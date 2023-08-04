@@ -17,11 +17,14 @@ import './icons.css';
 
 If you're a developer, check out our [getting started](/get-started/develop#using-styles) page to learn more about how to get and use our icon set.
 
+## Icon colors
+Visit our [colors page](/design-foundations/colors) to learn more about icon colors.
+
 ## Icon sizes
 <Grid gutter="md">
   <GridItem xl={6} lg={12} className="ws-icons-gridtext">
     <p>
-      Medium icons are used as our base size across our system as a whole and we recommend using this base size within your applications. Small, large and x-large icons are used sparingly across PatternFly components. Here is a complete list of icon sizes:
+      PatternFly supports a range of icon sizes so that all icons can be adapted to different use cases. This range includes small, medium, large, and x-large icons, which correspond to the following font sizes and CSS variables:
     </p>
     <Flex className="ws-icon-sizes ws-icon-sizes-sm" alignItems={{ default: 'alignItemsFlexStart' }}>
       <FlexItem className="ws-icon-size">
@@ -80,49 +83,53 @@ If you're a developer, check out our [getting started](/get-started/develop#usin
         <img src="./xl-icons.png" alt="Extra large icons" className="ws-xl-icons" />
       </CardBody>
     </Card>
+    <p>
+      Medium icons are typically the most versatile size to use across UIs. PatternFly uses medium icons in most applications. Small, large and x-large icons are used sparingly across PatternFly components. 
+    </p>
   </GridItem>
   <GridItem xl={6} lg={12} className="ws-icons-gridtext ws-icons-alignment-section">
-    No matter the size of the icon, when icons are next to text, they should be center-aligned horizontally. An example of this alignment in a component is a [link button.](/components/button/design-guidelines#button-types) If icons are stacked, they should also be center-aligned vertically.
+    No matter the size of an icon, when it is placed next to text, it should be center-aligned horizontally, as shown in our [link button example.](/components/button/design-guidelines#link-buttons) Stacked icons should also be center-aligned vertically.
     <div><img src="./icon_alignment.png" alt="Icon alignment" className="ws-icon-alignment" /></div>
   </GridItem>
 </Grid>
 
-<Divider className="ws-icons-divider" />
+## PatternFly icons
+PatternFly uses custom icons and selections from <a href="https://fontawesome.com/icons?d=gallery&m=free">Font Awesome Free</a>. If PatternFly doesn't offer an icon for your use case, you can download SVGs of additional ‘fa’ icons from Font Awesome's free set. Be sure to properly attribute these additional icons as outlined on the Font Awesome site.
 
-## Icon colors
-Visit our [colors page](/design-foundations/colors) to learn more about icon colors.
+These icons are the same as those in the [PatternFly Sketch design kit](/get-started/design#whats-in-the-design-kit), but you can use any Font Awesome icon so long it aligns with our icon guidelines.
 
-<Divider className="ws-icons-divider" />
+### HTML icons 
+When using HTML, use the following syntax:
 
-## All icons
-PatternFly uses custom icons and selections from <a href="https://fontawesome.com/icons?d=gallery&m=free">Font Awesome Free</a>. PatternFly icons are mostly two dimensional and flat. Navigate to Font Awesome’s website to download SVGs of any additional ‘fa’ icons within their free set. Proper attribution should be given as outlined on the Font Awesome site.
+- For 'pficon' icons: `<i class="pf-icon [insert-icon-name]"></i>`<br />
+- For 'fa' solid icons: `<i class="fas [insert-icon-name]"></i>`<br />
+- For 'fa' regular icons: `<i class="far [insert-icon-name]"></i>`<br />
 
-Click on any single icon in the table to download it as an SVG. Download all icon SVGs <a href="https://github.com/patternfly/patternfly-design/raw/master/resources/patternfly-icon-svgs/patternfly-icons.zip">here</a>.
+**Note:** Be sure to read [how to get started with icons](/get-started/develop#using-styles) when using 'fa' regular icons.
 
-If you’re a designer, these icons are the same set as the ones in the [PatternFly Sketch Design Kit.](/get-started/design) It is possible to use any FontAwesome icon as long it follows the guidelines above.
-
-If you’re looking to copy HTML for an icon:<br/>
-Use this for 'pficon' icons: `<i class="pf-icon [insert-icon-name]"></i>`<br />
-Use this for 'fa' solid icons: `<i class="fas [insert-icon-name]"></i>`<br />
-Use this for 'fa' regular icons: `<i class="far [insert-icon-name]"></i>`<br />
-<small>Note: Be sure to read [how to get started with icons](/get-started/develop#using-styles) when using 'fa' regular icons</small>
-
-If you're looking to copy React for an icon:<br />
-Use this for 'pficon' icons: `import { [insert-icon-name] } from '@patternfly/react-icons'`
+### React icons
+When using React, include the following import line for 'pficon' icons: `import { [insert-icon-name] } from '@patternfly/react-icons'`
 
 ### Font Awesome solid (FAS) vs Font Awesome regular (FAR)
-The Font Awesome icons included with PatternFly core are FAS (Font Awesome solid) webfont icons. If you're using icons via `<i class="[fa, far, fas] [insert-icon-name]"></i>`, designers and developers may use any FAS icon in their designs. If a FAR icon is needed, developers must include the FAR icon(s) themselves. There are a few ways of doing so:
+The Font Awesome icons included with PatternFly are FAS (Font Awesome solid) webfont icons. If you're using icons via `<i class="[fa, far, fas] [insert-icon-name]"></i>`, you can use any FAS icon. If you need to use a FAR icon, you must include the FAR icon(s) yourself by doing one of the following:
 
 1. [Hosting it yourself](https://fontawesome.com/how-to-use/on-the-web/setup/hosting-font-awesome-yourself)
-2. [Including via a package manager](https://fontawesome.com/how-to-use/on-the-web/setup/using-package-managers)
+2. [Including the icon(s) via a package manager](https://fontawesome.com/how-to-use/on-the-web/setup/using-package-managers)
 3. [Linking to a CDN](https://cdnjs.com/libraries/font-awesome)
-4. Use the SVG code directly from [fontawesome.com](https://fontawesome.com) (though this requires attribution)
+4. Using the SVG code directly from [fontawesome.com](https://fontawesome.com) (proper attribution is required)
+
+
+## All icons 
+
+The following table outlines details for all icons supported by PatternFly, as well as guidance for using each icon.
+
+Select any single icon in the table to download it as an SVG. You can also download all icon SVGs <a href="https://github.com/patternfly/patternfly-design/raw/master/resources/patternfly-icon-svgs/patternfly-icons.zip">on GitHub</a>.
 
 <IconsTable />
 
 <Divider className="ws-icons-divider" />
 
-## Updated icon recommendations
-We’ve recently updated some of our PatternFly icons as well as icon usage guidelines. If you are using an outdated icon, we suggest you migrate over to the newest recommendations.
+## Current icon recommendations
+We’ve recently updated some of our PatternFly icons as well as icon usage guidelines. If you are using an outdated icon, we suggest you migrate over to the newest recommendations, outlined in the following table.
 
 <IconRecommendations />
