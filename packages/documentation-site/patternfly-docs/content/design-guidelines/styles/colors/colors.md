@@ -24,14 +24,14 @@ Primary colors are those displayed most frequently across your application scree
       Primary colors are those displayed most frequently across your application screens and components. Our primary colors are used across components and are typically applied to default, active, focus, and hover states.
     </p>
     <ColorSwatch label="Default" color="--pf-v5-global--primary-color--100">
-      This color usually indicates a default or active state for many components, including badges and spinners.
-    </ColorSwatch>
+      </ColorSwatch>
+    This color usually indicates a default or active state for many components, including badges and spinners.
     <ColorSwatch label="Hover" color="--pf-v5-global--primary-color--200">
-      This color is most commonly used as the hover or focus state for components that use the default primary color, such as buttons and dropdowns.
-    </ColorSwatch>
+     </ColorSwatch> 
+    This color is most commonly used as the hover or focus state for components that use the default primary color, such as buttons and dropdowns.
   </GridItem>
   <GridItem xl={6} lg={12}>
-    <img width="480px" src="./patternfly-blue.png" alt="PatternFly blue colors" />
+    <img width="480px" src="./img/primary-colors.png" alt="PatternFly blue colors" />
   </GridItem>
 </Grid>
 
