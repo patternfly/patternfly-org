@@ -7,17 +7,33 @@ import { ColorSwatch } from './ColorSwatch';
 import { ColorFamily } from './ColorFamily';
 import './colors.css';
 
+# PatternFly colors
+
+This guide outlines the PatternFly color palette, as well as guidance for color use in different scenarios.
+
+Refer to our developer resources to [see a list of all global CSS color variables.](/developer-resources/global-css-variables/#global-css-variables)
+
 ## Primary colors
 
 Primary colors are those displayed most frequently across your application screens and components. Our primary colors are used across components and are typically applied to default, active, focus, and hover states.
 
-<ColorSwatch label="Default" color="--pf-v5-global--primary-color--100">
-This color usually indicates a default or active state for many components.
-</ColorSwatch>
-
-<ColorSwatch label="Hover" color="--pf-v5-global--primary-color--200">
-This color is most commonly used as the hover or focus state for components that use the default primary color.
-</ColorSwatch>
+<Grid hasGutter>
+  <GridItem xl={6} lg={12} className="ws-colors-gridtext">
+    ### PatternFly blue
+    <p>
+      Primary colors are those displayed most frequently across your application screens and components. Our primary colors are used across components and are typically applied to default, active, focus, and hover states.
+    </p>
+    <ColorSwatch label="Default" color="--pf-v5-global--primary-color--100">
+      This color usually indicates a default or active state for many components, including badges and spinners.
+    </ColorSwatch>
+    <ColorSwatch label="Hover" color="--pf-v5-global--primary-color--200">
+      This color is most commonly used as the hover or focus state for components that use the default primary color, such as buttons and dropdowns.
+    </ColorSwatch>
+  </GridItem>
+  <GridItem xl={6} lg={12}>
+    <img width="480px" src="./patternfly-blue.png" alt="PatternFly blue colors" />
+  </GridItem>
+</Grid>
 
 <br/>
   
@@ -69,19 +85,86 @@ This color is used as a background color for navigation.
 
 Status and state colors are indicators that communicate data and actions to users through the UI. Our status colors cover default, danger, success, information, and warning statuses, as well as disabled states.
 
-<img width="443px" src="./patternfly-status.png" alt="PatternFly status colors" />
- 
-### Default
-
-<ColorSwatch color="--pf-v5-global--default-color--300" caption="alert title">
-  This color is used as the title color for the default alert component.
-</ColorSwatch>
-<ColorSwatch color="--pf-v5-global--default-color--200" caption="alert icon">
-  This color is used as the icon color for the default alert component.
-</ColorSwatch>
-<ColorSwatch color="--pf-v5-global--palette--cyan-50" caption="inline alert background">
-  This color is used as the background color for the default inline alert component.
-</ColorSwatch>
+<Grid hasGutter>
+  <GridItem xl={6} lg={12} className="ws-colors-gridtext">
+      Status and state colors are indicators that communicate data and actions to users through the UI. Our status colors cover default, danger, success, information, and warning statuses, as well as disabled states.
+  </GridItem>
+  <GridItem xl={6} lg={12} rowSpan={6}>
+    <img width="443px" src="./patternfly-status.png" alt="PatternFly status colors" />
+  </GridItem>
+  <GridItem xl={6} lg={12}>
+    <h3>Default</h3>
+    <ColorSwatch color="--pf-v5-global--default-color--300" caption="alert title">
+      This color is used as the title color for the default alert component.
+    </ColorSwatch>
+    <ColorSwatch color="--pf-v5-global--default-color--200" caption="alert icon">
+      This color is used as the icon color for the default alert component.
+    </ColorSwatch>
+    <ColorSwatch color="--pf-v5-global--palette--cyan-50" caption="inline alert background">
+      This color is used as the background color for the default inline alert component.
+    </ColorSwatch>
+  </GridItem>
+  <GridItem xl={6} lg={12}>
+  <h3>Danger</h3>
+    <ColorSwatch color="--pf-v5-global--danger-color--200" caption="alert title">
+      This color is used as the title color for the danger alert component.
+    </ColorSwatch>
+    <ColorSwatch color="--pf-v5-global--danger-color--100" caption="alert icon">
+      This color is used as the icon color for the danger alert component.
+    </ColorSwatch> 
+    <ColorSwatch color="--pf-v5-global--palette--red-50" caption="inline alert background">
+      This color is used as the background color for danger inline alert component.
+    </ColorSwatch>
+  </GridItem>
+  <GridItem xl={6} lg={12}>
+    <h3>Success</h3>
+    <ColorSwatch color="--pf-v5-global--success-color--200" caption="alert title">
+      This color is used as the title color for the success alert component.
+    </ColorSwatch>
+    <ColorSwatch color="--pf-v5-global--success-color--100" caption="alert icon">
+      This color is used as the icon color for the success alert component.
+    </ColorSwatch>
+    <ColorSwatch color="--pf-v5-global--palette--green-50" caption="inline alert background">
+      This color is used as the background color for the success inline alert component.
+    </ColorSwatch>
+  </GridItem>
+  <GridItem xl={6} lg={12}>
+    <h3>Info</h3>
+    <ColorSwatch color="--pf-v5-global--info-color--200" caption="alert title">
+      This color is used as the title color for the info alert component.
+    </ColorSwatch>
+    <ColorSwatch color="--pf-v5-global--info-color--100" caption="alert icon">
+      This color is used as the icon color for the default alert component.
+    </ColorSwatch>
+    <ColorSwatch color="--pf-v5-global--palette--blue-50" caption="alert background">
+      This color is used as the background color for the info inline alert component.
+    </ColorSwatch>
+  </GridItem>
+  <GridItem xl={6} lg={12}>
+    <h3>Warning</h3>
+    <ColorSwatch color="--pf-v5-global--warning-color--200" caption="alert title">
+      This color is used as the title color for the warning alert component.
+    </ColorSwatch>
+    <ColorSwatch color="--pf-v5-global--warning-color--100" caption="alert icon">
+      This color is used as the icon color for the warning alert component.
+    </ColorSwatch>
+    <ColorSwatch color="--pf-v5-global--palette--gold-50" caption="inline alert background">
+      This color is used as the background color for the warning inline alert component.
+    </ColorSwatch>
+  </GridItem>
+   <GridItem xl={6} lg={12}>
+    <h3>Disabled</h3>
+    <ColorSwatch color="--pf-v5-global--disabled-color--100">
+      This color is used as the text color when components are disabled.
+    </ColorSwatch>
+    <ColorSwatch color="--pf-v5-global--disabled-color--200">
+      This color is used as the background color for many components when they are disabled, such as buttons and the application launcher.
+    </ColorSwatch>
+    <ColorSwatch color="--pf-v5-global--disabled-color--300">
+      This color is used as an alternate background color for components when they are disabled, such as dropdowns and options menus.
+    </ColorSwatch>
+  </GridItem>
+</Grid>
 
 <br/>
 
@@ -226,4 +309,6 @@ Our color palette is organized into color "families", the details of which can b
 <br/>
 
 ## Dark theme
-Our [dark theme handbook](/developer-resources/dark-theme-handbook) details important information about PatternFly's dark theme and its implmenetation process.
+Our [dark theme handbook](/developer-resources/dark-theme-handbook) details important information about PatternFly's dark theme and its implementation process.
+
+Also note that many colors change when the PatternFly website is toggled to dark theme.
