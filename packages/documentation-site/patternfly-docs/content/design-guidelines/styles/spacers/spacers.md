@@ -5,7 +5,7 @@ section: design-foundations
 import './spacers.css';
 
 
-PatternFly designs uses spaces to define fixed amounts of space between elements. Spacers make it easy for designers to maintain consistency across screens and  simplify the design handoff between designers and developers.
+PatternFly designs uses spacers to define fixed amounts of space between elements. Spacers make it easy for designers to maintain consistency across screens and  simplify the design handoff between designers and developers.
 
 To see a list of all PatternFly CSS variables, including spacers [visit our developer resources.](/developer-resources/global-css-variables)
 
@@ -111,6 +111,8 @@ Some components like icons, buttons, and input fields, have a fixed amount of pa
 
 <img src="./padding-example.png" alt="Spacers example" style="background-color: var(--pf-v5-global--palette--white)" />
 
+<br/>
+
 ### Using spacers with text 
 
 When using spacers with text-based content, you should consider line height to ensure that you’re leaving the right amount of vertical space between each line of text. 
@@ -168,6 +170,8 @@ For example:
 <p class="ws-content-border ws-content-p" style="margin-bottom: 0;">
   b. They still use the same text styling, however.
 </p>
+
+<br/>
 
 For more information about line height and typography, read our [typography guidelines.](/design-foundations/typography)
 
