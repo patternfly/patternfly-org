@@ -5,7 +5,9 @@ section: design-foundations
 import './spacers.css';
 
 
-We use spacers to define fixed amounts of space between elements. Spacers make it easy for designers to maintain consistency across screens. Since the same spacer sizes and values are built into the PatternFly codebase, spacers also majorly simplify the design handoff between designers and developers.
+PatternFly designs uses spaces to define fixed amounts of space between elements. Spacers make it easy for designers to maintain consistency across screens and  simplify the design handoff between designers and developers.
+
+To see a list of all PatternFly CSS variables, including spacers [visit our developer resources.](/developer-resources/global-css-variables)
 
 <div class="pf-v5-u-display-flex pf-v5-u-flex-direction-row pf-v5-u-mb-lg">
   <div class="ws-content-spacer4">
@@ -91,41 +93,29 @@ We use spacers to define fixed amounts of space between elements. Spacers make i
   </div>
 </div>
 
-[Click here for all variables](/developer-resources/global-css-variables)
-<div class="pf-v5-u-display-flex ws-content-demo pf-v5-u-my-3xl pf-v5-u-p-xl">
-  <div class="pf-v5-u-display-flex pf-v5-u-flex-direction-column pf-v5-u-mb-xl">
-    <div class="h4 ws-content-correct">
-      <i class="fas fa-check-circle"></i>
-      Correct
-    </div>
-    <p>
-      Include spacers in your designs to make it easy for developers to quickly see what size spacer you are using between elements.
-    </p>
-  </div>
-  <div class="pf-v5-u-display-flex pf-v5-u-flex-direction-column">
-    <div class="h4 ws-content-incorrect">
-      <i class="fas fa-exclamation-triangle"></i>
-      Incorrect
-    </div>
-      <p>
-        Don’t use spacers to design flexible layouts that utilize responsive measurement variables.
-      </p>
-      <p>
-        Don’t use spacers to define both horizontal and vertical space at the same time - spacers should be used to define a single spacing variable.
-      </p>
-  </div>
-</div>
+## Best practices
 
-<h1 class="pf-v5-c-title pf-m-2xl">Considering line height and padding</h1>
-<p>
-  Certain components or elements like icons, buttons, and input fields, have a fixed amount of padding built-in. Remember to take that extra space around each element into account when laying the content out on your page. You may not have as much horizontal or vertical room as you think.
-</p>
+When using spacers, adhere to the following best practices: 
+
+- Include spacers in your designs to make it easy for developers to quickly see what size spacer you are using between elements.
+- **Do not** use spacers to design flexible layouts that utilize responsive measurement variables.
+- **Do not** use spacers to define both horizontal and vertical space at the same time. Spacers should only be used to define a single spacing variable.
+
+## Considering line height and padding
+
+There are additional considerations to keep in mind when adapting spacers to different line heights and padding, which are common with PatternFly components and text content.
+
+### Using spacers with components
+
+Some components like icons, buttons, and input fields, have a fixed amount of padding built in. Remember to account for this extra space when laying the content out on your page. You may not have as much horizontal or vertical room as you think.
 
 <img src="./padding-example.png" alt="Spacers example" style="background-color: var(--pf-v5-global--palette--white)" />
 
-<p class="pf-v5-u-mt-3xl ws-content-p">
-  When laying out text-based content, remember to take line height into account so you’re leaving the right amount of vertical space between each line of text.
-</p>
+### Using spacers with text 
+
+When using spacers with text-based content, you should consider line height to ensure that you’re leaving the right amount of vertical space between each line of text. 
+
+For example:
 
 <div class="ws-content-border" style="font-size: 36px;">
   Design is a journey of discovery
@@ -133,12 +123,12 @@ We use spacers to define fixed amounts of space between elements. Spacers make i
 <div class="ws-content-spacer16" style="height: 16px;">
 </div>
 <p class="ws-content-border ws-content-p">
-  Body text should be Overpass Regular at 16px. It should have leading of 24px because of its relative line height of 1.5.
+  Body text should be Red Hat Text at 16px. It should have 24px of lead space because of its relative line height of 1.5.
 </p>
 
-<p class="pf-v5-u-mt-3xl ws-content-p">
-  You also need to use different spacer sizes depending on the type of text you’re using. For example, you’ll need to provide a 16px spacer between a title and body copy, but only an 8px spacer between items in a bulleted or numbered list.
-</p>
+You also need to use different spacer sizes depending on the type of text you’re using. For example, you’ll need to provide a 16px spacer between a title and body copy, but only an 8px spacer between items in a bulleted or numbered list.
+
+For example:
 
 <div class="ws-content-border" style="font-size: 28px">
   Design is a journey of discovery
@@ -146,7 +136,7 @@ We use spacers to define fixed amounts of space between elements. Spacers make i
 <div class="ws-content-spacer16" style="height: 16px;">
 </div>
 <p class="ws-content-border ws-content-p" style="margin-bottom: 0;">
-  Body text should be Overpass Regular at 16px. It should have leading of 24px because of its relative line height of 1.5.
+  Body text should be Red Hat Text at 16px. It should have leading of 24px because of its relative line height of 1.5.
 </p>
 <div class="ws-content-spacer24" style="height: 24px;">
 </div>
@@ -156,7 +146,7 @@ We use spacers to define fixed amounts of space between elements. Spacers make i
 <div class="ws-content-spacer16" style="height: 16px;">
 </div>
 <p class="ws-content-border ws-content-p" style="margin-bottom: 0;">
-  Body text should be Overpass Regular at 16px. It should have leading of 24px because of its relative line height of 1.5.
+  Body text should be Red Hat Text at 16px. It should have leading of 24px because of its relative line height of 1.5.
 </p>
 <div class="ws-content-spacer16" style="height: 16px;">
 </div>
@@ -179,6 +169,5 @@ We use spacers to define fixed amounts of space between elements. Spacers make i
   b. They still use the same text styling, however.
 </p>
 
-<p class="pf-v5-u-my-3xl ws-content-p">
-  For more information about line height and typography, go to the [typography page.](/design-foundations/typography)
-</p>
+For more information about line height and typography, read our [typography guidelines.](/design-foundations/typography)
+
