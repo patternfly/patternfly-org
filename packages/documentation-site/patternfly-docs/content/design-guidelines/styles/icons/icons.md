@@ -62,6 +62,9 @@ Visit our [colors page](/design-foundations/colors) to learn more about icon col
         <code className="ws-code ws-icon-code">--pf-v5-global--icon--FontSize--xl</code>
       </FlexItem>
     </Flex>
+    <p>
+      Medium icons are typically the most versatile size to use across UIs. PatternFly uses medium icons in most applications. Small, large and x-large icons are used sparingly across PatternFly components. 
+    </p>
   </GridItem>
   <GridItem xl={5} xlOffset={7} lg={12} xlRowSpan={2} >
     <Card className="ws-icon-size-examples">
@@ -83,9 +86,6 @@ Visit our [colors page](/design-foundations/colors) to learn more about icon col
         <img src="./xl-icons.png" alt="Extra large icons" className="ws-xl-icons" />
       </CardBody>
     </Card>
-    <p>
-      Medium icons are typically the most versatile size to use across UIs. PatternFly uses medium icons in most applications. Small, large and x-large icons are used sparingly across PatternFly components. 
-    </p>
   </GridItem>
   <GridItem xl={6} lg={12} className="ws-icons-gridtext ws-icons-alignment-section">
     No matter the size of an icon, when it is placed next to text, it should be center-aligned horizontally, as shown in our [link button example.](/components/button/design-guidelines#link-buttons) Stacked icons should also be center-aligned vertically.
@@ -94,7 +94,7 @@ Visit our [colors page](/design-foundations/colors) to learn more about icon col
 </Grid>
 
 ## PatternFly icons
-PatternFly uses custom icons and selections from <a href="https://fontawesome.com/icons?d=gallery&m=free">Font Awesome Free</a>. If PatternFly doesn't offer an icon for your use case, you can download SVGs of additional ‘fa’ icons from Font Awesome's free set. Be sure to properly attribute these additional icons as outlined on the Font Awesome site.
+PatternFly uses custom icons and selections from <a href="https://fontawesome.com/icons?d=gallery&m=free">Font Awesome Free</a>. If PatternFly doesn't offer an icon for your use case, you can download SVGs of additional 'fa' icons from Font Awesome's free set. Be sure to properly attribute these additional icons as outlined on the Font Awesome site.
 
 These icons are the same as those in the [PatternFly Sketch design kit](/get-started/design#whats-in-the-design-kit), but you can use any Font Awesome icon so long it aligns with our icon guidelines.
 
