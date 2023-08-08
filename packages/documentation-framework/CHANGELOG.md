@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 5.1.0 (2023-08-08)
+
+
+### Features
+
+* add released versions and changelog links to highlights ([#3688](https://github.com/patternfly/patternfly-org/issues/3688)) ([9591726](https://github.com/patternfly/patternfly-org/commit/9591726a8697ecadbc6d38c2dbc48905f85f0173))
+
+
+
+
+
 ## 5.0.19 (2023-08-03)
 
 
