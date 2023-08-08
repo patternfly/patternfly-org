@@ -6,11 +6,37 @@ section: get-started
 
 import './get-started.css';
 
-# What's new with PatternFly 5.0 
+## PatternFly 5.0 
 
-The following sections highlight the new features and updates included in this release. You can [view the full details for this release on GitHub](https://github.com/patternfly/patternfly-react/releases) and [refer to our upgrade guide](/get-started/upgrade) to update from PatternFly 4 to PatternFly 5.
+Refer to our [upgrade guide](/get-started/upgrade) to update from PatternFly 4 to PatternFly 5.
 
-## Dark theme support
+### Promoted package versions
+
+- patternfly/patternfly ([changelog](https://github.com/patternfly/patternfly/releases/tag/v5.0.2))
+  - [@patternfly/patternfly@5.0.2](https://www.npmjs.com/package/@patternfly/patternfly/v/5.0.2)
+
+
+- patternfly/patternfly-react ([changelog](https://github.com/patternfly/patternfly-react/releases/tag/v5.0.0))
+  - [@patternfly/react-charts@7.0.0](https://www.npmjs.com/package/@patternfly/react-charts/v/7.0.0)
+  - [@patternfly/react-code-editor@5.0.0](https://www.npmjs.com/package/@patternfly/react-code-editor/v/5.0.0)
+  - [@patternfly/react-core@5.0.0](https://www.npmjs.com/package/@patternfly/react-core/v/5.0.0)
+  - [@patternfly/react-icons@5.0.0](https://www.npmjs.com/package/@patternfly/react-icons/v/5.0.0)
+  - [@patternfly/react-styles@5.0.0](https://www.npmjs.com/package/@patternfly/react-styles/v/5.0.0)
+  - [@patternfly/react-table@5.0.0](https://www.npmjs.com/package/@patternfly/react-table/v/5.0.0)
+  - [@patternfly/react-tokens@5.0.0](https://www.npmjs.com/package/@patternfly/react-tokens/v/5.0.0)
+
+
+- PatternFly extensions
+  - [@patternfly/react-catalog-view-extension@5.0.0](https://www.npmjs.com/package/@patternfly/react-catalog-view-extension/v/5.0.0) ([changelog](https://github.com/patternfly/react-catalog-view/releases/tag/v5.0.0))
+  - [@patternfly/react-console@5.0.0](https://www.npmjs.com/package/@patternfly/react-console/v/5.0.0) ([changelog](https://github.com/patternfly/react-console/releases/tag/v5.0.0))
+  - [@patternfly/react-log-viewer@5.0.0](https://www.npmjs.com/package/@patternfly/react-log-viewer/v/5.0.0) ([changelog](https://github.com/patternfly/react-log-viewer/releases/tag/v5.0.0))
+  - [@patternfly/react-topology@5.0.0](https://www.npmjs.com/package/@patternfly/react-topology/v/5.0.0) ([changelog](https://github.com/patternfly/react-topology/releases/tag/v5.0.0))
+  - [@patternfly/react-user-feedback@5.0.0](https://www.npmjs.com/package/@patternfly/react-user-feedback/v/5.0.0) ([changelog](https://github.com/patternfly/react-user-feedback/releases/tag/v5.0.0))
+  - [@patternfly/react-virtualized-extension@5.0.0](https://www.npmjs.com/package/@patternfly/react-virtualized-extension/v/5.0.0) ([changelog](https://github.com/patternfly/react-virtualized-extension/releases/tag/v5.0.0))
+  - [@patternfly/quickstarts@5.0.0](https://www.npmjs.com/package/@patternfly/quickstarts/v/5.0.0) ([changelog](https://github.com/patternfly/patternfly-quickstarts/releases/tag/v5.0.0))
+  
+
+### Dark theme support
 
 While PatternFly has supported a dark theme in beta for some time, our dark theme has not been fully documented or tested. As part of the release of PatternFly 5, we were dedicated to thoroughly testing our beta implementation to ensure that it was ready for everyone. With this major release, we're excited to say that PatternFly's dark theme is fully vetted and supported. You can configure your applications' dark theme to update based on users’ system preferences.
 
@@ -20,23 +46,23 @@ To enable dark theme in your products, add the `.pf-theme-dark` class to the `<h
 
 For information regarding the shipping and implementation processes for dark theme, as well as general advice for its use read our [dark theme handbook.](/developer-resources/dark-theme-handbook)
 
-## React 18 support
+### React 18 support
 
 We are committed to supporting the 2 most recent versions of React for PatternFly to keep up with the environments that our users work in. To this end, we are pleased to announce that PatternFly 5 is compatible with both React 17 and React 18.
 
-## Versioned CSS variables and class names
+### Versioned CSS variables and class names
 
 We wanted to ensure that our variable naming conventions were clear and consistent going forward with our future release cycles. To keep things organized and clear, we updated our CSS variables and class names so that they are explicitly associated with the version of PatternFly that they align to. For PatternFly 5, we added a prefix of  `v5` to a number of our variable and class names.
 
 For more details, refer to [our upgrade guide](/get-started/upgrade#review-and-update-variable-and-class-names) and our [updated CSS classes and variables](developer-resources/global-css-variables) documentation.
 
-## Event handler parameter consistency updates
+### Event handler parameter consistency updates
 
 Previously, our event handler parameters weren’t consistently ordered. To meet industry standards, and get everything on the same page, we added event parameters to all of our callbacks and reordered handlers to consistently list the event as the first parameter. Additionally, we made sure that all of our event handlers now pass back an event. This change will make it easier to incorporate third party libraries, especially in the case of form building tools, like Formik.
 
 Our [codemods](/get-started/upgrade#run-our-codemods) should take care of most of these changes, but if your callback function is defined at the class level you will need to manually update your code.
 
-## Changes to React icons
+### Changes to React icons
 
 To improve the consistency of icon usage across projects adopting PatternFly, we are no longer using inline styles, color, or size for icons. Instead, React icons come with a built-in class `pf-v5-svg`, which gives an icon a default height, width, and vertical alignment. An icon's color is now set on the SVG file itself, using the `fill` attribute.
 
@@ -44,9 +70,9 @@ If you want a custom color or size, wrap your icon in the [`<Icon>` React compon
 
 If you are not importing `@patternfly/react-styles`, but are still using `@patternfly/react-icons` you will need to provide the generic styles that you have separated from the icons and moved into `@patternfly/react-styles`. For more information, [refer to the @patternfly/react-icons README file.](https://github.com/patternfly/patternfly-react/blob/main/packages/react-icons/README.md)
 
-## Major component updates and enhancements
+### Major component updates and enhancements
 
-### Card
+#### Card
 
 The following updates were made to the card component to improve the experience for both developers and end-users.
 
@@ -82,7 +108,7 @@ As a result, our previous design has been deprecated, along with the following p
 
 We recommend that you upgrade to these new cards if your use case calls for them. You can read more about their intended usage [in our card documentation.](/components/card/design-guidelines#variations)
 
-### Empty state
+#### Empty state
 
 Our empty state component was long overdue for some clean up. It was not following PatternFly’s established practices for CSS rule specificity and CSS variable usage. We also saw a great opportunity to improve our empty state layouts by using CSS `gap`.
 
@@ -94,7 +120,7 @@ To freshen things up, we made a number of changes, which can be seen in action o
 
 - We added the `EmptyStateFooter` component that wraps any content following `EmptyStateBody`.
 
-### Helper text
+#### Helper text
 
 Our components often allow you to display descriptive or status text below a form field to help users make decisions, but the implementation of this text hasn’t been consistent across components. We wanted to clean things up so that this implementation is more consistent.
 
@@ -113,13 +139,13 @@ As a result, a few components were updated to use the same [`HelperText` compone
 
         To add helper text to a form group in place of these properties you should use the `FormHelperText`, `HelperText`, and `HelperTextItem` components directly as part of the `FormGroup`’s children. This implementation is shown in PatternFly's [invalid form example.](components/forms/form#invalid)
 
-### Input group
+#### Input group
 
 Previously, the input group styles were too narrowly coupled with the types of children they contained. It did not match the approach we took to styling other groups of components. This update enabled more flexibility for the types of children allowed in an input group, and simplified the style rules for things like spacing, focus management, and item size manipulation.
 
 As a result, input group items no longer automatically fill the available space of their container. To retain previous styling, new `InputGroupItem` components may need to have the `isFill`, `isBox`, and/or `isPlain` properties adjusted. This is likely necessary for `FormSelect`, `TextInput`, `Select`, and `TextArea`, which may particularly require the `isFill` property to be passed to `InputGroupItem`.
 
-## Refactored and deprecated components 
+### Refactored and deprecated components 
 
 As PatternFly has matured, a number of its popular components have been repeatedly enhanced. Their complexity and fragility has grown to become an ever-growing maintenance problem. Rather than continuing to enhance these delicate components, as part of PatternFly 5, we have adjusted our implementation and recommendations to support new components that are more flexible, composable, and easier to maintain. As a result, we are deprecating our previous implementations in favor of our newer, more composable components.
 
@@ -142,7 +168,7 @@ Deprecated components are no longer being maintained or enhanced, but they will 
 
 You can still continue to use deprecated component implementations by importing them from `@patternfly/react-core/deprecated` or `@patternfly/react-table/deprecated`, but we recommend aligning with their replacements to benefit from our code enhancements and better  prepare for future iterations.
 
-## Components promoted out of beta
+### Components promoted out of beta
 
 Whenever a new component or major component enhancement is introduced to PatternFly, it’s released in beta until it’s been vetted by products and proven to be stable enough. While components are in beta, they may continue to evolve as we tweak their API and modify their HTML markup. Once a component is promoted out of beta, we are committed to withhold any additional breaking changes to the component until our next major release. With PatternFly 5, we’re excited to promote 16 components and variants out of beta:
 
@@ -165,7 +191,7 @@ Whenever a new component or major component enhancement is introduced to Pattern
 - [Truncate](/components/truncate)
 - [Wizard-next (our new recommendation for wizard)](/components/wizard)
 
-## Extensions updates
+### Extensions updates
 
 All PatternFly extensions have been updated to be compatible with PatternFly 5. For details on the nature of the changes made to each extension, please see [the PatternFly 5 release notes](/get-started/upgrade/release-notes).
 Most notably, topology's D3 dependency has been updated to version 7, and some event handler callback signatures were updated.
