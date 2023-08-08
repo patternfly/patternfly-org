@@ -282,7 +282,7 @@ Learn more about writing error messages in the [content](#content-considerations
 Forms may be placed in several contexts including on a page, in a wizard, or in a modal. Your chosen form placement may impact specific spacing considerations, but general form spacing requirements apply across these contexts.
 
 ### General spacing
-Always add 24px of spacing underneath each form input. If a form input includes helper text, this 24px spacing should start below the helper text. Spacing between data inputs like checkboxes and radio buttons should also be 24px when on the same line or stacked on one another. For more spacing information, consult the [PatternFly spacer guidelines](/guidelines/spacers#considering-line-height-and-padding).
+Always add 24px of spacing underneath each form input. If a form input includes helper text, this 24px spacing should start below the helper text. Spacing between data inputs like checkboxes and radio buttons should also be 24px when on the same line or stacked on one another. For more spacing information, consult the [PatternFly spacer guidelines](/design-foundations/spacers#considering-line-height-and-padding).
 
 <img src="./img/form-spacing.png" alt="Basic form example with spacers to demonstrate how elements should be spaced within it" width="460"/>
 

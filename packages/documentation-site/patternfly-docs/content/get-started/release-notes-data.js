@@ -5094,5 +5094,49 @@ import { Wizard } from '@patternfly/react-core/deprecated';`}
     pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/9257",
     repo: "React",
     fixedWithCodeMod: false
+  },
+  {
+    component: "Brand",
+    description: (<>Allowed heights/widths to be set together and be used when no children are passed</>),
+    pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/9342",
+    repo: "React",
+    fixedWithCodeMod: false
+  },
+  {
+    component: "Table",
+    description: <>The <code className="ws-code">tooltip</code> property has been removed from ActionsColumn's <code className="ws-code">item</code> prop interface. Instead a <code className="ws-code">content</code> property should be passed into the <code className="ws-code">tooltipProps</code> property of the <code className="ws-code">items</code> interface.</>,
+    pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/9382",
+    details: (
+      <TextContent>
+        <Text component={TextVariants.h2}>Example in</Text>
+        <CodeBlock>
+          <CodeBlockCode>
+            {`<ActionsColumn items={[{tooltip: "test"}]} />
+<ActionsColumn items={[{tooltip: "test", tooltipProps: {direction: "top"}}]} />
+
+const actionItems = [{tooltip: "test"}];
+<ActionsColumn items={actionItems} />
+
+const actionItems = () => [{tooltip: "test"}];
+<ActionsColumn items={actionItems} />`}
+          </CodeBlockCode>
+        </CodeBlock>
+        <Text component={TextVariants.h2}>Example out</Text>
+        <CodeBlock>
+          <CodeBlockCode>
+            {`<ActionsColumn items={[{tooltipProps: { content: "test" }}]} />
+<ActionsColumn items={[{ tooltipProps: {content: "test", direction: "top"}}]} />
+
+const actionItems = [{tooltipProps: { content: "test" }}];
+<ActionsColumn items={actionItems} />
+
+const actionItems = () => [{tooltipProps: { content: "test" }}];
+<ActionsColumn items={actionItems} />`}
+          </CodeBlockCode>
+        </CodeBlock>
+      </TextContent>
+    ),
+    repo: "React",
+    fixedWithCodeMod: true
   }
 ];

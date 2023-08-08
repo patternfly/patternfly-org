@@ -52,7 +52,7 @@ const MDXChildTemplate = ({
     ensureID(toc);
   }
   const innerContentWrapperClass = () => {
-    if (source === 'landing-page') {
+    if (source === 'landing-pages') {
       return 'landing-pages';
     }
     if (source === 'release-notes') {

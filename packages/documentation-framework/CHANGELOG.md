@@ -3,6 +3,66 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 5.0.19 (2023-08-03)
+
+
+### Bug Fixes
+
+* **links:** fixed multiple broken linkes ([#3680](https://github.com/patternfly/patternfly-org/issues/3680)) ([669f6aa](https://github.com/patternfly/patternfly-org/commit/669f6aa1a27487dceae3225924f212016fd1fe8b))
+
+
+
+
+
+## 5.0.18 (2023-07-27)
+
+
+### Bug Fixes
+
+* bump ast-helpers version ([eb12d27](https://github.com/patternfly/patternfly-org/commit/eb12d272901bec5fd5153c34c9b9b5a5185cad0f))
+
+
+
+
+
+## 5.0.17 (2023-07-26)
+
+
+### Bug Fixes
+
+* update site in preperation for release ([#3662](https://github.com/patternfly/patternfly-org/issues/3662)) ([bacd4dc](https://github.com/patternfly/patternfly-org/commit/bacd4dc70c025a8e53dc226611d63036a27f9d7a))
+
+
+
+
+
+## 5.0.16 (2023-07-25)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 5.0.15 (2023-07-21)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 5.0.14 (2023-07-19)
+
+
+### Bug Fixes
+
+* bump versions + add release note ([#3647](https://github.com/patternfly/patternfly-org/issues/3647)) ([0fa797a](https://github.com/patternfly/patternfly-org/commit/0fa797aaa6a1bc0a7c4ae2e63367ed5eb18f5ee0)), closes [#9342](https://github.com/patternfly/patternfly-org/issues/9342)
+
+
+
+
+
 ## 5.0.13 (2023-07-12)
 
 **Note:** Version bump only for package @patternfly/documentation-framework
