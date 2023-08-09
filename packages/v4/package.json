@@ -7,7 +7,7 @@
   "license": "MIT",
   "scripts": {
     "analyze": "pf-docs-framework build all --analyze",
-    "build": "pf-docs-framework build all",
+    "build": "pf-docs-framework build all --legacySSL",
     "build:server": "pf-docs-framework build server",
     "build:client": "pf-docs-framework build client",
     "clean": "rm -rf .cache public size-plugin.json patternfly-docs/generated/**/*.js",

@@ -26,6 +26,7 @@ program
   .command('build <server|client|all>')
   .option('-a, --analyze', 'use webpack-bundle-analyzer', false)
   .option('-o, --output <folder>', 'output folder', 'public')
+  .option('--legacySSL', 'use legacy version of openssl, needed to support Node 18 until we upgrade webpack to v5', false)
   .description('generates source files and runs webpack')
   .action((cmd, options) => {
     const { build } = require('./build');
