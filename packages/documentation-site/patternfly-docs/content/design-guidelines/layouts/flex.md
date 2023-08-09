@@ -7,18 +7,18 @@ The **flex** layout supports a completely custom layout by utilizing the Pattern
 
 ## Elements
 
-[image](/packages/documentation-site/patternfly-docs/images/flex-example.png)
+As an example, our [dashboard pattern](/patterns/dashboard) utilizes a flex layout.
 
-1. **Flex:** the grid container
-1. **Flex item:** the grid child
+<img src="packages/documentation-site/patternfly-docs/images/flex-example.png" alt="PatternFly website screenshot showing dashboard created with flex layout." width="3330px"/>
+
+1. **Flex:** The flex container, which contains flex child items
+1. **Flex item:** The flex children items
 
 ## Usage
 
 Flex layouts can be combined with other layouts to create versatile UIs. 
 
-[Combined with a grid layout.](/patterns/dashboard)
-
-[Combined w stack layout.](patterns/primary-detail/react-demos/primary-detail-full-page/)
+For example, our [dashboard pattern](/patterns/dashboard) combines the grid layout with flex to improve the responsiveness of information. Similarly, our [primary-detail pattern](patterns/primary-detail/react-demos/primary-detail-full-page/) combines the stack layout with flex to ensure that icons and buttons are responsive to changes in screen size. 
 
 ### When to use 
 
@@ -29,5 +29,8 @@ Also use the flex layout when a rigid grid is not necessary or wanted.
 
 ## Variations
 
-The flex layout is based on the [CSS "flex" properties](https://www.w3schools.com/cssref/css3_pr_flex.php), which help determine how a flex item will grow or shrink to fit the space available in its container. 
+The flex layout is based on the [CSS "flex" properties](https://www.w3schools.com/cssref/css3_pr_flex.php), which help determine how a flex item will grow or shrink to fit the space available in its container. These properties allow for variance in the implementation and appearance of flex layouts. 
+
+Most of the flex layout variations are available at our standard breakpoints. In the future, we plan to apply these modifiers via [ResizeObserver](https://developer.mozilla.org/en-US/docs/Web/API/ResizeObserver). 
+
 
