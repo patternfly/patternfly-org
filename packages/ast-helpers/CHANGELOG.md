@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.1.2 (2023-08-09)
+
+
+### Bug Fixes
+
+* clean up h2 and dark theme switcher styles ([#3690](https://github.com/patternfly/patternfly-org/issues/3690)) ([8319c0c](https://github.com/patternfly/patternfly-org/commit/8319c0ccecb018f72b277e070e4ccab1896f6cab))
+
+
+
+
+
 ## 1.1.1 (2023-08-09)
 
 **Note:** Version bump only for package @patternfly/ast-helpers
