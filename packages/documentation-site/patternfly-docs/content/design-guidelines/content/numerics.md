@@ -29,24 +29,24 @@ PatternFly date and time formats follow the American standard. When localizing, 
 
 Whether you use **absolute** or **relative** timestamps will depend on context. 
 
-To represent the exact date and time that an event occurred, use an absolute timestamp, while referencing the examples provided in the [table of date and time formats](#date-and-time-formats).
+### Absolute time 
 
-To represent how long ago an event occurred, use a relative timestamp.
+To represent the exact date and time that an event occurred, use an absolute timestamp. For example, "07 Jan 2020, 23:33 UTC". For more examples, reference the [table of date and time formats.](#date-and-time-formats)
 
-When reporting relative time, align with the following language:
+### Relative time
+
+To represent how long ago an event occurred, use a relative timestamp. When reporting relative time, align with the following language:
 
 <div class="ws-content-table">
   
-| **Time frame** | **Relative timestamp** |
-|---------------------|------------------------|
-| 0-60 seconds        | Just now               |
-| 1-60 minutes        | 4 minutes ago          |
-| 1-24 hours          | 4 hours ago            |
-| Yesterday           | 1 day ago              |
-| 1-30 days ago       | 24 days ago            |
-| 1 month-1 year ago  | 4 months ago           |
-| 1 year+             | 07 Jan 2020            |
-| Exact date and time | 07 Jan 2020, 23:33 UTC |
+| **Time frame** | **Guideline** | **Relative timestamp(s)**
+|---------------------|------------------------|------------------------|
+| Less than 1 minute ago | **Do not** display time in seconds or milliseconds. |  Just now               |
+| Less than 1 hour ago | Display time in minutes, rounded to the nearest minute. | 1 minute ago<br /><br />4 minutes ago |
+| Less than 1 day ago | Display time in hours, rounded to the nearest hour. | 1 hour ago<br /><br />4 hours ago |
+| Less than 1 month ago| Display time in days. | 1 day ago<br /><br />24 days ago |
+| Less than 1 year ago | Display time in months, rounded to the nearest month. | 1 month ago<br /><br />10 months ago |
+| 1 or more years ago | Display time in years, rounded to the nearest year. | 1 year ago<br /><br />5 years ago
 
 </div>
 
