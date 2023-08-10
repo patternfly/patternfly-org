@@ -9,7 +9,7 @@ The **flex** layout supports a completely custom layout by utilizing the Pattern
 
 As an example, our [dashboard pattern](/patterns/dashboard) utilizes a flex layout.
 
-<img src="packages/documentation-site/patternfly-docs/images/flex-example.png" alt="PatternFly website screenshot showing dashboard created with flex layout." width="3330px"/>
+<img src="./img/flex-example.png" alt="PatternFly website screenshot showing dashboard created with flex layout." width="3330px"/>
 
 1. **Flex:** The flex container, which contains flex child items
 1. **Flex item:** The flex children items
