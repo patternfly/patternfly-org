@@ -23,9 +23,9 @@ To create accessible content, refer to the following best practices:
 
     <div class="ws-content-table">
 
-    | **Do** | **Don't** |
+    | **Before** | **After** |
     |--------|-----------|
-    | Say "Click **Submit form**". | Say "Click the blue button."|
+    | Click the blue button. | Click **Submit form**. | 
 
     </div> 
     <br /> 

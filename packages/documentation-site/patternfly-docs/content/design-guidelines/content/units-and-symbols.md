@@ -7,9 +7,9 @@ section: UX writing
 
 Use consistent formatting, terminology, and symbols when displaying units of measurement in your UI, including:
 
-- Currency, 
-- Data bandwidth,
-- Data storage, and
+- Currency.
+- Data bandwidth.
+- Data storage.
 - Time.
 
 When displaying quantitative values for measurements in your UI, use the [International System of Units](https://www.nist.gov/pml/owm/metric-si/si-units) (SI unit) so that your content can be understood by global users. The following table outlines the base units and symbols you should use to describe different quantitative values:

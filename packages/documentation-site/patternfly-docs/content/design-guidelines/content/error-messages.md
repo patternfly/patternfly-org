@@ -27,7 +27,7 @@ _To manually log in to the host, click **Log in.**_ (resolution)
 
 Keep these best practices in mind when crafting error messages:
 
-#### **Don’t blame users**. 
+#### Don’t blame users 
 
 A user should never feel like the error is their fault. Avoid language like “You did something wrong.” Depending on your message, you may need to use the passive voice instead of the active voice so that you don't assign blame to the user.   
 
@@ -40,7 +40,7 @@ A user should never feel like the error is their fault. Avoid language like “Y
 </div> 
 <br /> 
 
-#### **Give users a next step**.
+#### Give users a next step
 
 A user should never feel stuck. If they’re hit with an error, give them the information they need to continue with their task. 
 
@@ -53,7 +53,7 @@ A user should never feel stuck. If they’re hit with an error, give them the in
 </div>
 <br /> 
 
-#### **Avoid jargon**.
+#### Avoid jargon
 
 Error messages are frustrating enough without technical terms that users might not understand. Avoid jargon and use terms that are familiar to your users. 
 
@@ -66,7 +66,7 @@ Error messages are frustrating enough without technical terms that users might n
 </div>
 <br />
 
-#### **Include the right amount of description**.
+#### Include the right amount of description
 
 Tell your user what is wrong. An error without an explanation can add to their frustration and prevent them from finding a solution.  
 
@@ -131,9 +131,9 @@ To create effective 404 pages, follow these best practice guidelines:
 
     <div class="ws-content-table">
 
-    | **Do** | **Don't** |
+    | **Before** | **After** |
     |:-----------:|:-----------:|
-    | 404: That page no longer exists | Error 404: Not found| 
+    | Error 404: Not found| 404: That page no longer exists | 
 
     </div> 
     <br />
@@ -142,11 +142,11 @@ To create effective 404 pages, follow these best practice guidelines:
 
     <div class="ws-content-table">
 
-    | **Do** | **Don't** |
+    | **Before** | **After** |
     |:-----------:|:-----------:|
-    | We lost that page | Uh oh, spaghetti-o! We lost that one | 
-    | We couldn't find that page | Oops! We dropped the ball | 
-    | That page no longer exists | Huh, that's odd... | 
+    | Uh oh, spaghetti-o! We lost that one  | We lost that page  | 
+    | Oops! We dropped the ball | We couldn't find that page  | 
+    | Huh, that's odd... | That page no longer exists |
 
     </div> 
     <br />
@@ -155,10 +155,10 @@ To create effective 404 pages, follow these best practice guidelines:
 
     <div class="ws-content-table">
 
-    | **Do** | **Don't** |
+    | **Before** | **After** |
     |:-----------:|:-----------:|
-    | We can't find that page | Your search came up empty |
-    | That page no longer exists | The page you're trying to reach doesn't exist |
+    | Your search came up empty | We can't find that page |
+    | The page you're trying to reach doesn't exist | That page no longer exists |
 
     </div>
     <br />
@@ -167,9 +167,9 @@ To create effective 404 pages, follow these best practice guidelines:
 
     <div class="ws-content-table">
 
-    | **Do** | **Don't** |
+    | **Before** | **After** |
     |:-----------:|:-----------:|
-    | Another page might have what you need, so try searching PatternFly. | That page doesn't exist. |
+    | That page doesn't exist. | Another page might have what you need, so try searching PatternFly.  |
 
     </div>
     <br />
@@ -178,9 +178,9 @@ To create effective 404 pages, follow these best practice guidelines:
 
     <div class="ws-content-table">
 
-    | **Do** | **Don't** |
+    | **Before** | **After** |
     |:-----------:|:-----------:|
-    | **404: We couldn't find that page**<br />Another page might have what you need, so try searching PatternFly. | **Error 404: Not found**<br />Requested URL not found on this server. Please try again. |
+    | **Error 404: Not found**<br />Requested URL not found on this server. Please try again. | **404: We couldn't find that page**<br />Another page might have what you need, so try searching PatternFly. |
 
     </div>
     <br />
@@ -189,9 +189,9 @@ To create effective 404 pages, follow these best practice guidelines:
 
     <div class="ws-content-table">
 
-    | **Do** | **Don't** |
+    | **Before** | **After** |
     |:-----------:|:-----------:|
-    | **404: We lost that page**<br />Let's find you a better one. Try a new search or return home. | **404: Not all who wander are lost...**<br />But this page is. Search again or find your way back home. |
+    | **404: Not all who wander are lost...**<br />But this page is. Search again or find your way back home. | **404: We lost that page**<br />Let's find you a better one. Try a new search or return home. |
 
     </div>
     <br />                  

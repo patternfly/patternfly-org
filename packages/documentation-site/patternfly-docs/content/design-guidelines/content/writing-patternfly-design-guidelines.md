@@ -15,7 +15,7 @@ Display an image of the component containing numbered annotation tags for each m
 
 Example:
 
-<img src="./img/sliderelements.png" alt="A screenshot of the slider component's element section with 8 elements outlined." width="600px" />
+<img src="./img/sliderelements.png" alt="A screenshot of the slider component's element section with 8 elements outlined." width="750px" />
 
 ### Usage 
 Explain how the component is used, when to use it, and why it should be used. Include explanations of problems it could help solve and address its advantages over similar components. Include images for visual examples.
@@ -36,7 +36,7 @@ Additional sub-sections to include:
 #### When to use X variation vs. when to use Y variation (H3)
 
 ### Spacing 
-Introduce spacing requirements for components and their content. For more information regarding proper spacing, refer to our [spacing guidelines.](https://www.patternfly.org/v4/guidelines/spacers/)
+Introduce spacing requirements for components and their content. For more information regarding proper spacing, refer to our [spacing guidelines.](/design-foundations/spacers)
 
 ### Content considerations 
 Showcase the different content that could be included within your component. Here is where you can also give additional tips and tricks the user may want to know. Content guidance includes:

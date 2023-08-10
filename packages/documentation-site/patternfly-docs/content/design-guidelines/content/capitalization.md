@@ -19,14 +19,6 @@ We recommend using title and sentence case as appropriate:
     
     - For example: “PatternFly’s design resources with tips and best practices.”
 
-## Capitalization in breadcrumb trails
-
-Usually, page titles appear in a breadcrumb trail. If all page titles are in title case then they should also appear in title case in the breadcrumb trail. If all page titles are in sentence case, they should also appear in sentence case in the breadcrumb trail. 
-
-However, breadcrumb trails aren’t limited to page titles alone. If a name entered by a user (such as “vagrant-host”) is included in the breadcrumb trail, then use the same case that the name appears in. 
-
-For example, this may look like: *Rules* > *Systems* > *System Tool* > *vagrant-host* 
-
 ## Capitalization across PatternFly
 
 Follow these guidelines for PatternFly content, including documentation, UX copy, blog articles, and more. 
@@ -73,6 +65,14 @@ A UI that adheres to these guidelines may resemble the following image:
 
 1. **Navigation**: Navigation items are in title case. 
 1. **Menu**: Menu items are in sentence case.
+
+## Capitalization in breadcrumb trails
+
+Usually, page titles appear in a breadcrumb trail. If all page titles are in title case then they should also appear in title case in the breadcrumb trail. If all page titles are in sentence case, they should also appear in sentence case in the breadcrumb trail. 
+
+However, breadcrumb trails aren’t limited to page titles alone. If a name entered by a user (such as “vagrant-host”) is included in the breadcrumb trail, then use the same case that the name appears in. 
+
+For example, this may look like: *Rules* > *Systems* > *System Tool* > *vagrant-host* 
 
 ## Capitalization for tools outside your product portfolio
 

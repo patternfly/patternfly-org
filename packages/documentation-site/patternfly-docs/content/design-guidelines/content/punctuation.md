@@ -8,7 +8,7 @@ When referring to an element or text in the UI, use bold text. Don't use quotati
 
 <div class="ws-content-table">
 
-| Before                             | After                                |
+| **Before**                             | **After**                                |
 |------------------------------------|--------------------------------------|
 | Add user to the “Group title” team | Add user to the **Group title** team |
 
@@ -68,16 +68,16 @@ Ellipses can also be used in more creative contexts to signify someone’s thoug
 
 ## Em dash, en dash, and hyphen
 
-### Em dash 
-To add emphasis to a phrase or sentence following it, use an **em dash (—)**. You can also use an em dash to provide additional information or specification in the middle of a sentence. For example:
+### Em dash ( — )
+To add emphasis to a phrase or sentence following it, use an **em dash ( — )**. You can also use an em dash to provide additional information or specification in the middle of a sentence. For example:
 
 - "Good design is not about you—it’s about the user."
 - "I like drinking something hot—coffee, tea, or cocoa—during my morning meetings."
 
-### En dash
+### En dash ( – )
 To separate numbers in a series, use an **en dash ( – )**. For example, "We plan on having 100–150 attendees."
 
-### Hyphen
+### Hyphen ( - )
 Use a **hyphen ( - )** if it's part of a term (such as "walk-through") or someone's name (such as "Mary-Jane").  
 
 You should also use a hyphen for a compound adjective that comes before the noun it modifies, but omit the hyphen if the first adjective ends in "-ly." For example:

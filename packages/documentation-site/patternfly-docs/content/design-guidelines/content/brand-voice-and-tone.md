@@ -49,11 +49,11 @@ You can’t *tell* your users what your voice is. You need to *show* them who yo
 
 <div class="ws-content-table">
 
-| **Do** | **Don't** |
+| **Don't** | **Do** |
 |--------|-----------|
-| Be clear and concise for users of all skills and abilities. | Don’t include fluff or long sentences that run on and on. |
-| Write how you speak, but add extra polish.                  ||
-| Focus on comprehension and use plain language.              ||
+| Don’t include fluff or long sentences that run on and on. | Do be clear and concise for users of all skills and abilities. 
+| | Do write how you speak, but add extra polish.                  ||
+| | Do focus on comprehension and use plain language.              ||
 
 </div>
 
@@ -63,10 +63,10 @@ You can’t *tell* your users what your voice is. You need to *show* them who yo
 
 <div class="ws-content-table">
 
-| **Do** | **Don't** |
+| **Don't** | **Do** |
 |--------|-----------|
-| Say what you mean. | Don’t use jargon, idioms, bizspeak, or formal language. |
-| Be direct and transparent with descriptive, specific language. |
+| Don’t use jargon, idioms, bizspeak, or formal language.| Do say what you mean.  |
+| | Do be direct and transparent with descriptive, specific language. |
 
 </div>
 
@@ -76,10 +76,10 @@ You can’t *tell* your users what your voice is. You need to *show* them who yo
 
 <div class="ws-content-table">
 
-| **Do** | **Don't** |
+| **Don't** | **Do** |
 |--------|-----------|
-| Deliver content in a way that includes everyone. | Don’t rely on inside jokes, colloquial expressions, culture-specific examples, or other alienating language to get your point across. |
-| Use “you” and the active voice to put emphasis on the user and the power in their hands. | Don’t use “I” too much. Make the user the star of every story you tell. |
+ | Don’t rely on inside jokes, colloquial expressions, culture-specific examples, or other alienating language to get your point across.| Do deliver content in a way that includes everyone. |
+| Don’t use “I” too much. Make the user the star of every story you tell.| Do use “you” and the active voice to put emphasis on the user and the power in their hands.  |
 
 </div>
 
@@ -89,10 +89,10 @@ You can’t *tell* your users what your voice is. You need to *show* them who yo
 
 <div class="ws-content-table">
 
-| **Do** | **Don't** |
+| **Don't** | **Do** |
 |--------|-----------|
-| Deliver concepts and ideas with an air of confident simplicity. | Don’t belittle others or make jokes at their expense. We can laugh at ourselves but not at our users. |
-| Add real-world, global-friendly examples.| Don’t use others as examples of what not to do.|
+| Don’t belittle others or make jokes at their expense. We can laugh at ourselves but not at our users. | Do deliver concepts and ideas with an air of confident simplicity. |
+| Don’t use others as examples of what not to do.| Do add real-world, global-friendly examples.|
 
 </div>
 
