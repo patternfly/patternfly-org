@@ -36,8 +36,8 @@ If the page has subsections, they are shown as indented jump links under the par
 ### Jump link placement
 Vertical jump links can be placed either to the left or the right of the content on the page. It is recommended to place the jump links on the left side of the content and remain consistent with the application you are working on. Only use jump links on the right when space allows and when there is an extensive nav on the left; otherwise, consider reverting to the left of the page. In both placements, the visual system is identical, including jump links with subsections. So use either according to your application’s needs.
 
-<img src="./img/Jumplink - left.png alt="Example of jump links on the left" width="1381"/>
-<img src="./img/Jumplink - right.png alt="Example of jump links on the right" width="800"/>
+<img src="./img/Jumplink-left.png" alt="Example of jump links with subsections" width="800"/>
+<img src="./img/Jumplink-right.png" alt="Example of jump links with subsections" width="800"/>
 
 ### Jump links on mobile
 On smaller screen sizes, jump links collapse into an expandable component that is shown above the content. This component can be expanded to display the jump links. 
