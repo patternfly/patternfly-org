@@ -5,9 +5,9 @@ module.exports = {
   pathPrefix: '/v4',
   googleAnalyticsID: 'UA-47523816-6',
   algolia: {
-    apiKey: 'a8fb1726b78594ff97a3418757514404',
-    appId: '79P4ZBH7A3',
-    indexName: 'patternfly'
+    apiKey: '4f56601621c4396613bbc652fdb9f42e',
+    appId: 'L2WU7VRBB7',
+    indexName: 'v4-archive-patternfly'
   },
   hasGdprBanner: true,
   hasFooter: true,
