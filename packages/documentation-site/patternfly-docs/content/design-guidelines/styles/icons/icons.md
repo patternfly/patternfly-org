@@ -2,7 +2,7 @@
 id: Icons
 section: design-foundations
 ---
-import { Card, CardBody, Divider, Flex, FlexItem, Grid, GridItem } from '@patternfly/react-core';
+import { Card, CardBody, Divider, Flex, FlexItem, Grid, GridItem, Icon } from '@patternfly/react-core';
 import CaretDownIcon from '@patternfly/react-icons/dist/esm/icons/caret-down-icon';
 import CheckCircleIcon from '@patternfly/react-icons/dist/esm/icons/check-circle-icon';
 import ExclamationCircleIcon from '@patternfly/react-icons/dist/esm/icons/exclamation-circle-icon';
@@ -28,25 +28,31 @@ Visit our [colors page](/design-foundations/colors) to learn more about icon col
     </p>
     <Flex className="ws-icon-sizes ws-icon-sizes-sm" alignItems={{ default: 'alignItemsFlexStart' }}>
       <FlexItem className="ws-icon-size">
-        <CheckCircleIcon size="sm" />
+      <Icon size ="sm">
+        <CheckCircleIcon />
+      </Icon>
       </FlexItem>
       <FlexItem>
-        <p>Small (10px)</p>
+        <p>Small (12px)</p>
         <code className="ws-code ws-icon-code">--pf-v5-global--icon--FontSize--sm</code>
       </FlexItem>
     </Flex>
     <Flex className="ws-icon-sizes ws-icon-sizes-md" alignItems={{ default: 'alignItemsFlexStart' }}>
       <FlexItem className="ws-icon-size">
-        <CheckCircleIcon size="md" />
+      <Icon size="md">
+        <CheckCircleIcon />
+      </Icon>  
       </FlexItem>
       <FlexItem>
-        <p>Medium (18px)</p>
+        <p>Medium (16px)</p>
         <code className="ws-code ws-icon-code">--pf-v5-global--icon--FontSize--md</code>
       </FlexItem>
     </Flex>
     <Flex className="ws-icon-sizes ws-icon-sizes-lg" alignItems={{ default: 'alignItemsFlexStart' }}>
       <FlexItem className="ws-icon-size">
-        <CheckCircleIcon size="lg" />
+      <Icon size="lg">
+        <CheckCircleIcon/>
+      </Icon>  
       </FlexItem>
       <FlexItem>
         <p>Large (24px)</p>
@@ -55,7 +61,9 @@ Visit our [colors page](/design-foundations/colors) to learn more about icon col
     </Flex>
     <Flex className="ws-icon-sizes ws-icon-sizes-xl" alignItems={{ default: 'alignItemsFlexStart' }}>
       <FlexItem className="ws-icon-size">
-        <CheckCircleIcon size="xl" />
+      <Icon size="xl">
+        <CheckCircleIcon/>
+      <Icon>
       </FlexItem>
       <FlexItem>
         <p>X-large (54px)</p>
@@ -130,6 +138,6 @@ Select any single icon in the table to download it as an SVG. You can also downl
 <Divider className="ws-icons-divider" />
 
 ## Current icon recommendations
-We’ve recently updated some of our PatternFly icons as well as icon usage guidelines. If you are using an outdated icon, we suggest you migrate over to the newest recommendations, outlined in the following table.
+The following table outlines our current recommendations for icon usage:
 
 <IconRecommendations />
