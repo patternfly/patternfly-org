@@ -63,7 +63,7 @@ Visit our [colors page](/design-foundations/colors) to learn more about icon col
       <FlexItem className="ws-icon-size">
       <Icon size="xl">
         <CheckCircleIcon/>
-      <Icon>
+      </Icon>
       </FlexItem>
       <FlexItem>
         <p>X-large (54px)</p>
