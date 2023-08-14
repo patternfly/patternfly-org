@@ -16,7 +16,7 @@ To create accessible content, refer to the following best practices:
 
 - Don't identify items by color only. Color identifiers don’t help users who are colorblind. For example:
 
-    <br/></br>
+    <br /><br />
     <img src="./img/submit-form.png" alt="blue PatternFly primary button reading Submit form" width="150"/>
     <br/></br>
 
