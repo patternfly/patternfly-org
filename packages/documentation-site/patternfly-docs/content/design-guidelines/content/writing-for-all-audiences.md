@@ -18,7 +18,7 @@ To create accessible content, refer to the following best practices:
 
     <br /><br />
     <img src="./img/submit-form.png" alt="blue PatternFly primary button reading Submit form" width="150"/>
-    <br/></br>
+    <br /><br />
 
     <div class="ws-content-table">
 
