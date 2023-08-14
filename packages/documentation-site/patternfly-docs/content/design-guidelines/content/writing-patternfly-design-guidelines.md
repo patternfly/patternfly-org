@@ -20,7 +20,7 @@ For example:
 ### Usage 
 Explain how the component is used, when to use it, and why it should be used. Include explanations of problems it could help solve and address its advantages over similar components. Include images for visual examples.
 
-Additional H3 sub-sections to include: 
+Additional (H3) sub-sections to include: 
 #### When to use 
 #### When not to use 
 #### When to use X vs. Y 
@@ -32,8 +32,8 @@ Explain how the component functions and break down how its elements interact wit
 ### Variations 
 Showcase different forms of your component and include explanations indicating when to use each one. 
 
-Additional sub-sections to include:
-#### When to use X variation vs. when to use Y variation (H3)
+Additional (H3) sub-sections to include:
+#### When to use X variation vs. when to use Y variation
 
 ### Spacing 
 Introduce spacing requirements for components and their content. For more information regarding proper spacing, refer to our [spacing guidelines.](/design-foundations/spacers)
@@ -50,7 +50,7 @@ Each component that has an accessibility tab should include the following senten
 
 "For information regarding accessibility, visit the [component name] accessibility tab."
 
-Then, link the component's accessibility tab to the words "accessibility tab".
+Then, link the component's accessibility tab to the words "accessibility tab."
 
 ## Formatting 
 

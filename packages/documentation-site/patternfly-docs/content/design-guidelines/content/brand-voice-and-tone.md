@@ -12,9 +12,9 @@ To keep your UX copy on-brand, consider style, voice, and tone:
 
 - **Style** is the way you use grammar, punctuation, and syntax. It’s influenced by how your words work together and what effect your writing has on the user. 
 
-- **Voice** is the personality that’s reflected in your writing. For example, your content's voice may be "helpful".
+- **Voice** is the personality that’s reflected in your writing. For example, your content's voice may be "helpful."
 
-- **Tone** encompasses the user’s emotions that need to be accounted for and the resulting approach you must take. It is important to choose a tone that's appropriate for the context of your content. For example, your content's tone may be "casual" or "professional".
+- **Tone** encompasses the user’s emotions that need to be accounted for and the resulting approach you must take. It is important to choose a tone that's appropriate for the context of your content. For example, your content's tone may be "casual" or "professional."
 
 ## Voice 
 
@@ -41,7 +41,7 @@ To reflect the Red Hat voice in our products' UX copy, we consider UX voice trai
 
 When crafting your brand voice, align your voice traits to any company or team values that you have.
 
-You can’t *tell* your users what your voice is. You need to *show* them who you are in your writing. To do this, consider utilizing "Do and Don’t” charts. For example, Red Hat's UX copy voice charts look like:
+You can’t *tell* your users what your voice is. You need to *show* them who you are in your writing. To do this, consider utilizing "Don't and Do” charts. For example, Red Hat's UX copy voice charts look like:
 
 #### Voice trait: Friendly
 

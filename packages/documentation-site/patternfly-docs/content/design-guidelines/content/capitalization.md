@@ -25,7 +25,7 @@ Follow these guidelines for PatternFly content, including documentation, UX copy
 
 - Use **sentence case** for page titles, menu items, navigation items, headings, subtitles, and subheadings. 
 
-    - For example: On PatternFly's website, all navigation items, button text, and headings are written in sentence case:  
+    - For example, on PatternFly's website, all navigation items, button text, and headings are written in sentence case:  
 
 <img src="./img/patternfly-sentence-case.png"  alt="PatternFly website screenshot showing sentence case copy"  width="3330px"/>
 
@@ -53,9 +53,9 @@ In general, follow these guidelines:
 
     | **Feature name** | **UI text**  | **Reasoning**    |
     |------------------|--------------|------------------|
-    | Compliance   | “Check your system compliance using Red Hat Insights Compliance.”                                                  | The first “compliance” is lowercase since it refers to compliance as a concept. The second “compliance” refers to a specific feature offered on cloud.redhat.com.                                     |
+    | Compliance   | “Check your system compliance using Red Hat Insights Compliance.”                                                  | The first “compliance” is lowercase since it refers to compliance as a concept. The second “compliance” refers to a specific feature offered on cloud.redhat.com, so it is capitalized.                                     |
     | User Access  | “Manage user access for your organization using the User Access feature.”                                          | The first “user access” is lowercase because it refers to user access as a concept. The second “user access” is capitalized because it refers to the User Access feature offered on cloud.redhat.com. |
-    | Sources      | “Add a source by going to **Settings > Sources.**” "Check the **Sources** table for status." Button text: "Add source" | “Sources” is only capitalized when it directly refers to a subsection, feature, or location in the UI. Always write buttons in sentence case. |
+    | Sources      | “Add a source by going to **Settings > Sources.**” "Check the **Sources** table for status."<br/></br> Button text: "Add source" | “Sources” is only capitalized when it directly refers to a subsection, feature, or location in the UI. Always write buttons in sentence case. |
 
     </div>
 

@@ -108,7 +108,7 @@ For most prefixes, you should *not* use a hyphen. For example:
 - Re-  (such as recreate)
 - Sub- (such as submerge)
 
-An exception for this rule is when you add a modifier prefix like “non". In these cases, you should use a hyphen. For example, "non-Red Hatter." 
+An exception for this rule is when you add a modifier prefix like “non." In these cases, you should use a hyphen. For example, "non-Red Hatter." 
 
 If you're unsure about the use of a hyphen, refer to [Merriam-Webster's online dictionary.](https://www.merriam-webster.com/)
 

@@ -7,7 +7,7 @@ This resource overviews common UI terms and their usage.
 
 For Red Hat product terminology and documentation standards, see [Red Hat's supplementary style guide for product documentation](https://redhat-documentation.github.io/supplementary-style-guide/#introduction).
 
-**Note:** Do not precede UI terms with "please". It is extraneous and overly formal.
+**Note:** Do not precede UI terms with "please." It is extraneous and overly formal.
 
 <div class="ws-content-table">
 

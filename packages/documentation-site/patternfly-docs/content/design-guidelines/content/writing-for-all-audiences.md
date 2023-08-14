@@ -16,10 +16,9 @@ To create accessible content, refer to the following best practices:
 
 - Don't identify items by color only. Color identifiers don’t help users who are colorblind. For example:
 
-    <br />
+    <br/></br>
     <img src="./img/submit-form.png" alt="blue PatternFly primary button reading Submit form" width="150"/>
-
-    <br/>
+    <br/></br>
 
     <div class="ws-content-table">
 
@@ -28,16 +27,13 @@ To create accessible content, refer to the following best practices:
     | Click the blue button. | Click **Submit form**. | 
 
     </div> 
-    <br /> 
 
 - Write for responsive design. If your application is accessible by multiple devices, such as a tablet, laptop, television, and smartphone, then consider that on some devices you may slide or tap the screen, while on others you may select options by clicking or pressing. 
 
 - Use proper heading levels (H1, H2) to articulate the page content’s organization. Headings are useful in identifying content changes, and machine translation recognizes each heading level as a new segment, which is important with text-laden pages. 
     - Headings are ranked hierarchically from H1 through H6, with H1 headings representing the most important idea on a page. 
 
-- Consistently describe UI elements in tooltips and product documentation. For example, for a kebab icon:  
-    - The tooltip text might be "More options"
-    - In product documentation, you would then say "Click **More options**". 
+- Consistently describe UI elements in tooltips and product documentation. For example, for a kebab icon the tooltip text might be "More options". In product documentation, you would then say "Click **More options**". 
 
 - Label UI elements (buttons, icons, menus) consistently and descriptively to clearly represent the element’s function.
 
@@ -63,7 +59,7 @@ Accessibility is closely related to localization and translation. The more acces
 
 Include text for screen readers. Screen readers are most useful when the words represent what is visually shown on the screen. When writing text that is visible only to a screen reader, such as an aria-label that describes an icon button, reference the following guidelines:  
 
-- Avoid redundancy. Screen readers announce the component or element as well as the associated property and state when the HTML is defined correctly. For example, a search button is announced to a user as a combination of the label and the component. Label the button as "Search", not "Search button". This way, it will be announced as "Search button" (rather than "Search search button").
+- Avoid redundancy. Screen readers announce the component or element as well as the associated property and state when the HTML is defined correctly. For example, a search button is announced to a user as a combination of the label and the component. Label the button as "Search", not "Search button." This way, it will be announced as "Search button" (rather than "Search search button").
 
 - Make sure that labels for elements like buttons or links make sense when pulled out of context. Use descriptive hyperlinks instead of raw links or vague linked text, such as “Click here.”  
 

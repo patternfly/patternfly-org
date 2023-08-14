@@ -11,17 +11,15 @@ Make your error messages brief yet descriptive. A useful pattern to follow is to
 - **Description**: What happened? 
     - For example, if the user's login failed.
 - **Reason**: Why did it happen? 
-    - For example, an SSH key doesn't allow auto-login.
+    - For example, if an SSH key doesn't allow auto-login.
 - **Resolution**: How can it be resolved?
-    - For example, a user may need  to manually log in to the host.
+    - For example, a user may need to manually log in to the host.
     
 Combine your description, reason, and resolution with a title to create a strong error message. For example:
 
-_**Login failed**_ (description)
-
-_The SSH key for auto-login is either not available, is unauthorized, or is password protected._ (reason)
-
-_To manually log in to the host, click **Log in.**_ (resolution)
+- **Description**: _**Login failed**_ 
+- **Reason**: _The SSH key for auto-login is either not available, is unauthorized, or is password protected._ 
+- **Resolution**: _To manually log in to the host, click **Log in.**_ 
 
 ## Best practices for writing error messages
 
@@ -105,7 +103,7 @@ When providing users with a resolution, start the sentence with their goal ("the
 
 ## 404 error pages
 
-A "404 page" is an error page that a user lands on when the content they're trying to view either doesn’t exist or can’t be found. 404 pages are named after the type of error they communicate: “Error 404: Not found.”
+A **404 page** is an error page that a user lands on when the content they're trying to view either doesn’t exist or can’t be found. 404 pages are named after the type of error they communicate: “Error 404: Not found.”
 
 Write 404 pages with [error message best practices](/ux-writing/error-messages) in mind: Explain what a 404 error is, define how users can proceed, and provide the tools they need to get there.
 
