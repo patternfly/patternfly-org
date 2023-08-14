@@ -13,7 +13,7 @@ When creating guidelines, information must be presented in the following order. 
 ### Elements 
 Display an image of the component containing numbered annotation tags for each major part of the component's visual design. Include specific icons, headers, fields, symbols, and anything else included in the component's structure. Following the image, list all the parts you tagged, aligning with the number displayed in the respective annotation tag. In this list, provide a description of each one. For example:
 
-<img src="./img/elements-guidelines.png" alt="A screenshot of the slider component's element section with 8 elements outlined."/>
+<img src="./img/elements-example.png" alt="A screenshot of the slider component's element section with 8 elements outlined."/>
 
 ### Usage 
 Explain how the component is used, when to use it, and why it should be used. Include explanations of problems it could help solve and address its advantages over similar components. Include images for visual examples.
