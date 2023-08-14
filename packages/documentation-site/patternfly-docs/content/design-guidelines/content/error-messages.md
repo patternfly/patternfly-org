@@ -91,7 +91,7 @@ However, don’t include too much information. The user doesn’t need to know e
 <br /> 
 
 
-#### **Lead with the benefit**. 
+#### Lead with the benefit
 
 When providing users with a resolution, start the sentence with their goal ("the benefit"), followed by what they need to do to continue.  
 

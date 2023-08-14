@@ -3,6 +3,20 @@ id: Punctuation
 section: UX writing
 ---
 
+## Headings and titles
+Headings and titles can include punctuation, but should not end in punctuation. For example:
+
+<div class="ws-content-table">
+
+|**Before**  | **After** |
+|------------|-----------|
+| Style, voice, and tone. | Style, voice, and tone |
+| Getting started with PatternFly! | Getting started with PatternFly |
+
+</div>
+
+The exception for this rule is a question mark, when it is contextually important. For example, in a confirmation dialog, it is important that users understand what action they are about to take. A valid heading may include a question mark, such as "Delete service account?". 
+
 ## Referring to text in the UI
 When referring to an element or text in the UI, use bold text. Don't use quotation marks or italics -- those should be reserved for quotes and emphasis, respectively. For example:
 

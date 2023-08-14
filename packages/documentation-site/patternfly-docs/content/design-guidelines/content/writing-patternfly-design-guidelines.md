@@ -11,11 +11,9 @@ To learn how to contribute design guidelines, see our [contribution guide](https
 When creating guidelines, information must be presented in the following order. Sections may be omitted, but if present must use the following section headings (H2).
 
 ### Elements 
-Display an image of the component containing numbered annotation tags for each major part of the component's visual design. Include specific icons, headers, fields, symbols, and anything else included in the component's structure. Following the image, list all the parts you tagged, aligning with the number displayed in the respective annotation tag. In this list, provide a description of each one. 
+Display an image of the component containing numbered annotation tags for each major part of the component's visual design. Include specific icons, headers, fields, symbols, and anything else included in the component's structure. Following the image, list all the parts you tagged, aligning with the number displayed in the respective annotation tag. In this list, provide a description of each one. For example:
 
-Example:
-
-<img src="./img/sliderelements.png" alt="A screenshot of the slider component's element section with 8 elements outlined." width="750px" />
+<img src="./img/elements-guidelines.png" alt="A screenshot of the slider component's element section with 8 elements outlined."/>
 
 ### Usage 
 Explain how the component is used, when to use it, and why it should be used. Include explanations of problems it could help solve and address its advantages over similar components. Include images for visual examples.
