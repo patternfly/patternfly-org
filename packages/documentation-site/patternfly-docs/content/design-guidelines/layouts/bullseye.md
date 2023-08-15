@@ -8,8 +8,8 @@ The **bullseye** layout centers content, both vertically and horizontally within
 
 <img src="./img/bullseye-example.png"  alt="PatternFly website screenshot showing modal created with bullseye layout."  width="3330px"/>
 
-1. **Bullseye:** The bullseye container, which contains the bullseye child item
-2. **Bullseye item:** The bullseye child, which contains the section of content you want to be centered 
+1. **Bullseye:** The bullseye container, which contains the bullseye item
+2. **Bullseye item:** The section of content that you want to be centered 
 
 ## Usage 
 
