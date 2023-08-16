@@ -5,7 +5,7 @@ section: design-foundations
 import './spacers.css';
 
 
-PatternFly designs uses spacers to define fixed amounts of space between elements. Spacers make it easy for designers to maintain consistency across screens and  simplify the design handoff between designers and developers.
+PatternFly designs use spacers to define fixed amounts of space between elements. Spacers make it easy for designers to maintain consistency across screens and  simplify the design handoff between designers and developers.
 
 To see a list of all PatternFly CSS variables, including spacers [visit our developer resources.](/developer-resources/global-css-variables)
 
@@ -111,8 +111,7 @@ Some components like icons, buttons, and input fields, have a fixed amount of pa
 
 <img src="./padding-example.png" alt="Spacers example" style="background-color: var(--pf-v5-global--palette--white)" />
 
-<br/>
-
+<br/> <br/>
 ### Using spacers with text 
 
 When using spacers with text-based content, you should consider line height to ensure that you’re leaving the right amount of vertical space between each line of text. 
@@ -138,7 +137,7 @@ For example:
 <div class="ws-content-spacer16" style="height: 16px;">
 </div>
 <p class="ws-content-border ws-content-p" style="margin-bottom: 0;">
-  Body text should be Red Hat Text at 16px. It should have leading of 24px because of its relative line height of 1.5.
+  Body text should be Red Hat Text at 16px. It should have 24px of leading because of its relative line height of 1.5.
 </p>
 <div class="ws-content-spacer24" style="height: 24px;">
 </div>
@@ -148,7 +147,7 @@ For example:
 <div class="ws-content-spacer16" style="height: 16px;">
 </div>
 <p class="ws-content-border ws-content-p" style="margin-bottom: 0;">
-  Body text should be Red Hat Text at 16px. It should have leading of 24px because of its relative line height of 1.5.
+  Body text should be Red Hat Text at 16px. It should have 24px of leading because of its relative line height of 1.5.
 </p>
 <div class="ws-content-spacer16" style="height: 16px;">
 </div>
