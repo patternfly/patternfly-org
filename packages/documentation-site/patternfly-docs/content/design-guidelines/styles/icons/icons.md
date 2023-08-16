@@ -100,7 +100,6 @@ Visit our [colors page](/design-foundations/colors) to learn more about icon col
 
   No matter the size of an icon, when it is placed next to text, it should be center-aligned horizontally, as shown in our [link button example.](/components/button/design-guidelines#link-buttons) Stacked icons should also be center-aligned vertically.
 
-  <br></br>
   <div><img src="./icon_alignment.png" alt="Icon alignment" className="ws-icon-alignment" /></div>
   </GridItem>
 </Grid>
