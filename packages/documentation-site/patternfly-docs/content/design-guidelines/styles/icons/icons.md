@@ -96,10 +96,16 @@ Visit our [colors page](/design-foundations/colors) to learn more about icon col
     </Card>
   </GridItem>
   <GridItem xl={6} lg={12} className="ws-icons-gridtext ws-icons-alignment-section">
-    No matter the size of an icon, when it is placed next to text, it should be center-aligned horizontally, as shown in our [link button example.](/components/button/design-guidelines#link-buttons) Stacked icons should also be center-aligned vertically.
-    <div><img src="./icon_alignment.png" alt="Icon alignment" className="ws-icon-alignment" /></div>
+  <br></br>
+
+  No matter the size of an icon, when it is placed next to text, it should be center-aligned horizontally, as shown in our [link button example.](/components/button/design-guidelines#link-buttons) Stacked icons should also be center-aligned vertically.
+
+  <br></br>
+  <div><img src="./icon_alignment.png" alt="Icon alignment" className="ws-icon-alignment" /></div>
   </GridItem>
 </Grid>
+
+<br></br>
 
 ## PatternFly icons
 PatternFly uses custom icons and selections from <a href="https://fontawesome.com/icons?d=gallery&m=free">Font Awesome Free</a>. If PatternFly doesn't offer an icon for your use case, you can download SVGs of additional 'fa' icons from Font Awesome's free set. Be sure to properly attribute these additional icons as outlined on the Font Awesome site.
@@ -119,7 +125,7 @@ When using HTML, use the following syntax:
 When using React, include the following import line for 'pficon' icons: `import { [insert-icon-name] } from '@patternfly/react-icons'`
 
 ### Font Awesome solid (FAS) vs Font Awesome regular (FAR)
-The Font Awesome icons included with PatternFly are FAS (Font Awesome solid) webfont icons. If you're using icons via `<i class="[fa, far, fas] [insert-icon-name]"></i>`, you can use any FAS icon. If you need to use a FAR icon, you must include the FAR icon(s) yourself by doing one of the following:
+The Font Awesome icons included with PatternFly are Font Awesome solid (FAS) webfont icons. If you're using icons via `<i class="[fa, far, fas] [insert-icon-name]"></i>`, you can use any FAS icon. If you need to use a Font Awesome regular (FAR) icon, you must include the FAR icon(s) yourself by doing one of the following:
 
 1. [Hosting it yourself](https://fontawesome.com/how-to-use/on-the-web/setup/hosting-font-awesome-yourself)
 2. [Including the icon(s) via a package manager](https://fontawesome.com/how-to-use/on-the-web/setup/using-package-managers)
@@ -134,10 +140,3 @@ The following table outlines details for all icons supported by PatternFly, as w
 Select any single icon in the table to download it as an SVG. You can also download all icon SVGs <a href="https://github.com/patternfly/patternfly-design/raw/master/resources/patternfly-icon-svgs/patternfly-icons.zip">on GitHub</a>.
 
 <IconsTable />
-
-<Divider className="ws-icons-divider" />
-
-## Current icon recommendations
-The following table outlines our current recommendations for icon usage:
-
-<IconRecommendations />
