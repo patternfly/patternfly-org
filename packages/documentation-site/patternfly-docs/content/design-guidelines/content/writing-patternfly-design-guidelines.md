@@ -39,7 +39,7 @@ Additional sub-sections to include:
 ### Spacing (H2)
 Introduce spacing requirements for components and their content. For more information regarding proper spacing, refer to our [spacing guidelines.](/design-foundations/spacers)
 
-### Placement 
+### Placement (H2)
 Provide details on how components should be located and aligned in a UI and in relation to other components. 
 
 ### Content considerations (H2)
