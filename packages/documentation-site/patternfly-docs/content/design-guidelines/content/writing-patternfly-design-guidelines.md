@@ -42,7 +42,7 @@ Introduce spacing requirements for components and their content. For more inform
 ### Placement 
 Provide details on how components should be located and aligned in a UI and in relation to other components. 
 
-### Content considerations 
+### Content considerations (H2)
 Showcase the different content that could be included within your component. Here is where you can also give additional tips and tricks the user may want to know. Content guidance includes:
 
 - Editorial guidelines for labeling and message text.
