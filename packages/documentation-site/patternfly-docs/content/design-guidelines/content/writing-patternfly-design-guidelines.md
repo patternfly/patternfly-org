@@ -25,7 +25,6 @@ Additional (H3) sub-sections to include:
 #### When not to use 
 #### When to use X vs. Y 
 #### Examples of incorrect usage 
-#### Placement
 
 ### Behavior 
 Explain how the component functions and break down how its elements interact with each other to achieve its purpose. It may be helpful to include additional images or animations to demonstrate how the component works.
