@@ -38,6 +38,9 @@ Additional (H3) sub-sections to include:
 ### Spacing 
 Introduce spacing requirements for components and their content. For more information regarding proper spacing, refer to our [spacing guidelines.](/design-foundations/spacers)
 
+### Placement 
+Provide details on how components should be located and aligned in a UI and in relation to other components. 
+
 ### Content considerations 
 Showcase the different content that could be included within your component. Here is where you can also give additional tips and tricks the user may want to know. Content guidance includes:
 
