@@ -8,34 +8,35 @@ This guide provides instructions for writing clear and consistent design documen
 To learn how to contribute design guidelines, see our [contribution guide](https://github.com/patternfly/patternfly-org/wiki/Contributing-to-patternfly-org-for-designers).
 
 ## Design guidelines sections
-When creating guidelines, information must be presented in the following order. Sections may be omitted, but if present must use the following section headings (H2).
+When creating guidelines, refer to the following template to ensure that information is presented in a consistent order and within sections that are consistently named and structured. Sections may be omitted, but if they are present, you must use the specified section headings and heading levels.
 
-### Elements 
+### Elements (H2)
 Display an image of the component containing numbered annotation tags for each major part of the component's visual design. Include specific icons, headers, fields, symbols, and anything else included in the component's structure. Following the image, list all the parts you tagged, aligning with the number displayed in the respective annotation tag. In this list, provide a description of each one. 
 
 For example:
 
 <img src="./img/elements-example.png" alt="A screenshot of the slider component's element section with 8 elements outlined."/>
 
-### Usage 
+### Usage (H2)
 Explain how the component is used, when to use it, and why it should be used. Include explanations of problems it could help solve and address its advantages over similar components. Include images for visual examples.
 
-Additional (H3) sub-sections to include: 
-#### When to use 
-#### When not to use 
-#### When to use X vs. Y 
-#### Examples of incorrect usage 
+Additional  sub-sections to include: 
 
-### Behavior 
+#### When to use (H3)
+#### When not to use (H3)
+#### When to use X vs. Y (H3)
+#### Examples of incorrect usage (H3)
+
+### Behavior (H2)
 Explain how the component functions and break down how its elements interact with each other to achieve its purpose. It may be helpful to include additional images or animations to demonstrate how the component works.
 
-### Variations 
+### Variations (H2)
 Showcase different forms of your component and include explanations indicating when to use each one. 
 
-Additional (H3) sub-sections to include:
-#### When to use X variation vs. when to use Y variation
+Additional sub-sections to include:
+#### When to use X variation vs. when to use Y variation (H3)
 
-### Spacing 
+### Spacing (H2)
 Introduce spacing requirements for components and their content. For more information regarding proper spacing, refer to our [spacing guidelines.](/design-foundations/spacers)
 
 ### Placement 
@@ -48,7 +49,7 @@ Showcase the different content that could be included within your component. Her
 - Length restrictions and what to do when text overflows.
 - Localization considerations.
 
-### Accessibility 
+### Accessibility (H2)
 Each component that has an accessibility tab should include the following sentence within this section:
 
 "For information regarding accessibility, visit the [component name] accessibility tab."
