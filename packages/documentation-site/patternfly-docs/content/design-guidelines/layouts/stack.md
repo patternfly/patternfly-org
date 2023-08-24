@@ -2,30 +2,27 @@
 id: Stack
 section: layouts
 ---
-The **stack** layout positions items vertically, with one item filling the available vertical space.
+The **stack** layout positions items vertically, with one or more items filling the available vertical space.
 
 ## Elements
 
-Placeholder example image: 
 <img src="./img/stack-example.png"  alt="PatternFly website screenshot showing modal created with bullseye layout."  width="3330px"/>
 
-1. **Stack**: the stack container
-1. **Stack item**: the stack child
+1. **Stack**: The stack container, which holds all stack items.
+1. **Stack item**: An individual section of content to be placed in the stack. 
 
 ## Usage
 
 ### When to use stack vs other layouts 
 
-The stack layout does not wrap. If you need to use a wrapping layout, choose from the flex, gallery, level, or split layouts instead.
+The stack layout does not wrap. If you need a layout that wraps, instead choose the flex, gallery, level, or split layout instead.
 
 ## Variations
 
-You can modify an item's fill to allow a stack item to grow with available space. Multiple items can be set to fill. [link to example] Setting a fill to multiple items does not constrain their width. These items will grow as their content dictates needed space. 
+You can specifiy which stack item fill the remaining vertical space in the layout. More than one items can be set to fill, and they will share the remaining space equally. 
 
-Placeholder example image: 
 <img src="./img/stack-filled.png"  alt="PatternFly website screenshot showing modal created with bullseye layout."  width="3330px"/>
 
-You can apply gutters to adjust spacing between items.
+To adjust spacing between items, you can apply gutters.
 
-Placeholder example image: 
 <img src="./img/stack-gutter.png"  alt="PatternFly website screenshot showing modal created with bullseye layout."  width="3330px"/>
