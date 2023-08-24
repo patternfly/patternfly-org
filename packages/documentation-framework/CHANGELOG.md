@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 5.1.5 (2023-08-24)
+
+
+### Bug Fixes
+
+* **docs:** fix missing vars in global css vars table ([#3717](https://github.com/patternfly/patternfly-org/issues/3717)) ([81b57b3](https://github.com/patternfly/patternfly-org/commit/81b57b3cc5de3093f0e72bfd57352e7641bec178))
+
+
+
+
+
 ## 5.1.4 (2023-08-17)
 
 **Note:** Version bump only for package @patternfly/documentation-framework
