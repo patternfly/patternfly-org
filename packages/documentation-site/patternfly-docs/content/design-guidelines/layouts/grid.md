@@ -7,8 +7,8 @@ The **grid** layout places content on a fixed-size 12 column grid.
 ## Elements
 
 ![Grid example image](./img/grid-example.png)
-1. **Grid**: The grid container, which holds all grid items
-1. **Grid item**: An individual section of content to be placed in the grid
+1. **Grid**: The grid container, which holds all grid items.
+1. **Grid item**: An individual section of content to be placed in the grid.
 
 ## Usage
 
@@ -24,8 +24,14 @@ However, by following the rule that all items should span up to 12, the grid can
 
 ## Variations
 
-You can use gutters to adjust the spacing of items.
+### Gutters around items
+
+To adjust spacing between items, you can apply gutters.
 
 ![Grid with gutter](./img/grid-gutters.png)
 
+### Adjusted for different screens 
+
 By adjusting the column span, row span, and order at various breakpoints, you can adapt the grid for different screen sizes.
+
+[A couple of image examples?]
