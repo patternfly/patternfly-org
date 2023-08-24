@@ -111,7 +111,8 @@ Some components like icons, buttons, and input fields, have a fixed amount of pa
 
 <img src="./padding-example.png" alt="Spacers example" style="background-color: var(--pf-v5-global--palette--white)" />
 
-<br><br>
+<br/>
+
 ### Using spacers with text 
 
 When using spacers with text-based content, you should consider line height to ensure that you’re leaving the right amount of vertical space between each line of text. 
@@ -127,7 +128,8 @@ For example:
   Body text should be Red Hat Text at 16px. It should have 24px of lead space because of its relative line height of 1.5.
 </p>
 
-<br/></br>
+<br/>
+
 You also need to use different spacer sizes depending on the type of text you’re using. For example, you’ll need to provide a 16px spacer between a title and body copy, but only an 8px spacer between items in a bulleted or numbered list.
 
 For example:
