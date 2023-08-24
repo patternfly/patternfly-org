@@ -161,9 +161,9 @@ Toast alerts are commonly used in the following situations:
 - Informing the user that their action was completed with errors
 
 ## Placement
-Toast alerts should be placed on the top right of a page. Use 8px of padding between each alert in an alert group. Alert group alignment on a page will depend on your use case.
+Toast alerts should be placed in an alert group in the upper-right corner of a page. Use 8px of padding between each alert in an alert group. Alert group alignment on a page will depend on your use case.
 
-**For desktop views**, right-align toast alert groups over your page content. Each alert should stack on top of one another with 8px of padding in between.
+**For desktop views**, right align toast alert groups over your page content. Each alert should stack on top of one another with 8px of padding in between.
 
 <img src="./img/alert-group-desktop.png" alt="An example of a right-aligned toast alert group over a desktop view." />
 
