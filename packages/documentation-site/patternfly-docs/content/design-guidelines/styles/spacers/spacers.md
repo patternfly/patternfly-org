@@ -111,7 +111,7 @@ Some components like icons, buttons, and input fields, have a fixed amount of pa
 
 <img src="./padding-example.png" alt="Spacers example" style="background-color: var(--pf-v5-global--palette--white)" />
 
-<br/> <br/>
+<br><br>
 ### Using spacers with text 
 
 When using spacers with text-based content, you should consider line height to ensure that you’re leaving the right amount of vertical space between each line of text. 
