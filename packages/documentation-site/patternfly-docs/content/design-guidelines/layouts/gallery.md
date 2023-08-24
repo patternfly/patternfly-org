@@ -10,8 +10,8 @@ The gallery layout is designed so that all of its elements are of uniform size, 
 
 ![image](./img/gallery-example.png)
 
-1. **Gallery:** The gallery container that contains all gallery items
-1. **Gallery item:** The individual items in a gallery container
+1. **Gallery:** The gallery container, which contains all gallery items.
+1. **Gallery item:** And individual item to be placed in the gallery.
 
 ## Usage
 
@@ -21,9 +21,12 @@ Common use cases for the gallery layout include card views.
 
 ## Variations
 
-Gutters can be applied to increase the spacing of gallery items.
+### Gutters around items
 
-Both a minimum and maximum width can be defined for gallery items. These values determine the width that a gallery item is allowed to be before they wrap.
+To adjust spacing between items, you can apply gutters.
 
 ![image](./img/gallery-example-gutter.png)
 
+### Items that customized wrapping
+
+Both a minimum and maximum width can be defined for gallery items. These values determine the width that a gallery item is allowed to be before they wrap.
