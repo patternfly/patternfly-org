@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 5.1.7 (2023-08-24)
+
+
+### Bug Fixes
+
+* added rtl switch to fullpage examples ([#3719](https://github.com/patternfly/patternfly-org/issues/3719)) ([fc1f9ba](https://github.com/patternfly/patternfly-org/commit/fc1f9bacab352cf2db7418ae98b2f3c98cd47302))
+
+
+
+
+
 ## 5.1.6 (2023-08-24)
 
 **Note:** Version bump only for package @patternfly/documentation-framework
