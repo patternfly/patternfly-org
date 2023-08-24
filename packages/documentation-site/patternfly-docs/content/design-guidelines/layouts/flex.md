@@ -11,8 +11,8 @@ As an example, our [dashboard pattern](/patterns/dashboard) utilizes a flex layo
 
 <img src="./img/flex-example.png" alt="PatternFly website screenshot showing dashboard created with flex layout." width="3330px"/>
 
-1. **Flex:** The flex container, which contains flex child items
-1. **Flex item:** The flex children items
+1. **Flex:** The flex container, which contains all flex items.
+1. **Flex item:** An individual section of content to be placed in the flex container. 
 
 ## Usage
 
@@ -22,14 +22,15 @@ For example, our [dashboard pattern](/patterns/dashboard) combines the grid layo
 
 ### When to use 
 
-Use the flex layout when for content heavy UIs and when it is necessary to wrap UI elements.
+Use the flex layout with content heavy UIs and when it is necessary to wrap UI elements.
 
 ### When to use the flex layout vs the grid layout
-Also use the flex layout when a rigid grid is not necessary or wanted.
+
+Use the flex layout when a rigid grid is not necessary or wanted. If you need a more structured layout, consider using a grid.
 
 ## Variations
 
-The flex layout is based on the [CSS "flex" properties](https://www.w3schools.com/cssref/css3_pr_flex.php), which help determine how a flex item will grow or shrink to fit the space available in its container. These properties allow for variance in the implementation and appearance of flex layouts. 
+The flex layout is based on the [CSS "flex" properties](https://www.w3schools.com/cssref/css3_pr_flex.php), which help determine how a flex item will grow or shrink to fit the space available in its container. These properties allow for variation in the implementation and appearance of flex layouts. 
 
 Most of the flex layout variations are available at our standard breakpoints. In the future, we plan to apply these modifiers via [ResizeObserver](https://developer.mozilla.org/en-US/docs/Web/API/ResizeObserver). 
 
