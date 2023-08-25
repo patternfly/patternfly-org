@@ -191,8 +191,7 @@
   margin-bottom: var(--pf-v5-c-content--h2--MarginBottom);
   font-size: var(--pf-v5-c-content--h2--FontSize);
   font-weight: var(--pf-v5-c-content--h2--FontWeight);
-  line-height: var(--pf-v5-c-content--h2--LineHeight); }
-  .ws-h2:not(:first-child) {
+  line-height: var(--pf-v5-c-content--h2--LineHeight);
     margin-top: var(--pf-v5-c-content--h2--MarginTop); }
 .ws-h3 {
   margin-bottom: var(--pf-v5-c-content--h3--MarginBottom);

@@ -71,25 +71,14 @@ function serializeRoot(node, options) {
     .map(node => node.value)
     .map(imp => imp.replace(/(['"])\./g, (_, match) => `${match}${getRelPath()}${path.posix.sep}\.`));
 
-  // Map relative import name to '@package...'
-  const relativeImportsRegex = /(?:[\.\/]+.*)(@.*)['"]/gm;
+  // Build array of absolute import paths for relative imports
+  const relativeImportsRegex = /(import [^'"]*)['"](?:[\.\/]+(?:node_modules\/)?)(@?(?:(?!\.svg|\.jpe?g|\.png).)+)['"][;?]/gm;
   let relativeImportMatch;
-  let relativeImportMatches = {};
-  while (relativeImportMatch = relativeImportsRegex.exec(importStatements[0])) {
-    const [_match, absoluteImportPath] = relativeImportMatch;
-    if (absoluteImportPath && !absoluteImportPath.includes('srcImport')) {
-      // `@patternfly/react-core/src/demos/./examples/DashboardWrapper` to `DashboardWrapper`
-      let relativeFileImport = /(\.+\/.*)/gm.exec(absoluteImportPath);
-      if (relativeFileImport) {
-        // Build map of relative imports (from example.js code) to npm package import path (used in codesandbox.js)
-        const relativeFilePath = relativeFileImport[0];
-        const relativeImportName = relativeFilePath
-          .split('/')
-          .pop()
-          .split('.')
-          .shift();
-        relativeImportMatches[relativeImportName] = absoluteImportPath;
-      }
+  let relativeImportMatches = [];
+  while (relativeImportMatch = relativeImportsRegex.exec(importStatements.join())) {
+    const [match, importItems, absoluteImportPath] = relativeImportMatch;
+    if (absoluteImportPath && !match.includes('srcImport')) {
+      relativeImportMatches.push(`${importItems}'${absoluteImportPath}';`);
     }
   }
 
@@ -120,12 +109,8 @@ const pageData = ${JSON.stringify(pageData, null, 2)};
       '  ' + liveContext
     }\n};\n`
   }
-  if (relativeImportMatches) {
-    res += `pageData.relativeImports = {\n${
-      '  ' + Object.entries(relativeImportMatches)
-        .map(([key, val]) => `'${key}': '${val}'`)
-        .join(',\n  ')
-    }\n};\n`;
+  if (relativeImportMatches.length > 0) {
+    res += `pageData.relativeImports = "${relativeImportMatches}"\n`;
   }
   if (examples) {
     res += `pageData.examples = {\n${
