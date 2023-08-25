@@ -9,7 +9,7 @@ glob.sync(path.join(__dirname, "../build/patternfly-org/site/**"))
   .filter(file => fs.lstatSync(file).isFile())
   .forEach(file => {
     const newPath = file.replace("patternfly-org/site", `patternfly-org/${version}`);
-
+    
     if (file.endsWith('.js') || file.endsWith('.html')) {
       let contents = fs.readFileSync(file, 'utf8');
       contents = contents.replace(/\/site/g, `/${version}`);
@@ -20,6 +20,9 @@ glob.sync(path.join(__dirname, "../build/patternfly-org/site/**"))
     }
 
   });
+
+const outputDir = path.join(__dirname, "../build/patternfly-org");
+fs.moveSync(`${outputDir}/${version}`, `${outputDir}/site/${version}`);
 
 fs.writeFileSync(
   path.join(__dirname, '../build/patternfly-org/versions.json'),

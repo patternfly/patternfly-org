@@ -52,7 +52,6 @@ const MDXChildTemplate = ({
     ensureID(toc);
   }
   const innerContentWrapperClass = () => {
-    console.log(source);
     if (source === 'landing-pages') {
       return 'landing-pages';
     }
@@ -126,8 +125,8 @@ const MDXChildTemplate = ({
               <AutoLinkHeader size="h2" className="ws-h2" id="css-variables">
                 {cssVarsTitle}
               </AutoLinkHeader>
-              {cssPrefix.map(prefix => (
-                <CSSVariables autoLinkHeader={cssPrefix.length > 1} prefix={prefix} />
+              {cssPrefix.map((prefix, index) => (
+                <CSSVariables key={index} autoLinkHeader={cssPrefix.length > 1} prefix={prefix} />
               ))}
             </React.Fragment>
           )}
