@@ -2,7 +2,7 @@
 id: Grid
 section: layouts
 ---
-The **grid** layout places content on a fixed-size 12 column grid.
+The **grid** layout places content on a fixed 12 column grid.
 
 ## Elements
 
@@ -12,13 +12,13 @@ The **grid** layout places content on a fixed-size 12 column grid.
 
 ## Usage
 
-Grid items can be ordered in a number of ways to create groups. The span value of all grid items must equal 12, but this can be acheived through any combination of section sizes.
+Grid items can be ordered in a number of ways to create groups. The span value of all grid items must equal 12, but this can be achieved by combining different section sizes.
 
-For example, our [basic React example](/layouts/grid) organizes the following grid:
+For example, the [basic grid React example](/layouts/grid) is organized to create the following grid:
 
 ![Grid from React example](./img/original-grid-span.png)
 
-However, by following the rule that all items should span up to 12, the grid can easily be modified and readjusted:
+However, by following the rule that section sizes can be customized as long as the span equals 12, the grid structure can easily be modified and adjusted to your needs:
 
 ![Adjusted React example grid](./img/adjusted-grid-span.png)
 
@@ -32,6 +32,6 @@ To adjust spacing between items, you can apply gutters.
 
 ### Adjusted for different screens 
 
-By adjusting the column span, row span, and order at various breakpoints, you can adapt the grid for different screen sizes.
+By adjusting the column span, row span, and order at various [breakpoints](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes), you can adapt the grid for different screen sizes.
 
 [A couple of image examples?]
