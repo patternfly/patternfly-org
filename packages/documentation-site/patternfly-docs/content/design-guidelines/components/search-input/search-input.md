@@ -31,9 +31,9 @@ Another way to use search input is as a find function. This would mean that the 
 
 3. **Optional navigation:** The navigation feature allows the user to navigate 1-by-1 through the matched results. It will correspond to the count that is within the badge.
 
-4. **Match highlight:** All matches will be highlighted using `gold-50`from the [PatternFly color palette](/guidelines/colors#color-palette).
+4. **Match highlight:** All matches will be highlighted using `gold-50`from the [PatternFly color palette](/design-foundations/colors#color-palette).
 
-5. **Current highlight:** The active match will be highlighted with `gold-100` from the [PatternFly color palette](/guidelines/colors#color-palette). In this case, since the user is on match 2 of 5, “Node” in “Node 2” is highlighted.
+5. **Current highlight:** The active match will be highlighted with `gold-100` from the [PatternFly color palette](/design-foundations/colors#color-palette). In this case, since the user is on match 2 of 5, “Node” in “Node 2” is highlighted.
 
 ### Advanced search
 The [advanced search variant](/components/search-input#advanced) is intended for more advanced search use cases across multiple attribute-value pairs. It allows users to enter complex search queries from the keyboard or to fill out a search form. Use this component for search or filter queries that involve many attributes and when you want to give the user the option to use a form to complete the search criteria.

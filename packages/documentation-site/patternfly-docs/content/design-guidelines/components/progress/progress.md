@@ -56,7 +56,7 @@ A red progress bar represents a process that has failed. Accompany a failed prog
 
 ### Complete or success
 
-A green progress bar represents the successful completion of a process. Accompany a complete progress bar with a [green check-circle icon](/guidelines/icons/#all-icons) to demonstrate that the process has finished with no errors.
+A green progress bar represents the successful completion of a process. Accompany a complete progress bar with a [green check-circle icon](/design-foundations/icons/#all-icons) to demonstrate that the process has finished with no errors.
 
 <img src="./img/progress-bar-complete.png" alt="An example of a progress bar in a complete or successful state, with a green track, optional check-circle icon, and a title that indicates its status: 'Validated account credentials.'" width="560" />
 
