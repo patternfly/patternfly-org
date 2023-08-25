@@ -18,13 +18,13 @@ Use the split layout when content should be flexible and may change dynamically.
 
 ### Multiple items that fill space 
 
-You can specify which split item fills the remaining container space. More than one item can be set to fill, and they will share the remaining space equally.
+You can specify which split item fills the remaining container space. More than one item can be set to fill and they will share the remaining space equally.
 
 <img src="./img/split-filled.png" alt="PatternFly website screenshot showing modal created with bullseye layout." width="3330px"/>
 
 ### Items that wrap 
 
-You can wrap a split item to ensure that it fits among other content in the viewport as it is resized.
+You can wrap a split item to ensure that it properly fits alongside other content as the screen is resized.
 
 ### Gutters around items
 
