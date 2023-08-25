@@ -105,7 +105,7 @@ Left-align progress value text when it’s placed to the right of the track.
 
 Always set an “outside fixed width measure” for determinate progress bars. This fixed spacing should solve alignment use cases in which stacked progress bar values vary in length. 
 
-### Placement
+## Placement
 
 <img src="./img/progress-bar-do-dont.png" alt="A visual example of how to successfully place a progress bar in your designs, side by side with an example of unsuccessful placement. Never isolate a progress bar above, below, or outside of its corresponding content view — always align it with its relevant content." width="1135"/>
 
