@@ -130,12 +130,12 @@ function getReactParams(title, code, scope, lang, relativeImports, relPath, sour
     // Ignore
   }
 
-  // Point to sourcelink for @patternfly images
+  // Update image imports from package to sourcelink - note this relies on image import path in example .md to be accurate
   if (relPath.includes('@patternfly')) {
     const imgImportRegex = /(import \W*(\w*)\W*[^'"`]*['"`](.*\.(?:png|jpe?g|webp|gif|svg))['"])/gm;
     let imgImportMatch;
     while ((imgImportMatch = imgImportRegex.exec(code))) {
-      const [match, importDeclaration, imgName, relImgPath] = imgImportMatch;
+      const [_match, importDeclaration, imgName, relImgPath] = imgImportMatch;
       // Point to sourceLink hosted file
       const sourceLinkPath = new URL(relImgPath, sourceLink.replace('/blob/', '/raw/')).href;
       const hostedImageDeclaration = `const ${imgName} = "${sourceLinkPath}"`;
@@ -143,15 +143,18 @@ function getReactParams(title, code, scope, lang, relativeImports, relPath, sour
     }
   }
 
-  const relImportRegex = /(import[\s*{])([\w*{}\n\r\t, ]+)([\s*]from\s["']([\.\/]+.*)["'])/gm;
+  // Add absolute imports to codesandbox file - comes from mdx-hast-to-jsx.js
+  if (relativeImports?.length > 0) {
+    const absoluteImports = relativeImports.split(';,').join(';\n');
+    code = `${absoluteImports}\n${code}`;
+  }
+  // Remove relative imports from codesandbox file (ignore images, which are addressed separately above)
+  const relImportRegex = /(import [^'"]*)['"](?:[\.\/]+(?:node_modules\/)?)(@?(?:(?!\.svg|\.jpe?g|\.png).)+)['"][;?]/gm;
   let relImportMatch;
   while (relImportMatch = relImportRegex.exec(code)) {
-    const [ relImportName, _name, relImportPath ] = relImportMatch;
-    if (relativeImports[relImportName]) {
-      code = code.replace(relImportPath, relativeImports[relImportName]);
-    }
+    const [ relImportStatement, _relImportItems, _relImportPath ] = relImportMatch;
+    code = code.replace(relImportStatement, '');
   }
-
   
   const dependencies = {
     '@patternfly/react-core': versions.Releases[0].versions['@patternfly/react-core']
@@ -197,14 +200,14 @@ function getReactParams(title, code, scope, lang, relativeImports, relPath, sour
 </html>`,
       },
       [lang === 'ts' ? 'index.tsx' : 'index.js']: {
-        content: `import ReactDOM from 'react-dom';
+        content: `import { createRoot } from "react-dom/client";
 import "@patternfly/react-core/dist/styles/base.css";
 import './fonts.css';
 
 ${code}
 
-const rootElement = document.getElementById("root");
-ReactDOM.render(<${toRender} />, rootElement);`
+const container = document.getElementById("root");
+createRoot(container).render(<${toRender} />);`
       },
       'fonts.css': {
         content: overpass
@@ -213,8 +216,8 @@ ReactDOM.render(<${toRender} />, rootElement);`
         content: {
           dependencies: {
             ...dependencies,
-            'react': '^16.8.0',
-            'react-dom': '^16.8.0'
+            'react': '^18',
+            'react-dom': '^18'
           }
         },
       },
