@@ -40,12 +40,12 @@ Your use case dictates which of these components you should use:
 | You want to include formatted text and/or interactive elements in your message body. | Hint or popover |
 | You want the information to persist until the user dismisses it. | Hint or popover |
 |You want the information to be announced by a screen reader whenever the user tabs to an element.| Hint, popover, or tooltip <br /><br /> **Note:** By default, popovers are only triggered when the user clicks on an element. Therefore screen readers will not read popover text when tabbing through an interface. If a popover is triggered on hover (optional behavior), it will behave like a tooltip and its content will be announced whenever a keyboard user tabs to the trigger element. |
-|You want to present additional information that might not be necessary or relevant to all users.| Hint or popover <br /><br /> **Note:** Hint can be used to convey information to advanced users (such as “pro-tips”. However, since a hint adds static content to a page, you should consider whether it’s important for this information to be shown at all times.|
+|You want to present additional information that might not be necessary or relevant to all users.| Hint or popover <br /><br /> **Note:** Hints can be used to convey information to advanced users (such as “pro-tips”. However, since a hint adds static content to a page, you should consider whether it’s important for this information to be shown at all times.|
 
 ## Progressive disclosure
 Progressive disclosure is the practice of showing and hiding information as needed, in order to simplify a user interface. To progressively disclose content, we recommend using the **[accordion](/components/accordion)**, **[expandable sections](/components/expandable-section)**, and **[expandable field groups](/components/forms/form/#field-groups)**.
 
-- Accordians allow content to be placed in stackable, expandable containers so that content can be hidden from view to simplify presentation and reduce the need for scrolling.
+- Accordions allow content to be placed in stackable, expandable containers so that content can be hidden from view to simplify presentation and reduce the need for scrolling.
 
 - Expandable sections allow designers to hide a single block of content or settings behind a show/hide link. 
 
@@ -55,7 +55,7 @@ Your use case dictates which of these components you should use:
 
 | **Use case** | **Recommended component** |
 | ------------------------ | ----------- |
-| You want to group a list of actions, links, or other data into expandable groups. | Accordian |
+| You want to group a list of actions, links, or other data into expandable groups. | Accordion |
 |You want to hide advanced or seldomly used options within a form.| Expandable section or field group |
 |You want to give the user the ability to show or hide chunks of information on a long scrolling page.| Expandable section |
 
@@ -84,7 +84,7 @@ Your use case dictates which of these components you should use:
 
 | **Use case** | **Recommended component** |
 |------------------------ | -----------|
-|The user wants to select one or more items from a list of items.| Checkbox or switch <br /><br /> **Note:** Switches are sometimes used in place of checkboxes because they provides a larger touch target than a checkbox, which improves the mobile experience.
+|The user wants to select one or more items from a list of items.| Checkbox or switch <br /><br /> **Note:** Switches are sometimes used in place of checkboxes because they provide a larger touch target than a checkbox, which improves the mobile experience.
 |
 |The user wants to select from a set of mutually exclusive options.| Radio |
 |The user wants to enable an option or feature.| Checkbox, radio, or switch <br /><br /> **Note:** Checkboxes are often used to enable or disable software features, because they allow you to concisely display on/off settings. <br /><br /> **Note:** You can use 2 radio buttons to allow users to choose between options like on/off or enabled/disabled, however this approach uses more space and is only recommended when it’s important to make both labeled options visible at the same time.|
@@ -123,7 +123,7 @@ Your use case dictates which of these components you should use:
 ## Dropdown menus for actions and selections
 To allow users to select between items in a menu, we recommend using the **[select](/components/menus/select)**, **[options](/components/menus/options-menu)**, or **[dropdown](/components/menus/dropdown)** menu components.
 
-- Select menus all users to select one or more values from a list. 
+- Select menus allow users to select one or more values from a list. 
 
 - Options menus are similar to a select, but are more appropriate when users make selections from optional settings. 
 
