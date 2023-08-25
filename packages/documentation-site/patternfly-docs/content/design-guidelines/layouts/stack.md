@@ -21,7 +21,7 @@ The stack layout does not wrap. If you need a layout that wraps, instead choose 
 
 ### Multiple items that fill space 
 
-You can specifiy which stack item fill the remaining vertical space in the layout. More than one items can be set to fill, and they will share the remaining space equally. 
+You can specify which stack item fill the remaining vertical space in the layout. More than one item can be set to fill and they will share the remaining space equally. 
 
 <img src="./img/stack-filled.png"  alt="PatternFly website screenshot showing modal created with bullseye layout."  width="3330px"/>
 
