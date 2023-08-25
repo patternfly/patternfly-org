@@ -43,6 +43,7 @@ const HeaderTools = ({
 }) => {
   const initialVersion = staticVersions.Releases.find(release => release.latest);
   const latestVersion = versions.Releases.find(version => version.latest);
+  const previousReleases = Object.values(versions.Releases).filter(version => !version.hidden && !version.latest);
   const hasSearch = algolia;
   const [isDropdownOpen, setDropdownOpen] = useState(false);
   const [searchValue, setSearchValue] = React.useState('');
@@ -132,14 +133,15 @@ const HeaderTools = ({
                     {getDropdownItem(latestVersion, true)}
                   </DropdownList>
                 </DropdownGroup>
-                <DropdownGroup key="Previous releases" label="Previous releases">
-                  <DropdownList>
-                    {Object.values(versions.Releases)
-                      .filter(version => !version.hidden && !version.latest)
-                      .slice(0,3)
-                      .map(version => getDropdownItem(version))}
-                  </DropdownList>
-                </DropdownGroup>
+                {previousReleases.length > 0 && (
+                  <DropdownGroup key="Previous releases" label="Previous releases">
+                    <DropdownList>
+                      {previousReleases
+                        .slice(0,3)
+                        .map(version => getDropdownItem(version))}
+                    </DropdownList>
+                  </DropdownGroup>
+                )}
                 <Divider key="divider" className="ws-switcher-divider"/>
                 <DropdownGroup key="Previous versions" label="Previous versions">
                   <DropdownList>
