@@ -73,6 +73,7 @@ const AggregateCards = () => {
       {cardData.map((card, cardIndex) => {
         let cardAlign;
         const cardId = `clickable-stay-informed-card-${cardIndex}`;
+        const actionId = `stay-informed-card-input-${cardIndex}`;
         return (
           <GalleryItem key={card.title}>
             <Card
@@ -86,7 +87,7 @@ const AggregateCards = () => {
               <CardHeader
                 selectableActions={{
                   to: card.link,
-                  selectableActionId: `stay-informed-card-input-${cardIndex}`,
+                  selectableActionId: actionId,
                   selectableActionAriaLabelledby: cardId,
                   name: 'homepage-card',
                   isExternalLink: card.hasExtLinkIcon
@@ -117,15 +118,16 @@ const AggregateCards = () => {
 
 const FeaturedBlogCard = ({postData, idx}) => {
   const { URL, author, imageURL, length, title } = postData;
-  const cardId = `featured-blog-post-${idx + 1}`;
+  const cardId = `featured-blog-post-${idx}`;
+  const actionId = `card-article-input-${idx}`;
 
   return (
-    <Card id={cardId} component="article" isClickable key={`${title}-${idx}`}>
+    <Card id={cardId} component="article" isClickable key={idx}>
       <CardHeader
         className="v5-featured-posts-card-header-img"
         selectableActions={{
           to: URL,
-          selectableActionId: `card-article-input-${idx + 1}`,
+          selectableActionId: actionId,
           selectableActionAriaLabelledby: cardId,
           name: 'homepage-card',
           isExternalLink: true
