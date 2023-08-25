@@ -42,7 +42,7 @@ Use a progress stepper:
 
 Use a [wizard](/v4/components/wizard):
 * To guide the user through a multi-step flow where they must complete specific tasks in order. 
-* When the steps are complex enough to need to broken up into smaller, more manageable steps and does not keep user on the same screen.
+* When the steps are complex enough they need to be broken up into smaller, more manageable steps and does not keep user on the same screen.
 
 ## Variations
 There are a few variations of the progress stepper that can be used for different use cases. All variations can be displayed horizontally or vertically, and the text on each step can be left justified or centered.
