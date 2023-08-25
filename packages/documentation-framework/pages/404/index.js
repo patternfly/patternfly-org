@@ -100,7 +100,7 @@ const Page404 = () => {
           body="Check out PatternFly's design approach to icons, colors, and more."
           link={{
             text: 'View guidelines',
-            to: '/guidelines/colors'
+            to: '/design-foundations/colors'
           }}
         />
         <Card404

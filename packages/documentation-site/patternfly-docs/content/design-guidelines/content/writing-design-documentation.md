@@ -34,7 +34,7 @@ Additional sub-sections to include:
 #### When to use X variation vs. when to use Y variation
 
 ### Spacing (H2)
-Introduce spacing requirements for components and their content. For more information regarding proper spacing, refer to our [spacing guidelines.](https://www.patternfly.org/v4/guidelines/spacers/)
+Introduce spacing requirements for components and their content. For more information regarding proper spacing, refer to our [spacing guidelines.](https://www.patternfly.org/design-foundations/spacers/)
 
 ### Content considerations (H2)
 Showcase the different content that could be included within your component. Here is where you can also give additional tips and tricks the user may want to know. Content guidance includes:

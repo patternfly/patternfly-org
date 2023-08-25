@@ -13,7 +13,7 @@ A **donut utlization chart** is a donut chart used specifically to show utilizat
 <img src="./img/donut-utilization-2.png" alt="Donut utilization 2" width="404"/>
 
 1. **Unused segment fill:** The unused area of the donut chart will always remain at #EDEDED.
-2. **Used segment fill:** We recommend using #0066cc for the used area of the donut chart. See [colors for charts](/guidelines/colors-for-charts) for other recommended color options.
+2. **Used segment fill:** We recommend using #0066cc for the used area of the donut chart. See [colors for charts](/charts/colors-for-charts) for other recommended color options.
 3. **Utilization label:** Both percentages and whole numbers can be used to represent the utilization.
 4. **Chart tooltip:** Since this is a utilization donut chart, the tooltip will display the percentage of data utilized. Chart tooltips only appear on hover over the utilization segment of the chart. We recommend stating the segment name and the utilization value being captured. For example, if the user is tracking GBps utilization, the chart tooltip would state "GBps utilization: 75%."
 

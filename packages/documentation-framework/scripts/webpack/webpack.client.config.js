@@ -27,7 +27,7 @@ const clientConfig = async (env, argv) => {
   return {
     output: {
       path: argv.output ? path.resolve(argv.output) : path.resolve('public'),
-      filename: '[name].[contenthash].bundle.js'
+      filename: 'js/[name].[contenthash].bundle.js'
     },
     devServer: {
       hot: true,
@@ -85,7 +85,7 @@ const clientConfig = async (env, argv) => {
           exclude: reactCSSRegex,
           use: [
             {
-              loader: MiniCssExtractPlugin.loader,
+              loader: MiniCssExtractPlugin.loader
             },
             {
               loader: 'css-loader'
@@ -117,8 +117,8 @@ const clientConfig = async (env, argv) => {
         'process.env.PRERENDER': false,
       }),
       new MiniCssExtractPlugin(!isProd ? {} : {
-        filename: '[name].[contenthash].css',
-        chunkFilename: '[name].[contenthash].css',
+        filename: 'css/[name].[contenthash].css',
+        chunkFilename: 'css/[name].[contenthash].css',
       }),
       new CopyPlugin({
         patterns: [

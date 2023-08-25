@@ -12,5 +12,5 @@ A pie chart may be the wrong choice when you need to compare categories to one a
 ### Example
 <img src="./img/pie-chart.png" alt="Pie chart" width="428"/>
 
-1. **Pie chart fill:** We recommend fill colors based on the [colors for charts](/guidelines/colors-for-charts).
+1. **Pie chart fill:** We recommend fill colors based on the [colors for charts](/charts/colors-for-charts).
 2. **Legend:** Each variable on the legend should report their current value.
