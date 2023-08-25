@@ -111,7 +111,8 @@ Some components like icons, buttons, and input fields, have a fixed amount of pa
 
 <img src="./padding-example.png" alt="Spacers example" style="background-color: var(--pf-v5-global--palette--white)" />
 
-<br><br>
+<br/>
+<br/>
 
 ### Using spacers with text 
 
