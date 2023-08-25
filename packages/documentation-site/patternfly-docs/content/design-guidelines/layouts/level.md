@@ -11,7 +11,7 @@ By default, level items are placed on the page horizontally and wrap. The level 
 [add image]
 
 1. **Level:** The level container, which holds all level items.
-1. **Level item:** An individual section of content to be placed in the level. 
+1. **Level item:** An individual section of content to be placed in the level container. 
 
 ## Usage
 
@@ -19,6 +19,6 @@ The level layout can be used to ensure that sections of content are neatly and e
 
 ## Variations
 
-You can apply gutters to adjust the space between items.
+To adjust spacing between items, you can apply gutters.
 
 [add image]
