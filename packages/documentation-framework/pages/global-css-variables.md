@@ -102,7 +102,7 @@ Example:
 
 ## Global CSS variables
 
-<CSSVariables prefix="patternfly_variables" selector=":root" hideSelectorColumn />
+<CSSVariables prefix="patternfly_variables" selector=":where(:root)" hideSelectorColumn />
 
 ## Chart CSS variables
 
