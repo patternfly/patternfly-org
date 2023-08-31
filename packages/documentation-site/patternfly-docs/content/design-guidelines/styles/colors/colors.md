@@ -211,9 +211,7 @@ Our color palettes are created as a system, designed to reinforce content and wo
 
 Note that bright colors are used sparingly and are reserved for specific interactions, such as communicating status.
 
-Our color palettes are organized into "families" that contain different shades of the same hue. 
-
-In the following palettes, you can expand each color or shadow value to see more details.
+Our color palettes are organized into "families" that contain different shades of the same hue. In the following palettes, you can expand each value color or shadow in a family to see more details.
 
 <Grid hasGutter>
   <GridItem xl2RowSpan={1} xl2={4} xl={6} xlRowSpan={2} sm={12}>
