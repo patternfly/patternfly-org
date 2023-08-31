@@ -56,7 +56,7 @@ export const Footer = () => (
                   <li className="ws-org-pfsite-footer-menu-list-item">
                     <Link
                       className="ws-org-pfsite-footer-menu-link"
-                      to="/guidelines/colors"
+                      to="/design-foundations/colors"
                       aria-label="PatternFly 4 styles"
                     >
                       Styles
@@ -225,7 +225,7 @@ export const Footer = () => (
         </GridItem>
         <GridItem md={4} lg={3} xl={2}>
           <span className="ws-org-pfsite-site-copyright">
-            Copyright &copy; 2022 Red Hat, Inc.
+            Copyright &copy; 2014-{new Date().getFullYear()} Red Hat, Inc.
           </span>
         </GridItem>
         <GridItem md={4} lg={5} className="pf-v5-u-ml-xl-on-xl">

@@ -1,7 +1,7 @@
 {
   "name": "@patternfly/documentation-framework",
   "description": "A framework to build documentation for PatternFly.",
-  "version": "5.0.14",
+  "version": "5.1.10",
   "author": "Red Hat",
   "license": "MIT",
   "private": false,
@@ -17,7 +17,7 @@
     "@babel/plugin-transform-react-jsx": "7.17.12",
     "@babel/preset-env": "7.18.2",
     "@mdx-js/util": "1.6.16",
-    "@patternfly/ast-helpers": "^0.4.57",
+    "@patternfly/ast-helpers": "^1.1.10",
     "@reach/router": "npm:@gatsbyjs/reach-router@1.3.9",
     "autoprefixer": "9.8.6",
     "babel-loader": "9.1.2",
@@ -80,10 +80,10 @@
     "webpack-merge": "5.8.0"
   },
   "peerDependencies": {
-    "@patternfly/patternfly": "5.0.0-prerelease.13",
-    "@patternfly/react-code-editor": "5.0.0-prerelease.21",
-    "@patternfly/react-core": "5.0.0-prerelease.21",
-    "@patternfly/react-table": "5.0.0-prerelease.21",
+    "@patternfly/patternfly": "5.0.2",
+    "@patternfly/react-code-editor": "5.0.0",
+    "@patternfly/react-core": "5.0.0",
+    "@patternfly/react-table": "5.0.0",
     "react": "^17.0.0 || ^18.0.0",
     "react-dom": "^17.0.0 || ^18.0.0"
   }

@@ -3,6 +3,155 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 5.1.10 (2023-08-30)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 5.1.9 (2023-08-25)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 5.1.8 (2023-08-25)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 5.1.7 (2023-08-24)
+
+
+### Bug Fixes
+
+* added rtl switch to fullpage examples ([#3719](https://github.com/patternfly/patternfly-org/issues/3719)) ([fc1f9ba](https://github.com/patternfly/patternfly-org/commit/fc1f9bacab352cf2db7418ae98b2f3c98cd47302))
+
+
+
+
+
+## 5.1.6 (2023-08-24)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 5.1.5 (2023-08-24)
+
+
+### Bug Fixes
+
+* **docs:** fix missing vars in global css vars table ([#3717](https://github.com/patternfly/patternfly-org/issues/3717)) ([81b57b3](https://github.com/patternfly/patternfly-org/commit/81b57b3cc5de3093f0e72bfd57352e7641bec178))
+
+
+
+
+
+## 5.1.4 (2023-08-17)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 5.1.3 (2023-08-09)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 5.1.2 (2023-08-09)
+
+
+### Bug Fixes
+
+* clean up h2 and dark theme switcher styles ([#3690](https://github.com/patternfly/patternfly-org/issues/3690)) ([8319c0c](https://github.com/patternfly/patternfly-org/commit/8319c0ccecb018f72b277e070e4ccab1896f6cab))
+
+
+
+
+
+## 5.1.1 (2023-08-09)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+# 5.1.0 (2023-08-08)
+
+
+### Features
+
+* add released versions and changelog links to highlights ([#3688](https://github.com/patternfly/patternfly-org/issues/3688)) ([9591726](https://github.com/patternfly/patternfly-org/commit/9591726a8697ecadbc6d38c2dbc48905f85f0173))
+
+
+
+
+
+## 5.0.19 (2023-08-03)
+
+
+### Bug Fixes
+
+* **links:** fixed multiple broken linkes ([#3680](https://github.com/patternfly/patternfly-org/issues/3680)) ([669f6aa](https://github.com/patternfly/patternfly-org/commit/669f6aa1a27487dceae3225924f212016fd1fe8b))
+
+
+
+
+
+## 5.0.18 (2023-07-27)
+
+
+### Bug Fixes
+
+* bump ast-helpers version ([eb12d27](https://github.com/patternfly/patternfly-org/commit/eb12d272901bec5fd5153c34c9b9b5a5185cad0f))
+
+
+
+
+
+## 5.0.17 (2023-07-26)
+
+
+### Bug Fixes
+
+* update site in preperation for release ([#3662](https://github.com/patternfly/patternfly-org/issues/3662)) ([bacd4dc](https://github.com/patternfly/patternfly-org/commit/bacd4dc70c025a8e53dc226611d63036a27f9d7a))
+
+
+
+
+
+## 5.0.16 (2023-07-25)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 5.0.15 (2023-07-21)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
 ## 5.0.14 (2023-07-19)
 
 

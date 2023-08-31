@@ -56,7 +56,7 @@ A red progress bar represents a process that has failed. Accompany a failed prog
 
 ### Complete or success
 
-A green progress bar represents the successful completion of a process. Accompany a complete progress bar with a [green check-circle icon](/guidelines/icons/#all-icons) to demonstrate that the process has finished with no errors.
+A green progress bar represents the successful completion of a process. Accompany a complete progress bar with a [green check-circle icon](/design-foundations/icons/#all-icons) to demonstrate that the process has finished with no errors.
 
 <img src="./img/progress-bar-complete.png" alt="An example of a progress bar in a complete or successful state, with a green track, optional check-circle icon, and a title that indicates its status: 'Validated account credentials.'" width="560" />
 
@@ -105,7 +105,7 @@ Left-align progress value text when it’s placed to the right of the track.
 
 Always set an “outside fixed width measure” for determinate progress bars. This fixed spacing should solve alignment use cases in which stacked progress bar values vary in length. 
 
-### Placement
+## Placement
 
 <img src="./img/progress-bar-do-dont.png" alt="A visual example of how to successfully place a progress bar in your designs, side by side with an example of unsuccessful placement. Never isolate a progress bar above, below, or outside of its corresponding content view — always align it with its relevant content." width="1135"/>
 

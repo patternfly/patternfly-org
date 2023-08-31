@@ -41,3 +41,7 @@ When PatternFly does a release (currently every 3 weeks) this bucket is copied t
 You might have a dirty file tree with old submodules and folders lying around. You can remove these with:
 
     git clean -dfx
+
+### Contribute to HTML/CSS 
+
+To contribute to PatternFly's HTML/CSS core repo, refer to the [core contribution guide](https://github.com/patternfly/patternfly/blob/main/patternfly-docs/site/pages/contribution.md) and the related [guidelines](https://github.com/patternfly/patternfly/blob/main/patternfly-docs/site/pages/guidelines.md).

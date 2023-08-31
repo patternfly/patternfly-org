@@ -14,4 +14,4 @@ An advantageous feature of stacked bar charts is the ability to reorder the stac
 
 <img src="./img/vertical-stacked-bar-chart.png" alt="Vertical stacked bar chart" width="663"/>
 
-The first series name is represented by the topmost stacked bar, and the last series name is represented by the bottommost stacked bar. For recommendations on series colors, see [colors for charts](/guidelines/colors-for-charts).
+The first series name is represented by the topmost stacked bar, and the last series name is represented by the bottommost stacked bar. For recommendations on series colors, see [colors for charts](/charts/colors-for-charts).
