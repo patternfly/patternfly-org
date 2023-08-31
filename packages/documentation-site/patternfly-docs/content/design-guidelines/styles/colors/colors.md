@@ -8,7 +8,7 @@ import { ColorFamily } from './ColorFamily';
 import './colors.css';
 
 # PatternFly colors 
-This guide outlines the PatternFly color palette, as well as guidance for color use in different scenarios. Note that the color swatches and palettes automatically change to accomodate light or dark themes. To learn more about dark theme, refer to our [dark theme handbook](/delevoper-resources/dark-theme-handbook).
+This guide outlines the PatternFly color palette, as well as guidance for color use in different scenarios. Note that the color swatches and palettes automatically change to accommodate light or dark themes. To learn more about PatternFly’s dark theme, refer to our [dark theme handbook](/developer-resources/dark-theme-handbook).
 
 In this guide, you can select each color swatch to learn more details, such as hex values and usage guidance.
 
@@ -25,6 +25,7 @@ Refer to our developer resources to see a list of all [global CSS color variable
     </ColorSwatch>
     <ColorSwatch label="Hover" color="--pf-v5-global--primary-color--200">
       This color is used as the hover or focus state for components that use the default primary color.
+    </ColorSwatch>
   </GridItem>
   <GridItem xl={6} lg={12}>
     <img width="480px" src="./patternfly-blue.png" alt="PatternFly blue colors" />
