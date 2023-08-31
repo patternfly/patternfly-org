@@ -31,6 +31,6 @@ Use the flex layout when a rigid grid is not necessary or wanted. If you need a 
 
 The flex layout is based on the [CSS "flex" properties](https://www.w3schools.com/cssref/css3_pr_flex.php), which help determine how a flex item will grow or shrink to fit a containers available space. These properties allow for variation in the implementation and appearance of flex layouts. 
 
-Most of the flex layout variations are available at our standard [breakpoints](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes). In the future, we plan to apply these modifiers via [ResizeObserver](https://developer.mozilla.org/en-US/docs/Web/API/ResizeObserver). 
+Most of the flex layout variations are available at our standard [breakpoints](/developer-resources/global-css-variables). In the future, we plan to apply these modifiers via [ResizeObserver](https://developer.mozilla.org/en-US/docs/Web/API/ResizeObserver). 
 
 
