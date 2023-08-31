@@ -19,7 +19,7 @@ Flex layouts can be combined with other layouts to create versatile UIs.
 
 For example, our [dashboard pattern](/patterns/dashboard) combines the grid layout with flex to improve the responsiveness of information. Similarly, our [primary-detail pattern](/patterns/primary-detail/react-demos/primary-detail-full-page/) combines the stack layout with flex to ensure that icons and buttons are responsive to changes in screen size. 
 
-### When to use 
+### When to use the flex layout
 
 Use the flex layout with content heavy UIs and when it is necessary to wrap UI elements.
 
