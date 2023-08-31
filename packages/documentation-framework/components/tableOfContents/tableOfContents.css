@@ -4,8 +4,14 @@
   width: calc(100% + var(--pf-v5-c-page__main-section--PaddingLeft) + var(--pf-v5-c-page__main-section--PaddingRight));
   background-color: var(--pf-v5-global--BackgroundColor--200);
   z-index: 501;
-  margin: calc(var(--pf-v5-c-page__main-section--PaddingTop) * -1) calc(var(--pf-v5-c-page__main-section--PaddingRight) * -2) var(--pf-v5-global--spacer--md) calc(var(--pf-v5-c-page__main-section--PaddingLeft) * -1);
-  padding: var(--pf-v5-global--spacer--md) 0 var(--pf-v5-global--spacer--md) var(--pf-v5-global--spacer--md);
+  margin-block-start: calc(var(--pf-v5-c-page__main-section--PaddingTop) * -1);
+  margin-block-end: var(--pf-v5-global--spacer--md);
+  margin-inline-start: calc(var(--pf-v5-c-page__main-section--PaddingLeft) * -1);
+  margin-inline-end: calc(var(--pf-v5-c-page__main-section--PaddingRight) * -2);
+  padding-block-start: var(--pf-v5-global--spacer--md);
+  padding-block-end: var(--pf-v5-global--spacer--md);
+  padding-inline-start: var(--pf-v5-global--spacer--md);
+  padding-inline-end: 0;
   box-shadow: var(--pf-v5-global--BoxShadow--lg-bottom);
 }
 
