@@ -161,14 +161,17 @@ export const Example = ({
       <div id={previewId} className={css(className, 'pf-v5-u-h-100')}>
         {livePreview}
         {(hasDarkThemeSwitcher || hasRTLSwitcher) && (
-          <Flex direction={{ default: 'column' }} gap={{ default: 'gapLg' }} className="ws-full-page-utils ws-dir-ltr">
+          <Flex direction={{ default: 'column' }} gap={{ default: 'gapLg' }} className="ws-full-page-utils pf-v5-m-dir-ltr ">
             {hasDarkThemeSwitcher && (
-              <Switch id="ws-theme-switch" label="Dark theme" defaultChecked={false} onChange={() =>
+              <Switch id="ws-example-theme-switch" label="Dark theme" defaultChecked={false} onChange={() =>
               document.querySelector('html').classList.toggle('pf-v5-theme-dark')} />
             )}
             {hasRTLSwitcher && (
-              <Switch id="ws-rtl-switch" label="RTL" defaultChecked={false} onChange={() =>
-              document.querySelector('html').classList.toggle('ws-dir-rtl')} />
+              <Switch id="ws-example-rtl-switch" label="RTL" defaultChecked={false} onChange={() => {
+                const html = document.querySelector('html');
+                const curDir = html.dir;
+                html.dir = (curDir !== 'rtl') ? 'rtl' : 'ltr';
+            }} />
             )}
           </Flex>
         )}

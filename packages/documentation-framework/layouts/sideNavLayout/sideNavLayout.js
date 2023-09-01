@@ -17,6 +17,8 @@ import {
   MastheadBrand,
   MenuToggle,
   PageToggleButton,
+  ToggleGroup,
+  ToggleGroupItem,
   Toolbar,
   ToolbarGroup,
   ToolbarContent,
@@ -27,6 +29,8 @@ import {
 } from '@patternfly/react-core';
 import BarsIcon from '@patternfly/react-icons/dist/esm/icons/bars-icon';
 import GithubIcon from '@patternfly/react-icons/dist/esm/icons/github-icon';
+import AlignLeftIcon from '@patternfly/react-icons/dist/esm/icons/align-left-icon';
+import AlignRightIcon from '@patternfly/react-icons/dist/esm/icons/align-right-icon';
 import { SideNav, TopNav, GdprBanner } from '../../components';
 import staticVersions from '../../versions.json';
 import logoMd from '../logo__pf--reverse-on-md.svg';
@@ -39,6 +43,7 @@ const HeaderTools = ({
   hasVersionSwitcher,
   algolia,
   hasDarkThemeSwitcher,
+  hasRTLSwitcher,
   topNavItems
 }) => {
   const initialVersion = staticVersions.Releases.find(release => release.latest);
@@ -47,6 +52,7 @@ const HeaderTools = ({
   const [isDropdownOpen, setDropdownOpen] = useState(false);
   const [searchValue, setSearchValue] = React.useState('');
   const [isSearchExpanded, setIsSearchExpanded] = React.useState(false);
+  const [isRtl, setIsRtl] = useState(false);
 
   const getDropdownItem = (version, isLatest = false) => (
     <DropdownItem itemId={version.name} key={version.name} to={isLatest ? '/' : `/${version.name}`}>
@@ -85,6 +91,27 @@ const HeaderTools = ({
             <ToolbarItem>
               <Switch id="ws-theme-switch" label="Dark theme" defaultChecked={false} onChange={() =>
                 document.querySelector('html').classList.toggle('pf-v5-theme-dark')} />
+            </ToolbarItem>
+          )}
+          {hasRTLSwitcher && (
+            <ToolbarItem>
+              <ToggleGroup aria-label="Example direction toggle">
+                <ToggleGroupItem
+                  icon={isRtl ? <AlignRightIcon /> : <AlignLeftIcon />}
+                  aria-label="Toggle direction"
+                  buttonId="ws-rtl-toggle"
+                  isSelected={false}
+                  onChange={() => setIsRtl(isRtl => {
+                    const examples = document.querySelectorAll('.ws-example');
+                    examples.forEach(ex => ex.classList.toggle('pf-v5-m-dir-rtl'));
+                    return !isRtl;
+                  })}
+                />
+              </ToggleGroup>
+              <Switch id="ws-rtl-switch" label="Example direction" defaultChecked={false} onChange={() =>{
+                const examples = document.querySelectorAll('.ws-example');
+                examples.forEach(ex => ex.classList.toggle('pf-v5-m-dir-rtl'));
+              }} />
             </ToolbarItem>
           )}
           {hasSearch && (
@@ -194,6 +221,7 @@ export const SideNavLayout = ({ children, groupedRoutes, navOpen: navOpenProp })
   const hasGdprBanner = process.env.hasGdprBanner;
   const hasVersionSwitcher = process.env.hasVersionSwitcher;
   const hasDarkThemeSwitcher = process.env.hasDarkThemeSwitcher;
+  const hasRTLSwitcher = process.env.hasRTLSwitcher;
   const sideNavItems = process.env.sideNavItems;
   const topNavItems = process.env.topNavItems;
   const prnum = process.env.prnum;
@@ -246,6 +274,7 @@ export const SideNavLayout = ({ children, groupedRoutes, navOpen: navOpenProp })
             algolia={algolia}
             hasVersionSwitcher={hasVersionSwitcher}
             hasDarkThemeSwitcher={hasDarkThemeSwitcher}
+            hasRTLSwitcher={hasRTLSwitcher}
             topNavItems={topNavItems}
           />
         )}
