@@ -17,8 +17,6 @@ import {
   MastheadBrand,
   MenuToggle,
   PageToggleButton,
-  ToggleGroup,
-  ToggleGroupItem,
   Toolbar,
   ToolbarGroup,
   ToolbarContent,
@@ -95,22 +93,10 @@ const HeaderTools = ({
           )}
           {hasRTLSwitcher && (
             <ToolbarItem>
-              <ToggleGroup aria-label="Example direction toggle">
-                <ToggleGroupItem
-                  icon={isRtl ? <AlignRightIcon /> : <AlignLeftIcon />}
-                  aria-label="Toggle direction"
-                  buttonId="ws-rtl-toggle"
-                  isSelected={false}
-                  onChange={() => setIsRtl(isRtl => {
-                    const examples = document.querySelectorAll('.ws-example');
-                    examples.forEach(ex => ex.classList.toggle('pf-v5-m-dir-rtl'));
-                    return !isRtl;
-                  })}
-                />
-              </ToggleGroup>
-              <Switch id="ws-rtl-switch" label="Example direction" defaultChecked={false} onChange={() =>{
-                const examples = document.querySelectorAll('.ws-example');
-                examples.forEach(ex => ex.classList.toggle('pf-v5-m-dir-rtl'));
+              <Switch id="ws-rtl-switch" label={isRtl ? 'RTL' : 'LTR'} defaultChecked={false} onChange={() =>{
+                const examplePreviews = document.querySelectorAll('.ws-example .ws-preview');
+                examplePreviews.forEach(ex => ex.classList.toggle('pf-v5-m-dir-rtl'));
+                setIsRtl(isRTL => !isRTL);
               }} />
             </ToolbarItem>
           )}
