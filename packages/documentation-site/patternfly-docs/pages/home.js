@@ -83,6 +83,7 @@ const AggregateCards = () => {
               component="div"
               isFullHeight
               isClickable
+              aria-labelledby={`stay-informed-card-${cardIndex}-title`}
             >
               <CardHeader
                 selectableActions={{
@@ -93,7 +94,7 @@ const AggregateCards = () => {
                   isExternalLink: card.hasExtLinkIcon
                 }}
               >
-                <CardTitle>
+                <CardTitle id={`stay-informed-card-${cardIndex}-title`}>
                   <a href={card.link}>
                     {card.title}
                     {card.hasExtLinkIcon ? (
@@ -122,7 +123,7 @@ const FeaturedBlogCard = ({postData, idx}) => {
   const actionId = `card-article-input-${idx}`;
 
   return (
-    <Card id={cardId} component="article" isClickable key={idx}>
+    <Card id={cardId} component="div" isClickable key={idx} aria-labelledby={`featured-blog-post-${idx}-title`}>
       <CardHeader
         className="v5-featured-posts-card-header-img"
         selectableActions={{
@@ -137,7 +138,7 @@ const FeaturedBlogCard = ({postData, idx}) => {
         }}
       ></CardHeader>
       <Divider />
-      <CardTitle>
+      <CardTitle id={`featured-blog-post-${idx}-title`}>
         {" "}
         <a href={URL}>
           {title}
