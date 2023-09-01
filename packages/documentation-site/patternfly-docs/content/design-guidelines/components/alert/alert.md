@@ -60,21 +60,6 @@ If your use case falls outside of PatternFly's standard alert variations, use [i
  
 View custom alerts in action in our [custom alert examples](https://www.patternfly.org/v4/components/alert#custom-icons).
 
-### Placement
-Toast alerts should be placed on the top right of a page. Use 8px of padding between each alert in an alert group. Alert group alignment on a page will depend on your use case.
-
-**For desktop views**, right-align toast alert groups over your page content. Each alert should stack on top of one another with 8px of padding in between.
-
-<img src="./img/alert-group-desktop.png" alt="An example of a right-aligned toast alert group over a desktop view." />
-
-**For mobile views**, center toast alert groups over your page content.
-
-<img src="./img/alert-group-mobile.png" alt="An example of a centered toast alert group over a mobile view." width="375" />
-
-<img src="./img/alert-group-mobile.png" alt="An example of a centered toast alert group over a mobile view." width="375" />
-
-See our [toast alert guidelines](/components/alert/design-guidelines/#using-toast-alerts) for more information about using toast alerts.
-
 ### Managing overflow
 
 If you don't want multiple alerts to stack and fill the screen until the user dismisses them, you may use the overflow footer in an alert group to manage overflow. When applying overflow, you should decide how many alerts to display before showing the footer. A threshold of 3 alerts is recommended. After that, additional alerts added to the screen will cause older alerts to be hidden, and only the most recent 3 alerts are displayed.
@@ -174,7 +159,21 @@ Toast alerts are commonly used in the following situations:
 - Confirming that an update was made
 - Informing the user that their action was completed successfully
 - Informing the user that their action was completed with errors
- 
+
+## Placement
+Toast alerts should be placed in an alert group in the upper-right corner of a page. Use 8px of padding between each alert in an alert group. Alert group alignment on a page will depend on your use case.
+
+**For desktop views**, right align toast alert groups over your page content. Each alert should stack on top of one another with 8px of padding in between.
+
+<img src="./img/alert-group-desktop.png" alt="An example of a right-aligned toast alert group over a desktop view." />
+
+**For mobile views**, center toast alert groups over your page content.
+
+<img src="./img/alert-group-mobile.png" alt="An example of a centered toast alert group over a mobile view." width="375" />
+
+<img src="./img/alert-group-mobile.png" alt="An example of a centered toast alert group over a mobile view." width="375" />
+
+See our [toast alert guidelines](/components/alert/design-guidelines/#using-toast-alerts) for more information about using toast alerts.
 
 ## Content considerations
  
