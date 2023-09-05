@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, createContext } from 'react';
 import {
   Button,
   Page,
@@ -27,14 +27,11 @@ import {
 } from '@patternfly/react-core';
 import BarsIcon from '@patternfly/react-icons/dist/esm/icons/bars-icon';
 import GithubIcon from '@patternfly/react-icons/dist/esm/icons/github-icon';
-import AlignLeftIcon from '@patternfly/react-icons/dist/esm/icons/align-left-icon';
-import AlignRightIcon from '@patternfly/react-icons/dist/esm/icons/align-right-icon';
 import { SideNav, TopNav, GdprBanner } from '../../components';
 import staticVersions from '../../versions.json';
-import logoMd from '../logo__pf--reverse-on-md.svg';
-import logo from '../logo__pf--reverse--base.svg';
-import logoBase from '../logo__pf--reverse--base.png';
 import v5Logo from '../PF-HorizontalLogo-Reverse.svg';
+
+export const RtlContext = createContext(false);
 
 const HeaderTools = ({
   versions,
@@ -42,7 +39,9 @@ const HeaderTools = ({
   algolia,
   hasDarkThemeSwitcher,
   hasRTLSwitcher,
-  topNavItems
+  topNavItems,
+  isRTL,
+  setIsRTL
 }) => {
   const initialVersion = staticVersions.Releases.find(release => release.latest);
   const latestVersion = versions.Releases.find(version => version.latest);
@@ -50,7 +49,6 @@ const HeaderTools = ({
   const [isDropdownOpen, setDropdownOpen] = useState(false);
   const [searchValue, setSearchValue] = React.useState('');
   const [isSearchExpanded, setIsSearchExpanded] = React.useState(false);
-  const [isRtl, setIsRtl] = useState(false);
 
   const getDropdownItem = (version, isLatest = false) => (
     <DropdownItem itemId={version.name} key={version.name} to={isLatest ? '/' : `/${version.name}`}>
@@ -93,11 +91,7 @@ const HeaderTools = ({
           )}
           {hasRTLSwitcher && (
             <ToolbarItem>
-              <Switch id="ws-rtl-switch" label={isRtl ? 'RTL' : 'LTR'} defaultChecked={false} onChange={() =>{
-                const examplePreviews = document.querySelectorAll('.ws-example .ws-preview');
-                examplePreviews.forEach(ex => ex.classList.toggle('pf-v5-m-dir-rtl'));
-                setIsRtl(isRTL => !isRTL);
-              }} />
+              <Switch id="ws-rtl-switch" label={'RTL'} defaultChecked={isRTL} onChange={() => setIsRTL(isRTL => !isRTL)} />
             </ToolbarItem>
           )}
           {hasSearch && (
@@ -214,6 +208,7 @@ export const SideNavLayout = ({ children, groupedRoutes, navOpen: navOpenProp })
   const prurl = process.env.prurl;
 
   const [versions, setVersions] = useState({ ...staticVersions });
+  const [isRTL, setIsRTL] = useState(false);
 
   useEffect(() => {
     if (typeof window === 'undefined') {
@@ -262,6 +257,8 @@ export const SideNavLayout = ({ children, groupedRoutes, navOpen: navOpenProp })
             hasDarkThemeSwitcher={hasDarkThemeSwitcher}
             hasRTLSwitcher={hasRTLSwitcher}
             topNavItems={topNavItems}
+            isRTL={isRTL}
+            setIsRTL={setIsRTL}
           />
         )}
       </MastheadContent>
@@ -270,20 +267,22 @@ export const SideNavLayout = ({ children, groupedRoutes, navOpen: navOpenProp })
 
   return (
     <React.Fragment>
-      <div id="ws-page-banners">
-        {hasGdprBanner && <GdprBanner />}
-      </div>
-      <Page
-        id="ws-page"
-        mainContainerId="ws-page-main"
-        header={Header}
-        sidebar={SideBar}
-        skipToContent={<SkipToContent href="#ws-page-main">Skip to content</SkipToContent>}
-        isManagedSidebar
-        defaultManagedSidebarIsOpen={navOpenProp}
-      >
-        {children}
-      </Page>
+      <RtlContext.Provider value={ isRTL }>
+        <div id="ws-page-banners">
+          {hasGdprBanner && <GdprBanner />}
+        </div>
+        <Page
+          id="ws-page"
+          mainContainerId="ws-page-main"
+          header={Header}
+          sidebar={SideBar}
+          skipToContent={<SkipToContent href="#ws-page-main">Skip to content</SkipToContent>}
+          isManagedSidebar
+          defaultManagedSidebarIsOpen={navOpenProp}
+        >
+          {children}
+        </Page>
+      </RtlContext.Provider>
     </React.Fragment>
   );
 }

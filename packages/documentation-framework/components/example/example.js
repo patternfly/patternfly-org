@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { useLocation } from '@reach/router';
 import { Button, CodeBlock, Flex, CodeBlockCode, debounce, Label, Switch, Tooltip } from '@patternfly/react-core';
 import * as reactCoreModule from '@patternfly/react-core';
@@ -20,6 +20,7 @@ import {
 } from '../../helpers';
 import { convertToReactComponent } from '@patternfly/ast-helpers';
 import missingThumbnail from './missing-thumbnail.jpg';
+import { RtlContext } from '../../layouts';
 
 const errorComponent = err => <pre>{err.toString()}</pre>;
 
@@ -112,6 +113,7 @@ export const Example = ({
 
   const [editorCode, setEditorCode] = React.useState(code);
   const loc = useLocation();
+  const isRTL = useContext(RtlContext);
   const scope = {
     ...liveContext,
     // These 2 are in the bundle anyways for the site since we dogfood
@@ -239,7 +241,11 @@ export const Example = ({
           </div>
         : <div
             id={previewId}
-            className={css(className, isFullscreen ? 'ws-preview-fullscreen' : 'ws-preview')}
+            className={css(
+              className,
+              isFullscreen ? 'ws-preview-fullscreen' : 'ws-preview',
+              isRTL && 'pf-v5-m-dir-rtl')
+            }
           >
             {livePreview}
           </div>
