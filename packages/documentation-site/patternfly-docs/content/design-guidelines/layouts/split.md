@@ -26,6 +26,6 @@ You can wrap split items to ensure that they fit among other content as the scre
 
 ### Gutters around items
 
-To adjust spacing between spli items, you can apply gutters.
+To adjust spacing between split items, you can apply gutters.
 
 <img src="./img/split-gutter.png" alt="Example image showing a split layout with gutters." width="3330px"/>
