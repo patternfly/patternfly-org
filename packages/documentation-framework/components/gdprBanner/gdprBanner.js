@@ -13,7 +13,7 @@ export const GdprBanner = () => {
   }
 
   return !isBannerOpen ? null : (
-    <section aria-labelledby="ws-gdpr-banner-text" className="ws-gdpr-banner-container pf-v5-l-flex">
+    <section aria-label="Cookies on PatternFly" className="ws-gdpr-banner-container pf-v5-l-flex">
       <div id="ws-gdpr-banner" className="pf-v5-l-flex pf-v5-u-py-md pf-m-align-items-center">
         <p id="ws-gdpr-banner-text" className="pf-v5-u-ml-xl">
           We use cookies on our websites to deliver our online services.

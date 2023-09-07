@@ -72,8 +72,11 @@ const AggregateCards = () => {
     <Gallery hasGutter minWidths={{xl: "30%"}}>
       {cardData.map((card, cardIndex) => {
         let cardAlign;
-        const cardId = `clickable-stay-informed-card-${cardIndex}`;
-        const actionId = `stay-informed-card-input-${cardIndex}`;
+        const curCardCount = cardIndex + 1;
+        const cardId = `clickable-stay-informed-card-${curCardCount}`;
+        const actionId = `stay-informed-card-input-${curCardCount}`;
+        const cardTitleId = `stay-informed-card-${curCardCount}-title`;
+
         return (
           <GalleryItem key={card.title}>
             <Card
@@ -83,18 +86,17 @@ const AggregateCards = () => {
               component="div"
               isFullHeight
               isClickable
-              aria-labelledby={`stay-informed-card-${cardIndex}-title`}
             >
               <CardHeader
                 selectableActions={{
                   to: card.link,
                   selectableActionId: actionId,
-                  selectableActionAriaLabelledby: cardId,
+                  selectableActionAriaLabelledby: cardTitleId,
                   name: 'homepage-card',
                   isExternalLink: card.hasExtLinkIcon
                 }}
               >
-                <CardTitle id={`stay-informed-card-${cardIndex}-title`}>
+                <CardTitle id={cardTitleId}>
                   <a href={card.link}>
                     {card.title}
                     {card.hasExtLinkIcon ? (
@@ -119,17 +121,19 @@ const AggregateCards = () => {
 
 const FeaturedBlogCard = ({postData, idx}) => {
   const { URL, author, imageURL, length, title } = postData;
-  const cardId = `featured-blog-post-${idx}`;
-  const actionId = `card-article-input-${idx}`;
+  const curCardCount = idx + 1;
+  const cardId = `featured-blog-post-${curCardCount}`;
+  const actionId = `card-article-input-${curCardCount}`;
+  const cardTitleId = `featured-blog-post-${curCardCount}-title`;
 
   return (
-    <Card id={cardId} component="div" isClickable key={idx} aria-labelledby={`featured-blog-post-${idx}-title`}>
+    <Card id={cardId} component="div" isClickable key={idx}>
       <CardHeader
         className="v5-featured-posts-card-header-img"
         selectableActions={{
           to: URL,
           selectableActionId: actionId,
-          selectableActionAriaLabelledby: cardId,
+          selectableActionAriaLabelledby: cardTitleId,
           name: 'homepage-card',
           isExternalLink: true
         }}
@@ -138,7 +142,7 @@ const FeaturedBlogCard = ({postData, idx}) => {
         }}
       ></CardHeader>
       <Divider />
-      <CardTitle id={`featured-blog-post-${idx}-title`}>
+      <CardTitle id={cardTitleId}>
         {" "}
         <a href={URL}>
           {title}
