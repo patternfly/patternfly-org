@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 5.1.15 (2023-09-07)
+
+
+### Bug Fixes
+
+* **docs:** fix axe issues on home page ([#3731](https://github.com/patternfly/patternfly-org/issues/3731)) ([0675f2f](https://github.com/patternfly/patternfly-org/commit/0675f2fb5af977a066a04b38916ae7b51a2ee919))
+
+
+
+
+
 ## 5.1.14 (2023-09-06)
 
 
