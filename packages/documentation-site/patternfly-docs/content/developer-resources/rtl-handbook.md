@@ -1,6 +1,6 @@
 ---
 id: Right-to-left handbook
-title: PatternFly Right to Left handbook
+title: PatternFly right-to-left handbook
 section: developer-resources
 
 ---
@@ -30,7 +30,7 @@ To reverse a value, you can multiply by the variable `--#{$pf-global}--inverse--
 
 Care should be taken to handle icons appropriately for RTL. [Sometimes an icon should be reversed in RTL](https://m2.material.io/design/usability/bidirectionality.html#mirroring-elements) (for example, when indicating a direction such as an expansion caret), and sometimes it should not be reversed (such as a logo, or an icon indicating time). When the icon should be reversed, the modifier `.pf-v5-m-mirror-inline-rtl` can be used.
 
-## Resources
-There are [many nuances to how content is laid out through LTR and RTL](https://ltr.wtf/explained/bidiintro.html#the-good-the-bad-and-the-ugly), so it isn't always obvious what the correct result should be. Testing your site with native speakers is always recommended. 
-Material Design summarizes [which UI elements should be reversed in an RTL layout](https://m2.material.io/design/usability/bidirectionality.html#mirroring-layout).
-For a comprehensive discussion on RTL styling, refer to the [RTL Styling 101](https://rtlstyling.com/posts/rtl-styling) guide.
+## Best practices and resources
+- There are [many nuances to how content is laid out through LTR and RTL](https://ltr.wtf/explained/bidiintro.html#the-good-the-bad-and-the-ugly), so it isn't always obvious what the correct result should be. Testing your site with native speakers is always recommended. 
+- Material Design summarizes [which UI elements should be reversed in an RTL layout](https://m2.material.io/design/usability/bidirectionality.html#mirroring-layout).
+- For a comprehensive discussion on RTL styling, refer to the [RTL Styling 101](https://rtlstyling.com/posts/rtl-styling) guide.
