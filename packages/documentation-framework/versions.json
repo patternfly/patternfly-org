@@ -25,6 +25,7 @@
     {
       "name": "2023.02",
       "date": "2022-03-27",
+      "hidden": true,
       "versions": {
         "@patternfly/patternfly": "4.224.4",
         "@patternfly/react-catalog-view-extension": "4.96.0",
@@ -45,6 +46,7 @@
     {
       "name": "2023.01",
       "date": "2022-01-31",
+      "hidden": true,
       "versions": {
         "@patternfly/patternfly": "4.224.2",
         "@patternfly/react-catalog-view-extension": "4.95.1",
@@ -63,6 +65,7 @@
     },{
       "name": "2022.16",
       "date": "2022-12-15",
+      "hidden": true,
       "versions": {
         "@patternfly/patternfly": "4.222.4",
         "@patternfly/react-catalog-view-extension": "4.93.15",
@@ -81,6 +84,7 @@
     },{
       "name": "2022.15",
       "date": "2022-11-21",
+      "hidden": true,
       "versions": {
         "@patternfly/patternfly": "4.221.2",
         "@patternfly/react-catalog-view-extension": "4.93.0",
@@ -99,6 +103,7 @@
     },{
       "name": "2022.14",
       "date": "2022-11-01",
+      "hidden": true,
       "versions": {
         "@patternfly/patternfly": "4.219.2",
         "@patternfly/react-catalog-view-extension": "4.92.55",
@@ -117,6 +122,7 @@
     },{
       "name": "2022.13",
       "date": "2022-10-11",
+      "hidden": true,
       "versions": {
         "@patternfly/patternfly": "4.217.1",
         "@patternfly/react-catalog-view-extension": "4.92.26",
@@ -135,6 +141,7 @@
     },{
       "name": "2022.12",
       "date": "2022-9-16",
+      "hidden": true,
       "versions": {
         "@patternfly/patternfly": "4.215.1",
         "@patternfly/react-catalog-view-extension": "4.90.0",
@@ -154,6 +161,7 @@
     {
       "name": "2022.11",
       "date": "2022-8-31",
+      "hidden": true,
       "versions": {
         "@patternfly/patternfly": "4.210.2",
         "@patternfly/react-catalog-view-extension": "4.86.7",
@@ -173,6 +181,7 @@
     {
       "name": "2022.10",
       "date": "2022-8-16",
+      "hidden": true,
       "versions": {
         "@patternfly/patternfly": "4.206.3",
         "@patternfly/react-catalog-view-extension": "4.82.8",
@@ -192,6 +201,7 @@
     {
       "name": "2022.08",
       "date": "2022-6-30",
+      "hidden": true,
       "versions": {
         "@patternfly/patternfly": "4.202.1",
         "@patternfly/react-catalog-view-extension": "4.75.1",
@@ -211,6 +221,7 @@
     {
       "name": "2022.07",
       "date": "2022-6-3",
+      "hidden": true,
       "versions": {
         "@patternfly/patternfly": "4.196.7",
         "@patternfly/react-catalog-view-extension": "4.72.3",
@@ -230,6 +241,7 @@
     {
       "name": "2022.06",
       "date": "2022-5-13",
+      "hidden": true,
       "versions": {
         "@patternfly/patternfly": "4.194.4",
         "@patternfly/react-catalog-view-extension": "4.65.1",
@@ -249,6 +261,7 @@
     {
       "name": "2022.05",
       "date": "2022-4-25",
+      "hidden": true,
       "versions": {
         "@patternfly/patternfly": "4.192.1",
         "@patternfly/react-catalog-view-extension": "4.57.1",
@@ -267,6 +280,7 @@
     }, {
       "name": "2022.04",
       "date": "2022-4-7",
+      "hidden": true,
       "versions": {
         "@patternfly/patternfly": "4.185.1",
         "@patternfly/react-catalog-view-extension": "4.53.16",
@@ -286,6 +300,7 @@
     {
       "name": "2022.03",
       "date": "2022-3-10",
+      "hidden": true,
       "versions": {
         "@patternfly/patternfly": "4.183.1",
         "@patternfly/react-catalog-view-extension": "4.49.19",
@@ -305,6 +320,7 @@
     {
       "name": "2022.02",
       "date": "2022-2-22",
+      "hidden": true,
       "versions": {
         "@patternfly/patternfly": "4.179.1",
         "@patternfly/react-catalog-view-extension": "4.49.5",
@@ -323,6 +339,7 @@
     }, {
       "name": "2022.01",
       "date": "2022-1-28",
+      "hidden": true,
       "versions": {
         "@patternfly/patternfly": "4.171.1",
         "@patternfly/react-catalog-view-extension": "4.43.14",
@@ -341,6 +358,7 @@
     }, {
       "name": "2021.16",
       "date": "2021-12-13",
+      "hidden": true,
       "versions": {
         "@patternfly/patternfly": "4.164.2",
         "@patternfly/react-catalog-view-extension": "4.32.1",
@@ -359,6 +377,7 @@
     }, {
       "name": "2021.15",
       "date": "2021-11-16",
+      "hidden": true,
       "versions": {
         "@patternfly/patternfly": "4.159.1",
         "@patternfly/react-catalog-view-extension": "4.26.4",
@@ -377,6 +396,7 @@
     }, {
       "name": "2021.14",
       "date": "2021-10-28",
+      "hidden": true,
       "versions": {
         "@patternfly/patternfly": "4.151.4",
         "@patternfly/react-catalog-view-extension": "4.19.8",
@@ -396,6 +416,7 @@
     {
       "name": "2021.13",
       "date": "2021-10-13",
+      "hidden": true,
       "versions": {
         "@patternfly/patternfly": "4.144.4",
         "@patternfly/react-catalog-view-extension": "4.13.17",
@@ -415,6 +436,7 @@
     {
       "name": "2021.12",
       "date": "2021-09-20",
+      "hidden": true,
       "versions": {
         "@patternfly/patternfly": "4.135.2",
         "@patternfly/react-catalog-view-extension": "4.12.74",
@@ -434,6 +456,7 @@
     {
       "name": "2021.11",
       "date": "2021-08-26",
+      "hidden": true,
       "versions": {
         "@patternfly/patternfly": "4.132.2",
         "@patternfly/react-catalog-view-extension": "4.12.56",
@@ -453,6 +476,7 @@
     {
       "name": "2021.10",
       "date": "2021-08-04",
+      "hidden": true,
       "versions": {
         "@patternfly/patternfly": "4.125.3",
         "@patternfly/react-catalog-view-extension": "4.12.36",
@@ -472,6 +496,7 @@
     {
       "name": "2021.08",
       "date": "2021-06-23",
+      "hidden": true,
       "versions": {
         "@patternfly/patternfly": "4.115.2",
         "@patternfly/react-catalog-view-extension": "4.12.0",
@@ -491,6 +516,7 @@
     {
       "name": "2021.07",
       "date": "2021-06-07",
+      "hidden": true,
       "versions": {
         "@patternfly/patternfly": "4.108.2",
         "@patternfly/react-catalog-view-extension": "4.11.42",
@@ -510,6 +536,7 @@
     {
       "name": "2021.06",
       "date": "2021-05-17",
+      "hidden": true,
       "versions": {
         "@patternfly/patternfly": "4.103.6",
         "@patternfly/react-catalog-view-extension": "4.11.25",
@@ -529,6 +556,7 @@
     {
       "name": "2021.05",
       "date": "2021-04-23",
+      "hidden": true,
       "versions": {
         "@patternfly/patternfly": "4.102.2",
         "@patternfly/react-catalog-view-extension": "4.11.7",
@@ -547,6 +575,7 @@
     {
       "name": "2021.04",
       "date": "2021-04-01",
+      "hidden": true,
       "versions": {
         "@patternfly/patternfly": "4.96.2",
         "@patternfly/react-catalog-view-extension": "4.10.29",
@@ -565,6 +594,7 @@
     {
       "name": "2021.03",
       "date": "2021-03-10",
+      "hidden": true,
       "versions": {
         "@patternfly/patternfly": "4.90.5",
         "@patternfly/react-catalog-view-extension": "4.10.13",
@@ -583,6 +613,7 @@
     {
       "name": "2021.02",
       "date": "2021-02-17",
+      "hidden": true,
       "versions": {
         "@patternfly/patternfly": "4.87.3",
         "@patternfly/react-catalog-view-extension": "4.10.2",
@@ -601,6 +632,7 @@
     {
       "name": "2021.01",
       "date": "2021-01-27",
+      "hidden": true,
       "versions": {
         "@patternfly/patternfly": "4.87.2",
         "@patternfly/react-catalog-view-extension": "4.10.1",
@@ -619,6 +651,7 @@
     {
       "name": "2021.01",
       "date": "2021-01-27",
+      "hidden": true,
       "versions": {
         "@patternfly/patternfly": "4.80.3",
         "@patternfly/react-catalog-view-extension": "4.9.15",
@@ -637,6 +670,7 @@
     {
       "name": "2020.16",
       "date": "2020-12-15",
+      "hidden": true,
       "versions": {
         "@patternfly/patternfly": "4.70.2",
         "@patternfly/react-catalog-view-extension": "4.8.126",
@@ -654,6 +688,7 @@
     {
       "name": "2020.15",
       "date": "2020-11-18",
+      "hidden": true,
       "versions": {
         "@patternfly/patternfly": "4.65.6",
         "@patternfly/react-catalog-view-extension": "4.8.105",
@@ -672,6 +707,7 @@
     {
       "name": "2020.14",
       "date": "2020-10-27",
+      "hidden": true,
       "versions": {
         "@patternfly/patternfly": "4.59.1",
         "@patternfly/react-catalog-view-extension": "4.8.89",
@@ -689,6 +725,7 @@
     {
       "name": "2020.13",
       "date": "2020-10-06",
+      "hidden": true,
       "versions": {
         "@patternfly/patternfly": "4.50.4",
         "@patternfly/react-catalog-view-extension": "4.8.60",
@@ -706,6 +743,7 @@
     {
       "name": "2020.12",
       "date": "2020-09-18",
+      "hidden": true,
       "versions": {
         "@patternfly/patternfly": "4.42.2",
         "@patternfly/react-catalog-view-extension": "4.8.31",
@@ -723,6 +761,7 @@
     {
       "name": "2020.11",
       "date": "2020-08-26",
+      "hidden": true,
       "versions": {
         "@patternfly/patternfly": "4.35.2",
         "@patternfly/react-catalog-view-extension": "4.8.18",
@@ -740,6 +779,7 @@
     {
       "name": "2020.10",
       "date": "2020-08-17",
+      "hidden": true,
       "versions": {
         "@patternfly/patternfly": "4.31.6",
         "@patternfly/react-catalog-view-extension": "4.8.5",
@@ -757,6 +797,7 @@
     {
       "name": "2020.09",
       "date": "2020-07-17",
+      "hidden": true,
       "versions": {
         "@patternfly/patternfly": "4.23.3",
         "@patternfly/react-catalog-view-extension": "4.5.1",
@@ -774,6 +815,7 @@
     {
       "name": "2020.08",
       "date": "2020-06-24",
+      "hidden": true,
       "versions": {
         "@patternfly/patternfly": "4.16.7",
         "@patternfly/react-catalog-view-extension": "4.4.8",
@@ -791,6 +833,7 @@
     {
       "name": "2020.07",
       "date": "2020-06-05",
+      "hidden": true,
       "versions": {
         "@patternfly/patternfly": "4.10.31",
         "@patternfly/react-catalog-view-extension": "4.3.12",
@@ -808,6 +851,7 @@
     {
       "name": "2020.06",
       "date": "2020-05-11",
+      "hidden": true,
       "versions": {
         "@patternfly/patternfly": "2.71.6",
         "@patternfly/react-catalog-view-extension": "1.4.66",
@@ -825,6 +869,7 @@
     {
       "name": "2020.05",
       "date": "2020-04-21",
+      "hidden": true,
       "versions": {
         "@patternfly/patternfly": "2.71.5",
         "@patternfly/react-catalog-view-extension": "1.4.58",
@@ -842,6 +887,7 @@
     {
       "name": "2020.04",
       "date": "2020-03-31",
+      "hidden": true,
       "versions": {
         "@patternfly/patternfly": "2.71.3",
         "@patternfly/react-catalog-view-extension": "1.4.48",
@@ -859,6 +905,7 @@
     {
       "name": "2020.03",
       "date": "2020-03-13",
+      "hidden": true,
       "versions": {
         "@patternfly/patternfly": "2.68.3",
         "@patternfly/react-catalog-view-extension": "1.4.27",
@@ -876,6 +923,7 @@
     {
       "name": "2020.02",
       "date": "2020-02-19",
+      "hidden": true,
       "versions": {
         "@patternfly/patternfly": "2.65.2",
         "@patternfly/react-catalog-view-extension": "1.4.11",
@@ -893,6 +941,7 @@
     {
       "name": "2020.01",
       "date": "2020-01-28",
+      "hidden": true,
       "versions": {
         "@patternfly/patternfly": "2.56.3",
         "@patternfly/react-catalog-view-extension": "1.2.5",
@@ -910,6 +959,7 @@
     {
       "name": "2019.11",
       "date": "2019-12-18",
+      "hidden": true,
       "versions": {
         "@patternfly/patternfly": "2.46.1",
         "@patternfly/react-catalog-view-extension": "1.1.58",
@@ -927,6 +977,7 @@
     {
       "name": "2019.10",
       "date": "2019-11-25",
+      "hidden": true,
       "versions": {
         "@patternfly/patternfly": "2.43.1",
         "@patternfly/react-catalog-view-extension": "1.1.38",
