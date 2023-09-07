@@ -8,7 +8,7 @@ The **gallery** layout is used to arrange content in a responsive grid. Content 
 
 The gallery layout is designed so that all of its elements wrap responsively, are of uniform size, and are displayed horizontally.
 
-![image](./img/gallery-example.png)
+![Example image of gallery layout.](./img/gallery-example.png)
 
 1. **Gallery:** The gallery container, which contains all gallery items.
 1. **Gallery item:** An individual item to be placed in the gallery.
@@ -23,9 +23,7 @@ The gallery layout is commonly used for UIs that contain multiple card component
 
 ### Gutters around items
 
-To adjust spacing between items, you can apply gutters.
-
-![image](./img/gallery-example-gutter.png)
+If you want to add spacing between items (a common practice for card views), you can apply gutters.
 
 ### Items with customized wrapping
 
