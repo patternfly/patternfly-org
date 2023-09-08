@@ -24,7 +24,7 @@ Use the modifier class `.pf-v5-m-mirror-inline-rtl` to reverse an icon or other 
 
 To set direction manually on an element, use `.pf-v5-m-dir-ltr` or `.pf-v5-m-dir-rtl`.
 
-To reverse a value, you can multiply by the variable `--#{$pf-global}--inverse--multiplier`, which will have a value of 1 in LTR and -1 in RTL.
+To reverse a value, you can multiply by the variable `--pf-v5-global--inverse--multiplier`, which will have a value of 1 in LTR and -1 in RTL.
 
 ## Support in your product
 
