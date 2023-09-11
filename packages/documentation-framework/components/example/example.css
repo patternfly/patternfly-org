@@ -130,11 +130,3 @@
 .pf-v5-theme-dark .ws-theme-switch-full-page::before {
   background-color: var(--pf-v5-global--BackgroundColor--300);
 }
-
-.ws-dir-rtl {
-  direction: rtl;
-}
-
-.ws-dir-ltr {
-  direction: ltr;
-}
