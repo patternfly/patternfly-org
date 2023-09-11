@@ -84,9 +84,8 @@ Your use case dictates which of these components you should use:
 
 | **Use case** | **Recommended component** |
 |------------------------ | -----------|
-|The user wants to select one or more items from a list of items.| Checkbox or switch <br /><br /> **Note:** Switches are sometimes used in place of checkboxes because they provide a larger touch target than a checkbox, which improves the mobile experience.
-|
-|The user wants to select from a set of mutually exclusive options.| Radio |
+|The user wants to select one or more items from a list of items. | Checkbox or switch <br /><br /> **Note:** Switches are sometimes used in place of checkboxes because they provide a larger touch target than a checkbox, which improves the mobile experience. |
+| The user wants to select from a set of mutually exclusive options.| Radio |
 |The user wants to enable an option or feature.| Checkbox, radio, or switch <br /><br /> **Note:** Checkboxes are often used to enable or disable software features, because they allow you to concisely display on/off settings. <br /><br /> **Note:** You can use 2 radio buttons to allow users to choose between options like on/off or enabled/disabled, however this approach uses more space and is only recommended when it’s important to make both labeled options visible at the same time.|
 
 ## Displaying progress
