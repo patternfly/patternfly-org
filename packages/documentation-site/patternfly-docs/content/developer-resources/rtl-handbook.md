@@ -7,7 +7,7 @@ section: developer-resources
 
 To allow for internationalization of your product's content, it is important to implement bidirectional language support by developing for both right-to-left (RTL) and left-to-right (LTR) languages. 
 
-The default browser behavior displays content following LTR formatting. To support RTL languages, like Arabic and Hebrew, you will need to explicitly add RTL support. To support RTL languages the browser uses `dir="RTL"` and `lang="{language code}"` to lay out the page appropriately for the selected language. Setting `dir="RTL"` causes the browser to reverse and lay out the contents from right to left. The W3C provides [information about internationalization and the bidirectional algorithm](https://www.w3.org/International/techniques/authoring-html#direction).
+The default browser behavior displays content following LTR formatting. In order to support RTL languages like Arabic and Hebrew, you will need to explicitly add RTL support. To support RTL languages the browser uses `dir="RTL"` and `lang="{language code}"` to lay out the page appropriately for the selected language. Setting `dir="RTL"` causes the browser to reverse and lay out the contents from right to left. The W3C provides [information about internationalization and the bidirectional algorithm](https://www.w3.org/International/techniques/authoring-html#direction).
 
 ## Support in PatternFly
 
