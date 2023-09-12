@@ -18,7 +18,7 @@ Use the split layout when content should be flexible and may change dynamically.
 
 ### Multiple items that fill space 
 
-You can specify which split item fills the remaining horizontal space in the layout. More than one item can be set to fill, as, and they will share the remaining space equally.
+You can specify which split item fills the remaining horizontal space in the layout. More than one item can be set to fill, and they will share the remaining space equally.
 
 ### Items that wrap 
 
