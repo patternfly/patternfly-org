@@ -14,7 +14,6 @@ The **grid** layout places content on a fixed 12 column grid.
 
 Grid items can be ordered in a number of ways to create groups. The span value of all grid items must equal 12, but this can be achieved by combining different section sizes.
 
-However, by following the rule that all items should span up to 12, the grid can easily be modified and readjusted:
 
 ![Example of grid layout with adjusted span.](./img/adjusted-grid-span.png)
 
