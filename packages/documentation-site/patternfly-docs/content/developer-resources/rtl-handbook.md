@@ -24,7 +24,7 @@ Use the modifier class `.pf-v5-m-mirror-inline-rtl` to reverse an icon or other 
 
 To set direction manually on an element, use `.pf-v5-m-dir-ltr` or `.pf-v5-m-dir-rtl`.
 
-To reverse a value, you can multiply by the variable `--pf-v5-global--inverse--multiplier`, which will have a value of 1 in LTR and -1 in RTL.
+To get the inverse of a number, dimension, or percentage, you can multiply by the variable `--pf-v5-global--inverse--multiplier`, which will have a value of 1 in LTR and -1 in RTL.
 
 ## Support in your product
 
@@ -32,5 +32,7 @@ Care should be taken to handle icons appropriately for RTL. [Sometimes an icon s
 
 ## Best practices and resources
 - There are [many nuances to how content is laid out through LTR and RTL](https://ltr.wtf/explained/bidiintro.html#the-good-the-bad-and-the-ugly), so it isn't always obvious what the correct result should be. Testing your site with native speakers is always recommended. 
+- The W3C's guide for [inline markup and bidirectional text in HTML](https://www.w3.org/International/articles/inline-bidi-markup/) explains how to write HTML within a paragraph or other inline content. 
+- The W3C's guide for [structural markup and right-to-left text in HTML](https://www.w3.org/International/articles/inline-bidi-markup/) covers ways of handling text direction at the document level and for elements.
 - Material Design summarizes [which UI elements should be reversed in an RTL layout](https://m2.material.io/design/usability/bidirectionality.html#mirroring-layout).
 - For a comprehensive discussion on RTL styling, refer to the [RTL Styling 101](https://rtlstyling.com/posts/rtl-styling) guide.
