@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { useLocation } from '@reach/router';
-import { Button, CodeBlock, CodeBlockCode, debounce, Label, Switch, Tooltip } from '@patternfly/react-core';
+import { Button, CodeBlock, Flex, CodeBlockCode, debounce, Label, Switch, Tooltip } from '@patternfly/react-core';
 import * as reactCoreModule from '@patternfly/react-core';
 import * as reactCoreNextModule from '@patternfly/react-core/next';
 import * as reactCoreDeprecatedModule from '@patternfly/react-core/deprecated';
@@ -20,6 +20,7 @@ import {
 } from '../../helpers';
 import { convertToReactComponent } from '@patternfly/ast-helpers';
 import missingThumbnail from './missing-thumbnail.jpg';
+import { RtlContext } from '../../layouts';
 
 const errorComponent = err => <pre>{err.toString()}</pre>;
 
@@ -86,6 +87,8 @@ export const Example = ({
   children,
   // Show dark theme switcher on full page examples
   hasDarkThemeSwitcher = process.env.hasDarkThemeSwitcher,
+  // Show dark theme switcher on full page examples
+  hasRTLSwitcher = process.env.hasRTLSwitcher,
   // Map of relative imports matched to their npm package import path (passed to Codesandbox)
   relativeImports,
   // md file location in node_modules, used to resolve relative import paths in examples
@@ -110,6 +113,7 @@ export const Example = ({
 
   const [editorCode, setEditorCode] = React.useState(code);
   const loc = useLocation();
+  const isRTL = useContext(RtlContext);
   const scope = {
     ...liveContext,
     // These 2 are in the bundle anyways for the site since we dogfood
@@ -158,11 +162,20 @@ export const Example = ({
     return (
       <div id={previewId} className={css(className, 'pf-v5-u-h-100')}>
         {livePreview}
-        {hasDarkThemeSwitcher && (
-          <div className="ws-theme-switch-full-page">
-            <Switch id="ws-theme-switch" label="Dark theme" defaultChecked={false} onChange={() =>
-            document.querySelector('html').classList.toggle('pf-v5-theme-dark')} />
-          </div>
+        {(hasDarkThemeSwitcher || hasRTLSwitcher) && (
+          <Flex direction={{ default: 'column' }} gap={{ default: 'gapLg' }} className="ws-full-page-utils pf-v5-m-dir-ltr ">
+            {hasDarkThemeSwitcher && (
+              <Switch id="ws-example-theme-switch" label="Dark theme" defaultChecked={false} onChange={() =>
+              document.querySelector('html').classList.toggle('pf-v5-theme-dark')} />
+            )}
+            {hasRTLSwitcher && (
+              <Switch id="ws-example-rtl-switch" label="RTL" defaultChecked={false} onChange={() => {
+                const html = document.querySelector('html');
+                const curDir = html.dir;
+                html.dir = (curDir !== 'rtl') ? 'rtl' : 'ltr';
+            }} />
+            )}
+          </Flex>
         )}
       </div>
     );
@@ -228,7 +241,11 @@ export const Example = ({
           </div>
         : <div
             id={previewId}
-            className={css(className, isFullscreen ? 'ws-preview-fullscreen' : 'ws-preview')}
+            className={css(
+              className,
+              isFullscreen ? 'ws-preview-fullscreen' : 'ws-preview',
+              isRTL && 'pf-v5-m-dir-rtl')
+            }
           >
             {livePreview}
           </div>

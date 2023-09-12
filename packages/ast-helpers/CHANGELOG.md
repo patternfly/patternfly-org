@@ -3,6 +3,106 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.1.15 (2023-09-07)
+
+
+### Bug Fixes
+
+* **docs:** fix axe issues on home page ([#3731](https://github.com/patternfly/patternfly-org/issues/3731)) ([0675f2f](https://github.com/patternfly/patternfly-org/commit/0675f2fb5af977a066a04b38916ae7b51a2ee919))
+
+
+
+
+
+## 1.1.14 (2023-09-06)
+
+
+### Bug Fixes
+
+* **docs:** hid previous v4 releases from version switcher on v5 ([#3732](https://github.com/patternfly/patternfly-org/issues/3732)) ([b47810f](https://github.com/patternfly/patternfly-org/commit/b47810f265f10f4ca4aeac93e2f8e254c40ac5c5))
+
+
+
+
+
+## 1.1.13 (2023-09-06)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+## 1.1.12 (2023-09-01)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+## 1.1.11 (2023-08-31)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+## 1.1.10 (2023-08-30)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+## 1.1.9 (2023-08-25)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+## 1.1.8 (2023-08-25)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+## 1.1.7 (2023-08-24)
+
+
+### Bug Fixes
+
+* added rtl switch to fullpage examples ([#3719](https://github.com/patternfly/patternfly-org/issues/3719)) ([fc1f9ba](https://github.com/patternfly/patternfly-org/commit/fc1f9bacab352cf2db7418ae98b2f3c98cd47302))
+
+
+
+
+
+## 1.1.6 (2023-08-24)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+## 1.1.5 (2023-08-24)
+
+
+### Bug Fixes
+
+* **docs:** fix missing vars in global css vars table ([#3717](https://github.com/patternfly/patternfly-org/issues/3717)) ([81b57b3](https://github.com/patternfly/patternfly-org/commit/81b57b3cc5de3093f0e72bfd57352e7641bec178))
+
+
+
+
+
 ## 1.1.4 (2023-08-17)
 
 **Note:** Version bump only for package @patternfly/ast-helpers
