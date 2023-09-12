@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, createContext } from 'react';
 import {
   Button,
   Page,
@@ -29,20 +29,23 @@ import BarsIcon from '@patternfly/react-icons/dist/esm/icons/bars-icon';
 import GithubIcon from '@patternfly/react-icons/dist/esm/icons/github-icon';
 import { SideNav, TopNav, GdprBanner } from '../../components';
 import staticVersions from '../../versions.json';
-import logoMd from '../logo__pf--reverse-on-md.svg';
-import logo from '../logo__pf--reverse--base.svg';
-import logoBase from '../logo__pf--reverse--base.png';
 import v5Logo from '../PF-HorizontalLogo-Reverse.svg';
+
+export const RtlContext = createContext(false);
 
 const HeaderTools = ({
   versions,
   hasVersionSwitcher,
   algolia,
   hasDarkThemeSwitcher,
-  topNavItems
+  hasRTLSwitcher,
+  topNavItems,
+  isRTL,
+  setIsRTL
 }) => {
   const initialVersion = staticVersions.Releases.find(release => release.latest);
   const latestVersion = versions.Releases.find(version => version.latest);
+  const previousReleases = Object.values(versions.Releases).filter(version => !version.hidden && !version.latest);
   const hasSearch = algolia;
   const [isDropdownOpen, setDropdownOpen] = useState(false);
   const [searchValue, setSearchValue] = React.useState('');
@@ -85,6 +88,11 @@ const HeaderTools = ({
             <ToolbarItem>
               <Switch id="ws-theme-switch" label="Dark theme" defaultChecked={false} onChange={() =>
                 document.querySelector('html').classList.toggle('pf-v5-theme-dark')} />
+            </ToolbarItem>
+          )}
+          {hasRTLSwitcher && (
+            <ToolbarItem>
+              <Switch id="ws-rtl-switch" label={'RTL'} defaultChecked={isRTL} onChange={() => setIsRTL(isRTL => !isRTL)} />
             </ToolbarItem>
           )}
           {hasSearch && (
@@ -132,14 +140,15 @@ const HeaderTools = ({
                     {getDropdownItem(latestVersion, true)}
                   </DropdownList>
                 </DropdownGroup>
-                <DropdownGroup key="Previous releases" label="Previous releases">
-                  <DropdownList>
-                    {Object.values(versions.Releases)
-                      .filter(version => !version.hidden && !version.latest)
-                      .slice(0,3)
-                      .map(version => getDropdownItem(version))}
-                  </DropdownList>
-                </DropdownGroup>
+                {previousReleases.length > 0 && (
+                  <DropdownGroup key="Previous releases" label="Previous releases">
+                    <DropdownList>
+                      {previousReleases
+                        .slice(0,3)
+                        .map(version => getDropdownItem(version))}
+                    </DropdownList>
+                  </DropdownGroup>
+                )}
                 <Divider key="divider" className="ws-switcher-divider"/>
                 <DropdownGroup key="Previous versions" label="Previous versions">
                   <DropdownList>
@@ -194,12 +203,14 @@ export const SideNavLayout = ({ children, groupedRoutes, navOpen: navOpenProp })
   const hasGdprBanner = process.env.hasGdprBanner;
   const hasVersionSwitcher = process.env.hasVersionSwitcher;
   const hasDarkThemeSwitcher = process.env.hasDarkThemeSwitcher;
+  const hasRTLSwitcher = process.env.hasRTLSwitcher;
   const sideNavItems = process.env.sideNavItems;
   const topNavItems = process.env.topNavItems;
   const prnum = process.env.prnum;
   const prurl = process.env.prurl;
 
   const [versions, setVersions] = useState({ ...staticVersions });
+  const [isRTL, setIsRTL] = useState(false);
 
   useEffect(() => {
     if (typeof window === 'undefined') {
@@ -246,7 +257,10 @@ export const SideNavLayout = ({ children, groupedRoutes, navOpen: navOpenProp })
             algolia={algolia}
             hasVersionSwitcher={hasVersionSwitcher}
             hasDarkThemeSwitcher={hasDarkThemeSwitcher}
+            hasRTLSwitcher={hasRTLSwitcher}
             topNavItems={topNavItems}
+            isRTL={isRTL}
+            setIsRTL={setIsRTL}
           />
         )}
       </MastheadContent>
@@ -255,20 +269,22 @@ export const SideNavLayout = ({ children, groupedRoutes, navOpen: navOpenProp })
 
   return (
     <React.Fragment>
-      <div id="ws-page-banners">
-        {hasGdprBanner && <GdprBanner />}
-      </div>
-      <Page
-        id="ws-page"
-        mainContainerId="ws-page-main"
-        header={Header}
-        sidebar={SideBar}
-        skipToContent={<SkipToContent href="#ws-page-main">Skip to content</SkipToContent>}
-        isManagedSidebar
-        defaultManagedSidebarIsOpen={navOpenProp}
-      >
-        {children}
-      </Page>
+      <RtlContext.Provider value={ isRTL }>
+        <div id="ws-page-banners">
+          {hasGdprBanner && <GdprBanner />}
+        </div>
+        <Page
+          id="ws-page"
+          mainContainerId="ws-page-main"
+          header={Header}
+          sidebar={SideBar}
+          skipToContent={<SkipToContent href="#ws-page-main">Skip to content</SkipToContent>}
+          isManagedSidebar
+          defaultManagedSidebarIsOpen={navOpenProp}
+        >
+          {children}
+        </Page>
+      </RtlContext.Provider>
     </React.Fragment>
   );
 }
