@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.2.0 (2023-09-13)
+
+
+### Features
+
+* **extensions:** Added extensions only build to patternfly org. ([#3747](https://github.com/patternfly/patternfly-org/issues/3747)) ([a636ad3](https://github.com/patternfly/patternfly-org/commit/a636ad379d87c07723d08a79849586387ff8d5b8))
+
+
+
+
+
 ## 1.1.16 (2023-09-12)
 
 **Note:** Version bump only for package @patternfly/ast-helpers
