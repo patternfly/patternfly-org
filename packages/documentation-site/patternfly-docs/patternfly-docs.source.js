@@ -135,9 +135,8 @@ module.exports = (sourceMD, sourceProps, sourceFunctionDocs) => {
   sourceProps(path.join(reactUserFeedbackPath, '/**/*.tsx'), reactPropsIgnore);
   sourceMD(path.join(reactUserFeedbackPath, '/**/examples/*.md'), 'react');
   sourceMD(path.join(reactUserFeedbackPath, '/**/design-guidelines/*.md'), 'design-guidelines');
-}
 
-// Prerelease sections:
+  // Prerelease sections:
   // Component Groups extension (Currently in PRERELEASE, so only include in PRERELEASE builds)
   if (process.env.PRERELEASE === 'true') {
     const reactComponentGroupsPath = require
@@ -153,3 +152,4 @@ module.exports = (sourceMD, sourceProps, sourceFunctionDocs) => {
     sourceMD(path.join(reactComponentGroupsPath, '/**/examples/*.md'), 'react');
     sourceMD(path.join(reactComponentGroupsPath, '/**/design-guidelines/*.md'), 'design-guidelines');
   }
+}
