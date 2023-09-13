@@ -7,17 +7,15 @@ module.exports = (sourceMD, sourceProps, sourceFunctionDocs) => {
   // Content md
   const contentBase = path.join(__dirname, '../patternfly-docs/content');
   const reactPropsIgnore = ['**/*.test.tsx', '**/examples/*.tsx'];
-  
-  if (process.env.EXTENSIONS_ONLY === 'true') { 
-    sourceMD(path.join(contentBase, 'extensions/**/*.md'), 'extensions');
-  } else {
+  sourceMD(path.join(contentBase, 'extensions/**/*.md'), 'extensions');
+  if (!(process.env.EXTENSIONS_ONLY === 'true')) { 
+    
     sourceMD(path.join(contentBase, 'contribute/**/*.md'), 'pages-contribute');
     sourceMD(path.join(contentBase, 'get-started/**/*.md'), 'pages-get-started');
     sourceMD(path.join(contentBase, 'developer-resources/**/*.md'), 'developer-resources');
     sourceMD(path.join(contentBase, 'accessibility/**/*.md'), 'accessibility');
     sourceMD(path.join(contentBase, 'design-guidelines/**/*.md'), 'design-guidelines');
     sourceMD(path.join(contentBase, 'training/**/*.md'), 'training');
-    sourceMD(path.join(contentBase, 'extensions/**/*.md'), 'extensions');
 
     // Gallery pages
     const galleryBase = path.join(__dirname, '../patternfly-docs/pages');
@@ -114,22 +112,6 @@ module.exports = (sourceMD, sourceProps, sourceFunctionDocs) => {
 
   sourceProps(path.join(consoleSrcPath, "/**/*.tsx"), reactPropsIgnore);
   sourceMD(path.join(consoleDocsPath, "/examples/*.md"), 'react');
-
-  // Component Groups extension (Currently in PRERELEASE, so only include in PRERELEASE builds)
-  if (process.env.PRERELEASE === 'true') {
-    const reactComponentGroupsPath = require
-    .resolve('@patternfly/react-component-groups/package.json')
-    .replace('package.json', 'src');
-
-    const reactComponentGroupsBase = require
-    .resolve('@patternfly/react-component-groups/package.json')
-    .replace('package.json', 'patternfly-docs/content/extensions/component-groups');
-
-    sourceProps(path.join(reactComponentGroupsPath, '/**/*.tsx'), reactPropsIgnore);
-    sourceMD(path.join(reactComponentGroupsBase, '/**/*.md'), 'react');
-    sourceMD(path.join(reactComponentGroupsPath, '/**/examples/*.md'), 'react');
-    sourceMD(path.join(reactComponentGroupsPath, '/**/design-guidelines/*.md'), 'design-guidelines');
-  }
   
   // Log viewer extension
   const reactLogViewerPath = require
@@ -154,3 +136,20 @@ module.exports = (sourceMD, sourceProps, sourceFunctionDocs) => {
   sourceMD(path.join(reactUserFeedbackPath, '/**/examples/*.md'), 'react');
   sourceMD(path.join(reactUserFeedbackPath, '/**/design-guidelines/*.md'), 'design-guidelines');
 }
+
+// Prerelease sections:
+  // Component Groups extension (Currently in PRERELEASE, so only include in PRERELEASE builds)
+  if (process.env.PRERELEASE === 'true') {
+    const reactComponentGroupsPath = require
+    .resolve('@patternfly/react-component-groups/package.json')
+    .replace('package.json', 'src');
+
+    const reactComponentGroupsBase = require
+    .resolve('@patternfly/react-component-groups/package.json')
+    .replace('package.json', 'patternfly-docs/content/extensions/component-groups');
+
+    sourceProps(path.join(reactComponentGroupsPath, '/**/*.tsx'), reactPropsIgnore);
+    sourceMD(path.join(reactComponentGroupsBase, '/**/*.md'), 'react');
+    sourceMD(path.join(reactComponentGroupsPath, '/**/examples/*.md'), 'react');
+    sourceMD(path.join(reactComponentGroupsPath, '/**/design-guidelines/*.md'), 'design-guidelines');
+  }
