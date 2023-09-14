@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.2.1 (2023-09-14)
+
+
+### Bug Fixes
+
+* update broken link in release-highlights ([b071d23](https://github.com/patternfly/patternfly-org/commit/b071d23ec5ac791da7b6bd60c9935585b4c15772))
+
+
+
+
+
 # 1.2.0 (2023-09-13)
 
 
