@@ -137,7 +137,7 @@ As a result, a few components were updated to use the same [`HelperText` compone
         - `helperTextInvalidIcon`
         - `isHelperTextBeforeField`
 
-        To add helper text to a form group in place of these properties you should use the `FormHelperText`, `HelperText`, and `HelperTextItem` components directly as part of the `FormGroup`’s children. This implementation is shown in PatternFly's [invalid form example.](components/forms/form#invalid)
+        To add helper text to a form group in place of these properties you should use the `FormHelperText`, `HelperText`, and `HelperTextItem` components directly as part of the `FormGroup`’s children. This implementation is shown in PatternFly's [invalid form example.](/components/forms/form#invalid)
 
 #### Input group
 
