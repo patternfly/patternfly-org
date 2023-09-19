@@ -1,3 +1,12 @@
+.content-outer-div {
+  width: 200px;
+  margin: 0 auto;
+}
+
+.content-inner-div {
+  margin-left: 5%;
+}
+
 .ws-content-spacerTitle {
   font-weight: 600;
   font-size: 20px;

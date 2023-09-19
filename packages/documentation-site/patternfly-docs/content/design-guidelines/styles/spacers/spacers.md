@@ -118,11 +118,14 @@ Some components like icons, buttons, and input fields, have a fixed amount of pa
 
 When using spacers with text-based content, you should consider line height to ensure that you’re leaving the right amount of vertical space between each line of text. 
 
-
-<div class="ws-content-border" style="font-size: 36px;">
-  Design is a journey of discovery
-</div>
-<div class="ws-content-spacer16" style="height: 16px;">
+<div class="content-outer-div">
+<div class="content-inner-div">
+    <div class="ws-content-border" style="font-size: 36px;">
+      Design is a journey of discovery
+    </div>
+    <div class="ws-content-spacer16" style="height: 16px;">
+    </div>
+  </div>
 </div>
 <p class="ws-content-border ws-content-p">
   Body text should be Red Hat Text at 16px. It should have 24px of lead space because of its relative line height of 1.5.
