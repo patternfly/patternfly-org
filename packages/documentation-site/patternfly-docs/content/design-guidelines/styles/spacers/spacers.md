@@ -118,7 +118,6 @@ Some components like icons, buttons, and input fields, have a fixed amount of pa
 
 When using spacers with text-based content, you should consider line height to ensure that you’re leaving the right amount of vertical space between each line of text. 
 
-<div class="content-outer-div">
   <div class="content-inner-div">
     <div class="ws-content-border" style="font-size: 36px;">
       Design is a journey of discovery
@@ -126,7 +125,6 @@ When using spacers with text-based content, you should consider line height to e
     <div class="ws-content-spacer16" style="height: 16px;">
     </div>
   </div>
-</div>
 <p class="ws-content-border ws-content-p">
   Body text should be Red Hat Text at 16px. It should have 24px of lead space because of its relative line height of 1.5.
 </p>
@@ -135,7 +133,6 @@ When using spacers with text-based content, you should consider line height to e
 
 You also need to use different spacer sizes depending on the type of text you’re using. For example, you’ll need to provide a 16px spacer between a title and body copy, but only an 8px spacer between items in a bulleted or numbered list.
 
-<div class="content-outer-div">
   <div class="content-inner-div">
     <div class="ws-content-border" style="font-size: 28px">
       Design is a journey of discovery
@@ -176,7 +173,6 @@ You also need to use different spacer sizes depending on the type of text you’
       b. They still use the same text styling, however.
     </p>
   </div>
-</div>
 
 <br/>
 
