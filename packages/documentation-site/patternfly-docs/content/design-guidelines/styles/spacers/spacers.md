@@ -124,10 +124,10 @@ When using spacers with text-based content, you should consider line height to e
     </div>
     <div class="ws-content-spacer16" style="height: 16px;">
     </div>
-  </div>
-<p class="ws-content-border ws-content-p">
+    <p class="ws-content-border ws-content-p">
   Body text should be Red Hat Text at 16px. It should have 24px of lead space because of its relative line height of 1.5.
-</p>
+    </p>
+  </div>
 
 <br/>
 
