@@ -270,9 +270,6 @@ export const SideNavLayout = ({ children, groupedRoutes, navOpen: navOpenProp })
   return (
     <React.Fragment>
       <RtlContext.Provider value={ isRTL }>
-        <div id="ws-page-banners">
-          {hasGdprBanner && <GdprBanner />}
-        </div>
         <Page
           id="ws-page"
           mainContainerId="ws-page-main"
@@ -284,6 +281,9 @@ export const SideNavLayout = ({ children, groupedRoutes, navOpen: navOpenProp })
         >
           {children}
         </Page>
+        <div id="ws-page-banners">
+          {hasGdprBanner && <GdprBanner />}
+        </div>
       </RtlContext.Provider>
     </React.Fragment>
   );
