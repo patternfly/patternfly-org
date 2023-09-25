@@ -34,7 +34,7 @@ The following sections outline common text styles that are used in PatternFly ap
   className="pf-v5-c-title pf-m-lg ws-title-level-heading"
   asGrid
   styleProps={styleProps.superHero} />
-<div class="--pf-v5-global--spacer--sm"
+<div class="--pf-v5-global--spacer--sm">
 </div>
 ### Hero heading (3xl)
 **Note:** Use only for extra large titles in cards or similar locations. Do not use for page titles.
