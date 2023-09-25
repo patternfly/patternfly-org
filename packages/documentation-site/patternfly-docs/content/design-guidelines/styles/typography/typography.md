@@ -34,7 +34,7 @@ The following sections outline common text styles that are used in PatternFly ap
   className="pf-v5-c-title pf-m-lg ws-title-level-heading"
   asGrid
   styleProps={styleProps.superHero} />
-<div class="--pf-v5-global--spacer--sm">
+<div class="--pf-v5-global--spacer--lg">
 </div>
 ### Hero heading (3xl)
 **Note:** Use only for extra large titles in cards or similar locations. Do not use for page titles.
@@ -43,7 +43,7 @@ The following sections outline common text styles that are used in PatternFly ap
   className="pf-v5-c-title pf-m-lg ws-title-level-heading"
   asGrid
   styleProps={styleProps.hero} />
-<div class="--pf-v5-global--spacer--sm">
+<div class="--pf-v5-global--spacer--lg">
 </div>
 ### First level heading (2xl, H1)
 **Note**: Only 1 first level/H1 heading should ever exist on a page.
@@ -51,28 +51,28 @@ The following sections outline common text styles that are used in PatternFly ap
   className="pf-v5-c-title pf-m-lg ws-title-level-heading"
   asGrid
   styleProps={styleProps.first} />
-<div class="--pf-v5-global--spacer--sm">
+<div class="--pf-v5-global--spacer--lg">
 </div>
 ### Second level heading (xl, H2)
 <TitleLevel
   className="pf-v5-c-title pf-m-lg ws-title-level-heading"
   asGrid
   styleProps={styleProps.second} />
-<div class="--pf-v5-global--spacer--sm">
+<div class="--pf-v5-global--spacer--lg">
 </div>
 ### Third level heading (lg, H3)
 <TitleLevel
   className="pf-v5-c-title pf-m-lg ws-title-level-heading"
   asGrid
   styleProps={styleProps.third} />
-<div class="--pf-v5-global--spacer--sm">
+<div class="--pf-v5-global--spacer--lg">
 </div>
 ### Fourth level heading (md, H4)
 <TitleLevel
   className="pf-v5-c-title pf-m-lg ws-title-level-heading"
   asGrid
   styleProps = {styleProps.fourth} />
-<div class="--pf-v5-global--spacer--sm">
+<div class="--pf-v5-global--spacer--lg">
 </div>
 ### Default body text 
 **Note:** This is the default text style for paragraphs, lists, tables, etc. Some components instead use Red Hat Text at 700 font weight, which is Red Hat Text Medium (such as alerts and navigation).
