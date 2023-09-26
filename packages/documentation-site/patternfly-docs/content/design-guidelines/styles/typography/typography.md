@@ -49,6 +49,7 @@ The following sections outline common text styles that are used in PatternFly ap
   asGrid
   styleProps={styleProps.hero} />
 <div class="--pf-v5-global--spacer--lg">
+</div>
 
 ### First level heading (2xl, H1)
 
