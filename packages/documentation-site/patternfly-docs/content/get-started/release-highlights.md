@@ -32,7 +32,6 @@ To enable this behavior, we've added a new `onClick` property to the `<Label>` c
 
 Note that you cannot use `onClick` if the `href` or `isEditable` properties are already passed into `<Label>`, since those align with link labels and editable labels, respectively.
 
-<Divider></Divider>
 
 ## PatternFly 5.0 
 
