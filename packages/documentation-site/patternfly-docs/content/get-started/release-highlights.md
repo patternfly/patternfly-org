@@ -12,7 +12,7 @@ As part of our [quarterly release cadence](/get-started/about#patternfly-release
 
 To help provide a high-level view of what's new, we've pulled together the major highlights from this release. Keep reading to learn more!
 
-### Right-to-left support 
+### Right-to-left language support 
 
 Last quarter, our developers were dedicated to implementing right-to-left (RTL) language support in PatternFly. To better enable product internationalization, we've updated our components to support both right-to-left (RTL) and left-to-right (LTR) languages. You can check out our [RTL handbook](/developer-resources/right-to-left-handbook) for more details and resources.
 
@@ -20,15 +20,17 @@ To achieve this support, our components now use [logical properties](https://dev
 
 Note that, to avoid a sweeping breaking change, PatternFly variable names still use "top", "bottom", "left", and "right". 
 
-### New Topology documentation
-We updated our [control bar documentation](/topology/control-bar) for Topology to answer potential questions about control bar use. The new documentation clarifies the extent of the control bar functions to better support the breadth of use cases. 
+### New topology documentation
+
+We updated the [control bar documentation](/topology/control-bar) for topology to clarify the extent of the control bar functions. This addition highlights information that will better support the range of control bar use cases.  
 
 ### Clickable labels
 
-We added a new "clickable" variant to the labels component 
-As a result, we've added a new `onClick` property to the `<LabelGroup>` component.
+We added a new "clickable" variant to the labels component, so that you can use a label that acts as a button.
 
-Keep an eye out for our Q4 release at the beginning of 2024!
+To enable this behavior, we've added a new `onClick` property to the `<Label>` component, which can contain an action fit for your use case. 
+
+Note that you cannot use `onClick` if the `href` or `isEditable` properties are already passed into `<Label>`, since those align with link labels and editable labels, respectively.
 
 <Divider></Divider>
 
