@@ -7,8 +7,7 @@ related: ['Alert', 'Alert group']
 ## Elements
 
 ### Alerts
-Alert elements vary depending on the variation of alert. Toast alerts are always dismissible, but bordered inline alerts can be both dismissable and non-dismissible. All other elements are consistent between toast and bordered inline alerts.
-Plain inline alerts are never dismissable, and consist of only a status area and alert title.
+Alert elements vary depending on the variation of alert. Toast alerts are always dismissible, but bordered inline alerts can be both dismissable and non-dismissible. All other elements are consistent between toast and bordered inline alerts. Plain inline alerts are never dismissable, and consist of only a status area and alert title.
  
 <img src="./img/alert-types.png" alt="Alert types" width="868" />
 
@@ -70,8 +69,46 @@ The overflow link should be configured to navigate to a place where the user can
 
 See our [toast alert guidelines](/components/alert/design-guidelines/#using-toast-alerts) for more information about using toast alerts.
 
+## Placement
+Toast alerts should be placed in an alert group in the upper-right corner of a page. Use 8px of padding between each alert in an alert group. Alert group alignment on a page will depend on your use case.
 
-## Variations
+### Toast alerts
+Toast alerts communicate information about an update, confirmation, or other activity. A toast alert overlays content in the upper-right corner of the page and disappears when it times out or when the user dismisses it.
+ 
+![toast notification placement](./img/toast-notification.png)
+ 
+
+#### Using toast alerts
+Use toast alerts to communicate an update, confirmation, or other activity to the user without blocking their workflow. For example, you can use a toast alert to inform the user that their message was sent. You can include links in a toast alert for a user to take action on the event that surfaced the alert, but the links should only be a shortcut for the user. A toast alert should never be used as the only means for taking actions on an alert event.
+ 
+Toast alerts stack in the upper-right corner of a page. To properly position and stack a set of alerts, use an [alert group](#alert-groups) component. When alerts stack, the most recent alert appears at the top, and others move down as more alerts come in. When alerts are deleted, the remaining alerts move up.
+ 
+![alert group](./img/toast-notification-multiple.png)
+ 
+Toast alerts should always have a close button so that the user can dismiss them. If you include an automatic timeout for your toast alert, 8 seconds is recommended. Toast alerts should not disappear while the user is hovering over them.
+ 
+<img src="./img/Toast-alerts-desktop.png" alt="toast alerts in a page" />
+ 
+Toast alerts are commonly used in the following situations:
+- Confirming that a message sent
+- Confirming that an update was made
+- Informing the user that their action was completed successfully
+- Informing the user that their action was completed with errors
+
+**For desktop views**, right align toast alert groups over your page content. Each alert should stack on top of one another with 8px of padding in between.
+
+<img src="./img/alert-group-desktop.png" alt="An example of a right-aligned toast alert group over a desktop view." />
+
+**For mobile views**, center toast alert groups over your page content.
+
+<img src="./img/alert-group-mobile.png" alt="An example of a centered toast alert group over a mobile view." width="375" />
+
+<img src="./img/alert-group-mobile.png" alt="An example of a centered toast alert group over a mobile view." width="375" />
+
+See our [toast alert guidelines](/components/alert/design-guidelines/#using-toast-alerts) for more information about using toast alerts.
+
+
+### Inline alerts
 
 ### Bordered inline alerts
 Bordered inline alerts communicate information about a specific user action on a page. An inline alert appears within the content area and disappears when the user closes it or navigates away from the page.
@@ -89,11 +126,29 @@ Use bordered inline alerts to return feedback as the result of a user action wit
  
   <img src="./img/Inline-alert-specific-context.png" alt="inline alert inline with content" />
 
-* **If the alert is being used to indicate errors,** use an error validation summary at the top of the page to indicate what errors are present. The summary should be a quick, general overview. Show an error alert next to the field that is causing the error. The error message should be concise and actionable. It should tell the user what happened and the next steps needed to fit it. 
+* **If the alert is being used to indicate errors,** use an error validation summary at the top of the page to indicate what errors are present. The summary should be a quick, general overview. Show an error alert next to the field that is causing the error. The error message should be concise and actionable. It should tell the user what happened and the next steps needed to fix it. 
 
-* If multiple errors are present in the same location, order them from most to least severe. 
+<img src="./img/inline-alert-page-level-with-link-1.png" alt="inline alert inline with link demo 1" />
 
-  <img src="./img/Multiplealert.png" alt="multiple alerts on a page"/>
+<img src="./img/inline-alert-page-level-with-link-2.png" alt="inline alert inline with link demo 2" />
+
+* **If multiple errors are present in the same location,** order them from most to least severe. 
+
+  <img src="./img/Multiplealert.png" alt="multiple alerts on a page" />
+
+* **If the alert is being used to indicate errors on a modal,** use an error validation summary at the top of the modal below the title to indicate what errors are present. Show an error alert next to the field that is causing the error. The error message should be concise and actionable. It should tell the user what happened and the next steps needed to fix it. 
+
+  <img src="./img/inline-alert-modal-with-link-1" alt="multiple alerts on a modal demo 1" />
+
+  <img src="./img/inline-alert-modal-with-link-2" alt="multiple alerts on a page demo 2" />
+
+* **If the alert is being used to indicate errors on a modal with an existing alert,** display the new alert above the existing alert.
+
+  <img src="./img/inline-alert-modal-with-existing-alert" alt="multiple alerts on a modal with existing alert" />
+
+* **Alert is not needed for a confirmation modal.**
+
+  <img src="./img/no-alert-for-confirmation-modal" alt="alert is not needed for a confirmation modal" />
 
 **The user can dismiss information alerts by clicking the alert’s close button.** Error-related alerts (warning and critical severity) should disappear only when the user addresses the issue that caused the alert. However, if the issue cannot be corrected on the current page and the user must take action to address a situation before proceeding, use a [modal](/components/modal) instead of an inline alert.
  
@@ -135,48 +190,8 @@ Plain inline alerts are commonly used in the following situations:
 - Informing the user of something that needs their attention
 - Informing the user that a temporary error has occurred
 - Informing the user that a feature is temporarily unresponsive
- 
- 
-### Toast alerts
-Toast alerts communicate information about an update, confirmation, or other activity. A toast alert overlays content in the upper-right corner of the page and disappears when it times out or when the user dismisses it.
- 
-![toast notification placement](./img/toast-notification.png)
- 
-
-#### Using toast alerts
-Use toast alerts to communicate an update, confirmation, or other activity to the user without blocking their workflow. For example, you can use a toast alert to inform the user that their message was sent. You can include links in a toast alert for a user to take action on the event that surfaced the alert, but the links should only be a shortcut for the user. A toast alert should never be used as the only means for taking actions on an alert event.
- 
-Toast alerts stack in the upper-right corner of a page. To properly position and stack a set of alerts, use an [alert group](#alert-groups) component. When alerts stack, the most recent alert appears at the top, and others move down as more alerts come in. When alerts are deleted, the remaining alerts move up.
- 
-![alert group](./img/toast-notification-multiple.png)
- 
-Toast alerts should always have a close button so that the user can dismiss them. If you include an automatic timeout for your toast alert, 8 seconds is recommended. Toast alerts should not disappear while the user is hovering over them.
- 
-<img src="./img/Toast-alerts-desktop.png" alt="toast alerts in a page" />
- 
-Toast alerts are commonly used in the following situations:
-- Confirming that a message sent
-- Confirming that an update was made
-- Informing the user that their action was completed successfully
-- Informing the user that their action was completed with errors
-
-## Placement
-Toast alerts should be placed in an alert group in the upper-right corner of a page. Use 8px of padding between each alert in an alert group. Alert group alignment on a page will depend on your use case.
-
-**For desktop views**, right align toast alert groups over your page content. Each alert should stack on top of one another with 8px of padding in between.
-
-<img src="./img/alert-group-desktop.png" alt="An example of a right-aligned toast alert group over a desktop view." />
-
-**For mobile views**, center toast alert groups over your page content.
-
-<img src="./img/alert-group-mobile.png" alt="An example of a centered toast alert group over a mobile view." width="375" />
-
-<img src="./img/alert-group-mobile.png" alt="An example of a centered toast alert group over a mobile view." width="375" />
-
-See our [toast alert guidelines](/components/alert/design-guidelines/#using-toast-alerts) for more information about using toast alerts.
 
 ## Content considerations
- 
  
 - In inline alerts and toast alerts, avoid using “success” and “successfully.” They’re extraneous.
  
