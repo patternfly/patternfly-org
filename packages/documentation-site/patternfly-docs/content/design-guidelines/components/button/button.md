@@ -13,13 +13,6 @@ Follow these guidelines for buttons in wizards (shown in the image below):
 
 <img src="./img/wizard.png" alt="Example of buttons in a wizard"/>
 
-### Button placement
-
-Buttons in forms, modals, or wizards should always be left aligned in the box. This solves for:
-* **Modularity and flexibility:** A standard alignment creates consistency in how objects appear across all areas of an app.
-* **Accessibility:** The form submit buttons are on the same scan line as the form fields, which benefits users who are sight-limited. Also, users who are blind can more easily navigate left-aligned form submit buttons because the button order is consistent across all contexts.
-* **Responsiveness:** The most important actions (i.e., primary buttons) are encountered first when elements are stacked vertically.
-
 ## Variations
 The following button styles, shown in order of visual hierarchy, can be used in your designs according to your needs.
 * [Danger button](#danger-button)
@@ -237,6 +230,13 @@ _Buttons appear in the toolbar_
 _Buttons placed in overflow menu due to limited space, with primary button persisting_
 
 <img src="./img/overflow_2.png" alt="Post-overflow menu in toolbar, where toolbar has become smaller in width, prompting an overflow menu for secondary actions, while primary button persists in the toolbar itself" width="1010"/>
+
+## Placement
+
+Buttons in forms, modals, or wizards should always be left aligned in the box. This solves for:
+* **Modularity and flexibility:** A standard alignment creates consistency in how objects appear across all areas of an app.
+* **Accessibility:** The form submit buttons are on the same scan line as the form fields, which benefits users who are sight-limited. Also, users who are blind can more easily navigate left-aligned form submit buttons because the button order is consistent across all contexts.
+* **Responsiveness:** The most important actions (i.e., primary buttons) are encountered first when elements are stacked vertically.
 
 ## Content considerations
 

@@ -50,18 +50,6 @@ Banner with icons can be used for added emphasis. Use icon banners when indicati
 
 <img src="./img/banner-variations.png" alt="Banners with icons variation" width="744" />
 
-### Placement
- 
-All banners should be a solid bar spanning the width of either the full page or the main content area of the page and should be sticky to where it is used.
-
-- The banner should span the top and bottom when it is used for a full page.
- 
-   <img src="./img/placement-1.png" alt="Example of banner placement above and below the page" width="1500" />
- 
-- The banner should span only the top when it is used for the main content area of the page.
- 
-   <img src="./img/placement-2.png" alt="Example of banner placement below above the main content area of the page" width="1500" />
-
 ## Spacing
 
 ### Padding
@@ -80,6 +68,18 @@ The padding required above and below a banner will depend on where it is placed.
 
   <img src="./img/placement-3.png" alt="Padding when banner is placed below the main content area of the page" />
  
+## Placement
+ 
+All banners should be a solid bar spanning the width of either the full page or the main content area of the page and should be sticky to where it is used.
+
+- The banner should span the top and bottom when it is used for a full page.
+ 
+   <img src="./img/placement-1.png" alt="Example of banner placement above and below the page" width="1500" />
+ 
+- The banner should span only the top when it is used for the main content area of the page.
+ 
+   <img src="./img/placement-2.png" alt="Example of banner placement below above the main content area of the page" width="1500" />
+
 ## Accessibility 
 
 For information regarding accessibility, visit the [banner accessibility tab](/components/banner/accessibility).
