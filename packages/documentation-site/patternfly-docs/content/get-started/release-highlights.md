@@ -1,6 +1,6 @@
 ---
 id: Release highlights
-title: Q3 release highlights
+title: Release highlights
 section: get-started
 ---
 
