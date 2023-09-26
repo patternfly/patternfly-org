@@ -29,14 +29,19 @@ The following sections outline common text styles that are used in PatternFly ap
 - **Font size CSS variable:** The CSS variable that controls the size of your text. You can customize type sizes in your application by modifying the values associated with these variables. In general, this is not advised, and should be done with caution, as changes to text style can have far reaching side effects on spacing within certain components.
 
 ### Super hero heading (4xl)
+
 **Note:** Use only for extra large titles in cards or similar locations. Do not use for page titles.
+
 <TitleLevel
   className="pf-v5-c-title pf-m-lg ws-title-level-heading"
   asGrid
   styleProps={styleProps.superHero} />
-<div class="--pf-v5-global--spacer--lg">
+
+<div class="--pf-v5-global--spacer--lg"> 
 </div>
+
 ### Hero heading (3xl)
+
 **Note:** Use only for extra large titles in cards or similar locations. Do not use for page titles.
 
 <TitleLevel
@@ -44,61 +49,84 @@ The following sections outline common text styles that are used in PatternFly ap
   asGrid
   styleProps={styleProps.hero} />
 <div class="--pf-v5-global--spacer--lg">
-</div>
+
 ### First level heading (2xl, H1)
+
 **Note**: Only 1 first level/H1 heading should ever exist on a page.
+
 <TitleLevel
   className="pf-v5-c-title pf-m-lg ws-title-level-heading"
   asGrid
   styleProps={styleProps.first} />
 <div class="--pf-v5-global--spacer--lg">
 </div>
+
 ### Second level heading (xl, H2)
+
 <TitleLevel
   className="pf-v5-c-title pf-m-lg ws-title-level-heading"
   asGrid
   styleProps={styleProps.second} />
 <div class="--pf-v5-global--spacer--lg">
 </div>
+
 ### Third level heading (lg, H3)
+
 <TitleLevel
   className="pf-v5-c-title pf-m-lg ws-title-level-heading"
   asGrid
   styleProps={styleProps.third} />
 <div class="--pf-v5-global--spacer--lg">
 </div>
+
 ### Fourth level heading (md, H4)
+
 <TitleLevel
   className="pf-v5-c-title pf-m-lg ws-title-level-heading"
   asGrid
   styleProps = {styleProps.fourth} />
 <div class="--pf-v5-global--spacer--lg">
 </div>
+
 ### Default body text 
+
 **Note:** This is the default text style for paragraphs, lists, tables, etc. Some components instead use Red Hat Text at 700 font weight, which is Red Hat Text Medium (such as alerts and navigation).
+
 <TitleLevel
   className="pf-v5-c-title pf-m-lg ws-title-level-heading"
   asGrid
   styleProps = {styleProps.body} />
+<div class="--pf-v5-global--spacer--lg">
+</div>
 
 ### Small text
+
 <TitleLevel
   className="pf-v5-c-title pf-m-lg ws-title-level-heading"
   asGrid
   styleProps = {styleProps.small} />
+<div class="--pf-v5-global--spacer--lg">
+</div>
 
 ### Tiny text
+
 <TitleLevel
   className="pf-v5-c-title pf-m-lg ws-title-level-heading"
   asGrid
   styleProps = {styleProps.tiny} />
+<div class="--pf-v5-global--spacer--lg">
+</div>
 
 ### Code
+
 **Note:** Used for code blocks.
+
 <TitleLevel
   className="pf-v5-c-title pf-m-lg ws-title-level-heading"
   asGrid
   styleProps = {styleProps.code} />
+<div class="--pf-v5-global--spacer--lg">
+</div>
 
 ## Customizing heading levels
 If you use the [title component](/components/title) to create headings on your page, you can modify the default relationship between heading levels and text sizes. When using title, you must specify a heading level that will apply to the target text. The following table shows the default mapping of heading level to text size:
