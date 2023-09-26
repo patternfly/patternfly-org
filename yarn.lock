@@ -2158,12 +2158,12 @@
     victory-voronoi-container "^36.6.11"
     victory-zoom-container "^36.6.11"
 
-"@patternfly/react-code-editor@^5.1.1-prerelease.20":
-  version "5.1.1-prerelease.21"
-  resolved "https://registry.yarnpkg.com/@patternfly/react-code-editor/-/react-code-editor-5.1.1-prerelease.21.tgz#e369a262ec3ae58fd1b0e01c10eca2eb2f5ae5c3"
-  integrity sha512-jiR2s1wmEb10NonwlmbHZ2pJ1+nUVgh5A3fxUBfisyf2wuCqcRzyKWMQdq6XJRFcZ8Qtbp+2yzanIgTdtdK2zQ==
+"@patternfly/react-code-editor@5.1.1-prerelease.22", "@patternfly/react-code-editor@^5.1.1-prerelease.22":
+  version "5.1.1-prerelease.22"
+  resolved "https://registry.yarnpkg.com/@patternfly/react-code-editor/-/react-code-editor-5.1.1-prerelease.22.tgz#9305bd05a554d482a87daf8b71817f47c4978714"
+  integrity sha512-PqMszB4siMo0OuWx/J1kopoMHEO2m+Opc0ou62VijltOl9ZlBZRJ3CSzSyp8jkxPZD8bTewR/hEh0uOVo5rOgw==
   dependencies:
-    "@patternfly/react-core" "^5.1.1-prerelease.21"
+    "@patternfly/react-core" "^5.1.1-prerelease.22"
     "@patternfly/react-icons" "^5.1.1-prerelease.7"
     "@patternfly/react-styles" "^5.1.1-prerelease.7"
     react-dropzone "14.2.3"
@@ -2194,6 +2194,18 @@
     xterm "^4.8.1"
     xterm-addon-fit "^0.2.1"
 
+"@patternfly/react-core@5.1.1-prerelease.22", "@patternfly/react-core@^5.1.1-prerelease.22":
+  version "5.1.1-prerelease.22"
+  resolved "https://registry.yarnpkg.com/@patternfly/react-core/-/react-core-5.1.1-prerelease.22.tgz#66fd67461943b6fd934bdd3642a6468b68dab36b"
+  integrity sha512-M2GkMiDDlGBlrgPp7PqmITQ+5/H+nslFlyi7nLNlyJNC8iGriH3bVSJKSaKsGpRW0ixEuEnjAZ0EXCY8CUU8mA==
+  dependencies:
+    "@patternfly/react-icons" "^5.1.1-prerelease.7"
+    "@patternfly/react-styles" "^5.1.1-prerelease.7"
+    "@patternfly/react-tokens" "^5.1.1-prerelease.7"
+    focus-trap "7.5.2"
+    react-dropzone "^14.2.3"
+    tslib "^2.5.0"
+
 "@patternfly/react-core@^5.0.0":
   version "5.0.1"
   resolved "https://registry.yarnpkg.com/@patternfly/react-core/-/react-core-5.0.1.tgz#474456a6bf173c421ba285d7371fd635b9b63f46"
@@ -2206,30 +2218,18 @@
     react-dropzone "^14.2.3"
     tslib "^2.5.0"
 
-"@patternfly/react-core@^5.1.1-prerelease.20", "@patternfly/react-core@^5.1.1-prerelease.21":
-  version "5.1.1-prerelease.21"
-  resolved "https://registry.yarnpkg.com/@patternfly/react-core/-/react-core-5.1.1-prerelease.21.tgz#f6bcfe96e2572058fca412df1aaf422f31958547"
-  integrity sha512-EfuLSxKipbI/RLAGEpgCWTIToWBX3e4kIqeyIsMlayJ33rIysCk3Fw7gROEPBnwk/BpHyh11ChY2Nroy9h4MSA==
-  dependencies:
-    "@patternfly/react-icons" "^5.1.1-prerelease.7"
-    "@patternfly/react-styles" "^5.1.1-prerelease.7"
-    "@patternfly/react-tokens" "^5.1.1-prerelease.7"
-    focus-trap "7.5.2"
-    react-dropzone "^14.2.3"
-    tslib "^2.5.0"
-
-"@patternfly/react-docs@6.1.1-prerelease.21":
-  version "6.1.1-prerelease.21"
-  resolved "https://registry.yarnpkg.com/@patternfly/react-docs/-/react-docs-6.1.1-prerelease.21.tgz#c4e827c710df2cd2928aa284dcbc1e2ea284ad47"
-  integrity sha512-oJu5Fp4XNNksTqLCuhCfkvaG2pn4uqL1tez/6qTUgo9JKLPhnyB6/agqZjAK5eHuPksIRDwJC9RhQcJYDWLccw==
+"@patternfly/react-docs@6.1.1-prerelease.23":
+  version "6.1.1-prerelease.23"
+  resolved "https://registry.yarnpkg.com/@patternfly/react-docs/-/react-docs-6.1.1-prerelease.23.tgz#c919e9803c051719fbcda3a235d4d719ea248e47"
+  integrity sha512-KE2cgCgyYVN5kW3TmEskNCCzK/E8nrQBy9obg+eeCigNCsZjXqIXOIj3WAhB0IVJ7SZACTptZch5gFWq0h2f6A==
   dependencies:
     "@patternfly/patternfly" "5.1.0-prerelease.32"
     "@patternfly/react-charts" "^7.1.1-prerelease.9"
-    "@patternfly/react-code-editor" "^5.1.1-prerelease.20"
-    "@patternfly/react-core" "^5.1.1-prerelease.20"
+    "@patternfly/react-code-editor" "^5.1.1-prerelease.22"
+    "@patternfly/react-core" "^5.1.1-prerelease.22"
     "@patternfly/react-icons" "^5.1.1-prerelease.7"
     "@patternfly/react-styles" "^5.1.1-prerelease.7"
-    "@patternfly/react-table" "^5.1.1-prerelease.20"
+    "@patternfly/react-table" "^5.1.1-prerelease.22"
     "@patternfly/react-tokens" "^5.1.1-prerelease.7"
 
 "@patternfly/react-icons@^5.0.0", "@patternfly/react-icons@^5.0.1":
@@ -2262,12 +2262,12 @@
   resolved "https://registry.yarnpkg.com/@patternfly/react-styles/-/react-styles-5.1.1-prerelease.7.tgz#196d325bf53e1dcfb099dfcbd36d1c2db4740760"
   integrity sha512-X6DO8ulgjAJ9zYDH8QFrjrEu+7QWvAbOZjEwZVK6HB4IhwSiy5YxPbpnuEyWd8n0gq6nAUZl2bsl2J+So0tTGQ==
 
-"@patternfly/react-table@^5.1.1-prerelease.20":
-  version "5.1.1-prerelease.21"
-  resolved "https://registry.yarnpkg.com/@patternfly/react-table/-/react-table-5.1.1-prerelease.21.tgz#d862f82320317ff91c8f7d62dbc018f0ce0a60fd"
-  integrity sha512-73ZLoy3M+Ib3lEfzfzfEjQRBnGgLeD7BzkdGyzMo4ssFjJp4w00bmFVgWaEztvi0RWd7t2tJ+Y7a9jn1QTkZBw==
+"@patternfly/react-table@5.1.1-prerelease.22", "@patternfly/react-table@^5.1.1-prerelease.22":
+  version "5.1.1-prerelease.22"
+  resolved "https://registry.yarnpkg.com/@patternfly/react-table/-/react-table-5.1.1-prerelease.22.tgz#0d3dcffec72a848f382623d372ed4ac7ae333f10"
+  integrity sha512-hmUp1bKddNYC9bhsy4jwLr2oZ2+TWpeYyv5meoZ1Oa1xybTnZXmej3r9JldRcVuETDr2RTE4GkF/XNpTHtICXA==
   dependencies:
-    "@patternfly/react-core" "^5.1.1-prerelease.21"
+    "@patternfly/react-core" "^5.1.1-prerelease.22"
     "@patternfly/react-icons" "^5.1.1-prerelease.7"
     "@patternfly/react-styles" "^5.1.1-prerelease.7"
     "@patternfly/react-tokens" "^5.1.1-prerelease.7"
