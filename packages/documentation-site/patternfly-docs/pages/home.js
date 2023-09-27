@@ -72,9 +72,15 @@ const AggregateCards = () => {
     <Gallery hasGutter minWidths={{xl: "30%"}}>
       {cardData.map((card, cardIndex) => {
         let cardAlign;
+        const curCardCount = cardIndex + 1;
+        const cardId = `clickable-stay-informed-card-${curCardCount}`;
+        const actionId = `stay-informed-card-input-${curCardCount}`;
+        const cardTitleId = `stay-informed-card-${curCardCount}-title`;
+
         return (
-          <GalleryItem>
+          <GalleryItem key={card.title}>
             <Card
+              id={cardId}
               style={{textAlign: cardAlign}}
               key={`${cardIndex}`}
               component="div"
@@ -84,12 +90,13 @@ const AggregateCards = () => {
               <CardHeader
                 selectableActions={{
                   to: card.link,
-                  selectableActionId: `clickable-stay-informed-card-${cardIndex}`,
+                  selectableActionId: actionId,
+                  selectableActionAriaLabelledby: cardTitleId,
                   name: 'homepage-card',
                   isExternalLink: card.hasExtLinkIcon
                 }}
               >
-                <CardTitle>
+                <CardTitle id={cardTitleId}>
                   <a href={card.link}>
                     {card.title}
                     {card.hasExtLinkIcon ? (
@@ -110,6 +117,42 @@ const AggregateCards = () => {
       })}
     </Gallery>
   );
+};
+
+const FeaturedBlogCard = ({postData, idx}) => {
+  const { URL, author, imageURL, length, title } = postData;
+  const curCardCount = idx + 1;
+  const cardId = `featured-blog-post-${curCardCount}`;
+  const actionId = `card-article-input-${curCardCount}`;
+  const cardTitleId = `featured-blog-post-${curCardCount}-title`;
+
+  return (
+    <Card id={cardId} component="div" isClickable key={idx}>
+      <CardHeader
+        className="v5-featured-posts-card-header-img"
+        selectableActions={{
+          to: URL,
+          selectableActionId: actionId,
+          selectableActionAriaLabelledby: cardTitleId,
+          name: 'homepage-card',
+          isExternalLink: true
+        }}
+        style={{
+          backgroundImage: `url(${imageURL})`,
+        }}
+      ></CardHeader>
+      <Divider />
+      <CardTitle id={cardTitleId}>
+        {" "}
+        <a href={URL}>
+          {title}
+        </a>
+      </CardTitle>
+      <CardFooter className="pf-v5-u-color-200">
+        {author} • {length}
+      </CardFooter>
+    </Card>
+  )
 };
 
 const HomePage = () => (
@@ -216,102 +259,9 @@ const HomePage = () => (
     </PageSection>
     <PageSection isWidthLimited className="v5-featured-posts-cards">
       <Grid hasGutter md={6} xl={3}>
-        <Card component="article" isClickable>
-          <CardHeader
-            className="v5-featured-posts-card-header-img"
-            selectableActions={{
-              to: featuredPostsData.post1.URL,
-              selectableActionId: "clickable-card-article-1",
-              name: 'homepage-card',
-              isExternalLink: true
-            }}
-            style={{
-              backgroundImage: `url(${featuredPostsData.post1.imageURL})`,
-            }}
-          ></CardHeader>
-          <Divider />
-          <CardTitle>
-            {" "}
-            <a href={featuredPostsData.post1.URL}>
-              {featuredPostsData.post1.title}
-            </a>
-          </CardTitle>
-          <CardFooter className="pf-v5-u-color-200">
-            {featuredPostsData.post1.author} • {featuredPostsData.post1.length}
-          </CardFooter>
-        </Card>
-        <Card component="article" isClickable>
-          <CardHeader
-            className="v5-featured-posts-card-header-img"
-            selectableActions={{
-              to: featuredPostsData.post2.URL,
-              selectableActionId: "clickable-card-article-2",
-              name: 'homepage-card',
-              isExternalLink: true
-            }}
-            style={{
-              backgroundImage: `url(${featuredPostsData.post2.imageURL})`,
-            }}
-          ></CardHeader>
-          <Divider />
-          <CardTitle>
-            {" "}
-            <a href={featuredPostsData.post2.URL}>
-              {featuredPostsData.post2.title}
-            </a>
-          </CardTitle>
-          <CardFooter className="pf-v5-u-color-200">
-            {featuredPostsData.post2.author} • {featuredPostsData.post2.length}
-          </CardFooter>
-        </Card>
-        <Card component="article" isClickable>
-          <CardHeader
-            className="v5-featured-posts-card-header-img"
-            selectableActions={{
-              to: featuredPostsData.post3.URL,
-              selectableActionId: "clickable-card-article-3",
-              name: 'homepage-card',
-              isExternalLink: true
-            }}
-            style={{
-              backgroundImage: `url(${featuredPostsData.post3.imageURL})`,
-            }}
-          ></CardHeader>
-          <Divider />
-          <CardTitle>
-            {" "}
-            <a href={featuredPostsData.post3.URL}>
-              {featuredPostsData.post3.title}
-            </a>
-          </CardTitle>
-          <CardFooter className="pf-v5-u-color-200">
-            {featuredPostsData.post3.author} • {featuredPostsData.post3.length}
-          </CardFooter>
-        </Card>
-        <Card component="article" isClickable>
-          <CardHeader
-            className="v5-featured-posts-card-header-img"
-            selectableActions={{
-              to: featuredPostsData.post4.URL,
-              selectableActionId: "clickable-card-article-4",
-              name: 'homepage-card',
-              isExternalLink: true
-            }}
-            style={{
-              backgroundImage: `url(${featuredPostsData.post4.imageURL})`,
-            }}
-          ></CardHeader>
-          <Divider />
-          <CardTitle>
-            {" "}
-            <a href={featuredPostsData.post4.URL}>
-              {featuredPostsData.post4.title}
-            </a>
-          </CardTitle>
-          <CardFooter className="pf-v5-u-color-200">
-            {featuredPostsData.post4.author} • {featuredPostsData.post4.length}
-          </CardFooter>
-        </Card>
+        {Object.values(featuredPostsData).map((post, idx) => (
+          <FeaturedBlogCard postData={post} idx={idx} key={`${idx}-${post.title}`} />
+        ))}
       </Grid>
     </PageSection>
     <PageSection isWidthLimited className="v5-stay-informed">

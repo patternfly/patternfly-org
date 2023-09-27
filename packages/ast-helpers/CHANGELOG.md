@@ -3,6 +3,106 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.2.5 (2023-09-27)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+## 1.2.4 (2023-09-22)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+## 1.2.3 (2023-09-18)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+## 1.2.2 (2023-09-15)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+## 1.2.1 (2023-09-14)
+
+
+### Bug Fixes
+
+* update broken link in release-highlights ([b071d23](https://github.com/patternfly/patternfly-org/commit/b071d23ec5ac791da7b6bd60c9935585b4c15772))
+
+
+
+
+
+# 1.2.0 (2023-09-13)
+
+
+### Features
+
+* **extensions:** Added extensions only build to patternfly org. ([#3747](https://github.com/patternfly/patternfly-org/issues/3747)) ([a636ad3](https://github.com/patternfly/patternfly-org/commit/a636ad379d87c07723d08a79849586387ff8d5b8))
+
+
+
+
+
+## 1.1.16 (2023-09-12)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+## 1.1.15 (2023-09-07)
+
+
+### Bug Fixes
+
+* **docs:** fix axe issues on home page ([#3731](https://github.com/patternfly/patternfly-org/issues/3731)) ([0675f2f](https://github.com/patternfly/patternfly-org/commit/0675f2fb5af977a066a04b38916ae7b51a2ee919))
+
+
+
+
+
+## 1.1.14 (2023-09-06)
+
+
+### Bug Fixes
+
+* **docs:** hid previous v4 releases from version switcher on v5 ([#3732](https://github.com/patternfly/patternfly-org/issues/3732)) ([b47810f](https://github.com/patternfly/patternfly-org/commit/b47810f265f10f4ca4aeac93e2f8e254c40ac5c5))
+
+
+
+
+
+## 1.1.13 (2023-09-06)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+## 1.1.12 (2023-09-01)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
 ## 1.1.11 (2023-08-31)
 
 **Note:** Version bump only for package @patternfly/ast-helpers
