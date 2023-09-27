@@ -5,6 +5,7 @@ section: get-started
 ---
 
 import './get-started.css';
+import { Divider } from '@patternfly/react-core';
 
 ## PatternFly 5.1 
 
@@ -26,12 +27,13 @@ We updated the [control bar documentation](/topology/control-bar) for topology t
 
 ### Clickable labels
 
-We added a new "clickable" variant to the labels component, so that you can use a label that acts as a button.
+We added a new "clickable" variant to the [label component](/components/label), so that you can use a label that acts as a button.
 
 To enable this behavior, we've added a new `onClick` property to the `<Label>` component, which can contain an action fit for your use case. 
 
 Note that you cannot use `onClick` if the `href` or `isEditable` properties are already passed into `<Label>`, since those align with link labels and editable labels, respectively.
 
+<Divider></Divider>
 
 ## PatternFly 5.0 
 
