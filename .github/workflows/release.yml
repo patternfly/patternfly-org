@@ -11,6 +11,8 @@ jobs:
     env:
       GH_TOKEN: ${{ secrets.GH_TOKEN_REDALLEN }} # needs to be an admin token to get around branch protection
       NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+      SURGE_LOGIN: ${{ secrets.SURGE_LOGIN }}
+      SURGE_TOKEN: ${{ secrets.SURGE_TOKEN }}
     steps:
       - run: printenv
       - uses: actions/checkout@v2
@@ -50,3 +52,12 @@ jobs:
         name: Check size of docs
       - run: .github/upload-staging.sh
         name: Upload docs to staging
+      - run: yarn build:extensions
+        name: Build extension docs
+      - name: Upload extension only docs
+        uses: dswistowski/surge-sh-action@v1
+        with:
+          domain: 'extensions-staging.patternfly.org'
+          project: 'build/patternfly-org/site'
+          login: ${{ secrets.SURGE_LOGIN }}
+          token: ${{ secrets.SURGE_TOKEN }}

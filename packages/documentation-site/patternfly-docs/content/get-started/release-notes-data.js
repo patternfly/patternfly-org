@@ -3552,7 +3552,13 @@ function handler2(_event, checked) {};
     description: (<>Removed the <code className='ws-code'>size</code>, <code className='ws-code'>color</code>, and <code className='ws-code'>noVerticalAlign</code> properties from icons imported from <code className='ws-code'>@patternfly/react-icons</code>.</>),
     pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/5275",
     repo: "React",
-    fixedWithCodeMod: false
+    fixedWithCodeMod: false,
+    details: (
+      <TextContent>
+        <Text component={TextVariants.p}>To change the default size or color on an icon, it is recommended to wrap the icon in a <code className='ws-code'>Icon</code> React component.</Text>
+	<Text component={TextVariants.p}>If the icon used the <code className='ws-code'>noVerticalAlign</code> prop in PatternFly 4, the same style can be achieved by wrapping the icon in a <code className='ws-code'>Icon</code> React component and using the <code className='ws-code'>isInline</code> prop.</Text>
+      </TextContent>
+    )    
   }, {
     component: "Application launcher",
     description: (<>Removed the <code className='ws-code'>removeFindDomNode</code> property as it is now the default behavior.</>),
