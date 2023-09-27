@@ -103,8 +103,6 @@ Toast alerts are commonly used in the following situations:
 
 <img src="./img/alert-group-mobile.png" alt="An example of a centered toast alert group over a mobile view." width="375" />
 
-<img src="./img/alert-group-mobile.png" alt="An example of a centered toast alert group over a mobile view." width="375" />
-
 See our [toast alert guidelines](/components/alert/design-guidelines/#using-toast-alerts) for more information about using toast alerts.
 
 
@@ -140,7 +138,7 @@ Use bordered inline alerts to return feedback as the result of a user action wit
 
 * **If the alert is being used to indicate errors on a modal,** use an error validation summary at the top of the modal below the title to indicate what errors are present. Show an error alert next to the field that is causing the error. The error message should be concise and actionable. It should tell the user what happened and the next steps needed to fix it. 
 
-  <img src="./img/inline-alert-modal-with-link-one.png" alt="multiple alerts on a modal demo 1" /> </br>
+  <img src="./img/inline-alert-modal-with-link-one.png" alt="multiple alerts on a modal demo 1" /> 
 
   <img src="./img/inline-alert-modal-with-link-two.png" alt="multiple alerts on a page demo 2" />
 
