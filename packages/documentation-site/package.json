@@ -25,12 +25,17 @@
     "@patternfly/react-log-viewer": "5.0.0",
     "@patternfly/react-topology": "5.0.0",
     "@patternfly/react-user-feedback": "5.0.0",
+    "@patternfly/react-component-groups": "1.0.15",
     "react": "^17.0.0 || ^18.0.0",
     "react-dom": "^17.0.0 || ^18.0.0"
   },
   "devDependencies": {
     "@patternfly/patternfly-a11y": "4.3.1",
     "fs-extra": "^11.1.0",
-    "glob": "^8.1.0"
+    "glob": "^8.1.0",
+    "react-jss": "^10.9.2",
+    "react-router": "^6.3.0",
+    "react-router-dom": "^6.3.0",
+    "classnames": "^2.2.5"
   }
 }

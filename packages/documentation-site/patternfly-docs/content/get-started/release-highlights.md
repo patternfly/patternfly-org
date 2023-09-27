@@ -66,7 +66,7 @@ Our [codemods](/get-started/upgrade#run-our-codemods) should take care of most o
 
 To improve the consistency of icon usage across projects adopting PatternFly, we are no longer using inline styles, color, or size for icons. Instead, React icons come with a built-in class `pf-v5-svg`, which gives an icon a default height, width, and vertical alignment. An icon's color is now set on the SVG file itself, using the `fill` attribute.
 
-If you want a custom color or size, wrap your icon in the [`<Icon>` React component](/components/icon), which comes with colors, size, etc.
+If you want a custom color or size, wrap your icon in the [`<Icon>` React component](/components/icon), which comes with colors, size, etc. If you had used `noVerticalAlign` on your icon in PatternFly 4, you can achieve this same style by using wrapping your icon in the `<Icon>` React component and passing in the `isInline` prop.
 
 If you are not importing `@patternfly/react-styles`, but are still using `@patternfly/react-icons` you will need to provide the generic styles that you have separated from the icons and moved into `@patternfly/react-styles`. For more information, [refer to the @patternfly/react-icons README file.](https://github.com/patternfly/patternfly-react/blob/main/packages/react-icons/README.md)
 
@@ -137,7 +137,7 @@ As a result, a few components were updated to use the same [`HelperText` compone
         - `helperTextInvalidIcon`
         - `isHelperTextBeforeField`
 
-        To add helper text to a form group in place of these properties you should use the `FormHelperText`, `HelperText`, and `HelperTextItem` components directly as part of the `FormGroup`’s children. This implementation is shown in PatternFly's [invalid form example.](components/forms/form#invalid)
+        To add helper text to a form group in place of these properties you should use the `FormHelperText`, `HelperText`, and `HelperTextItem` components directly as part of the `FormGroup`’s children. This implementation is shown in PatternFly's [invalid form example.](/components/forms/form#invalid)
 
 #### Input group
 
