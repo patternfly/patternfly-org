@@ -11,16 +11,29 @@ The default browser behavior displays content following LTR formatting. In order
 
 ## Support in PatternFly
 
-PatternFly components have been written to use logical properties - `block-start`, `inline-end`, `block-end`, and `inline-start` - rather than `top`, `right`, `bottom`, and `left`. This allows styles like margin and padding to be correctly laid out in both LTR and RTL. However, to avoid a sweeping breaking change, PatternFly variable names still use `top`, `bottom`, `left`, and `right`.
+PatternFly components have been written to use [logical properties](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_logical_properties_and_values) - `block-start`, `inline-end`, `block-end`, and `inline-start` - rather than `top`, `right`, `bottom`, and `left`. This allows styles like margin and padding to be correctly laid out in both LTR and RTL. However, to avoid a sweeping breaking change, PatternFly variable names still use `top`, `bottom`, `left`, and `right`.
 
-PatternFly components have been written to reverse directional icons that are part of the component - for example, the caret indicating expansion of various components is properly reversed. 
+**Note:** An exception to this support is with any components using popper.js, like tooltips and popovers. 
 
-Other icons you may have in your interface will not be mirrored automatically, as it may be appropriate to mirror some but not others. Be sure to review all icons in your product and adjust appropriately. PatternFly has modifier classes listed below that can help with that.
+### Charts 
+
+To support RTL across PatternFly charts, we've added a new `legendDirection` property to the
+`<Chart>`, `<ChartPie>`, `<ChartBullet>`, `<ChartDonut>`, and `<ChartDonutUtilization>` components. This property allows you to adjust the direction of chart legend labels. When in RTL, the value of this property should be set to "rtl". 
+
+Additionally, when in RTL, ensure that the `<ChartAxis>` representing a chart's x-axis uses the `invertAxis` property to flip the axis.
+
+**Note:** When using self-defined custom legends and label components, RTL support must be handled manually as `legendDirection` does not apply to custom implementations.
+
+### Icons
+PatternFly components have also been written to reverse directional icons that are part of the component. For example, the caret indicating expansion of various components is properly reversed. 
+
+Other icons you may have in your interface will not be mirrored automatically, as it may be appropriate to mirror some but not others. Be sure to review all icons in your product and adjust appropriately. PatternFly has modifier classes listed in the following section that can help with that.
+
 <br />
 
 ## PatternFly modifiers supporting RTL
 
-Use the modifier class `.pf-v5-m-mirror-inline-rtl` to reverse an icon or other element only when in RTL.
+To reverse an icon or other element when in RTL, use the modifier class `.pf-v5-m-mirror-inline-rtl` or the `shouldMirrorRTL` property of the `<Icon>` React component.
 
 To set direction manually on an element, use `.pf-v5-m-dir-ltr` or `.pf-v5-m-dir-rtl`.
 
