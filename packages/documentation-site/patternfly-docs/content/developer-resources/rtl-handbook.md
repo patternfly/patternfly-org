@@ -29,7 +29,7 @@ Additionally, when in RTL, ensure that the `<ChartAxis>` representing a chart's 
 ### Icons
 PatternFly components have also been written to reverse directional icons that are part of the component. For example, the caret indicating expansion of various components is properly reversed. 
 
-Care should be taken to handle icons appropriately for RTL. Some icons you may have in your interface will not be mirrored automatically. [Sometimes an icon should be reversed in RTL](https://m2.material.io/design/usability/bidirectionality.html#mirroring-elements) (for example, when indicating a direction such as an expansion caret), and sometimes it should not be reversed (such as a logo, or an icon indicating time). When an icon *should* be reversed, but isn't reverse automatically, you can use the modifier `.pf-v5-m-mirror-inline-rtl`.
+Care should be taken to handle icons appropriately for RTL. Some icons you may have in your interface will not be mirrored automatically. [Sometimes an icon should be reversed in RTL](https://m2.material.io/design/usability/bidirectionality.html#mirroring-elements) (for example, when indicating a direction such as an expansion caret), and sometimes it should not be reversed (such as a logo, or an icon indicating time). When an icon *should* be reversed, but isn't reversed automatically, you can use the modifier `.pf-v5-m-mirror-inline-rtl`.
 
 ## PatternFly modifiers supporting RTL
 
