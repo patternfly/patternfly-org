@@ -2,6 +2,7 @@
 id: Split
 section: layouts
 ---
+
 The **split** layout positions items horizontally in a container, with one item filling the remaining horizontal space as the viewport is resized.
 
 ##  Elements
