@@ -63,6 +63,7 @@ Refer to our developer resources to see a list of all [global CSS color variable
     <p>
       Background colors are used throughout components and, occasionally, for certain screens. Light colors can be used interchangeably with full-screen backgrounds, while dark colors are strictly used as backgrounds within components.
     </p>
+    <br>
     <h3>Light backgrounds</h3>
     <ColorSwatch color="--pf-v5-global--BackgroundColor--200">
       This color is most commonly used as a secondary background color for full-screen applications and hover backgrounds.
