@@ -128,7 +128,9 @@ Use bordered inline alerts to return feedback as the result of a user action wit
 
 * **If the alert is being used to indicate errors,** use an error validation summary at the top of the page to indicate what errors are present. The summary should be a quick, general overview. Show an error alert next to the field that is causing the error. The error message should be concise and actionable. It should tell the user what happened and the next steps needed to fix it. 
 
-  <img src="./img/inline-alert-page-level-with-link-one.png" alt="inline alert inline with link demo 1" /> </br>
+  <img src="./img/inline-alert-page-level-with-link-one.png" alt="inline alert inline with link demo 1" />
+
+  
 
   <img src="./img/inline-alert-page-level-with-link-two.png" alt="inline alert inline with link demo 2" />
 
