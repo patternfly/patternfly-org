@@ -29,7 +29,6 @@ PatternFly components have also been written to reverse directional icons that a
 
 Other icons you may have in your interface will not be mirrored automatically, as it may be appropriate to mirror some but not others. Be sure to review all icons in your product and adjust appropriately. PatternFly has modifier classes listed in the following section that can help with that.
 
-<br />
 
 ## PatternFly modifiers supporting RTL
 
