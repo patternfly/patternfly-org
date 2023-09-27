@@ -11,6 +11,8 @@ The default browser behavior displays content following LTR formatting. In order
 
 ## Support in PatternFly
 
+### Components 
+
 PatternFly components have been written to use [logical properties](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_logical_properties_and_values) - `block-start`, `inline-end`, `block-end`, and `inline-start` - rather than `top`, `right`, `bottom`, and `left`. This allows styles like margin and padding to be correctly laid out in both LTR and RTL. However, to avoid a sweeping breaking change, PatternFly variable names still use `top`, `bottom`, `left`, and `right`.
 
 **Note:** An exception to this support is with any components using popper.js, like tooltips and popovers. 
