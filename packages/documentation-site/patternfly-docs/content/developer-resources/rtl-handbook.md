@@ -27,20 +27,15 @@ Additionally, when in RTL, ensure that the `<ChartAxis>` representing a chart's 
 ### Icons
 PatternFly components have also been written to reverse directional icons that are part of the component. For example, the caret indicating expansion of various components is properly reversed. 
 
-Other icons you may have in your interface will not be mirrored automatically, as it may be appropriate to mirror some but not others. Be sure to review all icons in your product and adjust appropriately. PatternFly has modifier classes listed in the following section that can help with that.
-
+Care should be taken to handle icons appropriately for RTL. Some icons you may have in your interface will not be mirrored automatically. [Sometimes an icon should be reversed in RTL](https://m2.material.io/design/usability/bidirectionality.html#mirroring-elements) (for example, when indicating a direction such as an expansion caret), and sometimes it should not be reversed (such as a logo, or an icon indicating time). When an icon *should* be reversed, but isn't reverse automatically, you can use the modifier `.pf-v5-m-mirror-inline-rtl`.
 
 ## PatternFly modifiers supporting RTL
 
-To reverse an icon or other element when in RTL, use the modifier class `.pf-v5-m-mirror-inline-rtl` or the `shouldMirrorRTL` property of the `<Icon>` React component.
+-To reverse an icon or other element when in RTL, use the modifier class `.pf-v5-m-mirror-inline-rtl` or the `shouldMirrorRTL` property of the `<Icon>` React component.
 
 To set direction manually on an element, use `.pf-v5-m-dir-ltr` or `.pf-v5-m-dir-rtl`.
 
 To get the inverse of a number, dimension, or percentage, you can multiply by the variable `--pf-v5-global--inverse--multiplier`, which will have a value of 1 in LTR and -1 in RTL.
-
-## Support in your product
-
-Care should be taken to handle icons appropriately for RTL. [Sometimes an icon should be reversed in RTL](https://m2.material.io/design/usability/bidirectionality.html#mirroring-elements) (for example, when indicating a direction such as an expansion caret), and sometimes it should not be reversed (such as a logo, or an icon indicating time). When the icon should be reversed, the modifier `.pf-v5-m-mirror-inline-rtl` can be used.
 
 ## Best practices and resources
 - There are [many nuances to how content is laid out through LTR and RTL](https://ltr.wtf/explained/bidiintro.html#the-good-the-bad-and-the-ugly), so it isn't always obvious what the correct result should be. Testing your site with native speakers is always recommended. 
