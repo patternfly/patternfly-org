@@ -1,6 +1,6 @@
 ---
 id: About
-title: PatternFly design tokens
+title: Design tokens
 section: design-tokens
 ---
 
@@ -10,32 +10,22 @@ section: design-tokens
 
 Design tokens are variables that store visual design attributes, like color, typography, and spacing. A design token has a name and value that represents the visual design information it contains. 
 
-Visit the all tokens page for a complete list of PatternFly design tokens. 
 
 
-## Why use design tokens 
+## Why use tokens 
 
-## How to understand PatternFly design tokens
+Using design tokens helps maintain consistency across product design processes by ensuring that designers use the same colors for the same use cases. 
 
-### Token layers 
+Tokens also allow for easier maintenance design updates. If a color changes as part of a redesign or update, developers won't have to make any changes to code. Any time a token is changed, it will update automatically and apply to all instances of use.
 
-![Design layers example](./img/design-layers-example.png)
+## How to read tokens 
 
-#### Palette layer 
 
-Just the color palettes 
+For a more detailed breakdown, visit the PatternFly tokens documentation. 
 
-same idea as current color paletter variables
+## Examples of token use 
 
-#### Base layer 
+[images]
 
-“Palette” of tokens that the semantic layer can choose from
-Grouped conceptually, named numerically
-No duplicates within token concept groups
-
-### Semantic layer
-
-Top level tokens that we know and love
-Grouped conceptually, named semantically
-Reference base tokens, but can also reference other semantic tokens
-
+Start designing 
+Start developing 
