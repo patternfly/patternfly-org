@@ -15,7 +15,7 @@ The default browser behavior displays content following LTR formatting. In order
 
 PatternFly components have been written to use [logical properties](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_logical_properties_and_values) - `block-start`, `inline-end`, `block-end`, and `inline-start` - rather than `top`, `right`, `bottom`, and `left`. This allows styles like margin and padding to be correctly laid out in both LTR and RTL. However, to avoid a sweeping breaking change, PatternFly variable names still use `top`, `bottom`, `left`, and `right`.
 
-**Note:** An exception to this support is with any components using popper.js, like tooltips and popovers. 
+**Note:** An exception to this support is with any components using popper.js, like tooltips and popovers. For now, the popper position and placement will need to be managed manually when used on pages with RTL content.
 
 ### Charts 
 
@@ -29,11 +29,11 @@ Additionally, when in RTL, ensure that the `<ChartAxis>` representing a chart's 
 ### Icons
 PatternFly components have also been written to reverse directional icons that are part of the component. For example, the caret indicating expansion of various components is properly reversed. 
 
-Care should be taken to handle icons appropriately for RTL. Some icons you may have in your interface will not be mirrored automatically. [Sometimes an icon should be reversed in RTL](https://m2.material.io/design/usability/bidirectionality.html#mirroring-elements) (for example, when indicating a direction such as an expansion caret), and sometimes it should not be reversed (such as a logo, or an icon indicating time). When an icon *should* be reversed, but isn't reversed automatically, you can use the modifier `.pf-v5-m-mirror-inline-rtl`.
+Care should be taken to handle icons appropriately for RTL. Some icons you may have in your interface will not be mirrored automatically. [Sometimes an icon should be reversed in RTL](https://m2.material.io/design/usability/bidirectionality.html#mirroring-elements) (for example, when indicating a direction such as an expansion caret), and sometimes it should not be reversed (such as a logo, or an icon indicating time). When an icon *should* be reversed, but isn't reversed automatically, you you can use one of the methods mentioned in the [RTL helpers](/developer-resources/right-to-left-handbook#patternfly-rtl-helpers) section.
 
-## PatternFly modifiers supporting RTL
+## PatternFly RTL helpers
 
--To reverse an icon or other element when in RTL, use the modifier class `.pf-v5-m-mirror-inline-rtl` or the `shouldMirrorRTL` property of the `<Icon>` React component.
+To reverse an icon or other element when in RTL, use the modifier class `.pf-v5-m-mirror-inline-rtl` or the `shouldMirrorRTL` property of the `<Icon>` React component.
 
 To set direction manually on an element, use `.pf-v5-m-dir-ltr` or `.pf-v5-m-dir-rtl`.
 
