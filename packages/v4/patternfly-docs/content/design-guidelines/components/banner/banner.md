@@ -83,3 +83,5 @@ The padding required above and below a banner will depend on where it is placed.
 ## Accessibility 
 
 For information regarding accessibility, visit the [banner accessibility tab](/components/banner/accessibility).
+
+This is an edit I want to add to the banner guidelines.
