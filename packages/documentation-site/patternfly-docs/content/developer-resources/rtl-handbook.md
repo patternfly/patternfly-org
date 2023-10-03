@@ -33,7 +33,7 @@ Care should be taken to handle icons appropriately for RTL. Some icons you may h
 
 ## PatternFly RTL helpers
 
-The preferred approach for defining the browser's writing direction is to use the `dir` HTML attribute: `dir="rtl"` or `dir="ltr"`. `dir` should be used when an element's writing mode needs to be set. If you are unable to use this attribute for any reason, you can instead manually set direction with our `.pf-v5-m-dir-ltr` or `.pf-v5-m-dir-rtl` helpers. These classes will change the visual direction of text, but will not adjust the writing mode. These approaches can apply to the whole document or individual elements, and can be nested.
+The preferred approach for defining the browser's writing direction is to use the `dir` HTML attribute, preferably on the `<html>` tag: `<html dir="rtl">` or `<html dir="ltr">`. If you are unable to use this attribute for any reason, you can instead set the CSS `direction` property with our `.pf-v5-m-dir-ltr` or `.pf-v5-m-dir-rtl` helpers. These approaches can apply to the whole document or individual elements, and can be nested.
 
 To adjust the of direction of icons that aren't automatically mirrored for RTL and LTR, you can use the `.pf-v5-m-mirror-inline-rtl` class or the `shouldMirrorRTL` property of the `<Icon>` React component.
 
