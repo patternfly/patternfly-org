@@ -29,15 +29,13 @@ Additionally, when in RTL, ensure that the `<ChartAxis>` representing a chart's 
 ### Icons
 PatternFly components have also been written to reverse directional icons that are part of the component. For example, the caret indicating expansion of various components is properly reversed. 
 
-Care should be taken to handle icons appropriately for RTL. Some icons you may have in your interface will not be mirrored automatically. [Sometimes an icon should be reversed in RTL](https://m2.material.io/design/usability/bidirectionality.html#mirroring-elements) (for example, when indicating a direction such as an expansion caret), and sometimes it should not be reversed (such as a logo, or an icon indicating time). When an icon *should* be reversed, but isn't reversed automatically, you you can use one of the methods mentioned in the [RTL helpers](/developer-resources/right-to-left-handbook#patternfly-rtl-helpers) section.
+Care should be taken to handle icons appropriately for RTL. Some icons you may have in your interface will not be mirrored automatically. [Sometimes an icon should be reversed in RTL](https://m2.material.io/design/usability/bidirectionality.html#mirroring-elements) (for example, when indicating a direction such as an expansion caret), and sometimes it should not be reversed (such as a logo, or an icon indicating time). When an icon *should* be reversed, but isn't reversed automatically, you you can use one of the methods mentioned in the [RTL helpers](#patternfly-rtl-helpers) section.
 
 ## PatternFly RTL helpers
 
-The preferred approach for defining an element's direction is to use the `dir` HTML attribute: `dir="rtl"` or `dir="ltr"`. If you are unable to use this attribute for any reason, you can instead utilize one of the following approaches to reverse an icon or other element when in RTL:
+The preferred approach for defining the browser's writing direction is to use the `dir` HTML attribute: `dir="rtl"` or `dir="ltr"`. `dir` should be used when an element's writing mode needs to be set. If you are unable to use this attribute for any reason, you can instead manually set direction with our `.pf-v5-m-dir-ltr` or `.pf-v5-m-dir-rtl` helpers. These classes will change the visual direction of text, but will not adjust the writing mode. These approaches can apply to the whole document or individual elements, and can be nested.
 
-- Use the `.pf-v5-m-mirror-inline-rtl` class
-- Manually set an element's direction with `.pf-v5-m-dir-ltr` or `.pf-v5-m-dir-rtl`
-- Use the `shouldMirrorRTL` property of the `<Icon>` React component
+To adjust the of direction of icons that aren't automatically mirrored for RTL and LTR, you can use the `.pf-v5-m-mirror-inline-rtl` class or the `shouldMirrorRTL` property of the `<Icon>` React component.
 
 To get the inverse of a number, dimension, or percentage, you can multiply by the variable `--pf-v5-global--inverse--multiplier`, which will have a value of 1 in LTR and -1 in RTL.
 
