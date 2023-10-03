@@ -33,9 +33,11 @@ Care should be taken to handle icons appropriately for RTL. Some icons you may h
 
 ## PatternFly RTL helpers
 
-To reverse an icon or other element when in RTL, use the modifier class `.pf-v5-m-mirror-inline-rtl` or the `shouldMirrorRTL` property of the `<Icon>` React component.
+The preferred approach for defining an element's direction is to use the `dir` HTML attribute: `dir="rtl"` or `dir="ltr"`. If you are unable to use this attribute for any reason, you can instead utilize one of the following approaches to reverse an icon or other element when in RTL:
 
-To set direction manually on an element, use `.pf-v5-m-dir-ltr` or `.pf-v5-m-dir-rtl`.
+- Use the `.pf-v5-m-mirror-inline-rtl` class
+- Manually set an element's direction with `.pf-v5-m-dir-ltr` or `.pf-v5-m-dir-rtl`
+- Use the `shouldMirrorRTL` property of the `<Icon>` React component
 
 To get the inverse of a number, dimension, or percentage, you can multiply by the variable `--pf-v5-global--inverse--multiplier`, which will have a value of 1 in LTR and -1 in RTL.
 
