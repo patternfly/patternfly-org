@@ -12,14 +12,17 @@ import incorrect from './typography_incorrect_spacing.png';
 import './typography.css';
 
 ## PatternFly fonts
+
 PatternFly's fonts include **Red Hat Display** and **Red Hat Text**. For larger text, such as headings, use Red Hat Display. For smaller text, subheadings, and body text, use Red Hat Text, which is more readable for long-form text. You can [download PatternFly's fonts from GitHub.](https://github.com/RedHatOfficial/RedHatFont)
 
-## Usage 
+## Usage
+
 Use typography to create visual hierarchy. A consistent and logical hierarchy makes it easier for users to quickly scan and understand information on a page.
 
 There are two PatternFly components that can be used to place text content on a page: the [text component](/components/text) and the [title component](/components/title). The text component should be used to create formatted blocks of text content. It accepts all general HTML text formatting tags, including heading, paragraph, and list styles. The title component is intended to be used specifically for headings or title text in components. This component is flexible and allows you to set the size of the text and heading level independently.
 
-## PatternFly text styles 
+## PatternFly text styles
+
 The following sections outline common text styles that are used in PatternFly applications, how they should be used, and list settings in a table. These tables include the following information: 
 
 - **Text style:** The name used to refer to that text style in the [PatternFly design kit](/get-started/design#getting-the-design-kit).
@@ -37,7 +40,7 @@ The following sections outline common text styles that are used in PatternFly ap
   asGrid
   styleProps={styleProps.superHero} />
 
-<div class="--pf-v5-global--spacer--lg"> 
+<div class="pf-v5-u-mt-lg"> 
 </div>
 
 ### Hero heading (3xl)
@@ -48,7 +51,7 @@ The following sections outline common text styles that are used in PatternFly ap
   className="pf-v5-c-title pf-m-lg ws-title-level-heading"
   asGrid
   styleProps={styleProps.hero} />
-<div class="--pf-v5-global--spacer--lg">
+<div class="pf-v5-u-mt-lg">
 </div>
 
 ### First level heading (2xl, H1)
@@ -59,7 +62,7 @@ The following sections outline common text styles that are used in PatternFly ap
   className="pf-v5-c-title pf-m-lg ws-title-level-heading"
   asGrid
   styleProps={styleProps.first} />
-<div class="--pf-v5-global--spacer--lg">
+<div class="pf-v5-u-mt-lg">
 </div>
 
 ### Second level heading (xl, H2)
@@ -68,7 +71,7 @@ The following sections outline common text styles that are used in PatternFly ap
   className="pf-v5-c-title pf-m-lg ws-title-level-heading"
   asGrid
   styleProps={styleProps.second} />
-<div class="--pf-v5-global--spacer--lg">
+<div class="pf-v5-u-mt-lg">
 </div>
 
 ### Third level heading (lg, H3)
@@ -77,7 +80,7 @@ The following sections outline common text styles that are used in PatternFly ap
   className="pf-v5-c-title pf-m-lg ws-title-level-heading"
   asGrid
   styleProps={styleProps.third} />
-<div class="--pf-v5-global--spacer--lg">
+<div class="pf-v5-u-mt-lg">
 </div>
 
 ### Fourth level heading (md, H4)
@@ -86,10 +89,10 @@ The following sections outline common text styles that are used in PatternFly ap
   className="pf-v5-c-title pf-m-lg ws-title-level-heading"
   asGrid
   styleProps = {styleProps.fourth} />
-<div class="--pf-v5-global--spacer--lg">
+<div class="pf-v5-u-mt-lg">
 </div>
 
-### Default body text 
+### Default body text
 
 **Note:** This is the default text style for paragraphs, lists, tables, etc. Some components instead use Red Hat Text at 700 font weight, which is Red Hat Text Medium (such as alerts and navigation).
 
@@ -97,7 +100,7 @@ The following sections outline common text styles that are used in PatternFly ap
   className="pf-v5-c-title pf-m-lg ws-title-level-heading"
   asGrid
   styleProps = {styleProps.body} />
-<div class="--pf-v5-global--spacer--lg">
+<div class="pf-v5-u-mt-lg">
 </div>
 
 ### Small text
@@ -106,7 +109,7 @@ The following sections outline common text styles that are used in PatternFly ap
   className="pf-v5-c-title pf-m-lg ws-title-level-heading"
   asGrid
   styleProps = {styleProps.small} />
-<div class="--pf-v5-global--spacer--lg">
+<div class="pf-v5-u-mt-lg">
 </div>
 
 ### Tiny text
@@ -115,7 +118,7 @@ The following sections outline common text styles that are used in PatternFly ap
   className="pf-v5-c-title pf-m-lg ws-title-level-heading"
   asGrid
   styleProps = {styleProps.tiny} />
-<div class="--pf-v5-global--spacer--lg">
+<div class="pf-v5-u-mt-lg">
 </div>
 
 ### Code
@@ -126,7 +129,7 @@ The following sections outline common text styles that are used in PatternFly ap
   className="pf-v5-c-title pf-m-lg ws-title-level-heading"
   asGrid
   styleProps = {styleProps.code} />
-<div class="--pf-v5-global--spacer--lg">
+<div class="pf-v5-u-mt-lg">
 </div>
 
 ## Customizing heading levels
