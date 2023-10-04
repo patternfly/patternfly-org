@@ -14,12 +14,6 @@
   font-family: var(--pf-v5-global--FontFamily--monospace) !important;
 }
 
-.ws-typography-textColor {
-  color: var(--pf-v5-global--info-color--100);
-  max-width: 350px;
-  font-size: 14px;
-}
-
 .ws-typography-tableTypography {
   --pf-v5-c-table--BackgroundColor: transparent;
 }
