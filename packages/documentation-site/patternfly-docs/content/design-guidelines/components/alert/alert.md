@@ -108,8 +108,6 @@ Toast alerts are commonly used in the following situations:
 See our [toast alert guidelines](/components/alert/design-guidelines/#using-toast-alerts) for more information about using toast alerts.
 
 
-### Inline alerts
-
 ### Bordered inline alerts
 Bordered inline alerts communicate information about a specific user action on a page. An inline alert appears within the content area and disappears when the user closes it or navigates away from the page.
 
@@ -138,19 +136,13 @@ Use bordered inline alerts to return feedback as the result of a user action wit
 
 * **If the alert is being used to indicate errors on a modal,** use an error validation summary at the top of the modal below the title to indicate what errors are present. Show an error alert next to the field that is causing the error. The error message should be concise and actionable. It should tell the user what happened and the next steps needed to fix it. 
 
-  <img src="./img/inline-alert-modal-with-link-one.png" alt="multiple alerts on a modal demo 1" /> 
-
   <img src="./img/inline-alert-modal-with-link-two.png" alt="multiple alerts on a page demo 2" />
 
 * **If the alert is being used to indicate errors on a modal with an existing alert,** display the new alert above the existing alert.
 
   <img src="./img/inline-alert-modal-with-existing-alert.png" alt="multiple alerts on a modal with existing alert" />
 
-* **Alert is not needed for a confirmation modal.**
-
-  <img src="./img/no-alert-for-confirmation-modal.png" alt="alert is not needed for a confirmation modal" />
-
-**The user can dismiss information alerts by clicking the alert’s close button.** Error-related alerts (warning and critical severity) should disappear only when the user addresses the issue that caused the alert. However, if the issue cannot be corrected on the current page and the user must take action to address a situation before proceeding, use a [modal](/components/modal) instead of an inline alert.
+**The user can dismiss an information alert by using the close button.** Error-related alerts (warning and critical severity) should disappear only when the underlying issue that caused the alert is resolved. However, if the issue cannot be resolved on the current page, use a [modal](/components/modal) instead of an inline alert to provide user the options to proceed.
  
 In addition to static message content and links, **you have the option of including interactive elements** in the body of an inline alert to ask the user for further input or feedback.
 
