@@ -1,5 +1,4 @@
 import React from 'react';
-import { Grid, GridItem } from '@patternfly/react-core';
 import { Table, Tr, Tbody, Td } from '@patternfly/react-table';
 
 export const PfStyledText = ({ children, variableName, fontWeight, lineHeight, fontFamily }) => (
@@ -116,43 +115,43 @@ export const styleProps = {
 
 export const TypographyGrid = ({title, note, symbol, fontWeight, fontWeightText, fontSize, variableName, lineHeight, fontFamily, textStyle, className}) => (
   <React.Fragment>
-    <h3 className={className ? `ws-title ${className}` : 'ws-title'}>{title} {symbol && <span className="ws-typography-gridTitleSymbol">{symbol}</span>}</h3>
+    {title && (
+      <h3 className={className ? `ws-title ${className}` : 'ws-title'}>
+        {title} {symbol && <span className="ws-typography-gridTitleSymbol">{symbol}</span>}
+      </h3>
+    )}
     {note && <p><strong>Note: </strong>{note}</p>}
     <PfStyledText fontFamily={fontFamily} fontWeight={fontWeight} variableName={variableName} lineHeight={lineHeight}>
       Design is where science and art break even.
     </PfStyledText>
-    <Grid gutter="sm">
-      <GridItem span={12}>
-        <Table variant="compact" className="ws-typography-tableTypography" aria-label="typography usage guidelines breakout">
-          <Tbody>
-            <Tr>
-              <Td className="pf-v5-u-pr-sm">Font family:</Td>
-              <Td>{fontFamily}</Td>
-            </Tr>
-            <Tr>
-              <Td>Font weight:</Td>
-              <Td>{fontWeightText}</Td>
-            </Tr>
-            <Tr>
-              <Td>Line height:</Td>
-              <Td>{lineHeight}</Td>
-            </Tr>
-            <Tr>
-              <Td>Font size:</Td>
-              <Td>{fontSize}</Td>
-            </Tr>
-            <Tr>
-              <Td>Text style:</Td>
-              <Td>{textStyle}</Td>
-            </Tr>
-            <Tr>
-              <Td>Font size CSS variable:</Td>
-              <Td><code className="ws-code">{variableName}</code></Td>
-            </Tr>
-          </Tbody>
-        </Table>
-      </GridItem>
-    </Grid>
+    <Table variant="compact" className="ws-typography-tableTypography" aria-label="typography usage guidelines breakout">
+      <Tbody>
+        <Tr>
+          <Td className="pf-v5-u-pr-sm">Font family:</Td>
+          <Td>{fontFamily}</Td>
+        </Tr>
+        <Tr>
+          <Td>Font weight:</Td>
+          <Td>{fontWeightText}</Td>
+        </Tr>
+        <Tr>
+          <Td>Line height:</Td>
+          <Td>{lineHeight}</Td>
+        </Tr>
+        <Tr>
+          <Td>Font size:</Td>
+          <Td>{fontSize}</Td>
+        </Tr>
+        <Tr>
+          <Td>Text style:</Td>
+          <Td>{textStyle}</Td>
+        </Tr>
+        <Tr>
+          <Td>Font size CSS variable:</Td>
+          <Td><code className="ws-code">{variableName}</code></Td>
+        </Tr>
+      </Tbody>
+    </Table>
   </React.Fragment>
 );
 
