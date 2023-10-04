@@ -7,18 +7,24 @@ import { ColorSwatch } from './ColorSwatch';
 import { ColorFamily } from './ColorFamily';
 import './colors.css';
 
-## Primary colors
+# PatternFly colors 
+This guide outlines the PatternFly color palette, as well as guidance for color use in different scenarios. Note that the color swatches and palettes automatically change to accommodate light or dark themes. To learn more about PatternFly’s dark theme, refer to our [dark theme handbook](/developer-resources/dark-theme-handbook).
+
+In this guide, you can select each color swatch to learn more details, such as hex values and usage guidance.
+
+Refer to our developer resources to see a list of all [global CSS color variables.](https://patternfly-org-pr-3678-site.surge.sh/developer-resources/global-css-variables/#global-css-variables)
+
 <Grid hasGutter>
   <GridItem xl={6} lg={12} className="ws-colors-gridtext">
-    ### PatternFly blue
+    ## Primary colors
     <p>
-      Primary colors are those displayed most frequently across your application screens and components. Our primary colors are used across components and are typically applied to default, active, focus, and hover states.
+      Primary colors are those displayed most frequently across your application screens and components. Our primary color is called **"PatternFly blue"**, which is used across PatternFly's components. PatternFly blue should change upon hover.
     </p>
     <ColorSwatch label="Default" color="--pf-v5-global--primary-color--100">
-      This color usually indicates a default or active state for many components, including badges and spinners.
+      This color indicates a default or active state for many components.
     </ColorSwatch>
     <ColorSwatch label="Hover" color="--pf-v5-global--primary-color--200">
-      This color is most commonly used as the hover or focus state for components that use the default primary color, such as buttons and dropdowns.
+      This color is used as the hover or focus state for components that use the default primary color.
     </ColorSwatch>
   </GridItem>
   <GridItem xl={6} lg={12}>
@@ -31,18 +37,17 @@ import './colors.css';
 ## Typography and iconography colors
 <Grid hasGutter>
   <GridItem xl={6} lg={12} className="ws-colors-gridtext">
-    ### Text and icons
     <p>
-      Typography and iconography colors are extremely similar because they can be used in the same context, such as for a link button. We have multiple shades of text colors on light and dark backgrounds so that you can emphasize hierarchy.
+      Text and icon colors are extremely similar because they can often be used in the same context, such as for a link button. We support multiple shades of text colors so that you can emphasize hierarchy on both light and dark backgrounds.
     </p>
     <ColorSwatch color="--pf-v5-global--Color--100">
-      This color is used for standard text, icons, and as a hover state color for icon buttons. It is most commonly used as a text color for many components and application screens.
+      This color is used for standard text and icons, and also as a hover state color for icon buttons. It is most commonly used as a text color for many components and application screens.
     </ColorSwatch>
     <ColorSwatch color="--pf-v5-global--Color--200">
       This color is used as a secondary text color and as a default color for icon buttons. It is most commonly used for many components, such as the app launcher and empty states.
     </ColorSwatch>
     <ColorSwatch color="--pf-v5-global--link--Color">
-      This color is most commonly used for link text and icons for many components, such as navigation and accordions. Blue icons use the same primary color variable as the blue text.
+      This color is most commonly used for link text and icons across many components, such as navigation and accordions.
     </ColorSwatch>
   </GridItem>
   <GridItem xl={6} lg={12}>
@@ -56,14 +61,17 @@ import './colors.css';
 <Grid hasGutter>
   <GridItem xl={6} lg={12} className="ws-colors-gridtext">
     <p>
-      Background colors are used throughout components and for certain screens, depending on the use case. Light colors can be used interchangeably with full-screen backgrounds, while dark background colors are strictly used within components.
+      Background colors are used throughout components and, occasionally, for certain screens. Light colors can be used interchangeably with full-screen backgrounds, while dark colors are strictly used as backgrounds within components.
     </p>
+
+    <h3>Light backgrounds</h3>
     <ColorSwatch color="--pf-v5-global--BackgroundColor--200">
-      This color is most commonly used as a secondary background color for full application screens and hover backgrounds.
+      This color is most commonly used as a secondary background color for full-screen applications and hover backgrounds.
     </ColorSwatch>
     <ColorSwatch color="--pf-v5-global--BackgroundColor--100">
-      This color is most commonly used as a primary background color for full application screens and many components, such as cards and tables/data lists.
+      This color is most commonly used as a primary background color for full-screen applications and many components, such as cards and tables/data lists.
     </ColorSwatch>
+    <h3>Dark backgrounds</h3>
     <ColorSwatch color="--pf-v5-global--BackgroundColor--dark-100">
       This color is most commonly used as a background color for many components, such as tooltips and wizards.
     </ColorSwatch>
@@ -87,7 +95,7 @@ import './colors.css';
 ## Status and state colors
 <Grid hasGutter>
   <GridItem xl={6} lg={12} className="ws-colors-gridtext">
-      Status and state colors are indicators that communicate data and actions to users through the UI. Our status colors cover default, danger, success, information, and warning statuses, as well as disabled states.
+      Status and state colors are indicators that communicate data and actions to users through the UI. PatternFly's status colors cover default, danger, success, information, and warning statuses, as well as disabled states.
   </GridItem>
   <GridItem xl={6} lg={12} rowSpan={6}>
     <img width="443px" src="./patternfly-status.png" alt="PatternFly status colors" />
@@ -154,13 +162,13 @@ import './colors.css';
   </GridItem>
    <GridItem xl={6} lg={12}>
     <h3>Disabled</h3>
-    <ColorSwatch color="--pf-v5-global--disabled-color--100">
+    <ColorSwatch color="--pf-v5-global--disabled-color--100" caption="disabled text">
       This color is used as the text color when components are disabled.
     </ColorSwatch>
-    <ColorSwatch color="--pf-v5-global--disabled-color--200">
+    <ColorSwatch color="--pf-v5-global--disabled-color--200" caption="disabled background">
       This color is used as the background color for many components when they are disabled, such as buttons and the application launcher.
     </ColorSwatch>
-    <ColorSwatch color="--pf-v5-global--disabled-color--300">
+    <ColorSwatch color="--pf-v5-global--disabled-color--300" caption="alternate disabled background">
       This color is used as an alternate background color for components when they are disabled, such as dropdowns and options menus.
     </ColorSwatch>
   </GridItem>
@@ -172,16 +180,16 @@ import './colors.css';
 <Grid hasGutter>
   <GridItem xl={6} lg={12} className="ws-colors-gridtext">
     <p>
-      Shadows provide specifics about depth, movement direction, and surface edges. Depending on the surface’s elevation and relationships to other surfaces, the type of shadow will change.
+      Shadows can be used to create contrast between UI elements. PatternFly supports different shadow sizes, which enable you to increase the visual depth of a UI element and distinguish it from other elements on the screen. 
     </p>
     <ColorSwatch label="Large" color="--pf-v5-global--BoxShadow--lg">
-      This variable displays a large shadow for many components, such as alerts and modals.
+      Large shadows create the most contrast and depth for a UI element. These are commonly used for alerts and modals.
     </ColorSwatch>
     <ColorSwatch label="Medium" color="--pf-v5-global--BoxShadow--md">
-      This variable displays a medium shadow for many components, such as accordions and dropdowns.
+      Medium shadows fall between small and large shadows, creating moderate contrast and depth for a UI element. These are commonly used for accordions and dropdowns. 
     </ColorSwatch>
     <ColorSwatch label="Small" color="--pf-v5-global--BoxShadow--sm">
-      This variable displays a small shadow for the card component.
+      Small shadows offer minimal, but visible shadows that slightly increase the contrast and depth of a UI element. These are most commonly used for cards. 
     </ColorSwatch>
   </GridItem>
   <GridItem xl={6} lg={12}>
@@ -192,18 +200,19 @@ import './colors.css';
 <Divider className="ws-colors-divider" />
 
 ## Contrast ratios
-<p>
-  <a href="https://www.w3.org/WAI/standards-guidelines/wcag/new-in-21/" target="_blank" className="pf-m-link">Level AA in the Web Content Accessibility Guidelines 2.1</a> requires a contrast ratio of at least 4.5:1 for normal text, 3:1 for large text, and 3:1 for graphics and UI components (such as form input borders).
-</p>
 
-Check the contrast between the background color and text color using a <a href="https://color.a11y.com/?wc3" target="_blank" className="pf-m-link">WCAG AA-compliance tool.</a>
+[PatternFly's goal](/accessibility/patternflys-accessibility/) is to meet [level AA in the Web Content Accessibility Guidelines 2.1](https://www.w3.org/WAI/standards-guidelines/wcag/new-in-21/). To meet level AA requirements, your UI contrast ratios must be at or above 4.5:1 for normal text, 3:1 for large text, and 3:1 for graphics and other UI components. Additionally, on hover, link text color should have ample contrast from both the background color and the default state link color.
 
-Make sure that, on hover, the link text color has ample contrast from both the background color and the default state link color.
+To check the contrast between background and text colors, use a <a href="https://color.a11y.com/?wc3" target="_blank" className="pf-m-link">WCAG AA-compliance tool.</a>
 
 <Divider className="ws-colors-divider" />
 
-## Color palette
-Our palettes are created as a system designed to reinforce application content and workflows. Bright colors are reserved for specific interactions, such as reinforcing status, and are used sparingly. Our palettes are simple, consolidated, and versatile to allow them to be easily deployed for any situation.
+## PatternFly palettes
+Our color palettes are created as a system, designed to reinforce content and workflows. Our palettes are carefully chosen to support effective communication and adapt to the needs of your UI.
+
+Note that bright colors are used sparingly and are reserved for specific interactions, such as communicating status.
+
+Our color palettes are organized into "families" that contain different shades of the same hue. In the following palettes, you can expand each value color or shadow in a family to see more details.
 
 <Grid hasGutter>
   <GridItem xl2RowSpan={1} xl2={4} xl={6} xlRowSpan={2} sm={12}>
