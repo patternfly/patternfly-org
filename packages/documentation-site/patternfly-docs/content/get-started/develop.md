@@ -58,6 +58,18 @@ The React library provides a collection of React components you can use to build
   yarn add @patternfly/react-core
   ```
 
+PatternFly React is composed of a number of React implementations published in the following npm packages:
+
+* [@patternfly/react-core](https://www.npmjs.com/package/@patternfly/react-core) - This packages provides most of the React core components
+* [@patternfly/react-charts](https://www.npmjs.com/package/@patternfly/react-charts) - This package provides PatternFly charting components.
+* [@patternfly/react-code-editors](https://www.npmjs.com/package/@patternfly/react-code-editors) - This package provides a PatternFly wrapper for the Monaco code editor.
+* [@patternfly/react-icons](https://www.npmjs.com/package/@patternfly/react-icons) - This package provides PatternFly icons as React components.
+* [@patternfly/react-styles](https://www.npmjs.com/package/@patternfly/react-styles) - This package provides CSS-in-JS capabilities .
+* [@patternfly/react-table](https://www.npmjs.com/package/@patternfly/react-table) - This package provides table PatternFly components.
+* [@patternfly/react-tokens](https://www.npmjs.com/package/@patternfly/react-tokens) - This package provides all CSS tokens and values as JavaScript objects.
+
+These PatternFly React packages are maintained together. To determine which versions of each package are compatible with the rest, view our [release highlights](https://www.patternfly.org/get-started/release-highlights).
+
 **Configurations**
 * [TypeScript](https://github.com/patternfly/patternfly-react-seed/blob/master/tsconfig.json)
 * [Webpack](https://github.com/patternfly/patternfly-react-seed/blob/master/webpack.common.js)
