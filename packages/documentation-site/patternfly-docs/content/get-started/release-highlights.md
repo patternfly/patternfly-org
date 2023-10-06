@@ -13,6 +13,25 @@ As part of our [quarterly release cadence](/get-started/about#patternfly-release
 
 To help provide a high-level view of what's new, we've pulled together the major highlights from this release. Keep reading to learn more!
 
+### Promoted package versions
+
+- patternfly/patternfly ([changelog](https://github.com/patternfly/patternfly/releases/tag/v5.1.0))
+  - [@patternfly/patternfly@5.1.0](https://www.npmjs.com/package/@patternfly/patternfly/v/5.1.0)
+
+
+- patternfly/patternfly-react ([changelog](https://github.com/patternfly/patternfly-react/releases/tag/v5.1.1))
+  - [@patternfly/react-charts@7.1.1](https://www.npmjs.com/package/@patternfly/react-charts/v/7.1.1)
+  - [@patternfly/react-code-editor@5.1.1](https://www.npmjs.com/package/@patternfly/react-code-editor/v/5.1.1)
+  - [@patternfly/react-core@5.1.1](https://www.npmjs.com/package/@patternfly/react-core/v/5.1.1)
+  - [@patternfly/react-icons@5.1.1](https://www.npmjs.com/package/@patternfly/react-icons/v/5.1.1)
+  - [@patternfly/react-styles@5.1.1](https://www.npmjs.com/package/@patternfly/react-styles/v/5.1.1)
+  - [@patternfly/react-table@5.1.1](https://www.npmjs.com/package/@patternfly/react-table/v/5.1.1)
+  - [@patternfly/react-tokens@5.1.1](https://www.npmjs.com/package/@patternfly/react-tokens/v/5.1.1)
+
+
+- PatternFly extensions
+  - [@patternfly/react-topology@5.1.0](https://www.npmjs.com/package/@patternfly/react-topology/v/5.1.0) ([changelog](https://github.com/patternfly/react-topology/releases/tag/v5.1.0))
+  
 ### Right-to-left language support 
 
 Last quarter, our developers were dedicated to implementing right-to-left (RTL) language support in PatternFly. To better enable product internationalization, we've updated our components to support both right-to-left (RTL) and left-to-right (LTR) languages. You can check out our [RTL handbook](/developer-resources/right-to-left-handbook) for more details and resources.
