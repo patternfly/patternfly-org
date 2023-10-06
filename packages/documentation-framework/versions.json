@@ -24,6 +24,7 @@
     },{
       "name": "5.0.0",
       "date": "2023-07-27",
+      "hidden": true,
       "versions": {
         "@patternfly/patternfly": "5.0.2",
         "@patternfly/react-charts": "7.0.0",
