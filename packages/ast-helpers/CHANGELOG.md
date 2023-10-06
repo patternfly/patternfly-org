@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.2.16 (2023-10-06)
+
+
+### Bug Fixes
+
+* update site with 5.1 release versions ([#3770](https://github.com/patternfly/patternfly-org/issues/3770)) ([63e583b](https://github.com/patternfly/patternfly-org/commit/63e583bc9d6c42f8e6619c6e61126e4c38b0c0c3))
+
+
+
+
+
 ## 1.2.15 (2023-10-05)
 
 
