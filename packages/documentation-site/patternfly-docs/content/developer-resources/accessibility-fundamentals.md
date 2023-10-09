@@ -81,13 +81,13 @@ We believe that all abilities should be treated equally. There should be parity 
 To help you achieve this, consider these guidelines:
 
 1. Content should be optimized for all input types: touch, mouse, and keyboard.
-- Don’t optimize the experience for one input type at the expense of another.
-- Contents that are mouse-accessible should also be accessible using touch or a keyboard.
-- Don’t show interactive elements on hover. Interactive elements that can display in a pop-up must display on click, touch, or enter-key events.
+  - Don’t optimize the experience for one input type at the expense of another.
+  - Contents that are mouse-accessible should also be accessible using touch or a keyboard.
+  - Don’t show interactive elements on hover. Interactive elements that can display in a pop-up must display on click, touch, or enter-key events.
 
 2. Screen reader content should match visibly rendered content (refer to the [first note for `aria-hidden` state](https://www.w3.org/TR/wai-aria/#aria-hidden)).
 
 3. There should be parity between hover and focus events. Any information that’s available on hover for the mouse user should be available on keyboard focus.
-- Make content should available to a screen reader by using `aria-describedby` (refer to [Tooltips & Toggletips example from Inclusive Components](https://inclusive-components.design/tooltips-toggletips/)).
+  - Make content should available to a screen reader by using `aria-describedby` (refer to [Tooltips & Toggletips example from Inclusive Components](https://inclusive-components.design/tooltips-toggletips/)).
 
-When building accessible user experiences, solving for one can extend to many. Humans are diverse and unique, and inclusive design takes that into consideration to create truly incredible products.
+When building accessible user experiences, solving for one can extend to many. Humans are diverse and unique, and designing for accessibility takes that into consideration to create truly inclusive products.
