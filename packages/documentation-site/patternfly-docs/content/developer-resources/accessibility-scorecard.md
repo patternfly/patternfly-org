@@ -4,12 +4,16 @@ section: accessibility
 ---
 import { AccessibilityScorecard } from './accessibility-scorecard.js';
 
+## Scoring your accessibility
+
+To support the proper assessment of accessibility measures, we've created a scorecard that outlines the essential criteria to meet. You can use this scorecard as a guide to evaluate the state of accessibility for any UI built using PatternFly.
+
 ## PatternFly.org accessibility scorecard
 
-The PatternFly team has created the accessibility scorecard to evaluate the state of accessibility for any UI built 
-using PatternFly. The scorecard represents the state of accessibility for a UI at the date of evaluation. The 
-PatternFly team has used this scorecard to evaluate the PatternFly documentation on PatternFly.org. A UI which desires 
-an accessibility evaluation and scorecard can reach out via the PatternFly 
-<a href="https://join.slack.com/t/patternfly/shared_invite/zt-1npmqswgk-bF2R1E2rglV8jz5DNTezMQ" target="_blank" rel="noopener noreferrer">Slack</a> workspace.
+The following scorecard demonstrates what a completed scorecard may look like for your product. This information can help you communicate the accessibility of your product by clearly identifying how it meets important criteria.
+
+Note that this example scorecard assesses the documentation on PatternFly.org. 
+
+If you're a developer looking for more guidance on conducting an accessibility audit, refer to our [accessibility testing guide](/accessibility/testing-your-accessibility).
 
 <AccessibilityScorecard />
