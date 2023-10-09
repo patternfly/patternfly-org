@@ -1,7 +1,6 @@
 ---
 id: Accessibility fundamentals
 section: accessibility
-redirectFrom: /developer-resources/accessibility-guide
 ---
 
 No user should feel left behind when using your product. The goal of accessible design is to remove barriers and create inclusive product experiences that work for everyone, regardless of ability. Accessibility is best achieved when considered early in the design and development process. 
@@ -86,9 +85,9 @@ To help you achieve this, consider these guidelines:
 - Contents that are mouse-accessible should also be accessible using touch or a keyboard.
 - Don’t show interactive elements on hover. Interactive elements that can display in a pop-up must display on click, touch, or enter-key events.
 
-1. Screen reader content should match visibly rendered content (refer to the [first note for `aria-hidden` state](https://www.w3.org/TR/wai-aria/#aria-hidden)).
+2. Screen reader content should match visibly rendered content (refer to the [first note for `aria-hidden` state](https://www.w3.org/TR/wai-aria/#aria-hidden)).
 
-1. There should be parity between hover and focus events. Any information that’s available on hover for the mouse user should be available on keyboard focus.
+3. There should be parity between hover and focus events. Any information that’s available on hover for the mouse user should be available on keyboard focus.
 - Make content should available to a screen reader by using `aria-describedby` (refer to [Tooltips & Toggletips example from Inclusive Components](https://inclusive-components.design/tooltips-toggletips/)).
 
 When building accessible user experiences, solving for one can extend to many. Humans are diverse and unique, and inclusive design takes that into consideration to create truly incredible products.
