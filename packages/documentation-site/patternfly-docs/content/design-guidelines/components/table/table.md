@@ -51,6 +51,25 @@ See [when to use compact vs. default spacing](#compact-vs-default-spacing) for m
 
 <img src="./img/compact-and-default-table.png"  alt="Compact and default table"  width="857"/>
 
+### Showing more information in a table cell
+
+### Compact label group in table usage
+
+Compact label groups in a table should be used where there are more than one label assigned to a component.
+Clickable label should be gray and indication “# more” (example: “3 more”)
+
+#### Variations
+**7 or less items**: Use a [popover](/components/popover#basic) to display remaining items
+
+<img src="./img/Label-with-popover.png"  alt="Label with popover"  width="857"/>
+<img src="./img/Label-with-tooltip.png"  alt="Label with tooltip"  width="857"/>
+<img src="./img/Labels-with-popover.png"  alt="Labels with popovers"  width="857"/>
+
+
+**8 or more items**: Use a modal with a search
+
+<img src="./img/8-or-more-labels-in-modal.png"  alt="8 or more items modal"  width="857"/>
+
 ### Table capabilities
 Every table can be extended with these functionalities:
 
