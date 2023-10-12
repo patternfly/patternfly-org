@@ -1,5 +1,5 @@
 ---
-id: Accessible design
+id: Design accessibly
 section: accessibility
 ---
 
