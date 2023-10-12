@@ -3,6 +3,8 @@ id: About
 section: accessibility
 ---
 
+# Accessibility fundamentals 
+
 No user should feel left behind when using your product. The goal of accessible design is to remove barriers and create inclusive product experiences that work for everyone, regardless of ability. Accessibility is best achieved when considered early in the design and development process. 
 
 Accessibility is a foundation of PatternFly, so if you contribute to PatternFly or use it for your products you should familiarize yourself with accessibility first.
