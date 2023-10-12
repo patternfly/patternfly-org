@@ -41,10 +41,10 @@ PatternFly recommends colors to use with bar charts, donut charts and pie charts
 
 When selecting colors for your chart, there are a few important usage considerations to keep in mind. Within a color family, use the base color before the other, lighter or darker hues. Additionally, consider other basic guidelines: 
 <br />
-**Green family:** Use to show success
-**Red family:** Use to show failure
-**Other color families:** Use for neutral purposes or categories
-**Patterns:** Use to deemphasize a section of a chart. Do not use patterns for every section of a chart. Instead, patterns should be used for a single chart portion or for one type of portion (such as for all successes) to deemphasize that section and highlight the other section, which utilizes a solid color.
+* **Green family:** Use to show success
+* **Red family:** Use to show failure
+* **Other color families:** Use for neutral purposes or categories
+* **Patterns:** Use to deemphasize a section of a chart. Do not use patterns for every section of a chart. Instead, patterns should be used for a single chart portion or for one type of portion (such as for all successes) to deemphasize that section and highlight the other section, which utilizes a solid color.
 <br />
 **Note:** When showing success and failure together in a chart, the base color red and green do not pass accessibility requirements. When using both red and green base colors in a single chart, add a pattern to the section that you want to deemphasize to improve the chart’s accessibility.
 <br />
