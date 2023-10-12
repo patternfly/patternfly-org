@@ -1,5 +1,5 @@
 ---
-id: Accessibility fundamentals
+id: About
 section: accessibility
 ---
 
