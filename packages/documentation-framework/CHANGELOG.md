@@ -3,6 +3,140 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 5.2.19 (2023-10-10)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 5.2.18 (2023-10-09)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 5.2.17 (2023-10-06)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 5.2.16 (2023-10-06)
+
+
+### Bug Fixes
+
+* update site with 5.1 release versions ([#3770](https://github.com/patternfly/patternfly-org/issues/3770)) ([63e583b](https://github.com/patternfly/patternfly-org/commit/63e583bc9d6c42f8e6619c6e61126e4c38b0c0c3))
+
+
+
+
+
+## 5.2.15 (2023-10-05)
+
+
+### Bug Fixes
+
+* updates for q3 release ([#3763](https://github.com/patternfly/patternfly-org/issues/3763)) ([fca2b60](https://github.com/patternfly/patternfly-org/commit/fca2b60d50002550ccf416aad6d0744058d398d1))
+
+
+
+
+
+## 5.2.14 (2023-10-05)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 5.2.13 (2023-10-04)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 5.2.12 (2023-10-04)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 5.2.11 (2023-09-27)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 5.2.10 (2023-09-27)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 5.2.9 (2023-09-27)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 5.2.8 (2023-09-27)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 5.2.7 (2023-09-27)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 5.2.6 (2023-09-27)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 5.2.5 (2023-09-27)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 5.2.4 (2023-09-22)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
 ## 5.2.3 (2023-09-18)
 
 **Note:** Version bump only for package @patternfly/documentation-framework
