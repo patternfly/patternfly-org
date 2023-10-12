@@ -1,5 +1,5 @@
 ---
-id: Accessible development
+id: Develop accessibly
 section: accessibility
 ---
 import { AccessibilityDatalist } from './accessibility-datalist.js';
