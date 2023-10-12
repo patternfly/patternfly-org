@@ -41,6 +41,21 @@ Lists and tables should be placed in the body of a page. The width should be set
 
 In this example, a table is positioned in the body of a page in a card.
 
+### Showing more information in a table cell
+
+To show more information in a table cell than can fit in the row field, you may truncate the list and use a label to indicate that there are more items to view. This label should be gray and indicate the numebr of items left to view (example: "3 more"). It is recommended to show at least one item before hiding the rest of the items.
+
+Clicking on the label would open up a popover or modal depending on the number of items:
+
+* When you have **7 or less items**, use a [popover](/components/popover#basic) to display remaining items:
+  <img src="./img/Label-with-popover.png"  alt="Label with popover"  width="857"/>
+  <img src="./img/Label-with-tooltip.png"  alt="Label with tooltip"  width="857"/>
+  <img src="./img/Labels-with-popover.png"  alt="Labels with popovers"  width="857"/>
+
+
+* When you have **8 or more items**, use a modal with a search:
+  <img src="./img/8-or-more-labels-in-modal.png"  alt="8 or more items modal"  width="600"/>
+
 ## Variations
 PatternFly supports 2 main types of tables:
 
@@ -50,25 +65,6 @@ PatternFly supports 2 main types of tables:
 See [when to use compact vs. default spacing](#compact-vs-default-spacing) for more information about the styling and usage.
 
 <img src="./img/compact-and-default-table.png"  alt="Compact and default table"  width="857"/>
-
-### Showing more information in a table cell
-
-### Compact label group in table usage
-
-Compact label groups in a table should be used where there are more than one label assigned to a component.
-Clickable label should be gray and indication “# more” (example: “3 more”)
-
-#### Variations
-**7 or less items**: Use a [popover](/components/popover#basic) to display remaining items
-
-<img src="./img/Label-with-popover.png"  alt="Label with popover"  width="857"/>
-<img src="./img/Label-with-tooltip.png"  alt="Label with tooltip"  width="857"/>
-<img src="./img/Labels-with-popover.png"  alt="Labels with popovers"  width="857"/>
-
-
-**8 or more items**: Use a modal with a search
-
-<img src="./img/8-or-more-labels-in-modal.png"  alt="8 or more items modal"  width="857"/>
 
 ### Table capabilities
 Every table can be extended with these functionalities:
