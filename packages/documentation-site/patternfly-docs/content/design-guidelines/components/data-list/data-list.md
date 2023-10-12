@@ -77,15 +77,13 @@ The selectable data list provides checkboxes that enable users to select one or 
 ### Clickable data list
 The clickable data list can be used when data lists need to provide additional information while keeping the row information available via a primary-detail drawer. This can be done by clicking on the row itself.
 
+* **Use a clickable data list** when you need to allow the user to trigger an action of opening a primary-detail drawer to view more information
+* **Don't use a clickable data list** when users don't need to see more information in addition to the data list information
+
 <img src="./img/datalist-clickable.png" alt="example of clickable data list" width="2606"/> 
 
 1. **Row:** Enables the user to click on the row to trigger the action of opening a primary-detail drawer
 2. **Primary-detail:** Additional drawer of information that allows the user to still see the data list
-
-### When to use
-
-* **Use a clickable data list** when you need to allow the user to trigger an action of opening a primary-detail drawer to view more information
-* **Don't use a clickable data list** when users don't need to see more information in addition to the data list information
 
 ### Expandable data list
 The expandable list adds an expansion panel to every row to reveal more details about the item.

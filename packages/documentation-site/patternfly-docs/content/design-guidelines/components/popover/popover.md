@@ -39,6 +39,14 @@ Both [tooltips](/components/tooltip/design-guidelines) and popovers provide more
  
 For information on other forms of on-screen help, see [Tooltip](/components/tooltip/design-guidelines) and [Hint](/components/hint/design-guidelines).
  
+## Behavior
+Popovers are triggered when a user clicks on the popover icon and are dismissed in one of the following ways:
+- The user clicks the exit icon.
+- The user clicks anywhere on the screen outside the popover.
+- The user clicks an action button inside the popover. (Note: This won't always close the popover; it depends on the action button.)
+ 
+<img src="./img/popover-example.png" alt="popover example with placeholder text for the title and informational text" width="300"/>
+
 ## Variations
  
 ### Default popovers
@@ -49,14 +57,6 @@ These popover are similar to default popovers, the key difference being the incl
  
 <img src="./img/alert_popover_examples.png" alt="alert popover examples with placeholder text for the title and informational text" width="300"/>
 
- ## Behavior
-Popovers are triggered when a user clicks on the popover icon and are dismissed in one of the following ways:
-- The user clicks the exit icon.
-- The user clicks anywhere on the screen outside the popover.
-- The user clicks an action button inside the popover. (Note: This won't always close the popover; it depends on the action button.)
- 
-<img src="./img/popover-example.png" alt="popover example with placeholder text for the title and informational text" width="300"/>
- 
 ## Content considerations
 - Popover copy is longer than tooltip copy, but it should still be concise. Aim for 1–3 sentences. 
 - Write in full sentences with punctuation.

@@ -27,9 +27,9 @@ Most multiple file upload components contain 5 basic elements:
 
 5. **Progress upload:** The name of the uploaded file, along with file size, progress bar, and percentage.
 
-## Usage/Best practices
+## Usage
 
-**When to use:**
+### **When to use:**
 * Uploading 1 or more files.
 
 * Uploading files by dragging and dropping.
