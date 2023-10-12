@@ -129,3 +129,25 @@ Example:
     </div>
 </div>
 ```
+
+## Screen reader considerations
+
+Just as front-end developers use their browser to see how their changes look, you should use a screen reader to see how your accessibility looks (we use Voice Over). You can use any screen reader that is available in your operating system. To test PatternFly, we target the following screen readers:
+
+Generally, screen readers access the Document Object Model (DOM) and use browser Application Programming Interfaces (APIs) to get the information they need. In this way, a screen reader knows what to say when a set of list items begins and ends, and can typically announce how many items are in the list in advance. A screen reader can also traverse a page using heading navigation to speak the heading level. 
+
+There are a few aspects that can affect how screen readers communicate information, which you should consider when building and testing your product:
+
+- **Semantic HTML**: Semantics refers to the meaning of a piece of code. A semantic element clearly describes its meaning to both the browser and the developer. For example, `<div>` and `<span>` are non-semantic elements because they don't describe their contents. On the other hand, `<form>` and `<table>` are semantic elements, because they clearly define their contents. Screen readers expect semantic HTML when traversing the DOM, so non-semantic elements (that aren't customized to be made accessible) are highly likely to be inaccessible. ARIA and other accessible attributes are meant to extend the functionality and meaning of native semantics, but at the core, your HTML should be semantic.
+
+- **Headings**: A user with vision can scan a page to quickly understand its information architecture. Visually impaired users have other methods of achieving this, such as using heading levels to determine the flow of information. Headings that vary in size for design purposes, rather than functionality, will likely confuse these users. A clear flow of sequential heading sizes based on headings and subheadings is significantly clearer to all users.
+
+- **Accessible names for all elements**: When an element doesn't have visual text, or when further explanation is necessary, a screen reader will not know what an item is or does. For example, if you have an icon `<button>` without a label, the screen reader can only tell that it’s a button—it can't determine what the button does. 
+
+- **Links**: Similar to buttons, links should always have a label for clarity (for example, don’t just say “click here”). Without the label, users have no idea where the links point to. If you have the same label for multiple links, each link must point to the same URL. Links, buttons, and form controls should make sense out of context. If a user wants to look at all of the links available, they should be able to differentiate the available links. 
+
+- **Landmarks**: Landmarks (such as banners, navigation, main, and form) help communicate the structure of a page by identifying regions. When there are multiple landmarks of the same role (such as 2 navigation regions on the same page), these regions should be differentiated by an `aria-label`.
+
+- **Dynamic content**: One of the biggest accessibility concerns with dynamic content is the need to notify users that the content has changed. Sighted users benefit from highlighting or drawing visual attention to the changes. Non-sighted users need to be notified in another way, such as loading a new page, sending the focus to the new content, or using ARIA live announcements.
+
+- **Unrelated notifications**: Notifications from the operating system outside of the web app can interrupt a user while interacting with a page (for example, "You received a new chat message."). Consider this possibility when designing and developing for screen readers, and keep any notification messaging concise to limit the interruption.
