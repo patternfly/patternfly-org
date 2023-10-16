@@ -1,7 +1,6 @@
 ---
-id: Develop with tokens
-title: Developing with PatternFly tokens
-section: design-tokens
+id: Developing with tokens
+section: Design tokens
 ---
 
 ## Installing tokens

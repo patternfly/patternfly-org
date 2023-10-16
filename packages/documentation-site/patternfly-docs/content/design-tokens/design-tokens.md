@@ -1,7 +1,6 @@
 ---
 id: About
-title: Design tokens
-section: design-tokens
+section: Design tokens
 ---
 
 # Design tokens 

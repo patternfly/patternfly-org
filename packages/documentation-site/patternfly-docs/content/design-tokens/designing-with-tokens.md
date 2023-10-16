@@ -1,7 +1,6 @@
 ---
-id: Design with tokens
-title: Design with PatternFly tokens
-section: design-tokens
+id: Designing with tokens
+section: Design tokens
 ---
 
 As a designer, you can access and use our token libraries in Figma.

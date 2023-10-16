@@ -1,7 +1,6 @@
 ---
 id: PatternFly tokens
-title: PatternFly tokens
-section: design-tokens
+section: Design tokens
 ---
 
 ## All tokens

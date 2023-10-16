@@ -1,7 +1,6 @@
 ---
-id: Migrate
-title: Migrate to PatternFly tokens
-section: design-tokens
+id: Migrate to tokens
+section: Design tokens
 ---
 
 This guide provides instructions for migrating to tokens from PatternFly's previous design and wireframe kits. 
