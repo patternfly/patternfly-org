@@ -5,6 +5,54 @@ section: get-started
 ---
 
 import './get-started.css';
+import { Divider } from '@patternfly/react-core';
+
+## PatternFly 5.1 
+
+As part of our [quarterly release cadence](/get-started/about#patternfly-release-cadence), we're excited to announce that PatternFly 5.1 is now live.
+
+To help provide a high-level view of what's new, we've pulled together the major highlights from this release. Keep reading to learn more!
+
+### Promoted package versions
+
+- patternfly/patternfly ([changelog](https://github.com/patternfly/patternfly/releases/tag/v5.1.0))
+  - [@patternfly/patternfly@5.1.0](https://www.npmjs.com/package/@patternfly/patternfly/v/5.1.0)
+
+
+- patternfly/patternfly-react ([changelog](https://github.com/patternfly/patternfly-react/releases/tag/v5.1.1))
+  - [@patternfly/react-charts@7.1.1](https://www.npmjs.com/package/@patternfly/react-charts/v/7.1.1)
+  - [@patternfly/react-code-editor@5.1.1](https://www.npmjs.com/package/@patternfly/react-code-editor/v/5.1.1)
+  - [@patternfly/react-core@5.1.1](https://www.npmjs.com/package/@patternfly/react-core/v/5.1.1)
+  - [@patternfly/react-icons@5.1.1](https://www.npmjs.com/package/@patternfly/react-icons/v/5.1.1)
+  - [@patternfly/react-styles@5.1.1](https://www.npmjs.com/package/@patternfly/react-styles/v/5.1.1)
+  - [@patternfly/react-table@5.1.1](https://www.npmjs.com/package/@patternfly/react-table/v/5.1.1)
+  - [@patternfly/react-tokens@5.1.1](https://www.npmjs.com/package/@patternfly/react-tokens/v/5.1.1)
+
+
+- PatternFly extensions
+  - [@patternfly/react-topology@5.1.0](https://www.npmjs.com/package/@patternfly/react-topology/v/5.1.0) ([changelog](https://github.com/patternfly/react-topology/releases/tag/v5.1.0))
+  
+### Right-to-left language support 
+
+Last quarter, our developers were dedicated to implementing right-to-left (RTL) language support in PatternFly. To better enable product internationalization, we've updated our components to support both right-to-left (RTL) and left-to-right (LTR) languages. You can check out our [RTL handbook](/developer-resources/right-to-left-handbook) for more details and resources.
+
+To achieve this support, our components now use [logical properties](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_logical_properties_and_values) (like `block-start`, `inline-end`, `block-end`, and `inline-start`), which will ensure that styles are laid out properly, no matter which languages you're using.
+
+Note that, to avoid a sweeping breaking change, PatternFly variable names still use "top", "bottom", "left", and "right". 
+
+### New topology documentation
+
+We updated the [control bar documentation](/topology/control-bar) for topology to clarify the extent of the control bar functions. This addition highlights information that will better support the range of control bar use cases.  
+
+### Clickable labels
+
+We added a new "clickable" variant to the [label component](/components/label), so that you can use a label that acts as a button.
+
+To enable this behavior, we've added a new `onClick` property to the `<Label>` component, which can contain an action fit for your use case. 
+
+Note that you cannot use `onClick` if the `href` or `isEditable` properties are already passed into `<Label>`, since those align with link labels and editable labels, respectively.
+
+<Divider></Divider>
 
 ## PatternFly 5.0 
 
@@ -34,7 +82,7 @@ Refer to our [upgrade guide](/get-started/upgrade) to update from PatternFly 4 t
   - [@patternfly/react-user-feedback@5.0.0](https://www.npmjs.com/package/@patternfly/react-user-feedback/v/5.0.0) ([changelog](https://github.com/patternfly/react-user-feedback/releases/tag/v5.0.0))
   - [@patternfly/react-virtualized-extension@5.0.0](https://www.npmjs.com/package/@patternfly/react-virtualized-extension/v/5.0.0) ([changelog](https://github.com/patternfly/react-virtualized-extension/releases/tag/v5.0.0))
   - [@patternfly/quickstarts@5.0.0](https://www.npmjs.com/package/@patternfly/quickstarts/v/5.0.0) ([changelog](https://github.com/patternfly/patternfly-quickstarts/releases/tag/v5.0.0))
-  
+
 
 ### Dark theme support
 
