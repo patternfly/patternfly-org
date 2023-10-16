@@ -3,3 +3,21 @@ id: Migrate to tokens
 title: Migrate to PatternFly tokens
 section: design-tokens
 ---
+
+This guide provides instructions for migrating to tokens from the previous implementation. 
+
+Make sure you first understand the basics of design tokens, as well as how you will design and/or develop with tokens. 
+
+## How to migrate a product to tokens 
+
+### For designers 
+
+Migrate your designs into Figma.
+
+### For developers
+
+Follow our instructions for developing with tokens to update your colors and styles to use tokens, instead of CSS variables. 
+
+This change may resemble the following: 
+
+```code example```

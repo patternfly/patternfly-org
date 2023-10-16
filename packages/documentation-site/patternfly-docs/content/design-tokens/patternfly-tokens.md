@@ -4,7 +4,7 @@ title: PatternFly tokens
 section: design-tokens
 ---
 
-## How to read PatternFly tokens
+## PatternFly design tokens
 
 PatternFly tokens have 3 layers: a palette layer, a base layer, and a semantic layer. 
 
@@ -15,6 +15,8 @@ PatternFly tokens have 3 layers: a palette layer, a base layer, and a semantic l
 Just the color palettes 
 
 same idea as current color paletter variables
+
+
 
 ### Base layer 
 
