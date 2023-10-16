@@ -6,9 +6,9 @@ section: design-tokens
 
 # Design tokens 
 
-To learn about PatternFly's use of design tokens, refer to this guide. Once you're up to speed, you can: 
+This guide outlines PatternFly's use of design tokens. You should familiarize yourself with the details across this guide to learn about the purpose and implementation of PatternFly's tokens. 
 
-Start designing or start developing 
+PatternFly's tokens are only available within Figma, so it's important that you follow our [Figma migration](/design-tokens/migrate) guide if necessary.
 
 ## What are design tokens
 
@@ -20,28 +20,61 @@ Using design tokens helps maintain consistency across product design processes b
 
 Tokens also enable easier maintenance. Whenever a color is changed as part of a redesign or update,related tokens are automatically updated to reflect this change. This means that developers won't have to make any changes to code to ensure that their product is up to date with the latest recommendations. Likewise, designers will see that their designs automatically update to reflect any changes.
 
-## How to read tokens 
+## PatternFly design tokens
 
-Tokens can be read from left to right, with each part separated by a forward slash (/). Each piece of the token represents a different  level of information. 
+### How to read tokens 
 
-scope / component / category / property / concept / variant / state 
+Tokens can be read from left to right, with each part separated by a forward slash (/):
 
-The naming structure for design tokens follows:
-- Scope: this may be `global` or `local`
-- Component: 
-- Category: this represents the style that the token is relevant to, for example `text`, `icon`, or `background`, to name a few.
-- Property: this refers to the ... `color` or `radius`
-- Concept: 
-- Variant: this refers to the variant type of the token, which often differs per components. For example `plain` or `primary`.
-- State: refers to the state that the token is in -- typically `hover` or `selected`.
+`scope / component / category / property / concept / variant / state` 
 
-Review this table to see how the naming structure levels will be skipped when not used.
+Each piece represents different information:
+- **Scope:** The range of the token. For example, `global` signifies that a token applies across the system.
+- **Component:** The component that the token relates to. 
+- **Category:** NEED INFO
+- **Property:** NEED INFO
+- **Concept:** NEED INFO
+- **Variant:** The variant type of the token's component.For example, a variant may be `plain` or `primary`.
+- **State:** The state that the component is in. This is typically `disabled`, `hover`, or `active`.
 
-For a more detailed breakdown, visit the PatternFly tokens documentation. 
+Note that all PatternFly tokens also begin with `pf`.
 
-## Examples of token use 
+### Token layers
 
-### Color tokens 
+PatternFly tokens have 3 layers: a **palette layer**, a **base layer**, and a **semantic layer**. 
 
-### Spacing tokens
+![Design layers example](./img/design-layers-example.png)
 
+#### **Palette layer**
+
+Palette layer tokens contain the colors in [PatternFly color palettes](/design-foundations/colors#patternfly-palettes). 
+
+If you've used PatternFly previously, these values resemble some of the CSS variables that you may be familiar with. They 
+
+**Add:** example image and/or `example / token / style / 000`
+
+#### **Base layer**
+
+Base layer tokens contain a wide range of tokens that the semantic layer can choose from. 
+
+These values are grouped conceptually and named numerically. There are no duplicate values within a concept group.
+
+**Add:** example image and/or `example / token / style / 000`
+
+#### **Semantic layer**
+
+Semantic layer tokens will be the value that you see the most frequently. These values are the top-level tokens that are grouped conceptually and named semantically. 
+
+Most of the time, these reference base tokens, but can also reference other semantic tokens
+
+**Add:** example image and/or `example / token / style / 000`
+
+### Examples of token use 
+
+#### **Color tokens**
+
+**Add:** example image and/or `example / token / style / 000`
+
+#### **Spacing tokens**
+
+**Add:** example image and/or `example / token / style / 000`

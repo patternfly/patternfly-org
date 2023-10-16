@@ -1,18 +1,13 @@
 ---
 id: Develop with tokens
-title: Develop with PatternFly tokens
+title: Developing with PatternFly tokens
 section: design-tokens
 ---
 
-## Downloading tokens
+## Installing tokens
 
-As a developer, you can access and use design tokens by downloading the following packages: 
+To develop with PatternFly tokens, you must first install the tokens package from `@patternfly/react-tokens`.
 
-## Using tokens 
-
-First, you must install the tokens package. 
+NEED INFO
 
 ### Using tokens with React 
-
-### Using tokens with HTML
-
