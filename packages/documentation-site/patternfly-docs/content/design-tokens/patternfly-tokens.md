@@ -1,6 +1,6 @@
 ---
 id: PatternFly tokens
-section: Design tokens
+section: design-tokens
 ---
 
 ## All tokens

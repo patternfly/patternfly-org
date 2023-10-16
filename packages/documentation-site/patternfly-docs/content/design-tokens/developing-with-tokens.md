@@ -1,6 +1,6 @@
 ---
 id: Developing with tokens
-section: Design tokens
+section: design-tokens
 ---
 
 ## Installing tokens
