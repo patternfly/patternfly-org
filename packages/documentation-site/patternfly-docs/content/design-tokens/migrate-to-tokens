@@ -19,6 +19,6 @@ Developers will need to download token packages and update all colors and styles
 
 This change may resemble the following: 
 
-```code example```
+`code example`
 
-For more detailed instructions, refer to our [develop with tokens](/design/tokens/develop-with-tokens) guide.
+For more detailed instructions, refer to our [develop with tokens](/design-tokens/develop-with-tokens) guide.
