@@ -6,7 +6,7 @@ import { AccessibilityScorecard } from './accessibility-scorecard.js';
 
 ## Scoring your accessibility
 
-To support the proper assessment of accessibility measures, we've created a scorecard that outlines the essential criteria to meet. You can use this scorecard as a guide to evaluate the state of accessibility for any UI built using PatternFly.
+To support the proper assessment of accessibility measures, we've created a scorecard that outlines the ways that we recommend testing for accessibility and how well your UI meets those expectations. You can use this scorecard as a guide to evaluate the state of accessibility for any UI built using PatternFly.
 
 ## PatternFly.org accessibility scorecard
 
