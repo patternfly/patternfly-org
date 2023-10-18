@@ -90,6 +90,6 @@ To help you achieve this, consider these guidelines:
 2. Screen reader content should match visibly rendered content (refer to the [first note for `aria-hidden` state](https://www.w3.org/TR/wai-aria/#aria-hidden)).
 
 3. There should be parity between hover and focus events. Any information that’s available on hover for the mouse user should be available on keyboard focus.
-  - Make content should available to a screen reader by using `aria-describedby` (refer to [Tooltips & Toggletips example from Inclusive Components](https://inclusive-components.design/tooltips-toggletips/)).
+  - Make content that appears on hover available to a screen reader by using `aria-describedby` (refer to [Tooltips & Toggletips example from Inclusive Components](https://inclusive-components.design/tooltips-toggletips/)).
 
 When building accessible user experiences, solving for one can extend to many. Humans are diverse and unique, and designing for accessibility takes that into consideration to create truly inclusive products.
