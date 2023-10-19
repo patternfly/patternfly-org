@@ -10,6 +10,7 @@ import {
   DropdownGroup,
   DropdownList,
   Divider,
+  Icon,
   Masthead,
   MastheadToggle,
   MastheadMain,
@@ -23,10 +24,14 @@ import {
   ToolbarItem,
   SkipToContent,
   Switch,
-  SearchInput
+  SearchInput,
+  ToggleGroup,
+  ToggleGroupItem
 } from '@patternfly/react-core';
 import BarsIcon from '@patternfly/react-icons/dist/esm/icons/bars-icon';
 import GithubIcon from '@patternfly/react-icons/dist/esm/icons/github-icon';
+import MoonIcon from '@patternfly/react-icons/dist/esm/icons/moon-icon';
+import SunIcon from '@patternfly/react-icons/dist/esm/icons/sun-icon';
 import { SideNav, TopNav, GdprBanner } from '../../components';
 import staticVersions from '../../versions.json';
 import v5Logo from '../PF-HorizontalLogo-Reverse.svg';
@@ -50,6 +55,7 @@ const HeaderTools = ({
   const [isDropdownOpen, setDropdownOpen] = useState(false);
   const [searchValue, setSearchValue] = React.useState('');
   const [isSearchExpanded, setIsSearchExpanded] = React.useState(false);
+  const [isDarkTheme, setIsDarkTheme] = React.useState(false);
 
   const getDropdownItem = (version, isLatest = false) => (
     <DropdownItem itemId={version.name} key={version.name} to={isLatest ? '/' : `/${version.name}`}>
@@ -63,6 +69,12 @@ const HeaderTools = ({
 
   const onToggleExpand = (_evt, isSearchExpanded) => {
     setIsSearchExpanded(!isSearchExpanded);
+  };
+
+  const toggleDarkTheme = (_evt, selected) => {
+    const darkThemeToggleClicked = !selected === isDarkTheme
+    document.querySelector('html').classList.toggle('pf-v5-theme-dark', darkThemeToggleClicked);
+    setIsDarkTheme(darkThemeToggleClicked);
   };
 
   useEffect(() => {
@@ -86,8 +98,10 @@ const HeaderTools = ({
         >
           {hasDarkThemeSwitcher && (
             <ToolbarItem>
-              <Switch id="ws-theme-switch" label="Dark theme" defaultChecked={false} onChange={() =>
-                document.querySelector('html').classList.toggle('pf-v5-theme-dark')} />
+                <ToggleGroup aria-label="Dark theme toggle group">
+                  <ToggleGroupItem aria-label="light theme toggle" icon={<Icon size="md"><SunIcon /></Icon>} isSelected={!isDarkTheme} onChange={toggleDarkTheme} />
+                  <ToggleGroupItem aria-label="dark theme toggle" icon={<Icon size="md"><MoonIcon /></Icon>} isSelected={isDarkTheme} onChange={toggleDarkTheme} />
+                </ToggleGroup>
             </ToolbarItem>
           )}
           {hasRTLSwitcher && (
