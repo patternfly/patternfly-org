@@ -98,15 +98,12 @@ export const Example = ({
 }) => {
   React.useEffect(() => {
     //append a class to the document body to indicate to screenshot/automated visual regression tools that the page has loaded
-    const isDevMode = process.env.NODE_ENV === 'development';
-    if (isDevMode && !document.body.classList.contains('page-loaded')) {
+    if (!document.body.classList.contains('page-loaded')) {
       document.body.classList.add('page-loaded');
     }
 
     return () => {
-      if (isDevMode) {
-        document.body.classList.remove('page-loaded');
-      }
+      document.body.classList.remove('page-loaded');
     }
   }, []);
 
