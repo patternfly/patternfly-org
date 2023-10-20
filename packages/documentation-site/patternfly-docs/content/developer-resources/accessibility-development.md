@@ -1,5 +1,5 @@
 ---
-id: Develop accessibly
+id: Develop for accessibility
 section: accessibility
 ---
 import { AccessibilityDatalist } from './accessibility-datalist.js';
@@ -10,7 +10,7 @@ As you develop your product, it can be helpful to keep accessibility top of mind
 
 **1. Can all users discover and perceive elements?**
 
-If you can see or click on it, then it should be discoverable and perceivable by all users, including those using a keyboard or screen reader.
+If you can see or click on it, then all users should be able to locate and navigate to it, including those using a keyboard or other assistive technology such as a screen reader.
 
 **2. Can all users interact with elements?**
 
@@ -20,9 +20,9 @@ It should be easy for users to use an element once it's in focus. They should be
 
 It should be clear what actions elements can perform. For example, buttons should have visible text that would be clear out of context of the page. If not, it should have an aria-label or accessible name.
 
-## Extra steps for accessibility 
+## Development considerations
 
-PatternFly provides accessible components, but **we can't guarantee that your products will be accessible**. There are items outside the scope of PatternFly, so you should keep these in mind to ensure accessibility: 
+There are items outside the scope of PatternFly, so you should keep these in mind to ensure accessibility: 
 
 <br />
 
@@ -30,11 +30,11 @@ PatternFly provides accessible components, but **we can't guarantee that your pr
 
 <br />
 
-## Recommendations for UI elements
+### UI element accessibility guidance
 
 The [WCAG 2.0 techniques](https://www.w3.org/TR/WCAG20-TECHS/Overview.html#contents) provide examples on how to meet accessibility guidelines. The following techniques are standard across PatternFly for specific patterns.
 
-### Labeling with ARIA
+#### Labeling with ARIA
 
 For sighted users, the context and visual appearance of an element can help users understand its purpose. But this isn’t always the case. For example, the X, often used in the top-right corner of pop-ups to indicate the control for closing, might not be clear to those using assistive technology: 
 
@@ -56,7 +56,7 @@ In a single-field form, the submit button label can serve as the field label for
 
 To render icons as something that assistive devices can ignore, pass `aria-hidden='true'` to all icons, either to the icon element or a parent element of the icon. 
 
-#### **Decorative and semantic icons**
+##### **Decorative and semantic icons**
 
 There are two main categories of accessible icons:
 1. **Decorative icons**, which can be removed without affecting the page's information.
@@ -72,9 +72,9 @@ There are two main categories of accessible icons:
         </button>
         ```
 
-#### **Non-interactive icons**
+##### **Non-interactive icons**
 
-For **non-interactive icons**, include `.pf-screen-reader` text near the icon. Depending on the component, this text might not be a direct sibling to the icon element.  
+For **non-interactive icons**, include `.pf-v5-screen-reader` text near the icon. Depending on the component, this text might not be a direct sibling to the icon element.  
 
 Example: 
 
@@ -87,7 +87,8 @@ In the alert component, the icon label text is adjacent to the message. This way
     </div>
     <div class="pf-v5-c-alert__body">
       <h4 class="pf-v5-c-alert__title">
-        {{#> screen-reader}}Success:{{/screen-reader}} Success alert title
+        <span class="pf-v5-screen-reader">Success alert:</span>
+        Success alert title
       </h4>
     </div>
   </div>
@@ -109,7 +110,7 @@ For keyboard-only users who use the tab key to navigate the interface, trapped f
 
 For screen reader users, the other contents on the page should be hidden from the screen reader.
 
-Based on the [screen reader / browser combinations](https://www.patternfly.org/v4/accessibility/testing-your-accessibility) we use for testing, we recommend applying `aria-hidden="true"` to the parent wrapping element of the page contents. The modal element of the component must not be a descendent of this element, and should be included as a sibling to this element.
+Based on the [screen reader / browser combinations](https://www.patternfly.org/accessibility/testing-your-accessibility) we use for testing, we recommend applying `aria-hidden="true"` to the parent wrapping element of the page contents. The modal element of the component must not be a descendent of this element, and should be included as a sibling to this element.
 
 ### Scrollable elements
 
