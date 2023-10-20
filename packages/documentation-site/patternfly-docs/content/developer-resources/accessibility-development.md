@@ -44,7 +44,7 @@ ARIA supplements HTML so that common application interactions and features can b
 
 Note that ARIA can only affect the semantics of an element; it has no effect on its behavior. For example, while you can make an element hidden to screen readers with `aria-hidden=”true”`, that does not hide the element from focus.
 
-### Form fields
+#### Form fields
 
 Use [explicit linking](https://www.w3.org/TR/WCAG20-TECHS/H44.html) between `label` and form input elements (such as `input`, `textarea`, or `select`) when both are present. [This "H44" guidelines](//www.w3.org/TR/WCAG20-TECHS/H44.html) provides an accessible name to screen readers and makes the label clickable to increase the overall clickable area of the form element.
 
