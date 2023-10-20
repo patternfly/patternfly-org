@@ -5,30 +5,33 @@ section: accessibility
 
 # Testing your product's accessibility 
 
-The following guide contains instructions and recommendations to comprehensively test your product's accessibility to identify accessibility issues and opportunities for improvement.  
+This guide contains instructions and recommendations to comprehensively test your product's accessibility to identify accessibility issues and opportunities for improvement.  
+
+**Keep in mind that this guide may not cover every scenario.**
+
 
 ## General testing recommendations 
 
 Many accessibility issues can be found by doing a few simple checks: 
 
-### 1. Validate your HTML
+### Validate your HTML
 
-Good accessibility practices start with structural, semantic HTML. When a screen reader (or any sort of assistive device) scans a web page, it gets information about the Document Object Model (DOM), or the HTML structure of the page. No styles or JavaScript will be read by a screen reader. 
+Good accessibility practices start with structural, semantic HTML. When a screen reader (or any sort of assistive technology) scans a web page, it gets information about the Document Object Model (DOM), or the HTML structure of the page. No styles or JavaScript will be read by a screen reader. 
 
 Screen reader software like Voice Over (VO), NVDA, or JAWS doesn’t just turn text into speech. It can use information in the HTML to list all of the headings on a page, give extra navigation controls to data tables, announce how many items are in a list, and more. This makes semantic HTML essential. 
 
 There are many tools you can use to validate your HTML, such as [W3C’s markup validation service](https://validator.w3.org/). 
 
-### 2. Check for accessibility violations with an audit tool
+### Check for accessibility violations with an audit tool
 
- If you are using PatternFly, we recommend using [aXe: The Accessibility Engine](//www.deque.com/axe/) to check for accessibility violations locally. To make it even easier for you, we've created the [patternfly-a11y script](https://github.com/patternfly/patternfly-a11y), which reports any aXe accessibility violations from a set of pages. 
+ If you are using PatternFly, we recommend using aXe: The Accessibility Engine (using their [DevTools](https://www.deque.com/axe/devtools/) or the [Chrome](https://chrome.google.com/webstore/detail/axe-devtools-web-accessib/lhdoppojpmngadmnindnejefpokejbdd) or [Firefox](https://addons.mozilla.org/en-US/firefox/addon/axe-devtools/) extension) to check for accessibility violations locally. 
  
- To use this script, a configuration file can be set to adapt our script to your specific needs like authentication, waiting for any specific items to finish loading (like a loading spinner), etc. 
+We also offer the [patternfly-a11y script](https://github.com/patternfly/patternfly-a11y) for bulk testing that reports any aXe accessibility violations from a set of pages. To use this script, a configuration file can be set to adapt our script to your specific needs like authentication, waiting for any specific items to finish loading (like a loading spinner), etc. 
  
- When used as a report, it will give an output [similar to this example](http://a11y-os.surge.sh/). The UI should be built first in the CI workflow and then a job created to run the a11y script against that build. The a11y script assumes that there is a webserver running somewhere that is serving up the pages, i.e. in localhost:8000, that it can reach. If you want to test a step before deployment, you could follow the path of integrating axe with cypress. If you are contributing to PatternFly, refer to our [README.md](//github.com/patternfly/patternfly/blob/main/README.md#testing-for-accessibility) on how to run this tool.
+ When used as a report, it will give an [accessibility report via surge](http://a11y-os.surge.sh/). The UI should be built first in the CI workflow and then a job created to run the a11y script against that build. The a11y script assumes that there is a webserver running somewhere that is serving up the pages, i.e. in localhost:8000, that it can reach. If you want to test a step before deployment, you could follow the path of integrating axe with cypress.
 
 
-### 3. Test keyboard accessibility
+### Test keyboard accessibility
 
 Because the keyboard is a key accessibility tool, it is necessary to ensure that the following requirements are met: 
 
@@ -36,20 +39,20 @@ Because the keyboard is a key accessibility tool, it is necessary to ensure that
   - Elements in the HTML and in the layout follow a logical order.
   - Elements with focus are clearly visible.
 
-### 4. Test without styles
+### Test without styles
 
 Because screen readers cannot access style information, you should disable styles for your product and ensure that your information architecture is effective and that there are adequate text labels.
 
  The [WAVE browser extension from WebAIM](//wave.webaim.org/extension/) provides this feature if it isn't available in the browser you are using.
 
-### 5. Test with a screen reader 
+### Test with a screen reader 
 
 You can use any screen reader that is available in your operating system. To test PatternFly, we target the following screen readers:
   - JAWS with Chrome, Windows ([JAWS keyboard shortcuts](//dequeuniversity.com/screenreaders/jaws-keyboard-shortcuts))
   - Voiceover with Safari, Mac ([Voiceover keyboard shortcuts](//dequeuniversity.com/screenreaders/voiceover-keyboard-shortcuts))
   - NVDA with Firefox, Windows ([NVDA keyboard shortcuts](//dequeuniversity.com/screenreaders/nvda-keyboard-shortcuts))
 
-### 6. Check color contrast
+### Check color contrast
 
 Colors should pass the following contrast checks, to ensure that users across the vision spectrum can understand your product:
     - Text color against background color ([Understanding WCAG 1.4.3](//www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html))
