@@ -52,7 +52,7 @@ When a `label` element cannot accompany a form input element, provide one using 
 
 In a single-field form, the submit button label can serve as the field label for sighted users, [following the "G167" guidelines](//www.w3.org/TR/WCAG20-TECHS/general.html#G167). For assistive devices, use `aria-labelledby`.
 
-### Icons
+#### Icons
 
 To render icons as something that assistive devices can ignore, pass `aria-hidden='true'` to all icons, either to the icon element or a parent element of the icon. 
 
