@@ -4,25 +4,22 @@ section: accessibility
 ---
 import { AccessibilityDatalist } from './accessibility-datalist.js';
 
+PatternFly provides accessible components, but **we can't guarantee that your products will be accessible**. In order to ensure that your product is accessible, you will need to take additional steps during development. For guidance on this development work, you can refer to these guidelines.
+
 ## Prioritizing accessibility during development
 
 As you develop your product, it can be helpful to keep accessibility top of mind, by asking yourself a few questions: 
 
-**1. Can all users discover and perceive elements?**
+- **Can all users discover and perceive elements?**: If you can see or click on it, then all users should be able to locate and navigate to it. This should include those that use a keyboard or other assistive technology, such as a screen reader.
 
-If you can see or click on it, then all users should be able to locate and navigate to it, including those using a keyboard or other assistive technology such as a screen reader.
+- **Can all users interact with elements?**. It should be easy for users to use an element once it's in focus. They should be able to interact with elements and initiate actions via keyboard (like pressing **Enter** to initiate a button action) and screen readers.
 
-**2. Can all users interact with elements?**
+- **Can all users understand elements?**: It should be clear what actions elements can perform. 
+  - For example, buttons should have visible text that would be clear out of context of the page. If not, it should have an aria-label or accessible name.
 
-It should be easy for users to use an element once it's in focus. They should be able to interact with elements and initiate actions via keyboard (for example, pressing **Enter** to initiate a button action) and screen readers.
+## Development techniques
 
-**3. Can all users understand elements?**
-
-It should be clear what actions elements can perform. For example, buttons should have visible text that would be clear out of context of the page. If not, it should have an aria-label or accessible name.
-
-## Development considerations
-
-There are items outside the scope of PatternFly, so you should keep these in mind to ensure accessibility: 
+There are items outside the scope of PatternFly that you should prioritize to ensure accessibility: 
 
 <br />
 
@@ -58,9 +55,9 @@ To render icons as something that assistive devices can ignore, pass `aria-hidde
 
 ##### **Decorative and semantic icons**
 
-There are two main categories of accessible icons:
-1. **Decorative icons**, which can be removed without affecting the page's information.
-1. **Semantic icons**, which provide information that isn't present on the page. For example, these can represent status, indicate an alert message type, or replace text as button labels. The meaning of a semantic icon must be provided in alternative ways to the user. Additionally, you should follow these guidelines:
+There are 2 main categories of accessible icons:
+- **Decorative icons**, which can be removed without affecting the page's information.
+- **Semantic icons**, which provide information that isn't present on the page. For example, these can represent status, indicate an alert message type, or replace text as button labels. The meaning of a semantic icon must be provided in alternative ways to the user. Additionally, you should follow these guidelines:
     - Add a label for the icon in tooltip text that displays on hover and focus.
     - For interactive elements (like `<a>` and `<button>`), where an icon is used as the label instead of text, set a label as an `aria-label`. 
 
@@ -76,25 +73,7 @@ There are two main categories of accessible icons:
 
 For **non-interactive icons**, include `.pf-v5-screen-reader` text near the icon. Depending on the component, this text might not be a direct sibling to the icon element.  
 
-Example: 
-
-In the alert component, the icon label text is adjacent to the message. This way, when `role="alert"` is added to `.pf-v5-c-alert__body` for dynamically displayed alerts, the type of message is announced along with the message text.
-
-  ```html noLive
-  <div class="pf-v5-c-alert pf-m-success" aria-label="Success Alert">
-    <div aria-hidden="true" class="pf-v5-c-alert__icon">
-      <i class="fas fa-check-circle"></i>
-    </div>
-    <div class="pf-v5-c-alert__body">
-      <h4 class="pf-v5-c-alert__title">
-        <span class="pf-v5-screen-reader">Success alert:</span>
-        Success alert title
-      </h4>
-    </div>
-  </div>
-  ```
-
-### Images
+#### Images
 
 All images should have alt text so that assistive technology can provide an image description. When an image contains words that are important to understanding the content, the alt text should include those words. This allows the alt text to communicate the same message as the image itself. 
 
@@ -102,7 +81,7 @@ All images should have alt text so that assistive technology can provide an imag
 
 The exception to this practice is when images are primarily for presentation purposes and are not essential pieces of content. To signify that an image should be skipped by a screen reader, set the value of the alt attribute to an empty string: `alt=””`.
 
-### Trapping focus
+#### Trapping focus
 
 The recommended interaction pattern for components like the modal or popover is to trap focus within the component's modal element when it becomes visible.  
 
@@ -112,7 +91,7 @@ For screen reader users, the other contents on the page should be hidden from th
 
 Based on the [screen reader / browser combinations](https://www.patternfly.org/accessibility/testing-your-accessibility) we use for testing, we recommend applying `aria-hidden="true"` to the parent wrapping element of the page contents. The modal element of the component must not be a descendent of this element, and should be included as a sibling to this element.
 
-### Scrollable elements
+#### Scrollable elements
 
 Any elements with horizontal or vertical scroll need to be accessible via keyboard.
 
