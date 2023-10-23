@@ -3,7 +3,7 @@ id: Design for accessibility
 section: accessibility
 ---
 
-As described in our [accessibility fundamentals](/accessibility/accessibility-fundamentals), users may interact with your product through a variety of assistive technologies. In addition to [developing accessibly](/accessibility/accessibility-development), you must design accessibly. 
+As described in our [accessibility fundamentals](/accessibility/accessibility-fundamentals), users may interact with your product through a variety of assistive technologies. In addition to [developing for accessibility](/accessibility/accessibility-development), you must also incorporate it into your product's UI design. 
 
 | Designer | Designer and developer | Developer |
 | --- | --- | --- |
