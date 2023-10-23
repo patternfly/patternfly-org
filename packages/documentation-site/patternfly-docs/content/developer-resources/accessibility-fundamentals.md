@@ -5,19 +5,21 @@ section: accessibility
 
 # Accessibility fundamentals 
 
-No user should feel left behind when using your product. The goal of accessible design is to remove barriers and create inclusive product experiences that work for everyone, regardless of ability. Accessibility is best achieved when considered early in the design and development process. 
+Accessibility is a foundation of PatternFly, so if you contribute to PatternFly or use it for your products you should first familiarize yourself with our accessibility guidelines and recommendations.
 
-Accessibility is a foundation of PatternFly, so if you contribute to PatternFly or use it for your products you should familiarize yourself with accessibility first.
+No user should feel left behind when using your product. The goal of accessible design is to remove barriers and create inclusive product experiences that work for everyone, regardless of ability. This is best achieved when accessibility is considered early in the design and development process. 
 
-There’s always room to improve accessibility. That’s why PatternFly’s accessibility guidelines will continually evolve. Your feedback can help make it better, so we welcome you to contribute to our accessibility documentation or [get involved in our discussions](https://github.com/orgs/patternfly/discussions). 
+There’s always room to improve accessibility. That’s why our guidelines will continually evolve. Your feedback can help support PatternFly's accessibility, so we welcome you to contribute to our documentation or [get involved in our GitHub discussions](https://github.com/orgs/patternfly/discussions). 
 
 ## Assistive technologies
 
+A core consideration for accessibility practices is assistive technologies that people may use to access your product. 
+
 ### Keyboard
-Some users can’t use a mouse and rely on other methods of navigation instead, like a keyboard. A keyboard allows users to navigate through UI elements in the order that they appear on the page. Keyboard users should be able to do anything that mouse users can, including viewing text that is shown upon hover or in popups.  
+Some users can’t use a mouse and rely on other methods of navigation instead, like a keyboard. A keyboard allows users to navigate through UI elements in the order that they appear on the page, typically using the tab key. Keyboard users should be able to do anything that mouse users can, including viewing text that is shown upon hover or in popups.  
 
 ### Screen readers
-When a user has vision impairments, temporary or permanent, that prevent them from viewing a screen, they can use a screen reader to read visible and non-visible content aloud. Non-visible content includes hidden text, like tooltips, and alternative text (alt text) for icons, images, and links. 
+When a user has impaired vision (temporary or permanent) that prevents them from viewing a screen, they can use a screen reader that reads visible and non-visible content aloud. Non-visible content includes hidden text, like tooltips, and alternative text (alt text) for icons, images, and links. 
 
 ## Understanding users’ needs
 Great user experiences don’t just happen. They’re designed, tested, and refined with users in mind. To develop inclusive products, it’s important to understand the varying needs of all users and consider the assistive tools and methods that they use.
@@ -27,14 +29,15 @@ This section provides information to help you better understand and address the 
 ### Motor control
 Users with reduced motor control often use a keyboard or computer mouse to access content.
 
-To support users with reduced motor control: 
+To support users with reduced motor control, remember that: 
+
 - Users who rely on a keyboard need elements that are keyboard accessible and highly visible when in focus.
 - Users who rely on a mouse or touch need target areas that are large enough to be hit easily.
 
 ### Vision
 
 #### No vision 
-Users with no vision rely on screen readers to access web sites and applications. Often, screen reader users will navigate a page by observing specific elements, like headers, links, or form elements.
+Users with no vision rely on screen readers to access web sites and applications. These users often navigate a page by observing specific elements, like headers, links, or form elements.
 
 To design for users with no vision:
 
@@ -42,7 +45,7 @@ To design for users with no vision:
 - Write labels that are meaningful when pulled out of context.
 
 #### Low vision
-Users with low vision can have different needs depending on the nature of their visual impairment. Users may have difficulty with color differentiation, blurriness, or lack of vision in central or peripheral areas.
+Users with low vision can have different needs depending on the nature of their visual impairment, such as difficulty with color differentiation, blurriness, or lack of vision in central or peripheral areas.
 
 To design for users with low vision:
 
@@ -60,15 +63,16 @@ To design for users with cognitive processing issues:
 - Avoid long paragraphs.
 
 ### Accessibility spectrum
+
 While there are a few main accessibility needs, it is not an exhaustive list. Often the “Persona Spectrum”, coined by [Microsoft](https://download.microsoft.com/download/b/0/d/b0d4bf87-09ce-4417-8f28-d60703d672ed/inclusive_toolkit_manual_final.pdf), can be used to understand related mismatches and motivations across a spectrum of permanent, temporary, and situational scenarios.
 
-While accessibility tends to focus on those with permanent disabilities, everyone benefits from accessible products. For example:
+While accessibility tends to focus on those with permanent disabilities, everyone benefits from accessible products:
 
 - Accessible content supports better comprehension across language fluency and literacy levels.
-- Alternative text (alt text) makes images accessible to users with low bandwidth connections or with older technologies that can’t load the images.
-- Closed captioning benefits those in crowded areas and, those learning how to read, and those learning a new language,
+- Alternative text (alt text) makes images accessible to users with low bandwidth connections or older technologies that can’t load the images.
+- Closed captioning benefits those in crowded areas, those learning how to read, and those learning a new language.
 
-Accessibility takes all users into account.
+Accessibility takes **all users** into account.
 
 <p className="ws-p pf-v5-u-screen-reader">
   The following image shows how accessibility is a spectrum. Different kinds of cognitive and physical impairments impact how users interact with products. All levels of impairment should be considered when building accessible products.
@@ -82,14 +86,15 @@ Accessibility takes all users into account.
 We believe that all abilities should be treated equally. There should be parity in the experience of all users—one user group shouldn't be prioritized over the other.
 To help you achieve this, consider these guidelines:
 
-1. Content should be optimized for all input types: touch, mouse, and keyboard.
+- Content should be optimized for all input types: touch, mouse, and keyboard.
   - Don’t optimize the experience for one input type at the expense of another.
   - Contents that are mouse-accessible should also be accessible using touch or a keyboard.
-  - Don’t show interactive elements on hover. Interactive elements that can display in a pop-up must display on click, touch, or enter-key events.
+  - Don’t show interactive elements on hover. 
+  - Interactive elements that display in a pop-up must also display on click, touch, or enter-key events.
 
-2. Screen reader content should match visibly rendered content (refer to the [first note for `aria-hidden` state](https://www.w3.org/TR/wai-aria/#aria-hidden)).
+- Screen reader content should match visibly rendered content (refer to the [first note for `aria-hidden` state](https://www.w3.org/TR/wai-aria/#aria-hidden)).
 
-3. There should be parity between hover and focus events. Any information that’s available on hover for the mouse user should be available on keyboard focus.
+- There should be parity between hover and focus events. Any information that’s available on hover for the mouse user should be available on keyboard focus.
   - Make content that appears on hover available to a screen reader by using `aria-describedby` (refer to [Tooltips & Toggletips example from Inclusive Components](https://inclusive-components.design/tooltips-toggletips/)).
 
 When building accessible user experiences, solving for one can extend to many. Humans are diverse and unique, and designing for accessibility takes that into consideration to create truly inclusive products.
