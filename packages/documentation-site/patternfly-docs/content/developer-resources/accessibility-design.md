@@ -13,7 +13,7 @@ As described in our [accessibility fundamentals](/accessibility/accessibility-fu
 
 ## Color and contrast
 
-Color and contrast go hand-in-hand for visual design. 
+Color and contrast go hand-in-hand for visual design accessibility. 
 
 For example, you should consider contrast when using colors commonly affected by color perception deficiency ([such as those described by W3C](https://www.w3.org/WAI/GL/low-vision-a11y-tf/wiki/Overview_of_Low_Vision#Color_Perception)). Different colors in a UI should be distinguishable for users across the color perception deficiency spectrum, typically by ensuring that each color has a different contrast weight. 
 
