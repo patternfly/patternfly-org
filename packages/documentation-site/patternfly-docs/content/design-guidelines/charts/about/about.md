@@ -18,16 +18,18 @@ A **chart** visualizes data in an application. The type of chart you use will de
 ## Chart types
 <img src="./img/chart-legend.png" alt="Image displaying what chart types to use when" width="1024"/> 
 
-- [Area chart](/charts/area-chart/design-guidelines): Use to show trends over a continuous scale (usually time).
-- [Bar chart](/charts/bar-chart/design-guidelines): Use to show and compare categorical data. Can be plotted vertically or horizontally.
+- [Area chart](/charts/area-chart/design-guidelines): Use to show (potentially multiple) trends over a continuous scale (usually time).
+- [Bar chart](/charts/bar-chart/design-guidelines): Use to show and compare categories and their respective data point/value. Bar charts can be plotted vertically or horizontally. The axis that labels the bar is the category, the axis that marks the end point of the bar displays the data points/values.
   - [Stacked bar chart](/charts/stack-chart/design-guidelines): Use to show and compare categorical data of more than one variable. Can be plotted vertically or horizontally.
+  - Vertical bar charts (category on the horizontal x axis): Use to show a progression of the categories (or sequential variables). The most common bar chart. 
+  - Horizontal bar charts (category on the vertical y axis): Use to show nominal variables. Allows for more space for category labeling.
 - [Bullet chart](/charts/bullet-chart/design-guidelines): Use as an extension to the bar chart to measure data with thresholds and static ranges.
-- [Donut chart](/charts/donut-chart/design-guidelines): Use to show the relationship of a set of values to a whole, or progress completion as a percentage; best used to display data with a small number of categories (example: 2-5 categories).
+- [Donut chart](/charts/donut-chart/design-guidelines): Use to show the relationship of a set of values to a whole or to show progress completion as a percentage. Donut charts are best used to display data with a small number of categories (example: 2-5 categories). Use the middle of the chart to highlight a data point.
   - [Donut utilization](/charts/donut-utilization-chart/design-guidelines): Use to show utilization for an object as a percentage.
   - [Donut utilization with threshold](/charts/donut-utilization-chart/design-guidelines#donut-chart---utilization-with-threshold): Use to show utilization for an object as a percentage in relation to threshold values.
-- [Line chart](/charts/line-chart/design-guidelines): Use to compare several data sets, or to show data over a period of time.
-- [Pie chart](/charts/pie-chart/design-guidelines): Use to show percentages or proportional data.
-- [Sparkline](/charts/sparkline-chart/design-guidelines): Use to show how values change over time for multiple sets of data. Useful alternative to the line chart when multiple lines need to be plotted.
+- [Line chart](/charts/line-chart/design-guidelines): Use to compare several data sets or to show data changes over a period of time. Line charts work best when small changes exist within the data.
+- [Pie chart](/charts/pie-chart/design-guidelines): Use to show percentages or proportional data. Can be used to show up to five or more data points.
+- [Sparkline](/charts/sparkline-chart/design-guidelines): Use to show how values change over time for multiple sets of data. Sparkline charts offer an alternative to the line chart when multiple lines need to be plotted. Axis values are not labeled, but a tooltip can be used to display the value at a given point.
 
 ## Charts in cards
 If a chart lives in a card, the title of that chart will be placed on the header of that card instead of the chart. The rest of the chart guidelines should be followed for the chart itself.
