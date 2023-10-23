@@ -25,7 +25,7 @@ Designing with contrast in mind also benefits users with light sensitivity.
 
 Your text content should also consider the needs of users with low vision. For example, links should be descriptive and concise, so that users can quickly identify their purpose. 
 
-To help simplify and strengthen the way that users process content, it is also important to carefully consider your text size, font, letter spacing, margins, and spacing. PatternFly supports these considerations through its [typography](/design-foundations/typography) and [spacing](/design-foundations/spacers) guidelines.
+To help simplify and strengthen the way that users process content, it is also important to carefully consider your text size, font, letter spacing, margins, and spacing. PatternFly supports these considerations through our [typography](/design-foundations/typography) and [spacing](/design-foundations/spacers) guidelines.
 
 ## Understanding low vision 
 
