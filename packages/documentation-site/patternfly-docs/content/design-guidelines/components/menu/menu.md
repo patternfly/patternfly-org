@@ -33,7 +33,7 @@ An action menu presents a list of actions or links.
 4. **Descriptions (optional):** Descriptive text may be added below each menu item, but only when the menu item label itself may not be clear to all users. Keep descriptive text to two lines or less.
 
 ### Option select menus
-Use an option select menu when you want to persist selected items. This is typically the case for select menus or settings menus that allow users to select between multiple options. See the [select](/components/select) and [options menu](/components/options-menu) components for more details. You may present single or multiple [groups of options](#grouped-menus) within the same menu.
+Use an option select menu when you want to persist selected items. This is typically the case for select menus or settings menus that allow users to select between multiple options. See the [select](/components/menus/select) and [options menu](/components/menus/options-menu) components for more details. You may present single or multiple [groups of options](#grouped-menus) within the same menu.
 
 <img src="./img/option-select-menu.png" alt="option select menus" width="863"/>
 
