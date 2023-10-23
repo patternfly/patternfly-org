@@ -8,7 +8,7 @@ The following table differentiates the accessibility responsibilities that are u
 | Designer | Designer and developer | Developer |
 | --- | --- | --- |
 | Color  | Layout and structure  | Semantic HTML  |
-| Contrast  | Information architecture and navigation | tab order  |
+| Contrast  | Information architecture and navigation | Tab order  |
 | Content  | Interaction patterns | Bypass blocks |
 
 ## Color and contrast
