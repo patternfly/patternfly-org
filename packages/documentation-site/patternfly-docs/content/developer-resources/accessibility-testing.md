@@ -18,7 +18,7 @@ Many accessibility issues can be found by doing a few simple checks:
 
 Good accessibility practices start with structural, semantic HTML. When a screen reader (or any sort of assistive technology) scans a web page, it gets information about the Document Object Model (DOM), or the HTML structure of the page. No styles or JavaScript will be read by a screen reader. 
 
-Screen reader software like Voice Over (VO), NVDA, or JAWS doesn’t just turn text into speech. It can use information in the HTML to list all of the headings on a page, give extra navigation controls to data tables, announce how many items are in a list, and more. This makes semantic HTML essential. 
+Screen readers like Voice Over (VO), NVDA, or JAWS don't just turn text into speech. They use information in the HTML to list all of the headings on a page, give extra navigation controls to data tables, announce how many items are in a list, and more. This makes semantic HTML essential. 
 
 There are many tools you can use to validate your HTML, such as [W3C’s markup validation service](https://validator.w3.org/). 
 
@@ -28,12 +28,12 @@ There are many tools you can use to validate your HTML, such as [W3C’s markup 
  
 We also offer the [patternfly-a11y script](https://github.com/patternfly/patternfly-a11y) for bulk testing that reports any aXe accessibility violations from a set of pages. To use this script, a configuration file can be set to adapt our script to your specific needs like authentication, waiting for any specific items to finish loading (like a loading spinner), etc. 
  
- When used as a report, it will give an [accessibility report via surge](http://a11y-os.surge.sh/). The UI should be built first in the CI workflow and then a job created to run the a11y script against that build. The a11y script assumes that there is a webserver running somewhere that is serving up the pages, i.e. in localhost:8000, that it can reach. If you want to test a step before deployment, you could follow the path of integrating axe with cypress.
+ When used as a report, it will give an [accessibility report via surge](http://a11y-os.surge.sh/). The UI should be built first in the CI workflow and then a job created to run the a11y script against that build. The a11y script assumes that there is a web server running somewhere that is serving up the pages  that it can reach. (for example, in localhost:8000). If you want to test a step before deployment, you could follow the path of integrating aXe with [Cypress](https://www.cypress.io/).
 
 
 ### Test keyboard accessibility
 
-Because the keyboard is a key accessibility tool, it is necessary to ensure that the following requirements are met: 
+The keyboard is an essential accessibility tool, so it is necessary to ensure that the following requirements are met: 
 
   - All functionality is keyboard accessible.
   - Elements in the HTML and in the layout follow a logical order.
