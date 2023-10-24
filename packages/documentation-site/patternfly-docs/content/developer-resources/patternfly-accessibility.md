@@ -13,7 +13,7 @@ We also regularly audit keyboard accessibility with both manual testing and inte
 
 ## PatternFly accessibility standards
 
-Our goal is to meet [level AA in the Web Content Accessibility Guidelines 2.1](https://www.w3.org/WAI/WCAG21/quickref/?currentsidebar=%23col_customize&levels=aaa). If you use or contribute to PatternFly, these are the accessibility guidelines you can expect PatternFly to meet: 
+Our goal is to meet [level AA in the Web Content Accessibility Guidelines 2.1](https://www.w3.org/WAI/WCAG21/quickref/?currentsidebar=%23col_customize&levels=aaa). If you use or contribute to PatternFly, these are the accessibility guidelines you can expect PatternFly to meet the following: 
 
 | Guideline  | Link  | Applies to  | Tested |
 | --- | --- | --- | --- |
