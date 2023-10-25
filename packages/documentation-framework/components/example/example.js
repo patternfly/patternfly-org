@@ -96,19 +96,12 @@ export const Example = ({
   // absolute url to hosted file
   sourceLink = ''
 }) => {
-  React.useEffect(() => {
-    //append a class to the document body to indicate to screenshot/automated visual regression tools that the page has loaded
-    if (!document.body.classList.contains('page-loaded')) {
-      document.body.classList.add('page-loaded');
-    }
-
-    return () => {
-      document.body.classList.remove('page-loaded');
-    }
-  }, []);
-
   if (isFullscreenPreview) {
     isFullscreen = false;
+    window.addEventListener('load', () => {
+      //append a class to the document body to indicate to screenshot/automated visual regression tools that the page has loaded
+      document.body.classList.add('page-loaded');
+    });
   }
   if (!lang) {
     // Inline code
