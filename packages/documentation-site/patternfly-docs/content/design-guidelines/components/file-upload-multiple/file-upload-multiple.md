@@ -29,7 +29,7 @@ Most multiple file upload components contain 5 basic elements:
 
 ## Usage
 
-### **When to use:**
+### When to use
 * Uploading 1 or more files.
 
 * Uploading files by dragging and dropping.
