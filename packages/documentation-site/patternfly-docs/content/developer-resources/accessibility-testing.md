@@ -67,39 +67,45 @@ These are some of the main areas we check for on the PatternFly team to ensure t
 
 ### General criteria
 
-<Checkbox label="Rotor navigation can discover all information." id="general-criteria-1" /><br/>
+<Checkbox label="Rotor navigation can discover all information." id="general-criteria-1" /> 
 
-<Checkbox label="Shortcut navigation can discover all information."  description="For example, a keyboard shortcut that navigates between all headings on a page should discover all intended headings." /><br/>
+<Checkbox label="Shortcut navigation can discover all information."  description="For example, a keyboard shortcut that navigates between all headings on a page should discover all intended headings." id="general-criteria-2/>
 
-<Checkbox label="Cursor navigation can discover all applicable information." description="Some assistive technologies will have their own means of navigation and focus management. For example, VoiceOver uses a 'VO' key plus right or left arrow keys to navigate a page. This may be different than conventional keyboard navigation." id="general-criteria-3" /><br/>
+<Checkbox label="Cursor navigation can discover all applicable information." description="Some assistive technologies will have their own means of navigation and focus management. For example, VoiceOver uses a 'VO' key plus right or left arrow keys to navigate a page. This may be different than conventional keyboard navigation." id="general-criteria-3" />
 
-<Checkbox label="Keyboard navigation via the 'tab' key can discover all information. If content should be hidden from other assistive technology like a screen reader description="`className="ws-code">aria-hidden="true"</span>` should be passed to it." id="general-criteria-4" />
-- Unless content should be hidden from a screen reader (such as offscreen or presentational information) make sure that content is set to aria-hidden=”true”.  <br/>
+<Checkbox label={<span>Keyboard navigation via the <kbd>tab</kbd> key can discover all information.</span>} description={<span>If content should be hidden from other assistive technology like a screen reader, <span className="ws-code">aria-hidden="true"</span> should be passed instead.</span>} id="general-criteria-4" />
 
-<Checkbox label="Items are understandable and usable." body={<Checkbox label="When you navigate to an item by keyboard or other assistive technology, you should be able to easily understand and use the item." id="general-criteria-5a" /><Checkbox label="The flow of information makes sense when navigating." description="Assistive technology like screen readers navigate the page in DOM order. If you used CSS to visually reposition elements, they might be announced in a nonsensical sequence. Instead, if you need something to appear earlier in the page, try to physically move it earlier in the DOM.
-" id="general-criteria-5b" /></>} id="general-criteria-5" />
+<Checkbox label="Items are understandable and usable." body={<><Checkbox label="When you navigate to an item by keyboard or other assistive technology, you can easily understand and use the item." id="general-criteria-5a" /> <Checkbox label="The flow of information makes sense when navigating." description="Assistive technology (like screen readers) navigate the page in DOM order. If you use CSS to visually reposition elements, they may be announced in a nonsensical sequence. If you need something to appear earlier in the page, try to physically move it earlier in the DOM instead.
+" id="general-criteria-5b" /></>} id="general-criteria-5" /> <br/>
 
 ### Accessibility points
 
-<checkbox label="Structure: The visual information architecture should map to the various rotor menus that exist by default." id="general-criteria-7" /><br />
-- <checkbox label="Check rotor: Are there good headings, landmarks, links, form controls, and other elements? Do they make sense, and are they descriptive without overloading information?" id="general-criteria-8" /><br />
-  - <checkbox label="Headings: Check that heading levels convey structure/content and do not skip. A common practice is to use a single h1 for the primary headline or logo on a page, h2s for designating major sections, and h3s for supporting sections." id="general-criteria-9" /><br />
-  - <checkbox label="Links" id="general-criteria-10" /><br />
-  - <checkbox label="Form controls" id="general-criteria-11" /><br />
-  - <checkbox label="Landmarks" id="general-criteria-12" /><br />
-  - <checkbox label="Tables" id="general-criteria-13" /><br />
+<Checkbox label={<span> <b> Structure: </b> The visual information architecture should map to the various rotor menus that exist by default.</span>} body={<><Checkbox label="Check rotor for descriptive and concise headings, landmarks, links, form controls, tables, and other elements." id="accessibility-points-7a" />
+<Checkbox label="Heading levels convey structure/content and do not skip levels." description="A common practice is to use a single h1 for the primary headline or logo on a page, h2s for designating major sections, and h3s for supporting sections." id="accessibility-points-7b" />
+<Checkbox label="Landmarks" id="accessibility-points-7c" />
+<Checkbox label="Links" id="accessibility-points-7d" />
+<Checkbox label="Form controls" id="accessibility-points-7e" />
+<Checkbox label="Tables" id="accessibility-points-7f" /></>}  id="accessibility-points-7" />
+<br/>
+<Checkbox label={<span> <b> Labels: </b> </span>} body={<><Checkbox label=<span><b>Link</b> labels  are descriptive, informative, and unique (unless they have the same URL).</span> id="accessibility-points-8a"/> 
 
+  <Checkbox label={<span><b>Buttons and form controls:</b></span>} description={ <span>
+    <li> All form controls have clear and descriptive labels. </li>
+    <li> Indicate that a button has the expandable control. </li>
+  </span>
+  }
+  id="general-criteria-8b" />
+    
+    <Checkbox label={<span><b>Form inputs</b> have a label — even if it's not visible.</span>} id="general-criteria-8c" />
+    
+    <Checkbox label={<span><b>Icons</b> have some some kind of text for screen readers - even if it's not visible.</span>} id="general-criteria-8d" />
 
-<checkbox label="Labels:" id="general-criteria-14" />
-- <checkbox label="Links: Labels should be unique unless they have the same URL. They should be descriptive and informative." id="general-criteria-1" />
-- <checkbox label="Buttons and form controls:" id="general-criteria-15" />
-  - Confirm that all form controls have effective labels. (Remember that there is a difference between being accessible and having a *good*, accessible experience. Clear, descriptive labels help create a better experience.)
-  - **Expandable buttons:** There should be some indication that a button has the expandable control.
-- <checkbox label="Form inputs: These inputs should have a label — even if it's not visible." id="general-criteria-16" />
-- <checkbox label="Icons: Even if you don’t visibly see text, there should still be some kind of text for screen readers." id="general-criteria-17" />
-- <checkbox label="Images: Check all images for proper alt text. The exception to this practice is when images are primarily for presentation purposes and are not essential pieces of content. To signify that an image should be skipped by a screen reader, set the value of the alt attribute to an empty string: `alt=””`." id="general-criteria-18" />
-- <checkbox label="Landmarks: Landmark regions should have labels when there is more than one type of landmark and they are not the same (such as navigation, main, form, etc.).
-Section element shouldn’t be used unless it has a label." id="general-criteria-19" />
-- <checkbox label="Tables: Can you tell what the table is and what’s in it? [WebAIM has additional guidance on this.](https://webaim.org/techniques/tables/)" id="general-criteria-20" />
-- <checkbox label="Aria: If there is visible text then there doesn’t need to be an `aria-label`. Aria provides more descriptive details to screen reader users. It doesn’t have to reiterate or override what might already be there so you should check that your aria is useful." id="general-criteria-21" />
-  - It’s important to understand that ARIA can only affect the _semantics_ of an element; it has no effect on the _behavior_ of the element. For example, while you can hide an element from screen readers with `aria-hidden=”true”`, that does not change the focus behavior for that element. 
+    <Checkbox label={<span><b>Images have proper alt text.</b></span>} description="The exception to this practice is when images are primarily for presentation purposes and are not essential pieces of content. To signify that an image should be skipped by a screen reader, set the value of the alt attribute to an empty string: `alt=””`." id="general-criteria-8e" />
+
+    <Checkbox label={<span> <b>Landmark</b> regions should have labels when there is more than one type of landmark, and they are not the same (such as navigation, main, form, etc.). Section element shouldn’t be used unless it has a label.</span>} id="general-criteria-8f" />
+
+    <Checkbox label={<span><b>Tables</b> and table content is clearly described. <a href="https://webaim.org/techniques/tables/">WebAIM has additional guidance on this.</a></span>} id="general-criteria-8g" />
+
+    <Checkbox label={<span><b>Aria</b> provides descriptive details to screen reader users, without reiterating or overriding the text that is already there. If there is visible text then there doesn’t need to be an <span className="ws-code">aria-label</span>. </span>} description={<span>It’s important to understand that ARIA can only affect the semantics of an element; not the behavior. For example, while you can hide an element from screen readers with <span> className="ws-code">aria-hidden=”true”</span>, that does not change the focus behavior for that element.</span>} id="general-criteria-8h" />
+
+</>}  id="general-criteria-8" />
