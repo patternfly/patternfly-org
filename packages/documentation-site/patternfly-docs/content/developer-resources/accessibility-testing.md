@@ -28,7 +28,7 @@ There are many tools you can use to validate your HTML, such as [W3C’s markup 
  
 We also offer the [patternfly-a11y script](https://github.com/patternfly/patternfly-a11y) for bulk testing that reports any aXe accessibility violations from a set of pages. To use this script, a configuration file can be set to adapt our script to your specific needs like authentication, waiting for any specific items to finish loading (like a loading spinner), etc. 
  
- When used as a report, it will give an [accessibility report via surge](http://a11y-os.surge.sh/). The UI should be built first in the CI workflow and then a job created to run the a11y script against that build. The a11y script assumes that there is a web server running somewhere that is serving up the pages  that it can reach. (for example, in localhost:8000). If you want to test a step before deployment, you could follow the path of integrating aXe with [Cypress](https://www.cypress.io/).
+When used as a report, it will give an [accessibility report via surge](http://a11y-os.surge.sh/). The UI should be built first in the CI workflow and then a job created to run the a11y script against that build. The a11y script assumes that there is a web server running somewhere that is serving up the pages (for example, in `localhost:8000`) that it can reach. If you want to test a step before deployment, you could follow the path of integrating aXe with Cypress.
 
 
 ### Test keyboard accessibility
@@ -69,18 +69,18 @@ These are some of the main areas we check for on the PatternFly team to ensure t
 
 <Checkbox label="Rotor navigation can discover all information." id="general-criteria-1" /> 
 
-<Checkbox label="Shortcut navigation can discover all information."  description="For example, a keyboard shortcut that navigates between all headings on a page should discover all intended headings." id="general-criteria-2/>
+<Checkbox label="Shortcut navigation can discover all information."  description="For example, a keyboard shortcut that navigates between all headings on a page should discover all intended headings." id="general-criteria-2" />
 
 <Checkbox label="Cursor navigation can discover all applicable information." description="Some assistive technologies will have their own means of navigation and focus management. For example, VoiceOver uses a 'VO' key plus right or left arrow keys to navigate a page. This may be different than conventional keyboard navigation." id="general-criteria-3" />
 
 <Checkbox label={<span>Keyboard navigation via the <kbd>tab</kbd> key can discover all information.</span>} description={<span>If content should be hidden from other assistive technology like a screen reader, <span className="ws-code">aria-hidden="true"</span> should be passed instead.</span>} id="general-criteria-4" />
 
-<Checkbox label="Items are understandable and usable." body={<><Checkbox label="When you navigate to an item by keyboard or other assistive technology, you can easily understand and use the item." id="general-criteria-5a" /> <Checkbox label="The flow of information makes sense when navigating." description="Assistive technology (like screen readers) navigate the page in DOM order. If you use CSS to visually reposition elements, they may be announced in a nonsensical sequence. If you need something to appear earlier in the page, try to physically move it earlier in the DOM instead.
+<Checkbox label="UI elements are understandable and usable." body={<><Checkbox label="When you navigate to an element by keyboard or other assistive technology, you can easily understand and use the item." id="general-criteria-5a" /> <Checkbox label="The flow of information makes sense when navigating." description="Assistive technology (like screen readers) navigate the page in DOM order. If you use CSS to visually reposition elements, they may be announced in a nonsensical sequence. If you need something to appear earlier in the page, try to physically move it earlier in the DOM instead.
 " id="general-criteria-5b" /></>} id="general-criteria-5" /> <br/>
 
 ### Accessibility points
 
-<Checkbox label={<span> <b> Structure: </b> The visual information architecture should map to the various rotor menus that exist by default.</span>} body={<><Checkbox label="Check rotor for descriptive and concise headings, landmarks, links, form controls, tables, and other elements." id="accessibility-points-7a" />
+<Checkbox label={<span> <b> Structure: </b> The visual information architecture maps to the various rotor menus that exist by default.</span>} body={<><Checkbox label="Rotor has descriptive and concise headings, landmarks, links, form controls, tables, and other elements." id="accessibility-points-7a" />
 <Checkbox label="Heading levels convey structure/content and do not skip levels." description="A common practice is to use a single h1 for the primary headline or logo on a page, h2s for designating major sections, and h3s for supporting sections." id="accessibility-points-7b" />
 <Checkbox label="Landmarks" id="accessibility-points-7c" />
 <Checkbox label="Links" id="accessibility-points-7d" />
@@ -96,9 +96,9 @@ These are some of the main areas we check for on the PatternFly team to ensure t
   }
   id="general-criteria-8b" />
     
-    <Checkbox label={<span><b>Form inputs</b> have a label — even if it's not visible.</span>} id="general-criteria-8c" />
+    <Checkbox label={<span><b>Form inputs</b> have a label (even if it's not visible).</span>} id="general-criteria-8c" />
     
-    <Checkbox label={<span><b>Icons</b> have some some kind of text for screen readers - even if it's not visible.</span>} id="general-criteria-8d" />
+    <Checkbox label={<span><b>Icons</b> have some some kind of text for screen readers (even if it's not visible.)</span>} id="general-criteria-8d" />
 
     <Checkbox label={<span><b>Images have proper alt text.</b></span>} description="The exception to this practice is when images are primarily for presentation purposes and are not essential pieces of content. To signify that an image should be skipped by a screen reader, set the value of the alt attribute to an empty string: `alt=””`." id="general-criteria-8e" />
 
