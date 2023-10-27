@@ -27,7 +27,7 @@ Use an overflow menu when additional options are available to the user but there
 ## Behavior
 Overflow menus are represented by a kebab button, as the user clicks on the kebab, a horizontal list will appear with additional options to click. 
 
-## Content Guidelines
+## Content considerations
 * Text should be short and direct so users can quickly scan and decide on an action.
 * Text  should be written in sentence case.
 * Overflow menus should be placed on the right side of the container. 
