@@ -98,6 +98,10 @@ export const Example = ({
 }) => {
   if (isFullscreenPreview) {
     isFullscreen = false;
+    window.addEventListener('load', () => {
+      //append a class to the document body to indicate to screenshot/automated visual regression tools that the page has loaded
+      document.body.classList.add('page-loaded');
+    });
   }
   if (!lang) {
     // Inline code
