@@ -3,7 +3,7 @@ id: PatternFly's accessibility
 section: accessibility
 ---
 
-# PatternFly components accessibility 
+## Component accessibility 
 
 We do our best to build accessibility into PatternFly's components to take some of the accessibility work off your hands.
 
@@ -11,9 +11,9 @@ As PatternFly is updated and enhanced, we maintain  accessibility through a comb
 
 We also regularly audit keyboard accessibility with both manual testing and integration tests. We aim to provide full support for VoiceOver as our main screen reader, but we still test our components through NVDA and JAWS. As part of our manual audit, every component is run through VoiceOver to make sure they’ll be as accessible as possible in your products.
 
-## PatternFly accessibility standards
+## Accessibility standards
 
-Our goal is to meet [level AA in the Web Content Accessibility Guidelines 2.1](https://www.w3.org/WAI/WCAG21/quickref/?currentsidebar=%23col_customize&levels=aaa). If you use or contribute to PatternFly, these are the accessibility guidelines you can expect PatternFly to meet the following: 
+Our goal is to meet [level AA in the Web Content Accessibility Guidelines 2.1](https://www.w3.org/WAI/WCAG21/quickref/?currentsidebar=%23col_customize&levels=aaa). If you use or contribute to PatternFly, the following accessibility guidelines are some that you can expect PatternFly:
 
 | Guideline  | Link  | Applies to  | Tested |
 | --- | --- | --- | --- |
