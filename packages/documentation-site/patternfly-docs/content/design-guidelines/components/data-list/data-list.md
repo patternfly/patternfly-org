@@ -82,7 +82,7 @@ The clickable data list can be used when data lists need to provide additional i
 1. **Row:** Enables the user to click on the row to trigger the action of opening a primary-detail drawer
 2. **Primary-detail:** Additional drawer of information that allows the user to still see the data list
 
-### When to use
+#### When to use
 
 * **Use a clickable data list** when you need to allow the user to trigger an action of opening a primary-detail drawer to view more information
 * **Don't use a clickable data list** when users don't need to see more information in addition to the data list information

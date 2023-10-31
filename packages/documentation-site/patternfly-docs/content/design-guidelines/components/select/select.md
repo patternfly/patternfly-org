@@ -53,15 +53,6 @@ Multiple select lists allow users to select one or more options from a list, wit
 
 <img src="./img/selectlist-multi.png" alt="Example of multiple select list" width="585"/>
 
-### When to use checkbox select versus multiple select
-Both the checkbox select and multiple select lists allow users to select multiple options from a list. However, there are some points to take into consideration when deciding which one to use.
-
-
-<img src="./img/suggested-checkbox.png" alt="Example for using a checkbox select" />
-
-
-<img src="./img/suggested-multiselect.png" alt="Example for using a multiple select inside a form" width="518"/>
-
 ## Variations
 
 ### Select list with typeahead
