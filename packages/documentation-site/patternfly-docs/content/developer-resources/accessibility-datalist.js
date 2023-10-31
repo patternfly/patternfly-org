@@ -152,8 +152,10 @@ export class AccessibilityDatalist extends React.Component {
               isHidden={!this.state.expanded.includes('ex-toggle1')}
             >
               <p>
-              A mechanism should be available to bypass blocks of content that are repeated on multiple Web pages. 
-              When keyboard-only users interact with your site, they use the tab key to jump from link to link. If you have a lot of links at the first of your page in your header or in a menu, they must tab through those every time they come to a new page just to get to the main content. Providing a skip to main content link allows them to easily bypass this.
+              A mechanism should be available to bypass blocks of content that are repeated on multiple Wwb pages. 
+              <br/>
+              <br/>
+              When keyboard-only users interact with your site, they use the <kbd>tab</kbd> key to jump from link to link. If your UI has many links in your page header or in a menu, they must tab through those every time they come to a new page just to get to the main content. Providing a "skip to main content" link allows them to easily bypass this hassle.
               </p>
 
             </DataListContent>
@@ -187,15 +189,18 @@ export class AccessibilityDatalist extends React.Component {
               id="ex-expand2"
               isHidden={!this.state.expanded.includes('ex-toggle2')}
             >
-              <div>
-                Descriptive titles help users find content, orient themselves within it, and navigate through it. Users can more quickly identify the content they need when accurate, descriptive titles appear in site maps or lists of search results. 
-                The title of each web page should:
-                  <ul>
-                    <li> Identify the subject of the web page. </li>
-                    <li> Make sense when read out of context, for example by a screen reader or in a site map or list of search results.</li>
-                    <li> Be short. </li>
-                  </ul>
-              </div>
+              <p>
+                Use descriptive titles to help users find content, orient themselves within it, and navigate through it. 
+                <br/>
+                <br/>
+                Users can more quickly identify the content they need when accurate, descriptive titles appear in site maps or lists of search results. The title of each web page should:
+                <br/>
+                - Identify the subject of the web page.
+                <br/>
+                - Make sense when read out of context. For example, when read by a screen reader, in a site map, or in a list of search results.
+                <br/>
+                - Be concise. 
+              </p>
             </DataListContent>
           </DataListItem>
           <DataListItem aria-labelledby="ex-item3" isExpanded={this.state.expanded.includes('ex-toggle3')}>
@@ -229,8 +234,9 @@ export class AccessibilityDatalist extends React.Component {
             >
             <p>
               If more than one link has the same label, it should also have the same URL. 
-              Screen reader users can access the list of links that are on a page, which pulls the links out of context. 
-              If you have links with different URLs but the same label, then add additional text to provide context to the screen reader user.
+              <br/>
+              <br/>
+              Screen reader users can access the list of links that are on a page, which pulls the links out of context. If you have links with different URLs but the same label, then add additional text to provide context to screen reader users.
             </p>
             </DataListContent>
           </DataListItem>
@@ -264,10 +270,14 @@ export class AccessibilityDatalist extends React.Component {
               isHidden={!this.state.expanded.includes('ex-toggle4')}
             >
             <p>
-              Use landmark roles to clearly identify regions that communicate page structure. If more than one landmark role occurs in the page, use aria-label to differentiate the landmark elements
-              Landmark roles programmatically identify sections of a page. Landmarks help assistive technology (AT) users orient themselves to a page and help them navigate easily to various sections of a page.
-              Whenever a landmark role is used more than once, provide a name using aria-label or aria-labelledby to provide context for that landmark. (ARIA6, ARIA16)
-              While toolbar is not a landmark role, the same rule applies to this role.
+              Use landmark roles to clearly identify regions that communicate page structure. 
+              <br/>
+              <br/>
+              Landmark roles programmatically identify sections of a page. If more than one landmark role occurs in the page, use <code>aria-label</code> to differentiate the landmark elements.
+              Landmarks help assistive-technology users orient themselves to a page and help them navigate easily to various page sections. Whenever a landmark role is used more than once, provide a name using <code>aria-label</code> or <code>aria-labelledby</code> to provide context for that landmark. (<a href="https://www.w3.org/WAI/WCAG21/Techniques/aria/ARIA6"> ARIA6</a>, <a href="https://w3.org/WAI/WCAG22/Techniques/aria/ARIA16">ARIA16</a>)
+              <br/>
+              <br/>
+              <strong>Note:</strong> While toolbar is not a landmark role, the same rule applies.
             </p>
             </DataListContent>
           </DataListItem>
@@ -301,8 +311,10 @@ export class AccessibilityDatalist extends React.Component {
               isHidden={!this.state.expanded.includes('ex-toggle5')}
             >
             <p>
-            Heading text should be descriptive. Correct heading levels should be used to communicate the outline and structure of the page.
-            A common practice is to use a single h1 for the primary headline or logo on a page, h2s to designate major sections, and h3's in supporting subsections
+            Heading text should be descriptive. 
+            <br/>
+            <br/>
+            Appropriate heading levels should be used to communicate the outline and structure of the page. For example, a common practice is to use a single h1 for the primary headline or logo on a page, h2s to designate major sections, and h3's for supporting subsections.
             </p>
             </DataListContent>
           </DataListItem>
@@ -335,7 +347,10 @@ export class AccessibilityDatalist extends React.Component {
               isHidden={!this.state.expanded.includes('ex-toggle6')}
             >
             <p>
-            Content should be meaningful, clear, and concise. Use simple language and formatting, as appropriate for the context.
+            Content should be meaningful, clear, and concise. 
+            <br/>
+            <br/>
+            Use simple language and formatting, as appropriate for the context.
             </p>
             </DataListContent>
           </DataListItem>
