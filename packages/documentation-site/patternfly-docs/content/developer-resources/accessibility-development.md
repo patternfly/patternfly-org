@@ -80,6 +80,8 @@ All images should have alt text so that assistive technology can provide an imag
 
 The exception to this practice is when images are primarily for presentation purposes and are not essential pieces of content. To signify that an image should be skipped by a screen reader, set the value of the alt attribute to an empty string: `alt=””`.
 
+For example, in the alert component, the icon label text is adjacent to the message. This way, when `role="alert"` is added to `.pf-v5-c-alert__body` for dynamically displayed alerts, the type of message is announced along with the message text.
+
 #### Trapping focus
 
 The recommended interaction pattern for components like the modal or popover is to trap focus within the component's modal element when it becomes visible.  
