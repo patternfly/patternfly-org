@@ -63,7 +63,7 @@ Colors should pass the following contrast checks, to ensure that users across th
 
 We recommend referencing the following checklist as you assess your product's accessibility.
 
-These are some of the main areas we check for on the PatternFly team to ensure that components meet consistent accessibility standards, but, to check your complete implementation, we recommend checking these same areas in your products. 
+These are some of the main areas we check for on the PatternFly team to ensure that a UI meets consistent accessibility standards. To assess your specific implementation, we recommend checking these same areas in your product. 
 
 ### General criteria
 
