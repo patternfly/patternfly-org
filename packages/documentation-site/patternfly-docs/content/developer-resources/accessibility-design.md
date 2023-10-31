@@ -5,13 +5,7 @@ section: accessibility
 
 As described in our [accessibility fundamentals](/accessibility/accessibility-fundamentals), users may interact with your product through a variety of assistive technologies. In addition to [developing for accessibility](/accessibility/accessibility-development), you must also incorporate it into your product's UI design. 
 
-The following table differentiates the accessibility responsibilities that are up to designers, developers, or both to uphold.
 
-| Designer | Designer and developer | Developer |
-| --- | --- | --- |
-| Color  | Layout and structure  | Semantic HTML  |
-| Contrast  | Information architecture and navigation | Tab order  |
-| Content  | Interaction patterns | Bypass blocks |
 
 ## Color and contrast
 
