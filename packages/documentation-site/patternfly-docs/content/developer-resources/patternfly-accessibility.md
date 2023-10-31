@@ -9,7 +9,7 @@ We do our best to build accessibility into PatternFly's components to take some 
 
 As PatternFly is updated and enhanced, we maintain  accessibility through a combination of automated and manual testing. We use [aXe: The Accessibility Engine](https://www.deque.com/axe/) to ensure that all components pass an accessibility audit before they’re added to PatternFly. 
 
-We also regularly audit keyboard accessibility with both manual testing and integration tests. We aim to provide full support for Voice Over as our main screen reader, but we still test our components through NVDA and JAWS. As part of our manual audit, every component is run through Voice Over to make sure they’ll be as accessible as possible in your products.
+We also regularly audit keyboard accessibility with both manual testing and integration tests. We aim to provide full support for VoiceOver as our main screen reader, but we still test our components through NVDA and JAWS. As part of our manual audit, every component is run through VoiceOver to make sure they’ll be as accessible as possible in your products.
 
 ## PatternFly accessibility standards
 
