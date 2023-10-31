@@ -14,12 +14,11 @@ As you develop your product, it can be helpful to keep accessibility top of mind
 
 - **Can all users interact with elements?**. It should be easy for users to use an element once it's in focus. They should be able to interact with elements and initiate actions via keyboard (like pressing **Enter** to initiate a button action) and screen readers.
 
-- **Can all users understand elements?**: It should be clear what actions elements can perform. 
-  - For example, buttons should have visible text that would be clear out of context of the page. If not, it should have an aria-label or accessible name.
+- **Can all users understand elements?**: It should be clear what actions elements can perform. For example, buttons should have visible text that would be clear out of context of the page. If not, it should have an aria-label or accessible name.
 
 ## Development techniques
 
-There are items outside the scope of PatternFly that you should prioritize to ensure accessibility: 
+These are some of the items outside the scope of PatternFly that you should prioritize to ensure accessibility: 
 
 <br />
 
