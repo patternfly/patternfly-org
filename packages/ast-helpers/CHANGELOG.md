@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.3.0 (2023-11-01)
+
+
+### Features
+
+* **dark-theme:** replace dark theme switcher with toggle group ([#3788](https://github.com/patternfly/patternfly-org/issues/3788)) ([0bf3c62](https://github.com/patternfly/patternfly-org/commit/0bf3c62484bc288386a9620fcb89c38da5d260af))
+
+
+
+
+
 ## 1.2.26 (2023-10-30)
 
 **Note:** Version bump only for package @patternfly/ast-helpers
