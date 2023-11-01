@@ -32,7 +32,7 @@ Users with reduced motor control often use a keyboard or computer mouse to acces
 To design for users with reduced motor control, remember that: 
 
 - Users who rely on a keyboard need elements that are keyboard accessible and highly visible when in focus.
-- Users who rely on a mouse or touch need target areas that are large enough to be hit easily.
+- Users who rely on a mouse or touch need target areas that are large enough to be easily clicked and selected.
 
 ### Vision
 
