@@ -7,7 +7,7 @@ section: accessibility
 
 Accessibility is a foundation of PatternFly, so if you contribute to PatternFly or use it for your products you should first familiarize yourself with our accessibility guidelines and recommendations.
 
-No user should feel left behind when using your product. The goal of accessible design is to remove barriers and create inclusive product experiences that work for everyone, regardless of ability. This is best achieved when accessibility is considered early in the design and development process. 
+No user should feel left behind when using your product. The goal of accessible design is to remove barriers and create inclusive product experiences that work for everyone, regardless of ability. This is best achieved when accessibility is considered early in the design and development process, but it's never too late to start prioritizing accessibility.
 
 There’s always room to improve accessibility. That’s why our guidelines will continually evolve. Your feedback can help support PatternFly's accessibility, so we welcome you to contribute to our documentation or [get involved in our GitHub discussions](https://github.com/orgs/patternfly/discussions). 
 
@@ -16,7 +16,7 @@ There’s always room to improve accessibility. That’s why our guidelines will
 A core consideration for accessibility practices is assistive technologies that people may use to access your product. 
 
 ### Keyboard
-Some users can’t use a mouse and rely on other methods of navigation instead, like a keyboard. A keyboard allows users to navigate through UI elements in the order that they appear on the page, typically using the tab key. Keyboard users should be able to do anything that mouse users can, including viewing text that is shown upon hover or in popups.  
+Some users can’t use a mouse and rely on other methods of navigation instead, like a keyboard. A keyboard allows users to navigate through UI elements in the order that they appear on the page, typically using the <kbd>Tab</kbd> key. Keyboard users should be able to do anything that mouse users can, including viewing text that is shown upon hover or in popups.  
 
 ### Screen readers
 When a user has impaired vision (temporary or permanent) that prevents them from viewing a screen, they can use a screen reader that reads visible and non-visible content aloud. Non-visible content includes hidden text, like tooltips, and alternative text (alt text) for icons, images, and links. 
@@ -24,12 +24,12 @@ When a user has impaired vision (temporary or permanent) that prevents them from
 ## Understanding users’ needs
 Great user experiences don’t just happen. They’re designed, tested, and refined with users in mind. To develop inclusive products, it’s important to understand the varying needs of all users and consider the assistive tools and methods that they use.
 
-This section provides information to help you better understand and address the needs of users [with diverse abilities](https://www.a11yproject.com/posts/accessibility-is-blind-people/). It is important to note that some users might fall into multiple groups, and some might use tools created for a different group.
+This section provides information to help you better understand and address some of the needs of [users with diverse abilities](https://www.a11yproject.com/posts/accessibility-is-blind-people/). It is important to note that some users might fall into multiple groups, and some might use tools created for a different group.
 
 ### Motor control
-Users with reduced motor control often use a keyboard or computer mouse to access content.
+Users with reduced motor control often use a keyboard or computer mouse to access content. Some users may also have difficulty keeping a mouse steady when trying to interact with content.
 
-To support users with reduced motor control, remember that: 
+To design for users with reduced motor control, remember that: 
 
 - Users who rely on a keyboard need elements that are keyboard accessible and highly visible when in focus.
 - Users who rely on a mouse or touch need target areas that are large enough to be hit easily.
@@ -64,7 +64,7 @@ To design for users with cognitive processing issues:
 
 ### Accessibility spectrum
 
-While there are a few main accessibility needs, it is not an exhaustive list. Often the “Persona Spectrum”, coined by [Microsoft](https://download.microsoft.com/download/b/0/d/b0d4bf87-09ce-4417-8f28-d60703d672ed/inclusive_toolkit_manual_final.pdf), can be used to understand related mismatches and motivations across a spectrum of permanent, temporary, and situational scenarios.
+While there are a few main accessibility needs, it is not an exhaustive list. Often the “Persona Spectrum”, coined by Microsoft [(Download the Inclusive Guidebook as a PDF)](https://download.microsoft.com/download/b/0/d/b0d4bf87-09ce-4417-8f28-d60703d672ed/inclusive_toolkit_manual_final.pdf), can be used to understand related mismatches and motivations across a spectrum of permanent, temporary, and situational scenarios.
 
 While accessibility tends to focus on those with permanent disabilities, everyone benefits from accessible products:
 
@@ -74,11 +74,8 @@ While accessibility tends to focus on those with permanent disabilities, everyon
 
 Accessibility takes **all users** into account.
 
-<p className="ws-p pf-v5-u-screen-reader">
-  The following image shows how accessibility is a spectrum. Different kinds of cognitive and physical impairments impact how users interact with products. All levels of impairment should be considered when building accessible products.
-</p>
 
-<img src="./PF-a11y.png" alt="Accessibility spectrum image" />
+<img src="./PF-a11y.png" alt="An accessibility spectrum showing examples of the situational, temporary, and permanent situations for different impairments." />
 <br />
 <br />
 
