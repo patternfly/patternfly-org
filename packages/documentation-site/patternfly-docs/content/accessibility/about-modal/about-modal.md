@@ -3,26 +3,78 @@ id: About modal
 section: components
 ---
 
-An **about modal** displays information about an application like product version number(s), as well as any appropriate legal text. Like modal, this component is a secondary window that displays over the primary window to allow the user to maintain the context of a particular task. When the modal is displayed and active, the primary window is inert, so users cannot interact with content outside it.
 
-**Keyboard and mouse users** shouldn’t be able to interact with the rest of the page outside of an open modal. Set the initial focus on the first focusable element in the modal. The user should be able to **Tab** to any interactive elements within the modal and use **Tab + Shift** to move backwards through interactive elements. Keyboard users should be able to leave the modal by pressing **Esc** and focus should return to the element that invoked the modal. 
+import { Checkbox, List, ListItem } from '@patternfly/react-core';
 
-**Screen reader users** shouldn’t be able to interact with the rest of the page outside an open modal. Add alternative text for any images or non-textual buttons (like icon buttons) . Images should use the alt attribute whereas `aria-label` is most common to label icon buttons. Write a clear headline that describes the modal, organize contents in logical DOM order, and be sure to follow [our modal content guidelines](https://www.patternfly.org/v4/components/modal/design-guidelines/) to clearly communicate information contained within it.
+## Accessibility
 
-<br/>
+To implement an accessible PatternFly **about modal**:
 
-**To make About Modal accessible:**
-- **If you use a brand image**, use the React prop `brandImageAlt` on the AboutModal component to give the brand image alternative text for assistive technology and low bandwidth users. This will look like `alt=”[title of image]”` in the HTML markup on the image with class .pf-v5-c-brand. 
-- **If you don’t use a title in your modal**, add an `aria-label` to give the modal an accessible name. It will look like `aria-label=”[title of modal]” on the AboutModal and will appear directly on the class .pf-v5-c-about-modal-box. 
+- Provide an `aria-label` to the about modal if there is no product name heading.
+- Ensure the first focusable element or the about modal itself receives focus when it is opened.
+- Ensure content behind the about modal cannot be interacted with or navigated to via mouse, keybaord, or other assistive technologies such as screen readers.
+- Ensure the element that previously had focus before the about modal was opened receives focus upon closing the about modal.
 
-<br/>
+## Testing
 
-The following props can be added or are customizable in PatternFly:
+At a minimum, an about modal should meet the following criteria:
 
-| React component| React prop | Which HTML element it appears on in markup | Explanation | 
-|---|---|---|---|
-| AboutModal | brandImageAlt | .pf-v5-c-about-modal-box__brand-image | The alternate text of the brand image |
-| AboutModal | closeButtonAriaLabel | .pf-v5-c-modal-box__close .pf-v5-c-button  | Provides an accessible name for the close button as it uses an icon instead of text. Default is “Close dialog”. Only used if you are customizing. |
+<List isPlain>
+  <ListItem>
+    <Checkbox id="aboutModal-a11y-checkbox-1" label={<span>An <code class="ws-code">aria-label</code> is passed if the about modal does not have a product name heading.</span>} description="This gives the about modal an accessible name, providing context of its purpose or content to users." />
+  </ListItem>
+  <ListItem>
+    <Checkbox id="aboutModal-a11y-checkbox-2" label="The first focusable element, or the about modal itself, receives focus when the about modal is opened." />
+  </ListItem>
+  <ListItem>
+    <Checkbox id="aboutModal-a11y-checkbox-3" label="Any content behind the about modal cannot be interacted with or navigated to." descriptjon="Upon reaching the end of the about modal, focus should either wrap back to the beginning of the about modal (for keyboard) or navigation should simply be prevented (for assistive technologies such as screen readers)." />
+  </ListItem>
+  <ListItem>
+    <Checkbox id="aboutModal-a11y-checkbox-4" label="The last element to have focus before the about modal was opened should receive focus after it is closed." descriptjon="Typically this will be whatever triggered the about modal to open. If that element no longer exists, then the element closest to it should receive focus." />
+  </ListItem>
+</List>
 
+## React customization
 
+The following React props have been provided for more fine-tuned control over accessibility.
 
+| Prop | Applied to | Reason | 
+|---|---|---|
+| `brandImageAlt="[alt text of the brand image]"` | `AboutModal` | Adds alternative text for the brand image passed to `brandImageSrc`. Typically this should either be an empty string `''` if the brand image is purely decorative, or the product name. |
+| `aria-label="[text that labels the about modal]"` | `AboutModal` | Adds an accessible name to the about modal. **Required** when the `productName` prop is not passed in, and typically will be the same as the product name. |
+| `closeButtonAriaLabel="[text that labels the close button]"` | `AboutModal` | Adds an accessible name to the close button of the about modal. By default the value is "Close Dialog". |
+| `disableFocusTrap` | `AboutModal` | Disables the focus trap of the about modal. **Read our [additional considerations](#additional-considerations) before passing this prop in.** |
+
+## HTML/CSS customization
+
+The following HTML attributes and PatternFly classes can be used for more fine-tuned control over accessibility.
+
+| Attribute or class | Applied to | Reason | 
+|---|---|---|
+| `aria-label="[text that labels the about modal]"` | `.pf-v5-c-modal-box` | Adds an accessible name to the about modal. **Required** when there is not visible product name heading. Typically the value passed in will be the product name itself. |
+| `aria-labelledby="[id of the element that labels the about modal]"` | `.pf-v5-c-modal-box` | Adds an accessible name to the about modal. **Required** when there is a visible product name heading. |
+| `role="dialog"` | `.pf-v5-c-modal-box` | Adds an accessibile role to the about modal. **Required**. |
+| `aria-modal="true"` | `.pf-v5-c-modal-box` | Marks the dialog as a modal. **Required**. |
+| `alt="[alt text of the brand image]"` | `.pf-v5-c-about-modal-box__brand-image` | Adds alternative text for the brand image. Typically this should either be an empty string `''` if the brand image is purely decorative, or the product name. |
+| `aria-label="[text that labels the close button]"` | `.pf-v5-c-about-modal-box__close > .pf-v5-c-button` | Adds an accessible name to the close button of the about modal. |
+
+## Additional considerations
+
+Consumers must ensure they take any additional considerations when customizing an about modal, using it in a way not described or recommended by PatternFly, or in various other specific use-cases not outlined elsewhere on this page.
+
+### Focus trap and focus management
+
+When using the HTML implementation of the about modal, or when passing the `disableFocusTrap` prop in the React implementation, it is up to the consumer to ensure proper focus trapping and focus management is implemented, as outlined in the [accessibility](#accessibility) section.
+
+Without taking these considerations, it may make it more difficult for users to navigate or interact with the about modal, especially if it is appended towards the end of the document body. Issues can include, but aren't limited to:
+
+- Needing to navigate through large sections of the rest of the page before focus is finally placed within the about modal
+- Being able to navigate outside of the about modal once reaching the end of its contents, which may be confusing for users
+- Not having any visual indication what element is focused when the about modal is closed
+- Needing to repeatedly navigate through the same content after closing the about modal just to get back to where focus was before it was opened
+
+## Further reading
+
+To read more about accessibility with about modals, refer to the following resources:
+
+- [ARIA Authoring Practices Guide - Dialog (Modal)](https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/)
