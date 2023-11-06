@@ -11,6 +11,7 @@ import { Checkbox, List, ListItem } from '@patternfly/react-core';
 To implement an accessible PatternFly **expandable section**:
 
 - Ensure the expandable section's toggle text is updated based on its current expanded state.
+- Provide unique toggle text for each expandable section if there are multiple on a page.
 
 ## Testing
 
@@ -28,6 +29,9 @@ At a minimum, an expandable section should meet the following criteria:
   </ListItem>
   <ListItem>
     <Checkbox id="expandableSection-a11y-checkbox-4" label="A user navigating via a screen reader will be notified of the current expanded state, as well as when that state gets updated." description={<span>This can be checked with a screen reader, or by checking that the <code className="ws-code">aria-expanded</code> attribute is accurate and updating in the DOM.</span>} />
+  </ListItem>
+  <ListItem>
+    <Checkbox id="expandableSection-a11y-checkbox-5" label="If there are multiple expandable sections on a page, each toggle is given unique text or accessible name" description={`If multiple expandable sections have the same toggle text, it will be confusing for users navigating via rotor menu when more than 1 toggle is announced as "Show more" with no other context.`} />
   </ListItem>
 </List>
 
