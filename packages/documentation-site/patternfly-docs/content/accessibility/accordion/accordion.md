@@ -98,7 +98,7 @@ The following HTML attributes and PatternFly classes can be used for more fine-t
 | `aria-expanded="[true or false]"` | `.pf-v5-c-accordion__toggle` | Indicates whether the accordion toggle is expanded (true) or collapsed (false) to assistive technologies. **Required**. |
 | `aria-label="[text that labels the accordion content]"` | `.pf-v5-c-accordion__expanded-content` | Adds an accessible name to the content of an accordion item. |
 | `hidden` | `.pf-v5-c-accordion__expanded-content` | Hides the accordion content. **Required** when `aria-expanded="false"` is passed in. |
-| `aria-hidden="true"` | `.pf-v5-c-accordion__toggle-icon` | Removes the accordion toggle icon from the accessibility tree, preventing assistive technologies from potentially announcing duplicate or unnecessary information without visually hiding it. **Required**. |
+| `aria-hidden="true"` | `.pf-v5-c-accordion__toggle-icon > i` | Removes the accordion toggle icon from the accessibility tree, preventing assistive technologies from potentially announcing duplicate or unnecessary information without visually hiding it. **Required**. |
 
 ## Additional considerations
 
