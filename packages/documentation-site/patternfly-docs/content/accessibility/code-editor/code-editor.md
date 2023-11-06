@@ -3,9 +3,7 @@ id: Code editor
 section: components
 ---
 
-
 import { Checkbox, List, ListItem } from '@patternfly/react-core';
-import { Link } from '@patternfly/documentation-framework/components/link/link';
 
 ## Accessibility
 
