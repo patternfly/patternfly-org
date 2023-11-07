@@ -5,8 +5,6 @@ section: accessibility
 
 As described in our [accessibility fundamentals](/accessibility/accessibility-fundamentals), users may interact with your product through a variety of assistive technologies. In addition to [developing for accessibility](/accessibility/accessibility-development), you must also incorporate it into your product's UI design. 
 
-
-
 ## Color and contrast
 
 Color and contrast go hand-in-hand for visual design accessibility. 
@@ -31,18 +29,18 @@ In addition to following the previous recommendations, it can be helpful to deve
 
 There are 4 types of limitations as a result of low vision.
 
-### 1. Visual acuity 
+### Visual acuity 
 
 **Visual acuity** refers to sharpness of vision (20/20 being standard). Users outside of the standard range of visual acuity have different needs for font size and spacing.
 
-### 2. Field of vision 
+### Field of vision 
 
 **Field of vision** is the area of vision people can see clearly when their eyes are in a fixed position. Some users have a restricted field of vision (such as central or peripheral field loss), which means that they rely on accessible content design in order to comprehend information on a page.
 
-### 3. Contrast and light sensitivity
+### Contrast and light sensitivity
 
 **Contrast and light sensitivity** refers to the way that people perceive luminance (the contrast of foreground and background). Following our color contrast guidelines can help you support users with deficiencies in these areas. 
 
-### 4. Color perception
+### Color perception
 
 **Color perception** affects how people see colors. Some of your users may have deficiencies in color perception (more than 300 million people are part of this group), which affects their ability to see certain colors. This condition is commonly called "color blindness", even though most people with color perception deficiencies can still see most colors.  Following our color contrast guidelines can help you support users with deficiencies in these areas. 
