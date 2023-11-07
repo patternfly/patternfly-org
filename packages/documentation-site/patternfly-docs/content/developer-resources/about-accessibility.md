@@ -1,5 +1,5 @@
 ---
-id: About
+id: About accessibility 
 section: accessibility
 ---
 
@@ -13,7 +13,7 @@ There’s always room to improve accessibility. That’s why our guidelines will
 
 ## Assistive technologies
 
-A core consideration for accessibility practices is assistive technologies that people may use to access your product. 
+A core consideration for accessibility practices is the assistive technologies that people may use to access your product. While there are many kinds of assistive technologies, PatternFly focuses primarily on accommodating users of keyboards and screen readers.
 
 ### Keyboard
 Some users can’t use a mouse and rely on other methods of navigation instead, like a keyboard. A keyboard allows users to navigate through UI elements in the order that they appear on the page, typically using the <kbd>Tab</kbd> key. Keyboard users should be able to do anything that mouse users can, including viewing text that is shown upon hover or in popups.  
