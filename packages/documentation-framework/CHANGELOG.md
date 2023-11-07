@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 5.3.1 (2023-11-07)
+
+
+### Bug Fixes
+
+* **react-drag-drop:** add react-drag-drop to latest version ([#3801](https://github.com/patternfly/patternfly-org/issues/3801)) ([bbf20d4](https://github.com/patternfly/patternfly-org/commit/bbf20d4406303441a534c5fc9bd4667f72e55850))
+
+
+
+
+
 # 5.3.0 (2023-11-01)
 
 
