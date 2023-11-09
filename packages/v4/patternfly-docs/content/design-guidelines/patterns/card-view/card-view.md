@@ -64,17 +64,16 @@ You may use an extra-small empty state inside a card to present users with anoth
 
 <img src="./img/add-card-empty-state.png" alt="card view with addition card" />
 
+#### Expand all action
+In cases where cards are expandable, include an expand all action to the top left of the page, below the divider. 
+
+<img src="./img/expand-all.png" alt="card view with expand all cards action below the divider" />
+
+Once expanded, the action text changes from “expand all” to “collapse all”.
+
+<img src="./img/collapse-all.png" alt="card view with collapse all cards action below the divider" />
 
 ### Bottom pagination
 If your card view has multiple pages, add a footer with [pagination](/components/pagination).
 
 <img src="./img/card-view-sticky-toolbar.png" alt="card view with sticky bottom toolbar" />
-
-### Expand and collapse all cards
-In cases where there are many cards that users may want to skim, you may make all cards collapsed by default. Include an expand all action to the top left of the page, below the divider. 
-
-<img src="./img/expand-all-cards.png" alt="card view with expand all action" />
-
-Once expanded, the action text changes from "expand all" to "collapse all".
-
-<img src="./img/collapse-all-cards.png" alt="card view with collapse all action" />
