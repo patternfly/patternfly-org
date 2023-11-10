@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 5.3.2 (2023-11-10)
+
+
+### Bug Fixes
+
+* clean up versions and showdown deps ([#3816](https://github.com/patternfly/patternfly-org/issues/3816)) ([aae74d0](https://github.com/patternfly/patternfly-org/commit/aae74d0196d2205c2828ad831773c379a62e8bd8))
+
+
+
+
+
 ## 5.3.1 (2023-11-07)
 
 
