@@ -8,6 +8,7 @@ A **card view** is a grid of cards in a gallery to facilitate browsing. Card vie
 
 <img src="./img/card-view.png" alt="example of card view" width="1500"/>
 
+## Usage
 Use a card view to:
 - Display items in a data set that are best identified by a graphic or other visual representation.
 - Make information easier to visualize and compare.
@@ -58,7 +59,6 @@ If an action can be performed globally on multiple cards, or if it leads to mult
 
 <img src="./img/cardview-globalactions.png" alt="example of card view with global action toolbar" width="1500"/>
 
-
 #### Action card
 You may use an extra-small empty state inside a card to present users with another way to add more cards to the existing card view. We recommend using this feature **in addition to** a primary button in the toolbar, to ensure that the user is still able to perform the action from any page of the card view. Place the action card where a new card will be added, most likely as the very first or last card in the card view.
 
@@ -72,9 +72,6 @@ In cases where cards are expandable, include an expand all action to the top lef
 Once expanded, the action text changes from “expand all” to “collapse all”.
 
 <img src="./img/collapse_all.png" alt="card view with collapse all cards action below the divider" />
-
-### Bottom pagination
-If your card view has multiple pages, add a footer with [pagination](/components/pagination).
 
 ### Bottom pagination
 If your card view has multiple pages, add a footer with [pagination](/components/pagination).
