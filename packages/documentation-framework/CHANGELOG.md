@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 5.3.4 (2023-11-13)
+
+
+### Bug Fixes
+
+* add charts dark theme stylesheet ([#3802](https://github.com/patternfly/patternfly-org/issues/3802)) ([03954ed](https://github.com/patternfly/patternfly-org/commit/03954edbf429d6e3a8e9d460c61b5ea9f6d441a6))
+
+
+
+
+
 ## 5.3.3 (2023-11-10)
 
 **Note:** Version bump only for package @patternfly/documentation-framework
