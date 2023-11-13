@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.3.5 (2023-11-13)
+
+
+### Bug Fixes
+
+* **drag drop:** add drag drop to 5.1 versions.json ([#3817](https://github.com/patternfly/patternfly-org/issues/3817)) ([d2dec78](https://github.com/patternfly/patternfly-org/commit/d2dec78730dae818c4a2f5d6bab89d98de14e80d))
+
+
+
+
+
 ## 1.3.4 (2023-11-13)
 
 
