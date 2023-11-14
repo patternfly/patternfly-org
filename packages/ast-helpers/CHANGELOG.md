@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.3.6 (2023-11-14)
+
+
+### Bug Fixes
+
+* add virtualized table to extensions staging ([#3819](https://github.com/patternfly/patternfly-org/issues/3819)) ([06e3fbc](https://github.com/patternfly/patternfly-org/commit/06e3fbcbf433969d5ac880d82597f1fb04e4bbf1))
+
+
+
+
+
 ## 1.3.5 (2023-11-13)
 
 
