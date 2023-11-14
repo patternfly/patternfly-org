@@ -8,8 +8,8 @@ module.exports = (sourceMD, sourceProps, sourceFunctionDocs) => {
   const contentBase = path.join(__dirname, '../patternfly-docs/content');
   const reactPropsIgnore = ['**/*.test.tsx', '**/examples/*.tsx'];
   sourceMD(path.join(contentBase, 'extensions/**/*.md'), 'extensions');
-  if (!(process.env.EXTENSIONS_ONLY === 'true')) { 
-    
+  if (!(process.env.EXTENSIONS_ONLY === 'true')) {
+
     sourceMD(path.join(contentBase, 'contribute/**/*.md'), 'pages-contribute');
     sourceMD(path.join(contentBase, 'get-started/**/*.md'), 'pages-get-started');
     sourceMD(path.join(contentBase, 'developer-resources/**/*.md'), 'developer-resources');
@@ -21,7 +21,6 @@ module.exports = (sourceMD, sourceProps, sourceFunctionDocs) => {
     // Gallery pages
     const galleryBase = path.join(__dirname, '../patternfly-docs/pages');
     sourceMD(path.join(galleryBase, 'landing-pages/**/*.md'), 'landing-pages');
-
 
     // Theme pages
     const themePagesPath = require
@@ -85,7 +84,7 @@ module.exports = (sourceMD, sourceProps, sourceFunctionDocs) => {
 
     // React OUIA MD
     sourceMD(path.join(reactCorePath, '/**/helpers/OUIA/*.md'), 'react');
-  } 
+  }
   // EXTENSIONS:
 
   // Quickstarts extension
@@ -113,7 +112,7 @@ module.exports = (sourceMD, sourceProps, sourceFunctionDocs) => {
 
   sourceProps(path.join(consoleSrcPath, "/**/*.tsx"), reactPropsIgnore);
   sourceMD(path.join(consoleDocsPath, "/examples/*.md"), 'react');
-  
+
   // Log viewer extension
   const reactLogViewerPath = require
   .resolve('@patternfly/react-log-viewer/package.json')
@@ -152,5 +151,16 @@ module.exports = (sourceMD, sourceProps, sourceFunctionDocs) => {
     sourceMD(path.join(reactComponentGroupsBase, '/**/*.md'), 'react');
     sourceMD(path.join(reactComponentGroupsPath, '/**/examples/*.md'), 'react');
     sourceMD(path.join(reactComponentGroupsPath, '/**/design-guidelines/*.md'), 'design-guidelines');
+
+    const reactVirtualizedTablePath = require
+      .resolve('@patternfly/react-virtualized-extension/package.json')
+      .replace('package.json', 'src');
+
+    const reactVirtualizedTableBase = require
+      .resolve('@patternfly/react-virtualized-extension/package.json')
+      .replace('package.json', 'patternfly-docs/');
+
+    sourceProps(path.join(reactVirtualizedTablePath, '/**/*.tsx'), reactPropsIgnore);
+    sourceMD(path.join(reactVirtualizedTableBase, '/**/*.md'), 'react');
   }
 }
