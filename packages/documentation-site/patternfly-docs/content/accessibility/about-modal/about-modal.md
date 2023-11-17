@@ -11,6 +11,7 @@ import { Checkbox, List, ListItem } from '@patternfly/react-core';
 To implement an accessible PatternFly **about modal**:
 
 - Provide an `aria-label` to the about modal if there is no product name heading.
+- Ensure any brand image has a valid `alt` attribute, either a string or an empty string `''`.
 - Ensure the first focusable element or the about modal itself receives focus when it is opened.
 - Ensure content behind the about modal cannot be interacted with or navigated to via mouse, keybaord, or other assistive technologies such as screen readers.
 - Ensure the element that previously had focus before the about modal was opened receives focus upon closing the about modal.
@@ -24,13 +25,16 @@ At a minimum, an about modal should meet the following criteria:
     <Checkbox id="aboutModal-a11y-checkbox-1" label={<span>An <code class="ws-code">aria-label</code> is passed if the about modal does not have a product name heading.</span>} description="This gives the about modal an accessible name, providing context of its purpose or content to users." />
   </ListItem>
   <ListItem>
-    <Checkbox id="aboutModal-a11y-checkbox-2" label="The first focusable element, or the about modal itself, receives focus when the about modal is opened." />
+    <Checkbox id="aboutModal-a11y-checkbox-2" label={<span>If there is a brand image, it has a valid <code class="ws-code">alt</code> attribute.</span>} description="If the image is purely decorative then an empty string should be passed as a value so that the image is not exposed to assistive technologies." />
   </ListItem>
   <ListItem>
-    <Checkbox id="aboutModal-a11y-checkbox-3" label="Any content behind the about modal cannot be interacted with or navigated to." descriptjon="Upon reaching the end of the about modal, focus should either wrap back to the beginning of the about modal (for keyboard) or navigation should simply be prevented (for assistive technologies such as screen readers)." />
+    <Checkbox id="aboutModal-a11y-checkbox-3" label="The first focusable element, or the about modal itself, receives focus when the about modal is opened." />
   </ListItem>
   <ListItem>
-    <Checkbox id="aboutModal-a11y-checkbox-4" label="The last element to have focus before the about modal was opened should receive focus after it is closed." descriptjon="Typically this will be whatever triggered the about modal to open. If that element no longer exists, then the element closest to it should receive focus." />
+    <Checkbox id="aboutModal-a11y-checkbox-4" label="Any content behind the about modal cannot be interacted with or navigated to." descriptjon="Upon reaching the end of the about modal, focus should either wrap back to the beginning of the about modal (for keyboard) or navigation should simply be prevented (for assistive technologies such as screen readers)." />
+  </ListItem>
+  <ListItem>
+    <Checkbox id="aboutModal-a11y-checkbox-5" label="The last element to have focus before the about modal was opened should receive focus after it is closed." descriptjon="Typically this will be whatever triggered the about modal to open. If that element no longer exists, then the element closest to it should receive focus." />
   </ListItem>
 </List>
 
