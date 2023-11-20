@@ -1,6 +1,6 @@
 ---
 id: Designing with tokens
-section: design-tokens
+section: tokens
 ---
 
 As a designer, you can access and use our token libraries in Figma.

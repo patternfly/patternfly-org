@@ -32,7 +32,7 @@ if (process.env.EXTENSIONS_ONLY === 'true') {
     sideNavItems: [
       { section: 'get-started' },
       { section: 'design-foundations' },
-      { section: 'design-tokens' },
+      { section: 'tokens' },
       { section: 'accessibility' },
       { section: 'UX writing' },
       { section: 'components' },
