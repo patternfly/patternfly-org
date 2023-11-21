@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 5.3.8 (2023-11-21)
+
+
+### Bug Fixes
+
+* prepare org for component groups release ([#3822](https://github.com/patternfly/patternfly-org/issues/3822)) ([fe7af55](https://github.com/patternfly/patternfly-org/commit/fe7af55205f6df709afa0c499743ca7a1d2946a1))
+
+
+
+
+
 ## 5.3.7 (2023-11-17)
 
 **Note:** Version bump only for package @patternfly/documentation-framework
