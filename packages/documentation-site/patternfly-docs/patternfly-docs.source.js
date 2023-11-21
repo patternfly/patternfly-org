@@ -136,22 +136,22 @@ module.exports = (sourceMD, sourceProps, sourceFunctionDocs) => {
   sourceMD(path.join(reactUserFeedbackPath, '/**/examples/*.md'), 'react');
   sourceMD(path.join(reactUserFeedbackPath, '/**/design-guidelines/*.md'), 'design-guidelines');
 
-  // Prerelease sections:
-  // Component Groups extension (Currently in PRERELEASE, so only include in PRERELEASE builds)
-  if (process.env.PRERELEASE === 'true') {
-    const reactComponentGroupsPath = require
+  const reactComponentGroupsPath = require
     .resolve('@patternfly/react-component-groups/package.json')
     .replace('package.json', 'src');
 
-    const reactComponentGroupsBase = require
+  const reactComponentGroupsBase = require
     .resolve('@patternfly/react-component-groups/package.json')
     .replace('package.json', 'patternfly-docs/content/extensions/component-groups');
 
-    sourceProps(path.join(reactComponentGroupsPath, '/**/*.tsx'), reactPropsIgnore);
-    sourceMD(path.join(reactComponentGroupsBase, '/**/*.md'), 'react');
-    sourceMD(path.join(reactComponentGroupsPath, '/**/examples/*.md'), 'react');
-    sourceMD(path.join(reactComponentGroupsPath, '/**/design-guidelines/*.md'), 'design-guidelines');
+  sourceProps(path.join(reactComponentGroupsPath, '/**/*.tsx'), reactPropsIgnore);
+  sourceMD(path.join(reactComponentGroupsBase, '/**/*.md'), 'react');
+  sourceMD(path.join(reactComponentGroupsPath, '/**/examples/*.md'), 'react');
+  sourceMD(path.join(reactComponentGroupsPath, '/**/design-guidelines/*.md'), 'design-guidelines');
 
+  // Prerelease sections:
+  // Component Groups extension (Currently in PRERELEASE, so only include in PRERELEASE builds)
+  if (process.env.PRERELEASE === 'true') {
     const reactVirtualizedTablePath = require
       .resolve('@patternfly/react-virtualized-extension/package.json')
       .replace('package.json', 'src');
