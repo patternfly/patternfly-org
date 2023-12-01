@@ -58,6 +58,8 @@ The following HTML attributes and PatternFly classes can be used for more fine-t
 | `aria-controls="[id of the expandable section content]"` | `.pf-v5-c-expandable-section__toggle` | Links the expandable section toggle and content for assistive technologies. **Required** when the expandable section content is rendered in the DOM. |
 | `aria-expanded="[true or false]"` | `.pf-v5-c-expandable-section__toggle` | Indicates whether the expandable section is expanded (true) or collapsed (false) to assistive technologies. **Required**. |
 | `hidden` | `.pf-v5-c-expandable-section__content` | Hides the expandable section content. **Required** when `aria-expanded="false"` is passed in, except for truncate expansion. |
+| `aria-labelledby="[id of the expandable section toggle]"` | `.pf-v5-c-expandable-section__content` | Adds an accessible name to the expandable section content based on the toggle content. **Required**. |
+| `role="region"` | `.pf-v5-c-expandable-section__content` | Adds the region role to the expandable section content. **Required**. |
 | `aria-hidden="true"` | `.pf-v5-c-expandable-section__toggle-icon > i` | Removes the accordion toggle icon from the accessibility tree, preventing assistive technologies from potentially announcing duplicate or unnecessary information without visually hiding it. **Required**. |
 
 ## Further reading
