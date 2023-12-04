@@ -104,7 +104,7 @@ These are some of the main areas we check for on the PatternFly team to ensure t
 
     <Checkbox label={<span> <b>Landmark</b> regions should have labels when there is more than one type of landmark, and they are not the same (such as navigation, main, form, etc.). Section element shouldn’t be used unless it has a label.</span>} id="general-criteria-8f" />
 
-    <Checkbox label={<span><b>Tables</b> and table content is clearly described. <a href="https://webaim.org/techniques/tables/">WebAIM has additional guidance on this.</a></span>} id="general-criteria-8g" />
+    <Checkbox label={<span><b>Tables</b> and table content is clearly described. WebAIM has additional guidance on <a href="https://webaim.org/techniques/tables/">creating accessible tables</a>.</span>} id="general-criteria-8g" />
 
     <Checkbox label={<span><b>Aria</b> provides descriptive details to screen reader users, without reiterating or overriding the text that is already there. If there is visible text then there doesn’t need to be an <span className="ws-code">aria-label</span>. </span>} description={<span>It’s important to understand that ARIA can only affect the semantics of an element; not the behavior. For example, while you can hide an element from screen readers with <span> className="ws-code">aria-hidden=”true”</span>, that does not change the focus behavior for that element.</span>} id="general-criteria-8h" />
 
