@@ -31,7 +31,7 @@ Our goal is to meet [level AA in the Web Content Accessibility Guidelines 2.1](h
 | Pointer events can be canceled.  | [WCAG 2.5.2](//www.w3.org/WAI/WCAG21/quickref#pointer-cancellation) | `js` | Manual testing |
 | Visible labels of UI components are either the same as the accessible name or used in the beginning of the accessible name. | [WCAG 2.5.3](//www.w3.org/WAI/WCAG21/quickref#label-in-name) | `html` | Automated testing with aXe and manual testing |
 | The target area for clickable elements is at least 44 by 44 [CSS pixels](//www.w3.org/TR/WCAG21#dfn-css-pixels). | [WCAG 2.5.5 (AAA)](//www.w3.org/WAI/WCAG21/quickref#target-size)* | `css` | Manual testing |
-| An accessible name is provided for all elements. | [WCAG 4.1.2](//www.w3.org/WAI/WCAG21/quickref#name-role-value) | `design` `html` | Automated testing with aXe and manual testing with Voice Over
+| An accessible name is provided for all elements. | [WCAG 4.1.2](//www.w3.org/WAI/WCAG21/quickref#name-role-value) | `design` `html` | Automated testing with aXe and manual testing with VoiceOver
 | Status messages can be programmatically determined through role or properties. | [WCAG 4.1.3](//www.w3.org/WAI/WCAG21/quickref#status-messages) | `html` | Manual testing |
 
 *WCAG 2.5.5 is included for reference only. This guideline suggests a size that is larger than what PatternFly requires.
