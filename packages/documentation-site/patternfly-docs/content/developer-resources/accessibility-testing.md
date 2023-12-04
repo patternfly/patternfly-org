@@ -100,7 +100,7 @@ These are some of the main areas we check for on the PatternFly team to ensure t
     
     <Checkbox label={<span><b>Icons</b> have some some kind of text for screen readers (even if it's not visible.)</span>} id="general-criteria-8d" />
 
-    <Checkbox label={<span><b>Images have proper alt text.</b></span>} description="The exception to this practice is when images are primarily for presentation purposes and are not essential pieces of content. To signify that an image should be skipped by a screen reader, set the value of the alt attribute to an empty string: `alt=””`." id="general-criteria-8e" />
+    <Checkbox label={<span><b>Images have proper alt text.</b></span>} description={<span>The exception to this practice is when images are primarily for presentation purposes and are not essential pieces of content. To signify that an image should be skipped by a screen reader, set the value of the alt attribute to an empty string: <code className="ws-code">alt=""</code></span>}  id="general-criteria-8e" />
 
     <Checkbox label={<span> <b>Landmark</b> regions should have labels when there is more than one type of landmark, and they are not the same (such as navigation, main, form, etc.). Section element shouldn’t be used unless it has a label.</span>} id="general-criteria-8f" />
 
