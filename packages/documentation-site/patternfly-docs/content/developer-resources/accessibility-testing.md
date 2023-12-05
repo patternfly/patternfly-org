@@ -6,64 +6,65 @@ import { Checkbox } from '@patternfly/react-core';
 
 # Testing your product's accessibility 
 
-This guide contains instructions and recommendations to comprehensively test your product's accessibility to identify accessibility issues and opportunities for improvement.  
+This guide contains instructions and recommendations that you can use to robustly test your product's accessibility, in order to identify accessibility issues and opportunities for improvement.  
 
 **Keep in mind that this guide will not cover every scenario.**
 
-## General testing recommendations 
+## Standard testing procedures 
 
-Many accessibility issues can be found by doing a few simple checks: 
+Many accessibility issues can be found by doing a few standard checks. 
 
 ### Validate your HTML
 
 Good accessibility practices start with structural, semantic HTML. When a screen reader (or any sort of assistive technology) scans a web page, it gets information about the Document Object Model (DOM), or the HTML structure of the page. No styles or JavaScript will be read by a screen reader. 
 
-Screen readers like Voice Over (VO), NVDA, or JAWS don't just turn text into speech. They use information in the HTML to list all of the headings on a page, give extra navigation controls to data tables, announce how many items are in a list, and more. This makes semantic HTML essential. 
+Screen readers (like Voice Over (VO), NVDA, or JAWS) don't just turn text into speech. They also use information in the HTML to list all of the headings on a page, give extra navigation controls to data tables, announce how many items are in a list, and more. This makes semantic HTML essential. 
 
-There are many tools you can use to validate your HTML, such as [W3C’s markup validation service](https://validator.w3.org/). 
+You can use an HTML validation tool to test your product, such as [W3C’s markup validation service](https://validator.w3.org/). 
 
 ### Check for accessibility violations with an audit tool
 
- If you are using PatternFly, we recommend using aXe: The Accessibility Engine (using their [DevTools](https://www.deque.com/axe/devtools/) or the [Chrome](https://chrome.google.com/webstore/detail/axe-devtools-web-accessib/lhdoppojpmngadmnindnejefpokejbdd) or [Firefox](https://addons.mozilla.org/en-US/firefox/addon/axe-devtools/) extension) to check for accessibility violations locally. 
+When using PatternFly, we recommend checking for accessibility violations locally via aXe: The Accessibility Engine (using [aXe DevTools](https://www.deque.com/axe/devtools/), the [Chrome extension](https://chrome.google.com/webstore/detail/axe-devtools-web-accessib/lhdoppojpmngadmnindnejefpokejbdd), or the [Firefox extension](https://addons.mozilla.org/en-US/firefox/addon/axe-devtools/)). If you want to test prior to deployment, you can integrate aXe with [Cypress](https://www.cypress.io/).
  
-We also offer the [patternfly-a11y script](https://github.com/patternfly/patternfly-a11y) for bulk testing that reports any aXe accessibility violations from a set of pages. To use this script, a configuration file can be set to adapt our script to your specific needs like authentication, waiting for any specific items to finish loading (like a loading spinner), etc. 
- 
-When used as a report, it will give an [accessibility report via surge](http://a11y-os.surge.sh/). The UI should be built first in the CI workflow and then a job created to run the a11y script against that build. The a11y script assumes that there is a web server running somewhere that is serving up the pages (for example, in `localhost:8000`) that it can reach. If you want to test a step before deployment, you could follow the path of integrating aXe with Cypress.
+#### Bulk testing with the patternfly-ally script
 
+We offer the [patternfly-a11y script](https://github.com/patternfly/patternfly-a11y) for bulk testing, which reports any aXe accessibility violations from a set of pages. You can adapt this script to your needs by creating a configuration file that includes authentication, waits for specific items to finish loading (like a loading spinner), or addresses other items relevant to your use case. As a report, this script will deliver an [accessibility report via surge](http://a11y-os.surge.sh/). 
+
+Before using this script, your UI should be built in the CI workflow. Once built, create a job to run the script against that build. The script assumes that a web server is running and serving your product somewhere that the script can reach (for example, in `localhost:8000`). 
 
 ### Test keyboard accessibility
 
 The keyboard is an essential accessibility tool, so it is necessary to ensure that the following requirements are met: 
 
-  - All functionality is keyboard accessible.
-  - Elements in the HTML and in the layout follow a logical order.
-  - Elements with focus are clearly visible.
+- All functionality is keyboard accessible.
+- Elements in the HTML and in the layout follow a logical order.
+- Elements with focus are clearly visible.
 
 ### Test without styles
 
-Because screen readers cannot access style information, you should disable styles for your product and ensure that your information architecture is effective and that there are adequate text labels.
+Screen readers cannot access style information, so you should disable styles for your product to test that your information architecture is effective and that elements have adequate text labels.
 
- The [WAVE browser extension from WebAIM](//wave.webaim.org/extension/) provides this feature if it isn't available in the browser you are using.
+The [WAVE browser extension from WebAIM](/wave.webaim.org/extension/) allows you to disable styles if this isn't available in the browser you are using.
 
 ### Test with a screen reader 
 
-You can use any screen reader that is available in your operating system. To test PatternFly, we target the following screen readers:
-  - [JAWS](https://www.freedomscientific.com/products/software/jaws/) with Chrome, Windows ([JAWS keyboard shortcuts](//dequeuniversity.com/screenreaders/jaws-keyboard-shortcuts))
-  - [Voiceover](https://support.apple.com/guide/voiceover/welcome/mac) with Safari, Mac ([Voiceover keyboard shortcuts](//dequeuniversity.com/screenreaders/voiceover-keyboard-shortcuts))
-  - [NVDA](https://www.nvaccess.org/download/) with Firefox, Windows ([NVDA keyboard shortcuts](//dequeuniversity.com/screenreaders/nvda-keyboard-shortcuts))
+You can test with any screen reader that is available in your operating system. In PatternFly, we target:
+  - [JAWS](https://www.freedomscientific.com/products/software/jaws/) with Chrome, Windows ([JAWS keyboard shortcuts](//dequeuniversity.com/screenreaders/jaws-keyboard-shortcuts)).
+  - [VoiceOver](https://support.apple.com/guide/voiceover/welcome/mac) with Safari, Mac ([VoiceOver keyboard shortcuts](//dequeuniversity.com/screenreaders/voiceover-keyboard-shortcuts)).
+  - [NVDA](https://www.nvaccess.org/download/) with Firefox, Windows ([NVDA keyboard shortcuts](//dequeuniversity.com/screenreaders/nvda-keyboard-shortcuts)).
 
 ### Check color contrast
 
-Colors should pass the following contrast checks, to ensure that users across the vision spectrum can understand your product:
+Your UI's colors should pass the following contrast checks to ensure that users across the vision spectrum can understand your product:
     - Text color against background color ([Understanding WCAG 1.4.3](//www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html))
     - Text color against link color ([Technique G183](//www.w3.org/TR/WCAG20-TECHS/G183.html))
     - Visible boundaries of buttons and form elements against adjacent background color ([Understanding WCAG 1.4.11](//www.w3.org/WAI/WCAG21/Understanding/non-text-contrast.html))
 
 ## Accessibility testing checklist
 
-We recommend referencing the following checklist as you assess your product's accessibility.
+To keep track of your testing efforts, we recommend referencing the following checklist.
 
-These are some of the main areas we check for on the PatternFly team to ensure that a UI meets consistent accessibility standards. To assess your specific implementation, we recommend checking these same areas in your product. 
+This checklist includes some of the main areas that the PatternFly team checks for to ensure that a UI meets consistent accessibility standards. To evaluate your specific implementation, we recommend checking these same areas in your product. 
 
 ### General criteria
 
