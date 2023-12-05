@@ -4,29 +4,27 @@ section: accessibility
 ---
 import { AccessibilityDatalist } from './accessibility-datalist.js';
 
-PatternFly provides accessible components, but **we can't guarantee that your products will be accessible**. In order to ensure that your product is accessible, you will need to take additional steps during development. For guidance on this development work, you can refer to these guidelines.
+PatternFly provides accessible components, but **we can't guarantee that your products will be accessible**. In order to ensure that your product is accessible, you will need to take additional steps during development, as described in the following guidelines and techniques.
 
 ## Prioritizing accessibility during development
 
-As you develop your product, it can be helpful to keep accessibility top of mind, by asking yourself a few questions: 
+As you develop your product, you should keep accessibility top of mind, by asking yourself a few questions: 
 
-- **Can all users discover and perceive elements?**: If you can see or click on it, then all users should be able to locate and navigate to it. This should include those that use a keyboard or other assistive technology, such as a screen reader.
+- **Can all users discover and perceive elements?**: If you can see or click on an element, then all users should be able to locate and navigate to it. This should include those that use a keyboard or other assistive technology, such as a screen reader.
 
-- **Can all users interact with elements?**. It should be easy for users to use an element once it's in focus. They should be able to interact with elements and initiate actions via keyboard (like pressing **Enter** to initiate a button action) and screen readers.
+- **Can all users interact with elements?**: It should be easy for users to use an element once it's in focus. They should be able to interact with elements and initiate actions via keyboard (like pressing <kbd>Enter</kbd> to initiate a button action) and screen readers.
 
-- **Can all users understand elements?**: It should be clear what actions elements can perform. For example, buttons should have visible text that would be clear out of context of the page. If not, it should have an aria-label or accessible name.
+- **Can all users understand elements?**: It should be clear what actions elements can perform. For example, buttons should have visible text that would be clear out of context of the page. If not, it should have an `aria-label` or accessible name.
 
 ## Development techniques
 
 These are some of the items outside the scope of PatternFly that you should prioritize to ensure accessibility: 
 
-<br />
-
 <AccessibilityDatalist />
 
 <br />
 
-### UI element accessibility guidance
+### UI element accessibility techniques
 
 The [WCAG 2.0 techniques](https://www.w3.org/TR/WCAG20-TECHS/Overview.html#contents) provide examples on how to meet accessibility guidelines. The following techniques are standard across PatternFly for specific patterns.
 
@@ -35,6 +33,9 @@ The [WCAG 2.0 techniques](https://www.w3.org/TR/WCAG20-TECHS/Overview.html#conte
 For sighted users, the context and visual appearance of an element can help users understand its purpose. But this isn’t always the case. For example, the X, often used in the top-right corner of pop-ups to indicate the control for closing, might not be clear to those using assistive technology: 
 
 <img src="./Popover.png" alt="Popover example of close button" />
+
+<br />
+<br />
 
 ARIA supplements HTML so that common application interactions and features can be passed to assistive technologies when there is not a native mechanism. This is typically done by including an `aria-label` that provides descriptive context to assistive technologies. **Only use labels when they are necessary to make an element accessible.** ARIA is meant to add context when there *isn’t* visible text, not to override or reiterate what’s already there. Make sure that your labels are useful and not redundant.
 
@@ -113,7 +114,13 @@ Example:
 
 ## Screen reader considerations
 
-Just as front-end developers use their browser to see how their changes look, you should use a screen reader to see how your accessibility looks (we use Voice Over). You can use any screen reader that is available in your operating system. To test PatternFly, we target the following screen readers:
+Just as front-end developers use their browser to see how their changes look, you should use a screen reader to see how your accessibility looks. You can use a screen reader that is available in your operating system, like VoiceOver for Mac, or you could download an open-source screen reader like [NVDA](https://www.nvaccess.org/download/) if you have a PC.
+
+To test PatternFly, we target the following screen readers:
+
+- JAWS with Chrome, Windows ([JAWS keyboard shortcuts](//dequeuniversity.com/screenreaders/jaws-keyboard-shortcuts))
+- Voiceover with Safari, Mac ([Voiceover keyboard shortcuts](//dequeuniversity.com/screenreaders/voiceover-keyboard-shortcuts))
+- NVDA with Firefox, Windows ([NVDA keyboard shortcuts](//dequeuniversity.com/screenreaders/nvda-keyboard-shortcuts))
 
 Generally, screen readers access the Document Object Model (DOM) and use browser Application Programming Interfaces (APIs) to get the information they need. In this way, a screen reader knows what to say when a set of list items begins and ends, and can typically announce how many items are in the list in advance. A screen reader can also traverse a page using heading navigation to speak the heading level. 
 

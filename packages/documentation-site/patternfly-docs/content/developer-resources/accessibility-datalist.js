@@ -152,7 +152,7 @@ export class AccessibilityDatalist extends React.Component {
               isHidden={!this.state.expanded.includes('ex-toggle1')}
             >
               <p>
-              A mechanism should be available to bypass blocks of content that are repeated on multiple Wwb pages. 
+              A mechanism should be available to bypass blocks of content that are repeated on multiple web pages. 
               <br/>
               <br/>
               When keyboard-only users interact with your site, they use the <kbd>tab</kbd> key to jump from link to link. If your UI has many links in your page header or in a menu, they must tab through those every time they come to a new page just to get to the main content. Providing a "skip to main content" link allows them to easily bypass this hassle.
@@ -173,7 +173,7 @@ export class AccessibilityDatalist extends React.Component {
                   <DataListCell isIcon key="icon">
                   </DataListCell>,
                   <DataListCell key="secondary content">
-                    <div id="ex-item2">Page Titles</div>
+                    <div id="ex-item2">Page titles</div>
                   </DataListCell>,
                   <DataListCell key="secondary content 2">
                     <a href="//www.w3.org/WAI/WCAG21/quickref#page-titled">WCAG 2.4.2</a>
