@@ -66,7 +66,7 @@ To keep track of your testing efforts, we recommend referencing the following ch
 
 This checklist includes some of the main areas that the PatternFly team checks for to ensure that a UI meets consistent accessibility standards. To evaluate your specific implementation, we recommend checking these same areas in your product. 
 
-### General criteria
+### Broad accessibility criteria
 
 <Checkbox label="Rotor navigation can discover all information." id="general-criteria-1" /> 
 
@@ -79,7 +79,7 @@ This checklist includes some of the main areas that the PatternFly team checks f
 <Checkbox label="UI elements are understandable and usable." body={<><Checkbox label="When you navigate to an element by keyboard or other assistive technology, you can easily understand and use the item." id="general-criteria-5a" /> <Checkbox label="The flow of information makes sense when navigating." description="Assistive technology (like screen readers) navigate the page in DOM order. If you use CSS to visually reposition elements, they may be announced in a nonsensical sequence. If you need something to appear earlier in the page, try to physically move it earlier in the DOM instead.
 " id="general-criteria-5b" /></>} id="general-criteria-5" /> <br/>
 
-### Accessibility points
+### Structural accessibility criteria
 
 <Checkbox label={<span> <b> Structure: </b> The visual information architecture maps to the various rotor menus that exist by default.</span>} body={<><Checkbox label="Rotor has descriptive and concise headings, landmarks, links, form controls, tables, and other elements." id="accessibility-points-7a" />
 <Checkbox label="Heading levels convey structure/content and do not skip levels." description="A common practice is to use a single h1 for the primary headline or logo on a page, h2s for designating major sections, and h3s for supporting sections." id="accessibility-points-7b" />
@@ -92,7 +92,7 @@ This checklist includes some of the main areas that the PatternFly team checks f
 
   <Checkbox label={<span><b>Buttons and form controls:</b></span>} description={ <span>
     <li> All form controls have clear and descriptive labels. </li>
-    <li> Indicate that a button has the expandable control. </li>
+    <li> Expandable buttons display the expandable control and utilize <code className="ws-code">aria-expanded</code> to indicate that a button is expandable. </li>
   </span>
   }
   id="general-criteria-8b" />
@@ -107,6 +107,13 @@ This checklist includes some of the main areas that the PatternFly team checks f
 
     <Checkbox label={<span><b>Tables</b> and table content is clearly described. WebAIM has additional guidance on <a href="https://webaim.org/techniques/tables/">creating accessible tables</a>.</span>} id="general-criteria-8g" />
 
-    <Checkbox label={<span><b>Aria</b> provides descriptive details to screen reader users, without reiterating or overriding the text that is already there. If there is visible text then there doesn’t need to be an <span className="ws-code">aria-label</span>. </span>} description={<span>It’s important to understand that ARIA can only affect the semantics of an element; not the behavior. For example, while you can hide an element from screen readers with <span> className="ws-code">aria-hidden=”true”</span>, that does not change the focus behavior for that element.</span>} id="general-criteria-8h" />
+    <Checkbox label={<span><b>ARIA</b> labels provide descriptive details to screen reader users, without reiterating or overriding the text that is already there. If there is visible text then there doesn’t need to be an ARIA label. </span>} 
+    description={ <span>
+      <li> To add a non-visual label to an element you should use <span className="ws-code">aria-label</span>. Keep in mind you should not add this to an element that already has a visual label in the UI. You can also use <span className="ws-code">aria-labelledby</span> to label an element through existing text or <span className="ws-code">aria-label</span>. </li>
+      <li> <span> It’s important to understand that ARIA can only affect the semantics of an element; not the behavior. For example, while you can hide an element from screen readers with <span className="ws-code">aria-hidden=”true”</span>, that does not change the focus behavior for that element.</span></li>
+    </span>
+    }
+    
+    id="general-criteria-8h" />
 
 </>}  id="general-criteria-8" />
