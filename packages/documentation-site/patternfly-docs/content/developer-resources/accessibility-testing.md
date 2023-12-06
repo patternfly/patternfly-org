@@ -92,7 +92,7 @@ This checklist includes some of the main areas that the PatternFly team checks f
 
   <Checkbox label={<span><b>Buttons and form controls:</b></span>} description={ <span>
     <li> All form controls have clear and descriptive labels. </li>
-    <li> Expandable buttons display the expandable control and utilize <code className="ws-code">aria-expanded</code> to indicate that a button is expandable. </li>
+    <li> Expandable buttons display the expandable control and utilize <code className="ws-code">aria-expanded</code> to indicate that a button is expandable. <code className="ws-code">aria-expanded</code> should always have a boolean value if a button is meant to be expandable. </li>
   </span>
   }
   id="general-criteria-8b" />
