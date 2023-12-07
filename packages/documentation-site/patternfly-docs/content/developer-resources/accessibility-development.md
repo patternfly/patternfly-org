@@ -73,6 +73,23 @@ There are 2 main categories of accessible icons:
 
 For **non-interactive icons**, include `.pf-v5-screen-reader` text near the icon. Depending on the component, this text might not be a direct sibling to the icon element.  
 
+For example, in the alert component, the icon label text is adjacent to the message:
+
+  ``` 
+  {
+    <div class="pf-v5-c-alert pf-m-success" aria-label="Success Alert">
+    <div aria-hidden="true" class="pf-v5-c-alert__icon">
+      <i class="fas fa-check-circle"></i>
+    </div>
+    <div class="pf-v5-c-alert__body">
+      <h4 class="pf-v5-c-alert__title">
+        {{#> screen-reader}}Success:{{/screen-reader}} Success alert title
+      </h4>
+    </div>
+  </div> 
+  }
+  ```
+
 #### Images
 
 All images should have alt text so that assistive technology can provide an image description. When an image contains words that are important to understanding the content, the alt text should include those words. This allows the alt text to communicate the same message as the image itself. 
@@ -80,8 +97,6 @@ All images should have alt text so that assistive technology can provide an imag
 **Note**: Alt text does not necessarily describe the visual characteristics of the image itself. It just needs to convey the same meaning as the image. 
 
 The exception to this practice is when images are primarily for presentation purposes and are not essential pieces of content. To signify that an image should be skipped by a screen reader, set the value of the alt attribute to an empty string: `alt=””`.
-
-For example, in the alert component, the icon label text is adjacent to the message. This way, when `role="alert"` is added to `.pf-v5-c-alert__body` for dynamically displayed alerts, the type of message is announced along with the message text.
 
 #### Trapping focus
 
@@ -103,7 +118,7 @@ When `tabIndex` is added, you should either add `role='region'` and an `aria-lab
 
 Some screen reader users navigate page elements via an element list or rotor menu, and the default label for these scrollable elements will be driven by whatever text content exists inside the container. This generated label may not be suitable to describe the region's purpose, and would likely be better described with a simple `aria-label`. 
 
-Example:
+For example:
 ```html noLive
 <div role="region" style="height: 200px; overflow-y: auto" tabindex="0" aria-label="Scrollable content">
     <div style="height: 2000px">
