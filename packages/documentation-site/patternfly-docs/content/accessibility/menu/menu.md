@@ -10,7 +10,7 @@ import { Checkbox, List, ListItem } from '@patternfly/react-core';
 ## Accessibility
 
 To implement an accessible PatternFly **menu** component:
-- Due to the composable nature of the menu component, keyboard interaction will need to be added manually between the menu toggle and the menu. See the [composable menu demos](https://www.patternfly.org/v4/demos/composable-menu) to see how this is done.
+- Due to the composable nature of the menu component, keyboard interaction will need to be added manually between the menu toggle and the menu. See the [custom menu demos](https://www.patternfly.org/components/menus/custom-menus) to see how this is done.
 - Any actions placed within a menu item will need an `aria-label` on the `MenuItemAction` to communicate to users what the action is.
 
 
