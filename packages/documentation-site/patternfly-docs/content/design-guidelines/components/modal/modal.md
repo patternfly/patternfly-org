@@ -40,6 +40,8 @@ Modals serve several functions in a UI and appear in four main types:
 
 * [Confirmation dialogs](#confirmation-dialogs)
 
+* [Edit dialogs](#edit-dialogs)
+
 * [Error dialogs](#error-dialogs)
 
 * [Passive dialogs](#passive-dialogs)
@@ -71,6 +73,15 @@ When a text input field is added to a confirmation dialog, the danger button wil
 
 <img src="./img/destructive-confirmation-dialog-steps.png" alt="A multi-step destructive confirmation dialog's button activates only after a user types DELETE into the input field" />
 
+### Edit dialogs
+
+Use an edit dialog for managing assets. Edit dialogs contain multiple actions which can include, but are not limited to, saving your changes or deleting the asset. The primary action in the dialog should use a primary button, the secondary should use a secondary button, and the cancel button should remain a link button.
+
+For example, if the secondary action is destructive, the button should be styled as a [secondary danger  button](/components/button/#variant-examples). Additionally, it should be aligned to the right-side of the modal, directly across from the primary action and cancel buttons. 
+
+<img src="./img/secondary-destructive-action.png" alt="An edit dialogs with three action buttons: save, cancel and delete" width="300"/>
+
+When using destructive actions, ensure that the user is informed about the consequences of taking this action. Review the general guidelines for [danger button](/components/button/design-guidelines#danger-button) and destructive actions for additional guidance. 
 
 ### Error dialogs
 
