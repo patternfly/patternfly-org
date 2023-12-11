@@ -3,6 +3,289 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 5.3.9 (2023-11-30)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 5.3.8 (2023-11-21)
+
+
+### Bug Fixes
+
+* prepare org for component groups release ([#3822](https://github.com/patternfly/patternfly-org/issues/3822)) ([fe7af55](https://github.com/patternfly/patternfly-org/commit/fe7af55205f6df709afa0c499743ca7a1d2946a1))
+
+
+
+
+
+## 5.3.7 (2023-11-17)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 5.3.6 (2023-11-14)
+
+
+### Bug Fixes
+
+* add virtualized table to extensions staging ([#3819](https://github.com/patternfly/patternfly-org/issues/3819)) ([06e3fbc](https://github.com/patternfly/patternfly-org/commit/06e3fbcbf433969d5ac880d82597f1fb04e4bbf1))
+
+
+
+
+
+## 5.3.5 (2023-11-13)
+
+
+### Bug Fixes
+
+* **drag drop:** add drag drop to 5.1 versions.json ([#3817](https://github.com/patternfly/patternfly-org/issues/3817)) ([d2dec78](https://github.com/patternfly/patternfly-org/commit/d2dec78730dae818c4a2f5d6bab89d98de14e80d))
+
+
+
+
+
+## 5.3.4 (2023-11-13)
+
+
+### Bug Fixes
+
+* add charts dark theme stylesheet ([#3802](https://github.com/patternfly/patternfly-org/issues/3802)) ([03954ed](https://github.com/patternfly/patternfly-org/commit/03954edbf429d6e3a8e9d460c61b5ea9f6d441a6))
+
+
+
+
+
+## 5.3.3 (2023-11-10)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 5.3.2 (2023-11-10)
+
+
+### Bug Fixes
+
+* clean up versions and showdown deps ([#3816](https://github.com/patternfly/patternfly-org/issues/3816)) ([aae74d0](https://github.com/patternfly/patternfly-org/commit/aae74d0196d2205c2828ad831773c379a62e8bd8))
+
+
+
+
+
+## 5.3.1 (2023-11-07)
+
+
+### Bug Fixes
+
+* **react-drag-drop:** add react-drag-drop to latest version ([#3801](https://github.com/patternfly/patternfly-org/issues/3801)) ([bbf20d4](https://github.com/patternfly/patternfly-org/commit/bbf20d4406303441a534c5fc9bd4667f72e55850))
+
+
+
+
+
+# 5.3.0 (2023-11-01)
+
+
+### Features
+
+* **dark-theme:** replace dark theme switcher with toggle group ([#3788](https://github.com/patternfly/patternfly-org/issues/3788)) ([0bf3c62](https://github.com/patternfly/patternfly-org/commit/0bf3c62484bc288386a9620fcb89c38da5d260af))
+
+
+
+
+
+## 5.2.26 (2023-10-30)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 5.2.25 (2023-10-27)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 5.2.24 (2023-10-27)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 5.2.23 (2023-10-27)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 5.2.22 (2023-10-23)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 5.2.21 (2023-10-23)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 5.2.20 (2023-10-12)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 5.2.19 (2023-10-10)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 5.2.18 (2023-10-09)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 5.2.17 (2023-10-06)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 5.2.16 (2023-10-06)
+
+
+### Bug Fixes
+
+* update site with 5.1 release versions ([#3770](https://github.com/patternfly/patternfly-org/issues/3770)) ([63e583b](https://github.com/patternfly/patternfly-org/commit/63e583bc9d6c42f8e6619c6e61126e4c38b0c0c3))
+
+
+
+
+
+## 5.2.15 (2023-10-05)
+
+
+### Bug Fixes
+
+* updates for q3 release ([#3763](https://github.com/patternfly/patternfly-org/issues/3763)) ([fca2b60](https://github.com/patternfly/patternfly-org/commit/fca2b60d50002550ccf416aad6d0744058d398d1))
+
+
+
+
+
+## 5.2.14 (2023-10-05)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 5.2.13 (2023-10-04)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 5.2.12 (2023-10-04)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 5.2.11 (2023-09-27)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 5.2.10 (2023-09-27)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 5.2.9 (2023-09-27)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 5.2.8 (2023-09-27)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 5.2.7 (2023-09-27)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 5.2.6 (2023-09-27)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 5.2.5 (2023-09-27)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
 ## 5.2.4 (2023-09-22)
 
 **Note:** Version bump only for package @patternfly/documentation-framework

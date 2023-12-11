@@ -1,13 +1,12 @@
-name: Add relevant issues to extensions project board
+name: Add new issues to project board
 
 on:
   issues:
     types:
-      - labeled
+      - opened
 
 jobs:
   add-to-extensions:
-    if: github.event.label.name == 'extension'
     name: Add issue to extensions board
     runs-on: ubuntu-latest
     steps:

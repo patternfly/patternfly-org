@@ -1,5 +1,30 @@
 export const featuredPostsData = {
   post1: {
+    title: "Introducing the new PatternFly logo",
+    author: "Allison Wolfe",
+    length: "3 min read",
+    URL: "https://medium.com/patternfly/introducing-the-new-patternfly-logo-2a94d969e5a3",
+    // Use resize:fit:600 in URL
+    imageURL:
+      "https://miro.medium.com/v2/resize:fit:600/0*7qrcygiOB8Zxs21w",
+  },
+  post2: {
+    title: "Webpack module federation | Think twice before sharing a dependency",
+    author: "Martin Maroši",
+    length: "9 min read",
+    URL: "https://medium.com/@marvusm.mmi/webpack-module-federation-think-twice-before-sharing-a-dependency-18b3b0e352cb",
+    // Use resize:fit:600 in URL
+    imageURL: "https://miro.medium.com/v2/resize:fit:600/format:webp/1*wvPsa-Gq_sblqb51mCto7w.png",
+  },
+  post3: {
+    title: "The lock and key",
+    author: "Kevin Hatchoua",
+    length: "3 min read",
+    URL: "https://medium.com/patternfly/the-lock-and-key-48d5374117ff",
+    // Use resize:fit:600 in URL
+    imageURL: "https://miro.medium.com/v2/resize:fit:600/format:webp/1*9aw4EmIgNIw7dpZS3Q93WA.png",
+  },
+  post4: {
     title: "PatternFly’s major release: Everything you need to know",
     author: "Allison Wolfe",
     length: "3 min read",
@@ -7,29 +32,5 @@ export const featuredPostsData = {
     // Use resize:fit:600 in URL
     imageURL:
       "https://miro.medium.com/v2/resize:fit:1400/0*mv2oK__r8GVxoySa",
-  },
-  post2: {
-    title: "Explaining content design to non-UXers",
-    author: "Allison Wolfe",
-    length: "3 min read",
-    URL: "https://medium.com/patternfly/explaining-content-design-to-non-uxers-ab0779229a5c",
-    // Use resize:fit:600 in URL
-    imageURL: "https://miro.medium.com/v2/resize:fit:600/0*Gy14UJRJ-QyF4c0C",
-  },
-  post3: {
-    title: "Critical skills for exceptional UX work",
-    author: "Erin Donehoo",
-    length: "4 min read",
-    URL: "https://medium.com/patternfly/critical-skills-for-exceptional-ux-work-22cd57c264b3",
-    // Use resize:fit:600 in URL
-    imageURL: "https://miro.medium.com/v2/resize:fit:600/0*34QuYnldEksEfyAI",
-  },
-  post4: {
-    title: "Designing data science",
-    author: "Katie Edwards",
-    length: "12 min read",
-    URL: "https://medium.com/patternfly/designing-data-science-4cf3a49bc3a2",
-    // Use resize:fit:600 in URL
-    imageURL: "https://miro.medium.com/v2/resize:fit:600/0*IagzTu5HGD2YYLil",
   },
 };

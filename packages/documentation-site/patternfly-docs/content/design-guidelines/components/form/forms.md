@@ -113,42 +113,6 @@ Form submit buttons should be disabled until a user starts filling out the form 
 * For a processing form, use feedback messages and progress indicators like spinners or progress bars if the processing time might exceed user expectations.
 
 
-## Variations
-
-### Form sections
-
-Form sections sort form fields into non-hierarchical groups based on common information type, step, or visual preference. Form sections are ideal for breaking long forms into simple, evenly spaced segments with all information exposed. 
-
-Default to grouping data with form sections, especially if all form fields are required. If you need to visualize complex or nested information, use [field groups](#field-groups) instead.
-
-To distinguish between form sections, title them based on the reason you grouped their inputs together. You may forego form section titles and solely rely on the added spacing between sections, but don't leave section titles blank if that empty space will confuse your users. If you do decide to forego the form section titles, add an `aria-label` to indicate why you're sectioning each set of form fields together.
-
-<img src="./img/form-sections.png" alt="Example of form sections used to separate out a form." width="570"/>
-
-To view an interactive example of form sections, see our [form sections demo](/components/forms/form).
-
-### Field groups
-
-Field groups sort form fields into hierarchical, collapsible groups based on theme. All field groups are nested and indented by default, so they create a clearer information architecture between groups. Since all elements won't be visible at all times, always title field groups based on their purpose. Field groups are ideal for building a more dimensional form structure or condensing lengthy forms into digestible, expandable segments.
-
-PatternFly field groups support a required title, description, and actions. 
-
-Use field groups to:
-
-- Group form fields in a more complex way.
-- Reduce information overload.
-- Hide unrequired fields. 
-- Use multiple instances of the same element without causing visual confusion.
-- Designate an area to configure advanced options.
-
-Because field groups call for more clicks, tabs, and interactions to reach form fields, they require additional accessibility considerations. Clearly label field group content so that it's clear to all users. For more field group accessibility guidance, see the [Accessibility guidelines](#accessibility).
-
-**Example:** For a form with multiple field groups, distinguish between each one by adding titles that convey each group's unique theme such as *Routing*, *Build configuration*, *Deployment*, or *Scaling*.
-
-<img src="./img/field-groups.png" alt="Example of nested, expandable field groups in a form." width="800"/>
-
-To view an interactive example of field groups, see our [field groups demo](/components/form#field-groups).
-
 ## Usage
 
 Due to their interactive nature, forms often include features that help communicate field importance and guidance as users complete them. 
@@ -277,6 +241,42 @@ For validation on submission, supplement field level errors with an [inline aler
 <img src="./img/validation-submission.png" alt="Example of errors after validation on submission, including an inline alert at the top, and field level errors" width="794"/>
 
 Learn more about writing error messages in the [content](#content-considerations) section.
+
+## Variations
+
+### Form sections
+
+Form sections sort form fields into non-hierarchical groups based on common information type, step, or visual preference. Form sections are ideal for breaking long forms into simple, evenly spaced segments with all information exposed. 
+
+Default to grouping data with form sections, especially if all form fields are required. If you need to visualize complex or nested information, use [field groups](#field-groups) instead.
+
+To distinguish between form sections, title them based on the reason you grouped their inputs together. You may forego form section titles and solely rely on the added spacing between sections, but don't leave section titles blank if that empty space will confuse your users. If you do decide to forego the form section titles, add an `aria-label` to indicate why you're sectioning each set of form fields together.
+
+<img src="./img/form-sections.png" alt="Example of form sections used to separate out a form." width="570"/>
+
+To view an interactive example of form sections, see our [form sections demo](/components/forms/form).
+
+### Field groups
+
+Field groups sort form fields into hierarchical, collapsible groups based on theme. All field groups are nested and indented by default, so they create a clearer information architecture between groups. Since all elements won't be visible at all times, always title field groups based on their purpose. Field groups are ideal for building a more dimensional form structure or condensing lengthy forms into digestible, expandable segments.
+
+PatternFly field groups support a required title, description, and actions. 
+
+Use field groups to:
+
+- Group form fields in a more complex way.
+- Reduce information overload.
+- Hide unrequired fields. 
+- Use multiple instances of the same element without causing visual confusion.
+- Designate an area to configure advanced options.
+
+Because field groups call for more clicks, tabs, and interactions to reach form fields, they require additional accessibility considerations. Clearly label field group content so that it's clear to all users. For more field group accessibility guidance, see the [Accessibility guidelines](#accessibility).
+
+**Example:** For a form with multiple field groups, distinguish between each one by adding titles that convey each group's unique theme such as *Routing*, *Build configuration*, *Deployment*, or *Scaling*.
+
+<img src="./img/field-groups.png" alt="Example of nested, expandable field groups in a form." width="800"/>
+
+To view an interactive example of field groups, see our [field groups demo](/components/form#field-groups).
 
 ## Spacing
 Forms may be placed in several contexts including on a page, in a wizard, or in a modal. Your chosen form placement may impact specific spacing considerations, but general form spacing requirements apply across these contexts.
