@@ -72,7 +72,7 @@ This checklist includes some of the main areas that the PatternFly team checks f
 
 <Checkbox label="Shortcut navigation can discover all information."  description="For example, a keyboard shortcut that navigates between all headings on a page should discover all intended headings." id="general-criteria-2" />
 
-<Checkbox label="Cursor navigation can discover all applicable information." description="Some assistive technologies will have their own means of navigation and focus management. For example, VoiceOver uses a 'VO' key plus right or left arrow keys to navigate a page. This may be different than conventional keyboard navigation." id="general-criteria-3" />
+<Checkbox label="Cursor navigation can discover all applicable information." description="Some assistive technologies will have their own means of navigation and focus management. For example, VoiceOver uses a 'VO' key plus right or left arrow keys to navigate a page. This may be different from conventional keyboard navigation." id="general-criteria-3" />
 
 <Checkbox label={<span>Keyboard navigation via the <kbd>tab</kbd> key can discover all information.</span>} description={<span>If content should be hidden from other assistive technology like a screen reader, <span className="ws-code">aria-hidden="true"</span> should be passed instead.</span>} id="general-criteria-4" />
 
@@ -99,7 +99,7 @@ This checklist includes some of the main areas that the PatternFly team checks f
     
     <Checkbox label={<span><b>Form inputs</b> have a label (even if it's not visible).</span>} id="general-criteria-8c" />
     
-    <Checkbox label={<span><b>Icons</b> have some some kind of text for screen readers (even if it's not visible.)</span>} id="general-criteria-8d" />
+    <Checkbox label={<span><b>Icons</b> have some kind of text for screen readers (even if it's not visible.)</span>} id="general-criteria-8d" />
 
     <Checkbox label={<span><b>Images have proper alt text.</b></span>} description={<span>The exception to this practice is when images are primarily for presentation purposes and are not essential pieces of content. To signify that an image should be skipped by a screen reader, set the value of the alt attribute to an empty string: <code className="ws-code">alt=""</code></span>}  id="general-criteria-8e" />
 
