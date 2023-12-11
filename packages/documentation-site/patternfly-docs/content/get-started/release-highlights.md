@@ -31,6 +31,7 @@ To help provide a high-level view of what's new, we've pulled together the major
 
 - PatternFly extensions
   - [@patternfly/react-topology@5.1.0](https://www.npmjs.com/package/@patternfly/react-topology/v/5.1.0) ([changelog](https://github.com/patternfly/react-topology/releases/tag/v5.1.0))
+  - [@patternfly/react-component-groups@5.0.0](https://www.npmjs.com/package/@patternfly/react-component-groups/v/5.0.0) ([changelog](https://github.com/patternfly/react-component-groups/releases/tag/v5.0.0))
   
 ### Right-to-left language support 
 
