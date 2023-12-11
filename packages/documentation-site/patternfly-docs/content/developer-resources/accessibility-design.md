@@ -17,17 +17,17 @@ Designing with contrast in mind also benefits users with light sensitivity.
 
 PatternFly components use [our color palettes](/design-foundations/colors) to pass color contrast tests. As long as you follow our recommendations, any UI built with PatternFly components should have proper contrast between colors, making them distinguishable for users with different types of color perception and light sensitivity. 
 
-It's important not to solely rely on color for conveying information. Even though PatternFly components pass color contrast tests, they also use icons to further help with identification.
+It's important not to solely rely on color for conveying information. Even though PatternFly components pass color contrast tests, they also use icons to further help with identification, which can be especially helpful for users with a form of color blindness.
 
 <br />
-<img src="./ally-color-example.png" alt="Image comparing alert component appearance for normal color vision to red-green color blindess." width="600px"/>
+<img src="./ally-color-example.png" alt="Two sets of alert components being compared, one displayed as normal and the other displayed with red-green color blindness emulated." width="600px"/>
 <br />
 <br />
 
 If you go beyond our recommendations to combine PatternFly colors in other ways, please be sure to check your color contrast with a contrast checker. When you alter the colors and/or icons used in PatternFly components, know that they may no longer be accessible for all users. 
 
 <br />
-<img src="./ally-contrast-example.png" alt="Image of alert component appearance for users with red-green color blindness, when color and contrast are not accessible and icons are not related to labels." width="600px" />
+<img src="./ally-contrast-example.png" alt="A set of alert components displayed with red-green color blindness emulated. These alert components are not clear or distinguishable, because they use poor color contrast and irrelevant icons." width="600px" />
 
 ## Content 
 
