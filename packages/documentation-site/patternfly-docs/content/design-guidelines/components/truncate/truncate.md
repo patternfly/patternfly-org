@@ -31,15 +31,19 @@ Truncated items are indicated by an ellipsis (...) and are used when trying to a
  A truncate indicates that the text string has been shortened, when the user hovers a mouse over the ellipsis, the full text will be displayed as a tooltip.
 
 ## Variations
-* **Front-line**: Used at the beginning of a text string to indicate the text is being continued from a previous location. 
+
+### Front-line 
+A front-line truncate is used at the beginning of a text string to indicate the text is being continued from a previous location. 
 
   <img src="./img/frontline.png" alt="image showing table truncate" width="331" />
 
-* **Mid-line**: Used to shorten a text string when the end of it can’t be truncated by an ellipsis. Also used when several text strings have the exact same middle characters, but the beginning and endings vary. 
+### Mid-line
+A mid-line truncate is used to shorten a text string when the end of it can’t be truncated by an ellipsis. Also used when several text strings have the exact same middle characters, but the beginning and endings vary. 
 
   <img src="./img/midline.png" alt="image showing table truncate" width="331" />
 
-* **End-line**: Used at the end of a text string to shorten the sequence and indicate that there is more content located elsewhere. 
+### End-line
+An end-line truncate is used at the end of a text string to shorten the sequence and indicate that there is more content located elsewhere. 
    
   <img src="./img/endline.png" alt="image showing table truncate" width="331" />
 

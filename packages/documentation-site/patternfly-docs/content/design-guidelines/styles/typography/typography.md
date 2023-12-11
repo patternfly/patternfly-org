@@ -11,109 +11,151 @@ import correct from './typography_correct_spacing.png';
 import incorrect from './typography_incorrect_spacing.png';
 import './typography.css';
 
-## Our font family
-We use Red Hat Display and Red Hat Text. Red Hat Display should be used for **larger** text headlines, while Red Hat text should be used for **smaller** subheaders and body text, for better long-form readability.
+## PatternFly fonts
 
-<Button style={{borderRadius: '0px', fontWeight: '600', paddingTop: '12px', paddingBottom: '12px', paddingLeft: '24px', paddingRight: '24px'}} variant="primary" component="a" href="https://github.com/RedHatOfficial/RedHatFont" target="_blank">DOWNLOAD</Button>
+PatternFly's fonts include **Red Hat Display** and **Red Hat Text**. For larger text, such as headings, use Red Hat Display. For smaller text, subheadings, and body text, use Red Hat Text, which is more readable for long-form text. You can [download PatternFly's fonts from GitHub.](https://github.com/RedHatOfficial/RedHatFont)
 
-## Usage guidelines
+## Usage
+
 Use typography to create visual hierarchy. A consistent and logical hierarchy makes it easier for users to quickly scan and understand information on a page.
 
-There are two components that can be used to place text content on a page. The [text component](/components/text) should be used for creating formatted blocks of text content and accepts all general HTML text formatting tags, including heading, paragraph, and list styles. The [title component](/components/title) is intended to be used specifically for headings or title text in cards or in similar elements. Title provides the flexibility to set the size of the text and heading level independently.
+There are two PatternFly components that can be used to place text content on a page: the [text component](/components/text) and the [title component](/components/title). The text component should be used to create formatted blocks of text content. It accepts all general HTML text formatting tags, including heading, paragraph, and list styles. The title component is intended to be used specifically for headings or title text in components. This component is flexible and allows you to set the size of the text and heading level independently.
 
-The table below lists all common text styles that are used in PatternFly applications, how they should be used, style settings, and default heading levels, where applicable. Here are further details about the information contained in the table:
+## PatternFly text styles
 
-* **Font family, font weight, line height, and font size:** These are the styles applied to that text category in the PatternFly CSS.
+The following sections outline common text styles that are used in PatternFly applications, how they should be used, and list settings in a table. These tables include the following information: 
 
-* **Text style:** This is the name used to refer to that text style in the PatternFly design kit.
+- **Text style:** The name used to refer to that text style in the [PatternFly design kit](/get-started/design#getting-the-design-kit).
 
-* **Font size CSS variable:** This is the CSS variable that controls the size of this text. You can customize type sizes in your application by modifying the values associated with these variables. In general, this is not advised, and should only be done with caution, as changes to text style can have far reaching side effects on spacing within certain components.
+- **Font family, font weight, line height, and font size:** The styles applied to the text style.
+
+- **Font size CSS variable:** The CSS variable that controls the size of your text. You can customize type sizes in your application by modifying the values associated with these variables. In general, this is not advised, and should be done with caution, as changes to text style can have far reaching side effects on spacing within certain components.
+
+### Super hero heading (4xl)
+
+**Note:** Use only for extra large titles in cards or similar locations. Do not use for page titles.
 
 <TitleLevel
-  title="Super hero heading (4xl)"
   className="pf-v5-c-title pf-m-lg ws-title-level-heading"
   asGrid
-  note="Use only for extra large titles in cards or similar locations. Do not use for page titles"
   styleProps={styleProps.superHero} />
 
+<div class="pf-v5-u-mt-lg"> 
+</div>
+
+### Hero heading (3xl)
+
+**Note:** Use only for extra large titles in cards or similar locations. Do not use for page titles.
+
 <TitleLevel
-  title="Hero heading (3xl)"
   className="pf-v5-c-title pf-m-lg ws-title-level-heading"
   asGrid
-  note="Use only for extra large titles in cards or similar locations. Do not use for page titles"
   styleProps={styleProps.hero} />
+<div class="pf-v5-u-mt-lg">
+</div>
+
+### First level heading (2xl, H1)
+
+**Note**: Only 1 first level/H1 heading should ever exist on a page.
 
 <TitleLevel
-  title="First level heading (2xl, h1)"
   className="pf-v5-c-title pf-m-lg ws-title-level-heading"
   asGrid
-  note="Only one first level/h1 heading should ever exist on a page"
   styleProps={styleProps.first} />
+<div class="pf-v5-u-mt-lg">
+</div>
+
+### Second level heading (xl, H2)
 
 <TitleLevel
-  title="Second level heading (xl, h2)"
   className="pf-v5-c-title pf-m-lg ws-title-level-heading"
   asGrid
   styleProps={styleProps.second} />
+<div class="pf-v5-u-mt-lg">
+</div>
+
+### Third level heading (lg, H3)
 
 <TitleLevel
-  title="Third level heading (lg, h3)"
   className="pf-v5-c-title pf-m-lg ws-title-level-heading"
   asGrid
   styleProps={styleProps.third} />
+<div class="pf-v5-u-mt-lg">
+</div>
+
+### Fourth level heading (md, H4)
 
 <TitleLevel
-  title="Fourth level heading (md, h4)"
   className="pf-v5-c-title pf-m-lg ws-title-level-heading"
   asGrid
   styleProps = {styleProps.fourth} />
+<div class="pf-v5-u-mt-lg">
+</div>
+
+### Default body text
+
+**Note:** This is the default text style for paragraphs, lists, tables, etc. Some components instead use Red Hat Text at 700 font weight, which is Red Hat Text Medium (such as alerts and navigation).
 
 <TitleLevel
-  title="Default body text"
   className="pf-v5-c-title pf-m-lg ws-title-level-heading"
   asGrid
-  note="This is the default text style for paragraphs, lists, tables, etc. Some components use RedHatText at 700 font weight, which is RedHatText Medium (such as alerts and navigation)"
   styleProps = {styleProps.body} />
+<div class="pf-v5-u-mt-lg">
+</div>
+
+### Small text
 
 <TitleLevel
-  title="Small text"
   className="pf-v5-c-title pf-m-lg ws-title-level-heading"
   asGrid
   styleProps = {styleProps.small} />
+<div class="pf-v5-u-mt-lg">
+</div>
+
+### Tiny text
 
 <TitleLevel
-  title="Tiny text"
   className="pf-v5-c-title pf-m-lg ws-title-level-heading"
   asGrid
   styleProps = {styleProps.tiny} />
+<div class="pf-v5-u-mt-lg">
+</div>
+
+### Code
+
+**Note:** Used for code blocks.
 
 <TitleLevel
-  title="Code"
   className="pf-v5-c-title pf-m-lg ws-title-level-heading"
   asGrid
-  note="Used for code blocks "
   styleProps = {styleProps.code} />
+<div class="pf-v5-u-mt-lg">
+</div>
 
-### Customizing heading levels
-If you use the [title component](/components/title) to create headings on your page, you can modify the default relationship between heading levels and text sizes. In using title, you must specify a heading level that will apply to the target text. The table below shows the default mapping of heading level to text size:
+## Customizing heading levels
+If you use the [title component](/components/title) to create headings on your page, you can modify the default relationship between heading levels and text sizes. When using title, you must specify a heading level that will apply to the target text. The following table shows the default mapping of heading level to text size:
 
 | Heading level | Default size|
 |----|-----------|
-| h1 | 2xl (24px)|
-| h2 | xl (20px) |
-| h3 | lg (18px) |
-| h4 | md (16px) |
-| h5 | md (16px) |
-| h6 | md (16px) |
+| H1 | 2xl (24px)|
+| H2 | xl (20px) |
+| H3 | lg (18px) |
+| H4 | md (16px) |
+| H5 | md (16px) |
+| H6 | md (16px) |
 
-Using this component, you can customize the visual hierarchy of text on your page while keeping the semantic hierarchy consistent with expectations for accessibility. For example, you may decide that 20px secondary headings are too large and you want to drop the size of these headings from 20px (xl) to 18px (lg). Rather than make your secondary headings h3’s, you should use the title component to keep them as h2 headings but change the associated text size from `xl` to `lg`.  You can also choose to use larger primary headers by changing the default text size as the title component will support text sizes up to 4xl (36px).
+The title component allows you to customize the visual hierarchy of text on your page, while keeping the semantic hierarchy consistent with expectations for accessibility. 
 
-No matter what visual customizations you choose to make, you should always maintain good visual hierarchy and mapping between heading levels and text sizes. In most cases, h1 should always be your largest heading and subheadings should get progressively smaller as you move down the hierarchy. Exceptions to this rule do occur. For example, there might be cases where card titles will use a text size that is larger than the h1 page title. We advise this approach to be used sparingly and only when it may be important to highlight critical data as in a dashboard.
+For example, you may decide that 20px secondary headings are too large and you want to drop the size of these headings from 20px (xl) to 18px (lg). Rather than make your secondary headings H3’s, you should use the title component to keep them as H2 headings, but change the associated text size from `xl` to `lg`. You can also choose to use larger primary headers by changing the default text size as the title component will support text sizes up to 4xl (36px).
+
+No matter which visual customizations you choose to make, you should always maintain good visual hierarchy and mapping between heading levels and text sizes. In most cases, H1 should always be your largest heading and subheadings should get progressively smaller as you move down the hierarchy. Exceptions to this rule do occur. For example, there might be cases where card titles will use a text size that is larger than the H1 page title. You should use this approach sparingly and only when it may be important to highlight critical data.
 
 ## Line height and spacing
-Spacing represents margins above and below text. When measuring spacing in text-based content, plan for line height. To get the correct line height in pixels, multiply line height by text size. Use spacers to provide appropriate spacing between lines of text.
+Your text's line height has an impact on the use of [spacers](/design-foundations/spacers) in your design.
 
-For example, if a body of text uses a line height of 1.5 and the body text size is 16px, the final line height would be 24 px (16 * 1.5 = 24). In this case, include the 24px line height as part of the text when creating designs in the design software. Visit the [Spacers](/design-foundations/spacers) page for more information about spacer usage.
+Line height is measured in in pixels, and can be calculated by multiplying the font's built-in line height by the text size. 
+
+For example, if a body of text uses a line height of 1.5 and the body text size is 16px, the final line height would be 24 px (16 * 1.5 = 24). In this case, include the 24px line height as part of the text when creating designs in the design software. 
 
 <Grid>
   <GridItem span={12}>
@@ -129,9 +171,9 @@ For example, if a body of text uses a line height of 1.5 and the body text size 
       <TimesCircleIcon color="#CC0000" />
       <span style={{marginLeft: 'var(--pf-v5-global--spacer--sm)'}}>Incorrect</span>
     </LineHeightTitle>
-    <div>Don't only use text to align with spacing elements when designing. Always include the line height space.</div>
+    <div>Don't align spacing solely to the text. Always include the line height space.</div>
     <img alt="incorrect line height space example" style={{maxHeight: '124px', padding: '16px'}} src={incorrect} />
   </GridItem>
 </Grid>
 
-Note that use of the [text](/components/text) and [title](/components/title) components will automatically apply the proper line height and spacing according to the specified text style.
+Note that the [text](/components/text) and [title](/components/title) components will automatically apply the proper line height and spacing according to the specified text style.

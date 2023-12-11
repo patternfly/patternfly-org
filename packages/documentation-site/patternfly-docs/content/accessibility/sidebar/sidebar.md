@@ -3,20 +3,44 @@ id: Sidebar
 section: components
 ---
 
-A **sidebar** is a component which orients a panel relative to content. It was originally built to house jump links so that page 
-content could be oriented relative to the jump links.
+import { Checkbox, List, ListItem } from '@patternfly/react-core';
+import { Link } from '@patternfly/documentation-framework/components/link/link';
 
-**Keyboard users** should be able to focus on interactive children of sidebar using **Tab** to move forward and 
-**Tab + Shift** to move backward through interactive elements. Additionally, a `tabindex`
-should be added to the sidebar when there is scrollable content in order for the overflow content to be scrolled and
-accessible via keyboard.
+## Accessibility
 
-**Screen reader users** should be able to navigate to the sidebar and all the contents of the sidebar should be read by
-the screen reader.
+To implement an accessible PatternFly **sidebar**:
 
+- Ensure the sidebar panel follows our documentation on [accessible scrollable elements](/accessibility/product-development-guide#scrollable-elements) if its content creates a scrollable container
 
-The following props/attributes have been added for you or are customizable in PatternFly:
+## Testing
 
-| React prop | React component it should be applied to | Which HTML element it appears on in markup | Reason used |
-| -- | -- | -- | -- |
-| tabindex | Sidebar | `.pf-v5-c-sidebar` | Tab index should be set to 0 if the content of the sidebar is scrollable |
+At a minimum, a sidebar should meet the following criteria:
+
+<List isPlain>
+  <ListItem>
+    <Checkbox id="sidebar-a11y-checkbox-1" label="Standard keyboard navigation can be used to navigate between focusable elements within the sidebar panel." description={<span><kbd>Tab</kbd> navigates to the next focusable element, and <kbd>Shift</kbd> + <kbd>Tab</kbd> navigates to the previous focusable element.</span>} />
+  </ListItem>
+  <ListItem>
+    <Checkbox id="sidebar-a11y-checkbox-2" label={<span>If the sidebar panel content creates a scrollbale container, it follows our documentation on <Link href="/accessibility/product-development-guide#scrollable-elements">accessible scrollable elements</Link>.</span>} />
+  </ListItem>
+</List>
+
+## React customization
+
+The following React props have been provided for more fine-tuned control over accessibility.
+
+| Prop | Applied to | Reason | 
+|---|---|---|
+| `aria-label="[text that labels the sidebar]"` or `aria-labelledby="[id of the element that labels the sidebar]"` | `SidebarPanel` | Adds an accessible name to the sidebar for assistive technologies. **Required** when `role="region"` is also passed in. |
+| `role="region"` | `SidebarPanel` | Sets the sidebar role to a region, exposing it to assistive technologies. This should be passed in if the sidebar content causes a scrollable container and `tabIndex="0"` is also passed in. |
+| `tabIndex="0"` | `SidebarPanel` | Makes the sidebar container focusable via keyboard and other assistive technologies. **Required** when the sidebar content causes a scrollable container. |
+
+## HTML/CSS customization
+
+The following HTML attributes and PatternFly classes can be used for more fine-tuned control over accessibility.
+
+| Attribute or class | Applied to | Reason | 
+|---|---|---|
+| `aria-label="[text that labels the sidebar]"` or `aria-labelledby="[id of the element that labels the sidebar]"` | `.pf-v5-c-sidebar__panel` | Adds an accessible name to the sidebar for assistive technologies. **Required** when `role="region"` is also passed in. |
+| `role="region"` | `.pf-v5-c-sidebar__panel` | Sets the sidebar role to a region, exposing it to assistive technologies. This should be passed in if the sidebar content causes a scrollable container and `tabIndex="0"` is also passed in. |
+| `tabindex="0"` | `.pf-v5-c-sidebar__panel` | Makes the sidebar container focusable via keyboard and other assistive technologies. **Required** when the sidebar content causes a scrollable container. |
