@@ -1,5 +1,5 @@
 const path = require('path');
-const glob = require('glob');
+const { globSync } = require('glob');
 const ts = require('typescript');
 const versions = require('../../versions.json');
 
@@ -32,7 +32,7 @@ declare module '\\*.svg' {
 `;
 
 const reactStylesDir = path.join(require.resolve('@patternfly/react-styles/package.json'), '../');
-const reactStyles = glob.sync(path.join(reactStylesDir, 'css/**/*.d.ts'))
+const reactStyles = globSync(path.join(reactStylesDir, 'css/**/*.d.ts'))
   .map(f => f.replace(reactStylesDir, '@patternfly/react-styles/').replace(/\.d.ts$/, ''));
 const defaultImports = [
   'react',

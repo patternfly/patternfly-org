@@ -7,7 +7,7 @@ const toVfile = require('to-vfile'); // https://github.com/vfile/vfile
 const vfileReport = require('vfile-reporter');
 const yaml = require('js-yaml'); // https://github.com/nodeca/js-yaml
 const chokidar = require('chokidar');
-const { sync } = require('glob');
+const { globSync } = require('glob');
 const { typecheck } = require('./typecheck');
 const { makeSlug } = require('../../helpers/slugger');
 const { liveCodeTypes } = require('../../helpers/liveCodeTypes');
@@ -338,11 +338,11 @@ function getTsDocNameVariant(source) {
 module.exports = {
   sourceProps(glob, ignore) {
     globs.props.push({ glob, ignore });
-    sync(glob, { ignore }).forEach(sourcePropsFile);
+    globSync(glob, { ignore }).forEach(sourcePropsFile);
   },
   sourceMD(glob, source, ignore, buildMode) {
     globs.md.push({ glob, source, ignore });
-    sync(glob, { ignore }).forEach(file => sourceMDFile(file, source, buildMode));
+    globSync(glob, { ignore }).forEach(file => sourceMDFile(file, source, buildMode));
   },
   sourceFunctionDocs,
   writeIndex,
