@@ -5217,6 +5217,11 @@ devtools-protocol@0.0.1001819:
   resolved "https://registry.yarnpkg.com/devtools-protocol/-/devtools-protocol-0.0.1001819.tgz#0a98f44cefdb02cc684f3d5e6bd898a1690231d9"
   integrity sha512-G6OsIFnv/rDyxSqBa2lDLR6thp9oJioLsb2Gl+LbQlyoA9/OBAkrTU9jiCcQ8Pnh7z4d6slDiLaogR5hzgJLmQ==
 
+devtools-protocol@0.0.1045489:
+  version "0.0.1045489"
+  resolved "https://registry.yarnpkg.com/devtools-protocol/-/devtools-protocol-0.0.1045489.tgz#f959ad560b05acd72d55644bc3fb8168a83abf28"
+  integrity sha512-D+PTmWulkuQW4D1NTiCRCFxF7pQPn0hgp4YyX4wAQ6xYXKOadSWPR3ENGDQ47MW/Ewc9v2rpC/UEEGahgBYpSQ==
+
 dezalgo@^1.0.0:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/dezalgo/-/dezalgo-1.0.3.tgz#7f742de066fc748bc8db820569dddce49bf0d456"
@@ -6288,16 +6293,15 @@ glob@7.1.4:
     once "^1.3.0"
     path-is-absolute "^1.0.0"
 
-glob@8.0.3:
-  version "8.0.3"
-  resolved "https://registry.yarnpkg.com/glob/-/glob-8.0.3.tgz#415c6eb2deed9e502c68fa44a272e6da6eeca42e"
-  integrity sha512-ull455NHSHI/Y1FqGaaYFaLGkNMMJbavMrEGFXG/PGrg6y7sutWHUHrz6gy6WEBH6akM1M414dWKCNs+IhKdiQ==
+glob@9.0.0:
+  version "9.0.0"
+  resolved "https://registry.yarnpkg.com/glob/-/glob-9.0.0.tgz#8940d5f3225ca022931bf129cae13fc5f284aab7"
+  integrity sha512-7rdoWzT8/4f1yEe/cMdBug2lmzmYMYU9h4RNNiavPHajhcxt7kkxrOvwSnIPkZMjLQb9BXv7nFoKmTnPPklMyA==
   dependencies:
     fs.realpath "^1.0.0"
-    inflight "^1.0.4"
-    inherits "2"
-    minimatch "^5.0.1"
-    once "^1.3.0"
+    minimatch "^7.3.0"
+    minipass "^4.2.4"
+    path-scurry "^1.5.0"
 
 glob@^7.0.0, glob@^7.0.3, glob@^7.1.2, glob@^7.1.3, glob@^7.1.4:
   version "7.2.3"
@@ -6311,7 +6315,7 @@ glob@^7.0.0, glob@^7.0.3, glob@^7.1.2, glob@^7.1.3, glob@^7.1.4:
     once "^1.3.0"
     path-is-absolute "^1.0.0"
 
-glob@^8.0.1, glob@^8.0.3, glob@^8.1.0:
+glob@^8.0.1, glob@^8.1.0:
   version "8.1.0"
   resolved "https://registry.yarnpkg.com/glob/-/glob-8.1.0.tgz#d388f656593ef708ee3e34640fdfb99a9fd1c33e"
   integrity sha512-r8hpEjiQEYlF2QU0df3dS+nxxSIreXQS1qRhMJM0Q5NDdR386C7jb7Hwwod8Fgiuex+k0GFjgft18yvxm5XoCQ==
@@ -7814,6 +7818,11 @@ lru-cache@^7.4.4, lru-cache@^7.5.1, lru-cache@^7.7.1:
   resolved "https://registry.yarnpkg.com/lru-cache/-/lru-cache-7.14.1.tgz#8da8d2f5f59827edb388e63e459ac23d6d408fea"
   integrity sha512-ysxwsnTKdAx96aTRdhDOCQfDgbHnt8SK0KY8SEjO0wHinhWOFTESbjVCMPbU1uGXg/ch4lifqx0wfjOawU2+WA==
 
+"lru-cache@^9.1.1 || ^10.0.0":
+  version "10.1.0"
+  resolved "https://registry.yarnpkg.com/lru-cache/-/lru-cache-10.1.0.tgz#2098d41c2dc56500e6c88584aa656c84de7d0484"
+  integrity sha512-/1clY/ui8CzjKFyjdvwPWJUYKiFVXG2I2cY0ssG7h4+hwk+XOIX7ZSG9Q7TW8TW3Kp3BUSqgFWBLgL4PJ+Blag==
+
 lunr@^2.3.9:
   version "2.3.9"
   resolved "https://registry.yarnpkg.com/lunr/-/lunr-2.3.9.tgz#18b123142832337dd6e964df1a5a7707b25d35e1"
@@ -8129,6 +8138,13 @@ minimatch@^5.0.1, minimatch@^5.1.0:
   dependencies:
     brace-expansion "^2.0.1"
 
+minimatch@^7.3.0:
+  version "7.4.6"
+  resolved "https://registry.yarnpkg.com/minimatch/-/minimatch-7.4.6.tgz#845d6f254d8f4a5e4fd6baf44d5f10c8448365fb"
+  integrity sha512-sBz8G/YjVniEz6lKPNpKxXwazJe4c19fEfV2GDMX6AjFz+MX9uDWIZW8XreVhkFW3fkIdTv/gxWr/Kks5FFAVw==
+  dependencies:
+    brace-expansion "^2.0.1"
+
 minimatch@~3.0.2:
   version "3.0.8"
   resolved "https://registry.yarnpkg.com/minimatch/-/minimatch-3.0.8.tgz#5e6a59bd11e2ab0de1cfb843eb2d82e546c321c1"
@@ -8224,6 +8240,16 @@ minipass@^4.0.0:
   version "4.0.3"
   resolved "https://registry.yarnpkg.com/minipass/-/minipass-4.0.3.tgz#00bfbaf1e16e35e804f4aa31a7c1f6b8d9f0ee72"
   integrity sha512-OW2r4sQ0sI+z5ckEt5c1Tri4xTgZwYDxpE54eqWlQloQRoWtXjqt9udJ5Z4dSv7wK+nfFI7FRXyCpBSft+gpFw==
+
+minipass@^4.2.4:
+  version "4.2.8"
+  resolved "https://registry.yarnpkg.com/minipass/-/minipass-4.2.8.tgz#f0010f64393ecfc1d1ccb5f582bcaf45f48e1a3a"
+  integrity sha512-fNzuVyifolSLFL4NzpF+wEF4qrgqaaKX0haXPQEdQ7NKAN+WecoKMHV09YcuL/DHxrUsYQOK3MiuDf7Ip2OXfQ==
+
+"minipass@^5.0.0 || ^6.0.2 || ^7.0.0":
+  version "7.0.4"
+  resolved "https://registry.yarnpkg.com/minipass/-/minipass-7.0.4.tgz#dbce03740f50a4786ba994c1fb908844d27b038c"
+  integrity sha512-jYofLM5Dam9279rdkWzqHozUo4ybjdZmCsDHePy5V/PbBcVMiSZR97gmAy45aqi8CK1lG2ECd356FU86avfwUQ==
 
 minizlib@^2.0.0, minizlib@^2.1.1, minizlib@^2.1.2:
   version "2.1.2"
@@ -9236,6 +9262,14 @@ path-parse@^1.0.7:
   resolved "https://registry.yarnpkg.com/path-parse/-/path-parse-1.0.7.tgz#fbc114b60ca42b30d9daf5858e4bd68bbedb6735"
   integrity sha512-LDJzPVEEEPR+y48z93A0Ed0yXb8pAByGWo/k5YYdYgpY2/2EsOsksJrq7lOHxryrVOn1ejG6oAp8ahvOIQD8sw==
 
+path-scurry@^1.5.0:
+  version "1.10.1"
+  resolved "https://registry.yarnpkg.com/path-scurry/-/path-scurry-1.10.1.tgz#9ba6bf5aa8500fe9fd67df4f0d9483b2b0bfc698"
+  integrity sha512-MkhCqzzBEpPvxxQ71Md0b1Kk51W01lrYvlMzSUaIzNsODdd7mqhiimSZlr+VegAz5Z6Vzt9Xg2ttE//XBhH3EQ==
+  dependencies:
+    lru-cache "^9.1.1 || ^10.0.0"
+    minipass "^5.0.0 || ^6.0.2 || ^7.0.0"
+
 path-to-regexp@0.1.7:
   version "0.1.7"
   resolved "https://registry.yarnpkg.com/path-to-regexp/-/path-to-regexp-0.1.7.tgz#df604178005f522f15eb4490e7247a1bfaa67f8c"
@@ -9585,7 +9619,33 @@ puppeteer-cluster@0.23.0, puppeteer-cluster@^0.23.0:
   dependencies:
     debug "^4.3.3"
 
-puppeteer@14.3.0, puppeteer@^14.2.0:
+puppeteer-core@18.2.0:
+  version "18.2.0"
+  resolved "https://registry.yarnpkg.com/puppeteer-core/-/puppeteer-core-18.2.0.tgz#dc9ccd770a97d473b9a3da59fdae68c6842e8f76"
+  integrity sha512-5JLJt3At3zNh6rVNG7o7VOonH6HIsPSFeUD+X4bTvfU8Fh/2ihuhXtE6+vYi5hG7sL+m3yq8cpCsV1Jh47i3/Q==
+  dependencies:
+    cross-fetch "3.1.5"
+    debug "4.3.4"
+    devtools-protocol "0.0.1045489"
+    extract-zip "2.0.1"
+    https-proxy-agent "5.0.1"
+    proxy-from-env "1.1.0"
+    rimraf "3.0.2"
+    tar-fs "2.1.1"
+    unbzip2-stream "1.4.3"
+    ws "8.9.0"
+
+puppeteer@18.2.0:
+  version "18.2.0"
+  resolved "https://registry.yarnpkg.com/puppeteer/-/puppeteer-18.2.0.tgz#11804d1ae2c83216089c0aaa5166b7ccef26dd0e"
+  integrity sha512-auxgcjcM7p7+2t6ga6izrrtks7Z1fl7Qv4Gwb9tvH0U0dnBYgbq8GxOZ5mDgSolWgN6NmfG2bxdfOPzc0yOfDA==
+  dependencies:
+    https-proxy-agent "5.0.1"
+    progress "2.0.3"
+    proxy-from-env "1.1.0"
+    puppeteer-core "18.2.0"
+
+puppeteer@^14.2.0:
   version "14.3.0"
   resolved "https://registry.yarnpkg.com/puppeteer/-/puppeteer-14.3.0.tgz#0099cabf97767461aca02486313e84fcfc776af6"
   integrity sha512-pDtg1+vyw1UPIhUjh2/VW1HUdQnaZJHfMacrJciR3AVm+PBiqdCEcFeFb3UJ/CDEQlHOClm3/WFa7IjY25zIGg==
@@ -11400,12 +11460,11 @@ typedarray@^0.0.6:
   resolved "https://registry.yarnpkg.com/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
   integrity sha1-hnrHTjhkGHsdPUfZlqeOxciDB3c=
 
-typedoc@0.22.X:
-  version "0.22.18"
-  resolved "https://registry.yarnpkg.com/typedoc/-/typedoc-0.22.18.tgz#1d000c33b66b88fd8cdfea14a26113a83b7e6591"
-  integrity sha512-NK9RlLhRUGMvc6Rw5USEYgT4DVAUFk7IF7Q6MYfpJ88KnTZP7EneEa4RcP+tX1auAcz7QT1Iy0bUSZBYYHdoyA==
+typedoc@0.23.0:
+  version "0.23.0"
+  resolved "https://registry.yarnpkg.com/typedoc/-/typedoc-0.23.0.tgz#dfb61f455d0111c206573de9bd48fd25b620d958"
+  integrity sha512-pcVvGbxRJDPuXKt7VV9gGMhR36kJc4IlQOnLAqfPQWujzHM9C4hW7gLjfpbXJXuwXkJehuFhPMOinga8mYFcjA==
   dependencies:
-    glob "^8.0.3"
     lunr "^2.3.9"
     marked "^4.0.16"
     minimatch "^5.1.0"
@@ -12329,6 +12388,11 @@ ws@8.7.0:
   version "8.7.0"
   resolved "https://registry.yarnpkg.com/ws/-/ws-8.7.0.tgz#eaf9d874b433aa00c0e0d8752532444875db3957"
   integrity sha512-c2gsP0PRwcLFzUiA8Mkr37/MI7ilIlHQxaEAtd0uNMbVMoy8puJyafRlm0bV9MbGSabUPeLrRRaqIBcFcA2Pqg==
+
+ws@8.9.0:
+  version "8.9.0"
+  resolved "https://registry.yarnpkg.com/ws/-/ws-8.9.0.tgz#2a994bb67144be1b53fe2d23c53c028adeb7f45e"
+  integrity sha512-Ja7nszREasGaYUYCI2k4lCKIRTt+y7XuqVoHR44YpI49TtryyqbqvDMn5eqfW7e6HzTukDRIsXqzVHScqRcafg==
 
 ws@^7.3.1:
   version "7.5.9"
