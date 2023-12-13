@@ -48,7 +48,7 @@
     "null-loader": "4.0.1",
     "parse-entities": "2.0.0",
     "path-browserify": "1.0.1",
-    "postcss": "8.4.31",
+    "postcss": "8.4.32",
     "postcss-loader": "7.1.0",
     "process": "^0.11.10",
     "puppeteer": "18.2.0",
