@@ -34,7 +34,7 @@ The following React props have been provided for more fine-tuned control over ac
 
 | Prop | Applied to | Reason |
 | -- | -- | -- |
-| `screenReaderText` | `Banner` | Adds text that is accessible only to assistive technologies and is not visually rendered. This prop should only be passed in when the banner is meant to convey status. |
+| `screenReaderText="[visually hidden text that describes the banner status]"` | `Banner` | Adds text that is accessible only to assistive technologies and is not visually rendered. This prop should only be passed in when the banner is meant to convey status. |
 
 ## HTML/CSS customization
 
