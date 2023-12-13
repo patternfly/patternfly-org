@@ -69,7 +69,7 @@ At a minimum, a tooltip should meet the following criteria:
     <Checkbox id="tooltip-a11y-checkbox-4" label={<span>If the tooltip is meant to act as supplementary information, the trigger has the <code className="ws-code">aria-describedby</code> attribute linked to the tooltip contents.</span>} />
   </ListItem>
   <ListItem>
-    <Checkbox id="tooltip-a11y-checkbox-5" label="Using a mouse to hover over the triggering element causes the tooltip to trigger, and the tooltip persists while hovering over the trigger or the tooltip itself." />
+    <Checkbox id="tooltip-a11y-checkbox-5" label="Using a mouse to hover over the triggering element causes the tooltip to trigger, and the tooltip persists while hovering over the trigger or the tooltip itself." description="The exit delay for a tooltip should typically be greater than 0 so that users have enough time to hover the tooltip with their mouse. Too short of an exit delay can make it difficult for users with motor control issues to hover the tooltip before it transitions out." />
   </ListItem>
   <ListItem>
     <Checkbox id="tooltip-a11y-checkbox-6" label="The triggering element can receive focus via keyboard in order to trigger the tooltip, and the tooltip persists as long as the triggering element has focus." />
