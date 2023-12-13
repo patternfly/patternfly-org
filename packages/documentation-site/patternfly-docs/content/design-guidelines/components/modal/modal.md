@@ -77,9 +77,9 @@ When a text input field is added to a confirmation dialog, the danger button wil
 
 Use an edit dialog for managing assets. Edit dialogs contain multiple actions which can include, but are not limited to, saving your changes or deleting the asset. The primary action in the dialog should use a primary button, the secondary should use a secondary button, and the cancel button should remain a link button.
 
-For example, if the secondary action is destructive, the button should be styled as a [secondary danger  button](/components/button/#variant-examples). Additionally, it should be aligned to the right-side of the modal, directly across from the primary action and cancel buttons. 
+For example, and edit dialogue might contain a "Save" button as the primary action, and a "Delete" button as a secondary action. If the secondary action is destructive, the button should be styled as a [secondary danger  button](/components/button/#variant-examples). Additionally, it should be aligned to the right-side of the modal, directly across from the primary action and cancel buttons. 
 
-<img src="./img/secondary-destructive-action.png" alt="An edit dialogs with three action buttons: save, cancel and delete" width="300"/>
+<img src="./img/secondary-destructive-action.png" alt="An edit dialogs with three action buttons: save, cancel and delete" width="500"/>
 
 When using destructive actions, ensure that the user is informed about the consequences of taking this action. Review the general guidelines for [danger button](/components/button/design-guidelines#danger-button) and destructive actions for additional guidance. 
 
