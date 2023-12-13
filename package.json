@@ -41,7 +41,9 @@
     "@octokit/rest": "^19.0.7",
     "glob": "^8.1.0",
     "lerna": "^6.4.1",
-    "surge": "^0.23.1"
+    "surge": "^0.23.1",
+    "react": "^18",
+    "react-dom": "^18"
   },
   "resolutions": {
     "node-sass": ">=6.0.1"
