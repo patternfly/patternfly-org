@@ -22,10 +22,10 @@ At a minimum, an about modal should meet the following criteria:
 
 <List isPlain>
   <ListItem>
-    <Checkbox id="aboutModal-a11y-checkbox-1" label={<span>An <code class="ws-code">aria-label</code> is passed if the about modal does not have a product name heading.</span>} description="This gives the about modal an accessible name, providing context of its purpose or content to users." />
+    <Checkbox id="aboutModal-a11y-checkbox-1" label={<span>An <code className="ws-code">aria-label</code> is passed if the about modal does not have a product name heading.</span>} description="This gives the about modal an accessible name, providing context of its purpose or content to users." />
   </ListItem>
   <ListItem>
-    <Checkbox id="aboutModal-a11y-checkbox-2" label={<span>If there is a brand image, it has a valid <code class="ws-code">alt</code> attribute.</span>} description="If the image is purely decorative then an empty string should be passed as a value so that the image is not exposed to assistive technologies." />
+    <Checkbox id="aboutModal-a11y-checkbox-2" label={<span>If there is a brand image, it has a valid <code className="ws-code">alt</code> attribute.</span>} description="If the image is purely decorative then an empty string should be passed as a value so that the image is not exposed to assistive technologies." />
   </ListItem>
   <ListItem>
     <Checkbox id="aboutModal-a11y-checkbox-3" label="The first focusable element, or the about modal itself, receives focus when the about modal is opened." />

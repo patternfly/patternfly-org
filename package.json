@@ -18,7 +18,7 @@
     "clean": "lerna run clean && rm -rf build",
     "serve": "pf-docs-framework serve build/patternfly-org/site",
     "test:v5": "yarn workspace patternfly-org test:a11y:ci",
-    "screenshots": "yarn workspace patternfly-org screenshots",
+    "screenshots": "node node_modules/puppeteer/install.js && yarn workspace patternfly-org screenshots",
     "start": "yarn start:v5",
     "start:v5": "yarn develop:v5",
     "start:extensions": "yarn develop:extensions",
