@@ -1,9 +1,28 @@
 {
   "Releases": [
     {
+      "name": "alphas",
+      "date": "2023-12-03",
+      "latest": true,
+      "versions": {
+        "@patternfly/patternfly": "6.0.0-alpha.38",
+        "@patternfly/react-catalog-view-extension": "5.0.0",
+        "@patternfly/react-charts": "8.0.0-alpha.4",
+        "@patternfly/react-code-editor": "6.0.0-alpha.5",
+        "@patternfly/react-core": "6.0.0-alpha.5",
+        "@patternfly/react-icons": "6.0.0-alpha.4",
+        "@patternfly/react-log-viewer": "5.0.0",
+        "@patternfly/react-styles": "6.0.0-alpha.4",
+        "@patternfly/react-table": "6.0.0-alpha.5",
+        "@patternfly/react-tokens": "5.1.0",
+        "@patternfly/react-topology": "5.1.0",
+        "@patternfly/quickstarts": "5.1.0",
+        "@patternfly/react-virtualized-extension": "5.1.0"
+      }
+    },
+    {
       "name": "5.1.0",
       "date": "2023-10-06",
-      "latest": true,
       "versions": {
         "@patternfly/patternfly": "5.1.0",
         "@patternfly/react-charts": "7.1.1",

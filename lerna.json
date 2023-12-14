@@ -16,5 +16,5 @@
     "packages/documentation-site"
   ],
   "version": "independent",
-  "allowBranch": ["main", "v4"]
+  "allowBranch": ["main", "v4", "v6"]
 }
