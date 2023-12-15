@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 6.0.0-alpha.2 (2023-12-15)
+
+
+### Bug Fixes
+
+* bump docs-framework version in docs-site ([93d9115](https://github.com/patternfly/patternfly-org/commit/93d91150da89bbabcd6d8e9b0ef9fcadad7272c1))
+
+
+
+
+
 # 6.0.0-alpha.1 (2023-12-14)
 
 
