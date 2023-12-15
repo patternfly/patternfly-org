@@ -30,7 +30,7 @@ jobs:
           key: ${{ runner.os }}-yarn-14-${{ hashFiles('yarn.lock') }}
       - run: yarn install --frozen-lockfile
         if: steps.yarn-cache.outputs.cache-hit != 'true'
-      # v5 build
+      # v6 build
       - uses: actions/cache@v2
         id: site-cache
         name: Load webpack cache
@@ -40,24 +40,23 @@ jobs:
       - run: yarn build
         name: Build docs
       - run: .github/release.sh
-      - name: Configure AWS Credentials
-        uses: aws-actions/configure-aws-credentials@v1
-        with:
-          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY}}
-          aws-secret-access-key: ${{ secrets.AWS_SECRET_KEY }}
-          aws-region: ${{ secrets.AWS_REGION }}
       - run: node scripts/writeVersionRedirects.js
       - run: node scripts/writeVersionPrefix.js
       - run: du -sh build/patternfly-org/*
         name: Check size of docs
-      - run: .github/upload-staging.sh
-        name: Upload docs to staging
-      - run: yarn build:extensions
-        name: Build extension docs
-      - name: Upload extension only docs
+      - name: Upload v6 staging docs
         uses: dswistowski/surge-sh-action@v1
         with:
-          domain: 'extensions-staging.patternfly.org'
+          domain: 'v6-org-staging.patternfly.org'
+          project: 'build/patternfly-org/site'
+          login: ${{ secrets.SURGE_LOGIN }}
+          token: ${{ secrets.SURGE_TOKEN }}
+      - run: yarn build:extensions
+        name: Build extension docs
+      - name: Upload v6 extension staging docs
+        uses: dswistowski/surge-sh-action@v1
+        with:
+          domain: 'v6-extensions-staging.patternfly.org'
           project: 'build/patternfly-org/site'
           login: ${{ secrets.SURGE_LOGIN }}
           token: ${{ secrets.SURGE_TOKEN }}
