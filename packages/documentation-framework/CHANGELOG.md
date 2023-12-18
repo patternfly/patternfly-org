@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 6.0.0-alpha.3 (2023-12-18)
+
+
+### Bug Fixes
+
+* try publish v6 to aws ([#3845](https://github.com/patternfly/patternfly-org/issues/3845)) ([9cc0909](https://github.com/patternfly/patternfly-org/commit/9cc09090ee035ac7087aacd9067b52a146bf3229))
+
+
+
+
+
 # 6.0.0-alpha.2 (2023-12-15)
 
 
