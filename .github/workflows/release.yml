@@ -40,20 +40,21 @@ jobs:
       - run: yarn build
         name: Build docs
       - run: .github/release.sh
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY}}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_KEY }}
+          aws-region: ${{ secrets.AWS_REGION }}
       - run: node scripts/writeVersionRedirects.js
       - run: node scripts/writeVersionPrefix.js
       - run: du -sh build/patternfly-org/*
         name: Check size of docs
-      - name: Upload v6 staging docs
-        uses: dswistowski/surge-sh-action@v1
-        with:
-          domain: 'v6-org-staging.patternfly.org'
-          project: 'build/patternfly-org/site'
-          login: ${{ secrets.SURGE_LOGIN }}
-          token: ${{ secrets.SURGE_TOKEN }}
+      - run: .github/upload-staging.sh
+        name: Upload docs to staging
       - run: yarn build:extensions
         name: Build extension docs
-      - name: Upload v6 extension staging docs
+      - name: Upload extension only docs
         uses: dswistowski/surge-sh-action@v1
         with:
           domain: 'v6-extensions-staging.patternfly.org'
