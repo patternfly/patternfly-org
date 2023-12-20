@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 6.0.0-alpha.4 (2023-12-20)
+
+
+### Bug Fixes
+
+* update white space to test publishing to aws ([4432fbe](https://github.com/patternfly/patternfly-org/commit/4432fbea86ab6f420cef816475718a62c673a870))
+
+
+
+
+
 # 6.0.0-alpha.3 (2023-12-18)
 
 
