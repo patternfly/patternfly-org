@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 6.0.0-alpha.5 (2023-12-20)
+
+
+### Bug Fixes
+
+* PF brand logo in masthead to inline svg ([cafef36](https://github.com/patternfly/patternfly-org/commit/cafef363ea6b0912af9c5a1d5a0e10c353b60fd0))
+
+
+
+
+
 # 6.0.0-alpha.4 (2023-12-20)
 
 
