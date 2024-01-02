@@ -1,6 +1,6 @@
 {
   "component-groups": {
-    "summary": "Provides a variety of React components that combine multiple base PatternFly components to address more complex UI design scenarios."
+    "summary": "Provides additional React components that combine multiple base PatternFly components to address more complex UI design scenarios."
   }, 
   "catalog-view": {
     "summary": "Constructs an interface that is composed of different elements, like tiles, tabs, panels, and headers."
