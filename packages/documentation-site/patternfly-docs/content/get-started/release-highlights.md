@@ -7,6 +7,56 @@ section: get-started
 import './get-started.css';
 import { Divider } from '@patternfly/react-core';
 
+## PatternFly 5.2 
+
+As part of our [quarterly release cadence](/get-started/about#patternfly-release-cadence), we're excited to announce that PatternFly 5.1 is now live.
+
+To help provide a high-level view of what's new, we've pulled together the major highlights from this release. Keep reading to learn more!
+
+### Design token support across components
+
+To prepare for our release of Penta, our upcoming new PatternFly theme, we added design token support to many of our components. 
+
+This work is a large-scale undertaking that lays the groundwork for our upcoming alpha release of Penta.
+
+List the completed components? 
+
+### React seed
+
+https://github.com/patternfly/patternfly-react-seed
+
+### Component groups extension 
+
+We released a new extension: [component groups](/extensions/component-groups/about-component-groups). This extension contains a range of React components that are more complex than basic PatternFly components. These component groups combine and adjust multiple base components to provide opinionated solutions for recurring use cases across products using PatternFly.
+
+Note that component groups is contained in its own [GitHub repository](https://github.com/patternfly/react-component-groups).
+
+This extension was created to migrate components from the [Red Hat Insights shared components repository](https://github.com/RedHatInsights/frontend-components). The PatternFly component groups extension is recommended in place of the RedHat Insights implementation. To migrate to the component groups extension, refer to this [migration guide](https://github.com/patternfly/react-component-groups/blob/main/migration.md) that we put together. 
+
+The latest version of component groups contains the following components:
+
+- Ansible
+- Battery
+- DetailsPage (beta)
+- Error boundary
+- Error state
+- Invalid object
+- Not authorized
+- Skeleton table
+- Tag count
+- Unavailable content
+- Warning modal
+
+We plan to continue to add additional components as they are requested. 
+
+### Accessibility guideline documentation 
+
+We've updated all of our [top-level accessibility guidelines](https://www.patternfly.org/accessibility/accessibility-fundamentals) 
+
+As part of these updates, we've added a new page called "Design for accessibility", which documents accessibility considerations for visual designers.  
+
+<Divider></Divider>
+
 ## PatternFly 5.1 
 
 As part of our [quarterly release cadence](/get-started/about#patternfly-release-cadence), we're excited to announce that PatternFly 5.1 is now live.
