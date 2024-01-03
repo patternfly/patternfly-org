@@ -5,7 +5,7 @@ section: UX writing
 
 # Capitalization guidelines
 
-Consistent capitalization adds clarity and creates unity across your products' UIs. When using PatternFly, we recommend writing in **sentence case**, which capitalizes the first letter of the first word in a title, heading, subtitle, or subheading -- except for proper nouns, product names, acronyms, and initialisms. 
+Consistent capitalization adds clarity and creates unity across product UIs. When using PatternFly, we recommend writing in **sentence case**, which capitalizes the first letter of the first word in a title, heading, subtitle, or subheading -- except for proper nouns, product names, acronyms, and initialisms. 
     
 For example: “PatternFly’s design resources with tips and best practices.”
 
@@ -13,30 +13,12 @@ Above all else, your main goal should be consistency. You may need to use differ
 
 ## Product UIs
 
-For products designed with PatternFly, sentence case is the standard, with exceptions based on individual product needs.
-
-In general, you should:
+When writing for products designed with PatternFly, you should adhere to the following capitalization patterns:
 
 - Capitalize proper nouns, acronyms, initialisms, product names, services, and features. 
 - Keep capitalization for custom resources the same as the capitalization used during creation. 
     - For example, if a custom resource was created in all lowercase letters, don't change any of the letters to uppercase. 
 - Capitalize product feature names when they’re used as proper nouns or when they refer to a capitalized UI term (like a navigation item). Write them in lowercase when they’re used to describe generic concepts. For example, consider the following scenarios found in Red Hat products:
-
-[Add more complete example image?]
-
-### Capitalization in breadcrumb trails
-
-Usually, page titles appear in a breadcrumb trail. Items in a breadrumb trail that correspond to page titles should match the capitalization of the original page title.
-
-However, breadcrumb trails aren’t limited to page titles alone. If a name entered by a user (such as “vagrant-host”) is included in the breadcrumb trail, then use the same case that the name appears in. 
-
-For example, this may look like: *Rules* > *Systems* > *System Tool* > *vagrant-host* 
-
-### Tools outside your product portfolio
-
-If you’re referencing tools outside your company’s product portfolio, write the product names as they appear in the respective company’s documentation. 
-
-For example, if you’re referencing a product in Amazon Web Services and Amazon capitalizes it, you should also capitalize it in your writing.
 
 <div class="ws-content-table">
 
@@ -48,9 +30,27 @@ For example, if you’re referencing a product in Amazon Web Services and Amazon
 
 </div>
 
+
+
+### Capitalization in breadcrumb trails
+
+Usually, page titles appear in a breadcrumb trail. When a breadcrumb item corresponds to a page title, you should match the capitalization of the original page title.
+
+This is true even if the capitalization is not sentence case. For example, this may look like: *Rules* > *Systems* > *System Tool* 
+
+Sometimes, user-named items will appear in a breadcrumb trail. If a custom name entered by a user (such as “vagrant-host”) is included in the breadcrumb trail, you should match the capitalization of the users' original entry.
+
+For example, this may look like: *Rules* > *Systems* > *System Tool* > *vagrant-host* 
+
+### Tools outside your product portfolio
+
+If you’re referencing tools outside your company’s product portfolio, write the product names as they appear in the respective company’s documentation. 
+
+For example, if you’re referencing a product in Amazon Web Services and Amazon capitalizes it, you should also capitalize it in your writing.
+
 ## PatternFly website documentation 
 
-Follow these guidelines when writing all PatternFly content, including documentation, UX copy, blog articles, and more. 
+There are additional capitalization guidelines that you should follow if you contribute to any PatternFly content, like documentation or microcopy.
 
 - Use sentence case for page titles, menu items, navigation items, headings, subtitles, and subheadings. 
 
@@ -63,14 +63,12 @@ Follow these guidelines when writing all PatternFly content, including documenta
 
 - Format any code snippets according to the standards used for their language. 
 
-The following image demonstrate how these guidelines are applied across the PatternFly website.
-
-<img src="./img/patternfly-homepage.png"  alt="PatternFly website screenshot showing sentence case copy"  width="600px"/>
+<br />
+<img src="./img/Testing.png"  alt="PatternFly website screenshot showing sentence case copy" />
 
 All navigation items, button text, and headings are written in sentence case:
 
-<img src="./img/patternfly-component-page.png"  alt="PatternFly website screenshot showing sentence case copy"  width="600px"/>
+<br />
+<img src="./img/Capitalization_ PF component page.png"  alt="PatternFly website screenshot showing sentence case copy" />
 
 For example, "Card, button, and banner components are my favorites."
-
-<img src="./img/component-example-text.png"  alt="PatternFly website screenshot showing sentence case copy"  width="600px"/>
