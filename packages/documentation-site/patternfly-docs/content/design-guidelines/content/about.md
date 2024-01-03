@@ -1,5 +1,5 @@
 ---
-id: About ux writing
+id: About UX writing
 section: UX writing
 sortValue: 1
 
