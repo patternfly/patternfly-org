@@ -15,6 +15,7 @@
         "@patternfly/react-drag-drop": "5.0.0-alpha.0",
         "@patternfly/react-tokens": "5.1.1",
         "@patternfly/react-catalog-view-extension": "5.0.0",
+        "@patternfly/react-component-groups": "5.0.0",
         "@patternfly/react-console": "5.0.0",
         "@patternfly/react-log-viewer": "5.0.0",
         "@patternfly/react-topology": "5.1.0",

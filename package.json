@@ -18,7 +18,7 @@
     "clean": "lerna run clean && rm -rf build",
     "serve": "pf-docs-framework serve build/patternfly-org/site",
     "test:v5": "yarn workspace patternfly-org test:a11y:ci",
-    "screenshots": "yarn workspace patternfly-org screenshots",
+    "screenshots": "node node_modules/puppeteer/install.js && yarn workspace patternfly-org screenshots",
     "start": "yarn start:v5",
     "start:v5": "yarn develop:v5",
     "start:extensions": "yarn develop:extensions",
@@ -41,7 +41,9 @@
     "@octokit/rest": "^19.0.7",
     "glob": "^8.1.0",
     "lerna": "^6.4.1",
-    "surge": "^0.23.1"
+    "surge": "^0.23.1",
+    "react": "^18",
+    "react-dom": "^18"
   },
   "resolutions": {
     "node-sass": ">=6.0.1"
