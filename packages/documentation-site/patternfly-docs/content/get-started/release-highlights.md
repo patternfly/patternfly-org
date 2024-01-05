@@ -9,31 +9,31 @@ import { Divider } from '@patternfly/react-core';
 
 ## PatternFly 5.2 
 
-As part of our [quarterly release cadence](/get-started/about#patternfly-release-cadence), we're excited to announce that PatternFly 5.1 is now live.
+We're excited to announce that PatternFly 5.1 is now live! Continue reading to learn about the major highlights from this release. 
 
-To help provide a high-level view of what's new, we've pulled together the major highlights from this release. Keep reading to learn more!
+### Design token support preparation 
 
-### Design token support across components
+To prepare for PatternFly's upcoming addition of a new visual theme, called Penta, we added support for design tokens to many of our components. This support has been enabled in both the visual design of components, as well as their code implementation. 
 
-To prepare for our release of Penta, our upcoming new PatternFly theme, we added design token support to many of our components. 
+This work is a large-scale undertaking that lays the groundwork for our upcoming v6 alpha release -- slotted for Q1 2024.
 
-This work is a large-scale undertaking that lays the groundwork for our upcoming alpha release of Penta.
+***[Here are the components that we've prepared OR here are the remaining components that we will complete ahead of our alpha release.]***
 
-List the completed components? 
+#### React seed
 
-### React seed
+***[I've heard mention of this, but don't know much about it -- do we want to include it here?]***
 
-https://github.com/patternfly/patternfly-react-seed
+We readied our [React seed codebase](https://github.com/patternfly/patternfly-react-seed) for the v6 alpha release, so that any web applications built on PatternFly will have access to our Penta theme at the same time as our React and HTML consumers.
 
 ### Component groups extension 
 
-We released a new extension: [component groups](/extensions/component-groups/about-component-groups). This extension contains a range of React components that are more complex than basic PatternFly components. These component groups combine and adjust multiple base components to provide opinionated solutions for recurring use cases across products using PatternFly.
+We released a new extension, called [component groups](/extensions/component-groups/about-component-groups). This extension contains a range of React components that are more complex than standard PatternFly components. These component groups combine and adjust multiple base components to provide opinionated solutions for recurring use cases across products using PatternFly.
 
 Note that component groups is contained in its own [GitHub repository](https://github.com/patternfly/react-component-groups).
 
-This extension was created to migrate components from the [Red Hat Insights shared components repository](https://github.com/RedHatInsights/frontend-components). The PatternFly component groups extension is recommended in place of the RedHat Insights implementation. To migrate to the component groups extension, refer to this [migration guide](https://github.com/patternfly/react-component-groups/blob/main/migration.md) that we put together. 
+This extension was created in an effort to migrate components from the [Red Hat Insights shared components repository](https://github.com/RedHatInsights/frontend-components). The PatternFly component groups extension is now recommended to be used in place of the RedHat Insights implementation. To update your product to using the component groups extension, refer to [our migration guide.](https://github.com/patternfly/react-component-groups/blob/main/migration.md)
 
-The latest version of component groups contains the following components:
+The latest version of component groups contains the following components, with full documentation on PatternFly.org:
 
 - Ansible
 - Battery
@@ -47,13 +47,22 @@ The latest version of component groups contains the following components:
 - Unavailable content
 - Warning modal
 
-We plan to continue to add additional components as they are requested. 
+To learn moreabout the story behind this project, read our article on our [Medium publication](https://medium.com/patternfly/introducing-component-groups-dbe054cac726).
 
-### Accessibility guideline documentation 
+We plan to continue to add additional components as they are requested, so please get involved if you have feedback or new ideas! 
 
-We've updated all of our [top-level accessibility guidelines](https://www.patternfly.org/accessibility/accessibility-fundamentals) 
+### Updated accessibility guideline documentation 
 
-As part of these updates, we've added a new page called "Design for accessibility", which documents accessibility considerations for visual designers.  
+We updated all of our top-level accessibility guidelines for better clarity and organization. As part of these updates, we also added a new page called "Design for accessibility", which documents accessibility considerations for visual designers.
+
+The following pages now have updated content -- take a read!
+
+- [About accessibility](/accessibility/about-accessibility) (formerly named "Accessibility fundamentals")
+- [Accessibility scorecard](/accessibility/accessibility-scorecard)
+- [***Design for accessibility***](https://www.patternfly.org/accessibility/accessibility-fundamentals)
+- Develop for accessibility (formerly named "Product development guide")
+- [PatternFly's accessibility](/accessibility/patternflys-accessibility)
+- [Testing your accessibility](/accessibility/patternflys-accessibility)
 
 <Divider></Divider>
 
