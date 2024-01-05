@@ -109,7 +109,7 @@ This checklist includes some of the main areas that the PatternFly team checks f
 
     <Checkbox label={<span><b>ARIA</b> labels provide descriptive details to screen reader users, without reiterating or overriding the text that is already there. If there is visible text then there doesn’t need to be an ARIA label. </span>} 
     description={ <span>
-      <li> To add a non-visual label to an element you should use <span className="ws-code">aria-label</span>. Keep in mind you should not add this to an element that already has a visual label in the UI. You can also use <span className="ws-code">aria-labelledby</span> to label an element through existing text or <span className="ws-code">aria-label</span>. </li>
+      <li> To add a non-visual label to an element you should use <span className="ws-code">aria-label</span>. You can also use <span className="ws-code">aria-labelledby</span> to label one element with another element's existing text or <span className="ws-code">aria-label</span>. </li>
       <li> <span> It’s important to understand that ARIA can only affect the semantics of an element; not the behavior. For example, while you can hide an element from screen readers with <span className="ws-code">aria-hidden=”true”</span>, that does not change the focus behavior for that element.</span></li>
     </span>
     }
