@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.3.15-alpha.6 (2024-01-12)
+
+
+### Bug Fixes
+
+* Update brand svg id to avoid duplicate ids ([55d351b](https://github.com/patternfly/patternfly-org/commit/55d351be1b8d4d4f0b6d5f5090cbedc6629c6d94))
+
+
+
+
+
 ## 1.3.15-alpha.5 (2024-01-12)
 
 
