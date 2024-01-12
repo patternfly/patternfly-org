@@ -2187,6 +2187,81 @@
     node-addon-api "^3.2.1"
     node-gyp-build "^4.3.0"
 
+"@patternfly/documentation-framework@6.0.0-alpha.4":
+  version "6.0.0-alpha.4"
+  resolved "https://registry.yarnpkg.com/@patternfly/documentation-framework/-/documentation-framework-6.0.0-alpha.4.tgz#d14a8ba982a9d0e425e0f2dfcc1e38c4d125935f"
+  integrity sha512-OJzTmOKaNb0mBButj1NUNipGPY8IWy/k8qhIGXvYTKq9kcPopxG/lFNt8Ol6wu5L+dlz4H/ZkIxevX15E7h+7A==
+  dependencies:
+    "@babel/core" "7.18.2"
+    "@babel/plugin-proposal-class-properties" "7.17.12"
+    "@babel/plugin-proposal-optional-chaining" "^7.18.9"
+    "@babel/plugin-proposal-private-methods" "7.17.12"
+    "@babel/plugin-proposal-private-property-in-object" "7.17.12"
+    "@babel/plugin-transform-react-jsx" "7.17.12"
+    "@babel/preset-env" "7.18.2"
+    "@mdx-js/util" "1.6.16"
+    "@patternfly/ast-helpers" "^1.3.15-alpha.3"
+    "@reach/router" "npm:@gatsbyjs/reach-router@1.3.9"
+    autoprefixer "9.8.6"
+    babel-loader "9.1.2"
+    camelcase-css "2.0.1"
+    chokidar "3.5.3"
+    clean-webpack-plugin "4.0.0"
+    codesandbox "2.2.0"
+    commander "4.1.1"
+    copy-webpack-plugin "11.0.0"
+    css-loader "6.7.3"
+    detab "2.0.3"
+    express "4.18.1"
+    file-loader "6.2.0"
+    file-saver "1.3.8"
+    fs-extra "9.0.1"
+    glob "9.0.0"
+    handlebars "4.7.7"
+    hast-to-hyperscript "9.0.0"
+    hast-util-to-text "2.0.0"
+    html-formatter "0.1.9"
+    html-webpack-plugin "5.5.0"
+    js-yaml "3.14.0"
+    mdast-util-to-hast "9.1.1"
+    mdurl "1.0.1"
+    mini-css-extract-plugin "2.7.5"
+    monaco-editor "0.34.1"
+    monaco-editor-webpack-plugin "7.0.1"
+    null-loader "4.0.1"
+    parse-entities "2.0.0"
+    path-browserify "1.0.1"
+    postcss "8.4.32"
+    postcss-loader "7.1.0"
+    process "^0.11.10"
+    puppeteer "19.7.3"
+    puppeteer-cluster "0.23.0"
+    react-docgen "5.3.1"
+    react-monaco-editor "^0.51.0"
+    react-ssr-prepass "1.5.0"
+    remark-footnotes "1.0.0"
+    remark-frontmatter "2.0.0"
+    remark-mdx "2.0.0-next.8"
+    remark-mdxjs "2.0.0-next.8"
+    remark-parse "8.0.3"
+    remark-squeeze-paragraphs "4.0.0"
+    responsive-loader "3.1.2"
+    sharp "0.32.6"
+    style-to-object "0.3.0"
+    to-vfile "6.1.0"
+    typedoc "0.23.0"
+    typescript "4.3.5"
+    unified "9.1.0"
+    unist-util-remove "2.0.0"
+    unist-util-visit "2.0.3"
+    url-loader "4.1.0"
+    vfile-reporter "6.0.1"
+    webpack "5.76.3"
+    webpack-bundle-analyzer "4.8.0"
+    webpack-cli "5.0.1"
+    webpack-dev-server "4.13.1"
+    webpack-merge "5.8.0"
+
 "@patternfly/patternfly-a11y@4.3.1":
   version "4.3.1"
   resolved "https://registry.yarnpkg.com/@patternfly/patternfly-a11y/-/patternfly-a11y-4.3.1.tgz#09f050d3a899a60471519f552d64ecaaeb5fec2f"
@@ -4044,6 +4119,13 @@ chromedriver@^101.0.0:
     proxy-from-env "^1.1.0"
     tcp-port-used "^1.0.1"
 
+chromium-bidi@0.4.4:
+  version "0.4.4"
+  resolved "https://registry.yarnpkg.com/chromium-bidi/-/chromium-bidi-0.4.4.tgz#44f25d4fa5d2f3debc3fc3948d0657194cac4407"
+  integrity sha512-4BX5cSaponuvVT1+SbLYTOAgDoVtX/Khoc9UsbFJ/AsPVUeFAM3RiIDFI6XFhLYMi9WmVJqh1ZH+dRpNKkKwiQ==
+  dependencies:
+    mitt "3.0.0"
+
 chromium-bidi@0.4.7:
   version "0.4.7"
   resolved "https://registry.yarnpkg.com/chromium-bidi/-/chromium-bidi-0.4.7.tgz#4c022c2b0fb1d1c9b571fadf373042160e71d236"
@@ -4584,6 +4666,16 @@ core-util-is@1.0.2, core-util-is@~1.0.0:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/core-util-is/-/core-util-is-1.0.2.tgz#b5fd54220aa2bc5ab57aab7140c940754503c1a7"
   integrity sha1-tf1UIgqivFq1eqtxQMlAdUUDwac=
+
+cosmiconfig@8.1.0:
+  version "8.1.0"
+  resolved "https://registry.yarnpkg.com/cosmiconfig/-/cosmiconfig-8.1.0.tgz#947e174c796483ccf0a48476c24e4fefb7e1aea8"
+  integrity sha512-0tLZ9URlPGU7JsKq0DQOQ3FoRsYX8xDZ7xMiATQfaiGMz7EHowNkbU9u1coAOmnh9p/1ySpm0RB3JNWRXM5GCg==
+  dependencies:
+    import-fresh "^3.2.1"
+    js-yaml "^4.1.0"
+    parse-json "^5.0.0"
+    path-type "^4.0.0"
 
 cosmiconfig@8.1.3, cosmiconfig@^8.0.0:
   version "8.1.3"
@@ -5238,6 +5330,11 @@ devtools-protocol@0.0.1001819:
   version "0.0.1001819"
   resolved "https://registry.yarnpkg.com/devtools-protocol/-/devtools-protocol-0.0.1001819.tgz#0a98f44cefdb02cc684f3d5e6bd898a1690231d9"
   integrity sha512-G6OsIFnv/rDyxSqBa2lDLR6thp9oJioLsb2Gl+LbQlyoA9/OBAkrTU9jiCcQ8Pnh7z4d6slDiLaogR5hzgJLmQ==
+
+devtools-protocol@0.0.1094867:
+  version "0.0.1094867"
+  resolved "https://registry.yarnpkg.com/devtools-protocol/-/devtools-protocol-0.0.1094867.tgz#2ab93908e9376bd85d4e0604aa2651258f13e374"
+  integrity sha512-pmMDBKiRVjh0uKK6CT1WqZmM3hBVSgD+N2MrgyV1uNizAZMw4tx6i/RTc+/uCsKSCmg0xXx7arCP/OFcIwTsiQ==
 
 devtools-protocol@0.0.1107588:
   version "0.0.1107588"
@@ -9673,6 +9770,22 @@ puppeteer-core@19.11.1:
     unbzip2-stream "1.4.3"
     ws "8.13.0"
 
+puppeteer-core@19.7.3:
+  version "19.7.3"
+  resolved "https://registry.yarnpkg.com/puppeteer-core/-/puppeteer-core-19.7.3.tgz#fc5b7ac3d8e9363265bb96f816cb834991c51beb"
+  integrity sha512-9Q5HahsstfoTnllcpNkxNu2z9J7V0Si5Mr5q90K6XSXwW1P8iqe8q3HzWViVuBuEYTSMZ2LaXXzTEYeoCzLEWg==
+  dependencies:
+    chromium-bidi "0.4.4"
+    cross-fetch "3.1.5"
+    debug "4.3.4"
+    devtools-protocol "0.0.1094867"
+    extract-zip "2.0.1"
+    https-proxy-agent "5.0.1"
+    proxy-from-env "1.1.0"
+    tar-fs "2.1.1"
+    unbzip2-stream "1.4.3"
+    ws "8.12.1"
+
 puppeteer@19.11.1:
   version "19.11.1"
   resolved "https://registry.yarnpkg.com/puppeteer/-/puppeteer-19.11.1.tgz#bb75d518e87b0b4f6ef9bad1ea7e9d1cdcd18a5d"
@@ -9684,6 +9797,17 @@ puppeteer@19.11.1:
     progress "2.0.3"
     proxy-from-env "1.1.0"
     puppeteer-core "19.11.1"
+
+puppeteer@19.7.3:
+  version "19.7.3"
+  resolved "https://registry.yarnpkg.com/puppeteer/-/puppeteer-19.7.3.tgz#3cf3af65aaf425d13f18dfb67cbe2c3dae913c4e"
+  integrity sha512-QEiRHPUAJp8VOK27zE6h2ne4xKVYibKUZpvjCuLYaAe8/2SOLKIgstF8wK3YaLgTkeruMrYfqZo+Qlw4ZkJDAQ==
+  dependencies:
+    cosmiconfig "8.1.0"
+    https-proxy-agent "5.0.1"
+    progress "2.0.3"
+    proxy-from-env "1.1.0"
+    puppeteer-core "19.7.3"
 
 puppeteer@^14.2.0:
   version "14.3.0"
@@ -12466,6 +12590,11 @@ write-pkg@^4.0.0:
     sort-keys "^2.0.0"
     type-fest "^0.4.1"
     write-json-file "^3.2.0"
+
+ws@8.12.1:
+  version "8.12.1"
+  resolved "https://registry.yarnpkg.com/ws/-/ws-8.12.1.tgz#c51e583d79140b5e42e39be48c934131942d4a8f"
+  integrity sha512-1qo+M9Ba+xNhPB+YTWUlK6M17brTut5EXbcBaMRN5pH5dFrXz7lzz1ChFSUq3bOUl8yEvSenhHmYUNJxFzdJew==
 
 ws@8.13.0, ws@^8.13.0:
   version "8.13.0"
