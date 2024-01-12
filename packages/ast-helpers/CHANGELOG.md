@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.3.18 (2024-01-12)
+
+
+### Bug Fixes
+
+* bump puppeteer to fix core ([#3860](https://github.com/patternfly/patternfly-org/issues/3860)) ([1695209](https://github.com/patternfly/patternfly-org/commit/169520944b7c3dccf69709e6e2075b9153fce059))
+
+
+
+
+
 ## 1.3.17 (2024-01-05)
 
 **Note:** Version bump only for package @patternfly/ast-helpers
