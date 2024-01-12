@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.3.15-alpha.5 (2024-01-12)
+
+
+### Bug Fixes
+
+* bump puppeteer ([#3858](https://github.com/patternfly/patternfly-org/issues/3858)) ([2182a0f](https://github.com/patternfly/patternfly-org/commit/2182a0fe4d4d50c866703efe316deafffc44e5a2))
+
+
+
+
+
 ## 1.3.15-alpha.4 (2023-12-20)
 
 
