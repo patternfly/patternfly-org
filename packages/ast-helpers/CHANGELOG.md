@@ -168,6 +168,12 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 * try a v6 release ([7d3150c](https://github.com/patternfly/patternfly-org/commit/7d3150c1195b013001720d1e5161cbb724a0d73b))
 
+## 1.3.20 (2024-01-15)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
 ## 1.3.19 (2024-01-15)
 
 **Note:** Version bump only for package @patternfly/ast-helpers
