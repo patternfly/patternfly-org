@@ -35,9 +35,9 @@
   },
   "devDependencies": {
     "@patternfly/patternfly": "5.2.0-prerelease.7",
-    "@patternfly/react-code-editor": "5.2.0-prerelease.47",
-    "@patternfly/react-core": "5.2.0-prerelease.46",
-    "@patternfly/react-table": "5.2.0-prerelease.46",
+    "@patternfly/react-code-editor": "5.2.0-prerelease.48",
+    "@patternfly/react-core": "5.2.0-prerelease.47",
+    "@patternfly/react-table": "5.2.0-prerelease.47",
     "@octokit/rest": "^19.0.7",
     "glob": "^8.1.0",
     "lerna": "^6.4.1",
