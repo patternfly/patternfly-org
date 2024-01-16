@@ -24,7 +24,10 @@ __Example__
 
 You may open an issue in our [patternfly-org repo](https://github.com/patternfly/patternfly-org) to propose a new design guideline page or update an existing guideline, and work with the PatternFly team and stakeholders to author and publish your new content. Visit [Contributing to patternfly org for designers](https://github.com/patternfly/patternfly-org/wiki/Contributing-to-patternfly-org-for-designers) for detailed instructions about how to author and contribute design guideline content.
 
-### PatternFly design kit
+### PatternFly Sketch design kit
+
+**Note:** We have migrated the PatternFly design system to Figma and no longer maintain or update our Sketch design kits. The following information may be out of date as a result. For information on how to migrate to Figma, read our ["Design with PatternFly" guide.](../get-started/design.md)
+
 The [PatternFly design kit](https://www.patternfly.org/v4/get-started/design) is a [Sketch](https://www.sketch.com) library that makes it easy for designers to create high-fidelity mockups using PatternFly components.
 
 __Example__

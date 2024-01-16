@@ -7,6 +7,8 @@ import { Gallery, GalleryItem, Hint, HintTitle, HintBody, HintFooter,Button } fr
 import { TrainingCard } from './trainingCard/trainingCard';
 import './design.css'
 
+**Note:** We have migrated the PatternFly design system to Figma and no longer maintain or update our Sketch design kits. The following training resources may be out of date as a result. For information on how to migrate to Figma, read our ["Design with PatternFly" guide.](../get-started/design.md)
+
 ## Sketch design training
 
 <Hint className="ws-sketch-training-hint">
