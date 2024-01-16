@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.3.22 (2024-01-16)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
 ## 1.3.21 (2024-01-16)
 
 
