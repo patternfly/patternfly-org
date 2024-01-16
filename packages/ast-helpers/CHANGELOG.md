@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.3.21 (2024-01-16)
+
+
+### Bug Fixes
+
+* bump to latest release candidates ahead of 5.2 release ([#3862](https://github.com/patternfly/patternfly-org/issues/3862)) ([12eeb78](https://github.com/patternfly/patternfly-org/commit/12eeb782d32c4fa65f6aef64292f1e0d92f0d183))
+
+
+
+
+
 ## 1.3.20 (2024-01-15)
 
 **Note:** Version bump only for package @patternfly/ast-helpers
