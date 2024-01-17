@@ -3,6 +3,52 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 5.3.22 (2024-01-16)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 5.3.21 (2024-01-16)
+
+
+### Bug Fixes
+
+* bump to latest release candidates ahead of 5.2 release ([#3862](https://github.com/patternfly/patternfly-org/issues/3862)) ([12eeb78](https://github.com/patternfly/patternfly-org/commit/12eeb782d32c4fa65f6aef64292f1e0d92f0d183))
+
+
+
+
+
+## 5.3.20 (2024-01-15)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 5.3.19 (2024-01-15)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 5.3.18 (2024-01-12)
+
+
+### Bug Fixes
+
+* bump puppeteer to fix core ([#3860](https://github.com/patternfly/patternfly-org/issues/3860)) ([1695209](https://github.com/patternfly/patternfly-org/commit/169520944b7c3dccf69709e6e2075b9153fce059))
+
+
+
+
+
 ## 5.3.17 (2024-01-05)
 
 **Note:** Version bump only for package @patternfly/documentation-framework
