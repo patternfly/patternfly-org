@@ -26,7 +26,7 @@ You may open an issue in our [patternfly-org repo](https://github.com/patternfly
 
 ### PatternFly Sketch design kit
 
-**Note:** We have migrated the PatternFly design system to Figma and no longer maintain or update our Sketch design kits. The following information may be out of date as a result. For information on how to migrate to Figma, read our ["Design with PatternFly" guide.](./get-started/design.md)
+**Note:** We have migrated the PatternFly design system to Figma and no longer maintain or update our Sketch design kits. The following information may be out of date as a result. For information on how to migrate to Figma, read our ["Design with PatternFly" guide.](./design.md)
 
 The [PatternFly design kit](https://www.patternfly.org/v4/get-started/design) is a [Sketch](https://www.sketch.com) library that makes it easy for designers to create high-fidelity mockups using PatternFly components.
 
