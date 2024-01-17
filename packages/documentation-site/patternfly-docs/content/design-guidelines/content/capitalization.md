@@ -16,18 +16,20 @@ Above all else, your main goal should be consistency. You may need to use differ
 When you write for a product, make sure you adhere to the following capitalization patterns.
 
 - Capitalize proper nouns, acronyms, initialisms, product names, services, and features. 
-Use title case for top-level navigation items and sentence case for secondary or tertiary items. For example:
 
-<p style="text-align: center"> <img src="./img/navigation-capitalization.png"  alt="A side navigation menu, expanded to show capitalization styles." width="500"/></p>
+- Use title case for top-level navigation items and sentence case for secondary or tertiary items. Corresponding page titles should also follow this capitalization style. For example:
 
-- Keep capitalization for custom resources the same as the capitalization style used during creation. For example, if a custom resource name was created with all lowercase letters, don't change any of the letters to uppercase when referencing this resource. 
-- Capitalize product feature names when they’re used as proper nouns or when they refer to a capitalized UI term (like a navigation item). Write them in lowercase when they’re used to describe generic concepts. For example, consider the following scenarios found in Red Hat products:
+<p class="ws-image">> <img src="./img/navigation-capitalization.png"  alt="A side navigation menu, expanded to show capitalization styles." width="600"/></p>
+
+- Keep capitalization for custom resources the same as the capitalization style used during creation. 
+    - For example, if a custom resource name was created with all lowercase letters, don't change any of the letters to uppercase when referencing this resource. 
+- Capitalize product feature names when they’re used as proper nouns or when they refer to a capitalized UI term (like a navigation item). Write them in lowercase when they’re used to describe generic concepts. For example:
 
     <div class="ws-content-table">
 
     | **Feature name** | **UI text**  | **Reasoning**    |
     |------------------|--------------|------------------|
-    | Compliance   | “Check your system **compliance** using Red Hat Insights **Compliance**.”                                                  | The first “compliance” is lowercase since it refers a concept. The second “compliance” refers to a specific feature offered on cloud.redhat.com, so it is capitalized.                                     |
+    | Compliance   | “Check your system **compliance** using Red Hat Insights **Compliance**.”                                                  | The first “compliance” is lowercase since it refers to a concept. The second “compliance” refers to a specific feature offered on cloud.redhat.com, so it is capitalized.                                     |
     | Sources      | “Add a *source* by going to **Settings > *Sources*.**” "Check the *Sources* table for status."<br /><br />Button text: "Add *source*" | “Sources” is only capitalized when it directly refers to a subsection, feature, or location in the UI. "Source" is lowercase in the button text because button labels should always be in sentence case. |
     </div>
 
@@ -35,11 +37,11 @@ Use title case for top-level navigation items and sentence case for secondary or
 
 It is common for page titles to appear as an item in a breadcrumb trail. Match the capitalization of the original page title in the corresponding breadcrumb item even when the item does not use sentence case, or when a breadcrumb trail contains mixed capitalization standards.
 
-<p style="text-align: center"> <img src="./img/basic-breadcrumb.png"  alt="A breadcrumb trail with mixed capitalization styles due to page title formatting." width="600"/> </p>
+<p class="ws-image">> <img src="./img/basic-breadcrumb.png"  alt="A breadcrumb trail with mixed capitalization styles due to page title formatting." width="600"/> </p>
 
 Sometimes, user-named items will appear in a breadcrumb trail. If a custom resource name (for example, "customResource-name") is included in the breadcrumb trail, you should match the capitalization of the users' original entry. 
 
-<p style="text-align: center"> <img src="./img/breadcrumb-custom-item.png"  alt="A breadcrumb trail with mixed capitalization styles due to custom resource naming." width="600"/></p>
+<p class="ws-image">> <img src="./img/breadcrumb-custom-item.png"  alt="A breadcrumb trail with mixed capitalization styles due to custom resource naming." width="600"/></p>
 
 ### Tools outside your product portfolio
 
@@ -57,7 +59,7 @@ There are additional capitalization guidelines that you should follow if you con
 
 Take the PatternFly website as an example, where all navigation items, button text, and headings are written in sentence case and all proper nouns are in title case:
 
-<p style="text-align: center"><img src="./img/pf-home-caps.png"  alt="A PatternFly website screenshot showing sentence case copy." width="700"/>
+<p class="ws-image"><img src="./img/pf-home-caps.png"  alt="A PatternFly website screenshot showing sentence case copy." width="700"/>
 </p>
 
 - Write all components in lowercase unless they start a sentence. 
@@ -66,5 +68,6 @@ Take the PatternFly website as an example, where all navigation items, button te
 
 For example, the following image from our component documentation uses lowercase for the component name ("card") and capitalizes code appropriately ("isCompact" and "isLarge").
 
-<p style="text-align: center"><img src="./img/component-docs.png"  alt="Component documentation showing sentence case copy and capitalization styling for code." width="700"/>
+<p class="ws-image"><img src="./img/component-docs.png"  alt="Component documentation showing sentence case copy and capitalization styling for code." width="700"/>
 </p>
+
