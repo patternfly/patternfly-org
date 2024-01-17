@@ -15,7 +15,7 @@ PatternFly 5 has been set up within Figma. To download the Figma library, which 
 <img src="./img/pf-figma-header.png" alt="Header from PatternFly's Figma community page." />
 </p>
 
-Previously, the PatternFly design kit was available within Sketch. We have migrated our design libraries to Figma, in order to take advantage of its real-time collaboration features that help streamline the design process and support better communication. While you may still use Sketch if it best fits your needs, it is no longer our recommendation. [See more details within our Sketch instruction.](./get-started/design#sketch-design-kit)
+Previously, the PatternFly design kit was available within Sketch. We have migrated our design libraries to Figma, in order to take advantage of its real-time collaboration features that help streamline the design process and support better communication. While you may still use Sketch if it best fits your needs, it is no longer our recommendation. [See more details within our Sketch instruction.](/get-started/design#sketch-design-kit)
 
 ### Red Hat employees
 
