@@ -2,11 +2,6 @@
   color: #0066CC;
 }
 
-.ws-image {
-  margin: 50%;
-  width: "600px";
-}
-
 #supported-browsers.ws-title + table {
   margin-bottom: 16px;
 }
