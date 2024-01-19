@@ -9,7 +9,7 @@ import { Divider } from '@patternfly/react-core';
 
 ## PatternFly 5.2 
 
-We're excited to announce that PatternFly 5.1 is now live! Continue reading to learn about the major highlights from this release. 
+We're excited to announce that PatternFly 5.2 is now live! Continue reading to learn about the major highlights from this release. 
 
 ### Design token support preparation 
 
