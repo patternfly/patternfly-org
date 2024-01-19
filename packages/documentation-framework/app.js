@@ -37,7 +37,6 @@ const AppRoute = ({ child, title, path }) => {
   return (
     <React.Fragment>
       {child}
-      {process.env.hasFooter && <Footer />}
     </React.Fragment>
   );
 }

@@ -35,6 +35,7 @@ import SunIcon from '@patternfly/react-icons/dist/esm/icons/sun-icon';
 import { SideNav, TopNav, GdprBanner } from '../../components';
 import staticVersions from '../../versions.json';
 import v5Logo from '../PF-HorizontalLogo-Reverse.svg';
+import { Footer } from '@patternfly/documentation-framework/components';
 
 export const RtlContext = createContext(false);
 
@@ -312,6 +313,7 @@ export const SideNavLayout = ({ children, groupedRoutes, navOpen: navOpenProp })
         <div id="ws-page-banners">
           {hasGdprBanner && <GdprBanner />}
         </div>
+        {process.env.hasFooter && <Footer />}
       </RtlContext.Provider>
     </React.Fragment>
   );
