@@ -3,12 +3,46 @@ id: Skip to content
 section: components
 ---
 
-A **skip to content** is a component that allows screen reader and keyboard users to bypass navigation rather than tabbing through it.
+import { Checkbox, List, ListItem } from '@patternfly/react-core';
 
-**Keyboard users** should be able to find the skip to content using **Tab** at the start of a page with navigation. They should be able to select the skip to content using **Enter**. A skip to content does not trap tab focus. It is the first tabbable element on a page, but can be tabbed past and into the navigation of a page if the user prefers.
+## Accessibility
 
-**Screen reader users** should also be able to navigate to skip to content using **Tab** and select it to skip past the navigation of a page.
+To implement an accessible PatternFly **skip to content**:
 
-## To make skip to content accessible:
+- Render the skip to content as the first focusable element on the page.
 - Ensure that the skip to content href is properly linked to the main content of the page. You may have to add context to the href if there are any query parameters in the URL.
-- If you're using the page component with the skip to content, we add a tabindex="-1" for you. If you are using the skip to content on its own, give the target of the skip to content link a tabindex of -1. Some browsers require this attribute to make this component work consistently.
+
+## Testing
+
+At a minimum, a skip to content should meet the following criteria:
+
+<List isPlain>
+  <ListItem>
+    <Checkbox id="skip-to-content-a11y-checkbox-1" label="The skip to content is the first focusable element on the page." description="When content is repeated on several pages - such as actions in a header or navigation links in a sidebar - users navigating via keyboard or other assistive technologies would need to navigate through that content every time. Placing a skip to content as the first focusable element helps users avoid this repeated content." />
+  </ListItem>
+  <ListItem>
+    <Checkbox id="skip-to-content-a11y-checkbox-2" label={<span>The skip to content's <code className="ws-code">href</code> is linked to the main content of the page.</span>} />
+  </ListItem>
+  <ListItem>
+    <Checkbox id="skip-to-content-a11y-checkbox-3" label="Standard keyboard navigation can be used to navigate between the skip to content and other focusable elements." description={<span><kbd>Tab</kbd> navigates to the skip to content when at the beginning of a page or the next focusable element thereafter, and <kbd>Shift</kbd> + <kbd>Tab</kbd> navigates to the previous focusable element or the skip to content.</span>} />
+  </ListItem>
+  <ListItem>
+    <Checkbox id="skip-to-content-a11y-checkbox-4" label="Standard keyboard interaction can be used to activate the skip to content." description={<span><kbd>Enter</kbd> is typically the only key that activates links.</span>} />
+  </ListItem>
+</List>
+
+## React customization
+
+The following React props have been provided for more fine-tuned control over accessibility.
+
+| Prop | Applied to | Reason | 
+|---|---|---|
+| `href="[id of the main content container]"` | `SkipToContent` | Links the skip to content to the main content. Typically this will be a jump link, e.g. `href="#main"`. |
+
+## HTML/CSS customization
+
+The following HTML attributes and PatternFly classes can be used for more fine-tuned control over accessibility.
+
+| Attribute or class | Applied to | Reason | 
+|---|---|---|
+| `href="[id of the main content container]"` | `.pf-v5-c-skip-to-content > a.pf-v5-c-button` | Links the skip to content to the main content. Typically this will be a jump link, e.g. `href="#main"`. |
