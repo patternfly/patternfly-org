@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 6.0.0-alpha.9 (2024-01-23)
+
+
+### Bug Fixes
+
+* Update versions.json to include drag drop alpha ([9d924b7](https://github.com/patternfly/patternfly-org/commit/9d924b747cc3e431dffe438ed41940fbd610aa91))
+
+
+
+
+
 # 6.0.0-alpha.8 (2024-01-15)
 
 **Note:** Version bump only for package @patternfly/documentation-framework
