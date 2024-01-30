@@ -7,6 +7,7 @@ packages=(
   @patternfly/react-component-groups
   @patternfly/react-console
   @patternfly/react-core
+  @patternfly/react-drag-drop
   @patternfly/react-icons
   @patternfly/react-log-viewer
   @patternfly/react-styles
