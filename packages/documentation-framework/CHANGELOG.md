@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 5.3.24 (2024-01-30)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 5.3.23 (2024-01-19)
+
+
+### Bug Fixes
+
+* avoid applying beta tags to nav items for next components ([#3868](https://github.com/patternfly/patternfly-org/issues/3868)) ([169c96f](https://github.com/patternfly/patternfly-org/commit/169c96f55b1bfdcb9859dbab27b88f5a180f48ba))
+
+
+
+
+
 ## 5.3.22 (2024-01-16)
 
 **Note:** Version bump only for package @patternfly/documentation-framework

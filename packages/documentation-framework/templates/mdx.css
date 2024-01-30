@@ -68,6 +68,12 @@
   table-layout: fixed;
   width: 100%;
 }
+
+.ws-image {
+  text-align: center;
+  width: "600px";
+}
+
 .ws-table td > code,
 .ws-table th > code,
 .ws-table tr > code {
