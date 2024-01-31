@@ -152,7 +152,7 @@ export const MDXTemplate = ({
   componentsData
 }) => {
   const isDeprecated = sources.some(source => source.source === "react-deprecated" || source.source === "html-deprecated") && !sources.some(source => source.source === "react"  || source.source === "html");
-  const isBeta = sources.some(source => source.beta)
+  const isBeta = sources.some(source => source.beta && source.source !== 'react-next')
   const isDemo = sources.some(source => source.source === "react-demos" || source.source === "html-demos") && !sources.some(source => source.source === "react" || source.source === "html");
   // Build obj mapping source names to text displayed on tabs
   const tabNames = sources.reduce((acc, curSrc) => {
