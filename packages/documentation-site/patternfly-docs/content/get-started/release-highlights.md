@@ -9,19 +9,19 @@ import { Divider } from '@patternfly/react-core';
 
 ## PatternFly 5.2 
 
-We're excited to announce that PatternFly 5.2 is now live! Continue reading to learn about the major highlights from this release. 
+PatternFly 5.2 is now live! Here are the highlights from this release. 
 
-### Design token support preparation 
+### Major release preparation
 
-To prepare for PatternFly's upcoming addition of a new visual theme, called Penta, we added support for design tokens to many of our components. This support has been enabled in both the visual design of components, as well as their code implementation. 
+The next major version of PatternFly (v6) doesn't come out until later this year, but our team has started preparing some of its most significant updates.
 
-This work is a large-scale undertaking that lays the groundwork for our upcoming v6 alpha release -- slotted for Q1 2024.
+Our major development work from the past quarter lays the groundwork for our ***upcoming v6 alpha release***, which is slotted for Q1 2024.
 
-***[Here are the components that we've prepared OR here are the remaining components that we will complete ahead of our alpha release.]***
+#### Design token support 
 
-#### React seed
+To prepare for PatternFly's upcoming addition of a new visual theme, called "Penta", we added support for design tokens to many of our components. This support has been enabled in both the visual design of each component, as well as in their code implementation. 
 
-***[I've heard mention of this, but don't know much about it -- do we want to include it here?]***
+#### PatternFly React seed
 
 We readied our [React seed codebase](https://github.com/patternfly/patternfly-react-seed) for the v6 alpha release, so that any web applications built on PatternFly will have access to our Penta theme at the same time as our React and HTML consumers.
 
@@ -29,7 +29,7 @@ We readied our [React seed codebase](https://github.com/patternfly/patternfly-re
 
 We released a new extension, called [component groups](/extensions/component-groups/about-component-groups). This extension contains a range of React components that are more complex than standard PatternFly components. These component groups combine and adjust multiple base components to provide opinionated solutions for recurring use cases across products using PatternFly.
 
-Note that component groups is contained in its own [GitHub repository](https://github.com/patternfly/react-component-groups).
+Note that the component groups extension is contained in its own [GitHub repository](https://github.com/patternfly/react-component-groups).
 
 This extension was created in an effort to migrate components from the [Red Hat Insights shared components repository](https://github.com/RedHatInsights/frontend-components). The PatternFly component groups extension is now recommended to be used in place of the RedHat Insights implementation. To update your product to using the component groups extension, refer to [our migration guide.](https://github.com/patternfly/react-component-groups/blob/main/migration.md)
 
@@ -47,11 +47,33 @@ The latest version of component groups contains the following components, with f
 - Unavailable content
 - Warning modal
 
-To learn moreabout the story behind this project, read our article on our [Medium publication](https://medium.com/patternfly/introducing-component-groups-dbe054cac726).
+To learn more about the story behind this project, read our [Medium article](https://medium.com/patternfly/introducing-component-groups-dbe054cac726).
 
 We plan to continue to add additional components as they are requested, so please get involved if you have feedback or new ideas! 
 
-### Updated accessibility guideline documentation 
+### New React "next" components 
+
+As a reminder, our next components will be promoted with our next major release. Once a next component is promoted, it becomes the default recommended implementation for that component. 
+
+We introduced a next version of **[modal](/components/modal/react-next)**. With this change, the modal API will be composable, rather than React property based.
+
+We also introduced a next version of **[drag and drop](/components/drag-and-drop/react-next)** with [related demos](/components/drag-and-drop/react-next-demos).
+
+### Topology updates 
+
+#### New additions 
+
+We added a new `hulledOutline` property in `DefaultGroup`, which can be used to specify if a group's outline is `hulled` or `rect`.
+
+We added logic to hide tags when the detail level is low, since they were difficult to read. Hidden tags will reappear if you hover on an edge, as you zoom in, or if you view the screen in a larger format.
+
+#### Fixes
+
+We removed the use of `window` and `global` to resolve bundling issues.  
+
+We updated the method in which we get node details to better support lower scales. Now, we get the topology details level directly from the graph, instead of through the `useDetailsLevel` hook.
+
+### Accessibility guideline updates 
 
 We updated all of our top-level accessibility guidelines for better clarity and organization. As part of these updates, we also added a new page called "Design for accessibility", which documents accessibility considerations for visual designers.
 
@@ -59,10 +81,10 @@ The following pages now have updated content -- take a read!
 
 - [About accessibility](/accessibility/about-accessibility) (formerly named "Accessibility fundamentals")
 - [Accessibility scorecard](/accessibility/accessibility-scorecard)
-- [***Design for accessibility***](https://www.patternfly.org/accessibility/accessibility-fundamentals)
-- Develop for accessibility (formerly named "Product development guide")
+- [Design for accessibility](/accessibility/accessibility-design) (**new!**)
+- [Develop for accessibility](/accessibility/develop-for-accessibility) (formerly named "Product development guide")
 - [PatternFly's accessibility](/accessibility/patternflys-accessibility)
-- [Testing your accessibility](/accessibility/patternflys-accessibility)
+- [Testing your accessibility](/accessibility/testing-your-accessibility)
 
 <Divider></Divider>
 
