@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.3.15-alpha.9 (2024-02-01)
+
+
+### Bug Fixes
+
+* bump docs framework version ([815e094](https://github.com/patternfly/patternfly-org/commit/815e09456987062a9b5d8a17c960698fd0c1c81c))
+
+
+
+
+
 ## 1.3.15-alpha.8 (2024-01-23)
 
 
