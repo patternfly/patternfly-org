@@ -7,6 +7,79 @@ section: get-started
 import './get-started.css';
 import { Divider } from '@patternfly/react-core';
 
+## PatternFly 5.2 
+
+PatternFly 5.2 is now live! Here are the highlights from this release. 
+
+### Component groups extension 
+
+We released a new extension, called [component groups](/extensions/component-groups/about-component-groups). This extension contains a range of React components that are more complex than standard PatternFly components. These component groups combine and adjust multiple base components to provide opinionated solutions for recurring use cases across products using PatternFly.
+
+Note that the component groups extension is contained in its own [GitHub repository](https://github.com/patternfly/react-component-groups).
+
+This extension was created in an effort to migrate components from the [Red Hat Insights shared components repository](https://github.com/RedHatInsights/frontend-components). The PatternFly component groups extension is now recommended to be used in place of the RedHat Insights implementation. To update your product to using the component groups extension, refer to [our migration guide.](https://github.com/patternfly/react-component-groups/blob/main/migration.md)
+
+The latest version of component groups contains the following components, with [full documentation on PatternFly.org](/extensions/component-groups/about-component-groups):
+
+- Ansible
+- Battery
+- DetailsPage (beta)
+- Error boundary
+- Error state
+- Invalid object
+- Not authorized
+- Skeleton table
+- Tag count
+- Unavailable content
+- Warning modal
+
+To learn more about the story behind this project, read our [Medium article](https://medium.com/patternfly/introducing-component-groups-dbe054cac726).
+
+We plan to continue to add additional components as they are requested, so please get involved if you have feedback or new ideas! 
+
+### New React "next" components 
+
+As a reminder, our next components will be promoted with our next major release. Once a next component is promoted, it becomes the default recommended implementation for that component. 
+
+We introduced a next version of **[modal](/components/modal/react-next)**. With this change, the modal API will be composable, rather than React property based.
+
+We also introduced a next version of **[drag and drop](/components/drag-and-drop/react-next)** with [related demos](/components/drag-and-drop/react-next-demos).
+
+### Topology updates 
+
+#### New additions 
+
+We added a new `hulledOutline` property in `DefaultGroup`, which can be used to specify if a group's outline is `hulled` or `rect`.
+
+We added logic to hide tags when the detail level is low, since they were difficult to read. Hidden tags will reappear if you hover on an edge, as you zoom in, or if you view the screen in a larger format.
+
+#### Fixes
+
+We removed the use of `window` and `global` to resolve bundling issues.  
+
+We updated the method in which we get node details to better support lower scales. Now, we get the topology details level directly from the graph, instead of through the `useDetailsLevel` hook.
+
+### Accessibility guideline updates 
+
+We updated all of our top-level accessibility guidelines for better clarity and organization. As part of these updates, we also added a new page called [Design for accessibility](/accessibility/design-for-accessibility), which documents accessibility considerations for visual designers.
+
+The following pages now have updated content -- take a read!
+
+- [About accessibility](/accessibility/about-accessibility) (formerly named "Accessibility fundamentals")
+- [Accessibility scorecard](/accessibility/accessibility-scorecard)
+- [Design for accessibility](/accessibility/accessibility-design) (**new!**)
+- [Develop for accessibility](/accessibility/develop-for-accessibility) (formerly named "Product development guide")
+- [PatternFly's accessibility](/accessibility/patternflys-accessibility)
+- [Testing your accessibility](/accessibility/testing-your-accessibility)
+
+### Coming soon
+
+The next major version of PatternFly (v6) doesn't come out until later this year, but our team has started preparing for the release, which will include new theming capabilities and design token support.
+
+Keep an eye out for more information about the ***v6 alpha release*** , which is slotted for Q1 2024.
+
+<Divider></Divider>
+
 ## PatternFly 5.1 
 
 As part of our [quarterly release cadence](/get-started/about#patternfly-release-cadence), we're excited to announce that PatternFly 5.1 is now live.
