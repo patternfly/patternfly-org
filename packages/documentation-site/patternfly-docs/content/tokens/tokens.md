@@ -9,7 +9,7 @@ section: tokens
 
 ## Why use tokens? 
 
-Tokens help maintain consistency across product design processes by ensuring that the same colors and styles are always used for the same use cases. By removing the decision making that would otherwise go into choosing the right color, heading level, spacing, and so on, designs can be create more consistently and efficienctly.
+Tokens help maintain consistency across product design processes by ensuring that the same colors and styles are always used for the same use cases. By removing the decision making that would otherwise go into choosing the right color, heading level, spacing, and so on, designs can be created more consistently and efficiently.
 
 [Add visual here with an example of a couple of tokens being used for an element]
 
@@ -17,17 +17,15 @@ Tokens also enable easier design system maintenance. Whenever a color is changed
 
 ## PatternFly design tokens
 
-PatternFly's tokens aren't available within Sketch, so you'll need to use Figma when designing with tokens. If necessary, you can follow our [Figma migration guide]() to get set up.
+PatternFly's tokens aren't available within Sketch, so you'll need to use Figma when designing with tokens. For more information, refer to our [instructions for accessing the PatternFly Figma library](/get-started/design#figma-library). 
 
-[Find a list of all PatternFly tokens here.](tokens/patternfly-tokens.md)
+You can also [view a list of all PatternFly tokens.](tokens/patternfly-tokens.md)
 
 ### Token naming
 
 Tokens are read from left to right, with a forward slash ( / ) separating different segments of the token name:
 
 `scope / component / property / concept / variant / state` 
-
-[replace this ^ with more of a visual]
 
 Each segment represents different style information:
 
@@ -49,9 +47,9 @@ bal | background | color | highlight | 100 |
 | global | spacer | width |  |  |  |
 
 
-**Note:** all PatternFly tokens also begin with `pft` and a version number. For example:
+All PatternFly tokens also begin with `pft` and a version number. For example:
 
-`pft-v5` / `global` / `spacer` / `width` [replace with image]
+`pft-v5` / `global` / `spacer` / `width`
 
 ### Token system layers
 
@@ -69,7 +67,7 @@ If you've used PatternFly previously, these values resemble some of the CSS colo
 
 #### Base tokens
 
-Base tokens expands on the palette layer to apply PatternFly colors to concepts. They also introduce additional concepts, like spacing and borders.
+Base tokens expand on the palette layer to apply PatternFly colors to concepts. They also introduce additional concepts, like spacing and borders.
 
 These values are grouped conceptually and named numerically. There are no duplicate values within a concept group.
 
