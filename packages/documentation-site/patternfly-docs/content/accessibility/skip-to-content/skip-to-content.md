@@ -24,7 +24,7 @@ At a minimum, a skip to content should meet the following criteria:
     <Checkbox id="skip-to-content-a11y-checkbox-2" label={<span>The skip to content's <code className="ws-code">href</code> is linked to the main content of the page.</span>} />
   </ListItem>
   <ListItem>
-    <Checkbox id="skip-to-content-a11y-checkbox-3" label="Standard keyboard navigation can be used to navigate between the skip to content and other focusable elements." description={<span><kbd>Tab</kbd> navigates to the skip to content when at the beginning of a page or the next focusable element thereafter, and <kbd>Shift</kbd> + <kbd>Tab</kbd> navigates to the previous focusable element or the skip to content.</span>} />
+    <Checkbox id="skip-to-content-a11y-checkbox-3" label="Standard keyboard navigation can be used to navigate between the skip to content and other focusable elements." description={<span>Depending on where focus is on the page, <kbd>Tab</kbd> navigates to the skip to content or the next focusable element, and <kbd>Shift</kbd> + <kbd>Tab</kbd> navigates to the previous focusable element or the skip to content. Since the skip to content should be the first focusable element on a page, the previous focusable element may typically be an item in the browser toolbar.</span>} />
   </ListItem>
   <ListItem>
     <Checkbox id="skip-to-content-a11y-checkbox-4" label="Standard keyboard interaction can be used to activate the skip to content." description={<span><kbd>Enter</kbd> is typically the only key that activates links.</span>} />
