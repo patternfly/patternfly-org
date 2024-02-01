@@ -19,7 +19,7 @@ Note that the component groups extension is contained in its own [GitHub reposit
 
 This extension was created in an effort to migrate components from the [Red Hat Insights shared components repository](https://github.com/RedHatInsights/frontend-components). The PatternFly component groups extension is now recommended to be used in place of the RedHat Insights implementation. To update your product to using the component groups extension, refer to [our migration guide.](https://github.com/patternfly/react-component-groups/blob/main/migration.md)
 
-The latest version of component groups contains the following components, with full documentation on PatternFly.org:
+The latest version of component groups contains the following components, with [full documentation on PatternFly.org](/extensions/component-groups/about-component-groups):
 
 - Ansible
 - Battery
