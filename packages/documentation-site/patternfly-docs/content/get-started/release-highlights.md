@@ -11,20 +11,6 @@ import { Divider } from '@patternfly/react-core';
 
 PatternFly 5.2 is now live! Here are the highlights from this release. 
 
-### Major release preparation
-
-The next major version of PatternFly (v6) doesn't come out until later this year, but our team has started preparing some of its most significant updates.
-
-Our major development work from the past quarter lays the groundwork for our ***upcoming v6 alpha release***, which is slotted for Q1 2024.
-
-#### Design token support 
-
-To prepare for PatternFly's upcoming addition of a new visual theme, called "Penta", we added support for design tokens to many of our components. This support has been enabled in both the visual design of each component, as well as in their code implementation. 
-
-#### PatternFly React seed
-
-We readied our [React seed codebase](https://github.com/patternfly/patternfly-react-seed) for the v6 alpha release, so that any web applications built on PatternFly will have access to our Penta theme at the same time as our React and HTML consumers.
-
 ### Component groups extension 
 
 We released a new extension, called [component groups](/extensions/component-groups/about-component-groups). This extension contains a range of React components that are more complex than standard PatternFly components. These component groups combine and adjust multiple base components to provide opinionated solutions for recurring use cases across products using PatternFly.
@@ -85,6 +71,12 @@ The following pages now have updated content -- take a read!
 - [Develop for accessibility](/accessibility/develop-for-accessibility) (formerly named "Product development guide")
 - [PatternFly's accessibility](/accessibility/patternflys-accessibility)
 - [Testing your accessibility](/accessibility/testing-your-accessibility)
+
+### Coming soon
+
+The next major version of PatternFly (v6) doesn't come out until later this year, but our team has started preparing for the release, which will include new theming capabilities and design token support.
+
+Keep an eye out for more information about the ***v6 alpha release*** , which is slotted for Q1 2024.
 
 <Divider></Divider>
 
