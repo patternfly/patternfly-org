@@ -61,7 +61,7 @@ We updated the method in which we get node details to better support lower scale
 
 ### Accessibility guideline updates 
 
-We updated all of our top-level accessibility guidelines for better clarity and organization. As part of these updates, we also added a new page called "Design for accessibility", which documents accessibility considerations for visual designers.
+We updated all of our top-level accessibility guidelines for better clarity and organization. As part of these updates, we also added a new page called [Design for accessibility](/accessibility/design-for-accessibility), which documents accessibility considerations for visual designers.
 
 The following pages now have updated content -- take a read!
 
