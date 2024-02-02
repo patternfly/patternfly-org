@@ -1,5 +1,5 @@
 ---
-id: Developing with tokens
+id: Develop with tokens
 section: tokens
 ---
 

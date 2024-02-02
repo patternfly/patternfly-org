@@ -3,6 +3,6 @@ id: PatternFly tokens
 section: tokens
 ---
 
-## All tokens
+## All design tokens
 
-(This is where we will add a generate list of all tokens.)
+[ADD GENERATED LIST]
