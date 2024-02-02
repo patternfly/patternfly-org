@@ -2420,10 +2420,10 @@
   resolved "https://registry.yarnpkg.com/@patternfly/react-icons/-/react-icons-5.2.0-prerelease.10.tgz#4850d06d1d6850b5d52d1366e7d08eb3b52300c2"
   integrity sha512-r86MhgOkyP5KNgNTwClyNqAx4+r702DtVbbFJaKEyJs07ubpF+uMnjZQErGfKtsdxY2dBFPK3oXqCnv4bRLr1Q==
 
-"@patternfly/react-log-viewer@5.1.0-prerelease.1":
-  version "5.1.0-prerelease.1"
-  resolved "https://registry.yarnpkg.com/@patternfly/react-log-viewer/-/react-log-viewer-5.1.0-prerelease.1.tgz#4cdbb3268f0a073ed76fe82ab4bd40e0d06440de"
-  integrity sha512-/dqbnVJkr8Cwzty1AK4fC4DZBRkd4rb3E5475yPF/QrO9hwAjDVIiHNZuUsEMy11sv31C73/ZnSDUcGI3iDaOA==
+"@patternfly/react-log-viewer@5.1.0":
+  version "5.1.0"
+  resolved "https://registry.yarnpkg.com/@patternfly/react-log-viewer/-/react-log-viewer-5.1.0.tgz#5d6bf3da15cff285fe4ffa3589aeddebacd6e448"
+  integrity sha512-76Sm8lKwXbXmjIwYwsUjk8H4jy7aDslDw7DK8MDzIaKdE8BLDA4EJ636Qv1zo5JFPbBKRpVeDrrMqqqfvPt5rg==
   dependencies:
     "@patternfly/react-core" "^5.0.0"
     "@patternfly/react-icons" "^5.0.0"
@@ -2484,10 +2484,10 @@
   resolved "https://registry.yarnpkg.com/@patternfly/react-tokens/-/react-tokens-5.2.0-prerelease.7.tgz#e443b97c3ec96ace00e0aa37e1b06786824a9668"
   integrity sha512-pMTth24Z1Wltcy64QAQjSL3pJMkze6R1XqwdaJD9frM+F//zvcdAHCBFBcFGLPNQnqgoYRvocptP0utmkB90KQ==
 
-"@patternfly/react-topology@5.2.0-prerelease.4":
-  version "5.2.0-prerelease.4"
-  resolved "https://registry.yarnpkg.com/@patternfly/react-topology/-/react-topology-5.2.0-prerelease.4.tgz#bfb38addfd45635e0913c20b0a5cd0afb97d32d6"
-  integrity sha512-inYgjvoorrFwwI6XayCJNZL0gXZVwWzUZzOXZaVpzNxClse6MErj9tXmIKxclejE/62m4CScaY+/TbV01HFucQ==
+"@patternfly/react-topology@5.2.0":
+  version "5.2.0"
+  resolved "https://registry.yarnpkg.com/@patternfly/react-topology/-/react-topology-5.2.0.tgz#09df2807af75af172ef5291513f1f27235c7d41e"
+  integrity sha512-+kZJSbD6Pb1bTriNzLRiddfSbEBxyiNGSreiV6zOyPwfRizqbFPsOYyRuEocduzLqj0/wT3PM5Ml6JSp8Rw2TQ==
   dependencies:
     "@patternfly/react-core" "^5.1.1"
     "@patternfly/react-icons" "^5.1.1"

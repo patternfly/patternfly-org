@@ -11,6 +11,33 @@ import { Divider } from '@patternfly/react-core';
 
 PatternFly 5.2 is now live! Here are the highlights from this release. 
 
+### Promoted package versions
+
+- patternfly/patternfly ([changelog](https://github.com/patternfly/patternfly/releases/tag/v5.2.0))
+  - [@patternfly/patternfly@5.2.0](https://www.npmjs.com/package/@patternfly/patternfly/v/5.2.0)
+
+
+- patternfly/patternfly-react ([changelog](https://github.com/patternfly/patternfly-react/releases/tag/v5.2.0))
+  - [@patternfly/react-charts@7.2.0](https://www.npmjs.com/package/@patternfly/react-charts/v/7.2.0)
+  - [@patternfly/react-code-editor@5.2.0](https://www.npmjs.com/package/@patternfly/react-code-editor/v/5.2.0)
+  - [@patternfly/react-core@5.2.0](https://www.npmjs.com/package/@patternfly/react-core/v/5.2.0)
+  - [@patternfly/react-icons@5.2.0](https://www.npmjs.com/package/@patternfly/react-icons/v/5.2.0)
+  - [@patternfly/react-styles@5.2.0](https://www.npmjs.com/package/@patternfly/react-styles/v/5.2.0)
+  - [@patternfly/react-table@5.2.0](https://www.npmjs.com/package/@patternfly/react-table/v/5.2.0)
+  - [@patternfly/react-tokens@5.2.0](https://www.npmjs.com/package/@patternfly/react-tokens/v/5.2.0)
+
+
+- PatternFly extensions
+  - [@patternfly/react-topology@5.2.0](https://www.npmjs.com/package/@patternfly/react-topology/v/5.2.0) ([changelog](https://github.com/patternfly/react-topology/releases/tag/v5.2.0))
+  - [@patternfly/react-log-viewer@5.1.0](https://www.npmjs.com/package/@patternfly/react-component-groups/v/5.0.0) ([changelog](https://github.com/patternfly/react-log-viewer/releases/tag/v5.1.0))
+  - [@patternfly/react-component-groups@5.0.0](https://www.npmjs.com/package/@patternfly/react-component-groups/v/5.0.0) ([changelog](https://github.com/patternfly/react-component-groups/releases/tag/v5.0.0))
+
+### Note for ConsoleDot applications
+
+PatternFly's 5.2 release is incompatible with [@redhat-cloud-services/tsc-transform-imports@1.0.6](https://www.npmjs.com/package/@redhat-cloud-services/tsc-transform-imports/v/1.0.6) or earlier.
+
+If your application has a dependency on `@redhat-cloud-services/tsc-transform-imports`, be sure to update it to [@redhat-cloud-services/tsc-transform-imports@1.0.7](https://www.npmjs.com/package/@redhat-cloud-services/tsc-transform-imports/v/1.0.7) or greater.
+
 ### Component groups extension 
 
 We released a new extension, called [component groups](/extensions/component-groups/about-component-groups). This extension contains a range of React components that are more complex than standard PatternFly components. These component groups combine and adjust multiple base components to provide opinionated solutions for recurring use cases across products using PatternFly.
@@ -104,7 +131,6 @@ To help provide a high-level view of what's new, we've pulled together the major
 
 - PatternFly extensions
   - [@patternfly/react-topology@5.1.0](https://www.npmjs.com/package/@patternfly/react-topology/v/5.1.0) ([changelog](https://github.com/patternfly/react-topology/releases/tag/v5.1.0))
-  - [@patternfly/react-component-groups@5.0.0](https://www.npmjs.com/package/@patternfly/react-component-groups/v/5.0.0) ([changelog](https://github.com/patternfly/react-component-groups/releases/tag/v5.0.0))
   
 ### Right-to-left language support 
 
