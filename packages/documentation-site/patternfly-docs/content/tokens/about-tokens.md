@@ -49,7 +49,9 @@ These values are named numerically and grouped conceptually, with no duplicate v
 
 PatternFly token names are composed of a 'pft' prefix, a version number, and a series of token segments.
 
-[VISUAL]
+<div class="ws-image">
+<img src="./img/token-name.png"  alt="PatternFly token naming structure."  width="600px"/>
+</div>
 
 Each token segment represents a different type of style information. If a segment isn't relevant for a particular token then it will be skipped in the token's name. 
 
@@ -61,13 +63,3 @@ Each token segment represents a different type of style information. If a segmen
 | Concept | The token's higher level concepts, such as *status*, *primary*, or *action*, which have different variant options.
 | Variant | The variant of a component or concept, such as *link*, *plain*, *warning*, or *success*.
 | State | The state that the component is in, such as *default*, *hover*, or *active*.
-
-[VISUALS]
-
-## Examples
-
-[POTENTIALLY]
-
-### Tokens in PatternFly components
-
-### Using tokens in custom work

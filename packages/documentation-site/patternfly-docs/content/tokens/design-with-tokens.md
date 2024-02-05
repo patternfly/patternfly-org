@@ -5,20 +5,22 @@ section: tokens
 
 ## Penta design kit
 
-PatternFly tokens are part of the [Penta design kit.]() In order to take use our token system, you will need to be designing with Penta, as tokens are not part of the PatternFly 5 Figma library.  
+PatternFly tokens are only part of the PatternFly 6 [Penta design kit.]() In order to make use our token system, you will need to [upgrade to PatternFly 6]().
 
 ## What is in the Penta design kit
 
-styles/tokens
+### Tokens 
 
-Penta component library 
+Our tokens are set up at a high level as Figma variables and styles. They are intentionally scoped so that they can only modify relevant and related visual attributes. 
 
-In Penta, PatternFly components are built with our token system
+<img src="./img/token-example-brand.png"  alt="Table of brand color tokens."  width="800px"/>
 
-demos/extensions
+### Penta component library 
 
-## How to use 
+The Penta component library is built off of our tokens, so you will have access to all PatternFly tokens when you install the component library .   
 
+<img src="./img/component-tokens.png"  alt="PatternFly alert components built with Figma tokens."  width="800px"/>
 
-### Token system 
-Our tokens are applied at a high level, scoped appropriately, and are used to build our Figma component library. When you install our component library, you will have access to all PatternFly tokens.   
+## Using the Penta design kit 
+
+To install the Penta design kit, [refer to our onboarding guide.](/get-started/design#figma-library)

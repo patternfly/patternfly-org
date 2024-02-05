@@ -9,15 +9,15 @@ If you're completely new to PatternFly, you should first read our high-level [De
 
 ## For designers 
 
-**Our tokens are only available within Figma.** 
+Our tokens are only available within Figma.
 
 To take advantage of the PatternFly token system, you must design within Figma and should begin to create all new designs there. If you've previously used Sketch to create UI designs with PatternFly, and you want to migrate an existing design into Figma, you will need to manually recreate each UI mockup using the PatternFly 6 component library.
 
-For there, you can begin to [design with tokens.](/tokens/designing-with-tokens)
+For there, you can begin to [design with tokens.](/tokens/design-with-tokens)
 
 ## For developers
 
-Previously, PatternFly UI solutions were implemented through our [global CSS variable system.](/developer-resources/css-variables) Tokens replace these CSS variables, so you will need to migrate style variables throughout your codebase to align with our tokens instead. 
+Previously, PatternFly UI solutions were implemented through our [global CSS variable system.](/developer-resources/global-css-variables) Tokens replace these CSS variables, so you will need to migrate style variables throughout your codebase to align with our tokens instead. 
 
 To migrate to tokens, follow these steps: 
 
