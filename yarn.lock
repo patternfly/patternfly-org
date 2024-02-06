@@ -2484,10 +2484,10 @@
   resolved "https://registry.yarnpkg.com/@patternfly/react-tokens/-/react-tokens-5.2.0-prerelease.7.tgz#e443b97c3ec96ace00e0aa37e1b06786824a9668"
   integrity sha512-pMTth24Z1Wltcy64QAQjSL3pJMkze6R1XqwdaJD9frM+F//zvcdAHCBFBcFGLPNQnqgoYRvocptP0utmkB90KQ==
 
-"@patternfly/react-topology@5.2.0":
-  version "5.2.0"
-  resolved "https://registry.yarnpkg.com/@patternfly/react-topology/-/react-topology-5.2.0.tgz#09df2807af75af172ef5291513f1f27235c7d41e"
-  integrity sha512-+kZJSbD6Pb1bTriNzLRiddfSbEBxyiNGSreiV6zOyPwfRizqbFPsOYyRuEocduzLqj0/wT3PM5Ml6JSp8Rw2TQ==
+"@patternfly/react-topology@5.2.1":
+  version "5.2.1"
+  resolved "https://registry.yarnpkg.com/@patternfly/react-topology/-/react-topology-5.2.1.tgz#075f5d22386539211d95f5a73ffe80d409981adc"
+  integrity sha512-wDg5hgNfkh8ADa1iWjqaAaigCJY2qjTg4dGe4XtT1ijhrHYUgHZm1w7wh2CADoTpogiHnDeio/0YkSROUBdqPw==
   dependencies:
     "@patternfly/react-core" "^5.1.1"
     "@patternfly/react-icons" "^5.1.1"
