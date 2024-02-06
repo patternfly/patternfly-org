@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.4.1 (2024-02-06)
+
+
+### Bug Fixes
+
+* Bump topology to 5.2.1 ([#3881](https://github.com/patternfly/patternfly-org/issues/3881)) ([af13c97](https://github.com/patternfly/patternfly-org/commit/af13c971384aaaa5bd87ce3e98dccee4b1214889))
+
+
+
+
+
 # 1.4.0 (2024-02-03)
 
 
