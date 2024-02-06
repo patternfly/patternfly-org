@@ -18,7 +18,7 @@
         "@patternfly/react-component-groups": "5.0.0",
         "@patternfly/react-console": "5.0.0",
         "@patternfly/react-log-viewer": "5.2.0",
-        "@patternfly/react-topology": "5.3.0",
+        "@patternfly/react-topology": "5.2.1",
         "@patternfly/react-user-feedback": "5.0.0",
         "@patternfly/react-virtualized-extension": "5.0.0",
         "@patternfly/quickstarts": "5.0.0"

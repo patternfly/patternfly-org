@@ -28,7 +28,7 @@ PatternFly 5.2 is now live! Here are the highlights from this release.
 
 
 - PatternFly extensions
-  - [@patternfly/react-topology@5.2.0](https://www.npmjs.com/package/@patternfly/react-topology/v/5.2.0) ([changelog](https://github.com/patternfly/react-topology/releases/tag/v5.2.0))
+  - [@patternfly/react-topology@5.2.1](https://www.npmjs.com/package/@patternfly/react-topology/v/5.2.1) ([changelog](https://github.com/patternfly/react-topology/releases/tag/v5.2.1))
   - [@patternfly/react-log-viewer@5.1.0](https://www.npmjs.com/package/@patternfly/react-component-groups/v/5.0.0) ([changelog](https://github.com/patternfly/react-log-viewer/releases/tag/v5.1.0))
   - [@patternfly/react-component-groups@5.0.0](https://www.npmjs.com/package/@patternfly/react-component-groups/v/5.0.0) ([changelog](https://github.com/patternfly/react-component-groups/releases/tag/v5.0.0))
 
