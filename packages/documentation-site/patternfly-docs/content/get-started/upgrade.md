@@ -5,22 +5,23 @@ section: get-started
 source: Major-release-upgrade
 ---
 
-# PatternFly 5 
+# PatternFly 6 
+
+If you have not previously upgraded to PatternFly 5, you may need to [follow these steps to upgrade your product](https://www.patternfly.org/get-started/upgrade) before attempting to support PatternFly 6. 
 
 Our latest major release introduces new support and functionality to PatternFly, including: 
 
-- React 18 support, 
-- Official dark theme support, 
-- An enhanced system of CSS classes and variables, 
+- A new visual theme, called Penta,
+- A design token system, 
 - And more!
 
 To learn about the most significant changes in this release, read our [release highlights](/get-started/release-highlights). A detailed list of all changes can be found in our [major release notes](/get-started/upgrade/release-notes). 
 
-This guide outlines the major steps you should take to upgrade your product's codebase from PatternFly 4 to PatternFly 5. 
+This guide outlines the major steps you should take to upgrade your product's codebase from PatternFly 5 to PatternFly 6. 
 
 ## Get help 
 
-If you need support as you upgrade to PatternFly 5, the PatternFly team is here to help. Reach out to us on [Slack](https://join.slack.com/t/patternfly/shared_invite/zt-1npmqswgk-bF2R1E2rglV8jz5DNTezMQ) or ask a question on our [GitHub discussion board](https://github.com/orgs/patternfly/discussions). We'll always do our best to answer your questions and connect you with the right people quickly. 
+If you need support as you upgrade to PatternFly 6, the PatternFly team is here to help. Reach out to us on [Slack](https://join.slack.com/t/patternfly/shared_invite/zt-1npmqswgk-bF2R1E2rglV8jz5DNTezMQ) or ask a question on our [GitHub discussion board](https://github.com/orgs/patternfly/discussions). We'll always do our best to answer your questions and connect you with the right people quickly. 
 
 ## Upgrade your product's codebase
 
@@ -81,39 +82,3 @@ For PatternFly 5, class names, variable names, and SCSS objects have all had `v5
 We offer [a `class-name-updater` Codemod](https://github.com/patternfly/pf-codemods/tree/main/packages/class-name-updater) to help support your updates. This utility automatically identifies class names that need to be updated as a result of the introduction of versioned class names in Patternfly v5, which helps highlight places in your codebase that may require changes to class names. Add the `--fix` flag to allow run the code mod and fix issues where possible. 
 
 **Note:** It is important to consider that this utility performs a simple ‘find and replace’, so it's possible that it will inadvertently identify code that is formatted similarly to a PatternFly class name, but is not one.
-
-## Upgrade deprecated components
-
-You will have until our next major release to update the code for your components to match our newest recommendations. If you have not adopted our recommended implementation at that time, your components will be outdated and may not function as needed.
-
-PatternFly 5 brings a new implementation to the following components, which can be upgraded according to the linked documentation:
-
-- [Table](/components/table) 
-- [Select](/components/menus/select)
-- [Dropdown ](/components/menus/dropdown) 
-- [Wizard](/components/wizard)
-
-## Other notes
-
-As you upgrade to PatternFly 5, keep in mind the following considerations:
-
-
-When updating the react-topology package, note that the topology styles have been removed from their previous home in @patternfly/react-styles and now need to be imported directly from [react-topology.](https://github.com/patternfly/react-topology)
-
-<div class="ws-content-table">
-
-| **Before**                                                                                    | **After**                                                                          |
-|-----------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------|
-| `import styles from '@patternfly/react-styles/css/components/Topology/topology-components';`  | `import styles from '@patternfly/react-topology/dist/js/css/topology-components';` |
-
-</div>
-
-In general, though PatternFly ships a `src` directory in it's npm package, it is not advised to import components from a `src` directory. Instead, when importing via absolute paths, import components from `dist` directories.
-
-<div class="ws-content-table">
-
-| **Before**                                                      | **After**                                                           |
-|-----------------------------------------------------------------|---------------------------------------------------------------------|
-| `import { Node } from '@patternfly/react-topology/src/types';`  | `import { Node } from '@patternfly/react-topology/dist/esm/types';` |
-
-</div>
