@@ -2,104 +2,111 @@
 id: Testing your accessibility
 section: accessibility
 ---
+import { Checkbox } from '@patternfly/react-core';
 
-## General testing
+# Testing your product's accessibility 
 
-Many accessibility issues can be found by doing a few simple checks: 
+This guide contains instructions and recommendations that you can use to robustly test your product's accessibility, in order to identify accessibility issues and opportunities for improvement.  
 
-1. **Validate your HTML.** Structural, semantic HTML is the key starting point toward good accessibility practices. When a screen reader (or any sort of assistive device) scans a web page, it gets information about the Document Object Model (DOM), or the HTML structure of the page. No styles or JavaScript will be read by a screen reader. 
+**Keep in mind that this guide will not cover every scenario.**
 
-   - Screen reader software like Voice Over, NVDA, or JAWS doesn’t just turn text into speech. It can use information in the HTML to list all of the headings on a page, give extra navigation controls to data tables, or announce how many items are in a list, among other things. This makes semantic HTML essential. 
+## Standard testing procedures 
 
-   - There are many tools you can use to validate your HTML, such as [W3C’s markup validation service](https://validator.w3.org/). 
+Many accessibility issues can be found by doing a few standard checks. 
 
+### Validate your HTML
 
-2. **Use an accessibility audit tool to check for violations.** If you are using PatternFly in your project, we recommend using [aXe: The Accessibility Engine](//www.deque.com/axe/) to check for accessibility violations locally. To make it even easier for you, we've created the [patternfly-a11y script](https://github.com/patternfly/patternfly-a11y) which reports any axe accessibility violations from a set of pages. A configuration file can be set to customize to specific needs like authentication, waiting for any specific items to finish loading (like a loading spinner), etc. When used as a report, it will give an output [similar to this example](http://a11y-os.surge.sh/). The UI should be built first in the CI workflow and then a job created to run the a11y script against that build. The a11y script assumes that there is a webserver running somewhere that is serving up the pages, i.e. in localhost:8000, that it can reach. If you want to test a step before deployment, you could follow the path of integrating axe with cypress. If you are contributing to PatternFly, refer to our [README.md](//github.com/patternfly/patternfly/blob/main/README.md#testing-for-accessibility) on how to run this tool.
+Good accessibility practices start with structural, semantic HTML. When a screen reader (or any sort of assistive technology) scans a web page, it gets information about the Document Object Model (DOM), or the HTML structure of the page. No styles or JavaScript will be read by a screen reader. 
 
+Screen readers (like Voice Over (VO), NVDA, or JAWS) don't just turn text into speech. They also use information in the HTML to list all of the headings on a page, give extra navigation controls to data tables, announce how many items are in a list, and more. This makes semantic HTML essential. 
 
-3. **Test keyboard accessibility, and check that these requirements are met:**
-    - All functionality is keyboard accessible.
-    - Elements in the HTML and in the layout follow a logical order.
-    - Elements with focus are clearly visible.
+You can use an HTML validation tool to test your product, such as [W3C’s markup validation service](https://validator.w3.org/). 
 
+### Check for accessibility violations with an audit tool
 
-4. **Disable styles**, then test the information architecture and presence of adequate text labels. The [WAVE browser extension from WebAIM](//wave.webaim.org/extension/) provides this feature if it isn't available in the browser you are using.
+When using PatternFly, we recommend checking for accessibility violations locally via aXe: The Accessibility Engine (using [aXe DevTools](https://www.deque.com/axe/devtools/), the [Chrome extension](https://chrome.google.com/webstore/detail/axe-devtools-web-accessib/lhdoppojpmngadmnindnejefpokejbdd), or the [Firefox extension](https://addons.mozilla.org/en-US/firefox/addon/axe-devtools/)). If you want to test prior to deployment, you can integrate aXe with [Cypress](https://www.cypress.io/).
+ 
+#### Bulk testing with the patternfly-ally script
 
+We offer the [patternfly-a11y script](https://github.com/patternfly/patternfly-a11y) for bulk testing, which reports any aXe accessibility violations from a set of pages. You can adapt this script to your needs by creating a configuration file that includes authentication, waits for specific items to finish loading (like a loading spinner), or addresses other items relevant to your use case. As a report, this script will deliver an [accessibility report via surge](http://a11y-os.surge.sh/). 
 
-5. **Test with any screen reader available in your operating system.** We target these screen readers to test PatternFly:
-    - JAWS with Chrome, Windows ([JAWS keyboard shortcuts](//dequeuniversity.com/screenreaders/jaws-keyboard-shortcuts))
-    - Voiceover with Safari, Mac ([Voiceover keyboard shortcuts](//dequeuniversity.com/screenreaders/voiceover-keyboard-shortcuts))
-    - NVDA with Firefox, Windows ([NVDA keyboard shortcuts](//dequeuniversity.com/screenreaders/nvda-keyboard-shortcuts))
+Before using this script, your UI should be built in the CI workflow. Once built, create a job to run the script against that build. The script assumes that a web server is running and serving your product somewhere that the script can reach (for example, in `localhost:8000`). 
 
+### Test keyboard accessibility
 
+The keyboard is an essential accessibility tool, so it is necessary to ensure that the following requirements are met: 
 
-6. **Check color contrast for the following:**
+- All functionality is keyboard accessible.
+- Elements in the HTML and in the layout follow a logical order.
+- Elements with focus are clearly visible.
+
+### Test without styles
+
+Screen readers cannot access style information, so you should disable styles for your product to test that your information architecture is effective and that elements have adequate text labels.
+
+The [WAVE browser extension from WebAIM](/wave.webaim.org/extension/) allows you to disable styles if this isn't available in the browser you are using.
+
+### Test with a screen reader 
+
+You can test with any screen reader that is available in your operating system. In PatternFly, we target:
+  - [JAWS](https://www.freedomscientific.com/products/software/jaws/) with Chrome, Windows ([JAWS keyboard shortcuts](//dequeuniversity.com/screenreaders/jaws-keyboard-shortcuts)).
+  - [VoiceOver](https://support.apple.com/guide/voiceover/welcome/mac) with Safari, Mac ([VoiceOver keyboard shortcuts](//dequeuniversity.com/screenreaders/voiceover-keyboard-shortcuts)).
+  - [NVDA](https://www.nvaccess.org/download/) with Firefox, Windows ([NVDA keyboard shortcuts](//dequeuniversity.com/screenreaders/nvda-keyboard-shortcuts)).
+
+### Check color contrast
+
+Your UI's colors should pass the following contrast checks to ensure that users across the vision spectrum can understand your product:
     - Text color against background color ([Understanding WCAG 1.4.3](//www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html))
     - Text color against link color ([Technique G183](//www.w3.org/TR/WCAG20-TECHS/G183.html))
     - Visible boundaries of buttons and form elements against adjacent background color ([Understanding WCAG 1.4.11](//www.w3.org/WAI/WCAG21/Understanding/non-text-contrast.html))
 
+## Accessibility testing checklist
 
+To keep track of your testing efforts, we recommend referencing the following checklist.
 
-## Screen readers
-Just as front-end developers use their browser to see how their changes look, you should use a screen reader to see how your accessibility looks (we use Voice Over). 
+This checklist includes some of the main areas that the PatternFly team checks for to ensure that a UI meets consistent accessibility standards. To evaluate your specific implementation, we recommend checking these same areas in your product. 
 
-Generally, screen readers access the DOM (Document Object Model), and they use browser APIs (Application Programming Interfaces) to get the information they need. In this way, a screen reader knows what to say when a set of list items begins and ends, and it typically announces, in advance, how many items are in the list. A screen reader can also traverse a page using heading navigation to speak the heading level. 
+### Broad accessibility criteria
 
-Here are a few aspects that can affect how screen readers communicate information:
+<Checkbox label="Rotor navigation can discover all information." id="general-criteria-1" /> 
 
-- **Semantic HTML**: Semantics refers to the meaning of a piece of code. A semantic element clearly describes its meaning to both the browser and the developer. For example, `<div>` and `<span>` are non-semantic elements because they don't describe their contents. Examples of semantic elements include `<form>` and `<table>`, which clearly define their contents. Screen readers expect semantic HTML when traversing the DOM, so non-semantic elements that aren't customized to be made accessible are highly likely to be inaccessible. Aria and other accessible attributes are meant to extend the functionality and meaning of native semantics, but at the core, your HTML should be semantic.
+<Checkbox label="Shortcut navigation can discover all information."  description="For example, a keyboard shortcut that navigates between all headings on a page should discover all intended headings." id="general-criteria-2" />
 
-- **Headings**: A visual user can scan a page and fairly quickly understand its information architecture. Visually impaired users have other methods of achieving this. One common method is using heading levels to determine the flow of information. Headings that vary in size simply based on design and not functionality will likely confuse these users. A clear flow of sequential heading sizes based on headings and subheadings is significantly clearer to all users.
+<Checkbox label="Cursor navigation can discover all applicable information." description="Some assistive technologies will have their own means of navigation and focus management. For example, VoiceOver uses a 'VO' key plus right or left arrow keys to navigate a page. This may be different from conventional keyboard navigation." id="general-criteria-3" />
 
-- **Accessible names for all elements**: When an element doesn't have visual text or when further explanation is necessary, a screen reader will not know what an item is or does. For example, if you have an icon `<button>`, and it doesn't have a label, the screen reader can only tell that it’s a button—it can't determine what the button does. Add a few more non-labeled buttons, and now all the screen reader sees are vague buttons with no understanding of what they do. For more information, see the labeling section.
+<Checkbox label={<span>Keyboard navigation via the <kbd>tab</kbd> key can discover all information.</span>} description={<span>If content should be hidden from other assistive technology like a screen reader, <span className="ws-code">aria-hidden="true"</span> should be passed instead.</span>} id="general-criteria-4" />
 
-- **Links**: Similar to buttons, links should always have a label for clarity. Without the label, users have no idea where the links point to. If you have the same label for multiple links, each link must point to the same URL. Links, buttons, and form controls should make sense out of context. If a user wants to look at all of the links available, they should be able to differentiate the available links. You shouldn’t have multiple “Click here” links.
+<Checkbox label="UI elements are understandable and usable." body={<><Checkbox label="When you navigate to an element by keyboard or other assistive technology, you can easily understand and use the item." id="general-criteria-5a" /> <Checkbox label="The flow of information makes sense when navigating." description="Assistive technology (like screen readers) navigate the page in DOM order. If you use CSS to visually reposition elements, they may be announced in a nonsensical sequence. If you need something to appear earlier in the page, try to physically move it earlier in the DOM instead.
+" id="general-criteria-5b" /></>} id="general-criteria-5" /> <br/>
 
-- **Landmarks**: Landmarks help communicate the structure of a page by identifying regions. There are many types of landmarks, such as banners, navigation, main, and form. When there are more than one of the same role (for example, two navigation regions on the same page), these regions should be differentiated by an `aria-label`.
+### Structural accessibility criteria
 
-- **Dynamic content**: One of the biggest accessibility concerns with dynamic content is the need to notify users that the content has changed. Sighted users benefit from highlighting or drawing visual attention to the changes. Non-sighted users need to be notified in another way, such as loading a new page, sending the focus to the new content, or using ARIA live announcements.
+<Checkbox label={<span> <b> Structure: </b> The visual information architecture maps to the various rotor menus that exist by default.</span>} body={<><Checkbox label="Rotor has descriptive and concise headings, landmarks, links, form controls, tables, and other elements." id="accessibility-points-7a" />
+<Checkbox label="Heading levels convey structure/content and do not skip levels." description="A common practice is to use a single h1 for the primary headline or logo on a page, h2s for designating major sections, and h3s for supporting sections." id="accessibility-points-7b" />
+<Checkbox label="Landmarks" id="accessibility-points-7c" />
+<Checkbox label="Links" id="accessibility-points-7d" />
+<Checkbox label="Form controls" id="accessibility-points-7e" />
+<Checkbox label="Tables" id="accessibility-points-7f" /></>}  id="accessibility-points-7" />
+<br/>
+<Checkbox label={<span> <b> Labels: </b> </span>} body={<><Checkbox label=<span><b>Link</b> labels  are descriptive, informative, and unique (unless they have the same URL).</span> id="accessibility-points-8a"/> 
 
-- **Unrelated notifications**: Notifications from the operating system outside of the web app can interrupt a user while interacting with a page (for example, "You received a new chat message."). Consider this possibility when designing and developing for screen readers, and keep any notification messaging concise to limit the interruption.
+  <Checkbox label={<span><b>Buttons and form controls:</b></span>} description={ <span>
+    <li> All form controls have clear and descriptive labels. </li>
+    <li> Expandable buttons display the expandable control and utilize <code className="ws-code">aria-expanded</code> to indicate that a button is expandable. <code className="ws-code">aria-expanded</code> should always have a boolean value if a button is meant to be expandable. </li>
+  </span>
+  }
+  id="general-criteria-8b" />
+    
+    <Checkbox label={<span><b>Form inputs</b> have a label (even if it's not visible).</span>} id="general-criteria-8c" />
+    
+    <Checkbox label={<span><b>Icons</b> have some kind of text for screen readers (even if it's not visible.)</span>} id="general-criteria-8d" />
 
+    <Checkbox label={<span><b>Images have proper alt text.</b></span>} description={<span>The exception to this practice is when images are primarily for presentation purposes and are not essential pieces of content. To signify that an image should be skipped by a screen reader, set the value of the alt attribute to an empty string: <code className="ws-code">alt=""</code></span>}  id="general-criteria-8e" />
 
-<br />
+    <Checkbox label={<span> <b>Landmark</b> regions should have labels when there is more than one type of landmark, and they are not the same (such as navigation, main, form, etc.). Section element shouldn’t be used unless it has a label.</span>} id="general-criteria-8f" />
 
-### Checklist for testing
-These are some of the main areas we check for on the PatternFly team. We recommend that you check for these same areas in your applications, too. 
+    <Checkbox label={<span><b>Tables</b> and table content is clearly described. WebAIM has additional guidance on <a href="https://webaim.org/techniques/tables/">creating accessible tables</a>.</span>} id="general-criteria-8g" />
 
-**General questions**
+    <Checkbox label={<span><b>ARIA</b> labels provide descriptive details to screen reader users, without reiterating or overriding the text that is already there. If there is visible text then there doesn’t need to be an ARIA label. </span>} id="general-criteria-8h" />
 
-<label><input type="checkbox" /> VO Rotor Navigation can discover all information. </label><br/>
-<label><input type="checkbox" /> VO Shortcut Navigation can discover all information. </label><br/>
-<label><input type="checkbox" /> VO Cursor Navigation can discover all information (dependent on component and use case- easy way to navigate to component). </label><br/>
-<label><input type="checkbox" /> Tabbed Keyboard Navigation can discover all information. </label>
-- However, if content should be hidden from a screen reader, for instance, if it’s offscreen or just presentational, make sure that content is set to aria-hidden=”true”.  <br/>
-
-<label><input type="checkbox" /> Is it understandable and usable? </label><br/>
-  - <label><input type="checkbox" /> When you navigate to an item by keyboard or by screen reader, you can easily understand and use the item. </label><br/>
-  - <label><input type="checkbox" /> The flow of information makes sense when navigating. Screen readers navigate the page in DOM order. If you used CSS to visually reposition elements, they might be announced in a nonsensical sequence. Instead, if you need something to appear earlier in the page, try to physically move it earlier in the DOM.</label>
-
-**Accessibility points** <br />
-<label><input type="checkbox" /> **Structure:** The visual information architecture should map to the various rotor menus that exist by default. </label><br />
-- <label><input type="checkbox" /> **Check rotor:** Are there good headings, landmarks, links, form controls, and other elements? Do they make sense, and are they descriptive without overloading information? </label><br />
-  - <label><input type="checkbox" /> Headings: Check that heading levels convey structure/content and do not skip. A common practice is to use a single h1 for the primary headline or logo on a page, h2s for designating major sections, and h3s for supporting sections. </label><br />
-  - <label><input type="checkbox" /> Links </label><br />
-  - <label><input type="checkbox" /> Form controls </label><br />
-  - <label><input type="checkbox" /> Landmarks </label><br />
-  - <label><input type="checkbox" /> Tables </label><br />
-
-
-<label><input type="checkbox" /> **Labels:**</label>
-- <label><input type="checkbox" /> **Links:** Labels should be unique unless they have the same url. They should be descriptive/informative.</label>
-- <label><input type="checkbox" /> **Buttons and form controls:**</label>
-  - Go through form controls and check if they all have labels. (Remember that there is a difference between being accessible and having a good, accessible experience. Clear, descriptive labels help create a better experience.)
-  - **Expandable buttons:** There should be some indication that it has the expandable control.
-- <label><input type="checkbox" /> **Form inputs:** These inputs should have some label even if it's not visible.</label>
-- <label><input type="checkbox" /> **Icons**: Where you don’t visibly see text there should still be some kind of text for screen reader.</label>
-- <label><input type="checkbox" /> **Images**: Check all images for proper alt text. The exception to this practice is when images are primarily for presentation purposes and are not essential pieces of content. To signify that an image should be skipped by a screen reader, set the value of the alt attribute to an empty string, e.g., `alt=””`.</label>
-- <label><input type="checkbox" /> **Landmarks:** Landmark regions should have labels when there is more than one type of landmark and they are not the same (navigation, main, form, etc.).
-Section element shouldn’t be used unless it has a label.</label>
-- <label><input type="checkbox" /> **Tables**: Can you tell what the table is and what’s in it? (https://webaim.org/techniques/tables/)</label>
-- <label><input type="checkbox" /> **Aria**: If there is visible text then there doesn’t need to be an `aria-label`. (Aria aids in description to screen reader users. It doesn’t have to reiterate or override what might already be there so you should check that your aria is useful.)</label>
-  - It’s important to understand that ARIA can only affect the _semantics_ of an element; it has no effect on the _behavior_ of the element. 
-  - For example, while you can make an element hidden to screen readers with `aria-hidden=”true”`, that does not change the focus behavior for that element. 
+</>}  id="general-criteria-8" />
