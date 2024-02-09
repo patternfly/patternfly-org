@@ -49,9 +49,6 @@ module.exports = (sourceMD, sourceProps, sourceFunctionDocs) => {
     const reactChartsPath = require
       .resolve('@patternfly/react-charts/package.json')
       .replace('package.json', 'src');
-    const reactDragDropPath = require
-      .resolve('@patternfly/react-drag-drop/package.json')
-      .replace('package.json', 'src');
 
     const reactTopologyPath = require
     .resolve('@patternfly/react-topology/package.json')
@@ -61,7 +58,6 @@ module.exports = (sourceMD, sourceProps, sourceFunctionDocs) => {
     sourceProps(path.join(reactTablePath, '/**/*.tsx'), reactPropsIgnore);
     sourceProps(path.join(reactCodeEditorPath, '/**/*.tsx'),reactPropsIgnore);
     sourceProps(path.join(reactChartsPath, '/**/*.tsx'),reactPropsIgnore);
-    sourceProps(path.join(reactDragDropPath, '/**/*.tsx'),reactPropsIgnore);
     sourceProps(path.join(reactTopologyPath, '/**/*.tsx'), reactPropsIgnore);
 
     // React MD
@@ -81,9 +77,6 @@ module.exports = (sourceMD, sourceProps, sourceFunctionDocs) => {
 
     // React-code-editor MD
     sourceMD(path.join(reactCodeEditorPath, '/**/examples/*.md'), 'react');
-
-    // Drag drop MD
-    sourceMD(path.join(reactDragDropPath, '/**/examples/*.md'), 'react-next');
 
     // React-topology MD
     sourceMD(path.join(reactTopologyPath, '/**/*.md'), 'extensions');
