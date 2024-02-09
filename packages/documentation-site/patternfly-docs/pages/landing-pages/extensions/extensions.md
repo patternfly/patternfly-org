@@ -1,5 +1,5 @@
 ---
-id: About
+id: About extensions
 title: Extensions
 section: extensions
 sortValue: 1

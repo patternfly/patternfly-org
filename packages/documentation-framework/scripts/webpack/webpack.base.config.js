@@ -2,7 +2,6 @@ const path = require('path');
 const webpack = require('webpack');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
-const MonacoWebpackPlugin = require('monaco-editor-webpack-plugin');
 
 module.exports = (_env, argv) => {
   const {
@@ -155,9 +154,6 @@ module.exports = (_env, argv) => {
         patterns: [
           { from: path.join(__dirname, '../../assets'), to: 'assets' }
         ]
-      }),
-      new MonacoWebpackPlugin({
-        globalAPI: true,
       })
     ],
     stats: 'minimal'
