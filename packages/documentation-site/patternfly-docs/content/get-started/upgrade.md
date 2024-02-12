@@ -1,18 +1,16 @@
 ---
 id: Upgrade
-title: Major release upgrade guide
+source: upgrade-guide
+title: PatternFly 6 upgrade
 section: get-started
-source: Major-release-upgrade
 ---
 
-# PatternFly 6 
+If you have not previously upgraded to PatternFly 5, you may need to [follow these steps to upgrade your product](https://www.patternfly.org/get-started/upgrade) before attempting to support this release.
 
-If you have not previously upgraded to PatternFly 5, you may need to [follow these steps to upgrade your product](https://www.patternfly.org/get-started/upgrade) before attempting to support PatternFly 6. 
+PatternFly 6 introduces new support and functionality to PatternFly, including: 
 
-Our latest major release introduces new support and functionality to PatternFly, including: 
-
+-  A design token system,
 - A new visual theme, called Penta,
-- A design token system, 
 - And more!
 
 To learn about the most significant changes in this release, read our [release highlights](/get-started/release-highlights). A detailed list of all changes can be found in our [major release notes](/get-started/upgrade/release-notes). 
@@ -25,7 +23,7 @@ If you need support as you upgrade to PatternFly 6, the PatternFly team is here 
 
 ## Upgrade your product's codebase
 
-When you upgrade your product to PatternFly 5, several breaking changes will likely be introduced to your product’s codebase. We are using a suite of codemods to simplify and streamline the upgrade process. Instead of requiring you to manually identify all errors and issues in your codebase, you can run our codemods to quickly identify and fix major issues. Keep in mind that some changes will still require manual intervention, but our codemods can automatically fix a large amount of issues and flag any issues that do require manual work.
+When you upgrade your product to PatternFly 6, several breaking changes will likely be introduced to your product’s codebase. We are using a suite of codemods to simplify and streamline the upgrade process. Instead of requiring you to manually identify all errors and issues in your codebase, you can run our codemods to quickly identify and fix major issues. Keep in mind that some changes will still require manual intervention, but our codemods can automatically fix a large amount of issues and flag any issues that do require manual work.
 
 To utilize our codemods, refer to the following instructions. You can also [view the project on GitHub](https://github.com/patternfly/pf-codemods/) for additional details.
 
@@ -60,25 +58,3 @@ To run our codemods, complete the following steps:
 
 ## Review and update variable and class names
 
-We changed component class names, layout class names, utility class names, CSS variables, and SCSS variables. These changes mean that any existing CSS overrides will likely be targeting outdated styles. These changes will break all custom CSS overrides that reference any PatternFly class names or CSS variables, so it is important to review your overrides and ensure that they align with our updated naming conventions, which are detailed in this section. 
-
-There are some cases where multiple applications that use PatternFly all plug into a larger application. In such cases, it's nearly impossible to coordinate a simultaneous update from PatternFly 4 to PatternFly 5. To prevent style collisions when multiple versions of PatternFly could be simultaneously running side by side in one UI, PatternFly has versioned all of its CSS using versioned prefixes.
-
-For PatternFly 5, class names, variable names, and SCSS objects have all had `v5` added to their prefix in the following ways:
-
-| Language/style | v4 prefix | v5 prefix|  Note |
-| --- | ---| --- | ---  |
-|  CSS |  `--pf-` |  `--pf-v5-` |
-|  SCSS |  `.pf-`  | `$pf-v5-`  |
-|  SCSS | `@mixin pf-`  | `@mixin pf-v5-`  |
-|  SCSS | `@function pf-`  | `@function pf-v5-`  |
-|  SCSS | `%pf-`  | `%pf-v5-`  |
-| HTML class names  | `.pf-`  |  `.pf-v5-`  | excludes `.pf-m ` |
-
-**Note:** PatternFly modifier classes, such as `pf-m-expanded` are not versioned and retain the same formatting that they had for PatternFly 4. 
-
-### Utilize our `class-name-updater` Codemod
-
-We offer [a `class-name-updater` Codemod](https://github.com/patternfly/pf-codemods/tree/main/packages/class-name-updater) to help support your updates. This utility automatically identifies class names that need to be updated as a result of the introduction of versioned class names in Patternfly v5, which helps highlight places in your codebase that may require changes to class names. Add the `--fix` flag to allow run the code mod and fix issues where possible. 
-
-**Note:** It is important to consider that this utility performs a simple ‘find and replace’, so it's possible that it will inadvertently identify code that is formatted similarly to a PatternFly class name, but is not one.
