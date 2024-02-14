@@ -25,10 +25,10 @@ Tokens also enable easier design system maintenance. Whenever a color is changed
 
 ## Token names
 
-PatternFly token names are composed of a '--pf-t' prefix, a version number, and a series of token segments, separated by double hyphens.
+PatternFly token names are composed of a `--pf-t` prefix, a version number, and a series of token segments, separated by double hyphens.
 
 <div class="ws-image">
-<img src="./img/token-name.png"  alt="PatternFly token naming structure."  width="600px"/>
+    <img src="./img/token-name.png"  alt="PatternFly token naming structure."  width="600px"/>
 </div>
 
 Each token segment represents a different type of style information. If a segment isn't relevant for a particular token then it will be skipped in the token's name. 
@@ -53,12 +53,12 @@ The PatternFly token system has 3 layers: palette tokens, base tokens, and seman
 * **Semantic tokens** are the top-level tokens that are grouped conceptually and named semantically. These are built with base tokens and are the tokens that you will see and use the majority of the time. The naming is intentionally chosen to support the proper and relevant use of a token, which makes design consistency easier for everyone. 
 
 <div class="ws-image">
-<img src="./img/token-layers-example.png"  alt="PatternFly token naming structure."  width="600px"/>
+    <img src="./img/token-layers-example.png"  alt="PatternFly token layer names for the same color value." width="700px"/>
 </div>
 
 ## Tokens in Figma 
 
-In Figma, tokens are stylized with a forward slash instead of a hyphen, but the segment names remain the same. While we hope that our semantic naming helps you quickly understand the purpose, here's a quick reference for some of the main ones.
+In Figma, tokens are stylized with a forward slash instead of a hyphen, but the segment names remain the same. While we hope that our semantic naming helps you quickly understand the purpose, here's a quick reference for some of the main values that you will see.
 
 ### Colors 
 
