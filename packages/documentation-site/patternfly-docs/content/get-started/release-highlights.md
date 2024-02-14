@@ -23,4 +23,4 @@ In order to support Penta, and any future visual theming capabilities, we have i
 
 Our tokens cover both dark and light themes, and make it easier to support both in your product.
 
-**Note:** The PatternFly 5 design library is not built with tokens. To take advantage of our token system, you must upgrade your product to PatternFly 6 and its Penta theme. 
+**Note:** The PatternFly 5 design library is not built with tokens. To take advantage of our token system, you must upgrade your product to PatternFly 6.

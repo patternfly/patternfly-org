@@ -58,3 +58,10 @@ To run our codemods, complete the following steps:
 
 ## Review and update variable and class names
 
+PatternFly 6 supports our new design token system, which changes variable names across PatternFly. These changes mean that any existing CSS overrides will likely be targeting outdated styles and will no longer work. Wherever you have any custom CSS overrides that reference PatternFly class names or CSS variables, you should carefully review them and make updates to ensure that they align with our token variables, which are outlined in our [tokens documentation](/tokens/all-patternfly-tokens).
+
+### Utilize our class-name-updater codemod
+We offer a [`class-name-updater` codemod](https://github.com/patternfly/pf-codemods/tree/main/packages/class-name-updater) to help support your updates. This utility automatically identifies class names that need to be updated as a result class name changes in Patternfly v5, which helps highlight places in your codebase that may require changes to class names. Add the `--fix` flag to allow run the code mod and fix issues where possible.
+
+**Note:** It is important to consider that this utility performs a simple ‘find and replace’, so it's possible that it will inadvertently identify code that is formatted similarly to a PatternFly class name, but is not one.
+
