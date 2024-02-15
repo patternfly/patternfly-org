@@ -5,13 +5,11 @@ section: tokens
 
 **Design tokens** are variables that store visual design attributes like color, typography, and spacing. Tokens have a name and value that conveys their associated design style, making their purpose clear and recognizable. 
 
-PatternFly's tokens are set up as variables and styles within Figma, and are exported as CSS variables for use in development. 
+PatternFly's tokens are set up as variables and styles within Figma, and are exported as CSS variables for use in development. Tokens are only available as part of the PatternFly 6 release, so make sure you [upgrade to PatternFly 6](/get-started/upgrade) in order to take advantage of tokens.
 
 To learn more about designing with the PatternFly Figma library, [refer to our onboarding guide.](/get-started/design#figma-library)
 
 You can also [view the complete list of PatternFly's design tokens.](/tokens/all-patternfly-tokens)
-
-Tokens are part of the PatternFly 6 release, so you must [upgrade](/get-started/upgrade) in order to take advantage of tokens.
 
 ## Why use tokens? 
 
@@ -27,9 +25,10 @@ Tokens also enable easier design system maintenance. Whenever a color is changed
 
 PatternFly token names are composed of a `--pf-t` prefix, a version number, and a series of token segments, separated by double hyphens.
 
-<div class="ws-image">
+<div class="ws-image" style="text-align: center;">
     <img src="./img/token-name.png"  alt="PatternFly token naming structure."  width="600px"/>
 </div>
+<br />
 
 Each token segment represents a different type of style information. If a segment isn't relevant for a particular token then it will be skipped in the token's name. 
 
@@ -52,49 +51,6 @@ The PatternFly token system has 3 layers: palette tokens, base tokens, and seman
 
 * **Semantic tokens** are the top-level tokens that are grouped conceptually and named semantically. These are built with base tokens and are the tokens that you will see and use the majority of the time. The naming is intentionally chosen to support the proper and relevant use of a token, which makes design consistency easier for everyone. 
 
-<div class="ws-image">
-    <img src="./img/token-layers-example.png"  alt="PatternFly token layer names for the same color value." width="700px"/>
+<div class="ws-image" style="text-align: center;">
+    <img src="./img/token-layers-example.png"  alt="PatternFly token layer names for the same color value." width="600px"/>
 </div>
-
-## Tokens in Figma 
-
-In Figma, tokens are stylized with a forward slash instead of a hyphen, but the segment names remain the same. While we hope that our semantic naming helps you quickly understand the purpose, here's a quick reference for some of the main values that you will see.
-
-### Colors 
-
-May be scoped to background, border, text, icon, 
-
-default 
-hover 
-clicked 
-
-status
-success 
-warning 
-danger 
-info 
-custom 
-read
-unread
-
-nonstatus
-red
-orange
-orange re
-gold
-green
-cyam
-blue
-purple
-gray
-
-### Dimensions
-
-Border 
-radius 
-width 
-
-Spacer
-control 
-
-Shadows 

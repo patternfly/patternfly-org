@@ -15,13 +15,18 @@ Our tokens are set up at a high level as Figma [variables](https://help.figma.co
 
 In Figma, the variable names look similar to [token names](/tokens/all-patternfly-tokens), but will be separated by a forward slash (/) instead of a double hyphen (--).
 
-<img src="./img/token-example-brand.png"  alt="Table of brand color tokens." width="700px"/>
+<div style="text-align: center;">
+    <img src="./img/token-example-brand.png"  alt="Table of brand color tokens." width="600px"/>
+</div>
+<br />
 
 ### Penta component library 
 
 You will have access to all PatternFly tokens when you install the component library. Penta components are built with tokens. From the colors used, to the spacing of elements, to the font size: tokens control it all!
 
-<img src="./img/component-tokens.png"  alt="PatternFly alert components built with Figma tokens."  width="800px"/> 
+<div style="text-align: center;">
+    <img src="./img/component-tokens.png"  alt="PatternFly alert components built with Figma tokens."  width="700px"/> 
+</div>
 
 ## Using the Penta design kit 
 
@@ -31,7 +36,10 @@ To install the Penta design kit, [find instructions in our design onboarding gui
 
 As you insert a component into a design workspace, you can adjust properties and variable modes to customize the appearance to your needs. 
 
-<img src="./img/component-instance.png"  alt="PatternFly alert components built with Figma tokens."  width="350px"/> 
+<div style="text-align: center;">
+    <img src="./img/component-instance.png"  alt="PatternFly alert components built with Figma tokens."  width="350px"/> 
+</div>
+<br />
 
 Once you've inserted a component into your workspace, you can continue to customize different parts of its appearance in [Figma's design sidebar](https://help.figma.com/hc/en-us/articles/360039832014-Design-prototype-and-explore-layer-properties-in-the-right-sidebar). Here, you will be able to see all tokens that can be used within a particular design property. 
 
