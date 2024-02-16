@@ -15,7 +15,7 @@ We're excited to announce that our alpha release of PatternFly 6 is now live. He
 
 As you've probably already noticed on the alpha website: PatternFly has a new look. Our brand new visual theme is called "Penta". Its visual style is more modern and refined, so that you you can create UIs that are more seamless and lightweight.
 
-All of our components have a new look to match. As you explore the alpha website, take a look at our component examples, demos, and patterns, to check out all the differences.
+All of our components have a new look to match. As you use the alpha website, take a look at our component examples, demos, and patterns, to explore our redesign.
 
 ### Design tokens 
 

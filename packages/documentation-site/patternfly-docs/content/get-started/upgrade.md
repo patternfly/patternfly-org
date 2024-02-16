@@ -5,11 +5,11 @@ title: PatternFly 6 upgrade
 section: get-started
 ---
 
-If you have not previously upgraded to PatternFly 5, you may need to [follow these steps to upgrade your product](https://www.patternfly.org/get-started/upgrade) before attempting to support this release.
+If you have not previously upgraded to PatternFly 5, make sure to review its [upgrade guide](https://www.patternfly.org/get-started/upgrade) before attempting to support PatternFly 6, to ensure that your product has addressed any necessary changes from our previous release.
 
 PatternFly 6 introduces new support and functionality to PatternFly, including: 
 
--  A design token system,
+- A design token system,
 - A new visual theme, called Penta,
 - And more!
 
@@ -23,7 +23,7 @@ If you need support as you upgrade to PatternFly 6, the PatternFly team is here 
 
 ## Upgrade your product's codebase
 
-When you upgrade your product to PatternFly 6, several breaking changes will likely be introduced to your product’s codebase. We are using a suite of codemods to simplify and streamline the upgrade process. Instead of requiring you to manually identify all errors and issues in your codebase, you can run our codemods to quickly identify and fix major issues. Keep in mind that some changes will still require manual intervention, but our codemods can automatically fix a large amount of issues and flag any issues that do require manual work.
+When you upgrade your product to PatternFly 6, several breaking changes will likely be introduced to your product’s codebase. We offer a suite of codemods to simplify and streamline your upgrade process. Instead of requiring you to manually identify all errors and issues in your codebase, you can run our codemods to quickly identify and fix major issues. Keep in mind that some changes will still require manual intervention, but our codemods can automatically fix a large amount of issues and flag any issues that do require manual work.
 
 To utilize our codemods, refer to the following instructions. You can also [view the project on GitHub](https://github.com/patternfly/pf-codemods/) for additional details.
 
@@ -58,10 +58,13 @@ To run our codemods, complete the following steps:
 
 ## Review and update variable and class names
 
-PatternFly 6 supports our new design token system, which changes variable names across PatternFly. These changes mean that any existing CSS overrides will likely be targeting outdated styles and will no longer work. Wherever you have any custom CSS overrides that reference PatternFly class names or CSS variables, you should carefully review them and make updates to ensure that they align with our token variables, which are outlined in our [tokens documentation](/tokens/all-patternfly-tokens).
+PatternFly 6 supports our new design token system, which changes variable names across PatternFly. These changes mean that **all** existing CSS overrides must be updated (or removed), because they will be targeting outdated styles and will no longer work. 
+
+Wherever you have any custom CSS overrides that reference PatternFly class names or CSS variables, you should carefully review them and make updates to ensure that they align with our token variables, which are outlined in our [tokens documentation](/tokens/all-patternfly-tokens). As much as possible, we recommend removing your CSS overrides so that your product upgrade experience will be smoother for future releases.
+
+If your product uses a custom solution to replicate PatternFly styling (without using PatternFly components), then it will need to be reskinned. We recognize that this may be a large undertaking, so we encourage you to reach out to the PatternFly team so that we support this work.
 
 ### Utilize our class-name-updater codemod
-We offer a [`class-name-updater` codemod](https://github.com/patternfly/pf-codemods/tree/main/packages/class-name-updater) to help support your updates. This utility automatically identifies class names that need to be updated as a result class name changes in Patternfly v5, which helps highlight places in your codebase that may require changes to class names. Add the `--fix` flag to allow run the code mod and fix issues where possible.
+We offer a [`class-name-updater` codemod](https://github.com/patternfly/pf-codemods/tree/main/packages/class-name-updater) to help support your updates. This utility automatically identifies class names that need to be updated as a result of class name changes in Patternfly 6, which helps highlight places in your codebase that may require changes to class names. Add the `--fix` flag to allow run the codemod and fix issues where possible.
 
 **Note:** It is important to consider that this utility performs a simple ‘find and replace’, so it's possible that it will inadvertently identify code that is formatted similarly to a PatternFly class name, but is not one.
-
