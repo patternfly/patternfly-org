@@ -28,6 +28,12 @@ module.exports = (sourceMD, sourceProps, sourceFunctionDocs) => {
       .replace('package.json', 'pages');
     sourceMD(path.join(themePagesPath, '*.md'), 'pages-overview');
 
+    // Design tokens
+    const designTokensPath = require
+      .resolve('@patternfly/design-tokens/package.json')
+      .replace('package.json', 'patternfly-docs/content');
+    sourceMD(path.join(designTokensPath, '/*.md'), 'tokens');
+
     // Core MD
     const coreDocsPath = require
       .resolve('@patternfly/patternfly/package.json')
