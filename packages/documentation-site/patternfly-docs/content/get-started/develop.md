@@ -7,13 +7,15 @@ import './get-started.css';
 
 ## Getting started 
 
-Before you can develop with PatternFly, take time to:
+In order to develop with PatternFly, you will need to:
 
-1. [Learn about PatternFly](/get-started/about) to get acquainted with our design system.
+1. [Learn about the PatternFly design system](/get-started/about) to get acquainted with all of its elements.
 
-1. Install a package manager to help you install, update, and configure all necessary PatternFly packages. We recommend [npm](https://nodejs.org/en/download) and [Yarn](https://yarnpkg.com/en/docs/getting-started)
+1. [Learn about our design token system](/tokens/about-tokens), which enables you to build interfaces with consistent PatternFly styling, including colors, shadows, spacing, and more.
 
-1. Get started with our [React](#react) or [HTML/CSS](#htmlcss) libraries.
+1. Install a package manager to help you install, update, and configure all necessary PatternFly packages. We recommend [npm](https://nodejs.org/en/download) or [Yarn](https://yarnpkg.com/en/docs/getting-started).
+
+1. Configure your environment to get started with our [React](#react) and/or [HTML/CSS](#htmlcss) libraries.
 
 ## Develop with React
 
@@ -25,11 +27,11 @@ Before you can develop with PatternFly, take time to:
 * [@patternfly/react-icons](https://www.npmjs.com/package/@patternfly/react-icons): PatternFly icons as React components.
 * [@patternfly/react-styles](https://www.npmjs.com/package/@patternfly/react-styles): CSS-in-JS capabilities. 
 * [@patternfly/react-table](https://www.npmjs.com/package/@patternfly/react-table): PatternFly table components.
-* [@patternfly/react-tokens](https://www.npmjs.com/package/@patternfly/react-tokens): All CSS tokens and values as JavaScript objects.
+* [@patternfly/react-tokens](https://www.npmjs.com/package/@patternfly/react-tokens): PatternFly's CSS variables, transformed into JavaScript objects for use with React.
 
 These packages are maintained together. To determine which versions of each package are compatible with the rest, view our [release highlights](https://www.patternfly.org/get-started/release-highlights).
 
-**Configurations**
+We support the following configurations:
 * [TypeScript](https://github.com/patternfly/patternfly-react-seed/blob/master/tsconfig.json)
 * [Webpack](https://github.com/patternfly/patternfly-react-seed/blob/master/webpack.common.js)
 * [Jest](https://github.com/patternfly/patternfly-react-seed/blob/master/jest.config.js)
@@ -71,7 +73,7 @@ If you wish to migrate an existing project to PatternFly you must install and co
 
 The PatternFLy HTML/CSS library contains a collection of code samples that you can use to build interfaces with consistent PatternFly markup and styling.
 
-Each of the three modules (layouts, components, and utilities) delivers a Sass file (.scss) and CSS file that you can include in your build environment or consume from your page header. If you need to overwrite any elements, we recommend extending the variables found in the Sass files, rather than manually overwriting the CSS.
+Each of the three modules (layouts, components, and utilities) delivers Sass (.scss) and CSS files that you can include in your build environment or consume from your page header. If you need to overwrite any elements, we recommend extending the variables found in the Sass files, rather than manually overwriting the CSS.
 
 When you install PatternFly, the package includes:
 
@@ -90,9 +92,7 @@ Use these files to consume the library. The recommended consumption approach wil
     npm install @patternfly/patternfly --save
     ```
 
-1. Navigate to the package you just installed and find the PatternFly CSS stylesheet, ```patternfly.css```.
-
-1. Copy ```patternfly.css``` to your project's CSS directory.
+1. Navigate to the package you just installed to find the PatternFly CSS stylesheet, ```patternfly.css```, and copy it into your project's CSS directory.
 
 1. In your HTML file, link to your new PatternFly stylesheet by adding the following line to the bottom of your list of CSS files:
 
@@ -102,33 +102,21 @@ Use these files to consume the library. The recommended consumption approach wil
   <br />
   This will ensure that PatternFly styles take precedence over anything that currently resides in your application.
 
-4. If you want to use PatternFly utilities in your project, find the utilities file,  ```patternfly-addons.css```.
+1. If you want to use PatternFly utilities in your project, find the utilities file, ```patternfly-addons.css```, and copy it into your project’s CSS directory.
 
-5. Copy ```patternfly-addons.css``` into your project’s CSS directory.
-
-6. In your HTML file, add the following line to the bottom of your list of CSS files:
+1. In your HTML file, add the following line to the bottom of your list of CSS files:
 
   ```html noLive
   <link rel="stylesheet" href="css/patternfly-addons.css">
   ```
 
-### PatternFly styles
-
-#### Design tokens
-
-[Learn about the PatternFly design token system](/tokens/about-tokens), which enables you to build interfaces with consistent PatternFly styling, including colors, shadows, spacing, and more.
-
-#### Design foundations 
-
-[Learn about PatternFly's design foundations](/design-foundations/about-design-foundations), which outline the best-practice standards and offer guidance of PatternFly's visual design.
-
-#### Icons
+### Using icons
 
 PatternFly uses [Font Awesome 5](https://fontawesome.com/), which can be utilized in 2 different ways:
 
-  * Built into PatternFly: By default, Font Awesome is included as part of the PatternFly CSS file. You do not need to do anything else to use this icon font family.
+  * **Built into PatternFly:** By default, Font Awesome is included as part of the PatternFly CSS file. You do not need to do anything else to use this icon font family.
 
-  * Used as a CDN: If you wish to use the CDN for Font Awesome 5 rather than the default approach, you need to: 
+  * **Used as a CDN:** If you wish to use the CDN for Font Awesome 5 rather than the default approach, you need to complete the following steps: 
     1. Update the ```sass-utilities/scss-variables.scss``` file (from source ```node_modules/@patternfly/patternfly/```) to include:
 
       ```scss
@@ -139,18 +127,11 @@ PatternFly uses [Font Awesome 5](https://fontawesome.com/), which can be utilize
 
 ## Testing
 
-Many PatternFly components comply with the Open UI Automation (OUIA) guidelines, which are designed to ease the burden of creating and maintaining automated testing environments.  Additional details about OUIA and the full list of compliant components can be found in [our developer resources](/developer-resources/open-ui-automation).
+Many PatternFly components comply with the Open UI Automation (OUIA) guidelines, which are designed to ease the burden of creating and maintaining automated testing environments.  Additional details about OUIA and the full list of compliant components [can be found in our developer resources.](/developer-resources/open-ui-automation)
 
 ## Supported browsers and operating systems
 
-PatternFly is supported by the following operating system and browser versions: 
-
-Operating systems: 
-- Mac OS
-- Windows 
-- Linux
-
-Browsers: 
+[PatternFly is supported on](https://github.com/patternfly/patternfly/?tab=readme-ov-file#browser-support) the 2 latest major versions of the following browsers: 
 - Chrome
 - Firefox
 - Safari
