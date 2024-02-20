@@ -71,9 +71,9 @@ If you wish to migrate an existing project to PatternFly you must install and co
 
 ## Develop with HTML/CSS 
 
-The PatternFLy HTML/CSS library contains a collection of code samples that you can use to build interfaces with consistent PatternFly markup and styling.
+The PatternFly HTML/CSS library contains a collection of code samples that you can use to build interfaces with consistent PatternFly markup and styling.
 
-Each of the three modules (layouts, components, and utilities) delivers Sass (.scss) and CSS files that you can include in your build environment or consume from your page header. If you need to overwrite any elements, we recommend extending the variables found in the Sass files, rather than manually overwriting the CSS.
+Each of the 3 modules (layouts, components, and utilities) delivers Sass (.scss) and CSS files that you can include in your build environment or consume from your page header. If you need to overwrite any elements, we recommend extending the variables found in the Sass files, rather than manually overwriting the CSS.
 
 When you install PatternFly, the package includes:
 
@@ -131,7 +131,7 @@ Many PatternFly components comply with the Open UI Automation (OUIA) guidelines,
 
 ## Supported browsers and operating systems
 
-[PatternFly is supported on](https://github.com/patternfly/patternfly/?tab=readme-ov-file#browser-support) the 2 latest major versions of the following browsers: 
+PatternFly is supported on the 2 latest major versions of the following browsers: 
 - Chrome
 - Firefox
 - Safari
