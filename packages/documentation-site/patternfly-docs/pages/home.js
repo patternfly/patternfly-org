@@ -13,6 +13,7 @@ import {
   FlexItem,
   Grid,
   PageSection,
+  PageSectionVariants,
   Title,
   Text,
   TextVariants,
@@ -157,6 +158,9 @@ const FeaturedBlogCard = ({postData, idx}) => {
 
 const HomePage = () => (
   <React.Fragment>
+    <PageSection variant={PageSectionVariants.light} stickyOnBreakpoint={{ default: 'top' }} className="pf-v5-u-font-size-lg">
+      PatternFly 6 alphas are available! Visit the PatternFly 6 staging website (still in in process) for new design, code samples, and documentation. <a href="https://staging-v6.patternfly.org/" className="pf-v5-u-font-weight-bold">Go to PatternFly 6 <ArrowRightIcon /></a>
+    </PageSection>
     <PageSection isWidthLimited className="ws-homepage-main-section">
       <Flex
         direction={{default: "column", lg: "row"}}

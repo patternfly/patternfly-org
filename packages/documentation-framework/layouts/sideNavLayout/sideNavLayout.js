@@ -163,12 +163,26 @@ const HeaderTools = ({
                     </DropdownList>
                   </DropdownGroup>
                 )}
-                <Divider key="divider" className="ws-switcher-divider"/>
+                <Divider key="divider1" className="ws-switcher-divider"/>
+                <DropdownGroup key="Alpha preview version" label="Alpha preview version">
+                  <DropdownList>
+                    <DropdownItem
+                      key="PatternFly 6"
+                      className="ws-patternfly-versions"
+                      isExternalLink
+                      to="https://staging-v6.patternfly.org/"
+                      itemId="patternfly-6"
+                    >
+                      PatternFly 6
+                    </DropdownItem>
+                  </DropdownList>
+                </DropdownGroup>
+                <Divider key="divider2" className="ws-switcher-divider"/>
                 <DropdownGroup key="Previous versions" label="Previous versions">
                   <DropdownList>
                     <DropdownItem
                       key="PatternFly 4"
-                      className="ws-patternfly-3"
+                      className="ws-patternfly-versions"
                       isExternalLink
                       to="http://v4-archive.patternfly.org/v4/"
                       itemId="patternfly-4"
@@ -177,7 +191,7 @@ const HeaderTools = ({
                     </DropdownItem>
                     <DropdownItem
                       key="PatternFly 3"
-                      className="ws-patternfly-3"
+                      className="ws-patternfly-versions"
                       isExternalLink
                       to="https://pf3.patternfly.org/"
                       itemId="patternfly-3"
