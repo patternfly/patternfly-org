@@ -148,7 +148,7 @@ const FeaturedBlogCard = ({postData, idx}) => {
           {title}
         </a>
       </CardTitle>
-      <CardFooter className="pf-v5-u-color-200">
+      <CardFooter className="pf-v6-u-color-200">
         {author} • {length}
       </CardFooter>
     </Card>
@@ -173,13 +173,13 @@ const HomePage = () => (
             spaceItems={{default: "spaceItemsLg"}}
           >
             <Title
-              className="pf-v5-u-font-weight-bold"
+              className="pf-v6-u-font-weight-bold"
               headingLevel="h1"
               size="4xl"
             >
               {" "}
               Design and build better product experiences in the
-              <Text component="span" className="pf-v5-u-primary-color-100">
+              <Text component="span" className="pf-v6-u-primary-color-100">
                 {" "}
                 open{" "}
               </Text>
@@ -195,7 +195,7 @@ const HomePage = () => (
             <FlexItem>
               <Link
                 to="/get-started/design"
-                className="pf-v5-c-button pf-m-secondary pf-m-display-lg"
+                className="pf-v6-c-button pf-m-secondary pf-m-display-lg"
                 aria-label="Start designing"
               >
                 Start designing
@@ -204,7 +204,7 @@ const HomePage = () => (
             <FlexItem>
               <Link
                 to="/get-started/develop"
-                className="pf-v5-c-button pf-m-secondary pf-m-display-lg"
+                className="pf-v6-c-button pf-m-secondary pf-m-display-lg"
                 aria-label="Start developing"
               >
                 Start developing
@@ -215,22 +215,22 @@ const HomePage = () => (
         <style>
           {`
           :root {
-            --pf-v5-c-image-showcase-url: url(${lightshowcase});
+            --pf-v6-c-image-showcase-url: url(${lightshowcase});
           }
-          .pf-v5-c-image-showcase {
-            background-image: var(--pf-v5-c-image-showcase-url);
+          .pf-v6-c-image-showcase {
+            background-image: var(--pf-v6-c-image-showcase-url);
             background-repeat: no-repeat;
             background-size: auto 100%;
           }
-          .pf-v5-theme-dark {
-            --pf-v5-c-image-showcase-url: url(${darkshowcase});
+          .pf-v6-theme-dark {
+            --pf-v6-c-image-showcase-url: url(${darkshowcase});
           }
         `}
         </style>
         <FlexItem
           flex={{md: "flex_3"}}
           alignSelf={{default: "alignSelfStretch"}}
-          className="pf-v5-c-image-showcase"
+          className="pf-v6-c-image-showcase"
         ></FlexItem>
       </Flex>
     </PageSection>

@@ -36,11 +36,11 @@ The following sections outline common text styles that are used in PatternFly ap
 **Note:** Use only for extra large titles in cards or similar locations. Do not use for page titles.
 
 <TitleLevel
-  className="pf-v5-c-title pf-m-lg ws-title-level-heading"
+  className="pf-v6-c-title pf-m-lg ws-title-level-heading"
   asGrid
   styleProps={styleProps.superHero} />
 
-<div class="pf-v5-u-mt-lg"> 
+<div class="pf-v6-u-mt-lg"> 
 </div>
 
 ### Hero heading (3xl)
@@ -48,10 +48,10 @@ The following sections outline common text styles that are used in PatternFly ap
 **Note:** Use only for extra large titles in cards or similar locations. Do not use for page titles.
 
 <TitleLevel
-  className="pf-v5-c-title pf-m-lg ws-title-level-heading"
+  className="pf-v6-c-title pf-m-lg ws-title-level-heading"
   asGrid
   styleProps={styleProps.hero} />
-<div class="pf-v5-u-mt-lg">
+<div class="pf-v6-u-mt-lg">
 </div>
 
 ### First level heading (2xl, H1)
@@ -59,37 +59,37 @@ The following sections outline common text styles that are used in PatternFly ap
 **Note**: Only 1 first level/H1 heading should ever exist on a page.
 
 <TitleLevel
-  className="pf-v5-c-title pf-m-lg ws-title-level-heading"
+  className="pf-v6-c-title pf-m-lg ws-title-level-heading"
   asGrid
   styleProps={styleProps.first} />
-<div class="pf-v5-u-mt-lg">
+<div class="pf-v6-u-mt-lg">
 </div>
 
 ### Second level heading (xl, H2)
 
 <TitleLevel
-  className="pf-v5-c-title pf-m-lg ws-title-level-heading"
+  className="pf-v6-c-title pf-m-lg ws-title-level-heading"
   asGrid
   styleProps={styleProps.second} />
-<div class="pf-v5-u-mt-lg">
+<div class="pf-v6-u-mt-lg">
 </div>
 
 ### Third level heading (lg, H3)
 
 <TitleLevel
-  className="pf-v5-c-title pf-m-lg ws-title-level-heading"
+  className="pf-v6-c-title pf-m-lg ws-title-level-heading"
   asGrid
   styleProps={styleProps.third} />
-<div class="pf-v5-u-mt-lg">
+<div class="pf-v6-u-mt-lg">
 </div>
 
 ### Fourth level heading (md, H4)
 
 <TitleLevel
-  className="pf-v5-c-title pf-m-lg ws-title-level-heading"
+  className="pf-v6-c-title pf-m-lg ws-title-level-heading"
   asGrid
   styleProps = {styleProps.fourth} />
-<div class="pf-v5-u-mt-lg">
+<div class="pf-v6-u-mt-lg">
 </div>
 
 ### Default body text
@@ -97,28 +97,28 @@ The following sections outline common text styles that are used in PatternFly ap
 **Note:** This is the default text style for paragraphs, lists, tables, etc. Some components instead use Red Hat Text at 700 font weight, which is Red Hat Text Medium (such as alerts and navigation).
 
 <TitleLevel
-  className="pf-v5-c-title pf-m-lg ws-title-level-heading"
+  className="pf-v6-c-title pf-m-lg ws-title-level-heading"
   asGrid
   styleProps = {styleProps.body} />
-<div class="pf-v5-u-mt-lg">
+<div class="pf-v6-u-mt-lg">
 </div>
 
 ### Small text
 
 <TitleLevel
-  className="pf-v5-c-title pf-m-lg ws-title-level-heading"
+  className="pf-v6-c-title pf-m-lg ws-title-level-heading"
   asGrid
   styleProps = {styleProps.small} />
-<div class="pf-v5-u-mt-lg">
+<div class="pf-v6-u-mt-lg">
 </div>
 
 ### Tiny text
 
 <TitleLevel
-  className="pf-v5-c-title pf-m-lg ws-title-level-heading"
+  className="pf-v6-c-title pf-m-lg ws-title-level-heading"
   asGrid
   styleProps = {styleProps.tiny} />
-<div class="pf-v5-u-mt-lg">
+<div class="pf-v6-u-mt-lg">
 </div>
 
 ### Code
@@ -126,10 +126,10 @@ The following sections outline common text styles that are used in PatternFly ap
 **Note:** Used for code blocks.
 
 <TitleLevel
-  className="pf-v5-c-title pf-m-lg ws-title-level-heading"
+  className="pf-v6-c-title pf-m-lg ws-title-level-heading"
   asGrid
   styleProps = {styleProps.code} />
-<div class="pf-v5-u-mt-lg">
+<div class="pf-v6-u-mt-lg">
 </div>
 
 ## Customizing heading levels
@@ -161,7 +161,7 @@ For example, if a body of text uses a line height of 1.5 and the body text size 
   <GridItem span={12}>
     <LineHeightTitle>
       <CheckCircleIcon color="#52A549" />
-      <span style={{marginLeft: 'var(--pf-v5-global--spacer--sm)'}}>Correct</span>
+      <span style={{marginLeft: 'var(--pf-v6-global--spacer--sm)'}}>Correct</span>
     </LineHeightTitle>
     <div>Include line height space when laying out text with spacers.</div>
     <img alt="correct line height space example" style={{maxHeight: '158px', padding: '16px'}} src={correct} />
@@ -169,7 +169,7 @@ For example, if a body of text uses a line height of 1.5 and the body text size 
   <GridItem span={12}>
     <LineHeightTitle>
       <TimesCircleIcon color="#CC0000" />
-      <span style={{marginLeft: 'var(--pf-v5-global--spacer--sm)'}}>Incorrect</span>
+      <span style={{marginLeft: 'var(--pf-v6-global--spacer--sm)'}}>Incorrect</span>
     </LineHeightTitle>
     <div>Don't align spacing solely to the text. Always include the line height space.</div>
     <img alt="incorrect line height space example" style={{maxHeight: '124px', padding: '16px'}} src={incorrect} />
