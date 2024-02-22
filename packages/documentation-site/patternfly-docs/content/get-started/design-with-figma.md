@@ -12,29 +12,34 @@ import ArrowRightIcon from '@patternfly/react-icons/dist/esm/icons/arrow-right-i
 
 ## Penta design kit
 
-Penta is part of PatternFly 6, so you will need to be fully upgraded in order to use the Penta kit. We recommend upgrading to PatternFly 6 to ensure that you're getting the most up-to-date resources and guidance. If you haven't yet, you can [follow our guide](/get-started/upgrade) to complete your upgrade. 
+Our current design kit, "Penta", is available as part of PatternFly 6. In order to take advantage of Penta, you must upgrade to PatternFly 6. This also ensures that you'll have access to the most up-to-date resources and guidance! If you haven't yet, you can [follow our guide](/get-started/upgrade) to complete your upgrade. 
 
-If you're still using PatternFly 5, [view our separate guidance](#patternfly-5-design-library). 
+[Check out our frequently asked questions](#frequently-asked-questions) for more details around PatternFly versioning.
 
 ### Get the design kit
 
-To start designing with PatternFly, you will need to install our design kit, called **"Penta"**. Our [Penta kit](https://www.figma.com/@patternfly) gives you full access to PatternFly's visual design system — including design tokens — so that you can create consistently usable product experiences. 
+To start designing with PatternFly, you will need to install the Penta design kit. The kit gives you full access to PatternFly's visual design system — including design tokens — so that you can create consistently usable product experiences. 
 
-<div style="text-align: center;">
+<div>
     <Button component="a" href='https://www.figma.com/@patternfly' target="_blank" variant='primary' size='lg' > Install Penta <ArrowRightIcon /> </Button>
     <br />
     <br />
 </div>
 
+If you have trouble getting the design kit, [review your access method](#1.-how-do-i-get-access-to-figma) or [reach out to us on Slack](http://join.slack.com/t/patternfly/shared_invite/zt-1npmqswgk-bF2R1E2rglV8jz5DNTezMQ).
 
-If you have trouble getting the design kit, [refer to these steps](#1.-how-do-i-get-access-to-figma), or reach out to us on Slack.
+### What's in the design kit? 
 
-### What is in the Penta design kit? 
+In the Penta design kit, you will find: 
+- A component library. 
+- A design token system. 
+- Demos of full-screen designs. 
 
-In the Penta design kit, you will have access to a few things: 
-- A component library 
-- A design token system 
-- Template files and/or demos if we add
+### Where do I start?
+
+A welcome page to guide you through your first steps.
+
+Once you've installed Penta, you're ready to start designing beautiful products. 
 
 #### The component library 
 
@@ -43,10 +48,6 @@ Our component library contains [all PatternFly components](/components/all-compo
 #### Design tokens
 
 For information on how to use design tokens, [visit our tokens documentation](/tokens/about-tokens).
-
-### Where do I start?
-
-Once you've installed Penta, you're ready to start designing beautiful products. 
 
 If you're completely new to PatternFly, we suggest that you [get familiar with our design system](/get-started/about-patternfly) first!
 
@@ -70,6 +71,11 @@ If you are not a Red Hat employee, you will need to create a copy of the [Penta 
 
 Note that you will not be able to receive automatic library updates since you are working from a local copy. The PatternFly team will release any updates every other week, as part of their sprint schedule. Be sure to revisit our Figma community page in order to download the latest updates. 
 
-### 2. What happened to the PatternFly 5 design library? 
+### 2. What if I haven't upgraded to PatternFly 6? 
+If your product hasn't been upgraded to PatternFly 6, 
+
+If you haven't migrated to Figma, continue to the next question.
+
+### 3. What if I'm still using Sketch? 
 
 Before PatternFly 5, the PatternFly design kit was available within Sketch. We have migrated our design libraries to Figma, in order to take advantage of its real-time collaboration features that help streamline the design process and support better communication. While you may still use Sketch if it best fits your needs, it is no longer our recommendation. [See more details within our Sketch instruction.](/get-started/design#sketch-design-kit)

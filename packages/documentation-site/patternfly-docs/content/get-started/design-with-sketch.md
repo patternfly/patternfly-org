@@ -5,7 +5,7 @@ section: get-started
 source: Design-with-Sketch
 ---
 
-**Note:** We have migrated to Figma and no longer maintain or update our Sketch design kits. We strongly advise you to migrate to Figma and use the updated PatternFly design kit. If you still use Sketch, you can refer to this guide, but know that it is no longer being updated.
+**Note:** We have migrated to Figma and no longer maintain or update our Sketch design kits. We strongly advise you to migrate to Figma and use the updated PatternFly design kit. If you still use Sketch, you can refer to this guide, but it is no longer being updated.
 
 ## Sketch design kit
 
@@ -19,8 +19,8 @@ A PatternFly wireframe kit is also available for creating low or mid-fidelity mo
 
 ### Getting the design kit
 
-#### Download the font
-PatternFly currently uses Red Hat Text and Red Hat Display. To download these fonts, go to https://github.com/RedHatOfficial/RedHatFont and download the whole repository. Then select all files in the "TTF" folder and double-click. This will install them onto your computer locally.
+#### Download fonts
+PatternFly currently uses Red Hat Text and Red Hat Display, [which you can download here](https://github.com/RedHatOfficial/RedHatFont). Once you've downloaded the repository, select all files in the "TTF" folder and double-click to install them onto your computer locally.
 
 ### What's in the design kit?
 
@@ -44,8 +44,7 @@ From the top toolbar in Sketch, select Insert → Symbols → Patternfly 4 to ad
 
 PatternFly symbols are designed to be as flexible and adaptable as possible. As such, designers should avoid detaching symbols from the library. However, there are rare instances where this may be necessary. Just know that once a symbol is detached, that symbol will no longer automatically update with new releases.
 
-<img src="./img/symbol-library.png"></img>
-
+<img src="./img/symbol-library.png" alt=""></img>
 
 ### Using Sketch
 
