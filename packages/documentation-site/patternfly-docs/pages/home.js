@@ -160,7 +160,7 @@ const FeaturedBlogCard = ({postData, idx}) => {
 const HomePage = () => (
   <React.Fragment>
     <Banner color="blue" isSticky>
-      Welcome to the PatternFly 6 staging website. PatternFly 6 and the documentation are <span className="pf-v6-u-font-weight-bold">still under development.</span>
+      Welcome to the PatternFly 6 staging website! PatternFly 6 is <span className="pf-v6-u-font-weight-bold">still under development, so documentation across this website will continue to change.</span>
     </Banner>
     <PageSection isWidthLimited className="ws-homepage-main-section">
       <Flex
