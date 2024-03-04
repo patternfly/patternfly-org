@@ -5,11 +5,19 @@ section: get-started
 source: Design-with-Sketch
 ---
 
-**Note:** We have migrated to Figma and no longer maintain or update our Sketch design kits. We strongly advise you to migrate to Figma and use the updated PatternFly design kit. If you still use Sketch, you can refer to this guide, but it is no longer being updated.
+import { Alert } from '@patternfly/react-core';
+
+<Alert variant="info" title="Unsupported">
+    We no longer maintain or update our Sketch design kits and strongly advise you to migrate to Figma, so that you can use the current PatternFly design kit. As a result, this guide is no longer being updated.
+</Alert>
 
 ## Sketch design kit
 
-The Sketch design kit was our recommendation prior to the release of PatternFly 5. Initial PatternFly 5 components and styles were added to Sketch, but nothing beyond those initial updates will be available in Sketch. If you continue to use Sketch, you will not be following our latest recommendations and will not have access to new PatternFly features. We strongly recommend that you [migrate to Figma](/get-started/design) so that you can continue to receive updated design resources.
+The Sketch design kit was our recommendation prior to the release of PatternFly 5. Initial PatternFly 5 components and styles were added to Sketch, but nothing beyond those initial updates will be included going forward. PatternFly 6 and beyond will only be available within Figma.
+
+If you continue to use Sketch, you will not be following our latest recommendations and will not have access to new PatternFly features.
+
+**We strongly recommend you to [migrate to Figma](/get-started/design) so that you can continue to receive updated design resources.**
 
 ### Design kit
 The design kit is a symbol library implemented in Sketch to help designers, like you, create high-fidelity mockups that reflect PatternFly styling.
@@ -77,7 +85,7 @@ There’s a lot to learn when it comes to making smart use of the Sketch templat
 [**Start Sketch design training**](/training/design) <i class="ws-content-blueArrow fas fa-arrow-right pf-v5-u-mx-sm"></i>
 
 ### Spacers
-The layout for all visual elements in Patternfly is determined by spacers. The spacers are used as padding between elements to ensure consistent layout and placement of components into a design that adhere to PatternFly guidelines. All symbols in the symbol library and templates have been made using spacers which are built-in to ensure correct use of elements.
+The layout for all visual elements in Patternfly is determined by spacers. The spacers are used as padding between elements to ensure consistent layout and placement of components into a design that adheres to PatternFly guidelines. All symbols in the symbol library and templates have been made using spacers which are built-in to ensure correct use of elements.
 
 The [template library](https://www.sketch.com/s/729c2eee-e8b6-4fcd-8a79-f6faa8c30f89) also contains examples of spacer use to clarify where elements should be placed within a given page or design.  These templates have been created in a way that reduces a user’s need to think about spacers. An example of a Login form template can be seen here with different sized spacers - demonstrated by their different colors - used to separate each symbol/component within the layout.
 
