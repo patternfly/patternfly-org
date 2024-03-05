@@ -2276,10 +2276,10 @@
     "@patternfly/react-core" "^5.0.0"
     "@patternfly/react-styles" "^5.0.0"
 
-"@patternfly/react-charts@^7.2.1":
-  version "7.2.1"
-  resolved "https://registry.yarnpkg.com/@patternfly/react-charts/-/react-charts-7.2.1.tgz#54d7b39d3779fe1f9fa0ed7c44465d2f0ee495e3"
-  integrity sha512-ln24zv08JF7tFWY/SXlV5vKInqBU/2o4DuPg5bVhy/V6X3BjPY1aUn/Yrwqw/9H0NTMZPdIpqVt8066zWHAu8g==
+"@patternfly/react-charts@^7.2.2":
+  version "7.2.2"
+  resolved "https://registry.yarnpkg.com/@patternfly/react-charts/-/react-charts-7.2.2.tgz#153a2b541dce3608702b34468850cb190e8aaa3a"
+  integrity sha512-1PFuvXz3mm/o/O+BQ2/2e66ncvtV8XIYxFaimurslCLTygodOvjBDDu/D/5tNa3HLxvA+fm2Q58893POGZi+bw==
   dependencies:
     "@patternfly/react-styles" "^5.2.1"
     "@patternfly/react-tokens" "^5.2.1"
@@ -2376,13 +2376,13 @@
     react-dropzone "^14.2.3"
     tslib "^2.5.0"
 
-"@patternfly/react-docs@6.2.1":
-  version "6.2.1"
-  resolved "https://registry.yarnpkg.com/@patternfly/react-docs/-/react-docs-6.2.1.tgz#6aec7262ebda8287df9801fecb1f6b3b465c36ef"
-  integrity sha512-r+p2n+oCzVIpB8tEGsBlKNbdfOxBi7MuZjGTJw1N39COQ1fr3lRORzI9auJYksDo1DMLFTQ1kp77WuZ9G/Pljg==
+"@patternfly/react-docs@6.2.2":
+  version "6.2.2"
+  resolved "https://registry.yarnpkg.com/@patternfly/react-docs/-/react-docs-6.2.2.tgz#e3741a545c1ddb29afc300d616098d135964cec7"
+  integrity sha512-POXDZkwT3J76W0VtVJudNFmjLXGtXYOHej49Rrue+/TMIdhzua7msbvq1Q7ahT96XiD69712bJk9UGQk8RrXng==
   dependencies:
     "@patternfly/patternfly" "5.2.1"
-    "@patternfly/react-charts" "^7.2.1"
+    "@patternfly/react-charts" "^7.2.2"
     "@patternfly/react-code-editor" "^5.2.1"
     "@patternfly/react-core" "^5.2.1"
     "@patternfly/react-drag-drop" "^5.2.1"

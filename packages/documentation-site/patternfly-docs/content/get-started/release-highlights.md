@@ -17,7 +17,7 @@ PatternFly 5.2.1 is now live! This was a patch release to fix the below bugs. He
   - [@patternfly/patternfly@5.2.1](https://www.npmjs.com/package/@patternfly/patternfly/v/5.2.1)
 
 - patternfly/patternfly-react ([changelog](https://github.com/patternfly/patternfly-react/releases/tag/5.2.1))
-  - [@patternfly/react-charts@7.2.1](https://www.npmjs.com/package/@patternfly/react-charts/v/7.2.1)
+  - [@patternfly/react-charts@7.2.2](https://www.npmjs.com/package/@patternfly/react-charts/v/7.2.2)
   - [@patternfly/react-code-editor@5.2.1](https://www.npmjs.com/package/@patternfly/react-code-editor/v/5.2.1)
   - [@patternfly/react-core@5.2.1](https://www.npmjs.com/package/@patternfly/react-core/v/5.2.1)
   - [@patternfly/react-drag-drop@5.2.1](https://www.npmjs.com/package/@patternfly/react-drag-drop/v/5.2.1)
