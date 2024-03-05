@@ -27,7 +27,8 @@ PatternFly 5.2.1 is now live! This was a patch release to fix the below bugs. He
   - [@patternfly/react-tokens@5.2.1](https://www.npmjs.com/package/@patternfly/react-tokens/v/5.2.1)
 
 ### Fixes include:
-- Issues with styles and intractability of cards in Chromium based browsers
+- Issues with styles and inetractability of cards in Chromium based browsers
+  - Additional details: https://github.com/orgs/patternfly/discussions/6381
 - Support for status modifiers on Modal titles
 - Type updates to react-charts to reflect changes in the Victory types
 - Reversion of a previous type change with our clipboard copy component that was unintentionally breaking
