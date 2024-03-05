@@ -33,6 +33,8 @@ PatternFly 5.2.1 is now live! This was a patch release to fix the below bugs. He
 - Reversion of a previous type change with our clipboard copy component that was unintentionally breaking
 - Pass through of more props to monaco-editor in our code editor component
 
+<Divider />
+
 ## PatternFly 5.2 
 
 PatternFly 5.2 is now live! Here are the highlights from this release. 
