@@ -26,13 +26,14 @@ PatternFly 5.2.1 is now live! This was a patch release to fix a few bugs that we
   - [@patternfly/react-table@5.2.1](https://www.npmjs.com/package/@patternfly/react-table/v/5.2.1)
   - [@patternfly/react-tokens@5.2.1](https://www.npmjs.com/package/@patternfly/react-tokens/v/5.2.1)
 
-### Fixes include:
-- Issues with styles and inetractability of cards in Chromium based browsers
+### Fixed bugs
+In this patch release, we:
+- Corrected issues with styles and intractability of cards in Chromium-based browsers.
   - Additional details: https://github.com/orgs/patternfly/discussions/6381
-- Support for status modifiers on Modal titles
-- Type updates to react-charts to reflect changes in the Victory types
-- Reversion of a previous type change with our clipboard copy component that was unintentionally breaking
-- Pass through of more props to monaco-editor in our code editor component
+- Added support for status modifiers on modal titles.
+- Updated types used in react-charts to reflect changes in the Victory types.
+- Reverted a previous type change within our clipboard copy component that was unintentionally breaking.
+- Updated our code editor component to pass through more props to monaco-editor. 
 
 <Divider />
 
