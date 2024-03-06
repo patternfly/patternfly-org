@@ -17,7 +17,7 @@ async function buildWebpack(webpackConfig) {
     throw err;
   }
 
-  return new Promise((res, rej) => 
+  return new Promise((res, rej) =>
     compiler.run((err, stats) => {
       if (err) {
         console.error(err.stack || err);
@@ -26,14 +26,14 @@ async function buildWebpack(webpackConfig) {
         }
         rej();
       }
-    
+
       const info = stats.toJson();
-    
+
       if (stats.hasErrors()) {
         console.error(info.errors);
         rej();
       }
-    
+
       if (stats.hasWarnings()) {
         console.warn(info.warnings.join('\n'));
       }
@@ -50,6 +50,11 @@ async function execFile(file, args) {
     const child_execArgv = [
       '--max-old-space-size=4096'
     ];
+
+    if (args.legacySSL) {
+      child_execArgv.push('--openssl-legacy-provider')
+    }
+
     const child = fork(path.join(__dirname, file), child_argv, { execArgv: child_execArgv });
     function errorHandler(err) {
       console.error(err);
@@ -78,6 +83,7 @@ async function build(cmd, options) {
   const config = getConfig(options);
   config.analyze = options.analyze;
   config.output = options.output;
+  config.legacySSL = options.legacySSL
 
   // These get passed to `fork`ed builds
   process.env.pathPrefix = config.pathPrefix;
