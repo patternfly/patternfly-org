@@ -9,7 +9,7 @@ import { Divider } from '@patternfly/react-core';
 
 ## PatternFly 5.2.1
 
-PatternFly 5.2.1 is now live! This was a patch release to fix the below bugs. Here are the package versions from this release. 
+PatternFly 5.2.1 is now live! This was a patch release to fix a few bugs that were found.
 
 ### Promoted package versions
 
