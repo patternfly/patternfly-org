@@ -6,6 +6,7 @@ section: get-started
 
 import './get-started.css';
 import { Button, Card, CardHeader, CardTitle, CardBody, Grid, GridItem } from '@patternfly/react-core';
+import ArrowRightIcon from '@patternfly/react-icons/dist/esm/icons/arrow-right-icon';
 
 ## What is PatternFly? 
 
@@ -20,9 +21,9 @@ The PatternFly design system is created and maintained by Red Hat, and is used a
 
 <br />
 
-At the core of PatternFly is our community of people: our Flyers. Together, we celebrate creativity and foster a sense of teamwork and unity. [Learn more about our community]() and the ways that you can [become a contributor]().
-
 We're excited that you're here!
+
+At the core of PatternFly is our community of people: our Flyers. Together, we celebrate creativity and foster a sense of teamwork and unity. [Learn more about our community](/get-started/community) and the ways that you can [become a contributor](/get-started/contribute).
 
 ## What does PatternFly include?
 
@@ -260,11 +261,10 @@ PatternFly is built on the needs of our community. To request a new feature or a
 
 ## Where do I start?
 
-Now that you've been introduced to PatternFly, you're ready to start creating!
+Now that you've been introduced to PatternFly, you're ready to start creating! Check out our onboarding guides for more instruction:
 
-<Button component="a" href="https://www.patternfly.org/get-started/design" variant="secondary" size="lg"> Start designing </Button>
-
-<Button component="a" href="https://www.patternfly.org/get-started/develop" variant="secondary" size="lg"> Start developing </Button>
+<Button component="a" href="https://www.patternfly.org/get-started/design" variant="secondary" size="lg"> Start designing <ArrowRightIcon /> </Button>
+<Button component="a" href="https://www.patternfly.org/get-started/develop" variant="secondary" size="lg" class="pf-v5-u-m-md"> Start developing <ArrowRightIcon /> </Button>
 
 <br />
 
