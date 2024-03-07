@@ -8,7 +8,8 @@ source: Design-with-Sketch
 import { Alert } from '@patternfly/react-core';
 
 <Alert variant="info" title="Unsupported">
-    We no longer maintain or update our Sketch design kits and strongly advise you to migrate to Figma, so that you can use the current PatternFly design kit. As a result, this guide is no longer being updated.
+    We no longer maintain or update our Sketch design kits and, as a result, this guide is no longer being updated. We strongly advise you to [migrate to Figma](/get-started/design), so that you can continue to receive updated PatternFly design resources.
+
 </Alert>
 
 ## Sketch design kit
@@ -17,7 +18,7 @@ The Sketch design kit was our recommendation prior to the release of PatternFly 
 
 If you continue to use Sketch, you will not be following our latest recommendations and will not have access to new PatternFly features.
 
-**We strongly recommend you to [migrate to Figma](/get-started/design) so that you can continue to receive updated design resources.**
+The following guide outlines our previous instructions for using Sketch, but they may no longer be relevant or accurate.
 
 ### Design kit
 The design kit is a symbol library implemented in Sketch to help designers, like you, create high-fidelity mockups that reflect PatternFly styling.
