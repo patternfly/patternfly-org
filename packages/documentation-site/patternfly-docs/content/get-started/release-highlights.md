@@ -7,6 +7,36 @@ section: get-started
 import './get-started.css';
 import { Divider } from '@patternfly/react-core';
 
+## PatternFly 5.2.1
+
+PatternFly 5.2.1 is now live! This was a patch release to fix a few bugs that were found.
+
+### Promoted package versions
+
+- patternfly/patternfly ([changelog](https://github.com/patternfly/patternfly/releases/tag/patch-5.2.1))
+  - [@patternfly/patternfly@5.2.1](https://www.npmjs.com/package/@patternfly/patternfly/v/5.2.1)
+
+- patternfly/patternfly-react ([changelog](https://github.com/patternfly/patternfly-react/releases/tag/5.2.1))
+  - [@patternfly/react-charts@7.2.2](https://www.npmjs.com/package/@patternfly/react-charts/v/7.2.2)
+  - [@patternfly/react-code-editor@5.2.1](https://www.npmjs.com/package/@patternfly/react-code-editor/v/5.2.1)
+  - [@patternfly/react-core@5.2.1](https://www.npmjs.com/package/@patternfly/react-core/v/5.2.1)
+  - [@patternfly/react-drag-drop@5.2.1](https://www.npmjs.com/package/@patternfly/react-drag-drop/v/5.2.1)
+  - [@patternfly/react-icons@5.2.1](https://www.npmjs.com/package/@patternfly/react-icons/v/5.2.1)
+  - [@patternfly/react-styles@5.2.1](https://www.npmjs.com/package/@patternfly/react-styles/v/5.2.1)
+  - [@patternfly/react-table@5.2.1](https://www.npmjs.com/package/@patternfly/react-table/v/5.2.1)
+  - [@patternfly/react-tokens@5.2.1](https://www.npmjs.com/package/@patternfly/react-tokens/v/5.2.1)
+
+### Fixed bugs
+In this patch release, we:
+- Corrected issues with styles and intractability of cards in Chromium-based browsers.
+  - Additional details: https://github.com/orgs/patternfly/discussions/6381
+- Added support for status modifiers on modal titles.
+- Updated types used in react-charts to reflect changes in the Victory types.
+- Reverted a previous type change within our clipboard copy component that was unintentionally breaking.
+- Updated our code editor component to pass through more props to monaco-editor. 
+
+<Divider />
+
 ## PatternFly 5.2 
 
 PatternFly 5.2 is now live! Here are the highlights from this release. 
