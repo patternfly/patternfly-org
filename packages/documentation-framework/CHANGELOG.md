@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 5.5.0 (2024-03-08)
+
+
+### Features
+
+* **deps:** version bump for 5.2.1 release ([#3913](https://github.com/patternfly/patternfly-org/issues/3913)) ([46cc8b7](https://github.com/patternfly/patternfly-org/commit/46cc8b70e06b9bda61067beba57d928e428b73c5))
+
+
+
+
+
 ## 5.4.3 (2024-02-27)
 
 **Note:** Version bump only for package @patternfly/documentation-framework
