@@ -7,6 +7,24 @@ section: get-started
 import './get-started.css';
 import { Divider } from '@patternfly/react-core';
 
+## PatternFly 5.2.2
+
+PatternFly 5.2.2 is now live! This was a patch release to fix a significant bug that was found.
+
+### Promoted package versions
+
+- patternfly/patternfly-react ([changelog](https://github.com/patternfly/patternfly-react/releases/tag/5.2.2))
+  - [@patternfly/react-code-editor@5.2.2](https://www.npmjs.com/package/@patternfly/react-code-editor/v/5.2.2)
+  - [@patternfly/react-core@5.2.2](https://www.npmjs.com/package/@patternfly/react-core/v/5.2.2)
+  - [@patternfly/react-drag-drop@5.2.2](https://www.npmjs.com/package/@patternfly/react-drag-drop/v/5.2.2)
+  - [@patternfly/react-table@5.2.2](https://www.npmjs.com/package/@patternfly/react-table/v/5.2.2)
+
+### Fixed bugs
+In this patch release, we:
+- Corrected an issue that caused our menu component to crash when dynamically resetting menu items.
+
+<Divider />
+
 ## PatternFly 5.2.1
 
 PatternFly 5.2.1 is now live! This was a patch release to fix a few bugs that were found.
