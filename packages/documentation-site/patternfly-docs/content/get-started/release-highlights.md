@@ -21,7 +21,7 @@ PatternFly 5.2.2 is now live! This was a patch release to fix a significant bug 
 
 ### Fixed bugs
 In this patch release, we:
-- Fixed issue causing our menu component to crash when dynamically resetting menu items.
+- Corrected an issue that caused our menu component to crash when dynamically resetting menu items.
 
 <Divider />
 
