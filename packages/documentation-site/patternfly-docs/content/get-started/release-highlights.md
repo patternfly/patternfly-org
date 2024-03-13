@@ -17,7 +17,7 @@ PatternFly 5.2.2 is now live! This was a patch release to fix a significant bug 
   - [@patternfly/react-code-editor@5.2.2](https://www.npmjs.com/package/@patternfly/react-code-editor/v/5.2.2)
   - [@patternfly/react-core@5.2.2](https://www.npmjs.com/package/@patternfly/react-core/v/5.2.2)
   - [@patternfly/react-drag-drop@5.2.2](https://www.npmjs.com/package/@patternfly/react-drag-drop/v/5.2.2)
-  - [@patternfly/react-table@5.2.12](https://www.npmjs.com/package/@patternfly/react-table/v/5.2.2)
+  - [@patternfly/react-table@5.2.2](https://www.npmjs.com/package/@patternfly/react-table/v/5.2.2)
 
 ### Fixed bugs
 In this patch release, we:
