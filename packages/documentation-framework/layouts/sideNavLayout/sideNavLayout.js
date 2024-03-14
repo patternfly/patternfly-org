@@ -24,7 +24,7 @@ import {
   ToolbarItem,
   SkipToContent,
   Switch,
-  SearchInput,
+  // SearchInput,
   ToggleGroup,
   ToggleGroupItem
 } from '@patternfly/react-core';
@@ -51,10 +51,10 @@ const HeaderTools = ({
   const initialVersion = staticVersions.Releases.find(release => release.latest);
   const latestVersion = versions.Releases.find(version => version.latest);
   const previousReleases = Object.values(versions.Releases).filter(version => !version.hidden && !version.latest);
-  const hasSearch = algolia;
+  // const hasSearch = algolia;
   const [isDropdownOpen, setDropdownOpen] = useState(false);
-  const [searchValue, setSearchValue] = React.useState('');
-  const [isSearchExpanded, setIsSearchExpanded] = React.useState(false);
+  // const [searchValue, setSearchValue] = React.useState('');
+  // const [isSearchExpanded, setIsSearchExpanded] = React.useState(false);
   const [isDarkTheme, setIsDarkTheme] = React.useState(false);
 
   const getDropdownItem = (version, isLatest = false) => (
@@ -63,13 +63,13 @@ const HeaderTools = ({
     </DropdownItem>
   );
 
-  const onChange = (_evt, value) => {
-    setSearchValue(value);
-  };
+  // const onChange = (_evt, value) => {
+  //   setSearchValue(value);
+  // };
 
-  const onToggleExpand = (_evt, isSearchExpanded) => {
-    setIsSearchExpanded(!isSearchExpanded);
-  };
+  // const onToggleExpand = (_evt, isSearchExpanded) => {
+  //   setIsSearchExpanded(!isSearchExpanded);
+  // };
 
   const toggleDarkTheme = (_evt, selected) => {
     const darkThemeToggleClicked = !selected === isDarkTheme
@@ -77,12 +77,12 @@ const HeaderTools = ({
     setIsDarkTheme(darkThemeToggleClicked);
   };
 
-  useEffect(() => {
-    // reattach algolia to input each time search is expanded
-    if (hasSearch && isSearchExpanded) {
-      attachDocSearch(algolia, '.ws-global-search .pf-v5-c-text-input-group__text-input', 1000);
-    }
-  }, [isSearchExpanded])
+  // useEffect(() => {
+  //   // reattach algolia to input each time search is expanded
+  //   if (hasSearch && isSearchExpanded) {
+  //     attachDocSearch(algolia, '.ws-global-search .pf-v5-c-text-input-group__text-input', 1000);
+  //   }
+  // }, [isSearchExpanded])
 
   return (
     <Toolbar isFullHeight>
@@ -109,7 +109,7 @@ const HeaderTools = ({
               <Switch id="ws-rtl-switch" label={'RTL'} defaultChecked={isRTL} onChange={() => setIsRTL(isRTL => !isRTL)} />
             </ToolbarItem>
           )}
-          {hasSearch && (
+          {/* {hasSearch && (
             <ToolbarItem>
               <SearchInput
                 className="ws-global-search"
@@ -120,7 +120,7 @@ const HeaderTools = ({
                 expandableInput={{ isExpanded: isSearchExpanded, onToggleExpand, toggleAriaLabel: 'Expandable search input toggle' }}
               />
             </ToolbarItem>
-          )}
+          )} */}
           <ToolbarItem>
             <Button
               component="a"
