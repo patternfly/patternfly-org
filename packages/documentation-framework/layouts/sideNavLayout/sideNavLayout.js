@@ -302,6 +302,7 @@ export const SideNavLayout = ({ children, groupedRoutes, navOpen: navOpenProp })
         <Page
           id="ws-page"
           mainContainerId="ws-page-main"
+          mainComponent="div"
           header={Header}
           sidebar={SideBar}
           skipToContent={<SkipToContent href="#ws-page-main">Skip to content</SkipToContent>}
@@ -309,11 +310,11 @@ export const SideNavLayout = ({ children, groupedRoutes, navOpen: navOpenProp })
           defaultManagedSidebarIsOpen={navOpenProp}
         >
           {children}
+          {process.env.hasFooter && <Footer />}
         </Page>
         <div id="ws-page-banners">
           {hasGdprBanner && <GdprBanner />}
         </div>
-        {process.env.hasFooter && <Footer />}
       </RtlContext.Provider>
     </React.Fragment>
   );
