@@ -10,10 +10,8 @@ import { Checkbox, List, ListItem } from '@patternfly/react-core';
 To implement an accessible PatternFly **page**:
 
 - Provide a [skip to content](/components/skip-to-content) if more than one page shares the same heading or sidebar content.
-- Give each `nav` element on the page a unique `aria-label`.
+- Give each `nav` element a unique `aria-label` if there is more than one `nav` element on the page.
 - Ensure there is only 1 `main` element on the page.
-- Ensure each page section has an `aria-labelledby` attribute linked to a heading element within the section.
-  - If there is no heading within the section, provide an `aria-label` instead.
 - Follow any accessibility documentation for other components used within a page, such as a [breadcrumb](/components/breadcrumb), [notification drawer](/components/notification-drawer), or [navigation](/components/navigation).
 
 ## Testing
@@ -25,16 +23,13 @@ At a minimum, a page should meet the following criteria:
     <Checkbox id="page-a11y-checkbox-1" label="If more than one page has the same header and/or sidebar content, a skip to content is passed to the page." description="This allows users to skip repetitive content, as otherwise they would have to navigate through each heading and sidebar item on every page." />
   </ListItem>
   <ListItem>
-    <Checkbox id="page-a11y-checkbox-2" label={<span>If there are multiple nav elements on a page - such as a side navigation, header navigation, and/or breadcrumb navigation - each is given a unique <code className="ws-code">aria-label</code>.</span>} description='This will differentiate the various navigations on a page to a user who is navigating via a rotor menu. Otherwise each element would be announced as something generic such as "navigation".' />
+    <Checkbox id="page-a11y-checkbox-2" label={<span>If there are multiple nav elements on a page - such as a side navigation, header navigation, and/or breadcrumb navigation - each is given a unique <code className="ws-code">aria-label</code>.</span>} description='This will differentiate the various navigations on a page to a user who is navigating via a rotor menu. You should also consider providing an <code className="ws-code">aria-label</code> if the sole navigation is not the primary navigation.' />
   </ListItem>
   <ListItem>
     <Checkbox id="page-a11y-checkbox-3" label={<span>Only 1 <code className="ws-code">main</code> element exists on the page.</span>} />
   </ListItem>
   <ListItem>
-    <Checkbox id="page-a11y-checkbox-4" label={<span>Each page section has an <code className="ws-code">aria-labelledby</code> attribute linked to a heading element within the section, or the section has an <code className="ws-code">aria-label</code> if there is no heading.</span>} description="This provides a more succinct label for the section when a user is navigating via a rotor menu, otherwise the entire content of a page section would be announced." />
-  </ListItem>
-  <ListItem>
-    <Checkbox id="page-a11y-checkbox-5" label="If any other components are used within any page sub-component, those components follow their own accessibility documentation." />
+    <Checkbox id="page-a11y-checkbox-4" label="If any other components are used within any page sub-component, those components follow their own accessibility documentation." />
   </ListItem>
 </List>
 
