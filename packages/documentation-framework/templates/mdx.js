@@ -87,7 +87,7 @@ const MDXChildTemplate = ({
       )}
        {(template || source === 'react-template') && (
         <InlineAlert title="Templates" variant="info">
-          {`This page showcases templates for the ${id.toLowerCase()} component. A template consists of the component and additional logic supporting the use case, and has a streamlined API with some limited customization.`}
+          {`This page showcases templates for the ${id.toLowerCase()} component. A template combines a component with logic that supports a specific use case, with a streamlined API that offers additional, limited customization.`}
         </InlineAlert>
       )}
     </React.Fragment>
