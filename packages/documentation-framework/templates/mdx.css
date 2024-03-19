@@ -50,6 +50,11 @@
   margin-bottom: var(--pf-v6-c-content--MarginBottom);
 }
 
+.ws-image {
+  text-align: center;
+  width: "600px";
+}
+
 /* Table styles */
 /* Undo patternfly reset to respect MD table styles */
 .ws-table td[align="center"],
@@ -68,6 +73,7 @@
   table-layout: fixed;
   width: 100%;
 }
+
 .ws-table td > code,
 .ws-table th > code,
 .ws-table tr > code {

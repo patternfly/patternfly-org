@@ -47,6 +47,7 @@ module.exports = (_env, argv) => {
             /react-[\w-]+\\src\\.*\\examples/, // fix for Windows
             /react-[\w-]+\/patternfly-docs\/.*\/examples/, //fixes for extensions
             /react-[\w-]+\\patternfly-docs\\.*\\examples/,
+            path.resolve(__dirname, '../../../../node_modules/@patternfly/design-tokens/patternfly-docs/content')
           ].concat(includePaths.map(path => new RegExp(path))),
           exclude: [
             path.resolve(__dirname, '../../node_modules'), // Temporarily compile theme using webpack for development
