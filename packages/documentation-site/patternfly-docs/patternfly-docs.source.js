@@ -10,7 +10,6 @@ module.exports = (sourceMD, sourceProps, sourceFunctionDocs) => {
   sourceMD(path.join(contentBase, 'extensions/**/*.md'), 'extensions');
   if (!(process.env.EXTENSIONS_ONLY === 'true')) {
 
-    sourceMD(path.join(contentBase, 'contribute/**/*.md'), 'pages-contribute');
     sourceMD(path.join(contentBase, 'get-started/**/*.md'), 'pages-get-started');
     sourceMD(path.join(contentBase, 'developer-resources/**/*.md'), 'developer-resources');
     sourceMD(path.join(contentBase, 'accessibility/**/*.md'), 'accessibility');
