@@ -34,10 +34,10 @@
     ]
   },
   "devDependencies": {
-    "@patternfly/patternfly": "6.0.0-alpha.38",
-    "@patternfly/react-code-editor": "6.0.0-alpha.5",
-    "@patternfly/react-core": "6.0.0-alpha.5",
-    "@patternfly/react-table": "6.0.0-alpha.5",
+    "@patternfly/patternfly": "6.0.0-alpha.91",
+    "@patternfly/react-code-editor": "6.0.0-alpha.36",
+    "@patternfly/react-core": "6.0.0-alpha.36",
+    "@patternfly/react-table": "6.0.0-alpha.36",
     "@octokit/rest": "^19.0.7",
     "glob": "^8.1.0",
     "lerna": "^6.4.1",
@@ -46,6 +46,23 @@
     "react-dom": "^18"
   },
   "resolutions": {
-    "node-sass": ">=6.0.1"
+    "node-sass": ">=6.0.1",
+    "victory-area": "36.6.11",
+    "victory-axis": "36.6.11",
+    "victory-bar": "36.6.11",
+    "victory-box-plot": "36.6.11",
+    "victory-chart": "36.6.11",
+    "victory-core": "36.6.11",
+    "victory-create-container": "36.6.11",
+    "victory-cursor-container": "36.6.11",
+    "victory-group": "36.6.11",
+    "victory-legend": "36.6.11",
+    "victory-line": "36.6.11",
+    "victory-pie": "36.6.11",
+    "victory-scatter": "36.6.11",
+    "victory-stack": "36.6.11",
+    "victory-tooltip": "36.6.11",
+    "victory-voronoi-container": "36.6.11",
+    "victory-zoom-container": "36.6.11"
   }
 }

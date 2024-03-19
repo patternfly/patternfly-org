@@ -9,86 +9,86 @@ PatternFly designs use spacers to define fixed amounts of space between elements
 
 To see a list of all PatternFly CSS variables, including spacers [visit our developer resources.](/developer-resources/global-css-variables)
 
-<div class="pf-v5-u-display-flex pf-v5-u-flex-direction-row pf-v5-u-mb-lg">
+<div class="pf-v6-u-display-flex pf-v6-u-flex-direction-row pf-v6-u-mb-lg">
   <div class="ws-content-spacer4">
   </div>
-  <div class="pf-v5-u-display-flex pf-v5-u-flex-direction-column">
+  <div class="pf-v6-u-display-flex pf-v6-u-flex-direction-column">
     <div class="ws-content-spacerTitle">4px spacer</div>
-    <div class="pf-v5-u-display-flex pf-v5-u-flex-direction-row">
-      <p class="pf-v5-u-my-0 pf-v5-u-mr-sm ws-content-p">Global CSS variable </p>
-      <code className="ws-code">--pf-v5-global--spacer--xs</code>
+    <div class="pf-v6-u-display-flex pf-v6-u-flex-direction-row">
+      <p class="pf-v6-u-my-0 pf-v6-u-mr-sm ws-content-p">Global CSS variable </p>
+      <code className="ws-code">--pf-v6-global--spacer--xs</code>
     </div>
   </div>
 </div>
 
-<div class="pf-v5-u-display-flex pf-v5-u-flex-direction-row pf-v5-u-mb-lg">
+<div class="pf-v6-u-display-flex pf-v6-u-flex-direction-row pf-v6-u-mb-lg">
   <div class="ws-content-spacer8">
   </div>
-  <div class="pf-v5-u-display-flex pf-v5-u-flex-direction-column">
+  <div class="pf-v6-u-display-flex pf-v6-u-flex-direction-column">
     <div class="ws-content-spacerTitle">8px spacer</div>
-    <div class="pf-v5-u-display-flex pf-v5-u-flex-direction-row">
-      <p class="pf-v5-u-my-0 pf-v5-u-mr-sm ws-content-p">Global CSS variable </p>
-      <code className="ws-code">--pf-v5-global--spacer--sm</code>
+    <div class="pf-v6-u-display-flex pf-v6-u-flex-direction-row">
+      <p class="pf-v6-u-my-0 pf-v6-u-mr-sm ws-content-p">Global CSS variable </p>
+      <code className="ws-code">--pf-v6-global--spacer--sm</code>
     </div>
   </div>
 </div>
 
-<div class="pf-v5-u-display-flex pf-v5-u-flex-direction-row pf-v5-u-mb-lg">
+<div class="pf-v6-u-display-flex pf-v6-u-flex-direction-row pf-v6-u-mb-lg">
   <div class="ws-content-spacer16">
   </div>
-  <div class="pf-v5-u-display-flex pf-v5-u-flex-direction-column">
+  <div class="pf-v6-u-display-flex pf-v6-u-flex-direction-column">
     <div class="ws-content-spacerTitle">16px spacer</div>
-    <div class="pf-v5-u-display-flex pf-v5-u-flex-direction-row">
-      <p class="pf-v5-u-my-0 pf-v5-u-mr-sm ws-content-p">Global CSS variable </p>
-      <code className="ws-code">--pf-v5-global--spacer--md</code>
+    <div class="pf-v6-u-display-flex pf-v6-u-flex-direction-row">
+      <p class="pf-v6-u-my-0 pf-v6-u-mr-sm ws-content-p">Global CSS variable </p>
+      <code className="ws-code">--pf-v6-global--spacer--md</code>
     </div>
   </div>
 </div>
 
-<div class="pf-v5-u-display-flex pf-v5-u-flex-direction-row pf-v5-u-mb-lg">
+<div class="pf-v6-u-display-flex pf-v6-u-flex-direction-row pf-v6-u-mb-lg">
   <div class="ws-content-spacer24">
   </div>
-  <div class="pf-v5-u-display-flex pf-v5-u-flex-direction-column">
+  <div class="pf-v6-u-display-flex pf-v6-u-flex-direction-column">
     <div class="ws-content-spacerTitle">24px spacer</div>
-    <div class="pf-v5-u-display-flex pf-v5-u-flex-direction-row">
-      <p class="pf-v5-u-my-0 pf-v5-u-mr-sm ws-content-p">Global CSS variable </p>
-      <code className="ws-code">--pf-v5-global--spacer--lg</code>
+    <div class="pf-v6-u-display-flex pf-v6-u-flex-direction-row">
+      <p class="pf-v6-u-my-0 pf-v6-u-mr-sm ws-content-p">Global CSS variable </p>
+      <code className="ws-code">--pf-v6-global--spacer--lg</code>
     </div>
   </div>
 </div>
 
-<div class="pf-v5-u-display-flex pf-v5-u-flex-direction-row pf-v5-u-mb-lg">
+<div class="pf-v6-u-display-flex pf-v6-u-flex-direction-row pf-v6-u-mb-lg">
   <div class="ws-content-spacer32">
   </div>
-  <div class="pf-v5-u-display-flex pf-v5-u-flex-direction-column">
+  <div class="pf-v6-u-display-flex pf-v6-u-flex-direction-column">
     <div class="ws-content-spacerTitle">32px spacer</div>
-    <div class="pf-v5-u-display-flex pf-v5-u-flex-direction-row">
-      <p class="pf-v5-u-my-0 pf-v5-u-mr-sm ws-content-p">Global CSS variable </p>
-      <code className="ws-code">--pf-v5-global--spacer--xl</code>
+    <div class="pf-v6-u-display-flex pf-v6-u-flex-direction-row">
+      <p class="pf-v6-u-my-0 pf-v6-u-mr-sm ws-content-p">Global CSS variable </p>
+      <code className="ws-code">--pf-v6-global--spacer--xl</code>
     </div>
   </div>
 </div>
 
-<div class="pf-v5-u-display-flex pf-v5-u-flex-direction-row pf-v5-u-mb-lg">
+<div class="pf-v6-u-display-flex pf-v6-u-flex-direction-row pf-v6-u-mb-lg">
   <div class="ws-content-spacer48">
   </div>
-  <div class="pf-v5-u-display-flex pf-v5-u-flex-direction-column">
+  <div class="pf-v6-u-display-flex pf-v6-u-flex-direction-column">
     <div class="ws-content-spacerTitle">48px spacer</div>
-    <div class="pf-v5-u-display-flex pf-v5-u-flex-direction-row">
-      <p class="pf-v5-u-my-0 pf-v5-u-mr-sm ws-content-p">Global CSS variable </p>
-      <code className="ws-code">--pf-v5-global--spacer--2xl</code>
+    <div class="pf-v6-u-display-flex pf-v6-u-flex-direction-row">
+      <p class="pf-v6-u-my-0 pf-v6-u-mr-sm ws-content-p">Global CSS variable </p>
+      <code className="ws-code">--pf-v6-global--spacer--2xl</code>
     </div>
   </div>
 </div>
 
-<div class="pf-v5-u-display-flex pf-v5-u-flex-direction-row pf-v5-u-mb-lg">
+<div class="pf-v6-u-display-flex pf-v6-u-flex-direction-row pf-v6-u-mb-lg">
   <div class="ws-content-spacer64">
   </div>
-  <div class="pf-v5-u-display-flex pf-v5-u-flex-direction-column">
+  <div class="pf-v6-u-display-flex pf-v6-u-flex-direction-column">
     <div class="ws-content-spacerTitle">64px spacer</div>
-    <div class="pf-v5-u-display-flex pf-v5-u-flex-direction-row">
-      <p class="pf-v5-u-my-0 pf-v5-u-mr-sm ws-content-p">Global CSS variable </p>
-      <code className="ws-code">--pf-v5-global--spacer--3xl</code>
+    <div class="pf-v6-u-display-flex pf-v6-u-flex-direction-row">
+      <p class="pf-v6-u-my-0 pf-v6-u-mr-sm ws-content-p">Global CSS variable </p>
+      <code className="ws-code">--pf-v6-global--spacer--3xl</code>
     </div>
   </div>
 </div>
@@ -109,7 +109,7 @@ There are additional considerations to keep in mind when adapting spacers to dif
 
 Some components like icons, buttons, and input fields, have a fixed amount of padding built in. Remember to account for this extra space when laying the content out on your page. You may not have as much horizontal or vertical room as you think.
 
-<img src="./padding-example.png" alt="Spacers example" style="background-color: var(--pf-v5-global--palette--white)" />
+<img src="./padding-example.png" alt="Spacers example" style="background-color: var(--pf-v6-global--palette--white)" />
 
 <br/>
 <br/>

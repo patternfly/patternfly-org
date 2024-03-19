@@ -19,14 +19,14 @@ const NavItem = ({ text, href, isDeprecated, isBeta, isDemo }) => {
   return (
     <PageContextConsumer key={href + text}>
       {({onSidebarToggle, isSidebarOpen }) => (
-          <li key={href + text} className="pf-v5-c-nav__item" onClick={() => isMobileView && onSidebarToggle && onSidebarToggle()}>
+          <li key={href + text} className="pf-v6-c-nav__item" onClick={() => isMobileView && onSidebarToggle && onSidebarToggle()}>
             <Link
               to={href}
               getProps={({ isCurrent, href, location }) => {
                 const { pathname } = location;
                 return {
                   className: css(
-                    'pf-v5-c-nav__link',
+                    'pf-v6-c-nav__link',
                     (isCurrent || pathname.startsWith(href + '/')) && 'pf-m-current'
                   )
                 }}

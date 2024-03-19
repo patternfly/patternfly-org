@@ -33,11 +33,11 @@ Care should be taken to handle icons appropriately for RTL. Some icons you may h
 
 ## PatternFly RTL helpers
 
-The preferred approach for defining the browser's writing direction is to use the `dir` HTML attribute, preferably on the `<html>` tag: `<html dir="rtl">` or `<html dir="ltr">`. If you are unable to use this attribute for any reason, you can instead set the CSS `direction` property with our `.pf-v5-m-dir-ltr` or `.pf-v5-m-dir-rtl` helpers. These approaches can apply to the whole document or individual elements, and can be nested.
+The preferred approach for defining the browser's writing direction is to use the `dir` HTML attribute, preferably on the `<html>` tag: `<html dir="rtl">` or `<html dir="ltr">`. If you are unable to use this attribute for any reason, you can instead set the CSS `direction` property with our `.pf-v6-m-dir-ltr` or `.pf-v6-m-dir-rtl` helpers. These approaches can apply to the whole document or individual elements, and can be nested.
 
-To adjust the of direction of icons that aren't automatically mirrored for RTL and LTR, you can use the `.pf-v5-m-mirror-inline-rtl` class or the `shouldMirrorRTL` property of the `<Icon>` React component.
+To adjust the of direction of icons that aren't automatically mirrored for RTL and LTR, you can use the `.pf-v6-m-mirror-inline-rtl` class or the `shouldMirrorRTL` property of the `<Icon>` React component.
 
-To get the inverse of a number, dimension, or percentage, you can multiply by the variable `--pf-v5-global--inverse--multiplier`, which will have a value of 1 in LTR and -1 in RTL.
+To get the inverse of a number, dimension, or percentage, you can multiply by the variable `--pf-v6-global--inverse--multiplier`, which will have a value of 1 in LTR and -1 in RTL.
 
 ## Best practices and resources
 - There are [many nuances to how content is laid out through LTR and RTL](https://ltr.wtf/explained/bidiintro.html#the-good-the-bad-and-the-ugly), so it isn't always obvious what the correct result should be. Testing your site with native speakers is always recommended. 

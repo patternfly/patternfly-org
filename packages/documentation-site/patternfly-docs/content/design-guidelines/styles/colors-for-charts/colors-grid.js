@@ -15,7 +15,7 @@ const colorFamilies = [
 ];
 
 const ColorEntry = ({color, idx, computedStyles}) => {
-  const varName = `--pf-v5-chart-color-${color.toLowerCase()}-${idx}00`;
+  const varName = `--pf-v6-chart-color-${color.toLowerCase()}-${idx}00`;
   const varValue = computedStyles?.getPropertyValue
     ? computedStyles.getPropertyValue(varName).toUpperCase()
     : ''; 
@@ -42,7 +42,7 @@ const ColorFamily = ({color, computedStyles}) => {
 
   return (
     <GridItem>
-      <h3 className="pf-v5-c-title pf-m-xl ws-heading ws-title ws-h3">{color} family</h3>
+      <h3 className="pf-v6-c-title pf-m-xl ws-heading ws-title ws-h3">{color} family</h3>
       <Flex direction={{ default: 'column' }}  gap={{ default: 'gapMd' }}>
         {entries}
       </Flex>

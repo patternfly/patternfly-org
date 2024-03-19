@@ -20,10 +20,10 @@ Refer to our developer resources to see a list of all [global CSS color variable
     <p>
       Primary colors are those displayed most frequently across your application screens and components. Our primary color is called **"PatternFly blue"**, which is used across PatternFly's components. PatternFly blue should change upon hover.
     </p>
-    <ColorSwatch label="Default" color="--pf-v5-global--primary-color--100">
+    <ColorSwatch label="Default" color="--pf-v6-global--primary-color--100">
       This color indicates a default or active state for many components.
     </ColorSwatch>
-    <ColorSwatch label="Hover" color="--pf-v5-global--primary-color--200">
+    <ColorSwatch label="Hover" color="--pf-v6-global--primary-color--200">
       This color is used as the hover or focus state for components that use the default primary color.
     </ColorSwatch>
   </GridItem>
@@ -40,13 +40,13 @@ Refer to our developer resources to see a list of all [global CSS color variable
     <p>
       Text and icon colors are extremely similar because they can often be used in the same context, such as for a link button. We support multiple shades of text colors so that you can emphasize hierarchy on both light and dark backgrounds.
     </p>
-    <ColorSwatch color="--pf-v5-global--Color--100">
+    <ColorSwatch color="--pf-v6-global--Color--100">
       This color is used for standard text and icons, and also as a hover state color for icon buttons. It is most commonly used as a text color for many components and application screens.
     </ColorSwatch>
-    <ColorSwatch color="--pf-v5-global--Color--200">
+    <ColorSwatch color="--pf-v6-global--Color--200">
       This color is used as a secondary text color and as a default color for icon buttons. It is most commonly used for many components, such as the app launcher and empty states.
     </ColorSwatch>
-    <ColorSwatch color="--pf-v5-global--link--Color">
+    <ColorSwatch color="--pf-v6-global--link--Color">
       This color is most commonly used for link text and icons across many components, such as navigation and accordions.
     </ColorSwatch>
   </GridItem>
@@ -65,23 +65,23 @@ Refer to our developer resources to see a list of all [global CSS color variable
     </p>
 
     <h3>Light backgrounds</h3>
-    <ColorSwatch color="--pf-v5-global--BackgroundColor--200">
+    <ColorSwatch color="--pf-v6-global--BackgroundColor--200">
       This color is most commonly used as a secondary background color for full-screen applications and hover backgrounds.
     </ColorSwatch>
-    <ColorSwatch color="--pf-v5-global--BackgroundColor--100">
+    <ColorSwatch color="--pf-v6-global--BackgroundColor--100">
       This color is most commonly used as a primary background color for full-screen applications and many components, such as cards and tables/data lists.
     </ColorSwatch>
     <h3>Dark backgrounds</h3>
-    <ColorSwatch color="--pf-v5-global--BackgroundColor--dark-100">
+    <ColorSwatch color="--pf-v6-global--BackgroundColor--dark-100">
       This color is most commonly used as a background color for many components, such as tooltips and wizards.
     </ColorSwatch>
-    <ColorSwatch color="--pf-v5-global--BackgroundColor--dark-200">
+    <ColorSwatch color="--pf-v6-global--BackgroundColor--dark-200">
       This color is used as a background color for navigation.
     </ColorSwatch>
-    <ColorSwatch color="--pf-v5-global--BackgroundColor--dark-300">
+    <ColorSwatch color="--pf-v6-global--BackgroundColor--dark-300">
       This color is most commonly used as a background color for many components, such as navigation.
     </ColorSwatch>
-    <ColorSwatch color="--pf-v5-global--BackgroundColor--dark-400">
+    <ColorSwatch color="--pf-v6-global--BackgroundColor--dark-400">
       This color is used as a background color for navigation.
     </ColorSwatch>
   </GridItem>
@@ -102,73 +102,73 @@ Refer to our developer resources to see a list of all [global CSS color variable
   </GridItem>
   <GridItem xl={6} lg={12}>
     <h3>Default</h3>
-    <ColorSwatch color="--pf-v5-global--default-color--300" caption="alert title">
+    <ColorSwatch color="--pf-v6-global--default-color--300" caption="alert title">
       This color is used as the title color for the default alert component.
     </ColorSwatch>
-    <ColorSwatch color="--pf-v5-global--default-color--200" caption="alert icon">
+    <ColorSwatch color="--pf-v6-global--default-color--200" caption="alert icon">
       This color is used as the icon color for the default alert component.
     </ColorSwatch>
-    <ColorSwatch color="--pf-v5-global--palette--cyan-50" caption="inline alert background">
+    <ColorSwatch color="--pf-v6-global--palette--cyan-50" caption="inline alert background">
       This color is used as the background color for the default inline alert component.
     </ColorSwatch>
   </GridItem>
   <GridItem xl={6} lg={12}>
   <h3>Danger</h3>
-    <ColorSwatch color="--pf-v5-global--danger-color--200" caption="alert title">
+    <ColorSwatch color="--pf-v6-global--danger-color--200" caption="alert title">
       This color is used as the title color for the danger alert component.
     </ColorSwatch>
-    <ColorSwatch color="--pf-v5-global--danger-color--100" caption="alert icon">
+    <ColorSwatch color="--pf-v6-global--danger-color--100" caption="alert icon">
       This color is used as the icon color for the danger alert component.
     </ColorSwatch> 
-    <ColorSwatch color="--pf-v5-global--palette--red-50" caption="inline alert background">
+    <ColorSwatch color="--pf-v6-global--palette--red-50" caption="inline alert background">
       This color is used as the background color for danger inline alert component.
     </ColorSwatch>
   </GridItem>
   <GridItem xl={6} lg={12}>
     <h3>Success</h3>
-    <ColorSwatch color="--pf-v5-global--success-color--200" caption="alert title">
+    <ColorSwatch color="--pf-v6-global--success-color--200" caption="alert title">
       This color is used as the title color for the success alert component.
     </ColorSwatch>
-    <ColorSwatch color="--pf-v5-global--success-color--100" caption="alert icon">
+    <ColorSwatch color="--pf-v6-global--success-color--100" caption="alert icon">
       This color is used as the icon color for the success alert component.
     </ColorSwatch>
-    <ColorSwatch color="--pf-v5-global--palette--green-50" caption="inline alert background">
+    <ColorSwatch color="--pf-v6-global--palette--green-50" caption="inline alert background">
       This color is used as the background color for the success inline alert component.
     </ColorSwatch>
   </GridItem>
   <GridItem xl={6} lg={12}>
     <h3>Info</h3>
-    <ColorSwatch color="--pf-v5-global--info-color--200" caption="alert title">
+    <ColorSwatch color="--pf-v6-global--info-color--200" caption="alert title">
       This color is used as the title color for the info alert component.
     </ColorSwatch>
-    <ColorSwatch color="--pf-v5-global--info-color--100" caption="alert icon">
+    <ColorSwatch color="--pf-v6-global--info-color--100" caption="alert icon">
       This color is used as the icon color for the default alert component.
     </ColorSwatch>
-    <ColorSwatch color="--pf-v5-global--palette--blue-50" caption="alert background">
+    <ColorSwatch color="--pf-v6-global--palette--blue-50" caption="alert background">
       This color is used as the background color for the info inline alert component.
     </ColorSwatch>
   </GridItem>
   <GridItem xl={6} lg={12}>
     <h3>Warning</h3>
-    <ColorSwatch color="--pf-v5-global--warning-color--200" caption="alert title">
+    <ColorSwatch color="--pf-v6-global--warning-color--200" caption="alert title">
       This color is used as the title color for the warning alert component.
     </ColorSwatch>
-    <ColorSwatch color="--pf-v5-global--warning-color--100" caption="alert icon">
+    <ColorSwatch color="--pf-v6-global--warning-color--100" caption="alert icon">
       This color is used as the icon color for the warning alert component.
     </ColorSwatch>
-    <ColorSwatch color="--pf-v5-global--palette--gold-50" caption="inline alert background">
+    <ColorSwatch color="--pf-v6-global--palette--gold-50" caption="inline alert background">
       This color is used as the background color for the warning inline alert component.
     </ColorSwatch>
   </GridItem>
    <GridItem xl={6} lg={12}>
     <h3>Disabled</h3>
-    <ColorSwatch color="--pf-v5-global--disabled-color--100" caption="disabled text">
+    <ColorSwatch color="--pf-v6-global--disabled-color--100" caption="disabled text">
       This color is used as the text color when components are disabled.
     </ColorSwatch>
-    <ColorSwatch color="--pf-v5-global--disabled-color--200" caption="disabled background">
+    <ColorSwatch color="--pf-v6-global--disabled-color--200" caption="disabled background">
       This color is used as the background color for many components when they are disabled, such as buttons and the application launcher.
     </ColorSwatch>
-    <ColorSwatch color="--pf-v5-global--disabled-color--300" caption="alternate disabled background">
+    <ColorSwatch color="--pf-v6-global--disabled-color--300" caption="alternate disabled background">
       This color is used as an alternate background color for components when they are disabled, such as dropdowns and options menus.
     </ColorSwatch>
   </GridItem>
@@ -182,13 +182,13 @@ Refer to our developer resources to see a list of all [global CSS color variable
     <p>
       Shadows can be used to create contrast between UI elements. PatternFly supports different shadow sizes, which enable you to increase the visual depth of a UI element and distinguish it from other elements on the screen. 
     </p>
-    <ColorSwatch label="Large" color="--pf-v5-global--BoxShadow--lg">
+    <ColorSwatch label="Large" color="--pf-v6-global--BoxShadow--lg">
       Large shadows create the most contrast and depth for a UI element. These are commonly used for alerts and modals.
     </ColorSwatch>
-    <ColorSwatch label="Medium" color="--pf-v5-global--BoxShadow--md">
+    <ColorSwatch label="Medium" color="--pf-v6-global--BoxShadow--md">
       Medium shadows fall between small and large shadows, creating moderate contrast and depth for a UI element. These are commonly used for accordions and dropdowns. 
     </ColorSwatch>
-    <ColorSwatch label="Small" color="--pf-v5-global--BoxShadow--sm">
+    <ColorSwatch label="Small" color="--pf-v6-global--BoxShadow--sm">
       Small shadows offer minimal, but visible shadows that slightly increase the contrast and depth of a UI element. These are most commonly used for cards. 
     </ColorSwatch>
   </GridItem>

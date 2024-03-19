@@ -5,7 +5,7 @@ import { css } from '@patternfly/react-styles';
 import { normalizeColor, getContrastRatio } from './helpers';
 import './ColorFamily.css';
 
-const palettePrefix = '--pf-v5-global--palette--';
+const palettePrefix = '--pf-v6-global--palette--';
 
 export function ColorFamily({
   title,
@@ -40,17 +40,17 @@ export function ColorFamily({
 
   return (
     <React.Fragment>
-      <dl className="pf-v5-c-accordion pf-v5-u-p-0">
+      <dl className="pf-v6-c-accordion pf-v6-u-p-0">
         <dt
           className={css(
-            'pf-v5-c-accordion__toggle',
+            'pf-v6-c-accordion__toggle',
             'ws-color-family-accordion-toggle',
             expanded.length === familyTokens.length && 'pf-m-expanded'
           )}
           onClick={expandAll}
         >
-          <h3 className="pf-v5-c-title pf-m-xl">
-            <AngleRightIcon className="pf-v5-c-accordion__toggle-icon ws-color-family-toggle-icon" />
+          <h3 className="pf-v6-c-title pf-m-xl">
+            <AngleRightIcon className="pf-v6-c-accordion__toggle-icon ws-color-family-toggle-icon" />
             {title}
           </h3>
         </dt>
@@ -58,24 +58,24 @@ export function ColorFamily({
           const isExpanded = expanded.includes(token.name);
           const isShadows = family === 'shadows';
           const tokenClass = css(
-            'pf-v5-c-accordion__toggle',
+            'pf-v6-c-accordion__toggle',
             'ws-color-family-toggle',
             isExpanded && 'pf-m-expanded'
           );
-          const itemStyle = { background: `var(${token.name})`, fontSize: 'var(--pf-v5-global--FontSize--sm)' };
+          const itemStyle = { background: `var(${token.name})`, fontSize: 'var(--pf-v6-global--FontSize--sm)' };
           if (isShadows) {
             itemStyle.marginBottom = '1rem';
             itemStyle.boxShadow = `var(${token.name})`;
           }
           else if (getContrastRatio(token.value, '#151515') <= 4.5) {
-            itemStyle.color = 'var(--pf-v5-global--Color--light-100)';
+            itemStyle.color = 'var(--pf-v6-global--Color--light-100)';
           }
           else if (getContrastRatio(token.value, '#151515') > 4.5) {
-            itemStyle.color = 'var(--pf-v5-global--palette--black-900)';
+            itemStyle.color = 'var(--pf-v6-global--palette--black-900)';
           }
           const expandedStyle = {};
           if (isExpanded && !isShadows) {
-            const borderLeftWidth = 'var(--pf-v5-c-accordion__toggle--m-expanded--BorderWidth)';
+            const borderLeftWidth = 'var(--pf-v6-c-accordion__toggle--m-expanded--BorderWidth)';
             const borderColor = `var(${token.name})`;
             const borderStyle = 'solid';
             itemStyle.borderLeftWidth = borderLeftWidth;
@@ -92,13 +92,13 @@ export function ColorFamily({
                 className={`${tokenClass} ws-color-family-accordion-toggle`}
                 style={itemStyle}
                 onClick={() => expand(token.name)}
-                id={!isShadows ? token.value.replace('#', 'color-') : token.name.replace('--pf-v5-global--BoxShadow--', '')}
+                id={!isShadows ? token.value.replace('#', 'color-') : token.name.replace('--pf-v6-global--BoxShadow--', '')}
               >
                 <div>
-                  <AngleRightIcon className="pf-v5-c-accordion__toggle-icon ws-color-family-toggle-icon" />
+                  <AngleRightIcon className="pf-v6-c-accordion__toggle-icon ws-color-family-toggle-icon" />
                   {token.name
                     .replace(palettePrefix, '')
-                    .replace('--pf-v5-global--BoxShadow--', 'box shadow ')}
+                    .replace('--pf-v6-global--BoxShadow--', 'box shadow ')}
                 </div>
                 {!isShadows && (
                   <div className="ws-color-family-color">
