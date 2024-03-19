@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 5.7.0 (2024-03-19)
+
+
+### Features
+
+* add pf 6 alpha banner to home page and version switcher ([#3896](https://github.com/patternfly/patternfly-org/issues/3896)) ([f7aaa22](https://github.com/patternfly/patternfly-org/commit/f7aaa22d12310aa62533de4169e1fa70a49a20d9))
+
+
+
+
+
 # 5.6.0 (2024-03-13)
 
 
