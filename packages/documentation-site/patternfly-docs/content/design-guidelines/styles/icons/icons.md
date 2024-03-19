@@ -34,7 +34,7 @@ Visit our [colors page](/design-foundations/colors) to learn more about icon col
       </FlexItem>
       <FlexItem>
         <p>Small (12px)</p>
-        <code className="ws-code ws-icon-code">--pf-v5-global--icon--FontSize--sm</code>
+        <code className="ws-code ws-icon-code">--pf-v6-global--icon--FontSize--sm</code>
       </FlexItem>
     </Flex>
     <Flex className="ws-icon-sizes ws-icon-sizes-md" alignItems={{ default: 'alignItemsFlexStart' }}>
@@ -45,7 +45,7 @@ Visit our [colors page](/design-foundations/colors) to learn more about icon col
       </FlexItem>
       <FlexItem>
         <p>Medium (16px)</p>
-        <code className="ws-code ws-icon-code">--pf-v5-global--icon--FontSize--md</code>
+        <code className="ws-code ws-icon-code">--pf-v6-global--icon--FontSize--md</code>
       </FlexItem>
     </Flex>
     <Flex className="ws-icon-sizes ws-icon-sizes-lg" alignItems={{ default: 'alignItemsFlexStart' }}>
@@ -56,7 +56,7 @@ Visit our [colors page](/design-foundations/colors) to learn more about icon col
       </FlexItem>
       <FlexItem>
         <p>Large (24px)</p>
-        <code className="ws-code ws-icon-code">--pf-v5-global--icon--FontSize--lg</code>
+        <code className="ws-code ws-icon-code">--pf-v6-global--icon--FontSize--lg</code>
       </FlexItem>
     </Flex>
     <Flex className="ws-icon-sizes ws-icon-sizes-xl" alignItems={{ default: 'alignItemsFlexStart' }}>
@@ -67,7 +67,7 @@ Visit our [colors page](/design-foundations/colors) to learn more about icon col
       </FlexItem>
       <FlexItem>
         <p>X-large (54px)</p>
-        <code className="ws-code ws-icon-code">--pf-v5-global--icon--FontSize--xl</code>
+        <code className="ws-code ws-icon-code">--pf-v6-global--icon--FontSize--xl</code>
       </FlexItem>
     </Flex>
     <p>

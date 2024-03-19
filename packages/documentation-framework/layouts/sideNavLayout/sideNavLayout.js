@@ -145,7 +145,7 @@ const HeaderTools = ({
                     onClick={() => setDropdownOpen(!isDropdownOpen)}
                     isExpanded={isDropdownOpen}
                   >
-                    Release {initialVersion.name}
+                    Current alphas
                   </MenuToggle>
                 )}
               >

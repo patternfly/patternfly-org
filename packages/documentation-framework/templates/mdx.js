@@ -88,7 +88,7 @@ const MDXChildTemplate = ({
   );
   // Create dynamic component for @reach/router
   const ChildComponent = () => (
-    <div className="pf-v5-u-display-flex ws-mdx-child-template">
+    <div className="pf-v6-u-display-flex ws-mdx-child-template">
       {toc.length > 1 && (
         <TableOfContents items={toc} />
       )}
@@ -296,19 +296,19 @@ export const MDXTemplate = ({
         </PageSection>
         { showTabs && (
           <PageSection id="ws-sticky-nav-tabs" stickyOnBreakpoint={{'default':'top'}} type="tabs">
-            <div className="pf-v5-c-tabs pf-m-page-insets pf-m-no-border-bottom">
-              <ul className="pf-v5-c-tabs__list">
+            <div className="pf-v6-c-tabs pf-m-page-insets pf-m-no-border-bottom">
+              <ul className="pf-v6-c-tabs__list">
                 {sourceKeys.map((source, index) => (
                   <li
                     key={source}
                     className={css(
-                      'pf-v5-c-tabs__item',
+                      'pf-v6-c-tabs__item',
                       activeSource === source && 'pf-m-current'
                     )}
                     // Send clicked tab name for analytics
                     onClick={() => trackEvent('tab_click', 'click_event', source.toUpperCase())}
                   >
-                    <Link className="pf-v5-c-tabs__link" to={`${path}${index === 0 ? '' : '/' + source}`}>
+                    <Link className="pf-v6-c-tabs__link" to={`${path}${index === 0 ? '' : '/' + source}`}>
                       {tabNames[source]}
                     </Link>
                   </li>
@@ -320,7 +320,7 @@ export const MDXTemplate = ({
         <PageSection id="main-content" isFilled className="pf-m-light-100">
           {isSinglePage && <MDXChildTemplate {...sources[0]} id={id}/>}
           {!isSinglePage && (
-            <Router className="pf-v5-u-h-100" primary={false}>
+            <Router className="pf-v6-u-h-100" primary={false}>
               {sources
                 .map((source, index) => {
                   source.index = index;

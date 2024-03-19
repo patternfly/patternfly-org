@@ -1,7 +1,7 @@
 const componentsData = require('./pages/landing-pages/components/components-data.json');
 // This module is shared between NodeJS and babelled ES5, if this extension only build
 // exclude the other side nav items.
-if (process.env.EXTENSIONS_ONLY === 'true') { 
+if (process.env.EXTENSIONS_ONLY === 'true') {
   module.exports = {
     hasGdprBanner: false,
     hasFooter: false,
@@ -32,17 +32,18 @@ if (process.env.EXTENSIONS_ONLY === 'true') {
     sideNavItems: [
       { section: 'get-started' },
       { section: 'design-foundations' },
+      { section: 'tokens' },
       { section: 'accessibility' },
       { section: 'UX writing' },
       { section: 'components' },
       { section: 'patterns' },
-      { section: 'extensions' }, 
+      // { section: 'extensions' },
       { section: 'charts' },
-      { section: 'topology' },
-      { section: 'layouts' },  
+      // { section: 'topology' },
+      { section: 'layouts' },
       { section: 'utility-classes' },
       { section: 'developer-resources' },
-      { section: 'training' }, 
+      { section: 'training' },
     ],
     topNavItems: [],
     port: 8003,
