@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 5.8.0 (2024-03-20)
+
+
+### Features
+
+* **templates:** add templates package to versions.json ([#3902](https://github.com/patternfly/patternfly-org/issues/3902)) ([c7c727c](https://github.com/patternfly/patternfly-org/commit/c7c727c717d5cc3c031f4f3c52070ffc6164e5d6))
+
+
+
+
+
 # 5.7.0 (2024-03-19)
 
 
