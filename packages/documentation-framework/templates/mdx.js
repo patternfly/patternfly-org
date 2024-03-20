@@ -23,6 +23,7 @@ const MDXChildTemplate = ({
     optIn,
     beta,
     deprecated,
+    template,
     newImplementationLink,
     functionDocumentation = []
   } = Component.getPageData();
@@ -82,6 +83,11 @@ const MDXChildTemplate = ({
             </React.Fragment>
           )}
           {' '}To learn more about the process, visit our <Link to="/get-started/about#major-release-cadence">about page</Link>.
+        </InlineAlert>
+      )}
+       {(template || source === 'react-template') && (
+        <InlineAlert title="Templates" variant="info">
+          {`This page showcases templates for the ${id.toLowerCase()} component. A template combines a component with logic that supports a specific use case, with a streamlined API that offers additional, limited customization.`}
         </InlineAlert>
       )}
     </React.Fragment>
