@@ -80,7 +80,6 @@
 
 .ws-title-level {
   border: var(--pf-v6-global--BorderWidth--sm) solid var(--pf-v6-global--BorderColor--100);
-  background: var(--pf-v6-global--BackgroundColor--100);
   padding: var(--pf-v6-global--spacer--sm);
   margin: var(--pf-v6-global--spacer--md) 0;
   display: inline-block;

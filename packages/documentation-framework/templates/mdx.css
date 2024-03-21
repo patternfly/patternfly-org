@@ -38,7 +38,7 @@
 
 .ws-code {
   display: inline-block;
-  background-color: var(--pf-v6-global--BackgroundColor--100);
+  background-color: var(--pf-t--global--background--color--secondary--default);
   padding: 1px var(--pf-v6-global--spacer--sm);
   border: var(--pf-v6-global--BorderWidth--sm) solid var(--pf-v6-global--BorderColor--300);
   white-space: pre-wrap;

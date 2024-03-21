@@ -4,7 +4,7 @@
   --pf-v6-c-nav--m-light__link--focus--BackgroundColor: var(--pf-v6-global--BackgroundColor--light-200);
   --pf-v6-c-nav--m-light__link--m-current--BackgroundColor: var(--pf-v6-global--BackgroundColor--light-200);
   --pf-v6-c-nav--m-light__link--active--BackgroundColor: var(--pf-v6-global--BackgroundColor--light-200);
-  --pf-v6-c-nav__link--m-current--BackgroundColor: var(--pf-v6-global--BackgroundColor--200);
+  --pf-v6-c-nav__link--m-current--BackgroundColor: var(--pf-t--global--background--color--action--plain--alt--clicked);
 }
 
 .ws-side-nav-list .pf-v6-c-nav__item.pf-m-expandable::before {
