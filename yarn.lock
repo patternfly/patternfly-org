@@ -2271,7 +2271,7 @@
   resolved "https://registry.yarnpkg.com/@patternfly/patternfly/-/patternfly-6.0.0-alpha.99.tgz#e9dcc5510c0ed003ef566f318c44da84eed8f9b4"
   integrity sha512-/ewxpKGO2aIpSohj+cUB0yp78pvNz8hkRKpdkXl7Ke8oYlBJkdKXeTmEYUDASFRkqQLctpy2O519gh5bdxOSMw==
 
-"@patternfly/quickstarts@5.1.0":
+"@patternfly/quickstarts@^5.1.0":
   version "5.1.0"
   resolved "https://registry.yarnpkg.com/@patternfly/quickstarts/-/quickstarts-5.1.0.tgz#c60c782ca8e7019b82b6aa2a533deeed68da922b"
   integrity sha512-ql5Q8IlW+Yp1Y7rqDqrsoDhYrSv3/HTp+1BYg7n4vyOsTc9QL+PxW4+PI8mLLk/tB6Z93yS7l76b5gaACPgH2g==
@@ -2449,10 +2449,10 @@
   resolved "https://registry.yarnpkg.com/@patternfly/react-icons/-/react-icons-6.0.0-alpha.16.tgz#4c24454b0c55d68455990d2521d0e2b54ba1b12c"
   integrity sha512-ifUj62b7CyYFzBzLCCp3nkeO6RqW9nkS/pN1wvjQqXzDrdPsdQCjfIA/kh6PumTAbDaEcMIpg/F88GfJ5Px7rg==
 
-"@patternfly/react-log-viewer@5.1.0-prerelease.1":
-  version "5.1.0-prerelease.1"
-  resolved "https://registry.yarnpkg.com/@patternfly/react-log-viewer/-/react-log-viewer-5.1.0-prerelease.1.tgz#4cdbb3268f0a073ed76fe82ab4bd40e0d06440de"
-  integrity sha512-/dqbnVJkr8Cwzty1AK4fC4DZBRkd4rb3E5475yPF/QrO9hwAjDVIiHNZuUsEMy11sv31C73/ZnSDUcGI3iDaOA==
+"@patternfly/react-log-viewer@5.1.0":
+  version "5.1.0"
+  resolved "https://registry.yarnpkg.com/@patternfly/react-log-viewer/-/react-log-viewer-5.1.0.tgz#5d6bf3da15cff285fe4ffa3589aeddebacd6e448"
+  integrity sha512-76Sm8lKwXbXmjIwYwsUjk8H4jy7aDslDw7DK8MDzIaKdE8BLDA4EJ636Qv1zo5JFPbBKRpVeDrrMqqqfvPt5rg==
   dependencies:
     "@patternfly/react-core" "^5.0.0"
     "@patternfly/react-icons" "^5.0.0"
