@@ -6,64 +6,64 @@ section: get-started
 
 ## Community contributions 
 
-Thank you for your interest in contributing to PatternFly! We depend on community contributions to help our design system grow and evolve. We encourage everyone, regardless of background, to get involved with. Common contributions include: 
-- New feature ideas 
-- Bug reports
-- Documentation updates
+Thank you for your interest in contributing to PatternFly! We depend on community contributions to help our design system grow and evolve. We encourage everyone, regardless of background, to get involved. Common contributions include (but aren't limited to): 
+- New feature ideas. 
+- Bug reports.
+- Documentation updates.
 
-With your help, we can stay on top of the latest and greatest solutions to make PatternFly the best open source design system for UI. 
+This guide outlines the ways that you can contribute to PatternFly's design, code, and documentation. With your help, we can stay on top of the latest and greatest solutions to keep PatternFly moving forward. 
+
+If you have any ideas that don't fit into the projects outlined in this guide, please [reach out to us on the primary 'patternfly' Slack channel](https://patternfly.slack.com/archives/C293LQ36J) to start a discussion.
 
 ## Design
 
-The PatternFly design team is composed of a small, but mighty group of visual and interaction designers who define the visual look and feel of the PatternFly library. They also provide direction to developers as they implement new features and enhancements in a product's codebase. The team follows an agile framework, planning their work in sprints in the [patternfly-design GitHub repository](https://github.com/patternfly/patternfly-design/issues)
+If you have skills in visual and interaction design, you can contribute to PatternFly's design, by taking an existing issue, or proposing a new design system feature, enhancement, or icon. If you are interested in any of these projects, [reach out on the 'patternfly-design' Slack channel.](http://join.slack.com/t/patternfly/shared_invite/zt-1npmqswgk-bF2R1E2rglV8jz5DNTezMQ)
 
-As a designer, your skills and knowledge in visual and interaction design are well suited for the following types of contributions. If you are interested in contributing to any of these projects, reach out to us on the [patternfly-design channel on Slack](http://join.slack.com/t/patternfly/shared_invite/zt-1npmqswgk-bF2R1E2rglV8jz5DNTezMQ).
+### Existing design issues 
+
+The PatternFly design team is composed of visual and interaction designers who define the look and feel of the PatternFly library. The team follows an agile framework, planning their work in sprints, with a backlog that is tracked and managed via [this GitHub project board.](https://github.com/orgs/patternfly/projects/7/views/30) This board contains a list issues that are currently unassigned and waiting in the queue. If you see something here that you'd like to work on, leave a comment on the issue and a member of our team will reach out with next steps.
 
 ### New feature or enhancement
-If you have an idea for a new design pattern, a new component type, or have ideas for improving existing features, you can work with our design team to design
-
-open a new issue  if you'd like to propose a design.
-
-he design backlog is tracked and managed via [this GitHub project board](https://github.com/orgs/patternfly/projects/7/views/30), which contains issues that are currently unassigned and waiting in the queue. You can claim one of these issues or 
-
-
-### Figma kit
+If you have an idea for a new design pattern, a new component type, or have ideas for improving existing features, we'd love to hear it. [Start by opening an issue in the `patternfly-design` repository.](https://github.com/patternfly/patternfly-design/issues) From there, a member of our team will reach out and work with you to plan and design a solution.
 
 ### New icons
-We encourage designers to work with the existing PatternFly icon set when choosing icons to use in their project. These include both custom and existing Font Awesome icons that cover most common use cases. To see what's available, vist our [Icons page](/design-foundations/icons). However, there may be occasions where you want to propose a new icon to be added to PatternFly.
+We encourage designers to work with [the existing PatternFly icon set](/design-foundations/icons), which includes both custom and existing Font Awesome icons that cover most common use cases. However, when a use case isn't covered, you may want to propose adding a new icon to our set.
 
-__Example__
-*I want to add a new custom icon to PatternFly to meet my project specific need.*
-
-To contribute a new icon, start by opening an issue in the [patternfly-design](https://github.com/patternfly/patternfly-design/issues) repo proposing a new icon and why it's needed. Then, follow the procedure outlined here for [creating custom icons](https://github.com/patternfly/patternfly-design/wiki/Creating-custom-icons) and adding them to the PatternFly icon set.
-
+To contribute a new icon, [start by opening an issue in the `patternfly-design` repository](https://github.com/patternfly/patternfly-design/issues), proposing your icon idea and describing why it's needed. A member of our team will reach out to you to discuss next steps.
 
 ## Code
 
-If you’d like to work on development projects that updates PatternFly’s codebase, 
+The primary PatternFly libraries include React and HTML/CSS (commonly called "core"). If you're looking to contribute to PatternFly's codebase, these libraries are a good place to start. You can help out by taking existing issues, or creating issues for bugs and other changes. 
 
-### Existing GitHub issues 
+If you have any questions about these projects, you can reach out to us on our ['patternfly-react'](https://patternfly.slack.com/archives/C4FM977N0) and ['patternfly-core'](https://patternfly.slack.com/archives/C9Q224EFL) Slack channels.
 
-To learn about existing projects that have been approved, but not started, you can view open issues in both our [HTML](https://github.com/patternfly/patternfly/issues) and [React](https://github.com/patternfly/patternfly-react/issues) GitHub repositories. If you find an issue that you're interested in working on, leave a comment and someone from our team will reach out to you with next steps. 
+### Existing development issues 
+
+To learn about existing work that has been approved, but not started, you can view open issues in both our [`patternfly`](https://github.com/patternfly/patternfly/issues) (HTML/CSS) and [`patternfly-react`](https://github.com/patternfly/patternfly-react/issues) (React) repositories. If you find an issue that you're interested in working on, leave a comment and someone from our team will reach out to you with next steps. 
 
 Be sure to view our detailed contribution instructions for both of these repositories:
-- [HTML/CSS contribution guidelines](https://github.com/patternfly/patternfly#guidelines-for-css-development)
+- [Core contribution guidelines](https://github.com/patternfly/patternfly#guidelines-for-css-development)
 - [React contribution guidelines](https://github.com/patternfly/patternfly-react/blob/main/CONTRIBUTING.md#contribution-process)
 
 ### File a bug
-  - View the documentation for the component
-  - Search open issues in the [patternfly](https://github.com/patternfly/patternfly/issues) and [patternfly-react](https://github.com/patternfly/patternfly-react/issues) repos to see if a related issue exists already
-  - If the bug is present in only the React implementation, create a bug in the [patternfly-react repo](https://github.com/patternfly/patternfly-react/issues)
-  - If the bug can be seen on both the React and HTML/CSS side, it should be created on the [patternfly repo](https://github.com/patternfly/patternfly/issues)
-  - Mention which project the bug was noticed in and if there is a deadline that the fix is needed for
+
+If you believe that you've come across a PatternFly bug, alerting our team will directly lead to PatternFly code improvements.
+
+We ask you to first view the documentation for the feature, to confirm that the behavior is not functioning as intended. From there, search open issues in the [`patternfly`](https://github.com/patternfly/patternfly/issues) and [`patternfly-react`](https://github.com/patternfly/patternfly-react/issues) repositories to see if a related issue already exists.
+
+If the bug is present in only the React implementation of PatternFly, [create a bug issue in `patternfly-react`](https://github.com/patternfly/patternfly-react/issues) If the bug can be seen on both the React and HTML/CSS side, [create a bug issue in `patternfly`](https://github.com/patternfly/patternfly/issues). Be sure to mention which project the bug was noticed in and if there is a deadline that the fix is needed for.
 
 ## Documentation 
 
-Our website documentation is contained in the [patternfly-org repository](https://github.com/patternfly/patternfly-org).
+PatternFly documentation largely refers to the content that you can see across our website. This content explains concepts, provides guidance, and outlines important resources for PatternFly users. Our documentation can always be improved, and we'd love to hear input from the people who use it.
 
-If you'd like to contribute to our documentation, you can refer to our [detailed contribution instructions](https://github.com/patternfly/patternfly-org/wiki/Contributing-to-patternfly-org-for-designers) for additional guidance.
+If you'd like to contribute to the following projects, you can refer to our [detailed contribution instructions](https://github.com/patternfly/patternfly-org/wiki/Contributing-to-patternfly-org-for-designers) for additional guidance.
+
+### Existing documentation issues
+
+Our website documentation is contained in the [`patternfly-org` repository](https://github.com/patternfly/patternfly-org). Take a look at any unassigned issues and leave a comment if you'd like to work on one. Our team will reach out to you with additional guidance.
 
 ### Design guidelines
-Across our website you will find design guidelines, which help designers add PatternFly components to their designs following best practice UI patterns. These guidelines clarify nuances and outline  design conventions that should be followed when using a component, layout, or chart. 
+Across our website you will find design guidelines, which help designers add PatternFly components to their designs following best practice UI patterns. These guidelines clarify nuances and outline design conventions that should be followed when using a component, layout, or chart. 
 
-If you'd like to contribute to our design guidelines, you can open an issue in our [patternfly-org repository](https://github.com/patternfly/patternfly-org) to propose a new page or updates to an existing page. From there, our team will work with you to author and publish your new content. 
+If you'd like to contribute to our design guidelines, you can open an issue in  [`patternfly-org`](https://github.com/patternfly/patternfly-org) to propose a new page or updates to an existing page. From there, our team will work with you to author and publish your new content. 
