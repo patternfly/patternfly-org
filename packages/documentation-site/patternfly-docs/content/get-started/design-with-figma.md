@@ -69,7 +69,7 @@ We plan to regularly release design kit updates to address any bugs and to evolv
 
     - **PatternFly community members:**
 
-        If you are not a Red Hat employee, you will need to create a copy of the [PatternFly 6 design file]() to install the library within your own Figma workspace. 
+        If you are not a Red Hat employee, you will need to create a copy of the [PatternFly 6 design file](https://www.figma.com/@patternfly) to install the library within your own Figma workspace. 
 
         Note that you will not be able to receive automatic library updates since you are working from a local copy. The PatternFly team will release any updates every other week, as part of their sprint schedule. Be sure to revisit our Figma community page in order to download the latest updates. 
 
