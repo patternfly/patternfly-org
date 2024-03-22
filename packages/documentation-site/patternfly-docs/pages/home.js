@@ -1,6 +1,7 @@
 import React from "react";
 import {Link} from "@patternfly/documentation-framework/components";
 import {
+  Banner,
   Button,
   Card,
   CardHeader,
@@ -13,6 +14,7 @@ import {
   FlexItem,
   Grid,
   PageSection,
+  PageSectionVariants,
   Title,
   Text,
   TextVariants,
@@ -157,6 +159,9 @@ const FeaturedBlogCard = ({postData, idx}) => {
 
 const HomePage = () => (
   <React.Fragment>
+    <Banner color="blue" isSticky>
+      Welcome to the PatternFly 6 staging website! PatternFly 6 is <span className="pf-v6-u-font-weight-bold">still under development, so documentation across this website will continue to change.</span>
+    </Banner>
     <PageSection isWidthLimited className="ws-homepage-main-section">
       <Flex
         direction={{default: "column", lg: "row"}}
