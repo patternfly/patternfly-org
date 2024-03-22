@@ -10,7 +10,7 @@ If you have not previously upgraded to PatternFly 5, make sure to review its [up
 PatternFly 6 introduces new support and functionality to PatternFly, including: 
 
 - A design token system,
-- A new visual theme, called Penta,
+- A new PatternFly 6 visual theme,
 - And more!
 
 To learn about the most significant changes in this release, read our [release highlights](/get-started/release-highlights). A detailed list of all changes can be found in our [major release notes](/get-started/upgrade/release-notes). 
@@ -35,14 +35,13 @@ To run our codemods, complete the following steps:
 
 1. Run the following command, adding in the path to your product's source code: 
 
-    ```{
-    npx @patternfly/pf-codemods@latest <path to your source code>
-    ```
+  `npx @patternfly/pf-codemods@latest <path to your source code> --v6`
 
-   * You should see an output similar to running `lint`, with both a list of warnings and errors, as well as a total count of each, as shown in the following example:
-     ![Example codemod output.](./img/codemod-output.png)
+    * You should see an output similar to running `lint`, with both a list of warnings and errors, as well as a total count of each, as shown in the following example:
+    
+    ![Example codemod output.](./img/codemod-output.png)
 
-   * If you see something different, please reach out before going further as there may be an issue.
+    * If you see something different, please reach out before going further as there may be an issue.
 
 2. Make note of any issues that get flagged.
 
