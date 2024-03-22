@@ -15,6 +15,7 @@ module.exports = (sourceMD, sourceProps, sourceFunctionDocs) => {
     sourceMD(path.join(contentBase, 'accessibility/**/*.md'), 'accessibility');
     sourceMD(path.join(contentBase, 'design-guidelines/**/*.md'), 'design-guidelines');
     sourceMD(path.join(contentBase, 'training/**/*.md'), 'training');
+    sourceMD(path.join(contentBase, 'tokens/**/*.md'), 'tokens');
 
     // Gallery pages
     const galleryBase = path.join(__dirname, '../patternfly-docs/pages');
@@ -25,6 +26,12 @@ module.exports = (sourceMD, sourceProps, sourceFunctionDocs) => {
       .resolve('@patternfly/documentation-framework/package.json')
       .replace('package.json', 'pages');
     sourceMD(path.join(themePagesPath, '*.md'), 'pages-overview');
+
+    // Design tokens
+    const designTokensPath = require
+      .resolve('@patternfly/design-tokens/package.json')
+      .replace('package.json', 'patternfly-docs/content');
+    sourceMD(path.join(designTokensPath, '/*.md'), 'tokens');
 
     // Core MD
     const coreDocsPath = require
