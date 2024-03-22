@@ -131,7 +131,7 @@ export const Example = ({
   if (lang === 'html') {
     livePreview = (
       <div
-        className={css('ws-preview-html', isFullscreenPreview && 'pf-v5-u-h-100')}
+        className={css('ws-preview-html', isFullscreenPreview && 'pf-v6-u-h-100')}
         dangerouslySetInnerHTML={{ __html: editorCode }}
       />
     );

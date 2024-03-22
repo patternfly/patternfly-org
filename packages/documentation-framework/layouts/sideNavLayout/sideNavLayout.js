@@ -59,7 +59,7 @@ const HeaderTools = ({
 
   const getDropdownItem = (version, isLatest = false) => (
     <DropdownItem itemId={version.name} key={version.name} to={isLatest ? '/' : `/${version.name}`}>
-      {`Release ${version.name}`}
+      {`Current ${version.name}`}
     </DropdownItem>
   );
 
@@ -163,23 +163,18 @@ const HeaderTools = ({
                     </DropdownList>
                   </DropdownGroup>
                 )}
-                <Divider key="divider1" className="ws-switcher-divider"/>
-                <DropdownGroup key="Alpha preview version" label="Alpha preview version">
-                  <DropdownList>
-                    <DropdownItem
-                      key="PatternFly 6"
-                      className="ws-patternfly-versions"
-                      isExternalLink
-                      to="https://staging-v6.patternfly.org/"
-                      itemId="patternfly-6"
-                    >
-                      PatternFly 6
-                    </DropdownItem>
-                  </DropdownList>
-                </DropdownGroup>
                 <Divider key="divider2" className="ws-switcher-divider"/>
                 <DropdownGroup key="Previous versions" label="Previous versions">
                   <DropdownList>
+                    <DropdownItem
+                      key="PatternFly 5"
+                      className="ws-patternfly-versions"
+                      isExternalLink
+                      to="https://www.patternfly.org"
+                      itemId="patternfly-5"
+                    >
+                      PatternFly 5
+                    </DropdownItem>
                     <DropdownItem
                       key="PatternFly 4"
                       className="ws-patternfly-versions"
