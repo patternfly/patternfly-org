@@ -164,7 +164,7 @@ export const Example = ({
 
   if (isFullscreenPreview) {
     return (
-      <div id={previewId} className={css(className, 'pf-v5-u-h-100')}>
+      <div id={previewId} className={css(className, 'pf-v6-u-h-100')}>
         {livePreview}
         {(hasDarkThemeSwitcher || hasRTLSwitcher) && (
           <Flex direction={{ default: 'column' }} gap={{ default: 'gapLg' }} className="ws-full-page-utils pf-v5-m-dir-ltr ">
