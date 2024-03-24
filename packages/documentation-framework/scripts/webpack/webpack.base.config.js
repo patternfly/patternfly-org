@@ -55,20 +55,12 @@ module.exports = (_env, argv) => {
             options: {
               cacheDirectory: '.cache/babel',
               cacheCompression: false,
-              presets: [['@babel/preset-env', {
-                loose: true,
-                corejs: 3,
-                useBuiltIns: 'entry',
-                exclude: ['transform-regenerator', 'transform-async-to-generator'],
-                modules: false,
-                targets: "> 0.25%, not dead"
-              }]],
-              plugins: [
-                '@babel/plugin-transform-react-jsx',
-                '@babel/plugin-proposal-class-properties',
-                '@babel/plugin-proposal-optional-chaining',
-                ["@babel/plugin-proposal-private-methods", { "loose": false }],
-                ["@babel/plugin-proposal-private-property-in-object", { "loose": false }]
+              presets: [
+                '@babel/preset-react',
+                ['@babel/preset-env', {
+                  loose: true,
+                  targets: '> 1%, not dead'
+                }],
               ],
             }
           },
