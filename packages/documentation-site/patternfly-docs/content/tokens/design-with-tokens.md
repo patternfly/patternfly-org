@@ -3,11 +3,11 @@ id: Design with tokens
 section: tokens
 ---
 
-## Penta design kit
+## PatternFly 6 design kit
 
-PatternFly tokens are only available as part of the PatternFly 6 [Penta design kit.]() In order to make use of our token system, you will need to [upgrade to PatternFly 6](/get-started/upgrade).
+PatternFly tokens are only available as part of [the PatternFly 6 design kit.](https://www.figma.com/@patternfly) In order to make use of our token system, you will need to [upgrade to PatternFly 6](/get-started/upgrade).
 
-## What is in the Penta design kit
+## What is in the PatternFly 6 design kit
 
 ### Tokens 
 
@@ -20,21 +20,21 @@ In Figma, the variable names look similar to [token names](/tokens/all-patternfl
 </div>
 <br />
 
-### Penta component library 
+### Component library 
 
-You will have access to all PatternFly tokens when you install the component library. Penta components are built with tokens. From the colors used, to the spacing of elements, to the font size: tokens control it all!
+You will have access to all PatternFly tokens when you install the component library. PatternFly 6 components are built with tokens. From the colors used, to the spacing of elements, to the font size: tokens control it all!
 
 <div style="text-align: center;">
     <img src="./img/component-tokens.png"  alt="PatternFly alert components built with Figma tokens."  width="700px"/> 
 </div>
 
-## Using the Penta design kit 
+## Using the PatternFly 6 design kit 
 
-To install the Penta design kit, [find instructions in our design onboarding guide.](/get-started/design#figma-library)
+To install the design kit, [find instructions in our design onboarding guide.](/get-started/design#figma-library)
 
-### Using Penta components
+### Using PatternFly 6 components
 
-As you insert a component into a design workspace, you can adjust properties and variable modes to customize the appearance to your needs. 
+As you insert a component into a Figma design workspace, you can adjust properties and variable modes to customize the appearance to your needs. 
 
 <div style="text-align: center;">
     <img src="./img/component-instance.png"  alt="PatternFly alert components built with Figma tokens."  width="350px"/> 
@@ -53,4 +53,4 @@ Our tokens are intentionally scoped so that they can only be used to modify rele
 
 Our tokens are only available within Figma. If you've previously designed with PatternFly by using our Sketch design kits, you will need to begin to create all new product designs within Figma.
 
-If you have any existing Sketch-based designs that you want to migrate into Figma, you will need to manually recreate each UI mockup using the Penta component library.
+If you have any existing Sketch-based designs that you want to migrate into Figma, you will need to manually recreate each UI mockup using the PatternFly 6 component library.
