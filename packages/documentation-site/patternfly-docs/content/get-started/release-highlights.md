@@ -7,6 +7,16 @@ section: get-started
 import './get-started.css';
 import { Divider } from '@patternfly/react-core';
 
+## PatternFly 5.3
+
+PatternFly 5.3 is now live! Here are the highlights from this release. 
+
+### React templates 
+
+We created a new feature for React components, called "templates", which combine a component with logic that supports a specific use case. Templates also come with a streamlined API that offers additional, limited customization. This will help reduce the amount of boilerplate code needed for common and recurring use cases.
+
+Templates will make it easier to migrate to the [current version of our select component](/components/menus/select) from [the deprecated version](/components/menus/select/react-deprecated). 
+
 ## PatternFly 5.2.2
 
 PatternFly 5.2.2 is now live! This was a patch release to fix a significant bug that was found.
