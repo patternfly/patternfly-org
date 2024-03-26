@@ -18,8 +18,8 @@ To make it easier to support light and dark theming in your application, we reco
 
 * **Use PatternFly components without customizations.** Most problems with dark theming are due to the use of custom styles, overrides to PatternFly styles, and non-PatternFly components. To ensure consistent styling and behavior when switching themes, try to use PatternFly components as they are.
 
-* **Use tokens to define any overrides.** 
-    * For example, to override a primary button’s background color, declare `.pf-[version]-c-button { --pf-[version]-c-button--m-primary--BackgroundColor: [color]; }` instead of `.pf-[version]-c-button.pf-m-primary { background-color: [color]; }`.
+* **Use tokens and component variables to define any overrides.** 
+    * For example, to override a primary button’s background color, declare `.pf-[version]-c-button { --pf-[version]-c-button--m-primary--BackgroundColor: [color token]; }` instead of `.pf-[version]-c-button.pf-m-primary { background-color: [color token]; }`.
 
 * **Use tokens in custom styles.** 
     * For example, use `background-color: var(--pf-t--[version]--global--background--color--primary--default)` for a primary background instead of `background-color: #fff` or `background-color: white`. Values like `#fff` and `white` will not change between light and dark theme, but tokens will.
