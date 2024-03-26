@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.4.0-alpha.4 (2024-03-26)
+
+
+### Bug Fixes
+
+* **docs:** fixed table of contents expand button cutoff ([#3929](https://github.com/patternfly/patternfly-org/issues/3929)) ([246ded9](https://github.com/patternfly/patternfly-org/commit/246ded97c3e52451ea46ee93638c974760d5e873))
+
+
+
+
+
 # 1.4.0-alpha.3 (2024-03-22)
 
 **Note:** Version bump only for package @patternfly/ast-helpers
