@@ -24,44 +24,46 @@ We added new support for a status indicator [within the menu toggle component.](
 <img src="./img/menu-toggle-status.png" alt="Menu toggles with success, warning, and danger status indicators." width="300px"/>
 
 #### Form select component bug fix
-We had a bug that would render the wrong color for menu items if the user was using a placeholder for the select menu
+We found a bug in [the form select component](/components/forms/form-select) that occassionally rendered the wrong color for menu items when a select menu placeholder was used in certain OS/browser combinations. We corrected this issue, so the appropriate color will now be used consistently.
 
 ### Topology pipeline updates
-We added new support to our topology pipelines, so that there is more flexibility in visualization options.
+To enhance and improve the experience using [topology pipelines](/topology/pipelines), we added a few new features.
 
 #### New layouts
-We introduced a new vertical layout that can be used to display pipelines from top to bottom.
+We introduced an new vertical layout that can display pipelines from top to bottom, rather than the previous left-to-right default.
 
 <img src="./img/topology-vertical-pipelines.png" alt="Topology pipeline in a top-to-bottom vertical presentation." width="500px"/>
 
-We added support for groups in pipeline views, which allows you to nest graphs. Groups are supported in both vertical and horizontal layouts.
+We also added support for groups in pipeline views, which allows you to combine and nest graphs. Groups are supported in both vertical and horizontal layouts.
 
 <img src="./img/topology-pipeline-groups.png" alt="Multiple topology pipelines grouped within a pipeline." width="650px"/>
 
-#### Visualization and functionality enhancements
-To enhance your experience with pipelines, we added new support for a couple of additional features. These features include: 
+#### Functional and visual enhancements
+To add more flexibility to topology pipelines, we added support for a couple of new features. These features introduce: 
 - Arrows as directional indicators between pipeline tasks. 
 - The ability to collapse and expand pipeline groups.
 
 <img src="./img/topology-pipeline-enhancements.png" alt="Topology pipeline before and after being collapsed." width="650px"/>
 
 ### Quick starts extension updates
+We made a few updates to [our quick starts extension](/extensions/quick-starts), which lives in [the patternfly/patternfly-quickstarts repository](https://github.com/patternfly/patternfly-quickstarts).
 
 #### Removed AsciiDoc code
-We removed AsciiDoc code, since it was no longer being utilized by any products. We still have support for AsciiDoc, but we recommend using markdown.
+To clean up our codebase and processes, we removed AsciiDoc examples, which were no longer being utilized by any products. We still have support for AsciiDoc, but we generally recommend using Markdown instead.
 
 #### New bookmarks feature
-We added a new feature, which allows card items to be bookmarked. This feature can be used for any action that is passed  to the card/tile.
+We added new functionality to cards in quick starts, which allows users to bookmark cards as needed. 
 
 <img src="./img/quickstarts-bookmark.png" alt="Card with bookmark action icon." width="300px"/>
 
 #### Bug fixes
-To fix some functionality issues, we made some updates to our quick starts extension at [patternfly/patternfly-quickstarts](https://github.com/patternfly/patternfly-quickstarts).
-
-These updates add suppport for clickable cards, active and hover card styling, and links that open in a new tab.  
+We fixed a few issues to enable: 
+- Clickable cards.
+- Active and hover card styles.
+- Links that open in a new tab.
 
 ### Coming soon
-Our v6 alpha will be released soon. Keep an eye on [our Medium publication](https://medium.com/patternfly) and the PatternFly website for updates.
+The release of our v6 alpha will be here soon. Keep an eye on [our Medium publication](https://medium.com/patternfly) and the PatternFly website for updates. We'll be sure to share an announcement as soon as the alpha is live!
 
 <Divider></Divider>
 
