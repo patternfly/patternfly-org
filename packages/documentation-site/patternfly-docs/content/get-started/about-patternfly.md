@@ -321,7 +321,7 @@ Now that you've been introduced to PatternFly, you're ready to start designing o
 <Grid sm={12} md={4} hasGutter>
 <Button size="lg" variant="secondary" component="a" href="/get-started/design"> Start designing </Button>
 <Button size="lg" variant="secondary" component="a" href="/get-started/develop"> Start developing </Button>
-<Button size="lg" variant="secondary" component="a" href="/get-started/contribute/contributing-to-patternfly"> Contribute to PatternFly</Button>
+<Button size="lg" variant="secondary" component="a" href="/get-started/contribute"> Contribute to PatternFly</Button>
 </Grid>
 <br />
 
