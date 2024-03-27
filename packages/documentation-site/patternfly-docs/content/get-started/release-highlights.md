@@ -14,12 +14,14 @@ PatternFly 5.3 is now live! Here are the highlights from this release.
 ### React templates 
 We created a new feature for React components, called "templates", which combine a component with logic that supports a specific use case. Templates also come with a streamlined API that offers additional, limited customization. This will help reduce the amount of boilerplate code needed for common and recurring use cases.
 
-Templates will also make it easier to upgrade your deprecated components going forward. For example, you can use a template to upgrade from the [current version of our select component](/components/menus/select) from [the deprecated version](/components/menus/select/react-deprecated). 
+Templates will also make it easier to upgrade your deprecated components going forward. For example, you can use a template to upgrade from the [current version of our select component](/components/menus/select) from [the deprecated version.](/components/menus/select/react-deprecated)
 
 ### Component updates 
 
 #### Menu toggle with status indicator
-We added new support for a status indicator [within the menu toggle component.](/components/menus/menu-toggle#status) This allows you to associate a menu toggle item with different statuses, such as "success", "warning", and "danger", so that users have more context about the effect that a selection may have. 
+We added support for a status indicator [within the menu toggle component.](/components/menus/menu-toggle#status) This allows you to associate a menu toggle item with different statuses, such as "success", "warning", and "danger", so that users have more context about the effect that a selection may have. 
+
+Because [the select component](/components/menus/select) is built with a menu toggle, this status indication can also be utilized by select components, [as shown in this example.](/components/menus/select#with-validation) This update replicates functionality that was present in [the now deprecated select component](/components/menus/select/react-deprecated), which has not been supported in our current implementation until now. With this addition, you can now migrate any select components using validation to our updated select implementation.
 
 <img src="./img/menu-toggle-status.png" alt="Menu toggles with success, warning, and danger status indicators." width="300px"/>
 
@@ -46,7 +48,7 @@ To add more flexibility to topology pipelines, we added support for a couple of 
 <img src="./img/topology-pipeline-enhancements.png" alt="Topology pipeline before and after being collapsed." width="650px"/>
 
 ### Quick starts extension updates
-We made a few updates to [our quick starts extension](/extensions/quick-starts), which lives in [the patternfly/patternfly-quickstarts repository](https://github.com/patternfly/patternfly-quickstarts).
+We made a few updates to [our quick starts extension](/extensions/quick-starts), which lives in [the patternfly/patternfly-quickstarts repository.](https://github.com/patternfly/patternfly-quickstarts)
 
 #### Removed AsciiDoc code
 To clean up our codebase and processes, we removed AsciiDoc examples, which were no longer being utilized by any products. We still have support for AsciiDoc, but we generally recommend using Markdown instead.
