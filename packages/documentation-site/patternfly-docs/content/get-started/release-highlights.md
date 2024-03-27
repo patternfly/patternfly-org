@@ -12,10 +12,58 @@ import { Divider } from '@patternfly/react-core';
 PatternFly 5.3 is now live! Here are the highlights from this release. 
 
 ### React templates 
-
 We created a new feature for React components, called "templates", which combine a component with logic that supports a specific use case. Templates also come with a streamlined API that offers additional, limited customization. This will help reduce the amount of boilerplate code needed for common and recurring use cases.
 
-Templates will make it easier to migrate to the [current version of our select component](/components/menus/select) from [the deprecated version](/components/menus/select/react-deprecated). 
+Templates will also make it easier to upgrade your deprecated components going forward. For example, you can use a template to upgrade from the [current version of our select component](/components/menus/select) from [the deprecated version](/components/menus/select/react-deprecated). 
+
+### Component updates 
+
+#### Menu toggle with status indicator
+We added new support for a status indicator [within the menu toggle component.](/components/menus/menu-toggle#status) This allows you to associate a menu toggle item with different statuses, such as "success", "warning", and "danger", so that users have more context about the effect that a selection may have. 
+
+<img src="./img/menu-toggle-status.png" alt="Menu toggles with success, warning, and danger status indicators." width="300px"/>
+
+#### Form select component bug fix
+We had a bug that would render the wrong color for menu items if the user was using a placeholder for the select menu
+
+### Topology pipeline updates
+We added new support to our topology pipelines, so that there is more flexibility in visualization options.
+
+#### New layouts
+We introduced a new vertical layout that can be used to display pipelines from top to bottom.
+
+<img src="./img/topology-vertical-pipelines.png" alt="Topology pipeline in a top-to-bottom vertical presentation." width="500px"/>
+
+We added support for groups in pipeline views, which allows you to nest graphs. Groups are supported in both vertical and horizontal layouts.
+
+<img src="./img/topology-pipeline-groups.png" alt="Multiple topology pipelines grouped within a pipeline." width="650px"/>
+
+#### Visualization and functionality enhancements
+To enhance your experience with pipelines, we added new support for a couple of additional features. These features include: 
+- Arrows as directional indicators between pipeline tasks. 
+- The ability to collapse and expand pipeline groups.
+
+<img src="./img/topology-pipeline-enhancements.png" alt="Topology pipeline before and after being collapsed." width="650px"/>
+
+### Quick starts extension updates
+
+#### Removed AsciiDoc code
+We removed AsciiDoc code, since it was no longer being utilized by any products. We still have support for AsciiDoc, but we recommend using markdown.
+
+#### New bookmarks feature
+We added a new feature, which allows card items to be bookmarked. This feature can be used for any action that is passed  to the card/tile.
+
+<img src="./img/quickstarts-bookmark.png" alt="Card with bookmark action icon." width="300px"/>
+
+#### Bug fixes
+To fix some functionality issues, we made some updates to our quick starts extension at [patternfly/patternfly-quickstarts](https://github.com/patternfly/patternfly-quickstarts).
+
+These updates add suppport for clickable cards, active and hover card styling, and links that open in a new tab.  
+
+### Coming soon
+Our v6 alpha will be released soon. Keep an eye on [our Medium publication](https://medium.com/patternfly) and the PatternFly website for updates.
+
+<Divider></Divider>
 
 ## PatternFly 5.2.2
 
