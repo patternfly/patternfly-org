@@ -64,6 +64,11 @@ Wherever you have any custom CSS overrides that reference PatternFly class names
 If your product uses a custom solution to replicate PatternFly styling (without using PatternFly components), then it will need to be reskinned. We recognize that this may be a large undertaking, so we encourage you to reach out to the PatternFly team so that we support this work.
 
 ### Utilize our class-name-updater codemod
-We offer a [`class-name-updater` codemod](https://github.com/patternfly/pf-codemods/tree/main/packages/class-name-updater) to help support your updates. This utility automatically identifies class names that need to be updated as a result of class name changes in Patternfly 6, which helps highlight places in your codebase that may require changes to class names. Add the `--fix` flag to allow run the codemod and fix issues where possible.
+We offer a [`class-name-updater` codemod](https://github.com/patternfly/pf-codemods/tree/main/packages/class-name-updater) to help support your updates. This utility automatically identifies class names that need to be updated as a result of class name changes in Patternfly 6, which helps highlight places in your codebase that may require you to adjust class names. 
 
-**Note:** It is important to consider that this utility performs a simple ‘find and replace’, so it's possible that it will inadvertently identify code that is formatted similarly to a PatternFly class name, but is not one.
+When using this codemod, keep the following guidance in mind: 
+- This codemod targets v5 of PatternFly by default, so you will need to add the `--pfVersion 6` option if you are upgrading to v6.
+- Add the `--fix` flag to allow the codemod to fix issues where possible.
+- This utility performs a simple ‘find and replace’, so it's possible that it will inadvertently identify code that is formatted similarly to a PatternFly class name, but is not one. You should check to ensure that this doesn't cause any unintentional changes.
+
+For more details, you can refer to [the README file for this codemod](https://github.com/patternfly/pf-codemods/tree/main/packages/class-name-updater).
