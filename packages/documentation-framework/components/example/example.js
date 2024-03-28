@@ -167,7 +167,7 @@ export const Example = ({
       <div id={previewId} className={css(className, 'pf-v6-u-h-100')}>
         {livePreview}
         {(hasDarkThemeSwitcher || hasRTLSwitcher) && (
-          <Flex direction={{ default: 'column' }} gap={{ default: 'gapLg' }} className="ws-full-page-utils pf-v5-m-dir-ltr ">
+          <Flex direction={{ default: 'column' }} gap={{ default: 'gapLg' }} className="ws-full-page-utils pf-v6-m-dir-ltr ">
             {hasDarkThemeSwitcher && (
               <Switch id="ws-example-theme-switch" label="Dark theme" defaultChecked={false} onChange={() =>
               document.querySelector('html').classList.toggle('pf-v5-theme-dark')} />
@@ -248,7 +248,7 @@ export const Example = ({
             className={css(
               className,
               isFullscreen ? 'ws-preview-fullscreen' : 'ws-preview',
-              isRTL && 'pf-v5-m-dir-rtl')
+              isRTL && 'pf-v6-m-dir-rtl')
             }
           >
             {livePreview}
