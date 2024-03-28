@@ -32,7 +32,7 @@ async function writeScreenshots({ urlPrefix, allRoutes, filterTerm }) {
     concurrency: Cluster.CONCURRENCY_CONTEXT,
     maxConcurrency: os.cpus().length,
     puppeteerOptions: {
-      headless: true, // set to false for testing...
+      headless: 'new', // set to false for testing...
       args: ["--no-sandbox", "--disable-setuid-sandbox"],
       defaultViewport: {width: 1920, height: 1080}
     }

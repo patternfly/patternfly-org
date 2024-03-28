@@ -1,5 +1,5 @@
 ---
-id: About
+id: About layouts
 title: Layouts
 section: layouts
 sortValue: 1

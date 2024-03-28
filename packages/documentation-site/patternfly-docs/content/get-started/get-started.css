@@ -2,6 +2,11 @@
   color: #0066CC;
 }
 
+.ws-images {
+  margin: auto;
+  width: 600p;
+}
+
 #supported-browsers.ws-title + table {
   margin-bottom: 16px;
 }

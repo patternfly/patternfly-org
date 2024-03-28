@@ -3,79 +3,69 @@ id: Capitalization
 section: UX writing
 ---
 
-Consistent capitalization adds clarity and creates unity across your products' UIs.
+# Capitalization guidelines
 
-## Capitalization types
+Consistent capitalization adds clarity and creates unity across product UIs. PatternFly recommends writing in sentence case for all titles, headings, subtitles, or subheadings. **Sentence case** capitalizes only the first letter of the first word. The only exceptions to this are proper nouns, product names, acronyms, and initialisms, all of which should be capitalized.
 
-We recommend using title and sentence case as appropriate:
+For example: “When you use PatternFly’s design resources, you get helpful tips and best practices.”
 
-- **Title case** capitalizes only the first letter of each word in a sentence, except for smaller words with fewer than four letters, like articles and conjunctions. 
+**Above all else, your main goal should be consistency.** You may need to use different capitalization standards depending on what you're designing, but be sure to keep the capitalization within your product area consistent.
 
-    - For example: "PatternFly Design Resources with Tips and Best Practices."
+## Red Hat product UIs
 
-    - **Note:** Hyperlinked articles in a UI are not displayed as titles. Instead, the copy typically reads something like, "Learn more about [tool name]." 
+When you write for a product, make sure you adhere to the following capitalization patterns.
 
-- **Sentence case** only capitalizes the first letter of the first word in a title, heading, subtitle, or subheading except for proper nouns, product names, acronyms, and initialisms. 
-    
-    - For example: “PatternFly’s design resources with tips and best practices.”
+- Default to sentence case across all UI elements, including navigation items, page titles, buttons, and so on. 
 
-## Capitalization across PatternFly
+<div class="ws-image"> <img src="./img/navigation-capitalization.png"  alt="A side navigation menu, expanded to show capitalization styles." width="600px"/></div>
 
-Follow these guidelines for PatternFly content, including documentation, UX copy, blog articles, and more. 
+- Keep capitalization for custom resources the same as the capitalization style used during creation. 
+    - For example, if a custom resource name was created with all lowercase letters, don't change any of the letters to uppercase when referencing this resource. 
+- Capitalize product feature names when they’re used as proper nouns or when they refer to a capitalized UI term (like a navigation item). Write them in lowercase when they’re used to describe generic concepts. For example:
 
-- Use **sentence case** for page titles, menu items, navigation items, headings, subtitles, and subheadings. 
-
-    - For example, on PatternFly's website, all navigation items, button text, and headings are written in sentence case:  
-
-<img src="./img/patternfly-sentence-case.png"  alt="PatternFly website screenshot showing sentence case copy"  width="3330px"/>
-
-- **Capitalize** proper nouns, product names, acronyms, and initialisms.  
-    
-    - **Note**: “React” is always capitalized, even when referring to a component (such as “React component”). It’s the official name of a JavaScript library, and it’s written as a proper noun across the <a href="https://reactjs.org/">react.js org site</a>.  
-
-- Write all components in **lowercase** unless they start a sentence. 
-    
-    - For example, "Card, button, and banner components are my favorites."
-
-## Capitalization across Red Hat UIs
-
-Similar to PatternFly, sentence case is the standard across Red Hat products. However, capitalization varies depending on each product area's context. 
-
-Keep in mind that your main goal should be consistency. You may need to use different capitalization standards depending on what you're designing, but be sure to keep the capitalization within your product area consistent.   
-
-In general, follow these guidelines:
-
-- **Capitalize** proper nouns, acronyms, initialisms, product names, services, and features. 
-- Keep capitalization for custom resources the same as the capitalization used during creation. For example, if a custom resource was created in all lowercase letters, don't change any of the letters to uppercase. 
-- Capitalize **Red Hat feature names** when they’re used as proper nouns or when they refer to a capitalized UI term (like a navigation item). Write them in lowercase when they’re used to describe generic concepts. For more specifics, reference the following table:
-    
     <div class="ws-content-table">
 
     | **Feature name** | **UI text**  | **Reasoning**    |
     |------------------|--------------|------------------|
-    | Compliance   | “Check your system compliance using Red Hat Insights Compliance.”                                                  | The first “compliance” is lowercase since it refers to compliance as a concept. The second “compliance” refers to a specific feature offered on cloud.redhat.com, so it is capitalized.                                     |
-    | User Access  | “Manage user access for your organization using the User Access feature.”                                          | The first “user access” is lowercase because it refers to user access as a concept. The second “user access” is capitalized because it refers to the User Access feature offered on cloud.redhat.com. |
-    | Sources      | “Add a source by going to **Settings > Sources.**” "Check the **Sources** table for status."<br /><br />Button text: "Add source" | “Sources” is only capitalized when it directly refers to a subsection, feature, or location in the UI. Always write buttons in sentence case. |
-
+    | Compliance   | “Check your system **compliance** using Red Hat Insights **Compliance**.”                                                  | The first “compliance” is lowercase since it refers to a concept. The second “compliance” refers to a specific feature offered on cloud.redhat.com, so it is capitalized.                                     |
+    | Sources      | “Add a *source* by going to **Settings > *Sources*.**” "Check the *Sources* table for status."<br /><br />Button text: "Add *source*" | “Sources” is only capitalized when it directly refers to a subsection, feature, or location in the UI. "Source" is lowercase in the button text because button labels should always be in sentence case. |
     </div>
 
-A UI that adheres to these guidelines may resemble the following image: 
+### Capitalization in breadcrumb trails
 
-<img src="./img/user-menu-example.png" alt="title case navigation items and sentence case menu items" width="3330px"/>   
+It is common for page titles to appear as an item in a breadcrumb trail. Match the capitalization of the original page title in the corresponding breadcrumb item even when the item does not use sentence case, or when a breadcrumb trail contains mixed capitalization standards.
 
-1. **Navigation**: Navigation items are in title case. 
-1. **Menu**: Menu items are in sentence case.
+<div class="ws-image"> <img src="./img/basic-breadcrumb.png"  alt="A breadcrumb trail with mixed capitalization styles due to page title formatting." width="600"/> </div>
 
-## Capitalization in breadcrumb trails
+Sometimes, user-named items will appear in a breadcrumb trail. If a custom resource name (for example, "customResource-name") is included in the breadcrumb trail, you should match the capitalization of the users' original entry. 
 
-Usually, page titles appear in a breadcrumb trail. If all page titles are in title case then they should also appear in title case in the breadcrumb trail. If all page titles are in sentence case, they should also appear in sentence case in the breadcrumb trail. 
+<p class="ws-image"> <img src="./img/breadcrumb-custom-item.png"  alt="A breadcrumb trail with mixed capitalization styles due to custom resource naming." width="600"/></p>
 
-However, breadcrumb trails aren’t limited to page titles alone. If a name entered by a user (such as “vagrant-host”) is included in the breadcrumb trail, then use the same case that the name appears in. 
+### Tools outside your product portfolio
 
-For example, this may look like: *Rules* > *Systems* > *System Tool* > *vagrant-host* 
+If you’re referencing tools that aren't part of your company’s product portfolio, write the product names as they appear in the respective company’s documentation.
 
-## Capitalization for tools outside your product portfolio
+For example, if you’re referencing a product in Amazon Web Services that Amazon capitalizes, then you should also capitalize it in your writing.
 
-If you’re referencing tools outside your company’s product portfolio, write the product names as they appear in the respective company’s documentation. 
+## PatternFly website documentation 
 
-For example, if you’re referencing a product in Amazon Web Services and Amazon capitalizes it, you should also capitalize it in your writing.
+There are additional capitalization guidelines that you should follow if you contribute to any PatternFly content, like documentation or microcopy.
+
+- Use sentence case for page titles, menu items, navigation items, headings, subtitles, and subheadings. 
+
+- Capitalize proper nouns, product names, acronyms, and initialisms. For example: React, PatternFly, and HTML.
+
+Take the PatternFly website as an example, where all navigation items, button text, and headings are written in sentence case and all proper nouns are in title case:
+
+<div class="ws-image"><img src="./img/pf-home-caps.png"  alt="A PatternFly website screenshot showing sentence case copy." width="700"/>
+</div>
+
+- Write all components in lowercase unless they start a sentence. 
+
+- Format any code snippets according to the standards used for their language. 
+
+For example, the following image from our component documentation uses lowercase for the component name ("card") and capitalizes code appropriately ("isCompact" and "isLarge").
+
+<div class="ws-image"><img src="./img/component-docs.png"  alt="Component documentation showing sentence case copy and capitalization styling for code." width="700"/>
+</div>
+

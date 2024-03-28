@@ -7,29 +7,71 @@ source: Design-with-Sketch
 
 import { Alert } from '@patternfly/react-core';
 
-<Alert variant="info" title="Unsupported">
-    We no longer maintain or update our Sketch design kits and, as a result, this guide is no longer being updated. We strongly advise you to [migrate to Figma](/get-started/design), so that you can continue to receive updated PatternFly design resources.
+To start designing with PatternFly, you will need to install our design kits and libraries. These resources give you full access to PatternFly's visual design system and enable you to create consistent and usable product experiences.
 
-</Alert>
+## Figma library
+
+PatternFly 5 has been set up within Figma. To download the Figma library, which contains all PatternFly components and styles, visit our [PatternFly community page.](https://www.figma.com/@patternfly)
+
+<p class="ws-images">
+<img src="./img/pf-figma-header.png" alt="Header from PatternFly's Figma community page." />
+</p>
+
+Previously, the PatternFly design kit was available within Sketch. We have migrated our design libraries to Figma, in order to take advantage of its real-time collaboration features that help streamline the design process and support better communication. While you may still use Sketch if it best fits your needs, it is no longer our recommendation. [See more details within our Sketch instruction.](/get-started/design#sketch-design-kit)
+
+### Red Hat employees
+
+If you are a Red Hat employee on the User Experience Design (UXD) team, you will be added to the UXD workspace in Figma. This allows you to instantly receive library updates as they are made by the team. 
+
+If you are a Red Hat employee, but you are not on the UXD team, you should work with your manager to be added to your team's respective workspace in Figma.
+
+### PatternFly community members
+
+If you are not a Red Hat employee, you will need to create a copy of the [PatternFly 5 design file](https://www.figma.com/community/file/1300826511900225842/patternfly-5) to install the library within your own Figma workspace. 
+
+Note that you will not be able to receive automatic library updates since you are working from a local copy. The PatternFly team will release any updates every other week, as part of their sprint schedule. Be sure to revisit our Figma community page in order to download the latest updates. 
 
 ## Sketch design kit
 
-The Sketch design kit was our recommendation prior to the release of PatternFly 5. Initial PatternFly 5 components and styles were added to Sketch, but nothing beyond those initial updates will be included going forward. PatternFly 6 and beyond will only be available within Figma.
+**Note:** We have migrated to Figma and no longer maintain or update our Sketch design kits. 
 
-If you continue to use Sketch, you will not be following our latest recommendations and will not have access to new PatternFly features.
+Initial PatternFly 5 components and styles have been added to Sketch, and can be accessed following the instructions outlined on this page, but no further updates will be released. You can continue to use Sketch, but keep in mind that you will not be following our latest recommendations and will not have access to new features. We recommend that you migrate to Figma so that you can continue to receive updated design resources.
 
-The following guide outlines our previous instructions for using Sketch, but they may no longer be relevant or accurate.
+The following information and instructions may be out of date.
 
 ### Design kit
 The design kit is a symbol library implemented in Sketch to help designers, like you, create high-fidelity mockups that reflect PatternFly styling.
 
 ### Wireframe kit
-A PatternFly wireframe kit is also available for creating low or mid-fidelity mockups that are compatible with PatternFly styles. The wireframe kit is separate from the design kit, but the two can be used together for a comprehensive approach to the design life-cycle. You can [learn more about the wireframe kit on GitHub.](https://github.com/patternfly/patternfly-design-kit/blob/master/PatternFly%204%20-%20Wireframe%20library%20and%20template/Wireframe%20kit%20guideline.md)
+A PatternFly wireframe kit (implemented in Sketch) is also available for creating low or mid-fidelity mockups that are compatible with PatternFly styles. The wireframe kit is separate from the design kit, but the two can be used together for a comprehensive approach to the design life-cycle.
 
-### Getting the design kit
+[**Learn more about the wireframe kit**](https://github.com/patternfly/patternfly-design-kit/blob/master/PatternFly%204%20-%20Wireframe%20library%20and%20template/Wireframe%20kit%20guideline.md) <i class="ws-content-blueArrow fas fa-arrow-right pf-v5-u-mx-sm"></i>
+
+### Style guidelines
+What typography should you be using? What about colors? Spacing? Check out styles to learn everything you need to know about our foundational design elements.
+
+[**View styles**](/design-foundations/colors) <i class="ws-content-blueArrow fas fa-arrow-right pf-v5-u-mx-sm"></i>
+
+### Usage and behavior guidelines
+Should you use a wizard or a form to solve this problem? How do you write a good button label? Which navigation makes the most sense? Get answers by clicking the Design guidelines tab associated within each component page.
+
+[**View usage and behavior guidelines**](/components/about-modal/design-guidelines) <i class="ws-content-blueArrow fas fa-arrow-right pf-v5-u-mx-sm"></i>
+
+### Content guidelines
+How do you write great microcopy and text for your user interface? Read our content guidelines for general principles, guidance on voice, and a style guide to help you with everything from capitalization to date and time formats.
+
+
+[**View content guidelines**](/ux-writing/about) <i class="ws-content-blueArrow fas fa-arrow-right pf-v5-u-mx-sm"></i>
+
+### Start building with components.
+What does a toolbar look like? What about a filter chip? Components are the building blocks of the design system. Check out individual component pages to view examples, understand states and behaviors, and check out the code samples (if you’re into that kind of thing).
 
 #### Download fonts
 PatternFly currently uses Red Hat Text and Red Hat Display, [which you can download here](https://github.com/RedHatOfficial/RedHatFont). Once you've downloaded the repository, select all files in the "TTF" folder and double-click to install them onto your computer locally.
+
+### What's in the design kit?
+
+[**View demos**](/patterns/primary-detail) <i class="ws-content-blueArrow fas fa-arrow-right pf-v5-u-mx-sm"></i>
 
 ### What's in the design kit?
 
@@ -54,6 +96,13 @@ From the top toolbar in Sketch, select Insert → Symbols → Patternfly 4 to ad
 PatternFly symbols are designed to be as flexible and adaptable as possible. As such, designers should avoid detaching symbols from the library. However, there are rare instances where this may be necessary. Just know that once a symbol is detached, that symbol will no longer automatically update with new releases.
 
 <img src="./img/symbol-library.png" alt=""></img>
+
+### Getting the design kit
+
+The PatternFly design kit was originally developed for [Sketch users](#sketch-users), but is now available for use through [any design tool](#using-other-design-tools).
+
+#### Download the font
+PatternFly currently uses Red Hat Text and Red Hat Display. To download these fonts, go to https://github.com/RedHatOfficial/RedHatFont and download the whole repository. Then select all files in the "TTF" folder and double-click. This will install them onto your computer locally.
 
 ### Using Sketch
 
@@ -109,3 +158,12 @@ Note that there is a difference between regular color options and chart color fi
 Currently, all PatternFly text styles use Red Hat Text and Red Hat Display fonts. If you have not done so already, make sure to download according to the instructions [above](#download-the-font) before starting your designs.
 
 When inserting text into your design, always assign it a text style by selecting the text item, followed by selecting a text style from the appearance menu on the right toolbar.
+
+### Staying up to date
+Adjustments and bug fixes are made to the kit on a regular basis. When we make a change to any of the libraries, you'll be notified via the bell icon in the top right corner of the Sketch window that says “Library Update Available”. To update, click "Update" on the pop-up that appears.
+
+We recommend that you keep your kit as up to date as possible. Once a change is accepted, you will not be able to revert to the previous version.
+
+Please note that the Patternfly template will NOT be automatically updated as the symbol library is. Every time this template file is updated, you will need to re-download and re-save this as a template. We have added [release notes](https://github.com/patternfly/patternfly-design-kit/blob/master/PatternFly%20release%20notes.md) to the [design-kit-repo](https://github.com/patternfly/patternfly-design-kit/) that document additions and edits to the design kit. This is a good place to start to review what has been added to the template file.
+
+Did you use the old versions of the symbols that were updated in files already? No problem -  you'll receive another notification in the top right of that specific Sketch file that will allow you to update them.

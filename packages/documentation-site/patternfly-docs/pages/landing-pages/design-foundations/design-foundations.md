@@ -1,5 +1,5 @@
 ---
-id: About
+id: About design foundations
 title: Design Foundations
 section: design-foundations
 sortValue: 1
