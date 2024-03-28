@@ -169,6 +169,190 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 * try a v6 release ([7d3150c](https://github.com/patternfly/patternfly-org/commit/7d3150c1195b013001720d1e5161cbb724a0d73b))
 
 
+# 1.8.0 (2024-03-20)
+
+
+### Features
+
+* **templates:** add templates package to versions.json ([#3902](https://github.com/patternfly/patternfly-org/issues/3902)) ([c7c727c](https://github.com/patternfly/patternfly-org/commit/c7c727c717d5cc3c031f4f3c52070ffc6164e5d6))
+
+
+
+
+
+# 1.7.0 (2024-03-19)
+
+
+### Features
+
+* add pf 6 alpha banner to home page and version switcher ([#3896](https://github.com/patternfly/patternfly-org/issues/3896)) ([f7aaa22](https://github.com/patternfly/patternfly-org/commit/f7aaa22d12310aa62533de4169e1fa70a49a20d9))
+
+
+
+
+
+# 1.6.0 (2024-03-13)
+
+
+### Features
+
+* **deps:** version bump and release notes for 5.2.2 patch release ([#3919](https://github.com/patternfly/patternfly-org/issues/3919)) ([94d3654](https://github.com/patternfly/patternfly-org/commit/94d3654768f42f2ae7b3c0734d1e5f211cd33ff6))
+
+
+
+
+
+## 1.5.1 (2024-03-12)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 1.5.0 (2024-03-08)
+
+
+### Features
+
+* **deps:** version bump for 5.2.1 release ([#3913](https://github.com/patternfly/patternfly-org/issues/3913)) ([46cc8b7](https://github.com/patternfly/patternfly-org/commit/46cc8b70e06b9bda61067beba57d928e428b73c5))
+
+
+
+
+
+## 1.4.3 (2024-02-27)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+## 1.4.2 (2024-02-14)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+## 1.4.1 (2024-02-06)
+
+
+### Bug Fixes
+
+* Bump topology to 5.2.1 ([#3881](https://github.com/patternfly/patternfly-org/issues/3881)) ([af13c97](https://github.com/patternfly/patternfly-org/commit/af13c971384aaaa5bd87ce3e98dccee4b1214889))
+
+
+
+
+
+# 1.4.0 (2024-02-03)
+
+
+### Features
+
+* release 5.3 ([#3878](https://github.com/patternfly/patternfly-org/issues/3878)) ([3d1d130](https://github.com/patternfly/patternfly-org/commit/3d1d130c63ac4421ed8a307cd6ef140fa6e1d6f2))
+
+
+
+
+
+## 1.3.27 (2024-02-01)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+## 1.3.26 (2024-02-01)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+## 1.3.25 (2024-01-30)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+## 1.3.24 (2024-01-30)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+## 1.3.23 (2024-01-19)
+
+
+### Bug Fixes
+
+* avoid applying beta tags to nav items for next components ([#3868](https://github.com/patternfly/patternfly-org/issues/3868)) ([169c96f](https://github.com/patternfly/patternfly-org/commit/169c96f55b1bfdcb9859dbab27b88f5a180f48ba))
+
+
+
+
+
+## 1.3.22 (2024-01-16)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+## 1.3.21 (2024-01-16)
+
+
+### Bug Fixes
+
+* bump to latest release candidates ahead of 5.2 release ([#3862](https://github.com/patternfly/patternfly-org/issues/3862)) ([12eeb78](https://github.com/patternfly/patternfly-org/commit/12eeb782d32c4fa65f6aef64292f1e0d92f0d183))
+
+
+
+## 1.3.20 (2024-01-15)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+## 1.3.19 (2024-01-15)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+## 1.3.18 (2024-01-12)
+
+
+### Bug Fixes
+
+* bump puppeteer to fix core ([#3860](https://github.com/patternfly/patternfly-org/issues/3860)) ([1695209](https://github.com/patternfly/patternfly-org/commit/169520944b7c3dccf69709e6e2075b9153fce059))
+
+
+## 1.3.17 (2024-01-05)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+## 1.3.16 (2024-01-03)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+## 1.3.15 (2023-12-14)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
 
 
 

@@ -59,7 +59,7 @@ const HeaderTools = ({
 
   const getDropdownItem = (version, isLatest = false) => (
     <DropdownItem itemId={version.name} key={version.name} to={isLatest ? '/' : `/${version.name}`}>
-      {`Release ${version.name}`}
+      {`Current ${version.name}`}
     </DropdownItem>
   );
 
@@ -93,7 +93,7 @@ const HeaderTools = ({
           </ToolbarItem>
         )}
         <ToolbarGroup
-          align={{ default: 'alignRight' }}
+          align={{ default: 'alignEnd' }}
           spaceItems={{ default: 'spacerNone', md: 'spacerMd' }}
         >
           {hasDarkThemeSwitcher && (
@@ -163,12 +163,21 @@ const HeaderTools = ({
                     </DropdownList>
                   </DropdownGroup>
                 )}
-                <Divider key="divider" className="ws-switcher-divider"/>
+                <Divider key="divider2" className="ws-switcher-divider"/>
                 <DropdownGroup key="Previous versions" label="Previous versions">
                   <DropdownList>
                     <DropdownItem
+                      key="PatternFly 5"
+                      className="ws-patternfly-versions"
+                      isExternalLink
+                      to="https://www.patternfly.org"
+                      itemId="patternfly-5"
+                    >
+                      PatternFly 5
+                    </DropdownItem>
+                    <DropdownItem
                       key="PatternFly 4"
-                      className="ws-patternfly-3"
+                      className="ws-patternfly-versions"
                       isExternalLink
                       to="http://v4-archive.patternfly.org/v4/"
                       itemId="patternfly-4"
@@ -177,7 +186,7 @@ const HeaderTools = ({
                     </DropdownItem>
                     <DropdownItem
                       key="PatternFly 3"
-                      className="ws-patternfly-3"
+                      className="ws-patternfly-versions"
                       isExternalLink
                       to="https://pf3.patternfly.org/"
                       itemId="patternfly-3"

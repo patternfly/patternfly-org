@@ -1,5 +1,5 @@
 ---
-id: About
+id: About charts
 section: charts
 ---
 
