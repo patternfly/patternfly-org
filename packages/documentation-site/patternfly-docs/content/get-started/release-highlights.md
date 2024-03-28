@@ -32,7 +32,7 @@ We found a bug in [the form select component](/components/forms/form-select) tha
 To enhance and improve the experience using [topology pipelines](/topology/pipelines), we added a few new features.
 
 #### New layouts
-We introduced an new vertical layout that can display pipelines from top to bottom, rather than the previous left-to-right default.
+We introduced a new vertical layout that can display pipelines from top to bottom, rather than the previous left-to-right default.
 
 <img src="./img/topology-vertical-pipelines.png" alt="Topology pipeline in a top-to-bottom vertical presentation." width="500px"/>
 
