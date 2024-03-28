@@ -25,6 +25,11 @@ Because [the select component](/components/menus/select) is built with a menu to
 
 <img src="./img/menu-toggle-status.png" alt="Menu toggles with success, warning, and danger status indicators." width="300px"/>
 
+#### Dual list selector "next" version
+We created the "next" version of [the dual list selector component](/components/dual-list-selector), which offers a simpler, more composable implementation. We also updated all examples to be solely comprised of composable components.
+
+**Note:** As a reminder, our next components will be promoted with our next major release. Once a next component is promoted, it becomes the default recommended implementation for that component.
+
 #### Form select component bug fix
 We found a bug in [the form select component](/components/forms/form-select) that occasionally rendered the wrong color for menu items when a select menu placeholder was used in certain OS/browser combinations. We corrected this issue, so the appropriate color will now be used consistently.
 
