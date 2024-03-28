@@ -48,9 +48,12 @@ We also added support for groups in pipeline views, which allows you to combine 
 #### Functional and visual enhancements
 To add more flexibility to topology pipelines, we added support for a couple of new features. These features introduce: 
 - Arrows as directional indicators between pipeline tasks. 
+
+  <img src="./img/topology-pipeline-arrows.png" alt="Topology pipeline with arrows between tasks." width="450px"/>
+
 - The ability to collapse and expand pipeline groups.
 
-<img src="./img/topology-pipeline-enhancements.png" alt="Topology pipeline before and after being collapsed." width="650px"/>
+  <img src="./img/topology-pipeline-expansion.png" alt="Topology pipeline before and after being collapsed." width="650px"/>
 
 ### Quick starts extension updates
 We made a few updates to [our quick starts extension](/extensions/quick-starts), which lives in [the patternfly/patternfly-quickstarts repository.](https://github.com/patternfly/patternfly-quickstarts)
