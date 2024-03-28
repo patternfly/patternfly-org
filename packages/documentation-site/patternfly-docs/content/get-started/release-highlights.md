@@ -26,7 +26,7 @@ Because [the select component](/components/menus/select) is built with a menu to
 <img src="./img/menu-toggle-status.png" alt="Menu toggles with success, warning, and danger status indicators." width="300px"/>
 
 #### Form select component bug fix
-We found a bug in [the form select component](/components/forms/form-select) that occassionally rendered the wrong color for menu items when a select menu placeholder was used in certain OS/browser combinations. We corrected this issue, so the appropriate color will now be used consistently.
+We found a bug in [the form select component](/components/forms/form-select) that occasionally rendered the wrong color for menu items when a select menu placeholder was used in certain OS/browser combinations. We corrected this issue, so the appropriate color will now be used consistently.
 
 ### Topology pipeline updates
 To enhance and improve the experience using [topology pipelines](/topology/pipelines), we added a few new features.
