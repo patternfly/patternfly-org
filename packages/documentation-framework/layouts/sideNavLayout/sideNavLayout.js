@@ -93,7 +93,7 @@ const HeaderTools = ({
           </ToolbarItem>
         )}
         <ToolbarGroup
-          align={{ default: 'alignRight' }}
+          align={{ default: 'alignEnd' }}
           spaceItems={{ default: 'spacerNone', md: 'spacerMd' }}
         >
           {hasDarkThemeSwitcher && (
