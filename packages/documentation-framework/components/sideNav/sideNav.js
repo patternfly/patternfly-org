@@ -67,7 +67,6 @@ const ExpandableNav = ({groupedRoutes, location, section, subsection = null}) =>
       key={capitalize(currentSection.replace(/-/g, ' '))}
       isActive={isActive}
       isExpanded={isActive}
-      className="ws-side-nav-group"
       onClick={(event) => {
         // Don't bubble click event up, avoids subsection triggering duplicate analtics
         event.stopPropagation();
