@@ -103,7 +103,7 @@ export const ExampleToolbar = ({
             copyCode();
             trackEvent('code_editor_control_click', 'click_event', 'COPY_CODE');
           }}
-          variant="control"
+          variant="plain"
           aria-label={copyAriaLabel}
           className={editorControlProps.className}
         >
@@ -124,7 +124,7 @@ export const ExampleToolbar = ({
           >
             <Button
               aria-label={codesandboxAriaLabel}
-              variant="control"
+              variant="plain"
               type="submit"
               onClick={() => {
                 trackEvent('code_editor_control_click', 'click_event', 'CODESANDBOX_LINK');
@@ -218,6 +218,7 @@ export const ExampleToolbar = ({
       onEditorDidMount={onEditorDidMount}
       isReadOnly={isFullscreen}
       className={`${isEditorOpen ? 'ws-example-code-expanded ' : ''}ws-code-editor`}
+      isHeaderPlain
     />
   );
 }
