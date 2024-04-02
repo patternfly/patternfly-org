@@ -12,7 +12,7 @@ To implement an accessible PatternFly **tree view**:
 - Provide a unique label for the tree view via `aria-label` or `aria-labelledby`.
 - Only pass custom interactive content as a tree view item's secondary action, and never as part of a tree view item's displayed name.
 - Ensure any interactive actions for a tree view item follow any applicable accessibility guideliens.
-- Provide a typeahead search when the tree view has more than 7 items at the root of the tree view.
+- Provide a typeahead search when the tree view has more than 7 nodes.
 
 For the PatternFly React library:
 
@@ -34,13 +34,13 @@ At a minimum, a tree view should meet the following criteria:
     <Checkbox id="treeview-a11y-checkbox-2" label={<span>Only the root <code className="ws-code">ul</code> element within the tree view has the attribute <code className="ws-code">role="tree"</code>. Any nested <code className="ws-code">ul</code> elements instead have the attribute <code className="ws-code">role="group"</code></span>} />
   </ListItem>
   <ListItem>
-    <Checkbox id="treeview-a11y-checkbox-3" label="If there are more than 7 items at the root of the tree view, a typeahead search is provided." />
+    <Checkbox id="treeview-a11y-checkbox-3" label="If there are more than 7 nodes in the tree view, a typeahead search is provided." />
   </ListItem>
   <ListItem>
     <Checkbox id="treeview-a11y-checkbox-4" label={<span>Within the context of the tree view, each tree view item can be navigated to and interacted with via keyboard. <kbd>Up Arrow</kbd> and <kbd>Down Arrow</kbd> will navigate to the next or previous item without expanding or collapsing any, respectively. <kbd>Left Arrow</kbd> will collapse an expanded item or navigate to its parent. <kbd>Right Arrow</kbd> will expand a collapsed item or navigate to its first child. <kbd>Enter</kbd> and <kbd>Space</kbd> will trigger a default action, typically selecting an item and/or expanding/collapsing it.</span>} />
   </ListItem>
   <ListItem>
-    <Checkbox id="treeview-a11y-checkbox-5" label={<span>When focus is outside of the tree view. <kbd>Tab</kbd> places focus on the first interactive item in the tree view or the last interactive element to have focus within the tree view. When focus is inside of the tree view, <kbd>Tab</kbd> places focus on the first focusable element outside of the tree view.</span>} />
+    <Checkbox id="treeview-a11y-checkbox-5" label={<span>When focus is outside of the tree view. <kbd>Tab</kbd> places focus on the first interactive item in the tree view or the last interactive element to have focus within the tree view.</span>} />
   </ListItem>
   <ListItem>
     <Checkbox id="treeview-a11y-checkbox-6" label="A tree view item does not have any custom interactive content passed to it, except as a secondary action." />
@@ -80,8 +80,6 @@ The following HTML attributes and PatternFly classes can be used for more fine-t
 | `aria-selected="false"` | `li.pf-v5-c-tree-view__list-item` | Indicates that a tree view item is not selected. **Required** if a tree view item is not selected. |
 | `aria-selected="true"` | `li.pf-v5-c-tree-view__list-item` | Indicates that a tree view item is currently selected. **Required** if a tree view item is selected. |
 | `role="treeitem"` | `li.pf-v5-c-tree-view__list-item` | Identifies the element as a group of nested tree view items. **Required** `ul` elements nested within the root `ul[role="tree"]`. |
-| `tabindex="-1"` | `button.pf-v5-c-tree-view__node, button.pf-v5-c-tree-view__node-toggle, button.pf-v5-c-tree-view__node-text, .pf-v5-c-tree-view__node-check > input[type="checkbox"], .pf-v5-c-tree-view__action > button` | Makes the element focusable without including it in the tab sequence of the page. **Required** on all tree items, toggles, checkboxes, and action buttons, except for the element that is currently or was last focused within the tree view. This must be updated as a user navigates through a tree view. |
-| `tabindex="0"` | `button.pf-v5-c-tree-view__node, button.pf-v5-c-tree-view__node-toggle, button.pf-v5-c-tree-view__node-text, .pf-v5-c-tree-view__node-check > input[type="checkbox"], .pf-v5-c-tree-view__action > button` | Includes the element in the tab sequence. **Required** on the tree item, toggle, checkbox, or action button that is currently or was last focused within the tree view. This must be updated as a user navigates through a tree view. |
 | `aria-label="[text that labels the tree view search]"` | `.pf-v5-c-tree-view__search input` | Adds an accessible name to the tree view search. **Required**. |
 
 ## Further reading
