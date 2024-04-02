@@ -96,7 +96,7 @@ const ExpandableNav = ({groupedRoutes, location, section, subsection = null}) =>
                   source.source === "react-deprecated" || source.source === "html-deprecated")
                 && !navObj.sources.some(source => source.source === "react" || source.source === "html")
               ),
-              isBeta: navObj.sources.some(source => source.beta && source.source !== 'react-next'),
+              isBeta: navObj.sources.some(source => source.beta && source.source !== 'react-next' && source.source !== 'react-templates'),
               isDemo: navObj.sources.some(source => (
                   source.source === "react-demos" || source.source === "html-demos")
                 && !navObj.sources.some(source => source.source === "react" || source.source === "html")
