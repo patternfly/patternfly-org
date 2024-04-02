@@ -40,9 +40,6 @@ At a minimum, a tree view should meet the following criteria:
     <Checkbox id="treeview-a11y-checkbox-4" label={<span>Within the context of the tree view, each tree view item can be navigated to and interacted with via keyboard. <kbd>Up Arrow</kbd> and <kbd>Down Arrow</kbd> will navigate to the next or previous item without expanding or collapsing any, respectively. <kbd>Left Arrow</kbd> will collapse an expanded item or navigate to its parent. <kbd>Right Arrow</kbd> will expand a collapsed item or navigate to its first child. <kbd>Enter</kbd> and <kbd>Space</kbd> will trigger a default action, typically selecting an item and/or expanding/collapsing it.</span>} />
   </ListItem>
   <ListItem>
-    <Checkbox id="treeview-a11y-checkbox-5" label={<span>When focus is outside of the tree view. <kbd>Tab</kbd> places focus on the first interactive item in the tree view or the last interactive element to have focus within the tree view.</span>} />
-  </ListItem>
-  <ListItem>
     <Checkbox id="treeview-a11y-checkbox-6" label="A tree view item does not have any custom interactive content passed to it, except as a secondary action." />
   </ListItem>
   <ListItem>
