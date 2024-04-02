@@ -7,6 +7,76 @@ section: get-started
 import './get-started.css';
 import { Divider } from '@patternfly/react-core';
 
+## PatternFly 5.3
+
+PatternFly 5.3 is now live! Here are the highlights from this release. 
+
+### React templates 
+We created a new feature for React components, called "templates", which combine a component with logic that supports a specific use case. Templates also come with a streamlined API that offers additional, limited customization. This will help reduce the amount of boilerplate code needed for common and recurring use cases.
+
+Templates will also make it easier to upgrade your deprecated components going forward. For example, you can use a template to upgrade from the [current version of our select component](/components/menus/select) from [the deprecated version.](/components/menus/select/react-deprecated)
+
+### Component updates 
+
+#### Menu toggle with status indicator
+We added support for a status indicator [within the menu toggle component.](/components/menus/menu-toggle#status) This allows you to associate a menu toggle item with different statuses, such as "success", "warning", and "danger", so that users have more context about the effect that a selection may have. 
+
+Because [the select component](/components/menus/select) is built with a menu toggle, this status indication can also be utilized by select components, [as shown in this example.](/components/menus/select#with-validation) This update replicates functionality that was present in [the now deprecated select component](/components/menus/select/react-deprecated), which has not been supported in our current implementation until now. With this addition, you can now migrate any select components using validation to our updated select implementation.
+
+<img src="./img/menu-toggle-status.png" alt="Menu toggles with success, warning, and danger status indicators." width="300px"/>
+
+#### Dual list selector "next" version
+We created the "next" version of [the dual list selector component](/components/dual-list-selector), which offers a simpler, more composable implementation. We also updated all examples to be solely comprised of composable components.
+
+**Note:** As a reminder, our next components will be promoted with our next major release. Once a next component is promoted, it becomes the default recommended implementation for that component.
+
+#### Form select component bug fix
+We found a bug in [the form select component](/components/forms/form-select) that occasionally rendered the wrong color for menu items when a select menu placeholder was used in certain OS/browser combinations. We corrected this issue, so the appropriate color will now be used consistently.
+
+### Topology pipeline updates
+To enhance and improve the experience using [topology pipelines](/topology/pipelines), we added a few new features.
+
+#### New layouts
+We introduced a new vertical layout that can display pipelines from top to bottom, rather than the previous left-to-right default.
+
+<img src="./img/topology-vertical-pipelines.png" alt="Topology pipeline in a top-to-bottom vertical presentation." width="500px"/>
+
+We also added support for groups in pipeline views, which allows you to combine and nest graphs. Groups are supported in both vertical and horizontal layouts.
+
+<img src="./img/topology-pipeline-groups.png" alt="Multiple topology pipelines grouped within a pipeline." width="650px"/>
+
+#### Functional and visual enhancements
+To add more flexibility to topology pipelines, we added support for a couple of new features. These features introduce: 
+- Arrows as directional indicators between pipeline tasks. 
+
+  <img src="./img/topology-pipeline-arrows.png" alt="Topology pipeline with arrows between tasks." width="450px"/>
+
+- The ability to collapse and expand pipeline groups.
+
+  <img src="./img/topology-pipeline-expansion.png" alt="Topology pipeline before and after being collapsed." width="650px"/>
+
+### Quick starts extension updates
+We made a few updates to [our quick starts extension](/extensions/quick-starts), which lives in [the patternfly/patternfly-quickstarts repository.](https://github.com/patternfly/patternfly-quickstarts)
+
+#### Removed AsciiDoc code
+To clean up our codebase and processes, we removed AsciiDoc examples, which were no longer being utilized by any products. We still have support for AsciiDoc, but we generally recommend using Markdown instead.
+
+#### New bookmarks feature
+We added new functionality to cards in quick starts, which allows users to bookmark cards as needed. 
+
+<img src="./img/quickstarts-bookmark.png" alt="Card with bookmark action icon." width="300px"/>
+
+#### Bug fixes
+We fixed a few issues to enable: 
+- Clickable cards.
+- Active and hover card styles.
+- Links that open in a new tab.
+
+### Coming soon
+The release of our v6 alpha will be here soon. Keep an eye on [our Medium publication](https://medium.com/patternfly) and the PatternFly website for updates. We'll be sure to share an announcement as soon as the alpha is live!
+
+<Divider></Divider>
+
 ## PatternFly 5.2.2
 
 PatternFly 5.2.2 is now live! This was a patch release to fix a significant bug that was found.
