@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 6.0.0-alpha.20 (2024-04-03)
+
+
+### Bug Fixes
+
+* dark theme use v6 classname ([54cdb71](https://github.com/patternfly/patternfly-org/commit/54cdb717052eb00da735b0c7db6a82db4ef5f9de))
+
+
+
+
+
 # 6.0.0-alpha.19 (2024-04-02)
 
 
