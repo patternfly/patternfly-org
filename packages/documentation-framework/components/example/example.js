@@ -170,7 +170,7 @@ export const Example = ({
           <Flex direction={{ default: 'column' }} gap={{ default: 'gapLg' }} className="ws-full-page-utils pf-v6-m-dir-ltr ">
             {hasDarkThemeSwitcher && (
               <Switch id="ws-example-theme-switch" label="Dark theme" defaultChecked={false} onChange={() =>
-              document.querySelector('html').classList.toggle('pf-v5-theme-dark')} />
+              document.querySelector('html').classList.toggle('pf-v6-theme-dark')} />
             )}
             {hasRTLSwitcher && (
               <Switch id="ws-example-rtl-switch" label="RTL" defaultChecked={false} onChange={() => {
