@@ -293,7 +293,7 @@ The PatternFly community is never finished growing, and we want to keep it that 
      <Card isCompact>
       <CardTitle className="pf-v5-u-font-size-l"> Request a new feature </CardTitle>
       <CardBody>
-        We welcome all ideas for adding or improving features! We review all requests, taking into account scope and technical constraints. Accepted requests are placed on [our feature roadmap](https://github.com/orgs/patternfly/projects/16), and we'll work with you to design and develop a solution.
+        We welcome all ideas for adding or improving features! We review all requests, taking into account scope and technical constraints. Accepted requests are placed on [our feature roadmap](https://github.com/orgs/patternfly/projects/16/views/2), and we'll work with you to design and develop a solution.
       </CardBody>
       <Divider />
       <CardFooter>
@@ -301,6 +301,9 @@ The PatternFly community is never finished growing, and we want to keep it that 
       </CardFooter>
     </Card>
   </Grid>
+
+<br />
+<br />
 
 #### New communities
 Sometimes Flyers branch out and build groups of their own, creating new communities. While these communities are separate from PatternFly and not supported as part of our design system, we still love seeing our Flyers turning their visions into actions.
