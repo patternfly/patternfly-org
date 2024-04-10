@@ -3,24 +3,56 @@ id: Motion
 section: design-foundations
 ---
 
-Like color or typography, motion can create a strong foundation that helps connect the complex elements within your designs. By carefully incorporating motion into the design of a UI, you can create products that are more clear, engaging, and expressive.  Effective motion design should be intentional, and should be used to help guide users through their experiences more efficiently.
+import { Card, CardHeader, CardTitle, CardBody, CardFooter, Grid, GridItem} from '@patternfly/react-core';
+
+Like color or typography, **motion** can create a strong foundation that helps connect the complex elements within your designs. By carefully incorporating motion into the design of a UI, you can create products that are more clear, engaging, and expressive.  Effective motion design should be intentional, and should be used to help guide users through their experiences more efficiently.
 
 This guide outlines the principles that drive motion design in PatternFly and describes the different types of motion that are supported see our design system.
 
 ## Principles 
 Our motion principles define the intention behind motion use, to ensure that animations are consistent and are used in ways that  support our [brand voice and tone](https://www.patternfly.org/ux-writing/brand-voice-and-tone). When you use animations, you should ask yourself if your scenario adheres to these principles. 
 
-### Intentional 
-Motion should be intentionally designed in ways that help your users reach their goals. Animations should be quick and simple to focus your users’ attention only on what’s important, without distracting.
+<br />
 
-### Consistent
-Motion should be applied consistently to ensure that you’re sticking to the best design practices. Consistent animations provide a sense of familiarity to users throughout their journey and connect cross-product experiences.
-
-### Engaging
-To draw your users in and keep them interested, motion should be expressive and approachable. Animations should celebrate the big moments in our users’ journeys and add character to common interactions.
-
-### Inclusive
-Motion should contribute to experiences that offer all of your users a sense of belonging. Animations should always be optional and should respect your users’ motion preferences.
+<Grid hasGutter>
+<GridItem span={6}>
+    <Card isFullHeight>
+    <CardHeader>
+    <CardTitle>Intentional</CardTitle>
+    </CardHeader>
+    <CardBody>Motion should be intentionally designed in ways that help your users reach their goals. Animations should be quick and simple to focus your users’ attention only on what’s important, without distracting.
+    </CardBody>
+    </Card>
+</GridItem>
+<GridItem span={6}>
+    <Card isFullHeight>
+    <CardHeader>
+    <CardTitle>Consistent</CardTitle>
+    </CardHeader>
+    <CardBody>Motion should be applied consistently to ensure that you’re sticking to the best design practices. Consistent animations provide a sense of familiarity to users throughout their journey and connect cross-product experiences. 
+    </CardBody>
+    </Card>
+</GridItem>
+<GridItem span={6}>
+    <Card isFullHeight>
+    <CardHeader>
+    <CardTitle>Engaging</CardTitle>
+    </CardHeader>
+    <CardBody>To draw your users in and keep them interested, motion should be expressive and approachable. Animations should celebrate the big moments in our users’ journeys and add character to common interactions. 
+    </CardBody>
+    </Card>
+</GridItem>
+<GridItem span={6}>
+    <Card isFullHeight>
+    <CardHeader>
+    <CardTitle>Inclusive</CardTitle>
+    </CardHeader>
+    <CardBody>
+        Motion should contribute to experiences that offer all of your users a sense of belonging. Animations should always be optional and should respect your users’ motion preferences.
+    </CardBody>
+    </Card>
+</GridItem>
+</Grid>
 
 ## Motion in PatternFly
 Motion is integrated across PatternFly components  in the form of micro animations, which are small, unobtrusive, and often understated. These animations serve specific purposes within a user interface and are designed to be subtle and complementary.
@@ -46,16 +78,23 @@ Optimal timing can change based on viewport size.
 1. **Easing:** Describes how an element transitions over time.
 
 1. **Properties:** The characteristics of the element being transitioned (position, opacity, scale, etc.). Animations can be tagged with one or multiple of these properties: 
-- Fade in/out
-- Scale
-- Rotation
-- Color transition
-- Movement -- Slide in/out
-- Movement -- Expand/Collapse
+    - Fade in/out
+    - Scale
+    - Rotation
+    - Color transition
+    - Movement -- Slide in/out
+    - Movement -- Expand/Collapse
 
-## Developing (and designing?) with motion 
-Animations are set up within components via CSS properties. They are enabled by default, but can be disabled based on users' motion preferences via browser settings.
+## Developing and designing with motion 
+
+Animations are set up within components via CSS properties. 
 
 ### Tokens
 
+Will add info about tokens.
+
 ### Accessibility considerations
+
+Add more specifics on a11y measures.
+
+Animations are enabled by default, but can be disabled based on users' motion preferences via browser settings.
