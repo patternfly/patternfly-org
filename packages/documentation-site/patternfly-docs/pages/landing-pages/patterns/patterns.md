@@ -1,5 +1,5 @@
 ---
-id: About
+id: About patterns
 title: Patterns
 section: patterns
 sortValue: 1

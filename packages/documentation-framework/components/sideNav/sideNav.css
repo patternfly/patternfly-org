@@ -15,7 +15,3 @@
   color: var(--ws-toc-link--Color, var(--pf-v6-global--Color--300));
   font-size: var(--pf-v6-global--FontSize--sm);
 }
-
-#ws-sticky-nav-tabs {
-  z-index: var(--pf-v6-global--ZIndex--2xl);
-}

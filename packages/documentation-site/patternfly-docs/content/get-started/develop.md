@@ -6,7 +6,7 @@ section: get-started
 import './get-started.css';
 
 
-Before you begin, check out our [overview of PatternFly](/get-started/about) to get acquainted with the basic elements of the design system.
+Before you begin, check out our [overview of PatternFly](/get-started/about-patternfly) to get acquainted with the basic elements of the design system.
 
 **Before you begin, install a package manager:**
 

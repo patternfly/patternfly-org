@@ -23,7 +23,6 @@
 @media (max-width: 1450px) {
   .ws-toc.pf-m-expanded .pf-v6-c-jump-links__main {
     max-height: 65vh;
-    overflow: auto;
   }
 
   .ws-toc .pf-v6-c-jump-links__header {

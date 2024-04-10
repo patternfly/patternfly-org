@@ -23,6 +23,7 @@ const MDXChildTemplate = ({
     optIn,
     beta,
     deprecated,
+    template,
     newImplementationLink,
     functionDocumentation = []
   } = Component.getPageData();
@@ -82,6 +83,11 @@ const MDXChildTemplate = ({
             </React.Fragment>
           )}
           {' '}To learn more about the process, visit our <Link to="/get-started/about#major-release-cadence">about page</Link>.
+        </InlineAlert>
+      )}
+       {(template || source === 'react-template') && (
+        <InlineAlert title="Templates" variant="info">
+          {`This page showcases templates for the ${id.toLowerCase()} component. A template combines a component with logic that supports a specific use case, with a streamlined API that offers additional, limited customization.`}
         </InlineAlert>
       )}
     </React.Fragment>
@@ -152,7 +158,7 @@ export const MDXTemplate = ({
   componentsData
 }) => {
   const isDeprecated = sources.some(source => source.source === "react-deprecated" || source.source === "html-deprecated") && !sources.some(source => source.source === "react"  || source.source === "html");
-  const isBeta = sources.some(source => source.beta)
+  const isBeta = sources.some(source => source.beta && source.source !== 'react-next')
   const isDemo = sources.some(source => source.source === "react-demos" || source.source === "html-demos") && !sources.some(source => source.source === "react" || source.source === "html");
   // Build obj mapping source names to text displayed on tabs
   const tabNames = sources.reduce((acc, curSrc) => {

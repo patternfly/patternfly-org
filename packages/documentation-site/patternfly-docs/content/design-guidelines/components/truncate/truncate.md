@@ -10,7 +10,7 @@ section: components
 * **Ellipsis**: indicates a truncate is used
 
 ## Usage
-Truncated items are indicated by an ellipsis (...) and are used when trying to avoud multiple lines of text or when a container is being overflowed by content. Truncation should only be used when 3 or more characters are being represented and there are still at least 4 non-truncated characters displayed. Truncated items should always incldue a tooltip on hover, showcasing the full string sequence. 
+Truncated items are indicated by an ellipsis (...) and are used when trying to avoid multiple lines of text or when a container is being overflowed by content. Truncation should only be used when 3 or more characters are being represented and there are still at least 4 non-truncated characters displayed. Truncated items should always include a tooltip on hover, showcasing the full string sequence. 
 * **Breadcrumbs**: Use a breadcrumbs truncate when there isn’t enough room to display the entire breadcrumbs list, or as a way of managing relevance.
 
   <img src="./img/breadcrumb.png" alt="image showing breadcrumbs truncation" width="353" />
