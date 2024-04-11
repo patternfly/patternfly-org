@@ -90,7 +90,7 @@ PatternFly’s core elements are what you will work directly with when building 
 <Card isClickable isCompact isFullHeight>
     <CardHeader
         selectableActions={{
-            to: "/design-tokens/about-layouts",
+            to: "/layouts/about-layouts",
             selectableActionId: 'clickable-selectable-card-input-4',
           }}
     >
@@ -104,7 +104,7 @@ PatternFly’s core elements are what you will work directly with when building 
 <Card isClickable isCompact isFullHeight>
     <CardHeader
         selectableActions={{
-            to: "/design-tokens/about-charts",
+            to: "/charts/about-charts",
             selectableActionId: 'clickable-selectable-card-input-5',
           }}
     >
@@ -118,7 +118,7 @@ PatternFly’s core elements are what you will work directly with when building 
 <Card isClickable isCompact isFullHeight>
     <CardHeader
         selectableActions={{
-            to: "/design-tokens/about-extensions",
+            to: "/extensions/about-extensions",
             selectableActionId: 'clickable-selectable-card-input-6',
           }}
     >
@@ -140,7 +140,7 @@ We provide extensive guidelines to help you create UIs following best practices.
 <Card isClickable isCompact isFullHeight>
     <CardHeader
         selectableActions={{
-            to: "/design-foundations/about-patterns",
+            to: "/patterns/about-patterns",
             selectableActionId: 'clickable-selectable-card-input-7',
           }}
     >
@@ -154,7 +154,7 @@ We provide extensive guidelines to help you create UIs following best practices.
 <Card isClickable isCompact isFullHeight>
     <CardHeader
         selectableActions={{
-            to: "/design-tokens/about-accessibility",
+            to: "/accessibility/about-accessibility",
             selectableActionId: 'clickable-selectable-card-input-8',
           }}
     >
@@ -168,7 +168,7 @@ We provide extensive guidelines to help you create UIs following best practices.
 <Card isClickable isCompact isFullHeight>
     <CardHeader
         selectableActions={{
-            to: "/design-tokens/about-ux-writing",
+            to: "/ux-writing/about-ux-writing",
             selectableActionId: 'clickable-selectable-card-input-9',
           }}
     >
