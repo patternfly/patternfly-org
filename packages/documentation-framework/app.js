@@ -3,7 +3,6 @@ import { createRoot, hydrateRoot } from 'react-dom/client';
 import { Router, useLocation } from '@reach/router';
 import 'client-styles'; // Webpack replaces this import: patternfly-docs.css.js
 import { SideNavLayout } from '@patternfly/documentation-framework/layouts';
-import { Footer } from '@patternfly/documentation-framework/components';
 import { MDXTemplate } from '@patternfly/documentation-framework/templates/mdx';
 import { routes, groupedRoutes, fullscreenRoutes, getAsyncComponent } from './routes';
 import { trackEvent } from './helpers';
@@ -37,7 +36,6 @@ const AppRoute = ({ child, title, path }) => {
   return (
     <React.Fragment>
       {child}
-      {process.env.hasFooter && <Footer />}
     </React.Fragment>
   );
 }
@@ -46,7 +44,7 @@ const SideNavRouter = () => {
   const componentsData = process?.env?.componentsData;
   return (
     <SideNavLayout groupedRoutes={groupedRoutes} navOpen={true} >
-      <Router id="ws-page-content-router">
+      <Router id="ws-page-content-router" component="main">
         {Object.entries(routes)
           .map(([path, { Component, title, sources, id }]) => Component
             ? <AppRoute

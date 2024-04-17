@@ -29,6 +29,7 @@ static
 
 # IDE - VSCode
 .vscode
+.history
 
 size-plugin.json
 **/generated/**/*.js
