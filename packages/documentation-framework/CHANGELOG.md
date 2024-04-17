@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 6.0.0-alpha.21 (2024-04-17)
+
+
+### Bug Fixes
+
+* **docs:** whitspace change ([#3966](https://github.com/patternfly/patternfly-org/issues/3966)) ([2199dc8](https://github.com/patternfly/patternfly-org/commit/2199dc883e6d118d6bedfa9d6ced3cefad78c575))
+
+
+
+
+
 # 5.10.0 (2024-04-02)
 
 
