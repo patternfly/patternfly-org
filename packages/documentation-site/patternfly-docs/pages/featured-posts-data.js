@@ -18,14 +18,6 @@ export const featuredPostsData = {
       "https://miro.medium.com/v2/resize:fit:600/format:webp/0*j9kT2OT7NJuKJRwX",
   },
   post3: {
-    title: "Why did the chicken cross the road",
-    author: "Kevin Hatchoua",
-    length: "3 min read",
-    URL: "https://medium.com/patternfly/why-did-the-chicken-cross-the-road-1d4a43521dc3",
-    // Use resize:fit:600 in URL
-    imageURL: "https://miro.medium.com/v2/resize:fit:600/format:webp/0*B5u7pOVCF8vzeckn",
-  },
-  post4: {
     title:
       "Webpack module federation | Think twice before sharing a dependency",
     author: "Martin Maroši",
@@ -35,7 +27,7 @@ export const featuredPostsData = {
     imageURL:
       "https://miro.medium.com/v2/resize:fit:600/format:webp/1*wvPsa-Gq_sblqb51mCto7w.png",
   },
-  post5: {
+  post4: {
     title: "Migrating PatternFly v4 to v5",
     author: "Carla Martinez",
     length: "6 min read",
