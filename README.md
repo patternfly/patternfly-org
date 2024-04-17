@@ -42,6 +42,6 @@ You might have a dirty file tree with old submodules and folders lying around. Y
 
     git clean -dfx
 
-### Contribute to HTML/CSS 
+### Contribute to HTML/CSS
 
 To contribute to PatternFly's HTML/CSS core repo, refer to the [core contribution guide](https://github.com/patternfly/patternfly/blob/main/patternfly-docs/site/pages/contribution.md) and the related [guidelines](https://github.com/patternfly/patternfly/blob/main/patternfly-docs/site/pages/guidelines.md).
