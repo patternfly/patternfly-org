@@ -23,7 +23,7 @@
     "@patternfly/react-console": "5.0.0",
     "@patternfly/react-docs": "6.3.0-prerelease.33",
     "@patternfly/react-log-viewer": "5.1.0",
-    "@patternfly/react-topology": "5.3.0-prerelease.7",
+    "@patternfly/react-topology": "5.3.0-prerelease.11",
     "@patternfly/react-user-feedback": "5.0.0",
     "@patternfly/react-component-groups": "5.1.0",
     "@patternfly/react-virtualized-extension": "5.0.0",
