@@ -11,6 +11,28 @@ import { Divider } from '@patternfly/react-core';
 
 PatternFly 5.3 is now live! Here are the highlights from this release. 
 
+### Promoted package versions
+
+- patternfly/patternfly ([changelog](https://github.com/patternfly/patternfly/releases/tag/v5.3.0))
+  - [@patternfly/patternfly@5.3.0](https://www.npmjs.com/package/@patternfly/patternfly/v/5.3.0)
+
+
+- patternfly/patternfly-react ([changelog](https://github.com/patternfly/patternfly-react/releases/tag/v5.3.0))
+  - [@patternfly/react-charts@7.3.0](https://www.npmjs.com/package/@patternfly/react-charts/v/7.3.0)
+  - [@patternfly/react-code-editor@5.3.0](https://www.npmjs.com/package/@patternfly/react-code-editor/v/5.3.0)
+  - [@patternfly/react-core@5.3.0](https://www.npmjs.com/package/@patternfly/react-core/v/5.3.0)
+  - [@patternfly/react-icons@5.3.0](https://www.npmjs.com/package/@patternfly/react-icons/v/5.3.0)
+  - [@patternfly/react-styles@5.3.0](https://www.npmjs.com/package/@patternfly/react-styles/v/5.3.0)
+  - [@patternfly/react-table@5.3.0](https://www.npmjs.com/package/@patternfly/react-table/v/5.3.0)
+  - [@patternfly/react-tokens@5.3.0](https://www.npmjs.com/package/@patternfly/react-tokens/v/5.3.0)
+  - [@patternfly/react-templates@1.0.0](https://www.npmjs.com/package/@patternfly/react-templates/v/1.0.0)
+
+
+- PatternFly extensions
+  - [@patternfly/react-topology@5.3.0](https://www.npmjs.com/package/@patternfly/react-topology/v/5.3.0) ([changelog](https://github.com/patternfly/react-topology/releases/tag/v5.3.0))
+  - [@patternfly/patternfly-quickstarts@5.3.0](https://www.npmjs.com/package/@patternfly/quickstarts/v/5.3.0) ([changelog](https://github.com/patternfly/patternfly-quickstarts/releases/tag/v5.3.0))
+
+
 ### React templates 
 We created a new feature for React components, called "templates", which combine a component with logic that supports a specific use case. Templates also come with a streamlined API that offers additional, limited customization. This will help reduce the amount of boilerplate code needed for common and recurring use cases.
 
