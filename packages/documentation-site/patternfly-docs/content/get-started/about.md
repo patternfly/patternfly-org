@@ -10,7 +10,7 @@ PatternFly is an open source design system created to enable consistency and usa
 
 ## What's included in PatternFly?
 
-### [Design foundations](/design-foundations/about)
+### [Design foundations](/design-foundations/about-design-foundations)
 
 These are the foundational elements of the design system, like color, typography, icons, and spacing.
 
@@ -18,23 +18,23 @@ These are the foundational elements of the design system, like color, typography
 
 Components are like building blocks. Designed to be flexible and modular, you can mix and match components to create a solution for almost any UI problem. Many components are accompanied by demos and design guidelines that show how the component can be used in context. Demos and examples also provide useful starter code that can be copied and reused.
 
-### [Layouts](/layouts/about)
+### [Layouts](/layouts/about-layouts)
 
 Layouts provide a way to arrange componpents on a page. Use of PatternFly layouts will ensure that your application is responsive to changes in screen size.
 
-### [Patterns](/patterns/about)
+### [Patterns](/patterns/about-patterns)
 
 Patterns document best practices and solutions to common use cases and design problems. Some patterns are accompanied by demos that provide an interactive example and reusable code to support implementation.
 
-### [Accessibility guidelines](/accessibility/accessibility-fundamentals)
+### [Accessibility guidelines](/accessibility/about-accessibility)
 
 Accessibility guidelines help designers and developers apply components to create applications that are usable and accessible by all users.
 
-### [UX writing style guide](/ux-writing/about)
+### [UX writing style guide](/ux-writing/about-ux-writing)
 
 Content guidelines provide principles and best practices around writing for user experience along with general voice and style guidance.
 
-### [Extensions](/extensions/about)
+### [Extensions](/extensions/about-extensions)
 
 Extensions are holistic solutions that utilize multiple PatternFly components, typically addressing cross-project use cases. They provide reusable code that can drive consistency throughout a user’s journey across products and platforms.
 
@@ -52,7 +52,7 @@ Global variables define and enforce style elements (like global values for color
 
 Component variables are used to define custom properties at the component level. Component variables are always defined by global variables.
 
-### [Utility classes](/utility-classes/about)
+### [Utility classes](/utility-classes/about-utility-classes)
 
 Utility classes enable you to further customize and modify elements in your project without having to write any custom CSS.
 
