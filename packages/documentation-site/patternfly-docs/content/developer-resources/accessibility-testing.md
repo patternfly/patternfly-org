@@ -90,10 +90,10 @@ This checklist includes some of the main areas that the PatternFly team checks f
 <br/>
 <Checkbox label={<span> <b> Labels: </b> </span>} body={<><Checkbox label=<span><b>Link</b> labels  are descriptive, informative, and unique (unless they have the same URL).</span> id="accessibility-points-8a"/> 
 
-  <Checkbox label={<span><b>Buttons and form controls:</b></span>} description={ <span>
+  <Checkbox label={<span><b>Buttons and form controls:</b></span>} description={ <ul>
     <li> All form controls have clear and descriptive labels. </li>
     <li> Expandable buttons display the expandable control and utilize <code className="ws-code">aria-expanded</code> to indicate that a button is expandable. <code className="ws-code">aria-expanded</code> should always have a boolean value if a button is meant to be expandable. </li>
-  </span>
+  </ul>
   }
   id="general-criteria-8b" />
     
