@@ -10,7 +10,7 @@ PatternFly is an open source design system created to enable consistency and usa
 
 ## What's included in PatternFly?
 
-### [Design foundations](/design-foundations//about-design-foundations)
+### [Design foundations](/design-foundations/about-design-foundations)
 
 These are the foundational elements of the design system, like color, typography, icons, and spacing.
 
