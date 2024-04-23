@@ -24,6 +24,7 @@ module.exports = (sourceMD, sourceProps, sourceFunctionDocs) => {
       "design-guidelines"
     );
     sourceMD(path.join(contentBase, "training/**/*.md"), "training");
+    sourceMD(path.join(contentBase, 'tokens/**/*.md'), 'tokens');
 
     // Gallery pages
     const galleryBase = path.join(__dirname, "../patternfly-docs/pages");
