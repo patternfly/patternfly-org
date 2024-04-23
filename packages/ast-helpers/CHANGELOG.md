@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.4.0-alpha.11 (2024-04-23)
+
+
+### Bug Fixes
+
+* **docs:** Add tokens back to site ([#3978](https://github.com/patternfly/patternfly-org/issues/3978)) ([1c97da8](https://github.com/patternfly/patternfly-org/commit/1c97da8b92d3fe331e49395c26730c5f4bc3b5e3))
+
+
+
+
+
 # 1.4.0-alpha.10 (2024-04-17)
 
 
