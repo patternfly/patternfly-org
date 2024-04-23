@@ -5,8 +5,8 @@ section: get-started
 ---
 
 import './get-started.css';
-import { Button, Card, CardHeader, CardTitle, CardBody, CardFooter, Divider, Icon, Grid, GridItem, PageSection, Split, SplitItem, Title, Tooltip } from '@patternfly/react-core';
-import ArrowRightIcon from '@patternfly/react-icons/dist/esm/icons/arrow-right-icon';
+import { Button, Card, CardHeader, CardTitle, CardBody, CardFooter, Divider, Icon, Grid, GridItem, PageSection, Split, SplitItem, Title, Tooltip, Text, TextVariants } from '@patternfly/react-core';
+import ExternalLinkAltIcon from '@patternfly/react-icons/dist/esm/icons/external-link-alt-icon';
 import { Link } from '@patternfly/documentation-framework/components';
 import './community/community.css';
 import { getTitle } from '@patternfly/documentation-framework/helpers/getTitle';
@@ -247,7 +247,7 @@ The PatternFly community is never finished growing, and we want to keep it that 
       </CardBody>
       <Divider />
       <CardFooter>
-        [Join our Slack workspace](https://www.redhat.com/mailman/listinfo/patternfly)
+        [Join our Slack workspace <ExternalLinkAltIcon />](https://www.redhat.com/mailman/listinfo/patternfly)
       </CardFooter>
     </Card>
     <Card isCompact>
@@ -257,7 +257,7 @@ The PatternFly community is never finished growing, and we want to keep it that 
       </CardBody>
       <Divider />
       <CardFooter>
-        [Sign up for our mailing list]()
+        [Sign up for our mailing list <ExternalLinkAltIcon />]()
       </CardFooter>
     </Card>
     <Card isCompact>
@@ -267,7 +267,7 @@ The PatternFly community is never finished growing, and we want to keep it that 
       </CardBody>
       <Divider />
       <CardFooter>
-        [View our Google calendar](https://calendar.google.com/calendar/embed?src=patternflyteam%40gmail.com&ctz=America%2FNew_York)
+        [View our Google calendar <ExternalLinkAltIcon />](https://calendar.google.com/calendar/embed?src=patternflyteam%40gmail.com&ctz=America%2FNew_York)
       </CardFooter>
     </Card>
     <Card isCompact>
@@ -277,7 +277,7 @@ The PatternFly community is never finished growing, and we want to keep it that 
       </CardBody>
       <Divider />
       <CardFooter>
-        [Visit our Medium publication](https://medium.com/patternfly)
+        [Visit our Medium publication <ExternalLinkAltIcon />](https://medium.com/patternfly)
       </CardFooter>
     </Card>
      <Card isCompact>
@@ -287,7 +287,7 @@ The PatternFly community is never finished growing, and we want to keep it that 
       </CardBody>
       <Divider />
       <CardFooter>
-        [Follow us on Twitter](https://twitter.com/patternfly)
+        [Follow us on Twitter <ExternalLinkAltIcon />](https://twitter.com/patternfly)
       </CardFooter>
     </Card>
      <Card isCompact>
@@ -297,7 +297,7 @@ The PatternFly community is never finished growing, and we want to keep it that 
       </CardBody>
       <Divider />
       <CardFooter>
-        [Visit our GitHub discussions board](https://github.com/orgs/patternfly/discussions/categories/feature-requests)
+       [Visit our GitHub discussions board <ExternalLinkAltIcon />](https://github.com/orgs/patternfly/discussions/categories/feature-requests)
       </CardFooter>
     </Card>
   </Grid>
@@ -324,16 +324,34 @@ Now that you've been introduced to PatternFly, you're ready to start designing o
 <Grid sm={12} md={4} hasGutter>
 <Button size="lg" variant="secondary" component="a" href="/get-started/design"> Start designing </Button>
 <Button size="lg" variant="secondary" component="a" href="/get-started/develop"> Start developing </Button>
-<Button size="lg" variant="secondary" component="a" href="/get-started/contribute"> Contribute to PatternFly</Button>
+<Button size="lg" variant="secondary" component="a" href="/get-started/contribute/contributing-to-patternfly"> Contribute to PatternFly</Button>
 </Grid>
 <br />
 
-## How do I stay up to date?
+## Release cadence
 
-We plan to release a new major version of PatternFly every year. These major releases will be the only releases with 
-planned "breaking" changes that alter core code functionality. Along with each major release, we will provide detailed upgrade guides and codemods to support the work needed to upgrade your products to the latest version of PatternFly.
+We plan to release a new major version of PatternFly every year. These major releases will be the only releases with planned "breaking" changes that alter core code functionality. Along with each major release, we will provide detailed upgrade guides and codemods to support the work needed to upgrade your products to the latest version of PatternFly.
 
 Minor feature releases will be available quarterly to introduce non-breaking changes, like new features and enhancements, with interim patch releases to fix any bugs that we find.
+
+Occasionally, a component page will contain a "React next" tab, which contains details about planned changes for the implementation of the component. This updated implementation will be promoted to the main component page as part of a major release, and will become the new recommended implementation. When this happens, the previous implementation will be deprecated. Deprecated component implementations will remain available until a following major release, but will no longer be maintained or updated.
+
+## Beta components 
+
+Newly introduced components to the PatternFly component library are initially released in beta. Such components are labelled with a blue informational alert at the top of their documentation pages.
+
+Beta components are open to evolution and possible breaking changes pending testing and feedback. Each beta component is evaluated on a quarterly basis to evaluate its stability and the degree to which it meets product requirements. Every quarter, stable components are proposed as promotion candidates. To view a list of current promotion candidates, visit this page.
+
+There are two recommended steps to take when considering using a beta component in product:
+
+1. Play with the component examples in the docs and determine whether or not the current implementation meets your needs. Open issues for any missing features, enhancement requests, or bugs.
+1. Check the PatternFly Issues GitHub Project board where we have created a view to categorize most issues by component. Browse any open issues for the beta component to determine how much more the beta component could evolve in the near future.
+
+Once promoted, breaking changes are not made to components outside of a well-advertised breaking change release. Breaking changes introduce visual changes, changes to applied CSS class names, or changes to existing React props (new React props might be added).
+
+Occasionally, a component is promoted out of beta and subsequent enhancement requests require new CSS class names and React props to be introduced. Whenever these enhancements are substantial enough to open the possibility for further updates pending testing and feedback, then the newly introduced CSS class names or React props as well as relevant examples in the documentation are all labeled as beta.
+
+For more information about beta components, visit this page.
 
 <!-- This section is WIP ** we need to wait to see how this content gets included **
 
