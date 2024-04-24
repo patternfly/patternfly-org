@@ -17,10 +17,12 @@ To implement an accessible PatternFly **tree view**:
 For the PatternFly React library:
 
 - Enure the root TreeView component's `isNested` prop is false, and that any nested TreeView components' `isNested` prop are true.
+- Pass the `isMultiselectable` property if more than 1 tree node can be selected at a time.
 
 For the HTML/CSS library:
 
 - Ensure only the root `ul.pf-v6-c-tree-view__list` element has the attribute `role="tree"`, and that any nested `ul.pf-v6-c-tree-view__list` elements instead have `role="group"`.
+- Pass the `aria-multiselectable="true"` attribute to the tree view list if more than 1 tree node can be selected at a time.
 
 ## Testing
 
@@ -44,6 +46,9 @@ At a minimum, a tree view should meet the following criteria:
   </ListItem>
   <ListItem>
     <Checkbox id="treeview-a11y-checkbox-7" label="If a tree view item contains interactive, secondary actions, those actions follow any applicable accessibility guidelines." />
+  </ListItem>
+  <ListItem>
+    <Checkbox id="treeview-a11y-checkbox-8" label={<span>If more than 1 tree view item can be selected at a time, ensure the tree view list has the <code className="ws-code">aria-multiselectable="true"</code> attribute.</span>} />
   </ListItem>
 </List>
 
