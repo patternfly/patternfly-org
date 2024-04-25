@@ -249,7 +249,7 @@ Keep an eye out for more information about the ***v6 alpha release*** , which is
 
 ## PatternFly 5.1 
 
-As part of our [quarterly release cadence](/get-started/about#patternfly-release-cadence), we're excited to announce that PatternFly 5.1 is now live.
+As part of our [quarterly release cadence](/get-started/about-patternfly#patternfly-release-cadence), we're excited to announce that PatternFly 5.1 is now live.
 
 To help provide a high-level view of what's new, we've pulled together the major highlights from this release. Keep reading to learn more!
 
