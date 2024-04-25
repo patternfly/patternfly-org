@@ -270,7 +270,7 @@ export const MDXTemplate = ({
                   {isDeprecated && (
                     <FlexItem spacer={{ default: 'spacerSm' }}>
                       <Tooltip content="Deprecated components are available for use but are no longer being maintained or enhanced.">
-                        <Button isInline component="span" variant="plain" hasNoPadding>
+                        <Button variant="plain" hasNoPadding>
                           <Label color="grey">Deprecated</Label>
                         </Button>
                       </Tooltip>
@@ -279,7 +279,7 @@ export const MDXTemplate = ({
                   {isDemo && (
                     <FlexItem spacer={{ default: 'spacerSm' }}>
                       <Tooltip content="Demos show how multiple components can be used in a single design.">
-                        <Button isInline component="span" variant="plain" hasNoPadding>
+                        <Button variant="plain" hasNoPadding>
                           <Label color="purple">Demo</Label>
                         </Button>
                       </Tooltip>
@@ -288,7 +288,7 @@ export const MDXTemplate = ({
                   {isBeta && (
                     <FlexItem spacer={{ default: 'spacerSm' }}>
                       <Tooltip content="This beta component is currently under review and is still open for further evolution.">
-                        <Button isInline component="span" variant="plain" hasNoPadding>
+                        <Button variant="plain" hasNoPadding>
                           <Label color="blue">Beta</Label>
                         </Button>
                       </Tooltip>
