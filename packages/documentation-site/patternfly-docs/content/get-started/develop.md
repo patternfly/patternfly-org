@@ -15,11 +15,11 @@ In order to develop with PatternFly, you will need to:
 
 1. Install a package manager to help you install, update, and configure all necessary PatternFly packages. We recommend [npm](https://nodejs.org/en/download) or [Yarn](https://yarnpkg.com/en/docs/getting-started).
 
-1. Configure your environment to get started with our [React](#react) and/or [HTML/CSS](#htmlcss) libraries.
+1. Configure your environment to get started with our [React](#develop-with-react) and/or [HTML/CSS](#develop-with-htmlcss) libraries.
 
 ## Develop with React
 
-[PatternFly's React library](https://github.com/patternfly/patternfly-react) contains a collection of components that you can use to build interfaces with consistent markup, styling, and behavior. It is composed of a number of React implementations, which are published in the following npm packages:
+[PatternFly's React library](https://github.com/patternfly/patternfly-react) contains a collection of components that you can use to build interfaces with consistent markup, styling, and behavior. It is composed of a number of React packages, which are published in the following npm packages:
 
 * [@patternfly/react-core](https://www.npmjs.com/package/@patternfly/react-core): Most React core components.
 * [@patternfly/react-charts](https://www.npmjs.com/package/@patternfly/react-charts): PatternFly charting components.
