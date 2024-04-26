@@ -33,13 +33,13 @@ To contribute a new icon, [start by opening an issue in the `patternfly-design` 
 
 ## Code
 
-The primary PatternFly libraries include React and HTML/CSS (commonly called "core"). If you're looking to contribute to PatternFly's codebase, these libraries are a good place to start. You can help out by taking existing issues, or creating issues for bugs and other changes. 
+The primary PatternFly libraries include HTML/CSS (commonly called "core") and React. If you're looking to contribute to PatternFly's codebase, these libraries are a good place to start. You can help out by taking existing issues, or creating issues for bugs and other changes. 
 
-If you have any questions about these projects, you can reach out to us on our ['patternfly-react'](https://patternfly.slack.com/archives/C4FM977N0) and ['patternfly-core'](https://patternfly.slack.com/archives/C9Q224EFL) Slack channels.
+If you have any questions about these projects, you can reach out to us on our [patternfly-core](https://patternfly.slack.com/archives/C9Q224EFL) and [patternfly-react](https://patternfly.slack.com/archives/C4FM977N0) Slack channels.
 
 ### Existing development issues 
 
-To learn about existing work that has been approved, but not started, you can view open issues in both our [`patternfly`](https://github.com/patternfly/patternfly/issues) (HTML/CSS) and [`patternfly-react`](https://github.com/patternfly/patternfly-react/issues) (React) repositories. If you find an issue that you're interested in working on, leave a comment and someone from our team will reach out to you with next steps. 
+To learn about existing work that has been approved, but not started, you can view open issues in both our [patternfly](https://github.com/patternfly/patternfly/issues) (HTML/CSS) and [patternfly-react](https://github.com/patternfly/patternfly-react/issues) (React) repositories. If you find an issue that you're interested in working on, leave a comment and someone from our team will reach out to you with next steps. 
 
 Be sure to view our detailed contribution instructions for both of these repositories:
 - [Core contribution guidelines](https://github.com/patternfly/patternfly#guidelines-for-css-development)
@@ -47,11 +47,13 @@ Be sure to view our detailed contribution instructions for both of these reposit
 
 ### File a bug
 
-If you believe that you've come across a PatternFly bug, alerting our team will directly lead to PatternFly code improvements.
+If you believe that you've come across a PatternFly bug, alerting our team will directly lead to PatternFly code improvements. To report a bug, follow these steps:
 
-We ask you to first view the documentation for the feature, to confirm that the behavior is not functioning as intended. From there, search open issues in the [`patternfly`](https://github.com/patternfly/patternfly/issues) and [`patternfly-react`](https://github.com/patternfly/patternfly-react/issues) repositories to see if a related issue already exists.
-
-If the bug is present in only the React implementation of PatternFly, [create a bug issue in `patternfly-react`](https://github.com/patternfly/patternfly-react/issues) If the bug can be seen on both the React and HTML/CSS side, [create a bug issue in `patternfly`](https://github.com/patternfly/patternfly/issues). Be sure to mention which project the bug was noticed in and if there is a deadline that the fix is needed for.
+1. View the documentation for the feature, to confirm that the behavior is not functioning as intended. 
+1. Search open issues in the [patternfly](https://github.com/patternfly/patternfly/issues) and [patternfly-react](https://github.com/patternfly/patternfly-react/issues) repositories to see if a related issue already exists.
+    - If the bug is present in only the React implementation of PatternFly, [create a bug issue in patternfly-react.](https://github.com/patternfly/patternfly-react/issues)
+    - If the bug can be seen on both the React and HTML/CSS side, [create a bug issue in patternfly](https://github.com/patternfly/patternfly/issues).
+1. Be sure to mention which project the bug was noticed in and if there is a deadline that the fix is needed for.
 
 ## Documentation 
 
@@ -61,9 +63,9 @@ If you'd like to contribute to the following projects, you can refer to our [det
 
 ### Existing documentation issues
 
-Our website documentation is contained in the [`patternfly-org` repository](https://github.com/patternfly/patternfly-org). Take a look at any unassigned issues and leave a comment if you'd like to work on one. Our team will reach out to you with additional guidance.
+Our website documentation is contained in the [patternfly-org repository](https://github.com/patternfly/patternfly-org). Take a look at any unassigned issues and leave a comment if you'd like to work on one. Our team will reach out to you with additional guidance.
 
 ### Design guidelines
 Across our website you will find design guidelines, which help designers add PatternFly components to their designs following best practice UI patterns. These guidelines clarify nuances and outline design conventions that should be followed when using a component, layout, or chart. 
 
-If you'd like to contribute to our design guidelines, you can open an issue in  [`patternfly-org`](https://github.com/patternfly/patternfly-org) to propose a new page or updates to an existing page. From there, our team will work with you to author and publish your new content. 
+If you'd like to contribute to our design guidelines, you can open an issue in [patternfly-org](https://github.com/patternfly/patternfly-org) to propose a new page or updates to an existing page. From there, our team will work with you to author and publish your new content. 
