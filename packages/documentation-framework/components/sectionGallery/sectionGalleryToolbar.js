@@ -30,7 +30,7 @@ export const SectionGalleryToolbar = ({
           </ToggleGroup>
         </ToolbarItem>
       </ToolbarGroup>
-      <ToolbarItem variant="pagination" spacer={{default: 'spacerMd', md: 'spacerNone'}} style={{'--pf-v5-c-toolbar__item--MinWidth': "max-content"}}>
+      <ToolbarItem variant="pagination" spacer={{default: 'spacerMd', md: 'spacerNone'}} style={{'--pf-v6-c-toolbar__item--MinWidth': "max-content"}}>
         <Text component={TextVariants.small}>{ galleryItems.length }{ countText }</Text>
       </ToolbarItem>
     </ToolbarContent>

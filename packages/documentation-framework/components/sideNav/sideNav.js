@@ -19,14 +19,14 @@ const NavItem = ({ text, href, isDeprecated, isBeta, isDemo }) => {
   return (
     <PageContextConsumer key={href + text}>
       {({onSidebarToggle, isSidebarOpen }) => (
-          <li key={href + text} className="pf-v5-c-nav__item" onClick={() => isMobileView && onSidebarToggle && onSidebarToggle()}>
+          <li key={href + text} className="pf-v6-c-nav__item" onClick={() => isMobileView && onSidebarToggle && onSidebarToggle()}>
             <Link
               to={href}
               getProps={({ isCurrent, href, location }) => {
                 const { pathname } = location;
                 return {
                   className: css(
-                    'pf-v5-c-nav__link',
+                    'pf-v6-c-nav__link',
                     (isCurrent || pathname.startsWith(href + '/')) && 'pf-m-current'
                   )
                 }}
@@ -67,7 +67,6 @@ const ExpandableNav = ({groupedRoutes, location, section, subsection = null}) =>
       key={capitalize(currentSection.replace(/-/g, ' '))}
       isActive={isActive}
       isExpanded={isActive}
-      className="ws-side-nav-group"
       onClick={(event) => {
         // Don't bubble click event up, avoids subsection triggering duplicate analtics
         event.stopPropagation();
@@ -96,7 +95,7 @@ const ExpandableNav = ({groupedRoutes, location, section, subsection = null}) =>
                   source.source === "react-deprecated" || source.source === "html-deprecated")
                 && !navObj.sources.some(source => source.source === "react" || source.source === "html")
               ),
-              isBeta: navObj.sources.some(source => source.beta),
+              isBeta: navObj.sources.some(source => source.beta && source.source !== 'react-next' && source.source !== 'react-templates'),
               isDemo: navObj.sources.some(source => (
                   source.source === "react-demos" || source.source === "html-demos")
                 && !navObj.sources.some(source => source.source === "react" || source.source === "html")

@@ -23,6 +23,7 @@ const MDXChildTemplate = ({
     optIn,
     beta,
     deprecated,
+    template,
     newImplementationLink,
     functionDocumentation = []
   } = Component.getPageData();
@@ -84,11 +85,16 @@ const MDXChildTemplate = ({
           {' '}To learn more about the process, visit our <Link to="/get-started/about#major-release-cadence">about page</Link>.
         </InlineAlert>
       )}
+       {(template || source === 'react-template') && (
+        <InlineAlert title="Templates" variant="info">
+          {`This page showcases templates for the ${id.toLowerCase()} component. A template combines a component with logic that supports a specific use case, with a streamlined API that offers additional, limited customization.`}
+        </InlineAlert>
+      )}
     </React.Fragment>
   );
   // Create dynamic component for @reach/router
   const ChildComponent = () => (
-    <div className="pf-v5-u-display-flex ws-mdx-child-template">
+    <div className="pf-v6-u-display-flex ws-mdx-child-template">
       {toc.length > 1 && (
         <TableOfContents items={toc} />
       )}
@@ -152,7 +158,7 @@ export const MDXTemplate = ({
   componentsData
 }) => {
   const isDeprecated = sources.some(source => source.source === "react-deprecated" || source.source === "html-deprecated") && !sources.some(source => source.source === "react"  || source.source === "html");
-  const isBeta = sources.some(source => source.beta)
+  const isBeta = sources.some(source => source.beta && source.source !== 'react-next' && source.source !== 'react-templates');
   const isDemo = sources.some(source => source.source === "react-demos" || source.source === "html-demos") && !sources.some(source => source.source === "react" || source.source === "html");
   // Build obj mapping source names to text displayed on tabs
   const tabNames = sources.reduce((acc, curSrc) => {
@@ -296,19 +302,19 @@ export const MDXTemplate = ({
         </PageSection>
         { showTabs && (
           <PageSection id="ws-sticky-nav-tabs" stickyOnBreakpoint={{'default':'top'}} type="tabs">
-            <div className="pf-v5-c-tabs pf-m-page-insets pf-m-no-border-bottom">
-              <ul className="pf-v5-c-tabs__list">
+            <div className="pf-v6-c-tabs pf-m-page-insets pf-m-no-border-bottom">
+              <ul className="pf-v6-c-tabs__list">
                 {sourceKeys.map((source, index) => (
                   <li
                     key={source}
                     className={css(
-                      'pf-v5-c-tabs__item',
+                      'pf-v6-c-tabs__item',
                       activeSource === source && 'pf-m-current'
                     )}
                     // Send clicked tab name for analytics
                     onClick={() => trackEvent('tab_click', 'click_event', source.toUpperCase())}
                   >
-                    <Link className="pf-v5-c-tabs__link" to={`${path}${index === 0 ? '' : '/' + source}`}>
+                    <Link className="pf-v6-c-tabs__link" to={`${path}${index === 0 ? '' : '/' + source}`}>
                       {tabNames[source]}
                     </Link>
                   </li>
@@ -320,7 +326,7 @@ export const MDXTemplate = ({
         <PageSection id="main-content" isFilled className="pf-m-light-100">
           {isSinglePage && <MDXChildTemplate {...sources[0]} id={id}/>}
           {!isSinglePage && (
-            <Router className="pf-v5-u-h-100" primary={false}>
+            <Router className="pf-v6-u-h-100" primary={false}>
               {sources
                 .map((source, index) => {
                   source.index = index;

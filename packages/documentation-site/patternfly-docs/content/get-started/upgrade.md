@@ -1,30 +1,29 @@
 ---
 id: Upgrade
-title: Major release upgrade guide
+source: upgrade-guide
+title: PatternFly 6 upgrade
 section: get-started
-source: Major-release-upgrade
 ---
 
-# PatternFly 5 
+If you have not previously upgraded to PatternFly 5, make sure to review its [upgrade guide](https://www.patternfly.org/get-started/upgrade) before attempting to support PatternFly 6, to ensure that your product has addressed any necessary changes from our previous release.
 
-Our latest major release introduces new support and functionality to PatternFly, including: 
+PatternFly 6 introduces new support and functionality to PatternFly, including: 
 
-- React 18 support, 
-- Official dark theme support, 
-- An enhanced system of CSS classes and variables, 
+- A design token system,
+- A new PatternFly 6 visual theme,
 - And more!
 
 To learn about the most significant changes in this release, read our [release highlights](/get-started/release-highlights). A detailed list of all changes can be found in our [major release notes](/get-started/upgrade/release-notes). 
 
-This guide outlines the major steps you should take to upgrade your product's codebase from PatternFly 4 to PatternFly 5. 
+This guide outlines the major steps you should take to upgrade your product's codebase from PatternFly 5 to PatternFly 6. 
 
 ## Get help 
 
-If you need support as you upgrade to PatternFly 5, the PatternFly team is here to help. Reach out to us on [Slack](https://join.slack.com/t/patternfly/shared_invite/zt-1npmqswgk-bF2R1E2rglV8jz5DNTezMQ) or ask a question on our [GitHub discussion board](https://github.com/orgs/patternfly/discussions). We'll always do our best to answer your questions and connect you with the right people quickly. 
+If you need support as you upgrade to PatternFly 6, the PatternFly team is here to help. Reach out to us on [Slack](https://join.slack.com/t/patternfly/shared_invite/zt-1npmqswgk-bF2R1E2rglV8jz5DNTezMQ) or ask a question on our [GitHub discussion board](https://github.com/orgs/patternfly/discussions). We'll always do our best to answer your questions and connect you with the right people quickly. 
 
 ## Upgrade your product's codebase
 
-When you upgrade your product to PatternFly 5, several breaking changes will likely be introduced to your product’s codebase. We are using a suite of codemods to simplify and streamline the upgrade process. Instead of requiring you to manually identify all errors and issues in your codebase, you can run our codemods to quickly identify and fix major issues. Keep in mind that some changes will still require manual intervention, but our codemods can automatically fix a large amount of issues and flag any issues that do require manual work.
+When you upgrade your product to PatternFly 6, several breaking changes will likely be introduced to your product’s codebase. We offer a suite of codemods to simplify and streamline your upgrade process. Instead of requiring you to manually identify all errors and issues in your codebase, you can run our codemods to quickly identify and fix major issues. Keep in mind that some changes will still require manual intervention, but our codemods can automatically fix a large amount of issues and flag any issues that do require manual work.
 
 To utilize our codemods, refer to the following instructions. You can also [view the project on GitHub](https://github.com/patternfly/pf-codemods/) for additional details.
 
@@ -36,14 +35,13 @@ To run our codemods, complete the following steps:
 
 1. Run the following command, adding in the path to your product's source code: 
 
-    ```{
-    npx @patternfly/pf-codemods@latest <path to your source code>
-    ```
+  `npx @patternfly/pf-codemods@latest <path to your source code> --v6`
 
-   * You should see an output similar to running `lint`, with both a list of warnings and errors, as well as a total count of each, as shown in the following example:
-     ![Example codemod output.](./img/codemod-output.png)
+    * You should see an output similar to running `lint`, with both a list of warnings and errors, as well as a total count of each, as shown in the following example:
+    
+    ![Example codemod output.](./img/codemod-output.png)
 
-   * If you see something different, please reach out before going further as there may be an issue.
+    * If you see something different, please reach out before going further as there may be an issue.
 
 2. Make note of any issues that get flagged.
 
@@ -59,61 +57,18 @@ To run our codemods, complete the following steps:
 
 ## Review and update variable and class names
 
-We changed component class names, layout class names, utility class names, CSS variables, and SCSS variables. These changes mean that any existing CSS overrides will likely be targeting outdated styles. These changes will break all custom CSS overrides that reference any PatternFly class names or CSS variables, so it is important to review your overrides and ensure that they align with our updated naming conventions, which are detailed in this section. 
+PatternFly 6 supports our new design token system, which changes variable names across PatternFly. These changes mean that **all** existing CSS overrides must be updated (or removed), because they will be targeting outdated styles and will no longer work. 
 
-There are some cases where multiple applications that use PatternFly all plug into a larger application. In such cases, it's nearly impossible to coordinate a simultaneous update from PatternFly 4 to PatternFly 5. To prevent style collisions when multiple versions of PatternFly could be simultaneously running side by side in one UI, PatternFly has versioned all of its CSS using versioned prefixes.
+Wherever you have any custom CSS overrides that reference PatternFly class names or CSS variables, you should carefully review them and make updates to ensure that they align with our token variables, which are outlined in our [tokens documentation](/tokens/all-patternfly-tokens). As much as possible, we recommend removing your CSS overrides so that your product upgrade experience will be smoother for future releases.
 
-For PatternFly 5, class names, variable names, and SCSS objects have all had `v5` added to their prefix in the following ways:
+If your product uses a custom solution to replicate PatternFly styling (without using PatternFly components), then it will need to be reskinned. We recognize that this may be a large undertaking, so we encourage you to reach out to the PatternFly team so that we support this work.
 
-| Language/style | v4 prefix | v5 prefix|  Note |
-| --- | ---| --- | ---  |
-|  CSS |  `--pf-` |  `--pf-v5-` |
-|  SCSS |  `.pf-`  | `$pf-v5-`  |
-|  SCSS | `@mixin pf-`  | `@mixin pf-v5-`  |
-|  SCSS | `@function pf-`  | `@function pf-v5-`  |
-|  SCSS | `%pf-`  | `%pf-v5-`  |
-| HTML class names  | `.pf-`  |  `.pf-v5-`  | excludes `.pf-m ` |
+### Utilize our class-name-updater codemod
+We offer a [`class-name-updater` codemod](https://github.com/patternfly/pf-codemods/tree/main/packages/class-name-updater) to help support your updates. This utility automatically identifies class names that need to be updated as a result of class name changes in Patternfly 6, which helps highlight places in your codebase that may require you to adjust class names. 
 
-**Note:** PatternFly modifier classes, such as `pf-m-expanded` are not versioned and retain the same formatting that they had for PatternFly 4. 
+When using this codemod, keep the following guidance in mind: 
+- This codemod targets v5 of PatternFly by default, so you will need to add the `--pfVersion 6` option if you are upgrading to v6.
+- Add the `--fix` flag to allow the codemod to fix issues where possible.
+- This utility performs a simple ‘find and replace’, so it's possible that it will inadvertently identify code that is formatted similarly to a PatternFly class name, but is not one. You should check to ensure that this doesn't cause any unintentional changes.
 
-### Utilize our `class-name-updater` Codemod
-
-We offer [a `class-name-updater` Codemod](https://github.com/patternfly/pf-codemods/tree/main/packages/class-name-updater) to help support your updates. This utility automatically identifies class names that need to be updated as a result of the introduction of versioned class names in Patternfly v5, which helps highlight places in your codebase that may require changes to class names. Add the `--fix` flag to allow run the code mod and fix issues where possible. 
-
-**Note:** It is important to consider that this utility performs a simple ‘find and replace’, so it's possible that it will inadvertently identify code that is formatted similarly to a PatternFly class name, but is not one.
-
-## Upgrade deprecated components
-
-You will have until our next major release to update the code for your components to match our newest recommendations. If you have not adopted our recommended implementation at that time, your components will be outdated and may not function as needed.
-
-PatternFly 5 brings a new implementation to the following components, which can be upgraded according to the linked documentation:
-
-- [Table](/components/table) 
-- [Select](/components/menus/select)
-- [Dropdown ](/components/menus/dropdown) 
-- [Wizard](/components/wizard)
-
-## Other notes
-
-As you upgrade to PatternFly 5, keep in mind the following considerations:
-
-
-When updating the react-topology package, note that the topology styles have been removed from their previous home in @patternfly/react-styles and now need to be imported directly from [react-topology.](https://github.com/patternfly/react-topology)
-
-<div class="ws-content-table">
-
-| **Before**                                                                                    | **After**                                                                          |
-|-----------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------|
-| `import styles from '@patternfly/react-styles/css/components/Topology/topology-components';`  | `import styles from '@patternfly/react-topology/dist/js/css/topology-components';` |
-
-</div>
-
-In general, though PatternFly ships a `src` directory in it's npm package, it is not advised to import components from a `src` directory. Instead, when importing via absolute paths, import components from `dist` directories.
-
-<div class="ws-content-table">
-
-| **Before**                                                      | **After**                                                           |
-|-----------------------------------------------------------------|---------------------------------------------------------------------|
-| `import { Node } from '@patternfly/react-topology/src/types';`  | `import { Node } from '@patternfly/react-topology/dist/esm/types';` |
-
-</div>
+For more details, you can refer to [the README file for this codemod](https://github.com/patternfly/pf-codemods/tree/main/packages/class-name-updater).

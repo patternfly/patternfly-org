@@ -2,7 +2,6 @@ const path = require('path');
 const webpack = require('webpack');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
-const MonacoWebpackPlugin = require('monaco-editor-webpack-plugin');
 
 module.exports = (_env, argv) => {
   const {
@@ -47,6 +46,7 @@ module.exports = (_env, argv) => {
             /react-[\w-]+\\src\\.*\\examples/, // fix for Windows
             /react-[\w-]+\/patternfly-docs\/.*\/examples/, //fixes for extensions
             /react-[\w-]+\\patternfly-docs\\.*\\examples/,
+            path.resolve(__dirname, '../../../../node_modules/@patternfly/design-tokens/patternfly-docs/content')
           ].concat(includePaths.map(path => new RegExp(path))),
           exclude: [
             path.resolve(__dirname, '../../node_modules'), // Temporarily compile theme using webpack for development
@@ -56,20 +56,12 @@ module.exports = (_env, argv) => {
             options: {
               cacheDirectory: '.cache/babel',
               cacheCompression: false,
-              presets: [['@babel/preset-env', {
-                loose: true,
-                corejs: 3,
-                useBuiltIns: 'entry',
-                exclude: ['transform-regenerator', 'transform-async-to-generator'],
-                modules: false,
-                targets: "> 0.25%, not dead"
-              }]],
-              plugins: [
-                '@babel/plugin-transform-react-jsx',
-                '@babel/plugin-proposal-class-properties',
-                '@babel/plugin-proposal-optional-chaining',
-                ["@babel/plugin-proposal-private-methods", { "loose": false }],
-                ["@babel/plugin-proposal-private-property-in-object", { "loose": false }]
+              presets: [
+                '@babel/preset-react',
+                ['@babel/preset-env', {
+                  loose: true,
+                  targets: '> 1%, not dead'
+                }],
               ],
             }
           },
@@ -155,9 +147,6 @@ module.exports = (_env, argv) => {
         patterns: [
           { from: path.join(__dirname, '../../assets'), to: 'assets' }
         ]
-      }),
-      new MonacoWebpackPlugin({
-        globalAPI: true,
       })
     ],
     stats: 'minimal'

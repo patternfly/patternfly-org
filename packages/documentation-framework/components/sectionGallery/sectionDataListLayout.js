@@ -7,7 +7,7 @@ export const SectionDataListLayout = ({ galleryItems, layoutView, hasListText, h
   if (layoutView !== 'list') {
     return null;
   }
-  
+
   return (
     <DataList onSelectDataListItem={() => {}}>
       {galleryItems.map(({ idx, slug, illustration, itemName, title, isBeta, isDeprecated, isDemo, id, galleryItemsData }) => (
@@ -23,7 +23,7 @@ export const SectionDataListLayout = ({ galleryItems, layoutView, hasListText, h
                   </DataListCell>
                 ),
                 <DataListCell width={5} key="text-description">
-                  <Split className={ hasListText ? "pf-v5-u-mb-md" : null }>
+                  <Split className={ hasListText ? "pf-v6-u-mb-md" : null }>
                     <SplitItem isFilled>
                       <TextContent>
                         <Text component={TextVariants.h2}>
@@ -32,7 +32,7 @@ export const SectionDataListLayout = ({ galleryItems, layoutView, hasListText, h
                           </span>
                         </Text>
                       </TextContent>
-                    </SplitItem>  
+                    </SplitItem>
                     <SplitItem>
                       {isBeta && (<Label color="blue" isCompact>Beta</Label>)}
                       {!isBeta && isDeprecated && (<Label color="grey" isCompact>Deprecated</Label>)}
