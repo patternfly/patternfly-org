@@ -1,5 +1,5 @@
 ---
-id: About
+id: About utility classes
 title: Utility classes
 section: utility-classes
 sortValue: 1

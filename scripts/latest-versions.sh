@@ -4,8 +4,10 @@ packages=(
   @patternfly/react-catalog-view-extension
   @patternfly/react-charts
   @patternfly/react-code-editor
+  @patternfly/react-component-groups
   @patternfly/react-console
   @patternfly/react-core
+  @patternfly/react-drag-drop
   @patternfly/react-icons
   @patternfly/react-log-viewer
   @patternfly/react-styles

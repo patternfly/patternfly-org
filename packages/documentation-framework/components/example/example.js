@@ -131,7 +131,7 @@ export const Example = ({
   if (lang === 'html') {
     livePreview = (
       <div
-        className={css('ws-preview-html', isFullscreenPreview && 'pf-v5-u-h-100')}
+        className={css('ws-preview-html', isFullscreenPreview && 'pf-v6-u-h-100')}
         dangerouslySetInnerHTML={{ __html: editorCode }}
       />
     );
@@ -164,13 +164,13 @@ export const Example = ({
 
   if (isFullscreenPreview) {
     return (
-      <div id={previewId} className={css(className, 'pf-v5-u-h-100')}>
+      <div id={previewId} className={css(className, 'pf-v6-u-h-100')}>
         {livePreview}
         {(hasDarkThemeSwitcher || hasRTLSwitcher) && (
-          <Flex direction={{ default: 'column' }} gap={{ default: 'gapLg' }} className="ws-full-page-utils pf-v5-m-dir-ltr ">
+          <Flex direction={{ default: 'column' }} gap={{ default: 'gapLg' }} className="ws-full-page-utils pf-v6-m-dir-ltr ">
             {hasDarkThemeSwitcher && (
               <Switch id="ws-example-theme-switch" label="Dark theme" defaultChecked={false} onChange={() =>
-              document.querySelector('html').classList.toggle('pf-v5-theme-dark')} />
+              document.querySelector('html').classList.toggle('pf-v6-theme-dark')} />
             )}
             {hasRTLSwitcher && (
               <Switch id="ws-example-rtl-switch" label="RTL" defaultChecked={false} onChange={() => {
@@ -248,7 +248,7 @@ export const Example = ({
             className={css(
               className,
               isFullscreen ? 'ws-preview-fullscreen' : 'ws-preview',
-              isRTL && 'pf-v5-m-dir-rtl')
+              isRTL && 'pf-v6-m-dir-rtl')
             }
           >
             {livePreview}

@@ -105,6 +105,7 @@ function toReactComponent(mdFilePath, source, buildMode) {
         section: frontmatter.section || '',
         subsection: frontmatter.subsection || '',
         deprecated: frontmatter.deprecated || false,
+        template: frontmatter.template || false,
         beta: frontmatter.beta || false,
         demo: frontmatter.demo || false,
         newImplementationLink: frontmatter.newImplementationLink || false,
@@ -295,6 +296,7 @@ function sourceMDFile(file, source, buildMode) {
       ...(pageData.hideNavItem && { hideNavItem: pageData.hideNavItem }),
       ...(pageData.beta && { beta: pageData.beta }),
       ...(pageData.deprecated && { deprecated: pageData.deprecated }),
+      ...(pageData.template && { template: pageData.template }),
       ...(pageData.demo && { demo: pageData.demo }),
       ...(pageData.sortValue && { sortValue: pageData.sortValue }),
       ...(pageData.subsectionSortValue && { subsectionSortValue: pageData.subsectionSortValue })

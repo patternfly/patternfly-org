@@ -62,7 +62,7 @@ const flattenList = files => {
 export class CSSVariables extends React.Component {
   constructor(props) {
     super(props);
-    const prefixToken = props.prefix.replace("pf-v5-", "").replace(/-+/g, "_");
+    const prefixToken = props.prefix.replace("pf-v6-", "").replace(/-+/g, "_");
     const applicableFiles = Object.entries(tokensModule)
       .filter(([key, val]) => prefixToken === key)
       .sort(([key1], [key2]) => key1.localeCompare(key2))
@@ -103,12 +103,12 @@ export class CSSVariables extends React.Component {
           <div key={rowKey}>
             <div
               key={`${rowKey}_1`}
-              className="pf-v5-l-flex pf-m-space-items-sm"
+              className="pf-v6-l-flex pf-m-space-items-sm"
             >
               {isColorRegex.test(value) && (
                 <div
                   key={`${rowKey}_2`}
-                  className="pf-v5-l-flex pf-m-column pf-m-align-self-center"
+                  className="pf-v6-l-flex pf-m-column pf-m-align-self-center"
                 >
                   <span
                     className="ws-color-box"
@@ -118,7 +118,7 @@ export class CSSVariables extends React.Component {
               )}
               <div
                 key={`${rowKey}_3`}
-                className="pf-v5-l-flex pf-m-column pf-m-align-self-center ws-td-text"
+                className="pf-v6-l-flex pf-m-column pf-m-align-self-center ws-td-text"
               >
                 {value}
               </div>
@@ -170,7 +170,7 @@ export class CSSVariables extends React.Component {
   render() {
     return (
       <React.Fragment>
-        {this.props.autoLinkHeader && <AutoLinkHeader size="h3" className="pf-v5-u-mt-lg pf-v5-u-mb-md">{`Prefixed with '${this.props.prefix}'`}</AutoLinkHeader>}
+        {this.props.autoLinkHeader && <AutoLinkHeader size="h3" className="pf-v6-u-mt-lg pf-v6-u-mb-md">{`Prefixed with '${this.props.prefix}'`}</AutoLinkHeader>}
         <CSSSearch getDebouncedFilteredRows={this.getDebouncedFilteredRows} />
         <Table
           variant="compact"
@@ -180,7 +180,7 @@ export class CSSVariables extends React.Component {
             <Tr>
               {!this.props.hideSelectorColumn && (
                 <React.Fragment>
-                  <Th />
+                  <Th screenReaderText="Expand or collapse column" />
                   <Th>Selector</Th>
                 </React.Fragment>
               )}

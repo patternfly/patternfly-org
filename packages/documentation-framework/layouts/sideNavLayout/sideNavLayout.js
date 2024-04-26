@@ -24,7 +24,7 @@ import {
   ToolbarItem,
   SkipToContent,
   Switch,
-  SearchInput,
+  // SearchInput,
   ToggleGroup,
   ToggleGroupItem
 } from '@patternfly/react-core';
@@ -35,6 +35,7 @@ import SunIcon from '@patternfly/react-icons/dist/esm/icons/sun-icon';
 import { SideNav, TopNav, GdprBanner } from '../../components';
 import staticVersions from '../../versions.json';
 import v5Logo from '../PF-HorizontalLogo-Reverse.svg';
+import { Footer } from '@patternfly/documentation-framework/components';
 
 export const RtlContext = createContext(false);
 
@@ -51,38 +52,38 @@ const HeaderTools = ({
   const initialVersion = staticVersions.Releases.find(release => release.latest);
   const latestVersion = versions.Releases.find(version => version.latest);
   const previousReleases = Object.values(versions.Releases).filter(version => !version.hidden && !version.latest);
-  const hasSearch = algolia;
+  // const hasSearch = algolia;
   const [isDropdownOpen, setDropdownOpen] = useState(false);
-  const [searchValue, setSearchValue] = React.useState('');
-  const [isSearchExpanded, setIsSearchExpanded] = React.useState(false);
+  // const [searchValue, setSearchValue] = React.useState('');
+  // const [isSearchExpanded, setIsSearchExpanded] = React.useState(false);
   const [isDarkTheme, setIsDarkTheme] = React.useState(false);
 
   const getDropdownItem = (version, isLatest = false) => (
     <DropdownItem itemId={version.name} key={version.name} to={isLatest ? '/' : `/${version.name}`}>
-      {`Release ${version.name}`}
+      {`Current ${version.name}`}
     </DropdownItem>
   );
 
-  const onChange = (_evt, value) => {
-    setSearchValue(value);
-  };
+  // const onChange = (_evt, value) => {
+  //   setSearchValue(value);
+  // };
 
-  const onToggleExpand = (_evt, isSearchExpanded) => {
-    setIsSearchExpanded(!isSearchExpanded);
-  };
+  // const onToggleExpand = (_evt, isSearchExpanded) => {
+  //   setIsSearchExpanded(!isSearchExpanded);
+  // };
 
   const toggleDarkTheme = (_evt, selected) => {
     const darkThemeToggleClicked = !selected === isDarkTheme
-    document.querySelector('html').classList.toggle('pf-v5-theme-dark', darkThemeToggleClicked);
+    document.querySelector('html').classList.toggle('pf-v6-theme-dark', darkThemeToggleClicked);
     setIsDarkTheme(darkThemeToggleClicked);
   };
 
-  useEffect(() => {
-    // reattach algolia to input each time search is expanded
-    if (hasSearch && isSearchExpanded) {
-      attachDocSearch(algolia, '.ws-global-search .pf-v5-c-text-input-group__text-input', 1000);
-    }
-  }, [isSearchExpanded])
+  // useEffect(() => {
+  //   // reattach algolia to input each time search is expanded
+  //   if (hasSearch && isSearchExpanded) {
+  //     attachDocSearch(algolia, '.ws-global-search .pf-v5-c-text-input-group__text-input', 1000);
+  //   }
+  // }, [isSearchExpanded])
 
   return (
     <Toolbar isFullHeight>
@@ -93,7 +94,7 @@ const HeaderTools = ({
           </ToolbarItem>
         )}
         <ToolbarGroup
-          align={{ default: 'alignRight' }}
+          align={{ default: 'alignEnd' }}
           spaceItems={{ default: 'spacerNone', md: 'spacerMd' }}
         >
           {hasDarkThemeSwitcher && (
@@ -109,7 +110,7 @@ const HeaderTools = ({
               <Switch id="ws-rtl-switch" label={'RTL'} defaultChecked={isRTL} onChange={() => setIsRTL(isRTL => !isRTL)} />
             </ToolbarItem>
           )}
-          {hasSearch && (
+          {/* {hasSearch && (
             <ToolbarItem>
               <SearchInput
                 className="ws-global-search"
@@ -120,7 +121,7 @@ const HeaderTools = ({
                 expandableInput={{ isExpanded: isSearchExpanded, onToggleExpand, toggleAriaLabel: 'Expandable search input toggle' }}
               />
             </ToolbarItem>
-          )}
+          )} */}
           <ToolbarItem>
             <Button
               component="a"
@@ -163,12 +164,35 @@ const HeaderTools = ({
                     </DropdownList>
                   </DropdownGroup>
                 )}
-                <Divider key="divider" className="ws-switcher-divider"/>
+                <Divider key="divider1" className="ws-switcher-divider"/>
+                <DropdownGroup key="Alpha preview version" label="Alpha preview version">
+                  <DropdownList>
+                    <DropdownItem
+                      key="PatternFly 6"
+                      className="ws-patternfly-versions"
+                      isExternalLink
+                      to="https://staging-v6.patternfly.org/"
+                      itemId="patternfly-6"
+                    >
+                      PatternFly 6
+                    </DropdownItem>
+                  </DropdownList>
+                </DropdownGroup>
+                <Divider key="divider2" className="ws-switcher-divider"/>
                 <DropdownGroup key="Previous versions" label="Previous versions">
                   <DropdownList>
                     <DropdownItem
+                      key="PatternFly 5"
+                      className="ws-patternfly-versions"
+                      isExternalLink
+                      to="https://www.patternfly.org"
+                      itemId="patternfly-5"
+                    >
+                      PatternFly 5
+                    </DropdownItem>
+                    <DropdownItem
                       key="PatternFly 4"
-                      className="ws-patternfly-3"
+                      className="ws-patternfly-versions"
                       isExternalLink
                       to="http://v4-archive.patternfly.org/v4/"
                       itemId="patternfly-4"
@@ -177,7 +201,7 @@ const HeaderTools = ({
                     </DropdownItem>
                     <DropdownItem
                       key="PatternFly 3"
-                      className="ws-patternfly-3"
+                      className="ws-patternfly-versions"
                       isExternalLink
                       to="https://pf3.patternfly.org/"
                       itemId="patternfly-3"
@@ -314,6 +338,7 @@ export const SideNavLayout = ({ children, groupedRoutes, navOpen: navOpenProp })
         <Page
           id="ws-page"
           mainContainerId="ws-page-main"
+          mainComponent="div"
           header={Header}
           sidebar={SideBar}
           skipToContent={<SkipToContent href="#ws-page-main">Skip to content</SkipToContent>}
@@ -321,6 +346,7 @@ export const SideNavLayout = ({ children, groupedRoutes, navOpen: navOpenProp })
           defaultManagedSidebarIsOpen={navOpenProp}
         >
           {children}
+          {process.env.hasFooter && <Footer />}
         </Page>
         <div id="ws-page-banners">
           {hasGdprBanner && <GdprBanner />}
