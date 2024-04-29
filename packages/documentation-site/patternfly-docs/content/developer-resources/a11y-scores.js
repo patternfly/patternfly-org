@@ -5,14 +5,14 @@ export const a11yScores = [
     'April 23, 2024': [
       {
         criteria:
-          'Preliminary accessibility report generated using axe-core based tooling.',
+          'Accessibility report generated using axe-core based tooling.',
         status: '✅',
         notes: (
           <>
-            <a href="https://pf-a11y_5-16-22.surge.sh/">
-              Initial report (May 16th, 2022)
+            <a href="http://pf-a11y_4-23-24.surge.sh/">
+              Q2 2024 report (April 23, 2024)
             </a>
-            <p>1066 violations found</p>
+            <p>24 violations found</p>
           </>
         ),
       },
@@ -38,14 +38,7 @@ export const a11yScores = [
         criteria:
           'Critical and major accessibility violations identified in item #3 resolved (%).',
         status: '--',
-        notes: (
-          <>
-            <a href="http://pf-a11y_4-23-24.surge.sh">
-              Latest generated report (April 23, 2024)
-            </a>
-            <p>24 violations remaining</p>
-          </>
-        ),
+        notes: <p>24 violations remaining</p>,
       },
       {
         criteria: `Automated accessibility checks added to pull request or equivalent code acceptance criteria.`,
