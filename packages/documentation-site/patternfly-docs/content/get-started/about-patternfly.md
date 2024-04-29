@@ -338,20 +338,19 @@ Occasionally, a component page will contain a "React next" tab, which contains d
 
 ## Beta components 
 
-Newly introduced components to the PatternFly component library are initially released in beta. Such components are labelled with a blue informational alert at the top of their documentation pages.
+New PatternFly components are first released in beta. To help you identify beta components, we add a blue label beside the component in the PatternFly.org navigation menu and an informational alert at the top of the component’s documentation pages.
 
-Beta components are open to evolution and possible breaking changes pending testing and feedback. Each beta component is evaluated on a quarterly basis to evaluate its stability and the degree to which it meets product requirements. Every quarter, stable components are proposed as promotion candidates. To view a list of current promotion candidates, visit this page.
+Beta components continue to evolve as users share feedback. As these components are tested, they are subject to breaking changes, which are changes that affect visuals, applied CSS class names, or existing React properties (including the addition of new properties). We review beta components every quarter to evaluate their stability and the degree to which they meet product requirements. Once a component is stable, it's proposed as a promotion candidate. Once promoted, breaking changes are not made to components outside of a well-advertised breaking change release. 
 
-There are two recommended steps to take when considering using a beta component in product:
+Occasionally, after a component is promoted out of beta, subsequent enhancement requests require the introduction of new CSS class names and React properties. Whenever these enhancements are substantial enough to lead to further component updates (pending testing and feedback), then a beta label is applied to the new class names and properties, as well as relevant examples in the component’s documentation.
 
-1. Play with the component examples in the docs and determine whether or not the current implementation meets your needs. Open issues for any missing features, enhancement requests, or bugs.
-1. Check the PatternFly Issues GitHub Project board where we have created a view to categorize most issues by component. Browse any open issues for the beta component to determine how much more the beta component could evolve in the near future.
+[Learn more about beta components and view a list of current promotion candidates here.](https://github.com/patternfly/patternfly-org/tree/main/beta-component-promotion)
 
-Once promoted, breaking changes are not made to components outside of a well-advertised breaking change release. Breaking changes introduce visual changes, changes to applied CSS class names, or changes to existing React props (new React props might be added).
+If you are considering using a beta component, make sure to:
 
-Occasionally, a component is promoted out of beta and subsequent enhancement requests require new CSS class names and React props to be introduced. Whenever these enhancements are substantial enough to open the possibility for further updates pending testing and feedback, then the newly introduced CSS class names or React props as well as relevant examples in the documentation are all labeled as beta.
+1. Play with the examples in the component's documentation on the PatternFly website to determine if the current implementation meets your needs. Open issues for any missing features, enhancement requests, or bugs.
+1. Check [the PatternFly Issues GitHub Project board](https://github.com/orgs/patternfly/projects/7/views/5) where we have created a view to categorize most issues by component. Browse any open issues for the beta component to determine how much more the beta component could evolve in the near future.
 
-For more information about beta components, visit this page.
 
 <!-- This section is WIP ** we need to wait to see how this content gets included **
 
