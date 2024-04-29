@@ -19,7 +19,7 @@
         "@patternfly/react-topology": "5.1.0",
         "@patternfly/quickstarts": "5.1.0",
         "@patternfly/react-virtualized-extension": "5.1.0",
-        "@patternfly/react-templates": "^1.0.0-alpha.0"
+        "@patternfly/react-templates": "^1.0.0-alpha.3"
       }
     },{
       "name": "5.2.2",
