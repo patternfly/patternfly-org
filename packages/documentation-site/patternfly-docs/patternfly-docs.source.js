@@ -6,7 +6,12 @@ module.exports = (sourceMD, sourceProps, sourceFunctionDocs) => {
 
   // Content md
   const contentBase = path.join(__dirname, "../patternfly-docs/content");
-  const reactPropsIgnore = ["**/*.test.tsx", "**/examples/*.tsx"];
+  const reactPropsIgnore = [
+    "/**/examples/**",
+    "/**/__mocks__/**",
+    "/**/__tests__/**",
+    "/**/*.test.tsx",
+  ];
   sourceMD(path.join(contentBase, "extensions/**/*.md"), "extensions");
   if (!(process.env.EXTENSIONS_ONLY === "true")) {
     sourceMD(path.join(contentBase, "contribute/**/*.md"), "pages-contribute");
