@@ -29,7 +29,7 @@ export const Footer = () => (
                   <li className="ws-org-pfsite-footer-menu-list-item">
                     <Link
                       className="ws-org-pfsite-footer-menu-link"
-                      to={"/get-started/about"}
+                      to={"/get-started/about-patternfly"}
                       aria-label="Get started with PatternFly 4"
                     >
                       Get started
