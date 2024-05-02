@@ -27,13 +27,13 @@ In PatternFly, components are the basic building blocks of user interfaces. They
 ### Step 1. Add a button component.
 Add a button element to the `<body>` of the `index.html` file. To apply PatternFly styling to the button, add the class `pf-v5-c-button`. To also apply ‘primary’ styling to the button and make it a bright blue color, add the `pf-m-primary` class.
 
-<CopyCodeBlock>
+<CopyCodeBlock id="copy-button-code">
 {`<button class="pf-v5-c-button pf-m-primary" type="button">\n  Primary\n</button>`}
 </CopyCodeBlock>
 
 **Note:** A simple component can be reused multiple times.
 
-<CopyCodeBlock>
+<CopyCodeBlock id="copy-buttons-code">
 {`<button class="pf-v5-c-button pf-m-primary" type="button">
 Primary\n</button>\n<button class="pf-v5-c-button pf-m-primary" type="button">
 Primary\n</button>`}
@@ -47,7 +47,7 @@ In this step, add a badge component to the chip component.
 #### Step 2.1 
 To build a chip component, replace the contents of the `<body>` in the index.html file with the following code snippet.
 
-<CopyCodeBlock>
+<CopyCodeBlock id="copy-chip-code">
 {`<div class="pf-v5-c-chip">
 <span class="pf-v5-c-chip__text">
   Chip
@@ -62,7 +62,7 @@ This is the default chip component that already has another component in it: the
 #### Step 2.2
 Add the badge inside the chip. To do this, add this block of code between `pf-v5-c-chip__text` and `pf-v5-c-button`.
 
-<CopyCodeBlock>
+<CopyCodeBlock id="copy-badge-code">
 {`<span class="pf-v5-c-badge pf-m-read">
 7\n</span>`}
 </CopyCodeBlock>
@@ -82,7 +82,7 @@ In PatternFly, layouts allow for organizing and grouping elements. This tutorial
 ### Step 1 
 Copy code into the `<body>` of the `index.html` file.
 
-<CopyCodeBlock>
+<CopyCodeBlock id="copy-card-code">
 {`<div>
 <div class="pf-v5-c-card">
   <div class="pf-v5-c-card__title">
@@ -114,7 +114,7 @@ Create a form demo using components and layouts.
 ### Step 1. Add five form components
 Copy and paste this block of code 5 times in the index.html file.
 
-<CopyCodeBlock>
+<CopyCodeBlock id="copy-form-code">
 {`<form class="pf-v5-c-form">
 <div class="pf-v5-c-form__group">
   <div class="pf-v5-c-form__group-label">
