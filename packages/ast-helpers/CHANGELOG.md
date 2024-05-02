@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.14.1 (2024-05-02)
+
+
+### Bug Fixes
+
+* **misc:** fix broken about links ([#3987](https://github.com/patternfly/patternfly-org/issues/3987)) ([10b1e04](https://github.com/patternfly/patternfly-org/commit/10b1e04ed9129758579796ecabd47d50a089307b))
+
+
+
+
+
 # 1.14.0 (2024-05-02)
 
 
