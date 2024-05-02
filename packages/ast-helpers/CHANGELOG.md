@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.14.0 (2024-05-02)
+
+
+### Features
+
+* **docs:** fix for missing props tables ([#3981](https://github.com/patternfly/patternfly-org/issues/3981)) ([11963b6](https://github.com/patternfly/patternfly-org/commit/11963b60d63ea20a09de67dc81ba8ac0e26224aa))
+
+
+
+
+
 ## 1.13.3 (2024-04-24)
 
 **Note:** Version bump only for package @patternfly/ast-helpers
