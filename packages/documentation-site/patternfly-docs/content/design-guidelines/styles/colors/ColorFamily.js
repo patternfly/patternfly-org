@@ -5,7 +5,7 @@ import { css } from '@patternfly/react-styles';
 import { normalizeColor, getContrastRatio } from './helpers';
 import './ColorFamily.css';
 
-// const palettePrefix = '--pf-v6-global--palette--';
+const palettePrefix = '--pf-t--color';
 
 export function ColorFamily({
   title,
@@ -62,7 +62,10 @@ export function ColorFamily({
             'ws-color-family-toggle',
             isExpanded && 'pf-m-expanded'
           );
-          // const itemStyle = { background: `var(${token.name})`, fontSize: 'var(--pf-v6-global--FontSize--sm)' };
+          const itemStyle = {
+            background: `var(${token.name})`,
+            // fontSize: 'var(--pf-v6-global--FontSize--sm)'
+          };
           if (isShadows) {
             itemStyle.marginBottom = '1rem';
             itemStyle.boxShadow = `var(${token.name})`;
