@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 6.0.0-alpha.23 (2024-05-02)
+
+
+### Features
+
+* **docs:** update beta button style ([#3961](https://github.com/patternfly/patternfly-org/issues/3961)) ([8a68ab7](https://github.com/patternfly/patternfly-org/commit/8a68ab7852643aac54282923b34feff090be1101))
+
+
+
+
+
 # 6.0.0-alpha.22 (2024-04-23)
 
 

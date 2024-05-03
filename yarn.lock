@@ -2842,10 +2842,10 @@
     node-addon-api "^3.2.1"
     node-gyp-build "^4.3.0"
 
-"@patternfly/design-tokens@1.0.4":
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/@patternfly/design-tokens/-/design-tokens-1.0.4.tgz#51142a5488bff61eecd044f7f0ca4157ef16b2c8"
-  integrity sha512-z6ikVWSkWGxOqdE5yTKVi4wOxdduy9wQoJU0Eri7psV532HKxd/XocURalqKgfhv55ReDHHG11+5z0ORUuLB0w==
+"@patternfly/design-tokens@1.0.5":
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/@patternfly/design-tokens/-/design-tokens-1.0.5.tgz#d944c50c30006efdc9f277707021a32665fb79d7"
+  integrity sha512-HifDWvUTrGBC0ngPGXqkdoCBA4JsPXlrGb78a0wL+nwEypAoLAulCCoBpnUeYESlI1CmVjlWUxwRpnVFICZc+Q==
   dependencies:
     "@patternfly/react-core" "^6.0.0-alpha.36"
 
