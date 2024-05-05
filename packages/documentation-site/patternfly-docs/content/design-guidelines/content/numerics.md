@@ -81,8 +81,8 @@ When displaying currencies that only use the "$" symbol, add the first 2 letters
 
 For other currencies, use their 3-letter ISO code wherever possible. You can use national currency symbols, but keep in mind that some users may not be familiar with them. When in doubt, default to ISO. For example:
 
-- EUR 1,500 or £1,500 (British pound)
-- GPB 1,500 or €1,500 (Euro)
+- GBP 1,500 or £1,500 (British pound)
+- EUR 1,500 or €1,500 (Euro)
 - JPY 1,500 or ¥1,500 (Japanese Yen)
 
 Use a currency's ISO 3-digit numeric code when writing for computerized systems or for countries that don't use Latin scripts.
