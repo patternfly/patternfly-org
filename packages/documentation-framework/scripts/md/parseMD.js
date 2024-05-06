@@ -204,7 +204,7 @@ function toReactComponent(mdFilePath, source, buildMode) {
         && node.tagName === 'Example'
         && liveCodeTypes.includes(node.properties.lang)
         && !node.properties.noLive;
-      // TODO: revert when CommonJS is upgraded to ESM
+      // TODO: revert when CommonJS is upgraded to ESM or when unist-util packages are updated to a tool that is compatible with ESM
       // visit(tree, isExample, node => {
       //   if (node.properties.isFullscreen) {
       //     pageData.fullscreenExamples = pageData.fullscreenExamples || [];
