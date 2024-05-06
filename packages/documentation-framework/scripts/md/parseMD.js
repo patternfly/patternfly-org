@@ -8,7 +8,7 @@ const vfileReport = require('vfile-reporter');
 const yaml = require('js-yaml'); // https://github.com/nodeca/js-yaml
 const chokidar = require('chokidar');
 const { globSync } = require('glob');
-const { typecheck } = require('./typecheck');
+// const { typecheck } = require('./typecheck');
 const { makeSlug } = require('../../helpers/slugger');
 const { liveCodeTypes } = require('../../helpers/liveCodeTypes');
 const { tsDocgen } = require('../tsDocgen');
@@ -204,35 +204,36 @@ function toReactComponent(mdFilePath, source, buildMode) {
         && node.tagName === 'Example'
         && liveCodeTypes.includes(node.properties.lang)
         && !node.properties.noLive;
-      visit(tree, isExample, node => {
-        if (node.properties.isFullscreen) {
-          pageData.fullscreenExamples = pageData.fullscreenExamples || [];
-          pageData.fullscreenExamples.push(node.title);
-        }
-        else {
-          pageData.examples = pageData.examples || [];
-          pageData.examples.push(node.title);
-        }
-        // Typecheck TS examples
-        if (node.properties.lang === 'ts') {
-          const typerrors = typecheck(
-            path.join(pageData.id, node.title + '.tsx'), // Needs to be unique per-example
-            node.properties.code
-          );
-          typerrors.forEach(({ line, character, message }) => {
-            line = node.position.start.line + line + 1;
-            const column = character;
-            if (buildMode === 'start') {
-              // Don't fail to start over types
-              file.message(`\u001b[31m THIS WILL FAIL THE BUILD\u001b[0m\n  ${message}`, { line, column });
-            } else {
-              console.log('\u001b[31m');
-              file.fail(`\n  ${message}\n`, { line, column });
-              console.log('\u001b[0m');
-            }
-          });
-        }
-      });
+      // TODO: revert when CommonJS is upgraded to ESM
+      // visit(tree, isExample, node => {
+      //   if (node.properties.isFullscreen) {
+      //     pageData.fullscreenExamples = pageData.fullscreenExamples || [];
+      //     pageData.fullscreenExamples.push(node.title);
+      //   }
+      //   else {
+      //     pageData.examples = pageData.examples || [];
+      //     pageData.examples.push(node.title);
+      //   }
+      //   // Typecheck TS examples
+      //   if (node.properties.lang === 'ts') {
+      //     const typerrors = typecheck(
+      //       path.join(pageData.id, node.title + '.tsx'), // Needs to be unique per-example
+      //       node.properties.code
+      //     );
+      //     typerrors.forEach(({ line, character, message }) => {
+      //       line = node.position.start.line + line + 1;
+      //       const column = character;
+      //       if (buildMode === 'start') {
+      //         // Don't fail to start over types
+      //         file.message(`\u001b[31m THIS WILL FAIL THE BUILD\u001b[0m\n  ${message}`, { line, column });
+      //       } else {
+      //         console.log('\u001b[31m');
+      //         file.fail(`\n  ${message}\n`, { line, column });
+      //         console.log('\u001b[0m');
+      //       }
+      //     });
+      //   }
+      // });
     })
     // Add custom PatternFly doc design things
     .use(require('./anchor-header'), toc => {
