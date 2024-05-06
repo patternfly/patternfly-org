@@ -1,14 +1,14 @@
 /* Specificity YAY */
 .pf-v6-c-accordion__toggle-icon.ws-color-family-toggle-icon {
-  font-size: var(--pf-v6-global--FontSize--xs);
+/*   font-size: var(--pf-v6-global--FontSize--xs); */
   margin-right: var(--pf-v6-c-accordion__toggle--PaddingLeft)
 }
 
 /* Specificity YAY */
 .pf-v6-c-accordion__toggle.ws-color-family-content {
-  font-size: var(--pf-v6-global--FontSize--xs);
+/*   font-size: var(--pf-v6-global--FontSize--xs); */
   display: inline-block;
-  padding-bottom: var(--pf-v6-global--spacer--lg);
+  padding-bottom: var(--pf-t--global--spacer--lg);
 }
 
 /* Specificity YAY */
@@ -23,10 +23,10 @@
 
 .pf-v6-c-accordion__toggle > .ws-color-family-label {
   display: inline-block;
-  font-size: var(--pf-v6-global--FontSize--sm);
+/*   font-size: var(--pf-v6-global--FontSize--sm); */
   font-weight: bold;
-  margin-top: var(--pf-v6-global--spacer--md);
-  margin-bottom: var(--pf-v6-global--spacer--sm);
+  margin-top: var(--pf-t--global--spacer--md);
+  margin-bottom: var(--pf-t--global--spacer--sm);
 }
 
 /* Specificity YAY */

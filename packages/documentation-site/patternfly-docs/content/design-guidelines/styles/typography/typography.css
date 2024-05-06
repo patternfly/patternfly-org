@@ -7,15 +7,15 @@
 }
 
 .ws-title-level-heading {
-  margin-top: var(--pf-v6-global--spacer--lg);
+  margin-top: var(--pf-t--global--spacer--lg);
 }
 
 .ws-typography-code-font + div {
-  font-family: var(--pf-v6-global--FontFamily--monospace) !important;
+/*   font-family: var(--pf-v6-global--FontFamily--monospace) !important; */
 }
 
 .ws-typography-textColor {
-  color: var(--pf-v6-global--info-color--100);
+/*   color: var(--pf-v6-global--info-color--100); */
   max-width: 350px;
   font-size: 14px;
 }
@@ -79,18 +79,18 @@
 }
 
 .ws-title-level {
-  border: var(--pf-v6-global--BorderWidth--sm) solid var(--pf-v6-global--BorderColor--100);
-  padding: var(--pf-v6-global--spacer--sm);
-  margin: var(--pf-v6-global--spacer--md) 0;
+/*   border: var(--pf-v6-global--BorderWidth--sm) solid var(--pf-v6-global--BorderColor--100); */
+  padding: var(--pf-t--global--spacer--sm);
+  margin: var(--pf-t--global--spacer--md) 0;
   display: inline-block;
 }
 
 #customizing-heading-levels {
-  margin-top: var(--pf-v6-global--spacer--lg);
+  margin-top: var(--pf-t--global--spacer--lg);
 }
 
 #line-height-and-spacing {
-  margin-top: var(--pf-v6-global--spacer--md);
+  margin-top: var(--pf-t--global--spacer--md);
 }
 
 @media screen and (min-width: 768px) {
