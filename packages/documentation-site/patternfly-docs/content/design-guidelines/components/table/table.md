@@ -118,6 +118,30 @@ The actionable table provides checkboxes or radio buttons that enable users to s
 #### When not to use
 * Users can not take any actions on table items/rows.
 
+### Comparison table
+
+For tables used to compare different items against different parameters, you may use a customized version of a table.
+
+<img src="./img/comparison-table.png"  alt="example of comparison table"  width="800"/>
+
+The comparison table differs from a standard table in the follow ways:
+* The items being compared should be shown as columns
+* The parameters should be a sticky column on the far left of the table, with each parameter having its own row
+* The table should contain both horizontal and vertical lines to separate items, aiding content scanning.
+* The table should have a nested header for the items being compared to help visualize the data
+* (optional) The table can be striped to help scan and compare between the different parameters.
+* (optional) If you choose to add actions, they should be at the individual cell level and not at the row level.
+
+#### Actions in a comparison table
+
+Actions in a comparison table could include:
+* Adding or removing an item for comparison
+* Adding or removing a parameter row for comparison
+* Exporting comparison table
+
+Although you could include the ability to remove certain parameters from inside the table, with an X button at the cell level, it is recommended that the greater management of a table be triggered from an action inside the table toolbar. For example, you could have an “Add to comparison” button in the toolbar that could open a modal in which a user could select the parameters they want to see and/or the items they want to compare.
+
+
 ### Row striping
 Row striping can help improve legibility of a table when presenting large amounts of data. With row striping enabled, table rows will alternate between ```--pf-v5-global--BackgroundColor--100``` and ```--pf-v5-global--BackgroundColor--150``` to visually separate dense data sets.
 
