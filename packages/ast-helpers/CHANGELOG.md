@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.4.0-alpha.13 (2024-05-06)
+
+
+### Bug Fixes
+
+* **styles:** Remove and replace global styles ([#3996](https://github.com/patternfly/patternfly-org/issues/3996)) ([41fe3eb](https://github.com/patternfly/patternfly-org/commit/41fe3eba104cc7ef49898fc1b614777bdbd04b22))
+
+
+
+
+
 # 1.4.0-alpha.12 (2024-05-02)
 
 
