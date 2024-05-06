@@ -34,16 +34,11 @@ Both tooltips and [popovers](/components/popover/design-guidelines) provide more
 - Tooltips appear on hover, while popovers appear on click.   
 
 ## Content considerations
-- Keep your tooltips clear and concise. Use the fewest number of words without sacrificing meaning.
-- If the tooltip is a full sentence, include a period at the end. If the tooltip is a fragment, do not include a period at the end.
-- Use tooltips for additional information. Don’t use tooltips for information critical to a user completing a task, such as password character requirements.  
-- Tooltips should provide new and valuable information. Never use a tooltip to repeat information already available in the UI.
-- Don’t use tooltips with question-circle icons to present contextual information in forms and other areas. Instead, use a [popover](/components/popover/design-guidelines).  
+For content guidance, refer to [our tooltip writing guide.](/ux-writing/tooltips)
 
 ## Accessibility
 
 For information regarding accessibility, visit the [tooltip accessibility](/components/tooltip/accessibility) tab.
-
 
 
 
