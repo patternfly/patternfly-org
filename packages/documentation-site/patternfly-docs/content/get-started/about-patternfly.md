@@ -257,7 +257,7 @@ The PatternFly community is never finished growing, and we want to keep it that 
       </CardBody>
       <Divider />
       <CardFooter>
-        [Sign up for our mailing list <ExternalLinkAltIcon />]()
+        [Sign up for our mailing list <ExternalLinkAltIcon />](https://www.redhat.com/dynamic-form/instance/934b1674-bc8a-4a13-8c9d-d19abcceb263)
       </CardFooter>
     </Card>
     <Card isCompact>
