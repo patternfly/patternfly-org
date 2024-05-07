@@ -122,13 +122,15 @@ The actionable table provides checkboxes or radio buttons that enable users to s
 
 For tables used to compare different items against different parameters, you may use a customized version of a table.
 
+
 <img src="./img/comparison-table.png"  alt="example of comparison table"  width="800"/>
 
+
 The comparison table differs from a standard table in the follow ways:
-* The items being compared should be shown as columns
-* The parameters should be a sticky column on the far left of the table, with each parameter having its own row
+* The items being compared should be shown as columns.
+* The parameters should be a sticky column on the far left of the table, with each parameter having its own row.
 * The table should contain both horizontal and vertical lines to separate items, aiding content scanning.
-* The table should have a nested header for the items being compared to help visualize the data
+* The table should have a nested header for the items being compared to help visualize the data.
 * (optional) The table can be striped to help scan and compare between the different parameters.
 * (optional) If you choose to add actions, they should be at the individual cell level and not at the row level.
 
