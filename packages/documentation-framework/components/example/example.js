@@ -203,21 +203,21 @@ export const Example = ({
             <React.Fragment>
               {isBeta && (
                 <Tooltip content="This beta component is currently under review and is still open for further evolution.">
-                  <Button variant="plain">
+                  <Button variant="plain" hasNoPadding>
                     <Label isCompact color="blue">Beta</Label>
                   </Button>
                 </Tooltip>
               )}
               {isDemo && (
                 <Tooltip content="Demos show how multiple components can be used in a single design.">
-                  <Button variant="plain">
+                  <Button variant="plain" hasNoPadding>
                     <Label isCompact color="purple">Demo</Label>
                   </Button>
                 </Tooltip>
               )}
               {isDeprecated && (
                 <Tooltip content="Deprecated components are available for use but are no longer being maintained or enhanced.">
-                  <Button variant="plain">
+                  <Button variant="plain" hasNoPadding>
                     <Label isCompact color="grey">Deprecated</Label>
                   </Button>
                 </Tooltip>

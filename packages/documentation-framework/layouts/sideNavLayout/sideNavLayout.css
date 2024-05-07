@@ -9,7 +9,7 @@
 }
 
 .ws-switcher-divider {
-  padding: 0 var(--pf-v6-global--spacer--md);
+  padding: 0 var(--pf-t--global--spacer--md);
 }
 
 @media (min-width: 1200px) {
@@ -19,7 +19,7 @@
 }
 
 .ws-page-sidebar > .pf-v6-c-page__sidebar-body {
-  padding-top: var(--pf-v6-global--spacer--md);
+  padding-top: var(--pf-t--global--spacer--md);
 }
 
 /* Search */
@@ -39,12 +39,12 @@
 
 .ws-masthead .pf-v6-c-switch {
   align-items: center;
-  --pf-v6-c-switch__input--not-checked__label--Color: var(--pf-v6-global--Color--100);
-  --pf-v6-c-switch__input--checked__label--Color: var(--pf-v6-global--Color--100);
+/*   --pf-v6-c-switch__input--not-checked__label--Color: var(--pf-v6-global--Color--100); */
+/*   --pf-v6-c-switch__input--checked__label--Color: var(--pf-v6-global--Color--100); */
 }
 
 .ws-masthead .pf-v6-c-toggle-group {
-  --pf-v6-c-toggle-group__button--m-selected--BackgroundColor: var(--pf-v6-global--palette--blue-400);
+/*   --pf-v6-c-toggle-group__button--m-selected--BackgroundColor: var(--pf-v6-global--palette--blue-400); */
   --pf-v6-c-toggle-group__button--focus--BackgroundColor: transparent;
   --pf-v6-c-toggle-group__button--hover--BackgroundColor: transparent;
 }

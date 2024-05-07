@@ -3,6 +3,39 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 6.0.0-alpha.25 (2024-05-07)
+
+
+### Bug Fixes
+
+* **build:** bump ts version and fix docs build for v6 ([#4004](https://github.com/patternfly/patternfly-org/issues/4004)) ([55db3db](https://github.com/patternfly/patternfly-org/commit/55db3db9d8f0b47b323ce921ac42f06d8515c9b6))
+
+
+
+
+
+# 6.0.0-alpha.24 (2024-05-06)
+
+
+### Bug Fixes
+
+* **styles:** Remove and replace global styles ([#3996](https://github.com/patternfly/patternfly-org/issues/3996)) ([41fe3eb](https://github.com/patternfly/patternfly-org/commit/41fe3eba104cc7ef49898fc1b614777bdbd04b22))
+
+
+
+
+
+# 6.0.0-alpha.23 (2024-05-02)
+
+
+### Features
+
+* **docs:** update beta button style ([#3961](https://github.com/patternfly/patternfly-org/issues/3961)) ([8a68ab7](https://github.com/patternfly/patternfly-org/commit/8a68ab7852643aac54282923b34feff090be1101))
+
+
+
+
+
 # 6.0.0-alpha.22 (2024-04-23)
 
 

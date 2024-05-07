@@ -62,7 +62,7 @@
 }
 
 .ws-content-correct {
-  color: var(--pf-v6-global--success-color--100);
+/*   color: var(--pf-v6-global--success-color--100); */
 }
 
 .ws-content-correct i {
@@ -70,7 +70,7 @@
 }
 
 .ws-content-incorrect {
-  color: var(--pf-v6-global--danger-color--100);
+/*   color: var(--pf-v6-global--danger-color--100); */
 }
 
 .ws-content-incorrect i {
@@ -78,7 +78,7 @@
 }
 
 .ws-content-demo {
-  background-color: var(--pf-v6-global--BackgroundColor--100);
+/*   background-color: var(--pf-v6-global--BackgroundColor--100); */
   flex-wrap: wrap;
   max-width: 680px;
 }

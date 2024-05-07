@@ -2,14 +2,14 @@
   display: inline-block;
   height: 18px;
   width: 18px;
-  border: var(--pf-v6-global--BorderWidth--sm) solid var(--pf-v6-global--BorderColor--200);
-  border-radius: var(--pf-v6-global--BorderRadius--lg);
+/*   border: var(--pf-v6-global--BorderWidth--sm) solid var(--pf-v6-global--BorderColor--200); */
+/*   border-radius: var(--pf-v6-global--BorderRadius--lg); */
 }
 
 .ws-td-text {
-  font-size: var(--pf-v6-global--FontSize--sm) !important;
+/*   font-size: var(--pf-v6-global--FontSize--sm) !important; */
 }
 
 .ws-css-property {
-  padding: var(--pf-v6-global--spacer--xs) var(--pf-v6-global--spacer--md);
+  padding: var(--pf-t--global--spacer--xs) var(--pf-t--global--spacer--md);
 }

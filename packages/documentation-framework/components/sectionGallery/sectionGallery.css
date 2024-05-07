@@ -20,10 +20,10 @@
 .ws-section-gallery .pf-v6-c-toolbar {
   margin-left: calc(var(--pf-v6-c-page__main-section--PaddingLeft) * -1);
   border-bottom: var(--pf-v6-c-page__sidebar--m-light--BorderRightWidth) solid var(--pf-v6-c-page__sidebar--m-light--BorderRightColor);
-  margin-bottom: var(--pf-v6-global--spacer--md);
+  margin-bottom: var(--pf-t--global--spacer--md);
   width: calc(100% + var(--pf-v6-c-page__main-section--PaddingLeft) + var(--pf-v6-c-page__main-section--PaddingRight));
   /* avoid hoverable data list items overlapping toolbar */
-  z-index: calc(var(--pf-v6-global--ZIndex--xs) + 2);
+/*   z-index: calc(var(--pf-v6-global--ZIndex--xs) + 2); */
 }
 
 /* Match toolbar left-padding to gallery left-padding */
