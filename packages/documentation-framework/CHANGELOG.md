@@ -3,6 +3,318 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 6.0.0-alpha.25 (2024-05-07)
+
+
+### Bug Fixes
+
+* **build:** bump ts version and fix docs build for v6 ([#4004](https://github.com/patternfly/patternfly-org/issues/4004)) ([55db3db](https://github.com/patternfly/patternfly-org/commit/55db3db9d8f0b47b323ce921ac42f06d8515c9b6))
+
+
+
+
+
+# 6.0.0-alpha.24 (2024-05-06)
+
+
+### Bug Fixes
+
+* **styles:** Remove and replace global styles ([#3996](https://github.com/patternfly/patternfly-org/issues/3996)) ([41fe3eb](https://github.com/patternfly/patternfly-org/commit/41fe3eba104cc7ef49898fc1b614777bdbd04b22))
+
+
+
+
+
+# 6.0.0-alpha.23 (2024-05-02)
+
+
+### Features
+
+* **docs:** update beta button style ([#3961](https://github.com/patternfly/patternfly-org/issues/3961)) ([8a68ab7](https://github.com/patternfly/patternfly-org/commit/8a68ab7852643aac54282923b34feff090be1101))
+
+
+
+
+
+# 6.0.0-alpha.22 (2024-04-23)
+
+
+### Bug Fixes
+
+* **docs:** Add tokens back to site ([#3978](https://github.com/patternfly/patternfly-org/issues/3978)) ([1c97da8](https://github.com/patternfly/patternfly-org/commit/1c97da8b92d3fe331e49395c26730c5f4bc3b5e3))
+
+
+
+
+
+# 6.0.0-alpha.21 (2024-04-17)
+
+
+### Bug Fixes
+
+* **docs:** whitspace change ([#3966](https://github.com/patternfly/patternfly-org/issues/3966)) ([2199dc8](https://github.com/patternfly/patternfly-org/commit/2199dc883e6d118d6bedfa9d6ced3cefad78c575))
+
+
+
+
+
+# 5.10.0 (2024-04-02)
+
+
+### Features
+
+* **Templates:** add to org site ([#3947](https://github.com/patternfly/patternfly-org/issues/3947)) ([a869dee](https://github.com/patternfly/patternfly-org/commit/a869dee87cc39296df9226f3fc1d780dce893a54))
+
+
+
+
+
+## 5.9.1 (2024-04-02)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+# 5.9.0 (2024-04-02)
+
+
+### Features
+
+* **docs:** update medium articles ([#3950](https://github.com/patternfly/patternfly-org/issues/3950)) ([5288ec1](https://github.com/patternfly/patternfly-org/commit/5288ec1fb1f7e744ed142585384840c8d415d9e5))
+
+
+
+
+
+## 5.8.3 (2024-03-28)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 5.8.2 (2024-03-25)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 5.8.1 (2024-03-25)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+# 5.8.0 (2024-03-20)
+
+
+### Features
+
+* **templates:** add templates package to versions.json ([#3902](https://github.com/patternfly/patternfly-org/issues/3902)) ([c7c727c](https://github.com/patternfly/patternfly-org/commit/c7c727c717d5cc3c031f4f3c52070ffc6164e5d6))
+
+
+
+
+
+# 5.7.0 (2024-03-19)
+
+
+### Features
+
+* add pf 6 alpha banner to home page and version switcher ([#3896](https://github.com/patternfly/patternfly-org/issues/3896)) ([f7aaa22](https://github.com/patternfly/patternfly-org/commit/f7aaa22d12310aa62533de4169e1fa70a49a20d9))
+
+
+
+
+
+# 5.6.0 (2024-03-13)
+
+
+### Features
+
+* **deps:** version bump and release notes for 5.2.2 patch release ([#3919](https://github.com/patternfly/patternfly-org/issues/3919)) ([94d3654](https://github.com/patternfly/patternfly-org/commit/94d3654768f42f2ae7b3c0734d1e5f211cd33ff6))
+
+
+
+
+
+## 5.5.1 (2024-03-12)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+# 5.5.0 (2024-03-08)
+
+
+### Features
+
+* **deps:** version bump for 5.2.1 release ([#3913](https://github.com/patternfly/patternfly-org/issues/3913)) ([46cc8b7](https://github.com/patternfly/patternfly-org/commit/46cc8b70e06b9bda61067beba57d928e428b73c5))
+
+
+
+
+
+## 5.4.3 (2024-02-27)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 5.4.2 (2024-02-14)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 5.4.1 (2024-02-06)
+
+
+### Bug Fixes
+
+* Bump topology to 5.2.1 ([#3881](https://github.com/patternfly/patternfly-org/issues/3881)) ([af13c97](https://github.com/patternfly/patternfly-org/commit/af13c971384aaaa5bd87ce3e98dccee4b1214889))
+
+
+
+
+
+# 5.4.0 (2024-02-03)
+
+
+### Features
+
+* release 5.3 ([#3878](https://github.com/patternfly/patternfly-org/issues/3878)) ([3d1d130](https://github.com/patternfly/patternfly-org/commit/3d1d130c63ac4421ed8a307cd6ef140fa6e1d6f2))
+
+
+
+
+
+## 5.3.27 (2024-02-01)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 5.3.26 (2024-02-01)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 5.3.25 (2024-01-30)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 5.3.24 (2024-01-30)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 5.3.23 (2024-01-19)
+
+
+### Bug Fixes
+
+* avoid applying beta tags to nav items for next components ([#3868](https://github.com/patternfly/patternfly-org/issues/3868)) ([169c96f](https://github.com/patternfly/patternfly-org/commit/169c96f55b1bfdcb9859dbab27b88f5a180f48ba))
+
+
+
+
+
+## 5.3.22 (2024-01-16)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 5.3.21 (2024-01-16)
+
+
+### Bug Fixes
+
+* bump to latest release candidates ahead of 5.2 release ([#3862](https://github.com/patternfly/patternfly-org/issues/3862)) ([12eeb78](https://github.com/patternfly/patternfly-org/commit/12eeb782d32c4fa65f6aef64292f1e0d92f0d183))
+
+
+
+
+
+## 5.3.20 (2024-01-15)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 5.3.19 (2024-01-15)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 5.3.18 (2024-01-12)
+
+
+### Bug Fixes
+
+* bump puppeteer to fix core ([#3860](https://github.com/patternfly/patternfly-org/issues/3860)) ([1695209](https://github.com/patternfly/patternfly-org/commit/169520944b7c3dccf69709e6e2075b9153fce059))
+
+
+
+
+
+## 5.3.17 (2024-01-05)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 5.3.16 (2024-01-03)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 5.3.15 (2023-12-14)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
 # 6.0.0-alpha.20 (2024-04-03)
 
 

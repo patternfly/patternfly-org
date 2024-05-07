@@ -180,7 +180,7 @@ export class CSSVariables extends React.Component {
             <Tr>
               {!this.props.hideSelectorColumn && (
                 <React.Fragment>
-                  <Th />
+                  <Th screenReaderText="Expand or collapse column" />
                   <Th>Selector</Th>
                 </React.Fragment>
               )}

@@ -146,7 +146,7 @@ export const IconsTable = () => {
                       onClick={(event) => onDownloadSvg(event.currentTarget, icon.Name)}
                       variant="plain"
                     >
-                      <Icon color={icon.color || 'var(--pf-v6-global--Color--100)'} />
+                      <Icon color={icon.color || ''} />
                     </Button>
                   </Tooltip>
                 </Td>

@@ -158,7 +158,7 @@ export const MDXTemplate = ({
   componentsData
 }) => {
   const isDeprecated = sources.some(source => source.source === "react-deprecated" || source.source === "html-deprecated") && !sources.some(source => source.source === "react"  || source.source === "html");
-  const isBeta = sources.some(source => source.beta && source.source !== 'react-next')
+  const isBeta = sources.some(source => source.beta && source.source !== 'react-next' && source.source !== 'react-templates');
   const isDemo = sources.some(source => source.source === "react-demos" || source.source === "html-demos") && !sources.some(source => source.source === "react" || source.source === "html");
   // Build obj mapping source names to text displayed on tabs
   const tabNames = sources.reduce((acc, curSrc) => {
@@ -270,7 +270,7 @@ export const MDXTemplate = ({
                   {isDeprecated && (
                     <FlexItem spacer={{ default: 'spacerSm' }}>
                       <Tooltip content="Deprecated components are available for use but are no longer being maintained or enhanced.">
-                        <Button isInline component="span" variant="link">
+                        <Button variant="plain" hasNoPadding>
                           <Label color="grey">Deprecated</Label>
                         </Button>
                       </Tooltip>
@@ -279,7 +279,7 @@ export const MDXTemplate = ({
                   {isDemo && (
                     <FlexItem spacer={{ default: 'spacerSm' }}>
                       <Tooltip content="Demos show how multiple components can be used in a single design.">
-                        <Button isInline component="span" variant="link">
+                        <Button variant="plain" hasNoPadding>
                           <Label color="purple">Demo</Label>
                         </Button>
                       </Tooltip>
@@ -288,7 +288,7 @@ export const MDXTemplate = ({
                   {isBeta && (
                     <FlexItem spacer={{ default: 'spacerSm' }}>
                       <Tooltip content="This beta component is currently under review and is still open for further evolution.">
-                        <Button isInline component="span" variant="link">
+                        <Button variant="plain" hasNoPadding>
                           <Label color="blue">Beta</Label>
                         </Button>
                       </Tooltip>

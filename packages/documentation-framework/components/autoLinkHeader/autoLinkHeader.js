@@ -25,7 +25,7 @@ export const AutoLinkHeader = ({
   const slug = id || slugger(children);
 
   return (
-    <Flex alignItems={{ default: 'alignItemsCenter'}} spaceItems={{ default: 'spaceItemsNone' }}>
+    <Flex alignItems={{ default: 'alignItemsCenter'}} spaceItems={{ default: "spaceItemsSm" }}>
       <FlexItem>
         <Title
           id={slug}
@@ -40,7 +40,7 @@ export const AutoLinkHeader = ({
           {children}
         </Title>
       </FlexItem>
-      <FlexItem>  {metaText}</FlexItem>
+      <FlexItem>{metaText}</FlexItem>
     </Flex>
   )
 };
