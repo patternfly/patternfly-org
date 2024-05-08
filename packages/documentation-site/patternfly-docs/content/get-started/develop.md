@@ -145,13 +145,13 @@ PatternFly uses Font Awesome 5. Font Awesome 5 can be utilized in two different 
   To use the CDN vs the standard build, update the ```sass-utilities/scss-variables.scss``` file as follows:
 
   ```scss
-  $pf-v5-global--enable-fontawesome-cdn: true !default;
+  $pf-v6-global--enable-fontawesome-cdn: true !default;
   ```
 
 ### Customizing PatternFly for your project
 The CSS variable system enables you to easily customize things like color or shape without overwriting existing PatternFly styles.
 
-[**Learn more and view CSS variables**](/developer-resources/global-css-variables) <i class="ws-content-blueArrow fas fa-arrow-right pf-v5-u-mx-sm"></i>
+[**Learn more and view CSS variables**](/developer-resources/global-css-variables) <i class="ws-content-blueArrow fas fa-arrow-right pf-v6-u-mx-sm"></i>
 
 ## Testing
 

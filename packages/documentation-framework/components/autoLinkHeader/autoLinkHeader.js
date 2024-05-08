@@ -31,11 +31,11 @@ export const AutoLinkHeader = ({
           id={slug}
           size={sizes[size]}
           headingLevel={headingLevel || size}
-          className={`ws-heading ${className}`}
+          className={`pf-v6-c-content--heading ${className}`}
           tabIndex={-1}
         >
-          <Link href={`#${slug}`} className="ws-heading-anchor" tabIndex="-1" aria-hidden>
-            <LinkIcon className="ws-heading-anchor-icon" style={{ verticalAlign: 'middle' }} />
+          <Link href={`#${slug}`} className="pf-v6-c-content--heading-anchor" tabIndex="-1" aria-hidden>
+            <LinkIcon className="pf-v6-c-content--heading-anchor-icon" style={{ verticalAlign: 'middle' }} />
           </Link>
           {children}
         </Title>
