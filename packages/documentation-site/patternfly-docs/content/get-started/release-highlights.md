@@ -7,6 +7,49 @@ section: get-started
 import './get-started.css';
 import { Divider } from '@patternfly/react-core';
 
+## PatternFly 5.3.2
+PatternFly 5.3.2 is now live! This was a patch release to fix a couple of bugs.
+
+### Promoted package versions
+
+- patternfly/patternfly ([changelog](https://github.com/patternfly/patternfly/releases/tag/patch-v5.3.1))
+  - [@patternfly/patternfly@5.3.1](https://www.npmjs.com/package/@patternfly/patternfly/v/5.3.1)
+
+- patternfly/patternfly-react ([changelog](https://github.com/patternfly/patternfly-react/releases/tag/v5.3.2))
+  - [@patternfly/react-charts@7.3.1](https://www.npmjs.com/package/@patternfly/react-charts/v/7.3.1)
+  - [@patternfly/react-code-editor@5.3.3](https://www.npmjs.com/package/@patternfly/react-code-editor/v/5.3.3)
+  - [@patternfly/react-core@5.3.3](https://www.npmjs.com/package/@patternfly/react-core/v/5.3.3)
+  - [@patternfly/react-docs@6.3.3](https://www.npmjs.com/package/@patternfly/react-docs/v/6.3.3)
+  - [@patternfly/react-drag-drop@5.3.3](https://www.npmjs.com/package/@patternfly/react-drag-drop/v/5.3.3)
+  - [@patternfly/react-icons@5.3.2](https://www.npmjs.com/package/@patternfly/react-icons/v/5.3.2)
+  - [@patternfly/react-styles@5.3.1](https://www.npmjs.com/package/@patternfly/react-styles/v/5.3.1)
+  - [@patternfly/react-table@5.3.3](https://www.npmjs.com/package/@patternfly/react-table/v/5.3.2)
+  - [@patternfly/react-templates@1.0.3](https://www.npmjs.com/package/@patternfly/react-templates/v/1.0.3)
+  - [@patternfly/react-tokens@5.3.1](https://www.npmjs.com/package/@patternfly/react-tokens/v/5.3.1)
+
+### Fixed bugs
+In this patch release, we:
+- Fixed a wrapping issue in [the bottom pagination component](/components/pagination#bottom).
+- Fixed and added accessibility support to the tree view component, including `aria-multiselectable` and `aria-selected`.
+
+## PatternFly 5.3.1
+PatternFly 5.3.1 is now live! This was a patch release to fix a bug.
+
+### Promoted package versions
+
+- patternfly/patternfly-react ([changelog](https://github.com/patternfly/patternfly-react/releases/tag/5.3.1))
+  - [@patternfly/react-code-editor@5.3.1](https://www.npmjs.com/package/@patternfly/react-code-editor/v/5.3.1)
+  - [@patternfly/react-core@5.3.1](https://www.npmjs.com/package/@patternfly/react-core/v/5.3.1)
+  - [@patternfly/react-docs@6.3.1](https://www.npmjs.com/package/@patternfly/react-docs/v/6.3.1)
+  - [@patternfly/react-drag-drop@5.3.1](https://www.npmjs.com/package/@patternfly/react-drag-drop/v/5.3.1)
+  - [@patternfly/react-table@5.3.1](https://www.npmjs.com/package/@patternfly/react-table/v/5.3.1)
+  - [@patternfly/react-templates@1.0.1](https://www.npmjs.com/package/@patternfly/react-templates/v/1.0.1)
+  - [@patternfly/react-icons@5.3.1](https://www.npmjs.com/package/@patternfly/react-icons/v/5.3.1) 
+  
+### Fixed bugs
+In this patch release, we:
+- Added `dist/dynamic-modules.json` and made it easier for products to share specific dynamic modules.
+
 ## PatternFly 5.3
 
 PatternFly 5.3 is now live! Here are the highlights from this release. 
@@ -15,7 +58,6 @@ PatternFly 5.3 is now live! Here are the highlights from this release.
 
 - patternfly/patternfly ([changelog](https://github.com/patternfly/patternfly/releases/tag/v5.3.0))
   - [@patternfly/patternfly@5.3.0](https://www.npmjs.com/package/@patternfly/patternfly/v/5.3.0)
-
 
 - patternfly/patternfly-react ([changelog](https://github.com/patternfly/patternfly-react/releases/tag/v5.3.0))
   - [@patternfly/react-charts@7.3.0](https://www.npmjs.com/package/@patternfly/react-charts/v/7.3.0)
@@ -123,7 +165,7 @@ PatternFly 5.2.1 is now live! This was a patch release to fix a few bugs that we
 
 ### Promoted package versions
 
-- patternfly/patternfly ([changelog](https://github.com/patternfly/patternfly/releases/tag/patch-5.2.1))
+- patternfly/patternfly ([changelog](https://github.com/patternfly/patternfly/releases/tag/patch-v5.2.1))
   - [@patternfly/patternfly@5.2.1](https://www.npmjs.com/package/@patternfly/patternfly/v/5.2.1)
 
 - patternfly/patternfly-react ([changelog](https://github.com/patternfly/patternfly-react/releases/tag/5.2.1))
@@ -249,7 +291,7 @@ Keep an eye out for more information about the ***v6 alpha release*** , which is
 
 ## PatternFly 5.1 
 
-As part of our [quarterly release cadence](/get-started/about#patternfly-release-cadence), we're excited to announce that PatternFly 5.1 is now live.
+As part of our [quarterly release cadence](/get-started/about-patternfly#patternfly-release-cadence), we're excited to announce that PatternFly 5.1 is now live.
 
 To help provide a high-level view of what's new, we've pulled together the major highlights from this release. Keep reading to learn more!
 
