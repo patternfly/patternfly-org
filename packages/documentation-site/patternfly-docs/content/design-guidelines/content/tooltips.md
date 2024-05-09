@@ -18,7 +18,7 @@ import TrashIcon from '@patternfly/react-icons/dist/esm/icons/trash-icon';
 import ExportIcon from '@patternfly/react-icons/dist/esm/icons/export-icon';
 import TaskIcon from '@patternfly/react-icons/dist/esm/icons/task-icon';
 import QuestionCircleIcon from '@patternfly/react-icons/dist/esm/icons/question-circle-icon';
-import { Button, Icon, Tooltip } from '@patternfly/react-core'
+import { Button, Icon, Tooltip, Split, SplitItem } from '@patternfly/react-core'
 
 A **tooltip** is a message box that is shown when a UI element, like a button or an icon, is in a hover state. They contain short descriptions that offer additional information to help users better understand elements within a UI.
 
@@ -46,15 +46,28 @@ You can find additional guidance in [the tooltip design guidelines.](/components
 ## Icon tooltips 
 Icons allow you to save space in a UI and provide users with another recognition method.
 
-It's often important to place tooltips on icons, especially when they aren't accompanied by a text label. This helps ensure that your users can understand the action that an icon is linked to. When you use a tooltip with an icon, limit the content to 1 or 2 words that identify the icon accurately and clearly. 
+It's often important to place tooltips on icons, especially when they aren't accompanied by a text label. This helps ensure that your users can hover over an icon to understand the action that it is linked to. When you use a tooltip with an icon, limit the content to 1 or 2 words that identify the icon accurately and clearly. 
 
-In PatternFly, there are commonly used icons that hold universal meanings. These should always use the same tooltip identifier, as shown in the following table: 
+For example: 
 
-<Tooltip content={"Upgrade"}> <Button variant="plain"> <ArrowCircleUpIcon /></Button> </Tooltip>
+<Split>
+<SplitItem>
+<Tooltip content={"Settings"}> <Button variant="plain"> <CogIcon /></Button> </Tooltip>
+</SplitItem>
+<SplitItem>
+<Tooltip content={"Copy"}> <Button variant="plain"> <CopyIcon /></Button> </Tooltip>
+</SplitItem>
+<SplitItem>
+<Tooltip content={"Search"}> <Button variant="plain"> <SearchIcon /></Button> </Tooltip>
+</SplitItem>
+</Split>
+<br />
 
-|**Icon**  | **Name** | **Tooltip** | **Note** |
+In PatternFly, there are commonly used icons that hold universal meanings. These should always use the same tooltip description, as shown in the following table: 
+
+|**Icon**  | **Name** | **Tooltip content** | **Note** |
 |------------|-----------|-----------|---- |
-| <Tooltip content={"Upgrade"}> <Button variant="plain"> <ArrowCircleUpIcon /></Button> </Tooltip> | fa-arrow-circle-up | Upgrade |
+| <ArrowCircleUpIcon /> | fa-arrow-circle-up | Upgrade |
 | <BellIcon />  | fa-bell | Notifications |
 | <CogIcon />  | fa-cog | Settings |
 | <CopyIcon />  | fa-copy | Copy |
