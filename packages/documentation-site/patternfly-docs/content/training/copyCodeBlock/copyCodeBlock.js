@@ -22,7 +22,7 @@ export const CopyCodeBlock = ({ id, children }) => {
     <React.Fragment>
       <CodeBlockAction>
         <ClipboardCopyButton
-          id={id}
+          id={`copy-${id}`}
           textId="code-content"
           aria-label="Copy to clipboard"
           onClick={(e) => onClick(e, children)}
@@ -39,7 +39,7 @@ export const CopyCodeBlock = ({ id, children }) => {
 
   return (
     <CodeBlock actions={actions}>
-      <CodeBlockCode id="code-content">{children}</CodeBlockCode>
+      <CodeBlockCode id={`${id}-content`}>{children}</CodeBlockCode>
     </CodeBlock>
   );
 };
