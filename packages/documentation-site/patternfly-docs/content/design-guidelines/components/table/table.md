@@ -74,6 +74,7 @@ Every table can be extended with these functionalities:
 * [Expandable table](#expandable-table)
 * [Compound expandable table](#compound-expandable-table)
 * [Actionable table](#actionable-table)
+* [Comparison table](#comparison-table)
 * [Row striping](#row-striping)
 * [Sortable table](#sorting-by-columns)
 * [Table with favoriting](#table-with-favoriting)
