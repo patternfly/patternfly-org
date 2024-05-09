@@ -1,6 +1,15 @@
 import React, { useContext } from 'react';
 import { useLocation } from '@reach/router';
-import { Button, CodeBlock, Flex, CodeBlockCode, debounce, Label, Switch, Tooltip } from '@patternfly/react-core';
+import {
+  Button,
+  CodeBlock,
+  Flex,
+  CodeBlockCode,
+  debounce,
+  Label,
+  Switch,
+  Tooltip,
+} from '@patternfly/react-core';
 import * as reactCoreModule from '@patternfly/react-core';
 import * as reactCoreNextModule from '@patternfly/react-core/next';
 import * as reactCoreDeprecatedModule from '@patternfly/react-core/deprecated';
@@ -16,13 +25,13 @@ import {
   getReactParams,
   getExampleClassName,
   getExampleId,
-  liveCodeTypes
+  liveCodeTypes,
 } from '../../helpers';
 import { convertToReactComponent } from '@patternfly/ast-helpers';
 import missingThumbnail from './missing-thumbnail.jpg';
 import { RtlContext } from '../../layouts';
 
-const errorComponent = err => <pre>{err.toString()}</pre>;
+const errorComponent = (err) => <pre>{err.toString()}</pre>;
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -34,7 +43,7 @@ class ErrorBoundary extends React.Component {
     errorInfo._suppressLogging = true;
     this.setState({
       error: error,
-      errorInfo: errorInfo
+      errorInfo: errorInfo,
     });
   }
 
@@ -94,14 +103,19 @@ export const Example = ({
   // md file location in node_modules, used to resolve relative import paths in examples
   relPath = '',
   // absolute url to hosted file
-  sourceLink = ''
+  sourceLink = '',
 }) => {
   if (isFullscreenPreview) {
     isFullscreen = false;
-    window.addEventListener('load', () => {
-      //append a class to the document body to indicate to screenshot/automated visual regression tools that the page has loaded
+
+    //append a class to the document body to indicate to screenshot/automated visual regression tools that the page has loaded
+    if (document.readyState === 'complete') {
       document.body.classList.add('page-loaded');
-    });
+    } else {
+      window.addEventListener('load', () => {
+        document.body.classList.add('page-loaded');
+      });
+    }
   }
   if (!lang) {
     // Inline code
@@ -124,20 +138,26 @@ export const Example = ({
     ...reactCoreModule,
     ...reactTableModule,
     ...(source === 'react-next' ? reactCoreNextModule : {}),
-    ...(source === 'react-deprecated' ? {...reactCoreDeprecatedModule, ...reactTableDeprecatedModule} : {})
+    ...(source === 'react-deprecated'
+      ? { ...reactCoreDeprecatedModule, ...reactTableDeprecatedModule }
+      : {}),
   };
 
   let livePreview = null;
   if (lang === 'html') {
     livePreview = (
       <div
-        className={css('ws-preview-html', isFullscreenPreview && 'pf-v6-u-h-100')}
+        className={css(
+          'ws-preview-html',
+          isFullscreenPreview && 'pf-v6-u-h-100'
+        )}
         dangerouslySetInnerHTML={{ __html: editorCode }}
       />
     );
   } else {
     try {
-      const { code: transformedCode, hasTS } = convertToReactComponent(editorCode);
+      const { code: transformedCode, hasTS } =
+        convertToReactComponent(editorCode);
       if (hasTS) {
         lang = 'ts';
       } else {
@@ -147,7 +167,11 @@ export const Example = ({
       const componentNames = Object.keys(scope);
       const componentValues = Object.values(scope);
 
-      const getPreviewComponent = new Function('React', ...componentNames, transformedCode);
+      const getPreviewComponent = new Function(
+        'React',
+        ...componentNames,
+        transformedCode
+      );
       const PreviewComponent = getPreviewComponent(React, ...componentValues);
 
       livePreview = (
@@ -167,17 +191,34 @@ export const Example = ({
       <div id={previewId} className={css(className, 'pf-v6-u-h-100')}>
         {livePreview}
         {(hasDarkThemeSwitcher || hasRTLSwitcher) && (
-          <Flex direction={{ default: 'column' }} gap={{ default: 'gapLg' }} className="ws-full-page-utils pf-v6-m-dir-ltr ">
+          <Flex
+            direction={{ default: 'column' }}
+            gap={{ default: 'gapLg' }}
+            className="ws-full-page-utils pf-v6-m-dir-ltr "
+          >
             {hasDarkThemeSwitcher && (
-              <Switch id="ws-example-theme-switch" label="Dark theme" defaultChecked={false} onChange={() =>
-              document.querySelector('html').classList.toggle('pf-v6-theme-dark')} />
+              <Switch
+                id="ws-example-theme-switch"
+                label="Dark theme"
+                defaultChecked={false}
+                onChange={() =>
+                  document
+                    .querySelector('html')
+                    .classList.toggle('pf-v6-theme-dark')
+                }
+              />
             )}
             {hasRTLSwitcher && (
-              <Switch id="ws-example-rtl-switch" label="RTL" defaultChecked={false} onChange={() => {
-                const html = document.querySelector('html');
-                const curDir = html.dir;
-                html.dir = (curDir !== 'rtl') ? 'rtl' : 'ltr';
-            }} />
+              <Switch
+                id="ws-example-rtl-switch"
+                label="RTL"
+                defaultChecked={false}
+                onChange={() => {
+                  const html = document.querySelector('html');
+                  const curDir = html.dir;
+                  html.dir = curDir !== 'rtl' ? 'rtl' : 'ltr';
+                }}
+              />
             )}
           </Flex>
         )}
@@ -188,12 +229,21 @@ export const Example = ({
   const codeBoxParams = getParameters(
     lang === 'html'
       ? getStaticParams(title, editorCode)
-      : getReactParams(title, editorCode, scope, lang, relativeImports, relPath, sourceLink)
+      : getReactParams(
+          title,
+          editorCode,
+          scope,
+          lang,
+          relativeImports,
+          relPath,
+          sourceLink
+        )
   );
-  const fullscreenLink = loc.pathname.replace(/\/$/, '')
-    + (loc.pathname.endsWith(source) ? '' : `/${source}`)
-    + '/'
-    + slugger(title);
+  const fullscreenLink =
+    loc.pathname.replace(/\/$/, '') +
+    (loc.pathname.endsWith(source) ? '' : `/${source}`) +
+    '/' +
+    slugger(title);
 
   return (
     <div className="ws-example">
@@ -204,21 +254,27 @@ export const Example = ({
               {isBeta && (
                 <Tooltip content="This beta component is currently under review and is still open for further evolution.">
                   <Button variant="plain" hasNoPadding>
-                    <Label isCompact color="blue">Beta</Label>
+                    <Label isCompact color="blue">
+                      Beta
+                    </Label>
                   </Button>
                 </Tooltip>
               )}
               {isDemo && (
                 <Tooltip content="Demos show how multiple components can be used in a single design.">
                   <Button variant="plain" hasNoPadding>
-                    <Label isCompact color="purple">Demo</Label>
+                    <Label isCompact color="purple">
+                      Demo
+                    </Label>
                   </Button>
                 </Tooltip>
               )}
               {isDeprecated && (
                 <Tooltip content="Deprecated components are available for use but are no longer being maintained or enhanced.">
                   <Button variant="plain" hasNoPadding>
-                    <Label isCompact color="grey">Deprecated</Label>
+                    <Label isCompact color="grey">
+                      Deprecated
+                    </Label>
                   </Button>
                 </Tooltip>
               )}
@@ -232,28 +288,34 @@ export const Example = ({
         </AutoLinkHeader>
         {children}
       </div>
-      {isFullscreen
-        ? <div className="ws-preview">
-            <a
-              className="ws-preview__thumbnail-link"
-              href={fullscreenLink}
-              target="_blank"
-              aria-label={`Open fullscreen ${title} example`}
-            >
-              <img src={thumbnail.src} width={thumbnail.width} height={thumbnail.height} alt={`${title} screenshot`} />
-            </a>
-          </div>
-        : <div
-            id={previewId}
-            className={css(
-              className,
-              isFullscreen ? 'ws-preview-fullscreen' : 'ws-preview',
-              isRTL && 'pf-v6-m-dir-rtl')
-            }
+      {isFullscreen ? (
+        <div className="ws-preview">
+          <a
+            className="ws-preview__thumbnail-link"
+            href={fullscreenLink}
+            target="_blank"
+            aria-label={`Open fullscreen ${title} example`}
           >
-            {livePreview}
-          </div>
-      }
+            <img
+              src={thumbnail.src}
+              width={thumbnail.width}
+              height={thumbnail.height}
+              alt={`${title} screenshot`}
+            />
+          </a>
+        </div>
+      ) : (
+        <div
+          id={previewId}
+          className={css(
+            className,
+            isFullscreen ? 'ws-preview-fullscreen' : 'ws-preview',
+            isRTL && 'pf-v6-m-dir-rtl'
+          )}
+        >
+          {livePreview}
+        </div>
+      )}
       <ExampleToolbar
         lang={lang}
         isFullscreen={isFullscreen}
@@ -266,4 +328,4 @@ export const Example = ({
       />
     </div>
   );
-}
+};
