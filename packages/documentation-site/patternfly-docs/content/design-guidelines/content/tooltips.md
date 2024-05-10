@@ -22,7 +22,7 @@ import { Button, Icon, Tooltip, Split, SplitItem } from '@patternfly/react-core'
 
 A **tooltip** is a message box that is shown when a UI element, like a button or an icon, is in a hover state. They contain short descriptions that offer additional information to help users better understand elements within a UI.
 
-<Tooltip content={"This is a tooltip. It contains useful information that solves all your problems."}>
+<Tooltip content={"This is a tooltip. It contains useful information that solves all your problems."} aria="describedby" >
       <Button>I'm a button with a tooltip!</Button>
 </Tooltip>
 <br />
@@ -52,13 +52,13 @@ For example:
 
 <Split>
 <SplitItem>
-<Tooltip content={"Settings"}> <Button variant="plain"> <CogIcon /></Button> </Tooltip>
+<Tooltip content={"Settings"} aria="labelledby"> <Button variant="plain"> <CogIcon /></Button> </Tooltip>
 </SplitItem>
 <SplitItem>
-<Tooltip content={"Copy"}> <Button variant="plain"> <CopyIcon /></Button> </Tooltip>
+<Tooltip content={"Copy"} aria="labelledby"> <Button variant="plain"> <CopyIcon /></Button> </Tooltip>
 </SplitItem>
 <SplitItem>
-<Tooltip content={"Search"}> <Button variant="plain"> <SearchIcon /></Button> </Tooltip>
+<Tooltip content={"Search"} aria="labelledby"> <Button variant="plain"> <SearchIcon /></Button> </Tooltip>
 </SplitItem>
 </Split>
 <br />
