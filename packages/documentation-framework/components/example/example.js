@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { useLocation } from '@reach/router';
+import { useLocation, useEffect } from '@reach/router';
 import {
   Button,
   CodeBlock,
@@ -107,16 +107,20 @@ export const Example = ({
 }) => {
   if (isFullscreenPreview) {
     isFullscreen = false;
-
-    //append a class to the document body to indicate to screenshot/automated visual regression tools that the page has loaded
-    if (document.readyState === 'complete') {
-      document.body.classList.add('page-loaded');
-    } else {
-      window.addEventListener('load', () => {
-        document.body.classList.add('page-loaded');
-      });
-    }
   }
+
+  //append a class to the document body on fullscreen examples to indicate to screenshot/automated visual regression tools that the page has loaded
+  const addPageLoadedClass = () => document.body.classList.add('page-loaded');
+  useEffect(() => {
+    if (!isFullscreenPreview) return;
+
+    document.readyState === 'complete'
+      ? addPageLoadedClass()
+      : window.addEventListener('load', addPageLoadedClass);
+
+    return () => window.removeEventListener('load', addPageLoadedClass);
+  }, []);
+
   if (!lang) {
     // Inline code
     return <code className="ws-code">{code}</code>;
