@@ -1,8 +1,8 @@
-.pf-v6-c-content--heading {
+.ws-heading {
   position: relative;
 }
 
-.pf-v6-c-content--heading-anchor {
+.ws-heading-anchor {
 /*   color: var(--pf-v6-global--Color--100); */
   transform: translate(calc(-100% - var(--pf-t--global--spacer--xs)), -50%);
   opacity: 0;
@@ -11,12 +11,12 @@
   top: 50%;
 }
 
-.pf-v6-c-content--heading-anchor-icon {
+.ws-heading-anchor-icon {
   height: 0.5em;
   width: 0.5em;
 }
 
-.pf-v6-c-content--heading:hover .pf-v6-c-content--heading-anchor,
-.pf-v6-c-content--heading-anchor:focus {
+.ws-heading:hover .ws-heading-anchor,
+.ws-heading-anchor:focus {
   opacity: 1;
 }

@@ -98,7 +98,7 @@ const MDXChildTemplate = ({
       {toc.length > 1 && (
         <TableOfContents items={toc} />
       )}
-      <div className="pf-v6-c-content">
+      <div>
         <div className={innerContentWrapperClass()}>
           {InlineAlerts}
           <Component />

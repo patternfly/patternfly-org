@@ -47,10 +47,6 @@
 /*   font-family: var(--pf-v6-global--FontFamily--monospace); */
 }
 
-.pf-v6-c-content--p + .ws-code {
-  margin-bottom: var(--pf-v6-c-content--MarginBottom);
-}
-
 .ws-image {
   text-align: center;
   width: "600px";
