@@ -24,7 +24,7 @@ When using tables you need to consider the structure of the data you want to dis
 
 Table toolbars should only contain actions that directly impact the table. Any actions that are related to the overall page and its context (or impact the general page but not the table directly) should be placed outside of the table, at the top right of the page at the header level. This may include actions that edit the page header, actions that launch related windows, and so on.
 
-[image?]
+![UI screen with action button placed outside of the table.](./img/page-action.png)
 
 PatternFly offers 2 components for displaying large data sets: [data lists](/components/data-list/design-guidelines) and tables. While they satisfy similar use cases, choosing the correct component to use in your design will be dependent on the type of data you need to display.
 
