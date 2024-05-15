@@ -29,7 +29,7 @@ import SearchIcon from '@patternfly/react-icons/dist/esm/icons/search-icon';
 import * as iconUnicodes from '@patternfly/patternfly/assets/icons/iconUnicodes.json';
 
 export const IconsTable = () => {
-  const columns = ['Icon', 'Name', 'Style', 'React', 'Usage/tooltip', 'Unicode'];
+  const columns = ['Icon', 'Name', 'Style', 'React', 'Usage', 'Unicode'];
   const [searchValue, setSearchValue] = React.useState('');
   const [isCopied, setCopied] = React.useState(false);
   const [sortByIndex, setSortByIndex] = React.useState(1);
@@ -74,7 +74,6 @@ export const IconsTable = () => {
       return icon.Name.toLowerCase().includes(searchValue.toLowerCase()) ||
         icon.Contextual_usage?.toLowerCase().includes(searchValue.toLowerCase()) ||
         icon.Extra_context?.toLowerCase().includes(searchValue.toLowerCase()) ||
-        icon.Label?.toLowerCase().includes(searchValue.toLowerCase()) ||
         icon.React_name.toLowerCase().includes(searchValue.toLowerCase()) ||
         (typeof icon.Type === "string" && icon.Type.toLowerCase().includes(searchValue.toLowerCase())) ||
         (Array.isArray(icon.Type) && icon.Type.filter((type) => type.toLowerCase().includes(searchValue.toLowerCase())).length > 0)
@@ -158,11 +157,6 @@ export const IconsTable = () => {
                   {icon.Extra_context && (
                     <React.Fragment>
                       <br/><br/>{icon.Extra_context}
-                    </React.Fragment>
-                  )}
-                  {icon.Label && (
-                    <React.Fragment>
-                      <br/><br/>Tooltip:{icon.Label}
                     </React.Fragment>
                   )}
                 </Td>
