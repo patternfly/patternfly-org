@@ -3,6 +3,44 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 6.0.0-alpha.28 (2024-05-14)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+# 6.0.0-alpha.27 (2024-05-14)
+
+
+### Bug Fixes
+
+* full page demos, typescript compliation still turned off ([#4022](https://github.com/patternfly/patternfly-org/issues/4022)) ([1fea420](https://github.com/patternfly/patternfly-org/commit/1fea42035c875a36c45522dcd3f69176c35c88a7))
+
+
+
+
+
+# 6.0.0-alpha.26 (2024-05-14)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+# 6.0.0-alpha.25 (2024-05-07)
+
+
+### Bug Fixes
+
+* **build:** bump ts version and fix docs build for v6 ([#4004](https://github.com/patternfly/patternfly-org/issues/4004)) ([55db3db](https://github.com/patternfly/patternfly-org/commit/55db3db9d8f0b47b323ce921ac42f06d8515c9b6))
+
+
+
+
+
 # 6.0.0-alpha.24 (2024-05-06)
 
 
