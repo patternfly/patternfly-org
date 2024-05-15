@@ -134,7 +134,9 @@ The Font Awesome icons included with PatternFly are Font Awesome solid (FAS) web
 
 ## All icons 
 
-The following table outlines details for all icons supported by PatternFly, as well as guidance for using each icon.
+The following table outlines details for all icons supported by PatternFly, as well as guidance for using each icon. 
+
+For guidance related to tooltips for icons, [refer to our tooltips writing guide.](/ux-writing/tooltips#icon-tooltips)
 
 Select any single icon in the table to download it as an SVG. You can also download all icon SVGs <a href="https://github.com/patternfly/patternfly-design/raw/master/resources/patternfly-icon-svgs/patternfly-icons.zip">on GitHub</a>.
 
