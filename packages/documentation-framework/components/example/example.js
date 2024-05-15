@@ -1,5 +1,5 @@
-import React, { useContext } from 'react';
-import { useLocation, useEffect } from '@reach/router';
+import React, { useContext, useEffect } from 'react';
+import { useLocation } from '@reach/router';
 import {
   Button,
   CodeBlock,
