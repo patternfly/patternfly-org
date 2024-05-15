@@ -1,12 +1,12 @@
 ---
-id: Product tours
+id: Guided tours
 section: UX writing
 ---
-A product tour, also referred to as an "onboarding flow", includes a series of dialog boxes or pop-ups that introduce users to a new tool or a redesigned tool.
+A **guided tour**, also referred to as an "onboarding flow" or a "product tour", includes a series of dialog boxes or pop-ups that introduce users to a new or redesigned tool.
 
-In product tours, your UX copy is never intended only to tell a user *how* something works. You need to convince them that using and learning about the product is worth their time.
+In guided tours, your UX copy is never intended only to tell a user *how* something works. You need to convince them that using and learning about the product is worth their time.
 
-When writing a product tour, refer to the following best practice guidelines and their respective before/after example:
+When writing a guided tour, refer to the following best practice guidelines and their respective before/after example:
 
 1. **Focus on the user’s goals**: Emphasize what the user can do with the product.
 

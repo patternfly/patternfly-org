@@ -19,7 +19,7 @@ PatternFly date and time formats follow the American standard. When localizing, 
 | 12-hour time notation | This time convention divides the 24 hours of the day into 2 periods of 12 hours, AM and PM. <br /><br />12-hour time notation is the American standard. | 3:00 PM |
 | 24-hour time notation | This time convention divides the day by 24 hours and runs from midnight to midnight. The hours are represented from 0 to 23. | 14:00 |
 | Date and time | Include the timestamp, along with the timezone, after the date. | Thursday, January 21, 2019 9:38:11 PM EST<br /><br />Thursday, 21 January 2019, 9:38:11 PM EST <br /><br />07 Jan 2019, 23:33 UTC |
-| Time zone | Display time in the user's time zone or in UTC. <br /><br />Use UTC when spanning multiple time zones. | Maintenance begins today at 14:00 UTC (2 PM EST). |
+| Time zone | Display time in the user's time zone or in UTC. <br /><br />Use UTC when spanning multiple time zones.<br /><br /> Avoid mentioning if a time zone uses Standards Time or Daylight Saving Time. | Maintenance begins today at 14:00 UTC (2 PM EST). |
 | Day |Write out the full name of the day. If space is limited, use the day’s 3-letter abbreviation: <ul><li>Mon</li><li>Tue</li><li>Wed</li><li>Thu</li><li>Fri</li><li>Sat</li><li>Sun</li></ul> | Monday, September 17, 2020 <br /><br />Mon, Sep 17, 2020 |
 | Month | Write out the full name of the month. If space is limited, use the month’s 3-letter abbreviation. <ul><li>Jan</li><li>Feb</li><li>Mar</li><li>Apr</li><li>May</li><li>Jun</li><li>Jul</li><li>Aug</li><li>Sep</li><li>Oct</li><li>Nov</li><li>Dec</li></ul> | September 17, 2020 <br /><br />Sep 17, 2020 |
 | Duration | HH:MM:SS or HH:MM | 03:15:30 <br /><br />03:15<br /><br />00:15 |
