@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 5.15.6 (2024-05-16)
+
+
+### Bug Fixes
+
+* Incorrectly formatted link ([#4024](https://github.com/patternfly/patternfly-org/issues/4024)) ([252c0a9](https://github.com/patternfly/patternfly-org/commit/252c0a94b9babf8268a08668ce44108748591d2f))
+
+
+
+
+
 ## 5.15.5 (2024-05-15)
 
 **Note:** Version bump only for package @patternfly/documentation-framework
