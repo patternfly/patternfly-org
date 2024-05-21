@@ -7,8 +7,6 @@ import {
   ToolbarContent,
   ToolbarItem,
   EmptyState,
-  EmptyStateHeader,
-  EmptyStateIcon,
   EmptyStateBody,
   Tooltip,
   TooltipPosition
@@ -190,8 +188,7 @@ export const IconsTable = () => {
       </Table>
 
       {filteredRows.length === 0 && (
-        <EmptyState>
-          <EmptyStateHeader titleText={`No results found for "${ searchValue }"`} headingLevel="h4" icon={<EmptyStateIcon icon={SearchIcon} />} />
+        <EmptyState titleText={`No results found for "${ searchValue }"`} headingLevel="h4" icon={SearchIcon}>
           <EmptyStateBody>We couldn't find any icons that matched your search. If none of the icons listed fit
             your use case, you may use any additional 'fa' icons within <a href="https://fontawesome.com/icons?d=gallery&amp;m=free">Font Awesome's free set</a>.
           </EmptyStateBody>
