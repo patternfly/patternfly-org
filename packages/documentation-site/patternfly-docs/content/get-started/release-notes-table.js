@@ -16,11 +16,9 @@ import {
   TextListItem,
   Bullseye,
   EmptyState,
-  EmptyStateHeader,
   EmptyStateFooter,
   EmptyStateBody,
   EmptyStateActions,
-  EmptyStateIcon,
   Button,
 } from "@patternfly/react-core";
 import {
@@ -345,12 +343,8 @@ export const ReleaseNotesTable = () => {
                 <Tr>
                   <Td colSpan={6}>
                     <Bullseye>
-                      <EmptyState variant="sm">
-                        <EmptyStateHeader
-                          icon={<EmptyStateIcon icon={SearchIcon} />}
-                          titleText="No results found"
-                          headingLevel="h2"
-                        />
+                      <EmptyState variant="sm" titleText="No results found"
+                          headingLevel="h2" icon={SearchIcon}>
                         <EmptyStateBody>
                           Clear search input and filters and try again.
                         </EmptyStateBody>

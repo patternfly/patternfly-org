@@ -3,6 +3,60 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 6.0.0-alpha.31 (2024-05-21)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+# 6.0.0-alpha.30 (2024-05-16)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+# 6.0.0-alpha.29 (2024-05-16)
+
+
+### Bug Fixes
+
+* **navigation:** remove custom sidenav styles ([#4007](https://github.com/patternfly/patternfly-org/issues/4007)) ([466aa44](https://github.com/patternfly/patternfly-org/commit/466aa44383b15355a369b09a792c70fcacf0e57a))
+
+
+
+
+
+# 6.0.0-alpha.28 (2024-05-14)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+# 6.0.0-alpha.27 (2024-05-14)
+
+
+### Bug Fixes
+
+* full page demos, typescript compliation still turned off ([#4022](https://github.com/patternfly/patternfly-org/issues/4022)) ([1fea420](https://github.com/patternfly/patternfly-org/commit/1fea42035c875a36c45522dcd3f69176c35c88a7))
+
+
+
+
+
+# 6.0.0-alpha.26 (2024-05-14)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
 # 6.0.0-alpha.25 (2024-05-07)
 
 
