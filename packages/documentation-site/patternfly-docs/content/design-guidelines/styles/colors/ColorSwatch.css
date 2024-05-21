@@ -1,11 +1,11 @@
 .ws-color-swatch {
   display: flex;
-  margin-top: var(--pf-t--global--spacer-md);
+  margin-top: var(--pf-t--global--spacer--md);
 }
 
 .ws-color-swatch > svg {
   flex: 0 0 44px;
-  margin-right: var(--pf-t--global--spacer-md);
+  margin-right: var(--pf-t--global--spacer--md);
   border-radius: 50%;
 }
 
@@ -32,12 +32,12 @@
 
 .ws-color-swatch-popover-label {
   display: inline-block;
-  padding-top: var(--pf-t--global--spacer-md);
+  padding-top: var(--pf-t--global--spacer--md);
   padding-bottom: var(--pf-t--global--spacer-xs);
   font-weight: bold;
 }
 
 .ws-color-swatch-popover-code {
   white-space: nowrap;
-  margin-bottom: var(--pf-t--global--spacer-md);
+  margin-bottom: var(--pf-t--global--spacer--md);
 }
