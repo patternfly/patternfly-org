@@ -45,4 +45,4 @@ The following HTML attributes and PatternFly classes can be used for more fine-t
 
 | Attribute or class | Applied to | Reason | 
 |---|---|---|
-| `href="[id of the main content container]"` | `.pf-v5-c-skip-to-content > a.pf-v5-c-button` | Links the skip to content to the main content. Typically this will be a jump link, e.g. `href="#main"`. |
+| `href="[id of the main content container]"` | `.pf-v6-c-skip-to-content > a.pf-v6-c-button` | Links the skip to content to the main content. Typically this will be a jump link, e.g. `href="#main"`. |

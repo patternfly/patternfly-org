@@ -64,5 +64,5 @@ The following HTML attributes and PatternFly classes can be used for more fine-t
 
 | Attribute or class | Applied to | Reason | 
 |---|---|---|
-| `aria-label="[text that labels the code editor control]"` | `.pf-v5-c-code-editor__controls > button` | Adds an accessible name to a code editor control button. **Required** when the control button content is only an icon. |
-| `aria-hidden="true"` | `.pf-v5-c-code-editor__controls > button > i` | Removes the control button icon from the accessibility tree, preventing assistive technologies from potentially announcing duplicate or unnecessary information without visually hiding it. **Required** if the control button contains an icon. |
+| `aria-label="[text that labels the code editor control]"` | `.pf-v6-c-code-editor__controls > button` | Adds an accessible name to a code editor control button. **Required** when the control button content is only an icon. |
+| `aria-hidden="true"` | `.pf-v6-c-code-editor__controls > button > i` | Removes the control button icon from the accessibility tree, preventing assistive technologies from potentially announcing duplicate or unnecessary information without visually hiding it. **Required** if the control button contains an icon. |
