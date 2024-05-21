@@ -16,10 +16,10 @@ We added PatternFly 6 styling and token support to additional areas of our desig
 - Extensions
 - Charts 
 
-### Tidied things throughout the system
+### Addressed issues throughout the system
 We cleaned up and fixed bugs in a number of areas:
 - We removed Sass global variables in favor of our tokens.
-- We renamed directional variables that changed to inline/block and start/end from our introduction of RTL support.
+- We renamed variables that previously had top/right/bottom/left in the name (for example, `PaddingTop`) to instead match inline/block start/end properties (for example, `PaddingBlockStart`). This change is a result of our introduction of [RTL support.](/developer-resources/right-to-left-handbook)
 - We removed the deprecated Sass `@import` rule in favor of new recommendations, `@use` and `@forward`.
 - We fixed various bugs that were reported following the initial alpha release.
 
