@@ -3,7 +3,7 @@
 }
 
 .pf-v6-c-divider.ws-icons-divider:first-of-type {
-  margin-top:8px;
+  margin-top: var(--pf-t--global--spacer--sm);
 }
 
 .ws-sm-icons-1 {
@@ -52,8 +52,8 @@
   display: none;
 }
 
-#all-icons ~ .pf-v6-c-content--p > .ws-code {
-  margin-left: 8px;
+#all-icons ~ .ws-p > .ws-code {
+  margin-inline-start: var(--pf-t--global--spacer--sm);  
 }
 
 .ws-icon-code {
@@ -69,10 +69,6 @@
 
 .ws-icons-gridtext .ws-icon-sizes-sm {
   margin-top: 24px;
-}
-
-.ws-icons-gridtext .ws-icon-sizes .pf-v6-c-content--p {
-  margin-bottom: 8px;
 }
 
 .ws-icons-gridtext .ws-icon-sizes .ws-icon-size {
@@ -103,7 +99,7 @@
   padding-top: 8px;
 }
 
-.ws-icon-size-examples .pf-v6-c-content--p {
+.ws-icon-size-examples .ws-p {
   margin-top: 16px;
   margin-bottom: 8px;
 }

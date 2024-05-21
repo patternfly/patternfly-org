@@ -1,9 +1,7 @@
 const visit = require('unist-util-visit');
 
-const styledMdTags = [
+const contentStyledMdTags = [
   'p',
-  'ul',
-  'ul',
   'ul',
   'ol',
   'li',
@@ -12,19 +10,27 @@ const styledMdTags = [
   'small',
   'hr',
   'dt',
+  'dd'
+];
+
+const styledMdTags = [
+  ...contentStyledMdTags,
   'code',
   'table',
   'img'
-];
+]
 
 function styledTags() {
   return tree => {
     visit(tree, 'element', node => {
+      if (contentStyledMdTags.includes(node.tagName)) {
+        node.properties.className += `pf-v6-c-content--${node.tagName}`;
+      }
+
       if (styledMdTags.includes(node.tagName)) {
         node.properties.className = node.properties.className || '';
         node.properties.className += node.properties.className ? ' ' : '';
-        // node.properties.className += `ws-${node.tagName}`;
-        node.properties.className += `pf-v6-c-content--${node.tagName}`;
+        node.properties.className += `ws-${node.tagName} `;
         // Match pf-v6-c-table implementation
         // https://pf4.patternfly.org/components/table/html/basic-table/
         if (node.tagName === 'table') {

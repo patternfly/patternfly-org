@@ -23,7 +23,7 @@
 
 .ws-color-swatch-description-label {
   font-size: var(--pf-t--global--font--size--xs);
-  font-weight: bold;
+  font-weight: var(--pf-t--global--font--weight--body--bold);
 }
 
 .ws-color-swatch-popover {
