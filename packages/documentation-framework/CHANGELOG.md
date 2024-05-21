@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 6.0.0-alpha.32 (2024-05-21)
+
+
+### Bug Fixes
+
+* **styles:** Replace workspace styles with content classes ([#4011](https://github.com/patternfly/patternfly-org/issues/4011)) ([f6faa02](https://github.com/patternfly/patternfly-org/commit/f6faa02ab7400000a5c25ee6150754c3dc94ef92))
+
+
+
+
+
 # 6.0.0-alpha.31 (2024-05-21)
 
 **Note:** Version bump only for package @patternfly/documentation-framework
