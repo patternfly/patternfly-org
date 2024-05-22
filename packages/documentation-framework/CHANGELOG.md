@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 6.0.0-alpha.34 (2024-05-22)
+
+
+### Bug Fixes
+
+* **docs-framework:** adjust back to top z-index ([#4015](https://github.com/patternfly/patternfly-org/issues/4015)) ([368aa94](https://github.com/patternfly/patternfly-org/commit/368aa943854b7d91daf6ddd124b2e5a0492e35d6))
+
+
+
+
+
 # 6.0.0-alpha.33 (2024-05-22)
 
 **Note:** Version bump only for package @patternfly/documentation-framework
