@@ -96,7 +96,6 @@
   max-width: 832px;
 }
 
-/* Overlay the footer */
 .ws-back-to-top {
-  z-index: 2;
+  z-index: var(--pf-t--global--z-index--2xl);
 }
