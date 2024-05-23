@@ -56,7 +56,7 @@ A **colon** separates parts of a sentence.
 |------------|-----------|
 | Use a colon to introduce a list or a series. | "The product improved in 3 categories: accessibility, ease of use, and functions."
 | Use a colon after a note label.| "Note: By the way, this note may be good to know." <br /><br /> "Tip: Here's a helpful tip for you."
-| Use a colon between 2 independent clauses to elaborate or emphasize a relationship between the clauses.\* <br /><br /> \* This usage is typically interchangeable with an [em dash](#em-dash). | "Plan the configuration carefully: the initial settings are difficult to change after you add user accounts." 
+| Use a colon between 2 independent clauses to elaborate or emphasize a relationship between the clauses.\* <br /><br /> \* This usage is typically interchangeable with an [em dash](#em-dash-). | "Plan the configuration carefully: the initial settings are difficult to change after you add user accounts." 
 
 #### Semicolon
 A **semicolon** indicates a firm break or pause in a sentence. 
@@ -105,16 +105,21 @@ You should also use a hyphen for a compound adjective that comes before the noun
 - "He is a highly talented writer." 
 - "She is a high-quality job candidate."    
 
-For most prefixes, you should *not* use a hyphen. For example, "auto-" (such as "autopopulate" or "autoloading"). However, there are a few scenarios where using a hyphen with a prefix is appropriate:
+For most prefixes, you should *not* use a hyphen. However, there are a few scenarios where using a hyphen with a prefix is appropriate.
 
-- When you must distinguish the word from a homonym (for example, co-op, re-cover, re-create, re-sign).
-- When the root word is capitalized or a numeral (for example, pre-2000).
-- When the root word consists of more than one word (for example, non-English-speaking citizens, pre-latency-period transaction).
-- In some words in which identical letters would be next to each other (for example, anti-intellectual, co-opt, de-emphasize).
-- When the prefix is "self-", "all-", or "ex-" (meaning formerly).
-- Occasionally, with the "non" prefix:
-    - When it precedes multiple words. For example, "non-Red Hatter." 
-    - When omitting a hyphen would impede readability. For example, "non-native". 
+| **Guideline**  | **Examples** |
+|------------|-----------|
+| Use a prefix hyphen to distinguish the word from a homonym. | "co-op"<br />"re-create" |
+| Use a prefix hyphen when the root word is capitalized or is a numeral. | "pre-2000" |
+| Use a prefix hyphen when the root word consists of more than one word. | "non-English-speaking citizens"<br />"pre-latency-period transaction" |
+| Use a prefix hyphen when identical letters would be next to each other. | "co-opt"<br />"de-emphasize".
+| Use a prefix hyphen when the prefix is "self-", "all-", or "ex-" (meaning formerly). |
+
+With caution, there are some instances where you can use a prefix hyphen when the prefix is "non":
+- When it precedes multiple words. For example:
+    - "non-Red Hatter" 
+ - When omitting a hyphen would impede readability. For example:
+    - "non-native"
 
 If you're unsure about the use of a hyphen, refer to [Merriam-Webster's online dictionary.](https://www.merriam-webster.com/)
 
@@ -123,7 +128,7 @@ An **exclamation mark** is used to denote excitement.
 
 Use exclamations marks sparingly. Don’t use one to generate excitement; only use an exclamation mark if the user is actually experiencing something exciting. You can also use an exclamation mark for something cautionary, like “Stop!” or “Watch out!”
 
-To more accurately capture human expression, use an exclamation mark after just a few words, not after a long sentence. For example:
+To more accurately capture human expression, use an exclamation mark after just a few words, not after a long sentence. 
 
 <div class="ws-content-table">
 
