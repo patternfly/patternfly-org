@@ -9,7 +9,9 @@ import { Divider } from '@patternfly/react-core';
 
 ## PatternFly 6 alpha 2
 
-As we continue to work towards the full release of PatternFly 6, we're excited to share an update to the alpha release. This release contains the final changes to the alpha. Our beta release is coming soon!
+As we continue to work towards the full release of PatternFly 6, we're excited to share an update. This release contains the final changes to the PatternFly 6 alpha. We've fixed the bugs that have been found so far and have continued to make progress towards our final PatternFly 6 vision. 
+
+Thanks for your participation in the alpha release: the beta is coming soon!
 
 ### Expanded PatternFly 6 support
 We added PatternFly 6 styling and token support to additional areas of our design system: 
