@@ -11,7 +11,7 @@ The elements mentioned below are similar for a data list with compact or default
 
 1. **[Toolbar](/components/toolbar/design-guidelines):** Sits above the list and contains controls for manipulating list data. Common actions include filtering, sorting, and pagination.
 2. **[Bulk selection](/patterns/bulk-selection):** When present, selects all items in a table. If pagination is being used, this will only select items on the current page. See [bulk selection](/patterns/bulk-selection) for more information.
-3. **Global actions:** Actions that apply to all selected items. Also includes actions that directly impact the table, regardless of selection, such as "Create", "Edit row item", "Delete row item", and "Export table", for example. For more guidance, see [the actions pattern.](/patterns/actions)
+3. **Global actions:** Actions that apply to all selected items. Also includes actions that directly impact the table, regardless of selection, such as "Create", "Edit row item", "Delete row item", and "Export table", for example. For more guidance, [see the actions pattern.](/patterns/actions)
 4. **Row:** Row height may be variable and sizes to the content. Rows in a data list may take any supported layout.
 5. **Expand:** Expands this row.
 6. **Select checkbox:** Selects this row.
