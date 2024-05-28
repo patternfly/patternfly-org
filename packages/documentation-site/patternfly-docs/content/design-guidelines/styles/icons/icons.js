@@ -62,7 +62,6 @@ export const iconsData = [
     "React_name": "ArrowCircleUpIcon",
     "Type": "Status",
     "Contextual_usage": "Represents status: an item (such as a VM) is up",
-    "Label": "Upgrade"
   },
   {
     "Style": "fas",
@@ -105,7 +104,6 @@ export const iconsData = [
       "React_name": "BellIcon",
       "Type": "Framework",
       "Contextual_usage": "Indicates the ability to open a notification drawer.",
-      "Label": "Notifications"
     },
     {
       "Style": "",
@@ -193,7 +191,6 @@ export const iconsData = [
     "React_name": "CogIcon",
     "Type": "Action",
     "Contextual_usage": "Indicates availability of configurable settings",
-    "Label": "Settings"
   },
   {
     "Style": "fas",
@@ -229,7 +226,6 @@ export const iconsData = [
     "React_name": "CopyIcon",
     "Type": "Action",
     "Contextual_usage": "Indicates the availability of a copy to clipboard function",
-    "Label": "Copy"
   },
   {
     "Style": "pficon",
@@ -272,7 +268,6 @@ export const iconsData = [
     "React_name": "DownloadIcon",
     "Type": "Action",
     "Contextual_usage": "Indicates a download function is available",
-    "Label": "Download"
   },
   {
     "Style": "fas",
@@ -280,7 +275,6 @@ export const iconsData = [
     "React_name": "EllipsisVIcon",
     "Type": "Framework",
     "Contextual_usage": "Indicates a contextual menu of actions or additional actions is available",
-    "Label": "More options"
   },
   {
     "Style": "fas",
@@ -518,7 +512,6 @@ export const iconsData = [
     "React_name": "PencilAltIcon",
     "Type": "Action",
     "Contextual_usage": "Indicates the ability to edit an item",
-    "Label": "Edit"
   },
   {
     "Style": "fas",
@@ -610,7 +603,6 @@ export const iconsData = [
     "React_name": "SearchIcon",
     "Type": "Action",
     "Contextual_usage": "Indicates that that user may perform a search",
-    "Label": "Search"
   },
   {
     "Style": "fas",
@@ -618,7 +610,6 @@ export const iconsData = [
     "React_name": "SearchMinusIcon",
     "Type": "Action",
     "Contextual_usage": "Indicates the ability to zoom out",
-    "Label": "Search minus"
   },
   {
     "Style": "fas",
@@ -626,7 +617,6 @@ export const iconsData = [
     "React_name": "SearchPlusIcon",
     "Type": "Action",
     "Contextual_usage": "Indicates the ability to zoom in",
-    "Label": "Search plus"
   },
   {
     "Style": "fas",
@@ -656,7 +646,6 @@ export const iconsData = [
     "React_name": "SyncAltIcon",
     "Type": "Action",
     "Contextual_usage": "Indicates the availability of a sync action",
-    "Label": "Sync; Refresh; Running"
   },
   {
     "Style": "fas",
@@ -685,7 +674,6 @@ export const iconsData = [
     "React_name": "TaskIcon",
     "Type": "Framework, Object",
     "Contextual_usage": "Indicates the ability to open a task drawer. Also can represent tasks or activity.",
-    "Label": "Tasks"
   },
   {
     "Style": "fas",
@@ -728,7 +716,6 @@ export const iconsData = [
     "React_name": "TrashIcon",
     "Type": "Action",
     "Contextual_usage": "Indicates the ability to delete",
-    "Label": "Delete"
   },
   {
     "Style": "fas",
@@ -989,7 +976,6 @@ export const iconsData = [
     "React_name": "ExportIcon",
     "Type": "Action",
     "Contextual_usage": "Indicates the ability to export a file or other data",
-    "Label": "Export"
   },
   {
     "Style": "pficon",
