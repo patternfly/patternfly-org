@@ -38,7 +38,7 @@ import CalendarIcon from '@patternfly/react-icons/dist/esm/icons/calendar-alt-ic
           Flyers may be spread all over the globe, but we make sure to come together once a month to share updates and collect feedback. All meetings are recorded and published on <a href="https://www.youtube.com/channel/UCqLT0IEvYmb8z__9IFLSVyQ">PatternFly's YouTube channel</a>, and you can join PatternFly's mailing list for the invites.
         </p>
         <Title size="xl" className="ws-title" headingLevel="h3">
-          <a href="https://www.redhat.com/mailman/listinfo/patternfly">Join our mailing list</a>
+          <a href="https://www.redhat.com/dynamic-form/instance/934b1674-bc8a-4a13-8c9d-d19abcceb263">Join our mailing list</a>
         </Title>
       </CardBody>
     </Card>
@@ -104,7 +104,7 @@ import CalendarIcon from '@patternfly/react-icons/dist/esm/icons/calendar-alt-ic
         <SplitItem style={{ marginRight: '12px' }}><MailBulkIcon /></SplitItem>
         <SplitItem isFilled>
           <Title size="lg" className="ws-title" headingLevel="h3">Stay in the loop</Title>
-          <a href="//www.redhat.com/mailman/listinfo/patternfly" target="_blank" rel="noopener noreferrer">PatternFly mailing list</a>
+          <a href="https://www.redhat.com/dynamic-form/instance/934b1674-bc8a-4a13-8c9d-d19abcceb263" target="_blank" rel="noopener noreferrer">PatternFly mailing list</a>
         </SplitItem>
       </Split>
     </GridItem>
