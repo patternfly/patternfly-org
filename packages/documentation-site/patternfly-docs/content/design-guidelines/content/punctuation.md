@@ -5,7 +5,7 @@ section: UX writing
 
 ## Usage 
 
-These best practice recommendations cover some of the most common UI scenarios and use cases. For additional guidance, we also have recommendations for the use of specific [punctuation marks](#punctuation-marks).
+These best-practice recommendations cover some of the most common UI scenarios and use cases. For additional guidance, we also have recommendations for the use of specific [punctuation marks](#punctuation-marks).
 
 ### Buttons 
 Avoid using punctuation in button labels.
