@@ -6,8 +6,6 @@ import {
   ToolbarContent,
   ToolbarItem,
   EmptyState,
-  EmptyStateHeader,
-  EmptyStateIcon,
   EmptyStateBody,
   Spinner
 } from '@patternfly/react-core';
@@ -194,8 +192,7 @@ export const IconRecommendations = () => {
         </Tbody>
       </Table>
       {filteredRows.length === 0 && (
-        <EmptyState>
-          <EmptyStateHeader titleText={`No results found for "${ searchValue }"`} headingLevel="h5" icon={<EmptyStateIcon icon={SearchIcon} />} />
+        <EmptyState titleText={`No results found for "${ searchValue }"`} headingLevel="h5" icon={SearchIcon}>
           <EmptyStateBody>
             We couldn't find any icons that matched your search. Try entering a new search term to find what you're looking for.
           </EmptyStateBody>

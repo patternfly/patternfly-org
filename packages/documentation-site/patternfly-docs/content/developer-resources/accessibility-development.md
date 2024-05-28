@@ -77,12 +77,12 @@ For example, in the alert component, the icon label text is adjacent to the mess
 
   ``` 
   {
-    <div class="pf-v5-c-alert pf-m-success" aria-label="Success Alert">
-    <div aria-hidden="true" class="pf-v5-c-alert__icon">
+    <div class="pf-v6-c-alert pf-m-success" aria-label="Success Alert">
+    <div aria-hidden="true" class="pf-v6-c-alert__icon">
       <i class="fas fa-check-circle"></i>
     </div>
-    <div class="pf-v5-c-alert__body">
-      <h4 class="pf-v5-c-alert__title">
+    <div class="pf-v6-c-alert__body">
+      <h4 class="pf-v6-c-alert__title">
         {{#> screen-reader}}Success:{{/screen-reader}} Success alert title
       </h4>
     </div>

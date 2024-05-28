@@ -74,7 +74,7 @@ If you encounter an issue with an earlier browser version and have a question ab
 Flexibility
 PatternFly was built to be flexible and is scoped to work in tandem with other design systems. This means you’re able to use PatternFly components alongside components from systems like Bootstrap, Material.io, or older versions of PatternFly.
 
-For example, our code is written like pf-v5-c-alert
+For example, our code is written like pf-v6-c-alert
 alert
 So if you had …
 Include an example -->

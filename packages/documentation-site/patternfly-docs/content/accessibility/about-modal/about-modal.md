@@ -55,12 +55,12 @@ The following HTML attributes and PatternFly classes can be used for more fine-t
 
 | Attribute or class | Applied to | Reason | 
 |---|---|---|
-| `aria-label="[text that labels the about modal]"` | `.pf-v5-c-modal-box` | Adds an accessible name to the about modal. **Required** when there is not visible product name heading. Typically the value passed in will be the product name itself. |
-| `aria-labelledby="[id of the element that labels the about modal]"` | `.pf-v5-c-modal-box` | Adds an accessible name to the about modal. **Required** when there is a visible product name heading. |
-| `role="dialog"` | `.pf-v5-c-modal-box` | Adds an accessibile role to the about modal. **Required**. |
-| `aria-modal="true"` | `.pf-v5-c-modal-box` | Marks the dialog as a modal. **Required**. |
-| `alt="[alt text of the brand image]"` | `.pf-v5-c-about-modal-box__brand-image` | Adds alternative text for the brand image. Typically this should either be an empty string `''` if the brand image is purely decorative, or the product name. |
-| `aria-label="[text that labels the close button]"` | `.pf-v5-c-about-modal-box__close > .pf-v5-c-button` | Adds an accessible name to the close button of the about modal. |
+| `aria-label="[text that labels the about modal]"` | `.pf-v6-c-modal-box` | Adds an accessible name to the about modal. **Required** when there is not visible product name heading. Typically the value passed in will be the product name itself. |
+| `aria-labelledby="[id of the element that labels the about modal]"` | `.pf-v6-c-modal-box` | Adds an accessible name to the about modal. **Required** when there is a visible product name heading. |
+| `role="dialog"` | `.pf-v6-c-modal-box` | Adds an accessibile role to the about modal. **Required**. |
+| `aria-modal="true"` | `.pf-v6-c-modal-box` | Marks the dialog as a modal. **Required**. |
+| `alt="[alt text of the brand image]"` | `.pf-v6-c-about-modal-box__brand-image` | Adds alternative text for the brand image. Typically this should either be an empty string `''` if the brand image is purely decorative, or the product name. |
+| `aria-label="[text that labels the close button]"` | `.pf-v6-c-about-modal-box__close > .pf-v6-c-button` | Adds an accessible name to the close button of the about modal. |
 
 ## Additional considerations
 
