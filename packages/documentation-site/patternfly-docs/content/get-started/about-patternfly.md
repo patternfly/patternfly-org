@@ -54,7 +54,7 @@ PatternFly's foundations create a strong base for the rest of the design system 
 <Card isClickable isCompact isFullHeight>
     <CardHeader
         selectableActions={{
-            to: "/design-tokens/about-design-tokens",
+            to: "/tokens/about-tokens",
             selectableActionId: 'clickable-selectable-card-input-2',
           }}
     >    
@@ -76,7 +76,7 @@ PatternFly’s core elements are what you will work directly with when building 
 <Card isClickable isCompact isFullHeight>
     <CardHeader
         selectableActions={{
-            to: "/design-foundations/all-components",
+            to: "/components/all-components",
             selectableActionId: 'clickable-selectable-card-input-3',
           }}
     >    
@@ -187,7 +187,7 @@ We provide extensive guidelines to help you create UIs following best practices.
 We offer more complex resources to assist with the development process.
 
 <Grid hasGutter>
-<GridItem span={4}>
+<GridItem span={6}>
 <Card isClickable isCompact isFullHeight>
     <CardHeader
         selectableActions={{
@@ -201,21 +201,7 @@ We offer more complex resources to assist with the development process.
 </Card>
 </GridItem>
 
-<GridItem span={4}>
-<Card isClickable isCompact isFullHeight>
-    <CardHeader
-        selectableActions={{
-            to: "/developer-resources/global-css-variables",
-            selectableActionId: 'clickable-selectable-card-input-11',
-          }}
-    >
-    <CardTitle component="h4"> **CSS variable system** </CardTitle>
-    </CardHeader>
-    <CardBody> CSS variables to use within code, which are tied into our design token system. </CardBody>
-</Card>
-</GridItem>
-
-<GridItem span={4}>
+<GridItem span={6}>
 <Card isClickable isCompact isFullHeight>
     <CardHeader
         selectableActions={{
