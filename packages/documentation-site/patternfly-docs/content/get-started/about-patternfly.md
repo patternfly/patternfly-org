@@ -247,7 +247,7 @@ The PatternFly community is never finished growing, and we want to keep it that 
       </CardBody>
       <Divider />
       <CardFooter>
-        [Join our Slack workspace <ExternalLinkAltIcon />](https://patternfly.slack.com/archives/C293LQ36J)
+        [Join our Slack workspace <ExternalLinkAltIcon />](https://www.redhat.com/mailman/listinfo/patternfly)
       </CardFooter>
     </Card>
     <Card isCompact>
@@ -281,13 +281,13 @@ The PatternFly community is never finished growing, and we want to keep it that 
       </CardFooter>
     </Card>
      <Card isCompact>
-      <CardTitle className="pf-v5-u-font-size-l"> Follow us on X </CardTitle>
+      <CardTitle className="pf-v5-u-font-size-l"> Follow us on Twitter </CardTitle>
       <CardBody>
-        If you want to keep up with us via social media, you can find us on X. We share meeting reminders, release announcements, community messages, and links to new Medium articles that you can add to your reading list. 
+        If you want to keep up with us via social media, you can find us on Twitter. We tweet meeting reminders, release announcements, community messages, and links to new Medium articles that you can add to your reading list. 
       </CardBody>
       <Divider />
       <CardFooter>
-        [Follow us on X <ExternalLinkAltIcon />](https://x.com/patternfly)
+        [Follow us on Twitter <ExternalLinkAltIcon />](https://twitter.com/patternfly)
       </CardFooter>
     </Card>
      <Card isCompact>
@@ -324,13 +324,13 @@ Now that you've been introduced to PatternFly, you're ready to start designing o
 <Grid sm={12} md={4} hasGutter>
 <Button size="lg" variant="secondary" component="a" href="/get-started/design"> Start designing </Button>
 <Button size="lg" variant="secondary" component="a" href="/get-started/develop"> Start developing </Button>
-<Button size="lg" variant="secondary" component="a" href="/get-started/contribute"> Contribute to PatternFly</Button>
+<Button size="lg" variant="secondary" component="a" href="/get-started/contribute/contributing-to-patternfly"> Contribute to PatternFly</Button>
 </Grid>
 <br />
 
 ## Release cadence
 
-We plan to release a new major version of PatternFly every year. These major releases will be the only releases with planned "breaking changes" that alter the way your code interacts with PatternFly's code. Along with each major release, we will provide detailed upgrade guides and codemods to support the work needed to upgrade your products to the latest version of PatternFly.
+We plan to release a new major version of PatternFly every year. These major releases will be the only releases with planned "breaking" changes that alter core code functionality. Along with each major release, we will provide detailed upgrade guides and codemods to support the work needed to upgrade your products to the latest version of PatternFly.
 
 Minor feature releases will be available quarterly to introduce non-breaking changes, like new features and enhancements, with interim patch releases to fix any bugs that we find.
 
