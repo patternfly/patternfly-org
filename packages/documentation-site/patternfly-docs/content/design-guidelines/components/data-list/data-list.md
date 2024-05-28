@@ -5,7 +5,7 @@ related: ['Table']
 ---
 
 ## Elements
-The elements mentioned below are similar for a data list with compact or default spacing. This example shows a data list with compact spacing. Learn more about [spacing options here.](/components/data-list/design-guidelines#spacing)
+The elements mentioned below are similar for a data list with compact or default spacing. This example shows a data list with compact spacing. [Learn more about spacing options here.](#spacing)
 
 <img src="./img/datalist-elements.png" alt="example of elements on a data list" width="1273"/> 
 
