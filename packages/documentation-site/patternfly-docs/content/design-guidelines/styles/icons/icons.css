@@ -1,9 +1,9 @@
-.pf-v6-c-divider.ws-icons-divider {
+.pf-v5-c-divider.ws-icons-divider {
   margin: 48px 0;
 }
 
-.pf-v6-c-divider.ws-icons-divider:first-of-type {
-  margin-top: var(--pf-t--global--spacer--sm);
+.pf-v5-c-divider.ws-icons-divider:first-of-type {
+  margin-top:8px;
 }
 
 .ws-sm-icons-1 {
@@ -53,7 +53,7 @@
 }
 
 #all-icons ~ .ws-p > .ws-code {
-  margin-inline-start: var(--pf-t--global--spacer--sm);  
+  margin-left: 8px;
 }
 
 .ws-icon-code {
@@ -71,13 +71,17 @@
   margin-top: 24px;
 }
 
+.ws-icons-gridtext .ws-icon-sizes .ws-p {
+  margin-bottom: 8px;
+}
+
 .ws-icons-gridtext .ws-icon-sizes .ws-icon-size {
   width: 54px;
   margin-right: 24px;
   text-align: center;
 }
 
-.ws-icon-size-examples .ws-icons-appLauncher .pf-v6-c-app-launcher__menu {
+.ws-icon-size-examples .ws-icons-appLauncher .pf-v5-c-app-launcher__menu {
   position: static;
 }
 
@@ -89,12 +93,12 @@
   width: 100%;
 }
 
-.ws-icon-size-examples .ws-icons-appLauncher .pf-v6-c-app-launcher__toggle,
-.ws-icon-size-examples .ws-icons-appLauncher .pf-v6-c-app-launcher__group:first-child {
+.ws-icon-size-examples .ws-icons-appLauncher .pf-v5-c-app-launcher__toggle,
+.ws-icon-size-examples .ws-icons-appLauncher .pf-v5-c-app-launcher__group:first-child {
   display: none;
 }
 
-.ws-icon-size-examples .pf-v6-c-card__body:first-child {
+.ws-icon-size-examples .pf-v5-c-card__body:first-child {
   padding: 16px;
   padding-top: 8px;
 }
@@ -114,7 +118,7 @@
   width: 100%;
 }
 
-.ws-icons-empty-state.pf-v6-c-empty-state {
+.ws-icons-empty-state.pf-v5-c-empty-state {
   padding-top: 0;
   padding-bottom: 0;
 }

@@ -120,7 +120,7 @@ PatternFly uses [Font Awesome 5](https://fontawesome.com/), which can be utilize
     1. Update the ```sass-utilities/scss-variables.scss``` file (from source ```node_modules/@patternfly/patternfly/```) to include:
 
       ```scss
-      $pf-v6-global--enable-fontawesome-cdn: true !default;
+      $pf-v5-global--enable-fontawesome-cdn: true !default;
       ```
 
     1. Build PatternFly as part of your build process. 

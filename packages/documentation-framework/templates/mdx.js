@@ -98,13 +98,13 @@ const MDXChildTemplate = ({
       {toc.length > 1 && (
         <TableOfContents items={toc} />
       )}
-      <div>
+      <div className="ws-mdx-content">
         <div className={innerContentWrapperClass()}>
           {InlineAlerts}
           <Component />
           {functionDocumentation.length > 0 && (
             <React.Fragment>
-              <AutoLinkHeader size="h2" className="pf-v6-c-content--h2" id="functions">
+              <AutoLinkHeader size="h2" className="ws-h2" id="functions">
                 Functions
               </AutoLinkHeader>
               <FunctionsTable functionDescriptions={functionDocumentation}/>
@@ -112,7 +112,7 @@ const MDXChildTemplate = ({
           )}
           {propsTitle && (
             <React.Fragment>
-              <AutoLinkHeader size="h2" className="pf-v6-c-content--h2" id="props">
+              <AutoLinkHeader size="h2" className="ws-h2" id="props">
                 {propsTitle}
               </AutoLinkHeader>
               {propComponents.map(component => (
@@ -128,7 +128,7 @@ const MDXChildTemplate = ({
           )}
           {cssPrefix.length > 0 && (
             <React.Fragment>
-              <AutoLinkHeader size="h2" className="pf-v6-c-content--h2" id="css-variables">
+              <AutoLinkHeader size="h2" className="ws-h2" id="css-variables">
                 {cssVarsTitle}
               </AutoLinkHeader>
               {cssPrefix.map((prefix, index) => (

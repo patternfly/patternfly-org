@@ -42,7 +42,7 @@ const ColorFamily = ({color, computedStyles}) => {
 
   return (
     <GridItem>
-      <h3 className="pf-v6-c-title pf-m-xl ws-heading ws-title pf-v6-c-content--h3">{color} family</h3>
+      <h3 className="pf-v6-c-title pf-m-xl ws-heading ws-title ws-h3">{color} family</h3>
       <Flex direction={{ default: 'column' }}  gap={{ default: 'gapMd' }}>
         {entries}
       </Flex>

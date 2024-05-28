@@ -64,12 +64,12 @@ The following HTML attributes and PatternFly classes can be used for more fine-t
 
 | Attribute or class | Applied to | Reason | 
 |---|---|---|
-| `aria-label="[text that labels the jump links navigation]"` | `.pf-v6-c-jump-links` | Adds an accessible name to the jump links' `nav` element for assistive technologies. This should generally be descriptive and unique, especially if there are multiple `nav` elements on the page. |
-| `aria-expanded="[true or false]"` | `.pf-v6-c-jump-links__toggle > button` | Indicates whether the jump links toggle is expanded (true) or collapsed (false) to assistive technologies. **Required** when the jump links component is expandable. |
-| `aria-label="[text that labels the expandable toggle]"` | `.pf-v6-c-jump-links__toggle > button` | Adds an accessible name to the expandable toggle for assistive technologies. **Required** when the jump links component is expandable. |
-| `aria-hidden="true"` | `.pf-v6-c-jump-links__toggle-icon > i` | Removes the expandable toggle icon from the accessibility tree, preventing assistive technologies from potentially announcing duplicate or unnecessary information without visually hiding it. **Required**. |
-| `role="list"` | `.pf-v6-c-jump-links__list` | Indicates that the jump links list is a list element. **Required**.<br/><br/>This role is redundant since `.pf-v6-c-jump-links__list` is a `<ul>` element, but it is required for assistive technologies to announce the list properly. |
-| `aria-current="location"` | `.pf-v6-c-jump-links__item.pf-m-current` | Announces to users navigating via assistive technologies such as a screen reader that a jump link is selected. **Required** after a jump link item has been selected. |
+| `aria-label="[text that labels the jump links navigation]"` | `.pf-v5-c-jump-links` | Adds an accessible name to the jump links' `nav` element for assistive technologies. This should generally be descriptive and unique, especially if there are multiple `nav` elements on the page. |
+| `aria-expanded="[true or false]"` | `.pf-v5-c-jump-links__toggle > button` | Indicates whether the jump links toggle is expanded (true) or collapsed (false) to assistive technologies. **Required** when the jump links component is expandable. |
+| `aria-label="[text that labels the expandable toggle]"` | `.pf-v5-c-jump-links__toggle > button` | Adds an accessible name to the expandable toggle for assistive technologies. **Required** when the jump links component is expandable. |
+| `aria-hidden="true"` | `.pf-v5-c-jump-links__toggle-icon > i` | Removes the expandable toggle icon from the accessibility tree, preventing assistive technologies from potentially announcing duplicate or unnecessary information without visually hiding it. **Required**. |
+| `role="list"` | `.pf-v5-c-jump-links__list` | Indicates that the jump links list is a list element. **Required**.<br/><br/>This role is redundant since `.pf-v5-c-jump-links__list` is a `<ul>` element, but it is required for assistive technologies to announce the list properly. |
+| `aria-current="location"` | `.pf-v5-c-jump-links__item.pf-m-current` | Announces to users navigating via assistive technologies such as a screen reader that a jump link is selected. **Required** after a jump link item has been selected. |
 
 ## Additional considerations
 

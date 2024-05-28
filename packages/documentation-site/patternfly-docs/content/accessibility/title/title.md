@@ -45,4 +45,4 @@ The following HTML attributes and PatternFly classes can be used for more fine-t
 
 | Attribute or class | Applied to | Reason | 
 |---|---|---|
-| `.pf-m-4xl`, `.pf-m-3xl`, `.pf-m-2xl`, `.pf-m-xl`, `.pf-m-lg`, and `.pf-m-md` | `.pf-v6-c-title` | Sets the font size of the component. |
+| `.pf-m-4xl`, `.pf-m-3xl`, `.pf-m-2xl`, `.pf-m-xl`, `.pf-m-lg`, and `.pf-m-md` | `.pf-v5-c-title` | Sets the font size of the component. |

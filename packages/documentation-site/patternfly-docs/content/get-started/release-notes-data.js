@@ -194,7 +194,7 @@ function handler2(_event, id) {};
     component: "Table",
     description: "Added unique table component CSS class selectors to all elements of the table that previously did not have a class.",
     pullRequestURL: "https://github.com/patternfly/patternfly/pull/5558",
-    details: "For example, '<tr>' is now '<tr  className=\".pf-v6-c-table__tr\">', 'thead' is now '<thead  className=\".pf-v6-c-table__thead\">'",
+    details: "For example, '<tr>' is now '<tr  className=\".pf-v5-c-table__tr\">', 'thead' is now '<thead  className=\".pf-v5-c-table__thead\">'",
     repo: "HTML/CSS",
     fixedWithCodeMod: false
   }, {
@@ -4963,7 +4963,7 @@ import { Wizard } from '@patternfly/react-core/deprecated';`}
   },
   {
     component: "Charts",
-    description: (<>Fixed dark theme chart var prefix from <code className='ws-code'>pf-v6-c-chart</code> to <code className='ws-code'>pf-v5-chart</code>.</>),
+    description: (<>Fixed dark theme chart var prefix from <code className='ws-code'>pf-v5-c-chart</code> to <code className='ws-code'>pf-v5-chart</code>.</>),
     pullRequestURL: "https://github.com/patternfly/patternfly/pull/5673",
     repo: "HTML/CSS",
     fixedWithCodeMod: false

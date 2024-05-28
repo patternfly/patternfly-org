@@ -66,19 +66,19 @@ The following HTML attributes and PatternFly classes can be used for more fine-t
 
 | Attribute or class | Applied to | Reason | 
 |---|---|---|
-| `aria-label="[text that labels the editable label]"` | `.pf-m-editable > button.pf-v6-c-label__content` | Adds an accessible name to an editable label. **Required**. |
-| `aria-labelledby="[id value of button.pf-v6-c-label__content] [id value of .pf-v6-c-label__text]"` | `.pf-m-editable > button.pf-v6-c-label__content` | Adds an accessible name to an editable label by using the label's internal button `aria-label` and the label text's content. **Required**. |
-| `aria-label="[text that labels the label's close button]"` | `.pf-v6-c-label__actions > button` | Adds an accessible name to the label group's close button. **Required**. |
-| `aria-labelledby="[id value of .pf-v6-c-label__actions > button] [id value of .pf-v6-c-label__content]" ` | `.pf-v6-c-label__actions > button` | Adds an accessible name to the label's close button by using the close button's `aria-label` and the label's accessible name. **Required**. |
-| `aria-hidden="true"` | `.pf-v6-c-label__icon` | Removes the label icon from the accessibility tree, preventing assistive technologies from potentially announcing duplicate or unnecessary information without visually hiding it. **Required**. |
+| `aria-label="[text that labels the editable label]"` | `.pf-m-editable > button.pf-v5-c-label__content` | Adds an accessible name to an editable label. **Required**. |
+| `aria-labelledby="[id value of button.pf-v5-c-label__content] [id value of .pf-v5-c-label__text]"` | `.pf-m-editable > button.pf-v5-c-label__content` | Adds an accessible name to an editable label by using the label's internal button `aria-label` and the label text's content. **Required**. |
+| `aria-label="[text that labels the label's close button]"` | `.pf-v5-c-label__actions > button` | Adds an accessible name to the label group's close button. **Required**. |
+| `aria-labelledby="[id value of .pf-v5-c-label__actions > button] [id value of .pf-v5-c-label__content]" ` | `.pf-v5-c-label__actions > button` | Adds an accessible name to the label's close button by using the close button's `aria-label` and the label's accessible name. **Required**. |
+| `aria-hidden="true"` | `.pf-v5-c-label__icon` | Removes the label icon from the accessibility tree, preventing assistive technologies from potentially announcing duplicate or unnecessary information without visually hiding it. **Required**. |
 
 ### Label group HTML attributes and classes
 
 | Attribute or class | Applied to | Reason | 
 |---|---|---|
-| `aria-label="[text that labels the label group's close button]"` | `.pf-v6-c-label-group__close > button` | Adds an accessible name to the label group's close button. **Required**. |
-| `aria-labelledby="[id value of .pf-v6-c-label-group__close > button] [id value of .pf-v6-c-label-group__label]" ` | `.pf-v6-c-label-group__close > button` | Adds an accessible name to the label group's close button by using the close button's `aria-label` and the label group's accessible name. **Required**. |
-| `role="list"` | `.pf-v6-c-label-group__list` | Indicates that the label group list is a list element. **Note:** typically you should not manually add the same role that an element already has. Due to a bug in certain browsers, however, this role must be manually added to ensure assistive technologies announce the list properly. |
+| `aria-label="[text that labels the label group's close button]"` | `.pf-v5-c-label-group__close > button` | Adds an accessible name to the label group's close button. **Required**. |
+| `aria-labelledby="[id value of .pf-v5-c-label-group__close > button] [id value of .pf-v5-c-label-group__label]" ` | `.pf-v5-c-label-group__close > button` | Adds an accessible name to the label group's close button by using the close button's `aria-label` and the label group's accessible name. **Required**. |
+| `role="list"` | `.pf-v5-c-label-group__list` | Indicates that the label group list is a list element. **Note:** typically you should not manually add the same role that an element already has. Due to a bug in certain browsers, however, this role must be manually added to ensure assistive technologies announce the list properly. |
 
 ## Additional considerations
 

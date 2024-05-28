@@ -1,9 +1,8 @@
 import React from 'react';
-import { Title, Flex, FlexItem, Text } from '@patternfly/react-core';
+import { Title, Flex, FlexItem } from '@patternfly/react-core';
 import LinkIcon from '@patternfly/react-icons/dist/esm/icons/link-icon';
 import { Link } from '../link/link';
 import { slugger } from '../../helpers/slugger';
-import { css } from '@patternfly/react-styles';
 
 // "xs" | "sm" | "md" | "lg" | "xl" | "2xl" | "3xl" | "4xl"
 const sizes = {
@@ -32,7 +31,7 @@ export const AutoLinkHeader = ({
           id={slug}
           size={sizes[size]}
           headingLevel={headingLevel || size}
-          className={css('ws-heading', className)}
+          className={`ws-heading ${className}`}
           tabIndex={-1}
         >
           <Link href={`#${slug}`} className="ws-heading-anchor" tabIndex="-1" aria-hidden>

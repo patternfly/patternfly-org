@@ -39,7 +39,7 @@ The following HTML attributes and PatternFly classes can be used for more fine-t
 
 | Attribute or class | Applied to | Reason | 
 |---|---|---|
-| `.pf-screen-reader` | `.pf-v6-c-skeleton > span` | Provides an accessible description of the purpose of the skeleton. |
+| `.pf-screen-reader` | `.pf-v5-c-skeleton > span` | Provides an accessible description of the purpose of the skeleton. |
 
 ## Additional considerations
 

@@ -41,6 +41,6 @@ The following HTML attributes and PatternFly classes can be used for more fine-t
 
 | Attribute or class | Applied to | Reason | 
 |---|---|---|
-| `aria-label="[text that labels the sidebar]"` or `aria-labelledby="[id of the element that labels the sidebar]"` | `.pf-v6-c-sidebar__panel` | Adds an accessible name to the sidebar for assistive technologies. **Required** when `role="region"` is also passed in. |
-| `role="region"` | `.pf-v6-c-sidebar__panel` | Sets the sidebar role to a region, exposing it to assistive technologies. This should be passed in if the sidebar content causes a scrollable container and `tabIndex="0"` is also passed in. |
-| `tabindex="0"` | `.pf-v6-c-sidebar__panel` | Makes the sidebar container focusable via keyboard and other assistive technologies. **Required** when the sidebar content causes a scrollable container. |
+| `aria-label="[text that labels the sidebar]"` or `aria-labelledby="[id of the element that labels the sidebar]"` | `.pf-v5-c-sidebar__panel` | Adds an accessible name to the sidebar for assistive technologies. **Required** when `role="region"` is also passed in. |
+| `role="region"` | `.pf-v5-c-sidebar__panel` | Sets the sidebar role to a region, exposing it to assistive technologies. This should be passed in if the sidebar content causes a scrollable container and `tabIndex="0"` is also passed in. |
+| `tabindex="0"` | `.pf-v5-c-sidebar__panel` | Makes the sidebar container focusable via keyboard and other assistive technologies. **Required** when the sidebar content causes a scrollable container. |
