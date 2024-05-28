@@ -22,7 +22,7 @@ In PatternFly, component-level custom properties follow this general formula:
  - `__element` refers to the element inside of the block (for example, `__title`).
  - `--modifier` refers to a modifier class such as `.pf-m-danger`, and is prefixed with `m-` in the component variable (for example`--m-danger`).
  - `--state` is something like hover or active.
- - `--breakpoint` is a media query breakpoint such as `sm` for `$pf-v5-global--breakpoint--sm`.
+ - `--breakpoint` is a media query breakpoint such as `sm` for `$pf-v6-global--breakpoint--sm`.
  - `--pseudo-element` is one of either `before` or `after`.
  - `PropertyCamelCase` refers to the property that is being changed.
 
