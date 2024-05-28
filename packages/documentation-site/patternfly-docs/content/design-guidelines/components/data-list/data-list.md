@@ -73,7 +73,7 @@ The selectable data list provides checkboxes that enable users to select 1 or mo
 
 1. **[Bulk selection](/patterns/bulk-selection):** When present, selects all items in a table. If pagination is being used, this will only select items on the current page. See [bulk selection](/patterns/bulk-selection) for more information. 
 2. **Checkbox:** Enables a user to select a row.
-3. **Global actions:** Actions that can be applied to all selected items. Also includes actions that directly impact the table, regardless of selection, such as "Create", "Edit row item", "Delete row item", and "Export table", for example. For more guidance, see [the actions pattern.](/patterns/actions)
+3. **Global actions:** Actions that can be applied to all selected items. Also includes actions that directly impact the table, regardless of selection, such as "Create", "Edit row item", "Delete row item", and "Export table", for example. For more guidance, [see the actions pattern.](/patterns/actions)
     - If actions in the data list are restricted to a single row or object, keep the actions at the individual row level, instead of in the toolbar.
 
 #### When to use

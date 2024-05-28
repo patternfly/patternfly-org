@@ -11,9 +11,9 @@ The elements mentioned below are similar for a table with compact or default spa
 
 1. **[Toolbar](/components/toolbar/design-guidelines):** Sits above the table and contains controls for manipulating table data. Common actions include filtering, sorting, and pagination. 
 2. **[Bulk selection](/patterns/bulk-selection):** When present, selects all items in a table. If pagination is being used, this will only select items on the current page. See [bulk selection](/patterns/bulk-selection) for more information.
-3. **Global actions:** Actions that apply to all selected items. Also includes actions that directly impact the table, regardless of selection, such as "Create", "Edit row item", "Delete row item", and "Export table", for example. For more guidance, see [the actions pattern](/patterns/actions).
+3. **Global actions:** Actions that apply to all selected items. Also includes actions that directly impact the table, regardless of selection, such as "Create", "Edit row item", "Delete row item", and "Export table", for example. For more guidance, [see the actions pattern](/patterns/actions).
 4. **Expansion:** Expand all the rows in the table.
-5. **Column headers:** Should align with the content they contain. If the user is able to sort on a column, the first click on the header will sort the content of the table on the content in that column. Subsequent clicks will toggle the direction of the sort. Table data can only be sorted on 1 column at a time. See [sorting by columns](#sorting-by-columns) for more information on the sort component.
+5. **Column headers:** Should align with the content they contain. If the user is able to sort on a column, the first click on the header will sort the content of the table on the content in that column. Subsequent clicks will toggle the direction of the sort. Table data can only be sorted on 1 column at a time. [Read about sorting by columns](#sorting-by-columns) for more information on the sort component.
 6. **Inline actions:** Actions that apply only to the current row/item.
 7. **Select checkbox:** Selects this row.
 8. **Expanded panel:** Expanded table row content.
