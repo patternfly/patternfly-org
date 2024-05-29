@@ -62,7 +62,7 @@ import CalendarIcon from '@patternfly/react-icons/dist/esm/icons/calendar-alt-ic
           A community isn't really a community unless everyone is included, so accessible UX is important to us. We regularly test and audit PatternFly's accessibility and share guidance whenever we can.
         </p>
         <Title size="xl" className="ws-title" headingLevel="h3">
-          <Link to="/accessibility/accessibility-fundamentals">
+          <Link to="/accessibility/about-accessibility">
             Read our accessibility guide
           </Link>
         </Title>
