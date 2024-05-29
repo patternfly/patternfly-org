@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.4.0-alpha.24 (2024-05-29)
+
+
+### Features
+
+* **deps:** Update to latest alpha versions in preparation of alpha2 ([#4044](https://github.com/patternfly/patternfly-org/issues/4044)) ([1ce739b](https://github.com/patternfly/patternfly-org/commit/1ce739b1eb5fb38dc87ad46e17e5b8bf8c9c59fb))
+
+
+
+
+
 # 1.4.0-alpha.23 (2024-05-22)
 
 
