@@ -5,7 +5,7 @@ import { css } from '@patternfly/react-styles';
 import { normalizeColor, getContrastRatio } from './helpers';
 import './ColorFamily.css';
 
-const palettePrefix = '--pf-t--color';
+const palettePrefix = '--pf-t--color--';
 
 export function ColorFamily({
   title,
@@ -15,10 +15,10 @@ export function ColorFamily({
   const rootTokens = tokens[':where(:root)'];
 
   const familyTokens = family === 'shadows'
-    ? [rootTokens.global_BoxShadow_sm, rootTokens.global_BoxShadow_md, rootTokens.global_BoxShadow_lg]
+    ? [rootTokens.global_box_shadow_sm, rootTokens.global_box_shadow_md, rootTokens.global_box_shadow_lg]
     : Object.values(rootTokens).filter(token => token.name.includes(`${palettePrefix}${family}`));
   if (family === 'black') {
-    const whiteToken = rootTokens.global_palette_white;
+    const whiteToken = rootTokens.color_white
     familyTokens.unshift(whiteToken);
   }
 

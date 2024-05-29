@@ -146,96 +146,96 @@ module.exports = (sourceMD, sourceProps, sourceFunctionDocs) => {
   // EXTENSIONS:
 
   // Quickstarts extension
-  const qsPath = require.resolve("@patternfly/quickstarts/package.json");
-  const qsContentBase = path.join(
-    qsPath.replace("package.json", "dist"),
-    "/patternfly-docs/quick-starts"
-  );
-  const qsPropsBase = qsPath.replace("package.json", "src");
-  const qsPropsIgnore = ["**/*.test.tsx", "**/examples/*.tsx"];
+  // const qsPath = require.resolve("@patternfly/quickstarts/package.json");
+  // const qsContentBase = path.join(
+  //   qsPath.replace("package.json", "dist"),
+  //   "/patternfly-docs/quick-starts"
+  // );
+  // const qsPropsBase = qsPath.replace("package.json", "src");
+  // const qsPropsIgnore = ["**/*.test.tsx", "**/examples/*.tsx"];
 
-  sourceProps(path.join(qsPropsBase, "/**/*.tsx"), qsPropsIgnore);
-  sourceMD(path.join(qsContentBase, "**/*.md"));
+  // sourceProps(path.join(qsPropsBase, "/**/*.tsx"), qsPropsIgnore);
+  // sourceMD(path.join(qsContentBase, "**/*.md"));
 
   // Catalog view extension
-  const catalogViewPath = require.resolve(
-    "@patternfly/react-catalog-view-extension/package.json"
-  );
-  const reactCatalogViewDocsPath = catalogViewPath.replace(
-    "package.json",
-    "patternfly-docs"
-  );
-  const reactCatalogViewSrcPath = catalogViewPath.replace(
-    "package.json",
-    "src/components"
-  );
+  // const catalogViewPath = require.resolve(
+  //   "@patternfly/react-catalog-view-extension/package.json"
+  // );
+  // const reactCatalogViewDocsPath = catalogViewPath.replace(
+  //   "package.json",
+  //   "patternfly-docs"
+  // );
+  // const reactCatalogViewSrcPath = catalogViewPath.replace(
+  //   "package.json",
+  //   "src/components"
+  // );
 
-  sourceProps(
-    path.join(reactCatalogViewSrcPath, "/**/*.tsx"),
-    reactPropsIgnore
-  );
-  sourceMD(path.join(reactCatalogViewDocsPath, "/**/examples/*.md"), "react");
+  // sourceProps(
+  //   path.join(reactCatalogViewSrcPath, "/**/*.tsx"),
+  //   reactPropsIgnore
+  // );
+  // sourceMD(path.join(reactCatalogViewDocsPath, "/**/examples/*.md"), "react");
 
   // Console extension
-  const consolePath = require.resolve("@patternfly/react-console/package.json");
-  const consoleDocsPath = consolePath.replace(
-    "package.json",
-    "patternfly-docs/content/extensions/react-console"
-  );
-  const consoleSrcPath = consolePath.replace("package.json", "src/components");
+  // const consolePath = require.resolve("@patternfly/react-console/package.json");
+  // const consoleDocsPath = consolePath.replace(
+  //   "package.json",
+  //   "patternfly-docs/content/extensions/react-console"
+  // );
+  // const consoleSrcPath = consolePath.replace("package.json", "src/components");
 
-  sourceProps(path.join(consoleSrcPath, "/**/*.tsx"), reactPropsIgnore);
-  sourceMD(path.join(consoleDocsPath, "/examples/*.md"), "react");
+  // sourceProps(path.join(consoleSrcPath, "/**/*.tsx"), reactPropsIgnore);
+  // sourceMD(path.join(consoleDocsPath, "/examples/*.md"), "react");
 
   // Log viewer extension
-  const reactLogViewerPath = require
-    .resolve("@patternfly/react-log-viewer/package.json")
-    .replace("package.json", "src");
+  // const reactLogViewerPath = require
+  //   .resolve("@patternfly/react-log-viewer/package.json")
+  //   .replace("package.json", "src");
 
-  const logViewerContentBase = require
-    .resolve("@patternfly/react-log-viewer/package.json")
-    .replace(
-      "package.json",
-      "patternfly-docs/content/extensions/react-log-viewer"
-    );
+  // const logViewerContentBase = require
+  //   .resolve("@patternfly/react-log-viewer/package.json")
+  //   .replace(
+  //     "package.json",
+  //     "patternfly-docs/content/extensions/react-log-viewer"
+  //   );
 
-  sourceProps(path.join(reactLogViewerPath, "/**/*.tsx"), reactPropsIgnore);
-  sourceMD(path.join(logViewerContentBase, "/**/examples/*.md"), "react");
-  sourceMD(path.join(logViewerContentBase, "/**/demos/*.md"), "react-demos");
+  // sourceProps(path.join(reactLogViewerPath, "/**/*.tsx"), reactPropsIgnore);
+  // sourceMD(path.join(logViewerContentBase, "/**/examples/*.md"), "react");
+  // sourceMD(path.join(logViewerContentBase, "/**/demos/*.md"), "react-demos");
 
   // User feedback extension
-  const reactUserFeedbackPath = require
-    .resolve("@patternfly/react-user-feedback/package.json")
-    .replace("package.json", "patternfly-docs/");
+  // const reactUserFeedbackPath = require
+  //   .resolve("@patternfly/react-user-feedback/package.json")
+  //   .replace("package.json", "patternfly-docs/");
 
-  sourceProps(path.join(reactUserFeedbackPath, "/**/*.tsx"), reactPropsIgnore);
-  sourceMD(path.join(reactUserFeedbackPath, "/**/examples/*.md"), "react");
-  sourceMD(
-    path.join(reactUserFeedbackPath, "/**/design-guidelines/*.md"),
-    "design-guidelines"
-  );
+  // sourceProps(path.join(reactUserFeedbackPath, "/**/*.tsx"), reactPropsIgnore);
+  // sourceMD(path.join(reactUserFeedbackPath, "/**/examples/*.md"), "react");
+  // sourceMD(
+  //   path.join(reactUserFeedbackPath, "/**/design-guidelines/*.md"),
+  //   "design-guidelines"
+  // );
 
-  const reactComponentGroupsPath = require
-    .resolve("@patternfly/react-component-groups/package.json")
-    .replace("package.json", "src");
+  // const reactComponentGroupsPath = require
+  //   .resolve("@patternfly/react-component-groups/package.json")
+  //   .replace("package.json", "src");
 
-  const reactComponentGroupsBase = require
-    .resolve("@patternfly/react-component-groups/package.json")
-    .replace(
-      "package.json",
-      "patternfly-docs/content/extensions/component-groups"
-    );
+  // const reactComponentGroupsBase = require
+  //   .resolve("@patternfly/react-component-groups/package.json")
+  //   .replace(
+  //     "package.json",
+  //     "patternfly-docs/content/extensions/component-groups"
+  //   );
 
-  sourceProps(
-    path.join(reactComponentGroupsPath, "/**/*.tsx"),
-    reactPropsIgnore
-  );
-  sourceMD(path.join(reactComponentGroupsBase, "/**/*.md"), "react");
-  sourceMD(path.join(reactComponentGroupsPath, "/**/examples/*.md"), "react");
-  sourceMD(
-    path.join(reactComponentGroupsPath, "/**/design-guidelines/*.md"),
-    "design-guidelines"
-  );
+  // sourceProps(
+  //   path.join(reactComponentGroupsPath, "/**/*.tsx"),
+  //   reactPropsIgnore
+  // );
+  // sourceMD(path.join(reactComponentGroupsBase, "/**/*.md"), "react");
+  // sourceMD(path.join(reactComponentGroupsPath, "/**/examples/*.md"), "react");
+  // sourceMD(
+  //   path.join(reactComponentGroupsPath, "/**/design-guidelines/*.md"),
+  //   "design-guidelines"
+  // );
 
   // Prerelease sections:
   // Component Groups extension (Currently in PRERELEASE, so only include in PRERELEASE builds)

@@ -1,7 +1,6 @@
 import React from 'react';
 import { Grid, GridItem, Flex, FlexItem } from '@patternfly/react-core';
 import '@patternfly/patternfly/patternfly-charts.css';
-import '@patternfly/patternfly/patternfly-charts-theme-dark.css';
 
 const colorFamilies = [
   'Blue',
