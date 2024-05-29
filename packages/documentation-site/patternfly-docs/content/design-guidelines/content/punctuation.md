@@ -42,7 +42,7 @@ When referring to an element or text in the UI, don't use quotation marks or ita
 Follow these general guidelines when using punctuation marks anywhere in your UI. 
 
 ### Ampersand (&)
-An **ampersand** is a shorthand symbol for "and". 
+An **ampersand** is a shorthand symbol for "and." 
 
 For clarity, avoid using ampersands. Use "and" instead. 
 
@@ -112,8 +112,8 @@ For most prefixes, you should *not* use a hyphen. However, there are a few scena
 | Use a prefix hyphen to distinguish the word from a homonym. | "co-op"<br />"re-create" |
 | Use a prefix hyphen when the root word is capitalized or is a numeral. | "pre-2000" |
 | Use a prefix hyphen when the root word consists of more than one word. | "non-English-speaking citizens"<br />"pre-latency-period transaction" |
-| Use a prefix hyphen when identical letters would be next to each other. | "co-opt"<br />"de-emphasize".
-| Use a prefix hyphen when the prefix is "self-", "all-", or "ex-" (meaning formerly). |
+| Use a prefix hyphen when identical letters would be next to each other. | "co-opt"<br />"de-emphasize"
+| Use a prefix hyphen when the prefix is "self-", "all-", or "ex-" (meaning formerly.) |
 
 With caution, there are some instances where you can use a prefix hyphen when the prefix is "non":
 - When it precedes multiple words. For example:
