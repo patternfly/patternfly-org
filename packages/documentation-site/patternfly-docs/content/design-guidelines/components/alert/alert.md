@@ -57,7 +57,7 @@ Use an alert component when you are trying to give the user essential informatio
  
 If your use case falls outside of PatternFly's standard alert variations, use [icons](/design-foundations/icons) and [colors](/design-foundations/colors) to create custom alerts that meet your needs.
  
-View custom alerts in action in our [custom alert examples](components/alert#custom-icons).
+View custom alerts in action in our [custom alert examples](/components/alert#custom-icons).
 
 ### Managing overflow
 
