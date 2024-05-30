@@ -95,7 +95,6 @@ const HeaderTools = ({
         )}
         <ToolbarGroup
           align={{ default: 'alignEnd' }}
-          spaceItems={{ default: 'spacerNone', md: 'spacerMd' }}
         >
           {hasDarkThemeSwitcher && (
             <ToolbarItem>
