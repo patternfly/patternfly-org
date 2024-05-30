@@ -170,7 +170,7 @@ export class CSSVariables extends React.Component {
   render() {
     return (
       <React.Fragment>
-        {this.props.autoLinkHeader && <AutoLinkHeader size="h3" className="pf-v6-u-mt-lg pf-v6-u-mb-md">{`Prefixed with '${this.props.prefix}'`}</AutoLinkHeader>}
+        {this.props.autoLinkHeader && <AutoLinkHeader headingLevel="h3" className="pf-v6-u-mt-lg pf-v6-u-mb-md">{`Prefixed with '${this.props.prefix}'`}</AutoLinkHeader>}
         <CSSSearch getDebouncedFilteredRows={this.getDebouncedFilteredRows} />
         <Table
           variant="compact"

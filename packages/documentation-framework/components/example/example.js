@@ -284,7 +284,6 @@ export const Example = ({
               )}
             </React.Fragment>
           }
-          size="h4"
           headingLevel="h3"
           className="ws-example-heading"
         >
