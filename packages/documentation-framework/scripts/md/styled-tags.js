@@ -23,12 +23,13 @@ const styledMdTags = [
 function styledTags() {
   return tree => {
     visit(tree, 'element', node => {
+      node.properties.className = node.properties.className || '';
+      
       if (contentStyledMdTags.includes(node.tagName)) {
         node.properties.className += `pf-v6-c-content--${node.tagName}`;
       }
 
       if (styledMdTags.includes(node.tagName)) {
-        node.properties.className = node.properties.className || '';
         node.properties.className += node.properties.className ? ' ' : '';
         node.properties.className += `ws-${node.tagName} `;
         // Match pf-v6-c-table implementation
