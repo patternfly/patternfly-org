@@ -40,7 +40,7 @@ const AppRoute = ({ child, title, path }) => {
 }
 
 const SideNavRouter = () => {
-  const componentsData = process?.env?.componentsData;
+  const componentsData = process.env.componentsData;
   return (
     <SideNavLayout groupedRoutes={groupedRoutes} navOpen={true} >
       <Router id="ws-page-content-router" component="main">
