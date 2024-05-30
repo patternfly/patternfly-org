@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 6.0.0-alpha.36 (2024-05-30)
+
+
+### Bug Fixes
+
+* address process not defined runtime error ([398e3c8](https://github.com/patternfly/patternfly-org/commit/398e3c8f9c030342cb23c2ad1d7109de642ae205))
+
+
+
+
+
 # 6.0.0-alpha.35 (2024-05-29)
 
 

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.4.0-alpha.25 (2024-05-30)
+
+
+### Bug Fixes
+
+* address process not defined runtime error ([398e3c8](https://github.com/patternfly/patternfly-org/commit/398e3c8f9c030342cb23c2ad1d7109de642ae205))
+
+
+
+
+
 # 1.4.0-alpha.24 (2024-05-29)
 
 
