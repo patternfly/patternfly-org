@@ -17,11 +17,11 @@
     "screenshots": "pf-docs-framework screenshots"
   },
   "dependencies": {
-    "@patternfly/documentation-framework": "6.0.0-alpha.36",
+    "@patternfly/documentation-framework": "6.0.0-alpha.37",
     "@patternfly/quickstarts": "^5.1.0",
     "@patternfly/react-catalog-view-extension": "5.0.0",
     "@patternfly/react-console": "5.0.0",
-    "@patternfly/react-docs": "7.0.0-alpha.64",
+    "@patternfly/react-docs": "7.0.0-alpha.65",
     "@patternfly/react-log-viewer": "5.1.0",
     "@patternfly/react-topology": "5.2.1",
     "@patternfly/react-user-feedback": "5.0.0",
