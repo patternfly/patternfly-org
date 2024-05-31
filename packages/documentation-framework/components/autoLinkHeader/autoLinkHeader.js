@@ -29,7 +29,7 @@ export const AutoLinkHeader = ({
           {children}
         </Text>
       </FlexItem>
-      <FlexItem>{metaText}</FlexItem>
+      {metaText && <FlexItem>{metaText}</FlexItem>}
     </Flex>
   )
 };

@@ -249,41 +249,43 @@ export const Example = ({
     '/' +
     slugger(title);
 
+  const hasMetaText = isBeta || isDemo || isDeprecated || false;
+  const tooltips = (<React.Fragment>
+    {isBeta && (
+      <Tooltip content="This beta component is currently under review and is still open for further evolution.">
+        <Button variant="plain" hasNoPadding>
+          <Label isCompact color="blue">
+            Beta
+          </Label>
+        </Button>
+      </Tooltip>
+    )}
+    {isDemo && (
+      <Tooltip content="Demos show how multiple components can be used in a single design.">
+        <Button variant="plain" hasNoPadding>
+          <Label isCompact color="purple">
+            Demo
+          </Label>
+        </Button>
+      </Tooltip>
+    )}
+    {isDeprecated && (
+      <Tooltip content="Deprecated components are available for use but are no longer being maintained or enhanced.">
+        <Button variant="plain" hasNoPadding>
+          <Label isCompact color="grey">
+            Deprecated
+          </Label>
+        </Button>
+      </Tooltip>
+    )}
+  </React.Fragment>);
+  const metaText = hasMetaText && tooltips
+
   return (
     <div className="ws-example">
       <div className="ws-example-header">
         <AutoLinkHeader
-          metaText={
-            <React.Fragment>
-              {isBeta && (
-                <Tooltip content="This beta component is currently under review and is still open for further evolution.">
-                  <Button variant="plain" hasNoPadding>
-                    <Label isCompact color="blue">
-                      Beta
-                    </Label>
-                  </Button>
-                </Tooltip>
-              )}
-              {isDemo && (
-                <Tooltip content="Demos show how multiple components can be used in a single design.">
-                  <Button variant="plain" hasNoPadding>
-                    <Label isCompact color="purple">
-                      Demo
-                    </Label>
-                  </Button>
-                </Tooltip>
-              )}
-              {isDeprecated && (
-                <Tooltip content="Deprecated components are available for use but are no longer being maintained or enhanced.">
-                  <Button variant="plain" hasNoPadding>
-                    <Label isCompact color="grey">
-                      Deprecated
-                    </Label>
-                  </Button>
-                </Tooltip>
-              )}
-            </React.Fragment>
-          }
+          metaText={metaText}
           headingLevel="h3"
           className="ws-example-heading"
         >
