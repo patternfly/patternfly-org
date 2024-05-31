@@ -3,31 +3,31 @@
 ----------------------------------------------------------
 ## New features and enhancements
 
-### [Tree-view enhancements](https://www.patternfly.org/v4/components/tree-view)
+### [Tree-view enhancements](https://v4-archive.patternfly.org/v4/components/tree-view)
 
 ![compact tree view with guides](./img/tree-view-compact.png)
 
 Adds new variants of the tree view component that are better designed to work with dense content and confined spaces. These include two compact variants and the ability to add guides to any tree view to better visualize the hierarchy. We have also made the toolbar/header area flexible to pass in anything you want including a search input, actions, or anything that makes sense.
 
-### [Search input with submit button](https://www.patternfly.org/v4/components/search-input#with-submit-button)
+### [Search input with submit button](https://v4-archive.patternfly.org/v4/components/search-input#with-submit-button)
 
 ![search input with submit](./img/search-with-submit.png)
 
  Adds a new search input variant that includes a submit button.
 
-### [New horizontal sub-navigation](https://www.patternfly.org/v4/components/navigation#horizontal-subnav)
+### [New horizontal sub-navigation](https://v4-archive.patternfly.org/v4/components/navigation#horizontal-subnav)
 
 ![page with vertical and horizontal sub-navigation](./img/horizontal-sub-nav.png)
 
-Introduces a new horizontal secondary navigation bar that will replace the legacy tertiary navigation to use for exposing local navigation within a page. The new navigation bar is better differentiated from horizontal tabs. See a [full page demo](https://www.patternfly.org/v4/components/navigation/react-demos#horizontal-subnav).
+Introduces a new horizontal secondary navigation bar that will replace the legacy tertiary navigation to use for exposing local navigation within a page. The new navigation bar is better differentiated from horizontal tabs. See a [full page demo](https://v4-archive.patternfly.org/v4/components/navigation/react-demos#horizontal-subnav).
 
-### [Multi-select rows in a table](https://www.patternfly.org/v4/components/table#composable-selectable)
+### [Multi-select rows in a table](https://v4-archive.patternfly.org/v4/components/table#composable-selectable)
 Users can now use `shift+select` to select a range of rows in composable table component.
 
-### [Popover diagonal positioning](https://www.patternfly.org/v4/components/popover/#advanced)
+### [Popover diagonal positioning](https://v4-archive.patternfly.org/v4/components/popover/#advanced)
 The popover component now supports diagonal as well as left, right, top, and bottom positioning.
 
-See the [latest release notes](https://www.patternfly.org/v4/developer-resources/release-notes) for a more detailed list of changes.
+See the [latest release notes](https://v4-archive.patternfly.org/v4/developer-resources/release-notes) for a more detailed list of changes.
 
 -----------------------------------------------------------------------------
 
@@ -47,7 +47,7 @@ See the [latest release notes](https://www.patternfly.org/v4/developer-resources
 
 * [Auto-complete search input](https://github.com/patternfly/patternfly-react/issues/6210) - Add auto-complete behavior to the search input component to expose a list of suggestions as the user types.
 
-* [Refactor page to use new masthead](https://github.com/patternfly/patternfly-react/issues/6174) - Refactor our page demos to utilize the new masthead component. This will provide a more flexible and responsive [masthead](https://www.patternfly.org/v4/components/masthead) for future projects.
+* [Refactor page to use new masthead](https://github.com/patternfly/patternfly-react/issues/6174) - Refactor our page demos to utilize the new masthead component. This will provide a more flexible and responsive [masthead](https://v4-archive.patternfly.org/v4/components/masthead) for future projects.
 
 
 ### 2021.13 (October 8)

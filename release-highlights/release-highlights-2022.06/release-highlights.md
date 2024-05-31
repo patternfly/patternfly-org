@@ -3,13 +3,13 @@
 ----------------------------------------------------------
 ## New features and enhancements
 
-### [Add and remove tabs](https://www.patternfly.org/v4/components/tabs#dynamic)
+### [Add and remove tabs](https://v4-archive.patternfly.org/v4/components/tabs#dynamic)
 
 ![dynamic tabs](./img/dynamic-tabs.png)
 
 The tab component has been enhanced to include the ability to dynamically add and remove tabs within a horizontal group of tabs.
 
-See the [latest release notes](https://www.patternfly.org/v4/developer-resources/release-notes) for a more detailed list of changes.
+See the [latest release notes](https://v4-archive.patternfly.org/v4/developer-resources/release-notes) for a more detailed list of changes.
 
 -----------------------------------------------------------------------------
 
@@ -23,7 +23,7 @@ See the [latest release notes](https://www.patternfly.org/v4/developer-resources
 
 ### 2022.08 (June 24)
 
-* [Tree view: add option to select parent nodes](https://github.com/patternfly/patternfly/issues/4724) - for some use cases, it makes sense for parent nodes in a tree view to have select actions (e.g. for navigation) as well as being used to expand or collapse the node. This enhancement will introduce a new variant of the [tree view](https://www.patternfly.org/v4/components/tree-view) to support that behavior.
+* [Tree view: add option to select parent nodes](https://github.com/patternfly/patternfly/issues/4724) - for some use cases, it makes sense for parent nodes in a tree view to have select actions (e.g. for navigation) as well as being used to expand or collapse the node. This enhancement will introduce a new variant of the [tree view](https://v4-archive.patternfly.org/v4/components/tree-view) to support that behavior.
 
 * [Search input - dark variant](https://github.com/patternfly/patternfly/issues/4705) - adding a dark variant of the search input that can be used in the masthead or above the vertical navigation menu.
 

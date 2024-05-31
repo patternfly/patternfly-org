@@ -3,37 +3,37 @@
 ----------------------------------------------------------
 ## New features and enhancements
 
-### [Plain read-only form input](https://www.patternfly.org/v4/components/text-input#read-only)
+### [Plain read-only form input](https://v4-archive.patternfly.org/v4/components/text-input#read-only)
 
 ![input field types](./img/read-only-plain.png)
 
-Adds a read-only input that has styling similar to [description list](https://www.patternfly.org/v4/components/description-list/) items (no background or borders). This is useful when the standard read-only input is too visually heavy or likely to be confused with the disabled input.
+Adds a read-only input that has styling similar to [description list](https://v4-archive.patternfly.org/v4/components/description-list/) items (no background or borders). This is useful when the standard read-only input is too visually heavy or likely to be confused with the disabled input.
 
-### [Link style progress button](https://www.patternfly.org/v4/components/button#progress-indicators)
+### [Link style progress button](https://v4-archive.patternfly.org/v4/components/button#progress-indicators)
 
 ![link button with spinner](./img/progress-link.png)
 
 Adds a new variant of the Progress button that has plain or link button styling (no borders). This is useful for Test buttons or similar actions that fall inline within a form.
 
-### [Alert group with overflow](https://www.patternfly.org/v4/components/alert-group/react-demos/alert-group-toast-with-notification-drawer/)
+### [Alert group with overflow](https://v4-archive.patternfly.org/v4/components/alert-group/react-demos/alert-group-toast-with-notification-drawer/)
 
 ![alert group with overflow](./img/alert-group-overflow.png)
 
 This is a new demo that shows how the overflow feature of an alert group can be used to only show a predetermined number of toast alerts while making additional alerts viewable in a notification drawer.
 
- ### [Overflow menu - set breakpoint relative to container width](https://www.patternfly.org/v4/components/overflow-menu#breakpoint-on-container)
+ ### [Overflow menu - set breakpoint relative to container width](https://v4-archive.patternfly.org/v4/components/overflow-menu#breakpoint-on-container)
 
- Responsive breakpoints are typically based on viewport width. This enhancement updates the [Overflow menu](https://www.patternfly.org/v4/components/overflow-menu) component to send overflow elements to the overflow menu when its container is resized.
+ Responsive breakpoints are typically based on viewport width. This enhancement updates the [Overflow menu](https://v4-archive.patternfly.org/v4/components/overflow-menu) component to send overflow elements to the overflow menu when its container is resized.
 
- ### [Icon component](https://www.patternfly.org/v4/components/icon)
+ ### [Icon component](https://v4-archive.patternfly.org/v4/components/icon)
 
  Introduces a new component to be used when placing an icon or a spinner inline with other elements. The icon component supports multiple sizes and will add the proper spacing around the icon.
 
- ### [Filter demos](https://www.patternfly.org/v4/demos/filters)
+ ### [Filter demos](https://v4-archive.patternfly.org/v4/demos/filters)
 
- Introduces a new set of full page demos that show how various filter patterns as described in the [Filters design guidelines](https://www.patternfly.org/v4/guidelines/filters) can be applied to a table.
+ Introduces a new set of full page demos that show how various filter patterns as described in the [Filters design guidelines](https://v4-archive.patternfly.org/v4/guidelines/filters) can be applied to a table.
 
- ### [React-next version of Select](https://www.patternfly.org/v4/components/select/react-next)
+ ### [React-next version of Select](https://v4-archive.patternfly.org/v4/components/select/react-next)
 
  We have introduced a new version of the Select component that has been optimized to be lighter-weight and more flexible. This is still considered beta, but you are encouraged to check it out!
 
@@ -41,7 +41,7 @@ This is a new demo that shows how the overflow feature of an alert group can be 
 
  With this release we are also introducing a PatternFly wireframe kit. This is a new symbol library implemented in Sketch that helps designers create low or mid-fidelity mockups that are compatible with PatternFly styles.
 
-See the [latest release notes](https://www.patternfly.org/v4/developer-resources/release-notes) for a more detailed list of changes.
+See the [latest release notes](https://v4-archive.patternfly.org/v4/developer-resources/release-notes) for a more detailed list of changes.
 
 -----------------------------------------------------------------------------
 

@@ -10,7 +10,7 @@ To support the proper assessment of accessibility measures, we've created a scor
 
 Scoring your accessibility shouldn't be a one-time thing. It's something that you should do routinely to assess your product as it evolves.
 
-An accessibility scorecard offers a higher-level overview of the current state of your product's accessibility, but it is **not intended to replace a full accessibility audit**, as described by our [accessibility testing guide](/accessibility.testing-your-accessibility). An accessibility audit is a vital part of creating your accessibility scorecard. 
+An accessibility scorecard offers a higher-level overview of the current state of your product's accessibility, but it is **not intended to replace a full accessibility audit**, as described by our [accessibility testing guide](/accessibility/testing-your-accessibility). An accessibility audit is a vital part of creating your accessibility scorecard. 
 
 ## PatternFly.org accessibility scorecard
 

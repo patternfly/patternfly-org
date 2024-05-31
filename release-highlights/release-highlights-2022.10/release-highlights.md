@@ -3,39 +3,39 @@
 ----------------------------------------------------------
 ## New features and enhancements
 
-### [Secondary-styled split button](https://www.patternfly.org/v4/components/dropdown#split-button-secondary-action)
+### [Secondary-styled split button](https://v4-archive.patternfly.org/v4/components/dropdown#split-button-secondary-action)
 
 ![split button with secondary styling](./img/secondary-split-button.png)
 
  We've added a split button variant that has secondary button styling for use in situations where you want a split button with button styling for more consistency with other actions on a page.
 
-### [Description list card variant](https://www.patternfly.org/v4/components/description-list#card-variants)
+### [Description list card variant](https://v4-archive.patternfly.org/v4/components/description-list#card-variants)
 
 ![description list card variant](./img/description-list-card.png)
 
 Introduces a new variant of the description list that makes items look like a dashboard card but retain description list semantics.
 
-### [Tree view with selectable parent nodes](https://www.patternfly.org/v4/components/tree-view#with-separate-selection-and-expansion)
+### [Tree view with selectable parent nodes](https://v4-archive.patternfly.org/v4/components/tree-view#with-separate-selection-and-expansion)
 
 ![tree with selectable parent node](./img/tree-selectable-parents.png)
 
 Parent nodes in a tree view can now have select actions (e.g. for navigation) associated with them as well as being used to expand or collapse the node.
 
-### [Tabs with overflow](https://www.patternfly.org/v4/components/tabs#horizontal-overflow)
+### [Tabs with overflow](https://v4-archive.patternfly.org/v4/components/tabs#horizontal-overflow)
 
 ![horizontal tabs with overflow](./img/tabs-with-overflow.png)
 
 If there are too many horizontal tabs to fit within the width of a container, we now support the ability to hide overflowing tabs in a dropdown menu that is opened from the last tab.
 
-### [Responsive progress stepper](https://www.patternfly.org/v4/components/progress-stepper)
+### [Responsive progress stepper](https://v4-archive.patternfly.org/v4/components/progress-stepper)
 
 Our progress stepper can now change from a horizontal to vertical orientation as the width of the viewport is reduced.
 
-### [Height breakpoint support for sticky sections](https://www.patternfly.org/v4/components/page/react-demos#sticky-section-breadcrumb-with-breakpoints)
+### [Height breakpoint support for sticky sections](https://v4-archive.patternfly.org/v4/components/page/react-demos#sticky-section-breadcrumb-with-breakpoints)
 
 We now support breakpoints based on the viewport height as well as width. This will allow sticky page section behavior to be modified when the viewport is shrunk below a certain height, allowing sticky page sections to scroll.
 
-See the [latest release notes](https://www.patternfly.org/v4/developer-resources/release-notes) for a more detailed list of changes.
+See the [latest release notes](https://v4-archive.patternfly.org/v4/developer-resources/release-notes) for a more detailed list of changes.
 
 -----------------------------------------------------------------------------
 

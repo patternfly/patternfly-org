@@ -3,37 +3,37 @@
 ----------------------------------------------------------
 ## New features and enhancements
 
-### [Expandable field groups](https://www.patternfly.org/v4/components/form#field-groups)
+### [Expandable field groups](https://v4-archive.patternfly.org/v4/components/form#field-groups)
 
 ![nested field groups](./img/field-groups.png)
 
 Introduced expandable nested sections to the Form component that are useful for organizing information on long, complex forms.
 
-### [Tree table](https://www.patternfly.org/v4/components/table#tree-table)
+### [Tree table](https://v4-archive.patternfly.org/v4/components/table#tree-table)
 
 ![tree-table](./img/tree-table.png)
 
  The tree table component allows for displaying hierarchical, tabular data in an expandable tree.
 
-### [Support for nested content in Radio button group](https://www.patternfly.org/v4/components/radio#with-body)
+### [Support for nested content in Radio button group](https://v4-archive.patternfly.org/v4/components/radio#with-body)
 
  ![radio button with description and nested content](./img/radio-with-body.png)
 
 You can now nest controls inside a radio button group with appropriate indentation and spacing.
 
-### [Collapsible breadcrumb](https://www.patternfly.org/v4/components/breadcrumb#with-dropdown)  
+### [Collapsible breadcrumb](https://v4-archive.patternfly.org/v4/components/breadcrumb#with-dropdown)  
 
 ![breadcrumb with collabsible nodes](./img/collapsible-breadcrumb.png)
 
 Add collapsible nodes to a breadcrumb component. This can be useful for displaying long breadcrumbs in a constrained space or as part of the header of a drill-down menu.
 
-### [Add disabled slider](https://www.patternfly.org/v4/components/slider#disabled)
+### [Add disabled slider](https://v4-archive.patternfly.org/v4/components/slider#disabled)
 
 ![disabled slider](./img/disabled-slider.png)
 
 You can now set a slider to be disabled and take on a "grayed-out" appearance.
 
-### [Auto-sized text area](https://www.patternfly.org/v4/components/text-area#auto-resizing)
+### [Auto-sized text area](https://v4-archive.patternfly.org/v4/components/text-area#auto-resizing)
 Adds an option to the Text Area component that allows the height to automatically size to its content.
 
 ### [Toast alerts no longer dismiss when hovering](https://github.com/patternfly/patternfly-react/pull/5566)
@@ -43,7 +43,7 @@ Updated the toast alert to not dismiss if the user is hovered over it. The alert
 
 Fix bug that prevented complete translation of pagination strings.
 
-See the [latest release notes](https://www.patternfly.org/v4/developer-resources/release-notes) for a more detailed list of changes.
+See the [latest release notes](https://v4-archive.patternfly.org/v4/developer-resources/release-notes) for a more detailed list of changes.
 
 -----------------------------------------------------------------------------
 

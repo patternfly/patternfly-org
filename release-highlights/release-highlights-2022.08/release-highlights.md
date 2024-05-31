@@ -3,26 +3,26 @@
 ----------------------------------------------------------
 ## New features and enhancements
 
-### [Wizard with optional drawer](https://www.patternfly.org/v4/components/wizard#wizard-with-drawer)
+### [Wizard with optional drawer](https://v4-archive.patternfly.org/v4/components/wizard#wizard-with-drawer)
 
 ![wizard with drawer](./img/wizard-with-drawer.png)
 
 It is now possible to include a drawer inside a wizard. This can be useful for in-context help about a step or for displaying object details.
 
-### [Editable label group](https://www.patternfly.org/v4/components/label-group#editable-labels-with-add-button)
+### [Editable label group](https://v4-archive.patternfly.org/v4/components/label-group#editable-labels-with-add-button)
 
 ![label group with Add button](./img/add-label.png)
 
 This update introduces the ability for the user to dynamically add new labels to a label group. The Add button can be configured to add a new label directly inline or to implement a custom add function via a modal or similar interaction.
 
-### [Gold label](https://www.patternfly.org/v4/components/label)
+### [Gold label](https://v4-archive.patternfly.org/v4/components/label)
 
 ![gold label](./img/gold-label.png)
 
 Adds a new label variant that uses our gold palette.
 
 
-See the [latest release notes](https://www.patternfly.org/v4/developer-resources/release-notes) for a more detailed list of changes.
+See the [latest release notes](https://v4-archive.patternfly.org/v4/developer-resources/release-notes) for a more detailed list of changes.
 
 -----------------------------------------------------------------------------
 
@@ -37,7 +37,7 @@ See the [latest release notes](https://www.patternfly.org/v4/developer-resources
 
 * [Description list with dashboard styling](https://github.com/patternfly/patternfly-react/issues/7535) - will introduce that ability to have alternate styling in a description list that makes it look like a dashboard card but appear semantically as a description list.
 
-* [Tree view: add option to select parent nodes](https://github.com/patternfly/patternfly-react/issues/7378) - for some use cases, it makes sense for parent nodes in a tree view to have select actions (e.g. for navigation) as well as being used to expand or collapse the node. This enhancement will introduce a new variant of the [tree view](https://www.patternfly.org/v4/components/tree-view) to support that behavior.
+* [Tree view: add option to select parent nodes](https://github.com/patternfly/patternfly-react/issues/7378) - for some use cases, it makes sense for parent nodes in a tree view to have select actions (e.g. for navigation) as well as being used to expand or collapse the node. This enhancement will introduce a new variant of the [tree view](https://v4-archive.patternfly.org/v4/components/tree-view) to support that behavior.
 
 ### 2022.11 (August 26)
 

@@ -36,7 +36,7 @@ Elements vary depending on inline edit variation
 1. **Toggle:** Indicates the edit action
 2. **[Tooltip](/components/tooltip):** Provides a short description of the inline edit toggle
 3. **Action group:** Allows the user to save or cancel changes
-4. **Form elements:** Examples include [text input](/components/text-input) or [text area](/components/text-area). See [forms](/components/form) for more information about form elements.
+4. **Form elements:** Examples include [text input](/components/text-input) or [text area](/components/text-area). See [forms](/components/forms/form) for more information about form elements.
  
 ### Field-specific edit
  

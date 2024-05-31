@@ -245,7 +245,7 @@ Buttons in forms, modals, or wizards should always be left aligned in the box. T
 When writing button labels:
 
 * Be specific and clearly communicate the button's action.
-* Make sure that button text is unique and easily understood on its own, so that screen readers may read buttons to users out of context. Refer to [PatternFly's accessibility guide](/accessibility/product-development-guide) for more information.
+* Make sure that button text is unique and easily understood on its own, so that screen readers may read buttons to users out of context. Refer to [PatternFly's accessibility guide](/accessibility/about-accessibility) for more information.
 * Use simple verbs or verb phrases.
 * Aim for short labels when possible (1–3 words), to avoid wrapping.
 * Avoid using articles (for example, write “Add source” instead of “Add a source”).

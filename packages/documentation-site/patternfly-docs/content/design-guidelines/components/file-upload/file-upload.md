@@ -13,7 +13,7 @@ subsection: file-upload
 
 ## Usage
 
-Use a single file upload component when only one file can be uploaded. If multiple files need to be uploaded, use the [multiple file upload component](https://www.patternfly.org/v4/components/file-upload---multiple/). This component is recommended for the use of text files where content can easily be displayed in the text area, but all file types are supported.
+Use a single file upload component when only one file can be uploaded. If multiple files need to be uploaded, use the [multiple file upload component](https://v4-archive.patternfly.org/v4/components/file-upload---multiple/). This component is recommended for the use of text files where content can easily be displayed in the text area, but all file types are supported.
 
 Once the file is uploaded, the user can edit the content.
 

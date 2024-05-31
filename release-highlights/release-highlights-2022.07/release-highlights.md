@@ -3,13 +3,13 @@
 ----------------------------------------------------------
 ## New features and enhancements
 
-### [Allow expandable section toggle to be an arbitrary component](https://www.patternfly.org/v4/components/expandable-section#with-custom-toggle-content)
+### [Allow expandable section toggle to be an arbitrary component](https://v4-archive.patternfly.org/v4/components/expandable-section#with-custom-toggle-content)
 
 ![expandable section with custom toggle](./img/expandable-section.png)
 
 Previously, the toggle in the expandable section component was constrained to only contain a string. This update allows an icon or any other non-interactive component to be placed in the toggle area.
 
-See the [latest release notes](https://www.patternfly.org/v4/developer-resources/release-notes) for a more detailed list of changes.
+See the [latest release notes](https://v4-archive.patternfly.org/v4/developer-resources/release-notes) for a more detailed list of changes.
 
 -----------------------------------------------------------------------------
 
@@ -19,7 +19,7 @@ See the [latest release notes](https://www.patternfly.org/v4/developer-resources
 
 * [Add information panel to a wizard](https://github.com/patternfly/patternfly-react/issues/7258) - this will add an optional sidebar to the body of a wizard for holding more information about completing that step.
 
-* [Tree view: add option to select parent nodes](https://github.com/patternfly/patternfly-react/issues/7378) - for some use cases, it makes sense for parent nodes in a tree view to have select actions (e.g. for navigation) as well as being used to expand or collapse the node. This enhancement will introduce a new variant of the [tree view](https://www.patternfly.org/v4/components/tree-view) to support that behavior.
+* [Tree view: add option to select parent nodes](https://github.com/patternfly/patternfly-react/issues/7378) - for some use cases, it makes sense for parent nodes in a tree view to have select actions (e.g. for navigation) as well as being used to expand or collapse the node. This enhancement will introduce a new variant of the [tree view](https://v4-archive.patternfly.org/v4/components/tree-view) to support that behavior.
 
 * [Editable label group](https://github.com/patternfly/patternfly-react/issues/7351) - introduce the ability for the user to add new labels to a label group.
 

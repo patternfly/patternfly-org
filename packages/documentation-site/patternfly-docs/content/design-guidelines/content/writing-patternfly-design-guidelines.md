@@ -128,4 +128,4 @@ If you're linking to other PatternFly pages, use relative URLs instead of full U
 
 - **Relative URL:** /components/tooltip/design-guidelines
 
-- **Full URL:** https://www.patternfly.org/v4/components/tooltip/design-guidelines
+- **Full URL:** https://www.patternfly.org/components/tooltip/design-guidelines

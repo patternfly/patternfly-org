@@ -3,31 +3,31 @@
 ----------------------------------------------------------
 ## New features and enhancements
 
-### [Progress stepper](https://www.patternfly.org/v4/components/progress-stepper)
+### [Progress stepper](https://v4-archive.patternfly.org/v4/components/progress-stepper)
 
 ![progress stepper](./img/progress-stepper.png)
 
 The progress stepper is useful for tracking the progress of linear, step-wise tasks.
 
-### [Dual list selector with drag and drop](https://www.patternfly.org/v4/components/dual-list-selector#reordering-lists-using-drag-and-drop)
+### [Dual list selector with drag and drop](https://v4-archive.patternfly.org/v4/components/dual-list-selector#reordering-lists-using-drag-and-drop)
 
 ![dual list selector with drag and drop reordering](./img/dual-list-draggable.png)
 
 Adds the ability to manually reorder the selected list in a dual list selector.
 
-### [Flyout navigation](https://www.patternfly.org/v4/components/navigation#flyout)
+### [Flyout navigation](https://v4-archive.patternfly.org/v4/components/navigation#flyout)
 
 ![flyout navigation menu](./img/flyout-nav.png)
 
 Adds a new flyout navigation variant that can be used to expose nested pages in a deep page hierarchy.
 
-### [Link styling for banners](https://www.patternfly.org/v4/components/banner/html#banner-with-links)
+### [Link styling for banners](https://v4-archive.patternfly.org/v4/components/banner/html#banner-with-links)
 
 ![banner with an embedded link](./img/banner-with-link.png)
 
 Adds special visual styling for links that are embedded inside a banner component.
 
-See the [latest release notes](https://www.patternfly.org/v4/developer-resources/release-notes) for a more detailed list of changes.
+See the [latest release notes](https://v4-archive.patternfly.org/v4/developer-resources/release-notes) for a more detailed list of changes.
 
 -----------------------------------------------------------------------------
 

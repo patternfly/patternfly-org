@@ -41,7 +41,7 @@ Users with no vision rely on screen readers to access web sites and applications
 
 To design for users with no vision:
 
-- Use [semantic elements](w3schools.com/html/html5_semantic_elements.asp).
+- Use [semantic elements](www.w3schools.com/html/html5_semantic_elements.asp).
 - Write labels that are meaningful when pulled out of context.
 
 #### Low vision

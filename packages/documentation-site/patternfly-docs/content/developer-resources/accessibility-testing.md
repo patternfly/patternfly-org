@@ -44,7 +44,7 @@ The keyboard is an essential accessibility tool, so it is necessary to ensure th
 
 Screen readers cannot access style information, so you should disable styles for your product to test that your information architecture is effective and that elements have adequate text labels.
 
-The [WAVE browser extension from WebAIM](/wave.webaim.org/extension/) allows you to disable styles if this isn't available in the browser you are using.
+The [WAVE browser extension from WebAIM](https://wave.webaim.org/) allows you to disable styles if this isn't available in the browser you are using.
 
 ### Test with a screen reader 
 

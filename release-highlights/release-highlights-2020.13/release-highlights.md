@@ -1,28 +1,28 @@
 # PatternFly Release Highlights
 ## Release 2020.13
 ### New features and enhancements
-#### [Data list: draggable rows](https://www.patternfly.org/v4/components/data-list#draggable)
+#### [Data list: draggable rows](https://v4-archive.patternfly.org/v4/components/data-list#draggable)
 Rows can now be reordered in a Data list using drag and drop. This is useful any time you want to support manual sorting of items in a list.
 
 ![draggable rows in data list](./img/draggable-rows.png)
 
-#### [Basic date picker](https://www.patternfly.org/v4/components/date-picker)
+#### [Basic date picker](https://v4-archive.patternfly.org/v4/components/date-picker)
 A basic date picker with calendar is now available for selecting a single date. This supports date selection in a variety of localized formats.
 
 ![date picker](./img/date-picker.png)
 
-#### [Added ability to have radio buttons in a table](https://www.patternfly.org/v4/components/table#selectable-radio-input)
+#### [Added ability to have radio buttons in a table](https://v4-archive.patternfly.org/v4/components/table#selectable-radio-input)
 Radio buttons can now be placed in a table row to support single-select use cases.
 
 ![table with radio buttons](./img/table-with-radio.png)
 
-#### [Select component enhancements](https://www.patternfly.org/v4/components/select)
+#### [Select component enhancements](https://v4-archive.patternfly.org/v4/components/select)
 Several enhancements were made to improve the behavior and flexibility of the Select component. Notably:
 * We now force focus on typeahead input even when the user click the 'open menu' button on the toggle.
 * We've added a 'no results' message to an empty typeahead menu if an empty options array is passed to typeahead select.
 * Dividers are now supported in Select menus.
 
-#### [Add support for react-router Link in a Label](https://www.patternfly.org/v4/components/label#router-link)
+#### [Add support for react-router Link in a Label](https://v4-archive.patternfly.org/v4/components/label#router-link)
 This enables the option to use a React-router link in addition to a standard link in a label.
 
 ### What we’re working on...

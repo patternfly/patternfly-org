@@ -3,13 +3,13 @@
 ----------------------------------------------------------
 ## New features and enhancements
 
-### [Advanced search input](https://www.patternfly.org/v4/components/search-input#advanced)
+### [Advanced search input](https://v4-archive.patternfly.org/v4/components/search-input#advanced)
 
 ![advanced search input](./img/advanced-search.png)
 
 Adds a new search input variant to support attribute-value searching or filtering use cases by combining a search field with a customizable search form.
 
-### [Updated label styling](https://www.patternfly.org/v4/components/label)
+### [Updated label styling](https://v4-archive.patternfly.org/v4/components/label)
 
 ![label styles](./img/labels.png)
 
@@ -21,22 +21,22 @@ Borders were added to filled labels to ensure they work well against either whit
 
 Support new modifiers to create a card with more spacing and rounder corners for marketing applications.
 
-### [Jump links demo](https://www.patternfly.org/v4/components/jump-links/react-demos)
+### [Jump links demo](https://v4-archive.patternfly.org/v4/components/jump-links/react-demos)
 
 ![jump links demo](./img/jump-links.png)
 
 A fully functional jump links React demo is now available to illustrate how jump links can be placed in a sticky sidebar for navigating long pages.
 
-### [Placeholder text in form select](https://www.patternfly.org/v4/components/form-select)
+### [Placeholder text in form select](https://v4-archive.patternfly.org/v4/components/form-select)
 
 ![form select with placeholder text](./img/form-select.png)
 
 You can now apply placeholder text styling to the default item in a form select component.
 
-### [SVG Spinner](https://www.patternfly.org/v4/components/spinner)
+### [SVG Spinner](https://v4-archive.patternfly.org/v4/components/spinner)
 Introduce a new SVG-based spinner for smoother rendering and performance.
 
-See the [latest release notes](https://www.patternfly.org/v4/developer-resources/release-notes) for a more detailed list of changes.
+See the [latest release notes](https://v4-archive.patternfly.org/v4/developer-resources/release-notes) for a more detailed list of changes.
 
 -----------------------------------------------------------------------------
 
@@ -58,7 +58,7 @@ See the [latest release notes](https://www.patternfly.org/v4/developer-resources
 
 ### 2021.04 (April 2)
 
-* [New List variants](https://github.com/patternfly/patternfly-react/issues/5336) - Introduce new variants of the [List](https://www.patternfly.org/v4/components/list) component that include plain lists, lists with horizontal separators, and lists with icons for communicating static information in a standard `<li>`element.
+* [New List variants](https://github.com/patternfly/patternfly-react/issues/5336) - Introduce new variants of the [List](https://v4-archive.patternfly.org/v4/components/list) component that include plain lists, lists with horizontal separators, and lists with icons for communicating static information in a standard `<li>`element.
 
 * [Stacked form elements](https://github.com/patternfly/patternfly-react/issues/5286) - Allows stacking of checkboxes, radios, text inputs, etc. in a single group.
 
