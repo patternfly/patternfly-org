@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.4.0-alpha.31 (2024-06-03)
+
+
+### Bug Fixes
+
+* **EmptyState:** removed extraneous ESIcon component import ([#4056](https://github.com/patternfly/patternfly-org/issues/4056)) ([60f4499](https://github.com/patternfly/patternfly-org/commit/60f4499adf803975175bdcac78b142b72d6f4e96))
+
+
+
+
+
 # 1.4.0-alpha.30 (2024-06-03)
 
 **Note:** Version bump only for package @patternfly/ast-helpers
