@@ -17,7 +17,7 @@
     "screenshots": "pf-docs-framework screenshots"
   },
   "dependencies": {
-    "@patternfly/documentation-framework": "^5.14.1",
+    "@patternfly/documentation-framework": "^5.15.7",
     "@patternfly/quickstarts": "5.3.0",
     "@patternfly/react-catalog-view-extension": "5.0.0",
     "@patternfly/react-console": "5.0.0",
@@ -25,7 +25,7 @@
     "@patternfly/react-log-viewer": "5.1.0",
     "@patternfly/react-topology": "5.3.0",
     "@patternfly/react-user-feedback": "5.0.0",
-    "@patternfly/react-component-groups": "5.1.0",
+    "@patternfly/react-component-groups": "5.2.0",
     "@patternfly/react-virtualized-extension": "5.0.0",
     "react": "^17.0.0 || ^18.0.0",
     "react-dom": "^17.0.0 || ^18.0.0",
