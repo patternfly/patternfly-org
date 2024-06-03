@@ -2,10 +2,13 @@
 id: Icons
 section: design-foundations
 ---
-import { Card, CardBody, Divider, Flex, FlexItem, Grid, GridItem, Icon } from '@patternfly/react-core';
+import { Alert, Card, CardBody, Divider, Flex, FlexItem, Grid, GridItem, Icon } from '@patternfly/react-core';
 import CaretDownIcon from '@patternfly/react-icons/dist/esm/icons/caret-down-icon';
 import CheckCircleIcon from '@patternfly/react-icons/dist/esm/icons/check-circle-icon';
 import ExclamationCircleIcon from '@patternfly/react-icons/dist/esm/icons/exclamation-circle-icon';
+import ExclamationTriangleIcon from '@patternfly/react-icons/dist/esm/icons/exclamation-triangle-icon';
+import InfoCircleIcon from '@patternfly/react-icons/dist/esm/icons/info-circle-icon';
+import BellIcon from '@patternfly/react-icons/dist/esm/icons/bell-icon';
 import GithubIcon from '@patternfly/react-icons/dist/esm/icons/github-icon';
 import OutlinedCalendarAltIcon from '@patternfly/react-icons/dist/esm/icons/outlined-calendar-alt-icon';
 import StarIcon from '@patternfly/react-icons/dist/esm/icons/star-icon';
@@ -15,101 +18,40 @@ import { IconRecommendations } from './IconRecommendations';
 import { IconsTable } from './IconsTable';
 import './icons.css';
 
-If you're a developer, check out our [getting started](/get-started/develop#using-styles) page to learn more about how to get and use our icon set.
-
-## Icon colors
-Visit our [colors page](/design-foundations/colors) to learn more about icon colors.
+If you're a developer, check out our [development onboarding guide](/get-started//develop#using-icons) to learn how to install and use our icon set.
 
 ## Icon sizes
-<Grid gutter="md">
-  <GridItem xl={6} lg={12} className="ws-icons-gridtext">
-    <p>
-      PatternFly supports a range of icon sizes so that all icons can be adapted to different use cases. This range includes small, medium, large, and x-large icons, which correspond to the following font sizes and CSS variables:
-    </p>
-    <Flex className="ws-icon-sizes ws-icon-sizes-sm" alignItems={{ default: 'alignItemsFlexStart' }}>
-      <FlexItem className="ws-icon-size">
-      <Icon size ="sm">
-        <CheckCircleIcon />
-      </Icon>
-      </FlexItem>
-      <FlexItem>
-        <p>Small (12px)</p>
-        <code className="ws-code ws-icon-code">--pf-v6-global--icon--FontSize--sm</code>
-      </FlexItem>
-    </Flex>
-    <Flex className="ws-icon-sizes ws-icon-sizes-md" alignItems={{ default: 'alignItemsFlexStart' }}>
-      <FlexItem className="ws-icon-size">
-      <Icon size="md">
-        <CheckCircleIcon />
-      </Icon>  
-      </FlexItem>
-      <FlexItem>
-        <p>Medium (16px)</p>
-        <code className="ws-code ws-icon-code">--pf-v6-global--icon--FontSize--md</code>
-      </FlexItem>
-    </Flex>
-    <Flex className="ws-icon-sizes ws-icon-sizes-lg" alignItems={{ default: 'alignItemsFlexStart' }}>
-      <FlexItem className="ws-icon-size">
-      <Icon size="lg">
-        <CheckCircleIcon/>
-      </Icon>  
-      </FlexItem>
-      <FlexItem>
-        <p>Large (24px)</p>
-        <code className="ws-code ws-icon-code">--pf-v6-global--icon--FontSize--lg</code>
-      </FlexItem>
-    </Flex>
-    <Flex className="ws-icon-sizes ws-icon-sizes-xl" alignItems={{ default: 'alignItemsFlexStart' }}>
-      <FlexItem className="ws-icon-size">
-      <Icon size="xl">
-        <CheckCircleIcon/>
-      </Icon>
-      </FlexItem>
-      <FlexItem>
-        <p>X-large (54px)</p>
-        <code className="ws-code ws-icon-code">--pf-v6-global--icon--FontSize--xl</code>
-      </FlexItem>
-    </Flex>
-    <p>
-      Medium icons are typically the most versatile size to use across UIs. PatternFly uses medium icons in most applications. Small, large and x-large icons are used sparingly across PatternFly components. 
-    </p>
-  </GridItem>
-  <GridItem xl={5} xlOffset={7} lg={12} xlRowSpan={2} >
-    <Card className="ws-icon-size-examples">
-      <CardBody>
-        <p><b>Small icons</b></p>
-        <Flex alignItems={{ default: 'alignItemsFlexStart' }}>
-          <FlexItem>
-            <img src="./sm-icons-1.png" alt="Small icons" className="ws-sm-icons ws-sm-icons-1" />
-          </FlexItem>
-          <FlexItem grow={{ default: 'grow' }}>
-            <img src="./sm-icons-2.png" alt="Small icons" className="ws-sm-icons ws-sm-icons-2" />
-          </FlexItem>
-        </Flex>
-        <p><b>Medium icons</b></p>
-        <img src="./md-icons.png" alt="Medium icons" className="ws-md-icons" />
-        <p><b>Large icons</b></p>
-        <img src="./lg-icons.png" alt="Large icons" className="ws-lg-icons" />
-        <p><b>X-large icons</b></p>
-        <img src="./xl-icons.png" alt="Extra large icons" className="ws-xl-icons" />
-      </CardBody>
-    </Card>
-  </GridItem>
-  <GridItem xl={6} lg={12} className="ws-icons-gridtext ws-icons-alignment-section">
-  <br></br>
 
-  No matter the size of an icon, when it is placed next to text, it should be center-aligned horizontally, as shown in our [link button example.](/components/button/design-guidelines#link-buttons) Stacked icons should also be center-aligned vertically.
+PatternFly supports a range of icon sizes so that all icons can be adapted to different use cases. This range includes small, medium, large, x-large, 2xl, and 3xl icons, which correspond to the following font sizes and tokens:
 
-  <div><img src="./icon_alignment.png" alt="Icon alignment" className="ws-icon-alignment" /></div>
-  </GridItem>
-</Grid>
+| **Size** | **Token** | **Example** |
+| --- | --- | :---: |
+| Small (12px) |  `--pf-t--global--icon--size--sm` |<Icon size ="sm"><CheckCircleIcon /></Icon> |
+| Medium (14px) |  `--pf-t--global--icon--size--md` |<Icon size ="md"><CheckCircleIcon /></Icon> |
+| Large (16px) |  `--pf-t--global--icon--size--lg` |<Icon size ="lg"><CheckCircleIcon /></Icon> |
+| X-large (22px) | `--pf-t--global--icon--size--xl` | <Icon size ="xl"> <CheckCircleIcon /></Icon> |
+| 2xl (56px) | `--pf-t--global--icon--size--2xl` |  <Icon size ="2xl"><CheckCircleIcon /></Icon> |
+| 3xl (96px) | `--pf-t--global--icon--size--3xl` | <Icon size ="3xl"><CheckCircleIcon /></Icon> |
 
-<br></br>
+Medium icons (the size used in most PatternFly components) are typically the most versatile size to use across UIs. Other icon sizes are used sparingly across PatternFly. Regardless of size, icons should be center-aligned horizontally when placed next to text and center-aligned vertically when stacked:
+
+<div><img src="./icon_alignment.png" alt="Icon alignment" className="ws-icon-alignment" /></div>
+
+## Icon colors
+All icon colors that you use should align with the proper [semantic design token.](/tokens/all-patternfly-tokens) For example, a warning icon should use our approved warning color, a danger icon should use our approved danger color, and so on. 
+
+| **Icon state** | **Color token** | **Example** |
+| --- | --- | :---: |
+| Danger | `--pf-t--global--icon--color--status--danger--default` | <Icon status="danger" size="xl"> <ExclamationCircleIcon /> </Icon> |
+| Warning  | `--pf-t--global--icon--color--status--warning--default` | <Icon status="warning" size="xl"><ExclamationTriangleIcon /></Icon> |
+| Success | `--pf-t--global--icon--color--status--success--default` | <Icon status="success" size="xl"><CheckCircleIcon /></Icon> |
+| Info | `--pf-t--global--icon--color--status--info--default` | <Icon status="info" size="xl"><InfoCircleIcon /></Icon> |
+| Custom | `--pf-t--global--icon--color--status--custom--default` | <Icon status="custom" size="xl"><BellIcon /></Icon> |
+
+To learn more about icon colors and color tokens, visit our [colors page.](/design-foundations/colors) 
 
 ## PatternFly icons
-PatternFly uses custom icons and selections from <a href="https://fontawesome.com/icons?d=gallery&m=free">Font Awesome Free</a>. If PatternFly doesn't offer an icon for your use case, you can download SVGs of additional 'fa' icons from Font Awesome's free set. Be sure to properly attribute these additional icons as outlined on the Font Awesome site.
-
-These icons are the same as those in the [PatternFly Sketch design kit](/get-started/design#whats-in-the-design-kit), but you can use any Font Awesome icon so long it aligns with our icon guidelines.
+PatternFly uses custom icons and selections from <a href="https://fontawesome.com/icons?d=gallery&m=free">Font Awesome Free</a>, as shown in [this table](#all-icons). If PatternFly doesn't offer an icon for your use case, you can download SVGs of additional 'fa' icons from Font Awesome's free set. Be sure to properly attribute these additional icons as outlined on the Font Awesome site.
 
 ### HTML icons 
 When using HTML, use the following syntax:
@@ -118,18 +60,18 @@ When using HTML, use the following syntax:
 - For 'fa' solid icons: `<i class="fas [insert-icon-name]"></i>`<br />
 - For 'fa' regular icons: `<i class="far [insert-icon-name]"></i>`<br />
 
-**Note:** Be sure to read [how to get started with icons](/get-started/develop#using-styles) when using 'fa' regular icons.
+**Note:** Be sure to reference our [development onboarding guide](/develop#using-icons) when using 'fa' regular icons.
 
 ### React icons
 When using React, include the following import line for 'pficon' icons: `import { [insert-icon-name] } from '@patternfly/react-icons'`
 
 ### Font Awesome solid (FAS) vs Font Awesome regular (FAR)
-The Font Awesome icons included with PatternFly are Font Awesome solid (FAS) webfont icons. If you're using icons via `<i class="[fa, far, fas] [insert-icon-name]"></i>`, you can use any FAS icon. If you need to use a Font Awesome regular (FAR) icon, you must include the FAR icon(s) yourself by doing one of the following:
+The Font Awesome icons included with PatternFly are Font Awesome solid (FAS) webfont icons. If you're using icons via `<i class="[fa, far, fas] [insert-icon-name]"></i>`, you can use any FAS icon. If you need to use a Font Awesome regular (FAR) icon, you must include the FAR icons yourself by doing one of the following:
 
-1. [Hosting it yourself](https://fontawesome.com/how-to-use/on-the-web/setup/hosting-font-awesome-yourself)
-2. [Including the icon(s) via a package manager](https://fontawesome.com/how-to-use/on-the-web/setup/using-package-managers)
-3. [Linking to a CDN](https://cdnjs.com/libraries/font-awesome)
-4. Using the SVG code directly from [fontawesome.com](https://fontawesome.com) (proper attribution is required)
+1. [Host it yourself](https://fontawesome.com/how-to-use/on-the-web/setup/hosting-font-awesome-yourself)
+2. [Include the icons via a package manager](https://fontawesome.com/how-to-use/on-the-web/setup/using-package-managers)
+3. [Link to a CDN](https://cdnjs.com/libraries/font-awesome)
+4. Use the SVG code directly from [fontawesome.com](https://fontawesome.com) (proper attribution is required)
 
 
 ## All icons 
@@ -138,6 +80,6 @@ The following table outlines details for all icons supported by PatternFly, as w
 
 For guidance related to tooltips for icons, [refer to our tooltips writing guide.](/ux-writing/tooltips#icon-tooltips)
 
-Select any single icon in the table to download it as an SVG. You can also download all icon SVGs <a href="https://github.com/patternfly/patternfly-design/raw/master/resources/patternfly-icon-svgs/patternfly-icons.zip">on GitHub</a>.
+Select any single icon in the table to download it as an SVG. You can also download all icon SVGs <a href="https://github.com/patternfly/patternfly-design/raw/master/resources/patternfly-icon-svgs" target="_blank">on GitHub (via patternfly-icons.zip.)</a>
 
 <IconsTable />
