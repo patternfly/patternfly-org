@@ -92,7 +92,7 @@ const Page404 = () => {
           body="Learn about designing and developing with PatternFly."
           link={{
             text: 'View getting started resources',
-            to: '/get-started/about'
+            to: '/get-started/about-patternfly'
           }}
         />
         <Card404
