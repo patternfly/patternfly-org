@@ -22,9 +22,9 @@ A local development server at http://localhost:8003 can be started with:
 
 ### Build
 
-The new v5 site can be built with:
+The new v6 site can be built with:
 
-    yarn build:v5
+    yarn build:v6
 
 The static assets get copied to build/patternfly-org.
 
