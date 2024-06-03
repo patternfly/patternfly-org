@@ -31,7 +31,7 @@ export const Footer = () => (
                       className="ws-org-pfsite-footer-menu-link"
                       to={"/get-started/about-patternfly"}
                       aria-label="Get started with PatternFly"
-                    >
+                     >
                       Get started
                     </Link>
                   </li>
@@ -139,7 +139,7 @@ export const Footer = () => (
                   <li className="ws-org-pfsite-footer-menu-list-item">
                     <Link
                       className="ws-org-pfsite-footer-menu-link"
-                      to="//redhat.com/mailman/listinfo/patternfly"
+                      to="https://www.redhat.com/dynamic-form/instance/934b1674-bc8a-4a13-8c9d-d19abcceb263"
                       target="top"
                       aria-label="Join the PatternFly mailing list"
                     >

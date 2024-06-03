@@ -5,7 +5,12 @@ module.exports = (sourceMD, sourceProps, sourceFunctionDocs) => {
   // source function docs (by calling sourceFunctionDocs with the package name) before sourcing markdown as well.
 
   const contentBase = path.join(__dirname, "../patternfly-docs/content");
-  const reactPropsIgnore = ["**/*.test.tsx", "**/examples/*.tsx"];
+  const reactPropsIgnore = [
+    "/**/examples/**",
+    "/**/__mocks__/**",
+    "/**/__tests__/**",
+    "/**/*.test.tsx",
+  ];
   sourceMD(path.join(contentBase, "extensions/**/*.md"), "extensions");
   if (!(process.env.EXTENSIONS_ONLY === "true")) {
     sourceMD(path.join(contentBase, "contribute/**/*.md"), "pages-contribute");

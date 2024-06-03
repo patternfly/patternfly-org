@@ -82,7 +82,7 @@ const MDXChildTemplate = ({
               You can find the <Link to={newImplementationLink}>updated implementation here</Link>.
             </React.Fragment>
           )}
-          {' '}To learn more about the process, visit our <Link to="/get-started/about#major-release-cadence">about page</Link>.
+          {' '}To learn more about the process, visit our <Link to="/get-started/about-patternfly#patternfly-release-cadence">about page</Link>.
         </InlineAlert>
       )}
        {(template || source === 'react-template') && (
