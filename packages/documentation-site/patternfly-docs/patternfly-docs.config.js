@@ -37,7 +37,7 @@ if (process.env.EXTENSIONS_ONLY === 'true') {
       { section: 'UX writing' },
       { section: 'components' },
       { section: 'patterns' },
-      // { section: 'extensions' },
+      { section: 'extensions' },
       { section: 'charts' },
       // { section: 'topology' },
       { section: 'layouts' },
