@@ -276,7 +276,7 @@ The following pages now have updated content -- take a read!
 
 - [About accessibility](/accessibility/about-accessibility) (formerly named "Accessibility fundamentals")
 - [Accessibility scorecard](/accessibility/accessibility-scorecard)
-- [Design for accessibility](/accessibility/accessibility-design) (**new!**)
+- [Design for accessibility](/accessibility/design-for-accessibility) (**new!**)
 - [Develop for accessibility](/accessibility/develop-for-accessibility) (formerly named "Product development guide")
 - [PatternFly's accessibility](/accessibility/patternflys-accessibility)
 - [Testing your accessibility](/accessibility/testing-your-accessibility)
@@ -384,7 +384,7 @@ We are committed to supporting the 2 most recent versions of React for PatternFl
 
 We wanted to ensure that our variable naming conventions were clear and consistent going forward with our future release cycles. To keep things organized and clear, we updated our CSS variables and class names so that they are explicitly associated with the version of PatternFly that they align to. For PatternFly 5, we added a prefix of  `v5` to a number of our variable and class names.
 
-For more details, refer to [our upgrade guide](/get-started/upgrade#review-and-update-variable-and-class-names) and our [updated CSS classes and variables](developer-resources/global-css-variables) documentation.
+For more details, refer to [our upgrade guide](/get-started/upgrade#review-and-update-variable-and-class-names) and our [updated CSS classes and variables](/developer-resources/global-css-variables) documentation.
 
 ### Event handler parameter consistency updates
 
@@ -410,7 +410,7 @@ The following updates were made to the card component to improve the experience 
 
 Our previous card API was difficult to understand and utilize. We reconfigured its markup and React subcomponents so you can implement cards more easily.
 
-As a result, `CardHeaderMain` and `CardActions` are no longer exported from PatternFly, and are instead rendered internally within the `CardHeader` sub-component. Any content and properties for `CardHeaderMain` or `CardActions` should be passed directly to [`CardHeader`](https://www.patternfly.org/v4/components/card#cardheader) instead.
+As a result, `CardHeaderMain` and `CardActions` are no longer exported from PatternFly, and are instead rendered internally within the `CardHeader` sub-component. Any content and properties for `CardHeaderMain` or `CardActions` should be passed directly to [`CardHeader`](https://v4-archive.patternfly.org/v4/components/card#cardheader) instead.
 
 **Clickable and selectable cards**
 

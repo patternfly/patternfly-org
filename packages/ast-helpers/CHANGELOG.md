@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.16.1 (2024-06-04)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 1.16.0 (2024-06-03)
+
+
+### Features
+
+* release component groups 5.2 ([#4055](https://github.com/patternfly/patternfly-org/issues/4055)) ([469376f](https://github.com/patternfly/patternfly-org/commit/469376f59edb691b4790fbbab50fecb86ee986f6))
+
+
+
+
+
 ## 1.15.7 (2024-05-21)
 
 **Note:** Version bump only for package @patternfly/ast-helpers
