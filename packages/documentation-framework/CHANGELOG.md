@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 6.0.0-alpha.43 (2024-06-04)
+
+
+### Bug Fixes
+
+* enable some extensions docs ([#4058](https://github.com/patternfly/patternfly-org/issues/4058)) ([0ef77e1](https://github.com/patternfly/patternfly-org/commit/0ef77e15727a6dced6084ca4dfb9e5a39c644e45))
+
+
+
+
+
 # 6.0.0-alpha.42 (2024-06-03)
 
 
