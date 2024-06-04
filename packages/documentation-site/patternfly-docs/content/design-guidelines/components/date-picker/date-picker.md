@@ -82,7 +82,7 @@ Some use cases may call for a two-lined toolbar. If your toolbar spans two lines
 
 <img src="./img/In toolbar filter group vertical.png" alt="Example of date picker in toolbar filter group - two liner" width="457"/>
 
-For more information about using different types of filters, see our [filters guidelines](/patterns/filters).
+For more information about using different types of filters, see our [filters guidelines](/patterns/filters/design-guidelines).
 
 ##### Additional dropdown for simplified date-range filtering 
 Add an optional dropdown to date-range filters within a toolbar to allow users to filter by the most common date-range options associated with the corresponding table. 
@@ -120,7 +120,7 @@ Example: MM/DD/YYYY
 
 <img src="./img/placeholder date picker.png" alt="Placeholder text in date picker" width="200"/>
 
-For more information about writing effective placeholder text, see our <a href="https://www.patternfly.org/v4/components/form/design-guidelines">form design guidelines</a>. 
+For more information about writing effective placeholder text, see our [form design guidelines.](/components/forms/form/design-guidelines)
 
 
 ### Helper text
@@ -128,7 +128,7 @@ Use helper text to provide permanent guidance below the date field.
 
 <img src="./img/helper text date picker.png" alt="Date picker witth helper text" width="200"/>
 
-For more information about writing effective placeholder text, see our <a href="https://www.patternfly.org/v4/components/form/design-guidelines">form design guidelines</a>. 
+For more information about writing effective placeholder text, see our [form design guidelines.](/components/forms/form/design-guidelines) 
 
 ### Error message
 Use field level error messages to alert users when their inputted date or date format is invalid. Always specify what went wrong so that users can quickly identify the problem and fix it.
@@ -139,4 +139,4 @@ Examples:
 
 <img src="./img/Error message date picker.png" alt="Date picker with error message" width="200"/>
 
-For more information about writing effective error messages, see our <a href="https://www.patternfly.org/v4/ux-writing/error-messages/">UX writing style guide</a>.
+For more information about writing effective error messages, see our [UX writing style guide.](/ux-writing/about-ux-writing)

@@ -30,7 +30,7 @@ export const Footer = () => (
                     <Link
                       className="ws-org-pfsite-footer-menu-link"
                       to={"/get-started/about-patternfly"}
-                      aria-label="Get started with PatternFly 4"
+                      aria-label="Get started with PatternFly"
                     >
                       Get started
                     </Link>
@@ -38,8 +38,8 @@ export const Footer = () => (
                   <li className="ws-org-pfsite-footer-menu-list-item">
                     <Link
                       className="ws-org-pfsite-footer-menu-link"
-                      to="/components/about-modal"
-                      aria-label="PatternFly 4 components"
+                      to="/components/all-components"
+                      aria-label="PatternFly components"
                     >
                       Components
                     </Link>
@@ -47,8 +47,8 @@ export const Footer = () => (
                   <li className="ws-org-pfsite-footer-menu-list-item">
                     <Link
                       className="ws-org-pfsite-footer-menu-link"
-                      to="/layouts/bullseye"
-                      aria-label="PatternFly 4 layouts"
+                      to="/layouts/about-layouts"
+                      aria-label="PatternFly layouts"
                     >
                       Layouts
                     </Link>
@@ -56,8 +56,8 @@ export const Footer = () => (
                   <li className="ws-org-pfsite-footer-menu-list-item">
                     <Link
                       className="ws-org-pfsite-footer-menu-link"
-                      to="/design-foundations/colors"
-                      aria-label="PatternFly 4 styles"
+                      to="/design-foundations/about-design-foundations"
+                      aria-label="PatternFly styles"
                     >
                       Styles
                     </Link>
@@ -98,7 +98,7 @@ export const Footer = () => (
                       className="ws-org-pfsite-footer-menu-link"
                       to="https://github.com/patternfly/patternfly/blob/main/CODE_OF_CONDUCT.md"
                       target="top"
-                      aria-label="PatternFly 4 Code of Conduct"
+                      aria-label="PatternFly Code of Conduct"
                     >
                       Code of Conduct
                     </Link>
@@ -121,7 +121,7 @@ export const Footer = () => (
                       className="ws-org-pfsite-footer-menu-link"
                       to="//join.slack.com/t/patternfly/shared_invite/zt-1npmqswgk-bF2R1E2rglV8jz5DNTezMQ"
                       target="top"
-                      aria-label="Join the PatternFly 4 Slack"
+                      aria-label="Join the PatternFly Slack"
                     >
                       Slack
                     </Link>
@@ -151,7 +151,7 @@ export const Footer = () => (
                       className="ws-org-pfsite-footer-menu-link"
                       to="//medium.com/patternfly"
                       target="top"
-                      aria-label="Read the PatternFly 4 blog"
+                      aria-label="Read the PatternFly blog"
                     >
                       PatternFly Medium
                     </Link>
