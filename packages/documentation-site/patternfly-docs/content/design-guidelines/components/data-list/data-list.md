@@ -54,7 +54,7 @@ PatternFly supports 2 main types of data lists:
 1. **[Compact data list](#compact-spacing):** Use when you want to show as much data per page as possible.
 2. **[Default data list](#default-spacing):** Use when you don’t have to minimize paging.
 
-See [when to use compact vs. default spacing](#when-to-use-a-data-list-vs.-a-table)for more information about the styling and usage.
+See [when to use compact vs. default spacing](#when-to-use-a-data-list-vs.-a-table) for more information about the styling and usage.
 
 <img src="./img/compact-and-default-list.png" alt="Compact and default data list" /> 
 
