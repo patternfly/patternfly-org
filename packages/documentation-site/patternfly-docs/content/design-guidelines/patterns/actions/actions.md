@@ -3,9 +3,7 @@ id: Actions
 section: patterns
 ---
 
-An **action** is any process that a user can trigger by clicking or selecting the component that is linked to the action. For example, adding, deleting, editing, filtering, and submitting. These actions are linked to specific PatternFly components, like buttons (most common), menu items, and cards.
-
-To cover common UI patterns, PatternFly components may incorporate other action components into their design. For example, a toolbar may contain an action button, a table may contain action toggle items, and so on.
+An **action** is any process that a user can trigger by clicking or selecting a linked component. Common actions include adding, deleting, editing, filtering, and submitting, for example. In PatternFly, most actions are shown in the UI as action buttons, action items (in menus), and action cards. These components are incorporated into the design of other components, such as a toolbar with action buttons, a dropdown menu with action items, and so on.
 
 ### Common actions 
 
@@ -27,9 +25,9 @@ The following images illustrate some of the common action patterns you may come 
 
 ## Usage
 
-Although many PatternFly components already have actions built into their design, you will often need to customize the arrangement of components and actions in your UI. It is important to strategically place actions so that they're easily located and so the data or UI elements they impact is clear.
+Although many PatternFly components already have actions built into their design, you may need to customize the arrangement of components and actions in your UI to address your use case. It's important to strategically place actions so that they can be easily found by users and so that it's clear which data sources or UI elements they impact.
 
-When labeling or referring to actions in your UI, make sure that you adhere to our [terminology guidelines](/ux-writing/terminology) and align icons with the usage behavior outlined in our [icon design foundations.](/design-foundations/icons#all-icons) 
+When labeling or referring to actions in your UI, make sure that you adhere to our [terminology guidelines](/ux-writing/terminology) and align any icons you use with the usage behavior outlined in our [icon design foundations.](/design-foundations/icons#all-icons) 
 
 ### When not to use actions 
 - Do not use actions in place of text links.
