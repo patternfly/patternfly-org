@@ -9,7 +9,7 @@ Consistent capitalization adds clarity and creates unity across product UIs. Pat
 
 For example: “When you use PatternFly’s design resources, you get helpful tips and best practices.”
 
-**Above all else, your main goal should be consistency.** You may need to use different capitalization standards depending on what you're designing, but be sure to keep the capitalization within your product area consistent.
+**Above all else, your main goal should be consistency.** You might need to use different capitalization standards depending on what you're designing, but be sure to keep the capitalization within your product area consistent.
 
 ## Red Hat product UIs
 
@@ -27,7 +27,7 @@ When you write for a product, make sure you adhere to the following capitalizati
 
     | **Feature name** | **UI text**  | **Reasoning**    |
     |------------------|--------------|------------------|
-    | Compliance   | “Check your system **compliance** using Red Hat Insights **Compliance**.”                                                  | The first “compliance” is lowercase since it refers to a concept. The second “compliance” refers to a specific feature offered on cloud.redhat.com, so it is capitalized.                                     |
+    | Compliance   | “Check your system **compliance** using Red Hat Insights **Compliance**.”                                                  | The first “compliance” is lowercase because it refers to a concept. The second “compliance” refers to a specific feature offered on cloud.redhat.com, so it is capitalized.                                     |
     | Sources      | “Add a *source* by going to **Settings > *Sources*.**” "Check the *Sources* table for status."<br /><br />Button text: "Add *source*" | “Sources” is only capitalized when it directly refers to a subsection, feature, or location in the UI. "Source" is lowercase in the button text because button labels should always be in sentence case. |
     </div>
 

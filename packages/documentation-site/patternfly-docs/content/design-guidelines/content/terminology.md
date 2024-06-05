@@ -29,7 +29,6 @@ For Red Hat product terminology and documentation standards, see [Red Hat's supp
 | **Edit** (v.) | Use to describe making changes to an object (like a file, configuration, or policy). | | *Modify* and *Change* are not recommended for this use case.|
 | **Expand** (v.) | Use to describe expanding a container element (like a list or message) to show all its contents. | *Collapse*
 | **Export** (v.) | Use to describe packing the contents (like a project or spreadsheet) from a website or application to a file format (like .pdf or .xslx) to your system. | *Import* | Do not use interchangeably with *Download*.
-| **Export** (v.) | Use to describe packing the contents (like a project or spreadsheet) from a website or application to a file format (like .pdf or .xslx) to your system. | *Import* | Do not use interchangeably with *Download*.
 | **Filter** (v.) | Use to describe the action of narrowing a set of search results to show only items meeting a certain criteria. Filtering is mostly associated with views like tables, lists, and card grids and assumes that a search has previously been performed to return an initial results list.
 | **Hide** (v.) | Use to describe hiding something that is displayed in the interface. | *Show*
 | **Home page** (n.) | Use to describe the main page of a website. | | Write *Home page* as two words, not one.

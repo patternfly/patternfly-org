@@ -5,6 +5,8 @@ section: UX writing
 
 By following accessibility and global writing best practices, you’ll be better equipped to create product experiences for users of all abilities and backgrounds. 
 
+In addition to this page, you can also reference [this Red Hat documentation guide for accessible writing](https://redhat-documentation.github.io/accessibility-guide/).
+
 ## Writing for all abilities 
 When designing interfaces, consider all users’ abilities, including physical and cognitive. Use words that are clear, concise, and consistent. Refer to the [Web Content Accessibility Guidelines (WCAG)](https://www.w3.org/TR/WCAG21/) for accessibility compliance information. 
 
