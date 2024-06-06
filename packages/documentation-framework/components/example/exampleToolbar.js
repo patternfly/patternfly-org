@@ -24,8 +24,6 @@ function getLanguage(lang) {
 export const ExampleToolbar = ({
   // Link to fullscreen example page (each example has one)
   fullscreenLink,
-  // Params to pass to codesandbox
-  codeBoxParams,
   // Language of code
   lang,
   // Whether the example is fullscreen only
@@ -44,14 +42,12 @@ export const ExampleToolbar = ({
 
   const copyLabel = 'Copy code to clipboard';
   const languageLabel = `Toggle ${lang.toUpperCase()} code`;
-  const codesandboxLabel = 'Open example in CodeSandbox';
   const fullscreenLabel = 'Open example in new window';
   const convertLabel = 'Convert example from Typescript to JavaScript';
   const undoAllLabel = 'Undo all changes';
 
   const copyAriaLabel = `Copy ${exampleTitle} example code to clipboard`;
   const languageAriaLabel = `Toggle ${lang.toUpperCase()} code in ${exampleTitle} example`;
-  const codesandboxAriaLabel = `Open ${exampleTitle} example in CodeSandbox`;
   const fullscreenAriaLabel = `Open ${exampleTitle} example in new window`;
   const convertAriaLabel = `Convert ${exampleTitle} example from Typescript to JavaScript`;
   const undoAllAriaLabel = `Undo all changes to ${exampleTitle}`;
@@ -110,38 +106,11 @@ export const ExampleToolbar = ({
           <CopyIcon />
         </Button>
       </Tooltip>
-      {codeBoxParams &&
-        <Form
-          aria-label={`${codesandboxAriaLabel} form` }
-          action="https://codesandbox.io/api/v1/sandboxes/define"
-          method="POST"
-          target="_blank"
-          style={{ display: "inline-block" }}
-        >
-          <Tooltip
-            content={codesandboxLabel}
-            maxWidth={editorControlProps.maxWidth}
-          >
-            <Button
-              aria-label={codesandboxAriaLabel}
-              variant="control"
-              type="submit"
-              onClick={() => {
-                trackEvent('code_editor_control_click', 'click_event', 'CODESANDBOX_LINK');
-              }}
-              className={editorControlProps.className}
-            >
-              <CodepenIcon />
-            </Button>
-          </Tooltip>
-          <input type="hidden" name="parameters" value={codeBoxParams} />
-        </Form>
-      }
-      {fullscreenLink && 
+      {fullscreenLink &&
         <CodeEditorControl
           component="a"
           icon={<ExternalLinkAltIcon />}
-          href={fullscreenLink} 
+          href={fullscreenLink}
           target="_blank"
           rel="noopener noreferrer"
           aria-label={fullscreenAriaLabel}

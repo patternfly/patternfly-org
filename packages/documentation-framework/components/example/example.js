@@ -16,7 +16,6 @@ import * as reactCoreDeprecatedModule from '@patternfly/react-core/deprecated';
 import * as reactTableModule from '@patternfly/react-table';
 import * as reactTableDeprecatedModule from '@patternfly/react-table/deprecated';
 import { css } from '@patternfly/react-styles';
-import { getParameters } from 'codesandbox/lib/api/define';
 import { ExampleToolbar } from './exampleToolbar';
 import { AutoLinkHeader } from '../autoLinkHeader/autoLinkHeader';
 import {
@@ -98,8 +97,6 @@ export const Example = ({
   hasDarkThemeSwitcher = process.env.hasDarkThemeSwitcher,
   // Show dark theme switcher on full page examples
   hasRTLSwitcher = process.env.hasRTLSwitcher,
-  // Map of relative imports matched to their npm package import path (passed to Codesandbox)
-  relativeImports,
   // md file location in node_modules, used to resolve relative import paths in examples
   relPath = '',
   // absolute url to hosted file
@@ -230,19 +227,6 @@ export const Example = ({
     );
   }
 
-  const codeBoxParams = getParameters(
-    lang === 'html'
-      ? getStaticParams(title, editorCode)
-      : getReactParams(
-          title,
-          editorCode,
-          scope,
-          lang,
-          relativeImports,
-          relPath,
-          sourceLink
-        )
-  );
   const fullscreenLink =
     loc.pathname.replace(/\/$/, '') +
     (loc.pathname.endsWith(source) ? '' : `/${source}`) +
@@ -327,7 +311,6 @@ export const Example = ({
         originalCode={code}
         code={editorCode}
         setCode={debounce(setEditorCode, 300)}
-        codeBoxParams={codeBoxParams}
         exampleTitle={title}
       />
     </div>
