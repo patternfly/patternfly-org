@@ -21,7 +21,7 @@ section: components
 ### When not to use
 * The numeric value range is infinite.
 * The numeric value can be either a fractional or whole number.
-* The numeric value required is not part of a range, or is arbitrary. In this use case, use an <a href="https://www.patternfly.org/v4/components/input-group/">input group</a> instead.
+* The numeric value required is not part of a range, or is arbitrary. In this use case, use an <a href="https://v4-archive.patternfly.org/v4/components/input-group/">input group</a> instead.
 * There is not enough space in the UI to account for the interaction between the input field and the buttons.
 
 ### Best practices
@@ -29,7 +29,7 @@ section: components
 * Keep labels concise and specific to effectively communicate what value the user should enter into the input field.
 * Determine an increment size relative to your specific value range. Scale your increment size to accommodate for the types of values users will input in context.
 For example: If your range is from 0-10, have increments of 1, but if your range is from 0-100, have increments of 10.
-* Include unit symbols to the right of the text input and increase button, depending on your use case. Always use a unit’s standard abbreviation or symbol. For a list of recommended symbols, see our <a href="https://www.patternfly.org/v4/ux-writing/units-and-symbols#writing-units-of-measure">Units and symbols page</a>.
+* Include unit symbols to the right of the text input and increase button, depending on your use case. Always use a unit’s standard abbreviation or symbol. For a list of recommended symbols, see our <a href="https://v4-archive.patternfly.org/v4/ux-writing/units-and-symbols#writing-units-of-measure">Units and symbols page</a>.
 <img src="./img/number_input_states.png" alt="Number input states" width="740px"/>
 
 ## Variations
@@ -52,6 +52,6 @@ When adding thresholds to a number input, be sure to inform users with text to m
 Consider the following guidance to ensure that your number input is <a href="https://www.section508.gov/">508 compliant</a>:
 
 * Use clear and descriptive labels for each button and fields. Specific language makes it easier for users with assistive technology to understand the required value.
-* Include error validation messages to guide users who enter values incorrectly. For more information about writing effective error messages, see our <a href="https://www.patternfly.org/v4/ux-writing/error-messages">UX writing style guide</a>.
+* Include error validation messages to guide users who enter values incorrectly. For more information about writing effective error messages, see our <a href="https://v4-archive.patternfly.org/v4/ux-writing/error-messages">UX writing style guide</a>.
 
-For more in-depth accessibility guidance, see the <a href="https://www.patternfly.org/v4/components/accordion/design-guidelines/#accessibility">PatternFly accessibility guide</a>.
+For more in-depth accessibility guidance, see the <a href="https://v4-archive.patternfly.org/v4/components/accordion/design-guidelines/#accessibility">PatternFly accessibility guide</a>.

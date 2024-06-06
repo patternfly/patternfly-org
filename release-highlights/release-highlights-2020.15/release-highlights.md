@@ -4,38 +4,38 @@
 
 
 
-#### [Menu component](https://www.patternfly.org/v4/components/menu)
+#### [Menu component](https://v4-archive.patternfly.org/v4/components/menu)
 Added a modular menu component that can be used independently of existing dropdown and select components. This supports most common action and option select menus as well as introducing fly-outs for supporting hierarchical menus. This component will form the basis of a composable dropdown approach to be delivered in future releases.
 
-#### [Lightweight, composable table components](https://www.patternfly.org/v4/components/table#tablecomposable-examples)
+#### [Lightweight, composable table components](https://v4-archive.patternfly.org/v4/components/table#tablecomposable-examples)
 This will enable developers to compose a PatternFly table from a set of lightweight components as an alternative to the existing PatternFly table component. The TableComposable component differs from the regular Table component, in that it allows you to compose the table by nesting the relevant `Thead`, `Tbody`, `Tr`, `Th` and `Td` components within it.
 
-#### [Action List component](https://www.patternfly.org/v4/components/action-list)
+#### [Action List component](https://v4-archive.patternfly.org/v4/components/action-list)
 The Action list positions a set of buttons with standard spacing.
 
 ![basic action list](./img/action-list.png)
 
-#### [Dual list selector component](https://www.patternfly.org/v4/components/dual-list-selector)
+#### [Dual list selector component](https://v4-archive.patternfly.org/v4/components/dual-list-selector)
 You can use a Dual List Selector to make it easier to select multiple items from long lists.
 
 ![dual list selector](./img/dual-list-selector.png)
 
-#### [Touchspin component](https://www.patternfly.org/v4/components/touchspin)
+#### [Touchspin component](https://v4-archive.patternfly.org/v4/components/touchspin)
 The Touchspin component can be used for entering numeric values.
 
 ![touchspin](./img/touchspin.png)
 
-#### [Date picker with custom calendar](https://www.patternfly.org/v4/components/date-picker)
+#### [Date picker with custom calendar](https://v4-archive.patternfly.org/v4/components/date-picker)
 Flatpicker has been replaced with a custom calendar component that will provide keyboard accessibility and more flexibility moving forward.
 
 ![date picker](./img/date-picker.png)
 
-#### [Jump links component](https://www.patternfly.org/v4/components/jump-links)
+#### [Jump links component](https://v4-archive.patternfly.org/v4/components/jump-links)
 Jump links, including optional scrollspy functionality, allow for navigating inside of a long scrolling page. The basic component is available now. More follow-on work will take place during the next few releases to include subsections and the ability to place jumplinks navigation in a sticky page section.
 
 ![jump links](./img/jump-links.png)
 
-See the [latest release notes](https://www.patternfly.org/v4/developer-resources/release-notes) for a more detailed list of changes.
+See the [latest release notes](https://v4-archive.patternfly.org/v4/developer-resources/release-notes) for a more detailed list of changes.
 
 
 ### What we’re working on...

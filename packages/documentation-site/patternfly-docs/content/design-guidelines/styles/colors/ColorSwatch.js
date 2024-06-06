@@ -35,8 +35,8 @@ export function ColorSwatch({
         {color}
       </code>
       <p>
-        <a href='/developer-resources/global-css-variables#global-css-variables'>
-          See all global CSS color variables
+        <a href='/tokens/all-patternfly-tokens/'>
+          See all tokens
         </a>
       </p>
       {token && (

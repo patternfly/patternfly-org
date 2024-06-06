@@ -3,53 +3,53 @@
 ----------------------------------------------------------
 ## New features and enhancements
 
-### [Back to top component](https://www.patternfly.org/v4/components/back-to-top)
+### [Back to top component](https://v4-archive.patternfly.org/v4/components/back-to-top)
 
 ![back to top](./img/back-to-top.png)
 
 Introduces a new component that floats on top of content for long scrolling pages. Back to top navigates the user back to the top of the page in a single click.
 
-### [Plain alert variants](https://www.patternfly.org/v4/components/alert#inline-plain-types)
+### [Plain alert variants](https://v4-archive.patternfly.org/v4/components/alert#inline-plain-types)
 
 ![plain alert variants](./img/plain-alert.png)
 
 Adds a new variant of an inline alert that removes borders and background styling for use in the body of a page.
 
-### [Expandable inline alert](https://www.patternfly.org/v4/components/alert#expandable)
+### [Expandable inline alert](https://v4-archive.patternfly.org/v4/components/alert#expandable)
 
 ![expandable alert](./img/expandable-alert.png)
 
 Adds a new alert type with an expandable header that allows body content to be hidden for a more compact appearance.
 
-### [Disabled tabs](https://www.patternfly.org/v4/components/tabs)
+### [Disabled tabs](https://v4-archive.patternfly.org/v4/components/tabs)
 
 ![disabled tab variants](./img/disabled-tab.png)
 
  Adds a disabled variant for the tabs component. The user can place a tooltip on a disabled tab as they would for other disabled controls to explain why the tab is disabled.
 
-### [Auto-complete search input](https://www.patternfly.org/v4/components/search-input/react-demos#search-with-autocomplete)
+### [Auto-complete search input](https://v4-archive.patternfly.org/v4/components/search-input/react-demos#search-with-autocomplete)
 
 ![auto complete search](./img/auto-complete-search.png)
 
 Adds auto-complete behavior to the search input component to expose a list of suggestions as the user types.
 
-### [Composable advanced search](https://www.patternfly.org/v4/components/search-input/react-demos#composable-advanced-search)
+### [Composable advanced search](https://v4-archive.patternfly.org/v4/components/search-input/react-demos#composable-advanced-search)
 
 ![composable search with form](./img/composable-search.png)
 
 Demonstrates how to create an advanced search input with an attached form using a more composable flexible approach.
 
-### [Refactor page to use new masthead](https://www.patternfly.org/v4/components/navigation/react-demos#default-nav)
+### [Refactor page to use new masthead](https://v4-archive.patternfly.org/v4/components/navigation/react-demos#default-nav)
 
 ![page with new masthead](./img/new-masthead.png)
 
 Refactors our page demos to utilize the new masthead component. This will provide a more flexible and responsive page header for future projects. Note changes to the configuration of the user menu to better integrate the avatar.
 
-### [Compact description list](https://www.patternfly.org/v4/components/description-list#compact)
+### [Compact description list](https://v4-archive.patternfly.org/v4/components/description-list#compact)
 
 Adds a more compact version of the description list with smaller text and tighter spacing.
 
-See the [latest release notes](https://www.patternfly.org/v4/developer-resources/release-notes) for a more detailed list of changes.
+See the [latest release notes](https://v4-archive.patternfly.org/v4/developer-resources/release-notes) for a more detailed list of changes.
 
 -----------------------------------------------------------------------------
 

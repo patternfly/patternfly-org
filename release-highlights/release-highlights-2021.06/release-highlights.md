@@ -3,35 +3,35 @@
 ----------------------------------------------------------
 ## New features and enhancements
 
-### [Toggle group re-styling](https://www.patternfly.org/v4/components/toggle-group)
+### [Toggle group re-styling](https://v4-archive.patternfly.org/v4/components/toggle-group)
 
 ![restyled toggle group](./img/toggle-group.png)
 
  We updated the selected color for a set of toggle buttons to use a lighter blue. This better differentiates them from primary buttons when placed in a full page layout.
 
-### [Composable dropdown menus](https://www.patternfly.org/v4/demos/composable-menu)
+### [Composable dropdown menus](https://v4-archive.patternfly.org/v4/demos/composable-menu)
 
- Composable menus pair a [Menu toggle](https://www.patternfly.org/v4/components/menu-toggle) and a [Menu](https://www.patternfly.org/v4/components/menu) component to create flexible dropdown and select menu configurations. This provides a more modular solution for deploying menus. Existing dropdown and select components are still supported.
+ Composable menus pair a [Menu toggle](https://v4-archive.patternfly.org/v4/components/menu-toggle) and a [Menu](https://v4-archive.patternfly.org/v4/components/menu) component to create flexible dropdown and select menu configurations. This provides a more modular solution for deploying menus. Existing dropdown and select components are still supported.
 
-### [View more action added to Select](https://www.patternfly.org/v4/components/select#view-more)
+### [View more action added to Select](https://v4-archive.patternfly.org/v4/components/select#view-more)
 
 ![select with view more](./img/view-more.png)
 
 We've added a view more action to the bottom of a select menu to enable incremental loading of long option lists.
 
-### [Complex actions now supported in a table](https://www.patternfly.org/v4/components/table#actions-and-first-cell-in-body-rows-as-th)
+### [Complex actions now supported in a table](https://v4-archive.patternfly.org/v4/components/table#actions-and-first-cell-in-body-rows-as-th)
 
 ![table with complex actions](./img/table-with-actions.png)
 
 We now support adding any type of actions to table rows. Formerly, only actions (kabob) menus were supported.
 
-### [Log viewer component (beta)](https://www.patternfly.org/v4/components/log-viewer)
+### [Log viewer component (beta)](https://v4-archive.patternfly.org/v4/components/log-viewer)
 
 ![log viewer](./img/log-viewer.png)
 
  Introduces a native log viewer component to display real-time streamed logs or static log data. The toolbar is fully customizable. This is currently work in progress with a number of enhancements and improvements to be introduced over upcoming releases. With that in mind, you are encouraged to use this and provide feedback.
 
-See the [latest release notes](https://www.patternfly.org/v4/developer-resources/release-notes) for a more detailed list of changes.
+See the [latest release notes](https://v4-archive.patternfly.org/v4/developer-resources/release-notes) for a more detailed list of changes.
 
 -----------------------------------------------------------------------------
 

@@ -12,7 +12,7 @@ This guide outlines the PatternFly color palette, as well as guidance for color 
 
 In this guide, you can select each color swatch to learn more details, such as hex values and usage guidance.
 
-Refer to our developer resources to see a list of all [global CSS color variables.](https://patternfly-org-pr-3678-site.surge.sh/developer-resources/global-css-variables/#global-css-variables)
+Refer to our tokens documentation to see a list of all [design tokens.](/tokens/all-patternfly-tokens/)
 
 <Grid hasGutter>
   <GridItem xl={6} lg={12} className="ws-colors-gridtext">
