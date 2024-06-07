@@ -81,7 +81,7 @@
   right: 0;
   bottom: 0;
   padding: var(--pf-t--global--spacer--lg);
-  z-index: var(--pf-t--global--z-index--600);
+  z-index: var(--pf-t--global--z-index--2xl);
 }
 
 .ws-full-page-utils::before {
@@ -90,7 +90,7 @@
   content: "";
   background-color: var(--pf-t--global--background--color--floating--default);
   opacity: 0.8;
-  box-shadow: var(--pf-t--global--box-shadow--color--sm);
+  box-shadow: var(--pf-t--global--box-shadow--sm);
 }
 
 .pf-v6-theme-dark .ws-theme-switch-full-page::before {
