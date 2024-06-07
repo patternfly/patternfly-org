@@ -17,15 +17,6 @@
   --pf-v6-c-button--after--BorderWidth: 0;
 }
 
-.ws-editor {
-/*   font-size: var(--pf-v6-global--FontSize--md); */
-}
-
-.ws-editor .token.punctuation,
-.ws-editor .token.operator {
-/*   color: var(--pf-v6-global--danger-color--100); */
-}
-
 .ws-preview__thumbnail-link {
   position: relative;
   line-height: 0;
@@ -82,7 +73,7 @@
 }
 
 .ws-prop-required {
-  color: var(--pf-t--global--text--color--status--on-danger--default);
+  color: var(--pf-t--global--text--color--status--danger--default);
 }
 
 .ws-full-page-utils {
@@ -99,7 +90,7 @@
   content: "";
   background-color: var(--pf-t--global--background--color--floating--default);
   opacity: 0.8;
-/*   box-shadow: var(--pf-v6-global--BoxShadow--sm); */
+  box-shadow: var(--pf-t--global--box-shadow--color--sm);
 }
 
 .pf-v6-theme-dark .ws-theme-switch-full-page::before {

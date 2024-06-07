@@ -87,7 +87,7 @@ const MDXChildTemplate = ({
   );
   // Create dynamic component for @reach/router
   const ChildComponent = () => (
-    <div className={source !== 'landing-pages' && 'pf-v6-l-flex'}>
+    <div className={source !== 'landing-pages' ? 'pf-v6-l-flex' : ''}>
       {toc.length > 1 && (
         <TableOfContents items={toc} />
       )}
