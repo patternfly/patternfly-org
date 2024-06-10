@@ -12,7 +12,7 @@ related: [
 
 ## Elements
 
-A select component consists of a toggle control to open and close a menu of actions or links. Selects differ from [dropdowns](/components/dropdown) in that they persist selection, whereas dropdowns are typically used to present a list of actions or links.
+A select component consists of a toggle control to open and close a menu of actions or links. Selects differ from [dropdowns](/components/menus/dropdown) in that they persist selection, whereas dropdowns are typically used to present a list of actions or links.
 
 <img src="./img/basic-select.png" alt="basic select menu" width="303"/>
 

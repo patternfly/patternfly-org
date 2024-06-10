@@ -19,7 +19,7 @@ You can further customize labels by making them filled or unfilled, dismissable,
 
 ### Usage
 
-Use a **label** when you want to highlight an element on a page to draw attention to it or make it more searchable. Labels can also be used to tag items of the same category. If you want to show a count, use a [badge](https://www.patternfly.org/v4/components/badge) instead.
+Use a **label** when you want to highlight an element on a page to draw attention to it or make it more searchable. Labels can also be used to tag items of the same category. If you want to show a count, use a [badge](https://v4-archive.patternfly.org/v4/components/badge) instead.
 
 There are 2 specific label types:
 
@@ -41,7 +41,7 @@ Both default and compact labels come in the following default colors: gray, blue
 <img src="./img/filled-labels.png" alt="Label colors" width="646"/>
 
 
-While you may use other colors for your labels, we recommend using the ones provided as they have been carefully selected to be accessible with the PatternFly library. If you choose to use other colors, be mindful of picking [accessible text color and icon color](https://www.patternfly.org/v4/accessibility/testing-your-accessibility) to go with the label background.
+While you may use other colors for your labels, we recommend using the ones provided as they have been carefully selected to be accessible with the PatternFly library. If you choose to use other colors, be mindful of picking [accessible text color and icon color](/accessibility/testing-your-accessibility) to go with the label background.
 
 
 ### Variations

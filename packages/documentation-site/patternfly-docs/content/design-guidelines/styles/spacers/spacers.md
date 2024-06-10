@@ -7,7 +7,7 @@ import './spacers.css';
 
 PatternFly designs use spacers to define fixed amounts of space between elements. Spacers make it easy for designers to maintain consistency across screens and  simplify the design handoff between designers and developers.
 
-To see a list of all PatternFly CSS variables, including spacers [visit our developer resources.](/developer-resources/global-css-variables)
+To see a list of all PatternFly spacer tokens, [search our list of design tokens.](/tokens/all-patternfly-tokens/)
 
 <div class="pf-v6-u-display-flex pf-v6-u-flex-direction-row pf-v6-u-mb-lg">
   <div class="ws-content-spacer4">

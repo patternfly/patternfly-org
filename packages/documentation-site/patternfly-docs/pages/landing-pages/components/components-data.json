@@ -202,7 +202,7 @@
   },
   "menu": {
     "illustration": "./images/component-illustrations/menu.png",
-    "summary": "A <b>menu</b> is a list of options or actions that users can choose from. It can be used in a variety of contexts whenever the user needs to choose between multiple values, options, or actions. A menu is most often paired with a <Link to='/components/menu-toggle'>menu toggle</Link> as its trigger, but can also be used inline or can be attached to other interactable elements to toggle it open and close."
+    "summary": "A <b>menu</b> is a list of options or actions that users can choose from. It can be used in a variety of contexts whenever the user needs to choose between multiple values, options, or actions. A menu is most often paired with a <Link to='/components/menus/menu-toggle'>menu toggle</Link> as its trigger, but can also be used inline or can be attached to other interactable elements to toggle it open and close."
   },
   "modal": {
     "illustration": "./images/component-illustrations/modal.png",

@@ -3,6 +3,63 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 6.0.0-alpha.44 (2024-06-06)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+# 6.0.0-alpha.43 (2024-06-04)
+
+
+### Bug Fixes
+
+* enable some extensions docs ([#4058](https://github.com/patternfly/patternfly-org/issues/4058)) ([0ef77e1](https://github.com/patternfly/patternfly-org/commit/0ef77e15727a6dced6084ca4dfb9e5a39c644e45))
+
+
+
+
+
+# 6.0.0-alpha.42 (2024-06-03)
+
+
+### Bug Fixes
+
+* **EmptyState:** removed extraneous ESIcon component import ([#4056](https://github.com/patternfly/patternfly-org/issues/4056)) ([60f4499](https://github.com/patternfly/patternfly-org/commit/60f4499adf803975175bdcac78b142b72d6f4e96))
+
+
+
+
+
+# 6.0.0-alpha.41 (2024-06-03)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+# 6.0.0-alpha.40 (2024-06-03)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+# 6.0.0-alpha.39 (2024-06-03)
+
+
+### Bug Fixes
+
+* Update README.md ([80e138e](https://github.com/patternfly/patternfly-org/commit/80e138e769f0fddc023946ff618566d4c23c7c88))
+
+
+
+
+
 # 6.0.0-alpha.38 (2024-05-30)
 
 

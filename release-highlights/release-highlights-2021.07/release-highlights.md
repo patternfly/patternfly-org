@@ -3,43 +3,43 @@
 ----------------------------------------------------------
 ## New features and enhancements
 
- ### [New list variants](https://www.patternfly.org/v4/components/list)
+ ### [New list variants](https://v4-archive.patternfly.org/v4/components/list)
 
   Adds new variants of the List component to include horizontal separators, lists with icons, and 'pf-m-plain' modifier.
 
-  ### [Optional help text on description list items](https://www.patternfly.org/v4/components/description-list#term-help-text)
+  ### [Optional help text on description list items](https://v4-archive.patternfly.org/v4/components/description-list#term-help-text)
 
   ![description list with pop-up help](./img/description-list-help.png)
 
    Added the ability to open help in a popover by clicking on a field label in a description list.
 
-  ### [Added a "danger" variant for secondary and link buttons](https://www.patternfly.org/v4/components/button)
+  ### [Added a "danger" variant for secondary and link buttons](https://v4-archive.patternfly.org/v4/components/button)
 
  ![danger button variants](./img/danger-buttons.png)
 
   Introduces danger (red button) styles for additional button types.
 
-  ### [Wizard with expandable sub-steps](https://www.patternfly.org/v4/components/wizard#expandable-steps)
+  ### [Wizard with expandable sub-steps](https://v4-archive.patternfly.org/v4/components/wizard#expandable-steps)
 
  ![wizard with expandable sub-steps](./img/wizard-steps-expandable.png)
 
   Allows wizard sub-steps to be hidden and expanded on-demand to reduce clutter in wizards with many steps.
 
-  ### [Filter-tree demo](https://www.patternfly.org/v4/demos/composable-menu#filter-tree-menu)
+  ### [Filter-tree demo](https://v4-archive.patternfly.org/v4/demos/composable-menu#filter-tree-menu)
 
   ![filter-tree](./img/filter-tree.png)
 
   Using the composable menu component, we demonstrate how to place a tree-view inside of a dropdown to create a "filter-tree" pattern.
 
- ### [Uncontrolled behavior for tabs](https://www.patternfly.org/v4/components/tabs#uncontrolled)
+ ### [Uncontrolled behavior for tabs](https://v4-archive.patternfly.org/v4/components/tabs#uncontrolled)
  The Tabs component now supports uncontrolled behavior so that the developer does not need to control which tab is the active one.
 
- ### [Tooltip: added entry delay](https://www.patternfly.org/v4/components/tooltip)
+ ### [Tooltip: added entry delay](https://v4-archive.patternfly.org/v4/components/tooltip)
 
  Added a 300ms default entry delay to tooltips to prevent immediate firing when passing the mouse over a page. This value can be changed via a prop.
 
 
-See the [latest release notes](https://www.patternfly.org/v4/developer-resources/release-notes) for a more detailed list of changes.
+See the [latest release notes](https://v4-archive.patternfly.org/v4/developer-resources/release-notes) for a more detailed list of changes.
 
 -----------------------------------------------------------------------------
 

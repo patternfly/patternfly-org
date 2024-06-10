@@ -5,7 +5,12 @@ module.exports = (sourceMD, sourceProps, sourceFunctionDocs) => {
   // source function docs (by calling sourceFunctionDocs with the package name) before sourcing markdown as well.
 
   const contentBase = path.join(__dirname, "../patternfly-docs/content");
-  const reactPropsIgnore = ["**/*.test.tsx", "**/examples/*.tsx"];
+  const reactPropsIgnore = [
+    "/**/examples/**",
+    "/**/__mocks__/**",
+    "/**/__tests__/**",
+    "/**/*.test.tsx",
+  ];
   sourceMD(path.join(contentBase, "extensions/**/*.md"), "extensions");
   if (!(process.env.EXTENSIONS_ONLY === "true")) {
     sourceMD(path.join(contentBase, "contribute/**/*.md"), "pages-contribute");
@@ -79,10 +84,9 @@ module.exports = (sourceMD, sourceProps, sourceFunctionDocs) => {
     const reactDragDropPath = require
       .resolve("@patternfly/react-drag-drop/package.json")
       .replace("package.json", "src");
-    // TODO: add back once PF react rebase is done
     // const reactTemplatesPath = require
-      // .resolve("@patternfly/react-templates/package.json")
-      // .replace("package.json", "src");
+    //   .resolve("@patternfly/react-templates/package.json")
+    //   .replace("package.json", "src");
 
     const reactTopologyPath = require
       .resolve("@patternfly/react-topology/package.json")
@@ -94,8 +98,7 @@ module.exports = (sourceMD, sourceProps, sourceFunctionDocs) => {
     sourceProps(path.join(reactChartsPath, "/**/*.tsx"), reactPropsIgnore);
     sourceProps(path.join(reactDragDropPath, "/**/*.tsx"), reactPropsIgnore);
     sourceProps(path.join(reactTopologyPath, "/**/*.tsx"), reactPropsIgnore);
-    // TODO: add back once PF react rebase is done
-    // sourceProps(path.join(reactTemplatesPath, "/**/*.tsx"), reactPropsIgnore);
+    //sourceProps(path.join(reactTemplatesPath, "/**/*.tsx"), reactPropsIgnore);
 
     // React MD
     sourceMD(path.join(reactCorePath, "/components/**/examples/*.md"), "react");
@@ -131,7 +134,6 @@ module.exports = (sourceMD, sourceProps, sourceFunctionDocs) => {
     sourceMD(path.join(reactDragDropPath, "/**/examples/*.md"), "react-next");
 
     // Templates MD
-    // TODO: add back once PF react rebase is done
     // sourceMD(
     //   path.join(reactTemplatesPath, "/**/examples/*.md"),
     //   "react-templates"
@@ -177,43 +179,43 @@ module.exports = (sourceMD, sourceProps, sourceFunctionDocs) => {
   // sourceMD(path.join(reactCatalogViewDocsPath, "/**/examples/*.md"), "react");
 
   // Console extension
-  // const consolePath = require.resolve("@patternfly/react-console/package.json");
-  // const consoleDocsPath = consolePath.replace(
-  //   "package.json",
-  //   "patternfly-docs/content/extensions/react-console"
-  // );
-  // const consoleSrcPath = consolePath.replace("package.json", "src/components");
+  const consolePath = require.resolve("@patternfly/react-console/package.json");
+  const consoleDocsPath = consolePath.replace(
+    "package.json",
+    "patternfly-docs/content/extensions/react-console"
+  );
+  const consoleSrcPath = consolePath.replace("package.json", "src/components");
 
-  // sourceProps(path.join(consoleSrcPath, "/**/*.tsx"), reactPropsIgnore);
-  // sourceMD(path.join(consoleDocsPath, "/examples/*.md"), "react");
+  sourceProps(path.join(consoleSrcPath, "/**/*.tsx"), reactPropsIgnore);
+  sourceMD(path.join(consoleDocsPath, "/examples/*.md"), "react");
 
   // Log viewer extension
-  // const reactLogViewerPath = require
-  //   .resolve("@patternfly/react-log-viewer/package.json")
-  //   .replace("package.json", "src");
+  const reactLogViewerPath = require
+    .resolve("@patternfly/react-log-viewer/package.json")
+    .replace("package.json", "src");
 
-  // const logViewerContentBase = require
-  //   .resolve("@patternfly/react-log-viewer/package.json")
-  //   .replace(
-  //     "package.json",
-  //     "patternfly-docs/content/extensions/react-log-viewer"
-  //   );
+  const logViewerContentBase = require
+    .resolve("@patternfly/react-log-viewer/package.json")
+    .replace(
+      "package.json",
+      "patternfly-docs/content/extensions/react-log-viewer"
+    );
 
-  // sourceProps(path.join(reactLogViewerPath, "/**/*.tsx"), reactPropsIgnore);
-  // sourceMD(path.join(logViewerContentBase, "/**/examples/*.md"), "react");
-  // sourceMD(path.join(logViewerContentBase, "/**/demos/*.md"), "react-demos");
+  sourceProps(path.join(reactLogViewerPath, "/**/*.tsx"), reactPropsIgnore);
+  sourceMD(path.join(logViewerContentBase, "/**/examples/*.md"), "react");
+  sourceMD(path.join(logViewerContentBase, "/**/demos/*.md"), "react-demos");
 
   // User feedback extension
-  // const reactUserFeedbackPath = require
-  //   .resolve("@patternfly/react-user-feedback/package.json")
-  //   .replace("package.json", "patternfly-docs/");
+  const reactUserFeedbackPath = require
+    .resolve("@patternfly/react-user-feedback/package.json")
+    .replace("package.json", "patternfly-docs/");
 
-  // sourceProps(path.join(reactUserFeedbackPath, "/**/*.tsx"), reactPropsIgnore);
-  // sourceMD(path.join(reactUserFeedbackPath, "/**/examples/*.md"), "react");
-  // sourceMD(
-  //   path.join(reactUserFeedbackPath, "/**/design-guidelines/*.md"),
-  //   "design-guidelines"
-  // );
+  sourceProps(path.join(reactUserFeedbackPath, "/**/*.tsx"), reactPropsIgnore);
+  sourceMD(path.join(reactUserFeedbackPath, "/**/examples/*.md"), "react");
+  sourceMD(
+    path.join(reactUserFeedbackPath, "/**/design-guidelines/*.md"),
+    "design-guidelines"
+  );
 
   // const reactComponentGroupsPath = require
   //   .resolve("@patternfly/react-component-groups/package.json")

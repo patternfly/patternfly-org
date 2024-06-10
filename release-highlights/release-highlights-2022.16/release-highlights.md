@@ -3,17 +3,17 @@
 ----------------------------------------------------------
 ## New features and enhancements
 
-### [Menu - drilldown menu with filter](https://www.patternfly.org/v4/components/menu#with-drilldown-and-inline-filter)
+### [Menu - drilldown menu with filter](https://v4-archive.patternfly.org/v4/components/menu#with-drilldown-and-inline-filter)
 
 ![drilldown menu with filter](./img/drilldown-filter.png)
 
 This update allows for the insertion of a filter within a drilldown menu to narrow the scope of choices when there are potentially many items to choose from.
 
-### [Search input - input now allows spaces](https://www.patternfly.org/v4/components/search-input#advanced)
+### [Search input - input now allows spaces](https://v4-archive.patternfly.org/v4/components/search-input#advanced)
 
 The advanced search input has been enhanced to allow for spaces inside a search string provided that they are wrapped in quotes.
 
-See the [latest release notes](https://www.patternfly.org/v4/developer-resources/release-notes) for a more detailed list of changes.
+See the [latest release notes](https://v4-archive.patternfly.org/v4/developer-resources/release-notes) for a more detailed list of changes.
 
 -----------------------------------------------------------------------------
 

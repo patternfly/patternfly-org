@@ -22,9 +22,9 @@ A local development server at http://localhost:8003 can be started with:
 
 ### Build
 
-The new v5 site can be built with:
+The new v6 site can be built with:
 
-    yarn build:v5
+    yarn build:v6
 
 The static assets get copied to build/patternfly-org.
 
@@ -42,6 +42,6 @@ You might have a dirty file tree with old submodules and folders lying around. Y
 
     git clean -dfx
 
-### Contribute to HTML/CSS 
+### Contribute to HTML/CSS
 
 To contribute to PatternFly's HTML/CSS core repo, refer to the [core contribution guide](https://github.com/patternfly/patternfly/blob/main/patternfly-docs/site/pages/contribution.md) and the related [guidelines](https://github.com/patternfly/patternfly/blob/main/patternfly-docs/site/pages/guidelines.md).  

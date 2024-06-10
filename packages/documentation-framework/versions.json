@@ -7,71 +7,23 @@
       "versions": {
         "@patternfly/patternfly": "6.0.0-alpha.139",
         "@patternfly/react-catalog-view-extension": "5.0.0",
-        "@patternfly/react-charts": "8.0.0-alpha.19",
-        "@patternfly/react-code-editor": "6.0.0-alpha.60",
-        "@patternfly/react-core": "6.0.0-alpha.60",
-        "@patternfly/react-drag-drop": "6.0.0-alpha.31",
-        "@patternfly/react-icons": "6.0.0-alpha.19",
-        "@patternfly/react-log-viewer": "5.0.0",
-        "@patternfly/react-styles": "6.0.0-alpha.19",
-        "@patternfly/react-table": "6.0.0-alpha.60",
-        "@patternfly/react-tokens": "6.0.0-alpha.19",
+        "@patternfly/react-charts": "8.0.0-alpha.23",
+        "@patternfly/react-code-editor": "6.0.0-alpha.61",
+        "@patternfly/react-core": "6.0.0-alpha.61",
+        "@patternfly/react-drag-drop": "6.0.0-alpha.43",
+        "@patternfly/react-icons": "6.0.0-alpha.23",
+        "@patternfly/react-log-viewer": "6.0.0-alpha.1",
+        "@patternfly/react-styles": "6.0.0-alpha.23",
+        "@patternfly/react-table": "6.0.0-alpha.61",
+        "@patternfly/react-tokens": "6.0.0-alpha.23",
         "@patternfly/react-topology": "5.1.0",
+        "@patternfly/react-user-feedback": "6.0.0-alpha.1",
+        "@patternfly/react-console": "6.0.0-alpha.1",
         "@patternfly/quickstarts": "5.1.0",
-        "@patternfly/react-virtualized-extension": "5.1.0",
-        "@patternfly/react-templates": "^1.0.0-alpha.0"
+        "@patternfly/react-virtualized-extension": "6.0.0-alpha.1",
+        "@patternfly/react-templates": "6.0.0-alpha.11"
       }
     },{
-      "name": "5.2.2",
-      "date": "2024-03-12",
-      "hidden": true,
-      "versions": {
-        "@patternfly/patternfly": "5.2.1",
-        "@patternfly/react-charts": "7.2.2",
-        "@patternfly/react-code-editor": "5.2.2",
-        "@patternfly/react-core": "5.2.2",
-        "@patternfly/react-icons": "5.2.1",
-        "@patternfly/react-styles": "5.2.1",
-        "@patternfly/react-table": "5.2.2",
-        "@patternfly/react-drag-drop": "5.2.2",
-        "@patternfly/react-tokens": "5.2.1",
-        "@patternfly/react-catalog-view-extension": "5.0.0",
-        "@patternfly/react-component-groups": "5.1.0",
-        "@patternfly/react-console": "5.0.0",
-        "@patternfly/react-log-viewer": "5.2.0",
-        "@patternfly/react-topology": "5.2.1",
-        "@patternfly/react-user-feedback": "5.0.0",
-        "@patternfly/react-virtualized-extension": "5.0.0",
-        "@patternfly/quickstarts": "5.0.0",
-        "@patternfly/react-templates": "^1.0.0-alpha.0"
-      }
-    },
-    {
-      "name": "5.2.1",
-      "date": "2024-03-01",
-      "hidden": true,
-      "versions": {
-        "@patternfly/patternfly": "5.2.1",
-        "@patternfly/react-charts": "7.2.2",
-        "@patternfly/react-code-editor": "5.2.1",
-        "@patternfly/react-core": "5.2.1",
-        "@patternfly/react-icons": "5.2.1",
-        "@patternfly/react-styles": "5.2.1",
-        "@patternfly/react-table": "5.2.1",
-        "@patternfly/react-drag-drop": "5.2.1",
-        "@patternfly/react-tokens": "5.2.1",
-        "@patternfly/react-catalog-view-extension": "5.0.0",
-        "@patternfly/react-component-groups": "5.1.0",
-        "@patternfly/react-console": "5.0.0",
-        "@patternfly/react-log-viewer": "5.2.0",
-        "@patternfly/react-topology": "5.2.1",
-        "@patternfly/react-user-feedback": "5.0.0",
-        "@patternfly/react-virtualized-extension": "5.0.0",
-        "@patternfly/quickstarts": "5.0.0",
-        "@patternfly/react-templates": "^1.0.0-alpha.0"
-      }
-    },
-    {
       "name": "5.2.0",
       "date": "2024-01-17",
       "hidden": true,
@@ -92,8 +44,7 @@
         "@patternfly/react-topology": "5.2.1",
         "@patternfly/react-user-feedback": "5.0.0",
         "@patternfly/react-virtualized-extension": "5.0.0",
-        "@patternfly/quickstarts": "5.0.0",
-        "@patternfly/react-templates": "^1.0.0-alpha.0"
+        "@patternfly/quickstarts": "5.0.0"
       }
     },{
       "name": "5.1.0",

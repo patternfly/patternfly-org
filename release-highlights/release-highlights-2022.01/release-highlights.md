@@ -3,34 +3,34 @@
 ----------------------------------------------------------
 ## New features and enhancements
 
-### [Truncate component](https://www.patternfly.org/v4/components/truncate)
+### [Truncate component](https://v4-archive.patternfly.org/v4/components/truncate)
 
 ![middle truncation example](./img/truncate.png)
 
 Introduces the ability to truncate text in the middle or at the beginning of a string.
 
-### [Password generator demo](https://www.patternfly.org/v4/demos/password-generator)
+### [Password generator demo](https://v4-archive.patternfly.org/v4/demos/password-generator)
 
 ![password generator](./img/password-generator.png)
 
 Added a new demo that shows how to use existing components to build a password generator field to use in creating user credentials.
 
-### [Time picker enhancements](https://www.patternfly.org/v4/components/time-picker#with-seconds)
+### [Time picker enhancements](https://v4-archive.patternfly.org/v4/components/time-picker#with-seconds)
 
 ![time picker with seconds](./img/time-picker.png)
 
 The time picker component was enhanced to add support for entering seconds. It also now includes optional `minTime` and `maxTime` props for constraining the time entered to being within a specified range.
 
-### [Description list: optionally fill columns first](https://www.patternfly.org/v4/components/description-list#column-fill)
+### [Description list: optionally fill columns first](https://v4-archive.patternfly.org/v4/components/description-list#column-fill)
 In a multi-column description list, this enhancement introduces the option to fill columns rather than rows first.
 
-### [Increased click-target size for table checkboxes](https://www.patternfly.org/v4/components/table#composable-selectable-with-checkbox)
+### [Increased click-target size for table checkboxes](https://v4-archive.patternfly.org/v4/components/table#composable-selectable-with-checkbox)
 This update makes tables with selectable rows more usable by increasing the click target size around checkboxes used to select the row.
 
-### [Progress button demo](https://www.patternfly.org/v4/components/button/react-demos)
-Demonstrates how to use the [progress variation](https://www.patternfly.org/v4/components/button#progress) of the button component to reflect in-progress and completion states by substituting a success icon for the spinner when done.
+### [Progress button demo](https://v4-archive.patternfly.org/v4/components/button/react-demos)
+Demonstrates how to use the [progress variation](https://v4-archive.patternfly.org/v4/components/button#progress) of the button component to reflect in-progress and completion states by substituting a success icon for the spinner when done.
 
-See the [latest release notes](https://www.patternfly.org/v4/developer-resources/release-notes) for a more detailed list of changes.
+See the [latest release notes](https://v4-archive.patternfly.org/v4/developer-resources/release-notes) for a more detailed list of changes.
 
 -----------------------------------------------------------------------------
 

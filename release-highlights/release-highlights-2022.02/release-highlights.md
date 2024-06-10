@@ -3,43 +3,43 @@
 ----------------------------------------------------------
 ## New features and enhancements
 
-### [Multiple-file upload](https://www.patternfly.org/v4/components/file-upload---multiple)
+### [Multiple-file upload](https://v4-archive.patternfly.org/v4/components/file-upload---multiple)
 
 ![mutiple file upload](./img/multi-file-upload.png)
 
-This new component introduces support for uploading multiple files simultaneously. It is also useful for uploading a single large binary file where reporting status using a progress bar might be useful. The simple [file upload](https://www.patternfly.org/v4/components/file-upload) component is still available for uploading text files.
+This new component introduces support for uploading multiple files simultaneously. It is also useful for uploading a single large binary file where reporting status using a progress bar might be useful. The simple [file upload](https://v4-archive.patternfly.org/v4/components/file-upload) component is still available for uploading text files.
 
-### [Optional row striping in tables](https://www.patternfly.org/v4/components/table#composable-striped)
+### [Optional row striping in tables](https://v4-archive.patternfly.org/v4/components/table#composable-striped)
 
 ![table with row stripping](./img/row-stripped-table.png)
 
 Adds the option to provide a background fill to alternate table rows to improve the readability of dense tables.
 
-### [Support for icons on description list items](https://www.patternfly.org/v4/components/description-list#with-icons)
+### [Support for icons on description list items](https://v4-archive.patternfly.org/v4/components/description-list#with-icons)
 
 ![description list with icons](./img/description-list-icons.png)
 
 An optional icon can now be added in front of a description list item.
 
-### [Moved expand-all control from toolbar to table header](https://www.patternfly.org/v4/components/table/react-demos#expandcollapse-all)
+### [Moved expand-all control from toolbar to table header](https://v4-archive.patternfly.org/v4/components/table/react-demos#expandcollapse-all)
 
 ![expand all shown in table header](./img/expand-all.png)
 
 Based on user feedback, we moved the expand-all control for expandable tables from the toolbar to the table header row.
 
-### [Diagonal tooltip positioning](https://www.patternfly.org/v4/components/tooltip#options)
+### [Diagonal tooltip positioning](https://v4-archive.patternfly.org/v4/components/tooltip#options)
 
 ![diagonal tooltip positions](./img/diagonal-tooltips.png)
 
 Tooltips can now be positioned diagonally relative to the element that triggers them (in addition to current top, bottom, left, and right positions).
 
-### [Drill-down navigation](https://www.patternfly.org/v4/components/navigation#drilldown)
+### [Drill-down navigation](https://v4-archive.patternfly.org/v4/components/navigation#drilldown)
 
 ![drilldown navigation](./img/drilldown-nav.png)
 
 We now support a drill-down menu pattern in our navigation component which provides more flexibility in navigating information hierarchies that are more than two levels deep.
 
-See the [latest release notes](https://www.patternfly.org/v4/developer-resources/release-notes) for a more detailed list of changes.
+See the [latest release notes](https://v4-archive.patternfly.org/v4/developer-resources/release-notes) for a more detailed list of changes.
 
 -----------------------------------------------------------------------------
 
@@ -58,7 +58,7 @@ See the [latest release notes](https://www.patternfly.org/v4/developer-resources
 
 * [Predefined sizes for the avatar](https://github.com/patternfly/patternfly-react/issues/6905) - support for predefined sizes from sm (24px) to xl (128px) will be supported.
 
-* [Comma-separated values in attribute-value filter](https://github.com/patternfly/patternfly-react/issues/6795) - enhance the [attribute-value filter demo](https://www.patternfly.org/v4/components/text-input-group/react-demos/) to show how to assign multiple values to a single attribute via a comma-separated list (e.g., [cluster: name1, name2] instead of [cluster: name1] [cluster: name2]).
+* [Comma-separated values in attribute-value filter](https://github.com/patternfly/patternfly-react/issues/6795) - enhance the [attribute-value filter demo](https://v4-archive.patternfly.org/v4/components/text-input-group/react-demos/) to show how to assign multiple values to a single attribute via a comma-separated list (e.g., [cluster: name1, name2] instead of [cluster: name1] [cluster: name2]).
 
 * [Allow for setting the column width of a horizontal description list](https://github.com/patternfly/patternfly-react/issues/6866) - allows for constraining the width of a column and forcing labels to wrap. This will be useful when terms in the list have very different lengths.
 

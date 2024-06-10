@@ -2,37 +2,37 @@
 ## Release 2020.16
 ### New features and enhancements
 
-#### [Basic time picker](https://www.patternfly.org/v4/components/time-picker)
+#### [Basic time picker](https://v4-archive.patternfly.org/v4/components/time-picker)
 
 ![time picker image](./img/time-picker.png)
 
 The time picker allows the user to enter a time in either 12 or 24 hour format using the keyboard or by picking from a list.
 
-#### [Date Range picker demo](https://www.patternfly.org/v4/components/date-picker/react-demos)
+#### [Date Range picker demo](https://v4-archive.patternfly.org/v4/components/date-picker/react-demos)
 
 ![date range on calendar](./img/date-range.png)
 
 Shows how to use two date pickers together for selecting a date range on the calendar that can be used for filtering or similar use cases.
 
-#### [Table favorities](https://www.patternfly.org/v4/components/table#favoritable)
+#### [Table favorities](https://v4-archive.patternfly.org/v4/components/table#favoritable)
 
 ![table with favorities](./img/table-favorites.png)
 
 Adds the ability to favorite rows in the Table component.
 
-#### [Resizable drawer with splitter](https://www.patternfly.org/v4/components/drawer#resizable-on-right)
+#### [Resizable drawer with splitter](https://v4-archive.patternfly.org/v4/components/drawer#resizable-on-right)
 
 ![drawer with splitter](./img/drawer-with-splitter.png)
 
 The resizable drawer provides a flexible, resizable container that can be attached to the right or bottom edge of the viewport.
 
-#### [Custom alerts](https://www.patternfly.org/v4/components/alert#custom-icons)
+#### [Custom alerts](https://v4-archive.patternfly.org/v4/components/alert#custom-icons)
 
 ![custom alerts](./img/custom-alert-icons.png)
 
 Alerts can now be customized by substituting a custom icon.
 
-See the [latest release notes](https://www.patternfly.org/v4/developer-resources/release-notes) for a more detailed list of changes.
+See the [latest release notes](https://v4-archive.patternfly.org/v4/developer-resources/release-notes) for a more detailed list of changes.
 
 
 ### What we’re working on...

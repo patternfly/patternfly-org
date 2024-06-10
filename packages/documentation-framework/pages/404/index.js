@@ -9,7 +9,6 @@ import {
   CardHeader,
   EmptyState,
   EmptyStateBody,
-  EmptyStateIcon,
   Grid,
   GridItem,
   PageSection,
@@ -68,11 +67,7 @@ const Page404 = () => {
   
   return (
     <PageSection>
-      <EmptyState variant="xl">
-        <EmptyStateIcon icon={() => <img src={PathMissingIcon} alt="Missing path" width="128px" />} />
-        <Title headingLevel="h1" size="2xl">
-          404: That page no longer exists
-        </Title>
+      <EmptyState headingLevel="h1" titleText="404: That page no longer exists" variant="xl" icon={() => <img src={PathMissingIcon} alt="" width="128px" />}>
         <p
           // style={{ marginTop: 'var(--pf-v6-global--spacer--sm)' }}
         >
@@ -92,7 +87,7 @@ const Page404 = () => {
           body="Learn about designing and developing with PatternFly."
           link={{
             text: 'View getting started resources',
-            to: '/get-started/about'
+            to: '/get-started/about-patternfly'
           }}
         />
         <Card404

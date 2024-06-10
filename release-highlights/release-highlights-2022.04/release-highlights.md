@@ -3,30 +3,30 @@
 ----------------------------------------------------------
 ## New features and enhancements
 
-### [Fit code editor to height](https://www.patternfly.org/v4/components/code-editor#with-sizetofit-height-height-will-growshrink-with-content)  
+### [Fit code editor to height](https://v4-archive.patternfly.org/v4/components/code-editor#with-sizetofit-height-height-will-growshrink-with-content)  
 
 ![code editor with fit-to-height](./img/fit-to-height.png)
 
 Enables the Monaco editor's "fit-to-height" option via a prop.
 
-### [Description list - set column width](https://www.patternfly.org/v4/components/description-list#horizontal-using-custom-term-width-modifier)
+### [Description list - set column width](https://v4-archive.patternfly.org/v4/components/description-list#horizontal-using-custom-term-width-modifier)
 
 ![description list with custom term width](./img/description-list-term-width.png)
 
 Allows for constraining the width of a column and forcing labels to wrap. This is useful when terms in the list have very different lengths.
 
-### [Predefined sizes for the avatar](https://www.patternfly.org/v4/components/avatar)
+### [Predefined sizes for the avatar](https://v4-archive.patternfly.org/v4/components/avatar)
 
 The avatar component now supports predefined sizes from sm (24px) to xl (128px).
 
-### [Calendar month enhancements](https://www.patternfly.org/v4/components/calendar-month)
+### [Calendar month enhancements](https://v4-archive.patternfly.org/v4/components/calendar-month)
 
 The `date` prop is now optional which allows for opening the calendar without setting an initial date.
 
-### [Website enhancements](https://www.patternfly.org/v4/components/about-modal)
+### [Website enhancements](https://v4-archive.patternfly.org/v4/components/about-modal)
 This release also includes some PatternFly website updates including a new responsive table of contents on component pages. The TOC will transform from a vertical sidebar to a dropdown menu as the viewport shrinks.
 
-See the [latest release notes](https://www.patternfly.org/v4/developer-resources/release-notes) for a more detailed list of changes.
+See the [latest release notes](https://v4-archive.patternfly.org/v4/developer-resources/release-notes) for a more detailed list of changes.
 
 -----------------------------------------------------------------------------
 
@@ -40,7 +40,7 @@ See the [latest release notes](https://www.patternfly.org/v4/developer-resources
 
 ### 2022.06 (May 13)
 
-* [Tree view: add option to select parent nodes](https://github.com/patternfly/patternfly/issues/4724) - for some use cases, it makes sense for parent nodes in a tree view to have select actions (e.g. for navigation) as well as being used to expand or collapse the node. This enhancement will introduce a new variant of the [tree view](https://www.patternfly.org/v4/components/tree-view) to support that behavior.
+* [Tree view: add option to select parent nodes](https://github.com/patternfly/patternfly/issues/4724) - for some use cases, it makes sense for parent nodes in a tree view to have select actions (e.g. for navigation) as well as being used to expand or collapse the node. This enhancement will introduce a new variant of the [tree view](https://v4-archive.patternfly.org/v4/components/tree-view) to support that behavior.
 
 * [Add information panel to a wizard](https://github.com/patternfly/patternfly/issues/4611) - this will add an optional sidebar to the body of a wizard for holding more information about completing that step.
 

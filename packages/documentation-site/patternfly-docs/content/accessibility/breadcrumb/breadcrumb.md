@@ -14,7 +14,7 @@ To implement an accessible PatternFly **breadcrumb** component:
 - Ensure each breadcrumb item can be navigated to and interacted with via keyboard and other assistive technologies such as a screen reader
 - Provide context to notify users if a breadcrumb item will open in a new tab or window
 - Provide an `aria-label` to the breadcrumb if there are multiple `nav` elements or breadcrumb components on the page
-- Follow the accessibility documentation for any other components used within a breadcrumb, such as a [dropdown](/components/dropdown) used within a breadcrumb item
+- Follow the accessibility documentation for any other components used within a breadcrumb, such as a [dropdown](/components/menus/dropdown) used within a breadcrumb item
 
 For the PatternFly React library:
 

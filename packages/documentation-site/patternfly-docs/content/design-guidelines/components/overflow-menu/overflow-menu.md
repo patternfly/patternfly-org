@@ -21,8 +21,8 @@ Use an overflow menu when additional options are available to the user but there
 
 ### When not to use
 * Do not use an overflow menu when there are 2 or fewer actions available to the user. 
-* Do not use in conjunction with label groups when there isn’t enough space to display each label. Instead, use an [overflow label](https://www.patternfly.org/v4/components/label-group).
-* Do not use an overflow menu to hide additional content that you dont want to be seen by default, instead use an [expandable section](https://www.patternfly.org/v4/components/expandable-section/design-guidelines).  
+* Do not use in conjunction with label groups when there isn’t enough space to display each label. Instead, use an [overflow label](https://v4-archive.patternfly.org/v4/components/label-group).
+* Do not use an overflow menu to hide additional content that you dont want to be seen by default, instead use an [expandable section](https://v4-archive.patternfly.org/v4/components/expandable-section/design-guidelines).  
 
 ## Behavior
 Overflow menus are represented by a kebab button, as the user clicks on the kebab, a horizontal list will appear with additional options to click. 
