@@ -33,7 +33,7 @@ function mdxAstToMdxHast({ watchExternal }) {
         type: 'import',
         value: `import ${srcImport} from '${url}';`
       });
-    
+
       return h(node, 'img', props);
     }
 
@@ -58,7 +58,7 @@ function mdxAstToMdxHast({ watchExternal }) {
             value: JSON.stringify(styleObject)
           };
         }
-    
+
         // class="my-class" -> className="my-class"
         if (attr.name === 'class') {
           attr.name = 'className';
@@ -89,7 +89,7 @@ function mdxAstToMdxHast({ watchExternal }) {
           code: node.value ? detab(node.value + '\n').trim() : '',
           title: node.title
         };
-        
+
         if (node.lang) {
           properties.lang = node.lang;
         }
@@ -166,10 +166,10 @@ function mdxAstToMdxHast({ watchExternal }) {
         if (node.title !== null && node.title !== undefined) {
           properties.title = node.title;
         }
-  
+
         if (href) {
           properties.to = href;
-          
+
           return Object.assign({}, node, {
             type: 'element',
             tagName: 'PatternflyThemeLink',
@@ -177,7 +177,7 @@ function mdxAstToMdxHast({ watchExternal }) {
             children: all(h, node)
           });
         }
-  
+
         properties.href = href;
         return h(node, 'a', properties, all(h, node));
       },
