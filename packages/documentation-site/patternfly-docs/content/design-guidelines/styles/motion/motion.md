@@ -121,8 +121,6 @@ A **motion pattern** is a combination of tokens and properties that work togethe
 
 For example, an "action fade" pattern may dictate how animation is applied when a user selects an action. This pattern specifies the timing and duration of the fade, so that the animation is the same across different action components. In this example, we would want users to see the same hover/click animation whether they're interacting with an action button, an action menu, and so on.
 
-![add alt text](/packages/documentation-site/patternfly-docs/content/images/placeholder-image.png)
-
 ### Custom motion 
 
 For some scenarios, like creating a new [PatternFly extension](/extensions/about-extensions), you may need to customize motion that doesn't already exist in PatternFly components. When you're creating a new animation behavior, make sure that:
