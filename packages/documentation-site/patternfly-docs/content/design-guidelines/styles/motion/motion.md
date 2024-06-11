@@ -3,14 +3,30 @@ id: Motion
 section: design-foundations
 ---
 
-import { Card, CardHeader, CardTitle, CardBody, CardFooter, Grid, GridItem} from '@patternfly/react-core';
+import { Alert, AlertActionLink, Card, CardHeader, CardTitle, CardBody, CardFooter, Grid, GridItem} from '@patternfly/react-core';
+import ExternalLinkAltIcon from '@patternfly/react-icons/dist/esm/icons/external-link-alt-icon';
+
+<Alert 
+variant="info" 
+title="Under development" 
+actionLinks={
+    <AlertActionLink component="a" href="#">
+     View the project roadmap <ExternalLinkAltIcon /> 
+    </AlertActionLink>
+}
+>
+<p> 
+We are still working on adding motion to all PatternFly components. As we progress, we will release batches of updated components, which will adhere to the principles and guidelines outlined on this page. 
+</p>
+</Alert>
+<br />
 
 Like color or typography, **motion** can create a strong foundation that helps connect the complex elements within your designs. By carefully incorporating motion into the design of a UI, you can create products that are more clear, engaging, and expressive.  Effective motion design should be intentional, and should be used to help guide users through their experiences more efficiently.
 
-This guide outlines the principles that drive motion design in PatternFly and describes the different types of motion that are supported see our design system.
+This guide outlines the principles that drive motion design in PatternFly and describes the different types of motion that are supported in our design system.
 
 ## Principles 
-Our motion principles define the intention behind motion use, to ensure that animations are consistent and are used in ways that  support our [brand voice and tone](https://www.patternfly.org/ux-writing/brand-voice-and-tone). When you use animations, you should ask yourself if your scenario adheres to these principles. 
+These principles guide the use of motion in PatternFly, to ensure consistency and alignment with our [brand voice and tone](https://www.patternfly.org/ux-writing/brand-voice-and-tone).
 
 <br />
 
@@ -55,46 +71,61 @@ Our motion principles define the intention behind motion use, to ensure that ani
 </Grid>
 
 ## Motion in PatternFly
-Motion is integrated across PatternFly components  in the form of micro animations, which are small, unobtrusive, and often understated. These animations serve specific purposes within a user interface and are designed to be subtle and complementary.
+
+PatternFly components support motion in the form of **micro animations**, which are small, unobtrusive, and often understated. These animations serve specific purposes within a UI, and are designed to be subtle and complementary. 
+
+This behavior is built into PatternFly, so there is nothing additional you need to do to support motion. To meet accessibility requirements, reduced motion support is determined based on users' browser settings.
+
+If you want to implement additional motion, or if you'd like to customize the default PatternFly behavior, [follow these practices.](#custom-motion)
 
 ### Types of animations
 There are 5 different types of animations used in PatternFly:
 1. **Hover:** Shown when a user hovers over an element to inform them that the item can be clicked.
 1. **Click:**  Shown when a user clicks an element, in order to provide immediate feedback that confirms user actions.
 1. **Loading:** Loading animations, like spinners or progress bars, which keep users informed about the loading process in order to reduce frustration.
-1. **Errors / Validation:** Shown when an error occurs during a validation process, in order to draw attention to error messages and guide users as they resolve issues.
+1. **Errors/validation:** Shown when an error occurs during a validation process, in order to draw attention to error messages and guide users as they resolve issues.
 1. **Change:** Smooth transitions between different screens or sections of an application or website that enhance user flow and engagement.
 
 ### Anatomy of an animation 
 An animation is composed of 4 elements: triggers, duration, easing, and properties.
 
-1. **Triggers:** The event that causes the animation to happen, which can be user-initiated (such as a gesture or click) or system-initiated (such as a time-based trigger).
+1. **Triggers:** The event that causes the animation to happen. These can be: 
+    - User-initiated. For example, a gesture or click. 
+    - System-initiated. For example, after a certain amount of time.
 
 1. **Duration:** Describes how long animations should be. 
-Shorter durations should be used for simpler effects and relatively small-sized animations (such as fades or color changes)
-Longer durations should be used for more complex effects and larger scale animations (such as page transitions or moving objects on and offscreen)
-Optimal timing can change based on viewport size. 
+    - Shorter durations are used for simpler effects and smaller animations. For example, fading or color changing.
+    - Longer durations are used for more complex effects and larger-scale animations. For example, page transitions or objects that slide in and out of the screen. Optimal timing can change based on viewport size. 
 
 1. **Easing:** Describes how an element transitions over time.
 
-1. **Properties:** The characteristics of the element being transitioned (position, opacity, scale, etc.). Animations can be tagged with one or multiple of these properties: 
+1. **Properties:** The characteristics of the element being transitioned. Animations may have multiple properties, including: 
     - Fade in/out
     - Scale
-    - Rotation
-    - Color transition
-    - Movement -- Slide in/out
-    - Movement -- Expand/Collapse
+    - Rotate
+    - Color transitions
+    - Slide in/out
+    - Expand/collapse
 
 ## Developing and designing with motion 
 
-Animations are set up within components via CSS properties. 
-
 ### Tokens
 
-Will add info about tokens.
+PatternFly component animations are created using design tokens that cover the different elements of an animation, including duration, delay, and timing. Like we do with color tokens, we implement motion by using semantic tokens, which are built off of base tokens.
 
-### Accessibility considerations
+If you aren't familiar with our token system, [refer to this overview](/tokens/about-tokens).
 
-Add more specifics on a11y measures.
+### Motion patterns
 
-Animations are enabled by default, but can be disabled based on users' motion preferences via browser settings.
+A **motion pattern** is a combination of tokens and properties that work together to solve common animation needs. These patterns help ensure that the behavior of a type of animation is consistent across similar use cases—even if different components are involved.
+
+For example, an "action fade" pattern may dictate how animation is applied when a user selects an action. This pattern specifies the timing and duration of the fade, so that the animation is the same across different action components. In this example, we would want users to see the same hover/click animation whether they're interacting with an action button, an action menu, and so on.
+
+![add alt text](/packages/documentation-site/patternfly-docs/content/images/placeholder-image.png)
+
+### Custom motion 
+
+For some scenarios, like creating a new [PatternFly extension](/extensions/about-extensions), you may need to customize motion that doesn't already exist in PatternFly components. When you're creating a new animation behavior, make sure that:
+- There is no existing support for the animation.
+- The animation adheres to our motion principles. 
+- Your implementation uses appropriate semantic tokens. 
