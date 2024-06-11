@@ -7,7 +7,7 @@ section: tokens
 
 PatternFly's tokens are set up as variables and styles within Figma, and are exported as CSS variables for use in development. Tokens are only available as part of the PatternFly 6 release, so make sure you [upgrade to PatternFly 6](/get-started/upgrade) and/or [install our Figma libray](/get-started/design#figma-library) in order to take advantage of tokens. PatternFly 6 components, charts, and extensions are all built with tokens.
 
-[View the complete list of PatternFly's design tokens.](/tokens/all-patternfly-tokens)
+[View a list of all PatternFly design tokens.](/tokens/all-patternfly-tokens)
 
 ## Why use tokens? 
 
@@ -53,3 +53,6 @@ Each token segment represents a different type of style information. If a segmen
 
 ### Choosing tokens
 We tried to clearly and name our semantic tokens. However, when you're unfamiliar with our token system, it may not be immediately clear which token you should use for your scenario.
+
+Colors 
+Text

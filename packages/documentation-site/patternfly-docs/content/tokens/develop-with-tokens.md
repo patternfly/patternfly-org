@@ -11,7 +11,9 @@ When using tokens in code: if there's a semantic token that matches your needs t
 
 ### Dark theme support
 
-Our token system is available for both light and dark themes. We have [separate tokens for dark theme](https://github.com/patternfly/patternfly/blob/v6/src/patternfly/base/tokens/_tokens-dark.scss) to ensure proper contrast ratios. For guidance on enabling and supporting dark theme in your product, refer to our [dark theme handbook.](/developer-resources/dark-theme-handbook) 
+Our token system is available for both light and dark themes. We have [separate tokens for dark theme](https://github.com/patternfly/patternfly/blob/v6/src/patternfly/base/tokens/_tokens-dark.scss) to ensure proper contrast ratios. Dark theme styles ship with PatternFly CSS by default. To enable dark theme, add the class pf-[version]-theme-dark (for example, pf-v6-theme-dark) to your application's `<html>` tag. When dark theme is enabled, your product will automatically pull dark theme tokens in order to adapt visual styles appropriately.
+
+For more guidance, refer to our [dark theme handbook.](/developer-resources/dark-theme-handbook) 
 
 ## Migrate to tokens
 
