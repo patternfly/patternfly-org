@@ -80,14 +80,14 @@ Example: *HH:MM*
 
 <img src="./img/placeholder text -time picker.png" alt="time picker with a placeholder" width="200"/>
 
-For more information about writing effective placeholder text, see our <a href="https://www.patternfly.org/v4/components/form/design-guidelines">form design guidelines</a>. 
+For more information about writing effective placeholder text, see our <a href="https://v4-archive.patternfly.org/v4/components/form/design-guidelines">form design guidelines</a>. 
 
 ### Helper text
 Use helper text to provide permanent guidance below the time field.
 
 <img src="./img/Helper text -time picker.png" alt="time picker with a helper text" width="200"/>
 
-For more information about writing effective inline help, see our <a href="https://www.patternfly.org/v4/components/form/design-guidelines">form design guidelines</a>. 
+For more information about writing effective inline help, see our <a href="https://v4-archive.patternfly.org/v4/components/form/design-guidelines">form design guidelines</a>. 
 
 ### Error messages
 Use field level error messages to alert users when their inputted time or time format is invalid. Always specify what went wrong so that users can quickly identify the problem and fix it.
@@ -98,4 +98,4 @@ Examples:
 
 <img src="./img/Error message  time picker.png" alt="time picker with an error message" width="200"/>
 
-For more information about writing effective error messages, see our <a href="https://www.patternfly.org/v4/ux-writing/error-messages/">UX writing style guide</a>.
+For more information about writing effective error messages, see our <a href="https://v4-archive.patternfly.org/v4/ux-writing/error-messages/">UX writing style guide</a>.

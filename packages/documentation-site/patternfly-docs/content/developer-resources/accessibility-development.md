@@ -77,12 +77,12 @@ For example, in the alert component, the icon label text is adjacent to the mess
 
   ``` 
   {
-    <div class="pf-v5-c-alert pf-m-success" aria-label="Success Alert">
-    <div aria-hidden="true" class="pf-v5-c-alert__icon">
+    <div class="pf-v6-c-alert pf-m-success" aria-label="Success Alert">
+    <div aria-hidden="true" class="pf-v6-c-alert__icon">
       <i class="fas fa-check-circle"></i>
     </div>
-    <div class="pf-v5-c-alert__body">
-      <h4 class="pf-v5-c-alert__title">
+    <div class="pf-v6-c-alert__body">
+      <h4 class="pf-v6-c-alert__title">
         {{#> screen-reader}}Success:{{/screen-reader}} Success alert title
       </h4>
     </div>
@@ -106,7 +106,7 @@ For keyboard-only users who use the tab key to navigate the interface, trapped f
 
 For screen reader users, the other contents on the page should be hidden from the screen reader.
 
-Based on the [screen reader / browser combinations](https://www.patternfly.org/accessibility/testing-your-accessibility) we use for testing, we recommend applying `aria-hidden="true"` to the parent wrapping element of the page contents. The modal element of the component must not be a descendent of this element, and should be included as a sibling to this element.
+Based on the [screen reader / browser combinations](/accessibility/testing-your-accessibility) we use for testing, we recommend applying `aria-hidden="true"` to the parent wrapping element of the page contents. The modal element of the component must not be a descendent of this element, and should be included as a sibling to this element.
 
 #### Scrollable elements
 

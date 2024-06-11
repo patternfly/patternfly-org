@@ -57,7 +57,7 @@ Use an alert component when you are trying to give the user essential informatio
  
 If your use case falls outside of PatternFly's standard alert variations, use [icons](/design-foundations/icons) and [colors](/design-foundations/colors) to create custom alerts that meet your needs.
  
-View custom alerts in action in our [custom alert examples](https://www.patternfly.org/v4/components/alert#custom-icons).
+View custom alerts in action in our [custom alert examples](/components/alert#custom-icons).
 
 ### Managing overflow
 
@@ -67,7 +67,7 @@ The overflow link should be configured to navigate to a place where the user can
 
 <img src="./img/alert-group-with-overflow.png" alt="An example of an alert group with overflow footer" width="662" />
 
-See our [toast alert guidelines](/components/alert/design-guidelines/#using-toast-alerts) for more information about using toast alerts.
+See our [toast alert guidelines](#using-toast-alerts) for more information about using toast alerts.
 
 ## Placement
 Toast alerts should be placed in an alert group in the upper-right corner of a page. Use 8px of padding between each alert in an alert group. Alert group alignment on a page will depend on your use case.
@@ -105,7 +105,7 @@ Toast alerts are commonly used in the following situations:
 
 <img src="./img/alert-group-mobile.png" alt="An example of a centered toast alert group over a mobile view." width="375" />
 
-See our [toast alert guidelines](/components/alert/design-guidelines/#using-toast-alerts) for more information about using toast alerts.
+See our [toast alert guidelines](#using-toast-alerts) for more information about using toast alerts.
 
 
 ### Bordered inline alerts

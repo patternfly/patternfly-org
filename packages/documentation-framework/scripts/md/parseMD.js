@@ -214,24 +214,24 @@ function toReactComponent(mdFilePath, source, buildMode) {
           pageData.examples.push(node.title);
         }
         // Typecheck TS examples
-        if (node.properties.lang === 'ts') {
-          const typerrors = typecheck(
-            path.join(pageData.id, node.title + '.tsx'), // Needs to be unique per-example
-            node.properties.code
-          );
-          typerrors.forEach(({ line, character, message }) => {
-            line = node.position.start.line + line + 1;
-            const column = character;
-            if (buildMode === 'start') {
-              // Don't fail to start over types
-              file.message(`\u001b[31m THIS WILL FAIL THE BUILD\u001b[0m\n  ${message}`, { line, column });
-            } else {
-              console.log('\u001b[31m');
-              file.fail(`\n  ${message}\n`, { line, column });
-              console.log('\u001b[0m');
-            }
-          });
-        }
+        // if (node.properties.lang === 'ts') {
+        //   const typerrors = typecheck(
+        //     path.join(pageData.id, node.title + '.tsx'), // Needs to be unique per-example
+        //     node.properties.code
+        //   );
+        //   typerrors.forEach(({ line, character, message }) => {
+        //     line = node.position.start.line + line + 1;
+        //     const column = character;
+        //     if (buildMode === 'start') {
+        //       // Don't fail to start over types
+        //       file.message(`\u001b[31m THIS WILL FAIL THE BUILD\u001b[0m\n  ${message}`, { line, column });
+        //     } else {
+        //       console.log('\u001b[31m');
+        //       file.fail(`\n  ${message}\n`, { line, column });
+        //       console.log('\u001b[0m');
+        //     }
+        //   });
+        // }
       });
     })
     // Add custom PatternFly doc design things

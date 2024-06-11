@@ -71,7 +71,7 @@ const MDXChildTemplate = ({
       )}
       {beta && (
         <InlineAlert title="Beta feature">
-          This beta component is currently under review and is still open for further evolution. It is available for use in product. Beta components are considered for promotion on a quarterly basis. Please join in and give us your feedback or submit any questions on the <a href="https://forum.patternfly.org/">PatternFly forum</a> or via <a href="//slack.patternfly.org/" target="_blank" rel="noopener noreferrer">Slack</a>. To learn more about the process, visit our <Link to="/get-started/about#beta-components">about page</Link> or our <a href="https://github.com/patternfly/patternfly-org/tree/main/beta-component-promotion">Beta components</a> page on GitHub.
+          This beta component is currently under review and is still open for further evolution. It is available for use in product. Beta components are considered for promotion on a quarterly basis. Please join in and give us your feedback or submit any questions on the <a href="https://forum.patternfly.org/">PatternFly forum</a> or via <a href="//slack.patternfly.org/" target="_blank" rel="noopener noreferrer">Slack</a>. To learn more about the process, visit our <Link to="/get-started/about-patternfly#beta-components">about page</Link> or our <a href="https://github.com/patternfly/patternfly-org/tree/main/beta-component-promotion">Beta components</a> page on GitHub.
         </InlineAlert>
       )}
       {(deprecated || source === 'react-deprecated' || source === 'html-deprecated') && (
@@ -82,7 +82,7 @@ const MDXChildTemplate = ({
               You can find the <Link to={newImplementationLink}>updated implementation here</Link>.
             </React.Fragment>
           )}
-          {' '}To learn more about the process, visit our <Link to="/get-started/about#major-release-cadence">about page</Link>.
+          {' '}To learn more about the process, visit our <Link to="/get-started/about-patternfly#patternfly-release-cadence">about page</Link>.
         </InlineAlert>
       )}
        {(template || source === 'react-template') && (
@@ -98,13 +98,13 @@ const MDXChildTemplate = ({
       {toc.length > 1 && (
         <TableOfContents items={toc} />
       )}
-      <div className="ws-mdx-content">
+      <div>
         <div className={innerContentWrapperClass()}>
           {InlineAlerts}
           <Component />
           {functionDocumentation.length > 0 && (
             <React.Fragment>
-              <AutoLinkHeader size="h2" className="ws-h2" id="functions">
+              <AutoLinkHeader size="h2" className="pf-v6-c-content--h2" id="functions">
                 Functions
               </AutoLinkHeader>
               <FunctionsTable functionDescriptions={functionDocumentation}/>
@@ -112,7 +112,7 @@ const MDXChildTemplate = ({
           )}
           {propsTitle && (
             <React.Fragment>
-              <AutoLinkHeader size="h2" className="ws-h2" id="props">
+              <AutoLinkHeader size="h2" className="pf-v6-c-content--h2" id="props">
                 {propsTitle}
               </AutoLinkHeader>
               {propComponents.map(component => (
@@ -128,7 +128,7 @@ const MDXChildTemplate = ({
           )}
           {cssPrefix.length > 0 && (
             <React.Fragment>
-              <AutoLinkHeader size="h2" className="ws-h2" id="css-variables">
+              <AutoLinkHeader size="h2" className="pf-v6-c-content--h2" id="css-variables">
                 {cssVarsTitle}
               </AutoLinkHeader>
               {cssPrefix.map((prefix, index) => (
@@ -158,7 +158,7 @@ export const MDXTemplate = ({
   componentsData
 }) => {
   const isDeprecated = sources.some(source => source.source === "react-deprecated" || source.source === "html-deprecated") && !sources.some(source => source.source === "react"  || source.source === "html");
-  const isBeta = sources.some(source => source.beta && source.source !== 'react-next')
+  const isBeta = sources.some(source => source.beta && source.source !== 'react-next' && source.source !== 'react-templates');
   const isDemo = sources.some(source => source.source === "react-demos" || source.source === "html-demos") && !sources.some(source => source.source === "react" || source.source === "html");
   // Build obj mapping source names to text displayed on tabs
   const tabNames = sources.reduce((acc, curSrc) => {
@@ -270,7 +270,7 @@ export const MDXTemplate = ({
                   {isDeprecated && (
                     <FlexItem spacer={{ default: 'spacerSm' }}>
                       <Tooltip content="Deprecated components are available for use but are no longer being maintained or enhanced.">
-                        <Button isInline component="span" variant="link">
+                        <Button variant="plain" hasNoPadding>
                           <Label color="grey">Deprecated</Label>
                         </Button>
                       </Tooltip>
@@ -279,7 +279,7 @@ export const MDXTemplate = ({
                   {isDemo && (
                     <FlexItem spacer={{ default: 'spacerSm' }}>
                       <Tooltip content="Demos show how multiple components can be used in a single design.">
-                        <Button isInline component="span" variant="link">
+                        <Button variant="plain" hasNoPadding>
                           <Label color="purple">Demo</Label>
                         </Button>
                       </Tooltip>
@@ -288,7 +288,7 @@ export const MDXTemplate = ({
                   {isBeta && (
                     <FlexItem spacer={{ default: 'spacerSm' }}>
                       <Tooltip content="This beta component is currently under review and is still open for further evolution.">
-                        <Button isInline component="span" variant="link">
+                        <Button variant="plain" hasNoPadding>
                           <Label color="blue">Beta</Label>
                         </Button>
                       </Tooltip>

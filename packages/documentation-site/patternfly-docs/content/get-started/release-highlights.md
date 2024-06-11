@@ -7,7 +7,27 @@ section: get-started
 import './get-started.css';
 import { Divider } from '@patternfly/react-core';
 
-## PatternFly 6 alpha
+## PatternFly 6 alpha 2
+
+As we continue to work towards the full release of PatternFly 6, we're excited to share an update. This release contains the final changes to the PatternFly 6 alpha. We've fixed the bugs that have been found so far and have continued to make progress towards our final PatternFly 6 vision. 
+
+Thanks for your participation in the alpha release: the beta is coming soon!
+
+### Expanded PatternFly 6 support
+We added PatternFly 6 styling and token support to additional areas of our design system: 
+- Extensions
+- Charts 
+
+### Addressed issues throughout the system
+We cleaned up and fixed bugs in a number of areas:
+- We removed Sass global variables in favor of our tokens.
+- We renamed variables that previously had top/right/bottom/left in the name (for example, `PaddingTop`) to instead match inline/block start/end properties (for example, `PaddingBlockStart`). This change is a result of our introduction of [RTL support.](/developer-resources/right-to-left-handbook)
+- We removed the deprecated Sass `@import` rule in favor of new recommendations, `@use` and `@forward`.
+- We fixed various bugs that were reported following the initial alpha release.
+
+<Divider />
+
+## PatternFly 6 alpha 1
 
 We're excited to announce that our alpha release of PatternFly 6 is now live. Here are the highlights that you should know about!
 

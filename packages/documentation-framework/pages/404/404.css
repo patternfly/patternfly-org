@@ -5,12 +5,12 @@
 }
 
 .ws-404-card-header {
-  padding: var(--pf-v6-global--spacer--lg);
+  padding: var(--pf-t--global--spacer--lg);
 }
 
 div.ws-404-button-wrapper {
   width: 100%;
   display: flex;
   justify-content: center;
-  padding: var(--pf-v6-global--spacer--xl);
+  padding: var(--pf-t--global--spacer--xl);
 }

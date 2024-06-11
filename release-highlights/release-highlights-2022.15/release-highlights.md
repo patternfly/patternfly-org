@@ -3,13 +3,13 @@
 ----------------------------------------------------------
 ## New features and enhancements
 
-### [File upload - allow customization of progress message](https://www.patternfly.org/v4/components/file-upload---multiple)
+### [File upload - allow customization of progress message](https://v4-archive.patternfly.org/v4/components/file-upload---multiple)
 
 ![File upload showing error status](./img/file-upload-error.png)
 
 For multiple file uploads, this gives consumers the ability to customize the progress message that displays to provide better error feedback. This is accomplished by adding the capability to add custom helper text below the progress component.
 
-### [Popover help for Tabs](https://www.patternfly.org/v4/components/tabs#help-action)
+### [Popover help for Tabs](https://v4-archive.patternfly.org/v4/components/tabs#help-action)
 
 ![tabs with pop-up help](./img/tabs-with-help.png)
 
@@ -21,7 +21,7 @@ Adds the ability to open a help popover from a tab to provide more information a
 
 Added Data Sync and Data Source as new custom icons.
 
-See the [latest release notes](https://www.patternfly.org/v4/developer-resources/release-notes) for a more detailed list of changes.
+See the [latest release notes](https://v4-archive.patternfly.org/v4/developer-resources/release-notes) for a more detailed list of changes.
 
 -----------------------------------------------------------------------------
 

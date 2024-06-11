@@ -35,6 +35,7 @@ import SunIcon from '@patternfly/react-icons/dist/esm/icons/sun-icon';
 import { SideNav, TopNav, GdprBanner } from '../../components';
 import staticVersions from '../../versions.json';
 import v5Logo from '../PF-HorizontalLogo-Reverse.svg';
+import { Footer } from '@patternfly/documentation-framework/components';
 
 export const RtlContext = createContext(false);
 
@@ -80,7 +81,7 @@ const HeaderTools = ({
   // useEffect(() => {
   //   // reattach algolia to input each time search is expanded
   //   if (hasSearch && isSearchExpanded) {
-  //     attachDocSearch(algolia, '.ws-global-search .pf-v5-c-text-input-group__text-input', 1000);
+  //     attachDocSearch(algolia, '.ws-global-search .pf-v6-c-text-input-group__text-input', 1000);
   //   }
   // }, [isSearchExpanded])
 
@@ -94,7 +95,6 @@ const HeaderTools = ({
         )}
         <ToolbarGroup
           align={{ default: 'alignEnd' }}
-          spaceItems={{ default: 'spacerNone', md: 'spacerMd' }}
         >
           {hasDarkThemeSwitcher && (
             <ToolbarItem>
@@ -163,6 +163,20 @@ const HeaderTools = ({
                     </DropdownList>
                   </DropdownGroup>
                 )}
+                <Divider key="divider1" className="ws-switcher-divider"/>
+                <DropdownGroup key="Alpha preview version" label="Alpha preview version">
+                  <DropdownList>
+                    <DropdownItem
+                      key="PatternFly 6"
+                      className="ws-patternfly-versions"
+                      isExternalLink
+                      to="https://staging-v6.patternfly.org/"
+                      itemId="patternfly-6"
+                    >
+                      PatternFly 6
+                    </DropdownItem>
+                  </DropdownList>
+                </DropdownGroup>
                 <Divider key="divider2" className="ws-switcher-divider"/>
                 <DropdownGroup key="Previous versions" label="Previous versions">
                   <DropdownList>
@@ -210,7 +224,7 @@ export function attachDocSearch(algolia, inputSelector, timeout) {
       inputSelector,
       autocompleteOptions: {
         hint: false,
-        appendTo: `.ws-global-search .pf-v5-c-text-input-group`,
+        appendTo: `.ws-global-search .pf-v6-c-text-input-group`,
       },
       debug: process.env.NODE_ENV !== 'production',
       ...algolia
@@ -323,6 +337,7 @@ export const SideNavLayout = ({ children, groupedRoutes, navOpen: navOpenProp })
         <Page
           id="ws-page"
           mainContainerId="ws-page-main"
+          mainComponent="div"
           header={Header}
           sidebar={SideBar}
           skipToContent={<SkipToContent href="#ws-page-main">Skip to content</SkipToContent>}
@@ -330,6 +345,7 @@ export const SideNavLayout = ({ children, groupedRoutes, navOpen: navOpenProp })
           defaultManagedSidebarIsOpen={navOpenProp}
         >
           {children}
+          {process.env.hasFooter && <Footer />}
         </Page>
         <div id="ws-page-banners">
           {hasGdprBanner && <GdprBanner />}

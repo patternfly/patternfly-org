@@ -3,31 +3,31 @@
 ----------------------------------------------------------
 ## New features and enhancements
 
-### [Helper text component](https://www.patternfly.org/v4/components/helper-text)
+### [Helper text component](https://v4-archive.patternfly.org/v4/components/helper-text)
 
    ![helper text applied to a field](./img/helper-text.png)
 
    Adds the ability to include lists and icons in help text attached to a form field. Will be useful for password and name validation.
 
-### [Added "visited" styling for links](https://www.patternfly.org/v4/components/text#visited)
+### [Added "visited" styling for links](https://v4-archive.patternfly.org/v4/components/text#visited)
 
 ![visited links](./img/visited-link.png)
 
 Adds option to apply visited styling to links on a page. Uses #40199a (purple-600) to indicate a visited link.
 
 
-### [Draggable rows in table](https://www.patternfly.org/v4/components/table#composable-draggable-row-table)
+### [Draggable rows in table](https://v4-archive.patternfly.org/v4/components/table#composable-draggable-row-table)
 
 ![table with draggable rows](./img/table-draggable.png)
 
  Adds the ability to drag rows in a composable table to support manual ordering of items.
 
- ### [Log viewer ehnacements](https://www.patternfly.org/v4/components/log-viewer)
+ ### [Log viewer ehnacements](https://v4-archive.patternfly.org/v4/components/log-viewer)
 
  The log viewer is now responsive to changes in viewport sizing and includes updated search results styling per the design.
 
 
-See the [latest release notes](https://www.patternfly.org/v4/developer-resources/release-notes) for a more detailed list of changes.
+See the [latest release notes](https://v4-archive.patternfly.org/v4/developer-resources/release-notes) for a more detailed list of changes.
 
 -----------------------------------------------------------------------------
 

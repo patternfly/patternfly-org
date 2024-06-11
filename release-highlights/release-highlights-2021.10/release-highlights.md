@@ -3,35 +3,35 @@
 ----------------------------------------------------------
 ## New features and enhancements
 
-### [Password strength demo](https://www.patternfly.org/v4/demos/password-strength)
+### [Password strength demo](https://v4-archive.patternfly.org/v4/demos/password-strength)
 
   ![password strength demo](./img/password-strength.png)
 
 Adds a demo to show how to use the new Helper text component to add password validation and a strength indicator to a password field.
 
-### [Editable label group](https://www.patternfly.org/v4/components/label-group#editable-labels)
+### [Editable label group](https://v4-archive.patternfly.org/v4/components/label-group#editable-labels)
 
 ![editable labels](./img/editable-label.png)
 
 Allows for inline editing of labels.
 
-### [Disclosure panel](https://www.patternfly.org/v4/components/expandable-section#disclosure-variation)
+### [Disclosure panel](https://v4-archive.patternfly.org/v4/components/expandable-section#disclosure-variation)
 
 ![expandable section disclosure variant](./img/disclosure.png)
 
 This is a new variant of the Expandable section component that allows content to be enclosed within a bordered panel that is expandable. This is useful when you have a lot of content on a page and want to allow the user to show or hide information that might not be relevant.
 
-### [Disabled dropdown tooltip](https://www.patternfly.org/v4/components/dropdown#basic)
+### [Disabled dropdown tooltip](https://v4-archive.patternfly.org/v4/components/dropdown#basic)
 
 ![tolltip on disabled dropdown item](./img/dropdown-tooltip.png)
 
 Allows a tooltip to be attached to a disabled dropdown menu item.
 
-### [Log viewer enhancements](https://www.patternfly.org/v4/extensions/log-viewer)
+### [Log viewer enhancements](https://v4-archive.patternfly.org/v4/extensions/log-viewer)
 
 The log viewer extension has been updated to support a dark mode and full screen viewing. Note that log viewer has been moved from the Components to the new Extensions area on the PatternFly website.
 
-### [Website changes](https://www.patternfly.org/v4/)
+### [Website changes](https://v4-archive.patternfly.org/v4/)
 
 Two significant changes were made to our website for this release:
 
@@ -39,9 +39,9 @@ Two significant changes were made to our website for this release:
 
 ![new code editor](./img/code-snippet.png)
 
-2. A new [Extensions](https://www.patternfly.org/v4/extensions/community-extensions) section has been added to the website navigation. This includes PatternFly extensions that are developed and supported by the UXD development team as well as community extensions that are contributed and supported by the PatternFly community.
+2. A new [Extensions](https://v4-archive.patternfly.org/v4/extensions/community-extensions) section has been added to the website navigation. This includes PatternFly extensions that are developed and supported by the UXD development team as well as community extensions that are contributed and supported by the PatternFly community.
 
-See the [latest release notes](https://www.patternfly.org/v4/developer-resources/release-notes) for a more detailed list of changes.
+See the [latest release notes](https://v4-archive.patternfly.org/v4/developer-resources/release-notes) for a more detailed list of changes.
 
 -----------------------------------------------------------------------------
 

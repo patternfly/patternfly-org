@@ -3,28 +3,28 @@
 ----------------------------------------------------------
 ## New features and enhancements
 
-### [New selectable card variants](https://www.patternfly.org/v4/components/card#selectable-and-selected)
+### [New selectable card variants](https://v4-archive.patternfly.org/v4/components/card#selectable-and-selected)
 
 ![selectable card types](./img/selectable-cards.png)
 
 We've introduced new styling for selectable cards to better distinguish the selected state from the browser focus state and to add a non-actionable or disabled card. The new selected card has a think blue underline and a slightly raised appearance. Legacy selectable card styles are still available so if you are using selectable cards today, nothing will change unless you makes updates to opt into this new styling. However, we recommend use of this new styling moving forward for catalog views or other places with you might use selectable cards.
 
-### [Secondary button styled dropdown](https://www.patternfly.org/v4/components/dropdown#secondary-toggle)
+### [Secondary button styled dropdown](https://v4-archive.patternfly.org/v4/components/dropdown#secondary-toggle)
 
 ![dropdown with secondary button styling](./img/secondary-dropdown.png)
 
 Adds a new variant of the Dropdown component that has secondary button styling. This complements the existing primary styled dropdown to present actions in an expandable menu when those actions are not intended as the primary actions on a page.
 
-### [Auto-complete search demo](https://www.patternfly.org/v4/components/text-input-group/react-demos#auto-complete-search)
+### [Auto-complete search demo](https://v4-archive.patternfly.org/v4/components/text-input-group/react-demos#auto-complete-search)
 
 ![auto complete search](./img/auto-complete-search.png)
 
-This demo showcases how to use the [text input group component](https://www.patternfly.org/v4/components/text-input-group) to create a search input with suggestions, which filters possible selections based on the text you've entered. Unlike the attribute-value filtering demo, it allows creation of new chip items when the text entered is not available in the list of suggestions.
+This demo showcases how to use the [text input group component](https://v4-archive.patternfly.org/v4/components/text-input-group) to create a search input with suggestions, which filters possible selections based on the text you've entered. Unlike the attribute-value filtering demo, it allows creation of new chip items when the text entered is not available in the list of suggestions.
 
-### [Red Hat font upgrade](https://www.patternfly.org/v4/developer-resources/red-hat-font)
-PatternFly now supports the latest Red Hat font version (v4.0.2). This includes several new features including monospace and tabular font faces. To use the new font in your project, opt-in by adding the new classes as [documented here](https://www.patternfly.org/v4/developer-resources/red-hat-font#available-opt-ins).
+### [Red Hat font upgrade](https://v4-archive.patternfly.org/v4/developer-resources/red-hat-font)
+PatternFly now supports the latest Red Hat font version (v4.0.2). This includes several new features including monospace and tabular font faces. To use the new font in your project, opt-in by adding the new classes as [documented here](https://v4-archive.patternfly.org/v4/developer-resources/red-hat-font#available-opt-ins).
 
-See the [latest release notes](https://www.patternfly.org/v4/developer-resources/release-notes) for a more detailed list of changes.
+See the [latest release notes](https://v4-archive.patternfly.org/v4/developer-resources/release-notes) for a more detailed list of changes.
 
 -----------------------------------------------------------------------------
 
@@ -42,7 +42,7 @@ See the [latest release notes](https://www.patternfly.org/v4/developer-resources
 
 * [Description list: optionally fill columns first](https://github.com/patternfly/patternfly-react/issues/6685) - in a multi-column description list values are filled in across rows first. This enhancement introduces the option to fill columns first rather than rows.
 
-* [Progress button demo](https://github.com/patternfly/patternfly-react/issues/6684) - demonstrate how to use the [progress variation](https://www.patternfly.org/v4/components/button#progress) of the button component to reflect in progress and completion states.
+* [Progress button demo](https://github.com/patternfly/patternfly-react/issues/6684) - demonstrate how to use the [progress variation](https://v4-archive.patternfly.org/v4/components/button#progress) of the button component to reflect in progress and completion states.
 
 ### 2022.02 (February 18)
 

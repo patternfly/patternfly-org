@@ -280,7 +280,7 @@ You can also use the extra small empty state variation inside of a card to prese
 ## Variations
 
 ### Extra small empty state
-Use an extra small empty state inside [cards](https://www.patternfly.org/v4/demos/card-view/design-guidelines/#action-card) or when there are space constraints. 
+Use an extra small empty state inside [cards](https://v4-archive.patternfly.org/v4/demos/card-view/design-guidelines/#action-card) or when there are space constraints. 
 
 ### Small empty state
 Use a small empty state inside tables, wizards, or modals. 

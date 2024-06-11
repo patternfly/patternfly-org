@@ -3,29 +3,29 @@
 ----------------------------------------------------------
 ## New features and enhancements
 
-### [Multi-level drill down menu](https://www.patternfly.org/v4/components/menu#with-drilldown)
+### [Multi-level drill down menu](https://v4-archive.patternfly.org/v4/components/menu#with-drilldown)
 
 ![menu with drilldown](./img/drill-down.png)
 
 Introduces a drill-down menu component for displaying hierarchical data. An optional breadcrumb can be added to the header to make it easier to directly navigate back to higher levels in the tree.
 
-### [Show/Hide password](https://www.patternfly.org/v4/components/login-page#showhide-password)
+### [Show/Hide password](https://v4-archive.patternfly.org/v4/components/login-page#showhide-password)
 
 ![login with show password](./img/show-hide-password.png)
 
 Allows users to toggle visibility of the password entered on the Login page.
 
-### [Drawer with light gray background](https://www.patternfly.org/v4/components/drawer#panel-with-light-200-background)
+### [Drawer with light gray background](https://v4-archive.patternfly.org/v4/components/drawer#panel-with-light-200-background)
 
 ![drawer with gray background](./img/gray-drawer.png)
 
 Adds the option to make the background color of a drawer white or gray. A white background will still be the default.
 
-### [Expand/collapse all capability in tree view](https://www.patternfly.org/v4/components/tree-view)
+### [Expand/collapse all capability in tree view](https://v4-archive.patternfly.org/v4/components/tree-view)
 
 Enables an expand/collapse all action to be added to a tree-view menu.
 
-See the [latest release notes](https://www.patternfly.org/v4/developer-resources/release-notes) for a more detailed list of changes.
+See the [latest release notes](https://v4-archive.patternfly.org/v4/developer-resources/release-notes) for a more detailed list of changes.
 
 -----------------------------------------------------------------------------
 

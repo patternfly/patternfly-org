@@ -1,11 +1,11 @@
 
 .pf-v6-c-extensions__link:not(:last-child) {
-    padding-right: var(--pf-v6-global--spacer--md);
-    margin-right: var(--pf-v6-global--spacer--md);
-    border-right: var(--pf-v6-global--BorderWidth--sm) solid var(--pf-v6-global--BorderColor--100);
+    padding-right: var(--pf-t--global--spacer--md);
+    margin-right: var(--pf-t--global--spacer--md);
+/*     border-right: var(--pf-v6-global--BorderWidth--sm) solid var(--pf-v6-global--BorderColor--100); */
 }
 
 .pf-v6-c-extensions__component-description {
-    font-size: var(--pf-v6-global--FontSize--sm);
-    color: var(--pf-v6-global--Color--200);
+/*     font-size: var(--pf-v6-global--FontSize--sm); */
+/*     color: var(--pf-v6-global--Color--200); */
 }

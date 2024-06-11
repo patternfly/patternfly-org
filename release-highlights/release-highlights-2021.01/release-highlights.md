@@ -3,25 +3,25 @@
 ----------------------------------------------------------
 ## New features and enhancements
 
-### [Horizontal collapsable Card](https://www.patternfly.org/v4/components/card/html-demos#horizontal-grid-expanded)
+### [Horizontal collapsable Card](https://v4-archive.patternfly.org/v4/components/card/html-demos#horizontal-grid-expanded)
 
 ![horizontal card demo](./img/horizontal-card.png)
 
 Demonstrates how to create a card layout with multiple columns and an expandable header. Additional examples include side-by-side layouts with an image and text. Currently available as an HTML/CSS demo, only.
 
-### [Code editor](https://www.patternfly.org/v4/components/code-editor)
+### [Code editor](https://v4-archive.patternfly.org/v4/components/code-editor)
 
 ![code editor](./img/code-editor.png)
 
  Introduce native support for the Monaco code editor to format code for read-only display or for editing. Includes language appropriate syntax highlighting, a dark theme option, customizable actions.
 
- ### [Slider component](https://www.patternfly.org/v4/components/slider)
+ ### [Slider component](https://v4-archive.patternfly.org/v4/components/slider)
 
 ![slider examples](./img/slider.png)
 
  The Slider provides basic slider capability for entering numeric data. Both discrete and continuous sliders are supported. An optional value input field supports either direct entry from the keyboard or manipulation of the slider using the mouse or keyboard.
 
-### [Number input](https://www.patternfly.org/v4/components/number-input)
+### [Number input](https://v4-archive.patternfly.org/v4/components/number-input)
 
 ![number input component](./img/number-input.png)
 
@@ -49,7 +49,7 @@ The Touchspin component has been renamed to Number input. This component is desi
 
 * [Jump links demo](https://github.com/patternfly/patternfly/issues/3560) - illustrate how jump links can be used in a sticky sidebar.
 
-* [New List variants](https://github.com/patternfly/patternfly-react/issues/5336) - Introduce new variants of the [List](https://www.patternfly.org/v4/components/list) component that include plain lists, lists with horizontal separators, and lists with icons for communicating static information in a standard `<li>`element.
+* [New List variants](https://github.com/patternfly/patternfly-react/issues/5336) - Introduce new variants of the [List](https://v4-archive.patternfly.org/v4/components/list) component that include plain lists, lists with horizontal separators, and lists with icons for communicating static information in a standard `<li>`element.
 
 * [Expandable form sections](https://github.com/patternfly/patternfly-react/issues/5023) - these will be expandable nested sections useful for organizing information on long, complex forms.
 

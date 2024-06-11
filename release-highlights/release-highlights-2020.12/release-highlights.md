@@ -1,7 +1,7 @@
 # PatternFly Release Highlights
 ## Release 2020.12
 ### New features and enhancements
-#### Introduce support for favorites into the [Select component](https://www.patternfly.org/v4/components/select#favorites)
+#### Introduce support for favorites into the [Select component](https://v4-archive.patternfly.org/v4/components/select#favorites)
 
 This feature allows for marking items as favorites to pin them to the top of the menu. This is especially useful when you have a long list of potential options but a smaller number that will be used frequently. **Note:** inclusion of dividers in the Select menu (as shown above) is still not implemented in this release. This feature will be added in a follow-up PR during our next release milestone.
 
@@ -11,20 +11,20 @@ This feature allows for marking items as favorites to pin them to the top of the
 #### [Table header fix](https://github.com/patternfly/patternfly-react/pull/4778)
 Fixed a bug that prevented  interactive elements from being added to sortable table headers. This will allow infotip popovers to be triggered from column headers.
 
-#### Introduced the [Skeleton component](https://www.patternfly.org/v4/components/skeleton)
+#### Introduced the [Skeleton component](https://v4-archive.patternfly.org/v4/components/skeleton)
 The new Skeleton component is an animated placeholder that can be used to implement skeleton loading on a page. We offer a variety of sizes and shapes to take the place of text strings or graphical elements like charts.
 
-#### Added a [bottom panel drawer](https://www.patternfly.org/v4/components/drawer#panel-on-bottom) variation
+#### Added a [bottom panel drawer](https://v4-archive.patternfly.org/v4/components/drawer#panel-on-bottom) variation
 
 This adds a horizontal drawer that can be attached to the bottom of a page. This is most useful when you want to insert a terminal window or something similar that will slide up from the bottom the viewport.
 
-#### Introduced a [Label group](https://www.patternfly.org/v4/components/label-group) component
+#### Introduced a [Label group](https://v4-archive.patternfly.org/v4/components/label-group) component
 Label groups have similar properties to Chip groups. They can include an optional  category label and can manage overflow conditions if there are many labels in the group.
 
 
 ![label group](./img/label-group.png)
 
-See the [latest release notes](https://www.patternfly.org/v4/developer-resources/release-notes) for a more detailed list of changes.
+See the [latest release notes](https://v4-archive.patternfly.org/v4/developer-resources/release-notes) for a more detailed list of changes.
 
 ### Web site changes
 Also with this release we are introducing a new website experience at [www.patternfly.org](http://www.patternfly.org). This update will make it easier to find content and browse examples.

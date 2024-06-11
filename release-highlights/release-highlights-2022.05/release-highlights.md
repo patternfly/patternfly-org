@@ -3,28 +3,28 @@
 ----------------------------------------------------------
 ## New features and enhancements
 
-### [Switch enhancements](https://www.patternfly.org/v4/components/switch)
+### [Switch enhancements](https://v4-archive.patternfly.org/v4/components/switch)
 
 ![new switch variant](./img/switch.png)
 
 The switch component was enhanced to add an option to have both a checkmark and label when on. Off and disabled colors were also be updated for improved usability.
 
-### [Pagination enhancement](https://www.patternfly.org/v4/components/pagination)
+### [Pagination enhancement](https://v4-archive.patternfly.org/v4/components/pagination)
 
 ![pagination control with items per page open](./img/pagination-menu-open.png)
 
 Based on user feedback, clicking either on the items per page text or the down caret will open the items per page menu allowing the user to change this setting.
 
-### [Brand enhancements](https://www.patternfly.org/v4/components/brand)
+### [Brand enhancements](https://v4-archive.patternfly.org/v4/components/brand)
 The brand component was enhanced to allow images to be swapped by breakpoint. This will allow a product to support unique brand images per platform (e.g. mobile vs desktop).
 
-### [Select enhancements](https://www.patternfly.org/v4/components/select#select)
+### [Select enhancements](https://v4-archive.patternfly.org/v4/components/select#select)
 We now expose the onBlur event for the select component via an `onBlur` callback to make it easier to implement validation on the checkbox event variant.
 
 ### Typescript conversions
 We continue to make progress on converting our React examples from JS to Typescript with most of our components now using Typescript to present examples.
 
-See the [latest release notes](https://www.patternfly.org/v4/developer-resources/release-notes) for a more detailed list of changes.
+See the [latest release notes](https://v4-archive.patternfly.org/v4/developer-resources/release-notes) for a more detailed list of changes.
 
 -----------------------------------------------------------------------------
 
@@ -40,7 +40,7 @@ See the [latest release notes](https://www.patternfly.org/v4/developer-resources
 
 ### 2022.07 (June 3)
 
-* [Tree view: add option to select parent nodes](https://github.com/patternfly/patternfly/issues/4724) - for some use cases, it makes sense for parent nodes in a tree view to have select actions (e.g. for navigation) as well as being used to expand or collapse the node. This enhancement will introduce a new variant of the [tree view](https://www.patternfly.org/v4/components/tree-view) to support that behavior.
+* [Tree view: add option to select parent nodes](https://github.com/patternfly/patternfly/issues/4724) - for some use cases, it makes sense for parent nodes in a tree view to have select actions (e.g. for navigation) as well as being used to expand or collapse the node. This enhancement will introduce a new variant of the [tree view](https://v4-archive.patternfly.org/v4/components/tree-view) to support that behavior.
 
 * [Search input - dark variant](https://github.com/patternfly/patternfly/issues/4705) - adding a dark variant of the search input that can be used in the masthead or above the vertical navigation menu.
 

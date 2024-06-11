@@ -25,7 +25,7 @@ export const styleProps = {
   superHero: {
     fontWeight: "400",
     fontWeightText: "400 (medium)",
-    variableName: "--pf-v6-global--FontSize--4xl",
+    // variableName: "--pf-v6-global--FontSize--4xl",
     fontSize: "36px",
     lineHeight: "1.3",
     fontFamily: "RedHatDisplay",
@@ -34,7 +34,7 @@ export const styleProps = {
   hero: {
     fontWeight: "400",
     fontWeightText: "400 (medium)",
-    variableName: "--pf-v6-global--FontSize--3xl",
+    // variableName: "--pf-v6-global--FontSize--3xl",
     fontSize: "28px",
     lineHeight: "1.3",
     fontFamily: "RedHatDisplay",
@@ -43,7 +43,7 @@ export const styleProps = {
   first: {
     fontWeight: "400",
     fontWeightText: "400 (medium)",
-    variableName: "--pf-v6-global--FontSize--2xl",
+    // variableName: "--pf-v6-global--FontSize--2xl",
     fontSize: "24px",
     lineHeight: "1.3",
     fontFamily: "RedHatDisplay",
@@ -53,7 +53,7 @@ export const styleProps = {
     fontWeight: "400",
     fontWeightText: "400 (medium)",
     fontSize: "20px",
-    variableName: "--pf-v6-global--FontSize--xl",
+    // variableName: "--pf-v6-global--FontSize--xl",
     lineHeight: "1.5",
     fontFamily: "RedHatDisplay",
     textStyle: "xl (RHD md 20)"
@@ -62,7 +62,7 @@ export const styleProps = {
     fontWeight: "400",
     fontWeightText: "400 (medium)",
     fontSize: "18px",
-    variableName: "--pf-v6-global--FontSize--lg",
+    // variableName: "--pf-v6-global--FontSize--lg",
     lineHeight: "1.5",
     fontFamily: "RedHatDisplay",
     textStyle: "lg (RHD md 18)"
@@ -71,7 +71,7 @@ export const styleProps = {
     fontWeight: "400",
     fontWeightText: "400 (medium)",
     fontSize: "16px",
-    variableName: "--pf-v6-global--FontSize--md",
+    // variableName: "--pf-v6-global--FontSize--md",
     lineHeight: "1.5",
     fontFamily: "RedHatDisplay",
     textStyle: "md (RHD md 16)"
@@ -80,7 +80,7 @@ export const styleProps = {
     fontWeight: "400",
     fontWeightText: "400 (regular)",
     fontSize: "16px",
-    variableName: "--pf-v6-global--FontSize--md",
+    // variableName: "--pf-v6-global--FontSize--md",
     lineHeight: "1.5",
     fontFamily: "RedHatText",
     textStyle: "md (RHT rg 16)"
@@ -89,7 +89,7 @@ export const styleProps = {
     fontWeight: "400",
     fontWeightText: "400 (regular)",
     fontSize: "14px",
-    variableName: "--pf-v6-global--FontSize--sm",
+    // variableName: "--pf-v6-global--FontSize--sm",
     lineHeight: "1.5",
     fontFamily: "RedHatText",
     textStyle: "sm (RHT rg 14)"
@@ -98,7 +98,7 @@ export const styleProps = {
     fontWeight: "400",
     fontWeightText: "400 (regular)",
     fontSize: "12px",
-    variableName: "--pf-v6-global--FontSize--xs",
+    // variableName: "--pf-v6-global--FontSize--xs",
     lineHeight: "1.5",
     fontFamily: "RedHatText",
     textStyle: "xs (RHT rg 12)"
@@ -107,7 +107,7 @@ export const styleProps = {
     fontWeight: "400",
     fontWeightText: "400 (regular)",
     fontSize: "16px",
-    variableName: "--pf-v6-global--FontSize--md",
+    // variableName: "--pf-v6-global--FontSize--md",
     lineHeight: "1.5",
     fontFamily: "RedHatMono",
     textStyle: "Code"

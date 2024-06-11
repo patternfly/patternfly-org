@@ -7,8 +7,6 @@ import {
   ToolbarContent,
   ToolbarItem,
   EmptyState,
-  EmptyStateHeader,
-  EmptyStateIcon,
   EmptyStateBody,
   Tooltip,
   TooltipPosition
@@ -29,7 +27,7 @@ import SearchIcon from '@patternfly/react-icons/dist/esm/icons/search-icon';
 import * as iconUnicodes from '@patternfly/patternfly/assets/icons/iconUnicodes.json';
 
 export const IconsTable = () => {
-  const columns = ['Icon', 'Name', 'Style', 'React', 'Usage/tooltip', 'Unicode'];
+  const columns = ['Icon', 'Name', 'Style', 'React', 'Usage', 'Unicode'];
   const [searchValue, setSearchValue] = React.useState('');
   const [isCopied, setCopied] = React.useState(false);
   const [sortByIndex, setSortByIndex] = React.useState(1);
@@ -74,7 +72,6 @@ export const IconsTable = () => {
       return icon.Name.toLowerCase().includes(searchValue.toLowerCase()) ||
         icon.Contextual_usage?.toLowerCase().includes(searchValue.toLowerCase()) ||
         icon.Extra_context?.toLowerCase().includes(searchValue.toLowerCase()) ||
-        icon.Label?.toLowerCase().includes(searchValue.toLowerCase()) ||
         icon.React_name.toLowerCase().includes(searchValue.toLowerCase()) ||
         (typeof icon.Type === "string" && icon.Type.toLowerCase().includes(searchValue.toLowerCase())) ||
         (Array.isArray(icon.Type) && icon.Type.filter((type) => type.toLowerCase().includes(searchValue.toLowerCase())).length > 0)
@@ -146,7 +143,7 @@ export const IconsTable = () => {
                       onClick={(event) => onDownloadSvg(event.currentTarget, icon.Name)}
                       variant="plain"
                     >
-                      <Icon color={icon.color || 'var(--pf-v6-global--Color--100)'} />
+                      <Icon color={icon.color || ''} />
                     </Button>
                   </Tooltip>
                 </Td>
@@ -158,11 +155,6 @@ export const IconsTable = () => {
                   {icon.Extra_context && (
                     <React.Fragment>
                       <br/><br/>{icon.Extra_context}
-                    </React.Fragment>
-                  )}
-                  {icon.Label && (
-                    <React.Fragment>
-                      <br/><br/>Tooltip:{icon.Label}
                     </React.Fragment>
                   )}
                 </Td>
@@ -190,8 +182,7 @@ export const IconsTable = () => {
       </Table>
 
       {filteredRows.length === 0 && (
-        <EmptyState>
-          <EmptyStateHeader titleText={`No results found for "${ searchValue }"`} headingLevel="h4" icon={<EmptyStateIcon icon={SearchIcon} />} />
+        <EmptyState titleText={`No results found for "${ searchValue }"`} headingLevel="h4" icon={SearchIcon}>
           <EmptyStateBody>We couldn't find any icons that matched your search. If none of the icons listed fit
             your use case, you may use any additional 'fa' icons within <a href="https://fontawesome.com/icons?d=gallery&amp;m=free">Font Awesome's free set</a>.
           </EmptyStateBody>

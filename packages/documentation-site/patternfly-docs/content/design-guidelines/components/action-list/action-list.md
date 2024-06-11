@@ -3,7 +3,7 @@ id: Action list
 section: components
 ---
 ## Usage
-Use an action list to determine which spacing guidelines to use for a group of actions in [toolbars](/components/toolbar), [modals](/components/modal), [forms](/components/form), [data lists](/components/data-list), [wizards](/components/wizard), and more. Using an action list allows you to know what spacing to use for a group of actions, depending on your use case. 
+Use an action list to determine which spacing guidelines to use for a group of actions in [toolbars](/components/toolbar), [modals](/components/modal), [forms](/components/forms/form), [data lists](/components/data-list), [wizards](/components/wizard), and more. Using an action list allows you to know what spacing to use for a group of actions, depending on your use case. 
 
 Action lists are especially useful for situations that call for more than standard spacing between elements. For example, buttons are normally separated by 16px, but cases like cancel buttons in wizards call for 48px of spacing from other actions instead. Using an action list upholds spacing guidelines across different use cases.
 

@@ -7,11 +7,11 @@
 }
 
 .ws-community-page .ws-keep-growing {
-  margin-top: var(--pf-v6-global--spacer--2xl);
+  margin-top: var(--pf-t--global--spacer--2xl);
 }
 
 .ws-community-page .ws-get-in-touch {
-  margin-top: var(--pf-v6-global--spacer--lg);
+  margin-top: var(--pf-t--global--spacer--lg);
 }
 
 .ws-community-grid-img {

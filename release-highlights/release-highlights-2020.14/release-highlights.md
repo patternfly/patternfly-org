@@ -2,26 +2,26 @@
 ## Release 2020.14
 ### New features and enhancements
 
-#### [Added Help button to modal header](https://www.patternfly.org/v4/components/modal#with-help)
+#### [Added Help button to modal header](https://v4-archive.patternfly.org/v4/components/modal#with-help)
 Adds an optional Help button to a Modal.
 
 ![modal with help](./img/modal-with-help.png)
 
-#### Added expand all capability for [data lists](https://www.patternfly.org/v4/components/data-list/react-demos#expandable-control-in-toolbar) and [tables](https://www.patternfly.org/v4/components/table/react-demos#expandcollapse-all)
+#### Added expand all capability for [data lists](https://v4-archive.patternfly.org/v4/components/data-list/react-demos#expandable-control-in-toolbar) and [tables](https://v4-archive.patternfly.org/v4/components/table/react-demos#expandcollapse-all)
 
 Allows all rows in a data list or table to be expanded in a single click by clicking the expand-all icon in the toolbar.
 
 ![expand all](./img/expand-all.png)
 
-#### Added [extra-small empty state](https://www.patternfly.org/v4/components/empty-state#extra-small)
+#### Added [extra-small empty state](https://v4-archive.patternfly.org/v4/components/empty-state#extra-small)
 The extra-small empty state can be used inside of a card or anyplace else you want to display an empty state in a constrained space.
 
 ![extra small empty state](./img/xs-empty-state.png)
 
-#### [Introduced sticky page sections](https://www.patternfly.org/v4/components/page/react-demos#sticky-section-group)
+#### [Introduced sticky page sections](https://v4-archive.patternfly.org/v4/components/page/react-demos#sticky-section-group)
 This is a new feature added to the Page component that allows for defining sticky sections on a page. It will enable defining sticky headers, footers, toolbars, etc.
 
-See the [latest release notes](https://www.patternfly.org/v4/developer-resources/release-notes) for a more detailed list of changes.
+See the [latest release notes](https://v4-archive.patternfly.org/v4/developer-resources/release-notes) for a more detailed list of changes.
 
 
 ### What we’re working on...

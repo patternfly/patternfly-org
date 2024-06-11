@@ -5,18 +5,18 @@
   background-color: var(--pf-t--global--background--color--primary--default);
   z-index: 501;
   margin-block-start: calc(var(--pf-v6-c-page__main-section--PaddingTop) * -1);
-  margin-block-end: var(--pf-v6-global--spacer--md);
+  margin-block-end: var(--pf-t--global--spacer--md);
   margin-inline-start: calc(var(--pf-v6-c-page__main-section--PaddingLeft) * -1);
   margin-inline-end: calc(var(--pf-v6-c-page__main-section--PaddingRight) * -2);
-  padding-block-start: var(--pf-v6-global--spacer--md);
-  padding-block-end: var(--pf-v6-global--spacer--md);
-  padding-inline-start: var(--pf-v6-global--spacer--md);
+  padding-block-start: var(--pf-t--global--spacer--md);
+  padding-block-end: var(--pf-t--global--spacer--md);
+  padding-inline-start: var(--pf-t--global--spacer--md);
   padding-inline-end: 0;
-  box-shadow: var(--pf-v6-global--BoxShadow--lg-bottom);
+/*   box-shadow: var(--pf-v6-global--BoxShadow--lg-bottom); */
 }
 
 .ws-toc.pf-m-expanded {
-  box-shadow: var(--pf-v6-global--BoxShadow--sm-bottom)
+/*   box-shadow: var(--pf-v6-global--BoxShadow--sm-bottom) */
 }
 
 /* Mobile jumplinks */
@@ -51,7 +51,7 @@
     -ms-overflow-style: none;
     scrollbar-width: none;
     order: 1;
-    padding: 0 var(--pf-v6-global--spacer--lg) var(--pf-v6-global--spacer--lg) var(--pf-v6-global--spacer--2xl);
+    padding: 0 var(--pf-t--global--spacer--lg) var(--pf-t--global--spacer--lg) var(--pf-t--global--spacer--2xl);
     flex-grow: 1;
     background: none;
     margin: 0;
@@ -67,8 +67,8 @@
 .ws-toc-item .pf-v6-c-jump-links__link {
   position: relative;
   display: block;
-  color: var(--ws-toc-link--Color, var(--pf-v6-global--Color--300));
-  font-size: var(--pf-v6-global--FontSize--sm);
+/*   color: var(--ws-toc-link--Color, var(--pf-v6-global--Color--300)); */
+/*   font-size: var(--pf-v6-global--FontSize--sm); */
   margin: -4px 0;
 }
 
