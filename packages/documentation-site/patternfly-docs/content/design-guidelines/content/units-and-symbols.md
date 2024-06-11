@@ -99,7 +99,7 @@ If space is limited, use symbols to communicate the same units of time in less s
 | Millisecond | ms
 | Second | s
 | Minute | min
-| Hour | hr
+| Hour | h
 
 </div>
 

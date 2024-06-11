@@ -3,6 +3,84 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 5.16.4 (2024-06-06)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 5.16.3 (2024-06-06)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 5.16.2 (2024-06-05)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 5.16.1 (2024-06-04)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+# 5.16.0 (2024-06-03)
+
+
+### Features
+
+* release component groups 5.2 ([#4055](https://github.com/patternfly/patternfly-org/issues/4055)) ([469376f](https://github.com/patternfly/patternfly-org/commit/469376f59edb691b4790fbbab50fecb86ee986f6))
+
+
+
+
+
+## 5.15.7 (2024-05-21)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 5.15.6 (2024-05-16)
+
+
+### Bug Fixes
+
+* Incorrectly formatted link ([#4024](https://github.com/patternfly/patternfly-org/issues/4024)) ([252c0a9](https://github.com/patternfly/patternfly-org/commit/252c0a94b9babf8268a08668ce44108748591d2f))
+
+
+
+
+
+## 5.15.5 (2024-05-15)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 5.15.4 (2024-05-15)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
 ## 5.15.3 (2024-05-14)
 
 **Note:** Version bump only for package @patternfly/documentation-framework
