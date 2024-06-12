@@ -3,10 +3,10 @@ id: Typography
 section: design-foundations
 ---
 
-import { Button, Grid, GridItem } from '@patternfly/react-core';
+import { Button, Grid, GridItem, Icon } from '@patternfly/react-core';
 import CheckCircleIcon from '@patternfly/react-icons/dist/esm/icons/check-circle-icon';
 import TimesCircleIcon from '@patternfly/react-icons/dist/esm/icons/times-circle-icon';
-import { TypographyGrid, LineHeightTitle, SpacingContentItem, Spacer, TitleLevel, styleProps } from './typography';
+import { TypographyGrid, TitleLevel, styleProps } from './typography';
 import correct from './typography_correct_spacing.png';
 import incorrect from './typography_incorrect_spacing.png';
 import './typography.css';
@@ -36,7 +36,6 @@ The following sections outline common text styles that are used in PatternFly ap
 **Note:** Use only for extra large titles in cards or similar locations. Do not use for page titles.
 
 <TitleLevel
-  className="pf-v6-c-title pf-m-lg ws-title-level-heading"
   asGrid
   styleProps={styleProps.superHero} />
 
@@ -48,101 +47,84 @@ The following sections outline common text styles that are used in PatternFly ap
 **Note:** Use only for extra large titles in cards or similar locations. Do not use for page titles.
 
 <TitleLevel
-  className="pf-v6-c-title pf-m-lg ws-title-level-heading"
+  className="pf-v6-c-title pf-m-lg"
   asGrid
   styleProps={styleProps.hero} />
-<div class="pf-v6-u-mt-lg">
-</div>
+<div class="pf-v6-u-mt-lg"></div>
 
 ### First level heading (2xl, H1)
 
 **Note**: Only 1 first level/H1 heading should ever exist on a page.
 
 <TitleLevel
-  className="pf-v6-c-title pf-m-lg ws-title-level-heading"
+  className="pf-v6-c-title pf-m-lg"
   asGrid
   styleProps={styleProps.first} />
-<div class="pf-v6-u-mt-lg">
-</div>
+<div class="pf-v6-u-mt-lg"></div>
 
 ### Second level heading (xl, H2)
 
 <TitleLevel
-  className="pf-v6-c-title pf-m-lg ws-title-level-heading"
+  className="pf-v6-c-title pf-m-lg"
   asGrid
   styleProps={styleProps.second} />
-<div class="pf-v6-u-mt-lg">
-</div>
+<div class="pf-v6-u-mt-lg"></div>
 
 ### Third level heading (lg, H3)
 
 <TitleLevel
-  className="pf-v6-c-title pf-m-lg ws-title-level-heading"
+  className="pf-v6-c-title pf-m-lg"
   asGrid
   styleProps={styleProps.third} />
-<div class="pf-v6-u-mt-lg">
-</div>
+<div class="pf-v6-u-mt-lg"></div>
 
 ### Fourth level heading (md, H4)
 
 <TitleLevel
-  className="pf-v6-c-title pf-m-lg ws-title-level-heading"
+  className="pf-v6-c-title pf-m-lg"
   asGrid
   styleProps = {styleProps.fourth} />
-<div class="pf-v6-u-mt-lg">
-</div>
+<div class="pf-v6-u-mt-lg"></div>
 
 ### Default body text
 
 **Note:** This is the default text style for paragraphs, lists, tables, etc. Some components instead use Red Hat Text at 700 font weight, which is Red Hat Text Medium (such as alerts and navigation).
 
 <TitleLevel
-  className="pf-v6-c-title pf-m-lg ws-title-level-heading"
+  className="pf-v6-c-title pf-m-lg"
   asGrid
   styleProps = {styleProps.body} />
-<div class="pf-v6-u-mt-lg">
-</div>
+<div class="pf-v6-u-mt-lg"></div>
 
 ### Small text
 
 <TitleLevel
-  className="pf-v6-c-title pf-m-lg ws-title-level-heading"
+  className="pf-v6-c-title pf-m-lg"
   asGrid
   styleProps = {styleProps.small} />
-<div class="pf-v6-u-mt-lg">
-</div>
-
-### Tiny text
-
-<TitleLevel
-  className="pf-v6-c-title pf-m-lg ws-title-level-heading"
-  asGrid
-  styleProps = {styleProps.tiny} />
-<div class="pf-v6-u-mt-lg">
-</div>
+<div class="pf-v6-u-mt-lg"></div>
 
 ### Code
 
 **Note:** Used for code blocks.
 
 <TitleLevel
-  className="pf-v6-c-title pf-m-lg ws-title-level-heading"
+  className="pf-v6-c-title pf-m-lg"
   asGrid
   styleProps = {styleProps.code} />
-<div class="pf-v6-u-mt-lg">
-</div>
+<div class="pf-v6-u-mt-lg"></div>
 
 ## Customizing heading levels
 If you use the [title component](/components/title) to create headings on your page, you can modify the default relationship between heading levels and text sizes. When using title, you must specify a heading level that will apply to the target text. The following table shows the default mapping of heading level to text size:
 
-| Heading level | Default size|
-|----|-----------|
-| H1 | 2xl (24px)|
-| H2 | xl (20px) |
-| H3 | lg (18px) |
-| H4 | md (16px) |
-| H5 | md (16px) |
-| H6 | md (16px) |
+| Heading level | Default size |
+|----|--------------|
+| H1 | 2xl (22px)   |
+| H2 | xl (20px)    |
+| H3 | lg (18px)    |
+| H4 | md (16px)    |
+| H5 | md (16px)    |
+| H6 | md (16px)    |
 
 The title component allows you to customize the visual hierarchy of text on your page, while keeping the semantic hierarchy consistent with expectations for accessibility. 
 
@@ -153,26 +135,22 @@ No matter which visual customizations you choose to make, you should always main
 ## Line height and spacing
 Your text's line height has an impact on the use of [spacers](/design-foundations/spacers) in your design.
 
-Line height is measured in in pixels, and can be calculated by multiplying the font's built-in line height by the text size. 
+Line height is measured in pixels, and can be calculated by multiplying the font's built-in line height by the text size. 
 
 For example, if a body of text uses a line height of 1.5 and the body text size is 16px, the final line height would be 24 px (16 * 1.5 = 24). In this case, include the 24px line height as part of the text when creating designs in the design software. 
 
 <Grid>
   <GridItem span={12}>
-    <LineHeightTitle>
-      <CheckCircleIcon color="#52A549" />
-      <span style={{marginLeft: 'var(--pf-v6-global--spacer--sm)'}}>Correct</span>
-    </LineHeightTitle>
+    <Icon isInline status="success"><CheckCircleIcon /></Icon> Correct
     <div>Include line height space when laying out text with spacers.</div>
-    <img alt="correct line height space example" style={{maxHeight: '158px', padding: '16px'}} src={correct} />
+    <img alt="correct line height space example" style={{maxHeight: '158px', padding: 'var(--pf-t--global--spacer--md)'}} src={correct} />
   </GridItem>
   <GridItem span={12}>
-    <LineHeightTitle>
-      <TimesCircleIcon color="#CC0000" />
-      <span style={{marginLeft: 'var(--pf-v6-global--spacer--sm)'}}>Incorrect</span>
-    </LineHeightTitle>
+    <div>
+      <Icon isInline status="danger"><TimesCircleIcon /></Icon> Incorrect
+    </div>
     <div>Don't align spacing solely to the text. Always include the line height space.</div>
-    <img alt="incorrect line height space example" style={{maxHeight: '124px', padding: '16px'}} src={incorrect} />
+    <img alt="incorrect line height space example" style={{maxHeight: '124px', padding: 'var(--pf-t--global--spacer--md)'}} src={incorrect} />
   </GridItem>
 </Grid>
 
