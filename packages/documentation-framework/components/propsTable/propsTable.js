@@ -1,5 +1,5 @@
 import React from "react";
-import { Badge } from "@patternfly/react-core";
+import { Label } from "@patternfly/react-core";
 import {
   Table,
   Caption,
@@ -62,12 +62,16 @@ export const PropsTable = ({ title, description, rows, allPropComponents }) => (
                     ""
                   )}
                   {row.beta && (
-                    <Badge
-                      key={`${row.name}-${idx}`}
-                      className="ws-beta-badge pf-v6-u-ml-sm"
-                    >
-                      Beta
-                    </Badge>
+                    <>
+                      {" "}
+                      <Label
+                        key={`${row.name}-${idx}`}
+                        color="blue"
+                        isCompact
+                      >
+                        Beta
+                      </Label>
+                    </>
                   )}
                 </TableText>
               </Td>

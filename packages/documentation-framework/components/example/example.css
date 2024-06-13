@@ -66,12 +66,6 @@
   color: rgba(255,255,255,.4);
 }
 
-.pf-v6-c-badge.ws-beta-badge {
-   --pf-v6-c-badge--m-unread--BackgroundColor: var(--pf-t--global--background--color--floating--default);
-   --pf-v6-c-badge--m-unread--Color: var(--pf-t--global--color--status--unread--default--default);
-   border: var(--pf-t--global--border--width--regular) solid var(--pf-t--global--border--color--nonstatus--blue--default);
-}
-
 .ws-prop-required {
   color: var(--pf-t--global--text--color--status--danger--default);
 }
@@ -91,8 +85,4 @@
   background-color: var(--pf-t--global--background--color--floating--default);
   opacity: 0.8;
   box-shadow: var(--pf-t--global--box-shadow--sm);
-}
-
-.pf-v6-theme-dark .ws-theme-switch-full-page::before {
-  background-color: var(--pf-t--global--background--color--secondary--default);
 }
