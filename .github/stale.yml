@@ -1,24 +1,19 @@
-# Configuration for probot-stale - https://github.com/probot/stale
-# Number of days of inactivity before an Issue or Pull Request becomes stale
-daysUntilStale: 60
+name: 'Close stale issues and PRs'
+on:
+  schedule:
+    - cron: '37 11 * * *'
 
-# Number of days of inactivity before an Issue or Pull Request with the stale label is closed.
-# Set to false to disable. If disabled, issues still need to be closed manually, but will remain marked as stale.
-daysUntilClose: 14
-
-# Issues with these labels will never be considered stale
-exemptLabels:
-  - pinned
-  - security
-  - accessibility
-
-# Label to use when marking as stale
-staleLabel: wontfix
-
-# Comment to post when marking as stale. Set to `false` to disable
-markComment: >
-  This issue has been automatically marked as stale because it has not had
-  recent activity. It will be closed if no further activity occurs.
-
-# Limit the number of actions per hour, from 1-30. Default is 30
-limitPerRun: 30
+jobs:
+  stale:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/stale@v9
+        with:
+          days-before-stale: 60
+          days-before-close: -1
+          exempt-issue-labels: 'accessibility,pinned,security'
+          stale-issue-label: 'stale'
+          stale-issue-message: 'This issue has been automatically marked as stale because it has not had activity in the last 60 days. It will be closed in 30 days if no further activity occurs.'
+          stale-pr-message: 'This PR has been automatically marked as stale because it has not had activity in the last 60 days. It will be closed in 30 days if no further activity occurs.'
+          close-issue-message: 'This issue has been closed because it has not had activity since being marked as stale.'
+          close-pr-message: 'This PR has been closed because it has not had activity since being marked as stale.'
