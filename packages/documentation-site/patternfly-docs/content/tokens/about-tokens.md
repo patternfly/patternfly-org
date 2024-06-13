@@ -58,8 +58,3 @@ If a segment isn't relevant for a particular token then it will be skipped in th
 
 <br />
 
-### How to choose tokens?
-We tried to clearly and name our semantic tokens. However, when you're unfamiliar with our token system, it may not be immediately clear which token you should use for your scenario.
-
-Colors 
-Text
