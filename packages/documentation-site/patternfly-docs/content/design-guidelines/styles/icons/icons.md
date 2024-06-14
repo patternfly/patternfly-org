@@ -33,7 +33,9 @@ PatternFly supports a range of icon sizes so that all icons can be adapted to di
 | 2xl (56px) | `--pf-t--global--icon--size--2xl` |  <Icon size ="2xl"><CheckCircleIcon /></Icon> |
 | 3xl (96px) | `--pf-t--global--icon--size--3xl` | <Icon size ="3xl"><CheckCircleIcon /></Icon> |
 
-Medium icons (the size used in most PatternFly components) are typically the most versatile size to use across UIs. Other icon sizes are used sparingly across PatternFly. Regardless of size, icons should be center-aligned horizontally when placed next to text and center-aligned vertically when stacked:
+Medium icons are typically the most versatile size to use in a UI. Most icons in PatternFly components are medium&mdash;other sizes are used sparingly.
+
+Regardless of size, icons should be center-aligned horizontally when placed next to text and center-aligned vertically when stacked:
 
 <div><img src="./icon_alignment.png" alt="Icon alignment" className="ws-icon-alignment" /></div>
 
@@ -63,7 +65,10 @@ When using HTML, use the following syntax:
 **Note:** Be sure to reference our [development onboarding guide](/develop#using-icons) when using 'fa' regular icons.
 
 ### React icons
-When using React, include the following import line for 'pficon' icons: `import { [insert-icon-name] } from '@patternfly/react-icons'`
+When using React, you can import 'pficon' icons from our [react-icons package](https://www.npmjs.com/package/@patternfly/react-icons) by including the following line: `import { [insert-icon-name] } from '@patternfly/react-icons/dist/esm/icons/[insert-hyphenated-icon-name]';`
+
+For example: 
+`import StarIcon from '@patternfly/react-icons/dist/esm/icons/star-icon';`
 
 ### Font Awesome solid (FAS) vs Font Awesome regular (FAR)
 The Font Awesome icons included with PatternFly are Font Awesome solid (FAS) webfont icons. If you're using icons via `<i class="[fa, far, fas] [insert-icon-name]"></i>`, you can use any FAS icon. If you need to use a Font Awesome regular (FAR) icon, you must include the FAR icons yourself by doing one of the following:
@@ -76,9 +81,9 @@ The Font Awesome icons included with PatternFly are Font Awesome solid (FAS) web
 
 ## All icons 
 
-The following table outlines details for all icons supported by PatternFly, as well as guidance for using each icon. 
+The following table provides details and usage information for all icons that PatternFly supports.
 
-For guidance related to tooltips for icons, [refer to our tooltips writing guide.](/ux-writing/tooltips#icon-tooltips)
+For guidance related to icon tooltips, [refer to our tooltips writing guide.](/ux-writing/tooltips#icon-tooltips)
 
 Select any single icon in the table to download it as an SVG. You can also download all icon SVGs <a href="https://github.com/patternfly/patternfly-design/raw/master/resources/patternfly-icon-svgs" target="_blank">on GitHub (via patternfly-icons.zip.)</a>
 
