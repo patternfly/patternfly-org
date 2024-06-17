@@ -3,7 +3,7 @@ id: Typography
 section: design-foundations
 ---
 
-import { Button, Grid, GridItem } from '@patternfly/react-core';
+import { Button, Grid, GridItem, Text, TextContent, Title } from '@patternfly/react-core';
 import CheckCircleIcon from '@patternfly/react-icons/dist/esm/icons/check-circle-icon';
 import TimesCircleIcon from '@patternfly/react-icons/dist/esm/icons/times-circle-icon';
 import { TypographyGrid, LineHeightTitle, SpacingContentItem, Spacer, TitleLevel, styleProps } from './typography';
@@ -11,126 +11,143 @@ import correct from './typography_correct_spacing.png';
 import incorrect from './typography_incorrect_spacing.png';
 import './typography.css';
 
+You can use **typography** to create visual hierarchy in a UI. By creating a consistent and logical hierarchy, users can more quickly scan and understand information on a page.
+
+This page outlines PatternFly's typography principles and standards, including token values and usage information.
+
+You can place text content on a page using the text or title component: 
+- **[Text component:](/components/text)** Used to create formatted blocks of text content. Text accepts all general HTML text formatting tags, including heading, paragraph, and list styles.
+- **[Title component:](/components/title)** Used specifically for headings or title text in components. Title is flexible and allows you to set the size of the text and heading level independently.
+
 ## PatternFly fonts
 
-PatternFly's fonts include **Red Hat Display** and **Red Hat Text**. For larger text, such as headings, use Red Hat Display. For smaller text, subheadings, and body text, use Red Hat Text, which is more readable for long-form text. You can [download PatternFly's fonts from GitHub.](https://github.com/RedHatOfficial/RedHatFont)
+We use 3 fonts in PatternFly:
+- **Red Hat Display:** Used for larger text, such as headings.
+- **Red Hat Text:** Used for smaller text, subheadings, and body text. More readable for long-form text. 
+- **Red Hat Mono:** Used to format text as code.
 
-## Usage
+[Download PatternFly's fonts from GitHub.](https://github.com/RedHatOfficial/RedHatFont)
 
-Use typography to create visual hierarchy. A consistent and logical hierarchy makes it easier for users to quickly scan and understand information on a page.
+## Headings 
 
-There are two PatternFly components that can be used to place text content on a page: the [text component](/components/text) and the [title component](/components/title). The text component should be used to create formatted blocks of text content. It accepts all general HTML text formatting tags, including heading, paragraph, and list styles. The title component is intended to be used specifically for headings or title text in components. This component is flexible and allows you to set the size of the text and heading level independently.
+All headings use Red Hat Display bold.
+- 2xl and xl are reserved for titles and h1, h2 headings
+-
 
-## PatternFly text styles
+| Example | Token | Size | Line height | Heading level | 
+| --- | --- | --- | --- | --- |
+| <Title headingLevel="h5" size='2xl'> Aa </Title> |  |  |  |  |  |
+| <Title headingLevel="h5" size='xl'> Aa </Title>  |  |  |  |  |  |
+| <Title headingLevel="h5" size='lg'> Aa </Title>  |  |  |  |  |  |
+| <Title headingLevel="h5" size='md'> Aa </Title>  |  |  |  |  |  |
+| <Title headingLevel="h5" size='sm'> Aa </Title>  |  |  |  |  |  |
+| <Title headingLevel="h5" size='xs'> Aa </Title>  |  |  |  |  |  |
+| <Text> Aa </Text>  |  |  |  |  |  |
+|   |  |  |  |  |  |
 
-The following sections outline common text styles that are used in PatternFly applications, how they should be used, and list settings in a table. These tables include the following information: 
 
-- **Text style:** The name used to refer to that text style in the [PatternFly design kit](/get-started/design#getting-the-design-kit).
+### Super hero heading (2xl)
 
-- **Font family, font weight, line height, and font size:** The styles applied to the text style.
+<br /> 
 
-- **Font size CSS variable:** The CSS variable that controls the size of your text. You can customize type sizes in your application by modifying the values associated with these variables. In general, this is not advised, and should be done with caution, as changes to text style can have far reaching side effects on spacing within certain components.
+|  |  |
+| --- | --- | 
+| **Example:** | <Title headingLevel="h5" size='2xl'> Design is where science and art break even. </Title> |
+| **Usage:** | Use only for XL titles for full page empty states, cards, similar locations. Do not use for page titles.  |
+| **Token:** | --pf-t--global--font--size--heading--h1 | 
+| **Heading level:** | N/a | 
+| **Size:** | 35 |
+| **Line height:** | 1.3 |
 
-### Super hero heading (4xl)
+### Hero heading (xl)
 
-**Note:** Use only for extra large titles in cards or similar locations. Do not use for page titles.
-
-<TitleLevel
-  className="pf-v6-c-title pf-m-lg ws-title-level-heading"
-  asGrid
-  styleProps={styleProps.superHero} />
-
-<div class="pf-v6-u-mt-lg"> 
-</div>
-
-### Hero heading (3xl)
-
-**Note:** Use only for extra large titles in cards or similar locations. Do not use for page titles.
-
-<TitleLevel
-  className="pf-v6-c-title pf-m-lg ws-title-level-heading"
-  asGrid
-  styleProps={styleProps.hero} />
-<div class="pf-v6-u-mt-lg">
-</div>
+|  |  |
+| --- | --- | 
+| **Example:** | <Title headingLevel="h5" size='xl'> Design is where science and art break even. </Title> |
+| **Usage:** | Use only for XL titles for full page empty states, cards, similar locations. Do not use for page titles.  |
+| **Token:** | --pf-t--global--font--size--heading--h1 | 
+| **Heading level:** | N/a | 
+| **Size:** | 35 |
+| **Line height:** | 1.3 |
 
 ### First level heading (2xl, H1)
 
-**Note**: Only 1 first level/H1 heading should ever exist on a page.
+<br /> 
 
-<TitleLevel
-  className="pf-v6-c-title pf-m-lg ws-title-level-heading"
-  asGrid
-  styleProps={styleProps.first} />
-<div class="pf-v6-u-mt-lg">
-</div>
+|  |  |
+| --- | --- | 
+| **Example:** | <Title headingLevel="h5" size='2xl'> Design is where science and art break even. </Title> |
+| **Usage:** | Use only for XL titles for full page empty states, cards, similar locations. Do not use for page titles.  |
+| **Token:** | --pf-t--global--font--size--heading--h1 | 
+| **Heading level:** | H1 | 
+| **Size:** | 35 |
+| **Line height:** | 1.3 |
 
-### Second level heading (xl, H2)
+### Second level heading (xl, H2) 
 
-<TitleLevel
-  className="pf-v6-c-title pf-m-lg ws-title-level-heading"
-  asGrid
-  styleProps={styleProps.second} />
-<div class="pf-v6-u-mt-lg">
-</div>
+|  |  |
+| --- | --- | 
+| **Example:** | <Title headingLevel="h5" size='xl'> Design is where science and art break even. </Title> |
+| **Usage:** | Use only for XL titles for full page empty states, cards, similar locations. Do not use for page titles.  |
+| **Token:** | --pf-t--global--font--size--heading--h1 | 
+| **Heading level:** | H2 | 
+| **Size:** | 35 |
+| **Line height:** | 1.3 |
 
-### Third level heading (lg, H3)
+### Third level heading (lg, H3) 
 
-<TitleLevel
-  className="pf-v6-c-title pf-m-lg ws-title-level-heading"
-  asGrid
-  styleProps={styleProps.third} />
-<div class="pf-v6-u-mt-lg">
-</div>
+|  |  |
+| --- | --- | 
+| **Example:** | <Title headingLevel="h5" size='lg'> Design is where science and art break even. </Title> |
+| **Usage:** | Use only for XL titles for full page empty states, cards, similar locations. Do not use for page titles.  |
+| **Token:** | --pf-t--global--font--size--heading--h1 | 
+| **Heading level:** | N/a | 
+| **Size:** | 35 |
+| **Line height:** | 1.3 |
 
 ### Fourth level heading (md, H4)
 
-<TitleLevel
-  className="pf-v6-c-title pf-m-lg ws-title-level-heading"
-  asGrid
-  styleProps = {styleProps.fourth} />
-<div class="pf-v6-u-mt-lg">
-</div>
+|  |  |
+| --- | --- | 
+| **Example:** | <Title headingLevel="h5" size='md'> Design is where science and art break even. </Title> |
+| **Usage:** | Use only for XL titles for full page empty states, cards, similar locations. Do not use for page titles.  |
+| **Token:** | --pf-t--global--font--size--heading--h1 | 
+| **Heading level:** | N/a | 
+| **Size:** | 35 |
+| **Line height:** | 1.3 |
 
-### Default body text
+### Fifth level heading (sm, H4)
 
-**Note:** This is the default text style for paragraphs, lists, tables, etc. Some components instead use Red Hat Text at 700 font weight, which is Red Hat Text Medium (such as alerts and navigation).
+|  |  |
+| --- | --- | 
+| **Example:** | <Title headingLevel="h5" size='sm'> Design is where science and art break even. </Title> |
+| **Usage:** | Use only for XL titles for full page empty states, cards, similar locations. Do not use for page titles.  |
+| **Token:** | --pf-t--global--font--size--heading--h1 | 
+| **Heading level:** | N/a | 
+| **Size:** | 35 |
+| **Line height:** | 1.3 |
 
-<TitleLevel
-  className="pf-v6-c-title pf-m-lg ws-title-level-heading"
-  asGrid
-  styleProps = {styleProps.body} />
-<div class="pf-v6-u-mt-lg">
-</div>
+### Sixth level heading (xs, H5)
 
-### Small text
+|  |  |
+| --- | --- | 
+| **Example:** | <Title headingLevel="h5" size='xs'> Design is where science and art break even. </Title> |
+| **Usage:** | Use only for XL titles for full page empty states, cards, similar locations. Do not use for page titles.  |
+| **Token:** | --pf-t--global--font--size--heading--h1 | 
+| **Heading level:** | N/a | 
+| **Size:** | 35 |
+| **Line height:** | 1.3 |
 
-<TitleLevel
-  className="pf-v6-c-title pf-m-lg ws-title-level-heading"
-  asGrid
-  styleProps = {styleProps.small} />
-<div class="pf-v6-u-mt-lg">
-</div>
+## Body text
 
-### Tiny text
+### Default 
 
-<TitleLevel
-  className="pf-v6-c-title pf-m-lg ws-title-level-heading"
-  asGrid
-  styleProps = {styleProps.tiny} />
-<div class="pf-v6-u-mt-lg">
-</div>
+### Large 
 
-### Code
+### Small
 
-**Note:** Used for code blocks.
+## Code
 
-<TitleLevel
-  className="pf-v6-c-title pf-m-lg ws-title-level-heading"
-  asGrid
-  styleProps = {styleProps.code} />
-<div class="pf-v6-u-mt-lg">
-</div>
 
 ## Customizing heading levels
 If you use the [title component](/components/title) to create headings on your page, you can modify the default relationship between heading levels and text sizes. When using title, you must specify a heading level that will apply to the target text. The following table shows the default mapping of heading level to text size:
