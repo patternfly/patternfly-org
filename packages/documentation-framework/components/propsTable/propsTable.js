@@ -17,7 +17,7 @@ import accessibleStyles from "@patternfly/react-styles/css/utilities/Accessibili
 
 export const PropsTable = ({ title, description, rows, allPropComponents }) => (
   <React.Fragment>
-    <AutoLinkHeader size="h3">{title}</AutoLinkHeader>
+    <AutoLinkHeader headingLevel="h3">{title}</AutoLinkHeader>
     <Table className="pf-v6-u-mt-md pf-v6-u-mb-lg" variant="compact" aria-label={title} gridBreakPoint="grid-lg">
       <Caption>
         {description && <div className="pf-v6-u-mb-md">{description}</div>}
