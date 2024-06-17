@@ -109,11 +109,36 @@ An animation is composed of 4 elements: triggers, duration, easing, and properti
 
 ## Developing and designing with motion 
 
+### Figma 
+In Figma, you can find annotations and prototype videos for each animation...
+
 ### Tokens
 
 PatternFly component animations are created using design tokens that cover the different elements of an animation, including duration, delay, and timing. Like we do with color tokens, we implement motion by using semantic tokens, which are built off of base tokens.
 
 If you aren't familiar with our token system, [refer to this overview](/tokens/about-tokens).
+
+#### Duration 
+Duration tokens specify the length of time that different animation should take to complete.
+
+| Animation | Tokens | Length |
+| --- | --- | --- |
+| Slide-out | -pf--t--global--motion--duration--slide-out--short<br />-pf--t--global--motion--duration--slide-out--default<br />-pf--t--global--motion--duration--slide-out--long | 300<br />400<br />500
+| Slide-in |  |
+| Fade |  |
+| Icon |  |
+<br />
+
+#### Delay 
+Delay tokens specify the length of time that should pass before an animation begins. Delay options include none, short, default, and long.
+
+#### Timing 
+Timing-function tokens specify the easing path that an animation takes. These paths are defined by cubic bezier curves, which define the start and end points ... [fact check]
+
+Options include: 
+- **Accelerate:** Use to specify when an animation should begin to speed up.
+- **Default:** Use to specify when an animation should maintain a cosistent speed.
+- **Decelerate:** Use to specify when an animation should begin to slow down.
 
 ### Motion patterns
 
