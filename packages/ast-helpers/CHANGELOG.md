@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.4.0-alpha.36 (2024-06-17)
+
+
+### Features
+
+* **docs-framework:** Update AutoLinkHeader to use the Text component ([#4049](https://github.com/patternfly/patternfly-org/issues/4049)) ([3a9c9a0](https://github.com/patternfly/patternfly-org/commit/3a9c9a08ff373def8b751b947e70580dcbc9e6da))
+
+
+
+
+
 # 1.4.0-alpha.35 (2024-06-17)
 
 
