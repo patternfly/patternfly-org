@@ -45,7 +45,7 @@
     "postcss": "8.4.33",
     "postcss-loader": "7.1.0",
     "process": "^0.11.10",
-    "puppeteer": "19.11.1",
+    "puppeteer": "22.11.2",
     "puppeteer-cluster": "0.23.0",
     "react-docgen": "5.3.1",
     "react-ssr-prepass": "1.5.0",
