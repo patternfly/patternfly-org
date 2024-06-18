@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.4.0-alpha.37 (2024-06-18)
+
+
+### Bug Fixes
+
+* add component groups alpha docs ([#4105](https://github.com/patternfly/patternfly-org/issues/4105)) ([f9c2be1](https://github.com/patternfly/patternfly-org/commit/f9c2be12f74dad69e390ba66af5cc34a350fa619))
+
+
+
+
+
 # 1.4.0-alpha.36 (2024-06-17)
 
 
