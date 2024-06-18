@@ -64,19 +64,3 @@
   }
 }
 
-/* .ws-toc-link { */
-.ws-toc-item .pf-v6-c-jump-links__link {
-  position: relative;
-  display: block;
-  color: var(--pf-v6-global--Color--300);
-  font-size: var(--pf-t--global--font--size--body--sm);
-  margin: -4px 0;
-}
-
-.ws-toc-sublist > .ws-toc-item:first-child .pf-v6-c-jump-links__link {
-  margin-top: 0;
-}
-
-.ws-toc-item.pf-m-current .pf-v6-c-jump-links__link::before {
-  z-index: 1;
-}
