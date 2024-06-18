@@ -8,7 +8,4 @@
 
 #ws-gdpr-banner {
   max-width: 95vw;
-  flex-wrap: nowrap;
-  background: var(--pf-t--global--background--color--floating--default);
-  border: var(--pf-t--global--border--width--box--default) solid var(--pf-t--global--border--color--default);
 }
