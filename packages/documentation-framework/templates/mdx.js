@@ -1,5 +1,5 @@
 import React from 'react';
-import { PageSection, Title, Tooltip, PageSectionVariants, Button, BackToTop, Flex, FlexItem, PageGroup, Page, Text, TextContent, Label } from '@patternfly/react-core';
+import { PageSection, Title, Tooltip, PageSectionVariants, Button, BackToTop, Flex, FlexItem, PageGroup, Page, Text, TextContent, Label, Stack, StackItem } from '@patternfly/react-core';
 import { css } from '@patternfly/react-styles';
 import ExternalLinkAltIcon from '@patternfly/react-icons/dist/esm/icons/external-link-alt-icon';
 import { Router, useLocation } from '@reach/router';
@@ -52,18 +52,11 @@ const MDXChildTemplate = ({
     }
     ensureID(toc);
   }
-  const innerContentWrapperClass = () => {
-    if (source === 'landing-pages') {
-      return 'landing-pages';
-    }
-    if (source === 'release-notes') {
-      return '';
-    }
-    return 'ws-mdx-content-content'
-  };
 
-  const InlineAlerts = (
-    <React.Fragment>
+  const isComponentCodeDocs = ['react', 'react-demos', 'html', 'html-demos', 'react-templates'].includes(source);
+
+  const InlineAlerts = (optIn || beta || deprecated || source === 'react-deprecated' || source === 'html-deprecated' || template || source === 'react-template') && (
+    <StackItem>
       {optIn && (
         <InlineAlert title="Opt-in feature">
           {optIn}
@@ -90,28 +83,27 @@ const MDXChildTemplate = ({
           {`This page showcases templates for the ${id.toLowerCase()} component. A template combines a component with logic that supports a specific use case, with a streamlined API that offers additional, limited customization.`}
         </InlineAlert>
       )}
-    </React.Fragment>
+    </StackItem>
   );
   // Create dynamic component for @reach/router
   const ChildComponent = () => (
-    <div className="pf-v6-u-display-flex ws-mdx-child-template">
+    <div className={source !== 'landing-pages' ? 'pf-v6-l-flex' : ''}>
       {toc.length > 1 && (
         <TableOfContents items={toc} />
       )}
-      <div>
-        <div className={innerContentWrapperClass()}>
-          {InlineAlerts}
+      <div className={isComponentCodeDocs && 'pf-v6-l-stack pf-m-gutter'} style={{...(source !== 'landing-pages' && {maxWidth: "825px"})}}>
+        {InlineAlerts}
           <Component />
           {functionDocumentation.length > 0 && (
-            <React.Fragment>
+            <StackItem>
               <AutoLinkHeader headingLevel="h2" className="pf-v6-c-content--h2" id="functions">
                 Functions
               </AutoLinkHeader>
               <FunctionsTable functionDescriptions={functionDocumentation}/>
-            </React.Fragment>
+            </StackItem>
           )}
           {propsTitle && (
-            <React.Fragment>
+            <StackItem>
               <AutoLinkHeader headingLevel="h2" className="pf-v6-c-content--h2" id="props">
                 {propsTitle}
               </AutoLinkHeader>
@@ -124,25 +116,24 @@ const MDXChildTemplate = ({
                   allPropComponents={propComponents}
                 />
               ))}
-            </React.Fragment>
+            </StackItem>
           )}
           {cssPrefix.length > 0 && (
-            <React.Fragment>
+            <StackItem>
               <AutoLinkHeader headingLevel="h2" className="pf-v6-c-content--h2" id="css-variables">
                 {cssVarsTitle}
               </AutoLinkHeader>
               {cssPrefix.map((prefix, index) => (
                 <CSSVariables key={index} autoLinkHeader={cssPrefix.length > 1} prefix={prefix} />
               ))}
-            </React.Fragment>
+            </StackItem>
           )}
           {sourceLink && (
-            <React.Fragment>
+            <StackItem>
               <br />
               <a href={sourceLink} target="_blank" onClick={() => trackEvent('view_source_click', 'click_event', source.toUpperCase())}>View source on GitHub</a>
-            </React.Fragment>
+            </StackItem>
           )}
-        </div>
       </div>
     </div>
   );
