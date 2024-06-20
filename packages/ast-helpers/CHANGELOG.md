@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.4.0-alpha.38 (2024-06-20)
+
+
+### Bug Fixes
+
+* cleaning out example.css ([#4081](https://github.com/patternfly/patternfly-org/issues/4081)) ([c06d13d](https://github.com/patternfly/patternfly-org/commit/c06d13d63df648f64e1c07f4e0ddb24e845ef405))
+
+
+
+
+
 # 1.4.0-alpha.37 (2024-06-18)
 
 
