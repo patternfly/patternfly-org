@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.4.0-alpha.39 (2024-06-20)
+
+
+### Bug Fixes
+
+* clean up gdpr banner styles ([#4082](https://github.com/patternfly/patternfly-org/issues/4082)) ([1ed25c5](https://github.com/patternfly/patternfly-org/commit/1ed25c500fa83434d2df266464acae3e84e34bf3))
+
+
+
+
+
 # 1.4.0-alpha.38 (2024-06-20)
 
 
