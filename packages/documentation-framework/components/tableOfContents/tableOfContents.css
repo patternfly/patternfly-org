@@ -2,7 +2,6 @@
   align-self: flex-start;
   position: sticky;
   width: calc(100% + var(--pf-v6-c-page__main-section--PaddingLeft) + var(--pf-v6-c-page__main-section--PaddingRight));
-  background-color: var(--pf-t--global--background--color--200);
   z-index: 201;
   margin-block-start: calc(var(--pf-v6-c-page__main-section--PaddingTop) * -1);
   margin-block-end: var(--pf-t--global--spacer--md);
