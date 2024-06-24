@@ -32,7 +32,7 @@ A user should never feel like the error is their fault. Avoid language like “Y
 <div class="ws-content-table">
 
 | **Before** | **After** |
-|:-----------------:|:-----------------:|
+|-----------------|-----------------|
 | You did not provide your authentication credentials. | Authentication credentials weren't provided.| 
 
 </div> 
@@ -45,7 +45,7 @@ A user should never feel stuck. If they’re hit with an error, give them the in
 <div class="ws-content-table">
 
 | **Before** | **After** |
-|:-------------:|:------------------:|
+|-------------|------------------|
 | Your list already has the maximum number of items. You are not able to continue customizing. | Your list has the maximum number of items. To continue customizing, remove an item.|
 
 </div>
@@ -58,7 +58,7 @@ Error messages are frustrating enough without technical terms that users might n
 <div class="ws-content-table">
 
 | **Before** | **After** |
-|:---------------:|:-----------------:|
+|---------------|-----------------|
 | Error code 5959: Outdated version information. Task termination pending. | Your task is outdated. To keep it active, update its version.|
 
 </div>
@@ -71,7 +71,7 @@ Tell your user what is wrong. An error without an explanation can add to their f
 <div class="ws-content-table">
 
 | **Before** | **After** |
-|:-------------:|:----------------:|
+|-------------|----------------|
 | An error occurred. The email cannot be sent. | To send this email, turn on your email permissions in user settings.|
 
 </div>
@@ -82,7 +82,7 @@ However, don’t include too much information. The user doesn’t need to know e
 <div class="ws-content-table"> 
 
 | **Before** | **After** |
-|:------------:|:------------:|
+|------------|------------|
 | Your information cannot be saved. Our system is currently designed to accommodate 1 record per user. The system memory is unable to store more at this time. | Only 1 record can be saved. To continue, remove one of your records.|
 
 </div> 
@@ -96,7 +96,7 @@ When providing users with a resolution, start the sentence with their goal ("the
 <div class="ws-content-table"> 
 
 | **Before** | **After** |
-|:-----------------:|:----------------:|
+|-----------------|----------------|
 | Click **Log in** to manually log in. | To manually log in, click **Log in.**| 
 
 </div>
@@ -130,7 +130,7 @@ To create effective 404 pages, follow these best practice guidelines:
     <div class="ws-content-table">
 
     | **Before** | **After** |
-    |:-----------:|:-----------:|
+    |-----------|-----------|
     | Error 404: Not found| 404: That page no longer exists | 
 
     </div> 
@@ -141,7 +141,7 @@ To create effective 404 pages, follow these best practice guidelines:
     <div class="ws-content-table">
 
     | **Before** | **After** |
-    |:-----------:|:-----------:|
+    |-----------|-----------|
     | Uh oh, spaghetti-o! We lost that one  | We lost that page  | 
     | Oops! We dropped the ball | We couldn't find that page  | 
     | Huh, that's odd... | That page no longer exists |
@@ -154,7 +154,7 @@ To create effective 404 pages, follow these best practice guidelines:
     <div class="ws-content-table">
 
     | **Before** | **After** |
-    |:-----------:|:-----------:|
+    |-----------|-----------|
     | Your search came up empty | We can't find that page |
     | The page you're trying to reach doesn't exist | That page no longer exists |
 
@@ -166,7 +166,7 @@ To create effective 404 pages, follow these best practice guidelines:
     <div class="ws-content-table">
 
     | **Before** | **After** |
-    |:-----------:|:-----------:|
+    |-----------|-----------|
     | That page doesn't exist. | Another page might have what you need, so try searching PatternFly.  |
 
     </div>
@@ -177,7 +177,7 @@ To create effective 404 pages, follow these best practice guidelines:
     <div class="ws-content-table">
 
     | **Before** | **After** |
-    |:-----------:|:-----------:|
+    |-----------|-----------|
     | **Error 404: Not found**<br />Requested URL not found on this server. Please try again. | **404: We couldn't find that page**<br />Another page might have what you need, so try searching PatternFly. |
 
     </div>
@@ -188,7 +188,7 @@ To create effective 404 pages, follow these best practice guidelines:
     <div class="ws-content-table">
 
     | **Before** | **After** |
-    |:-----------:|:-----------:|
+    |-----------|-----------|
     | **404: Not all who wander are lost...**<br />But this page is. Search again or find your way back home. | **404: We lost that page**<br />Let's find you a better one. Try a new search or return home. |
 
     </div>
