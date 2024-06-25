@@ -1,12 +1,13 @@
 .ws-toc {
   align-self: flex-start;
   position: sticky;
-  width: calc(100% + var(--pf-v6-c-page__main-section--PaddingLeft) + var(--pf-v6-c-page__main-section--PaddingRight));
+  width: calc(100% + var(--pf-v6-c-page__main-section--PaddingInlineStart) + var(--pf-v6-c-page__main-section--PaddingInlineEnd));
+  background-color: var(--pf-t--global--background--color--secondary--default);
   z-index: 201;
   margin-block-start: calc(var(--pf-v6-c-page__main-section--PaddingTop) * -1);
   margin-block-end: var(--pf-t--global--spacer--md);
-  margin-inline-start: calc(var(--pf-v6-c-page__main-section--PaddingLeft) * -1);
-  margin-inline-end: calc(var(--pf-v6-c-page__main-section--PaddingRight) * -2);
+  margin-inline-start: calc(var(--pf-v6-c-page__main-section--PaddingInlineStart) * -1);
+  margin-inline-end: calc(var(--pf-v6-c-page__main-section--PaddingInlineEnd) * -2);
   padding-block-start: var(--pf-t--global--spacer--md);
   padding-block-end: var(--pf-t--global--spacer--md);
   padding-inline-start: var(--pf-t--global--spacer--md);
@@ -28,7 +29,6 @@
   .ws-toc .pf-v6-c-jump-links__header {
     position: sticky;
     top: 0;
-    background-color: var(--pf-t--global--background--color--secondary--default);
     z-index: 2;
   }
 }
