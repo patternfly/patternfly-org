@@ -14,13 +14,36 @@ The following image of a card view demonstrates some of the more common uses of 
 1. [**Action button:**](/components/button) Most buttons in a UI trigger an action. 
 1. [**Action card:**](/components/card#actionable) A card itself can be actionable, meaning an action will be triggered when a user selects the card.
 1. [**Action icon (button):**](/components/button) Icon buttons are commonly used to trigger recognizable and recurring actions. For example, ellipsis icons are used to open menus.
-1. [**Action menu item:**](/components/menus/menu/design-guidelines#action-menu) To save space, actions may be placed within a menu. This is also useful when there are multiple actions that a user may take. 
+1. [**Action menu item:**](/components/menus/menu/design-guidelines#action-menu) To save space, actions can be placed within a menu. This is also useful when there are multiple actions that a user can take. 
 
 ## Usage
 
-Use actions to make it clear and convenient for users to complete tasks in a UI. Using actions strategically makes the UI more efficient, effective, 
+Use actions to make it clear and convenient for users to complete tasks in a UI. When applied intentionally, actions can make the UI more efficient and effective. 
 
 When labeling or referring to actions in your UI, make sure that you adhere to our [terminology guidelines](/ux-writing/terminology) and align any icons you use with the usage behavior outlined in our [icon design foundations.](/design-foundations/icons#all-icons) 
+
+### Deletion 
+When users can delete data objects, items, or similar resources via the UI, follow these practices to ensure that they understand the purpose and consequences of deleting something. 
+
+#### Irreversible deletion 
+
+When deleting a resource is irreversible, there is a high risk that users will lose highly important information or data. It is necessary to ensure that users understand the impact of this action. Whether a resource is critical or non-critical, you should follow the same pattern.
+
+To communicate that deletion will be permanent, use a confirmation dialog with the following features:
+
+![Confirmation modal with danger styling.](./img/critical-deletion-modal.png)
+
+1. A **warning icon** beside the title.
+1. A **labeled text input** to ask users to confirm the resource name. 
+    - An error will be shown if the user does not enter a resource name, or if the resource name does not match the resource being deleted.
+1. A **danger button** that submits the modal.
+
+Once a resource has been successfully deleted, show an [inline success alert:](/components/alert#inline-alerts-variants)
+
+![Inline success alert for deletion.](./img/critical-deletion-success.png)
+
+#### Reversible deletion 
+When the action of deleting a resource can be reversed, it has a lower impact on the user experience. You might want to warn users, but a confirmation dialog isn't necessary because they can easily retrieve the deleted resource.
 
 ## Variations 
 
