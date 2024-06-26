@@ -1,4 +1,7 @@
 {
+  "actions":{
+    "summary": "Any process that a user can trigger by clicking or selecting a button, icon, or toggle item."
+  },
   "bulk-selection": {
     "summary": "Allows users to select or deselect multiple items in a content view."
   },
