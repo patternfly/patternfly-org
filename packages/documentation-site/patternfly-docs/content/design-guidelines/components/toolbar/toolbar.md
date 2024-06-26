@@ -118,7 +118,7 @@ To save space, you may represent some actions as icons. Use an icon group to pro
 **Custom toolbar**
 <img src="./img/custom-toolbar.png"  alt="custom toolbar layout" width="1210"/>
 
-The Toolbar component is extremely flexible and you can create custom toolbar layouts by working with items, groups, and spacers. Here, a custom toolbar with three labeled filters is created by paring a text label and a Select component. Items are spaced by 16px by default but here the spacing to the right of each Select filter has been modified to 24px to help better group each filter with its related label.
+The toolbar component is extremely flexible and you can create custom toolbar layouts by working with items, groups, and spacers. Here, a custom toolbar with three labeled filters is created by pairing a text label and a select component. Items are spaced by 16px by default but here the spacing to the right of each select filter has been modified to 24px to help better group each filter with its related label.
 
 ### The toolbar on mobile
 
@@ -131,11 +131,11 @@ The following is an example of a complex toolbar optimized for mobile.
 
 <img src="./img/toolbar-filters-mobile.png"  alt="toolbar with filters and actions hidden on mobile" />
 
-Here, the search filter and filter group containing three drop-down filters are placed in a toggle group that collapsed when the screen shrinks to mobile size. The two action buttons are part of an overflow menu that collapses to a single kabob menu. The bulk selector and sort icon button are implemented as toolbar items that remain visible at all breakpoints.
+Here, the search filter and filter group containing three drop-down filters are placed in a toggle group that collapses when the screen shrinks to mobile size. The two action buttons are part of an overflow menu that collapses to a single kabob menu. The bulk selector and sort icon button are implemented as toolbar items that remain visible at all breakpoints.
 
 ## Placement 
 
-The toolbar should live as close to possible to the content it controls. For a card view or similar views, the toolbar should be placed inside of the page header. This arrangement is also recommended if the user may switch between views (e.g. view as cards or as a list). You may optionally apply the `pf-m-sticky-top` modifier to the header section to create a sticky toolbar and prevent it from scrolling off the page.
+The toolbar should live as close as possible to the content it controls. For a card view or similar views, the toolbar should be placed inside of the page header. This arrangement is also recommended if the user may switch between views (e.g. view as cards or as a list). You may optionally apply the `pf-m-sticky-top` modifier to the header section to create a sticky toolbar and prevent it from scrolling off the page.
 
 ![toolbar in page header](./img/toolbar-layout-cardview.png)
 
