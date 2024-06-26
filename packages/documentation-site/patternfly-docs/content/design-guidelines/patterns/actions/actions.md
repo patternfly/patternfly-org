@@ -25,9 +25,15 @@ When labeling or referring to actions in your UI, make sure that you adhere to o
 ### Deletion 
 When users can delete data objects, items, or similar resources via the UI, follow these practices to ensure that they understand the purpose and consequences of deleting something. 
 
+Deleting is different from removing. 
+- **“Delete”** refers to the destruction of information (for example, deleting a group, system, or a role.) The trash icon symbolizes deletion.
+
+- **“Remove”** refers to removing the content/system from a particular view, without the destruction of information (for example, removing something from a group or removing a user.) The solid minus-circle icon symbolizes removal.
+
+Deletion is typically initiated via buttons or menu items. When using a button trigger, apply secondary button styling. When using a menu item trigger (like within an options/kebab menu), apply default text styling. You should not use red danger styling for deletion buttons or menu items because they will both launch confirmation modals before completing the deletion. Guidance for these modals is included in the following sections. 
 #### Irreversible deletion 
 
-When deleting a resource is irreversible, there is a high risk that users will lose highly important information or data. It is necessary to ensure that users understand the impact of this action. Whether a resource is critical or non-critical, you should follow the same pattern.
+When resource deletion is irreversible, there is a high risk that users will lose highly important information or data. It is necessary to ensure that users understand the impact of this action. Whether a resource is critical or non-critical, you should follow the same pattern.
 
 To communicate that deletion will be permanent, use a confirmation dialog with the following features:
 
@@ -43,7 +49,9 @@ Once a resource has been successfully deleted, show an [inline success alert:](/
 ![Inline success alert for deletion.](./img/critical-deletion-success.png)
 
 #### Reversible deletion 
-When the action of deleting a resource can be reversed, it has a lower impact on the user experience. You might want to warn users, but a confirmation dialog isn't necessary because they can easily retrieve the deleted resource.
+When the action of deleting a resource can be reversed, it has a lower impact on the user experience. A confirmation dialog isn't necessary because users can easily retrieve the deleted resource. 
+
+If you do choose to use a confirmation dialog, use a primary button to submit the modal, rather than a danger button. Do not ask users for any text input. 
 
 ## Variations 
 
