@@ -21,7 +21,7 @@
     "@patternfly/react-catalog-view-extension": "6.0.0-alpha.4",
     "@patternfly/react-console": "6.0.0-alpha.1",
     "@patternfly/react-docs": "7.0.0-alpha.75",
-    "@patternfly/react-log-viewer": "6.0.0-alpha.2",
+    "@patternfly/react-log-viewer": "6.0.0-alpha.1",
     "@patternfly/react-topology": "6.0.0-alpha.1",
     "@patternfly/react-user-feedback": "6.0.0-alpha.1",
     "@patternfly/react-component-groups": "6.0.0-alpha.3",

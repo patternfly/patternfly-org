@@ -1976,10 +1976,10 @@
   resolved "https://registry.npmjs.org/@patternfly/react-icons/-/react-icons-6.0.0-alpha.20.tgz#9ec22da437d3a2f79d6773b4a21fe37610a15149"
   integrity sha512-RSDMWhjfxACJrElKhEVVkxmnSVwicSWwDSsDkJawCnwYVcVq/+fm72/anpzYrHaMWqyvhBdy2rva/RnEJZ2qxg==
 
-"@patternfly/react-log-viewer@6.0.0-alpha.2":
-  version "6.0.0-alpha.2"
-  resolved "https://registry.yarnpkg.com/@patternfly/react-log-viewer/-/react-log-viewer-6.0.0-alpha.2.tgz#220b69c053eb70c3b8ae8d0bc5cd71e92daeeaaa"
-  integrity sha512-Vj1XEHgqVMBPPCZIvTbDu3Bxdw9juBpXu9zN3qAELYu0Gm5TGKQORXlSkUAs3DAXCa3tHJfu+4tb0atc9M0wiw==
+"@patternfly/react-log-viewer@6.0.0-alpha.1":
+  version "6.0.0-alpha.1"
+  resolved "https://registry.yarnpkg.com/@patternfly/react-log-viewer/-/react-log-viewer-6.0.0-alpha.1.tgz#675423cc6a1a1a9c2a421128dccaa7c6bd85c696"
+  integrity sha512-oiO/vjGiHKIpF1Jf2nXGIDNzVBIZp1pkuAqsJyp5++LTJGI6FczR7I2ybs5ROU5sWQKhMVWzegocxlIU5FUrbg==
   dependencies:
     "@patternfly/react-core" "^6.0.0-alpha.61"
     "@patternfly/react-icons" "^6.0.0-alpha.23"
