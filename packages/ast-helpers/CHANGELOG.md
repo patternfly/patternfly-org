@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.4.0-alpha.40 (2024-06-27)
+
+
+### Bug Fixes
+
+* return ws-preview-html class to core examples ([#4111](https://github.com/patternfly/patternfly-org/issues/4111)) ([fc0de79](https://github.com/patternfly/patternfly-org/commit/fc0de79d142da35b352c33519898e7e9243950fe))
+
+
+
+
+
 # 1.4.0-alpha.39 (2024-06-20)
 
 
