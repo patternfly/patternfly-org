@@ -13,9 +13,11 @@ Figma tokens align with the segments in [our token variable structure](/tokens/a
 
 ![Table of brand color tokens.](./img/token-example-brand.png)  
 
-PatternFly 6 elements, including components, charts, and extensions, are built with tokens. Therefore, you will typically not need to work with tokens directly. The exception to this is if you are deviating from our built-in design options to create a custom design. [See these instructions for more detail on customization.](#making-customizations)
+PatternFly 6 elements, including components, charts, and extensions, are built with tokens. Therefore, you will typically not need to work with tokens directly. The exception to this is if you are deviating from our built-in customization options. [See these instructions for more detail.](#making-customizations)
 
-Because tokens are set up behind the scenes, they enable you to customize components as you add them to your design. Before you insert a component into a Figma design workspace, you can adjust its properties and variable modes to fit your specific use case: 
+Because tokens are set up behind the scenes, they enable you to customize components as you add them to your design. Before you insert a component into a Figma design workspace, you can adjust its properties and variable modes to fit your specific use case. 
+
+This allows you to quickly swap between different variants and enable/disable component enhancements. For example: 
 
 ![PatternFly alert components built with Figma tokens.](./img/component-instance.png)  
 <br />
@@ -24,6 +26,6 @@ Once you've inserted a component into your workspace, you can continue to custom
 
 ### Customizing designs with tokens
 
-If you're working on a custom design, you may need to adjust a component beyond the predefined options. For example, you may need to add text or custom spacing where it isn't already. When you create custom designs, use tokens appropriately to achieve the style and structure you need.
+If you're working on a custom design, you may need to adjust a component beyond the predefined options. For example, you may need to add text or custom spacing where it isn't already present. When you create custom designs, use tokens appropriately to achieve the style and structure you need. Choose the semantic token that is the best fit for your needs. 
 
-Our tokens are intentionally scoped so that they can only be used to modify relevant visual attributes. For example, a token may have its color scope limited so that it can only be used as a fill color or a stroke color. This means that, while you can use tokens to customize a design, you will only be able to use certain tokens in certain situations. This helps ensure that you're using tokens that are conceptually related to each design element that you're working on.
+Our tokens are intentionally scoped so that they can only be used to modify relevant visual attributes. For example, a token may have its color scope limited so that it can only be used as a fill color or a stroke color. This means that, while you can use tokens to customize a design, you will only be able to use certain tokens in certain situations. This helps ensure that you're using tokens that are conceptually relevant to the design element that you're working on.

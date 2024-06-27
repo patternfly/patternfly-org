@@ -9,7 +9,7 @@ PatternFly tokens are exported from Figma and transformed into CSS variables for
 
 Our tokens are named semantically, so that they're meaningful and better communicate their function. When using tokens in code you should always use the semantic token that best matches your needs. For example, choose a color token based on its function, not just its hex value. 
 
-In the event that there isn't a semantic token that fits your use case, then you can use a base token instead. Do not use palette tokens. They are the foundation of our token system and there will always be a better base or semantic token to use.
+In the event that there isn't a semantic token that fits your use case, then you can use a base token instead, but do so sparingly. Do not use palette tokens. They are the foundation of our token system and there will always be a better base or semantic token to use.
 
 [View all PatternFly design tokens.](/tokens/all-patternfly-tokens)
 
@@ -47,17 +47,17 @@ We tried to name our semantic tokens so that their meaning is clear, but, until 
             - In the case of some text and icon colors&mdash;`on-`, which refers to accessible colors to use on a particular background.
         - **State:** What is the state? For example, default, hover, or clicked.
 
-1. **If you use semantic tokens, you will get dark theme styling for free!** You may notice tokens with `dark` in their name. Don’t be tempted to use them! These exist within a selector that applies dark theme values to the main set of semantic tokens. 
+1. **If you use semantic tokens, you will get dark theme styling for free.** You may notice tokens with `dark` in their name. Don’t be tempted to use them! These exist within a selector that applies dark theme values to the main set of semantic tokens. 
 
 #### Examples 
 
-Look at what you need a token for, and use the fuzzy matching to help you find the options. Consider the following scenarios:
+Look at what you need a token for, and use fuzzy matching to help you find the appropriate token options. Consider the following scenarios (based on [the VS code plugin](https://marketplace.visualstudio.com/items?itemName=vunguyentuan.vscode-css-variables) we recommend):
 
 - **Scenario 1:** You need to make a disabled state on a custom element. 
     1. You’ll probably want to set the background color: start typing `pft` to get tokens, then `back` for background, followed by `dis` for disabled. 
-    2. You'll end up selecting `var(--pf-t--global--background--color--disabled--default)`. 
-    3. Next you’ll want to set the text color of that element: type `pft`, then `text` for text color, then `ondis` 
-    4. You'll end up with `var(--pf-t--global--text--color--on-disabled)`.
+    1. You'll end up selecting `var(--pf-t--global--background--color--disabled--default)`. 
+    1. Next you’ll want to set the text color of that element: type `pft`, then `text` for text color, then `ondis` 
+    1. You'll end up with `var(--pf-t--global--text--color--on-disabled)`.
 - **Scenario 2:** You need to adjust spacing. 
     1. You probably want a spacer: start typing `pft`, then `sp` to get spacers, followed by the spacer size you want (`sm`, `md`, and so on). 
-    2. You'll end up with something like `var(--pf-t--global--spacer--sm)`.
+    1. You'll end up with something like `var(--pf-t--global--spacer--sm)`.
