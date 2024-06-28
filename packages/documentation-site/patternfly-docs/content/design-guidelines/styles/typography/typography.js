@@ -27,7 +27,7 @@ export const styleProps = {
     variableName: "--pf-t--global--font--size--4xl",
     fontSize: "36px",
     lineHeight: "1.3",
-    fontFamily: "--pf-t--global--font--family--200",
+    fontFamily: "--pf-t--global--font--family--heading",
     fontFamilyText: "Red Hat Display",
     textStyle: "4xl (RHD md 36)"
   },
@@ -37,7 +37,7 @@ export const styleProps = {
     variableName: "--pf-t--global--font--size--3xl",
     fontSize: "28px",
     lineHeight: "1.3",
-    fontFamily: "--pf-t--global--font--family--200",
+    fontFamily: "--pf-t--global--font--family--heading",
     fontFamilyText: "Red Hat Display",
     textStyle: "3xl (RHD md 28)"
   },
@@ -47,7 +47,7 @@ export const styleProps = {
     variableName: "--pf-t--global--font--size--2xl",
     fontSize: "24px",
     lineHeight: "1.3",
-    fontFamily: "--pf-t--global--font--family--200",
+    fontFamily: "--pf-t--global--font--family--heading",
     fontFamilyText: "Red Hat Display",
     textStyle: "2xl (RHD md 24)"
   },
@@ -57,7 +57,7 @@ export const styleProps = {
     fontSize: "20px",
     variableName: "--pf-t--global--font--size--xl",
     lineHeight: "1.5",
-    fontFamily: "--pf-t--global--font--family--200",
+    fontFamily: "--pf-t--global--font--family--heading",
     fontFamilyText: "Red Hat Display",
     textStyle: "xl (RHD md 20)"
   },
@@ -67,7 +67,7 @@ export const styleProps = {
     fontSize: "18px",
     variableName: "--pf-t--global--font--size--lg",
     lineHeight: "1.5",
-    fontFamily: "--pf-t--global--font--family--200",
+    fontFamily: "--pf-t--global--font--family--heading",
     fontFamilyText: "Red Hat Display",
     textStyle: "lg (RHD md 18)"
   },
@@ -77,7 +77,7 @@ export const styleProps = {
     fontSize: "16px",
     variableName: "--pf-t--global--font--size--md",
     lineHeight: "1.5",
-    fontFamily: "--pf-t--global--font--family--200",
+    fontFamily: "--pf-t--global--font--family--heading",
     fontFamilyText: "Red Hat Display",
     textStyle: "md (RHD md 16)"
   },
@@ -87,7 +87,7 @@ export const styleProps = {
     fontSize: "14px",
     variableName: "--pf-t--global--font--size--body--default",
     lineHeight: "1.5",
-    fontFamily: "--pf-t--global--font--family--100",
+    fontFamily: "--pf-t--global--font--family--body",
     fontFamilyText: "Red Hat Text",
     textStyle: "md (RHT rg 14)"
   },
@@ -97,7 +97,7 @@ export const styleProps = {
     fontSize: "12px",
     variableName: "--pf-t--global--font--size--body--sm",
     lineHeight: "1.5",
-    fontFamily: "--pf-t--global--font--family--100",
+    fontFamily: "--pf-t--global--font--family--body",
     fontFamilyText: "Red Hat Text",
     textStyle: "sm (RHT rg 12)"
   },
@@ -107,7 +107,7 @@ export const styleProps = {
     fontSize: "14px",
     variableName: "--pf-t--global--font--size--body--default",
     lineHeight: "1.5",
-    fontFamily: "--pf-t--global--font--family--300",
+    fontFamily: "--pf-t--global--font--family--mono",
     fontFamilyText: "Red Hat Mono",
     textStyle: "Code"
   }
