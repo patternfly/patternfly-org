@@ -117,14 +117,14 @@ The following sections outline common text styles that are used in PatternFly ap
 ## Customizing heading levels
 If you use the [title component](/components/title) to create headings on your page, you can modify the default relationship between heading levels and text sizes. When using title, you must specify a heading level that will apply to the target text. The following table shows the default mapping of heading level to text size:
 
-| Heading level | Default size |
-|----|--------------|
-| H1 | 2xl (22px)   |
-| H2 | xl (20px)    |
-| H3 | lg (18px)    |
-| H4 | md (16px)    |
-| H5 | md (16px)    |
-| H6 | md (16px)    |
+| Heading level | Default size                                  |
+|----|-----------------------------------------------|
+| H1 | 2xl (--pf-t--global--font--size--heading--h1) |
+| H2 | xl (--pf-t--global--font--size--heading--h2)  |
+| H3 | lg (--pf-t--global--font--size--heading--h3)  |
+| H4 | md (--pf-t--global--font--size--heading--h4)  |
+| H5 | md (--pf-t--global--font--size--heading--h5)  |
+| H6 | md (--pf-t--global--font--size--heading--h6)  |
 
 The title component allows you to customize the visual hierarchy of text on your page, while keeping the semantic hierarchy consistent with expectations for accessibility. 
 
