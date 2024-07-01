@@ -9,6 +9,8 @@ import {
   Label,
   Switch,
   Tooltip,
+  Stack,
+  StackItem
 } from '@patternfly/react-core';
 import * as reactCoreModule from '@patternfly/react-core';
 import * as reactCoreNextModule from '@patternfly/react-core/next';
@@ -152,7 +154,7 @@ export const Example = ({
     livePreview = (
       <div
         className={css(
-          'ws-preview-html',
+          'ws-preview-html', // core uses this class name to apply styles to specific examples
           isFullscreenPreview && 'pf-v6-u-h-100'
         )}
         dangerouslySetInnerHTML={{ __html: editorCode }}
@@ -249,87 +251,90 @@ export const Example = ({
     '/' +
     slugger(title);
 
+  const hasMetaText = isBeta || isDemo || isDeprecated || false;
+  const tooltips = (<React.Fragment>
+    {isBeta && (
+      <Tooltip content="This beta component is currently under review and is still open for further evolution.">
+        <Button variant="plain" hasNoPadding>
+          <Label isCompact color="blue">
+            Beta
+          </Label>
+        </Button>
+      </Tooltip>
+    )}
+    {isDemo && (
+      <Tooltip content="Demos show how multiple components can be used in a single design.">
+        <Button variant="plain" hasNoPadding>
+          <Label isCompact color="purple">
+            Demo
+          </Label>
+        </Button>
+      </Tooltip>
+    )}
+    {isDeprecated && (
+      <Tooltip content="Deprecated components are available for use but are no longer being maintained or enhanced.">
+        <Button variant="plain" hasNoPadding>
+          <Label isCompact color="grey">
+            Deprecated
+          </Label>
+        </Button>
+      </Tooltip>
+    )}
+  </React.Fragment>);
+  const metaText = hasMetaText && tooltips
+
   return (
-    <div className="ws-example">
-      <div className="ws-example-header">
+    <Stack hasGutter>
+      <StackItem>
         <AutoLinkHeader
-          metaText={
-            <React.Fragment>
-              {isBeta && (
-                <Tooltip content="This beta component is currently under review and is still open for further evolution.">
-                  <Button variant="plain" hasNoPadding>
-                    <Label isCompact color="blue">
-                      Beta
-                    </Label>
-                  </Button>
-                </Tooltip>
-              )}
-              {isDemo && (
-                <Tooltip content="Demos show how multiple components can be used in a single design.">
-                  <Button variant="plain" hasNoPadding>
-                    <Label isCompact color="purple">
-                      Demo
-                    </Label>
-                  </Button>
-                </Tooltip>
-              )}
-              {isDeprecated && (
-                <Tooltip content="Deprecated components are available for use but are no longer being maintained or enhanced.">
-                  <Button variant="plain" hasNoPadding>
-                    <Label isCompact color="grey">
-                      Deprecated
-                    </Label>
-                  </Button>
-                </Tooltip>
-              )}
-            </React.Fragment>
-          }
-          size="h4"
+          metaText={metaText}
           headingLevel="h3"
-          className="ws-example-heading"
         >
           {title}
         </AutoLinkHeader>
         {children}
-      </div>
-      {isFullscreen ? (
-        <div className="ws-preview">
-          <a
-            className="ws-preview__thumbnail-link"
-            href={fullscreenLink}
-            target="_blank"
-            aria-label={`Open fullscreen ${title} example`}
+      </StackItem>
+      <StackItem>
+        {isFullscreen ? (
+          <div>
+            <a
+              className="ws-preview__thumbnail-link"
+              href={fullscreenLink}
+              target="_blank"
+              aria-label={`Open fullscreen ${title} example`}
+            >
+              <img
+                src={thumbnail.src}
+                width={thumbnail.width}
+                height={thumbnail.height}
+                alt={`${title} screenshot`}
+              />
+            </a>
+          </div>
+        ) : (
+          <div
+            id={previewId}
+            className={css(
+              className,
+              isRTL && 'pf-v6-m-dir-rtl'
+            )}
           >
-            <img
-              src={thumbnail.src}
-              width={thumbnail.width}
-              height={thumbnail.height}
-              alt={`${title} screenshot`}
-            />
-          </a>
-        </div>
-      ) : (
-        <div
-          id={previewId}
-          className={css(
-            className,
-            isFullscreen ? 'ws-preview-fullscreen' : 'ws-preview',
-            isRTL && 'pf-v6-m-dir-rtl'
-          )}
-        >
-          {livePreview}
-        </div>
-      )}
-      <ExampleToolbar
-        lang={lang}
-        isFullscreen={isFullscreen}
-        fullscreenLink={fullscreenLink}
-        originalCode={code}
-        code={editorCode}
-        setCode={debounce(setEditorCode, 300)}
-        codeBoxParams={codeBoxParams}
-        exampleTitle={title}
-      />
-    </div>
+            {livePreview}
+          </div>
+        )}
+      </StackItem>
+      <StackItem>
+        <ExampleToolbar
+          lang={lang}
+          isFullscreen={isFullscreen}
+          fullscreenLink={fullscreenLink}
+          originalCode={code}
+          code={editorCode}
+          setCode={debounce(setEditorCode, 300)}
+          codeBoxParams={codeBoxParams}
+          exampleTitle={title}
+        />
+      </StackItem>
+    </Stack>
   );
 };

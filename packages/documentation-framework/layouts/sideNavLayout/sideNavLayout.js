@@ -273,7 +273,7 @@ export const SideNavLayout = ({ children, groupedRoutes, navOpen: navOpenProp })
     </PageSidebar>
   );
 
-  const Header = (
+  const masthead = (
     <Masthead className="ws-masthead">
       <MastheadToggle>
         <PageToggleButton variant="plain" aria-label="Global navigation">
@@ -338,7 +338,7 @@ export const SideNavLayout = ({ children, groupedRoutes, navOpen: navOpenProp })
           id="ws-page"
           mainContainerId="ws-page-main"
           mainComponent="div"
-          header={Header}
+          masthead={masthead}
           sidebar={SideBar}
           skipToContent={<SkipToContent href="#ws-page-main">Skip to content</SkipToContent>}
           isManagedSidebar

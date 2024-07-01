@@ -1,23 +1,12 @@
 import React from 'react';
-import { Title, Flex, FlexItem, Text } from '@patternfly/react-core';
+import { Flex, FlexItem, Text } from '@patternfly/react-core';
 import LinkIcon from '@patternfly/react-icons/dist/esm/icons/link-icon';
 import { Link } from '../link/link';
 import { slugger } from '../../helpers/slugger';
 import { css } from '@patternfly/react-styles';
 
-// "xs" | "sm" | "md" | "lg" | "xl" | "2xl" | "3xl" | "4xl"
-const sizes = {
-  h1: '3xl',
-  h2: '2xl',
-  h3: 'xl',
-  h4: 'lg',
-  h5: 'md',
-  h6: 'sm'
-}
-
 export const AutoLinkHeader = ({
   id,
-  size,
   headingLevel,
   children,
   metaText,
@@ -28,10 +17,9 @@ export const AutoLinkHeader = ({
   return (
     <Flex alignItems={{ default: 'alignItemsCenter'}} spaceItems={{ default: "spaceItemsSm" }}>
       <FlexItem>
-        <Title
+        <Text
           id={slug}
-          size={sizes[size]}
-          headingLevel={headingLevel || size}
+          component={headingLevel}
           className={css('ws-heading', className)}
           tabIndex={-1}
         >
@@ -39,9 +27,9 @@ export const AutoLinkHeader = ({
             <LinkIcon className="ws-heading-anchor-icon" style={{ verticalAlign: 'middle' }} />
           </Link>
           {children}
-        </Title>
+        </Text>
       </FlexItem>
-      <FlexItem>{metaText}</FlexItem>
+      {metaText && <FlexItem>{metaText}</FlexItem>}
     </Flex>
   )
 };
