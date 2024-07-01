@@ -26,12 +26,12 @@ PatternFly supports a range of icon sizes so that all icons can be adapted to di
 
 | **Size** | **Token** | **Example** |
 | --- | --- | :---: |
-| Small (12px) |  `--pf-t--global--icon--size--sm` |<Icon size ="sm"><CheckCircleIcon /></Icon> |
-| Medium (14px) |  `--pf-t--global--icon--size--md` |<Icon size ="md"><CheckCircleIcon /></Icon> |
-| Large (16px) |  `--pf-t--global--icon--size--lg` |<Icon size ="lg"><CheckCircleIcon /></Icon> |
-| X-large (22px) | `--pf-t--global--icon--size--xl` | <Icon size ="xl"> <CheckCircleIcon /></Icon> |
-| 2xl (56px) | `--pf-t--global--icon--size--2xl` |  <Icon size ="2xl"><CheckCircleIcon /></Icon> |
-| 3xl (96px) | `--pf-t--global--icon--size--3xl` | <Icon size ="3xl"><CheckCircleIcon /></Icon> |
+| Small (12px) |  --pf-t--global--icon--size--sm |<Icon size ="sm"><CheckCircleIcon /></Icon> |
+| Medium (14px) |  --pf-t--global--icon--size--md |<Icon size ="md"><CheckCircleIcon /></Icon> |
+| Large (16px) |  --pf-t--global--icon--size--lg |<Icon size ="lg"><CheckCircleIcon /></Icon> |
+| X-large (22px) | --pf-t--global--icon--size--xl | <Icon size ="xl"> <CheckCircleIcon /></Icon> |
+| 2xl (56px) | --pf-t--global--icon--size--2xl |  <Icon size ="2xl"><CheckCircleIcon /></Icon> |
+| 3xl (96px) | --pf-t--global--icon--size--3xl | <Icon size ="3xl"><CheckCircleIcon /></Icon> |
 
 Medium icons are typically the most versatile size to use in a UI. Most icons in PatternFly components are medium&mdash;other sizes are used sparingly.
 
@@ -44,11 +44,11 @@ All icon colors that you use should align with the proper [semantic design token
 
 | **Icon state** | **Color token** | **Example** |
 | --- | --- | :---: |
-| Danger | `--pf-t--global--icon--color--status--danger--default` | <Icon status="danger" size="xl"> <ExclamationCircleIcon /> </Icon> |
-| Warning  | `--pf-t--global--icon--color--status--warning--default` | <Icon status="warning" size="xl"><ExclamationTriangleIcon /></Icon> |
-| Success | `--pf-t--global--icon--color--status--success--default` | <Icon status="success" size="xl"><CheckCircleIcon /></Icon> |
-| Info | `--pf-t--global--icon--color--status--info--default` | <Icon status="info" size="xl"><InfoCircleIcon /></Icon> |
-| Custom | `--pf-t--global--icon--color--status--custom--default` | <Icon status="custom" size="xl"><BellIcon /></Icon> |
+| Danger | --pf-t--global--icon--color--status--danger--default | <Icon status="danger" size="xl"> <ExclamationCircleIcon /> </Icon> |
+| Warning  | --pf-t--global--icon--color--status--warning--default | <Icon status="warning" size="xl"><ExclamationTriangleIcon /></Icon> |
+| Success | --pf-t--global--icon--color--status--success--default | <Icon status="success" size="xl"><CheckCircleIcon /></Icon> |
+| Info | --pf-t--global--icon--color--status--info--default | <Icon status="info" size="xl"><InfoCircleIcon /></Icon> |
+| Custom | --pf-t--global--icon--color--status--custom--default | <Icon status="custom" size="xl"><BellIcon /></Icon> |
 
 To learn more about icon colors and color tokens, visit our [colors page.](/design-foundations/colors) 
 
