@@ -3,7 +3,7 @@
 }
 
 .ws-heading-anchor {
-/*   color: var(--pf-v6-global--Color--100); */
+  color: var(--pf-t--global--icon--color--regular);
   transform: translate(calc(-100% - var(--pf-t--global--spacer--xs)), -50%);
   opacity: 0;
   position: absolute;

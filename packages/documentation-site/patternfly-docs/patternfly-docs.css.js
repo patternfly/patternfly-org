@@ -13,3 +13,5 @@ import '@patternfly/react-topology/src/css/topology-side-bar.css';
 import '@patternfly/react-topology/src/css/topology-view.css';
 import '@patternfly/react-topology/src/css/topology-components.css';
 import '@patternfly/react-topology/src/css/topology-pipelines.css';
+// PatternFly log viewer
+// import '@patternfly/react-log-viewer/dist/css/log-viewer.css';

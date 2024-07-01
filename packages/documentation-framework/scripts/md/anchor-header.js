@@ -42,7 +42,7 @@ function anchorHeader(tocCallback) {
         // Add to TOC for indexing
         addTOCItem(tocItem, node.tagName);
 
-        node.properties.size = node.tagName;
+        node.properties.headingLevel = node.tagName;
         node.properties.className = node.properties.className || '';
         node.properties.className += node.properties.className ? ' ' : '';
         node.properties.className += `ws-title ws-${node.tagName}`;
