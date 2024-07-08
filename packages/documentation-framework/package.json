@@ -21,7 +21,7 @@
     "chokidar": "3.5.3",
     "clean-webpack-plugin": "4.0.0",
     "codesandbox": "2.2.0",
-    "commander": "4.1.1",
+    "commander": "12.1.0",
     "copy-webpack-plugin": "11.0.0",
     "css-loader": "6.7.3",
     "detab": "2.0.3",
