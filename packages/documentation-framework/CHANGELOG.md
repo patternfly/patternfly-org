@@ -3,6 +3,36 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 6.0.0-alpha.53 (2024-07-08)
+
+
+### Bug Fixes
+
+* clean up toc/JumpLinks styling ([#4083](https://github.com/patternfly/patternfly-org/issues/4083)) ([9840ac3](https://github.com/patternfly/patternfly-org/commit/9840ac35087b9e79a51d6c14f4c320586acd817f))
+
+
+
+
+
+# 6.0.0-alpha.52 (2024-06-27)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+# 6.0.0-alpha.51 (2024-06-27)
+
+
+### Bug Fixes
+
+* return ws-preview-html class to core examples ([#4111](https://github.com/patternfly/patternfly-org/issues/4111)) ([fc0de79](https://github.com/patternfly/patternfly-org/commit/fc0de79d142da35b352c33519898e7e9243950fe))
+
+
+
+
+
 # 6.0.0-alpha.50 (2024-06-20)
 
 

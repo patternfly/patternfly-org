@@ -154,6 +154,7 @@ export const Example = ({
     livePreview = (
       <div
         className={css(
+          'ws-preview-html', // core uses this class name to apply styles to specific examples
           isFullscreenPreview && 'pf-v6-u-h-100'
         )}
         dangerouslySetInnerHTML={{ __html: editorCode }}

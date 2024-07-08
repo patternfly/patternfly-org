@@ -39,7 +39,7 @@ if (process.env.EXTENSIONS_ONLY === 'true') {
       { section: 'patterns' },
       { section: 'extensions' },
       { section: 'charts' },
-      // { section: 'topology' },
+      { section: 'topology' },
       { section: 'layouts' },
       { section: 'utility-classes' },
       { section: 'developer-resources' },

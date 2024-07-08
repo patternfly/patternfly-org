@@ -88,16 +88,16 @@ module.exports = (sourceMD, sourceProps, sourceFunctionDocs) => {
     //   .resolve("@patternfly/react-templates/package.json")
     //   .replace("package.json", "src");
 
-    // const reactTopologyPath = require
-    //   .resolve("@patternfly/react-topology/package.json")
-    //   .replace("package.json", "patternfly-docs/content/examples");
+    const reactTopologyPath = require
+      .resolve("@patternfly/react-topology/package.json")
+      .replace("package.json", "patternfly-docs/content/examples");
 
     sourceProps(path.join(reactCorePath, "/**/*.tsx"), reactPropsIgnore);
     sourceProps(path.join(reactTablePath, "/**/*.tsx"), reactPropsIgnore);
     sourceProps(path.join(reactCodeEditorPath, "/**/*.tsx"), reactPropsIgnore);
     sourceProps(path.join(reactChartsPath, "/**/*.tsx"), reactPropsIgnore);
     sourceProps(path.join(reactDragDropPath, "/**/*.tsx"), reactPropsIgnore);
-    //sourceProps(path.join(reactTopologyPath, "/**/*.tsx"), reactPropsIgnore);
+    sourceProps(path.join(reactTopologyPath, "/**/*.tsx"), reactPropsIgnore);
     //sourceProps(path.join(reactTemplatesPath, "/**/*.tsx"), reactPropsIgnore);
 
     // React MD
@@ -140,7 +140,7 @@ module.exports = (sourceMD, sourceProps, sourceFunctionDocs) => {
     // );
 
     // React-topology MD
-    // sourceMD(path.join(reactTopologyPath, "/**/*.md"), "extensions");
+    sourceMD(path.join(reactTopologyPath, "/**/*.md"), "extensions");
 
     // React OUIA MD
     sourceMD(path.join(reactCorePath, "/**/helpers/OUIA/*.md"), "react");
