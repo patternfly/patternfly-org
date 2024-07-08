@@ -7,6 +7,7 @@ import { MDXTemplate } from '@patternfly/documentation-framework/templates/mdx';
 import { routes, groupedRoutes, fullscreenRoutes, getAsyncComponent } from './routes';
 import { trackEvent } from './helpers';
 import './components/autoLinkHeader/autoLinkHeader.css';
+import './components/cssVariables/cssVariables.css';
 import './components/tableOfContents/tableOfContents.css';
 import './components/example/example.css';
 import './components/footer/footer.css';

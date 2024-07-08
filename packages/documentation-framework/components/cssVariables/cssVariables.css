@@ -1,0 +1,13 @@
+
+.circle {
+    height: 1em;
+    display: inline-block;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    border: var(--pf-t--global--border--width--regular) solid var(--pf-t--global--background--color--inverse--default);
+    box-shadow: var(--pf-t--global--box-shadow--sm);
+}
+
+.rotate-90-deg {
+    transform: rotate(90deg);
+}

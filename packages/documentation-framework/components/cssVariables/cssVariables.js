@@ -1,5 +1,5 @@
 import React from "react";
-import { Icon, List, ListItem, debounce } from "@patternfly/react-core";
+import { List, ListItem, debounce } from "@patternfly/react-core";
 import {
   Table,
   Thead,
@@ -11,7 +11,6 @@ import {
 import { AutoLinkHeader } from "../autoLinkHeader/autoLinkHeader";
 import * as tokensModule from "@patternfly/react-tokens/dist/esm/componentIndex";
 import LevelUpAltIcon from "@patternfly/react-icons/dist/esm/icons/level-up-alt-icon";
-import CircleIcon from "@patternfly/react-icons/dist/esm/icons/circle-icon";
 import { CSSSearch } from './cssSearch';
 
 const isColorRegex = /^(#|rgb)/;
@@ -21,7 +20,7 @@ const mappingAsList = (property, values) => (
     <ListItem>{property}</ListItem>
     {values.map((entry) => (
       <ListItem
-        icon={<LevelUpAltIcon style={{ transform: "rotate(90deg)" }} />}
+        icon={<LevelUpAltIcon className="rotate-90-deg" />}
       >
         {entry}
       </ListItem>
@@ -100,9 +99,7 @@ export class CSSVariables extends React.Component {
                   key={`${rowKey}_2`}
                   className="pf-v6-l-flex pf-m-column pf-m-align-self-center"
                 >
-                  <Icon>
-                    <CircleIcon color={value}/>
-                  </Icon>
+                  <span className="circle" style={{ backgroundColor: value}}/>
                 </div>
               )}
               <div
