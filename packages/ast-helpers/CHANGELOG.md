@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.4.0-alpha.42 (2024-07-08)
+
+
+### Bug Fixes
+
+* clean up toc/JumpLinks styling ([#4083](https://github.com/patternfly/patternfly-org/issues/4083)) ([9840ac3](https://github.com/patternfly/patternfly-org/commit/9840ac35087b9e79a51d6c14f4c320586acd817f))
+
+
+
+
+
 # 1.4.0-alpha.41 (2024-06-27)
 
 **Note:** Version bump only for package @patternfly/ast-helpers
