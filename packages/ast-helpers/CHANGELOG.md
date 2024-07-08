@@ -3,6 +3,91 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.4.0-alpha.42 (2024-07-08)
+
+
+### Bug Fixes
+
+* clean up toc/JumpLinks styling ([#4083](https://github.com/patternfly/patternfly-org/issues/4083)) ([9840ac3](https://github.com/patternfly/patternfly-org/commit/9840ac35087b9e79a51d6c14f4c320586acd817f))
+
+
+
+
+
+# 1.4.0-alpha.41 (2024-06-27)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 1.4.0-alpha.40 (2024-06-27)
+
+
+### Bug Fixes
+
+* return ws-preview-html class to core examples ([#4111](https://github.com/patternfly/patternfly-org/issues/4111)) ([fc0de79](https://github.com/patternfly/patternfly-org/commit/fc0de79d142da35b352c33519898e7e9243950fe))
+
+
+
+
+
+# 1.4.0-alpha.39 (2024-06-20)
+
+
+### Bug Fixes
+
+* clean up gdpr banner styles ([#4082](https://github.com/patternfly/patternfly-org/issues/4082)) ([1ed25c5](https://github.com/patternfly/patternfly-org/commit/1ed25c500fa83434d2df266464acae3e84e34bf3))
+
+
+
+
+
+# 1.4.0-alpha.38 (2024-06-20)
+
+
+### Bug Fixes
+
+* cleaning out example.css ([#4081](https://github.com/patternfly/patternfly-org/issues/4081)) ([c06d13d](https://github.com/patternfly/patternfly-org/commit/c06d13d63df648f64e1c07f4e0ddb24e845ef405))
+
+
+
+
+
+# 1.4.0-alpha.37 (2024-06-18)
+
+
+### Bug Fixes
+
+* add component groups alpha docs ([#4105](https://github.com/patternfly/patternfly-org/issues/4105)) ([f9c2be1](https://github.com/patternfly/patternfly-org/commit/f9c2be12f74dad69e390ba66af5cc34a350fa619))
+
+
+
+
+
+# 1.4.0-alpha.36 (2024-06-17)
+
+
+### Features
+
+* **docs-framework:** Update AutoLinkHeader to use the Text component ([#4049](https://github.com/patternfly/patternfly-org/issues/4049)) ([3a9c9a0](https://github.com/patternfly/patternfly-org/commit/3a9c9a08ff373def8b751b947e70580dcbc9e6da))
+
+
+
+
+
+# 1.4.0-alpha.35 (2024-06-17)
+
+
+### Bug Fixes
+
+* lots of bumps ([#4103](https://github.com/patternfly/patternfly-org/issues/4103)) ([b0a146d](https://github.com/patternfly/patternfly-org/commit/b0a146dbd0fc16a65c5f1787c5b8308a8008e6ac))
+
+
+
+
+
 # 1.4.0-alpha.34 (2024-06-12)
 
 **Note:** Version bump only for package @patternfly/ast-helpers
