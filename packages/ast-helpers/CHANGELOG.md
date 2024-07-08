@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.4.0-alpha.43 (2024-07-08)
+
+
+### Bug Fixes
+
+* bump core/react to latest alphas ([#4125](https://github.com/patternfly/patternfly-org/issues/4125)) ([a48812d](https://github.com/patternfly/patternfly-org/commit/a48812df7438286efe21b34df3c8909eaeee7133))
+
+
+
+
+
 # 1.4.0-alpha.42 (2024-07-08)
 
 
