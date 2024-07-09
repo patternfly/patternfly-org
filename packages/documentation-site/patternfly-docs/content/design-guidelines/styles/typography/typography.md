@@ -28,16 +28,22 @@ We use 3 fonts in PatternFly:
 
 [Download PatternFly's fonts from GitHub.](https://github.com/RedHatOfficial/RedHatFont)
 
+### Font sizing: rem vs pixel
+
+Font size tokens use rems, rather than pixels. Rems are relative units that adjust font size based on a webpage's HTML document root element size. For example, if the root size is 10px, a rem size of 1.5 would be 15px.
+
+PatternFly's default root element size is 16px. If you change this default size, note that the following tables will no longer show accurate pixel measurements (though the rem values will stay the same). 
+
 ## Headings 
 
 All headings use Red Hat Display bold.
 
 | Example | Tokens | Size | Line height | Usage | 
 | --- | --- | --- | --- | --- |
-| <Title headingLevel="h5" size='2xl'> Aa </Title> | --pf-t--global--font--size--heading--h1 | 22 | 1.3 | H1 <br /> Page titles |
-| <Title headingLevel="h5" size='xl'> Aa </Title>  | --pf-t--global--font--size--heading--h2 | 20 | 1.3 | H2 |
-| <Title headingLevel="h5" size='lg'> Aa </Title>  | --pf-t--global--font--size--heading--h3 | 18 | 1.3 | H3 |
-| <Title headingLevel="h5" size='md'> Aa </Title>  | --pf-t--global--font--size--heading--h4 <br /> --pf-t--global--font--size--heading--h5 <br /> --pf-t--global--font--size--heading--h6 |16 | 1.3 | H4 <br /> H5 <br /> H6 |
+| <Title headingLevel="h5" size='2xl'> Aa </Title> | --pf-t--global--font--size--heading--h1 | 1.375rem (22px) | 1.3 | H1 <br /> Page titles |
+| <Title headingLevel="h5" size='xl'> Aa </Title>  | --pf-t--global--font--size--heading--h2 | 1.25rem (20px) | 1.3 | H2 |
+| <Title headingLevel="h5" size='lg'> Aa </Title>  | --pf-t--global--font--size--heading--h3 | 1.125rem (18px) | 1.3 | H3 |
+| <Title headingLevel="h5" size='md'> Aa </Title>  | --pf-t--global--font--size--heading--h4 <br /> --pf-t--global--font--size--heading--h5 <br /> --pf-t--global--font--size--heading--h6 |1rem (16px) | 1.3 | H4 <br /> H5 <br /> H6 |
 
 ### Customizing heading levels
 The [title component](/components/title) allows you to customize the visual hierarchy of text on your page, while keeping the semantic hierarchy consistent with expectations for accessibility. If you use the title component, you can change the text size of different heading levels to customize beyond the default behavior.
@@ -45,11 +51,11 @@ The [title component](/components/title) allows you to customize the visual hier
 For example, you may decide that the default size of 16px for secondary headings is too small and you want to increase the size from 16px (md) to 18px (lg). Rather than make your secondary headings H3’s, you should use the title component to keep them as H4 headings, but change the associated text size from `md` to `lg`. For example: 
 
 <Title headingLevel="h4" size='md'> This is an "md" H4. </Title>
-
+<br />
 ```<Title headingLevel="h5" size='md'> Aa </Title>```
 
 <Title headingLevel="h4" size='lg'> This is a "lg" H4. </Title>
-
+<br />
 ```<Title headingLevel="h5" size='lg'> Aa </Title>```
 
 Make sure that you maintain good visual hierarchy and mapping between heading levels and text sizes. In most cases, H1 should always be your largest heading and subheadings should get progressively smaller as you move down the hierarchy. Rare exceptions to this rule do occur, but should only be used to highlight critical data. For example, there might be scenarios where card titles use a text size that is larger than the H1 page title. 
@@ -62,9 +68,9 @@ All body text uses Red Hat Text.
 
 | Example | Tokens | Size | Line height | Usage | 
 | --- | --- | --- | --- | --- |
-|<p style="font-size:16px">Aa</p>  | --pf-t--global--font--size--body--lg | 16 | 1.5 | Use for larger body, like within extra large empty states.  |
-| <TextContent><Text component={TextVariants.p}>Aa</Text></TextContent> | --pf-t--global--font--size--body--default | 14 | 1.5 | Use for standard body text. |
-| <TextContent><Text component={TextVariants.small}>Aa</Text></TextContent>  | --pf-t--global--font--size--body--sm | 12 | 1.5 | User for smaller body text, like as helper text. |
+|<p style="font-size:16px">Aa</p>  | --pf-t--global--font--size--body--lg | 1rem (16px) | 1.5 | Use for larger body text, like in xl empty states.  |
+| <TextContent><Text component={TextVariants.p}>Aa</Text></TextContent> | --pf-t--global--font--size--body--default | 0.875rem (14px) | 1.5 | Use for standard body text. |
+| <TextContent><Text component={TextVariants.small}>Aa</Text></TextContent>  | --pf-t--global--font--size--body--sm | 0.75rem (12px) | 1.5 | User for smaller body text, like helper text. |
 
 ## Line height and spacing
 Your text's line height has an impact on the use of [spacers](/design-foundations/spacers) in your design. 
