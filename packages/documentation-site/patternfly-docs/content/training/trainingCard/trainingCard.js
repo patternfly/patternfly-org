@@ -1,15 +1,13 @@
 import React from 'react';
-import { Card, CardTitle, CardHeader, CardBody, CardFooter, Button } from '@patternfly/react-core';
+import { Card, CardTitle, CardHeader, CardBody, CardFooter, Button, Text, Flex, Stack } from '@patternfly/react-core';
 import ArrowRightIcon from '@patternfly/react-icons/dist/esm/icons/arrow-right-icon';
 import CubesIcon from '@patternfly/react-icons/dist/esm/icons/cubes-icon';
 import ClockIcon from '@patternfly/react-icons/dist/esm/icons/clock-icon';
 import RunningIcon from '@patternfly/react-icons/dist/esm/icons/running-icon';
 import PuzzlePieceIcon from '@patternfly/react-icons/dist/esm/icons/puzzle-piece-icon';
 import ChartBarIcon from '@patternfly/react-icons/dist/esm/icons/chart-bar-icon';
-import SketchIcon from '@patternfly/react-icons/dist/esm/icons/sketch-icon';
 import { Link } from '@patternfly/documentation-framework/components/link/link';
 import { capitalize } from '@patternfly/documentation-framework/helpers/capitalize';
-import './trainingCard.css';
 
 const getTrainingIcon = trainingType => {
   if (['html-css', 'react'].includes(trainingType)) {
@@ -17,9 +15,6 @@ const getTrainingIcon = trainingType => {
   }
   else if (trainingType === 'react-components') {
     return <PuzzlePieceIcon className="pf-org__training-components" />;
-  }
-  else if (trainingType === 'design') {
-    return <SketchIcon className="pf-org__training-design" />;
   }
 
   return <ChartBarIcon className="pf-org__training-charts" />;
@@ -32,40 +27,32 @@ export const TrainingCard = ({
   time,
   description,
   subsection,
-  name = null,
-  designUrl = null
+  name = null
 }) => (
-  <Card className="pf-org__card" isCompact>
+  <Card isCompact>
     <CardHeader>
-      <Card className="pf-org__card-small">
+      <Flex gap={{'default': 'gapSm'}}>
         {getTrainingIcon(trainingType)}
-      </Card>
-      <div className="pf-org__level">
-        <RunningIcon className={`pf-org__level-${level}`} />
         {capitalize(level)}
-      </div>
+      </Flex>
     </CardHeader>
     <CardTitle>
       {title}
     </CardTitle>
     <CardBody>
-      <div className="pf-org__time">
-        <ClockIcon />
-        {time}
-      </div>
-      {description}
+      <Stack hasGutter>
+        <Text component="small">
+          <Flex gap={{'default': 'gapSm'}}>
+            <ClockIcon />
+            {time}
+          </Flex>
+        </Text>
+        {description}
+      </Stack>
     </CardBody>
     <CardFooter>
     {name && (
       <Link to={`/training/${name}`} >
-        <Button variant="link" aria-label={`Start ${title} training`}>
-          Start
-          <ArrowRightIcon />
-        </Button>
-      </Link>
-    )}
-    {designUrl && (
-      <Link to={designUrl} >
         <Button variant="link" aria-label={`Start ${title} training`}>
           Start
           <ArrowRightIcon />

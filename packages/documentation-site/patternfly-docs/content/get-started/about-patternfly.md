@@ -8,18 +8,6 @@ import './get-started.css';
 import { Button, Card, CardHeader, CardTitle, CardBody, CardFooter, Divider, Icon, Grid, GridItem, PageSection, Split, SplitItem, Title, Tooltip, Text, TextVariants } from '@patternfly/react-core';
 import ExternalLinkAltIcon from '@patternfly/react-icons/dist/esm/icons/external-link-alt-icon';
 import { Link } from '@patternfly/documentation-framework/components';
-import './community/community.css';
-import { getTitle } from '@patternfly/documentation-framework/helpers/getTitle';
-import communityPageHeader from './community/community-page-header.svg';
-import community1 from './community/community-1.svg';
-import community2 from './community/community-2.svg';
-import community3 from './community/community-3.svg';
-import ChatIcon from '@patternfly/react-icons/dist/esm/icons/chat-icon';
-import QuestionIcon from '@patternfly/react-icons/dist/esm/icons/question-icon';
-import CatalogIcon from '@patternfly/react-icons/dist/esm/icons/catalog-icon';
-import MailBulkIcon from '@patternfly/react-icons/dist/esm/icons/mail-bulk-icon';
-import TwitterIcon from '@patternfly/react-icons/dist/esm/icons/twitter-icon';
-import CalendarIcon from '@patternfly/react-icons/dist/esm/icons/calendar-alt-icon';
 
 ## What is PatternFly? 
 
