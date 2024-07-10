@@ -77,7 +77,7 @@ This checklist includes some of the main areas that the PatternFly team checks f
 <Checkbox label={<span>Keyboard navigation via the <kbd>tab</kbd> key can discover all information.</span>} description={<span>If content should be hidden from other assistive technology like a screen reader, <span className="ws-code">aria-hidden="true"</span> should be passed instead.</span>} id="general-criteria-4" />
 
 <Checkbox label="UI elements are understandable and usable." body={<><Checkbox label="When you navigate to an element by keyboard or other assistive technology, you can easily understand and use the item." id="general-criteria-5a" /> <Checkbox label="The flow of information makes sense when navigating." description="Assistive technology (like screen readers) navigate the page in DOM order. If you use CSS to visually reposition elements, they may be announced in a nonsensical sequence. If you need something to appear earlier in the page, try to physically move it earlier in the DOM instead.
-" id="general-criteria-5b" /></>} id="general-criteria-5" /> <br/>
+" id="general-criteria-5b" /></>} id="general-criteria-5" />
 
 ### Structural accessibility criteria
 
