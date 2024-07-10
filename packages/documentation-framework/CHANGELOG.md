@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 6.0.0-alpha.57 (2024-07-10)
+
+
+### Bug Fixes
+
+* clean up community and trainging card css ([#4127](https://github.com/patternfly/patternfly-org/issues/4127)) ([eb9a231](https://github.com/patternfly/patternfly-org/commit/eb9a23103cb6e54f38e2eae5056f2a53cd4a430e))
+
+
+
+
+
 # 6.0.0-alpha.56 (2024-07-10)
 
 
