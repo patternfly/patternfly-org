@@ -73,27 +73,10 @@ All body text uses Red Hat Text.
 | <TextContent><Text component={TextVariants.small}>Aa</Text></TextContent>  | --pf-t--global--font--size--body--sm | 0.75rem (12px) | 1.5 | User for smaller body text, like helper text. |
 
 ## Line height and spacing
-Your text's line height has an impact on the use of [spacers](/design-foundations/spacers) in your design. 
+The line height of your text impacts how you should use [spacers](/design-foundations/spacers) in your design. 
 
-Line height is measured in in pixels, and can be calculated by multiplying the font's built-in line height by the text size. 
+Your overall line height can be calculated by multiplying the font's built-in line height by the text size. 
 
-For example, if a body of text uses a line height of 1.5 and the body text size is 16px, the final line height would be 24 px (16 * 1.5 = 24). In this case, include the 24px line height as part of the text when creating designs in the design software. 
+For example, if your font has a line height of 1.5 and a size of 16px, the final height of a line of text would be 24px (16px * 1.5 = 24px). In this example, you would consider the final line height of 24px when creating designs. 
 
-<Grid>
-  <GridItem span={12}>
-    <LineHeightTitle>
-      <CheckCircleIcon color="#52A549" />
-      <span style={{marginLeft: 'var(--pf-v6-global--spacer--sm)'}}>Correct</span>
-    </LineHeightTitle>
-    <div>Include line height space when laying out text with spacers.</div>
-    <img alt="correct line height space example" style={{maxHeight: '158px', padding: '16px'}} src={correct} />
-  </GridItem>
-  <GridItem span={12}>
-    <LineHeightTitle>
-      <TimesCircleIcon color="#CC0000" />
-      <span style={{marginLeft: 'var(--pf-v6-global--spacer--sm)'}}>Incorrect</span>
-    </LineHeightTitle>
-    <div>Don't align spacing solely to the text. Always include the line height space.</div>
-    <img alt="incorrect line height space example" style={{maxHeight: '124px', padding: '16px'}} src={incorrect} />
-  </GridItem>
-</Grid>
+![Correct and incorrect text spacing examples.](./line-height.png)
