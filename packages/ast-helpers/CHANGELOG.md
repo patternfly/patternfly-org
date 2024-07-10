@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.4.0-alpha.45 (2024-07-10)
+
+
+### Bug Fixes
+
+* clean up spacers.css ([#4088](https://github.com/patternfly/patternfly-org/issues/4088)) ([e13a093](https://github.com/patternfly/patternfly-org/commit/e13a09302aea90b66e8fbe47b9f5386baea43835))
+
+
+
+
+
 # 1.4.0-alpha.44 (2024-07-10)
 
 
