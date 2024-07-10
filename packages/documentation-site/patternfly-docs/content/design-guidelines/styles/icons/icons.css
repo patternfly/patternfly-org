@@ -36,13 +36,6 @@
   margin-right: 8px;
 }
 
-#icon-sizes,
-#icon-colors,
-#all-icons,
-#updated-icon-recommendations {
-  margin-bottom: 24px;
-}
-
 #ws-icons-table td[data-label="Icon"] svg,
 #ws-icons-table td[data-label="Unicode"] span {
   cursor: pointer;
@@ -53,7 +46,7 @@
 }
 
 #all-icons ~ .ws-p > .ws-code {
-  margin-inline-start: var(--pf-t--global--spacer--sm);  
+  margin-inline-start: var(--pf-t--global--spacer--sm);
 }
 
 .ws-icon-code {

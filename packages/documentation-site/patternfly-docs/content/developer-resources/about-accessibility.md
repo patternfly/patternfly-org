@@ -76,8 +76,6 @@ Accessibility takes **all users** into account.
 
 
 <img src="./PF-a11y.png" alt="An accessibility spectrum showing examples of the situational, temporary, and permanent situations for different impairments." />
-<br />
-<br />
 
 ## Experience parity
 We believe that all abilities should be treated equally. There should be parity in the experience of all users—one user group shouldn't be prioritized over the other.
