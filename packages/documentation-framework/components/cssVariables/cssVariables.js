@@ -95,20 +95,20 @@ export class CSSVariables extends React.Component {
               key={`${rowKey}_1`}
               className="pf-v6-l-flex pf-m-space-items-sm"
             >
-              {isColor ? (
+              {isColor && (
                 <div
                   key={`${rowKey}_2`}
                   className="pf-v6-l-flex pf-m-column pf-m-align-self-center"
                 >
                   <span className="circle" style={{ backgroundColor: `var(${property})`}}/>
                 </div>
-              ) :
+              )}
               <div
                 key={`${rowKey}_3`}
                 className="pf-v6-l-flex pf-m-column pf-m-align-self-center ws-td-text"
               >
-                {value}
-              </div>}
+                {isColor && '(In light theme)'} {value}
+              </div>
             </div>
           </div>
         ];
