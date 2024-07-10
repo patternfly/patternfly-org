@@ -36,7 +36,6 @@ A user should never feel like the error is their fault. Avoid language like “Y
 | You did not provide your authentication credentials. | Authentication credentials weren't provided.| 
 
 </div> 
-<br /> 
 
 #### Give users a next step
 
@@ -49,7 +48,6 @@ A user should never feel stuck. If they’re hit with an error, give them the in
 | Your list already has the maximum number of items. You are not able to continue customizing. | Your list has the maximum number of items. To continue customizing, remove an item.|
 
 </div>
-<br /> 
 
 #### Avoid jargon
 
@@ -62,7 +60,6 @@ Error messages are frustrating enough without technical terms that users might n
 | Error code 5959: Outdated version information. Task termination pending. | Your task is outdated. To keep it active, update its version.|
 
 </div>
-<br />
 
 #### Include the right amount of description
 
@@ -75,7 +72,6 @@ Tell your user what is wrong. An error without an explanation can add to their f
 | An error occurred. The email cannot be sent. | To send this email, turn on your email permissions in user settings.|
 
 </div>
-<br />
 
 However, don’t include too much information. The user doesn’t need to know exactly what is going on behind the scenes. Only give them information about what went wrong and what they can do next.  
 
@@ -85,9 +81,7 @@ However, don’t include too much information. The user doesn’t need to know e
 |:------------:|:------------:|
 | Your information cannot be saved. Our system is currently designed to accommodate 1 record per user. The system memory is unable to store more at this time. | Only 1 record can be saved. To continue, remove one of your records.|
 
-</div> 
-<br /> 
-
+</div>
 
 #### Lead with the benefit
 
@@ -133,8 +127,7 @@ To create effective 404 pages, follow these best practice guidelines:
     |:-----------:|:-----------:|
     | Error 404: Not found| 404: That page no longer exists | 
 
-    </div> 
-    <br />
+    </div>
 
 1. **Avoid exclamations, colloquialisms, and excessive humor.** Write 404 headings to be informative and repeatable. When users land on a page more than once, jokes grow stale. Steer clear of extraneous words like “Uh oh!” or “Oops!”.
 
@@ -147,7 +140,6 @@ To create effective 404 pages, follow these best practice guidelines:
     | Huh, that's odd... | That page no longer exists |
 
     </div> 
-    <br />
 
 1. **Avoid assigning blame to the user.** If your brand doesn’t use first-person plural (“we”) pronouns, use “that page” or “this page” as your heading's subject instead.
 
@@ -159,7 +151,6 @@ To create effective 404 pages, follow these best practice guidelines:
     | The page you're trying to reach doesn't exist | That page no longer exists |
 
     </div>
-    <br />
 
 1. **Turn error into opportunity.** Always provide a link back to your site’s home page, and include supplemental next steps below your heading to encourage users to explore options beyond just going back to where they came from.
 
@@ -170,7 +161,6 @@ To create effective 404 pages, follow these best practice guidelines:
     | That page doesn't exist. | Another page might have what you need, so try searching PatternFly.  |
 
     </div>
-    <br />
 
 1. **Channel your brand voice.** Bland, impersonal error messages can be frustrating. Infuse your 404 page content with brand personality to support a more inviting site experience. 
 
@@ -181,7 +171,6 @@ To create effective 404 pages, follow these best practice guidelines:
     | **Error 404: Not found**<br />Requested URL not found on this server. Please try again. | **404: We couldn't find that page**<br />Another page might have what you need, so try searching PatternFly. |
 
     </div>
-    <br />
 
 1. **Write for all audiences.** Be mindful of localization. Puns, wordplay, and cultural references may not localize for all users. Prioritize clarity over cleverness.
 
@@ -191,5 +180,4 @@ To create effective 404 pages, follow these best practice guidelines:
     |:-----------:|:-----------:|
     | **404: Not all who wander are lost...**<br />But this page is. Search again or find your way back home. | **404: We lost that page**<br />Let's find you a better one. Try a new search or return home. |
 
-    </div>
-    <br />                  
+    </div>                 

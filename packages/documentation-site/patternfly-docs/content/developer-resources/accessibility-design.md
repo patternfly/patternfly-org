@@ -19,14 +19,10 @@ PatternFly components use [our color palettes](/design-foundations/colors) to pa
 
 It's important not to solely rely on color for conveying information. Even though PatternFly components pass color contrast tests, they also use icons to further help with identification, which can be especially helpful for users with a form of color blindness.
 
-<br />
 <img src="./ally-color-example.png" alt="Two sets of alert components being compared, one displayed as normal and the other displayed with red-green color blindness emulated." width="600px"/>
-<br />
-<br />
 
 If you go beyond our recommendations to combine PatternFly colors in other ways, please be sure to check your color contrast with a contrast checker. When you alter the colors and/or icons used in PatternFly components, know that they may no longer be accessible for all users. 
 
-<br />
 <img src="./ally-contrast-example.png" alt="A set of alert components displayed with red-green color blindness emulated. These alert components are not clear or distinguishable, because they use poor color contrast and irrelevant icons." width="600px" />
 
 ## Content 

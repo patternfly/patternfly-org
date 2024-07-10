@@ -14,11 +14,9 @@ import ArrowRightIcon from '@patternfly/react-icons/dist/esm/icons/arrow-right-i
 
 To start designing with PatternFly, you will need to install our PatternFly 6 design kit. This kit gives you access to PatternFly's visual design system — including design tokens — so that you can create consistent and usable product experiences. 
 
-<br />
-<Button component="a" href='https://www.figma.com/@patternfly' target="_blank" variant='primary' size='lg' > Install the PatternFly 6 design kit <ArrowRightIcon /> </Button>
-<br />
-<br />
-<br />
+<div>
+  <Button component="a" href='https://www.figma.com/@patternfly' target="_blank" variant='primary' size='lg' > Install the PatternFly 6 design kit <ArrowRightIcon /> </Button>
+</div>
 
 In order to use PatternFly 6, your product *must* be using the PatternFly 6 design kit. If you haven't yet, you can [follow our upgrade guide](/get-started/upgrade) to complete your upgrade. Doing so also ensures that you'll have access to the most current PatternFly features, resources, and guidance going forward! 
 
@@ -51,11 +49,7 @@ If you're completely new to PatternFly, you should also first [read this overvie
 
 We plan to regularly release design kit updates to address any bugs and to evolve our design solutions. If you're a Red Hat employee, then you will automatically receive updates as they are released. If you are not a Red Hat employee, then you will have to manually check our Figma community page to find and install updates. [Read more about Figma access levels here.](#1.-how-do-i-get-figma-access)
 
-<br />
-
 <Divider />
-
-<br />
 
 ## Get help 
 

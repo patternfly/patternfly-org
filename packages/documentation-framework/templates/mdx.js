@@ -91,7 +91,7 @@ const MDXChildTemplate = ({
       {toc.length > 1 && (
         <TableOfContents items={toc} />
       )}
-      <Stack hasGutter={isComponentCodeDocs} style={{...(source !== 'landing-pages' && {maxWidth: "825px"})}}>
+      <Stack hasGutter style={{...(source !== 'landing-pages' && {maxWidth: "825px"})}}>
         {InlineAlerts}
           <Component />
           {functionDocumentation.length > 0 && (

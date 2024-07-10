@@ -25,8 +25,6 @@ A **tooltip** is a message box that is shown when a UI element, like a button or
 <Tooltip content={"This is a tooltip. It contains useful information that solves all your problems."} aria="describedby" >
       <Button>I'm a button with a tooltip!</Button>
 </Tooltip>
-<br />
-<br />
 
 When writing tooltips, follow these general recommendations:
 
@@ -61,7 +59,6 @@ For example:
 <Tooltip content={"Search"} aria="labelledby"> <Button variant="plain"> <SearchIcon /></Button> </Tooltip>
 </SplitItem>
 </Split>
-<br />
 
 In PatternFly, there are commonly used icons that hold universal meanings. These should always use the same tooltip description, as shown in the following table: 
 

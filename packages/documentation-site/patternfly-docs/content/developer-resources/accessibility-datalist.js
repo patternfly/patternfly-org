@@ -96,32 +96,7 @@ export class AccessibilityDatalist extends React.Component {
     };
     return (
       <React.Fragment>
-        <br />
-        <Button onClick={this.onToggleAll}>
-          {this.state.allExpanded && <AngleDownIcon />}
-          {!this.state.allExpanded && <AngleRightIcon />}
-          Toggle All
-        </Button>
-        <br />
-        <br />
         <DataList aria-label="Headings">
-          <DataListItem aria-labelledby="ex-item0">
-            <DataListItemRow>
-              <DataListItemCells
-                dataListCells={[
-                  <DataListCell key="primary content">
-                    <span id="ex-item0">Guideline</span>
-                  </DataListCell>,
-                  <DataListCell key="secondary content">
-                    <span>Link</span>
-                  </DataListCell>,
-                  <DataListCell key="secondary content 2">
-                    <span>Category</span>
-                  </DataListCell>
-                ]}
-              />
-            </DataListItemRow>
-          </DataListItem>
           <DataListItem aria-labelledby="ex-item1" isExpanded={this.state.expanded.includes('ex-toggle1')}>
             <DataListItemRow>
               <DataListToggle
@@ -152,7 +127,7 @@ export class AccessibilityDatalist extends React.Component {
               isHidden={!this.state.expanded.includes('ex-toggle1')}
             >
               <p>
-              A mechanism should be available to bypass blocks of content that are repeated on multiple web pages. 
+              A mechanism should be available to bypass blocks of content that are repeated on multiple web pages.
               <br/>
               <br/>
               When keyboard-only users interact with your site, they use the <kbd>tab</kbd> key to jump from link to link. If your UI has many links in your page header or in a menu, they must tab through those every time they come to a new page just to get to the main content. Providing a "skip to main content" link allows them to easily bypass this hassle.
@@ -190,7 +165,7 @@ export class AccessibilityDatalist extends React.Component {
               isHidden={!this.state.expanded.includes('ex-toggle2')}
             >
               <p>
-                Use descriptive titles to help users find content, orient themselves within it, and navigate through it. 
+                Use descriptive titles to help users find content, orient themselves within it, and navigate through it.
                 <br/>
                 <br/>
                 Users can more quickly identify the content they need when accurate, descriptive titles appear in site maps or lists of search results. The title of each web page should:
@@ -199,7 +174,7 @@ export class AccessibilityDatalist extends React.Component {
                 <br/>
                 - Make sense when read out of context. For example, when read by a screen reader, in a site map, or in a list of search results.
                 <br/>
-                - Be concise. 
+                - Be concise.
               </p>
             </DataListContent>
           </DataListItem>
@@ -233,7 +208,7 @@ export class AccessibilityDatalist extends React.Component {
               isHidden={!this.state.expanded.includes('ex-toggle3')}
             >
             <p>
-              If more than one link has the same label, it should also have the same URL. 
+              If more than one link has the same label, it should also have the same URL.
               <br/>
               <br/>
               Screen reader users can access the list of links that are on a page, which pulls the links out of context. If you have links with different URLs but the same label, then add additional text to provide context to screen reader users.
@@ -270,7 +245,7 @@ export class AccessibilityDatalist extends React.Component {
               isHidden={!this.state.expanded.includes('ex-toggle4')}
             >
             <p>
-              Use landmark roles to clearly identify regions that communicate page structure. 
+              Use landmark roles to clearly identify regions that communicate page structure.
               <br/>
               <br/>
               Landmark roles programmatically identify sections of a page. If more than one landmark role occurs in the page, use <code>aria-label</code> to differentiate the landmark elements.
@@ -311,7 +286,7 @@ export class AccessibilityDatalist extends React.Component {
               isHidden={!this.state.expanded.includes('ex-toggle5')}
             >
             <p>
-            Heading text should be descriptive. 
+            Heading text should be descriptive.
             <br/>
             <br/>
             Appropriate heading levels should be used to communicate the outline and structure of the page. For example, a common practice is to use a single h1 for the primary headline or logo on a page, h2s to designate major sections, and h3's for supporting subsections.
@@ -347,7 +322,7 @@ export class AccessibilityDatalist extends React.Component {
               isHidden={!this.state.expanded.includes('ex-toggle6')}
             >
             <p>
-            Content should be meaningful, clear, and concise. 
+            Content should be meaningful, clear, and concise.
             <br/>
             <br/>
             Use simple language and formatting, as appropriate for the context.
