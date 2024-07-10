@@ -26,12 +26,12 @@ PatternFly supports a range of icon sizes so that all icons can be adapted to di
 
 | **Size** | **Token** | **Example** |
 | --- | --- | :---: |
-| Small (12px) |  --pf-t--global--icon--size--sm |<Icon size ="sm"><CheckCircleIcon /></Icon> |
-| Medium (14px) |  --pf-t--global--icon--size--md |<Icon size ="md"><CheckCircleIcon /></Icon> |
-| Large (16px) |  --pf-t--global--icon--size--lg |<Icon size ="lg"><CheckCircleIcon /></Icon> |
-| X-large (22px) | --pf-t--global--icon--size--xl | <Icon size ="xl"> <CheckCircleIcon /></Icon> |
-| 2xl (56px) | --pf-t--global--icon--size--2xl |  <Icon size ="2xl"><CheckCircleIcon /></Icon> |
-| 3xl (96px) | --pf-t--global--icon--size--3xl | <Icon size ="3xl"><CheckCircleIcon /></Icon> |
+| Small (0.75rem, 12px) |  --pf-t--global--icon--size--sm |<Icon size ="sm"><CheckCircleIcon /></Icon> |
+| Medium (0.875rem, 14px) |  --pf-t--global--icon--size--md |<Icon size ="md"><CheckCircleIcon /></Icon> |
+| Large (1rem, 16px) |  --pf-t--global--icon--size--lg |<Icon size ="lg"><CheckCircleIcon /></Icon> |
+| X-large (1.375rem, 22px) | --pf-t--global--icon--size--xl | <Icon size ="xl"> <CheckCircleIcon /></Icon> |
+| 2xl (3.5rem, 56px) | --pf-t--global--icon--size--2xl |  <Icon size ="2xl"><CheckCircleIcon /></Icon> |
+| 3xl (6rem, 96px) | --pf-t--global--icon--size--3xl | <Icon size ="3xl"><CheckCircleIcon /></Icon> |
 
 Medium icons are typically the most versatile size to use in a UI. Most icons in PatternFly components are medium&mdash;other sizes are used sparingly.
 
