@@ -1,99 +1,15 @@
-#ws-page-content-router {
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
-  flex-shrink: 0;
-}
-
-.ws-release-notes-toc {
-  margin-bottom: var(--pf-t--global--spacer--lg);
-}
-
-.ws-release-notes-toc .pf-v6-c-card {
-  height: 100%;
-}
-
-.ws-release-notes-toc .pf-v6-c-card__title {
-  padding-bottom: var(--pf-t--global--spacer--xs);
-}
-
-.ws-release-notes-toc .pf-v6-c-card__title .pf-v6-c-title {
-  display: inline;
-}
-
-.ws-release-notes-toc .pf-v6-c-card__title a {
-  margin-right: var(--pf-t--global--spacer--sm);
-}
-
-.ws-release-notes-toc .pf-v6-c-card__title .pf-v6-c-badge {
-  vertical-align: text-top;
-}
-
-.ws-release-notes-toc .pf-v6-c-card__body {
-  color: #72767B;
-/*   font-family: var(--pf-v6-global--FontFamily--text); */
-/*   font-size: var(--pf-v6-global--FontSize--md); */
-  font-weight: 400;
-  line-height: 1.5;
-}
-
 .ws-code {
   display: inline-block;
   background-color: var(--pf-t--global--background--color--secondary--default);
   padding: 1px var(--pf-t--global--spacer--sm);
-/*   border: var(--pf-v6-global--BorderWidth--sm) solid var(--pf-v6-global--BorderColor--300); */
+  border: var(--pf-t--global--border--width--regular) solid var(--pf-t--global--border--color--nonstatus--gray--default);
   white-space: pre-wrap;
-/*   font-size: var(--pf-v6-global--FontSize--sm); */
-/*   font-family: var(--pf-v6-global--FontFamily--monospace); */
+  font-size: var(--pf-t--global--font--size--body--sm);
+  font-family: var(--pf-t--global--font--family--mono);
 }
 
 .ws-image {
   text-align: center;
-  width: "600px";
-}
-
-/* Table styles */
-/* Undo patternfly reset to respect MD table styles */
-.ws-table td[align="center"],
-.ws-table th[align="center"] {
-  text-align: center;
-}
-.ws-table td[align="left"],
-.ws-table th[align="left"] {
-  text-align: left;
-}
-.ws-table td[align="right"],
-.ws-table th[align="right"] {
-  text-align: right;
-}
-.ws-content-table > .ws-table {
-  table-layout: fixed;
-  width: 100%;
-}
-
-.ws-image {
-  text-align: center;
-  width: "600px";
-}
-
-.ws-table td > code,
-.ws-table th > code,
-.ws-table tr > code {
-  white-space: normal;
-}
-.ws-table tbody > tr > td {
-  vertical-align: top;
-}
-
-@media screen and (max-width: 1450px) {
-  .ws-mdx-child-template {
-    flex-direction: column;
-  }
-}
-
-/* Design asked for this. A nice side effect is that the TOC doesn't "jump" between pages */
-.ws-mdx-content-content {
-  max-width: 832px;
 }
 
 .ws-back-to-top {
