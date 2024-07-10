@@ -53,11 +53,8 @@ export const TrainingCard = ({
     <CardFooter>
     {name && (
       <Link to={`/training/${name}`} >
-        <Button isInline variant="link" aria-label={`Start ${title} training`}>
-          <Flex>
-            <FlexItem>Start</FlexItem>
-            <FlexItem><ArrowRightIcon /></FlexItem>
-          </Flex>
+        <Button isInline variant="link" size="lg" icon={<ArrowRightIcon />} iconPosition="end">
+          Start
         </Button>
       </Link>
     )}
