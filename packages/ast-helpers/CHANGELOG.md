@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.4.0-alpha.44 (2024-07-10)
+
+
+### Bug Fixes
+
+* clean up mdx.css (after examples.css merges) ([#4084](https://github.com/patternfly/patternfly-org/issues/4084)) ([6e7f86f](https://github.com/patternfly/patternfly-org/commit/6e7f86ffb8346449a6ad26338df157a71e4730aa))
+
+
+
+
+
 # 1.4.0-alpha.43 (2024-07-08)
 
 
