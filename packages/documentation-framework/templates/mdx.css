@@ -1,3 +1,7 @@
+p.pf-v6-c-content--p.ws-p {
+  margin: 0;
+}
+
 .ws-code {
   display: inline-block;
   background-color: var(--pf-t--global--background--color--secondary--default);
@@ -6,6 +10,10 @@
   white-space: pre-wrap;
   font-size: var(--pf-t--global--font--size--body--sm);
   font-family: var(--pf-t--global--font--family--mono);
+}
+
+.ws-content-table > .ws-table {
+  margin-bottom: var(--pf-t--global--spacer--md);
 }
 
 .ws-image {

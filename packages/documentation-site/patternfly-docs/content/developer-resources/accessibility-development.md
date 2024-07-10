@@ -22,8 +22,6 @@ These are some of the items outside the scope of PatternFly that you should prio
 
 <AccessibilityDatalist />
 
-<br />
-
 ### UI element accessibility techniques
 
 The [WCAG 2.0 techniques](https://www.w3.org/TR/WCAG20-TECHS/Overview.html#contents) provide examples on how to meet accessibility guidelines. The following techniques are standard across PatternFly for specific patterns.
@@ -33,9 +31,6 @@ The [WCAG 2.0 techniques](https://www.w3.org/TR/WCAG20-TECHS/Overview.html#conte
 For sighted users, the context and visual appearance of an element can help users understand its purpose. But this isn’t always the case. For example, the X, often used in the top-right corner of pop-ups to indicate the control for closing, might not be clear to those using assistive technology: 
 
 <img src="./Popover.png" alt="Popover example of close button" />
-
-<br />
-<br />
 
 ARIA supplements HTML so that common application interactions and features can be passed to assistive technologies when there is not a native mechanism. This is typically done by including an `aria-label` that provides descriptive context to assistive technologies. **Only use labels when they are necessary to make an element accessible.** ARIA is meant to add context when there *isn’t* visible text, not to override or reiterate what’s already there. Make sure that your labels are useful and not redundant.
 

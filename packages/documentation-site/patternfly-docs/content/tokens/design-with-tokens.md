@@ -20,7 +20,7 @@ Because tokens are set up behind the scenes, they enable you to customize compon
 This allows you to quickly swap between different variants and enable/disable component enhancements. For example: 
 
 ![PatternFly alert components built with Figma tokens.](./img/component-instance.png)  
-<br />
+
 
 Once you've inserted a component into your workspace, you can continue to customize its appearance in [Figma's design sidebar](https://help.figma.com/hc/en-us/articles/360039832014-Design-prototype-and-explore-layer-properties-in-the-right-sidebar). When choosing colors, styles, and effects, you will see a list of tokens to choose from.
 

@@ -46,7 +46,6 @@ Each token segment represents a different type of style information:
 | Variant | The variant of a component or concept, such as *link*, *plain*, *warning*, or *success*.
 | State | The state that the component is in, such as *default*, *hover*, or *active*.
 
-<br />
 
 If a segment isn't relevant for a particular token then it will be skipped in the token's name:
 
@@ -56,5 +55,4 @@ If a segment isn't relevant for a particular token then it will be skipped in th
 | [scope]--[component]--[property]--[variant]--[state]  | `--pf-t--global--background--color--backdrop--default` |
 | [scope]--[component]--[property]--[variant]  |  `--pf-t--global--border--width--regular`	|
 
-<br />
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, CardTitle, CardHeader, CardBody, CardFooter, Button, Text, Flex, Stack } from '@patternfly/react-core';
+import { Card, CardTitle, CardHeader, CardBody, CardFooter, Button, Text, Flex, FlexItem, Stack } from '@patternfly/react-core';
 import ArrowRightIcon from '@patternfly/react-icons/dist/esm/icons/arrow-right-icon';
 import CubesIcon from '@patternfly/react-icons/dist/esm/icons/cubes-icon';
 import ClockIcon from '@patternfly/react-icons/dist/esm/icons/clock-icon';
@@ -53,9 +53,11 @@ export const TrainingCard = ({
     <CardFooter>
     {name && (
       <Link to={`/training/${name}`} >
-        <Button variant="link" aria-label={`Start ${title} training`}>
-          Start
-          <ArrowRightIcon />
+        <Button isInline variant="link" aria-label={`Start ${title} training`}>
+          <Flex>
+            <FlexItem>Start</FlexItem>
+            <FlexItem><ArrowRightIcon /></FlexItem>
+          </Flex>
         </Button>
       </Link>
     )}
