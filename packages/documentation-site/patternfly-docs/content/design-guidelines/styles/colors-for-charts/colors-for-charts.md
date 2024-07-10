@@ -40,7 +40,7 @@ PatternFly recommends colors to use with bar charts, donut charts and pie charts
 ## Color and pattern usage
 
 When selecting colors for your chart, there are a few important usage considerations to keep in mind. Within a color family, use the base color before the other, lighter or darker hues. Additionally, consider other basic guidelines: 
-<br />
+
 * **Green family:** Use to show success
 * **Red family:** Use to show failure
 * **Other color families:** Use for neutral purposes or categories
@@ -65,8 +65,6 @@ When selecting colors for your chart, there are a few important usage considerat
   </GridItem>
 </Grid>
 
-<br />
-
 <Grid hasGutter>
   <GridItem xl={6} lg={12} className="ws-chart-colors-gridtext">
     ### Chart with nested (grouped) variables
@@ -78,8 +76,6 @@ When selecting colors for your chart, there are a few important usage considerat
     <img width="480px" src={nestedVariables} alt="Nested variables example" />
   </GridItem>
 </Grid>
-
-<br />
 
 <Grid hasGutter>
   <GridItem xl={6} lg={12} className="ws-chart-colors-gridtext">

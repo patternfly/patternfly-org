@@ -91,7 +91,7 @@ const MDXChildTemplate = ({
       {toc.length > 1 && (
         <TableOfContents items={toc} />
       )}
-      <div className={isComponentCodeDocs && 'pf-v6-l-stack pf-m-gutter'} style={{...(source !== 'landing-pages' && {maxWidth: "825px"})}}>
+      <Stack hasGutter style={{...(source !== 'landing-pages' && {maxWidth: "825px"})}}>
         {InlineAlerts}
           <Component />
           {functionDocumentation.length > 0 && (
@@ -134,7 +134,7 @@ const MDXChildTemplate = ({
               <a href={sourceLink} target="_blank" onClick={() => trackEvent('view_source_click', 'click_event', source.toUpperCase())}>View source on GitHub</a>
             </StackItem>
           )}
-      </div>
+      </Stack>
     </div>
   );
   ChildComponent.displayName = `MDXChildTemplate${Component.displayName}`;
