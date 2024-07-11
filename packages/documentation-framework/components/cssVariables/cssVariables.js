@@ -1,5 +1,5 @@
 import React from "react";
-import { debounce } from "@patternfly/react-core";
+import { List, ListItem, debounce } from "@patternfly/react-core";
 import {
   Table,
   Thead,
@@ -10,33 +10,22 @@ import {
 } from "@patternfly/react-table";
 import { AutoLinkHeader } from "../autoLinkHeader/autoLinkHeader";
 import * as tokensModule from "@patternfly/react-tokens/dist/esm/componentIndex";
-import global_spacer_md from "@patternfly/react-tokens/dist/esm/global_spacer_md";
 import LevelUpAltIcon from "@patternfly/react-icons/dist/esm/icons/level-up-alt-icon";
 import { CSSSearch } from './cssSearch';
 
 const isColorRegex = /^(#|rgb)/;
 
 const mappingAsList = (property, values) => (
-  <div>
-    <div className="ws-css-property">
-      <span>
-        {property}
-      </span>
-    </div>
-    {values.map((entry, index) => (
-      <div
-        key={index}
-        style={{
-          padding: `4px 0 4px calc(${global_spacer_md.value} * ${index + 3})`
-        }}
+  <List isPlain>
+    <ListItem>{property}</ListItem>
+    {values.map((entry) => (
+      <ListItem
+        icon={<LevelUpAltIcon className="rotate-90-deg" />}
       >
-        <LevelUpAltIcon style={{ transform: 'rotate(90deg)' }} />
-        <span style={{ paddingLeft: '16px' }}>
-          {entry}
-        </span>
-      </div>
+        {entry}
+      </ListItem>
     ))}
-  </div>
+  </List>
 );
 
 const flattenList = files => {
@@ -97,6 +86,7 @@ export class CSSVariables extends React.Component {
         (values && searchRE.test(JSON.stringify(values)));
       if (passes) {
         const rowKey = `${selector}_${property}`;
+        const isColor = isColorRegex.test(value);
         const cells = [
           ...this.props.hideSelectorColumn ? [] : [selector],
           property,
@@ -105,22 +95,19 @@ export class CSSVariables extends React.Component {
               key={`${rowKey}_1`}
               className="pf-v6-l-flex pf-m-space-items-sm"
             >
-              {isColorRegex.test(value) && (
+              {isColor && (
                 <div
                   key={`${rowKey}_2`}
                   className="pf-v6-l-flex pf-m-column pf-m-align-self-center"
                 >
-                  <span
-                    className="ws-color-box"
-                    style={{ backgroundColor: value }}
-                  />
+                  <span className="circle" style={{ backgroundColor: `var(${property})`}}/>
                 </div>
               )}
               <div
                 key={`${rowKey}_3`}
                 className="pf-v6-l-flex pf-m-column pf-m-align-self-center ws-td-text"
               >
-                {value}
+                {isColor && '(In light theme)'} {value}
               </div>
             </div>
           </div>
