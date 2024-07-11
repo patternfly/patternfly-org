@@ -22,20 +22,23 @@ Use actions to make it clear and convenient for users to complete tasks in a UI.
 
 When labeling or referring to actions in your UI, make sure that you adhere to our [terminology guidelines](/ux-writing/terminology) and align any icons you use with the usage behavior outlined in our [icon design foundations.](/design-foundations/icons#all-icons) 
 
-### Deletion 
-When users can delete data objects, items, or similar resources via the UI, follow these practices to ensure that they understand the purpose and consequences of deleting something. 
+### Deletion vs removal 
+Make sure that users understand the purpose and consequences of deleting or removing data objects, items, or similar resources via the UI. Deleting is different from removing. 
 
-Deleting is different from removing. 
-- **“Delete”** refers to the destruction of information (for example, deleting a group, system, or a role.) The trash icon symbolizes deletion.
+- **Deletion:** Refers to the destruction of information (for example, deleting a group, system, or a role.) Often identified by a trash icon.
 
-- **“Remove”** refers to removing the content/system from a particular view, without the destruction of information (for example, removing something from a group or removing a user.) The solid minus-circle icon symbolizes removal.
+- **Removal:** Refers to removing the content/system from a particular view, without the destruction of information (for example, removing something from a group or removing a user.) Often identified by a solid minus-circle icon.
 
-Deletion is typically initiated via buttons or menu items. When using a button trigger, apply secondary button styling. When using a menu item trigger (like within an options/kebab menu), apply default text styling. You should not use red danger styling for deletion buttons or menu items because they will both launch confirmation modals before completing the deletion. Guidance for these modals is included in the following sections. 
-#### Irreversible deletion 
+#### Deletion 
 
-When resource deletion is irreversible, there is a high risk that users will lose highly important information or data. It is necessary to ensure that users understand the impact of this action. Whether a resource is critical or non-critical, you should follow the same pattern.
+When resource deletion is irreversible, there is a high risk that users will lose highly important information or data, so you should ensure that they understand the impact of deletion. 
 
-To communicate that deletion will be permanent, use a confirmation dialog with the following features:
+Users can typically trigger deletion using buttons or menu items. Consider the following for deletion triggers:
+- Button triggers should use secondary button styling. 
+- Menu item triggers (like within an options/kebab menu) should use default text styling. 
+- Do not use red danger styling for deletion buttons or menu items, because they will both launch confirmation modals before completing the deletion. 
+
+After a user triggers deletion, communicate that it will be permanent via a confirmation modal:
 
 ![Confirmation modal with danger styling.](./img/critical-deletion-modal.png)
 
@@ -48,7 +51,7 @@ Once a resource has been successfully deleted, show an [inline success alert:](/
 
 ![Inline success alert for deletion.](./img/critical-deletion-success.png)
 
-#### Reversible deletion 
+#### Removal
 When the action of deleting a resource can be reversed, it has a lower impact on the user experience. A confirmation dialog isn't necessary because users can easily retrieve the deleted resource. 
 
 If you do choose to use a confirmation dialog, use a primary button to submit the modal, rather than a danger button. Do not ask users for any text input. 
