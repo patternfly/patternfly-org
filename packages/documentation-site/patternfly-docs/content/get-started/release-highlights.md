@@ -7,6 +7,51 @@ section: get-started
 import './get-started.css';
 import { Divider } from '@patternfly/react-core';
 
+## PatternFly 5.4
+The final minor release within PatternFly 5 is now live&mdash;here are the highlights. 
+
+Next up is PatternFly 6! Don't forget to keep an eye on [our staging site](https://staging-v6.patternfly.org/) for updates. 
+
+### Promoted package versions
+
+### Fixed bugs
+
+We addressed some remaining bugs that you helped us catch. 
+
+- Fixed unexpected wrapping in horizontal forms.
+- Added a border on compound expansion table rows.
+- Fixed `<ExpandableSection>` errors that were caused by `variant="truncate"`.
+- Updated `paginationAriaLabel` to stop adding "items" to the end of labels.
+- Fixed unexpected wrapping in the pagination component. 
+- Added `shouldFocusFirstMenuItemOnOpen` to the dropdown component, to fix autofocus issues.
+### Content updates
+
+We made a few updates to our website documentation as part of our ongoing, full-site content audit: 
+
+#### Topology documentation 
+We went through all of our [Topology docs](/topology/about-topology) to tidy things up, expand on details, and make sure everything is consistent with other PatternFly docs.
+
+#### Onboarding guides 
+We made updates across our onboarding docs (aka our "Get started" pages). These changes aligned with our findings from previous user research, and make our onboarding docs more accurate, up-to-date, and easier to navigate. Changes included: 
+- Moving the Community page info into our About PatternFly page
+- Combining the Contribute pages into 1 organized guide
+- Updating the Design and Develop pages to align the content and designs with the user expectations we uncovered in our content study 
+
+The same info (and more!) is available, it's just a little reorganized: 
+
+![Get started navigation before and after](./img/get-started-nav.png)
+
+#### UX writing guide 
+We collaborated with other Red Hatters to make sure the PatternFly UX writing guidelines are inline with IBM and Red Hat product documentation standards. A variety of smaller updates were made to our guidance recommendations.
+
+We also now have a new [tooltips writing guide.](/ux-writing/tooltips) This doc was actually released ahead of 5.4, so you may have come across it already, but we want to share the news here to ensure that it's on everyone's radar. 
+
+#### Link updates 
+
+We took care of some housekeeping and updated a few broken and outdated links that we found. 
+
+We also updated our mailing list link to align with our new sign-up form. Keep an eye out for more email communication going forward.
+
 ## PatternFly 5.3.2
 PatternFly 5.3.2 is now live! This was a patch release to fix a couple of bugs.
 
