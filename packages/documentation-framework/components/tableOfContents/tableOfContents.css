@@ -19,6 +19,10 @@
   box-shadow: var(--pf-t--global--box-shadow--sm--bottom)
 }
 
+.ws-toc .pf-v6-c-jump-links__toggle {
+  background-color: var(--pf-t--global--background--color--secondary--default);
+}
+
 /* Mobile jumplinks */
 @media (max-width: 1450px) {
   .ws-toc.pf-m-expanded .pf-v6-c-jump-links__main {

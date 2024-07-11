@@ -27,7 +27,7 @@
 .ws-preview__thumbnail-link::before,
 .ws-preview__thumbnail-link::after {
   position: absolute;
-  z-index: 500;
+  z-index: var(--pf-t--global--z-index--sm);
   transition: .2s;
   opacity: 0;
 }

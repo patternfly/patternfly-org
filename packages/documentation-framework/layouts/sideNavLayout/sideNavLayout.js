@@ -163,7 +163,7 @@ const HeaderTools = ({
                     </DropdownList>
                   </DropdownGroup>
                 )}
-                <Divider key="divider1" className="ws-switcher-divider"/>
+                <Divider key="divider1"/>
                 <DropdownGroup key="Alpha preview version" label="Alpha preview version">
                   <DropdownList>
                     <DropdownItem
@@ -177,7 +177,7 @@ const HeaderTools = ({
                     </DropdownItem>
                   </DropdownList>
                 </DropdownGroup>
-                <Divider key="divider2" className="ws-switcher-divider"/>
+                <Divider key="divider2"/>
                 <DropdownGroup key="Previous versions" label="Previous versions">
                   <DropdownList>
                     <DropdownItem
@@ -263,10 +263,7 @@ export const SideNavLayout = ({ children, groupedRoutes, navOpen: navOpenProp })
   }, []);
 
   const SideBar = (
-    <PageSidebar
-      className="ws-page-sidebar"
-      theme="light"
-    >
+    <PageSidebar>
       <PageSidebarBody>
         <SideNav navItems={sideNavItems} groupedRoutes={groupedRoutes} />
       </PageSidebarBody>
@@ -274,7 +271,7 @@ export const SideNavLayout = ({ children, groupedRoutes, navOpen: navOpenProp })
   );
 
   const masthead = (
-    <Masthead className="ws-masthead">
+    <Masthead>
       <MastheadToggle>
         <PageToggleButton variant="plain" aria-label="Global navigation">
           <BarsIcon />
