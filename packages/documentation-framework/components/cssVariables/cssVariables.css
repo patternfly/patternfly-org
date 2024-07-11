@@ -1,15 +1,13 @@
-.ws-color-box {
-  display: inline-block;
-  height: 18px;
-  width: 18px;
-/*   border: var(--pf-v6-global--BorderWidth--sm) solid var(--pf-v6-global--BorderColor--200); */
-/*   border-radius: var(--pf-v6-global--BorderRadius--lg); */
+
+.circle {
+    height: 1em;
+    display: inline-block;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    border: var(--pf-t--global--border--width--regular) solid var(--pf-t--global--background--color--inverse--default);
+    box-shadow: var(--pf-t--global--box-shadow--sm);
 }
 
-.ws-td-text {
-/*   font-size: var(--pf-v6-global--FontSize--sm) !important; */
-}
-
-.ws-css-property {
-  padding: var(--pf-t--global--spacer--xs) var(--pf-t--global--spacer--md);
+.rotate-90-deg {
+    transform: rotate(90deg);
 }
