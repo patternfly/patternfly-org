@@ -52,9 +52,9 @@ Once a resource has been successfully deleted, show an [inline success alert:](/
 ![Inline success alert for deletion.](./img/critical-deletion-success.png)
 
 #### Removal
-When the action of removing a resource can be reversed, it has a lower impact on the user experience. A confirmation dialog isn't necessary because users can easily retrieve the deleted resource. 
+When the action of removing a resource can be reversed, it has a lower impact on the user experience. A confirmation dialog isn't necessary because users can easily retrieve the removed resource. 
 
-If you do choose to use a confirmation dialog, use a primary button to submit the modal, rather than a danger button. Do not ask users for any text input. 
+If you do choose to use a confirmation dialog for removals, use a primary button to submit the modal, rather than a danger button. Do not ask users for any text input. 
 
 ## Variations 
 
