@@ -40,7 +40,7 @@
     "mdurl": "1.0.1",
     "mini-css-extract-plugin": "2.7.5",
     "null-loader": "4.0.1",
-    "parse-entities": "2.0.0",
+    "parse-entities": "4.0.1",
     "path-browserify": "1.0.1",
     "postcss": "8.4.39",
     "postcss-loader": "7.1.0",
