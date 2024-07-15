@@ -46,17 +46,30 @@ All headings use Red Hat Display bold.
 | <Title headingLevel="h5" size='md'> Aa </Title>  | --pf-t--global--font--size--heading--h4 <br /> --pf-t--global--font--size--heading--h5 <br /> --pf-t--global--font--size--heading--h6 |1rem (16px) | 1.3 | H4 <br /> H5 <br /> H6 |
 
 ### Customizing heading levels
-The [title component](/components/title) allows you to customize the visual hierarchy of text on your page, while keeping the semantic hierarchy consistent with expectations for accessibility. If you use the title component, you can change the text size of different heading levels to customize beyond the default behavior.
+The [title component](/components/title) allows you to customize the visual hierarchy of text on your page, while keeping the semantic hierarchy consistent with expectations for accessibility. 
 
-For example, you may decide that the default size of 16px for secondary headings is too small and you want to increase the size from 16px (md) to 18px (lg). Rather than make your secondary headings H3’s, you should use the title component to keep them as H4 headings, but change the associated text size from `md` to `lg`. For example: 
+The following table shows the default mapping of PatternFly heading levels to text size:
 
-<Title headingLevel="h4" size='md'> This is an "md" H4. </Title>
-<br />
-```<Title headingLevel="h5" size='md'> Aa </Title>```
+| Heading level | Default size |
+|----|-----------|
+| H1 | 2xl (1.375rem, 22px)|
+| H2 | xl (1.25rem, 20px) |
+| H3 | lg (1.125rem, 18px) |
+| H4 | md (1 rem, 16px) |
+| H5 | md (1 rem, 16px) |
+| H6 | md (1 rem, 16px) |
 
-<Title headingLevel="h4" size='lg'> This is a "lg" H4. </Title>
-<br />
-```<Title headingLevel="h5" size='lg'> Aa </Title>```
+If you use the title component, you can change the text size of your heading levels to customize beyond this default behavior.
+
+For example, you may decide that the default size of 20px for secondary headings is too large and you want to decrease the size from 20px (xl) to 18px (lg). Instead of making your secondary headings H3’s to set the size, you should use the title component to keep them as H2 headings and change the `size` property from `xl` to `lg`. 
+
+Example: 
+
+<Title headingLevel="h2"> This is a default "xl" H2. </Title>
+```<Title headingLevel="h2" size='lg'> Aa </Title>```
+
+<Title headingLevel="h2" size='lg'> This is a customized "lg" H2. </Title>
+```<Title headingLevel="h2" size='lg'> Aa </Title>```
 
 Make sure that you maintain good visual hierarchy and mapping between heading levels and text sizes. In most cases, H1 should always be your largest heading and subheadings should get progressively smaller as you move down the hierarchy. Rare exceptions to this rule do occur, but should only be used to highlight critical data. For example, there might be scenarios where card titles use a text size that is larger than the H1 page title. 
 
