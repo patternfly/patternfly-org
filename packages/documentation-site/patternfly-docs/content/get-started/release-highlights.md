@@ -28,7 +28,7 @@ We addressed some remaining bugs that you helped us catch.
 
 ### New severity icons
 
-We created new severity icons, which can be used to communicate the severity of an error or issue with a data source that is linked to a UI element. These icons have been added to both our [HTML](https://www.npmjs.com/package/@patternfly/icons) and [React](https://www.npmjs.com/package/@patternfly/react-icons) packages. They are also available for design use in our [PatternFly 6 Figma design kit.](https://www.figma.com/community/file/1357060119827689328/patternfly-6-components) 
+We created new severity icons, which can be used to communicate the severity of an error or issue with a data source that is linked to a UI element. These icons have been added to both our [HTML](https://www.npmjs.com/package/@patternfly/patternfly) and [React](https://www.npmjs.com/package/@patternfly/react-icons) packages. They are also available for design use in our [PatternFly 6 Figma design kit.](https://www.figma.com/community/file/1357060119827689328/patternfly-6-components) 
 
 ![Severity icons within Figma menu](./img/severity-icons-figma.png)
 
