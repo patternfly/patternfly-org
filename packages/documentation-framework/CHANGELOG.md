@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 6.0.0-alpha.59 (2024-07-11)
+
+
+### Bug Fixes
+
+* css clean up - esp sidenavlayout.css ([#4129](https://github.com/patternfly/patternfly-org/issues/4129)) ([fc9d721](https://github.com/patternfly/patternfly-org/commit/fc9d721d9d4a1a14ab0bb2d66d1c68fb2d90ca7c))
+
+
+
+
+
 # 6.0.0-alpha.58 (2024-07-11)
 
 **Note:** Version bump only for package @patternfly/documentation-framework
