@@ -7,6 +7,41 @@ section: get-started
 import './get-started.css';
 import { Divider } from '@patternfly/react-core';
 
+## PatternFly 6 beta
+We’re excited to share the next milestone in our journey to PatternFly 6–our beta release! This beta introduces more improvements and refinement, containing all major features planned for the final release. 
+
+Your continued participation, support, and feedback will help ensure that PatternFly 6 is as well-tested and bug-free as possible before the full release. 
+
+### Expanded PatternFly 6 support
+
+We applied PatternFly 6 styles to Topology. You can also now find Topology, extensions, patterns, and charts in our Figma kit.
+
+### Content updates 
+
+We made more updates to our website docs to reference our token system. 
+- Tokens 
+- Colors 
+- Icons 
+- Spacers 
+- Typography 
+
+### Component updates
+
+We promoted some of our beta components to become standard components in PatternFly 6. These will be fully-supported features going forward:
+- Buttons with count label 
+- Editable labels
+- Flyout and drilldown menus and navigation 
+- Menu toggle with status indicator
+- Modal title with status indicator
+- Inline spinners
+- Timestamp component 
+
+### Bug fixes
+We fixed the bugs that were reported throughout the alpha period.
+- 
+
+<Divider />
+
 ## PatternFly 6 alpha 2
 
 As we continue to work towards the full release of PatternFly 6, we're excited to share an update. This release contains the final changes to the PatternFly 6 alpha. We've fixed the bugs that have been found so far and have continued to make progress towards our final PatternFly 6 vision. 
