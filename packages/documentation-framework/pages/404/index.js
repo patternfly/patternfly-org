@@ -13,7 +13,6 @@ import {
   GridItem,
   PageSection,
   TextInput,
-  Title
 } from '@patternfly/react-core';
 import { attachDocSearch } from '../../layouts/sideNavLayout/sideNavLayout';
 import PathMissingIcon from './404.svg';
@@ -23,31 +22,16 @@ import ComponentsIcon from './components.svg';
 import ChartIcon from './chart.svg';
 import './404.css';
 
-const Card404 = ({
-  img,
-  alt,
-  title,
-  body,
-  link: {
-    text,
-    to
-  }
-}) => (
+const Card404 = ({ img, alt, title, body, link: { text, to } }) => (
   <GridItem xl={3} md={6} xs={12}>
     <Card style={{ height: '340px' }}>
       <CardHeader className="ws-404-card-header">
         <img src={img} alt={alt} width="64px" />
       </CardHeader>
-      <CardTitle>
-        {title}
-      </CardTitle>
-      <CardBody>
-        {body}
-      </CardBody>
+      <CardTitle>{title}</CardTitle>
+      <CardBody>{body}</CardBody>
       <CardFooter>
-        <Link to={to}>
-          {text}
-        </Link>
+        <Link to={to}>{text}</Link>
       </CardFooter>
     </Card>
   </GridItem>
@@ -64,18 +48,24 @@ const Page404 = () => {
       attachDocSearch(algolia, '#ws-404-search', 1000);
     }
   });
-  
+
   return (
     <PageSection>
-      <EmptyState headingLevel="h1" titleText="404: That page no longer exists" variant="xl" icon={() => <img src={PathMissingIcon} alt="" width="128px" />}>
-        <p
-          // style={{ marginTop: 'var(--pf-v6-global--spacer--sm)' }}
-        >
-          Another page might have the information you need, so try searching PatternFly.
-        </p>
+      <EmptyState
+        headingLevel="h1"
+        titleText="404: That page no longer exists"
+        variant="xl"
+        icon={() => <img src={PathMissingIcon} alt="" width="128px" />}
+      >
+        Another page might have the information you need, so try searching
+        PatternFly.
         <EmptyStateBody>
           <div id="ws-404-search-wrapper">
-            <TextInput id="ws-404-search" type="text" placeholder="Search PatternFly" />
+            <TextInput
+              id="ws-404-search"
+              type="text"
+              placeholder="Search PatternFly"
+            />
           </div>
         </EmptyStateBody>
       </EmptyState>
@@ -87,7 +77,7 @@ const Page404 = () => {
           body="Learn about designing and developing with PatternFly."
           link={{
             text: 'View getting started resources',
-            to: '/get-started/about-patternfly'
+            to: '/get-started/about-patternfly',
           }}
         />
         <Card404
@@ -97,7 +87,7 @@ const Page404 = () => {
           body="Check out PatternFly's design approach to icons, colors, and more."
           link={{
             text: 'View guidelines',
-            to: '/design-foundations/colors'
+            to: '/design-foundations/colors',
           }}
         />
         <Card404
@@ -107,7 +97,7 @@ const Page404 = () => {
           body="Start creating your applications with components -- the building blocks of user interfaces."
           link={{
             text: 'View components',
-            to: '/components/about-modal'
+            to: '/components/about-modal',
           }}
         />
         <Card404
@@ -117,7 +107,7 @@ const Page404 = () => {
           body="Visualize your facts and figures by designing the right charts for your data."
           link={{
             text: 'View charts',
-            to: '/charts/about'
+            to: '/charts/about',
           }}
         />
       </Grid>
@@ -128,6 +118,6 @@ const Page404 = () => {
       </div>
     </PageSection>
   );
-}
+};
 
 export default Page404;
