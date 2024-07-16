@@ -2,250 +2,176 @@
 id: Colors
 section: design-foundations
 ---
-import { Alert, Grid, GridItem, Divider } from '@patternfly/react-core';
+import { Alert, Grid, GridItem, Divider, Banner, Button } from '@patternfly/react-core';
+import { Table, Caption, Thead, Tr, Th, Tbody, Td } from '@patternfly/react-table';
+import ArrowRightIcon from '@patternfly/react-icons/dist/esm/icons/arrow-right-icon';
 import { ColorSwatch } from './ColorSwatch';
-import { ColorFamily } from './ColorFamily';
 import './colors.css';
 
-# PatternFly colors 
-This guide outlines the PatternFly color palette, as well as guidance for color use in different scenarios. Note that the color swatches and palettes automatically change to accommodate light or dark themes. To learn more about PatternFly’s dark theme, refer to our [dark theme handbook](/developer-resources/dark-theme-handbook).
+# PatternFly's palette
 
-In this guide, you can select each color swatch to learn more details, such as hex values and usage guidance.
+Our color palettes align with <a href="https://www.redhat.com/en/about/brand/standards/color" target="_blank" alt="Red Hat brand colors"> Red Hat's brand colors </a> and are designed to reinforce content and support effective communication across different UI needs. Colors are applied to PatternFly elements using [design tokens.](/tokens/about-tokens) 
 
-Refer to our tokens documentation to see a list of all [design tokens.](/tokens/all-patternfly-tokens/)
+This guide offers guidance for color use in some of the most common scenarios. You can select a color swatch for more details. Each swatch will automatically change to accommodate both light and dark themes.
+
+<div>
+<Button component="a" href="/tokens/all-patternfly-tokens" variant="link" isInline> View all PatternFly tokens <ArrowRightIcon />
+</Button>
+</div>
+
+## Brand colors
+
+Brand colors are used to identify your brand, and are the colors most frequently used across your UI. Our brand color, "PatternFly blue", is used across all components. There are different brand tokens depending on the use case, like icon tokens, text tokens, global color tokens, and so on.
 
 <Grid hasGutter>
-  <GridItem xl={6} lg={12} className="ws-colors-gridtext">
-    ## Primary colors
-    <p>
-      Primary colors are those displayed most frequently across your application screens and components. Our primary color is called **"PatternFly blue"**, which is used across PatternFly's components. PatternFly blue should change upon hover.
-    </p>
-    <ColorSwatch label="Default" color="--pf-v6-global--primary-color--100">
-      This color indicates a default or active state for many components.
+  <GridItem span={5}>
+    <ColorSwatch label="Default" color="--pf-t--global--color--brand--default">
+      Use to reinforce your brand. Often indicates a default or active state.
     </ColorSwatch>
-    <ColorSwatch label="Hover" color="--pf-v6-global--primary-color--200">
-      This color is used as the hover or focus state for components that use the default primary color.
+    <ColorSwatch label="Hover" color="--pf-t--global--color--brand--hover">
+      Use for branded elements that are in a hover/focus state.
     </ColorSwatch>
-  </GridItem>
-  <GridItem xl={6} lg={12}>
-    <img width="480px" src="./patternfly-blue.png" alt="PatternFly blue colors" />
-  </GridItem>
-</Grid>
-
-<Divider className="ws-colors-divider" />
-
-## Typography and iconography colors
-<Grid hasGutter>
-  <GridItem xl={6} lg={12} className="ws-colors-gridtext">
-    <p>
-      Text and icon colors are extremely similar because they can often be used in the same context, such as for a link button. We support multiple shades of text colors so that you can emphasize hierarchy on both light and dark backgrounds.
-    </p>
-    <ColorSwatch color="--pf-v6-global--Color--100">
-      This color is used for standard text and icons, and also as a hover state color for icon buttons. It is most commonly used as a text color for many components and application screens.
-    </ColorSwatch>
-    <ColorSwatch color="--pf-v6-global--Color--200">
-      This color is used as a secondary text color and as a default color for icon buttons. It is most commonly used for many components, such as the app launcher and empty states.
-    </ColorSwatch>
-    <ColorSwatch color="--pf-v6-global--link--Color">
-      This color is most commonly used for link text and icons across many components, such as navigation and accordions.
+    <ColorSwatch label="Text" color="--pf-t--global--text--color--brand--default">
+      Use for branded text elements.
     </ColorSwatch>
   </GridItem>
-  <GridItem xl={6} lg={12}>
-    <img width="480px" src="./patternfly-typography.png" alt="PatternFly typography colors" />
+  <GridItem span={7}>
+    <img src="./img/brand-colors.png" alt="PatternFly blue colors" />
   </GridItem>
 </Grid>
-
-<Divider className="ws-colors-divider" />
 
 ## Background colors
-<Grid hasGutter>
-  <GridItem xl={6} lg={12} className="ws-colors-gridtext">
-    <p>
-      Background colors are used throughout components and, occasionally, for certain screens. Light colors can be used interchangeably with full-screen backgrounds, while dark colors are strictly used as backgrounds within components.
-    </p>
 
-    <h3>Light backgrounds</h3>
-    <ColorSwatch color="--pf-v6-global--BackgroundColor--200">
-      This color is most commonly used as a secondary background color for full-screen applications and hover backgrounds.
+Background colors are used throughout components and, occasionally, for certain screens.
+
+<Grid hasGutter>
+  <GridItem span={5}>
+    <ColorSwatch label="Primary" color="--pf-t--global--background--color--primary--default">
+      Use as the primary background color for UI content such as cards, page sections, and other content areas. 
     </ColorSwatch>
-    <ColorSwatch color="--pf-v6-global--BackgroundColor--100">
-      This color is most commonly used as a primary background color for full-screen applications and many components, such as cards and tables/data lists.
+    <ColorSwatch label="Primary hover" color="--pf-t--global--background--color--primary--hover">
+      Use as the hover color for primary-colored backgrounds.
     </ColorSwatch>
-    <h3>Dark backgrounds</h3>
-    <ColorSwatch color="--pf-v6-global--BackgroundColor--dark-100">
-      This color is most commonly used as a background color for many components, such as tooltips and wizards.
+    <ColorSwatch label="Secondary" color="--pf-t--global--background--color--secondary--default">
+      Use as the secondary color for UI content. Also use for UI shell backgrounds, like navigation and mastheads.
     </ColorSwatch>
-    <ColorSwatch color="--pf-v6-global--BackgroundColor--dark-200">
-      This color is used as a background color for navigation.
-    </ColorSwatch>
-    <ColorSwatch color="--pf-v6-global--BackgroundColor--dark-300">
-      This color is most commonly used as a background color for many components, such as navigation.
-    </ColorSwatch>
-    <ColorSwatch color="--pf-v6-global--BackgroundColor--dark-400">
-      This color is used as a background color for navigation.
+    <ColorSwatch label="Secondary hover" color="--pf-t--global--background--color--secondary--hover">
+      Use as the hover color for secondary-colored backgrounds.
     </ColorSwatch>
   </GridItem>
-  <GridItem xl={6} lg={12}>
-    <img width="480px" src="./patternfly-background.png" alt="PatternFly background colors" />
+  <GridItem span={7}>
+    <img src="./img/background-colors.png" alt="PatternFly background colors" />
   </GridItem>
 </Grid>
 
-<Divider className="ws-colors-divider" />
+
+## Text and icon colors
+
+Text and icon colors overlap, because they can be used inline with each other. Note that there are different tokens for standalone icons, inline icons, and standalone text. For more details view our [icons](/design-foundations/icons) and [typography](/design-foundations/typography) guidelines.
+
+Text and icons can also display status information, which is covered in the [status and state colors section.](#status-and-state-colors)
+
+<Grid hasGutter>
+  <GridItem span={5}>
+    <ColorSwatch label="Regular text" color="--pf-t--global--text--color--regular">
+      Use as the primary color for standard text, like heading/body copy. Icons paired with regular text should inherit this color or should use --global--icon--color--regular.
+    </ColorSwatch>
+    <ColorSwatch label="Subtle text" color="--pf-t--global--text--color--subtle">
+      Use as a secondary text color for text in an element that requires less emphasis, like descriptions or inactive tab labels.
+    </ColorSwatch>
+    <ColorSwatch label="Regular icons" color="--pf-t--global--icon--color--regular">
+      Use as the default color for icons in icon buttons and/or when paired with regular-colored text.
+    </ColorSwatch>
+    <ColorSwatch label="Links" color="--pf-t--global--text--color--link--default">
+      Use as the default text color for links.
+    </ColorSwatch>
+  </GridItem>
+  <GridItem span={7}>
+    <img src="./img/text-icon-colors.png" alt="PatternFly text and icon colors" />
+  </GridItem>
+</Grid>
 
 ## Status and state colors
+
+Status and state colors are indicators that communicate data and actions to users through the UI. PatternFly's status colors cover default, danger, success, information, and warning statuses, as well as disabled states.
+
+### Danger
+
 <Grid hasGutter>
-  <GridItem xl={6} lg={12} className="ws-colors-gridtext">
-      Status and state colors are indicators that communicate data and actions to users through the UI. PatternFly's status colors cover default, danger, success, information, and warning statuses, as well as disabled states.
-  </GridItem>
-  <GridItem xl={6} lg={12} rowSpan={6}>
-    <img width="443px" src="./patternfly-status.png" alt="PatternFly status colors" />
-  </GridItem>
-  <GridItem xl={6} lg={12}>
-    <h3>Default</h3>
-    <ColorSwatch color="--pf-v6-global--default-color--300" caption="alert title">
-      This color is used as the title color for the default alert component.
+  <GridItem span={5}>
+    <ColorSwatch color="--pf-t--global--icon--color--status--danger--default" label="Default icons">
+      Use as the default color for icons that convey danger, like in alerts or banners.
     </ColorSwatch>
-    <ColorSwatch color="--pf-v6-global--default-color--200" caption="alert icon">
-      This color is used as the icon color for the default alert component.
-    </ColorSwatch>
-    <ColorSwatch color="--pf-v6-global--palette--cyan-50" caption="inline alert background">
-      This color is used as the background color for the default inline alert component.
-    </ColorSwatch>
-  </GridItem>
-  <GridItem xl={6} lg={12}>
-  <h3>Danger</h3>
-    <ColorSwatch color="--pf-v6-global--danger-color--200" caption="alert title">
-      This color is used as the title color for the danger alert component.
-    </ColorSwatch>
-    <ColorSwatch color="--pf-v6-global--danger-color--100" caption="alert icon">
-      This color is used as the icon color for the danger alert component.
+    <ColorSwatch color="--pf-t--global--text--color--status--danger--default" label="Default text">
+      Use as the default color for text that communicates a danger status.
     </ColorSwatch> 
-    <ColorSwatch color="--pf-v6-global--palette--red-50" caption="inline alert background">
-      This color is used as the background color for danger inline alert component.
+    <ColorSwatch color="--pf-t--global--color--status--danger--hover" label="Hover">
+      Use as the hover color for any element that conveys a danger status.
     </ColorSwatch>
   </GridItem>
-  <GridItem xl={6} lg={12}>
-    <h3>Success</h3>
-    <ColorSwatch color="--pf-v6-global--success-color--200" caption="alert title">
-      This color is used as the title color for the success alert component.
-    </ColorSwatch>
-    <ColorSwatch color="--pf-v6-global--success-color--100" caption="alert icon">
-      This color is used as the icon color for the success alert component.
-    </ColorSwatch>
-    <ColorSwatch color="--pf-v6-global--palette--green-50" caption="inline alert background">
-      This color is used as the background color for the success inline alert component.
-    </ColorSwatch>
-  </GridItem>
-  <GridItem xl={6} lg={12}>
-    <h3>Info</h3>
-    <ColorSwatch color="--pf-v6-global--info-color--200" caption="alert title">
-      This color is used as the title color for the info alert component.
-    </ColorSwatch>
-    <ColorSwatch color="--pf-v6-global--info-color--100" caption="alert icon">
-      This color is used as the icon color for the default alert component.
-    </ColorSwatch>
-    <ColorSwatch color="--pf-v6-global--palette--blue-50" caption="alert background">
-      This color is used as the background color for the info inline alert component.
-    </ColorSwatch>
-  </GridItem>
-  <GridItem xl={6} lg={12}>
-    <h3>Warning</h3>
-    <ColorSwatch color="--pf-v6-global--warning-color--200" caption="alert title">
-      This color is used as the title color for the warning alert component.
-    </ColorSwatch>
-    <ColorSwatch color="--pf-v6-global--warning-color--100" caption="alert icon">
-      This color is used as the icon color for the warning alert component.
-    </ColorSwatch>
-    <ColorSwatch color="--pf-v6-global--palette--gold-50" caption="inline alert background">
-      This color is used as the background color for the warning inline alert component.
-    </ColorSwatch>
-  </GridItem>
-   <GridItem xl={6} lg={12}>
-    <h3>Disabled</h3>
-    <ColorSwatch color="--pf-v6-global--disabled-color--100" caption="disabled text">
-      This color is used as the text color when components are disabled.
-    </ColorSwatch>
-    <ColorSwatch color="--pf-v6-global--disabled-color--200" caption="disabled background">
-      This color is used as the background color for many components when they are disabled, such as buttons and the application launcher.
-    </ColorSwatch>
-    <ColorSwatch color="--pf-v6-global--disabled-color--300" caption="alternate disabled background">
-      This color is used as an alternate background color for components when they are disabled, such as dropdowns and options menus.
-    </ColorSwatch>
+  <GridItem span={7}>
+    <img src="./img/danger-colors.png" alt="PatternFly danger colors" />
   </GridItem>
 </Grid>
 
-<Divider className="ws-colors-divider" />
+### Warning
 
-## Shadows
 <Grid hasGutter>
-  <GridItem xl={6} lg={12} className="ws-colors-gridtext">
-    <p>
-      Shadows can be used to create contrast between UI elements. PatternFly supports different shadow sizes, which enable you to increase the visual depth of a UI element and distinguish it from other elements on the screen. 
-    </p>
-    <ColorSwatch label="Large" color="--pf-v6-global--BoxShadow--lg">
-      Large shadows create the most contrast and depth for a UI element. These are commonly used for alerts and modals.
+  <GridItem span={5}>
+    <ColorSwatch color="--pf-t--global--icon--color--status--warning--default" label="Default icons">
+      Use as the default color for icons that convey a warning status, like in alerts or banners.
     </ColorSwatch>
-    <ColorSwatch label="Medium" color="--pf-v6-global--BoxShadow--md">
-      Medium shadows fall between small and large shadows, creating moderate contrast and depth for a UI element. These are commonly used for accordions and dropdowns. 
+    <ColorSwatch color="--pf-t--global--text--color--status--warning--default" label="Default text">
+      Use as the default color for text that communicates a warning status.
     </ColorSwatch>
-    <ColorSwatch label="Small" color="--pf-v6-global--BoxShadow--sm">
-      Small shadows offer minimal, but visible shadows that slightly increase the contrast and depth of a UI element. These are most commonly used for cards. 
+    <ColorSwatch color="--pf-t--global--color--status--warning--hover" label="Hover">
+      Use as the hover color for any element that conveys a warning status.
     </ColorSwatch>
   </GridItem>
-  <GridItem xl={6} lg={12}>
-    <img width="443px" src="./patternfly-shadows.png" alt="PatternFly shadows" />
+  <GridItem span={7}>
+    <img src="./img/warning-colors.png" alt="PatternFly warning colors" />
   </GridItem>
 </Grid>
 
-<Divider className="ws-colors-divider" />
+### Disabled
+<Grid hasGutter>
+   <GridItem span={5}>
+    <ColorSwatch color="--pf-t--global--icon--color--disabled" label="Icons">
+      Use as the color for icons that show in disabled icon buttons and/or when paired with disabled-color text
+    </ColorSwatch>
+    <ColorSwatch color="--pf-t--global--text--color--disabled" label="Text">
+      Use as the color of text on disabled elements, like disabled menu items.
+    </ColorSwatch>
+    <ColorSwatch color="--pf-t--global--background--color--disabled--default" label="Backgrounds">
+      Use as the background color for disabled components.
+    </ColorSwatch>
+  </GridItem>
+  <GridItem span={7}>
+    <img src="./img/disabled-colors.png" alt="PatternFly disabled colors" />
+  </GridItem>
+</Grid>
+
+## Nonstatus colors 
+
+<Grid hasGutter>
+  <GridItem span={5}>
+    <ColorSwatch color="--pf-t--global--border--color--nonstatus--teal--default" label="Borders">
+      Use as the default border color for any element that does not convey status and that you always want to be teal, like color-coded labels.
+    </ColorSwatch>
+    <ColorSwatch color="--pf-t--global--color--nonstatus--purple--default" label="Backgrounds">
+      Use as the default background color for any element that does not convey status and that you always will want to be purple, like color-coded labels and banners.
+    </ColorSwatch> 
+    <ColorSwatch color="--pf-t--global--color--nonstatus--green--hover" label="Hover">
+      Use as the hover state color for any element that uses the nonstatus green background color.
+    </ColorSwatch>
+  </GridItem>
+  <GridItem span={7}>
+    <img src="./img/nonstatus-colors.png" alt="PatternFly nonstatus colors" />
+  </GridItem>
+</Grid>
 
 ## Contrast ratios
 
-[PatternFly's goal](/accessibility/patternflys-accessibility/) is to meet [level AA in the Web Content Accessibility Guidelines 2.1](https://www.w3.org/WAI/standards-guidelines/wcag/new-in-21/). To meet level AA requirements, your UI contrast ratios must be at or above 4.5:1 for normal text, 3:1 for large text, and 3:1 for graphics and other UI components. Additionally, on hover, link text color should have ample contrast from both the background color and the default state link color.
+[Our goal](/accessibility/patternflys-accessibility/) is for PatternFly to meet [level AA requirements in the Web Content Accessibility Guidelines 2.1](https://www.w3.org/WAI/standards-guidelines/wcag/new-in-21/). To achieve level AA accessibility, your UI contrast ratios must be at or above 4.5:1 for normal text, 3:1 for large text, and 3:1 for graphics and other UI components. Additionally, on hover, link text color should have ample contrast from both the background color and the default state link color.
 
-To check the contrast between background and text colors, use a <a href="https://color.a11y.com/?wc3" target="_blank" className="pf-m-link">WCAG AA-compliance tool.</a>
-
-<Divider className="ws-colors-divider" />
-
-## PatternFly palettes
-Our color palettes are created as a system, designed to reinforce content and workflows. Our palettes are carefully chosen to support effective communication and adapt to the needs of your UI.
-
-Note that bright colors are used sparingly and are reserved for specific interactions, such as communicating status.
-
-Our color palettes are organized into "families" that contain different shades of the same hue. In the following palettes, you can expand each value color or shadow in a family to see more details.
-
-<Grid hasGutter>
-  <GridItem xl2RowSpan={1} xl2={4} xl={6} xlRowSpan={2} sm={12}>
-    <ColorFamily title="Gray family" family="black" />
-  </GridItem>
-  <GridItem xl2={4} xl={6} sm={12}>
-    <ColorFamily title="Blue family" family="blue" />
-  </GridItem>
-  <GridItem xl2={4} xl={6} sm={12}>
-    <ColorFamily title="Shadows" family="shadows" />
-  </GridItem>
-  <GridItem xl2={4} xl={6} sm={12}>
-    <ColorFamily title="Green family" family="green" />
-  </GridItem>
-  <GridItem xl2={4} xl={6} sm={12}>
-    <ColorFamily title="Cyan family" family="cyan" />
-  </GridItem>
-  <GridItem xl2={4} xl={6} sm={12}>
-    <ColorFamily title="Purple family" family="purple" />
-  </GridItem>
-  <GridItem xl2={4} xl={6} sm={12}>
-    <ColorFamily title="Light blue family" family="light-blue" />
-  </GridItem>
-  <GridItem xl2={4} xl={6} sm={12}>
-    <ColorFamily title="Gold family" family="gold" />
-  </GridItem>
-  <GridItem xl2={4} xl={6} sm={12}>
-    <ColorFamily title="Light green family" family="light-green" />
-  </GridItem>
-  <GridItem xl2={4} xl={6} sm={12}>
-    <ColorFamily title="Orange family" family="orange" />
-  </GridItem>
-  <GridItem xl2={4} xl={6} sm={12}>
-    <ColorFamily title="Red family" family="red" />
-  </GridItem>
-</Grid>
+To check the contrast between background and text colors, use a <a href="https://color.a11y.com/?wc3" target="_blank" className="pf-m-link">[WCAG AA-compliance tool.</a>
