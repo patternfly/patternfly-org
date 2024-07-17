@@ -10,14 +10,14 @@ import './colors.css';
 
 # PatternFly's palette
 
-Our color palettes align with <a href="https://www.redhat.com/en/about/brand/standards/color" target="_blank" alt="Red Hat brand colors"> Red Hat's brand colors </a> and are designed to reinforce content and support effective communication across different UI needs. Colors are applied to PatternFly elements using [design tokens.](/tokens/about-tokens) 
-
-This guide offers guidance for color use in some of the most common scenarios. You can select a color swatch for more details. Each swatch will automatically change to accommodate both light and dark themes.
+Our color palettes align with <a href="https://www.redhat.com/en/about/brand/standards/color" target="_blank" alt="Red Hat brand colors"> Red Hat's brand colors </a> and are designed to reinforce content and support effective communication across different UI needs. Colors are applied to PatternFly elements using [semantic design tokens.](/tokens/about-tokens) This guide offers guidance for color use in some of the most common scenarios, but it does not cover all tokens. Additional color usage information is included in our tokens documentation.
 
 <div>
 <Button component="a" href="/tokens/all-patternfly-tokens" variant="link" isInline> View all PatternFly tokens <ArrowRightIcon />
 </Button>
 </div>
+
+Each example contains a descriptive label, a semantic token, and a color swatch circle. If you select a color swatch circle, you can see more details, including a hex code and usage information. Color swatches will automatically update to match light or dark theme colors, based on your browser settings.
 
 ## Brand colors
 
@@ -174,4 +174,4 @@ Status and state colors are indicators that communicate data and actions to user
 
 [Our goal](/accessibility/patternflys-accessibility/) is for PatternFly to meet [level AA requirements in the Web Content Accessibility Guidelines 2.1](https://www.w3.org/WAI/standards-guidelines/wcag/new-in-21/). To achieve level AA accessibility, your UI contrast ratios must be at or above 4.5:1 for normal text, 3:1 for large text, and 3:1 for graphics and other UI components. Additionally, on hover, link text color should have ample contrast from both the background color and the default state link color.
 
-To check the contrast between background and text colors, use a <a href="https://color.a11y.com/?wc3" target="_blank" className="pf-m-link">[WCAG AA-compliance tool.</a>
+To check the contrast between background and text colors, use a <a href="https://color.a11y.com/?wc3" target="_blank" className="pf-m-link">WCAG AA-compliance tool.</a>
