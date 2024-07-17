@@ -9,11 +9,11 @@ The elements mentioned below are similar for a table with compact or default spa
 
 <img src="./img/table-elements.png"  alt="example of table and the elements"  width="1189"/>
 
-1. **[Toolbar](/components/toolbar/design-guidelines):** Sits above the table and contains controls for manipulating table data. Common actions include filtering, sorting, and pagination.
+1. **[Toolbar](/components/toolbar/design-guidelines):** Sits above the table and contains controls for manipulating table data. Common actions include filtering, sorting, and pagination. 
 2. **[Bulk selection](/patterns/bulk-selection):** When present, selects all items in a table. If pagination is being used, this will only select items on the current page. See [bulk selection](/patterns/bulk-selection) for more information.
-3. **Global actions:** Actions that apply to all selected items.
+3. **Global actions:** Actions that apply to all selected items. Also includes actions that directly impact the table, regardless of selection, such as "Create", "Edit row item", "Delete row item", and "Export table", for example. For more guidance, [see the actions pattern](/patterns/actions).
 4. **Expansion:** Expand all the rows in the table.
-5. **Column headers:** Should align with the content they contain. If the user is able to sort on a column, the first click on the header will sort the content of the table on the content in that column. Subsequent clicks will toggle the direction of the sort. Table data can only be sorted on one column at a time. See [sorting by columns](#sorting-by-columns) for more information on the sort component.
+5. **Column headers:** Should align with the content they contain. If the user is able to sort on a column, the first click on the header will sort the content of the table on the content in that column. Subsequent clicks will toggle the direction of the sort. Table data can only be sorted on 1 column at a time. [Read about sorting by columns](#sorting-by-columns) for more information on the sort component.
 6. **Inline actions:** Actions that apply only to the current row/item.
 7. **Select checkbox:** Selects this row.
 8. **Expanded panel:** Expanded table row content.
@@ -21,6 +21,10 @@ The elements mentioned below are similar for a table with compact or default spa
 
 ## Usage
 When using tables you need to consider the structure of the data you want to display and organize that information into columns. Columns will typically have column headers. Every row within a table must have a consistent format. If the table row includes actions, they should always be placed in the rightmost column(s).
+
+Table toolbars should only contain actions that directly impact the table. Any actions that are related to the overall page and its context (or impact the general page but not the table directly) should be placed outside of the table, at the top right of the page at the header level. This may include actions that edit the page header, actions that launch related windows, and so on.
+
+![UI screen with action button placed outside of the table.](./img/page-action.png)
 
 PatternFly offers 2 components for displaying large data sets: [data lists](/components/data-list/design-guidelines) and tables. While they satisfy similar use cases, choosing the correct component to use in your design will be dependent on the type of data you need to display.
 
@@ -43,7 +47,7 @@ In this example, a table is positioned in the body of a page in a card.
 
 ### Showing more information in a table cell
 
-To show more information in a table cell than can fit in the row field, you may truncate the list and use a label to indicate that there are more items to view. This label should be gray and indicate the number of items left to view (example: "3 more"). It is recommended to show at least one item before hiding the rest of the items.
+To show more information in a table cell than can fit in the row field, you may truncate the list and use a label to indicate that there are more items to view. This label should be gray and indicate the number of items left to view (example: "3 more"). It is recommended to show at least 1 item before hiding the rest of the items.
 
 Clicking on the label would open up a popover or modal depending on the number of items:
 
@@ -104,20 +108,21 @@ Every table can be extended with these functionalities:
 * It would not make sense to combine all of this information into a single, simple expansion.
 
 ### Actionable table
-The actionable table provides checkboxes or radio buttons that enable users to select one or more rows in a table. Users may then act on those selections using options in the [toolbar](/components/toolbar/design-guidelines),.
+The actionable table provides checkboxes or radio buttons that enable users to select 1 or more rows in a table. Users may then act on those selections using options in the [toolbar](/components/toolbar/design-guidelines).
 
 <img src="./img/table-actionable.png"  alt="example of actionable table"  width="1214"/>
 
 1. **[Bulk selection](/patterns/bulk-selection):** When present, selects all items in a table with checkboxes. If pagination is being used, this will only select items on the current page. See [bulk selection](/patterns/bulk-selection) for more information.
 2. **Checkbox**: Enables a user to select a row. Use when multiple rows can be selected at the same time.
-3. **Radio button**: Enables a user to select a single row at a time. Use when only one row can be selected at a time.
-3. **Global actions:** Actions that can be applied to **all** selected items.  If actions in the table are restricted to a single row or object, keep the actions at the row kebab level, instead of in the toolbar.
+3. **Radio button**: Enables a user to select a single row at a time. Use when only 1 row can be selected at a time.
+3. **Global actions:** Actions that can be applied to all selected items or the entire table. If actions in the table are restricted to a single row or object, keep the actions at the row kebab level, instead of in the toolbar.
 
 #### When to use 
-* You need to enable a user to select one or more items in the table, for example to make selections in a wizard, or to carry out actions in a full page table.
+* Users need to be able to select 1 or more items in the table. For example, in order to make selections in a wizard. 
+* Users need to carry out actions in a full page table.
 
 #### When not to use
-* Users can not take any actions on table items/rows.
+* Users cannot take any actions on table items/rows.
 
 ### Comparison table
 
@@ -168,12 +173,12 @@ Sorting by columns is possible for any table variation. Enabling the component w
 The default sort order for a table should support the primary use case for the application. All columns in a table do not require sort functionality. That is, you can disable the header sort function on some columns and enable it on others.
 
 #### Example
-If a table contains these two attributes: (System Name | Last Sync) you may want to show the most recently synced system at the top of the table (in other words, it is the default sort column), because a primary use case for this table is verifying that you have successfully connected or troubleshot the system’s connection to Cloud Services.
+If a table contains these 2 attributes: (System Name | Last Sync) you may want to show the most recently synced system at the top of the table (in other words, it is the default sort column), because a primary use case for this table is verifying that you have successfully connected or troubleshot the system’s connection to Cloud Services.
 
-If a table contains these three attributes: (System Name | Last Sync | Severity) you may want to show the system with the highest Severity because that is the system the user should tend to first.
+If a table contains these 3 attributes: (System Name | Last Sync | Severity) you may want to show the system with the highest Severity because that is the system the user should tend to first.
 
 ### Table with favoriting
-Adding the ability to favorite is possible for any table variation. Users can set their favorites by clicking the star icon in the favorites row. By default, the star is grey; when an item is favorited, the star becomes yellow. Clicking the star again will unfavorite the item. When an item is favorited or unfavorited, it does not move in the list unless sorting is on.
+Adding the ability to favorite is possible for any table variation. Users can set their favorites by clicking the star icon in the favorites row. By default, the star is gray; when an item is favorited, the star becomes yellow. Clicking the star again will unfavorite the item. When an item is favorited or unfavorited, it does not move in the list unless sorting is on.
 
 <img src="./img/table-favoriting.png"  alt="Table with favoriting"  width="930"/>
 
@@ -203,13 +208,13 @@ A table may sometimes need to be compact to make more rows visible at a time. Th
 **Example:**
 * You can see more data on 1 page.
 * You have a good overview about the structure of data.
-* The structure of data is simple, informative and have less visual elements.
+* The structure of data is simple, informative, and has less visual elements.
 
 #### Default spacing
 A table may sometimes need more space for rich graphical data. See an example below.
 
 **Use default spacing when:**
-* You don’t have to display a lot of data on one page.
+* You don’t have to display a lot of data on 1 page.
 * You use many visual indicators that are placed in columns, such as icons or charts.
 * You don't have to minimize paging.
 * Readability is a primary concern.
@@ -217,7 +222,7 @@ A table may sometimes need more space for rich graphical data. See an example be
 <img src="./img/default-spacing.png"  alt="Default spacing"  width="1162"/>
 
 **Example:**
-* You can see less data on one page.
+* You can see less data on 1 page.
 * You will need a pagination to see more rows.
 * Data structure includes many visual elements.
 
@@ -225,6 +230,3 @@ A table may sometimes need more space for rich graphical data. See an example be
 The PatternFly table is designed to be fully responsive. When columns no longer fit within the width of the viewport, columns are stacked so that data in each row is displayed as sets of attribute-value pairs.
 
 <img src="./img/Mobile-data-table-example.png"  alt="Mobile data table"  width="375"/>
-
-
-

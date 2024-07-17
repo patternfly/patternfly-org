@@ -55,9 +55,14 @@ If multiple actions can be performed on a single card, place those actions in a 
 <img src="./img/cardview-multipleinline.png" alt="example of cards with multiple inline actions in a kebab" width="1500"/>
 
 #### Global actions
-If an action can be performed globally on multiple cards, or if it leads to multiple pieces of content at the same time, place the action in a toolbar above the card view. In the top-right corner of your card, add a checkbox so that users can select one or more items.
+
+A global action is any action that applies to multiple cards that a user selects or actions that directly impact the card view as a whole (such as "Create", "Edit row item", "Delete row item", and "Export table", for example.) 
+
+Place global actions in a toolbar above the card view. In the top-right corner of your cards, add a checkbox so that users can select one or more items.
 
 <img src="./img/cardview-globalactions.png" alt="example of card view with global action toolbar" width="1500"/>
+
+Any actions that are related to the overall page and its context (or impact the general page but not the card view directly) should be placed outside of the card view, at the top right of the page at the header level. This may include actions that edit the page header, actions that launch related windows, and so on.
 
 #### Action card
 You may use an extra-small empty state inside a card to present users with another way to add more cards to the existing card view. We recommend using this feature **in addition to** a primary button in the toolbar, to ensure that the user is still able to perform the action from any page of the card view. Place the action card where a new card will be added, most likely as the very first or last card in the card view.
