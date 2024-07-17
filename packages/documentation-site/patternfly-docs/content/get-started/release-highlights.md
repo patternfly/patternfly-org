@@ -7,28 +7,52 @@ section: get-started
 import './get-started.css';
 import { Divider } from '@patternfly/react-core';
 
-## PatternFly 5.4
-The final minor release within PatternFly 5 is now live&mdash;here are the highlights. 
 
-Next up is PatternFly 6! Don't forget to keep an eye on [our staging site](https://staging-v6.patternfly.org/) for updates. 
+## PatternFly 5.4
+The final minor release within PatternFly 5 is now live! Next up is PatternFly 6. Don't forget to keep an eye on [our staging site](https://staging-v6.patternfly.org/) for updates. 
+
+But first, we have *lots* to share for this update&mdash;check out the highlights.
 
 ### Promoted package versions
 
-### Fixed bugs
+- need list
 
-We addressed some remaining bugs that you helped us catch. 
+### Component updates
+#### Fixed bugs
+
+There were still a handful of bugs on our to-do list. To address a variety of reported issues, we did the following:
 
 - Added support for additional label info on horizontal forms.
 - Added a missing border on compound expansion table rows.
-- Fixed `<ExpandableSection>` errors that were caused by `variant="truncate"`.
+- Fixed `<ExpandableSection>` errors that were caused by `variant="truncate"`
+- Fixed issues with icon variants in modal.
 - Updated `paginationAriaLabel` to stop adding "items" to the end of labels.
 - Fixed unexpected wrapping in the pagination component. 
 - Added `shouldFocusFirstMenuItemOnOpen` to the dropdown component, to fix autofocus issues.
 - Fixed spacing issues with progress stepper's help text title.
+- Fixed some charts-related errors.
+- Added new `shouldFocusContent` property to the wizard component to help navigate accessibility challenges when navigating wizards with keyboard controls.
+- Improved accessibility features for the tree view component via aria properties.
+- Fixed an issue in the code block component that was removing code styling terms, like "\n" and "\t".
+- Updated the truncate component to only show a tooltip when truncation is present.
+- Drag and drop: 
+  - Switched to the flex layout for multi-list drag and drops.
+  - Fixed the positioning of `DragOverlay`
 
-### New severity icons
+  #### New features and demos
 
-We created new severity icons, which can be used to communicate the severity of an error or issue with a data source that is linked to a UI element. These icons have been added to both our [Core](https://www.npmjs.com/package/@patternfly/patternfly) and [React](https://www.npmjs.com/package/@patternfly/react-icons) packages. They are also available for design use in our [PatternFly 6 Figma design kit.](https://www.figma.com/community/file/1357060119827689328/patternfly-6-components) 
+We added new features to a few of our components, along with new examples and demos, including:
+- Expanded selectable area size for checkboxes.
+- New page component properties to support drawer width customization.
+- Multiple drop zones in the drag and drop component.
+- [Editable table rows.](/components/table#editable-rows)
+- [Main section variations for the page component.](/components/page#main-section-variations)
+- [A masthead demo with horizontal navigation.](/components/masthead/react-demos)
+- [A basic description list demo.](/components/description-list/react-demos)
+
+#### New severity icons
+
+We created new severity icons, which can be used to communicate the severity of an error or issue with a data source that is linked to a UI element. These icons have been added to both our [Core](https://www.npmjs.com/package/@patternfly/patternfly) and [React](https://www.npmjs.com/package/@patternfly/react-icons) packages. They are also available for design use in [our Figma design kits.](https://www.figma.com/@patternfly) 
 
 ![Severity icons within Figma menu](./img/severity-icons-figma.png)
 
@@ -42,13 +66,66 @@ There are 6 icons that cover the following severity levels:
 
 We are still working on writing design guidelines to document usage rules for these icons. Once these are completed and published, we will provide an update.
 
+#### New and updated React templates 
+
+We added 2 new react templates to help your migration efforts, including:
+- [Simple dropdown](/components/menus/dropdown/react-templates) 
+- [Typeahead select](/components/menus/select/react-templates) 
+
+We also updated some of our existing templates to address issues:
+- We fixed a bug that prevented initial selections from showing in simple select and checkbox select templates.
+- We fixed a bug that appeared after selections were cleared in a typeahead select.
+- We added additional customization support to our select templates.
+
+### Extensions updates
+#### Topology 
+
+We've expanded our Topology features to support a range of use cases, and fixed bugs that were found.
+
+**Pipelines**
+
+We added a few things to pipelines, including:
+
+- Custom status icons. 
+- `GroupLabelComponent`
+- Updates for expanded/collapsed groups.
+	- Support for focusing on the bounds of an expanded group.
+	- Adjusted the appearance of expanded group labels to match collapsed label styles.
+- Selectable task edges and selected task edge styling options.
+- Support for displaying nested, collapsed groups.
+
+**Group labels**
+
+- Added ability to center group labels on edges.
+- Added ability to display group labels on hover.
+
+**Control bar**
+
+- Added new expand/collapse all buttons.
+
+**Layouts**
+
+Updated the version of the dagre layout.
+
+**Task groups**
+
+- Added ability to display support status.
+
+We also went through all of our [Topology docs](/topology/about-topology) to tidy things up, expand on details, and make sure everything is consistent with other PatternFly docs. We also added documentation to provide guidance for using the Topology demo app. 
+
+#### Quickstarts 
+We fixed an issue that prevented the quickstart panel from grabbing focus.
+
+#### Logviewer
+We exposed `LogViewerProps` to allow for reuse.
+We fixed issues with the full-screen React demo.
+
+#### React console
+We fixed the link to https://virt-manager.org/download 
+
 ### Content updates
 
 We made a few updates to our website documentation as part of our ongoing, full-site content audit: 
-
-#### Topology documentation 
-We went through all of our [Topology docs](/topology/about-topology) to tidy things up, expand on details, and make sure everything is consistent with other PatternFly docs.
-
 #### Onboarding guides 
 We made updates across our onboarding docs (aka our "Get started" pages). These changes aligned with our findings from previous user research, and make our onboarding docs more accurate, up-to-date, and easier to navigate. Changes included: 
 - Moving the Community page info into our About PatternFly page
