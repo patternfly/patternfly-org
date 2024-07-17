@@ -1,6 +1,0 @@
-.ws-title-level {
-  border: var(--pf-t--global--border--width--regular) solid var(--pf-t--global--border--color--default);
-  padding: var(--pf-t--global--spacer--sm);
-  margin: var(--pf-t--global--spacer--md) 0;
-  display: inline-block;
-}
