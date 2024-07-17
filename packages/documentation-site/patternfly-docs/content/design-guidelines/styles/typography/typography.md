@@ -3,13 +3,9 @@ id: Typography
 section: design-foundations
 ---
 
-import { Button, EmptyState, EmptyStateBody, EmptyStateVariant, Grid, GridItem, Text, TextContent, TextVariants, Title } from '@patternfly/react-core';
-import CheckCircleIcon from '@patternfly/react-icons/dist/esm/icons/check-circle-icon';
-import TimesCircleIcon from '@patternfly/react-icons/dist/esm/icons/times-circle-icon';
-import { TypographyGrid, LineHeightTitle, SpacingContentItem, Spacer, TitleLevel, styleProps } from './typography';
+import { Text, TextContent, TextVariants, Title } from '@patternfly/react-core';
 import correct from './typography_correct_spacing.png';
 import incorrect from './typography_incorrect_spacing.png';
-import './typography.css';
 
 You can use **typography** to create visual hierarchy in a UI. By creating a consistent and logical hierarchy, users can more quickly scan and understand information on a page.
 
