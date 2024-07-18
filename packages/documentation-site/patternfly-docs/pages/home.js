@@ -16,7 +16,7 @@ import {
   PageSection,
   PageSectionVariants,
   Title,
-  Text,
+  Content,
   TextVariants,
 } from '@patternfly/react-core';
 import ArrowRightIcon from '@patternfly/react-icons/dist/esm/icons/arrow-right-icon';
@@ -186,17 +186,17 @@ const HomePage = () => (
             >
               {' '}
               Design and build better product experiences in the
-              <Text component="span" className="pf-v6-u-primary-color-100">
+              <Content component="span" className="pf-v6-u-primary-color-100">
                 {' '}
                 open{' '}
-              </Text>
+              </Content>
               with PatternFly
             </Title>
-            <Text component={TextVariants.p} className="pf-v6-u-font-size-lg">
+            <Content component={TextVariants.p} className="pf-v6-u-font-size-lg">
               PatternFly is an open source design system that enables teams to
               create consistent and scalable enterprise products. PatternFly is
               sponsored and maintained by Red Hat, but is open to all.
-            </Text>
+            </Content>
           </Flex>
           <Flex gap={{ default: 'gapMd' }}>
             <FlexItem>

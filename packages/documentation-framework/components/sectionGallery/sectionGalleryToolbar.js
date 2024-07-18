@@ -6,7 +6,7 @@ import {
   ToolbarContent,
   ToolbarGroup,
   ToolbarItem,
-  Text,
+  Content,
   TextVariants,
   ToggleGroup,
   ToggleGroupItem,
@@ -63,10 +63,10 @@ export const SectionGalleryToolbar = ({
         spacer={{ default: 'spacerMd', md: 'spacerNone' }}
         style={{ '--pf-v6-c-toolbar__item--MinWidth': 'max-content' }}
       >
-        <Text component={TextVariants.small}>
+        <Content component={TextVariants.small}>
           {galleryItems.length}
           {countText}
-        </Text>
+        </Content>
       </ToolbarItem>
     </ToolbarContent>
   </Toolbar>
