@@ -67,7 +67,7 @@ If your product uses a custom solution to replicate PatternFly styling (without 
 We offer a [`class-name-updater` codemod](https://github.com/patternfly/pf-codemods/tree/main/packages/class-name-updater) to help support your updates. This utility automatically identifies class names that need to be updated as a result of class name changes in Patternfly 6, which helps highlight places in your codebase that may require you to adjust class names. 
 
 When using this codemod, keep the following guidance in mind: 
-- This codemod targets v5 of PatternFly by default, so you will need to add the `--pfVersion 6` option if you are upgrading to v6.
+- This codemod targets v5 of PatternFly by default, so you will need to add the `--v6` option if you are upgrading to v6.
 - Add the `--fix` flag to allow the codemod to fix issues where possible.
 - This utility performs a simple ‘find and replace’, so it's possible that it will inadvertently identify code that is formatted similarly to a PatternFly class name, but is not one. You should check to ensure that this doesn't cause any unintentional changes.
 
