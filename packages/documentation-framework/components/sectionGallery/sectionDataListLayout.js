@@ -8,7 +8,7 @@ import {
   Split,
   SplitItem,
   Content,
-  TextVariants,
+  ContentVariants,
   Label,
 } from '@patternfly/react-core';
 import { Link } from '../link/link';
@@ -58,7 +58,7 @@ export const SectionDataListLayout = ({
                       <Split className={hasListText ? 'pf-v6-u-mb-md' : null}>
                         <SplitItem isFilled>
                           <Content>
-                            <Content component={TextVariants.h2}>
+                            <Content component={ContentVariants.h2}>
                               <span>{title}</span>
                             </Content>
                           </Content>

@@ -17,7 +17,7 @@ import {
   PageSectionVariants,
   Title,
   Content,
-  TextVariants,
+  ContentVariants,
 } from '@patternfly/react-core';
 import ArrowRightIcon from '@patternfly/react-icons/dist/esm/icons/arrow-right-icon';
 import ExternalLinkAltIcon from '@patternfly/react-icons/dist/esm/icons/external-link-alt-icon';
@@ -192,7 +192,7 @@ const HomePage = () => (
               </Content>
               with PatternFly
             </Title>
-            <Content component={TextVariants.p} className="pf-v6-u-font-size-lg">
+            <Content component={ContentVariants.p} className="pf-v6-u-font-size-lg">
               PatternFly is an open source design system that enables teams to
               create consistent and scalable enterprise products. PatternFly is
               sponsored and maintained by Red Hat, but is open to all.
