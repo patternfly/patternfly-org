@@ -3,6 +3,33 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 6.0.0-alpha.62 (2024-07-17)
+
+
+### Bug Fixes
+
+* clean up typography.css ([#4089](https://github.com/patternfly/patternfly-org/issues/4089)) ([8c1d66d](https://github.com/patternfly/patternfly-org/commit/8c1d66d4ce131b1b4638f291bb51013a976749bb))
+
+
+
+
+
+# 6.0.0-alpha.61 (2024-07-17)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+# 6.0.0-alpha.60 (2024-07-16)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
 # 6.0.0-alpha.59 (2024-07-11)
 
 
