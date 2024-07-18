@@ -14,16 +14,17 @@ Your continued participation, support, and feedback will help ensure that Patter
 
 ### Expanded PatternFly 6 support
 
-We applied PatternFly 6 styles to Topology. You can also now find Topology, extensions, patterns, and charts in our Figma kit.
+We extended PatternFly 6 styles to Topology. Now, all PatternFly elements are covered for the release, and all related design resources can be found in [our PatternFly 6 Figma kit.]()
 
 ### Content updates 
 
-We made more updates to our website docs to reference our token system. 
-- Tokens 
-- Colors 
-- Icons 
-- Spacers 
-- Typography 
+We made more improvements to our website docs, to ensure that they're accurate and inline with our new token system. A variety of pages and sections were updated, including: 
+- All [tokens](/tokens/about-tokens) pages
+- Our design foundations 
+    - [Colors](/design-foundations/colors) 
+    - [Icons](/design-foundations/icons) 
+    - [Spacers](/design-foundations/spacers)  
+    - [Typography](/design-foundations/typography)  
 
 ### Component updates
 
@@ -36,29 +37,21 @@ We promoted some of our beta components to become standard components in Pattern
 - Inline spinners
 - Timestamp component 
 
+We updated some of our components to make room for additional features:
+- Updated the page component to allow multiple page body elements.
+- Added the ability to include icons in navigation items.
+
+We also made tweaks to some of our component structure and naming conventions:
+- Renamed "text" components to "content." [It has its own page.](/components/content)
+    - Added `<hr>` element support to the content component.
+- Refactored pagination to use menu toggle rather than options menu.
 ### Bug fixes
 We fixed the bugs that were reported throughout the alpha period.
-- 
-
-<Divider />
-
-## PatternFly 6 alpha 2
-
-As we continue to work towards the full release of PatternFly 6, we're excited to share an update. This release contains the final changes to the PatternFly 6 alpha. We've fixed the bugs that have been found so far and have continued to make progress towards our final PatternFly 6 vision. 
-
-Thanks for your participation in the alpha release: the beta is coming soon!
-
-### Expanded PatternFly 6 support
-We added PatternFly 6 styling and token support to additional areas of our design system: 
-- Extensions
-- Charts 
-
-### Addressed issues throughout the system
-We cleaned up and fixed bugs in a number of areas:
-- We removed Sass global variables in favor of our tokens.
-- We renamed variables that previously had top/right/bottom/left in the name (for example, `PaddingTop`) to instead match inline/block start/end properties (for example, `PaddingBlockStart`). This change is a result of our introduction of [RTL support.](/developer-resources/right-to-left-handbook)
-- We removed the deprecated Sass `@import` rule in favor of new recommendations, `@use` and `@forward`.
-- We fixed various bugs that were reported following the initial alpha release.
+- Fixed issue with displaying card hover/click states in the user feedback extension.
+- Updated buttons to support wrappers, to fix padding issues.
+- Updated docs to replace terms from deprecated components. For example, replacing "chip" with "label" across property naming.
+- Various small accessibility bugs.
+- Removed deprecated or unused properties across some of our components.
 
 <Divider />
 
