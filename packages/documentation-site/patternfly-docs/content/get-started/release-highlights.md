@@ -25,7 +25,7 @@ There were still a handful of bugs on our to-do list. To address a variety of re
 - Added support for additional label info on horizontal forms.
 - Added a missing border on compound expansion table rows.
 - Fixed `<ExpandableSection>` errors that were caused by `variant="truncate"`
-- Fixed issues with icon variants in modal.
+- Fixed issues with icon variants in the "next" modal component.
 - Updated `paginationAriaLabel` to stop adding "items" to the end of labels.
 - Fixed unexpected wrapping in the pagination component. 
 - Added `shouldFocusFirstMenuItemOnOpen` to the dropdown component, to fix autofocus issues.
@@ -36,7 +36,7 @@ There were still a handful of bugs on our to-do list. To address a variety of re
 - Fixed an issue in the code block component that was removing code styling terms, like "\n" and "\t".
 - Updated the truncate component to only show a tooltip when truncation is present.
 - Drag and drop: 
-  - Switched to the flex layout for multi-list drag and drops.
+  - Switched to the flex layout in the multi-list drag and drop example.
   - Fixed the positioning of `DragOverlay`
 
 #### New features and demos
@@ -44,7 +44,7 @@ There were still a handful of bugs on our to-do list. To address a variety of re
 We added new features to a few of our components, along with new examples and demos, including:
 - Expanded selectable area size for checkboxes.
 - New page component properties to support drawer width customization.
-- Multiple drop zones in the drag and drop component.
+- Multiple drop zones in the "next" drag and drop component.
 - [Editable table rows.](/components/table#editable-rows)
 - [Main section variations for the page component.](/components/page#main-section-variations)
 - [A masthead demo with horizontal navigation.](/components/masthead/react-demos)
