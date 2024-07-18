@@ -39,7 +39,7 @@ There were still a handful of bugs on our to-do list. To address a variety of re
   - Switched to the flex layout for multi-list drag and drops.
   - Fixed the positioning of `DragOverlay`
 
-  #### New features and demos
+#### New features and demos
 
 We added new features to a few of our components, along with new examples and demos, including:
 - Expanded selectable area size for checkboxes.
@@ -146,6 +146,8 @@ We also now have a new [tooltips writing guide.](/ux-writing/tooltips) This doc 
 We took care of some housekeeping and updated a few broken and outdated links that we found. 
 
 We also updated our mailing list link to align with our new sign-up form. Keep an eye out for more email communication going forward.
+
+<Divider />
 
 ## PatternFly 5.3.2
 PatternFly 5.3.2 is now live! This was a patch release to fix a couple of bugs.
