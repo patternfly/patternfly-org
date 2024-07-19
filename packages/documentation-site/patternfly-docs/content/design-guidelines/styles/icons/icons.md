@@ -2,19 +2,13 @@
 id: Icons
 section: design-foundations
 ---
-import { Alert, Card, CardBody, Divider, Flex, FlexItem, Grid, GridItem, Icon, Text, TextVariants } from '@patternfly/react-core';
-import CaretDownIcon from '@patternfly/react-icons/dist/esm/icons/caret-down-icon';
+import { Icon, Text, TextVariants } from '@patternfly/react-core';
 import CheckCircleIcon from '@patternfly/react-icons/dist/esm/icons/check-circle-icon';
 import ExclamationCircleIcon from '@patternfly/react-icons/dist/esm/icons/exclamation-circle-icon';
 import ExclamationTriangleIcon from '@patternfly/react-icons/dist/esm/icons/exclamation-triangle-icon';
 import InfoCircleIcon from '@patternfly/react-icons/dist/esm/icons/info-circle-icon';
 import BellIcon from '@patternfly/react-icons/dist/esm/icons/bell-icon';
-import GithubIcon from '@patternfly/react-icons/dist/esm/icons/github-icon';
-import OutlinedCalendarAltIcon from '@patternfly/react-icons/dist/esm/icons/outlined-calendar-alt-icon';
 import StarIcon from '@patternfly/react-icons/dist/esm/icons/star-icon';
-import TagIcon from '@patternfly/react-icons/dist/esm/icons/tag-icon';
-import TimesCircleIcon from '@patternfly/react-icons/dist/esm/icons/times-circle-icon';
-import { IconRecommendations } from './IconRecommendations';
 import { IconsTable } from './IconsTable';
 import './icons.css';
 
@@ -108,7 +102,6 @@ The Font Awesome icons included with PatternFly are Font Awesome solid (FAS) web
 2. [Include the icons via a package manager](https://fontawesome.com/how-to-use/on-the-web/setup/using-package-managers)
 3. [Link to a CDN](https://cdnjs.com/libraries/font-awesome)
 4. Use the SVG code directly from [fontawesome.com](https://fontawesome.com) (proper attribution is required)
-
 
 ## All icons 
 
