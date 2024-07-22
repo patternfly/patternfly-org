@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.4.0-alpha.52 (2024-07-19)
+
+
+### Bug Fixes
+
+* update icons css and remove unused images ([#4146](https://github.com/patternfly/patternfly-org/issues/4146)) ([8dc1eaa](https://github.com/patternfly/patternfly-org/commit/8dc1eaa75d6a1d1f94a5ac04944224f477f30b6e))
+
+
+
+
+
 # 1.4.0-alpha.51 (2024-07-17)
 
 
