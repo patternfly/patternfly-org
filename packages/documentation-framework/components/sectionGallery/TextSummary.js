@@ -1,6 +1,6 @@
 import React from "react";
 import { convertToReactComponent } from "@patternfly/ast-helpers";
-import { TextContent, Text } from "@patternfly/react-core";
+import { Content } from "@patternfly/react-core";
 
 // convert summary text from string to jsx, remove links
 export const SummaryComponent = ({ id, itemsData }) => {
@@ -22,10 +22,10 @@ export const TextSummary = ({ id, itemsData }) => {
   }
 
   return (
-    <TextContent>
-      <Text>
+    <Content>
+      <Content component="p">
         <SummaryComponent id={id} itemsData={itemsData} />
-      </Text>
-    </TextContent>
+      </Content>
+    </Content>
   )
 };

@@ -1,5 +1,5 @@
 import React from "react";
-import {Brand, Grid, GridItem, List, PageSection, Text} from "@patternfly/react-core";
+import {Brand, Grid, GridItem, List, PageSection, Content} from "@patternfly/react-core";
 import {Link} from "@patternfly/documentation-framework/components";
 import {GithubIcon, TwitterIcon} from "@patternfly/react-icons";
 import redhatLogo from "./RHLogo.png";
@@ -176,14 +176,14 @@ export const Footer = () => (
                   <source srcSet={logo} />
                 </Brand>
               </Link>
-              <Text className="ws-org-pfsite-footer-menu-about-description">
+              <Content component="p" className="ws-org-pfsite-footer-menu-about-description">
                 PatternFly is an open source design system built to drive
                 consistency and unify teams. From documentation and components
                 to code examples and tutorials, PatternFly is a place where
                 design and development can thrive. We’re on a mission to help
                 teams build consistent, accessible, and scalable enterprise
                 product experiences—the open source way.
-              </Text>
+              </Content>
             </GridItem>
             <GridItem className="ws-org-pfsite-footer-menu-social-links pf-v6-u-px-xl">
               <Link

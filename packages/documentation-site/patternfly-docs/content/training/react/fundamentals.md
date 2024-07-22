@@ -84,24 +84,24 @@ Add a `TimesIcon` so that the card can be closed.
 ## Step 3. Build out the `CardTitle`
 
 ### Step 3.1
-Add the text component with a variant inside of the `<CardTitle>`. The text component can wrap any static HTML content that is placed on the page to provide correct formatting when using standard HTML tags. The text component comes in several variations, such as `h1`, `p`, `a`, `small`, `blockquote`, and `pre`.
-Use the ‘p’ variation, which is specified with `component={TextVariants.p}`.
+Add the content component with a variant inside of the `<CardTitle>`. The content component can wrap any static HTML content that is placed on the page to provide correct formatting when using standard HTML tags. The content component comes in several variations, such as `h1`, `p`, `a`, `small`, `blockquote`, and `pre`.
+Use the ‘p’ variation, which is specified with `component="p"`.
 Add the following code inside the `CardTitle` component:
 
 <CopyCodeBlock>
-{`<Text component={TextVariants.p}>
-PatternFly\n</Text>`}
+{`<Content component="p">
+PatternFly\n</Content>`}
 </CopyCodeBlock>
 
 ### Step 3.2
-Add a subhead below the text added in Step 3.1. `TextContent` is used to wrap `Text` components and provides text with extra spacing and styling.
-Add the following code inside of the Text component that is inside of the `CardTitle`:
+Add a subhead below the content added in Step 3.1. `Content` without component prop is used to wrap html elements and provides them with extra spacing and styling.
+Add the following code bellow the Text component that is inside of the `CardTitle`:
 
 <CopyCodeBlock>
-{`<TextContent>
-<Text component={TextVariants.small}>
+{`<Content>
+<small>
   Provided by Red Hat
-</Text>\n</TextContent>`}
+</small>\n</Content>`}
 </CopyCodeBlock>
 </PageSection>
 <Divider />

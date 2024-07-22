@@ -6,8 +6,8 @@ import {
   ToolbarContent,
   ToolbarGroup,
   ToolbarItem,
-  Text,
-  TextVariants,
+  Content,
+  ContentVariants,
   ToggleGroup,
   ToggleGroupItem,
 } from '@patternfly/react-core';
@@ -63,10 +63,10 @@ export const SectionGalleryToolbar = ({
         spacer={{ default: 'spacerMd', md: 'spacerNone' }}
         style={{ '--pf-v6-c-toolbar__item--MinWidth': 'max-content' }}
       >
-        <Text component={TextVariants.small}>
+        <Content component={ContentVariants.small}>
           {galleryItems.length}
           {countText}
-        </Text>
+        </Content>
       </ToolbarItem>
     </ToolbarContent>
   </Toolbar>
