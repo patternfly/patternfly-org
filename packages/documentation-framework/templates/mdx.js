@@ -1,7 +1,6 @@
 import React from 'react';
-import { PageSection, Title, Tooltip, PageSectionVariants, Button, BackToTop, Flex, FlexItem, PageGroup, Page, Text, TextContent, Label, Stack, StackItem } from '@patternfly/react-core';
+import { PageSection, Title, Tooltip, PageSectionVariants, Button, BackToTop, Flex, FlexItem, PageGroup, Content, Label, Stack, StackItem } from '@patternfly/react-core';
 import { css } from '@patternfly/react-styles';
-import ExternalLinkAltIcon from '@patternfly/react-icons/dist/esm/icons/external-link-alt-icon';
 import { Router, useLocation } from '@reach/router';
 import { CSSVariables, PropsTable, TableOfContents, Link, AutoLinkHeader, InlineAlert } from '../components';
 import { capitalize, getTitle, slugger, trackEvent } from '../helpers';
@@ -249,7 +248,7 @@ export const MDXTemplate = ({
           variant={!isSinglePage ? PageSectionVariants.light : ""}
           isWidthLimited
         >
-          <TextContent>
+          <Content>
             <Flex alignItems={{ default: 'alignItemsCenter'}}>
               <FlexItem>
                 <Title headingLevel='h1' size='4xl' id="ws-page-title">
@@ -289,7 +288,7 @@ export const MDXTemplate = ({
               </FlexItem>
             </Flex>
             {isComponent && summary && (<SummaryComponent />)}
-          </TextContent>
+          </Content>
         </PageSection>
         { showTabs && (
           <PageSection id="ws-sticky-nav-tabs" stickyOnBreakpoint={{'default':'top'}} type="tabs">

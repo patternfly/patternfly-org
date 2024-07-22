@@ -1,5 +1,5 @@
 import React from 'react';
-import { Grid, GridItem, Flex, FlexItem, Text } from '@patternfly/react-core';
+import { Grid, GridItem, Flex, FlexItem, Content } from '@patternfly/react-core';
 import '@patternfly/patternfly/patternfly-charts.css';
 
 const colorFamilies = [
@@ -41,7 +41,7 @@ const ColorFamily = ({color, computedStyles}) => {
 
   return (
     <GridItem>
-      <Text className="ws-heading ws-title" component="h3">{color} family</Text>
+      <Content className="ws-heading ws-title" component="h3">{color} family</Content>
       <Flex direction={{ default: 'column' }}  gap={{ default: 'gapMd' }}>
         {entries}
       </Flex>

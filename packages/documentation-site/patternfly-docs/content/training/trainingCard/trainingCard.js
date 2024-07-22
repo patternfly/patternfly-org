@@ -1,9 +1,8 @@
 import React from 'react';
-import { Card, CardTitle, CardHeader, CardBody, CardFooter, Button, Text, Flex, FlexItem, Stack } from '@patternfly/react-core';
+import { Card, CardTitle, CardHeader, CardBody, CardFooter, Button, Content, Flex, Stack } from '@patternfly/react-core';
 import ArrowRightIcon from '@patternfly/react-icons/dist/esm/icons/arrow-right-icon';
 import CubesIcon from '@patternfly/react-icons/dist/esm/icons/cubes-icon';
 import ClockIcon from '@patternfly/react-icons/dist/esm/icons/clock-icon';
-import RunningIcon from '@patternfly/react-icons/dist/esm/icons/running-icon';
 import PuzzlePieceIcon from '@patternfly/react-icons/dist/esm/icons/puzzle-piece-icon';
 import ChartBarIcon from '@patternfly/react-icons/dist/esm/icons/chart-bar-icon';
 import { Link } from '@patternfly/documentation-framework/components/link/link';
@@ -41,12 +40,12 @@ export const TrainingCard = ({
     </CardTitle>
     <CardBody>
       <Stack hasGutter>
-        <Text component="small">
+        <Content component="small">
           <Flex gap={{'default': 'gapSm'}}>
             <ClockIcon />
             {time}
           </Flex>
-        </Text>
+        </Content>
         {description}
       </Stack>
     </CardBody>
