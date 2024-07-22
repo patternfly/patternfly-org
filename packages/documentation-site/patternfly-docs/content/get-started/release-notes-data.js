@@ -3150,9 +3150,9 @@ import {
           <Content component="li">
             <code className="ws-code">perPageComponenet</code>: removed
           </Content>
-          <Text component={ContentVariants.p}>
+          <Content component={ContentVariants.p}>
             The following sub-properties of Pagination's "title" property were renamed:
-          </Text>
+          </Content>
           <Content component="li">
             <code className="ws-code">currPage</code>:{" "}
             <code className="ws-code">currPageAriaLabel</code>

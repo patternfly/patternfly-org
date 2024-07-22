@@ -186,10 +186,10 @@ const HomePage = () => (
             >
               {' '}
               Design and build better product experiences in the
-              <Content component="span" className="pf-v6-u-primary-color-100">
+              <span className="pf-v6-u-primary-color-100">
                 {' '}
                 open{' '}
-              </Content>
+              </span>
               with PatternFly
             </Title>
             <Content component={ContentVariants.p} className="pf-v6-u-font-size-lg">

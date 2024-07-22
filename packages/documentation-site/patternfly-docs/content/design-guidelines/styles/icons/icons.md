@@ -2,7 +2,7 @@
 id: Icons
 section: design-foundations
 ---
-import { Alert, Card, CardBody, Divider, Flex, FlexItem, Grid, GridItem, Icon, Text, TextVariants } from '@patternfly/react-core';
+import { Alert, Card, CardBody, Divider, Flex, FlexItem, Grid, GridItem, Icon, Content, ContentVariants } from '@patternfly/react-core';
 import CaretDownIcon from '@patternfly/react-icons/dist/esm/icons/caret-down-icon';
 import CheckCircleIcon from '@patternfly/react-icons/dist/esm/icons/check-circle-icon';
 import ExclamationCircleIcon from '@patternfly/react-icons/dist/esm/icons/exclamation-circle-icon';
@@ -40,20 +40,20 @@ Use the following semantic tokens to ensure that icons are properly aligned and 
 
 | **Size** | **Token** | **Example** |
 | --- | --- | :---: |
-|  1.375rem (22px)   | `pf-t--global--icon--size--font--heading--h1` | <Text component="h1"> <Icon isInline> <StarIcon /> </Icon> Heading <Icon isInline> <StarIcon /> </Icon></Text>  | 
-| 1.25rem (20px)    | `pf-t--global--icon--size--font--heading--h2` | <Text component="h2"> <Icon isInline> <StarIcon /> </Icon> Heading <Icon isInline> <StarIcon /> </Icon></Text>  |
-| 1.125rem (18px) | `pf-t--global--icon--size--font--heading--h3` | <Text component="h3"> <Icon isInline> <StarIcon /> </Icon> Heading <Icon isInline> <StarIcon /> </Icon></Text>  |
-| 1rem (16px) | `pf-t--global--icon--size--font--heading--h4` | <Text component="h4"> <Icon isInline> <StarIcon /> </Icon> Heading <Icon isInline> <StarIcon /> </Icon></Text>  |
-| 1rem (16px) | `pf-t--global--icon--size--font--heading--h5` | <Text component="h5"> <Icon isInline> <StarIcon /> </Icon> Heading <Icon isInline> <StarIcon /> </Icon></Text>  |
-| 1rem (16px) | `pf-t--global--icon--size--font--heading--h6` | <Text component="h6"> <Icon isInline> <StarIcon /> </Icon> Heading <Icon isInline> <StarIcon /> </Icon></Text>  |
+|  1.375rem (22px)   | `pf-t--global--icon--size--font--heading--h1` | <Content component="h1"> <Icon isInline> <StarIcon /> </Icon> Heading <Icon isInline> <StarIcon /> </Icon></Content>  | 
+| 1.25rem (20px)    | `pf-t--global--icon--size--font--heading--h2` | <Content component="h2"> <Icon isInline> <StarIcon /> </Icon> Heading <Icon isInline> <StarIcon /> </Icon></Content>  |
+| 1.125rem (18px) | `pf-t--global--icon--size--font--heading--h3` | <Content component="h3"> <Icon isInline> <StarIcon /> </Icon> Heading <Icon isInline> <StarIcon /> </Icon></Content>  |
+| 1rem (16px) | `pf-t--global--icon--size--font--heading--h4` | <Content component="h4"> <Icon isInline> <StarIcon /> </Icon> Heading <Icon isInline> <StarIcon /> </Icon></Content>  |
+| 1rem (16px) | `pf-t--global--icon--size--font--heading--h5` | <Content component="h5"> <Icon isInline> <StarIcon /> </Icon> Heading <Icon isInline> <StarIcon /> </Icon></Content>  |
+| 1rem (16px) | `pf-t--global--icon--size--font--heading--h6` | <Content component="h6"> <Icon isInline> <StarIcon /> </Icon> Heading <Icon isInline> <StarIcon /> </Icon></Content>  |
 
 ### Body text
 
 | **Size** | **Token** | **Example** |
 | --- | --- | :---: |
-| 0.75rem (12px)  | `pf-t--global--icon--size--font--body--sm`  | <Text component={TextVariants.small}> <Icon isInline><StarIcon /></Icon> Small body <Icon isInline><StarIcon /></Icon></Text> |
-| 0.875rem (14px) | `pf-t--global--icon--size--font--body--default`  | <Text component={TextVariants.p}> <Icon isInline><StarIcon /></Icon> Default body <Icon isInline><StarIcon /></Icon></Text> 
-| 1rem (16px)  | `pf-t--global--icon--size--font--body--lg`  | <Text component={TextVariants.p} style="font-size: 16px"> <Icon isInline><StarIcon /></Icon> Large body <Icon isInline><StarIcon /></Icon></Text> 
+| 0.75rem (12px)  | `pf-t--global--icon--size--font--body--sm`  | <Content component={ContentVariants.small}> <Icon isInline><StarIcon /></Icon> Small body <Icon isInline><StarIcon /></Icon></Content> |
+| 0.875rem (14px) | `pf-t--global--icon--size--font--body--default`  | <Content component={ContentVariants.p}> <Icon isInline><StarIcon /></Icon> Default body <Icon isInline><StarIcon /></Icon></Content> 
+| 1rem (16px)  | `pf-t--global--icon--size--font--body--lg`  | <Content component={ContentVariants.p} style="font-size: 16px"> <Icon isInline><StarIcon /></Icon> Large body <Icon isInline><StarIcon /></Icon></Content> 
 
 ## Standalone icons 
 
