@@ -74,9 +74,9 @@
   },
   "peerDependencies": {
     "@patternfly/patternfly": "6.0.0-alpha.181",
-    "@patternfly/react-code-editor": "6.0.0-alpha.78",
-    "@patternfly/react-core": "6.0.0-alpha.88",
-    "@patternfly/react-table": "6.0.0-alpha.79",
+    "@patternfly/react-code-editor": "6.0.0-alpha.89",
+    "@patternfly/react-core": "6.0.0-alpha.89",
+    "@patternfly/react-table": "6.0.0-alpha.90",
     "react": "^17.0.0 || ^18.0.0",
     "react-dom": "^17.0.0 || ^18.0.0"
   }
