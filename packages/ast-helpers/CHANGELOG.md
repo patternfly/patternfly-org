@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.18.0 (2024-07-22)
+
+
+### Features
+
+* **org:** update to new 5.4 rc ([#4153](https://github.com/patternfly/patternfly-org/issues/4153)) ([e165049](https://github.com/patternfly/patternfly-org/commit/e165049051ef7c027ad70a86f31d4424badbe0a0))
+
+
+
+
+
 # 1.17.0 (2024-07-18)
 
 
