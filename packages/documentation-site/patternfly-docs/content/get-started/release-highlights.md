@@ -14,7 +14,7 @@ Your continued participation, support, and feedback will help ensure that Patter
 
 ### Expanded PatternFly 6 support
 
-We extended PatternFly 6 styles to Topology. Now, all PatternFly elements are covered for the release, and all related design resources can be found in [our PatternFly 6 Figma kit.]()
+We extended PatternFly 6 styles to Topology. Now, all PatternFly components are covered for the release, and all related design resources can be found in [our PatternFly 6 Figma kit.]()
 
 ### Content updates 
 
