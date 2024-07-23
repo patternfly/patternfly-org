@@ -12,8 +12,7 @@ import {
   ToolbarGroup,
   ToolbarFilter,
   ToolbarContent,
-  TextList,
-  TextListItem,
+  Content,
   Bullseye,
   EmptyState,
   EmptyStateFooter,
@@ -308,17 +307,17 @@ export const ReleaseNotesTable = () => {
                             #{row.pullRequestURL.match(/(\d+)/)[0]}
                           </a>
                         ) : (
-                          <TextList isPlain>
+                          <Content component="ul" isPlainList>
                             {row.pullRequestURL.map((url) => (
-                              <TextListItem
+                              <Content component="li"
                                 key={`${rowIndex}-${url.slice(-4)}`}
                               >
                                 <a target="_blank" href={url}>
                                   #{url.match(/(\d+)/)[0]}
                                 </a>
-                              </TextListItem>
+                              </Content>
                             ))}
-                          </TextList>
+                          </Content>
                         )}
                       </Td>
                       <Td dataLabel="Fixed with codemods">

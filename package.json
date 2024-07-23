@@ -35,9 +35,9 @@
   },
   "devDependencies": {
     "@patternfly/patternfly": "6.0.0-alpha.181",
-    "@patternfly/react-code-editor": "6.0.0-alpha.78",
-    "@patternfly/react-core": "6.0.0-alpha.78",
-    "@patternfly/react-table": "6.0.0-alpha.79",
+    "@patternfly/react-code-editor": "6.0.0-alpha.89",
+    "@patternfly/react-core": "6.0.0-alpha.89",
+    "@patternfly/react-table": "6.0.0-alpha.90",
     "@octokit/rest": "^19.0.7",
     "glob": "^8.1.0",
     "lerna": "^6.4.1",

@@ -1,39 +1,6 @@
-.ws-landing-page > * {
-  max-width: 832px;
-}
-
-.ws-landing-page > .ws-section-gallery-full-width {
-  max-width: initial;
-}
-
-.ws-section-gallery {
-  /* top placement */
-  margin-top: calc(var(--pf-v6-c-page__main-section--PaddingTop) * -1);
-}
-
-* + .ws-section-gallery {
-  /* top placement */
-  margin-top: unset;
-}
-
 /* Toolbar styles */
 .ws-section-gallery .pf-v6-c-toolbar {
-  margin-left: calc(var(--pf-v6-c-page__main-section--PaddingLeft) * -1);
-  border-bottom: var(--pf-v6-c-page__sidebar--m-light--BorderRightWidth) solid var(--pf-v6-c-page__sidebar--m-light--BorderRightColor);
-  margin-bottom: var(--pf-t--global--spacer--md);
-  width: calc(100% + var(--pf-v6-c-page__main-section--PaddingLeft) + var(--pf-v6-c-page__main-section--PaddingRight));
-  /* avoid hoverable data list items overlapping toolbar */
-/*   z-index: calc(var(--pf-v6-global--ZIndex--xs) + 2); */
-}
-
-/* Match toolbar left-padding to gallery left-padding */
-.ws-section-gallery .pf-v6-c-toolbar .pf-v6-c-toolbar__content {
-  --pf-v6-c-toolbar__content--PaddingLeft: var(--pf-v6-c-page__main-section--PaddingLeft);
-}
-
-/* Avoid toolbar wrap on smaller screens */
-.ws-section-gallery .pf-v6-c-toolbar__content-section {
-  flex-wrap: nowrap;
+  margin-block-end: var(--pf-t--global--spacer--md);
 }
 
 /* Avoid link styling on gallery/data list item names */
@@ -42,12 +9,7 @@
   color: inherit;
 }
 
-/* Ensure same height for all cards in a gallery row */
-.ws-section-gallery .pf-v6-c-card {
-  height: 100%;
-}
-
 /* Limit width for data list view only */
 .ws-section-gallery .pf-v6-c-data-list {
-  max-width: 956px;
+  max-width: var(--pf-t--global--breakpoint--lg);
 }
