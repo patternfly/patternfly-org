@@ -6,6 +6,7 @@ import {
   Card,
   CardHeader,
   CardTitle,
+  CardBody,
   CardFooter,
   Gallery,
   GalleryItem,
@@ -18,6 +19,8 @@ import {
   Title,
   Content,
   ContentVariants,
+  Split, 
+  SplitItem
 } from '@patternfly/react-core';
 import ArrowRightIcon from '@patternfly/react-icons/dist/esm/icons/arrow-right-icon';
 import ExternalLinkAltIcon from '@patternfly/react-icons/dist/esm/icons/external-link-alt-icon';
@@ -28,43 +31,43 @@ import { featuredPostsData } from './featured-posts-data';
 
 const cardData = [
   {
-    title: 'Upgrade to PatternFly v5',
-    body: 'Reference our upgrade guide to learn how you can update to the latest version of PatternFly.',
-    link: '/get-started/upgrade',
-    layout: 'withSubtitle',
-  },
-  {
-    title: 'Read our latest release highlights',
-    body: 'Stay informed about every PatternFly release by reading through our highlights, which lay out important code changes and design updates.',
+    title: 'Releases',
+    body: 'To learn more about every PatternFly update, read our release highlights.',
     link: '/get-started/release-highlights',
     layout: 'withSubtitle',
   },
   {
-    title: 'Attend PatternFly community events',
-    body: 'Join one of our regular meetings where we set time aside to share information and address questions or issues presented by the community.',
+    title: 'Mailing List',
+    body: 'To get meeting reminders and newsletters, sign up for our mailing list.',
+    link: 'https://www.redhat.com/dynamic-form/instance/934b1674-bc8a-4a13-8c9d-d19abcceb263',
+    layout: 'withSubtitle',
+  },
+  {
+    title: 'Meetings',
+    body: 'To join our open meetings, keep an eye on our calendar.',
     link: 'https://calendar.google.com/calendar/embed?src=patternflyteam%40gmail.com&ctz=America%2FNew_York',
     layout: 'withSubtitle',
     hasExtLinkIcon: true,
   },
   {
-    title: 'Explore our roadmaps',
-    body: 'Take a look at our issue boards on GitHub to see what we’re working on now and what we have planned next.',
-    link: 'https://github.com/orgs/patternfly/projects/7',
+    title: 'Slack',
+    body: 'Chat with the PatternFly team on Slack.',
+    link: 'https://join.slack.com/t/patternfly/shared_invite/zt-1npmqswgk-bF2R1E2rglV8jz5DNTezMQ',
     layout: 'withSubtitle',
     hasExtLinkIcon: true,
   },
   {
-    title: 'Follow us on Twitter',
-    body: 'Stay up to date on timely PatternFly news and updates through our Twitter.',
+    title: 'Figma',
+    body: 'Make sure you keep your Figma resources up to date.',
+    link: 'https://www.figma.com/@patternfly',
     layout: 'withSubtitle',
-    link: 'https://twitter.com/patternfly',
     hasExtLinkIcon: true,
   },
   {
-    title: 'Join the discussion',
-    body: 'Visit our discussion board on GitHub to help drive future design and development plans.',
-    link: 'https://github.com/orgs/patternfly/discussions',
+    title: 'GitHub',
+    body: 'Explore our repos and project board to learn what we\'re developing.',
     layout: 'withSubtitle',
+    link: 'https://github.com/patternfly',
     hasExtLinkIcon: true,
   },
 ];
@@ -157,14 +160,7 @@ const FeaturedBlogCard = ({ postData, idx }) => {
 
 const HomePage = () => (
   <React.Fragment>
-    <Banner color="blue" isSticky>
-      Welcome to the PatternFly 6 staging website! PatternFly 6 is{' '}
-      <span className="pf-v6-u-font-weight-bold">
-        still under development, so documentation across this website will
-        continue to change.
-      </span>
-    </Banner>
-    <PageSection isWidthLimited className="ws-homepage-main-section">
+    <PageSection isWidthLimited className="v6-homepage-section-top  v6-homepage-section-bottom width-padding">
       <Flex
         direction={{ default: 'column', lg: 'row' }}
         gap={{ default: 'gap2xl' }}
@@ -180,13 +176,12 @@ const HomePage = () => (
             spaceItems={{ default: 'spaceItemsLg' }}
           >
             <Title
-              className="pf-v6-u-font-weight-bold"
               headingLevel="h1"
               size="4xl"
             >
               {' '}
               Design and build better product experiences in the
-              <span className="pf-v6-u-primary-color-100">
+              <span className="brand-text">
                 {' '}
                 open{' '}
               </span>
@@ -198,26 +193,32 @@ const HomePage = () => (
               sponsored and maintained by Red Hat, but is open to all.
             </Content>
           </Flex>
-          <Flex gap={{ default: 'gapMd' }}>
-            <FlexItem>
-              <Link
-                to="/get-started/design"
-                className="pf-v6-c-button pf-m-secondary pf-m-display-lg"
-                aria-label="Start designing"
+          <Split hasGutter>
+            <SplitItem isFilled>
+              <Button component="a" href="/get-started/upgrade"
+                variant="primary" size="lg" isBlock
+                aria-label="Upgrade to PatternFly 6" icon={<ArrowRightIcon />} iconPosition="end"
+                >
+                Upgrade
+              </Button>
+            </SplitItem>
+            <SplitItem isFilled>
+              <Button component="a" href="/get-started/design"
+                variant="secondary" size="lg" isBlock
+                aria-label="Start designing" icon={<ArrowRightIcon />} iconPosition="end"
               >
-                Start designing
-              </Link>
-            </FlexItem>
-            <FlexItem>
-              <Link
-                to="/get-started/develop"
-                className="pf-v6-c-button pf-m-secondary pf-m-display-lg"
-                aria-label="Start developing"
+                Design
+              </Button>
+            </SplitItem>
+            <SplitItem isFilled>
+            <Button component="a" href="/get-started/develop"
+                variant="secondary" size="lg" isBlock
+                aria-label="Start developing" icon={<ArrowRightIcon />} iconPosition="end"
               >
-                Start developing
-              </Link>
-            </FlexItem>
-          </Flex>
+                Develop
+              </Button>
+            </SplitItem>
+          </Split>
         </Flex>
         <style>
           {`
@@ -241,17 +242,50 @@ const HomePage = () => (
         ></FlexItem>
       </Flex>
     </PageSection>
-    <PageSection isWidthLimited>
-      <Divider inset={{ default: 'insetLg' }} />
+    <PageSection isWidthLimited className="width-padding">
+      <Divider inset={{ default: 'insetMd' }} />
     </PageSection>
-    <PageSection isWidthLimited className="v6-featured-posts">
+    <PageSection isWidthLimited className="v6-featured-posts-cards v6-homepage-section-bottom width-padding">
+      [replace with 3 split cards]
+      <Grid hasGutter md={7} xl={4}>
+        {Object.values(featuredPostsData).map((post, idx) => (
+          <FeaturedBlogCard
+            postData={post}
+            idx={idx}
+            key={`${idx}-${post.title}`}
+          />
+        ))}
+      </Grid>
+    </PageSection>
+    <PageSection isWidthLimited className="width-padding">
+      <Divider inset={{ default: 'insetMd' }} />
+    </PageSection>
+    <PageSection isWidthLimited className="v6-stay-informed  v6-homepage-section-top width-padding">
       <Flex
         direction={{ default: 'column', md: 'row' }}
         gap={{ default: 'gapMd' }}
       >
         <FlexItem flex={{ default: 'flex_1' }}>
-          <Title headingLevel="h2" size="2xl">
-            Featured blog posts
+          <Title headingLevel="h2" size="3xl">
+            Stay informed
+          </Title>
+        </FlexItem>
+      </Flex>
+    </PageSection>
+    <PageSection isWidthLimited className="v6-stay-informed-cards  v6-homepage-section-bottom width-padding">
+      <AggregateCards />
+    </PageSection>
+    <PageSection isWidthLimited className="width-padding">
+      <Divider inset={{ default: 'insetMd' }} />
+    </PageSection>
+    <PageSection isWidthLimited className="v6-featured-posts v6-homepage-section-top width-padding">
+      <Flex
+        direction={{ default: 'column', md: 'row' }}
+        gap={{ default: 'gapMd' }}
+      >
+        <FlexItem flex={{ default: 'flex_1' }}>
+          <Title headingLevel="h2" size="3xl">
+            What's new?
           </Title>
         </FlexItem>
         <Button
@@ -262,13 +296,16 @@ const HomePage = () => (
           variant="link"
           aria-label="explore our blog"
           target="_blank"
+          icon={<ArrowRightIcon />} 
+          iconPosition="end"
+          className="link-size"
         >
-          Explore our blog <ArrowRightIcon />
+          Read more articles 
         </Button>
       </Flex>
     </PageSection>
-    <PageSection isWidthLimited className="v6-featured-posts-cards">
-      <Grid hasGutter md={6} xl={3}>
+    <PageSection isWidthLimited className="v6-featured-posts-cards v6-homepage-section-bottom width-padding">
+      <Grid hasGutter md={7} xl={4}>
         {Object.values(featuredPostsData).map((post, idx) => (
           <FeaturedBlogCard
             postData={post}
@@ -277,32 +314,6 @@ const HomePage = () => (
           />
         ))}
       </Grid>
-    </PageSection>
-    <PageSection isWidthLimited className="v6-stay-informed">
-      <Flex
-        direction={{ default: 'column', md: 'row' }}
-        gap={{ default: 'gapMd' }}
-      >
-        <FlexItem flex={{ default: 'flex_1' }}>
-          <Title headingLevel="h2" size="2xl">
-            Stay informed
-          </Title>
-        </FlexItem>
-        <Button
-          isInline
-          size="lg"
-          component="a"
-          href="https://github.com/patternfly"
-          variant="link"
-          aria-label="Patternfly on Github"
-          target="_blank"
-        >
-          View our Github repositories <ArrowRightIcon />
-        </Button>
-      </Flex>
-    </PageSection>
-    <PageSection isWidthLimited className="v6-stay-informed-cards">
-      <AggregateCards />
     </PageSection>
   </React.Fragment>
 );

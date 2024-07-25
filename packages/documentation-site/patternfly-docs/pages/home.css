@@ -3,3 +3,25 @@
   background-size: cover;
   height: 300px;
 }
+
+.v6-homepage-section-top {
+  margin-top: var(--pf-t--global--spacer--gap--group-to-group--vertical);
+}
+
+.v6-homepage-section-bottom {
+  margin-bottom: var(--pf-t--global--spacer--gap--group-to-group--vertical);
+}
+
+.brand-text {
+  color: var(--pf-t--global--text--color--brand--default);
+}
+
+.width-padding {
+  margin-left: var(--pf-t--global--spacer--md);
+  margin-right: var(--pf-t--global--spacer--md);
+}
+
+.link-size {
+  font-size: var(--pf-t--global--font--size--heading--h3);
+  font-weight: var(--pf-t--global--font--weight--200);
+}
