@@ -11,8 +11,8 @@ You can use **typography** to create visual hierarchy in a UI. By creating a con
 
 This page outlines PatternFly's typography principles and standards, including token values and usage information.
 
-You can place text content on a page using the text or title component: 
-- **[Text component:](/components/text)** Used to create formatted blocks of text content. Text accepts all general HTML text formatting tags, including heading, paragraph, and list styles.
+You can place text content on a page using the content or title component: 
+- **[Content component:](/components/content)** Used to create formatted blocks of text content. Content accepts all general HTML text formatting tags, including heading, paragraph, and list styles.
 - **[Title component:](/components/title)** Used specifically for headings or title text in components. Title is flexible and allows you to set the size of the text and heading level independently.
 
 ## PatternFly fonts
