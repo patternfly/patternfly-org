@@ -1,6 +1,6 @@
 .ws-color-swatch {
   display: flex;
-  margin-top: var(--pf-t--global--spacer--md);
+  margin-bottom: var(--pf-t--global--spacer--lg);
 }
 
 .ws-color-swatch > svg {
@@ -22,8 +22,9 @@
 }
 
 .ws-color-swatch-description-label {
-  font-size: var(--pf-t--global--font--size--xs);
+  font-size: var(--pf-t--global--font--size--sm);
   font-weight: var(--pf-t--global--font--weight--body--bold);
+  margin-bottom: var(--pf-t--global--spacer--xs);
 }
 
 .ws-color-swatch-popover {
@@ -33,11 +34,20 @@
 .ws-color-swatch-popover-label {
   display: inline-block;
   padding-top: var(--pf-t--global--spacer--md);
-  padding-bottom: var(--pf-t--global--spacer-xs);
+  padding-bottom: var(--pf-t--global--spacer-sm);
   font-weight: bold;
 }
 
 .ws-color-swatch-popover-code {
-  white-space: nowrap;
-  margin-bottom: var(--pf-t--global--spacer--md);
+  margin-bottom: var(--pf-t--global--spacer--sm);
+}
+
+.ws-color-swatch-usage {
+  max-width: 25rem;
+  display: inline-block;
+  word-wrap: break-word;
+}
+
+.ws-color-swatch-image{
+  margin-right: var(--pf-t--global--spacer--md);
 }

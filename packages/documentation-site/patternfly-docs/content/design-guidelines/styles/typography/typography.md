@@ -3,7 +3,7 @@ id: Typography
 section: design-foundations
 ---
 
-import { Text, TextContent, TextVariants, Title } from '@patternfly/react-core';
+import { Content, ContentVariants, Title } from '@patternfly/react-core';
 import correct from './typography_correct_spacing.png';
 import incorrect from './typography_incorrect_spacing.png';
 
@@ -78,8 +78,8 @@ All body text uses Red Hat Text.
 | Example | Tokens | Size | Line height | Usage | 
 | --- | --- | --- | --- | --- |
 |<p style="font-size:16px">Aa</p>  | --pf-t--global--font--size--body--lg | 1rem (16px) | 1.5 | Use for larger body text, like in xl empty states.  |
-| <TextContent><Text component={TextVariants.p}>Aa</Text></TextContent> | --pf-t--global--font--size--body--default | 0.875rem (14px) | 1.5 | Use for standard body text. |
-| <TextContent><Text component={TextVariants.small}>Aa</Text></TextContent>  | --pf-t--global--font--size--body--sm | 0.75rem (12px) | 1.5 | User for smaller body text, like helper text. |
+| <Content><Content component={ContentVariants.p}>Aa</Content></Content> | --pf-t--global--font--size--body--default | 0.875rem (14px) | 1.5 | Use for standard body text. |
+| <Content><Content component={ContentVariants.small}>Aa</Content></Content>  | --pf-t--global--font--size--body--sm | 0.75rem (12px) | 1.5 | User for smaller body text, like helper text. |
 
 ## Line height and spacing
 The line height of your text impacts how you should use [spacers](/design-foundations/spacers) in your design. 

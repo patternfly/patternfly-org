@@ -136,7 +136,7 @@ export const IconsTable = () => {
 
             return (
               <Tr key={index}>
-                <Td dataLabel={columns[0]} className="pf-v6-c-table__favorite">
+                <Td dataLabel={columns[0]}>
                   <Tooltip content="Download SVG" position={TooltipPosition.right}>
                     <Button
                       aria-label={`Download SVG ${icon.Name}`}

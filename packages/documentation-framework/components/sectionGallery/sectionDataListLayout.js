@@ -7,9 +7,8 @@ import {
   DataListCell,
   Split,
   SplitItem,
-  TextContent,
-  Text,
-  TextVariants,
+  Content,
+  ContentVariants,
   Label,
 } from '@patternfly/react-core';
 import { Link } from '../link/link';
@@ -58,11 +57,11 @@ export const SectionDataListLayout = ({
                     <DataListCell width={5} key="text-description">
                       <Split className={hasListText ? 'pf-v6-u-mb-md' : null}>
                         <SplitItem isFilled>
-                          <TextContent>
-                            <Text component={TextVariants.h2}>
+                          <Content>
+                            <Content component={ContentVariants.h2}>
                               <span>{title}</span>
-                            </Text>
-                          </TextContent>
+                            </Content>
+                          </Content>
                         </SplitItem>
                         <SplitItem>
                           {isBeta && (
