@@ -1870,16 +1870,17 @@
     clsx "^2.0.0"
     react-jss "^10.10.0"
 
-"@patternfly/react-console@6.0.0-alpha.3":
-  version "6.0.0-alpha.3"
-  resolved "https://registry.yarnpkg.com/@patternfly/react-console/-/react-console-6.0.0-alpha.3.tgz#0a85d52896450926378d95607cd6d2d722280382"
-  integrity sha512-Q6dU9gMZybC+u2Mz+merxEKliqmkhuT1kKOw3kGNb+Od/jgO3J2yqQRVqig4vcm8XFT4S0/kpnxps2uI/LYVYw==
+"@patternfly/react-console@6.0.0-alpha.4":
+  version "6.0.0-alpha.4"
+  resolved "https://registry.yarnpkg.com/@patternfly/react-console/-/react-console-6.0.0-alpha.4.tgz#251c21576b1ddbd94c6003ffcfbe03fc05d2981f"
+  integrity sha512-XdWyhbB8butOOsFU4jCfWchlNoO88priWYpZ5XpmAslBcN/SXDmu9goaGsWnYNT8Z6BYizoAmmGXmDYnD0AX0A==
   dependencies:
     "@novnc/novnc" "^1.3.0"
     "@patternfly/react-core" "6.0.0-alpha.61"
     "@patternfly/react-styles" "6.0.0-alpha.23"
     "@spice-project/spice-html5" "^0.2.1"
     file-saver "^1.3.8"
+    react-jss "^10.10.0"
     xterm "^4.8.1"
     xterm-addon-fit "^0.2.1"
 

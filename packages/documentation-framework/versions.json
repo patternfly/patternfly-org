@@ -19,7 +19,7 @@
         "@patternfly/react-tokens": "6.0.0-alpha.23",
         "@patternfly/react-topology": "6.0.0-alpha.1",
         "@patternfly/react-user-feedback": "6.0.0-alpha.1",
-        "@patternfly/react-console": "6.0.0-alpha.1",
+        "@patternfly/react-console": "6.0.0-alpha.4",
         "@patternfly/quickstarts": "5.1.0",
         "@patternfly/react-virtualized-extension": "6.0.0-alpha.1",
         "@patternfly/react-templates": "6.0.0-alpha.39"
