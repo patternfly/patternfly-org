@@ -38,13 +38,14 @@ export function ColorFamily({
           const isExpanded = expanded.includes(token.name);
           const itemStyle = {
             '--pf-v6-c-accordion__toggle--BackgroundColor': `var(${token.name})`,
+            '--pf-v6-c-accordion__toggle--hover--BackgroundColor': `var(${token.name})`,
             fontSize: 'var(--pf-t--global--font--size--md)'
           };
           if (getContrastRatio(token.value, '#151515') > 4.5) {
-            itemStyle['--pf-v6-c-accordion__toggle-text--Color'] = 'var(--pf-t--global--text--color--regular)';
+            itemStyle['--pf-v6-c-accordion__toggle-text--Color'] = '#151515';
           }
           else if (getContrastRatio(token.value, '#151515') <= 4.5) {
-            itemStyle['--pf-v6-c-accordion__toggle-text--Color'] = 'var(--pf-t--global--text--color--inverse)';
+            itemStyle['--pf-v6-c-accordion__toggle-text--Color'] = '#FFFFFF';
           }
 
           const tokenList = Object.values(rootTokens)
@@ -58,20 +59,24 @@ export function ColorFamily({
                 onClick={() => expand(token.name)}
                 id={token.value.replace('#', 'color-')}
                 style={{
-                  backgroundColor: `var(${token.name}) !important`,
+                  backgroundColor: `${token.value} !important`,
                   color: itemStyle['--pf-v6-c-accordion__toggle-text--Color']
                 }}
               >
                 #{normalizeColor(token.value.toUpperCase())}
               </AccordionToggle>
               <AccordionContent>
-                <Title headingLevel="h4" size="md">CSS variables<span className='pf-v6-screen-reader'> {token.value.toUpperCase()}</span></Title>
-                {tokenList?.length > 0 && (
-                  <Content className="pf-v6-u-m-sm" component={ContentVariants.ol} isPlainList>
-                    {tokenList.map(tokenName =>
-                      <Content component={ContentVariants.li} key={tokenName}>{tokenName}</Content>
-                    )}
-                  </Content>
+                {tokenList?.length > 0 ? (
+                  <>
+                    <Title headingLevel="h4" size="md">Semantic tokens<span className='pf-v6-screen-reader'>for {token.value.toUpperCase()}</span></Title>
+                    <Content className="pf-v6-u-m-sm" component={ContentVariants.ol} isPlainList>
+                      {tokenList.map(tokenName =>
+                        <Content component={ContentVariants.li} key={tokenName}>{tokenName}</Content>
+                      )}
+                    </Content>
+                  </>
+                ) : (
+                  <Title headingLevel="h4" size="md">No semantic tokens<span className='pf-v6-screen-reader'>for {token.value.toUpperCase()}</span></Title>
                 )}
               </AccordionContent>
             </AccordionItem>
