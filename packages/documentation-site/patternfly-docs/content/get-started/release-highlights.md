@@ -70,7 +70,7 @@ We are still working on writing design guidelines to document usage rules for th
 
 We added 2 new react templates to help your migration efforts, including:
 - [Simple dropdown](/components/menus/dropdown/react-templates) 
-- [Typeahead select](/components/menus/select/react-templates) 
+- [Multi-typeahead select](/components/menus/select/react-templates) 
 
 We also updated some of our existing templates to address issues:
 - We fixed a bug that prevented initial selections from showing in simple select and checkbox select templates.
