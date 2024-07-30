@@ -74,7 +74,7 @@ These principles guide the use of motion in PatternFly, to ensure consistency an
 
 PatternFly components support motion in the form of **micro animations**, which are small, unobtrusive, and often understated. These animations serve specific purposes within a UI, and are designed to be subtle and complementary. 
 
-This behavior is built into PatternFly, so there is nothing additional you need to do to support motion. To meet accessibility requirements, reduced motion support is determined based on users' browser settings.
+Animations are largely built into PatternFly components, but there may be instances where you need to use our motion tokens to enable an animation in your specific scenarios. Wherever PatternFly provides animation, reduced motion support (based on users' browser settings) is provided.
 
 If you want to implement additional motion, or if you'd like to customize the default PatternFly behavior, [follow these practices.](#custom-motion)
 
@@ -112,7 +112,7 @@ An animation is composed of 4 elements: triggers, duration, easing, and properti
 ### Figma 
 In Figma, you can find annotations and prototype videos for each animation...
 
-### Tokens
+### Motion tokens
 
 PatternFly component animations are created using design tokens that cover the different elements of an animation, including duration, delay, and timing. Like we do with color tokens, we implement motion by using semantic tokens, which are built off of base tokens.
 
@@ -137,7 +137,7 @@ Timing-function tokens specify the easing path that an animation takes. These pa
 
 Options include: 
 - **Accelerate:** Use to specify when an animation should begin to speed up.
-- **Default:** Use to specify when an animation should maintain a cosistent speed.
+- **Default:** Use to specify when an animation should maintain a consistent speed.
 - **Decelerate:** Use to specify when an animation should begin to slow down.
 
 ### Motion patterns
@@ -150,5 +150,5 @@ For example, an "action fade" pattern may dictate how animation is applied when 
 
 For some scenarios, like creating a new [PatternFly extension](/extensions/about-extensions), you may need to customize motion that doesn't already exist in PatternFly components. When you're creating a new animation behavior, make sure that:
 - There is no existing support for the animation.
-- The animation adheres to our motion principles. 
+- The animation adheres to our motion principles and respects users' [`prefers-reduced-motion` settings.](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-reduced-motion)
 - Your implementation uses appropriate semantic tokens. 
