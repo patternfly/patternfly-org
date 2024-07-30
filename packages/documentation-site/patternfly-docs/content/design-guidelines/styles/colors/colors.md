@@ -192,12 +192,8 @@ To check the contrast between background and text colors, use a <a href="https:/
 
 <Divider/>
 
-## PatternFly palettes
-Our color palettes are created as a system, designed to reinforce content and workflows. Our palettes are carefully chosen to support effective communication and adapt to the needs of your UI.
-
-Note that bright colors are used sparingly and are reserved for specific interactions, such as communicating status.
-
-Our color palettes are organized into "families" that contain different shades of the same hue. In the following palettes, you can expand each value color or shadow in a family to see more details.
+## Color families 
+Our color palettes are organized into "families" that contain different shades of the same hue. In the following families, you can expand each color to see related tokens.
 
 <Grid hasGutter>
   <GridItem xl2RowSpan={1} xl2={4} xl={6} xlRowSpan={2} sm={12}>
