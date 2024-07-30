@@ -204,7 +204,7 @@ Our color palettes are organized into "families" that contain different shades o
     <ColorFamily title="Green family" family="green" />
   </GridItem>
   <GridItem xl2={4} xl={6} sm={12}>
-    <ColorFamily title="Cyan family" family="teal" />
+    <ColorFamily title="Teal family" family="teal" />
   </GridItem>
   <GridItem xl2={4} xl={6} sm={12}>
     <ColorFamily title="Purple family" family="purple" />
