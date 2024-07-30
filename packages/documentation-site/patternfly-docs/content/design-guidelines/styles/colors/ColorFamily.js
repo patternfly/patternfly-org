@@ -50,7 +50,7 @@ export function ColorFamily({
           onClick={expandAll}
         >
           <h3 className="pf-v6-c-title pf-m-xl">
-            <AngleRightIcon className="pf-v6-c-accordion__toggle-icon ws-color-family-toggle-icon" />
+            <AngleRightIcon className="pf-v6-c-accordion__toggle-icon ws-color-family-toggle-icon" /> 
             {title}
           </h3>
         </dt>
@@ -71,10 +71,10 @@ export function ColorFamily({
             itemStyle.boxShadow = `var(${token.name})`;
           }
           else if (getContrastRatio(token.value, '#151515') <= 4.5) {
-            // itemStyle.color = 'var(--pf-v6-global--Color--light-100)';
+            itemStyle.color = 'var(--pf-v6-global--Color--light-100)';
           }
           else if (getContrastRatio(token.value, '#151515') > 4.5) {
-            // itemStyle.color = 'var(--pf-v6-global--palette--black-900)';
+            itemStyle.color = 'var(--pf-v6-global--palette--black-900)';
           }
           const expandedStyle = {};
           if (isExpanded && !isShadows) {
@@ -112,7 +112,7 @@ export function ColorFamily({
               </dd>
               {isExpanded && (
                 <dd className={`${tokenClass} ws-color-family-content`} style={expandedStyle}>
-                  <label className="ws-color-family-label">CSS variables</label>
+                  <label className="ws-color-family-label">Tokens</label>
                   {Object.values(rootTokens)
                     .filter(t => t.value === token.value)
                     .map(t => t.name)

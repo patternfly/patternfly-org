@@ -3,7 +3,7 @@ id: Typography
 section: design-foundations
 ---
 
-import { Text, TextContent, TextVariants, Title } from '@patternfly/react-core';
+import { Content, ContentVariants, Title } from '@patternfly/react-core';
 import correct from './typography_correct_spacing.png';
 import incorrect from './typography_incorrect_spacing.png';
 
@@ -11,8 +11,8 @@ You can use **typography** to create visual hierarchy in a UI. By creating a con
 
 This page outlines PatternFly's typography principles and standards, including token values and usage information.
 
-You can place text content on a page using the text or title component: 
-- **[Text component:](/components/text)** Used to create formatted blocks of text content. Text accepts all general HTML text formatting tags, including heading, paragraph, and list styles.
+You can place text content on a page using the content or title component: 
+- **[Content component:](/components/content)** Used to create formatted blocks of text content. Content accepts all general HTML text formatting tags, including heading, paragraph, and list styles.
 - **[Title component:](/components/title)** Used specifically for headings or title text in components. Title is flexible and allows you to set the size of the text and heading level independently.
 
 ## PatternFly fonts
@@ -78,8 +78,8 @@ All body text uses Red Hat Text.
 | Example | Tokens | Size | Line height | Usage | 
 | --- | --- | --- | --- | --- |
 |<p style="font-size:16px">Aa</p>  | --pf-t--global--font--size--body--lg | 1rem (16px) | 1.5 | Use for larger body text, like in xl empty states.  |
-| <TextContent><Text component={TextVariants.p}>Aa</Text></TextContent> | --pf-t--global--font--size--body--default | 0.875rem (14px) | 1.5 | Use for standard body text. |
-| <TextContent><Text component={TextVariants.small}>Aa</Text></TextContent>  | --pf-t--global--font--size--body--sm | 0.75rem (12px) | 1.5 | User for smaller body text, like helper text. |
+| <Content><Content component={ContentVariants.p}>Aa</Content></Content> | --pf-t--global--font--size--body--default | 0.875rem (14px) | 1.5 | Use for standard body text. |
+| <Content><Content component={ContentVariants.small}>Aa</Content></Content>  | --pf-t--global--font--size--body--sm | 0.75rem (12px) | 1.5 | User for smaller body text, like helper text. |
 
 ## Line height and spacing
 The line height of your text impacts how you should use [spacers](/design-foundations/spacers) in your design. 

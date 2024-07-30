@@ -1,5 +1,5 @@
 import React from 'react';
-import { Flex, FlexItem, Text } from '@patternfly/react-core';
+import { Flex, FlexItem, Content } from '@patternfly/react-core';
 import LinkIcon from '@patternfly/react-icons/dist/esm/icons/link-icon';
 import { Link } from '../link/link';
 import { slugger } from '../../helpers/slugger';
@@ -17,7 +17,7 @@ export const AutoLinkHeader = ({
   return (
     <Flex alignItems={{ default: 'alignItemsCenter'}} spaceItems={{ default: "spaceItemsSm" }}>
       <FlexItem>
-        <Text
+        <Content
           id={slug}
           component={headingLevel}
           className={css('ws-heading', className)}
@@ -27,7 +27,7 @@ export const AutoLinkHeader = ({
             <LinkIcon className="ws-heading-anchor-icon" style={{ verticalAlign: 'middle' }} />
           </Link>
           {children}
-        </Text>
+        </Content>
       </FlexItem>
       {metaText && <FlexItem>{metaText}</FlexItem>}
     </Flex>

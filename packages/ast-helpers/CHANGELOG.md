@@ -3,6 +3,71 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.4.0-alpha.58 (2024-07-29)
+
+
+### Features
+
+* **ver:** update v6 beta versions ([#4160](https://github.com/patternfly/patternfly-org/issues/4160)) ([7790b3c](https://github.com/patternfly/patternfly-org/commit/7790b3cefc5236815899320965a72b7b990cebca))
+
+
+
+
+
+# 1.4.0-alpha.57 (2024-07-29)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 1.4.0-alpha.56 (2024-07-29)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 1.4.0-alpha.55 (2024-07-26)
+
+
+### Bug Fixes
+
+* **react-console:** Updated to the latest prerelease of react console. ([#4156](https://github.com/patternfly/patternfly-org/issues/4156)) ([8f9f553](https://github.com/patternfly/patternfly-org/commit/8f9f5536bc0016b56b8be6133465809b084ca198))
+
+
+
+
+
+# 1.4.0-alpha.54 (2024-07-25)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 1.4.0-alpha.53 (2024-07-22)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 1.4.0-alpha.52 (2024-07-19)
+
+
+### Bug Fixes
+
+* update icons css and remove unused images ([#4146](https://github.com/patternfly/patternfly-org/issues/4146)) ([8dc1eaa](https://github.com/patternfly/patternfly-org/commit/8dc1eaa75d6a1d1f94a5ac04944224f477f30b6e))
+
+
+
+
+
 # 1.4.0-alpha.51 (2024-07-17)
 
 
