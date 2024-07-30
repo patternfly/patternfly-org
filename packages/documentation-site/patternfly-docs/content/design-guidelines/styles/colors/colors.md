@@ -2,7 +2,7 @@
 id: Colors
 section: design-foundations
 ---
-import { Alert, Grid, GridItem, Divider, Banner, Button, Stack } from '@patternfly/react-core';
+import { Alert, Grid, GridItem, Banner, Button, Stack } from '@patternfly/react-core';
 import { Table, Caption, Thead, Tr, Th, Tbody, Td } from '@patternfly/react-table';
 import ArrowRightIcon from '@patternfly/react-icons/dist/esm/icons/arrow-right-icon';
 import { ColorSwatch } from './ColorSwatch';
@@ -189,8 +189,6 @@ Status and state colors are indicators that communicate data and actions to user
 [Our goal](/accessibility/patternflys-accessibility/) is for PatternFly to meet [level AA requirements in the Web Content Accessibility Guidelines 2.1](https://www.w3.org/WAI/standards-guidelines/wcag/new-in-21/). To achieve level AA accessibility, your UI contrast ratios must be at or above 4.5:1 for normal text, 3:1 for large text, and 3:1 for graphics and other UI components. Additionally, on hover, link text color should have ample contrast from both the background color and the default state link color.
 
 To check the contrast between background and text colors, use a <a href="https://color.a11y.com/?wc3" target="_blank" className="pf-m-link">WCAG AA-compliance tool.</a>
-
-<Divider/>
 
 ## Color families 
 Our color palettes are organized into "families" that contain different shades of the same hue. In the following families, you can expand each color to see related tokens.
