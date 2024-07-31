@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 6.0.0-alpha.70 (2024-07-31)
+
+
+### Bug Fixes
+
+* update styles on color page ([#4157](https://github.com/patternfly/patternfly-org/issues/4157)) ([4df0b25](https://github.com/patternfly/patternfly-org/commit/4df0b255f70bfebbe78eb87b8406d435fe7f66ac))
+
+
+
+
+
 # 6.0.0-alpha.69 (2024-07-29)
 
 
