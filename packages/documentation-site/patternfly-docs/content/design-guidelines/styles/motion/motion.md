@@ -133,12 +133,14 @@ Duration tokens specify the length of time that different animation should take 
 Delay tokens specify the length of time that should pass before an animation begins. Delay options include none, short, default, and long.
 
 #### Timing 
-Timing-function tokens specify the easing path that an animation takes. These paths are defined by cubic bezier curves, which define the start and end points ... [fact check]
+Timing-function tokens specify the easing path that an animation takes. These paths are defined by [cubic Bezier curves,](https://developer.mozilla.org/en-US/docs/Web/CSS/easing-function#cubic_b%C3%A9zier_easing_functionyar) which define the start and end points of a curve, as well as its initial and final times and states.
 
 Options include: 
-- **Accelerate:** Use to specify when an animation should begin to speed up.
-- **Default:** Use to specify when an animation should maintain a consistent speed.
-- **Decelerate:** Use to specify when an animation should begin to slow down.
+- **Accelerate:** Specifies that the animation starts slowly and accelerates gradually until the end. Equivalent to an "ease-in" transition.
+
+- **Default:** Use default to specify that the animation starts slow, speeds up and slows down at the end. Equivalent to an "ease-in-out" transition.
+
+- **Decelerate:** Use decelerate to specify that the animation starts quickly and decelerates gradually until the end. Equivalent to an "ease-out" transition.
 
 ### Motion patterns
 
