@@ -200,7 +200,7 @@ export const Footer = () => (
                 product experiences—the open source way.
               </Content>
             </GridItem>
-            <GridItem className="ws-org-pfsite-footer-menu-social-links pf-v6-u-px-xl">
+            <GridItem className="ws-org-pfsite-footer-menu-social-links">
               <Link
                 to="//github.com/patternfly"
                 target="top"
