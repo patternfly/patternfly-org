@@ -1,5 +1,5 @@
 import React from "react";
-import { Badge } from "@patternfly/react-core";
+import { Label } from "@patternfly/react-core";
 import {
   Table,
   Caption,
@@ -17,7 +17,7 @@ import accessibleStyles from "@patternfly/react-styles/css/utilities/Accessibili
 
 export const PropsTable = ({ title, description, rows, allPropComponents }) => (
   <React.Fragment>
-    <AutoLinkHeader size="h3">{title}</AutoLinkHeader>
+    <AutoLinkHeader headingLevel="h3">{title}</AutoLinkHeader>
     <Table className="pf-v6-u-mt-md pf-v6-u-mb-lg" variant="compact" aria-label={title} gridBreakPoint="grid-lg">
       <Caption>
         {description && <div className="pf-v6-u-mb-md">{description}</div>}
@@ -62,12 +62,16 @@ export const PropsTable = ({ title, description, rows, allPropComponents }) => (
                     ""
                   )}
                   {row.beta && (
-                    <Badge
-                      key={`${row.name}-${idx}`}
-                      className="ws-beta-badge pf-v6-u-ml-sm"
-                    >
-                      Beta
-                    </Badge>
+                    <>
+                      {" "}
+                      <Label
+                        key={`${row.name}-${idx}`}
+                        color="blue"
+                        isCompact
+                      >
+                        Beta
+                      </Label>
+                    </>
                   )}
                 </TableText>
               </Td>

@@ -195,8 +195,6 @@ Plain inline alerts are commonly used in the following situations:
  
 </div>
  
-<br />
- 
 - Be concise. In one-line toast alerts, use fragments instead of sentences if possible.
  
 <div class="ws-content-table">
@@ -206,9 +204,7 @@ Plain inline alerts are commonly used in the following situations:
 | Message sent| Your message has been sent.|
  
 </div>
- 
-<br />
- 
+
 - In toast alerts containing links, describe how the user can navigate through the UI to perform the action. Learn more about how descriptive text supports accessibility in the next section.
  
 <div class="ws-content-table">
@@ -217,9 +213,7 @@ Plain inline alerts are commonly used in the following situations:
 |:------:|:---------:|
 | From the **Settings** tab, click **View logs.**| **View logs**|
  
-</div> 
- 
-<br />
+</div>
  
 ## Accessibility
 

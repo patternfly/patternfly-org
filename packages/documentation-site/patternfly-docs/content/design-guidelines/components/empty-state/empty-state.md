@@ -34,7 +34,6 @@ Use the [extra large empty state](#extra-large-empty-state) variation for gettin
 | Welcome to PatternFly | Welcome to PatternFly! |
 
 </div>
-<br /> 
 
 **Body**: Explain how the product or feature delivers value to the user. State what the user can do with the product instead of what the product enables them to do. This way, you give power to the user.
 
@@ -74,7 +73,6 @@ Use the [small empty state](#small-empty-state) variation for no results empty s
 | No results found | Your search did not yield any results |
 
 </div>
-<br /> 
 
 **Body**: Explain what the user should do next so that they can continue searching for what they need.
 
@@ -112,7 +110,6 @@ Use the [large empty state](#large-empty-state) variation for required configura
 | Start the configuration process and follow the on-screen instructions. | You cannot continue until you complete the configuration. |
 
 </div>
-<br />  
 
 **Button**: Give the user the ability to quickly take action on the task. 
 
@@ -139,8 +136,7 @@ Use the [large empty state](#large-empty-state) variation for no access empty st
 |:-------------------------------:|:--------------------------:|
 | Access permissions needed | Access denied |
 
-</div>
-<br />  
+</div> 
 
 **Body**: Explain what action the user must take to reach their goal of accessing the page.
 
@@ -151,7 +147,6 @@ Use the [large empty state](#large-empty-state) variation for no access empty st
 | To access PatternFly, ask your administrator to adjust your permissions. | You don’t have access to PatternFly. |
 
 </div>
-<br />  
 
 **Button**: Give the user the ability to easily leave the page and return to the dashboard, home page, or another main area of the product. 
 
@@ -210,7 +205,6 @@ Use the [extra large empty state](#extra-large-empty-state) variation for succes
 | You're all set | You have successfully registered |
 
 </div>
-<br />   
 
 **Body**: Give the user a next step so that they can continue using the product. If an additional confirmation is needed (such as a confirmation email), include that in the body, too. 
 
@@ -221,7 +215,6 @@ Use the [extra large empty state](#extra-large-empty-state) variation for succes
 | We emailed you a confirmation. Ready to explore other activities? | You can now exit. |
 
 </div>
-<br />    
 
 **Button**: Give the user the ability to easily take the next step. 
 
@@ -249,7 +242,6 @@ Use the [large empty state](#large-empty-state) variation for creation empty sta
 | No service accounts yet | No service accounts have been found |
 
 </div>
-<br />   
 
 **Body**: Explain what the user needs to do next.
 

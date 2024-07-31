@@ -3,6 +3,246 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.4.0-alpha.59 (2024-07-31)
+
+
+### Bug Fixes
+
+* update styles on color page ([#4157](https://github.com/patternfly/patternfly-org/issues/4157)) ([4df0b25](https://github.com/patternfly/patternfly-org/commit/4df0b255f70bfebbe78eb87b8406d435fe7f66ac))
+
+
+
+
+
+# 1.4.0-alpha.58 (2024-07-29)
+
+
+### Features
+
+* **ver:** update v6 beta versions ([#4160](https://github.com/patternfly/patternfly-org/issues/4160)) ([7790b3c](https://github.com/patternfly/patternfly-org/commit/7790b3cefc5236815899320965a72b7b990cebca))
+
+
+
+
+
+# 1.4.0-alpha.57 (2024-07-29)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 1.4.0-alpha.56 (2024-07-29)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 1.4.0-alpha.55 (2024-07-26)
+
+
+### Bug Fixes
+
+* **react-console:** Updated to the latest prerelease of react console. ([#4156](https://github.com/patternfly/patternfly-org/issues/4156)) ([8f9f553](https://github.com/patternfly/patternfly-org/commit/8f9f5536bc0016b56b8be6133465809b084ca198))
+
+
+
+
+
+# 1.4.0-alpha.54 (2024-07-25)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 1.4.0-alpha.53 (2024-07-22)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 1.4.0-alpha.52 (2024-07-19)
+
+
+### Bug Fixes
+
+* update icons css and remove unused images ([#4146](https://github.com/patternfly/patternfly-org/issues/4146)) ([8dc1eaa](https://github.com/patternfly/patternfly-org/commit/8dc1eaa75d6a1d1f94a5ac04944224f477f30b6e))
+
+
+
+
+
+# 1.4.0-alpha.51 (2024-07-17)
+
+
+### Bug Fixes
+
+* clean up typography.css ([#4089](https://github.com/patternfly/patternfly-org/issues/4089)) ([8c1d66d](https://github.com/patternfly/patternfly-org/commit/8c1d66d4ce131b1b4638f291bb51013a976749bb))
+
+
+
+
+
+# 1.4.0-alpha.50 (2024-07-17)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 1.4.0-alpha.49 (2024-07-16)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 1.4.0-alpha.48 (2024-07-11)
+
+
+### Bug Fixes
+
+* css clean up - esp sidenavlayout.css ([#4129](https://github.com/patternfly/patternfly-org/issues/4129)) ([fc9d721](https://github.com/patternfly/patternfly-org/commit/fc9d721d9d4a1a14ab0bb2d66d1c68fb2d90ca7c))
+
+
+
+
+
+# 1.4.0-alpha.47 (2024-07-11)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 1.4.0-alpha.46 (2024-07-10)
+
+
+### Bug Fixes
+
+* clean up community and trainging card css ([#4127](https://github.com/patternfly/patternfly-org/issues/4127)) ([eb9a231](https://github.com/patternfly/patternfly-org/commit/eb9a23103cb6e54f38e2eae5056f2a53cd4a430e))
+
+
+
+
+
+# 1.4.0-alpha.45 (2024-07-10)
+
+
+### Bug Fixes
+
+* clean up spacers.css ([#4088](https://github.com/patternfly/patternfly-org/issues/4088)) ([e13a093](https://github.com/patternfly/patternfly-org/commit/e13a09302aea90b66e8fbe47b9f5386baea43835))
+
+
+
+
+
+# 1.4.0-alpha.44 (2024-07-10)
+
+
+### Bug Fixes
+
+* clean up mdx.css (after examples.css merges) ([#4084](https://github.com/patternfly/patternfly-org/issues/4084)) ([6e7f86f](https://github.com/patternfly/patternfly-org/commit/6e7f86ffb8346449a6ad26338df157a71e4730aa))
+
+
+
+
+
+# 1.4.0-alpha.43 (2024-07-08)
+
+
+### Bug Fixes
+
+* bump core/react to latest alphas ([#4125](https://github.com/patternfly/patternfly-org/issues/4125)) ([a48812d](https://github.com/patternfly/patternfly-org/commit/a48812df7438286efe21b34df3c8909eaeee7133))
+
+
+
+
+
+# 1.4.0-alpha.42 (2024-07-08)
+
+
+### Bug Fixes
+
+* clean up toc/JumpLinks styling ([#4083](https://github.com/patternfly/patternfly-org/issues/4083)) ([9840ac3](https://github.com/patternfly/patternfly-org/commit/9840ac35087b9e79a51d6c14f4c320586acd817f))
+
+
+
+
+
+# 1.4.0-alpha.41 (2024-06-27)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 1.4.0-alpha.40 (2024-06-27)
+
+
+### Bug Fixes
+
+* return ws-preview-html class to core examples ([#4111](https://github.com/patternfly/patternfly-org/issues/4111)) ([fc0de79](https://github.com/patternfly/patternfly-org/commit/fc0de79d142da35b352c33519898e7e9243950fe))
+
+
+
+
+
+# 1.4.0-alpha.39 (2024-06-20)
+
+
+### Bug Fixes
+
+* clean up gdpr banner styles ([#4082](https://github.com/patternfly/patternfly-org/issues/4082)) ([1ed25c5](https://github.com/patternfly/patternfly-org/commit/1ed25c500fa83434d2df266464acae3e84e34bf3))
+
+
+
+
+
+# 1.4.0-alpha.38 (2024-06-20)
+
+
+### Bug Fixes
+
+* cleaning out example.css ([#4081](https://github.com/patternfly/patternfly-org/issues/4081)) ([c06d13d](https://github.com/patternfly/patternfly-org/commit/c06d13d63df648f64e1c07f4e0ddb24e845ef405))
+
+
+
+
+
+# 1.4.0-alpha.37 (2024-06-18)
+
+
+### Bug Fixes
+
+* add component groups alpha docs ([#4105](https://github.com/patternfly/patternfly-org/issues/4105)) ([f9c2be1](https://github.com/patternfly/patternfly-org/commit/f9c2be12f74dad69e390ba66af5cc34a350fa619))
+
+
+
+
+
+# 1.4.0-alpha.36 (2024-06-17)
+
+
+### Features
+
+* **docs-framework:** Update AutoLinkHeader to use the Text component ([#4049](https://github.com/patternfly/patternfly-org/issues/4049)) ([3a9c9a0](https://github.com/patternfly/patternfly-org/commit/3a9c9a08ff373def8b751b947e70580dcbc9e6da))
+
+
+
+
+
 # 1.4.0-alpha.35 (2024-06-17)
 
 

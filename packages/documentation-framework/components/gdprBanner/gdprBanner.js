@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button } from '@patternfly/react-core';
+import { Panel, PanelMain, PanelMainBody, Flex, FlexItem, Button } from '@patternfly/react-core';
 import TimesIcon from '@patternfly/react-icons/dist/esm/icons/times-icon';
 import './gdprBanner.css';
 
@@ -13,19 +13,25 @@ export const GdprBanner = () => {
   }
 
   return !isBannerOpen ? null : (
-    <section aria-label="Cookies on PatternFly" className="ws-gdpr-banner-container pf-v6-l-flex">
-      <div id="ws-gdpr-banner" className="pf-v6-l-flex pf-v6-u-py-md pf-m-align-items-center">
-        <p id="ws-gdpr-banner-text" className="pf-v6-u-ml-xl">
-          We use cookies on our websites to deliver our online services.
-          Details about how we use cookies and how you may disable them are set out in our <a href="//www.redhat.com/en/about/privacy-policy">Privacy Statement</a>.
-          By using this website you agree to our use of cookies.
-        </p>
-        <div className="pf-m-align-self-flex-start">
-          <Button variant="plain" aria-label="Close banner" onClick={closeBanner}>
-            <TimesIcon />
-          </Button>
-        </div>
-      </div>
-    </section>
+    <Flex className="ws-gdpr-banner-container">
+    <Panel variant="bordered" className="pf-m-raised" id="ws-gdpr-banner">
+      <PanelMain>
+        <PanelMainBody>
+          <Flex flexWrap={{default: 'nowrap'}} alignItems={{default: 'alignItemsFlexStart'}}>
+            <FlexItem className="pf-v6-u-ml-xl">
+              We use cookies on our websites to deliver our online services.
+              Details about how we use cookies and how you may disable them are set out in our <a href="//www.redhat.com/en/about/privacy-policy">Privacy Statement</a>.
+              By using this website you agree to our use of cookies.
+            </FlexItem>
+            <FlexItem>
+              <Button variant="plain" aria-label="Close banner" onClick={closeBanner}>
+                <TimesIcon />
+              </Button>
+            </FlexItem>
+          </Flex>
+        </PanelMainBody>
+      </PanelMain>
+    </Panel>
+    </Flex>
   );
 }

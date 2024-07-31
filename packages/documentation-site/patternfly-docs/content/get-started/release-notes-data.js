@@ -1,5 +1,5 @@
 import React from "react";
-import { CodeBlock, CodeBlockCode, TextContent, Text, TextList, TextListItem, TextVariants } from '@patternfly/react-core';
+import { CodeBlock, CodeBlockCode, Content, ContentVariants } from '@patternfly/react-core';
 import {
   Table,
   Tbody,
@@ -40,33 +40,33 @@ export const releaseNotes = [
     description: "Deprecated various properties.",
     pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/9092",
     details: (
-      <TextContent>
-        <Text component={TextVariants.p}>Deprecated the following properties:</Text>
-        <TextList>
-          <TextListItem>isSelectableRaised</TextListItem>
-          <TextListItem>isDisabledRaised</TextListItem>
-          <TextListItem>hasSelectableInput</TextListItem>
-          <TextListItem>selectableInputAriaLabel</TextListItem>
-          <TextListItem>selectableInputAriaLabel</TextListItem>
-        </TextList>
-        <Text component={TextVariants.p}>
+      <Content>
+        <Content component={ContentVariants.p}>Deprecated the following properties:</Content>
+        <Content component="ul">
+          <Content component="li">isSelectableRaised</Content>
+          <Content component="li">isDisabledRaised</Content>
+          <Content component="li">hasSelectableInput</Content>
+          <Content component="li">selectableInputAriaLabel</Content>
+          <Content component="li">selectableInputAriaLabel</Content>
+        </Content>
+        <Content component={ContentVariants.p}>
           We recommend using our new implementation of clickable and selectable cards instead. Codemods will raise a warning, but can provide fixes when using the `isSelectableRaised` or `isDisabledRaised` properties.
-        </Text>
-        <Text component={TextVariants.h2}>Example in</Text>
+        </Content>
+        <Content component={ContentVariants.h2}>Example in</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`<Card isSelectableRaised isDisabledRaised />
 <Card isSelectableRaised hasSelectableInput />`}
           </CodeBlockCode>
         </CodeBlock>
-        <Text component={TextVariants.h2}>Example out</Text>
+        <Content component={ContentVariants.h2}>Example out</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`<Card isSelectable isDisabled />
 <Card isSelectable hasSelectableInput tabIndex={0} />`}
           </CodeBlockCode>
         </CodeBlock>
-      </TextContent>
+      </Content>
     ),
     repo: "React",
     fixedWithCodeMod: true
@@ -77,21 +77,21 @@ export const releaseNotes = [
     repo: "React",
     fixedWithCodeMod: true,
     details:(
-      <TextContent>
-        <Text component={TextVariants.p}>Codemods will make the following updates:</Text>
-        <Text component={TextVariants.h2}>Example in</Text>
+      <Content>
+        <Content component={ContentVariants.p}>Codemods will make the following updates:</Content>
+        <Content component={ContentVariants.h2}>Example in</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`<Card isHoverable />`}
           </CodeBlockCode>
         </CodeBlock>
-        <Text component={TextVariants.h2}>Example out</Text>
+        <Content component={ContentVariants.h2}>Example out</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`<Card  />`}
           </CodeBlockCode>
         </CodeBlock>
-      </TextContent>
+      </Content>
     )
   }, {
     component: "Card",
@@ -100,9 +100,9 @@ export const releaseNotes = [
     repo: "React",
     fixedWithCodeMod: true,
     details:(
-      <TextContent>
-        <Text component={TextVariants.p}>Codemods will make the following updates:</Text>
-        <Text component={TextVariants.h2}>Example in</Text>
+      <Content>
+        <Content component={ContentVariants.p}>Codemods will make the following updates:</Content>
+        <Content component={ContentVariants.h2}>Example in</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`<Card onSelectableInputChange={(id) => handler(id)} />
@@ -112,7 +112,7 @@ function handler2(id) {};
 <Card onSelectableInputChange={handler2}>`}
           </CodeBlockCode>
         </CodeBlock>
-        <Text component={TextVariants.h2}>Example out</Text>
+        <Content component={ContentVariants.h2}>Example out</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`<Card onSelectableInputChange={(_event, id) => handler(id)} />
@@ -122,7 +122,7 @@ function handler2(_event, id) {};
 <Card onSelectableInputChange={handler2}>`}
           </CodeBlockCode>
         </CodeBlock>
-      </TextContent>
+      </Content>
     )
   }, {
     component: "Card",
@@ -137,9 +137,9 @@ function handler2(_event, id) {};
     repo: "React",
     fixedWithCodeMod: true,
     details: (
-      <TextContent>
-        <Text component={TextVariants.p}>Codemods will make the following updates:</Text>
-        <Text component={TextVariants.h2}>Example in</Text>
+      <Content>
+        <Content component={ContentVariants.p}>Codemods will make the following updates:</Content>
+        <Content component={ContentVariants.h2}>Example in</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`<CardHeader>
@@ -148,7 +148,7 @@ function handler2(_event, id) {};
 </CardHeader>`}
           </CodeBlockCode>
         </CodeBlock>
-        <Text component={TextVariants.h2}>Example out</Text>
+        <Content component={ContentVariants.h2}>Example out</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`<CardHeader actions={{ actions: <><Button>Card action</Button></>, hasNoOffset: true, className: "test"}} >
@@ -157,7 +157,7 @@ function handler2(_event, id) {};
 </CardHeader>`}
           </CodeBlockCode>
         </CodeBlock>
-      </TextContent>
+      </Content>
     )
   }, {
     component: "Sidebar",
@@ -496,20 +496,20 @@ function handler2(_event, id) {};
     description: (<>Replaced the <code className='ws-code'>isVertical</code> flag with the <code className='ws-code'>orientation</code> property that can define verticality on different breakpoints.</>),
     pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/8199",
     details: (
-      <TextContent>
-        <Text component={TextVariants.h2}>Example in</Text>
+      <Content>
+        <Content component={ContentVariants.h2}>Example in</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`<Divider isVertical />`}
           </CodeBlockCode>
         </CodeBlock>
-        <Text component={TextVariants.h2}>Example out</Text>
+        <Content component={ContentVariants.h2}>Example out</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`<Divider orientation={{ default: "vertical" }} />`}
           </CodeBlockCode>
         </CodeBlock>
-      </TextContent>
+      </Content>
     ),
     repo: "React",
     fixedWithCodeMod: true
@@ -519,8 +519,8 @@ function handler2(_event, id) {};
     description: (<>The <code className='ws-code'>onResize</code> property in <code className='ws-code'>DrawerPanelContent</code> to take the <code className='ws-code'>event</code> as its first parameter. Handlers may require an update.</>),
     pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/8736",
     details: (
-      <TextContent>
-        <Text component={TextVariants.h2}>Example in</Text>
+      <Content>
+        <Content component={ContentVariants.h2}>Example in</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`<DrawerPanelContent onResize={(width, id) => onChange(checked)} />
@@ -532,7 +532,7 @@ function handler2(_event, id) {};
     <DrawerPanelContent onResize={onResize2}>`}
           </CodeBlockCode>
         </CodeBlock>
-        <Text component={TextVariants.h2}>Example out</Text>
+        <Content component={ContentVariants.h2}>Example out</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`<DrawerPanelContent onResize={(_event, width, id) => onChange(checked)} />
@@ -544,7 +544,7 @@ function handler2(_event, id) {};
     <DrawerPanelContent onResize={onResize2}>`}
           </CodeBlockCode>
         </CodeBlock>
-      </TextContent>
+      </Content>
     ),
     repo: "React",
     fixedWithCodeMod: true
@@ -554,42 +554,42 @@ function handler2(_event, id) {};
     description: (<>Deprecated the current implementation of dropdown.</>),
     pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/8835",
     details: (
-      <TextContent>
-        <Text component={TextVariants.p}>In order to continue using this deprecated implementation, the import path must be updated to our deprecated package and specifiers must be aliased. However, we suggest updating to our newer implementation of dropdown.
+      <Content>
+        <Content component={ContentVariants.p}>In order to continue using this deprecated implementation, the import path must be updated to our deprecated package and specifiers must be aliased. However, we suggest updating to our newer implementation of dropdown.
 
           The following imports will be affected by this deprecation:
-        </Text>
-        <TextList>
-          <TextListItem>BadgeToggle</TextListItem>
-          <TextListItem>Dropdown</TextListItem>
-          <TextListItem>DropdownPosition</TextListItem>
-          <TextListItem>DropdownDirection</TextListItem>
-          <TextListItem>DropdownContext</TextListItem>
-          <TextListItem>DropdownArrowContext</TextListItem>
-          <TextListItem>DropdownGroup</TextListItem>
-          <TextListItem>DropdownItem</TextListItem>
-          <TextListItem>DropdownMenu</TextListItem>
-          <TextListItem>DropdownSeparator</TextListItem>
-          <TextListItem>DropdownToggle</TextListItem>
-          <TextListItem>DropdownToggleAction</TextListItem>
-          <TextListItem>DropdownToggleCheckbox</TextListItem>
-          <TextListItem>DropdownWithContext</TextListItem>
-          <TextListItem>KebabToggle</TextListItem>
-        </TextList>
-        <Text component={TextVariants.h2}>Example in</Text>
+        </Content>
+        <Content component="ul">
+          <Content component="li">BadgeToggle</Content>
+          <Content component="li">Dropdown</Content>
+          <Content component="li">DropdownPosition</Content>
+          <Content component="li">DropdownDirection</Content>
+          <Content component="li">DropdownContext</Content>
+          <Content component="li">DropdownArrowContext</Content>
+          <Content component="li">DropdownGroup</Content>
+          <Content component="li">DropdownItem</Content>
+          <Content component="li">DropdownMenu</Content>
+          <Content component="li">DropdownSeparator</Content>
+          <Content component="li">DropdownToggle</Content>
+          <Content component="li">DropdownToggleAction</Content>
+          <Content component="li">DropdownToggleCheckbox</Content>
+          <Content component="li">DropdownWithContext</Content>
+          <Content component="li">KebabToggle</Content>
+        </Content>
+        <Content component={ContentVariants.h2}>Example in</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`import { Dropdown, DropdownPosition, Button } from '@patternfly/react-core';`}
           </CodeBlockCode>
         </CodeBlock>
-        <Text component={TextVariants.h2}>Example out</Text>
+        <Content component={ContentVariants.h2}>Example out</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`import { Button } from '@patternfly/react-core';
     import { Dropdown, DropdownPosition } from '@patternfly/react-core/deprecated';`}
           </CodeBlockCode>
         </CodeBlock>
-      </TextContent>
+      </Content>
     ),
     repo: "React",
     fixedWithCodeMod: true
@@ -599,20 +599,20 @@ function handler2(_event, id) {};
     description: (<>Removed the <code className='ws-code'>isHovered</code> property from <code className='ws-code'>DropdownItem</code>.</>),
     pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/8179",
     details: (
-      <TextContent>
-        <Text component={TextVariants.h2}>Example in</Text>
+      <Content>
+        <Content component={ContentVariants.h2}>Example in</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`<DropdownItem isHovered={isHovered} />`}
           </CodeBlockCode>
         </CodeBlock>
-        <Text component={TextVariants.h2}>Example out</Text>
+        <Content component={ContentVariants.h2}>Example out</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`<DropdownItem  />`}
           </CodeBlockCode>
         </CodeBlock>
-      </TextContent>
+      </Content>
     ),
     repo: "React",
     fixedWithCodeMod: true
@@ -622,20 +622,20 @@ function handler2(_event, id) {};
     description: (<>Removed the <code className='ws-code'>openedOnEnter</code> property from <code className='ws-code'>DropdownMenu</code>.</>),
     pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/8179",
     details: (
-      <TextContent>
-        <Text component={TextVariants.h2}>Example in</Text>
+      <Content>
+        <Content component={ContentVariants.h2}>Example in</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`<DropdownMenu openedOnEnter={false} />`}
           </CodeBlockCode>
         </CodeBlock>
-        <Text component={TextVariants.h2}>Example out</Text>
+        <Content component={ContentVariants.h2}>Example out</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`<DropdownMenu  />`}
           </CodeBlockCode>
         </CodeBlock>
-      </TextContent>
+      </Content>
     ),
     repo: "React",
     fixedWithCodeMod: true
@@ -646,20 +646,20 @@ function handler2(_event, id) {};
     description: (<>Replaced the deprecated <code className='ws-code'>isPrimary</code> property "primary" value on the <code className='ws-code'>toggleVariant</code> property from <code className='ws-code'>DropdownToggle</code></>),
     pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/8179",
     details: (
-      <TextContent>
-        <Text component={TextVariants.h2}>Example in</Text>
+      <Content>
+        <Content component={ContentVariants.h2}>Example in</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`<DropdownToggle isPrimary />`}
           </CodeBlockCode>
         </CodeBlock>
-        <Text component={TextVariants.h2}>Example out</Text>
+        <Content component={ContentVariants.h2}>Example out</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`<DropdownToggle toggleVariant="primary" />`}
           </CodeBlockCode>
         </CodeBlock>
-      </TextContent>
+      </Content>
     ),
     repo: "React",
     fixedWithCodeMod: true
@@ -669,8 +669,8 @@ function handler2(_event, id) {};
     description: (<>Updated <code className='ws-code'>onChange</code> property from <code className='ws-code'>DropdownToggleCheckbox</code> so that the <code className='ws-code'>event</code> parameter is included as the first parameter. Handlers may need to be updated.</>),
     pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/8787",
     details: (
-      <TextContent>
-        <Text component={TextVariants.h2}>Example in</Text>
+      <Content>
+        <Content component={ContentVariants.h2}>Example in</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`<DropdownToggleCheckbox onChange={(id) => handler(id)} />
@@ -679,7 +679,7 @@ function handler2(_event, id) {};
     <DropdownToggleCheckbox onChange={handler1}>`}
           </CodeBlockCode>
         </CodeBlock>
-        <Text component={TextVariants.h2}>Example out</Text>
+        <Content component={ContentVariants.h2}>Example out</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`<DropdownToggleCheckbox onChange={(_event, id) => handler(id)} />
@@ -688,7 +688,7 @@ function handler2(_event, id) {};
     <DropdownToggleCheckbox onChange={handler1}>`}
           </CodeBlockCode>
         </CodeBlock>
-      </TextContent>
+      </Content>
     ),
     repo: "React",
     fixedWithCodeMod: true
@@ -698,8 +698,8 @@ function handler2(_event, id) {};
     description: (<>The <code className='ws-code'>onAvailableOptionsSearchInputChanged</code>, <code className='ws-code'>onChosenOptionsSearchInputChanged</code> and <code className='ws-code'>onListChange</code> properties now take <code className='ws-code'>event</code> as the first parameter. Handlers may need to be updated.</>),
     pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/8793",
     details: (
-      <TextContent>
-        <Text component={TextVariants.h2}>Example in</Text>
+      <Content>
+        <Content component={ContentVariants.h2}>Example in</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`<DualListSelector onAvailableOptionsSearchInputChanged={(id) => handler(id)} />
@@ -723,7 +723,7 @@ function handler2(_event, id) {};
     <DualListSelector onListChange={handler2}>`}
           </CodeBlockCode>
         </CodeBlock>
-        <Text component={TextVariants.h2}>Example out</Text>
+        <Content component={ContentVariants.h2}>Example out</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`<DualListSelector onAvailableOptionsSearchInputChanged={(_event, id) => handler(id)} />
@@ -747,7 +747,7 @@ function handler2(_event, id) {};
     <DualListSelector onListChange={handler2}>`}
           </CodeBlockCode>
         </CodeBlock>
-      </TextContent>
+      </Content>
     ),
     repo: "React",
     fixedWithCodeMod: true
@@ -757,8 +757,8 @@ function handler2(_event, id) {};
     description: (<>Updated the <code className='ws-code'>onSelect</code> and <code className='ws-code'>clearSelection</code> properties on <code className='ws-code'>EditableSelectInputCell</code> to take <code className='ws-code'>event</code> as the first parameter. Handlers may need to be updated.</>),
     pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/9057",
     details: (
-      <TextContent>
-        <Text component={TextVariants.h2}>Example in</Text>
+      <Content>
+        <Content component={ContentVariants.h2}>Example in</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`<EditableSelectInputCell onSelect={(value) => onSelectHandler(value)} clearSelection={(row, cell) => clearSelectionHandler(row, cell)} />
@@ -771,7 +771,7 @@ function handler2(_event, id) {};
     <EditableSelectInputCell onSelect={onSelectHandler2} clearSelection={clearSelectionHandler2} />`}
           </CodeBlockCode>
         </CodeBlock>
-        <Text component={TextVariants.h2}>Example out</Text>
+        <Content component={ContentVariants.h2}>Example out</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`<EditableSelectInputCell onSelect={(_event, value) => onSelectHandler(value)} clearSelection={(_event, row, cell) => clearSelectionHandler(row, cell)} />
@@ -784,7 +784,7 @@ function handler2(_event, id) {};
     <EditableSelectInputCell onSelect={onSelectHandler2} clearSelection={clearSelectionHandler2} />`}
           </CodeBlockCode>
         </CodeBlock>
-      </TextContent>
+      </Content>
     ),
     repo: "React",
     fixedWithCodeMod: true
@@ -794,8 +794,8 @@ function handler2(_event, id) {};
     description: (<>Replaced the <code className='ws-code'>EmptyStatePrimary</code> and <code className='ws-code'>EmptyStateSecondaryActions</code> components with <code className='ws-code'>EmptyStateActions</code>.</>),
     pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/8737",
     details: (
-      <TextContent>
-        <Text component={TextVariants.h2}>Example in</Text>
+      <Content>
+        <Content component={ContentVariants.h2}>Example in</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`import { EmptyStatePrimary as Primary, EmptyStateSecondaryActions } from '@patternfly/react-core';
@@ -805,7 +805,7 @@ function handler2(_event, id) {};
     </>`}
           </CodeBlockCode>
         </CodeBlock>
-        <Text component={TextVariants.h2}>Example out</Text>
+        <Content component={ContentVariants.h2}>Example out</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`import { EmptyStateActions } from '@patternfly/react-core';
@@ -815,7 +815,7 @@ function handler2(_event, id) {};
     </>`}
           </CodeBlockCode>
         </CodeBlock>
-      </TextContent>
+      </Content>
     ),
     repo: "React",
     fixedWithCodeMod: true
@@ -828,8 +828,8 @@ function handler2(_event, id) {};
       Added the <code className='ws-code'>EmptyStateFooter</code> component. It should wrap the content which follows after <code className='ws-code'>EmptyStateBody</code> inside <code className='ws-code'>EmptyState</code>.</>),
     pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/8737",
     details: (
-      <TextContent>
-        <Text component={TextVariants.h2}>Example in</Text>
+      <Content>
+        <Content component={ContentVariants.h2}>Example in</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`    import { EmptyState, EmptyStateActions, EmptyStateBody, EmptyStateIcon, Title } from '@patternfly/react-core';
@@ -851,7 +851,7 @@ function handler2(_event, id) {};
     </EmptyState>`}
           </CodeBlockCode>
         </CodeBlock>
-        <Text component={TextVariants.h2}>Example out</Text>
+        <Content component={ContentVariants.h2}>Example out</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`import { EmptyState, EmptyStateActions, EmptyStateBody, EmptyStateIcon, EmptyStateHeader, EmptyStateFooter,  } from '@patternfly/react-core';
@@ -870,7 +870,7 @@ function handler2(_event, id) {};
     </EmptyStateFooter></EmptyState>`}
           </CodeBlockCode>
         </CodeBlock>
-      </TextContent>
+      </Content>
     ),
     repo: "React",
     fixedWithCodeMod: true
@@ -887,22 +887,22 @@ function handler2(_event, id) {};
     description: (<>Removed the <code className='ws-code'>variant</code> property from <code className='ws-code'>EmtpyStateIcon</code>. Replaced the <code className='ws-code'>component</code> property with the <code className='ws-code'>icon</code> property.</>),
     pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/8737",
     details: (
-      <TextContent>
-        <Text component={TextVariants.h2}>Example in</Text>
+      <Content>
+        <Content component={ContentVariants.h2}>Example in</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`<EmptyStateIcon icon={CubesIcon} variant="icon"/>
     <EmptyStateIcon component={Spinner} variant="container"/>`}
           </CodeBlockCode>
         </CodeBlock>
-        <Text component={TextVariants.h2}>Example out</Text>
+        <Content component={ContentVariants.h2}>Example out</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`<EmptyStateIcon icon={CubesIcon} />
     <EmptyStateIcon icon={Spinner} />`}
           </CodeBlockCode>
         </CodeBlock>
-      </TextContent>
+      </Content>
     ),
     repo: "React",
     fixedWithCodeMod: true
@@ -912,8 +912,8 @@ function handler2(_event, id) {};
     description: (<>Renamed the <code className='ws-code'>EmptyStateVariant</code> enum and property values "small" to "sm" and "large" to "lg".</>),
     pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/8737",
     details: (
-      <TextContent>
-        <Text component={TextVariants.h2}>Example in</Text>
+      <Content>
+        <Content component={ContentVariants.h2}>Example in</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`const myVariant = EmptyStateVariant.small;
@@ -922,7 +922,7 @@ function handler2(_event, id) {};
     <EmptyState variant="large" />`}
           </CodeBlockCode>
         </CodeBlock>
-        <Text component={TextVariants.h2}>Example out</Text>
+        <Content component={ContentVariants.h2}>Example out</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`const myVariant = EmptyStateVariant.sm;
@@ -931,7 +931,7 @@ function handler2(_event, id) {};
     <EmptyState variant="lg" />`}
           </CodeBlockCode>
         </CodeBlock>
-      </TextContent>
+      </Content>
     ),
     repo: "React",
     fixedWithCodeMod: true
@@ -941,20 +941,20 @@ function handler2(_event, id) {};
     description: (<>Renamed the <code className='ws-code'>large</code> property value of <code className='ws-code'>displaySize</code> to <code className='ws-code'>lg.</code></>),
     pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/8212",
     details: (
-      <TextContent>
-        <Text component={TextVariants.h2}>Example in</Text>
+      <Content>
+        <Content component={ContentVariants.h2}>Example in</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`<ExpandableSection displaySize="large" />`}
           </CodeBlockCode>
         </CodeBlock>
-        <Text component={TextVariants.h2}>Example out</Text>
+        <Content component={ContentVariants.h2}>Example out</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`<ExpandableSection displaySize="lg" />`}
           </CodeBlockCode>
         </CodeBlock>
-      </TextContent>
+      </Content>
     ),
     repo: "React",
     fixedWithCodeMod: true
@@ -964,8 +964,8 @@ function handler2(_event, id) {};
     description: (<>Updated the <code className='ws-code'>onToggle</code> property so that the <code className='ws-code'>event</code> parameter is the first parameter. Handlers may require an update.</>),
     pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/8880",
     details: (
-      <TextContent>
-        <Text component={TextVariants.h2}>Example in</Text>
+      <Content>
+        <Content component={ContentVariants.h2}>Example in</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`<ExpandableSection onToggle={(id) => handler(id)} />
@@ -975,7 +975,7 @@ function handler2(_event, id) {};
     <ExpandableSection onToggle={handler2} />`}
           </CodeBlockCode>
         </CodeBlock>
-        <Text component={TextVariants.h2}>Example out</Text>
+        <Content component={ContentVariants.h2}>Example out</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`<ExpandableSection onToggle={(_event, id) => handler(id)} />
@@ -985,7 +985,7 @@ function handler2(_event, id) {};
     <ExpandableSection onToggle={handler2} />`}
           </CodeBlockCode>
         </CodeBlock>
-      </TextContent>
+      </Content>
     ),
     repo: "React",
     fixedWithCodeMod: true
@@ -995,8 +995,8 @@ function handler2(_event, id) {};
     description: (<>Updated the <code className='ws-code'>onTextChange</code> property for <code className='ws-code'>FileUploadField</code> and <code className='ws-code'>FileUpload</code> so that the <code className='ws-code'>event</code> parameter is the first parameter. Handlers may require an update.</>),
     pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/8955",
     details: (
-      <TextContent>
-        <Text component={TextVariants.h2}>Example in</Text>
+      <Content>
+        <Content component={ContentVariants.h2}>Example in</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`<FileUpload onTextChange={text => textHandler(text)} />
@@ -1011,7 +1011,7 @@ function handler2(_event, id) {};
     <FileUploadField onTextChange={textHandler5} />`}
           </CodeBlockCode>
         </CodeBlock>
-        <Text component={TextVariants.h2}>Example out</Text>
+        <Content component={ContentVariants.h2}>Example out</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`<FileUpload onTextChange={(_event, text) => textHandler(text)} />
@@ -1026,7 +1026,7 @@ function handler2(_event, id) {};
     <FileUploadField onTextChange={textHandler5} />`}
           </CodeBlockCode>
         </CodeBlock>
-      </TextContent>
+      </Content>
     ),
     repo: "React",
     fixedWithCodeMod: true
@@ -1036,8 +1036,8 @@ function handler2(_event, id) {};
     description: (<>Updated the <code className='ws-code'>onDataChange</code>, <code className='ws-code'>onReadFailed</code>, <code className='ws-code'>onReadFinished</code>, and <code className='ws-code'>onReadStarted</code> properties so that the <code className='ws-code'>event</code> parameter is the first parameter. Handlers may require an update.</>),
     pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/8960",
     details: (
-      <TextContent>
-        <Text component={TextVariants.h2}>Example in</Text>
+      <Content>
+        <Content component={ContentVariants.h2}>Example in</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`<FileUpload
@@ -1070,7 +1070,7 @@ function handler2(_event, id) {};
     />;`}
           </CodeBlockCode>
         </CodeBlock>
-        <Text component={TextVariants.h2}>Example out</Text>
+        <Content component={ContentVariants.h2}>Example out</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`<FileUpload
@@ -1103,7 +1103,7 @@ function handler2(_event, id) {};
     />;`}
           </CodeBlockCode>
         </CodeBlock>
-      </TextContent>
+      </Content>
     ),
     repo: "React",
     fixedWithCodeMod: true
@@ -1113,20 +1113,20 @@ function handler2(_event, id) {};
     description: (<>Removed the deprecated <code className='ws-code'>onChange</code> property. This rule will remove the property and suggest replacing it with the <code className='ws-code'>onFileInputChange</code>, <code className='ws-code'>onTextChange</code>, <code className='ws-code'>onDataChange</code>, and <code className='ws-code'>onClearClick</code> properties as needed.</>),
     pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/8155",
     details: (
-      <TextContent>
-        <Text component={TextVariants.h2}>Example in</Text>
+      <Content>
+        <Content component={ContentVariants.h2}>Example in</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`<FileUpload onChange={onChange} />`}
           </CodeBlockCode>
         </CodeBlock>
-        <Text component={TextVariants.h2}>Example out</Text>
+        <Content component={ContentVariants.h2}>Example out</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`<FileUpload  /> `}
           </CodeBlockCode>
         </CodeBlock>
-      </TextContent>
+      </Content>
     ),
     repo: "React",
     fixedWithCodeMod: true
@@ -1136,14 +1136,14 @@ function handler2(_event, id) {};
     description: (<>Some properties have been removed from a few form control components.</>),
     pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/9132",
     details: (
-      <TextContent>
-        <Text component={TextVariants.p}>Affected components - properties:</Text>
-        <TextList>
-          <TextListItem>FormSelect - isIconSprite</TextListItem>
-          <TextListItem>TextArea - isIconSprite, isReadOnly</TextListItem>
-          <TextListItem>TextInput - isIconSprite, isReadOnly, iconVariant, customIconUrl, customIconDimensions</TextListItem>
-        </TextList>
-        <Text component={TextVariants.h2}>Example in</Text>
+      <Content>
+        <Content component={ContentVariants.p}>Affected components - properties:</Content>
+        <Content component="ul">
+          <Content component="li">FormSelect - isIconSprite</Content>
+          <Content component="li">TextArea - isIconSprite, isReadOnly</Content>
+          <Content component="li">TextInput - isIconSprite, isReadOnly, iconVariant, customIconUrl, customIconDimensions</Content>
+        </Content>
+        <Content component={ContentVariants.h2}>Example in</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`<FormSelect isIconSprite />
@@ -1154,7 +1154,7 @@ function handler2(_event, id) {};
     <TextArea isReadOnly readOnlyVariant="plain" >`}
           </CodeBlockCode>
         </CodeBlock>
-        <Text component={TextVariants.h2}>Example out</Text>
+        <Content component={ContentVariants.h2}>Example out</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`<FormSelect  />
@@ -1165,7 +1165,7 @@ function handler2(_event, id) {};
     <TextArea  readOnlyVariant="plain" >`}
           </CodeBlockCode>
         </CodeBlock>
-      </TextContent>
+      </Content>
     ),
     repo: "React",
     fixedWithCodeMod: true
@@ -1175,24 +1175,24 @@ function handler2(_event, id) {};
     description: (<>Changed the markup for several form control components. Selectors may need to be updated.</>),
     pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/9132",
     details: (
-      <TextContent>
-        <Text component={TextVariants.p}>Affected components:</Text>
-        <TextList>
-          <TextListItem>FormSelect</TextListItem>
-          <TextListItem>TextArea</TextListItem>
-          <TextListItem>TextInput</TextListItem>
-          <TextListItem>TimePicker</TextListItem>
-          <TextListItem>ClipboardCopy</TextListItem>
-          <TextListItem>DatePicker</TextListItem>
-          <TextListItem>FileUpload</TextListItem>
-          <TextListItem>LoginPage</TextListItem>
-          <TextListItem>NumberInput</TextListItem>
-          <TextListItem>SearchInput</TextListItem>
-          <TextListItem>Slider - only when the <code className='ws-code'>isInputVisible</code> property is passed in</TextListItem>
-          <TextListItem>TreeViewSearch</TextListItem>
-          <TextListItem>Select - only the deprecated implementation with the <code className='ws-code'>hasInlineFilter</code> property passed in</TextListItem>
-        </TextList>
-      </TextContent>
+      <Content>
+        <Content component={ContentVariants.p}>Affected components:</Content>
+        <Content component="ul">
+          <Content component="li">FormSelect</Content>
+          <Content component="li">TextArea</Content>
+          <Content component="li">TextInput</Content>
+          <Content component="li">TimePicker</Content>
+          <Content component="li">ClipboardCopy</Content>
+          <Content component="li">DatePicker</Content>
+          <Content component="li">FileUpload</Content>
+          <Content component="li">LoginPage</Content>
+          <Content component="li">NumberInput</Content>
+          <Content component="li">SearchInput</Content>
+          <Content component="li">Slider - only when the <code className='ws-code'>isInputVisible</code> property is passed in</Content>
+          <Content component="li">TreeViewSearch</Content>
+          <Content component="li">Select - only the deprecated implementation with the <code className='ws-code'>hasInlineFilter</code> property passed in</Content>
+        </Content>
+      </Content>
     ),
     repo: "React",
     fixedWithCodeMod: false
@@ -1202,8 +1202,8 @@ function handler2(_event, id) {};
     description: (<>Removed the helper text related properties from <code className='ws-code'>FormGroup</code>: <code className='ws-code'>helperText</code>, <code className='ws-code'>helperTextInvalid</code>, <code className='ws-code'>validated</code>, <code className='ws-code'>helperTextIcon</code>, <code className='ws-code'>helperTextInvalidIcon</code>, and <code className='ws-code'>isHelperTextBeforeField</code>. The <code className='ws-code'>FormHelperText</code>, <code className='ws-code'>HelperText</code>, and <code className='ws-code'>HelperTextItem</code> components should now be used directly as part of <code className='ws-code'>children</code> instead of these properties. This rule will throw an error but not make any changes.</>),
     pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/8810",
     details: (
-      <TextContent>
-        <Text component={TextVariants.h2}>Example in</Text>
+      <Content>
+        <Content component={ContentVariants.h2}>Example in</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`<FormGroup
@@ -1220,7 +1220,7 @@ function handler2(_event, id) {};
     </FormGroup>`}
           </CodeBlockCode>
         </CodeBlock>
-        <Text component={TextVariants.h2}>Example out</Text>
+        <Content component={ContentVariants.h2}>Example out</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`<FormGroup>
@@ -1243,7 +1243,7 @@ function handler2(_event, id) {};
     </FormGroup>`}
           </CodeBlockCode>
         </CodeBlock>
-      </TextContent>
+      </Content>
     ),
     repo: "React",
     fixedWithCodeMod: false
@@ -1253,20 +1253,20 @@ function handler2(_event, id) {};
     description: (<>Removed functionality from <code className='ws-code'>FormHelperText</code>, which will instead be covered by <code className='ws-code'>HelperText</code> and <code className='ws-code'>HelperTextItem</code>. This rule will remove the <code className='ws-code'>isError</code>, <code className='ws-code'>isHidden</code>, <code className='ws-code'>icon</code>, and <code className='ws-code'>component</code> properties if present. The <code className='ws-code'>HelperText</code> and <code className='ws-code'>HelperTextItem</code> components should now be used directly as part of <code className='ws-code'>children</code> instead of these properties.</>),
     pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/8810",
     details: (
-      <TextContent>
-        <Text component={TextVariants.h2}>Example in</Text>
+      <Content>
+        <Content component={ContentVariants.h2}>Example in</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`<FormHelperText isError={true} isHidden={false} icon={<Icon />} component="div" />`}
           </CodeBlockCode>
         </CodeBlock>
-        <Text component={TextVariants.h2}>Example out</Text>
+        <Content component={ContentVariants.h2}>Example out</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`<FormHelperText     />`}
           </CodeBlockCode>
         </CodeBlock>
-      </TextContent>
+      </Content>
     ),
     repo: "React",
     fixedWithCodeMod: true
@@ -1276,8 +1276,8 @@ function handler2(_event, id) {};
     description: (<>Updated the <code className='ws-code'>onChange</code> property so that the <code className='ws-code'>event</code> parameter is the first parameter. Handlers may require an update.</>),
     pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/8998",
     details: (
-      <TextContent>
-        <Text component={TextVariants.h2}>Example in</Text>
+      <Content>
+        <Content component={ContentVariants.h2}>Example in</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`<FormSelect onChange={(id) => handler(id)} />
@@ -1288,7 +1288,7 @@ function handler2(_event, id) {};
     <FormSelect onChange={handler2} />`}
           </CodeBlockCode>
         </CodeBlock>
-        <Text component={TextVariants.h2}>Example out</Text>
+        <Content component={ContentVariants.h2}>Example out</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`<FormSelect onChange={(_event, id) => handler(id)} />
@@ -1299,7 +1299,7 @@ function handler2(_event, id) {};
     <FormSelect onChange={handler2} />`}
           </CodeBlockCode>
         </CodeBlock>
-      </TextContent>
+      </Content>
     ),
     repo: "React",
     fixedWithCodeMod: true
@@ -1309,20 +1309,20 @@ function handler2(_event, id) {};
     description: (<>Renamed the <code className='ws-code'>hasCheck</code> property for the next implementation of SelectOption to <code className='ws-code'>hasCheckbox</code>.</>),
     pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/8403",
     details: (
-      <TextContent>
-        <Text component={TextVariants.h2}>Example in</Text>
+      <Content>
+        <Content component={ContentVariants.h2}>Example in</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`<SelectOption hasCheck />`}
           </CodeBlockCode>
         </CodeBlock>
-        <Text component={TextVariants.h2}>Example out</Text>
+        <Content component={ContentVariants.h2}>Example out</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`<SelectOption hasCheckbox />`}
           </CodeBlockCode>
         </CodeBlock>
-      </TextContent>
+      </Content>
     ),
     repo: "React",
     fixedWithCodeMod: true
@@ -1332,20 +1332,20 @@ function handler2(_event, id) {};
     description: (<>Renamed the <code className='ws-code'>hasCheck</code> property on <code className='ws-code'>MenuItem</code> to <code className='ws-code'>hasCheckbox</code>.</>),
     pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/8403",
     details: (
-      <TextContent>
-        <Text component={TextVariants.h2}>Example in</Text>
+      <Content>
+        <Content component={ContentVariants.h2}>Example in</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`<MenuItem hasCheck />`}
           </CodeBlockCode>
         </CodeBlock>
-        <Text component={TextVariants.h2}>Example out</Text>
+        <Content component={ContentVariants.h2}>Example out</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`<MenuItem hasCheckbox />`}
           </CodeBlockCode>
         </CodeBlock>
-      </TextContent>
+      </Content>
     ),
     repo: "React",
     fixedWithCodeMod: true
@@ -1355,20 +1355,20 @@ function handler2(_event, id) {};
     description: (<>Renamed the <code className='ws-code'>hasCheck</code> property to <code className='ws-code'>hasCheckbox</code>.</>),
     pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/8403",
     details: (
-      <TextContent>
-        <Text component={TextVariants.h2}>Example in</Text>
+      <Content>
+        <Content component={ContentVariants.h2}>Example in</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`<TreeView hasCheck />`}
           </CodeBlockCode>
         </CodeBlock>
-        <Text component={TextVariants.h2}>Example out</Text>
+        <Content component={ContentVariants.h2}>Example out</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`<TreeView hasCheckbox />`}
           </CodeBlockCode>
         </CodeBlock>
-      </TextContent>
+      </Content>
     ),
     repo: "React",
     fixedWithCodeMod: true
@@ -1385,8 +1385,8 @@ function handler2(_event, id) {};
     description: (<>pull request #9176 affects this as well as #9074. Added the <code className='ws-code'>InputGroupItem</code> component, which must wrap all non-<code className='ws-code'>InputGroupText</code> children passed to an <code className='ws-code'>InputGroup</code>. The <code className='ws-code'>InputGroupItem</code> component may need to have the <code className='ws-code'>isFill</code>, <code className='ws-code'>isBox</code>, and/or <code className='ws-code'>isPlain</code> properties adjusted to retain styling.</>),
     pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/9074",
     details: (
-      <TextContent>
-        <Text component={TextVariants.h2}>Example in</Text>
+      <Content>
+        <Content component={ContentVariants.h2}>Example in</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`    <InputGroup>
@@ -1399,7 +1399,7 @@ function handler2(_event, id) {};
     </InputGroup>`}
           </CodeBlockCode>
         </CodeBlock>
-        <Text component={TextVariants.h2}>Example out</Text>
+        <Content component={ContentVariants.h2}>Example out</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`<InputGroup>
@@ -1412,7 +1412,7 @@ function handler2(_event, id) {};
     </InputGroup>`}
           </CodeBlockCode>
         </CodeBlock>
-      </TextContent>
+      </Content>
     ),
     repo: "React",
     fixedWithCodeMod: true
@@ -1422,20 +1422,20 @@ function handler2(_event, id) {};
     description: (<>Removed the <code className='ws-code'>variant</code> property on <code className='ws-code'>InputGroupText.</code></>),
     pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/9147",
     details: (
-      <TextContent>
-        <Text component={TextVariants.h2}>Example in</Text>
+      <Content>
+        <Content component={ContentVariants.h2}>Example in</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`<InputGroupText variant={InputGroupTextVariant.plain} />`}
           </CodeBlockCode>
         </CodeBlock>
-        <Text component={TextVariants.h2}>Example out</Text>
+        <Content component={ContentVariants.h2}>Example out</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`<InputGroupText  />`}
           </CodeBlockCode>
         </CodeBlock>
-      </TextContent>
+      </Content>
     ),
     repo: "React",
     fixedWithCodeMod: true
@@ -1450,20 +1450,20 @@ function handler2(_event, id) {};
     description: (<>Renamed the <code className='ws-code'>AccordionExpandedContentBody</code> component to <code className='ws-code'>AccordionExpandableContentBody</code>.</>),
     pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/8525",
     details: (
-      <TextContent>
-        <Text component={TextVariants.h2}>Example in</Text>
+      <Content>
+        <Content component={ContentVariants.h2}>Example in</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`<AccordionExpandedContentBody>Body</AccordionExpandedContentBody>`}
           </CodeBlockCode>
         </CodeBlock>
-        <Text component={TextVariants.h2}>Example out</Text>
+        <Content component={ContentVariants.h2}>Example out</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`<AccordionExpandableContentBody>Body</AccordionExpandableContentBody>`}
           </CodeBlockCode>
         </CodeBlock>
-      </TextContent>
+      </Content>
     ),
     repo: "React",
     fixedWithCodeMod: true
@@ -1472,20 +1472,20 @@ function handler2(_event, id) {};
     description: (<>Renamed the <code className='ws-code'>large</code> property value of the <code className='ws-code'>displaySize</code> property to <code className='ws-code'>lg</code>.</>),
     pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/8206",
     details: (
-      <TextContent>
-        <Text component={TextVariants.h2}>Example in</Text>
+      <Content>
+        <Content component={ContentVariants.h2}>Example in</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`<Accordion displaySize="large" />`}
           </CodeBlockCode>
         </CodeBlock>
-        <Text component={TextVariants.h2}>Example out</Text>
+        <Content component={ContentVariants.h2}>Example out</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`<Accordion displaySize="lg" />`}
           </CodeBlockCode>
         </CodeBlock>
-      </TextContent>
+      </Content>
     ),
     repo: "React",
     fixedWithCodeMod: true
@@ -1494,21 +1494,21 @@ function handler2(_event, id) {};
     description: (<>Removed the <code className='ws-code'>aria-label</code> property.</>),
     pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/8649",
     details: (
-      <TextContent>
-        <Text component={TextVariants.p}>The <code className='ws-code'>aria-label</code> property should not be used on an <code className='ws-code'>Alert</code> as it is not well supported by assistive technologies.</Text>
-        <Text component={TextVariants.h2}>Example in</Text>
+      <Content>
+        <Content component={ContentVariants.p}>The <code className='ws-code'>aria-label</code> property should not be used on an <code className='ws-code'>Alert</code> as it is not well supported by assistive technologies.</Content>
+        <Content component={ContentVariants.h2}>Example in</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`<Alert aria-label="Error alert" />`}
           </CodeBlockCode>
         </CodeBlock>
-        <Text component={TextVariants.h2}>Example out</Text>
+        <Content component={ContentVariants.h2}>Example out</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`<Alert  />`}
           </CodeBlockCode>
         </CodeBlock>
-      </TextContent>
+      </Content>
     ),
     repo: "React",
     fixedWithCodeMod: true
@@ -1517,20 +1517,20 @@ function handler2(_event, id) {};
     description: (<>Replaced the <code className='ws-code'>titleHeadingLevel</code> property with <code className='ws-code'>component</code>.</>),
     pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/8518",
     details: (
-      <TextContent>
-        <Text component={TextVariants.h2}>Example in</Text>
+      <Content>
+        <Content component={ContentVariants.h2}>Example in</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`<Alert titleHeadingLevel="h4" />`}
           </CodeBlockCode>
         </CodeBlock>
-        <Text component={TextVariants.h2}>Example out</Text>
+        <Content component={ContentVariants.h2}>Example out</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`<Alert component="h4" />`}
           </CodeBlockCode>
         </CodeBlock>
-      </TextContent>
+      </Content>
     ),
     repo: "React",
     fixedWithCodeMod: true
@@ -1539,21 +1539,21 @@ function handler2(_event, id) {};
     description: (<>Deprecated the <code  className='ws-code'>ApplicationLauncher</code> components.</>),
     pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/8836",
     details: (
-      <TextContent>
-        <Text component={TextVariants.p}>Codemods will update import and export paths to our deprecated directory, but we recommend replacing it with our new <code className='ws-code'>Dropdown</code> or <code className='ws-code'>Select</code> implementation.</Text>
-        <Text component={TextVariants.h2}>Example in</Text>
+      <Content>
+        <Content component={ContentVariants.p}>Codemods will update import and export paths to our deprecated directory, but we recommend replacing it with our new <code className='ws-code'>Dropdown</code> or <code className='ws-code'>Select</code> implementation.</Content>
+        <Content component={ContentVariants.h2}>Example in</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`import { ApplicationLauncher } from '@patternfly/react-core';`}
           </CodeBlockCode>
         </CodeBlock>
-        <Text component={TextVariants.h2}>Example out</Text>
+        <Content component={ContentVariants.h2}>Example out</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`import { ApplicationLauncher } from '@patternfly/react-core/deprecated';`}
           </CodeBlockCode>
         </CodeBlock>
-      </TextContent>
+      </Content>
     ),
     repo: "React",
     fixedWithCodeMod: true
@@ -1562,9 +1562,9 @@ function handler2(_event, id) {};
     description: (<>Updated callback properties to include the <code  className='ws-code'>event</code> parameter as the first parameter.</>),
     pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/8756",
     details: (
-      <TextContent>
-        <Text component={TextVariants.p}>The <code  className='ws-code'>onFavorite</code> and <code  className='ws-code'>onSearch</code> propertiesnow take <code  className='ws-code'>event</code> as the first parameter. Handlers may need to be updated.</Text>
-        <Text component={TextVariants.h2}>Example in</Text>
+      <Content>
+        <Content component={ContentVariants.p}>The <code  className='ws-code'>onFavorite</code> and <code  className='ws-code'>onSearch</code> propertiesnow take <code  className='ws-code'>event</code> as the first parameter. Handlers may need to be updated.</Content>
+        <Content component={ContentVariants.h2}>Example in</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`<ApplicationLauncher onFavorite={(id) => handler(id)} onSearch={(text) => searchHandler(text)}/>
@@ -1576,7 +1576,7 @@ function searchHandler2(text) {};
 <ApplicationLauncher onFavorite={handler2} onSearch={searchHandler2}>`}
           </CodeBlockCode>
         </CodeBlock>
-        <Text component={TextVariants.h2}>Example out</Text>
+        <Content component={ContentVariants.h2}>Example out</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`<ApplicationLauncher onFavorite={(_event, id) => handler(id)} onSearch={(_event, text) => searchHandler(text)}/>
@@ -1588,7 +1588,7 @@ function searchHandler2(_event, text) {};
 <ApplicationLauncher onFavorite={handler2} onSearch={searchHandler2}>`}
           </CodeBlockCode>
         </CodeBlock>
-      </TextContent>
+      </Content>
     ),
     repo: "React",
     fixedWithCodeMod: true
@@ -1603,9 +1603,9 @@ function searchHandler2(_event, text) {};
     description: (<>Removed the <code  className='ws-code'>filter</code> property and updated the <code  className='ws-code'>src</code>  property.</>),
     pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/8931",
     details: (
-      <TextContent>
-        <Text component={TextVariants.p}>The <code  className='ws-code'>filter</code> was removed. The <code  className='ws-code'>src</code> property's type was updated to just a string and will no longer accept a <code  className='ws-code'>BackgroundImageSrcMap</code> object. Codemods will not update the <code  className='ws-code'>src</code> properety, but will raise an error if its value is not a string.</Text>
-        <Text component={TextVariants.h2}>Example in</Text>
+      <Content>
+        <Content component={ContentVariants.p}>The <code  className='ws-code'>filter</code> was removed. The <code  className='ws-code'>src</code> property's type was updated to just a string and will no longer accept a <code  className='ws-code'>BackgroundImageSrcMap</code> object. Codemods will not update the <code  className='ws-code'>src</code> properety, but will raise an error if its value is not a string.</Content>
+        <Content component={ContentVariants.h2}>Example in</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`<BackgroundImage filter={<SomeFilter />} src={{xs: 'file/path'}} />
@@ -1614,7 +1614,7 @@ const srcPath = {xs: 'file/path'};
 <BackgroundImage src={srcPath} />`}
           </CodeBlockCode>
         </CodeBlock>
-        <Text component={TextVariants.h2}>Example out</Text>
+        <Content component={ContentVariants.h2}>Example out</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`// An error is raised for the src prop
@@ -1625,7 +1625,7 @@ const srcPath = {xs: 'file/path'};
 <BackgroundImage src={srcPath} />`}
           </CodeBlockCode>
         </CodeBlock>
-      </TextContent>
+      </Content>
     ),
     repo: "React",
     fixedWithCodeMod: true
@@ -1634,20 +1634,20 @@ const srcPath = {xs: 'file/path'};
     description: (<>Removed the <code  className='ws-code'>BackgroundImageSrcMap</code> interface.</>),
     pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/8931",
     details: (
-      <TextContent>
-        <Text component={TextVariants.h2}>Example in</Text>
+      <Content>
+        <Content component={ContentVariants.h2}>Example in</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`const backgroundImgSrcObj: BackgroundImageSrcMap = {};`}
           </CodeBlockCode>
         </CodeBlock>
-        <Text component={TextVariants.h2}>Example out</Text>
+        <Content component={ContentVariants.h2}>Example out</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`const backgroundImgSrcObj = {};`}
           </CodeBlockCode>
         </CodeBlock>
-      </TextContent>
+      </Content>
     ),
     repo: "React",
     fixedWithCodeMod: true
@@ -1656,27 +1656,27 @@ const srcPath = {xs: 'file/path'};
     description: (<>Updated the <code  className='ws-code'>variant</code> property's type.</>),
     pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/8808",
     details: (
-      <TextContent>
-        <Text component={TextVariants.p}>The <code className='ws-code'>default</code> value is still valid, but the following values have been replaced with color values:</Text>
-        <TextList>
-          <TextListItem><code className='ws-code'>info</code> to <code className='ws-code'>blue</code></TextListItem>
-          <TextListItem><code className='ws-code'>danger</code> to <code className='ws-code'>red</code></TextListItem>
-          <TextListItem><code className='ws-code'>success</code> to <code className='ws-code'>green</code></TextListItem>
-          <TextListItem><code className='ws-code'>warning</code> to <code className='ws-code'>gold</code></TextListItem>
-        </TextList>
-        <Text component={TextVariants.h2}>Example in</Text>
+      <Content>
+        <Content component={ContentVariants.p}>The <code className='ws-code'>default</code> value is still valid, but the following values have been replaced with color values:</Content>
+        <Content component="ul">
+          <Content component="li"><code className='ws-code'>info</code> to <code className='ws-code'>blue</code></Content>
+          <Content component="li"><code className='ws-code'>danger</code> to <code className='ws-code'>red</code></Content>
+          <Content component="li"><code className='ws-code'>success</code> to <code className='ws-code'>green</code></Content>
+          <Content component="li"><code className='ws-code'>warning</code> to <code className='ws-code'>gold</code></Content>
+        </Content>
+        <Content component={ContentVariants.h2}>Example in</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`<Banner variant="danger" />`}
           </CodeBlockCode>
         </CodeBlock>
-        <Text component={TextVariants.h2}>Example out</Text>
+        <Content component={ContentVariants.h2}>Example out</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`<Banner variant="red" />`}
           </CodeBlockCode>
         </CodeBlock>
-      </TextContent>
+      </Content>
     ),
     repo: "React",
     fixedWithCodeMod: true
@@ -1685,23 +1685,23 @@ const srcPath = {xs: 'file/path'};
     description: (<>Replaced the <code  className='ws-code'>isSmall</code> and <code  className='ws-code'>isLarge</code> properties with the <code  className='ws-code'>size</code>  property.</>),
     pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/8144",
     details: (
-      <TextContent>
-        <Text component={TextVariants.p}>The <code className='ws-code'>size</code> property accepts either <code  className='ws-code'>sm</code> or <code  className='ws-code'>lg</code> as a value.</Text>
-        <Text component={TextVariants.h2}>Example in</Text>
+      <Content>
+        <Content component={ContentVariants.p}>The <code className='ws-code'>size</code> property accepts either <code  className='ws-code'>sm</code> or <code  className='ws-code'>lg</code> as a value.</Content>
+        <Content component={ContentVariants.h2}>Example in</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`<Button isSmall />
 <Button isLarge />`}
           </CodeBlockCode>
         </CodeBlock>
-        <Text component={TextVariants.h2}>Example out</Text>
+        <Content component={ContentVariants.h2}>Example out</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`<Button size="sm" />
 <Button size="lg" />`}
           </CodeBlockCode>
         </CodeBlock>
-      </TextContent>
+      </Content>
     ),
     repo: "React",
     fixedWithCodeMod: true
@@ -1710,23 +1710,23 @@ const srcPath = {xs: 'file/path'};
     description: (<>Replaced the <code  className='ws-code'>isSmall</code> and <code  className='ws-code'>isLarge</code> properties with the <code  className='ws-code'>size</code>  property.</>),
     pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/8144",
     details: (
-      <TextContent>
-        <Text component={TextVariants.p}>The <code className='ws-code'>size</code> property accepts either <code  className='ws-code'>sm</code> or <code  className='ws-code'>lg</code> as a value.</Text>
-        <Text component={TextVariants.h2}>Example in</Text>
+      <Content>
+        <Content component={ContentVariants.p}>The <code className='ws-code'>size</code> property accepts either <code  className='ws-code'>sm</code> or <code  className='ws-code'>lg</code> as a value.</Content>
+        <Content component={ContentVariants.h2}>Example in</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`<Button isSmall />
 <Button isLarge />`}
           </CodeBlockCode>
         </CodeBlock>
-        <Text component={TextVariants.h2}>Example out</Text>
+        <Content component={ContentVariants.h2}>Example out</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`<Button size="sm" />
 <Button size="lg" />`}
           </CodeBlockCode>
         </CodeBlock>
-      </TextContent>
+      </Content>
     ),
     repo: "React",
     fixedWithCodeMod: true
@@ -1735,9 +1735,9 @@ const srcPath = {xs: 'file/path'};
     description: (<>Updated callback properties to include the <code  className='ws-code'>event</code> parameter as the first parameter.</>),
     pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/8753",
     details: (
-      <TextContent>
-        <Text component={TextVariants.p}>Updated the <code  className='ws-code'>onChange</code> and <code  className='ws-code'>onMonthChange</code> properties to take <code  className='ws-code'>event</code> as the first parameter. Handlers may need to be updated.</Text>
-        <Text component={TextVariants.h2}>Example in</Text>
+      <Content>
+        <Content component={ContentVariants.p}>Updated the <code  className='ws-code'>onChange</code> and <code  className='ws-code'>onMonthChange</code> properties to take <code  className='ws-code'>event</code> as the first parameter. Handlers may need to be updated.</Content>
+        <Content component={ContentVariants.h2}>Example in</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`<CalendarMonth onChange={(date) => handler(date)} onMonthChange={(newDate) => handler(newDate)} />
@@ -1750,7 +1750,7 @@ function handler2(newDate, event) {};
 <CalendarMonth onChange={changeHandler2} onMonthChange={handler2}>`}
           </CodeBlockCode>
         </CodeBlock>
-        <Text component={TextVariants.h2}>Example out</Text>
+        <Content component={ContentVariants.h2}>Example out</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`<CalendarMonth onChange={(_event, date) => handler(date)} onMonthChange={(_event, newDate) => handler(newDate)} />
@@ -1763,7 +1763,7 @@ function handler2(_event, newDate) {};
 <CalendarMonth onChange={changeHandler2} onMonthChange={handler2}>`}
           </CodeBlockCode>
         </CodeBlock>
-      </TextContent>
+      </Content>
     ),
     repo: "React",
     fixedWithCodeMod: true
@@ -1772,21 +1772,21 @@ function handler2(_event, newDate) {};
     description: (<>Removed the <code  className='ws-code'>getResizeObserver</code> function from <code className='ws-code'>@patternfly/react-charts</code>.</>),
     pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/8533",
     details: (
-      <TextContent>
-        <Text component={TextVariants.p}>The <code className='ws-code'>@patternfly/react-core</code> implementation should be used instead, which accepts a third parameter, <code className='ws-code'>useRequestAnimationFrame</code>.</Text>
-        <Text component={TextVariants.h2}>Example in</Text>
+      <Content>
+        <Content component={ContentVariants.p}>The <code className='ws-code'>@patternfly/react-core</code> implementation should be used instead, which accepts a third parameter, <code className='ws-code'>useRequestAnimationFrame</code>.</Content>
+        <Content component={ContentVariants.h2}>Example in</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`import { getResizeObserver } from "@patternfly/react-charts";`}
           </CodeBlockCode>
         </CodeBlock>
-        <Text component={TextVariants.h2}>Example out</Text>
+        <Content component={ContentVariants.h2}>Example out</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`import { getResizeObserver } from "@patternfly/react-core";`}
           </CodeBlockCode>
         </CodeBlock>
-      </TextContent>
+      </Content>
     ),
     repo: "React",
     fixedWithCodeMod: true
@@ -1801,20 +1801,20 @@ function handler2(_event, newDate) {};
     description: (<>Removed <code  className='ws-code'>ChartThemeVariant</code> from <code  className='ws-code'>@patternfly/react-charts</code>.</>),
     pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/8590",
     details: (
-      <TextContent>
-        <Text component={TextVariants.h2}>Example in</Text>
+      <Content>
+        <Content component={ContentVariants.h2}>Example in</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`import { Chart, ChartThemeVariant } from '@patternfly/react-charts';`}
           </CodeBlockCode>
         </CodeBlock>
-        <Text component={TextVariants.h2}>Example out</Text>
+        <Content component={ContentVariants.h2}>Example out</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`import { Chart } from '@patternfly/react-charts';`}
           </CodeBlockCode>
         </CodeBlock>
-      </TextContent>
+      </Content>
     ),
     repo: "React",
     fixedWithCodeMod: true
@@ -1823,21 +1823,21 @@ function handler2(_event, newDate) {};
     description: (<>Removed dark theme objects from <code  className='ws-code'>@patternfly/react-charts</code>.</>),
     pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/8590",
     details: (
-      <TextContent>
-        <Text component={TextVariants.h2}>Example in</Text>
+      <Content>
+        <Content component={ContentVariants.h2}>Example in</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`import { DarkBlueColorTheme, DarkCyanColorTheme, DarkGoldColorTheme, DarkGrayColorTheme, DarkGreenColorTheme, DarkMultiColorOrderedTheme, DarkMultiColorUnorderedTheme,
 DarkOrangeColorTheme, DarkPurpleColorTheme, ChartLegend } from '@patternfly/react-charts';`}
           </CodeBlockCode>
         </CodeBlock>
-        <Text component={TextVariants.h2}>Example out</Text>
+        <Content component={ContentVariants.h2}>Example out</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`import { ChartLegend } from '@patternfly/react-charts';`}
           </CodeBlockCode>
         </CodeBlock>
-      </TextContent>
+      </Content>
     ),
     repo: "React",
     fixedWithCodeMod: true
@@ -1846,8 +1846,8 @@ DarkOrangeColorTheme, DarkPurpleColorTheme, ChartLegend } from '@patternfly/reac
     description: (<>Removed <code  className='ws-code'>themeVariant</code> properties from all components and the <code  className='ws-code'>getCustomTheme</code> function in <code  className='ws-code'>@patternfly/react-charts</code>.</>),
     pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/8590",
     details: (
-      <TextContent>
-        <Text component={TextVariants.h2}>Example in</Text>
+      <Content>
+        <Content component={ContentVariants.h2}>Example in</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`import { Chart, ChartThemeColor, getCustomTheme } from '@patternfly/react-charts';
@@ -1860,7 +1860,7 @@ return (
 );`}
           </CodeBlockCode>
         </CodeBlock>
-        <Text component={TextVariants.h2}>Example out</Text>
+        <Content component={ContentVariants.h2}>Example out</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`import { Chart, ChartThemeColor, getCustomTheme } from '@patternfly/react-charts';
@@ -1873,7 +1873,7 @@ return (
 );`}
           </CodeBlockCode>
         </CodeBlock>
-      </TextContent>
+      </Content>
     ),
     repo: "React",
     fixedWithCodeMod: true
@@ -1882,37 +1882,37 @@ return (
     description: (<>Removed various exports from <code  className='ws-code'>@patternfly/react-charts</code>.</>),
     pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/8869",
     details: (
-      <TextContent>
-        <Text component={TextVariants.p}>The following are no longer exported:</Text>
-        <TextList>
-          <TextListItem><code className='ws-code'>ChartAreaSortOrder</code></TextListItem>
-          <TextListItem><code className='ws-code'>ChartDonutLabelPosition</code></TextListItem>
-          <TextListItem><code className='ws-code'>ChartDonutSortOrder</code></TextListItem>
-          <TextListItem><code className='ws-code'>ChartDonutThresholdSortOrder</code></TextListItem>
-          <TextListItem><code className='ws-code'>ChartDonutUtilizationLabelPosition</code></TextListItem>
-          <TextListItem><code className='ws-code'>ChartDonutUtilizationSortOrder</code></TextListItem>
-          <TextListItem><code className='ws-code'>ChartGroupSortOrder</code></TextListItem>
-          <TextListItem><code className='ws-code'>ChartLabelPlacement</code></TextListItem>
-          <TextListItem><code className='ws-code'>ChartLegendOrientation</code></TextListItem>
-          <TextListItem><code className='ws-code'>ChartLegendRowGutter</code></TextListItem>
-          <TextListItem><code className='ws-code'>ChartLineSortOrder</code></TextListItem>
-          <TextListItem><code className='ws-code'>ChartPieLabelPosition</code></TextListItem>
-          <TextListItem><code className='ws-code'>ChartPieSortOrder</code></TextListItem>
-          <TextListItem><code className='ws-code'>ChartScatterSortOrder</code></TextListItem>
-          <TextListItem><code className='ws-code'>ChartDonutThresholdDonutOrientation</code></TextListItem>
-          <TextListItem><code className='ws-code'>ChartDonutThresholdLabelOrientation</code></TextListItem>
-          <TextListItem><code className='ws-code'>ChartDonutThresholdLabelPosition</code></TextListItem>
-          <TextListItem><code className='ws-code'>ChartLegendPosition</code></TextListItem>
-          <TextListItem><code className='ws-code'>ChartDonutSubTitlePosition</code></TextListItem>
-          <TextListItem><code className='ws-code'>ChartDonutThresholdSubTitlePosition</code></TextListItem>
-          <TextListItem><code className='ws-code'>ChartDonutUtilizationLegendOrientation</code></TextListItem>
-          <TextListItem><code className='ws-code'>ChartDonutUtilizationLegendPosition</code></TextListItem>
-          <TextListItem><code className='ws-code'>ChartDonutUtilizationSubTitlePosition</code></TextListItem>
-          <TextListItem><code className='ws-code'>ChartLabelDirection</code></TextListItem>
-          <TextListItem><code className='ws-code'>ChartPieLegendPosition</code></TextListItem>
-          <TextListItem><code className='ws-code'>ChartVoronoiDimension</code></TextListItem>
-        </TextList>
-      </TextContent>
+      <Content>
+        <Content component={ContentVariants.p}>The following are no longer exported:</Content>
+        <Content component="ul">
+          <Content component="li"><code className='ws-code'>ChartAreaSortOrder</code></Content>
+          <Content component="li"><code className='ws-code'>ChartDonutLabelPosition</code></Content>
+          <Content component="li"><code className='ws-code'>ChartDonutSortOrder</code></Content>
+          <Content component="li"><code className='ws-code'>ChartDonutThresholdSortOrder</code></Content>
+          <Content component="li"><code className='ws-code'>ChartDonutUtilizationLabelPosition</code></Content>
+          <Content component="li"><code className='ws-code'>ChartDonutUtilizationSortOrder</code></Content>
+          <Content component="li"><code className='ws-code'>ChartGroupSortOrder</code></Content>
+          <Content component="li"><code className='ws-code'>ChartLabelPlacement</code></Content>
+          <Content component="li"><code className='ws-code'>ChartLegendOrientation</code></Content>
+          <Content component="li"><code className='ws-code'>ChartLegendRowGutter</code></Content>
+          <Content component="li"><code className='ws-code'>ChartLineSortOrder</code></Content>
+          <Content component="li"><code className='ws-code'>ChartPieLabelPosition</code></Content>
+          <Content component="li"><code className='ws-code'>ChartPieSortOrder</code></Content>
+          <Content component="li"><code className='ws-code'>ChartScatterSortOrder</code></Content>
+          <Content component="li"><code className='ws-code'>ChartDonutThresholdDonutOrientation</code></Content>
+          <Content component="li"><code className='ws-code'>ChartDonutThresholdLabelOrientation</code></Content>
+          <Content component="li"><code className='ws-code'>ChartDonutThresholdLabelPosition</code></Content>
+          <Content component="li"><code className='ws-code'>ChartLegendPosition</code></Content>
+          <Content component="li"><code className='ws-code'>ChartDonutSubTitlePosition</code></Content>
+          <Content component="li"><code className='ws-code'>ChartDonutThresholdSubTitlePosition</code></Content>
+          <Content component="li"><code className='ws-code'>ChartDonutUtilizationLegendOrientation</code></Content>
+          <Content component="li"><code className='ws-code'>ChartDonutUtilizationLegendPosition</code></Content>
+          <Content component="li"><code className='ws-code'>ChartDonutUtilizationSubTitlePosition</code></Content>
+          <Content component="li"><code className='ws-code'>ChartLabelDirection</code></Content>
+          <Content component="li"><code className='ws-code'>ChartPieLegendPosition</code></Content>
+          <Content component="li"><code className='ws-code'>ChartVoronoiDimension</code></Content>
+        </Content>
+      </Content>
     ),
     repo: "React",
     fixedWithCodeMod: false
@@ -1927,8 +1927,8 @@ return (
     description: (<>Updated <code  className='ws-code'>onChange</code> property so that the <code  className='ws-code'>event</code> parameter is the first parameter.</>),
     pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/8750",
     details: (
-      <TextContent>
-        <Text component={TextVariants.h2}>Example in</Text>
+      <Content>
+        <Content component={ContentVariants.h2}>Example in</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`<Checkbox onChange={(id) => handler(id)} />
@@ -1939,7 +1939,7 @@ function handler2(id, event) {};
 <Checkbox onChange={handler2}>`}
           </CodeBlockCode>
         </CodeBlock>
-        <Text component={TextVariants.h2}>Example out</Text>
+        <Content component={ContentVariants.h2}>Example out</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`<Checkbox onChange={(_event, id) => handler(id)} />
@@ -1950,7 +1950,7 @@ function handler2(_event, id) {};
 <Checkbox onChange={handler2}>`}
           </CodeBlockCode>
         </CodeBlock>
-      </TextContent>
+      </Content>
     ),
     repo: "React",
     fixedWithCodeMod: true
@@ -1959,8 +1959,8 @@ function handler2(_event, id) {};
     description: (<>Updated <code  className='ws-code'>onChange</code> property so that the <code  className='ws-code'>event</code> parameter is the first parameter.</>),
     pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/8747",
     details: (
-      <TextContent>
-        <Text component={TextVariants.h2}>Example in</Text>
+      <Content>
+        <Content component={ContentVariants.h2}>Example in</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`<ClipboardCopy onChange={(text) => handleChange(text)} />
@@ -1970,7 +1970,7 @@ function handleChange2(text) {};
 <ClipboardCopy onChange={toggle2}>`}
           </CodeBlockCode>
         </CodeBlock>
-        <Text component={TextVariants.h2}>Example out</Text>
+        <Content component={ContentVariants.h2}>Example out</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`<ClipboardCopy onChange={(_event, text) => handleChange(text)} />
@@ -1980,7 +1980,7 @@ function handleChange2(_event, text) {};
 <ClipboardCopy onChange={toggle2}>`}
           </CodeBlockCode>
         </CodeBlock>
-      </TextContent>
+      </Content>
     ),
     repo: "React",
     fixedWithCodeMod: true
@@ -1989,22 +1989,22 @@ function handleChange2(_event, text) {};
     description: (<>Removed the <code  className='ws-code'>PopoverPosition</code> type for the <code  className='ws-code'>position</code>  property.</>),
     pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/8226",
     details: (
-      <TextContent>
-        <Text component={TextVariants.h2}>Example in</Text>
+      <Content>
+        <Content component={ContentVariants.h2}>Example in</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`<ClipboardCopy position={PopoverPosition.top} />
 <ClipboardCopyButton position={PopoverPosition.bottom} />`}
           </CodeBlockCode>
         </CodeBlock>
-        <Text component={TextVariants.h2}>Example out</Text>
+        <Content component={ContentVariants.h2}>Example out</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`<ClipboardCopy position="top" />
 <ClipboardCopyButton position="bottom" />`}
           </CodeBlockCode>
         </CodeBlock>
-      </TextContent>
+      </Content>
     ),
     repo: "React",
     fixedWithCodeMod: true
@@ -2013,20 +2013,20 @@ function handleChange2(_event, text) {};
     description: (<>Removed the <code  className='ws-code'>switchDelay</code>  property.</>),
     pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/8619",
     details: (
-      <TextContent>
-        <Text component={TextVariants.h2}>Example in</Text>
+      <Content>
+        <Content component={ContentVariants.h2}>Example in</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`<ClipboardCopy switchDelay="500" />`}
           </CodeBlockCode>
         </CodeBlock>
-        <Text component={TextVariants.h2}>Example out</Text>
+        <Content component={ContentVariants.h2}>Example out</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`<ClipboardCopy  />`}
           </CodeBlockCode>
         </CodeBlock>
-      </TextContent>
+      </Content>
     ),
     repo: "React",
     fixedWithCodeMod: true
@@ -2035,28 +2035,28 @@ function handleChange2(_event, text) {};
     description: (<>Removed various deprecated properties from <code className='ws-code'>CodeEditorControl</code>. Codemods will suggest using the <code className='ws-code'>tooltipProps</code> property instead.</>),
     pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/8624",
     details: (
-      <TextContent>
-        <Text component={TextVariants.p}>The following deprecated properties were removed:</Text>
-        <TextList>
-          <TextListItem><code className='ws-code'>entryDelay</code></TextListItem>
-          <TextListItem><code className='ws-code'>exitDelay</code></TextListItem>
-          <TextListItem><code className='ws-code'>maxWidth</code></TextListItem>
-          <TextListItem><code className='ws-code'>position</code></TextListItem>
-          <TextListItem><code className='ws-code'>toolTipText</code></TextListItem>
-        </TextList>
-        <Text component={TextVariants.h2}>Example in</Text>
+      <Content>
+        <Content component={ContentVariants.p}>The following deprecated properties were removed:</Content>
+        <Content component="ul">
+          <Content component="li"><code className='ws-code'>entryDelay</code></Content>
+          <Content component="li"><code className='ws-code'>exitDelay</code></Content>
+          <Content component="li"><code className='ws-code'>maxWidth</code></Content>
+          <Content component="li"><code className='ws-code'>position</code></Content>
+          <Content component="li"><code className='ws-code'>toolTipText</code></Content>
+        </Content>
+        <Content component={ContentVariants.h2}>Example in</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`<CodeEditor entryDelay="500" exitDelay="500" maxWidth="15rem" position="top" toolTipText="hi" />`}
           </CodeBlockCode>
         </CodeBlock>
-        <Text component={TextVariants.h2}>Example out</Text>
+        <Content component={ContentVariants.h2}>Example out</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`<CodeEditor      />`}
           </CodeBlockCode>
         </CodeBlock>
-      </TextContent>
+      </Content>
     ),
     repo: "React",
     fixedWithCodeMod: true
@@ -2089,21 +2089,21 @@ function handleChange2(_event, text) {};
     description: (<>Deprecated the <code  className='ws-code'>ContextSelector</code> components.</>),
     pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/8840",
     details: (
-      <TextContent>
-        <Text component={TextVariants.p}>Codemods will update import and export paths to our deprecated directory, but we recommend replacing it with our new <code className='ws-code'>Dropdown</code> or <code className='ws-code'>Select</code> implementation.:</Text>
-        <Text component={TextVariants.h2}>Example in</Text>
+      <Content>
+        <Content component={ContentVariants.p}>Codemods will update import and export paths to our deprecated directory, but we recommend replacing it with our new <code className='ws-code'>Dropdown</code> or <code className='ws-code'>Select</code> implementation.:</Content>
+        <Content component={ContentVariants.h2}>Example in</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`import { ContextSelector, ContextSelectorItem } from '@patternfly/react-core';`}
           </CodeBlockCode>
         </CodeBlock>
-        <Text component={TextVariants.h2}>Example out</Text>
+        <Content component={ContentVariants.h2}>Example out</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`import { ContextSelector, ContextSelectorItem } from '@patternfly/react-core/deprecated';`}
           </CodeBlockCode>
         </CodeBlock>
-      </TextContent>
+      </Content>
     ),
     repo: "React",
     fixedWithCodeMod: true
@@ -2112,8 +2112,8 @@ function handleChange2(_event, text) {};
     description: (<>Replaced the <code  className='ws-code'>selectableRow</code> property with <code className='ws-code'>onSelectableRowChange</code>, which also takes the <code className='ws-code'>event</code> parameter as its first parameter.</>),
     pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/8827",
     details: (
-      <TextContent>
-        <Text component={TextVariants.h2}>Example in</Text>
+      <Content>
+        <Content component={ContentVariants.h2}>Example in</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`<DataList onSelectableRowChange={(id) => handler(id)} />
@@ -2124,7 +2124,7 @@ function handler2(id, event) {};
 <DataList onSelectableRowChange={handler2} />`}
           </CodeBlockCode>
         </CodeBlock>
-        <Text component={TextVariants.h2}>Example out</Text>
+        <Content component={ContentVariants.h2}>Example out</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`<DataList onSelectableRowChange={(_event, id) => handler(id)} />
@@ -2135,7 +2135,7 @@ function handler2(_event, id) {};
 <DataList onSelectableRowChange={handler2} />`}
           </CodeBlockCode>
         </CodeBlock>
-      </TextContent>
+      </Content>
     ),
     repo: "React",
     fixedWithCodeMod: true
@@ -2144,29 +2144,29 @@ function handler2(_event, id) {};
     description: (<>Removed various deprecated properties.</>),
     pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/8388",
     details: (
-      <TextContent>
-        <Text component={TextVariants.p}>The following deprecated properties were removed:</Text>
-        <TextList>
-          <TextListItem><code className='ws-code'>onDragFinish</code></TextListItem>
-          <TextListItem><code className='ws-code'>onDragStart</code></TextListItem>
-          <TextListItem><code className='ws-code'>onDragMove</code></TextListItem>
-          <TextListItem><code className='ws-code'>onDragCancel</code></TextListItem>
-          <TextListItem><code className='ws-code'>itemOrder</code></TextListItem>
-        </TextList>
-        <Text component={TextVariants.p}>In addition to removing these properties,  Codemods will suggest instead using the <code className='ws-code'>DragDrop</code> component.</Text>
-        <Text component={TextVariants.h2}>Example in</Text>
+      <Content>
+        <Content component={ContentVariants.p}>The following deprecated properties were removed:</Content>
+        <Content component="ul">
+          <Content component="li"><code className='ws-code'>onDragFinish</code></Content>
+          <Content component="li"><code className='ws-code'>onDragStart</code></Content>
+          <Content component="li"><code className='ws-code'>onDragMove</code></Content>
+          <Content component="li"><code className='ws-code'>onDragCancel</code></Content>
+          <Content component="li"><code className='ws-code'>itemOrder</code></Content>
+        </Content>
+        <Content component={ContentVariants.p}>In addition to removing these properties,  Codemods will suggest instead using the <code className='ws-code'>DragDrop</code> component.</Content>
+        <Content component={ContentVariants.h2}>Example in</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`<DataList onDragFinish onDragStart onDragMove onDragCancel itemOrder />`}
           </CodeBlockCode>
         </CodeBlock>
-        <Text component={TextVariants.h2}>Example out</Text>
+        <Content component={ContentVariants.h2}>Example out</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`<DataList      />`}
           </CodeBlockCode>
         </CodeBlock>
-      </TextContent>
+      </Content>
     ),
     repo: "React",
     fixedWithCodeMod: true
@@ -2175,8 +2175,8 @@ function handler2(_event, id) {};
     description: (<>Updated the <code className='ws-code'>onSelectDataListItem</code> property to include the <code  className='ws-code'>event</code> parameter as the first parameter.</>),
     pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/8756",
     details: (
-      <TextContent>
-        <Text component={TextVariants.h2}>Example in</Text>
+      <Content>
+        <Content component={ContentVariants.h2}>Example in</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`<DataList onSelectDataListItem={(id) => onSelect(id)} />
@@ -2188,7 +2188,7 @@ function toggle2(id) {};
 <DataList onSelectDataListItem={toggle2}>`}
           </CodeBlockCode>
         </CodeBlock>
-        <Text component={TextVariants.h2}>Example out</Text>
+        <Content component={ContentVariants.h2}>Example out</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`<DataList onSelectDataListItem={(_event, id) => onSelect(id)} />
@@ -2200,7 +2200,7 @@ function toggle2(_event, id) {};
 <DataList onSelectDataListItem={toggle2}>`}
           </CodeBlockCode>
         </CodeBlock>
-      </TextContent>
+      </Content>
     ),
     repo: "React",
     fixedWithCodeMod: true
@@ -2209,8 +2209,8 @@ function toggle2(_event, id) {};
     description: (<>Updated the <code className='ws-code'>onChange</code> property for the <code className='ws-code'>DataListCheck</code> component to include the <code  className='ws-code'>event</code> parameter as the first parameter.</>),
     pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/8756",
     details: (
-      <TextContent>
-        <Text component={TextVariants.h2}>Example in</Text>
+      <Content>
+        <Content component={ContentVariants.h2}>Example in</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`<DataListCheck onChange={(checked) => onChange(checked)} />
@@ -2222,7 +2222,7 @@ function onChange2(checked) {};
 <DataListCheck onChange={onChange2}>`}
           </CodeBlockCode>
         </CodeBlock>
-        <Text component={TextVariants.h2}>Example out</Text>
+        <Content component={ContentVariants.h2}>Example out</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`<DataListCheck onChange={(_event, checked) => onChange(checked)} />
@@ -2234,7 +2234,7 @@ function onChange2(_event, checked) {};
 <DataListCheck onChange={onChange2}>`}
           </CodeBlockCode>
         </CodeBlock>
-      </TextContent>
+      </Content>
     ),
     repo: "React",
     fixedWithCodeMod: true
@@ -2273,16 +2273,16 @@ function onChange2(_event, checked) {};
     ),
     pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/8771",
     details: (
-      <TextContent>
-        <Text component={TextVariants.h2}>Example in</Text>
+      <Content>
+        <Content component={ContentVariants.h2}>Example in</Content>
         <CodeBlock>
           <CodeBlockCode>{`<Label isTruncated />`}</CodeBlockCode>
         </CodeBlock>
-        <Text component={TextVariants.h2}>Example out</Text>
+        <Content component={ContentVariants.h2}>Example out</Content>
         <CodeBlock>
           <CodeBlockCode>{`<Label  />`}</CodeBlockCode>
         </CodeBlock>
-      </TextContent>
+      </Content>
     ),
     repo: "React",
     fixedWithCodeMod: true,
@@ -2297,15 +2297,15 @@ function onChange2(_event, checked) {};
     ),
     pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/8996",
     details: (
-      <TextContent>
-        <Text component={TextVariants.p}>
+      <Content>
+        <Content component={ContentVariants.p}>
           The <code className="ws-code">onChangeUsername</code>,{" "}
           <code className="ws-code">onChangePassword</code>, and{" "}
           <code className="ws-code">onChangeRememberMe</code> properties now take{" "}
           <code className="ws-code">event</code> as the first parameter. Handlers
           may require an update.
-        </Text>
-        <Text component={TextVariants.h2}>Example in</Text>
+        </Content>
+        <Content component={ContentVariants.h2}>Example in</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`<LoginForm onChangeUsername={(id) => handler(id)} />
@@ -2330,7 +2330,7 @@ function rememberMeHandler2(id, event) {};
 <LoginForm onChangeRememberMe={rememberMeHandler2} />`}
           </CodeBlockCode>
         </CodeBlock>
-        <Text component={TextVariants.h2}>Example out</Text>
+        <Content component={ContentVariants.h2}>Example out</Content>
         <CodeBlock>
           <CodeBlockCode>{`<LoginForm onChangeUsername={(_event, id) => handler(id)} />
 <LoginForm onChangeUsername={(event, id) => handler(id, event)} />
@@ -2353,7 +2353,7 @@ const rememberMeHandler1 = (_event, id) => {};
 function rememberMeHandler2(_event, id) {};
 <LoginForm onChangeRememberMe={rememberMeHandler2} />`}</CodeBlockCode>
         </CodeBlock>
-      </TextContent>
+      </Content>
     ),
     repo: "React",
     fixedWithCodeMod: true,
@@ -2371,8 +2371,8 @@ function rememberMeHandler2(_event, id) {};
     ),
     pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/8931",
     details: (
-      <TextContent>
-        <Text component={TextVariants.h2}>Example in</Text>
+      <Content>
+        <Content component={ContentVariants.h2}>Example in</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`<LoginPage backgroundImgAlt="Alt text" backgroundImgSrc={{xs: 'file/path'}} />
@@ -2381,7 +2381,7 @@ const srcPath = {xs: 'file/path'};
 <LoginPage backgroundImgSrc={srcPath} />`}
           </CodeBlockCode>
         </CodeBlock>
-        <Text component={TextVariants.h2}>Example out</Text>
+        <Content component={ContentVariants.h2}>Example out</Content>
         <CodeBlock>
           <CodeBlockCode>{`// An error is raised for the backgroundImgSrc prop
 <LoginPage  backgroundImgSrc={{xs: 'file/path'}} />
@@ -2390,7 +2390,7 @@ const srcPath = {xs: 'file/path'};
 // An error is raised for the backgroundImgSrc prop
 <LoginPage backgroundImgSrc={srcPath} />`}</CodeBlockCode>
         </CodeBlock>
-      </TextContent>
+      </Content>
     ),
     repo: "React",
     fixedWithCodeMod: false,
@@ -2407,22 +2407,22 @@ const srcPath = {xs: 'file/path'};
     ),
     pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/8655",
     details: (
-      <TextContent>
-        <Text component={TextVariants.p}>
+      <Content>
+        <Content component={ContentVariants.p}>
           Explicitly declared component properties will remain unchanged, but if
           it is not specified a default will be added.
-        </Text>
-        <Text component={TextVariants.h2}>Example in</Text>
+        </Content>
+        <Content component={ContentVariants.h2}>Example in</Content>
         <CodeBlock>
           <CodeBlockCode>{`<MastheadBrand />
 <MastheadBrand component="div" />`}</CodeBlockCode>
         </CodeBlock>
-        <Text component={TextVariants.h2}>Example out</Text>
+        <Content component={ContentVariants.h2}>Example out</Content>
         <CodeBlock>
           <CodeBlockCode>{`<MastheadBrand component="a" />
 <MastheadBrand component="div" />`}</CodeBlockCode>
         </CodeBlock>
-      </TextContent>
+      </Content>
     ),
     repo: "React",
     fixedWithCodeMod: true,
@@ -2437,14 +2437,14 @@ const srcPath = {xs: 'file/path'};
     ),
     pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/8649",
     details: (
-      <TextContent>
-        <Text component={TextVariants.p}>
+      <Content>
+        <Content component={ContentVariants.p}>
           If you are also using MenuGroup with a{" "}
           <code className="ws-code">label</code> property passed to it, an{" "}
           <code className="ws-code">aria-label</code> on MenuList is not
           necessary.
-        </Text>
-        <Text component={TextVariants.h2}>Example in</Text>
+        </Content>
+        <Content component={ContentVariants.h2}>Example in</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`<Menu aria-label="tester">
@@ -2471,7 +2471,7 @@ const srcPath = {xs: 'file/path'};
 </Menu>`}
           </CodeBlockCode>
         </CodeBlock>
-        <Text component={TextVariants.h2}>Example out</Text>
+        <Content component={ContentVariants.h2}>Example out</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`<Menu >
@@ -2498,7 +2498,7 @@ const srcPath = {xs: 'file/path'};
 </Menu>`}
           </CodeBlockCode>
         </CodeBlock>
-      </TextContent>
+      </Content>
     ),
     repo: "React",
     fixedWithCodeMod: true,
@@ -2514,21 +2514,21 @@ const srcPath = {xs: 'file/path'};
     ),
     pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/8820",
     details: (
-      <TextContent>
-        <Text component={TextVariants.h2}>Example in</Text>
+      <Content>
+        <Content component={ContentVariants.h2}>Example in</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`  <MenuInput><SearchInput /></MenuInput>
 `}
           </CodeBlockCode>
         </CodeBlock>
-        <Text component={TextVariants.h2}>Example out</Text>
+        <Content component={ContentVariants.h2}>Example out</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`    <MenuSearch><MenuSearchInput><SearchInput /></MenuSearchInput></MenuSearch>`}
           </CodeBlockCode>
         </CodeBlock>
-      </TextContent>
+      </Content>
     ),
     repo: "React",
     fixedWithCodeMod: true,
@@ -2556,8 +2556,8 @@ const srcPath = {xs: 'file/path'};
     ),
     pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/8931",
     details: (
-      <TextContent>
-        <Text component={TextVariants.h2}>Example in</Text>
+      <Content>
+        <Content component={ContentVariants.h2}>Example in</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`<MultipleFileUpload onFileDrop={(id) => handler(id)} />
@@ -2567,7 +2567,7 @@ function handler2(id) {};
 <MultipleFileUpload onFileDrop={handler2} />`}
           </CodeBlockCode>
         </CodeBlock>
-        <Text component={TextVariants.h2}>Example out</Text>
+        <Content component={ContentVariants.h2}>Example out</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`<MultipleFileUpload onFileDrop={(_event, id) => handler(id)} />
@@ -2577,7 +2577,7 @@ function handler2(_event, id) {};
 <MultipleFileUpload onFileDrop={handler2} />`}
           </CodeBlockCode>
         </CodeBlock>
-      </TextContent>
+      </Content>
     ),
     repo: "React",
     fixedWithCodeMod: true,
@@ -2597,8 +2597,8 @@ function handler2(_event, id) {};
     ),
     pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/8997",
     details: (
-      <TextContent>
-        <Text component={TextVariants.h2}>Example in</Text>
+      <Content>
+        <Content component={ContentVariants.h2}>Example in</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`<Navigation onSelect={(id) => handler(id)} />
@@ -2614,7 +2614,7 @@ function toggleHandler2(id) {};
 <Navigation onToggle={toggleHandler2} />`}
           </CodeBlockCode>
         </CodeBlock>
-        <Text component={TextVariants.h2}>Example out</Text>
+        <Content component={ContentVariants.h2}>Example out</Content>
         <CodeBlock>
           <CodeBlockCode>{`<Navigation onSelect={(_event, id) => handler(id)} />
 const handler1 = (_event, id) => {};
@@ -2628,7 +2628,7 @@ const toggleHandler1 = (_event, id) => {};
 function toggleHandler2(_event, id) {};
 <Navigation onToggle={toggleHandler2} />`}</CodeBlockCode>
         </CodeBlock>
-      </TextContent>
+      </Content>
     ),
     repo: "React",
     fixedWithCodeMod: true,
@@ -2650,23 +2650,23 @@ function toggleHandler2(_event, id) {};
     ),
     pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/8835",
     details: (
-      <TextContent>
-        <Text component={TextVariants.p}>
+      <Content>
+        <Content component={ContentVariants.p}>
           This rule will update import and/or export paths.
-        </Text>
-        <Text component={TextVariants.h2}>Example in</Text>
+        </Content>
+        <Content component={ContentVariants.h2}>Example in</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`import { Dropdown } from '@patternfly/react-core/next';`}
           </CodeBlockCode>
         </CodeBlock>
-        <Text component={TextVariants.h2}>Example out</Text>
+        <Content component={ContentVariants.h2}>Example out</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`import { Dropdown /* data- Codemods */ } from '@patternfly/react-core';`}
           </CodeBlockCode>
         </CodeBlock>
-      </TextContent>
+      </Content>
     ),
     repo: "React",
     fixedWithCodeMod: true,
@@ -2681,23 +2681,23 @@ function toggleHandler2(_event, id) {};
     ),
     pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/8825",
     details: (
-      <TextContent>
-        <Text component={TextVariants.p}>
+      <Content>
+        <Content component={ContentVariants.p}>
           This rule will update import and/or export paths.
-        </Text>
-        <Text component={TextVariants.h2}>Example in</Text>
+        </Content>
+        <Content component={ContentVariants.h2}>Example in</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`import { Select } from '@patternfly/react-core/next';`}
           </CodeBlockCode>
         </CodeBlock>
-        <Text component={TextVariants.h2}>Example out</Text>
+        <Content component={ContentVariants.h2}>Example out</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`import { Select /* data- Codemods */ } from '@patternfly/react-core';`}
           </CodeBlockCode>
         </CodeBlock>
-      </TextContent>
+      </Content>
     ),
     repo: "React",
     fixedWithCodeMod: true,
@@ -2712,23 +2712,23 @@ function toggleHandler2(_event, id) {};
     ),
     pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/8821",
     details: (
-      <TextContent>
-        <Text component={TextVariants.p}>
+      <Content>
+        <Content component={ContentVariants.p}>
           This rule will update import and/or export paths.
-        </Text>
-        <Text component={TextVariants.h2}>Example in</Text>
+        </Content>
+        <Content component={ContentVariants.h2}>Example in</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`import { Wizard } from '@patternfly/react-core/next';`}
           </CodeBlockCode>
         </CodeBlock>
-        <Text component={TextVariants.h2}>Example out</Text>
+        <Content component={ContentVariants.h2}>Example out</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`import { Wizard /* data- Codemods */ } from '@patternfly/react-core';`}
           </CodeBlockCode>
         </CodeBlock>
-      </TextContent>
+      </Content>
     ),
     repo: "React",
     fixedWithCodeMod: true,
@@ -2744,8 +2744,8 @@ function toggleHandler2(_event, id) {};
     ),
     pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/8626",
     details: (
-      <TextContent>
-        <Text component={TextVariants.h2}>Example in</Text>
+      <Content>
+        <Content component={ContentVariants.h2}>Example in</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`  <NotificationBadge isRead />
@@ -2754,7 +2754,7 @@ function toggleHandler2(_event, id) {};
   <NotificationBadge isRead={isRead || markedRead} />`}
           </CodeBlockCode>
         </CodeBlock>
-        <Text component={TextVariants.h2}>Example out</Text>
+        <Content component={ContentVariants.h2}>Example out</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`  <NotificationBadge variant="read" />
@@ -2763,7 +2763,7 @@ function toggleHandler2(_event, id) {};
   <NotificationBadge variant={(isRead || markedRead) ? "read" : "unread"} />`}
           </CodeBlockCode>
         </CodeBlock>
-      </TextContent>
+      </Content>
     ),
     repo: "React",
     fixedWithCodeMod: true,
@@ -2778,16 +2778,16 @@ function toggleHandler2(_event, id) {};
     ),
     pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/8715",
     details: (
-      <TextContent>
-        <Text component={TextVariants.h2}>Example in</Text>
+      <Content>
+        <Content component={ContentVariants.h2}>Example in</Content>
         <CodeBlock>
           <CodeBlockCode>{`<NumberInput allowEmptyInput />`}</CodeBlockCode>
         </CodeBlock>
-        <Text component={TextVariants.h2}>Example out</Text>
+        <Content component={ContentVariants.h2}>Example out</Content>
         <CodeBlock>
           <CodeBlockCode>{`<NumberInput  />`}</CodeBlockCode>
         </CodeBlock>
-      </TextContent>
+      </Content>
     ),
     repo: "React",
     fixedWithCodeMod: true,
@@ -2811,8 +2811,8 @@ function toggleHandler2(_event, id) {};
     ),
     pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/8667",
     details: (
-      <TextContent>
-        <Text component={TextVariants.h2}>Example in</Text>
+      <Content>
+        <Content component={ContentVariants.h2}>Example in</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`<Toggle onToggle={(isOpen) => onToggle(isOpen)} />
@@ -2824,7 +2824,7 @@ function toggleDropdown(isOpen) {};
 <DropdownToggle onToggle={toggleDropdown}>`}
           </CodeBlockCode>
         </CodeBlock>
-        <Text component={TextVariants.h2}>Example out</Text>
+        <Content component={ContentVariants.h2}>Example out</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`<Toggle onToggle={(_event, isOpen) => onToggle(isOpen)} />
@@ -2836,7 +2836,7 @@ function toggleDropdown(_event, isOpen) {};
 <DropdownToggle onToggle={toggleDropdown}>>`}
           </CodeBlockCode>
         </CodeBlock>
-      </TextContent>
+      </Content>
     ),
     repo: "React",
     fixedWithCodeMod: true,
@@ -2850,20 +2850,20 @@ function toggleDropdown(_event, isOpen) {};
     ),
     pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/8798",
     details: (
-      <TextContent>
-        <Text component={TextVariants.h2}>Example in</Text>
+      <Content>
+        <Content component={ContentVariants.h2}>Example in</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`import { OptionsMenu, OptionsMenuToggle } from '@patternfly/react-core';`}
           </CodeBlockCode>
         </CodeBlock>
-        <Text component={TextVariants.h2}>Example out</Text>
+        <Content component={ContentVariants.h2}>Example out</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`import { OptionsMenu, OptionsMenuToggle } from '@patternfly/react-core/deprecated';`}
           </CodeBlockCode>
         </CodeBlock>
-      </TextContent>
+      </Content>
     ),
     repo: "React",
     fixedWithCodeMod: true,
@@ -2891,20 +2891,20 @@ function toggleDropdown(_event, isOpen) {};
     ),
     pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/8359",
     details: (
-      <TextContent>
-        <Text component={TextVariants.h2}>Example in</Text>
+      <Content>
+        <Content component={ContentVariants.h2}>Example in</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`<OverflowMenuDropdownItem index={0}>`}
           </CodeBlockCode>
         </CodeBlock>
-        <Text component={TextVariants.h2}>Example out</Text>
+        <Content component={ContentVariants.h2}>Example out</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`<OverflowMenuDropdownItem itemId={0}>`}
           </CodeBlockCode>
         </CodeBlock>
-      </TextContent>
+      </Content>
     ),
     repo: "React",
     fixedWithCodeMod: true,
@@ -2945,22 +2945,22 @@ function toggleDropdown(_event, isOpen) {};
     ),
     pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/8942",
     details: (
-      <TextContent>
-        <Text component={TextVariants.h2}>Example in</Text>
+      <Content>
+        <Content component={ContentVariants.h2}>Example in</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`<PageSidebar isNavOpen={true} />
 <PageToggleButton isNavOpen={true} onNavToggle={() => {}} />`}
           </CodeBlockCode>
         </CodeBlock>
-        <Text component={TextVariants.h2}>Example out</Text>
+        <Content component={ContentVariants.h2}>Example out</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`<PageSidebar isSidebarOpen={true} />
             <PageToggleButton isSidebarOpen={true} onSidebarToggle={() => {}} />`}
           </CodeBlockCode>
         </CodeBlock>
-      </TextContent>
+      </Content>
     ),
     repo: "React",
     fixedWithCodeMod: true,
@@ -2976,8 +2976,8 @@ function toggleDropdown(_event, isOpen) {};
     ),
     pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/9011",
     details: (
-      <TextContent>
-        <Text component={TextVariants.h2}>Example in</Text>
+      <Content>
+        <Content component={ContentVariants.h2}>Example in</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`<Page onPageResize={({obj}) => onChange({obj})} />
@@ -2989,7 +2989,7 @@ function toggleDropdown(_event, isOpen) {};
                 <Page onPageResize={resize2}>`}
           </CodeBlockCode>
         </CodeBlock>
-        <Text component={TextVariants.h2}>Example out</Text>
+        <Content component={ContentVariants.h2}>Example out</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`<Page onPageResize={(_event, {obj}) => onChange({obj})} />
@@ -3001,7 +3001,7 @@ function toggleDropdown(_event, isOpen) {};
                 <Page onPageResize={resize2}>`}
           </CodeBlockCode>
         </CodeBlock>
-      </TextContent>
+      </Content>
     ),
     repo: "React",
     fixedWithCodeMod: true,
@@ -3015,13 +3015,13 @@ function toggleDropdown(_event, isOpen) {};
     ),
     pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/8854",
     details: (
-      <TextContent>
-        <Text component={TextVariants.p}>
+      <Content>
+        <Content component={ContentVariants.p}>
           Codemods will update import and export paths to our deprecated
           directory, but we recommend replacing it with{" "}
           <code className="ws-code">Masthead</code> and its related imports.
-        </Text>
-        <Text component={TextVariants.h2}>Example in</Text>
+        </Content>
+        <Content component={ContentVariants.h2}>Example in</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`import { Button,
@@ -3032,7 +3032,7 @@ function toggleDropdown(_event, isOpen) {};
             } from "@patternfly/react-core";`}
           </CodeBlockCode>
         </CodeBlock>
-        <Text component={TextVariants.h2}>Example out</Text>
+        <Content component={ContentVariants.h2}>Example out</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`import {
@@ -3046,7 +3046,7 @@ import {
 } from '@patternfly/react-core/deprecated';`}
           </CodeBlockCode>
         </CodeBlock>
-      </TextContent>
+      </Content>
     ),
     repo: "React",
     fixedWithCodeMod: true,
@@ -3061,22 +3061,22 @@ import {
     ),
     pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/8655",
     details: (
-      <TextContent>
-        <Text component={TextVariants.h2}>Example in</Text>
+      <Content>
+        <Content component={ContentVariants.h2}>Example in</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`<PageHeader />
 <PageHeader logoComponent="div" />`}
           </CodeBlockCode>
         </CodeBlock>
-        <Text component={TextVariants.h2}>Example out</Text>
+        <Content component={ContentVariants.h2}>Example out</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`<PageHeader logoComponent="a" />
 <PageHeader logoComponent="div" />`}
           </CodeBlockCode>
         </CodeBlock>
-      </TextContent>
+      </Content>
     ),
     repo: "React",
     fixedWithCodeMod: true,
@@ -3092,14 +3092,14 @@ import {
     ),
     pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/8942",
     details: (
-      <TextContent>
-        <Text component={TextVariants.h2}>Example in</Text>
+      <Content>
+        <Content component={ContentVariants.h2}>Example in</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`<PageSidebar theme="light" nav="Content">`}
           </CodeBlockCode>
         </CodeBlock>
-        <Text component={TextVariants.h2}>Example out</Text>
+        <Content component={ContentVariants.h2}>Example out</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`<PageSidebar theme="light">
@@ -3109,7 +3109,7 @@ import {
                 </PageSidebar>`}
           </CodeBlockCode>
         </CodeBlock>
-      </TextContent>
+      </Content>
     ),
     repo: "React",
     fixedWithCodeMod: true,
@@ -3138,51 +3138,51 @@ import {
     ),
     pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/8624",
     details: (
-      <TextContent>
-        <Text component={TextVariants.p}>
+      <Content>
+        <Content component={ContentVariants.p}>
           The following deprecated properties were renamed and/or removed:
-        </Text>
-        <TextList>
-          <TextListItem>
+        </Content>
+        <Content component="ul">
+          <Content component="li">
             <code className="ws-code">defaultToFullPage</code>:{" "}
             <code className="ws-code">isLastFullPageShown</code>
-          </TextListItem>
-          <TextListItem>
+          </Content>
+          <Content component="li">
             <code className="ws-code">perPageComponenet</code>: removed
-          </TextListItem>
-          <Text component={TextVariants.p}>
+          </Content>
+          <Content component={ContentVariants.p}>
             The following sub-properties of Pagination's "title" property were renamed:
-          </Text>
-          <TextListItem>
+          </Content>
+          <Content component="li">
             <code className="ws-code">currPage</code>:{" "}
             <code className="ws-code">currPageAriaLabel</code>
-          </TextListItem>
-          <TextListItem>
+          </Content>
+          <Content component="li">
             <code className="ws-code">paginationTitle</code>:{" "}
             <code className="ws-code">paginationAriaLabel</code>
-          </TextListItem>
-          <TextListItem>
+          </Content>
+          <Content component="li">
             <code className="ws-code">toFirstPage</code>:{" "}
             <code className="ws-code">toFirstPageAriaLabel</code>
-          </TextListItem>
-          <TextListItem>
+          </Content>
+          <Content component="li">
             <code className="ws-code">toLastPage</code>:{" "}
             <code className="ws-code">toLastPageAriaLabel</code>
-          </TextListItem>
-          <TextListItem>
+          </Content>
+          <Content component="li">
             <code className="ws-code">toNextPage</code>:{" "}
             <code className="ws-code">toNextPageAriaLabel</code>
-          </TextListItem>
-          <TextListItem>
+          </Content>
+          <Content component="li">
             <code className="ws-code">toPreviousPage</code>:{" "}
             <code className="ws-code">toPreviousPageAriaLabel</code>
-          </TextListItem>
-          <TextListItem>
+          </Content>
+          <Content component="li">
             <code className="ws-code">optionsToggle</code>:{" "}
             <code className="ws-code">optionsToggleAriaLabel</code>
-          </TextListItem>
-        </TextList>
-        <Text component={TextVariants.h2}>Example in</Text>
+          </Content>
+        </Content>
+        <Content component={ContentVariants.h2}>Example in</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`<Pagination
@@ -3200,7 +3200,7 @@ import {
 />`}
           </CodeBlockCode>
         </CodeBlock>
-        <Text component={TextVariants.h2}>Example out</Text>
+        <Content component={ContentVariants.h2}>Example out</Content>
         <CodeBlock>
           <CodeBlockCode>{`<Pagination
   isLastFullPageShown
@@ -3215,7 +3215,7 @@ import {
   }}
 />`}</CodeBlockCode>
         </CodeBlock>
-      </TextContent>
+      </Content>
     ),
     repo: "React",
     fixedWithCodeMod: true,
@@ -3230,22 +3230,22 @@ import {
     ),
     pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/8134",
     details: (
-      <TextContent>
-        <Text component={TextVariants.h2}>Example in</Text>
+      <Content>
+        <Content component={ContentVariants.h2}>Example in</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`import { Pagination, ToggleTemplateProps } from '@patternfly/react-core';
 <Pagination toggleTemplate={({firstIndex, lastIndex} : ToggleTemplateProps) => <div />} />`}
           </CodeBlockCode>
         </CodeBlock>
-        <Text component={TextVariants.h2}>Example out</Text>
+        <Content component={ContentVariants.h2}>Example out</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`import { Pagination, PaginationToggleTemplateProps } from '@patternfly/react-core';
 <Pagination toggleTemplate={({firstIndex, lastIndex} : PaginationToggleTemplateProps) => <div />} />`}
           </CodeBlockCode>
         </CodeBlock>
-      </TextContent>
+      </Content>
     ),
     repo: "React",
     fixedWithCodeMod: true,
@@ -3402,15 +3402,15 @@ import {
     description: (<>Removed the <code className='ws-code'>boundary</code> and <code className='ws-code'>tippyProps</code> properties and updated removed parameters from various callback properties.</>),
     pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/8201",
     details: (
-      <TextContent>
-        <Text component={TextVariants.p}>The <code className='ws-code'>shouldClose</code> property's first parameter was removed, and all parameters were removed from the <code className='ws-code'>onHidden</code>, <code className='ws-code'>onHide</code>, <code className='ws-code'>onMount</code>, <code className='ws-code'>onShow</code>, and <code className='ws-code'>onShown</code> properties.</Text>
-        <Text component={TextVariants.h2}>Example in</Text>
+      <Content>
+        <Content component={ContentVariants.p}>The <code className='ws-code'>shouldClose</code> property's first parameter was removed, and all parameters were removed from the <code className='ws-code'>onHidden</code>, <code className='ws-code'>onHide</code>, <code className='ws-code'>onMount</code>, <code className='ws-code'>onShow</code>, and <code className='ws-code'>onShown</code> properties.</Content>
+        <Content component={ContentVariants.h2}>Example in</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`<Popover boundary={} tippyProps={} shouldClose={(tip, hideFunction) => {/* ... */}} onHidden={(tip) => {/* ... */}} onHide={(tip) => {/* ... */}} onMount={(tip) => {/* ... */}} onShow={(tip) => {/* ... */}} onShown={(tip) => {/* ... */}} />`}
           </CodeBlockCode>
         </CodeBlock>
-        <Text component={TextVariants.h2}>Example out</Text>
+        <Content component={ContentVariants.h2}>Example out</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`<Popover
@@ -3435,7 +3435,7 @@ import {
 />`}
           </CodeBlockCode>
         </CodeBlock>
-      </TextContent>
+      </Content>
     ),
     repo: "React",
     fixedWithCodeMod: true
@@ -3444,8 +3444,8 @@ import {
     description: (<>Updated the <code className='ws-code'>shouldClose</code> and <code className='ws-code'>shouldOpen</code> callback properties so that the <code className='ws-code'>event</code> parameter is the first parameter.</>),
     pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/9054",
     details: (
-      <TextContent>
-        <Text component={TextVariants.h2}>Example in</Text>
+      <Content>
+        <Content component={ContentVariants.h2}>Example in</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`<Popover shouldOpen={(fn) => openHandler(fn)} shouldClose={(fn2) => closeHandler(fn2)} />
@@ -3458,7 +3458,7 @@ function closeHandler2(fn, event) {};
 <Popover shouldOpen={openHandler2} shouldClose={closeHandler2} />`}
           </CodeBlockCode>
         </CodeBlock>
-        <Text component={TextVariants.h2}>Example out</Text>
+        <Content component={ContentVariants.h2}>Example out</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`<Popover shouldOpen={(_event, fn) => openHandler(fn)} shouldClose={(_event, fn2) => closeHandler(fn2)} />
@@ -3471,7 +3471,7 @@ function closeHandler2(event, id) {};
 <Popover shouldOpen={openHandler2} shouldClose={closeHandler2} />`}
           </CodeBlockCode>
         </CodeBlock>
-      </TextContent>
+      </Content>
     ),
     repo: "React",
     fixedWithCodeMod: true
@@ -3480,20 +3480,20 @@ function closeHandler2(event, id) {};
     description: (<>Removed the <code className='ws-code'>popperMatchesTriggerWidth</code>  property. The <code className='ws-code'>width</code>, <code className='ws-code'>minWidth</code>, and <code className='ws-code'>maxWidth</code> properties should be used instead to modify the Popper width.</>),
     pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/8724",
     details: (
-      <TextContent>
-        <Text component={TextVariants.h2}>Example in</Text>
+      <Content>
+        <Content component={ContentVariants.h2}>Example in</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`<Popper popperMatchesTriggerWidth />`}
           </CodeBlockCode>
         </CodeBlock>
-        <Text component={TextVariants.h2}>Example out</Text>
+        <Content component={ContentVariants.h2}>Example out</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`<Popper  />`}
           </CodeBlockCode>
         </CodeBlock>
-      </TextContent>
+      </Content>
     ),
     repo: "React",
     fixedWithCodeMod: true
@@ -3502,8 +3502,8 @@ function closeHandler2(event, id) {};
     description: (<>Updated the <code className='ws-code'>onChange</code> callback property so that the <code className='ws-code'>event</code> parameter is the first parameter.</>),
     pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/8965",
     details: (
-      <TextContent>
-        <Text component={TextVariants.h2}>Example in</Text>
+      <Content>
+        <Content component={ContentVariants.h2}>Example in</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`<Radio onChange={(checked) => handler(checked)} />
@@ -3514,7 +3514,7 @@ function handler2(checked, event) {};
 <Radio onChange={handler2} />`}
           </CodeBlockCode>
         </CodeBlock>
-        <Text component={TextVariants.h2}>Example out</Text>
+        <Content component={ContentVariants.h2}>Example out</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`<Radio onChange={(_event, checked) => handler(checked)} />
@@ -3525,7 +3525,7 @@ function handler2(_event, checked) {};
 <Radio onChange={handler2} />`}
           </CodeBlockCode>
         </CodeBlock>
-      </TextContent>
+      </Content>
     ),
     repo: "React",
     fixedWithCodeMod: true
@@ -3554,30 +3554,30 @@ function handler2(_event, checked) {};
     repo: "React",
     fixedWithCodeMod: false,
     details: (
-      <TextContent>
-        <Text component={TextVariants.p}>To change the default size or color on an icon, it is recommended to wrap the icon in a <code className='ws-code'>Icon</code> React component.</Text>
-	<Text component={TextVariants.p}>If the icon used the <code className='ws-code'>noVerticalAlign</code> prop in PatternFly 4, the same style can be achieved by wrapping the icon in a <code className='ws-code'>Icon</code> React component and using the <code className='ws-code'>isInline</code> prop.</Text>
-      </TextContent>
+      <Content>
+        <Content component={ContentVariants.p}>To change the default size or color on an icon, it is recommended to wrap the icon in a <code className='ws-code'>Icon</code> React component.</Content>
+	<Content component={ContentVariants.p}>If the icon used the <code className='ws-code'>noVerticalAlign</code> prop in PatternFly 4, the same style can be achieved by wrapping the icon in a <code className='ws-code'>Icon</code> React component and using the <code className='ws-code'>isInline</code> prop.</Content>
+      </Content>
     )    
   }, {
     component: "Application launcher",
     description: (<>Removed the <code className='ws-code'>removeFindDomNode</code> property as it is now the default behavior.</>),
     pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/8316",
     details: (
-      <TextContent>
-        <Text component={TextVariants.h2}>Example in</Text>
+      <Content>
+        <Content component={ContentVariants.h2}>Example in</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`<ApplicationLauncher removeFindDomNode />`}
           </CodeBlockCode>
         </CodeBlock>
-        <Text component={TextVariants.h2}>Example out</Text>
+        <Content component={ContentVariants.h2}>Example out</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`<ApplicationLauncher  />`}
           </CodeBlockCode>
         </CodeBlock>
-      </TextContent>
+      </Content>
     ),
     repo: "React",
     fixedWithCodeMod: true
@@ -3586,20 +3586,20 @@ function handler2(_event, checked) {};
     description: (<>Removed the <code className='ws-code'>removeFindDomNode</code> property as it is now the default behavior.</>),
     pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/8371",
     details: (
-      <TextContent>
-        <Text component={TextVariants.h2}>Example in</Text>
+      <Content>
+        <Content component={ContentVariants.h2}>Example in</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`<ClipboardCopy removeFindDomNode />`}
           </CodeBlockCode>
         </CodeBlock>
-        <Text component={TextVariants.h2}>Example out</Text>
+        <Content component={ContentVariants.h2}>Example out</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`<ClipboardCopy  />`}
           </CodeBlockCode>
         </CodeBlock>
-      </TextContent>
+      </Content>
     ),
     repo: "React",
     fixedWithCodeMod: true
@@ -3608,20 +3608,20 @@ function handler2(_event, checked) {};
     description: (<>Removed the <code className='ws-code'>removeFindDomNode</code> property as it is now the default behavior.</>),
     pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/8371",
     details: (
-      <TextContent>
-        <Text component={TextVariants.h2}>Example in</Text>
+      <Content>
+        <Content component={ContentVariants.h2}>Example in</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`<Truncate removeFindDomNode />`}
           </CodeBlockCode>
         </CodeBlock>
-        <Text component={TextVariants.h2}>Example out</Text>
+        <Content component={ContentVariants.h2}>Example out</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`<Truncate  />`}
           </CodeBlockCode>
         </CodeBlock>
-      </TextContent>
+      </Content>
     ),
     repo: "React",
     fixedWithCodeMod: true
@@ -3630,20 +3630,20 @@ function handler2(_event, checked) {};
     description: (<>Removed the <code className='ws-code'>removeFindDomNode</code> property as it is now the default behavior.</>),
     pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/8316",
     details: (
-      <TextContent>
-        <Text component={TextVariants.h2}>Example in</Text>
+      <Content>
+        <Content component={ContentVariants.h2}>Example in</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`<ContextSelector removeFindDomNode />`}
           </CodeBlockCode>
         </CodeBlock>
-        <Text component={TextVariants.h2}>Example out</Text>
+        <Content component={ContentVariants.h2}>Example out</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`<ContextSelector  />`}
           </CodeBlockCode>
         </CodeBlock>
-      </TextContent>
+      </Content>
     ),
     repo: "React",
     fixedWithCodeMod: true
@@ -3652,20 +3652,20 @@ function handler2(_event, checked) {};
     description: (<>Removed the <code className='ws-code'>removeFindDomNode</code> property from the deprecated implementation as it is now the default behavior.</>),
     pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/8316",
     details: (
-      <TextContent>
-        <Text component={TextVariants.h2}>Example in</Text>
+      <Content>
+        <Content component={ContentVariants.h2}>Example in</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`<Dropdown removeFindDomNode />`}
           </CodeBlockCode>
         </CodeBlock>
-        <Text component={TextVariants.h2}>Example out</Text>
+        <Content component={ContentVariants.h2}>Example out</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`<Dropdown  />`}
           </CodeBlockCode>
         </CodeBlock>
-      </TextContent>
+      </Content>
     ),
     repo: "React",
     fixedWithCodeMod: true
@@ -3674,20 +3674,20 @@ function handler2(_event, checked) {};
     description: (<>Removed the <code className='ws-code'>removeFindDomNode</code> property from the <code className='ws-code'>NavItem</code> component as it is now the default behavior.</>),
     pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/8316",
     details: (
-      <TextContent>
-        <Text component={TextVariants.h2}>Example in</Text>
+      <Content>
+        <Content component={ContentVariants.h2}>Example in</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`<NavItem removeFindDomNode />`}
           </CodeBlockCode>
         </CodeBlock>
-        <Text component={TextVariants.h2}>Example out</Text>
+        <Content component={ContentVariants.h2}>Example out</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`<NavItem  />`}
           </CodeBlockCode>
         </CodeBlock>
-      </TextContent>
+      </Content>
     ),
     repo: "React",
     fixedWithCodeMod: true
@@ -3696,20 +3696,20 @@ function handler2(_event, checked) {};
     description: (<>Removed the <code className='ws-code'>removeFindDomNode</code> property as it is now the default behavior.</>),
     pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/8316",
     details: (
-      <TextContent>
-        <Text component={TextVariants.h2}>Example in</Text>
+      <Content>
+        <Content component={ContentVariants.h2}>Example in</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`<OptionsMenu removeFindDomNode />`}
           </CodeBlockCode>
         </CodeBlock>
-        <Text component={TextVariants.h2}>Example out</Text>
+        <Content component={ContentVariants.h2}>Example out</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`<OptionsMenu  />`}
           </CodeBlockCode>
         </CodeBlock>
-      </TextContent>
+      </Content>
     ),
     repo: "React",
     fixedWithCodeMod: true
@@ -3718,20 +3718,20 @@ function handler2(_event, checked) {};
     description: (<>Removed the <code className='ws-code'>removeFindDomNode</code> property as it is now the default behavior.</>),
     pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/8316",
     details: (
-      <TextContent>
-        <Text component={TextVariants.h2}>Example in</Text>
+      <Content>
+        <Content component={ContentVariants.h2}>Example in</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`<Popover removeFindDomNode />`}
           </CodeBlockCode>
         </CodeBlock>
-        <Text component={TextVariants.h2}>Example out</Text>
+        <Content component={ContentVariants.h2}>Example out</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`<Popover  />`}
           </CodeBlockCode>
         </CodeBlock>
-      </TextContent>
+      </Content>
     ),
     repo: "React",
     fixedWithCodeMod: true
@@ -3740,20 +3740,20 @@ function handler2(_event, checked) {};
     description: (<>Removed the <code className='ws-code'>removeFindDomNode</code> property as it is now the default behavior.</>),
     pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/8316",
     details: (
-      <TextContent>
-        <Text component={TextVariants.h2}>Example in</Text>
+      <Content>
+        <Content component={ContentVariants.h2}>Example in</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`<SearchInput removeFindDomNode />`}
           </CodeBlockCode>
         </CodeBlock>
-        <Text component={TextVariants.h2}>Example out</Text>
+        <Content component={ContentVariants.h2}>Example out</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`<SearchInput  />`}
           </CodeBlockCode>
         </CodeBlock>
-      </TextContent>
+      </Content>
     ),
     repo: "React",
     fixedWithCodeMod: true
@@ -3762,20 +3762,20 @@ function handler2(_event, checked) {};
     description: (<>Removed the <code className='ws-code'>removeFindDomNode</code> property from the deprecated implementation as it is now the default behavior.</>),
     pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/8316",
     details: (
-      <TextContent>
-        <Text component={TextVariants.h2}>Example in</Text>
+      <Content>
+        <Content component={ContentVariants.h2}>Example in</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`<Select removeFindDomNode />`}
           </CodeBlockCode>
         </CodeBlock>
-        <Text component={TextVariants.h2}>Example out</Text>
+        <Content component={ContentVariants.h2}>Example out</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`<Select  />`}
           </CodeBlockCode>
         </CodeBlock>
-      </TextContent>
+      </Content>
     ),
     repo: "React",
     fixedWithCodeMod: true
@@ -3784,20 +3784,20 @@ function handler2(_event, checked) {};
     description: (<>Removed the <code className='ws-code'>removeFindDomNode</code> property from the <code className='ws-code'>OverflowTab</code> component as it is now the default behavior.</>),
     pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/8316",
     details: (
-      <TextContent>
-        <Text component={TextVariants.h2}>Example in</Text>
+      <Content>
+        <Content component={ContentVariants.h2}>Example in</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`<OverflowTab removeFindDomNode />`}
           </CodeBlockCode>
         </CodeBlock>
-        <Text component={TextVariants.h2}>Example out</Text>
+        <Content component={ContentVariants.h2}>Example out</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`<OverflowTab  />`}
           </CodeBlockCode>
         </CodeBlock>
-      </TextContent>
+      </Content>
     ),
     repo: "React",
     fixedWithCodeMod: true
@@ -3806,20 +3806,20 @@ function handler2(_event, checked) {};
     description: (<>Removed the <code className='ws-code'>removeFindDomNode</code> property as it is now the default behavior.</>),
     pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/8316",
     details: (
-      <TextContent>
-        <Text component={TextVariants.h2}>Example in</Text>
+      <Content>
+        <Content component={ContentVariants.h2}>Example in</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`<Timepicker removeFindDomNode />`}
           </CodeBlockCode>
         </CodeBlock>
-        <Text component={TextVariants.h2}>Example out</Text>
+        <Content component={ContentVariants.h2}>Example out</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`<Timepicker  />`}
           </CodeBlockCode>
         </CodeBlock>
-      </TextContent>
+      </Content>
     ),
     repo: "React",
     fixedWithCodeMod: true
@@ -3828,20 +3828,20 @@ function handler2(_event, checked) {};
     description: (<>Removed the <code className='ws-code'>removeFindDomNode</code> property as it is now the default behavior.</>),
     pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/8316",
     details: (
-      <TextContent>
-        <Text component={TextVariants.h2}>Example in</Text>
+      <Content>
+        <Content component={ContentVariants.h2}>Example in</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`<Tooltip removeFindDomNode />`}
           </CodeBlockCode>
         </CodeBlock>
-        <Text component={TextVariants.h2}>Example out</Text>
+        <Content component={ContentVariants.h2}>Example out</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`<Tooltip  />`}
           </CodeBlockCode>
         </CodeBlock>
-      </TextContent>
+      </Content>
     ),
     repo: "React",
     fixedWithCodeMod: true
@@ -3898,15 +3898,15 @@ function handler2(_event, checked) {};
     description: (<>Deprecated the <code  className='ws-code'>Select</code> components and replaced them with a newer implementation.</>),
     pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/8825",
     details: (
-      <TextContent>
-        <Text component={TextVariants.p}>Codemods will update import and export paths to our deprecated directory, but we recommend replacing it with our new <code className='ws-code'>Select</code> implementation.</Text>
-        <Text component={TextVariants.h2}>Example in</Text>
+      <Content>
+        <Content component={ContentVariants.p}>Codemods will update import and export paths to our deprecated directory, but we recommend replacing it with our new <code className='ws-code'>Select</code> implementation.</Content>
+        <Content component={ContentVariants.h2}>Example in</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`import { Button, Select, SelectOption, SelectVariant, SelectDirection, SelectGroup } from "@patternfly/react-core";`}
           </CodeBlockCode>
         </CodeBlock>
-        <Text component={TextVariants.h2}>Example out</Text>
+        <Content component={ContentVariants.h2}>Example out</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`import {
@@ -3921,7 +3921,7 @@ import {
 } from '@patternfly/react-core/deprecated';`}
           </CodeBlockCode>
         </CodeBlock>
-      </TextContent>
+      </Content>
     ),
     repo: "React",
     fixedWithCodeMod: true
@@ -3930,20 +3930,20 @@ import {
     description: (<>Renamed the <code  className='ws-code'>itemId</code> property for the new implementation of <code  className='ws-code'>SelectOption</code> to <code  className='ws-code'>value</code>.</>),
     pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/8825",
     details: (
-      <TextContent>
-        <Text component={TextVariants.h2}>Example in</Text>
+      <Content>
+        <Content component={ContentVariants.h2}>Example in</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`<SelectOption itemId="Option 1" />`}
           </CodeBlockCode>
         </CodeBlock>
-        <Text component={TextVariants.h2}>Example out</Text>
+        <Content component={ContentVariants.h2}>Example out</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`<SelectOption value="Option 1" />`}
           </CodeBlockCode>
         </CodeBlock>
-      </TextContent>
+      </Content>
     ),
     repo: "React",
     fixedWithCodeMod: true
@@ -3952,20 +3952,20 @@ import {
     description: (<>Renamed the <code  className='ws-code'>itemId</code> property for the new implementation of <code  className='ws-code'>DropdownItem</code> to <code  className='ws-code'>value</code>.</>),
     pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/8825",
     details: (
-      <TextContent>
-        <Text component={TextVariants.h2}>Example in</Text>
+      <Content>
+        <Content component={ContentVariants.h2}>Example in</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`<DropdownItem itemId="Item 1" />`}
           </CodeBlockCode>
         </CodeBlock>
-        <Text component={TextVariants.h2}>Example out</Text>
+        <Content component={ContentVariants.h2}>Example out</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`<DropdownItem value="Item 1" />`}
           </CodeBlockCode>
         </CodeBlock>
-      </TextContent>
+      </Content>
     ),
     repo: "React",
     fixedWithCodeMod: true
@@ -3980,20 +3980,20 @@ import {
     description: (<>Removed the <code  className='ws-code'>isCurrent</code>  property, which should be replaced with the <code  className='ws-code'>isActive</code>  property.</>),
     pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/8132",
     details: (
-      <TextContent>
-        <Text component={TextVariants.h2}>Example in</Text>
+      <Content>
+        <Content component={ContentVariants.h2}>Example in</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`<SimpleList isCurrent />`}
           </CodeBlockCode>
         </CodeBlock>
-        <Text component={TextVariants.h2}>Example out</Text>
+        <Content component={ContentVariants.h2}>Example out</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`<SimpleList isActive />`}
           </CodeBlockCode>
         </CodeBlock>
-      </TextContent>
+      </Content>
     ),
     repo: "React",
     fixedWithCodeMod: true
@@ -4002,8 +4002,8 @@ import {
     description: (<>Updated the <code className='ws-code'>onChange</code> callback property so that the <code className='ws-code'>event</code> parameter is the first parameter.</>),
     pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/8970",
     details: (
-      <TextContent>
-        <Text component={TextVariants.h2}>Example in</Text>
+      <Content>
+        <Content component={ContentVariants.h2}>Example in</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`<Slider onChange={(value) => handler(value)} />
@@ -4013,7 +4013,7 @@ function handler2(value) {};
 <Slider onChange={handler2} />`}
           </CodeBlockCode>
         </CodeBlock>
-        <Text component={TextVariants.h2}>Example out</Text>
+        <Content component={ContentVariants.h2}>Example out</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`<Slider onChange={(_event, value) => handler(value)} />
@@ -4023,7 +4023,7 @@ function handler2(_event, value) {};
 <Slider onChange={handler2} />`}
           </CodeBlockCode>
         </CodeBlock>
-      </TextContent>
+      </Content>
     ),
     repo: "React",
     fixedWithCodeMod: true
@@ -4032,20 +4032,20 @@ function handler2(_event, value) {};
     description: (<>Removed the <code className='ws-code'>isSVG</code> property as the component now uses an SVG exclusively.</>),
     pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/8616",
     details: (
-      <TextContent>
-        <Text component={TextVariants.h2}>Example in</Text>
+      <Content>
+        <Content component={ContentVariants.h2}>Example in</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`<Spinner isSVG />`}
           </CodeBlockCode>
         </CodeBlock>
-        <Text component={TextVariants.h2}>Example out</Text>
+        <Content component={ContentVariants.h2}>Example out</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`<Spinner  />`}
           </CodeBlockCode>
         </CodeBlock>
-      </TextContent>
+      </Content>
     ),
     repo: "React",
     fixedWithCodeMod: true
@@ -4054,8 +4054,8 @@ function handler2(_event, value) {};
     description: (<>Updated the <code className='ws-code'>onChange</code> callback property so that the <code className='ws-code'>event</code> parameter is the first parameter.</>),
     pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/9037",
     details: (
-      <TextContent>
-        <Text component={TextVariants.h2}>Example in</Text>
+      <Content>
+        <Content component={ContentVariants.h2}>Example in</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`<Switch onChange={(id) => handler(id)} />
@@ -4066,7 +4066,7 @@ function handler2(id, event) {};
 <Switch onChange={handler2} />`}
           </CodeBlockCode>
         </CodeBlock>
-        <Text component={TextVariants.h2}>Example out</Text>
+        <Content component={ContentVariants.h2}>Example out</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`<Switch onChange={(_event, id) => handler(id)} />
@@ -4077,7 +4077,7 @@ function handler2(_event, id) {};
 <Switch onChange={handler2} />`}
           </CodeBlockCode>
         </CodeBlock>
-      </TextContent>
+      </Content>
     ),
     repo: "React",
     fixedWithCodeMod: true
@@ -4086,20 +4086,20 @@ function handler2(_event, id) {};
     description: (<>Renamed the <code className='ws-code'>isHoverable</code> property to <code className='ws-code'>isClickable</code>. Codemods will provide a fix when the property is passed to the <code className='ws-code'>Tr</code> component of our composable implementation, but will otherwise only raise an error for our deprecated implementation.</>),
     pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/9083",
     details: (
-      <TextContent>
-        <Text component={TextVariants.h2}>Example in</Text>
+      <Content>
+        <Content component={ContentVariants.h2}>Example in</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`<Tr isHoverable />`}
           </CodeBlockCode>
         </CodeBlock>
-        <Text component={TextVariants.h2}>Example out</Text>
+        <Content component={ContentVariants.h2}>Example out</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`<Tr isClickable />`}
           </CodeBlockCode>
         </CodeBlock>
-      </TextContent>
+      </Content>
     ),
     repo: "React",
     fixedWithCodeMod: true
@@ -4108,9 +4108,9 @@ function handler2(_event, id) {};
     description: (<>Renamed the <code className='ws-code'>TableComposable</code> component to just <code className='ws-code'>Table</code>.</>),
     pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/8892",
     details: (
-      <TextContent>
-        <Text component={TextVariants.p}>The fix provided by  Codemods will insert a <code className='ws-code'>/* data- Codemods */</code> comment after the import specifier. This should only be removed once  Codemods is no longer being ran as it prevents other fixes from overwriting this update.</Text>
-        <Text component={TextVariants.h2}>Example in</Text>
+      <Content>
+        <Content component={ContentVariants.p}>The fix provided by  Codemods will insert a <code className='ws-code'>/* data- Codemods */</code> comment after the import specifier. This should only be removed once  Codemods is no longer being ran as it prevents other fixes from overwriting this update.</Content>
+        <Content component={ContentVariants.h2}>Example in</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`import { TableComposable } from '@patternfly/react-table';
@@ -4118,7 +4118,7 @@ function handler2(_event, id) {};
 <TableComposable />`}
           </CodeBlockCode>
         </CodeBlock>
-        <Text component={TextVariants.h2}>Example out</Text>
+        <Content component={ContentVariants.h2}>Example out</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`import { Table /* data- Codemods */ } from '@patternfly/react-table';
@@ -4126,7 +4126,7 @@ function handler2(_event, id) {};
 <Table />`}
           </CodeBlockCode>
         </CodeBlock>
-      </TextContent>
+      </Content>
     ),
     repo: "React",
     fixedWithCodeMod: true
@@ -4135,15 +4135,15 @@ function handler2(_event, id) {};
     description: (<>Deprecated the <code  className='ws-code'>Table</code> components, which should be replaced with the composable implementation.</>),
     pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/8892",
     details: (
-      <TextContent>
-        <Text component={TextVariants.p}>Codemods will update import and export paths to our deprecated directory, but we recommend replacing it with our composable implementation.</Text>
-        <Text component={TextVariants.h2}>Example in</Text>
+      <Content>
+        <Content component={ContentVariants.p}>Codemods will update import and export paths to our deprecated directory, but we recommend replacing it with our composable implementation.</Content>
+        <Content component={ContentVariants.h2}>Example in</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`import { Table, TableBody, TableHeader, TableProps } from "@patternfly/react-table";`}
           </CodeBlockCode>
         </CodeBlock>
-        <Text component={TextVariants.h2}>Example out</Text>
+        <Content component={ContentVariants.h2}>Example out</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`import {
@@ -4154,7 +4154,7 @@ function handler2(_event, id) {};
 } from '@patternfly/react-table/deprecated';`}
           </CodeBlockCode>
         </CodeBlock>
-      </TextContent>
+      </Content>
     ),
     repo: "React",
     fixedWithCodeMod: true
@@ -4163,13 +4163,13 @@ function handler2(_event, id) {};
     description: (<>Updated the <code  className='ws-code'>ActionsColumn</code> to use the new implementation of <code  className='ws-code'>Dropdown</code>. This applies to both the deprecated and composable implementations.</>),
     pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/8629",
     details: (
-      <TextContent>
-        <Text component={TextVariants.p}>The following changes were also made:</Text>
-        <TextList>
-          <TextListItem>The toggle passed to the <code  className='ws-code'>ActionsColumn</code> must be a <code  className='ws-code'>MenuToggle</code> component</TextListItem>
-          <TextListItem>Removed the <code  className='ws-code'>dropdownPosition</code>, <code  className='ws-code'>dropdownDirection</code>, and <code  className='ws-code'>menuAppendTo</code> properties, which should be replaced with the <code  className='ws-code'>popperProps</code> property</TextListItem>
-        </TextList>
-      </TextContent>
+      <Content>
+        <Content component={ContentVariants.p}>The following changes were also made:</Content>
+        <Content component="ul">
+          <Content component="li">The toggle passed to the <code  className='ws-code'>ActionsColumn</code> must be a <code  className='ws-code'>MenuToggle</code> component</Content>
+          <Content component="li">Removed the <code  className='ws-code'>dropdownPosition</code>, <code  className='ws-code'>dropdownDirection</code>, and <code  className='ws-code'>menuAppendTo</code> properties, which should be replaced with the <code  className='ws-code'>popperProps</code> property</Content>
+        </Content>
+      </Content>
     ),
     repo: "React",
     fixedWithCodeMod: false
@@ -4184,20 +4184,20 @@ function handler2(_event, id) {};
     description: (<>Removed the deprecated <code  className='ws-code'>hasSelectableRowCaption</code> property from our composable implementation.</>),
     pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/8352",
     details: (
-      <TextContent>
-        <Text component={TextVariants.h2}>Example in</Text>
+      <Content>
+        <Content component={ContentVariants.h2}>Example in</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`<TableComposable hasSelectableRowCaption />`}
           </CodeBlockCode>
         </CodeBlock>
-        <Text component={TextVariants.h2}>Example out</Text>
+        <Content component={ContentVariants.h2}>Example out</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`<TableComposable  />`}
           </CodeBlockCode>
         </CodeBlock>
-      </TextContent>
+      </Content>
     ),
     repo: "React",
     fixedWithCodeMod: true
@@ -4206,8 +4206,8 @@ function handler2(_event, id) {};
     description: (<>Updated the <code className='ws-code'>onToggle</code> callback property so that the <code className='ws-code'>event</code> parameter is the first parameter.</>),
     pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/9059",
     details: (
-      <TextContent>
-        <Text component={TextVariants.h2}>Example in</Text>
+      <Content>
+        <Content component={ContentVariants.h2}>Example in</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`<Tabs onToggle={(id) => handler(id)} />
@@ -4217,7 +4217,7 @@ function handler2(id) {};
 <Tabs onToggle={handler2} />`}
           </CodeBlockCode>
         </CodeBlock>
-        <Text component={TextVariants.h2}>Example out</Text>
+        <Content component={ContentVariants.h2}>Example out</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`<Tabs onToggle={(_event, id) => handler(id)} />
@@ -4227,7 +4227,7 @@ function handler2(_event, id) {};
 <Tabs onToggle={handler2} />`}
           </CodeBlockCode>
         </CodeBlock>
-      </TextContent>
+      </Content>
     ),
     repo: "React",
     fixedWithCodeMod: true
@@ -4236,8 +4236,8 @@ function handler2(_event, id) {};
     description: (<>Renamed the <code className='ws-code'>hasBorderBottom</code> property to <code className='ws-code'>hasNoBorderBottom</code>.</>),
     pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/8517",
     details: (
-      <TextContent>
-        <Text component={TextVariants.h2}>Example in</Text>
+      <Content>
+        <Content component={ContentVariants.h2}>Example in</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`<Tabs hasBorderBottom />
@@ -4246,7 +4246,7 @@ function handler2(_event, id) {};
 <Tabs hasBorderBottom={someVar} />`}
           </CodeBlockCode>
         </CodeBlock>
-        <Text component={TextVariants.h2}>Example out</Text>
+        <Content component={ContentVariants.h2}>Example out</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`<Tabs  />
@@ -4255,7 +4255,7 @@ function handler2(_event, id) {};
 <Tabs hasNoBorderBottom={!someVar} />`}
           </CodeBlockCode>
         </CodeBlock>
-      </TextContent>
+      </Content>
     ),
     repo: "React",
     fixedWithCodeMod: true
@@ -4264,20 +4264,20 @@ function handler2(_event, id) {};
     description: (<>Removed the <code className='ws-code'>hasSecondaryBorderBottom</code>  property.</>),
     pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/8517",
     details: (
-      <TextContent>
-        <Text component={TextVariants.h2}>Example in</Text>
+      <Content>
+        <Content component={ContentVariants.h2}>Example in</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`<Tabs hasSecondaryBorderBottom />`}
           </CodeBlockCode>
         </CodeBlock>
-        <Text component={TextVariants.h2}>Example out</Text>
+        <Content component={ContentVariants.h2}>Example out</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`<Tabs  />`}
           </CodeBlockCode>
         </CodeBlock>
-      </TextContent>
+      </Content>
     ),
     repo: "React",
     fixedWithCodeMod: true
@@ -4293,9 +4293,9 @@ function handler2(_event, id) {};
     // TODO: Update to include both pull requests for this codemod
     pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/8861",
     details: (
-      <TextContent>
-        <Text component={TextVariants.p}>This change affects the <code className='ws-code'>TdSelectType</code> interface used within the <code className='ws-code'>select</code>  property, and the <code className='ws-code'>TdActionsType</code> interface used within the <code className='ws-code'>actions</code>  property.</Text>
-        <Text component={TextVariants.h2}>Example in</Text>
+      <Content>
+        <Content component={ContentVariants.p}>This change affects the <code className='ws-code'>TdSelectType</code> interface used within the <code className='ws-code'>select</code>  property, and the <code className='ws-code'>TdActionsType</code> interface used within the <code className='ws-code'>actions</code>  property.</Content>
+        <Content component={ContentVariants.h2}>Example in</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`let myObj = { disable: true };
@@ -4313,7 +4313,7 @@ const obj = { disable };
 </>;`}
           </CodeBlockCode>
         </CodeBlock>
-        <Text component={TextVariants.h2}>Example out</Text>
+        <Content component={ContentVariants.h2}>Example out</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`let myObj = { isDisabled: true };
@@ -4331,7 +4331,7 @@ const obj = { isDisabled };
 </>;`}
           </CodeBlockCode>
         </CodeBlock>
-      </TextContent>
+      </Content>
     ),
     repo: "React",
     fixedWithCodeMod: true
@@ -4340,8 +4340,8 @@ const obj = { isDisabled };
     description: (<>Updated the <code className='ws-code'>onChange</code> callback property so that the <code className='ws-code'>event</code> parameter is the first parameter.</>),
     pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/9061",
     details: (
-      <TextContent>
-        <Text component={TextVariants.h2}>Example in</Text>
+      <Content>
+        <Content component={ContentVariants.h2}>Example in</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`<TextArea onChange={(id) => handler(id)} />
@@ -4352,7 +4352,7 @@ function handler2(id, event) {};
 <TextArea onChange={handler2} />`}
           </CodeBlockCode>
         </CodeBlock>
-        <Text component={TextVariants.h2}>Example out</Text>
+        <Content component={ContentVariants.h2}>Example out</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`<TextArea onChange={(_event, id) => handler(id)} />
@@ -4363,7 +4363,7 @@ function handler2(_event, id) {};
 <TextArea onChange={handler2} />`}
           </CodeBlockCode>
         </CodeBlock>
-      </TextContent>
+      </Content>
     ),
     repo: "React",
     fixedWithCodeMod: true
@@ -4372,8 +4372,8 @@ function handler2(_event, id) {};
     description: (<>Updated the <code className='ws-code'>onChange</code> callback property so that the <code className='ws-code'>event</code> parameter is the first parameter.</>),
     pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/9061",
     details: (
-      <TextContent>
-        <Text component={TextVariants.h2}>Example in</Text>
+      <Content>
+        <Content component={ContentVariants.h2}>Example in</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`<TextInput onChange={(id) => handler(id)} />
@@ -4384,7 +4384,7 @@ function handler2(id, event) {};
 <TextInput onChange={handler2} />`}
           </CodeBlockCode>
         </CodeBlock>
-        <Text component={TextVariants.h2}>Example out</Text>
+        <Content component={ContentVariants.h2}>Example out</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`<TextInput onChange={(_event, id) => handler(id)} />
@@ -4395,7 +4395,7 @@ function handler2(_event, id) {};
 <TextInput onChange={handler2} />`}
           </CodeBlockCode>
         </CodeBlock>
-      </TextContent>
+      </Content>
     ),
     repo: "React",
     fixedWithCodeMod: true
@@ -4404,20 +4404,20 @@ function handler2(_event, id) {};
     description: (<>Removed the deprecated <code className='ws-code'>isPrimary</code> property from the deprecated <code className='ws-code'>Toggle</code> component. Codemods will replace the property with a "primary" value on the <code className='ws-code'>toggleVariant</code>  property.</>),
     pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/8179",
     details: (
-      <TextContent>
-        <Text component={TextVariants.h2}>Example in</Text>
+      <Content>
+        <Content component={ContentVariants.h2}>Example in</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`<Toggle isPrimary />`}
           </CodeBlockCode>
         </CodeBlock>
-        <Text component={TextVariants.h2}>Example out</Text>
+        <Content component={ContentVariants.h2}>Example out</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`<Toggle toggleVariant="primary" />`}
           </CodeBlockCode>
         </CodeBlock>
-      </TextContent>
+      </Content>
     ),
     repo: "React",
     fixedWithCodeMod: true
@@ -4426,8 +4426,8 @@ function handler2(_event, id) {};
     description: (<>Updated the <code className='ws-code'>onChange</code> callback property on the <code className='ws-code'>ToggleGroupItem</code> component so that the <code className='ws-code'>event</code> parameter is the first parameter.</>),
     pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/9067",
     details: (
-      <TextContent>
-        <Text component={TextVariants.h2}>Example in</Text>
+      <Content>
+        <Content component={ContentVariants.h2}>Example in</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`<ToggleGroupItem onChange={(id) => handler(id)} />
@@ -4438,7 +4438,7 @@ function handler2(id, event) {};
 <ToggleGroupItem onChange={handler2} />`}
           </CodeBlockCode>
         </CodeBlock>
-        <Text component={TextVariants.h2}>Example out</Text>
+        <Content component={ContentVariants.h2}>Example out</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`<ToggleGroupItem onChange={(_event, id) => handler(id)} />
@@ -4449,7 +4449,7 @@ function handler2(_event, id) {};
 <ToggleGroupItem onChange={handler2} />`}
           </CodeBlockCode>
         </CodeBlock>
-      </TextContent>
+      </Content>
     ),
     repo: "React",
     fixedWithCodeMod: true
@@ -4458,21 +4458,21 @@ function handler2(_event, id) {};
     description: (<>Removed the deprecated <code className='ws-code'>visiblity</code>  property, which should be replaced with the correctly spelled <code className='ws-code'>visibility</code>  property.</>),
     pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/8212",
     details: (
-      <TextContent>
-        <Text component={TextVariants.p}>This change affects the <code className='ws-code'>ToolbarContent</code>, <code className='ws-code'>ToolbarGroup</code>, <code className='ws-code'>ToolbarItem</code>, and <code className='ws-code'>ToolbarToggleGroup</code> components.</Text>
-        <Text component={TextVariants.h2}>Example in</Text>
+      <Content>
+        <Content component={ContentVariants.p}>This change affects the <code className='ws-code'>ToolbarContent</code>, <code className='ws-code'>ToolbarGroup</code>, <code className='ws-code'>ToolbarItem</code>, and <code className='ws-code'>ToolbarToggleGroup</code> components.</Content>
+        <Content component={ContentVariants.h2}>Example in</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`<ToolbarContent visiblity={{ default: "hidden" }} />`}
           </CodeBlockCode>
         </CodeBlock>
-        <Text component={TextVariants.h2}>Example out</Text>
+        <Content component={ContentVariants.h2}>Example out</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`<ToolbarContent visibility={{ default: "hidden" }} />`}
           </CodeBlockCode>
         </CodeBlock>
-      </TextContent>
+      </Content>
     ),
     repo: "React",
     fixedWithCodeMod: true
@@ -4481,9 +4481,9 @@ function handler2(_event, id) {};
     description: (<>Removed the <code className='ws-code'>alignment</code> property from the <code className='ws-code'>ToolbarContent</code>, <code className='ws-code'>ToolbarGroup</code>, and <code className='ws-code'>ToolbarItem</code> components.</>),
     pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/8563",
     details: (
-      <TextContent>
-        <Text component={TextVariants.p}>Codemods will replace the property with <code className='ws-code'>align</code> for the <code className='ws-code'>ToolbarItem</code> and <code className='ws-code'>ToolbarGroup</code> components.</Text>
-        <Text component={TextVariants.h2}>Example in</Text>
+      <Content>
+        <Content component={ContentVariants.p}>Codemods will replace the property with <code className='ws-code'>align</code> for the <code className='ws-code'>ToolbarItem</code> and <code className='ws-code'>ToolbarGroup</code> components.</Content>
+        <Content component={ContentVariants.h2}>Example in</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`<ToolbarContent alignment={{ default: 'alignLeft' }} />
@@ -4491,7 +4491,7 @@ function handler2(_event, id) {};
 <ToolbarItem alignment={{ default: 'alignLeft' }} />`}
           </CodeBlockCode>
         </CodeBlock>
-        <Text component={TextVariants.h2}>Example out</Text>
+        <Content component={ContentVariants.h2}>Example out</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`<ToolbarContent  />
@@ -4499,7 +4499,7 @@ function handler2(_event, id) {};
 <ToolbarItem align={{ default: 'alignLeft' }} />`}
           </CodeBlockCode>
         </CodeBlock>
-      </TextContent>
+      </Content>
     ),
     repo: "React",
     fixedWithCodeMod: true
@@ -4514,20 +4514,20 @@ function handler2(_event, id) {};
     description: (<>Removed the <code className='ws-code'>boundary</code>, <code className='ws-code'>tippyProps</code>, and <code className='ws-code'>isAppLauncher</code> properties.</>),
     pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/8231",
     details: (
-      <TextContent>
-        <Text component={TextVariants.h2}>Example in</Text>
+      <Content>
+        <Content component={ContentVariants.h2}>Example in</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`<Tooltip boundary={} tippyProps={} isAppLauncher />`}
           </CodeBlockCode>
         </CodeBlock>
-        <Text component={TextVariants.h2}>Example out</Text>
+        <Content component={ContentVariants.h2}>Example out</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`<Tooltip     />`}
           </CodeBlockCode>
         </CodeBlock>
-      </TextContent>
+      </Content>
     ),
     repo: "React",
     fixedWithCodeMod: true
@@ -4536,8 +4536,8 @@ function handler2(_event, id) {};
     description: (<>Renamed the <code className='ws-code'>default</code> value for the <code className='ws-code'>variant</code> property to <code className='ws-code'>custom</code>. This change also affects the <code className='ws-code'>AlertVariant</code> enum and <code className='ws-code'>AlertIcon</code> component.</>),
     pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/8924",
     details: (
-      <TextContent>
-        <Text component={TextVariants.h2}>Example in</Text>
+      <Content>
+        <Content component={ContentVariants.h2}>Example in</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`const alertVariantOption = AlertVariant.default;
@@ -4546,7 +4546,7 @@ function handler2(_event, id) {};
 <AlertIcon variant={"default"}></AlertIcon>`}
           </CodeBlockCode>
         </CodeBlock>
-        <Text component={TextVariants.h2}>Example out</Text>
+        <Content component={ContentVariants.h2}>Example out</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`const alertVariantOption = AlertVariant.custom;
@@ -4555,7 +4555,7 @@ function handler2(_event, id) {};
 <AlertIcon variant={"custom"}></AlertIcon>`}
           </CodeBlockCode>
         </CodeBlock>
-      </TextContent>
+      </Content>
     ),
     repo: "React",
     fixedWithCodeMod: true
@@ -4564,20 +4564,20 @@ function handler2(_event, id) {};
     description: (<>Renamed the <code className='ws-code'>default</code> value for the <code className='ws-code'>variant</code> property to <code className='ws-code'>custom</code> for the <code className='ws-code'>NotificationDrawerListItemHeader</code> component.</>),
     pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/8924",
     details: (
-      <TextContent>
-        <Text component={TextVariants.h2}>Example in</Text>
+      <Content>
+        <Content component={ContentVariants.h2}>Example in</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`<NotificationDrawerListItemHeader variant="default"></NotificationDrawerListItemHeader>`}
           </CodeBlockCode>
         </CodeBlock>
-        <Text component={TextVariants.h2}>Example out</Text>
+        <Content component={ContentVariants.h2}>Example out</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`<NotificationDrawerListItemHeader variant="custom"></NotificationDrawerListItemHeader>`}
           </CodeBlockCode>
         </CodeBlock>
-      </TextContent>
+      </Content>
     ),
     repo: "React",
     fixedWithCodeMod: true
@@ -4586,8 +4586,8 @@ function handler2(_event, id) {};
     description: (<>Renamed the <code className='ws-code'>default</code> value for the <code className='ws-code'>titleIconVariant</code> property to <code className='ws-code'>custom</code>. This change also affects the <code className='ws-code'>ModalContent</code> component.</>),
     pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/8924",
     details: (
-      <TextContent>
-        <Text component={TextVariants.h2}>Example in</Text>
+      <Content>
+        <Content component={ContentVariants.h2}>Example in</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`const variantOption = "default";
@@ -4595,7 +4595,7 @@ function handler2(_event, id) {};
 <ModalContent titleIconVariant="default"></ModalContent>`}
           </CodeBlockCode>
         </CodeBlock>
-        <Text component={TextVariants.h2}>Example out</Text>
+        <Content component={ContentVariants.h2}>Example out</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`const variantOption = "custom";
@@ -4603,7 +4603,7 @@ function handler2(_event, id) {};
 <ModalContent titleIconVariant="custom"></ModalContent>`}
           </CodeBlockCode>
         </CodeBlock>
-      </TextContent>
+      </Content>
     ),
     repo: "React",
     fixedWithCodeMod: true
@@ -4612,20 +4612,20 @@ function handler2(_event, id) {};
     description: (<>Renamed the <code className='ws-code'>default</code> value for the <code className='ws-code'>alertSeverityVariant</code> property to <code className='ws-code'>custom</code>.</>),
     pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/8924",
     details: (
-      <TextContent>
-        <Text component={TextVariants.h2}>Example in</Text>
+      <Content>
+        <Content component={ContentVariants.h2}>Example in</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`<Popover alertSeverityVariant="default"></Popover>`}
           </CodeBlockCode>
         </CodeBlock>
-        <Text component={TextVariants.h2}>Example out</Text>
+        <Content component={ContentVariants.h2}>Example out</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`<Popover alertSeverityVariant="custom"></Popover>`}
           </CodeBlockCode>
         </CodeBlock>
-      </TextContent>
+      </Content>
     ),
     repo: "React",
     fixedWithCodeMod: true
@@ -4634,20 +4634,20 @@ function handler2(_event, id) {};
     description: (<>Renamed the <code className='ws-code'>reference</code> property to <code className='ws-code'>triggerRef</code>.</>),
     pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/8733",
     details: (
-      <TextContent>
-        <Text component={TextVariants.h2}>Example in</Text>
+      <Content>
+        <Content component={ContentVariants.h2}>Example in</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`<Popover reference={componentRef} />`}
           </CodeBlockCode>
         </CodeBlock>
-        <Text component={TextVariants.h2}>Example out</Text>
+        <Content component={ContentVariants.h2}>Example out</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`<Popover triggerRef={componentRef} />`}
           </CodeBlockCode>
         </CodeBlock>
-      </TextContent>
+      </Content>
     ),
     repo: "React",
     fixedWithCodeMod: true
@@ -4656,20 +4656,20 @@ function handler2(_event, id) {};
     description: (<>Renamed the <code className='ws-code'>reference</code> property to <code className='ws-code'>triggerRef</code>.</>),
     pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/8733",
     details: (
-      <TextContent>
-        <Text component={TextVariants.h2}>Example in</Text>
+      <Content>
+        <Content component={ContentVariants.h2}>Example in</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`<Tooltip reference={componentRef} />`}
           </CodeBlockCode>
         </CodeBlock>
-        <Text component={TextVariants.h2}>Example out</Text>
+        <Content component={ContentVariants.h2}>Example out</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`<Tooltip triggerRef={componentRef} />`}
           </CodeBlockCode>
         </CodeBlock>
-      </TextContent>
+      </Content>
     ),
     repo: "React",
     fixedWithCodeMod: true
@@ -4678,22 +4678,22 @@ function handler2(_event, id) {};
     description: (<>Deprecated the <code  className='ws-code'>Wizard</code> components and replaced them with a newer implementation.</>),
     pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/8821",
     details: (
-      <TextContent>
-        <Text component={TextVariants.p}>Codemods will update import and export paths to our deprecated directory, but we recommend replacing it with our new <code className='ws-code'>Wizard</code> implementation.</Text>
-        <Text component={TextVariants.h2}>Example in</Text>
+      <Content>
+        <Content component={ContentVariants.p}>Codemods will update import and export paths to our deprecated directory, but we recommend replacing it with our new <code className='ws-code'>Wizard</code> implementation.</Content>
+        <Content component={ContentVariants.h2}>Example in</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`import { Wizard, Button } from '@patternfly/react-core';`}
           </CodeBlockCode>
         </CodeBlock>
-        <Text component={TextVariants.h2}>Example out</Text>
+        <Content component={ContentVariants.h2}>Example out</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`import { Button } from '@patternfly/react-core';
 import { Wizard } from '@patternfly/react-core/deprecated';`}
           </CodeBlockCode>
         </CodeBlock>
-      </TextContent>
+      </Content>
     ),
     repo: "React",
     fixedWithCodeMod: true
@@ -5113,8 +5113,8 @@ import { Wizard } from '@patternfly/react-core/deprecated';`}
     description: <>The <code className="ws-code">tooltip</code> property has been removed from ActionsColumn's <code className="ws-code">item</code> prop interface. Instead a <code className="ws-code">content</code> property should be passed into the <code className="ws-code">tooltipProps</code> property of the <code className="ws-code">items</code> interface.</>,
     pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/9382",
     details: (
-      <TextContent>
-        <Text component={TextVariants.h2}>Example in</Text>
+      <Content>
+        <Content component={ContentVariants.h2}>Example in</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`<ActionsColumn items={[{tooltip: "test"}]} />
@@ -5127,7 +5127,7 @@ const actionItems = () => [{tooltip: "test"}];
 <ActionsColumn items={actionItems} />`}
           </CodeBlockCode>
         </CodeBlock>
-        <Text component={TextVariants.h2}>Example out</Text>
+        <Content component={ContentVariants.h2}>Example out</Content>
         <CodeBlock>
           <CodeBlockCode>
             {`<ActionsColumn items={[{tooltipProps: { content: "test" }}]} />
@@ -5140,7 +5140,7 @@ const actionItems = () => [{tooltipProps: { content: "test" }}];
 <ActionsColumn items={actionItems} />`}
           </CodeBlockCode>
         </CodeBlock>
-      </TextContent>
+      </Content>
     ),
     repo: "React",
     fixedWithCodeMod: true

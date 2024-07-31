@@ -5,21 +5,9 @@ section: get-started
 ---
 
 import './get-started.css';
-import { Button, Card, CardHeader, CardTitle, CardBody, CardFooter, Divider, Icon, Grid, GridItem, PageSection, Split, SplitItem, Title, Tooltip, Text, TextVariants } from '@patternfly/react-core';
+import { Button, Card, CardHeader, CardTitle, CardBody, CardFooter, Divider, Icon, Grid, GridItem, PageSection, Split, SplitItem, Title, Tooltip, Content, ContentVariants } from '@patternfly/react-core';
 import ExternalLinkAltIcon from '@patternfly/react-icons/dist/esm/icons/external-link-alt-icon';
 import { Link } from '@patternfly/documentation-framework/components';
-import './community/community.css';
-import { getTitle } from '@patternfly/documentation-framework/helpers/getTitle';
-import communityPageHeader from './community/community-page-header.svg';
-import community1 from './community/community-1.svg';
-import community2 from './community/community-2.svg';
-import community3 from './community/community-3.svg';
-import ChatIcon from '@patternfly/react-icons/dist/esm/icons/chat-icon';
-import QuestionIcon from '@patternfly/react-icons/dist/esm/icons/question-icon';
-import CatalogIcon from '@patternfly/react-icons/dist/esm/icons/catalog-icon';
-import MailBulkIcon from '@patternfly/react-icons/dist/esm/icons/mail-bulk-icon';
-import TwitterIcon from '@patternfly/react-icons/dist/esm/icons/twitter-icon';
-import CalendarIcon from '@patternfly/react-icons/dist/esm/icons/calendar-alt-icon';
 
 ## What is PatternFly? 
 
@@ -64,8 +52,6 @@ PatternFly's foundations create a strong base for the rest of the design system 
 </Card>
 </GridItem>
 </Grid>
-
-<br />
 
 ### Elements 
 
@@ -129,8 +115,6 @@ PatternFly’s core elements are what you will work directly with when building 
 </GridItem>
 </Grid>
 
-<br />
-
 ### Guidance
 
 We provide extensive guidelines to help you create UIs following best practices. 
@@ -180,8 +164,6 @@ We provide extensive guidelines to help you create UIs following best practices.
 
 </Grid>
 
-<br />
-
 ### Additional developer resources
 
 We offer more complex resources to assist with the development process.
@@ -216,8 +198,6 @@ We offer more complex resources to assist with the development process.
 </GridItem>
 
 </Grid>
-
-<br />
 
 ## Join the community
 
@@ -288,9 +268,6 @@ The PatternFly community is never finished growing, and we want to keep it that 
     </Card>
   </Grid>
 
-<br />
-<br />
-
 #### New communities
 Sometimes Flyers branch out and build groups of their own, creating new communities. While these communities are separate from PatternFly and not supported as part of our design system, we still love seeing our Flyers turning their visions into actions.
 
@@ -306,13 +283,11 @@ Sometimes Flyers branch out and build groups of their own, creating new communit
 
 Now that you've been introduced to PatternFly, you're ready to start designing or start developing your product. Looking to get involved in the behind-the-scenes work? Check out our contribution guidelines for more instruction.
 
-<br />
 <Grid sm={12} md={4} hasGutter>
 <Button size="lg" variant="secondary" component="a" href="/get-started/design"> Start designing </Button>
 <Button size="lg" variant="secondary" component="a" href="/get-started/develop"> Start developing </Button>
 <Button size="lg" variant="secondary" component="a" href="/get-started/contribute"> Contribute to PatternFly</Button>
 </Grid>
-<br />
 
 ## Release cadence
 

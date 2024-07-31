@@ -1,43 +1,5 @@
-.ws-color-swatch {
-  display: flex;
-  margin-top: var(--pf-t--global--spacer--md);
-}
-
 .ws-color-swatch > svg {
   flex: 0 0 44px;
   margin-right: var(--pf-t--global--spacer--md);
   border-radius: 50%;
-}
-
-.ws-color-swatch > svg:hover {
-  cursor: pointer;
-  box-shadow: var(--pf-t--global--box-shadow--lg);
-  /* box-shadow: 0 0 0 0.0625rem rgba(3, 3, 3, 0.05), 0 0.25rem 0.5rem 0.25rem rgba(3, 3, 3, 0.06); */
-}
-
-.ws-color-swatch-description {
-  display: flex;
-  flex-direction: column;
-  align-content: space-between;
-}
-
-.ws-color-swatch-description-label {
-  font-size: var(--pf-t--global--font--size--xs);
-  font-weight: var(--pf-t--global--font--weight--body--bold);
-}
-
-.ws-color-swatch-popover {
-  font-size: var(--pf-t--global--font--size--sm);
-}
-
-.ws-color-swatch-popover-label {
-  display: inline-block;
-  padding-top: var(--pf-t--global--spacer--md);
-  padding-bottom: var(--pf-t--global--spacer-xs);
-  font-weight: bold;
-}
-
-.ws-color-swatch-popover-code {
-  white-space: nowrap;
-  margin-bottom: var(--pf-t--global--spacer--md);
 }
