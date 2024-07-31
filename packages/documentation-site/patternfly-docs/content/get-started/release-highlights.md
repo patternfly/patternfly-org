@@ -39,16 +39,16 @@ There were still a handful of bugs on our to-do list. To address a variety of re
   - Switched to the flex layout in the multi-list drag and drop example.
   - Fixed the positioning of `DragOverlay`
 
-#### New features and demos
+#### New features, examples, and demos
 
-We added new features to a few of our components, along with new examples and demos, including:
-- Expanded selectable area size for checkboxes.
-- New page component properties to support drawer width customization.
-- Multiple drop zones in the "next" drag and drop component.
-- [Editable table rows.](/components/table#editable-rows)
-- [Main section variations for the page component.](/components/page#main-section-variations)
-- [A masthead demo with horizontal navigation.](/components/masthead/react-demos)
-- [A basic description list demo.](/components/description-list/react-demos)
+We added new features, examples, and demos to a few of our components:
+- **Feature:** Expanded selectable area size for checkboxes.
+- **Feature:** New page component properties to support drawer width customization.
+- **Feature:** Multiple drop zones in the "next" drag and drop component.
+- **Example:** [Editable table rows.](/components/table#editable-rows)
+- **Example:** [Main section variations for the page component.](/components/page#main-section-variations)
+- **Demo:** [Masthead with horizontal navigation.](/components/masthead/react-demos#horizontal-nav)
+- **Demo:** [Basic description list.](/components/description-list/react-demos#basic)
 
 #### New severity icons
 
