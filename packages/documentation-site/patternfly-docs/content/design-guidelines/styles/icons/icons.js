@@ -228,13 +228,6 @@ export const iconsData = [
     "Contextual_usage": "Indicates the availability of a copy to clipboard function",
   },
   {
-    "Style": "pficon",
-    "Name": "pficon-critical-risk",
-    "React_name": "CriticalRiskIcon",
-    "Type": "Status",
-    "Contextual_usage": "Represents potential critical impact on a system or cluster",
-  },
-  {
     "Style": "fas",
     "Name": "fa-cube",
     "React_name": "CubeIcon",
