@@ -12,8 +12,7 @@ export const GdprBanner = () => {
     setBannerOpen(false);
   }
 
-  // return !isBannerOpen ? null : (
-  return (
+  return !isBannerOpen ? null : (
     <Flex className="ws-gdpr-banner-container">
     <Panel variant="bordered" className="pf-m-raised" id="ws-gdpr-banner">
       <PanelMain>
