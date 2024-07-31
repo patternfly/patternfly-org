@@ -1,13 +1,25 @@
-import React from "react";
-import {Brand, Grid, GridItem, List, PageSection, Content} from "@patternfly/react-core";
-import {Link} from "@patternfly/documentation-framework/components";
-import {GithubIcon, TwitterIcon} from "@patternfly/react-icons";
-import redhatLogo from "./RHLogo.png";
-import logo from "../../layouts/PF-HorizontalLogo-Reverse.svg";
+import React from 'react';
+import {
+  Brand,
+  Grid,
+  GridItem,
+  List,
+  ListItem,
+  PageSection,
+  Content,
+} from '@patternfly/react-core';
+import { Link } from '@patternfly/documentation-framework/components';
+import { GithubIcon, TwitterIcon } from '@patternfly/react-icons';
+import redhatLogo from './RHLogo.png';
+import logo from '../../layouts/PF-HorizontalLogo-Reverse.svg';
 
 export const Footer = () => (
   <React.Fragment>
-    <PageSection key="footer-1" className="ws-org-pfsite-l-footer" component="footer">
+    <PageSection
+      key="footer-1"
+      className="ws-org-pfsite-l-footer"
+      component="footer"
+    >
       <Grid>
         <GridItem
           sm={12}
@@ -22,20 +34,20 @@ export const Footer = () => (
               className="pf-v6-u-ml-md pf-v6-u-ml-0-on-md pf-v6-u-mb-xl pf-v6-u-mb-0-on-md"
             >
               <p className="pf-v6-c-title ws-org-pfsite-footer-menu-list-title">
-                QUICKLINKS
+                <b>QUICKLINKS</b>
               </p>
               <nav aria-label="Quick Links">
                 <List isPlain className="ws-org-pfsite-footer-menu-list">
-                  <li className="ws-org-pfsite-footer-menu-list-item">
+                  <ListItem className="ws-org-pfsite-footer-menu-list-item">
                     <Link
                       className="ws-org-pfsite-footer-menu-link"
-                      to={"/get-started/about-patternfly"}
+                      to={'/get-started/about-patternfly'}
                       aria-label="Get started with PatternFly"
-                     >
+                    >
                       Get started
                     </Link>
-                  </li>
-                  <li className="ws-org-pfsite-footer-menu-list-item">
+                  </ListItem>
+                  <ListItem className="ws-org-pfsite-footer-menu-list-item">
                     <Link
                       className="ws-org-pfsite-footer-menu-link"
                       to="/components/all-components"
@@ -43,8 +55,8 @@ export const Footer = () => (
                     >
                       Components
                     </Link>
-                  </li>
-                  <li className="ws-org-pfsite-footer-menu-list-item">
+                  </ListItem>
+                  <ListItem className="ws-org-pfsite-footer-menu-list-item">
                     <Link
                       className="ws-org-pfsite-footer-menu-link"
                       to="/layouts/about-layouts"
@@ -52,8 +64,8 @@ export const Footer = () => (
                     >
                       Layouts
                     </Link>
-                  </li>
-                  <li className="ws-org-pfsite-footer-menu-list-item">
+                  </ListItem>
+                  <ListItem className="ws-org-pfsite-footer-menu-list-item">
                     <Link
                       className="ws-org-pfsite-footer-menu-link"
                       to="/design-foundations/about-design-foundations"
@@ -61,7 +73,7 @@ export const Footer = () => (
                     >
                       Styles
                     </Link>
-                  </li>
+                  </ListItem>
                 </List>
               </nav>
             </GridItem>
@@ -71,11 +83,11 @@ export const Footer = () => (
               className="pf-v6-u-mt-lg pf-v6-u-mt-0-on-sm pf-v6-u-ml-md pf-v6-u-ml-0-on-md pf-v6-u-mb-xl pf-v6-u-mb-0-on-md"
             >
               <p className="pf-v6-c-title ws-org-pfsite-footer-menu-list-title">
-                CONTRIBUTE
+                <b>CONTRIBUTE</b>
               </p>
               <nav aria-label="Contribute">
                 <List isPlain className="ws-org-pfsite-footer-menu-list">
-                  <li className="ws-org-pfsite-footer-menu-list-item">
+                  <ListItem className="ws-org-pfsite-footer-menu-list-item">
                     <Link
                       className="ws-org-pfsite-footer-menu-link"
                       to="/get-started/design"
@@ -83,8 +95,8 @@ export const Footer = () => (
                     >
                       Designers
                     </Link>
-                  </li>
-                  <li className="ws-org-pfsite-footer-menu-list-item">
+                  </ListItem>
+                  <ListItem className="ws-org-pfsite-footer-menu-list-item">
                     <Link
                       className="ws-org-pfsite-footer-menu-link"
                       to="/get-started/develop"
@@ -92,8 +104,8 @@ export const Footer = () => (
                     >
                       Developers
                     </Link>
-                  </li>
-                  <li className="ws-org-pfsite-footer-menu-list-item">
+                  </ListItem>
+                  <ListItem className="ws-org-pfsite-footer-menu-list-item">
                     <Link
                       className="ws-org-pfsite-footer-menu-link"
                       to="https://github.com/patternfly/patternfly/blob/main/CODE_OF_CONDUCT.md"
@@ -102,7 +114,7 @@ export const Footer = () => (
                     >
                       Code of Conduct
                     </Link>
-                  </li>
+                  </ListItem>
                 </List>
               </nav>
             </GridItem>
@@ -112,11 +124,11 @@ export const Footer = () => (
               className="pf-v6-u-mt-lg pf-v6-u-mt-0-on-md pf-v6-u-ml-md pf-v6-u-ml-0-on-md"
             >
               <p className="ws-org-pfsite-footer-menu-list-title">
-                STAY IN TOUCH
+                <b>STAY IN TOUCH</b>
               </p>
               <nav aria-label="Stay in touch">
                 <List isPlain className="ws-org-pfsite-footer-menu-list">
-                  <li className="ws-org-pfsite-footer-menu-list-item">
+                  <ListItem className="ws-org-pfsite-footer-menu-list-item">
                     <Link
                       className="ws-org-pfsite-footer-menu-link"
                       to="//join.slack.com/t/patternfly/shared_invite/zt-1npmqswgk-bF2R1E2rglV8jz5DNTezMQ"
@@ -125,8 +137,8 @@ export const Footer = () => (
                     >
                       Slack
                     </Link>
-                  </li>
-                  <li className="ws-org-pfsite-footer-menu-list-item">
+                  </ListItem>
+                  <ListItem className="ws-org-pfsite-footer-menu-list-item">
                     <Link
                       className="ws-org-pfsite-footer-menu-link"
                       to="//github.com/orgs/patternfly/discussions"
@@ -135,8 +147,8 @@ export const Footer = () => (
                     >
                       Discussions
                     </Link>
-                  </li>
-                  <li className="ws-org-pfsite-footer-menu-list-item">
+                  </ListItem>
+                  <ListItem className="ws-org-pfsite-footer-menu-list-item">
                     <Link
                       className="ws-org-pfsite-footer-menu-link"
                       to="https://www.redhat.com/dynamic-form/instance/934b1674-bc8a-4a13-8c9d-d19abcceb263"
@@ -145,8 +157,8 @@ export const Footer = () => (
                     >
                       Mailing list
                     </Link>
-                  </li>
-                  <li className="ws-org-pfsite-footer-menu-list-item">
+                  </ListItem>
+                  <ListItem className="ws-org-pfsite-footer-menu-list-item">
                     <Link
                       className="ws-org-pfsite-footer-menu-link"
                       to="//medium.com/patternfly"
@@ -155,15 +167,15 @@ export const Footer = () => (
                     >
                       PatternFly Medium
                     </Link>
-                  </li>
+                  </ListItem>
                 </List>
               </nav>
             </GridItem>
           </Grid>
         </GridItem>
         <GridItem sm={12} md={4}>
-          <Grid className="pf-v6-u-pt-xl ws-org-pfsite-l-footer-column">
-            <GridItem className="pf-v6-u-px-xl">
+          <Grid className="pf-v6-u-pt-xl pf-v6-u-pb-xl ws-org-pfsite-l-footer-column">
+            <GridItem>
               <Link
                 className="pf-v6-c-page__header-brand-link pf-v6-c-brand ws-org-pfsite-footer-menu-about-logo pf-v6-u-pb-md"
                 to="/"
@@ -171,12 +183,15 @@ export const Footer = () => (
                 <Brand
                   src={logo}
                   alt="PatternFly"
-                  heights={{default: "32px"}}
+                  heights={{ default: '32px' }}
                 >
                   <source srcSet={logo} />
                 </Brand>
               </Link>
-              <Content component="p" className="ws-org-pfsite-footer-menu-about-description">
+              <Content
+                component="p"
+                className="ws-org-pfsite-footer-menu-about-description"
+              >
                 PatternFly is an open source design system built to drive
                 consistency and unify teams. From documentation and components
                 to code examples and tutorials, PatternFly is a place where
@@ -209,26 +224,21 @@ export const Footer = () => (
       key="footer-2"
       className="ws-org-pfsite-l-footer-dark pf-m-no-fill"
     >
-      <Grid className="pf-v6-u-py-xl-on-sm pf-v6-u-py-0-on-md pf-v6-u-align-items-center">
+      <Grid
+        hasGutter
+        className="pf-v6-u-py-xl-on-sm pf-v6-u-py-0-on-md pf-v6-u-align-items-center"
+      >
         <GridItem md={2} mdOffset={1}>
-          <Link
-            to="//www.redhat.com"
-            target="top"
-          >
-            <img
-              src={redhatLogo}
-              alt="Red Hat"
-              width="145px"
-              height="613px"
-            />
+          <Link to="//www.redhat.com" target="top">
+            <img src={redhatLogo} alt="Red Hat" width="145px" height="613px" />
           </Link>
         </GridItem>
-        <GridItem md={4} lg={3} xl={2}>
+        <GridItem md={3} lg={3} xl={2}>
           <span className="ws-org-pfsite-site-copyright">
             Copyright &copy; 2014-{new Date().getFullYear()} Red Hat, Inc.
           </span>
         </GridItem>
-        <GridItem md={4} lg={5} className="pf-v6-u-ml-xl-on-xl">
+        <GridItem md={5} lg={5} className="pf-v6-u-ml-xl-on-xl">
           <Link
             to="//www.redhat.com/en/about/privacy-policy"
             target="top"
