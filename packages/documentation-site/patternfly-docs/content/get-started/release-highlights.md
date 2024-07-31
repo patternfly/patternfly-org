@@ -136,6 +136,11 @@ The same info (and more!) is available, it's just a little reorganized:
 
 ![Get started navigation before and after](./img/get-started-nav.png)
 
+#### Actions pattern 
+We added a new [actions pattern page](/patterns/actions) to document common design patterns related to using actions in components and screens. This page includes clarity around deletion and removal actions, as well as action placement within components and UI screens. 
+
+To align with this new information, action-related guidance was updated in the data list, table, and toolbar component design guidelines, and also within the card view pattern guidelines.
+
 #### UX writing guide 
 We collaborated with other Red Hatters to make sure the PatternFly UX writing guidelines are inline with IBM and Red Hat product documentation standards. A variety of smaller updates were made to our guidance recommendations.
 
