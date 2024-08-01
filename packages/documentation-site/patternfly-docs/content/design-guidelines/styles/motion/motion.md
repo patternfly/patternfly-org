@@ -114,33 +114,44 @@ In Figma, you can find annotations and prototype videos for each animation...
 
 ### Motion tokens
 
-PatternFly component animations are created using design tokens that cover the different elements of an animation, including duration, delay, and timing. Like we do with color tokens, we implement motion by using semantic tokens, which are built off of base tokens.
+PatternFly component animations are created using design tokens that cover the different elements of an animation, including duration, delay, and timing. Like we do with color tokens, we implement motion by using semantic tokens, which are built off of base tokens. Motion tokens begin with `-pf-t--global--motion--`
+
+You can [search for motion tokens here.](/tokens/all-tokens)
 
 If you aren't familiar with our token system, [refer to this overview](/tokens/about-tokens).
 
 #### Duration 
-Duration tokens specify the length of time that different animation should take to complete.
+Duration tokens specify the length of time that different animation should take to complete. There are predefined duration tokens based on the type of animation, shown in the following table;
 
-| Animation | Tokens | Length |
-| --- | --- | --- |
-| Slide-out | -pf--t--global--motion--duration--slide-out--short<br />-pf--t--global--motion--duration--slide-out--default<br />-pf--t--global--motion--duration--slide-out--long | 300<br />400<br />500
-| Slide-in |  |
-| Fade |  |
-| Icon |  |
+| **Animation** | **Description** | **Tokens** |
+| --- | --- | --- | 
+| Slide-out | Moves an element out of the viewport. | `-pf--t--global--motion--duration--slide-out--short`<br /><br />`-pf--t--global--motion--duration--slide-out--default`<br /><br />`-pf--t--global--motion--duration--slide-out--long` |
+| Slide-in | Moves an element into the viewport from offscreen. | `-pf--t--global--motion--duration--slide-in--short`<br /><br />`-pf--t--global--motion--duration--slide-in--default`<br /><br />`-pf--t--global--motion--duration--slide-in--long`  |
+| Fade | Applies a gradual transition to an element.  | `--pf-t--global--motion--duration--fade--short` <br /><br/> `--pf-t--global--motion--duration--fade--default`<br /><br/> `--pf-t--global--motion--duration--fade--long` |
+| Icon | Applies transitions to icons. | `--pf-t--global--motion--duration--icon--short` <br /><br/> `--pf-t--global--motion--duration--icon--default`<br /><br/> `--pf-t--global--motion--duration--icon--long`  |
 <br />
 
 #### Delay 
 Delay tokens specify the length of time that should pass before an animation begins. Delay options include none, short, default, and long.
 
+| **Token** | **Value** | 
+| --- | --- |
+| `--pf-t--global--motion--delay--none` | 0ms |
+| `--pf-t--global--motion--delay--short` | 50ms |
+| `--pf-t--global--motion--delay--default` | 100ms |
+| `--pf-t--global--motion--delay--long` | 7000ms |
+<br />
+
 #### Timing 
-Timing-function tokens specify the easing path that an animation takes. These paths are defined by [cubic Bezier curves,](https://developer.mozilla.org/en-US/docs/Web/CSS/easing-function#cubic_b%C3%A9zier_easing_functionyar) which define the start and end points of a curve, as well as its initial and final times and states.
+Timing-function tokens specify the easing path that an animation takes. These paths are defined by [cubic Bezier curves,](https://developer.mozilla.org/en-US/docs/Web/CSS/easing-function#cubic_b%C3%A9zier_easing_functionyar) which define the start and end points of a curve, as well as its initial and final times and states. 
 
-Options include: 
-- **Accelerate:** Specifies that the animation starts slowly and accelerates gradually until the end. Equivalent to an "ease-in" transition.
+The available options for timing are described in the following table:
 
-- **Default:** Use default to specify that the animation starts slow, speeds up and slows down at the end. Equivalent to an "ease-in-out" transition.
-
-- **Decelerate:** Use decelerate to specify that the animation starts quickly and decelerates gradually until the end. Equivalent to an "ease-out" transition.
+| **Timing function** | **Description** | **Token** | **Value** | 
+| --- | --- | --- | --- |
+| Accelerate | Specifies that the animation starts slowly and accelerates gradually until the end. Equivalent to an "ease-in" transition. | `--pf-t--global--motion--timing-function--accelerate` | cubic-bezier(.4, 0, .7, .2)
+| Default | Use default to specify that the animation starts slow, speeds up and slows down at the end. Equivalent to an "ease-in-out" transition.| `--pf-t--global--motion--timing-function--default` | cubic-bezier(.4, 0, .2, 1)
+| Decelerate | Use decelerate to specify that the animation starts quickly and decelerates gradually until the end. Equivalent to an "ease-out" transition. |  `--pf-t--global--motion--timing-function--decelerate` | cubic-bezier(0, 0, .2, 1)
 
 ### Motion patterns
 
