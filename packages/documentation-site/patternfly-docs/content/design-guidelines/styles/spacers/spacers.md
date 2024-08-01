@@ -5,114 +5,41 @@ section: design-foundations
 import './spacers.css';
 
 
-PatternFly designs use spacers to define fixed amounts of space between elements. Spacers make it easy for designers to maintain consistency across screens and  simplify the design handoff between designers and developers.
+PatternFly designs use **spacers** to define fixed amounts of space between UI elements. They help you create designs that are visually balanced and consistent. Spacers are built into PatternFly components, and are also available as tokens for you to use within Figma's auto layout system:
 
-To see a list of all PatternFly spacer tokens, [search our list of design tokens.](/tokens/all-patternfly-tokens/)
+![Spacer tokens displayed as options in a Figma layout menu](./auto-layout-spacers.png)
 
-<div class="pf-v6-u-display-flex pf-v6-u-flex-direction-row pf-v6-u-mb-lg">
-  <div class="ws-content-spacer4">
-  </div>
-  <div class="pf-v6-u-display-flex pf-v6-u-flex-direction-column">
-    <div class="ws-content-spacerTitle">4px spacer</div>
-    <div class="pf-v6-u-display-flex pf-v6-u-flex-direction-row">
-      <p class="pf-v6-u-my-0 pf-v6-u-mr-sm ws-content-p">Global CSS variable </p>
-      <code className="ws-code">--pf-t--global--spacer--xs</code>
-    </div>
-  </div>
-</div>
+## Spacer sizing 
 
-<div class="pf-v6-u-display-flex pf-v6-u-flex-direction-row pf-v6-u-mb-lg">
-  <div class="ws-content-spacer8">
-  </div>
-  <div class="pf-v6-u-display-flex pf-v6-u-flex-direction-column">
-    <div class="ws-content-spacerTitle">8px spacer</div>
-    <div class="pf-v6-u-display-flex pf-v6-u-flex-direction-row">
-      <p class="pf-v6-u-my-0 pf-v6-u-mr-sm ws-content-p">Global CSS variable </p>
-      <code className="ws-code">--pf-t--global--spacer--sm</code>
-    </div>
-  </div>
-</div>
+Like the rest of our dimension tokens, spacers use rem sizing, rather than pixels. Rems are relative units that adjust size based on a webpage's HTML document root element size. For example, if the root size is 10px, a rem size of 1.5 would be 15px.
 
-<div class="pf-v6-u-display-flex pf-v6-u-flex-direction-row pf-v6-u-mb-lg">
-  <div class="ws-content-spacer16">
-  </div>
-  <div class="pf-v6-u-display-flex pf-v6-u-flex-direction-column">
-    <div class="ws-content-spacerTitle">16px spacer</div>
-    <div class="pf-v6-u-display-flex pf-v6-u-flex-direction-row">
-      <p class="pf-v6-u-my-0 pf-v6-u-mr-sm ws-content-p">Global CSS variable </p>
-      <code className="ws-code">--pf-t--global--spacer--md</code>
-    </div>
-  </div>
-</div>
+PatternFly's default root element size is 16px. If you change this default size, note that the following table will no longer show accurate pixel measurements (though the rem values will stay the same).
+## PatternFly spacers 
 
-<div class="pf-v6-u-display-flex pf-v6-u-flex-direction-row pf-v6-u-mb-lg">
-  <div class="ws-content-spacer24">
-  </div>
-  <div class="pf-v6-u-display-flex pf-v6-u-flex-direction-column">
-    <div class="ws-content-spacerTitle">24px spacer</div>
-    <div class="pf-v6-u-display-flex pf-v6-u-flex-direction-row">
-      <p class="pf-v6-u-my-0 pf-v6-u-mr-sm ws-content-p">Global CSS variable </p>
-      <code className="ws-code">--pf-t--global--spacer--lg</code>
-    </div>
-  </div>
-</div>
+Our spacers include the following sizes:
 
-<div class="pf-v6-u-display-flex pf-v6-u-flex-direction-row pf-v6-u-mb-lg">
-  <div class="ws-content-spacer32">
-  </div>
-  <div class="pf-v6-u-display-flex pf-v6-u-flex-direction-column">
-    <div class="ws-content-spacerTitle">32px spacer</div>
-    <div class="pf-v6-u-display-flex pf-v6-u-flex-direction-row">
-      <p class="pf-v6-u-my-0 pf-v6-u-mr-sm ws-content-p">Global CSS variable </p>
-      <code className="ws-code">--pf-t--global--spacer--xl</code>
-    </div>
-  </div>
-</div>
+| **Spacer** | **Token** | **Size** | **Example** | 
+| :-:| :-: | :-: | :-: |
+| xs | `--pf-t--global--spacer--xs` | .25rem (4px) | <div class="ws-content-spacer4"></div> | 
+|  sm | `--pf-t--global--spacer--sm` | .5rem (8px) |<div class="ws-content-spacer8"></div> |
+|  md | `--pf-t--global--spacer--md` | 1rem (16px) |<div class="ws-content-spacer16"></div> | 
+|  lg | `--pf-t--global--spacer--lg` | 1.5rem (244px) |<div class="ws-content-spacer24"></div> |
+|  xl | `--pf-t--global--spacer--xl` | 2rem (32px) |<div class="ws-content-spacer32"></div> |
+|  2xl | `--pf-t--global--spacer--2xl` | 3rem (48px) | <div class="ws-content-spacer48"></div> |
+|  3xl | `--pf-t--global--spacer--3xl` | 4rem (64px) | <div class="ws-content-spacer64"></div> |
+ | 4xl | `--pf-t--global--spacer--4xl` | 5rem (80px) | <div class="ws-content-spacer80"></div>
 
-<div class="pf-v6-u-display-flex pf-v6-u-flex-direction-row pf-v6-u-mb-lg">
-  <div class="ws-content-spacer48">
-  </div>
-  <div class="pf-v6-u-display-flex pf-v6-u-flex-direction-column">
-    <div class="ws-content-spacerTitle">48px spacer</div>
-    <div class="pf-v6-u-display-flex pf-v6-u-flex-direction-row">
-      <p class="pf-v6-u-my-0 pf-v6-u-mr-sm ws-content-p">Global CSS variable </p>
-      <code className="ws-code">--pf-t--global--spacer--2xl</code>
-    </div>
-  </div>
-</div>
+### Spacer tokens 
 
-<div class="pf-v6-u-display-flex pf-v6-u-flex-direction-row pf-v6-u-mb-lg">
-  <div class="ws-content-spacer64">
-  </div>
-  <div class="pf-v6-u-display-flex pf-v6-u-flex-direction-column">
-    <div class="ws-content-spacerTitle">64px spacer</div>
-    <div class="pf-v6-u-display-flex pf-v6-u-flex-direction-row">
-      <p class="pf-v6-u-my-0 pf-v6-u-mr-sm ws-content-p">Global CSS variable </p>
-      <code className="ws-code">--pf-t--global--spacer--3xl</code>
-    </div>
-  </div>
-</div>
+Our spacer tokens are based on the values in the previous table, but there are certain use cases that align with more specific tokens. When using spacers in these scenarios, always use these more specific semantic tokens, rather than a global spacer token. 
+- **Action spacers:** Used to set horizontal and vertical padding within actions, like buttons. 
+  - Action spacer tokens begin with `--pf-t--global--spacer--action--`
+- **Control spacers:** Used to set horizontal and vertical padding within controls, like menu toggles and text inputs. 
+  - Control spacer tokens begin with `--pf-t--global--spacer--control--`
+- **Gap spacers:** Used to set space between elements or groups of elements, like gaps between multiple actions, gaps between items in a group, gaps between controls, and so on. 
+  - Gap spacer tokens begin with `--pf-t--global--spacer--gap`
 
-<div class="pf-v6-u-display-flex pf-v6-u-flex-direction-row pf-v6-u-mb-lg">
-  <div class="ws-content-spacer80">
-  </div>
-  <div class="pf-v6-u-display-flex pf-v6-u-flex-direction-column">
-    <div class="ws-content-spacerTitle">80px spacer</div>
-    <div class="pf-v6-u-display-flex pf-v6-u-flex-direction-row">
-      <p class="pf-v6-u-my-0 pf-v6-u-mr-sm ws-content-p">Global CSS variable </p>
-      <code className="ws-code">--pf-t--global--spacer--4xl</code>
-    </div>
-  </div>
-</div>
-
-## Best practices
-
-When using spacers, adhere to the following best practices: 
-
-- Include spacers in your designs to make it easy for developers to quickly see what size spacer you are using between elements.
-- **Do not** use spacers to design flexible layouts that utilize responsive measurement variables.
-- **Do not** use spacers to define both horizontal and vertical space at the same time. Spacers should only be used to define a single spacing variable.
-
+You can search for spacer tokens in [our list of all tokens.](/tokens/all-patternfly-tokens)
 ## Considering line height and padding
 
 There are additional considerations to keep in mind when adapting spacers to different line heights and padding, which are common with PatternFly components and text content.
@@ -121,65 +48,22 @@ There are additional considerations to keep in mind when adapting spacers to dif
 
 Some components like icons, buttons, and input fields, have a fixed amount of padding built in. Remember to account for this extra space when laying the content out on your page. You may not have as much horizontal or vertical room as you think.
 
-<img src="./padding-example.png" alt="Spacers example" style="background-color: var(--pf-v6-global--palette--white)" />
+For example, padding around this vertical ellipsis (or "kebab") icon increases the amount of space that it takes up in a component:
 
+![A vertical ellipsis icon with an extra small spacer symbol.](./icon-spacing.png)
+
+When laying out your design, make sure to account for this extra padding.
 ### Using spacers with text 
 
-When using spacers with text-based content, you should consider line height to ensure that you’re leaving the right amount of vertical space between each line of text. 
+When spacing out text-based content, use the standard [global spacer tokens.](/design-foundations/spacers#patternfly-spacers)
 
-  <div class="content-inner-div">
-    <div class="ws-content-border" style="font-size: 36px;">
-      Design is a journey of discovery
-    </div>
-    <div class="ws-content-spacer16" style="height: 16px;">
-    </div>
-    <p class="ws-content-border ws-content-p">
-  Body text should be Red Hat Text at 16px. It should have 24px of lead space because of its relative line height of 1.5.
-    </p>
-  </div>
+You should consider line height to ensure that you’re leaving the right amount of vertical space between each line of text:
+
+![A medium spacer placed between a heading and body text.](./heading-body-spacing.png)
 
 You also need to use different spacer sizes depending on the type of text you’re using. For example, you’ll need to provide a 16px spacer between a title and body copy, but only an 8px spacer between items in a bulleted or numbered list.
 
-  <div class="content-inner-div">
-    <div class="ws-content-border" style="font-size: 28px">
-      Design is a journey of discovery
-    </div>
-    <div class="ws-content-spacer16" style="height: 16px;">
-    </div>
-    <p class="ws-content-border ws-content-p" style="margin-bottom: 0;">
-      Body text should be Red Hat Text at 16px. It should have 24px of leading because of its relative line height of 1.5.
-    </p>
-    <div class="ws-content-spacer24" style="height: 24px;">
-    </div>
-    <div class="h2 ws-content-border">
-      Design is a journey of discovery
-    </div>
-    <div class="ws-content-spacer16" style="height: 16px;">
-    </div>
-    <p class="ws-content-border ws-content-p" style="margin-bottom: 0;">
-      Body text should be Red Hat Text at 16px. It should have 24px of leading because of its relative line height of 1.5.
-    </p>
-    <div class="ws-content-spacer16" style="height: 16px;">
-    </div>
-    <p class="ws-content-border ws-content-p" style="margin-bottom: 0;">
-      1. Lists should use body text style with 8px between items.
-    </p>
-    <div class="ws-content-spacer8" style="height: 8px;">
-    </div>
-    <p class="ws-content-border ws-content-p" style="margin-bottom: 0;">
-      2. This is the second item in the list.
-    </p>
-    <div class="ws-content-spacer8" style="height: 8px;">
-    </div>
-    <p class="ws-content-border ws-content-p" style="margin-bottom: 0;">
-      a. Secondary items in the list should use 8px spacing.
-    </p>
-    <div class="ws-content-spacer8" style="height: 8px;">
-    </div>
-    <p class="ws-content-border ws-content-p" style="margin-bottom: 0;">
-      b. They still use the same text styling, however.
-    </p>
-  </div>
+![Different-sized spacers placed between heading, body, and list text](./complex-text-spacing.png)
 
-For more information about line height and typography, read our [typography guidelines.](/design-foundations/typography)
+For more information about line height and text spacing, read our [typography guidelines.](/design-foundations/typography)
 

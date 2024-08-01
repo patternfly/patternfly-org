@@ -95,7 +95,7 @@ PatternFly\n</Content>`}
 
 ### Step 3.2
 Add a subhead below the content added in Step 3.1. `Content` without component prop is used to wrap html elements and provides them with extra spacing and styling.
-Add the following code bellow the Text component that is inside of the `CardTitle`:
+Add the following code below the content component that is inside of the `CardTitle`:
 
 <CopyCodeBlock>
 {`<Content>

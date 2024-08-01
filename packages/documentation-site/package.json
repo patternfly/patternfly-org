@@ -16,11 +16,10 @@
     "test:a11y": "patternfly-a11y --config patternfly-a11y.config",
     "screenshots": "pf-docs-framework screenshots"
   },
-  "dependencies": {
-    "@patternfly/documentation-framework": "6.0.0-alpha.65",
+    "@patternfly/documentation-framework": "6.0.0-alpha.69",
     "@patternfly/react-catalog-view-extension": "6.0.0-alpha.4",
-    "@patternfly/react-console": "6.0.0-alpha.3",
-    "@patternfly/react-docs": "7.0.0-alpha.96",
+    "@patternfly/react-console": "6.0.0-alpha.4",
+    "@patternfly/react-docs": "7.0.0-alpha.102",
     "@patternfly/react-log-viewer": "6.0.0-alpha.1",
     "@patternfly/react-topology": "6.0.0-alpha.1",
     "@patternfly/react-user-feedback": "6.0.0-alpha.1",
