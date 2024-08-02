@@ -12,10 +12,6 @@ We’re excited to share the next milestone in our journey to PatternFly 6–our
 
 Your continued participation, support, and feedback will help ensure that PatternFly 6 is as well-tested and bug-free as possible before the full release. 
 
-### Expanded PatternFly 6 support
-
-We extended PatternFly 6 styles to Topology. Now, all PatternFly components and extensions are prepared for the full release. All related design resources can be found in [our PatternFly 6 Figma kit.](https://www.figma.com/@patternfly)
-
 ### Design updates
 
 #### Rem units
@@ -60,6 +56,19 @@ We also made updates to some of our component structure and naming conventions. 
     - Renamed `<MastheadMain>` to `<MastheadBrand>`
     - Wrapped `<MastheadToggle>` and `<MastheadBrand>` in `<MastheadMain>`
     - Updated our documentation to align with the new structure.
+
+### Extension updates
+
+We applied PatternFly 6 styles to the rest of our extensions. All have now been upgraded to use the PatternFly 6 beta: 
+- Topology 
+- Component groups
+- React console
+- Log viewer
+- User feedback
+- Catalog view
+- Quickstarts
+
+Related design resources can also be found in [our PatternFly 6 Figma kit.](https://www.figma.com/@patternfly)
 
 ### Bug fixes
 We fixed bugs that were reported throughout the alpha period including. We:
