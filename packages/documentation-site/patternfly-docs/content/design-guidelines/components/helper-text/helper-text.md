@@ -4,7 +4,7 @@ section: components
 ---
 
 ## Usage
-Helper text is most commonly used in conjunction with form elements to provide additional hints and information for the user. It can also be used to explain why certain information is being requested, how to use a specific input or to suggest helpful hints. Helper text should always be visible and appear as a subheading, unlike [popovers](https://www.patternfly.org/components/popover/design-guidelines/) which display content in a new window.
+Helper text is most commonly used in conjunction with form elements to provide additional hints and information for the user. It can also be used to explain why certain information is being requested, how to use a specific input, or to suggest helpful hints. Helper text should always be visible and appear as a subheading (unlike [popovers](https://www.patternfly.org/components/popover/design-guidelines/), which display content in a new window).
 <br/>
 ### When to use helper text
 * Use helper text to provide imperative information regarding an input, such as character limits, password expectations, and more.  
