@@ -1,0 +1,23 @@
+.critical{
+    --pf-v6-c-icon__content--Color: var(--pf-t--global--icon--color--severity--critical--default);
+}
+
+.important{
+    --pf-v6-c-icon__content--Color: var(--pf-t--global--icon--color--severity--important--default);
+}
+
+.moderate{
+    --pf-v6-c-icon__content--Color: var(--pf-t--global--icon--color--severity--moderate--default);
+}
+
+.minor{
+    --pf-v6-c-icon__content--Color: var(--pf-t--global--icon--color--severity--minor--default);
+}
+
+.none{
+    --pf-v6-c-icon__content--Color: var(--pf-t--global--icon--color--severity--none--default);
+}
+
+.undefined{
+    --pf-v6-c-icon__content--Color: var(--pf-t--global--icon--color--severity--undefined--default);
+}
