@@ -99,17 +99,15 @@ const AggregateCards = () => {
                 }}
               >
                 <CardTitle id={cardTitleId}>
-                  <a href={card.link}>
-                    {card.title}
-                    {card.hasExtLinkIcon ? (
-                      <>
-                        {' '}
-                        <ExternalLinkAltIcon />
-                      </>
-                    ) : (
-                      ''
-                    )}
-                  </a>
+                  {card.title}
+                  {card.hasExtLinkIcon ? (
+                    <>
+                      {' '}
+                      <ExternalLinkAltIcon />
+                    </>
+                  ) : (
+                    ''
+                  )}
                 </CardTitle>
               </CardHeader>
               <CardFooter>{card.body}</CardFooter>
@@ -144,10 +142,7 @@ const FeaturedBlogCard = ({ postData, idx }) => {
         }}
       ></CardHeader>
       <Divider />
-      <CardTitle id={cardTitleId}>
-        {' '}
-        <a href={URL}>{title}</a>
-      </CardTitle>
+      <CardTitle id={cardTitleId}>{` ${title}`}</CardTitle>
       <CardFooter className="pf-v6-u-color-200">
         {author} • {length}
       </CardFooter>
@@ -186,13 +181,13 @@ const HomePage = () => (
             >
               {' '}
               Design and build better product experiences in the
-              <span className="pf-v6-u-primary-color-100">
-                {' '}
-                open{' '}
-              </span>
+              <span className="pf-v6-u-primary-color-100"> open </span>
               with PatternFly
             </Title>
-            <Content component={ContentVariants.p} className="pf-v6-u-font-size-lg">
+            <Content
+              component={ContentVariants.p}
+              className="pf-v6-u-font-size-lg"
+            >
               PatternFly is an open source design system that enables teams to
               create consistent and scalable enterprise products. PatternFly is
               sponsored and maintained by Red Hat, but is open to all.
