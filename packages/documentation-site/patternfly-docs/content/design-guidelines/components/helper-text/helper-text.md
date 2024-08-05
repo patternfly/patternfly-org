@@ -12,7 +12,7 @@ Helper text is most commonly used in conjunction with form elements to provide a
 <img src="./img/errorhelptext.png" alt="image showing error help text" width="452"/>
 
 ### When not to use helper text
-* Do not use helper text to explain what a form field is or to provide additional form context. Instead, use a popover to convey any additional, non-imperative information to a user. Popover content is displayed in a new window after the user clicks or toggles over the popover icon. Its content consists of longer descriptions, formatted text, and complete sentences. 
+* Do not use helper text to explain what a form field is, or to provide additional form context. Instead, use a popover to convey any additional, non-imperative information to a user. Popover content is displayed in a new window after the user clicks or toggles over the popover icon. Its content consists of longer descriptions, formatted text, and complete sentences. 
 <br/>
 <img src="./img/popoverexample.png" alt="image showing popover" width="452"/>
 * Do not use helper text to provide formatting examples within a text box. Instead, use placeholder text to temporarily showcase what content should appear in a field before the user inputs information. 
