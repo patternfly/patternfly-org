@@ -60,7 +60,7 @@ export const SectionGalleryToolbar = ({
       </ToolbarGroup>
       <ToolbarItem
         variant="pagination"
-        spacer={{ default: 'spacerMd', md: 'spacerNone' }}
+        gap={{ default: 'gapMd', md: 'gapNone' }}
         style={{ '--pf-v6-c-toolbar__item--MinWidth': 'max-content' }}
       >
         <Content component={ContentVariants.small}>
