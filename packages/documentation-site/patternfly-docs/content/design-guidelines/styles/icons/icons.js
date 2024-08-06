@@ -1249,7 +1249,7 @@ export const iconsData = [
     "Name": "pficon-severity-critical",
     "React_name": "SeverityCriticalIcon",
     "Type": "Status",
-    "Contextual_usage": "Indicates critical severity for an error or issue. This icon should be used instead of pficon-severity-critical for new implementations.",
+    "Contextual_usage": "Indicates critical severity for an error or issue. This icon should be used instead of pficon-critical-risk for new implementations.",
   },
   {
     "Style": "pficon",
