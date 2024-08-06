@@ -1242,14 +1242,14 @@ export const iconsData = [
     "Name": "pficon-critical-risk",
     "React_name": "CriticalRiskIcon",
     "Type": "Status",
-    "Contextual_usage": "Indicates critical severity for an error or issue",
+    "Contextual_usage": "Indicates critical severity for an error or issue. This is an old icon, going forward, use the pficon-severity-critical icon.",
   },
   {
     "Style": "pficon",
     "Name": "pficon-severity-critical",
     "React_name": "SeverityCriticalIcon",
     "Type": "Status",
-    "Contextual_usage": "Indicates critical severity for an error or issue",
+    "Contextual_usage": "Indicates critical severity for an error or issue. This icon should be used instead of pficon-severity-critical for new implementations.",
   },
   {
     "Style": "pficon",
