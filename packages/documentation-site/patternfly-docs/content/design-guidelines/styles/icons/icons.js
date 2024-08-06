@@ -1246,6 +1246,13 @@ export const iconsData = [
   },
   {
     "Style": "pficon",
+    "Name": "pficon-severity-critical",
+    "React_name": "SeverityCriticalIcon",
+    "Type": "Status",
+    "Contextual_usage": "Indicates critical severity for an error or issue",
+  },
+  {
+    "Style": "pficon",
     "Name": "pficon-severity-important",
     "React_name": "SeverityImportantIcon",
     "Type": "Status",
