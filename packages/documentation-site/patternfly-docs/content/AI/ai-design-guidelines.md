@@ -49,7 +49,7 @@ Transparency is essential for ethical AI usage. To help users understand and tru
 
 ## Be prepared for something to go wrong. 
 
-Errors and failure is inevitable when working with AI, so it is essential that you are prepared to handle undesired outcomes. You should understand the risk involved in AI and the impact that an error may have. 
+Errors and failure are inevitable when working with AI, so it is essential that you are prepared to handle undesired outcomes. You should understand the risk involved in AI and the impact that an error may have. 
 
 To create a plan for issues, start by following these guidelines: 
 
