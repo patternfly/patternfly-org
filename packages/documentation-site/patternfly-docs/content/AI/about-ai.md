@@ -14,6 +14,7 @@ To guide the use of AI in design practices, we have developed AI-driven design p
 
 These design principles build an ethics-first framework and guide the use of AI with PatternFly. AI systems should be: 
 - Accountable. 
+- Explainable.
 - Transparent. 
 - Fair 
 - Human-centered.
