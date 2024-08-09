@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.4.0-alpha.65 (2024-08-09)
+
+
+### Bug Fixes
+
+* **docs:** gallery cards fill row height ([#4180](https://github.com/patternfly/patternfly-org/issues/4180)) ([d433321](https://github.com/patternfly/patternfly-org/commit/d433321aed3e7b95435087cd827c9793569d638e))
+
+
+
+
+
 # 1.4.0-alpha.64 (2024-08-09)
 
 
