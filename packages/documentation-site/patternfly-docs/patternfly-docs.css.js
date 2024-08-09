@@ -16,4 +16,4 @@ import "@patternfly/react-topology/src/css/topology-pipelines.css";
 // Patternfly log viewer
 import "@patternfly/react-log-viewer/src/LogViewer/css/log-viewer.css";
 // Patternfly user feedback
-// import "@patternfly/react-user-feedback/src/Feedback/Feedback.css"; waiting for user-feedback update
+import "@patternfly/react-user-feedback/src/Feedback/Feedback.css";

@@ -18,7 +18,7 @@
         "@patternfly/react-table": "6.0.0-alpha.95",
         "@patternfly/react-tokens": "6.0.0-alpha.33",
         "@patternfly/react-topology": "6.0.0-alpha.2",
-        "@patternfly/react-user-feedback": "6.0.0-alpha.2",
+        "@patternfly/react-user-feedback": "6.0.0-alpha.3",
         "@patternfly/react-console": "6.0.0-alpha.4",
         "@patternfly/quickstarts": "6.0.0-alpha.3",
         "@patternfly/react-virtualized-extension": "6.0.0-alpha.2",
