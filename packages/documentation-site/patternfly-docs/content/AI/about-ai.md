@@ -16,7 +16,7 @@ These design principles build an ethics-first framework and guide the use of AI 
 - Accountable. 
 - Explainable.
 - Transparent. 
-- Fair 
+- Fair. 
 - Human-centered.
 
 ### Accountable
