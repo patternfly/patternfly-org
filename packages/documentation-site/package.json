@@ -24,7 +24,7 @@
     "@patternfly/react-log-viewer": "6.0.0-alpha.4",
     "@patternfly/react-topology": "6.0.0-alpha.2",
     "@patternfly/react-user-feedback": "6.0.0-alpha.3",
-    "@patternfly/react-component-groups": "6.0.0-alpha.6",
+    "@patternfly/react-component-groups": "6.0.0-alpha.7",
     "@patternfly/react-virtualized-extension": "6.0.0-alpha.2",
     "@patternfly/design-tokens": "1.6.1",
     "react": "^17.0.0 || ^18.0.0",
