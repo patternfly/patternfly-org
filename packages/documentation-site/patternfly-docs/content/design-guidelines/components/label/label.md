@@ -156,4 +156,4 @@ The new label is created based on the attributes selected by the user and it can
 <img src="./img/editable-label-group-in-a-table_4_2.png" alt="New custom label added to a label group" width="1200"/>
 
 ## Accessibility
-For information regarding accessibility, visit the [labels accessibility](/components/jump-links/accessibility) tab.
+For information regarding accessibility, visit the [labels accessibility](/components/label/accessibility) tab.
