@@ -69,3 +69,23 @@ The following HTML attributes and PatternFly classes can be used for more fine-t
 | `required` | `.pf-v6-c-check__input` | Notifies users that the checkbox must be checked. **Required** when users must check the checkbox. |
 | `for="[id of the associated checkbox]"` | `label` | Links the `label` element to the checkbox, providing a larger clickable area to toggle the checkbox. **Required**. |
 |`.pf-v6-c-check__label-required` | `label > span` | Adds styling to visually notify users that the checkbox is required and to differentiate the content from the checkbox label. Usually an asterisk `*` is used to visually convey that an input is required. **Required** when users must check the checkbox. |
+
+### Explicit vs implicit labeling
+
+Wrapping an input element within a `label` element will link the two implicitly, without the `for` attribute on the `label` element being necessary. For example, the following code snippet shows an input and label being linked implicitly:
+
+```noLive
+<label>
+  <span>Checkbox label</span>
+  <input type="checkbox">
+</label>
+```
+
+Implicitly linking the two elements behaves similarly as passing the `for` attribute on the `label`, i.e. clicking the visible label text will toggle the checkbox. However, this may not be supported by all assistive technologies, so when possible it is best to explicitly link an input with its `label` like the following code snippet shows, even if the input is wrapped by the `label` element:
+
+```noLive
+<label for="checkbox1-id">
+  <span>Checkbox label</span>
+  <input id="checkbox1-id" type="checkbox">
+</label>
+```

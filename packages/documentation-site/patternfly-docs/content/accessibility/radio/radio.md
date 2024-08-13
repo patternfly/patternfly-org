@@ -70,3 +70,23 @@ The following HTML attributes and PatternFly classes can be used for more fine-t
 | `disabled` | `.pf-v6-c-radio__input` | Disables the radio, removing it from the tab order on the page, and applies disabled styling. |
 | `id` | `.pf-v6-c-radio__input` | Links the radio input with its text label, which allows clicking the label to check the radio. The linked label text is also used as the accessible name of the radio. **Required**. |
 | `for="[id of the associated radio]"` | `label` | Links the `label` element to the radio, providing a larger clickable area to check the radio. **Required**. |
+
+### Explicit vs implicit labeling
+
+Wrapping an input element within a `label` element will link the two implicitly, without the `for` attribute on the `label` element being necessary. For example, the following code snippet shows an input and label being linked implicitly:
+
+```noLive
+<label>
+  <span>Radio label</span>
+  <input type="radio">
+</label>
+```
+
+Implicitly linking the two elements behaves similarly as passing the `for` attribute on the `label`, i.e. clicking the visible label text will check the radio. However, this may not be supported by all assistive technologies, so when possible it is best to explicitly link an input with its `label` like the following code snippet shows, even if the input is wrapped by the `label` element:
+
+```noLive
+<label for="radio1-id">
+  <span>Radio label</span>
+  <input id="radio1-id" type="radio">
+</label>
+```
