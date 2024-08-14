@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.20.0 (2024-08-14)
+
+
+### Features
+
+* **docs-framework:** Add support for next subpaths in react-charts ([#4191](https://github.com/patternfly/patternfly-org/issues/4191)) ([43ba034](https://github.com/patternfly/patternfly-org/commit/43ba0347939f3faaf7b91c17354eed9528750952))
+
+
+
+
+
 ## 1.19.3 (2024-08-06)
 
 **Note:** Version bump only for package @patternfly/ast-helpers
