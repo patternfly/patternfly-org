@@ -17,7 +17,7 @@
     "screenshots": "pf-docs-framework screenshots"
   },
   "dependencies": {
-    "@patternfly/documentation-framework": "6.0.0-alpha.74",
+    "@patternfly/documentation-framework": "6.0.0-alpha.77",
     "@patternfly/react-catalog-view-extension": "6.0.0-alpha.6",
     "@patternfly/react-console": "6.0.0-alpha.4",
     "@patternfly/react-docs": "7.0.0-alpha.102",
