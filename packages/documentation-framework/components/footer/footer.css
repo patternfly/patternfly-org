@@ -1,12 +1,12 @@
 .ws-org-pfsite-l-footer,
 .ws-org-pfsite-l-footer-dark {
-  color: var(--pf-t--global--text--color--300);
-  background-color: var(--pf-t--color--gray--95);
+  color: var(--pf-t--global--text--color--regular);
+  background-color: var(--pf-t--global--background--color--secondary--default);
   /* Hide long overflowing tocs */
   z-index: 1;
 }
 .ws-org-pfsite-l-footer-column {
-  background-color: var(--pf-t--color--gray--80);
+  background-color: var(--pf-t--global--background--color--primary--default);
   height: 100%;
   padding-inline: var(--pf-t--global--spacer--xl);
 }
@@ -17,7 +17,7 @@
 }
 .ws-org-pfsite-footer-menu-social-links a {
   margin-inline-end: var(--pf-t--global--spacer--md);
-  color: var(--pf-t--color--blue--20);
+  /* color: var(--pf-t--color--blue--20); */
 }
 .ws-org-pfsite-footer-menu-social-links
   a:last-of-type {
@@ -25,24 +25,29 @@
 }
 .ws-org-pfsite-footer-menu-social-links {
   margin-block-start: var(--pf-t--global--spacer--md);
+  color: var(--pf-t--global--icon--color--brand--default);
 }
 .ws-org-pfsite-footer-menu-list-title {
   margin-block-end: var(--pf-t--global--spacer--md);
+  color: var(--pf-t--global--text--color--subtle);
 }
 .ws-org-pfsite-footer-menu-list-item {
   padding-right: var(--pf-t--global--spacer--sm);
 }
 .ws-org-pfsite-footer-menu-link {
-  color: var(--pf-t--color--blue--20);
+  color: var(--pf-t--global--text--color--link--default);
 }
 
 /* Red Hat footer */
+/* .ws-org-pfsite-l-footer-dark {
+  background-color: var(--pf-t--color--gray--95);
+  z-index: 1;
+} */
 .ws-org-pfsite-l-footer-dark > * {
   font-size: var(--pf-t--global--font--size--100);
 }
 .ws-org-pfsite-l-footer-dark a {
   padding-inline: var(--pf-t--global--spacer--sm);
-  color: var(--pf-t--global--text--color--300);
 }
 .ws-org-pfsite-l-footer-dark a:first-of-type {
   padding-inline-start: 0;

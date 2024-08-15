@@ -11,9 +11,10 @@ import {
 import { Link } from '@patternfly/documentation-framework/components';
 import { GithubIcon, TwitterIcon } from '@patternfly/react-icons';
 import redhatLogo from './RHLogo.png';
+import redhatLogoDark from './RHLogoDark.png';
 import logo from '../../layouts/PF-HorizontalLogo-Reverse.svg';
 
-export const Footer = () => (
+export const Footer = ({ isDarkTheme }) => (
   <React.Fragment>
     <PageSection
       key="footer-1"
@@ -230,7 +231,12 @@ export const Footer = () => (
       >
         <GridItem md={2} mdOffset={1}>
           <Link to="//www.redhat.com" target="top">
-            <img src={redhatLogo} alt="Red Hat" width="145px" height="613px" />
+            <img
+              src={isDarkTheme ? redhatLogo : redhatLogoDark}
+              alt="Red Hat"
+              width="145px"
+              height="613px"
+            />
           </Link>
         </GridItem>
         <GridItem md={3} lg={3} xl={2}>

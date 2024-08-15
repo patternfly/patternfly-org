@@ -1,4 +1,4 @@
-import React, { useEffect, useState, createContext } from "react";
+import React, { useEffect, useState, createContext } from 'react';
 import {
   Button,
   Page,
@@ -28,15 +28,15 @@ import {
   ToggleGroup,
   ToggleGroupItem,
   MastheadLogo,
-} from "@patternfly/react-core";
-import BarsIcon from "@patternfly/react-icons/dist/esm/icons/bars-icon";
-import GithubIcon from "@patternfly/react-icons/dist/esm/icons/github-icon";
-import MoonIcon from "@patternfly/react-icons/dist/esm/icons/moon-icon";
-import SunIcon from "@patternfly/react-icons/dist/esm/icons/sun-icon";
-import { SideNav, TopNav, GdprBanner } from "../../components";
-import staticVersions from "../../versions.json";
-import v5Logo from "../PF-HorizontalLogo-Reverse.svg";
-import { Footer } from "@patternfly/documentation-framework/components";
+} from '@patternfly/react-core';
+import BarsIcon from '@patternfly/react-icons/dist/esm/icons/bars-icon';
+import GithubIcon from '@patternfly/react-icons/dist/esm/icons/github-icon';
+import MoonIcon from '@patternfly/react-icons/dist/esm/icons/moon-icon';
+import SunIcon from '@patternfly/react-icons/dist/esm/icons/sun-icon';
+import { SideNav, TopNav, GdprBanner } from '../../components';
+import staticVersions from '../../versions.json';
+import pfSvg from '../pfSvg.svg';
+import { Footer } from '@patternfly/documentation-framework/components';
 
 export const RtlContext = createContext(false);
 
@@ -49,6 +49,8 @@ const HeaderTools = ({
   topNavItems,
   isRTL,
   setIsRTL,
+  isDarkTheme,
+  setIsDarkTheme,
 }) => {
   const initialVersion = staticVersions.Releases.find(
     (release) => release.latest
@@ -61,13 +63,12 @@ const HeaderTools = ({
   const [isDropdownOpen, setDropdownOpen] = useState(false);
   // const [searchValue, setSearchValue] = React.useState('');
   // const [isSearchExpanded, setIsSearchExpanded] = React.useState(false);
-  const [isDarkTheme, setIsDarkTheme] = React.useState(false);
 
   const getDropdownItem = (version, isLatest = false) => (
     <DropdownItem
       itemId={version.name}
       key={version.name}
-      to={isLatest ? "/" : `/${version.name}`}
+      to={isLatest ? '/' : `/${version.name}`}
     >
       {`Current ${version.name}`}
     </DropdownItem>
@@ -84,8 +85,8 @@ const HeaderTools = ({
   const toggleDarkTheme = (_evt, selected) => {
     const darkThemeToggleClicked = !selected === isDarkTheme;
     document
-      .querySelector("html")
-      .classList.toggle("pf-v6-theme-dark", darkThemeToggleClicked);
+      .querySelector('html')
+      .classList.toggle('pf-v6-theme-dark', darkThemeToggleClicked);
     setIsDarkTheme(darkThemeToggleClicked);
   };
 
@@ -104,7 +105,7 @@ const HeaderTools = ({
             <TopNav navItems={topNavItems} />
           </ToolbarItem>
         )}
-        <ToolbarGroup align={{ default: "alignEnd" }}>
+        <ToolbarGroup align={{ default: 'alignEnd' }}>
           {hasDarkThemeSwitcher && (
             <ToolbarItem>
               <ToggleGroup aria-label="Dark theme toggle group">
@@ -135,7 +136,7 @@ const HeaderTools = ({
             <ToolbarItem>
               <Switch
                 id="ws-rtl-switch"
-                label={"RTL"}
+                label={'RTL'}
                 defaultChecked={isRTL}
                 onChange={() => setIsRTL((isRTL) => !isRTL)}
               />
@@ -268,7 +269,7 @@ export function attachDocSearch(algolia, inputSelector, timeout) {
         hint: false,
         appendTo: `.ws-global-search .pf-v6-c-text-input-group`,
       },
-      debug: process.env.NODE_ENV !== "production",
+      debug: process.env.NODE_ENV !== 'production',
       ...algolia,
     });
   } else {
@@ -293,13 +294,14 @@ export const SideNavLayout = ({
 
   const [versions, setVersions] = useState({ ...staticVersions });
   const [isRTL, setIsRTL] = useState(false);
+  const [isDarkTheme, setIsDarkTheme] = React.useState(false);
 
   useEffect(() => {
-    if (typeof window === "undefined") {
+    if (typeof window === 'undefined') {
       return;
     }
     if (hasVersionSwitcher && window.fetch) {
-      fetch("/versions.json").then((res) => {
+      fetch('/versions.json').then((res) => {
         if (res.ok) {
           res.json().then((json) => setVersions(json));
         }
@@ -327,8 +329,13 @@ export const SideNavLayout = ({
           {prnum ? (
             `PR #${prnum}`
           ) : (
-            <MastheadLogo href={prurl || "/"}>
-              <svg height="40px" viewBox="0 0 679 158">
+            <MastheadLogo href={prurl || '/'}>
+              <Brand
+                src={pfSvg}
+                alt="PatternFly logo"
+                heights={{ default: '36px' }}
+              />
+              {/* <svg height="40px" viewBox="0 0 679 158">
                 <title>PF-HorizontalLogo-Color</title>
                 <defs>
                   <linearGradient
@@ -379,7 +386,7 @@ export const SideNavLayout = ({
                     ></path>
                   </g>
                 </g>
-              </svg>
+              </svg> */}
             </MastheadLogo>
           )}
         </MastheadBrand>
@@ -395,6 +402,8 @@ export const SideNavLayout = ({
             topNavItems={topNavItems}
             isRTL={isRTL}
             setIsRTL={setIsRTL}
+            isDarkTheme={isDarkTheme}
+            setIsDarkTheme={setIsDarkTheme}
           />
         )}
       </MastheadContent>
@@ -417,7 +426,7 @@ export const SideNavLayout = ({
           defaultManagedSidebarIsOpen={navOpenProp}
         >
           {children}
-          {process.env.hasFooter && <Footer />}
+          {process.env.hasFooter && <Footer isDarkTheme={isDarkTheme} />}
         </Page>
         <div id="ws-page-banners">{hasGdprBanner && <GdprBanner />}</div>
       </RtlContext.Provider>
