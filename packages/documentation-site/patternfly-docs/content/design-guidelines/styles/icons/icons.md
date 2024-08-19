@@ -12,57 +12,13 @@ import StarIcon from '@patternfly/react-icons/dist/esm/icons/star-icon';
 import { IconsTable } from './IconsTable';
 import './icons.css';
 
-If you're a developer, check out our [development onboarding guide](/get-started//develop#using-icons) to learn how to install and use our icon set.
-
-For additional usage instruction, [refer to the icon component pages.](/components/icon)
+For detailed usage information, [refer to the icon design guidelines.](/components/icon/design-guidelines)
 
 ## Icon sizes
 
 Icon size tokens use rems, rather than pixels. Rems are relative units that adjust font size based on a webpage's HTML document root element size. For example, if the root size is 10px, a rem size of 1.5 would be 15px.
 
 PatternFly's default root element size is 16px. If you change this default size, note that the following tables will no longer show accurate pixel measurements (though the rem values will stay the same). 
-
-## Inline icons
-
-[Inline icons](/components/icon#inline) must be center-aligned horizontally when placed next to text and center-aligned vertically when stacked.
-
-<img src="./icon-alignment.png" alt="Icon alignment" style="max-width:500px"></img>
-
-Use the following semantic tokens to ensure that icons are properly aligned and match the correct font size:
-
-### Headings 
-
-| **Size** | **Token** | **Example** |
-| --- | --- | :---: |
-|  1.375rem (22px)   | `pf-t--global--icon--size--font--heading--h1` | <Content component="h1"> <Icon isInline> <StarIcon /> </Icon> Heading <Icon isInline> <StarIcon /> </Icon></Content>  | 
-| 1.25rem (20px)    | `pf-t--global--icon--size--font--heading--h2` | <Content component="h2"> <Icon isInline> <StarIcon /> </Icon> Heading <Icon isInline> <StarIcon /> </Icon></Content>  |
-| 1.125rem (18px) | `pf-t--global--icon--size--font--heading--h3` | <Content component="h3"> <Icon isInline> <StarIcon /> </Icon> Heading <Icon isInline> <StarIcon /> </Icon></Content>  |
-| 1rem (16px) | `pf-t--global--icon--size--font--heading--h4` | <Content component="h4"> <Icon isInline> <StarIcon /> </Icon> Heading <Icon isInline> <StarIcon /> </Icon></Content>  |
-| 1rem (16px) | `pf-t--global--icon--size--font--heading--h5` | <Content component="h5"> <Icon isInline> <StarIcon /> </Icon> Heading <Icon isInline> <StarIcon /> </Icon></Content>  |
-| 1rem (16px) | `pf-t--global--icon--size--font--heading--h6` | <Content component="h6"> <Icon isInline> <StarIcon /> </Icon> Heading <Icon isInline> <StarIcon /> </Icon></Content>  |
-
-### Body text
-
-| **Size** | **Token** | **Example** |
-| --- | --- | :---: |
-| 0.75rem (12px)  | `pf-t--global--icon--size--font--body--sm`  | <Content component={ContentVariants.small}> <Icon isInline><StarIcon /></Icon> Small body <Icon isInline><StarIcon /></Icon></Content> |
-| 0.875rem (14px) | `pf-t--global--icon--size--font--body--default`  | <Content component={ContentVariants.p}> <Icon isInline><StarIcon /></Icon> Default body <Icon isInline><StarIcon /></Icon></Content> 
-| 1rem (16px)  | `pf-t--global--icon--size--font--body--lg`  | <Content component={ContentVariants.p} style="font-size: 16px"> <Icon isInline><StarIcon /></Icon> Large body <Icon isInline><StarIcon /></Icon></Content> 
-
-## Standalone icons 
-
-Occasionally, you may need to use a standalone icon that isn't aligned with any kind of text. PatternFly supports a range of icon sizes that can adapt to these use cases, including small, medium, large, x-large, 2xl, and 3xl icons. These sizes correspond to the following font sizes and tokens:
-
-| **Size** | **Token** | **Example** |
-| --- | --- | :---: |
-| Small (0.75rem, 12px) |  `--pf-t--global--icon--size--sm` |<Icon size ="sm"><StarIcon /></Icon> |
-| Medium (0.875rem, 14px) |  `--pf-t--global--icon--size--md` |<Icon size ="md"><StarIcon /></Icon> |
-| Large (1rem, 16px) |  `--pf-t--global--icon--size--lg` |<Icon size ="lg"><StarIcon /></Icon> |
-| X-large (1.375rem, 22px) | `--pf-t--global--icon--size--xl` | <Icon size ="xl"> <StarIcon /></Icon> |
-| 2xl (3.5rem, 56px) | `--pf-t--global--icon--size--2xl` |  <Icon size ="2xl"><StarIcon /></Icon> |
-| 3xl (6rem, 96px) | `--pf-t--global--icon--size--3xl` | <Icon size ="3xl"><StarIcon /></Icon> |
-
-Medium icons are typically the most versatile size to use in a UI. Most icons in PatternFly components are medium; other sizes are used sparingly.
 
 ## Icon colors
 All icon colors that you use should align with the proper [semantic design token.](/tokens/all-patternfly-tokens) For example, a warning icon should use our approved warning color, a danger icon should use our approved danger color, and so on. 
@@ -79,6 +35,8 @@ To learn more about icon colors and color tokens, visit our [colors page.](/desi
 
 ## PatternFly icons
 PatternFly uses custom icons and selections from <a href="https://fontawesome.com/icons?d=gallery&m=free">Font Awesome Free</a>, as shown in [this table](#all-icons). If PatternFly doesn't offer an icon for your use case, you can download SVGs of additional 'fa' icons from Font Awesome's free set. Be sure to properly attribute these additional icons as outlined on the Font Awesome site.
+
+If you're a developer, check out our [development onboarding guide](/get-started//develop#using-icons) to learn how to install and use our icon set.
 
 ### HTML icons 
 When using HTML, use the following syntax:
