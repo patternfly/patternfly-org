@@ -3,7 +3,7 @@ import tokens from '@patternfly/react-tokens/dist/esm/patternfly_variables';
 import AngleRightIcon from '@patternfly/react-icons/dist/esm/icons/angle-right-icon';
 import { css } from '@patternfly/react-styles';
 import { normalizeColor, getContrastRatio } from './helpers';
-import './ColorFamily.css';
+import { Accordion, AccordionItem, AccordionContent, AccordionToggle, Content, ContentVariants, Title } from '@patternfly/react-core';
 
 const palettePrefix = '--pf-t--color--';
 
@@ -14,21 +14,13 @@ export function ColorFamily({
   const [expanded, setExpanded] = React.useState([]);
   const rootTokens = tokens[':where(:root)'];
 
-  const familyTokens = family === 'shadows'
-    ? [rootTokens.global_box_shadow_sm, rootTokens.global_box_shadow_md, rootTokens.global_box_shadow_lg]
-    : Object.values(rootTokens).filter(token => token.name.includes(`${palettePrefix}${family}`));
-  if (family === 'black') {
-    const whiteToken = rootTokens.color_white
+  const familyTokens = Object.values(rootTokens).filter(token => token.name.includes(`${palettePrefix}${family}--`));
+  if (family === 'gray') {
+    const whiteToken = rootTokens.color_white;
     familyTokens.unshift(whiteToken);
+    const blackToken = rootTokens.color_black;
+    familyTokens.push(blackToken);
   }
-
-  const expandAll = () => {
-    if (expanded.length > 0) {
-      setExpanded([]);
-    } else {
-      setExpanded(familyTokens.map(token => token.name));
-    }
-  };
 
   const expand = name => {
     if (expanded.includes(name)) {
@@ -40,92 +32,57 @@ export function ColorFamily({
 
   return (
     <React.Fragment>
-      <dl className="pf-v6-c-accordion pf-v6-u-p-0">
-        <dt
-          className={css(
-            'pf-v6-c-accordion__toggle',
-            'ws-color-family-accordion-toggle',
-            expanded.length === familyTokens.length && 'pf-m-expanded'
-          )}
-          onClick={expandAll}
-        >
-          <h3 className="pf-v6-c-title pf-m-xl">
-            <AngleRightIcon className="pf-v6-c-accordion__toggle-icon ws-color-family-toggle-icon" /> 
-            {title}
-          </h3>
-        </dt>
+      <Title headingLevel="h3">{title}</Title>
+      <Accordion togglePosition="start">
         {familyTokens.map(token => {
           const isExpanded = expanded.includes(token.name);
-          const isShadows = family === 'shadows';
-          const tokenClass = css(
-            'pf-v6-c-accordion__toggle',
-            'ws-color-family-toggle',
-            isExpanded && 'pf-m-expanded'
-          );
           const itemStyle = {
-            background: `var(${token.name})`,
-            // fontSize: 'var(--pf-v6-global--FontSize--sm)'
+            '--pf-v6-c-accordion__toggle--BackgroundColor': `var(${token.name})`,
+            '--pf-v6-c-accordion__toggle--hover--BackgroundColor': `var(${token.name})`,
+            fontSize: 'var(--pf-t--global--font--size--md)'
           };
-          if (isShadows) {
-            itemStyle.marginBottom = '1rem';
-            itemStyle.boxShadow = `var(${token.name})`;
+          if (getContrastRatio(token.value, '#151515') > 4.5) {
+            itemStyle['--pf-v6-c-accordion__toggle-text--Color'] = '#151515';
           }
           else if (getContrastRatio(token.value, '#151515') <= 4.5) {
-            itemStyle.color = 'var(--pf-v6-global--Color--light-100)';
-          }
-          else if (getContrastRatio(token.value, '#151515') > 4.5) {
-            itemStyle.color = 'var(--pf-v6-global--palette--black-900)';
-          }
-          const expandedStyle = {};
-          if (isExpanded && !isShadows) {
-            const borderLeftWidth = 'var(--pf-v6-c-accordion__toggle--m-expanded--BorderWidth)';
-            const borderColor = `var(${token.name})`;
-            const borderStyle = 'solid';
-            itemStyle.borderLeftWidth = borderLeftWidth;
-            itemStyle.borderColor = borderColor;
-            itemStyle.borderStyle = borderStyle;
-            expandedStyle.borderLeftWidth = borderLeftWidth;
-            expandedStyle.borderColor = borderColor;
-            expandedStyle.borderStyle = borderStyle;
+            itemStyle['--pf-v6-c-accordion__toggle-text--Color'] = '#FFFFFF';
           }
 
+          const tokenList = Object.values(rootTokens)
+            .filter(t => t.value === token.value && !/\d/.test(t.name)) // only show semantic tokens (without digits at the end)
+            .map(t => t.name)
+            .sort();
+
           return (
-            <React.Fragment key={token.name}>
-              <dd
-                className={`${tokenClass} ws-color-family-accordion-toggle`}
-                style={itemStyle}
+            <AccordionItem isExpanded={isExpanded} style={itemStyle}>
+              <AccordionToggle
                 onClick={() => expand(token.name)}
-                // id={!isShadows ? token.value.replace('#', 'color-') : token.name.replace('--pf-v6-global--BoxShadow--', '')}
+                id={token.value.replace('#', 'color-')}
+                style={{
+                  backgroundColor: `${token.value} !important`,
+                  color: itemStyle['--pf-v6-c-accordion__toggle-text--Color']
+                }}
               >
-                <div>
-                  <AngleRightIcon className="pf-v6-c-accordion__toggle-icon ws-color-family-toggle-icon" />
-                  {token.name
-                    .replace(palettePrefix, '')
-                    // .replace('--pf-v6-global--BoxShadow--', 'box shadow ')}
-                  }
-                </div>
-                {!isShadows && (
-                  <div className="ws-color-family-color">
-                    #{normalizeColor(token.value.toUpperCase())}
-                  </div>
+                #{normalizeColor(token.value.toUpperCase())}
+              </AccordionToggle>
+              <AccordionContent>
+                {tokenList?.length > 0 ? (
+                  <>
+                    <Title headingLevel="h4" size="md">Semantic tokens<span className='pf-v6-screen-reader'>for {token.value.toUpperCase()}</span></Title>
+                    <Content className="pf-v6-u-m-sm" component={ContentVariants.ol} isPlainList>
+                      {tokenList.map(tokenName =>
+                        <Content component={ContentVariants.li} key={tokenName}>{tokenName}</Content>
+                      )}
+                    </Content>
+                  </>
+                ) : (
+                  <Title headingLevel="h4" size="md">No semantic tokens<span className='pf-v6-screen-reader'>for {token.value.toUpperCase()}</span></Title>
                 )}
-              </dd>
-              {isExpanded && (
-                <dd className={`${tokenClass} ws-color-family-content`} style={expandedStyle}>
-                  <label className="ws-color-family-label">Tokens</label>
-                  {Object.values(rootTokens)
-                    .filter(t => t.value === token.value)
-                    .map(t => t.name)
-                    .sort()
-                    .map(tokenName => 
-                      <div key={tokenName}>{tokenName}</div>
-                    )}
-                </dd>
-              )}
-            </React.Fragment>
+              </AccordionContent>
+            </AccordionItem>
           );
         })}
-      </dl>
+      </Accordion>
     </React.Fragment>
   );
 }
