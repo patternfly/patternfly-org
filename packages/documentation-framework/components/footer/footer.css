@@ -17,7 +17,6 @@
 }
 .ws-org-pfsite-footer-menu-social-links a {
   margin-inline-end: var(--pf-t--global--spacer--md);
-  /* color: var(--pf-t--color--blue--20); */
 }
 .ws-org-pfsite-footer-menu-social-links
   a:last-of-type {
@@ -39,12 +38,8 @@
 }
 
 /* Red Hat footer */
-/* .ws-org-pfsite-l-footer-dark {
-  background-color: var(--pf-t--color--gray--95);
-  z-index: 1;
-} */
 .ws-org-pfsite-l-footer-dark > * {
-  font-size: var(--pf-t--global--font--size--100);
+  font-size: var(--pf-t--global--font--size--xs);
 }
 .ws-org-pfsite-l-footer-dark a {
   padding-inline: var(--pf-t--global--spacer--sm);
