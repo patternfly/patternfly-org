@@ -54,6 +54,7 @@ The following React props have been provided for more fine-tuned control over ac
 | `aria-label="[text that labels the radio]"` | `Radio` | Adds an accessible name to the radio when there is no visible text label. **Required** for standalone radios without a `label` prop, and when there is no other element that can label the radio via its `aria-labelledby` prop. |
 | `aria-labelledby="[id or space-separated list of id's of the element(s) that labels the radio]"` | `Radio` | Adds an accessible name to the radio. **Required** for standalone radios without a `label` prop, and when there is another element that can label the radio. |
 | `id` | `Radio` | Links the radio input with its text label, which allows clicking the label to check the radio. The linked label text is also used as the accessible name of the radio. **Required**. |
+| `isDisabled={[true or false]}` | `Radio` | Disables the radio, removing it from the tab order on the page and preventing interaction, and applies disabled styling. |
 | `isValid={[true or false]}` | `Radio` | Sets the `aria-invalid` attribute, notifying users of assistive technologies whether the radio value is invalid. |
 | `label="[text that labels the radio]"` | `Radio` | Adds a visible text label for the radio, which also acts as its accessible name. |
 
@@ -67,7 +68,7 @@ The following HTML attributes and PatternFly classes can be used for more fine-t
 | `aria-invalid={[true or false]}` | `.pf-v6-c-radio__input` | Notifies users of assistive technologies whether the radio value is invalid. |
 | `aria-label="[text that labels the radio]"` | `.pf-v6-c-radio__input` | Adds an accessible name to the radio when there is no visible text label. **Required** for standalone radios without a linked `label` element, and when there is no other element that can label the radio via its `aria-labelledby` attribute. |
 | `aria-labelledby="[id or space-separated list of id's of the element(s) that labels the radio]"` | `.pf-v6-c-radio__input` | Adds an accessible name to the radio. **Required** for standalone radios without a linked `label` element, and when there is another element that can label the radio. |
-| `disabled` | `.pf-v6-c-radio__input` | Disables the radio, removing it from the tab order on the page, and applies disabled styling. |
+| `disabled` | `.pf-v6-c-radio__input` | Disables the radio, removing it from the tab order on the page and preventing interaction, and applies disabled styling. |
 | `id` | `.pf-v6-c-radio__input` | Links the radio input with its text label, which allows clicking the label to check the radio. The linked label text is also used as the accessible name of the radio. **Required**. |
 | `for="[id of the associated radio]"` | `label` | Links the `label` element to the radio, providing a larger clickable area to check the radio. **Required**. |
 
