@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.4.0-alpha.69 (2024-08-20)
+
+
+### Bug Fixes
+
+* **docs:** updated scroll selector for jumplinks, router links ([#4197](https://github.com/patternfly/patternfly-org/issues/4197)) ([f5de805](https://github.com/patternfly/patternfly-org/commit/f5de80593323739d08397c0bb8ad69c479ec8367))
+
+
+
+
+
 # 1.4.0-alpha.68 (2024-08-19)
 
 
