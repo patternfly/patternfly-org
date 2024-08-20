@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.4.0-alpha.70 (2024-08-20)
+
+
+### Bug Fixes
+
+* **docs:** removed extra link tags in card title ([#4166](https://github.com/patternfly/patternfly-org/issues/4166)) ([e9a0f3e](https://github.com/patternfly/patternfly-org/commit/e9a0f3e4e79e145af6880d8dd204bf65bcb20125))
+
+
+
+
+
 # 1.4.0-alpha.69 (2024-08-20)
 
 
