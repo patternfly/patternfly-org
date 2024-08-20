@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 6.0.0-alpha.83 (2024-08-20)
+
+
+### Bug Fixes
+
+* **docs:** switched from v4 to evergreen badge link ([#4186](https://github.com/patternfly/patternfly-org/issues/4186)) ([9bbd121](https://github.com/patternfly/patternfly-org/commit/9bbd121302dc3f84231c6bf1de2680b47766b56c))
+
+
+
+
+
 # 6.0.0-alpha.82 (2024-08-20)
 
 **Note:** Version bump only for package @patternfly/documentation-framework
