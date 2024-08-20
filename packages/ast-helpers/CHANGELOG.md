@@ -3,6 +3,101 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.4.0-alpha.68 (2024-08-19)
+
+
+### Bug Fixes
+
+* another beta bump ([#4204](https://github.com/patternfly/patternfly-org/issues/4204)) ([0b30482](https://github.com/patternfly/patternfly-org/commit/0b304827c5bedb7ac52104764bf7ddd914138754))
+
+
+
+
+
+# 1.4.0-alpha.67 (2024-08-19)
+
+
+### Bug Fixes
+
+* **docs:** update theme toggle icon colors ([#4203](https://github.com/patternfly/patternfly-org/issues/4203)) ([7979777](https://github.com/patternfly/patternfly-org/commit/79797771cecd9f0db801273567776d78417a0080))
+
+
+
+
+
+# 1.4.0-alpha.66 (2024-08-09)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 1.4.0-alpha.65 (2024-08-09)
+
+
+### Bug Fixes
+
+* **docs:** gallery cards fill row height ([#4180](https://github.com/patternfly/patternfly-org/issues/4180)) ([d433321](https://github.com/patternfly/patternfly-org/commit/d433321aed3e7b95435087cd827c9793569d638e))
+
+
+
+
+
+# 1.4.0-alpha.64 (2024-08-09)
+
+
+### Features
+
+* **ver:** update extension alphas ([#4177](https://github.com/patternfly/patternfly-org/issues/4177)) ([9e0da04](https://github.com/patternfly/patternfly-org/commit/9e0da04199a118c112ca040e99a3186f85a512e3))
+
+
+
+
+
+# 1.4.0-alpha.63 (2024-08-09)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 1.4.0-alpha.62 (2024-08-05)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 1.4.0-alpha.61 (2024-08-02)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 1.4.0-alpha.60 (2024-08-01)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 1.4.0-alpha.59 (2024-07-31)
+
+
+### Bug Fixes
+
+* update styles on color page ([#4157](https://github.com/patternfly/patternfly-org/issues/4157)) ([4df0b25](https://github.com/patternfly/patternfly-org/commit/4df0b255f70bfebbe78eb87b8406d435fe7f66ac))
+
+
+
+
+
 # 1.4.0-alpha.58 (2024-07-29)
 
 

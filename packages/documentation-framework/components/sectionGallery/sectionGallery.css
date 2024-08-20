@@ -9,6 +9,11 @@
   color: inherit;
 }
 
+/* Ensure cards within a row stretch vertically to fill row height */
+.ws-section-gallery .pf-v6-c-card {
+  height: 100%;
+}
+
 /* Limit width for data list view only */
 .ws-section-gallery .pf-v6-c-data-list {
   max-width: var(--pf-t--global--breakpoint--lg);
