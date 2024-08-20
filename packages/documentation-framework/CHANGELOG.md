@@ -3,6 +3,28 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 6.0.0-alpha.79 (2024-08-19)
+
+
+### Bug Fixes
+
+* another beta bump ([#4204](https://github.com/patternfly/patternfly-org/issues/4204)) ([0b30482](https://github.com/patternfly/patternfly-org/commit/0b304827c5bedb7ac52104764bf7ddd914138754))
+
+
+
+
+
+# 6.0.0-alpha.78 (2024-08-19)
+
+
+### Bug Fixes
+
+* **docs:** update theme toggle icon colors ([#4203](https://github.com/patternfly/patternfly-org/issues/4203)) ([7979777](https://github.com/patternfly/patternfly-org/commit/79797771cecd9f0db801273567776d78417a0080))
+
+
+
+
+
 # 6.0.0-alpha.77 (2024-08-09)
 
 **Note:** Version bump only for package @patternfly/documentation-framework

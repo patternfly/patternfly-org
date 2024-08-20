@@ -110,21 +110,13 @@ const HeaderTools = ({
               <ToggleGroup aria-label="Dark theme toggle group">
                 <ToggleGroupItem
                   aria-label="light theme toggle"
-                  icon={
-                    <Icon size="md">
-                      <SunIcon />
-                    </Icon>
-                  }
+                  icon={<SunIcon />}
                   isSelected={!isDarkTheme}
                   onChange={toggleDarkTheme}
                 />
                 <ToggleGroupItem
                   aria-label="dark theme toggle"
-                  icon={
-                    <Icon size="md">
-                      <MoonIcon />
-                    </Icon>
-                  }
+                  icon={<MoonIcon />}
                   isSelected={isDarkTheme}
                   onChange={toggleDarkTheme}
                 />
