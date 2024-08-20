@@ -33,9 +33,7 @@ export const Footer = ({ isDarkTheme }) => (
               md={4}
               className="pf-v6-u-ml-md pf-v6-u-ml-0-on-md pf-v6-u-mb-xl pf-v6-u-mb-0-on-md"
             >
-              <p className="pf-v6-c-title ws-org-pfsite-footer-menu-list-title">
-                <b>QUICKLINKS</b>
-              </p>
+              <p className="ws-org-pfsite-footer-menu-list-title">Quicklinks</p>
               <nav aria-label="Quick Links">
                 <List isPlain className="ws-org-pfsite-footer-menu-list">
                   <ListItem className="ws-org-pfsite-footer-menu-list-item">
@@ -82,9 +80,7 @@ export const Footer = ({ isDarkTheme }) => (
               md={4}
               className="pf-v6-u-mt-lg pf-v6-u-mt-0-on-sm pf-v6-u-ml-md pf-v6-u-ml-0-on-md pf-v6-u-mb-xl pf-v6-u-mb-0-on-md"
             >
-              <p className="pf-v6-c-title ws-org-pfsite-footer-menu-list-title">
-                <b>CONTRIBUTE</b>
-              </p>
+              <p className="ws-org-pfsite-footer-menu-list-title">Contribute</p>
               <nav aria-label="Contribute">
                 <List isPlain className="ws-org-pfsite-footer-menu-list">
                   <ListItem className="ws-org-pfsite-footer-menu-list-item">
@@ -124,7 +120,7 @@ export const Footer = ({ isDarkTheme }) => (
               className="pf-v6-u-mt-lg pf-v6-u-mt-0-on-md pf-v6-u-ml-md pf-v6-u-ml-0-on-md"
             >
               <p className="ws-org-pfsite-footer-menu-list-title">
-                <b>STAY IN TOUCH</b>
+                Stay in touch
               </p>
               <nav aria-label="Stay in touch">
                 <List isPlain className="ws-org-pfsite-footer-menu-list">

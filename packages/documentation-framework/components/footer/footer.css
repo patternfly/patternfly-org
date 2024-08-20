@@ -29,6 +29,7 @@
 .ws-org-pfsite-footer-menu-list-title {
   margin-block-end: var(--pf-t--global--spacer--md);
   color: var(--pf-t--global--text--color--subtle);
+  font-weight: var(--pf-t--global--font--weight--body--bold);
 }
 .ws-org-pfsite-footer-menu-list-item {
   padding-right: var(--pf-t--global--spacer--sm);
