@@ -2,16 +2,19 @@ import React from 'react';
 import { Link as ReachLink, navigate } from '@reach/router';
 import { getAsyncComponent } from '../../routes';
 
-const Promiseany = (Promise.any || function ($) {
-  return new Promise(function (D, E, A, L) {
-    A = [];
-    L = $.map(function ($, i) {
-      return Promise.resolve($).then(D, function (O) {
-        return ((A[i] = O), --L) || E({errors: A});
-      });
-    }).length;
-  });
-}).bind(Promise);
+const Promiseany = (
+  Promise.any ||
+  function ($) {
+    return new Promise(function (D, E, A, L) {
+      A = [];
+      L = $.map(function ($, i) {
+        return Promise.resolve($).then(D, function (O) {
+          return ((A[i] = O), --L) || E({ errors: A });
+        });
+      }).length;
+    });
+  }
+).bind(Promise);
 
 export const Link = ({
   href,
@@ -23,7 +26,7 @@ export const Link = ({
   let preloadPromise;
   let url = href || to || '';
   if (url.startsWith('#') && !onClick) {
-    onClick = ev => {
+    onClick = (ev) => {
       ev.preventDefault(); // Don't use client-side routing
       // Chrome does not jump until ALL network requests finish.
       // We have to force it to...
@@ -37,8 +40,7 @@ export const Link = ({
   }
   if (url.includes('//') || url.startsWith('#')) {
     return <a href={url} onClick={onClick} {...props} />;
-  }
-  else if (url.startsWith('/')) {
+  } else if (url.startsWith('/')) {
     if (!process.env.PRERENDER) {
       const Component = getAsyncComponent(url);
       if (Component) {
@@ -48,14 +50,17 @@ export const Link = ({
           onMouseOver();
         };
         // Wait up to an extra 500ms on click before showing 'Loading...'
-        props.onClick = ev => {
-          if (!(ev.ctrlKey || ev.metaKey)) { // avoid disallowing cmnd/ctrl+click opening in new tab
+        props.onClick = (ev) => {
+          if (!(ev.ctrlKey || ev.metaKey)) {
+            // avoid disallowing cmnd/ctrl+click opening in new tab
             ev.preventDefault();
-            document.querySelector("#ws-page-main").scrollTo({top: 0}); // scroll to top of page
+            document
+              .querySelector('.pf-v6-c-page__main-container')
+              .scrollTo({ top: 0 }); // scroll to top of page
             if (typeof window !== 'undefined' && url !== location.pathname) {
               Promiseany([
                 preloadPromise,
-                new Promise(res => setTimeout(res, 500))
+                new Promise((res) => setTimeout(res, 500)),
               ]).then(() => navigate(url));
             }
           }
@@ -65,4 +70,4 @@ export const Link = ({
   }
 
   return <ReachLink to={url} {...props} />;
-}
+};
