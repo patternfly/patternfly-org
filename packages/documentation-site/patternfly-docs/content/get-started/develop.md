@@ -23,7 +23,7 @@ In order to develop with PatternFly, you will need to:
 
 * [@patternfly/react-core](https://www.npmjs.com/package/@patternfly/react-core): Most React core components.
 * [@patternfly/react-charts](https://www.npmjs.com/package/@patternfly/react-charts): PatternFly charting components.
-* [@patternfly/react-code-editors](https://www.npmjs.com/package/@patternfly/react-code-editors): A PatternFly wrapper for the Monaco code editor.
+* [@patternfly/react-code-editor](https://www.npmjs.com/package/@patternfly/react-code-editor): A PatternFly wrapper for the Monaco code editor.
 * [@patternfly/react-icons](https://www.npmjs.com/package/@patternfly/react-icons): PatternFly icons as React components.
 * [@patternfly/react-styles](https://www.npmjs.com/package/@patternfly/react-styles): CSS-in-JS capabilities. 
 * [@patternfly/react-table](https://www.npmjs.com/package/@patternfly/react-table): PatternFly table components.
