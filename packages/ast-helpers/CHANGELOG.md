@@ -3,6 +3,153 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.4.0-alpha.74 (2024-08-21)
+
+
+### Bug Fixes
+
+* **docs:** fix broken link on get started-develop ([#4205](https://github.com/patternfly/patternfly-org/issues/4205)) ([ebc14eb](https://github.com/patternfly/patternfly-org/commit/ebc14eb96e1d471a89f9b45fa367725d90426ed6))
+
+
+
+
+
+# 1.4.0-alpha.73 (2024-08-21)
+
+
+### Features
+
+* **docs:** update design-tokens version ([#4190](https://github.com/patternfly/patternfly-org/issues/4190)) ([5a4b2d1](https://github.com/patternfly/patternfly-org/commit/5a4b2d1459c5916069565bf49b3dde4ec71a81b8))
+
+
+
+
+
+# 1.4.0-alpha.72 (2024-08-20)
+
+
+### Bug Fixes
+
+* **docs:** switched from v4 to evergreen badge link ([#4186](https://github.com/patternfly/patternfly-org/issues/4186)) ([9bbd121](https://github.com/patternfly/patternfly-org/commit/9bbd121302dc3f84231c6bf1de2680b47766b56c))
+
+
+
+
+
+# 1.4.0-alpha.71 (2024-08-20)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 1.4.0-alpha.70 (2024-08-20)
+
+
+### Bug Fixes
+
+* **docs:** removed extra link tags in card title ([#4166](https://github.com/patternfly/patternfly-org/issues/4166)) ([e9a0f3e](https://github.com/patternfly/patternfly-org/commit/e9a0f3e4e79e145af6880d8dd204bf65bcb20125))
+
+
+
+
+
+# 1.4.0-alpha.69 (2024-08-20)
+
+
+### Bug Fixes
+
+* **docs:** updated scroll selector for jumplinks, router links ([#4197](https://github.com/patternfly/patternfly-org/issues/4197)) ([f5de805](https://github.com/patternfly/patternfly-org/commit/f5de80593323739d08397c0bb8ad69c479ec8367))
+
+
+
+
+
+# 1.4.0-alpha.68 (2024-08-19)
+
+
+### Bug Fixes
+
+* another beta bump ([#4204](https://github.com/patternfly/patternfly-org/issues/4204)) ([0b30482](https://github.com/patternfly/patternfly-org/commit/0b304827c5bedb7ac52104764bf7ddd914138754))
+
+
+
+
+
+# 1.4.0-alpha.67 (2024-08-19)
+
+
+### Bug Fixes
+
+* **docs:** update theme toggle icon colors ([#4203](https://github.com/patternfly/patternfly-org/issues/4203)) ([7979777](https://github.com/patternfly/patternfly-org/commit/79797771cecd9f0db801273567776d78417a0080))
+
+
+
+
+
+# 1.4.0-alpha.66 (2024-08-09)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 1.4.0-alpha.65 (2024-08-09)
+
+
+### Bug Fixes
+
+* **docs:** gallery cards fill row height ([#4180](https://github.com/patternfly/patternfly-org/issues/4180)) ([d433321](https://github.com/patternfly/patternfly-org/commit/d433321aed3e7b95435087cd827c9793569d638e))
+
+
+
+
+
+# 1.4.0-alpha.64 (2024-08-09)
+
+
+### Features
+
+* **ver:** update extension alphas ([#4177](https://github.com/patternfly/patternfly-org/issues/4177)) ([9e0da04](https://github.com/patternfly/patternfly-org/commit/9e0da04199a118c112ca040e99a3186f85a512e3))
+
+
+
+
+
+# 1.4.0-alpha.63 (2024-08-09)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 1.4.0-alpha.62 (2024-08-05)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 1.4.0-alpha.61 (2024-08-02)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 1.4.0-alpha.60 (2024-08-01)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
 # 1.4.0-alpha.59 (2024-07-31)
 
 
