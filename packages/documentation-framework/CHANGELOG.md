@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 6.0.0-alpha.85 (2024-08-21)
+
+
+### Bug Fixes
+
+* **docs:** fix broken link on get started-develop ([#4205](https://github.com/patternfly/patternfly-org/issues/4205)) ([ebc14eb](https://github.com/patternfly/patternfly-org/commit/ebc14eb96e1d471a89f9b45fa367725d90426ed6))
+
+
+
+
+
 # 6.0.0-alpha.84 (2024-08-21)
 
 
