@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.4.0-alpha.73 (2024-08-21)
+
+
+### Features
+
+* **docs:** update design-tokens version ([#4190](https://github.com/patternfly/patternfly-org/issues/4190)) ([5a4b2d1](https://github.com/patternfly/patternfly-org/commit/5a4b2d1459c5916069565bf49b3dde4ec71a81b8))
+
+
+
+
+
 # 1.4.0-alpha.72 (2024-08-20)
 
 
