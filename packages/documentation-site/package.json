@@ -26,7 +26,7 @@
     "@patternfly/react-user-feedback": "6.0.0-alpha.3",
     "@patternfly/react-component-groups": "6.0.0-alpha.7",
     "@patternfly/react-virtualized-extension": "6.0.0-alpha.2",
-    "@patternfly/design-tokens": "1.6.1",
+    "@patternfly/design-tokens": "1.13.0",
     "react": "^17.0.0 || ^18.0.0",
     "react-dom": "^17.0.0 || ^18.0.0",
     "showdown": "^2.1.0"

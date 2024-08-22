@@ -16,7 +16,7 @@
     "build:extensions": "EXTENSIONS_ONLY=true PRERELEASE=true yarn build:v6",
     "copy:v6": "rm -rf build/patternfly-org/site && mkdir -p build/patternfly-org && cp -r packages/documentation-site/public build/patternfly-org/site",
     "clean": "lerna run clean && rm -rf build",
-    "serve": "pf-docs-framework serve build/patternfly-org/site",
+    "serve": "npx pf-docs-framework serve build/patternfly-org/site",
     "test:v6": "yarn workspace patternfly-org test:a11y:ci",
     "screenshots": "node node_modules/puppeteer/install.js && yarn workspace patternfly-org screenshots",
     "start": "yarn start:v6",
@@ -34,10 +34,10 @@
     ]
   },
   "devDependencies": {
-    "@patternfly/patternfly": "6.0.0-alpha.205",
-    "@patternfly/react-code-editor": "6.0.0-alpha.100",
-    "@patternfly/react-core": "6.0.0-alpha.100",
-    "@patternfly/react-table": "6.0.0-alpha.101",
+    "@patternfly/patternfly": "6.0.0-alpha.210",
+    "@patternfly/react-code-editor": "6.0.0-alpha.101",
+    "@patternfly/react-core": "6.0.0-alpha.101",
+    "@patternfly/react-table": "6.0.0-alpha.102",
     "@octokit/rest": "^19.0.7",
     "glob": "^8.1.0",
     "lerna": "^6.4.1",

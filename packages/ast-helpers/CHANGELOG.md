@@ -3,6 +3,58 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.4.0-alpha.74 (2024-08-21)
+
+
+### Bug Fixes
+
+* **docs:** fix broken link on get started-develop ([#4205](https://github.com/patternfly/patternfly-org/issues/4205)) ([ebc14eb](https://github.com/patternfly/patternfly-org/commit/ebc14eb96e1d471a89f9b45fa367725d90426ed6))
+
+
+
+
+
+# 1.4.0-alpha.73 (2024-08-21)
+
+
+### Features
+
+* **docs:** update design-tokens version ([#4190](https://github.com/patternfly/patternfly-org/issues/4190)) ([5a4b2d1](https://github.com/patternfly/patternfly-org/commit/5a4b2d1459c5916069565bf49b3dde4ec71a81b8))
+
+
+
+
+
+# 1.4.0-alpha.72 (2024-08-20)
+
+
+### Bug Fixes
+
+* **docs:** switched from v4 to evergreen badge link ([#4186](https://github.com/patternfly/patternfly-org/issues/4186)) ([9bbd121](https://github.com/patternfly/patternfly-org/commit/9bbd121302dc3f84231c6bf1de2680b47766b56c))
+
+
+
+
+
+# 1.4.0-alpha.71 (2024-08-20)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 1.4.0-alpha.70 (2024-08-20)
+
+
+### Bug Fixes
+
+* **docs:** removed extra link tags in card title ([#4166](https://github.com/patternfly/patternfly-org/issues/4166)) ([e9a0f3e](https://github.com/patternfly/patternfly-org/commit/e9a0f3e4e79e145af6880d8dd204bf65bcb20125))
+
+
+
+
+
 # 1.4.0-alpha.69 (2024-08-20)
 
 
