@@ -232,7 +232,7 @@ export const iconsData = [
     "Name": "pficon-critical-risk",
     "React_name": "CriticalRiskIcon",
     "Type": "Status",
-    "Contextual_usage": "Represents potential critical impact on a system or cluster",
+    "Contextual_usage": "Represents potential critical impact on a system or cluster. This is an old icon, going forward, use the pficon-severity-critical icon.",
   },
   {
     "Style": "pficon",
