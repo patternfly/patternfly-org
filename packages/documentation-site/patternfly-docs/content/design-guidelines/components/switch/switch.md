@@ -8,7 +8,7 @@ section: components
 ![Examples of labeled and unlabeled switches](./img/switch-elements.png)
 
 1. **Switch:** The switch itself, which uses active primary colors when turned "on" and inactive colors when turned "off". When a switch is disabled, it will use disabled colors.
-1. **Switch label:** The text label that represents the "on" state for a switch. This may simply be "On", or it may be something more descriptive, like "Allow edits." By default, the label is placed to the right of the switch, but this layout can be [swapped to the left](/components/switch#reversed-layout) if needed.
+1. **Switch label:** The text label that represents the "on" state for a switch. This may simply be "On" (as long as it's paired with other meaningful text within a context, like a form label), or it may be something more descriptive, like "Allow edits." By default, the label is placed to the right of the switch, but this layout can be [swapped to the left](/components/switch#reversed-layout) if needed.
 1. **Switch checkmark:** A checkmark, which can be used to further signify that a switch is turned on. When you use a switch label, a checkmark is optional. If you do not use a switch label, then a checkmark is required, to help users understand the status of a switch.
 
 ## Usage 
@@ -43,12 +43,12 @@ Use switches when a series of one or more independent options can be turned on o
 
 A [basic switch](/components/switch#basic) uses a label to communicate its purpose to users.
 
-- Do not include the state of a switch in a label if you're using a switch with a label and a checkmark. 
+- Do not include the switch state in a label ("On" or "Off") if you're using a labeled switch with a checkmark. 
 - To be accessible, the label for a switch must never dynamically change. For example, don't have one label for an "on" state and another label for an "off" state. Doing so can be confusing since the context for each label changes with the switch state. 
 
 ### Unlabeled switch
 
-Use a labeled switch by default. If space is limited, use an [unlabeled switch.](/components/switch#without-label)
+Use a labeled switch by default. If space is limited, use an [unlabeled switch.](/components/switch#without-label) When you use an unlabeled switch, ensure that there is other meaningful text to provide context, like a descriptive form label.
 
 ## Placement 
 
