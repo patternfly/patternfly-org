@@ -19,7 +19,7 @@ You can further customize labels by making them filled or unfilled, dismissable,
 
 ### Usage
 
-Use a **label** when you want to highlight an element on a page to draw attention to it or make it more searchable. Labels can also be used to tag items of the same category. If you want to show a count, use a [badge](https://v4-archive.patternfly.org/v4/components/badge) instead.
+Use a **label** when you want to highlight an element on a page to draw attention to it or make it more searchable. Labels can also be used to tag items of the same category. If you want to show a count, use a [badge](/components/badge) instead.
 
 There are 2 specific label types:
 
@@ -156,4 +156,4 @@ The new label is created based on the attributes selected by the user and it can
 <img src="./img/editable-label-group-in-a-table_4_2.png" alt="New custom label added to a label group" width="1200"/>
 
 ## Accessibility
-For information regarding accessibility, visit the [labels accessbility](components/jump-links/accessibility) tab.
+For information regarding accessibility, visit the [labels accessibility](/components/label/accessibility) tab.
