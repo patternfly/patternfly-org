@@ -1242,7 +1242,7 @@ export const iconsData = [
     "Name": "pficon-critical-risk",
     "React_name": "CriticalRiskIcon",
     "Type": "Status",
-    "Contextual_usage": "Indicates critical severity for an error or issue. This is an old icon, going forward, use the pficon-severity-critical icon.",
+    "Contextual_usage": "Represents potential critical impact on a system or cluster. This is an old icon, going forward, use the pficon-severity-critical icon.",
   },
   {
     "Style": "pficon",
@@ -1250,7 +1250,7 @@ export const iconsData = [
     "React_name": "SeverityCriticalIcon",
     "Type": "Status",
     "Contextual_usage": "Indicates the highest level of severity for an error or issue. This icon should be used instead of pficon-critical-risk for new implementations.",
-    color: 'var(--pf-t--global--icon--color--severity--critical--default)',
+    color: 'var(--pf-v5-global--palette--red-200)',
   },
   {
     "Style": "pficon",
@@ -1258,7 +1258,7 @@ export const iconsData = [
     "React_name": "SeverityImportantIcon",
     "Type": "Status",
     "Contextual_usage": "Indicates important severity for an error or issue.",
-    color: 'var(--pf-t--global--icon--color--severity--important--default)',
+    color: 'var(--pf-v5-global--palette--orange-400)',
   },
   {
     "Style": "pficon",
@@ -1266,7 +1266,7 @@ export const iconsData = [
     "React_name": "SeverityModerateIcon",
     "Type": "Status",
     "Contextual_usage": "Indicates moderate severity for an error or issue.",
-    color: 'var(--pf-t--global--icon--color--severity--moderate--default)',
+    color: 'var(--pf-v5-global--palette--gold-400)',
   },
   {
     "Style": "pficon",
@@ -1274,7 +1274,7 @@ export const iconsData = [
     "React_name": "SeverityMinorIcon",
     "Type": "Status",
     "Contextual_usage": "Indicates minor severity for an error or issue.",
-    color: 'var(--pf-t--global--icon--color--severity--minor--default)',
+    color: 'var(--pf-v5-global--palette--black-400)',
   },
   
   {
@@ -1283,7 +1283,7 @@ export const iconsData = [
     "React_name": "SeverityNoneIcon",
     "Type": "Status",
     "Contextual_usage": "Indicates no severity for an error or issue.",
-    color: 'var(--pf-t--global--icon--color--severity--none--default)',
+    color: 'var(--pf-v5-global--palette--blue-300)',
   },
   {
     "Style": "pficon",
@@ -1291,7 +1291,7 @@ export const iconsData = [
     "React_name": "SeverityUndefinedIcon",
     "Type": "Status",
     "Contextual_usage": "Indicates undefined severity for an error or issue. Use if a severity level has not been determined yet, but is expected to change and be defined later.",
-    color: 'var(--pf-t--global--icon--color--severity--undefined--default)',
+    color: 'var(--pf-v5-global--palette--black-300)',
   },
   {
     "Style": "pficon",
