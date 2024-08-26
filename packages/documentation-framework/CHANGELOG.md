@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 6.0.0-alpha.87 (2024-08-26)
+
+
+### Bug Fixes
+
+* **docs:** tokenize footer styles ([#4167](https://github.com/patternfly/patternfly-org/issues/4167)) ([622560c](https://github.com/patternfly/patternfly-org/commit/622560c903042e6ec5841280d7247697c51ca88c))
+
+
+
+
+
 # 6.0.0-alpha.86 (2024-08-26)
 
 **Note:** Version bump only for package @patternfly/documentation-framework
