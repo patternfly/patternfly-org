@@ -35,7 +35,6 @@ import MoonIcon from '@patternfly/react-icons/dist/esm/icons/moon-icon';
 import SunIcon from '@patternfly/react-icons/dist/esm/icons/sun-icon';
 import { SideNav, TopNav, GdprBanner } from '../../components';
 import staticVersions from '../../versions.json';
-import v5Logo from '../PF-HorizontalLogo-Reverse.svg';
 import { Footer } from '@patternfly/documentation-framework/components';
 
 export const RtlContext = createContext(false);
@@ -49,6 +48,8 @@ const HeaderTools = ({
   topNavItems,
   isRTL,
   setIsRTL,
+  isDarkTheme,
+  setIsDarkTheme,
 }) => {
   const initialVersion = staticVersions.Releases.find(
     (release) => release.latest
@@ -61,7 +62,6 @@ const HeaderTools = ({
   const [isDropdownOpen, setDropdownOpen] = useState(false);
   // const [searchValue, setSearchValue] = React.useState('');
   // const [isSearchExpanded, setIsSearchExpanded] = React.useState(false);
-  const [isDarkTheme, setIsDarkTheme] = React.useState(false);
 
   const getDropdownItem = (version, isLatest = false) => (
     <DropdownItem
@@ -285,6 +285,7 @@ export const SideNavLayout = ({
 
   const [versions, setVersions] = useState({ ...staticVersions });
   const [isRTL, setIsRTL] = useState(false);
+  const [isDarkTheme, setIsDarkTheme] = React.useState(false);
 
   useEffect(() => {
     if (typeof window === 'undefined') {
@@ -387,6 +388,8 @@ export const SideNavLayout = ({
             topNavItems={topNavItems}
             isRTL={isRTL}
             setIsRTL={setIsRTL}
+            isDarkTheme={isDarkTheme}
+            setIsDarkTheme={setIsDarkTheme}
           />
         )}
       </MastheadContent>
@@ -409,7 +412,7 @@ export const SideNavLayout = ({
           defaultManagedSidebarIsOpen={navOpenProp}
         >
           {children}
-          {process.env.hasFooter && <Footer />}
+          {process.env.hasFooter && <Footer isDarkTheme={isDarkTheme} />}
         </Page>
         <div id="ws-page-banners">{hasGdprBanner && <GdprBanner />}</div>
       </RtlContext.Provider>
