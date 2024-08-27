@@ -75,7 +75,7 @@ const MDXChildTemplate = ({
               You can find the <Link to={newImplementationLink}>updated implementation here</Link>.
             </React.Fragment>
           )}
-          {' '}To learn more about the deprecated components, visit <Link to="/get-started/about-patternfly#deprecated-components">about PatternFly.</Link>
+          {' '}To learn more about deprecated components, visit <Link to="/get-started/about-patternfly#deprecated-components">about PatternFly.</Link>
         </InlineAlert>
       )}
        {(template || source === 'react-template') && (
