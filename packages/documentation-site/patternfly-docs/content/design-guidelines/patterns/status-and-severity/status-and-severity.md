@@ -52,13 +52,13 @@ The following table outlines the proper combination of status type, icon, and co
 
 ### Usage 
 
-Use status icons to: 
-- Provide more context to the meaning or current state of an alert, modal, banner, or similar component. 
-- Properly identify the type of message being shared (based on the usage definitions in the previous table).
+Use status icons: 
+- To provide more context to the meaning or current state of an alert, modal, banner, or similar component. 
+- To properly identify the type of message being shared (based on the usage definitions in the previous table).
 
-Do not use status icons to: 
-- Convey severity. Use [severity icons](#severity-icons) instead.
-- Communicate a message on their own, without a text label. 
+Do not use status icons: 
+- To convey severity. Use [severity icons](#severity-icons) instead.
+- To communicate a message without a text label. 
 ## Severity icons
 
 When there is an issue or incident related to a source of data, it is important to communicate the severity of the situation to help users to measure and understand the impact that it may have. To facilitate effective communication, we offer a series of severity icons.
@@ -76,8 +76,8 @@ These icons utilize color and visual weight to reflect the sense of severity tha
 
 ### Usage
 
-Use severity icons to: 
-- Make it easier for users to quickly understand the impact of an issue.
+Use severity icons: 
+- To make it easier for users to quickly understand the impact of an issue.
 
 Do not use severity icons: 
 - To communicate the status of something. Instead, use [status icons.](#status-icons)
