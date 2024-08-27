@@ -2,7 +2,6 @@
 id: Chip
 section: components
 ---
-
 ## Elements
 
 Chips are mainly used within chip groups, which represent an attribute that has been assigned one or more values. 

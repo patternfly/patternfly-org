@@ -313,6 +313,22 @@ If you are considering using a beta component, make sure to:
 1. Check [the PatternFly Issues GitHub Project board](https://github.com/orgs/patternfly/projects/7/views/5) where we have created a view to categorize most issues by component. Browse any open issues for the beta component to determine how much more the beta component could evolve in the near future.
 
 
+## Deprecated components 
+
+Deprecated components are components that are no longer recommended for use in PatternFly, either due to significant design or code changes. Once deprecated, a component is replaced with a newer implementation, and the previous implementation is no longer maintained or enhanced. 
+
+Deprecated components will typically be available to use until the next major release, after which no documentation will be included on the current release website.
+
+![Onsite deprecated component messages](./img/deprecated-component.png)
+
+Deprecation includes: 
+- Components that are removed completely, in favor of a different component. 
+  - The newly recommended component will be mentioned and linked on the deprecated component's page.
+- Components whose implementation has changed significantly. The new implementation is still contained under the same component name.
+  - The new implementation will populate the "React tab," while documentation for the deprecated implementation will be placed under a "React deprecated" tab. You will see an alert on both the React and React deprecated pages.
+
+Deprecated components can be imported from @patternfly/react-core/deprecated.
+
 <!-- This section is WIP ** we need to wait to see how this content gets included **
 
 Flexibility
