@@ -67,3 +67,7 @@
   }
 }
 
+.ws-toc-item .pf-m-link {
+  text-wrap: wrap;
+  text-align: left;
+}

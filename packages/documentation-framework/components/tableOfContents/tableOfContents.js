@@ -1,5 +1,9 @@
 import React from 'react';
-import { JumpLinks, JumpLinksItem, JumpLinksList } from '@patternfly/react-core';
+import {
+  JumpLinks,
+  JumpLinksItem,
+  JumpLinksList,
+} from '@patternfly/react-core';
 import { trackEvent } from '../../helpers';
 
 export const TableOfContents = ({ items }) => {
@@ -9,15 +13,17 @@ export const TableOfContents = ({ items }) => {
   const [stickyNavHeight, setStickyNavHeight] = React.useState(0);
 
   React.useEffect(() => {
-    if (document.getElementById("ws-sticky-nav-tabs")) {
-      setStickyNavHeight(document.getElementById("ws-sticky-nav-tabs").offsetHeight);
+    if (document.getElementById('ws-sticky-nav-tabs')) {
+      setStickyNavHeight(
+        document.getElementById('ws-sticky-nav-tabs').offsetHeight
+      );
     }
-  }, [])
+  }, []);
 
   const updateWidth = () => {
     const { innerWidth } = window;
     innerWidth !== width && setWidth(innerWidth);
-  }
+  };
   let jumpLinksItems = [];
   let wasSublistRendered = false;
 
@@ -27,14 +33,20 @@ export const TableOfContents = ({ items }) => {
       <>
         {item.text}
         <JumpLinksList>
-          {nextItemArr.map(curItem => (
+          {nextItemArr.map((curItem) => (
             <JumpLinksItem
               key={curItem.id}
               href={`#${curItem.id}`}
               className="ws-toc-item"
               onKeyDown={updateWidth}
               onMouseDown={updateWidth}
-              onClick={() => trackEvent('jump_link_click', 'click_event', curItem.id.toUpperCase())}
+              onClick={() =>
+                trackEvent(
+                  'jump_link_click',
+                  'click_event',
+                  curItem.id.toUpperCase()
+                )
+              }
             >
               {curItem.text}
             </JumpLinksItem>
@@ -42,7 +54,7 @@ export const TableOfContents = ({ items }) => {
         </JumpLinksList>
       </>
     );
-  }
+  };
 
   const renderJumpLinksItems = () => {
     items.forEach((item, index) => {
@@ -53,18 +65,28 @@ export const TableOfContents = ({ items }) => {
         return;
       }
       if (!Array.isArray(nextItem) && Array.isArray(item)) {
-        {item.map(curItem => jumpLinksItems.push(
-          <JumpLinksItem
-            key={curItem.id}
-            href={`#${curItem.id}`}
-            className="ws-toc-item"
-            onKeyDown={updateWidth}
-            onMouseDown={updateWidth}
-            onClick={() => trackEvent('jump_link_click', 'click_event', curItem.id.toUpperCase())}
-          >
-            {curItem.text}
-          </JumpLinksItem>
-        ))}
+        {
+          item.map((curItem) =>
+            jumpLinksItems.push(
+              <JumpLinksItem
+                key={curItem.id}
+                href={`#${curItem.id}`}
+                className="ws-toc-item"
+                onKeyDown={updateWidth}
+                onMouseDown={updateWidth}
+                onClick={() =>
+                  trackEvent(
+                    'jump_link_click',
+                    'click_event',
+                    curItem.id.toUpperCase()
+                  )
+                }
+              >
+                {curItem.text}
+              </JumpLinksItem>
+            )
+          );
+        }
       } else {
         jumpLinksItems.push(
           <JumpLinksItem
@@ -73,27 +95,35 @@ export const TableOfContents = ({ items }) => {
             className="ws-toc-item"
             onKeyDown={updateWidth}
             onMouseDown={updateWidth}
-            onClick={() => trackEvent('jump_link_click', 'click_event', item.id.toUpperCase())}
+            onClick={() =>
+              trackEvent(
+                'jump_link_click',
+                'click_event',
+                item.id.toUpperCase()
+              )
+            }
           >
-            { Array.isArray(nextItem) ? renderSublist(item, nextItem) : item.text }
+            {Array.isArray(nextItem)
+              ? renderSublist(item, nextItem)
+              : item.text}
           </JumpLinksItem>
         );
       }
-    })
+    });
     return jumpLinksItems;
-  }
+  };
 
   return (
     <JumpLinks
       label="Table of contents"
       isVertical
-      scrollableSelector="#ws-page-main"
+      scrollableSelector=".pf-v6-c-page__main-container"
       className="ws-toc"
-      style={{ 'top': stickyNavHeight }}
+      style={{ top: stickyNavHeight }}
       offset={width > 1450 ? 108 + stickyNavHeight : 148 + stickyNavHeight}
       expandable={{ default: 'expandable', '2xl': 'nonExpandable' }}
     >
-      { renderJumpLinksItems() }
+      {renderJumpLinksItems()}
     </JumpLinks>
   );
-}
+};
