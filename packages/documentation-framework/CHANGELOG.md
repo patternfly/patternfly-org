@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 5.21.0 (2024-08-26)
+
+
+### Features
+
+* **ver:** update to final 5.4 prereleease versions ([#4219](https://github.com/patternfly/patternfly-org/issues/4219)) ([8420894](https://github.com/patternfly/patternfly-org/commit/84208949c472c895940c7ca1ec361fe8e928b5c0))
+
+
+
+
+
+## 5.20.1 (2024-08-26)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
 # 5.20.0 (2024-08-14)
 
 
