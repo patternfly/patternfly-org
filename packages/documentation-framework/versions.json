@@ -2,7 +2,7 @@
   "Releases": [
     {
       "name": "5.4.0",
-      "date": "2024-08-29",
+      "date": "2024-08-28",
       "latest": true,
       "versions": {
         "@patternfly/patternfly": "5.4.0",
