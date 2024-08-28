@@ -15,7 +15,25 @@ But first, we have *lots* to share for this update&mdash;check out the highlight
 
 ### Promoted package versions
 
-- need list
+- patternfly/patternfly ([changelog](https://github.com/patternfly/patternfly/releases/tag/v5.4.0))
+  - [@patternfly/patternfly@5.4.0](https://www.npmjs.com/package/@patternfly/patternfly/v/5.4.0)
+
+- patternfly/patternfly-react ([changelog](https://github.com/patternfly/patternfly-react/releases/tag/v5.4.0))
+  - [@patternfly/react-charts@7.4.0](https://www.npmjs.com/package/@patternfly/react-charts/v/7.4.0)
+  - [@patternfly/react-code-editor@5.4.0](https://www.npmjs.com/package/@patternfly/react-code-editor/v/5.4.0)
+  - [@patternfly/react-core@5.4.0](https://www.npmjs.com/package/@patternfly/react-core/v/5.4.0)
+  - [@patternfly/react-drag-drop@5.4.0](https://www.npmjs.com/package/@patternfly/react-drag-drop/v/5.4.0)
+  - [@patternfly/react-icons@5.4.0](https://www.npmjs.com/package/@patternfly/react-icons/v/5.4.0)
+  - [@patternfly/react-styles@5.4.0](https://www.npmjs.com/package/@patternfly/react-styles/v/5.4.0)
+  - [@patternfly/react-table@5.4.0](https://www.npmjs.com/package/@patternfly/react-table/v/5.4.0)
+  - [@patternfly/react-templates@1.1.0](https://www.npmjs.com/package/@patternfly/react-templates/v/1.1.0)
+  - [@patternfly/react-tokens@5.4.0](https://www.npmjs.com/package/@patternfly/react-tokens/v/5.4.0)
+
+- PatternFly extensions
+  - [@patternfly/react-console@5.1.0](https://www.npmjs.com/package/@patternfly/react-console/v/5.1.0) ([changelog](https://github.com/patternfly/react-console/releases/tag/v5.1.0))
+  - [@patternfly/react-log-viewer@5.3.0](https://www.npmjs.com/package/@patternfly/react-log-viewer/v/5.3.0) ([changelog](https://github.com/patternfly/react-log-viewer/releases/tag/v5.3.0))
+  - [@patternfly/react-topology@5.4.0](https://www.npmjs.com/package/@patternfly/react-topology/v/5.4.0) ([changelog](https://github.com/patternfly/react-topology/releases/tag/v5.4.0))
+  - [@patternfly/patternfly-quickstarts@5.4.0](https://www.npmjs.com/package/@patternfly/quickstarts/v/5.4.0) ([changelog](https://github.com/patternfly/patternfly-quickstarts/releases/tag/v5.4.0))
 
 ### Component updates
 #### Fixed bugs
