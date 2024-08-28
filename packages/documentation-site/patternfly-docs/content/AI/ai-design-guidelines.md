@@ -1,6 +1,6 @@
 ---
 id: AI guidelines
-section: PatternFly AI
+section: PatternFly-AI
 --- 
 
 import {Alert} from '@patternfly/react-core';
