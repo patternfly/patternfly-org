@@ -18,6 +18,7 @@ But first, we have *lots* to share for this update&mdash;check out the highlight
 - patternfly/patternfly ([changelog](https://github.com/patternfly/patternfly/releases/tag/v5.4.0))
   - [@patternfly/patternfly@5.4.0](https://www.npmjs.com/package/@patternfly/patternfly/v/5.4.0)
 
+
 - patternfly/patternfly-react ([changelog](https://github.com/patternfly/patternfly-react/releases/tag/v5.4.0))
   - [@patternfly/react-charts@7.4.0](https://www.npmjs.com/package/@patternfly/react-charts/v/7.4.0)
   - [@patternfly/react-code-editor@5.4.0](https://www.npmjs.com/package/@patternfly/react-code-editor/v/5.4.0)
@@ -28,6 +29,7 @@ But first, we have *lots* to share for this update&mdash;check out the highlight
   - [@patternfly/react-table@5.4.0](https://www.npmjs.com/package/@patternfly/react-table/v/5.4.0)
   - [@patternfly/react-templates@1.1.0](https://www.npmjs.com/package/@patternfly/react-templates/v/1.1.0)
   - [@patternfly/react-tokens@5.4.0](https://www.npmjs.com/package/@patternfly/react-tokens/v/5.4.0)
+
 
 - PatternFly extensions
   - [@patternfly/react-console@5.1.0](https://www.npmjs.com/package/@patternfly/react-console/v/5.1.0) ([changelog](https://github.com/patternfly/react-console/releases/tag/v5.1.0))
