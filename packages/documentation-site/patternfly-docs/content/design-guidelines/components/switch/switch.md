@@ -21,19 +21,19 @@ Switches are most often used in forms, as a way of allowing users to turn on set
 
 ### When to use a switch vs. a radio button 
 
-If the available options represent anything other than “on” or “off”, use a [radio button](/components/forms/radio/design-guidelines) instead of a switch. 
+- If the available options represent anything other than “on” or “off”, use a [radio button](/components/forms/radio/design-guidelines) instead of a switch. 
 
 ### When to use a switch vs. a checkbox
 
-Use checkboxes when additional action is required to save a user's selections. A switch changes and saves an option simultaneously, while checkboxes do not. For example, the following image requires users to click the **Save** button:
+- Use checkboxes when additional action is required to save a user's selections. A switch should change and save an option simultaneously, while checkboxes should not. For example, the following image requires users to click the **Save** button:
 
 ![A "do" and "don't" comparison image that shows the proper use of checkboxes in a saveable modal](./img/switch-do-dont.png)
 
-Use checkboxes for intermediate states, where you can select all, none, or some actions:
+- Use checkboxes for intermediate states, where you can select all, none, or some actions:
 
 ![A "do" and "don't" comparison image that shows the proper use of a checkbox that selects all other checkboxes](./img/switch-intermediate.png)
 
-Use switches when a series of one or more independent options can be turned on or off:
+- Use switches when a series of one or more independent options can be turned on or off:
 
 ![A "do" and "don't" comparison image that shows the proper use of switches when you can toggle multiple independent settings](./img/switch-multiple-independent.png)
 
