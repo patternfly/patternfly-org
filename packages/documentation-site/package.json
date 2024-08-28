@@ -18,7 +18,7 @@
   },
   "dependencies": {
     "@patternfly/documentation-framework": "^5.20.1",
-    "@patternfly/quickstarts": "5.4.0-prerelease.4",
+    "@patternfly/quickstarts": "5.4.0",
     "@patternfly/react-catalog-view-extension": "5.0.0",
     "@patternfly/react-console": "5.1.0-prerelease.2",
     "@patternfly/react-docs": "6.4.0-prerelease.54",
