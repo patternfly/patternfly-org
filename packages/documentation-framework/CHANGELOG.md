@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 5.22.0 (2024-08-28)
+
+
+### Features
+
+* **org-main:** update screenshots ([#4229](https://github.com/patternfly/patternfly-org/issues/4229)) ([bea1fb8](https://github.com/patternfly/patternfly-org/commit/bea1fb8b5d2c1c23c804d4d3d41636eed8b76e3d))
+
+
+
+
+
 # 5.21.0 (2024-08-26)
 
 
