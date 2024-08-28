@@ -1,6 +1,6 @@
 ---
 id: Chatbots
-section: UX writing
+section: PatternFly-AI
 subsection: Conversation design
 ---
 
@@ -9,7 +9,7 @@ import ArrowRightIcon from '@patternfly/react-icons/dist/esm/icons/arrow-right-i
 
 ## Writing for chatbots 
 
-When designed with your users in mind, chatbots can improve the overall UX, because they are convenient, efficient, and persistent. 
+When chatbots are design to meet the needs of your users, they can improve the overall UX of your product, because they are convenient, efficient, and persistent. 
 
 Chatbots are only as good as the writing that goes into them. The language they use must build trust and clearly establish the “rules” of the conversation.
  
@@ -39,6 +39,7 @@ It is important to only use chatbots when they add value to the user experience.
 Common chatbot uses include: 
 - Providing customer assistance, when waiting for human help would take longer
 - Connecting users with resources, to streamline the process of searching for resources on their own
+- Using natural language to share information with users (requires generative AI support)
 - Assisting users with common, recurring tasks
 
 Before building a chatbot, ask yourself the following questions: 
@@ -46,18 +47,14 @@ Before building a chatbot, ask yourself the following questions:
 - How could a bot help your users reach their goals? 
 - How is a bot better than traditional contextual support, like wizards, modals, and so on?
 
-| **Do** | **Don't** |
+| **Don't** | **Do** |
 | --- | --- |
-| Do use a chatbot to help resolve common problems more efficiently. | Don't use a chatbot when users can accomplish tasks more efficiently through the UI. |
-| Do use a chatbot to make it easier for users to complete routine tasks. | Don't use a chatbot for a complex or lengthy process. |
-| To use a chatbot if users would benefit from on-demand help. | Don't use a chatbot for sensitive or emotional topics, that need real humans. |
+| Don't use a chatbot when users can accomplish tasks more efficiently through the UI. | Do use a chatbot to help resolve common problems more efficiently. |
+| Don't use a chatbot for a complex or lengthy process. | Do use a chatbot to make it easier for users to complete routine tasks. | 
+| Don't use a chatbot for sensitive or emotional topics, that need real humans. | Do use a chatbot if users would benefit from on-demand help, quicker than humans can provide. | 
 
 ## Chatbot personality and branding
 
-Chatbots should be aligned with the [PatternFly brand guidelines.]() 
+Chatbots should be aligned with the [PatternFly brand guidelines.](/ux-writing/brand-voice-and-tone) If your chatbot is designed for a Red Hat product, there are [additional Red Hat brand guidelines](https://www.redhat.com/en/about/brand/standards) that you should follow. 
 
-If your chatbot is designed for a Red Hat product, there are [additional Red Hat brand guidelines](https://www.redhat.com/en/about/brand/standards) that you should follow. Additionally, you will need to customize the chatbot with the brand name and system avatar for your product. 
-
-
-
-
+Additionally, you will need to customize a brand for your chatbot, including a name, personality, and avatar. Doing so will help users identify and understand the bot, and will also help you build a consistent bot identity. 
