@@ -1,6 +1,6 @@
 ---
 id: About AI
-section: AI
+section: PatternFly AI
 --- 
 
 **Artificial intelligence (AI)** is transforming experiences, enabling more personalized, efficient, and innovative digital interactions. When used thoughtfully and intentionally, AI can enhance the user experience of products designed with PatternFly. 
