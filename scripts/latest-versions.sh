@@ -1,24 +1,64 @@
 #!/bin/bash
+ # Make sure you update the version number when changing this script.
+version=2.0
+promote=false
+
 packages=(
   @patternfly/patternfly
-  @patternfly/react-catalog-view-extension
   @patternfly/react-charts
   @patternfly/react-code-editor
-  @patternfly/react-component-groups
-  @patternfly/react-console
   @patternfly/react-core
+  @patternfly/react-docs
   @patternfly/react-drag-drop
   @patternfly/react-icons
-  @patternfly/react-log-viewer
   @patternfly/react-styles
   @patternfly/react-table
+  @patternfly/react-templates
   @patternfly/react-tokens
+)
+
+packagesExtensions=(
   @patternfly/react-topology
   @patternfly/react-virtualized-extension
-  @patternfly/react-user-feedback
   @patternfly/quickstarts
+  @patternfly/react-user-feedback
+  @patternfly/react-console
+  @patternfly/react-log-viewer
+  @patternfly/react-catalog-view-extension
+  @patternfly/react-component-groups
 )
+
 prereleaseTag=prerelease
+
+show_help() {
+  echo "Usage: $(basename $0) [OPTIONS]"
+  echo "Options:"
+  echo "  -h, --help     Display this help message"
+  echo "  -v, -version   Display version information"
+  echo "  -e             Shows extensions packages prerelease versions"
+  echo "  -p             Shows the command to promote to latest tag"
+  echo "  -t             Versions are displayed for this tag (default: prerelease)"
+  # Add more options and descriptions as needed
+  exit 0
+}
+
+if [[ "$1" == "-h" || "$1" == "--help" ]]; then
+  show_help
+fi
+if [[ "$1" == "-v" || "$1" == "--version" ]]; then
+  echo "Version: $version"
+  exit 0
+fi
+while getopts ept: flag; 
+do
+  case "${flag}" in
+    e) packages+=(${packagesExtensions[@]});;
+    p) promote=true;;
+    t) prereleaseTag=${OPTARG};;
+
+    *) show_help;;
+  esac
+done
 
 function getPrereleaseVersion {
   local version=$(
@@ -31,7 +71,7 @@ function getPrereleaseVersion {
 
 for p in ${packages[@]}; do
   version=$(getPrereleaseVersion $p)
-  if [ "$1" = "promote" ]; then
+  if [ "$promote" = true ]; then
     echo "npm dist-tag add $p@$version latest"
   else # list
     echo "\"$p\": \"$version\","
