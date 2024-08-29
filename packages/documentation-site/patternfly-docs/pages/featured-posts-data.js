@@ -3,7 +3,7 @@ export const featuredPostsData = {
     title: "Introducing the PatternFly 6 beta",
     author: "Erin Donehoo",
     length: "3 min read",
-    URL: "https://medium.com/patternfly/https://medium.com/@edonehoo/introducing-the-patternfly-6-beta-364952dba6ba",
+    URL: "https://medium.com/patternfly/introducing-the-patternfly-6-beta-364952dba6ba",
     // Use resize:fit:600 in URL
     imageURL:
       "https://cdn-images-1.medium.com/max/2400/1*-xS5YU2yAEwZSXFF_xjgow.png",

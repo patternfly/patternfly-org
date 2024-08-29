@@ -3,6 +3,52 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 6.0.0-alpha.90 (2024-08-29)
+
+
+### Features
+
+* **org-v6:** update versions, update ver script ([#4234](https://github.com/patternfly/patternfly-org/issues/4234)) ([1baa6dd](https://github.com/patternfly/patternfly-org/commit/1baa6dd17332691a57a139257971dac2dcc8d4a9))
+
+
+
+
+
+# 6.0.0-alpha.89 (2024-08-27)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+# 6.0.0-alpha.88 (2024-08-26)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+# 6.0.0-alpha.87 (2024-08-26)
+
+
+### Bug Fixes
+
+* **docs:** tokenize footer styles ([#4167](https://github.com/patternfly/patternfly-org/issues/4167)) ([622560c](https://github.com/patternfly/patternfly-org/commit/622560c903042e6ec5841280d7247697c51ca88c))
+
+
+
+
+
+# 6.0.0-alpha.86 (2024-08-26)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
 # 6.0.0-alpha.85 (2024-08-21)
 
 
