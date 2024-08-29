@@ -310,7 +310,7 @@ Occasionally, after a component is promoted out of beta, subsequent enhancement 
 If you are considering using a beta component, make sure to:
 
 1. Play with the examples in the component's documentation on the PatternFly website to determine if the current implementation meets your needs. Open issues for any missing features, enhancement requests, or bugs.
-1. Check [the PatternFly Issues GitHub Project board](https://github.com/orgs/patternfly/projects/7/views/5) where we have created a view to categorize most issues by component. Browse any open issues for the beta component to determine how much more the beta component could evolve in the near future.
+2. Check the [PatternFly Issues GitHub Project board](https://github.com/orgs/patternfly/projects/7/views/1). Browse any open issues for the beta component to determine how much more the beta component could evolve in the near future.
 
 
 <!-- This section is WIP ** we need to wait to see how this content gets included **
