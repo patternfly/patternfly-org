@@ -173,7 +173,7 @@
   },
   "inline-edit": {
     "illustration": "./images/component-illustrations/inline-edit.png",
-    "summary": "An <b>inline edit</b> component allows users to switch between read-only and edits views of description lists, page text elements, or tables&mdashwithin the context of their current view."
+    "summary": "An <b>inline edit</b> component allows users to switch between read-only and edits views of description lists, page text elements, or tables&mdash;within the context of their current view."
   },
   "input-group": {
     "illustration": "./images/component-illustrations/input-group.png",
