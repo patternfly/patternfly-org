@@ -25,12 +25,11 @@ To support tokens, PatternFly's global CSS variable system has been updated. Var
 
 If you make customizations to PatternFly components in your product, or use CSS overrides, you will need to manually update your CSS variable names to match an appropriate [semantic token](/tokens/all-patternfly-tokens). There is no one-to-one recommendation for any particular CSS variable, so you will need to choose the most appropriate token for your use case. 
 
-### Choosing tokens 
-We tried to name our semantic tokens so that their meaning is clear, but, until you're familiar with our token system, it may not be obvious which token you should choose for your use case. When choosing tokens, consider the following tips and reminders:  
+As you migrate and [select tokens](#selecting-tokens), refer to these recommendations and reminders:
 
-1. **Fuzzy matching/autocomplete on CSS variables** is immensely helpful in finding the right token name. For VSCode, we like the [CSS variable autocomplete plugin.](https://marketplace.visualstudio.com/items?itemName=vunguyentuan.vscode-css-variables)
+1. **Remember that you should only use semantic tokens.** Palette and base tokens provide values for semantic tokens, but generally should never be used otherwise. Palette and base tokens end in a number, but semantic tokens do not&mdash;so never use a token that ends in a number. 
 
-1. **Remember that you should only use semantic tokens.** Palette and base tokens provide values for semantic tokens, but generally should never be used otherwise. Palette and base tokens end in a number, but semantic tokens do not&mdash;so never use a token that ends in a number.
+1. **Don’t start with the old value and work backwards.** For example, there are many things that are “blue” but it’s important to choose the right token for your purpose. In addition, PatternFly 6 has a completely new look&mdash;so what used to be “blue” might not be anymore!
 
 1. **Understand the naming layers for semantic tokens.** Remember [the structure of our token names:](/tokens/about-tokens#token-names) 
 `--pf-t--[scope]--[component]--[property]--[concept]--[variant]--[state]`
@@ -41,17 +40,28 @@ We tried to name our semantic tokens so that their meaning is clear, but, until 
         - **Component:** What are you applying it to? For example, the background, text, icon, border, box-shadow, motion, or spacer.
         - **Property:** What’s the attribute you are applying? For example, color, size, radius, or width.
         - **Concept:** Is it associated with a concept, like primary, status, nonstatus, or action?
-        - **Variant:** What variation do you need? This typically includes:
+        - **Variant:** Which variation do you need? This typically includes:
             - Sizes (xs, sm, md, lg, xl, 2xl)
             - Statuses (danger, warning, success, info)
             - In the case of some text and icon colors&mdash;`on-`, which refers to accessible colors to use on a particular background.
         - **State:** What is the state? For example, default, hover, or clicked.
 
+1. **Use fuzzy matching/autocomplete on CSS variables.** This is immensely helpful in finding the right token name. For VSCode, we like the [CSS variable autocomplete plugin.](https://marketplace.visualstudio.com/items?itemName=vunguyentuan.vscode-css-variables)
+
 1. **If you use semantic tokens, you will get dark theme styling for free.** You may notice tokens with `dark` in their name. Don’t be tempted to use them! These exist within a selector that applies dark theme values to the main set of semantic tokens. 
 
-#### Examples 
+1. **Be sure to spend time testing how things look.** 
+    - Switch to dark theme and make sure things look correct. This will often expose improper tokens. 
+    - If your custom style should match and behave like an existing PatternFly component, compare that component's style to yours (in light and dark themes), to confirm that it matches.
+    - Try changing a token and see if it changes what you'd expect.
 
-Look at what you need a token for, and use fuzzy matching to help you find the appropriate token options. Consider the following scenarios (based on [the VS code plugin](https://marketplace.visualstudio.com/items?itemName=vunguyentuan.vscode-css-variables) we recommend):
+### Selecting tokens 
+
+It’s difficult to consistently map the old global variables to the new design tokens because, for the most part, the old global variables did not convey a lot of meaning. In contrast, design tokens carry intentional meaning. We tried to name our semantic tokens so that their meaning is clear, but, until you're familiar with our token system, it may not be obvious which token you should choose for your use case. 
+
+When choosing tokens, look at what you need a token for, and use fuzzy matching to help you find the appropriate token options. 
+
+The following scenarios provide examples (based on [the VS code plugin](https://marketplace.visualstudio.com/items?itemName=vunguyentuan.vscode-css-variables) we recommend):
 
 - **Scenario 1:** You need to make a disabled state on a custom element. 
     1. You’ll probably want to set the background color: start typing `pft` to get tokens, then `back` for background, followed by `dis` for disabled. 
