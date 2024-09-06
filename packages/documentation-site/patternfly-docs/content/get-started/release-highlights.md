@@ -25,7 +25,11 @@ We created a framework for micro animation CSS tokens, which will be used to ena
 ### Content updates 
 
 We made more improvements to our website docs, to ensure that they're accurate and inline with our new token system. A variety of pages and sections were updated, including: 
-- All [tokens](/tokens/about-tokens) pages
+- All tokens pages: 
+    - [About tokens](/tokens/about-tokens)
+    - [All PatternFly tokens](/tokens/all-patternfly-tokens)
+    - [Develop with tokens](/tokens/develop-with-tokens)
+    - [Design with tokens](/tokens/design-with-tokens)
 - Our design foundations 
     - [Colors](/design-foundations/colors) 
     - [Icons](/design-foundations/icons) 
@@ -51,11 +55,19 @@ We also made updates to some of our component structure and naming conventions. 
 - Renamed the "text" component to ["content."](/components/content)
     - Added `<hr>` element support to the content component.
 - Refactored pagination to use menu toggle rather than options menu.
-- Restructured the mastehead component: 
+- Updated the `<ToolbarItem>` `variant` prop options: 
+    - Replaced "chip-group" with "label-group", to align with the deprecation of chip. 
+    - (Previously) Removed "bulk-select", "overflow-menu", and "search-filter" variants for `<ToolbarItem>`.
+- Restructured the masthead component: 
     - Renamed `<MastheadBrand>` to `<MastheadLogo>`
     - Renamed `<MastheadMain>` to `<MastheadBrand>`
     - Wrapped `<MastheadToggle>` and `<MastheadBrand>` in `<MastheadMain>`
     - Updated our documentation to align with the new structure.
+- Restructured the empty state component:
+    - Made it less composable, in order to address styling issues.
+    - Updated `<EmptyStateHeader>` and `<EmptyStateIcon>` to be rendered internally within `<EmptyState>`. They should now only be customized using props. 
+    - Updated the content passed to the icon prop on `<EmptyState>` to be wrapped by `<EmptyStateIcon>` automatically.
+    - Made the `titleText` prop required.
 
 ### Extension updates
 
