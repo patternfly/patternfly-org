@@ -41,6 +41,20 @@ Lists and tables should be placed in the body of a page. The width should be set
 
 In this example, a table is positioned in the body of a page in a card.
 
+### When to use accordions vs. tree tables vs. tree views
+
+**Use [accordions](/components/accordion):**
+- When you have content that users should be able to hide and display as needed.
+- When you need to make long content sections easier to navigate and parse through. 
+- When your content only includes simple blocks of text or lists&mdash;not complex information, like tables. 
+
+**Use tree tables:** 
+- When you need to nest related information within a table.
+
+**Use [tree views](/components/tree-view):** 
+- When you need to communicate a hierarchical structure.
+- When you need to change content on a page, based on selection in a tree view.
+
 ### Showing more information in a table cell
 
 To show more information in a table cell than can fit in the row field, you may truncate the list and use a label to indicate that there are more items to view. This label should be gray and indicate the number of items left to view (example: "3 more"). It is recommended to show at least one item before hiding the rest of the items.
@@ -225,6 +239,3 @@ A table may sometimes need more space for rich graphical data. See an example be
 The PatternFly table is designed to be fully responsive. When columns no longer fit within the width of the viewport, columns are stacked so that data in each row is displayed as sets of attribute-value pairs.
 
 <img src="./img/Mobile-data-table-example.png"  alt="Mobile data table"  width="375"/>
-
-
-

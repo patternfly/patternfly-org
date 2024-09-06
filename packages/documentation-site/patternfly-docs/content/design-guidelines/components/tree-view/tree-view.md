@@ -37,6 +37,20 @@ A tree view can be used for:
 * You need to compare 2 large sets of data. Use [charts](/charts/about) for a better view. 
 * The hierarchy is too deep and includes hundreds of items. Instead, use a [drill-down menu](/components/menu#drilldown).
 
+### When to use accordions vs. tree tables vs. tree views
+
+**Use [accordions:](/components/accordion)**
+- When you have content that users should be able to hide and display as needed.
+- When you need to make long content sections easier to navigate and parse through. 
+- When your content only includes simple blocks of text or lists&mdash;not complex information, like tables. 
+
+**Use [tree tables](/components/table#tree-table):** 
+- When you need to nest related information within a table.
+
+**Use tree views:** 
+- When you need to communicate a hierarchical structure.
+- When you need to change content on a page, based on selection in a tree view.
+
 ### Tree view in a page
 
 Tree views can be included in pages within these components: [dropdown](/components/menus/dropdown), [drawer](/components/drawer), [primary-detail](/demos/primary-detail), [modal](/components/modal), or [wizard](/components/wizard). 
