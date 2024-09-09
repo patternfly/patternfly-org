@@ -6,14 +6,19 @@ section: get-started
 
 import './get-started.css';
 import { Divider } from '@patternfly/react-core';
+
 ## PatternFly 6 beta
 We’re excited to share the next milestone in our journey to PatternFly 6–our beta release! This beta introduces more improvements and refinement, and contains all major PatternFly 6 features. 
 Your continued participation, support, and feedback will help ensure that PatternFly 6 is as well-tested and bug-free as possible before the full release. 
+
 ### Design updates
+
 #### Rem units
 We updated our sizing system to be based on rems, instead of pixels. Rems are relative units that adjust font size based on a webpage's HTML document root element size. For example, if the root size is 10px, a rem size of 1.5 would be 15px. This allows you to scale your font sizes, based on a root size of your choice. PatternFly's default root element size is 16px.
+
 #### Motion framework 
 We created a framework for micro animation CSS tokens, which will be used to enable component animations in future minor releases.
+
 ### Content updates 
 
 We made more improvements to our website docs, to ensure that they're accurate and inline with our new token system. A variety of pages and sections were updated, including: 
@@ -27,6 +32,7 @@ We made more improvements to our website docs, to ensure that they're accurate a
     - [Icons](/design-foundations/icons) 
     - [Spacers](/design-foundations/spacers)  
     - [Typography](/design-foundations/typography)  
+
 ### Component updates
 We promoted some of our beta and "next" components to become standard components in PatternFly 6. These will be fully-supported features going forward:
 - Buttons with count label 
@@ -58,6 +64,7 @@ We also made updates to some of our component structure and naming conventions. 
     - Updated `<EmptyStateHeader>` and `<EmptyStateIcon>` to be rendered internally within `<EmptyState>`. They should now only be customized using props. 
     - Updated the content passed to the icon prop on `<EmptyState>` to be wrapped by `<EmptyStateIcon>` automatically.
     - Made the `titleText` prop required.
+
 ### Extension updates
 
 We applied PatternFly 6 styles to the rest of our extensions. All have now been upgraded to use the PatternFly 6 beta: 
