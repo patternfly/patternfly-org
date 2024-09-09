@@ -3,100 +3,69 @@ id: Release highlights
 title: Release highlights
 section: get-started
 ---
-
 import './get-started.css';
 import { Divider } from '@patternfly/react-core';
+## PatternFly 6 beta
+We’re excited to share the next milestone in our journey to PatternFly 6–our beta release! This beta introduces more improvements and refinement, and contains all major PatternFly 6 features. 
+Your continued participation, support, and feedback will help ensure that PatternFly 6 is as well-tested and bug-free as possible before the full release. 
+### Design updates
+#### Rem units
+We updated our sizing system to be based on rems, instead of pixels. Rems are relative units that adjust font size based on a webpage's HTML document root element size. For example, if the root size is 10px, a rem size of 1.5 would be 15px. This allows you to scale your font sizes, based on a root size of your choice. PatternFly's default root element size is 16px.
+#### Motion framework 
+We created a framework for micro animation CSS tokens, which will be used to enable component animations in future minor releases.
+### Content updates 
 
+We made more improvements to our website docs, to ensure that they're accurate and inline with our new token system. A variety of pages and sections were updated, including: 
+- All tokens pages: 
+    - [About tokens](/tokens/about-tokens)
+    - [All PatternFly tokens](/tokens/all-patternfly-tokens)
+    - [Develop with tokens](/tokens/develop-with-tokens)
+    - [Design with tokens](/tokens/design-with-tokens)
+- Our design foundations 
+    - [Colors](/design-foundations/colors) 
+    - [Icons](/design-foundations/icons) 
 
-## PatternFly 5.4
-The final minor release within PatternFly 5 is now live! Next up is PatternFly 6. Don't forget to keep an eye on [our staging site](https://staging-v6.patternfly.org/) for updates. 
+    
+        
+          
+    
 
-But first, we have *lots* to share for this update&mdash;check out the highlights.
-
-### Promoted package versions
-
-- patternfly/patternfly ([changelog](https://github.com/patternfly/patternfly/releases/tag/v5.4.0))
-  - [@patternfly/patternfly@5.4.0](https://www.npmjs.com/package/@patternfly/patternfly/v/5.4.0)
-
-
-- patternfly/patternfly-react ([changelog](https://github.com/patternfly/patternfly-react/releases/tag/v5.4.0))
-  - [@patternfly/react-charts@7.4.0](https://www.npmjs.com/package/@patternfly/react-charts/v/7.4.0)
-  - [@patternfly/react-code-editor@5.4.0](https://www.npmjs.com/package/@patternfly/react-code-editor/v/5.4.0)
-  - [@patternfly/react-core@5.4.0](https://www.npmjs.com/package/@patternfly/react-core/v/5.4.0)
-  - [@patternfly/react-drag-drop@5.4.0](https://www.npmjs.com/package/@patternfly/react-drag-drop/v/5.4.0)
-  - [@patternfly/react-icons@5.4.0](https://www.npmjs.com/package/@patternfly/react-icons/v/5.4.0)
-  - [@patternfly/react-styles@5.4.0](https://www.npmjs.com/package/@patternfly/react-styles/v/5.4.0)
-  - [@patternfly/react-table@5.4.0](https://www.npmjs.com/package/@patternfly/react-table/v/5.4.0)
-  - [@patternfly/react-templates@1.1.0](https://www.npmjs.com/package/@patternfly/react-templates/v/1.1.0)
-  - [@patternfly/react-tokens@5.4.0](https://www.npmjs.com/package/@patternfly/react-tokens/v/5.4.0)
-
-
-- PatternFly extensions
-  - [@patternfly/react-console@5.1.0](https://www.npmjs.com/package/@patternfly/react-console/v/5.1.0) ([changelog](https://github.com/patternfly/react-console/releases/tag/v5.1.0))
-  - [@patternfly/react-log-viewer@5.3.0](https://www.npmjs.com/package/@patternfly/react-log-viewer/v/5.3.0) ([changelog](https://github.com/patternfly/react-log-viewer/releases/tag/v5.3.0))
-  - [@patternfly/react-topology@5.4.0](https://www.npmjs.com/package/@patternfly/react-topology/v/5.4.0) ([changelog](https://github.com/patternfly/react-topology/releases/tag/v5.4.0))
-  - [@patternfly/patternfly-quickstarts@5.4.0](https://www.npmjs.com/package/@patternfly/quickstarts/v/5.4.0) ([changelog](https://github.com/patternfly/patternfly-quickstarts/releases/tag/v5.4.0))
-
+        
+        Expand All
+    
+    @@ -51,11 +55,19 @@ We also made updates to some of our component structure and naming conventions.
+  
+    - [Spacers](/design-foundations/spacers)  
+    - [Typography](/design-foundations/typography)  
 ### Component updates
-#### Fixed bugs
-
-There were still a handful of bugs on our to-do list. To address a variety of reported issues, we did the following:
-
-- Added support for additional label info on horizontal forms.
-- Added a missing border on compound expansion table rows.
-- Fixed `<ExpandableSection>` errors that were caused by `variant="truncate"`
-- Fixed issues with icon variants in the "next" modal component.
-- Updated `paginationAriaLabel` to stop adding "items" to the end of labels.
-- Fixed unexpected wrapping in the pagination component. 
-- Added `shouldFocusFirstMenuItemOnOpen` to the dropdown component, to fix autofocus issues.
-- Fixed spacing issues with progress stepper's help text title.
-- Fixed some charts-related errors.
-- Added new `shouldFocusContent` property to the wizard component to help navigate accessibility challenges when navigating wizards with keyboard controls.
-- Improved accessibility features for the tree view component via aria properties.
-- Fixed an issue in the code block component that was removing code styling terms, like "\n" and "\t".
-- Updated the truncate component to only show a tooltip when truncation is present.
-- Drag and drop: 
-  - Switched to the flex layout in the multi-list drag and drop example.
-  - Fixed the positioning of `DragOverlay`
-
-#### New features, examples, and demos
-
-We added new features, examples, and demos to a few of our components:
-- **Feature:** Expanded selectable area size for checkboxes.
-- **Feature:** New page component properties to support drawer width customization.
-- **Feature:** Multiple drop zones in the "next" drag and drop component.
-- **Example:** [Editable table rows.](/components/table#editable-rows)
-- **Example:** [Main section variations for the page component.](/components/page#main-section-variations)
-- **Demo:** [Masthead with horizontal navigation.](/components/masthead/react-demos#horizontal-nav)
-- **Demo:** [Basic description list.](/components/description-list/react-demos#basic)
-
-#### New severity icons
-
-We created new severity icons, which can be used to communicate the severity of an error or issue with a data source that is linked to a UI element. These icons have been added to both our [Core](https://www.npmjs.com/package/@patternfly/patternfly) and [React](https://www.npmjs.com/package/@patternfly/react-icons) packages. They are also available for design use in [our Figma design kits.](https://www.figma.com/@patternfly) 
-
-![Severity icons within Figma menu](./img/severity-icons-figma.png)
-
-There are 6 icons that cover the following severity levels:
-- Undefined
-- None
-- Minor 
-- Moderate 
-- Important
-- Critical
-
-We are still working on writing design guidelines to document usage rules for these icons. Once these are completed and published, we will provide an update.
-
-#### New and updated React templates 
-
-We added 2 new react templates to help your migration efforts, including:
-- [Simple dropdown](/components/menus/dropdown/react-templates) 
-- [Multi-typeahead select](/components/menus/select/react-templates) 
-
-We also updated some of our existing templates to address issues:
-- We fixed a bug that prevented initial selections from showing in simple select and checkbox select templates.
-- We fixed a bug that appeared after selections were cleared in a typeahead select.
-- We added additional customization support to our select templates.
-
+We promoted some of our beta and "next" components to become standard components in PatternFly 6. These will be fully-supported features going forward:
+- Buttons with count label 
+- Editable labels
+- Flyout and drilldown menus and navigation 
+- Menu toggle with status indicator
+- Modal title with status indicator
+- Inline spinners
+- Timestamp component 
+We updated some of our components to make room for additional features, including:
+- Multiple page body elements within the page component.
+- Icons in navigation items.
+We also made updates to some of our component structure and naming conventions. We:
+- Renamed the "text" component to ["content."](/components/content)
+    - Added `<hr>` element support to the content component.
+- Refactored pagination to use menu toggle rather than options menu.
+- Updated the `<ToolbarItem>` `variant` prop options: 
+    - Replaced "chip-group" with "label-group", to align with the deprecation of chip. 
+    - (Previously) Removed "bulk-select", "overflow-menu", and "search-filter" variants for `<ToolbarItem>`.
+- Restructured the masthead component: 
+    - Renamed `<MastheadBrand>` to `<MastheadLogo>`
+    - Renamed `<MastheadMain>` to `<MastheadBrand>`
+    - Wrapped `<MastheadToggle>` and `<MastheadBrand>` in `<MastheadMain>`
+    - Updated our documentation to align with the new structure.
+- Restructured the empty state component:
+    - Made it less composable, in order to address styling issues.
+    - Updated `<EmptyStateHeader>` and `<EmptyStateIcon>` to be rendered internally within `<EmptyState>`. They should now only be customized using props. 
+    - Updated the content passed to the icon prop on `<EmptyState>` to be wrapped by `<EmptyStateIcon>` automatically.
+    - Made the `titleText` prop required.
 ### Extensions updates
 #### Topology 
 
