@@ -3,6 +3,7 @@ id: Release highlights
 title: Release highlights
 section: get-started
 ---
+
 import './get-started.css';
 import { Divider } from '@patternfly/react-core';
 ## PatternFly 6 beta
