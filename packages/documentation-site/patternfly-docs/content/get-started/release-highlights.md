@@ -24,12 +24,6 @@ We made more improvements to our website docs, to ensure that they're accurate a
 - Our design foundations 
     - [Colors](/design-foundations/colors) 
     - [Icons](/design-foundations/icons) 
-
-        
-          
-
-
-        
     - [Spacers](/design-foundations/spacers)  
     - [Typography](/design-foundations/typography)  
 ### Component updates
