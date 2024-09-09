@@ -36,9 +36,11 @@ We promoted some of our beta and "next" components to become standard components
 - Modal title with status indicator
 - Inline spinners
 - Timestamp component 
+
 We updated some of our components to make room for additional features, including:
 - Multiple page body elements within the page component.
 - Icons in navigation items.
+
 We also made updates to some of our component structure and naming conventions. We:
 - Renamed the "text" component to ["content."](/components/content)
     - Added `<hr>` element support to the content component.

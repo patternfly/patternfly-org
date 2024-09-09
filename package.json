@@ -34,16 +34,16 @@
     ]
   },
   "devDependencies": {
+    "@octokit/rest": "^19.0.7",
     "@patternfly/patternfly": "6.0.0-alpha.227",
     "@patternfly/react-code-editor": "6.0.0-alpha.105",
     "@patternfly/react-core": "6.0.0-alpha.105",
     "@patternfly/react-table": "6.0.0-alpha.106",
-    "@octokit/rest": "^19.0.7",
     "glob": "^8.1.0",
     "lerna": "^6.4.1",
-    "surge": "^0.23.1",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "surge": "^0.23.1"
   },
   "resolutions": {
     "node-sass": ">=6.0.1"

@@ -17,27 +17,27 @@
     "screenshots": "pf-docs-framework screenshots"
   },
   "dependencies": {
-    "@patternfly/documentation-framework": "6.0.0-alpha.89",
+    "@patternfly/design-tokens": "1.13.0",
+    "@patternfly/documentation-framework": "6.0.0-alpha.90",
     "@patternfly/react-catalog-view-extension": "6.0.0-alpha.7",
+    "@patternfly/react-component-groups": "6.0.0-alpha.14",
     "@patternfly/react-console": "6.0.0-alpha.5",
     "@patternfly/react-docs": "7.0.0-alpha.113",
     "@patternfly/react-log-viewer": "6.0.0-alpha.5",
     "@patternfly/react-topology": "6.0.0-alpha.3",
     "@patternfly/react-user-feedback": "6.0.0-alpha.4",
-    "@patternfly/react-component-groups": "6.0.0-alpha.14",
     "@patternfly/react-virtualized-extension": "6.0.0-alpha.3",
-    "@patternfly/design-tokens": "1.13.0",
     "react": "^17.0.0 || ^18.0.0",
     "react-dom": "^17.0.0 || ^18.0.0",
     "showdown": "^2.1.0"
   },
   "devDependencies": {
     "@patternfly/patternfly-a11y": "4.3.1",
+    "classnames": "^2.2.5",
     "fs-extra": "^11.1.0",
     "glob": "^8.1.0",
     "react-jss": "^10.9.2",
     "react-router": "^6.3.0",
-    "react-router-dom": "^6.3.0",
-    "classnames": "^2.2.5"
+    "react-router-dom": "^6.3.0"
   }
 }
