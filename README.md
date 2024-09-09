@@ -22,9 +22,9 @@ A local development server at http://localhost:8003 can be started with:
 
 ### Build
 
-The new v6 site can be built with:
+The site can be built with:
 
-    yarn build:v6
+    yarn build
 
 The static assets get copied to build/patternfly-org.
 
@@ -34,7 +34,7 @@ If you see errors, make sure that the version of the `package.json` file in `pac
 
 When you submit a PR, previews should be automatically generated for you and uploaded as PR comments. This takes between 5-10 minutes.
 
-When the PR is merged to main, the site is first deployed to a [staging S3 bucket.](https://staging.patternfly.org)
+When the PR is merged to main, the site is first deployed to a [staging S3 bucket.](https://staging-v6.patternfly.org)
 
 When PatternFly does a release (currently every 3 weeks) this bucket is copied to https://patternfly.org.
 
