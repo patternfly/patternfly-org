@@ -944,7 +944,6 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-<<<<<<< HEAD
 ## 1.3.15 (2023-12-14)
 
 **Note:** Version bump only for package @patternfly/ast-helpers
@@ -1328,8 +1327,6 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package @patternfly/ast-helpers
 
 
-=======
->>>>>>> 0860b9376 (chore(release): releasing packages [ci skip])
 ## 1.3.15 (2023-12-14)
 
 **Note:** Version bump only for package @patternfly/ast-helpers
