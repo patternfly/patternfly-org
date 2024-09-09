@@ -30,10 +30,6 @@ We made more improvements to our website docs, to ensure that they're accurate a
 
 
         
-        Expand All
-
-    @@ -51,11 +55,19 @@ We also made updates to some of our component structure and naming conventions.
-
     - [Spacers](/design-foundations/spacers)  
     - [Typography](/design-foundations/typography)  
 ### Component updates
