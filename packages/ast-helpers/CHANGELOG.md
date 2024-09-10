@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.4.0-alpha.81 (2024-09-10)
+
+
+### Bug Fixes
+
+* **docs:** updated width on table of contents ([#4202](https://github.com/patternfly/patternfly-org/issues/4202)) ([66eb44a](https://github.com/patternfly/patternfly-org/commit/66eb44abad283ae1168fe727361cf78cf52ed517))
+
+
+
+
+
 # 1.4.0-alpha.80 (2024-09-09)
 
 **Note:** Version bump only for package @patternfly/ast-helpers
