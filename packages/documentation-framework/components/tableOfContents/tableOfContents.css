@@ -48,7 +48,7 @@
 
 @media (min-width: 1451px) {
   .ws-toc {
-    width: 280px;
+    width: 260px;
     max-height: calc(100vh - 76px);
     overflow-y: auto;
     /* Hide TOC scrollbar IE, Edge & Firefox */
