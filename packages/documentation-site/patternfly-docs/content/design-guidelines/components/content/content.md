@@ -34,6 +34,6 @@ Margins will be automatically applied to the content component, based on its loc
 
 ### Editorial content 
 
-[Editorial styling](/components/content#editorial-content)) increases the default size of PatternFly's body text from 14px to 16px and small text from 12px to 14px. This style adjustment is intended to aid in readability and should be used for long-form content, like documentation. 
+[Editorial styling](/components/content#editorial-content) increases the default size of PatternFly's body text from 14px to 16px and small text from 12px to 14px. This style adjustment is intended to aid in readability and should be used for long-form content, like documentation. 
 
 ![Size difference between default and editorial styles.](./img/editorial-content.png)
