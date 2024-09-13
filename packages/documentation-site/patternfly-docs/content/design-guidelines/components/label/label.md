@@ -37,17 +37,19 @@ There are 2 label sizes:
 
 Labels can be used almost anywhere in a UI. They are commonly used in tables, card views, and filters.
 
-**Labels in tables:**
+#### Labels in tables
 
     ![](./img/table-with-labels.png)
 
-**Labels in card views:**
+#### Labels in card views
 
     ![](./img/card-view-labels.png)
 
-**Labels in filters**
+#### Filter labels
 
-    ![]()
+Labels are typically used in filter and selection use cases to indicate what selections a user has made. They utilize [label groups](#label-groups) to organize selections by category for added clarity. When there are multiple filter labels within a group, any data that matches one or more of the labels will be filtered. It is not required for all filter labels to be apply in order to match a filtered item.
+
+![](./img/label-filters.png)
 
 #### Color considerations
 
@@ -57,13 +59,13 @@ While you may use other colors for your labels, we recommend using the ones prov
 
 The colors you should use differs for status and nonstatus labels:
 
-**Status labels:**
+##### Status labels
 
 Status colors can be used to indicate danger, warning, success, info, or custom statuses. 
 
     ![](./img/status-labels.png)
 
-**Nonstatus labels:** 
+##### Nonstatus labels
 
 We offer a nonstatus color palette, which you can use to color code labels that don't correspond to any status level, including red, orange, orange red, gold, green, cyan, blue, purple, and gray. 
 
@@ -84,11 +86,11 @@ Use the filled option to add more visual prominence to a label. If your use case
 
 Both status and nonstatus labels can be filled or unfilled.
 
-**Filled:**
+##### Filled
 
 ![Filled label styles for light and dark themes.](./img/filled-labels.png)
 
-**Unfilled:**
+##### Unfilled
 
 ![Unfilled label styles for light and dark themes.](./img/Unfilled-labels.png)
 
@@ -137,8 +139,10 @@ You can build custom label groups using various combinations of these features.
 Label groups should be used when there are multiple labels assigned to a component. They can be used almost anywhere in a UI, but are commonly used in table views and description lists. Label groups can be oriented either horizontally or vertically and can optionally be named and be dismissible. You may also make the label group editable to allow users to edit an existing label or add a new label.
 
 #### Label groups in a table
-<img src="./img/table-view.png" alt="Table with labels" width="1200"/>
 
+In a table, basic label groups can 
+
+![](./img/table-with-label-group.png)
 #### Label groups in a table popover
 <img src="./img/table-view-2.png" alt="Table with vertical label group in a popover" width="1200"/>
 
