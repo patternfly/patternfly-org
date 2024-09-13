@@ -3,75 +3,77 @@ id: Switch
 section: components
 ---
 
-## Usage
+## Elements
 
-It is assumed that when a user toggles a switch, the change will save automatically without the need for additional action (like clicking a "Save" button).
+![Examples of labeled and unlabeled switches](./img/switch-elements.png)
 
-<img src="./img/switch.png" alt="A side-by-side comparison of a basic switch and a switch without a label. The basic switch uses both a form label and a switch label, while the switch without a label uses a form label and replaces the switch label with a checkmark inside the switch itself" width="792"/>
+1. **Switch:** The switch itself, which uses active primary colors when turned "on" and inactive colors when turned "off". When a switch is disabled, it will use disabled colors.
+1. **Switch label:** The text label that represents the "on" state for a switch. This may simply be "On" (as long as it's paired with other meaningful text within a context, like a form label), or it may be something more descriptive, like "Allow edits." By default, the label is placed to the right of the switch, but this layout can be [swapped to the left](/components/switch#reversed-layout) if needed.
+1. **Switch checkmark:** A checkmark, which can be used to further signify that a switch is turned on. When you use a switch label, a checkmark is optional. If you do not use a switch label, then a checkmark is required, to help users understand the status of a switch.
 
-1. **Form label:** Indicates what the switch turns on or off
-2. **Switch label:** Indicates whether the switch itself is turned on or off
-3. **Switch without label:** Indicates the state of a switch with a checkmark inside the switch itself, used in place of a switch label
-4. **Switch with label and checkmark:** Indicates the state of a switch with a checkmark inside the switch itself and label with additional message 
+## Usage 
 
-All switch types display their state (on or off) through different methods and locations. A basic switch communicates its state with an exterior switch label added to its right, while a switch without a label uses a checkmark to communicate its state from inside the switch itself.
+Use a switch to allow users to toggle a setting on and off. When a user toggles a switch, the change should save automatically without the need for additional action (like clicking a "Save" button).
 
-**General guidelines**
+Switches are most often used in forms, as a way of allowing users to turn on settings as they desire. The form label should specify what setting a switch turns on or off, such as "Bluetooth" or "Editing permissions":
 
-* Use a basic switch by default unless space is limited, then use a [switch without a label](/components/switch#without-label).
-* Add a form label in front of your switch to specify what setting a switch turns on or off, such as *Wi-fi* or *Bluetooth*.
-* If you're using a basic switch, add switch labels to clarify between toggled settings, such as *On* and *Off*.
-* Don't include the state of a switch in a label if you're using a switch with a label and a checkmark. 
-* Don’t use a switch if the options you’re presenting to the user are anything other than “on” or “off.” Instead, use [radio buttons](/components/forms/radio/design-guidelines). 
+![A switch that is used to set an option in a form](./img/switch-form.png)
 
+### When to use a switch vs. a radio button 
 
+- If the available options represent anything other than “on” or “off”, use a [radio button](/components/forms/radio/design-guidelines) instead of a switch. 
 
-### When to use switches versus checkboxes
+### When to use a switch vs. a checkbox
 
-A switch changes an option and saves it simultaneously, while checkboxes require a separate action to save the selection, such as pressing a “Submit” or “Save” button.
+- Use checkboxes when additional action is required to save a user's selections. A switch should change and save an option simultaneously, while checkboxes should not. For example, the following image requires users to click the **Save** button:
 
-**Follow these guidelines for when to use a switch versus a checkbox:**
+![A "do" and "don't" comparison image that shows the proper use of checkboxes in a saveable modal](./img/switch-do-dont.png)
 
-* Use checkboxes when options do not save automatically and require the user to perform an additional action to save changes (in this case, pressing the “Save changes” button).
+- Use checkboxes for intermediate states, where you can select all, none, or some actions:
 
-    <img src="./img/switch-check-1.png" alt="Example 1 of do's and don'ts for using a checkbox vs. a switch" width="661"/>
+![A "do" and "don't" comparison image that shows the proper use of a checkbox that selects all other checkboxes](./img/switch-intermediate.png)
 
-* Use a switch for situations where you are turning a series of one or more independent options on or off.
+- Use switches when a series of one or more independent options can be turned on or off:
 
-    <img src="./img/switch-check-2.png" alt="Example 2 of do's and don'ts for using a checkbox vs. a switch" width="661"/>
+![A "do" and "don't" comparison image that shows the proper use of switches when you can toggle multiple independent settings](./img/switch-multiple-independent.png)
 
-* Use checkboxes when you may have an intermediate state where you can select all, none, or some actions.
+## Variations 
 
-    <img src="./img/switch-check-3.png" alt="Example 3 of do's and don'ts for using a checkbox vs. a switch" width="661"/>
+### Labeled switch 
+
+A [basic switch](/components/switch#basic) uses a label to communicate its purpose to users.
+
+- Do not include the switch state in a label ("On" or "Off") if you're using a labeled switch with a checkmark. 
+- To be accessible, the label for a switch must never dynamically change. For example, don't have one label for an "on" state and another label for an "off" state. Doing so can be confusing since the context for each label changes with the switch state. 
+
+### Unlabeled switch
+
+Use a labeled switch by default. If space is limited, use an [unlabeled switch.](/components/switch#without-label) When you use an unlabeled switch, ensure that there is other meaningful text to provide context, like a descriptive form label.
+
+## Placement 
+
+If a switch controls site-wide settings, place it in the masthead:
+
+![A switch in a masthead](./img/switch-masthead.png)
 
 ## Content considerations
-### Form labels
-When writing form labels, keep the message short and specific. Ensure that the message is clear when the switch is toggled to both the “on” and “off” position. 
+### Switch labels
 
-<div class="ws-content-table">
+It is typically best for a switch label to simply be "On", so that the design of the switch's toggle state effectively communicates the status of a setting. 
+
+However, if you're presenting a user with multiple switches, you should be more specific about the setting that each switch is tied to. When adding a custom label, keep the message short and specific. Ensure that the message is clear when the switch is toggled to both the “on” and “off” position. 
 
 | **Do** | **Don’t** |
 |:------:|:---------:|
 |Encrypt installed disks|Enabled encryption of installed disks| 
-
-</div>
-
-In this example, “Enabled encryption of installed disks” implies that enabled encryption is on, despite what position the switch is in. When the user toggles the switch to “off”, the form label “Enabled encryption of installed disks” could make them second-guess whether or not encryption is actually enabled. “Encrypt installed disks” makes sense when the option is both enabled and disabled, and does not imply that it is “on” or “off”. 
-
-<div class="ws-content-table">
-
-| **Do** | **Don’t** |
-|:------:|:---------:|
 |Bluetooth|Turn on bluetooth|
 |Notifications|Turn off notifications|
 |Admin edit permission|Give admins edit permissions|
 
-</div>
+For example, “Enabled encryption of installed disks” implies that enabled encryption is on, despite what position the switch is in. When a user toggles the switch to “Off”, this label could make them second-guess whether or not encryption is actually enabled. “Encrypt installed disks” clearly identifies the purpose of the switch, and pairs well with the active and inactive styling of the switch to convey status.
 
-### Punctuation 
-Keep labels short and clear. Avoid end-of-sentence punctuation such as question marks or exclamation points. 
-
-<div class="ws-content-table">
+#### Punctuation 
+Do not use end-of-sentence punctuation, like question marks or exclamation points. 
 
 | **Do** | **Don’t** |
 |:------:|:---------:|
@@ -79,4 +81,5 @@ Keep labels short and clear. Avoid end-of-sentence punctuation such as question 
 |Data collection| Allow data collection?| 
 |Notifications| Turn off notifications.|
 
-</div>
+### Form field labels 
+For form-based switches, make sure that you follow our [form field guidelines](/components/forms/form/design-guidelines#content-considerations) to effectively pair a form field label with its related switch. 

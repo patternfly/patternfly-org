@@ -31,7 +31,8 @@ async function prerender(url) {
     // For react-consoles
     createElementNS: () => ({
       download: {}
-    })
+    }),
+    documentElement: { style: {} }
   };
   global.self = {
     // For react-console
