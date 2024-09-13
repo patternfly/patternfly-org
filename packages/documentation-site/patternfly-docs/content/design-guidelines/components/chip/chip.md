@@ -3,7 +3,12 @@ id: Chip
 section: components
 ---
 
+import { Alert } from '@patternfly/react-core';
+
 ## Elements
+
+<Alert variant="warning" title="Deprecated feature" ouiaId="DeprecatedAlert"> Chip has been deprecated in favor of  [the label component.](/components/label) Chip will no longer be maintained or enhanced. 
+</Alert>
 
 Chips are mainly used within chip groups, which represent an attribute that has been assigned one or more values. 
 

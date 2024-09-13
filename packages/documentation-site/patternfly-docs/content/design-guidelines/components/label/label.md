@@ -5,87 +5,117 @@ section: components
 ## Labels
 
 ### Elements
-You can further customize labels by making them filled or unfilled, dismissable, adding icons, or making them clickable links. You can use any combination of these elements in a single label.
+You can further customize labels by adjusting their visual styling or adding functionality to let user click, edit, or remove labels.
+
+![text](./img/label-elements.png)
 
 
-<img src="./img/label-features.png" alt="Examples of different label features" width="180"/>
-
-
-1. **Fill/Unfilled labels:** Offer customization for emphasis.
-2. **Dismissible label:** Can be dismissed by clicking on the “x”.
-3. **Label with icon:** Can be used to further clarify the label.
-4. **Clickable labels:** Has a hover state to show interactiveness.
-5. **Editable labels:** Has a dashed underline to communicate editability.
+1. **Status label:** Combines color and an icon to communicate a status, like danger, warning, or success.
+1. **Filled label:** Can be used for additional emphasis.
+1. **Unfilled label:** Can be used as a less prominent label style.
+1. **Compact label:** Takes up less space than the default label.
+1. **Label with icon:** Can utilize a recognizable icon to make the label more clear and identifiable. 
+1. **Clickable label:** Is identified by the inclusion of a hover state (as shown in the example image).
+1. **Editable label:** Is identified by a dashed underline.
+1. **Dismissible label:** Can be removed or dismissed by clicking on the "x" close icon.
+1. **Label group:** Contains multiple labels at once.
+1. **Overflow label** Contains additional labels that don't fit within the main space of the label group.
 
 ### Usage
 
-Use a **label** when you want to highlight an element on a page to draw attention to it or make it more searchable. Labels can also be used to tag items of the same category. If you want to show a count, use a [badge](/components/badge) instead.
+Labels are useful in a few scenarios: 
+- When you want to highlight an element on a page to draw attention to it or make it more searchable. 
+- To tag items of the same category. If you want to show a count, use a [badge](/components/badge) instead.
+- For use in [filtering](/patterns/filters) to indicate user selections, similar to the now deprecated [chip](/component/chip) component.
 
-There are 2 specific label types:
+There are 2 label sizes:
 
-<img src="./img/label-features-type.png" alt="Different label types" width="180"/>
+![sdf](./img/label-sizes.png)
 
 1. **Default labels:** Use by default when needing a label.
 2. **Compact labels:** Use when confronted by space limitations and a smaller label is required (for example, in a table).
 
-Labels can be used almost anywhere in a UI, but are commonly used in table views and catalogs as shown below. 
+Labels can be used almost anywhere in a UI. They are commonly used in tables, card views, and filters.
 
-<img src="./img/label-table-view.png" alt="Example labels in a table" width="1209"/>
+**Labels in tables:**
 
-<img src="./img/catalog-view.png" alt="Example labels in a catalog" width="1204"/>
+    ![](./img/table-with-labels.png)
+
+**Labels in card views:**
+
+    ![](./img/card-view-labels.png)
+
+**Labels in filters**
+
+    ![]()
 
 #### Color considerations
-Both default and compact labels come in the following default colors: gray, blue, green, orange, red, purple, and cyan. We offer a wide array of colors to allow for color coding labels within UIs. Label colors can be used to indicate status if desired, but do not have to. Regardless, we recommend you avoid using the red label unless it indicates danger or an error state.
 
-
-<img src="./img/filled-labels.png" alt="Label colors" width="646"/>
-
+Labels can utilize both our [status](/design-foundations/colors#status-and-state-colors)  and [nonstatus](/design-foundations/colors#nonstatus-colors) color palettes.
 
 While you may use other colors for your labels, we recommend using the ones provided as they have been carefully selected to be accessible with the PatternFly library. If you choose to use other colors, be mindful of picking [accessible text color and icon color](/accessibility/testing-your-accessibility) to go with the label background.
 
+The colors you should use differs for status and nonstatus labels:
+
+**Status labels:**
+
+Status colors can be used to indicate danger, warning, success, info, or custom statuses. 
+
+    ![](./img/status-labels.png)
+
+**Nonstatus labels:** 
+
+We offer a nonstatus color palette, which you can use to color code labels that don't correspond to any status level, including red, orange, orange red, gold, green, cyan, blue, purple, and gray. 
+
+    ![](./img/nonstatus-labels.png)
+
+**Note:** We recommend to avoid using red, unless you're indicating danger or an error state.
 
 ### Variations
-* [Unfilled](#when-to-use-filled-or-unfilled-labels)
-* [Filled](#when-to-use-filled-or-unfilled-labels)
-* [Dismissable](#when-to-use-dismissable-labels)
-* [With icons](#when-to-use-labels-with-icons)
-* [Clickable](#when-to-use-clickable-labels)
-* [Editable](#when-to-use-editable-labels)
+- [Filled or unfilled labels](#when-to-use-filled-or-unfilled-labels)
+- [Labels with icons](#when-to-use-labels-with-icons)
+- [Editable labels](#when-to-use-editable-labels)
+- [dismissible labels](#when-to-use-dismissible-labels)
+- [Clickable labels](#when-to-use-clickable-labels)
 
 #### When to use filled or unfilled labels
 
-Use the filled option to add more visual prominence to a label. If your use case requires a mix of clickable and non-clickable labels, consider using one type for clickable and another for non-clickable. Whatever convention you choose, be sure to maintain consistency through your UI.
+Use the filled option to add more visual prominence to a label. If your use case requires a mix of clickable and non-clickable labels, consider using 1 type for clickable and another for non-clickable. Whatever convention you choose, be sure to maintain consistency through your UI.
 
-1. Unfilled
+Both status and nonstatus labels can be filled or unfilled.
 
-<img src="./img/unfilled-labels.png" alt="Unfilled labels" width="646"/>
+**Filled:**
 
-2. Filled
+![Filled label styles for light and dark themes.](./img/filled-labels.png)
 
-<img src="./img/filled-labels.png" alt="Filled labels" width="646"/>
+**Unfilled:**
 
-Use the filled option to add more visual prominence to a label.
-
-#### When to use dismissable labels
-
-Use a dismissable label for labels that are easily removed. A common use case for dismissable labels is when users can edit labels.
-
-<img src="./img/edit-labels.png" alt="Example of dismissable labels" width="646"/>
+![Unfilled label styles for light and dark themes.](./img/Unfilled-labels.png)
 
 #### When to use labels with icons
-Add an icon to your label in cases where additional visual information is helpful. You can also use them to distinguish labels of the same color if needed.
 
-<img src="./img/labels-with-icons.png" alt="Example of different colored labels with icons" width="318"/>
+While status labels will automatically contain an appropriate icon, you can also add an icon to nonstatus labels, when additional visual information would be helpful. 
 
-#### When to use clickable labels
-Use a clickable label for actionable labels. A common use case for clickable labels is when a user may want to filter by a specific label. You can also use label links to redirect users to a new page.
+![](./img/card-labels.png)
 
-<img src="./img/clickable-label.png" alt="Example of a clickable label" width="220"/>
+Icons can also help distinguish labels of the same color.
 
 #### When to use editable labels
 Use editable labels when you want to allow users to organize and select resources manually. Adding editable labels enables the user to query for objects that have similar, dissimilar, or overlapping labels.
 
-<img src="./img/editable-label-feature.png" alt="Example of a editable label" width="165"/>
+![](./img/editable-labels.png)
+#### When to use dismissible labels
+
+Use a dismissible label for labels that can be easily removed. Editable labels are often dismissible as well.
+
+![](./img/dismissible-labels.png)
+
+#### When to use clickable labels
+Use a clickable label for labels that trigger actions or link to new pages. 
+
+As shown in the following image, a common use case for clickable labels is when a user may want to filter by a specific label. 
+
+![](./img/clickable-labels.png)
 
 ## Label groups
 
@@ -94,17 +124,17 @@ Label groups are used to display multiple labels at once.
 ### Elements
 Label groups have a number of components to them.
 
-<img src="./img/label-group-elements.png" alt="Elements of a label group" width="532"/>
+![](./img/label-group-elements.png)
 
-1. **Group category (optional):** indicates the group category
-2. **Label:** indicates the labels applied.
-3. **Overflow:** indicates if there are more labels to show.
-4. **Group close (optional):** deletes the entire label group.
+1. **Label:** Indicates the labels applied.
+1. **Group category (optional):** Indicates the group category or name.
+1. **Overflow:** Indicates if there are more labels to show.
+1. **Group close (optional):** Deletes the entire label group.
 
-Label groups can use various combinations of these features to build custom label groups.
+You can build custom label groups using various combinations of these features.
 
 ### Usage
-Label groups should be used when there are multiple labels assigned to a component. They can be used almost anywhere in a UI, but are commonly used in table views and description lists. Label groups can be oriented either horizontally or vertically and can optionally be named and be dismissable. You may also make the label group editable to allow users to edit an existing label or add a new label.
+Label groups should be used when there are multiple labels assigned to a component. They can be used almost anywhere in a UI, but are commonly used in table views and description lists. Label groups can be oriented either horizontally or vertically and can optionally be named and be dismissible. You may also make the label group editable to allow users to edit an existing label or add a new label.
 
 #### Label groups in a table
 <img src="./img/table-view.png" alt="Table with labels" width="1200"/>
