@@ -5,7 +5,7 @@ title: PatternFly 6 upgrade
 section: get-started
 ---
 
-## PatternFly 6 release notes
+## PatternFly 6 React breaking changes
 
 import { ReleaseNotesTable } from './release-notes-table.js';
 
