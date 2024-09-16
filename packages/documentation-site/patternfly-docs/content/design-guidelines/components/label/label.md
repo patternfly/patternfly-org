@@ -129,7 +129,7 @@ Label groups have a number of components to them.
 ![](./img/label-group-elements.png)
 
 1. **Label:** Indicates the labels applied.
-1. **Group category (optional):** Indicates the group category or name.
+1. **Group label (optional):** Indicates the group category or name.
 1. **Overflow:** Indicates if there are more labels to show.
 1. **Group close (optional):** Deletes the entire label group.
 
@@ -147,47 +147,40 @@ In a table, basic label groups can
 <img src="./img/table-view-2.png" alt="Table with vertical label group in a popover" width="1200"/>
 
 #### Label groups in a description list
-<img src="./img/description-list.png" alt="Description list with labels" width="520"/>
+
+![](./img/description-list-labels.png)
 
 ### Variations
 
 #### Editable label group
 
-##### Adding a new label to a group, without a group label
-This variation can be used when there is a need to add a new label or edit an existing label within a label group, and the label group does not have a group label.
+##### Adding a new label to a group
 
-<img src="./img/editable-label-group-in-a-table_1.png" alt="Adding a new label to a group without a group label" width="1200"/>
+This pattern can be followed to let users add a new label or edit an existing label within a group.
 
-When the user selects the ‘Add label’ button, a new label is added as the first label in the group. Once the new label is added, the user can overwrite the default value by double clicking the label.
-<img src="./img/editable-label-group-in-a-table_1-1.png" alt="Adding a new label to a group without a group label" width="1200"/>
+![](./img/adding-label.png)
 
-##### Adding a new label to a group, with a group label
-This variation can be used when there is a need to add a new label within the label group, and the label group has a group label. 
+When a user selects the **Add label** button, a new label is added to the beginning of the group. Once the new label is added, they can overwrite the default value by double clicking the label.
 
-<img src="./img/editable-label-group-in-a-table_2.png" alt="Add a new label to a group with a group label" width="1200"/>
+![](./img/added-label.png)
 
-When the user selects the ‘Add label’ button, a new label is added as the first label in the group. Once the new label is added, the user can overwrite the default value by double clicking the label.
-<img src="./img/editable-label-group-in-a-table_2_1.png" alt="OVerwrite default value" width="1200"/>
+##### Adding a new label to a group from a list of preselected labels
 
-##### Adding a new label to a label group from a list of preselected labels
-This variation can be used when only a fixed set of labels can be added to a label group. 
-<img src="./img/editable-label-group-in-a-table_3.png" alt="Add fixed set of labels to a label group" width="1200"/>
+You can provide users with a fixed set of label options to add to a group. 
 
-When the user selects the ‘Add label’ button, a drop list is displayed with the existing list of values. User selects a new label from the values in the drop list.
-<img src="./img/editable-label-group-in-a-table_3_1.png" alt="Add new label and select value from existing list" width="1200"/>
+When a user selects the **Add label** button, display a menu of available label options. They can select a new label from the values in the menu.
 
-The new label is added with the selected value and can not be changed. 
-<img src="./img/editable-label-group-in-a-table_3_2.png" alt="New lavel added with selected value" width="1200"/>
+![](./img/adding-label-options.png)
 
+The new label is added with the selected value and can not be edited. 
 ##### Adding a new custom label to a label group
-This variation can be used when you want to allow users to customize the labels they add to a label group. 
-<img src="./img/editable-label-group-in-a-table_4.png" alt="Add customized label to a label group" width="1200"/>
 
-When the user selects the ‘Add label’ button, it opens up a modal from which they can select the attributes for the new label. These include label text, color, icon, filled vs outlined, ability to dismiss, and editability. The options shown can be customized to fit your use cases.
-<img src="./img/editable-label-group-in-a-table_4_1_add-label-model.png" alt="Select custom label properties" width="1200"/>
+You can allow users to customize the labels they add to a group. 
 
-The new label is created based on the attributes selected by the user and it can not be changed.
-<img src="./img/editable-label-group-in-a-table_4_2.png" alt="New custom label added to a label group" width="1200"/>
+When a user selects the **Add label** button, it opens up a modal, where they can select the attributes for their new label, including the label type, text, color, icon, and the ability to dismiss or edit. Customize these options to fit your needs.
 
+![](./img/adding-label-modal.png)
+
+Once the new label is created, it cannot be edited. Users will need to add a new label if they want to make changes.
 ## Accessibility
 For information regarding accessibility, visit the [labels accessibility](/components/label/accessibility) tab.
