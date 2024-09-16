@@ -2737,13 +2737,18 @@ export { ToolbarLabelGroupContent as CustomThing };`}
   {
     component: "Toolbar group",
     description:
-      "The `variant` prop of ToolbarGroup and ToolbarToggleGroup had these options renamed:| Old variant option  | New variant option   || ------------------- | -------------------- || `button-group`      | `action-group`       || `icon-button-group` | `action-group-plain` |",
+      "The `variant` prop of ToolbarGroup and ToolbarToggleGroup had some options renamed.",
     pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/10674",
     repo: "React",
     fixedWithCodeMod: true,
     title: "toolbarGroup-updated-variant",
     details: (
       <Content>
+        <p>The `variant` prop of ToolbarGroup and ToolbarToggleGroup had these options renamed:</p>
+        <ul>
+          <li>button-group --> action-group</li>
+          <li>icon-button-group --> action-group-plain</li>
+        </ul>
         <p>Codemods will make the following updates:</p>
         <h2>Example in</h2>
         <CodeBlock>
@@ -2902,13 +2907,27 @@ export const ToolbarRemovePropsInput = () => (
   {
     component: "Toolbar",
     description:
-      "Several Chip-based props have been renamed on our Toolbar components:| Component/Location of change | Description of update || -- | -- | -- || `<Toolbar>` | The `customChipGroupContent` prop has been renamed to `customLabelGroupContent` || `<ToolbarExpandableContent>` | The `chipContainerRef` prop has been renamed to `labelContainerRef` || `<ToolbarFilter>` | The `chips` prop has been renamed to `labels` || `<ToolbarFilter>` | The `deleteChipGroup` prop has been renamed to `deleteLabelGroup` || `<ToolbarFilter>` | The `deleteChip` prop has been renamed to `deleteLabel` || `<ToolbarFilter>` | The `chipGroupExpandedText` prop has been renamed to `labelGroupExpandedText` || `<ToolbarFilter>` | The `chipGroupCollapsedText` prop has been renamed to `labelGroupCollapsedText` || `<ToolbarFilter>` | The `expandableChipContainerRef` prop has been renamed to `expandableLabelContainerRef` || `<ToolbarChipGroupContent>` | The `chipGroupContentRef` prop has been renamed to `labelGroupContentRef` || `<ToolbarChipGroupContent>` | The `customChipGroupContent` prop has been renamed to `customLabelGroupContent` || `<ToolbarToggleGroup>` | The `chipContainerRef` prop has been renamed to `labelContainerRef` |",
+      "Several Chip-based props have been renamed on our Toolbar components",
     pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/10649",
     repo: "React",
     fixedWithCodeMod: true,
     title: "toolbar-replace-chip-instances",
     details: (
       <Content>
+        <p>The following Chip-based props have been renamed on our Toolbar components:</p>
+        <ul>
+          <li>{`<Toolbar>`}: The `customChipGroupContent` prop has been renamed to `customLabelGroupContent`</li>
+          <li>{`<ToolbarExpandableContent>`}: The `chipContainerRef` prop has been renamed to `labelContainerRef`</li>
+          <li>{`<ToolbarFilter>`}: The `chips` prop has been renamed to `labels`</li>
+          <li>{`<ToolbarFilter>`}: The `deleteChipGroup` prop has been renamed to `deleteLabelGroup`</li>
+          <li>{`<ToolbarFilter>`}: The `deleteChip` prop has been renamed to `deleteLabel`</li>
+          <li>{`<ToolbarFilter>`}: The `chipGroupExpandedText` prop has been renamed to `labelGroupExpandedText`</li>
+          <li>{`<ToolbarFilter>`}: The `chipGroupCollapsedText` prop has been renamed to `labelGroupCollapsedText`</li>
+          <li>{`<ToolbarFilter>`}: The `expandableChipContainerRef` prop has been renamed to `expandableLabelContainerRef`</li>
+          <li>{`<ToolbarChipGroupContent>`}: The `chipGroupContentRef` prop has been renamed to `labelGroupContentRef`</li>
+          <li>{`<ToolbarChipGroupContent>`}: The `customChipGroupContent` prop has been renamed to `customLabelGroupContent`</li>
+          <li>{`<ToolbarToggleGroup>`}: The `chipContainerRef` prop has been renamed to `labelContainerRef`</li>
+        </ul>
         <p>Codemods will make the following updates:</p>
         <h2>Example in</h2>
         <CodeBlock>
@@ -2974,13 +2993,19 @@ export const ToolbarReplaceChipInstancesInput = () => (
   {
     component: "Toolbar",
     description:
-      "The following Toolbar interfaces have been renamed:| Old interface name | New interface name || -- | -- | -- || `ToolbarChipGroupContentProps` | `ToolbarLabelGroupContentProps` || `ToolbarChipGroup` | `ToolbarLabelGroup` || `ToolbarChip` | `ToolbarLabel` |",
+      "Some Toolbar interfaces / components have been renamed",
     pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/10649",
     repo: "React",
     fixedWithCodeMod: true,
     title: "toolbar-rename-interfaces",
     details: (
       <Content>
+        <p>The following Toolbar interfaces have been renamed</p>
+        <ul>
+          <li>ToolbarChipGroupContentProps --> ToolbarLabelGroupContentProps</li>
+          <li>ToolbarChipGroup --> ToolbarLabelGroup</li>
+          <li>ToolbarChip --> ToolbarLabel</li>
+        </ul>
         <p>Codemods will make the following updates:</p>
         <h2>Example in</h2>
         <CodeBlock>
