@@ -3,6 +3,9 @@ id: Numerics
 section: UX writing
 ---
 
+## Font styling
+
+If needed, we offer a font modifier `.pf-v6-m-tabular-nums` that applies tabular styling to numerals. [Learn more about tabular font styling.](/design-foundations/typography#tabular-font-styling)
 ## Date and time formats
 
 All date and time formats should be localizable, not hard-coded. When building localizable date and time formats, development teams should share the same library by using resources like [date-fns](https://date-fns.org/) or [Day.js](https://day.js.org/).
