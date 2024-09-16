@@ -92,7 +92,7 @@ Both status and nonstatus labels can be filled or unfilled.
 
 ##### Unfilled
 
-![Unfilled label styles for light and dark themes.](./img/Unfilled-labels.png)
+![Unfilled label styles for light and dark themes.](./img/unfilled-labels.png)
 
 #### When to use labels with icons
 
