@@ -164,7 +164,6 @@ const HeaderTools = ({
                 isOpen={isDropdownOpen}
                 toggle={(toggleRef) => (
                   <MenuToggle
-                    isFullHeight
                     ref={toggleRef}
                     onClick={() => setDropdownOpen(!isDropdownOpen)}
                     isExpanded={isDropdownOpen}
