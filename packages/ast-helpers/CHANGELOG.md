@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.4.0-alpha.84 (2024-09-17)
+
+
+### Bug Fixes
+
+* **homepage:** remove is full height ([#4211](https://github.com/patternfly/patternfly-org/issues/4211)) ([9875ac8](https://github.com/patternfly/patternfly-org/commit/9875ac827996b874048507df270bf4b07ecb8d64))
+
+
+
+
+
 # 1.4.0-alpha.83 (2024-09-13)
 
 
