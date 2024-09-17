@@ -34,7 +34,7 @@ If you see errors, make sure that the version of the `package.json` file in `pac
 
 When you submit a PR, previews should be automatically generated for you and uploaded as PR comments. This takes between 5-10 minutes.
 
-When the PR is merged to main, the site is first deployed to a [staging S3 bucket.](https://staging-v6.patternfly.org)
+When the PR is merged to main, the site is first deployed to a [staging S3 bucket.](https://staging.patternfly.org)
 
 When PatternFly does a release (currently every 3 weeks) this bucket is copied to https://patternfly.org.
 
@@ -46,7 +46,7 @@ To update the screenshots (these are the images that you click on to see a full-
 
 Make sure that the version of Chromium you are using is relatively recent. Version 112.0.5614.0 (Developer Build), for example, isn't compatible with the latest versions of PatternFly, and your screenshots will be off.
 
-Browse the screenshots to make sure that nothing seems super off. For V6, you can compare to [PatternFly React V6 staging](https://patternfly-react-v6.surge.sh/) and [PatternFly Core V6 staging](https://pf6.patternfly.org/) to verify. You may need to bump PatternFly-React and Core versions if things are only off in the patternfly-org workspace.
+Browse the screenshots to make sure that nothing seems super off. You can compare to [PatternFly React staging](https://patternfly-react.surge.sh/) and [PatternFly Core staging](https://pf.patternfly.org/) to verify. You may need to bump PatternFly-React and Core versions if things are only off in the patternfly-org workspace.
 
 ### Old submodules
 
