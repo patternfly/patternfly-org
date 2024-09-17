@@ -7,7 +7,7 @@ section: components
 ### Elements
 You can further customize labels by adjusting their visual styling or adding functionality to let user click, edit, or remove labels.
 
-![text](./img/label-elements.png)
+![Different label variants for both nonstatus and status labels.](./img/label-elements.png)
 
 
 1. **Status label:** Combines color and an icon to communicate a status, like danger, warning, or success.
@@ -30,7 +30,7 @@ Labels are useful in a few scenarios:
 
 There are 2 label sizes:
 
-![sdf](./img/label-sizes.png)
+![Default and compact-sized labels.](./img/label-sizes.png)
 
 1. **Default labels:** Use by default when needing a label.
 2. **Compact labels:** Use when confronted by space limitations and a smaller label is required (for example, in a table).
@@ -39,17 +39,17 @@ Labels can be used almost anywhere in a UI. They are commonly used in tables, ca
 
 #### Labels in tables
 
-    ![](./img/table-with-labels.png)
+![Labels within a table.](./img/table-with-labels.png)
 
 #### Labels in card views
 
-    ![](./img/card-view-labels.png)
+![Labels on cards in a card view.](./img/card-view-labels.png)
 
 #### Filter labels
 
 Labels are typically used in filter and selection use cases to indicate what selections a user has made. They utilize [label groups](#label-groups) to organize selections by category for added clarity. When there are multiple filter labels within a group, any data that matches one or more of the labels will be filtered. It is not required for all filter labels to be apply in order to match a filtered item.
 
-![](./img/label-filters.png)
+![Labels as filters in a toolbar.](./img/label-filters.png)
 
 #### Color considerations
 
@@ -63,13 +63,13 @@ The colors you should use differs for status and nonstatus labels:
 
 Status colors can be used to indicate danger, warning, success, info, or custom statuses. 
 
-    ![](./img/status-labels.png)
+![Filled status labels in light and dark color themes.](./img/status-labels.png)
 
 ##### Nonstatus labels
 
 We offer a nonstatus color palette, which you can use to color code labels that don't correspond to any status level, including red, orange, orange red, gold, green, cyan, blue, purple, and gray. 
 
-    ![](./img/nonstatus-labels.png)
+![Filled nonstatus labels in light and dark color themes.](./img/nonstatus-labels.png)
 
 **Note:** We recommend to avoid using red, unless you're indicating danger or an error state.
 
@@ -88,36 +88,36 @@ Both status and nonstatus labels can be filled or unfilled.
 
 ##### Filled
 
-![Filled label styles for light and dark themes.](./img/filled-labels.png)
+![All color options for filled labels for light and dark themes.](./img/filled-labels.png)
 
 ##### Unfilled
 
-![Unfilled label styles for light and dark themes.](./img/unfilled-labels.png)
+![All color options for unfilled label styles for light and dark themes.](./img/unfilled-labels.png)
 
 #### When to use labels with icons
 
 While status labels will automatically contain an appropriate icon, you can also add an icon to nonstatus labels, when additional visual information would be helpful. 
 
-![](./img/card-labels.png)
+![Icons within labels in a card.](./img/card-labels.png)
 
 Icons can also help distinguish labels of the same color.
 
 #### When to use editable labels
 Use editable labels when you want to allow users to organize and select resources manually. Adding editable labels enables the user to query for objects that have similar, dissimilar, or overlapping labels.
 
-![](./img/editable-labels.png)
+![Before and after example of editing a label.](./img/editable-labels.png)
 #### When to use dismissible labels
 
 Use a dismissible label for labels that can be easily removed. Editable labels are often dismissible as well.
 
-![](./img/dismissible-labels.png)
+![Before and after example of dismissing a label.](./img/dismissible-labels.png)
 
 #### When to use clickable labels
 Use a clickable label for labels that trigger actions or link to new pages. 
 
 As shown in the following image, a common use case for clickable labels is when a user may want to filter by a specific label. 
 
-![](./img/clickable-labels.png)
+![Example of clicking a label to filter on that label.](./img/clickable-labels.png)
 
 ## Label groups
 
@@ -126,7 +126,7 @@ Label groups are used to display multiple labels at once.
 ### Elements
 Label groups have a number of components to them.
 
-![](./img/label-group-elements.png)
+![Different elements of a label group.](./img/label-group-elements.png)
 
 1. **Label:** Indicates the labels applied.
 1. **Group label (optional):** Indicates the group category or name.
@@ -142,16 +142,16 @@ Label groups should be used when there are multiple labels assigned to a compone
 
 In a table, basic label groups can be used to display all labels associated with a data source.
 
-![](./img/table-with-label-group.png)  
+![Label groups within a table.](./img/table-with-label-group.png)  
 #### Label groups in a table popover
 
 When there are many labels assigned to a table, you can use a popover as a container. 
 
-<img src="./img/table-view-2.png" alt="Table with vertical label group in a popover" width="1200"/>
+![Vertical label group within a popover.](./img/label-group-popover)
 
 #### Label groups in a description list
 
-![](./img/description-list-labels.png)
+![Label group within a description list field.](./img/description-list-labels.png)
 
 ### Variations
 
@@ -161,11 +161,11 @@ When there are many labels assigned to a table, you can use a popover as a conta
 
 This pattern can be followed to let users add a new label or edit an existing label within a group.
 
-![](./img/adding-label.png)
+![Table-based label group with option to add a new label.](./img/adding-label.png)
 
 When a user selects the **Add label** button, a new label is added to the beginning of the group. Once the new label is added, they can overwrite the default value by double clicking the label.
 
-![](./img/added-label.png)
+![Table-based label group example, after a new label is added.](./img/added-label.png)
 
 ##### Adding a new label to a group from a list of preselected labels
 
@@ -173,7 +173,7 @@ You can provide users with a fixed set of label options to add to a group.
 
 When a user selects the **Add label** button, display a menu of available label options. They can select a new label from the values in the menu.
 
-![](./img/adding-label-options.png)
+![Dropdown menu of label options when trying to add new label to group.](./img/adding-label-options.png)
 
 The new label is added with the selected value and can not be edited. 
 ##### Adding a new custom label to a label group
@@ -182,7 +182,7 @@ You can allow users to customize the labels they add to a group.
 
 When a user selects the **Add label** button, it opens up a modal, where they can select the attributes for their new label, including the label type, text, color, icon, and the ability to dismiss or edit. Customize these options to fit your needs.
 
-![](./img/adding-label-modal.png)
+![Modal with selectable options used to create a new label.](./img/adding-label-modal.png)
 
 Once the new label is created, it cannot be edited. Users will need to add a new label if they want to make changes.
 ## Accessibility
