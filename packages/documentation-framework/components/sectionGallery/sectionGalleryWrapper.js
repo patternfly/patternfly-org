@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import { groupedRoutes } from '../../routes';
 
 export const SectionGalleryWrapper = ({
@@ -10,9 +10,11 @@ export const SectionGalleryWrapper = ({
   parseSubsections,
   initialLayout,
   isFullWidth,
-  children
+  children,
 }) => {
-  let sectionRoutes = subsection ? groupedRoutes[section][subsection] : groupedRoutes[section];
+  let sectionRoutes = subsection
+    ? groupedRoutes[section][subsection]
+    : groupedRoutes[section];
   if (!includeSubsections || parseSubsections) {
     const sectionRoutesArr = Object.entries(sectionRoutes);
     // loop through galleryItems object and build new object to handle subsections
@@ -32,22 +34,21 @@ export const SectionGalleryWrapper = ({
           if (subitemName !== 'isSubsection') {
             acc[subitemName] = subitemData;
           }
-        })
+        });
       }
       return acc;
-    }, {})
+    }, {});
   }
 
   const [searchTerm, setSearchTerm] = React.useState('');
   const [layoutView, setLayoutView] = React.useState(initialLayout);
-  const filteredItems = Object.entries(sectionRoutes)
-    .filter(([itemName, { slug }]) => (
-      // exclude current gallery page from results
+  const filteredItems = Object.entries(sectionRoutes).filter(
+    ([itemName, { slug }]) =>
+      // exclude current gallery page from results - check for trailing /
       !location.pathname.endsWith(slug) &&
-      itemName
-        .toLowerCase()
-        .includes(searchTerm.toLowerCase())
-    ));
+      !location.pathname.endsWith(`${slug}/`) &&
+      itemName.toLowerCase().includes(searchTerm.toLowerCase())
+  );
   const sectionGalleryItems = filteredItems
     .sort(([itemName1], [itemName2]) => itemName1.localeCompare(itemName2))
     .map(([itemName, itemData], idx) => {
@@ -56,36 +57,63 @@ export const SectionGalleryWrapper = ({
         // Convert to lowercase-camelcase ex: File upload - multiple ==> file_upload_multiple
         const illustrationName = itemName
           .replace('-', '')
-          .replace('  ',' ')
+          .replace('  ', ' ')
           .split(' ')
           .join('_')
           .toLowerCase();
-        illustration = illustrations[illustrationName] || illustrations.default_placeholder;
+        illustration =
+          illustrations[illustrationName] || illustrations.default_placeholder;
       }
       const { sources, isSubsection = false } = itemData;
       // Subsections don't have title or id, default to itemName aka sidenav text
       const title = itemData.title || itemName;
       const id = itemData.id || title;
       // Display beta label if tab other than a '-next' tab is marked Beta
-      const isDeprecated = !isSubsection && sources && sources.some(source => source.source === "react-deprecated" || source.source === "html-deprecated") && !sources.some(source => source.source === "react"  || source.source === "html");
-      const isBeta = !isSubsection && sources && sources.some(src => src.beta && !src.source.includes('-next'));
-      const isDemo = !isSubsection && sources && sources.some(source => source.source === "react-demos" || source.source === "html-demos") && !sources.some(source => source.source === "react" || source.source === "html");
+      const isDeprecated =
+        !isSubsection &&
+        sources &&
+        sources.some(
+          (source) =>
+            source.source === 'react-deprecated' ||
+            source.source === 'html-deprecated'
+        ) &&
+        !sources.some(
+          (source) => source.source === 'react' || source.source === 'html'
+        );
+      const isBeta =
+        !isSubsection &&
+        sources &&
+        sources.some((src) => src.beta && !src.source.includes('-next'));
+      const isDemo =
+        !isSubsection &&
+        sources &&
+        sources.some(
+          (source) =>
+            source.source === 'react-demos' || source.source === 'html-demos'
+        ) &&
+        !sources.some(
+          (source) => source.source === 'react' || source.source === 'html'
+        );
 
       let slug = itemData.slug;
       if (!slug && isSubsection) {
         // Update slug to link to first page in subsection
-        const subsectionItems = Object.entries(itemData).filter(([name, _data]) => name !== 'isSubsection');
-        const sortedSubsectionItems = subsectionItems.sort((
-          [name1, {sortValue: sortValue1 = 50}],
-          [name2, {sortValue: sortValue2 = 50}]
-        ) => {
-          if (sortValue1 === sortValue2) {
-            return name1.localeCompare(name2);
+        const subsectionItems = Object.entries(itemData).filter(
+          ([name, _data]) => name !== 'isSubsection'
+        );
+        const sortedSubsectionItems = subsectionItems.sort(
+          (
+            [name1, { sortValue: sortValue1 = 50 }],
+            [name2, { sortValue: sortValue2 = 50 }]
+          ) => {
+            if (sortValue1 === sortValue2) {
+              return name1.localeCompare(name2);
+            }
+            return sortValue1 > sortValue2 ? 1 : -1;
           }
-          return sortValue1 > sortValue2 ? 1 : -1;
-        });
+        );
         const firstSubsectionItem = sortedSubsectionItems[0];
-        slug = firstSubsectionItem[1].slug;   
+        slug = firstSubsectionItem[1].slug;
       }
 
       return {
@@ -98,13 +126,23 @@ export const SectionGalleryWrapper = ({
         isDemo,
         title,
         id,
-        galleryItemsData
+        galleryItemsData,
       };
     });
 
   return (
-    <div className={`ws-section-gallery${ isFullWidth ? ' ws-section-gallery-full-width' : '' }`}>
-      { children(sectionGalleryItems, searchTerm, setSearchTerm, layoutView, setLayoutView) }
+    <div
+      className={`ws-section-gallery${
+        isFullWidth ? ' ws-section-gallery-full-width' : ''
+      }`}
+    >
+      {children(
+        sectionGalleryItems,
+        searchTerm,
+        setSearchTerm,
+        layoutView,
+        setLayoutView
+      )}
     </div>
-  )
+  );
 };
