@@ -68,6 +68,11 @@ See [when to use compact vs. default spacing](#compact-vs-default-spacing) for m
 
 <img src="./img/compact-and-default-table.png"  alt="Compact and default table"  width="857"/>
 
+### Numeral styling
+
+If needed, we offer a font modifier `.pf-v6-m-tabular-nums` that applies tabular styling to numerals. [Learn more about tabular font styling.](/design-foundations/typography#tabular-font-styling)
+
+
 ### Table capabilities
 Every table can be extended with these functionalities:
 
