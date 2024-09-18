@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 6.0.0-alpha.96 (2024-09-18)
+
+
+### Bug Fixes
+
+* **sideNav:** Temporarily harcode breakpoint tokem token value ([#4262](https://github.com/patternfly/patternfly-org/issues/4262)) ([e91a93c](https://github.com/patternfly/patternfly-org/commit/e91a93c6bff7f99efd10d6f9577b21f82c20e749))
+
+
+
+
+
 # 6.0.0-alpha.95 (2024-09-17)
 
 
