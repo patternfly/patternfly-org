@@ -20,7 +20,7 @@ You can place text content on a page using the content or title component:
 We use 3 fonts in PatternFly:
 - **Red Hat Display:** Used for larger text, such as headings.
 - **Red Hat Text:** Used for smaller text, subheadings, and body text. More readable for long-form text. 
-- **Red Hat Mono:** A tabular font used to format text as code. [Read more about our use of tabular font styling.](#tabular-font)
+- **Red Hat Mono:** A tabular font used to format text as code. [Read more about our use of tabular font styling.](#tabular-font-styling)
 
 [Download PatternFly's fonts from GitHub.](https://github.com/RedHatOfficial/RedHatFont)
 
