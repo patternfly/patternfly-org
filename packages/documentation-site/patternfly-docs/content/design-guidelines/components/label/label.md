@@ -5,7 +5,7 @@ section: components
 ## Labels
 
 ### Elements
-You can further customize labels by adjusting their visual styling or adding functionality to let user click, edit, or remove labels.
+You can customize labels by adjusting their visual styling or adding functionality to let users click, edit, or remove labels.
 
 ![Different label variants for both nonstatus and status labels.](./img/label-elements.png)
 
@@ -47,7 +47,7 @@ Labels can be used almost anywhere in a UI. They are commonly used in tables, ca
 
 #### Filter labels
 
-Labels are typically used in filter and selection use cases to indicate what selections a user has made. They utilize [label groups](#label-groups) to organize selections by category for added clarity. When there are multiple filter labels within a group, any data that matches one or more of the labels will be filtered. It is not required for all filter labels to be apply in order to match a filtered item.
+Labels are typically used in filter and selection use cases to indicate what selections a user has made. They utilize [label groups](#label-groups) to organize selections by category for added clarity. When there are multiple filter labels within a group, any data that matches one or more of the labels will be filtered. It is not required for all filter labels to be applied in order to match a filtered item.
 
 ![Labels as filters in a toolbar.](./img/label-filters.png)
 
@@ -71,7 +71,7 @@ We offer a nonstatus color palette, which you can use to color code labels that 
 
 ![Filled nonstatus labels in light and dark color themes.](./img/nonstatus-labels.png)
 
-**Note:** We recommend to avoid using red, unless you're indicating danger or an error state.
+**Note:** We recommend you avoid using red, unless you're indicating danger or an error state.
 
 ### Variations
 - [Filled or unfilled labels](#when-to-use-filled-or-unfilled-labels)
@@ -173,7 +173,7 @@ You can provide users with a fixed set of label options to add to a group.
 
 When a user selects the **Add label** button, display a menu of available label options. They can select a new label from the values in the menu.
 
-![Dropdown menu of label options when trying to add new label to group.](./img/adding-label-options.png)
+![Dropdown menu of label options when trying to add a new label to a group.](./img/adding-label-options.png)
 
 The new label is added with the selected value and can not be edited. 
 ##### Adding a new custom label to a label group
