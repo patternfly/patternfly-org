@@ -1787,6 +1787,74 @@
     "@patternfly/react-core" "6.0.0-alpha.94"
     commander "^12.0.0"
 
+"@patternfly/documentation-framework@6.0.0-alpha.94":
+  version "6.0.0-alpha.94"
+  resolved "https://registry.yarnpkg.com/@patternfly/documentation-framework/-/documentation-framework-6.0.0-alpha.94.tgz#48da789fb92879af4283362ae5661f78bd919ef1"
+  integrity sha512-Dkjh/yix5Rh/sMEOfL3He16zRn9i5nGo3ANKcIysYXo9vULThqm8l13ew0vPjdf1xnHg1hhTthKnqsKz0PS1tQ==
+  dependencies:
+    "@babel/core" "^7.24.3"
+    "@babel/preset-env" "^7.24.3"
+    "@babel/preset-react" "^7.24.1"
+    "@mdx-js/util" "1.6.16"
+    "@patternfly/ast-helpers" "^1.4.0-alpha.83"
+    "@reach/router" "npm:@gatsbyjs/reach-router@1.3.9"
+    autoprefixer "9.8.6"
+    babel-loader "^9.1.3"
+    camelcase-css "2.0.1"
+    chokidar "4.0.0"
+    clean-webpack-plugin "4.0.0"
+    codesandbox "2.2.0"
+    commander "4.1.1"
+    copy-webpack-plugin "11.0.0"
+    css-loader "6.7.3"
+    detab "2.0.3"
+    express "4.20.0"
+    file-loader "6.2.0"
+    file-saver "1.3.8"
+    fs-extra "9.0.1"
+    glob "9.0.0"
+    handlebars "4.7.7"
+    hast-to-hyperscript "9.0.0"
+    hast-util-to-text "2.0.0"
+    html-formatter "0.1.9"
+    html-webpack-plugin "5.5.0"
+    js-yaml "3.14.0"
+    mdast-util-to-hast "9.1.1"
+    mdurl "1.0.1"
+    mini-css-extract-plugin "2.7.5"
+    null-loader "4.0.1"
+    parse-entities "2.0.0"
+    path-browserify "1.0.1"
+    postcss "8.4.32"
+    postcss-loader "7.1.0"
+    process "^0.11.10"
+    puppeteer "19.11.1"
+    puppeteer-cluster "0.23.0"
+    react-docgen "5.3.1"
+    react-ssr-prepass "1.5.0"
+    remark-footnotes "1.0.0"
+    remark-frontmatter "2.0.0"
+    remark-mdx "2.0.0-next.8"
+    remark-mdxjs "2.0.0-next.8"
+    remark-parse "8.0.3"
+    remark-squeeze-paragraphs "4.0.0"
+    responsive-loader "3.1.2"
+    sharp "0.32.6"
+    style-to-object "0.3.0"
+    to-vfile "6.1.0"
+    typedoc "0.23.0"
+    typescript "4.7.4"
+    unified "9.1.0"
+    unist-util-remove "2.0.0"
+    unist-util-visit "2.0.3"
+    url-loader "4.1.0"
+    vfile-reporter "6.0.1"
+    webpack "5.76.3"
+    webpack-bundle-analyzer "4.8.0"
+    webpack-cli "5.0.1"
+    webpack-dev-server "4.13.1"
+    webpack-merge "5.8.0"
+
 "@patternfly/patternfly-a11y@4.3.1":
   version "4.3.1"
   resolved "https://registry.npmjs.org/@patternfly/patternfly-a11y/-/patternfly-a11y-4.3.1.tgz#09f050d3a899a60471519f552d64ecaaeb5fec2f"
@@ -1810,6 +1878,14 @@
   version "6.0.0-prerelease.5"
   resolved "https://registry.yarnpkg.com/@patternfly/patternfly/-/patternfly-6.0.0-prerelease.5.tgz#4b23df0febf2eaadfcf032618cc6f3f5bf86a4ca"
   integrity sha512-MV9fuMV1ApQC+6ez/2u1PGrQ1Zp24A51deXUaBxdya8exTTzWS8YQbC+ZfWryaNdtnJZ+S+BFXXtoaRd3r1klw==
+
+"@patternfly/quickstarts@6.0.0-alpha.5":
+  version "6.0.0-alpha.5"
+  resolved "https://registry.yarnpkg.com/@patternfly/quickstarts/-/quickstarts-6.0.0-alpha.5.tgz#bd833f3459b54e583ce8585da2d0b27084c717b3"
+  integrity sha512-yulCT5wwg41vFZDycW5Gk7dsNeJ++2bq2auCfAAIyIhn/+ymvdGtU6IkM8ZFWjEwO09q9bnHd7QszMJi3sYL6Q==
+  dependencies:
+    dompurify "^2.4.9"
+    history "^5.0.0"
 
 "@patternfly/react-catalog-view-extension@6.0.0-alpha.7":
   version "6.0.0-alpha.7"
@@ -5145,6 +5221,11 @@ domhandler@^4.0.0, domhandler@^4.2.0, domhandler@^4.3.1:
   dependencies:
     domelementtype "^2.2.0"
 
+dompurify@^2.4.9:
+  version "2.5.6"
+  resolved "https://registry.yarnpkg.com/dompurify/-/dompurify-2.5.6.tgz#8402b501611eaa7fb3786072297fcbe2787f8592"
+  integrity sha512-zUTaUBO8pY4+iJMPE1B9XlO2tXVYIcEA4SNGtvDELzTSCQO7RzH+j7S180BmhmJId78lqGU2z19vgVx2Sxs/PQ==
+
 domutils@^2.5.2, domutils@^2.8.0:
   version "2.8.0"
   resolved "https://registry.npmjs.org/domutils/-/domutils-2.8.0.tgz#4437def5db6e2d1f5d6ee859bd95ca7d02048135"
@@ -6548,6 +6629,13 @@ he@^1.2.0:
   version "1.2.0"
   resolved "https://registry.npmjs.org/he/-/he-1.2.0.tgz#84ae65fa7eafb165fddb61566ae14baf05664f0f"
   integrity sha512-F/1DnUGPopORZi0ni+CvrCgHQ5FyEAHRLSApuYWMmrbSwoN2Mn/7k+Gl38gJnR7yyDZk6WLXwiGod1JOWNDKGw==
+
+history@^5.0.0:
+  version "5.3.0"
+  resolved "https://registry.yarnpkg.com/history/-/history-5.3.0.tgz#1548abaa245ba47992f063a0783db91ef201c73b"
+  integrity sha512-ZqaKwjjrAYUYfLG+htGaIIZ4nioX2L70ZUMIFysS3xvBsSG4x/n1V6TXV3N8ZYNuFGlDirFg32T7B6WOUPDYcQ==
+  dependencies:
+    "@babel/runtime" "^7.7.6"
 
 hoist-non-react-statics@^3.2.0, hoist-non-react-statics@^3.3.0, hoist-non-react-statics@^3.3.2:
   version "3.3.2"
