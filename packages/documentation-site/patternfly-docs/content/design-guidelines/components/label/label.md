@@ -147,7 +147,7 @@ In a table, basic label groups can be used to display all labels associated with
 
 When there are many labels assigned to a table, you can use a popover as a container. 
 
-![Vertical label group within a popover.](./img/label-group-popover)
+![Vertical label group within a popover.](./img/label-group-popover.png)
 
 #### Label groups in a description list
 
