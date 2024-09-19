@@ -20,7 +20,7 @@ You can place text content on a page using the content or title component:
 We use 3 fonts in PatternFly:
 - **Red Hat Display:** Used for larger text, such as headings.
 - **Red Hat Text:** Used for smaller text, subheadings, and body text. More readable for long-form text. 
-- **Red Hat Mono:** Used to format text as code.
+- **Red Hat Mono:** A tabular font used to format text as code. [Read more about our use of tabular font styling.](#tabular-font-styling)
 
 [Download PatternFly's fonts from GitHub.](https://github.com/RedHatOfficial/RedHatFont)
 
@@ -80,6 +80,14 @@ All body text uses Red Hat Text.
 |<p style="font-size:16px">Aa</p>  | --pf-t--global--font--size--body--lg | 1rem (16px) | 1.5 | Use for larger body text, like in xl empty states.  |
 | <Content><Content component={ContentVariants.p}>Aa</Content></Content> | --pf-t--global--font--size--body--default | 0.875rem (14px) | 1.5 | Use for standard body text. |
 | <Content><Content component={ContentVariants.small}>Aa</Content></Content>  | --pf-t--global--font--size--body--sm | 0.75rem (12px) | 1.5 | User for smaller body text, like helper text. |
+
+## Tabular font styling 
+
+The primary fonts used in PatternFly (Red Hat Display and Red Hat Text) are proportional fonts, which typically offer better readability for standard blocks of text. When numerals are placed within long text bodies, as part of the text, it is best to use a proportional font. 
+
+Sometimes, numerals benefit from the use of a tabular font instead. **Tabular fonts** apply uniform width and spacing to helps maintain proper alignment of numbers. This can be particularly helpful when numbers are dynamically changing on screen, to prevent rough and jumpy movement. 
+
+Tabular font styling is used in a couple of PatternFly components, including slider and progress, but we also offer a modifier that allows you to apply tabular styling on your own: `.pf-v6-m-tabular-nums`, which sets `font-variant-numeric: tabular-nums;`
 
 ## Line height and spacing
 The line height of your text impacts how you should use [spacers](/design-foundations/spacers) in your design. 
