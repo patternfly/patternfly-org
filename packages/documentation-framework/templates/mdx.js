@@ -69,13 +69,13 @@ const MDXChildTemplate = ({
       )}
       {(deprecated || source === 'react-deprecated' || source === 'html-deprecated') && (
         <InlineAlert title="Deprecated feature" variant="warning">
-          This implementation has been deprecated in favor of a newer implementation, and is no longer getting maintained or enhanced.
+          This component implementation has been deprecated in favor of a newer solution, and is no longer being maintained or enhanced.
           {newImplementationLink && (
             <React.Fragment>
               You can find the <Link to={newImplementationLink}>updated implementation here</Link>.
             </React.Fragment>
           )}
-          {' '}To learn more about the process, visit our <Link to="/get-started/about-patternfly#patternfly-release-cadence">about page</Link>.
+          {' '}To learn more about deprecated components, visit <Link to="/get-started/about-patternfly#deprecated-components">about PatternFly.</Link>
         </InlineAlert>
       )}
        {(template || source === 'react-template') && (

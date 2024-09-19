@@ -69,7 +69,7 @@
   },
   "chip": {
     "illustration": "./images/component-illustrations/chip.png",
-    "summary": "A <b>chip</b> is an annotation that displays a value or a set of attribute-value pairs that have been filtered within a data view."
+    "summary": "A <b>chip</b> is used to communicate a value or a set of attribute-value pairs within workflows that involve filtering a set of objects.<br /><br /><b>Note:</b> The chip component has been deprecated. Our new recommendation is to use <Link to='/components/label'>the label component</Link> instead."
   },
   "clipboard-copy": {
     "illustration": "./images/component-illustrations/clipboard-copy.png",
