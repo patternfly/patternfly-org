@@ -2,6 +2,9 @@
 id: Chip
 section: components
 ---
+
+**Note:** Chip is now deprecated. Use the [label](/components/label) component instead.
+
 ## Elements
 
 Chips are mainly used within chip groups, which represent an attribute that has been assigned one or more values. 

@@ -164,7 +164,6 @@ const HeaderTools = ({
                 isOpen={isDropdownOpen}
                 toggle={(toggleRef) => (
                   <MenuToggle
-                    isFullHeight
                     ref={toggleRef}
                     onClick={() => setDropdownOpen(!isDropdownOpen)}
                     isExpanded={isDropdownOpen}
@@ -200,7 +199,7 @@ const HeaderTools = ({
                       key="PatternFly 6"
                       className="ws-patternfly-versions"
                       isExternalLink
-                      to="https://staging-v6.patternfly.org/"
+                      to="https://staging.patternfly.org/"
                       itemId="patternfly-6"
                     >
                       PatternFly 6

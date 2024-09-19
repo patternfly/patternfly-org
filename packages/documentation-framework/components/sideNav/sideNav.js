@@ -4,7 +4,8 @@ import { Label, Nav, NavList, NavExpandable, PageContextConsumer, capitalize, Fl
 import { css } from '@patternfly/react-styles';
 import { Location } from '@reach/router';
 import { makeSlug } from '../../helpers';
-import globalBreakpointXl from "@patternfly/react-tokens/dist/esm/global_breakpoint_xl";
+// temp fix for tokens changes. uncomment next line once rect-core PR #11002 goes in and  org bumps the versions
+//import globalBreakpointXl from "@patternfly/react-tokens/dist/esm/global_breakpoint_xl";
 import { trackEvent } from '../../helpers';
 
 const getIsActive = (location, section, subsection = null) => {
@@ -15,7 +16,9 @@ const getIsActive = (location, section, subsection = null) => {
 const defaultValue = 50;
 
 const NavItem = ({ text, href, isDeprecated, isBeta, isDemo }) => {
-  const isMobileView = window.innerWidth < Number.parseInt(globalBreakpointXl.value, 10);
+  // temp fix for tokens changes. uncomment next line and delete line 21 once rect-core PR #11002 goes in and  org bumps the versions
+  // const isMobileView = window.innerWidth < Number.parseInt(globalBreakpointXl.value, 10);
+ const isMobileView = window.innerWidth < Number.parseInt("75rem", 10);
   return (
     <PageContextConsumer key={href + text}>
       {({onSidebarToggle, isSidebarOpen }) => (

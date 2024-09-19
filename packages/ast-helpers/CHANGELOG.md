@@ -3,6 +3,85 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.4.0-alpha.86 (2024-09-19)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 1.4.0-alpha.85 (2024-09-18)
+
+
+### Bug Fixes
+
+* **sideNav:** Temporarily harcode breakpoint tokem token value ([#4262](https://github.com/patternfly/patternfly-org/issues/4262)) ([e91a93c](https://github.com/patternfly/patternfly-org/commit/e91a93c6bff7f99efd10d6f9577b21f82c20e749))
+
+
+
+
+
+# 1.4.0-alpha.84 (2024-09-17)
+
+
+### Bug Fixes
+
+* **homepage:** remove is full height ([#4211](https://github.com/patternfly/patternfly-org/issues/4211)) ([9875ac8](https://github.com/patternfly/patternfly-org/commit/9875ac827996b874048507df270bf4b07ecb8d64))
+
+
+
+
+
+# 1.4.0-alpha.83 (2024-09-13)
+
+
+### Bug Fixes
+
+* packages/documentation-framework/package.json to reduce vulnerabilities ([#4255](https://github.com/patternfly/patternfly-org/issues/4255)) ([79a21e3](https://github.com/patternfly/patternfly-org/commit/79a21e34c3b7464c8e7da9bd0c7c600c44af8f52))
+
+
+
+
+
+# 1.4.0-alpha.82 (2024-09-11)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 1.4.0-alpha.81 (2024-09-10)
+
+
+### Bug Fixes
+
+* **docs:** updated width on table of contents ([#4202](https://github.com/patternfly/patternfly-org/issues/4202)) ([66eb44a](https://github.com/patternfly/patternfly-org/commit/66eb44abad283ae1168fe727361cf78cf52ed517))
+
+
+
+
+
+# 1.4.0-alpha.80 (2024-09-09)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 1.4.0-alpha.79 (2024-08-29)
+
+
+### Features
+
+* **org-v6:** update versions, update ver script ([#4234](https://github.com/patternfly/patternfly-org/issues/4234)) ([1baa6dd](https://github.com/patternfly/patternfly-org/commit/1baa6dd17332691a57a139257971dac2dcc8d4a9))
+
+
+
+
+
 # 1.4.0-alpha.78 (2024-08-27)
 
 **Note:** Version bump only for package @patternfly/ast-helpers
