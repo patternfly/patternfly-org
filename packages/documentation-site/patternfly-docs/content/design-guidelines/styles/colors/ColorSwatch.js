@@ -10,7 +10,7 @@ export function ColorSwatch({
   caption,
   children
 }) {
-  const token = tokens[":where(:root)"][tokenName(color)];
+  const token = tokens[":root"][tokenName(color)];
   const popoverContent = (
     <Stack hasGutter>
       <StackItem>
