@@ -184,7 +184,7 @@ function toReactComponent(mdFilePath, source, buildMode) {
     .use(require('./mdx-ast-to-mdx-hast'), {
       watchExternal(file) {
         if (buildMode === 'start') {
-          const watcher = chokidar.watch(file, { ignoreInitial: true });
+          const watcher = chokidar.watch(globSync(file, { ignoreInitial: true}));
           watcher.on('change', () => {
             sourceMDFile(mdFilePath, source, buildMode);
             writeIndex();
@@ -350,12 +350,12 @@ module.exports = {
   writeIndex,
   watchMD() {
     globs.props.forEach(({ glob, ignore }) => {
-      const propWatcher = chokidar.watch(glob, { ignored: ignore, ignoreInitial: true });
+      const propWatcher = chokidar.watch(globSync(glob, { ignored: ignore, ignoreInitial: true}));
       propWatcher.on('add', sourcePropsFile);
       propWatcher.on('change', sourcePropsFile);
     });
     globs.md.forEach(({ glob, source, ignore }) => {
-      const mdWatcher = chokidar.watch(glob, { ignored: ignore, ignoreInitial: true });
+      const mdWatcher = chokidar.watch(globSync(glob, { ignored: ignore, ignoreInitial: true }));
       function onMDFileChange(file) {
         sourceMDFile(file, source, 'start');
         writeIndex();
