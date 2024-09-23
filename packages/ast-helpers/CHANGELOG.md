@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.4.0-alpha.91 (2024-09-23)
+
+
+### Bug Fixes
+
+* **sideNav:** revert temp fix for tokens update ([#4270](https://github.com/patternfly/patternfly-org/issues/4270)) ([4ccd2f0](https://github.com/patternfly/patternfly-org/commit/4ccd2f01f780e706cbfa0664007f3bdf873797ad))
+
+
+
+
+
 # 1.4.0-alpha.90 (2024-09-23)
 
 
