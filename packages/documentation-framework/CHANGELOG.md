@@ -3,6 +3,33 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 6.0.0-alpha.100 (2024-09-23)
+
+
+### Bug Fixes
+
+* **chokidar:** update chokidar watch calls as v4 does not support globs ([#4272](https://github.com/patternfly/patternfly-org/issues/4272)) ([82232ec](https://github.com/patternfly/patternfly-org/commit/82232ecbfc928a61b57f80ccc43bbb729dce94db))
+
+
+
+
+
+# 6.0.0-alpha.99 (2024-09-19)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+# 6.0.0-alpha.98 (2024-09-19)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
 # 6.0.0-alpha.97 (2024-09-19)
 
 **Note:** Version bump only for package @patternfly/documentation-framework
