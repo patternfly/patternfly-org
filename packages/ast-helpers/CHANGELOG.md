@@ -3,6 +3,28 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.23.0 (2024-08-28)
+
+
+### Features
+
+* **org-main:** update to 5.4 release versions ([#4230](https://github.com/patternfly/patternfly-org/issues/4230)) ([58ce2af](https://github.com/patternfly/patternfly-org/commit/58ce2af8118b09fca0a2e6836c8ec3138d38bd60))
+
+
+
+
+
+# 1.22.0 (2024-08-28)
+
+
+### Features
+
+* **org-main:** update screenshots ([#4229](https://github.com/patternfly/patternfly-org/issues/4229)) ([bea1fb8](https://github.com/patternfly/patternfly-org/commit/bea1fb8b5d2c1c23c804d4d3d41636eed8b76e3d))
+
+
+
+
+
 # 1.21.0 (2024-08-26)
 
 
