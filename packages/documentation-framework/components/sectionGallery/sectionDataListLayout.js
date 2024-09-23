@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import {
   DataList,
   DataListItem,
@@ -10,9 +10,9 @@ import {
   Content,
   ContentVariants,
   Label,
-} from '@patternfly/react-core';
-import { Link } from '../link/link';
-import { TextSummary } from './TextSummary';
+} from "@patternfly/react-core";
+import { Link } from "../link/link";
+import { TextSummary } from "./TextSummary";
 
 export const SectionDataListLayout = ({
   galleryItems,
@@ -20,7 +20,7 @@ export const SectionDataListLayout = ({
   hasListText,
   hasListImages,
 }) => {
-  if (layoutView !== 'list') {
+  if (layoutView !== "list") {
     return null;
   }
 
@@ -55,10 +55,10 @@ export const SectionDataListLayout = ({
                       </DataListCell>
                     ),
                     <DataListCell width={5} key="text-description">
-                      <Split className={hasListText ? 'pf-v6-u-mb-md' : null}>
+                      <Split className={hasListText ? "pf-v6-u-mb-md" : null}>
                         <SplitItem isFilled>
-                          <Content>
-                            <Content component={ContentVariants.h2}>
+                          <Content isEditorial>
+                            <Content component={ContentVariants.h2} isEditorial>
                               <span>{title}</span>
                             </Content>
                           </Content>

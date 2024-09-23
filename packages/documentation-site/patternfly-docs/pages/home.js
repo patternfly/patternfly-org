@@ -187,6 +187,7 @@ const HomePage = () => (
             <Content
               component={ContentVariants.p}
               className="pf-v6-u-font-size-lg"
+              isEditorial
             >
               PatternFly is an open source design system that enables teams to
               create consistent and scalable enterprise products. PatternFly is

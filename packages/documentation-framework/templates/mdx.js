@@ -249,7 +249,7 @@ export const MDXTemplate = ({
           variant={!isSinglePage ? PageSectionVariants.light : ""}
           isWidthLimited
         >
-          <Content>
+          <Content isEditorial>
             <Flex alignItems={{ default: 'alignItemsCenter'}}>
               <FlexItem>
                 <Title headingLevel='h1' size='4xl' id="ws-page-title">
