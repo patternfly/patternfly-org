@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 6.0.0-alpha.101 (2024-09-23)
+
+
+### Features
+
+* **site:** version bump ([#4276](https://github.com/patternfly/patternfly-org/issues/4276)) ([d9c2648](https://github.com/patternfly/patternfly-org/commit/d9c26480a5ac2c7922d0de4c912b9bbe2e25e18c))
+
+
+
+
+
 # 6.0.0-alpha.100 (2024-09-23)
 
 
