@@ -1787,74 +1787,6 @@
     "@patternfly/react-core" "6.0.0-alpha.94"
     commander "^12.0.0"
 
-"@patternfly/documentation-framework@6.0.0-alpha.94":
-  version "6.0.0-alpha.94"
-  resolved "https://registry.yarnpkg.com/@patternfly/documentation-framework/-/documentation-framework-6.0.0-alpha.94.tgz#48da789fb92879af4283362ae5661f78bd919ef1"
-  integrity sha512-Dkjh/yix5Rh/sMEOfL3He16zRn9i5nGo3ANKcIysYXo9vULThqm8l13ew0vPjdf1xnHg1hhTthKnqsKz0PS1tQ==
-  dependencies:
-    "@babel/core" "^7.24.3"
-    "@babel/preset-env" "^7.24.3"
-    "@babel/preset-react" "^7.24.1"
-    "@mdx-js/util" "1.6.16"
-    "@patternfly/ast-helpers" "^1.4.0-alpha.83"
-    "@reach/router" "npm:@gatsbyjs/reach-router@1.3.9"
-    autoprefixer "9.8.6"
-    babel-loader "^9.1.3"
-    camelcase-css "2.0.1"
-    chokidar "4.0.0"
-    clean-webpack-plugin "4.0.0"
-    codesandbox "2.2.0"
-    commander "4.1.1"
-    copy-webpack-plugin "11.0.0"
-    css-loader "6.7.3"
-    detab "2.0.3"
-    express "4.20.0"
-    file-loader "6.2.0"
-    file-saver "1.3.8"
-    fs-extra "9.0.1"
-    glob "9.0.0"
-    handlebars "4.7.7"
-    hast-to-hyperscript "9.0.0"
-    hast-util-to-text "2.0.0"
-    html-formatter "0.1.9"
-    html-webpack-plugin "5.5.0"
-    js-yaml "3.14.0"
-    mdast-util-to-hast "9.1.1"
-    mdurl "1.0.1"
-    mini-css-extract-plugin "2.7.5"
-    null-loader "4.0.1"
-    parse-entities "2.0.0"
-    path-browserify "1.0.1"
-    postcss "8.4.32"
-    postcss-loader "7.1.0"
-    process "^0.11.10"
-    puppeteer "19.11.1"
-    puppeteer-cluster "0.23.0"
-    react-docgen "5.3.1"
-    react-ssr-prepass "1.5.0"
-    remark-footnotes "1.0.0"
-    remark-frontmatter "2.0.0"
-    remark-mdx "2.0.0-next.8"
-    remark-mdxjs "2.0.0-next.8"
-    remark-parse "8.0.3"
-    remark-squeeze-paragraphs "4.0.0"
-    responsive-loader "3.1.2"
-    sharp "0.32.6"
-    style-to-object "0.3.0"
-    to-vfile "6.1.0"
-    typedoc "0.23.0"
-    typescript "4.7.4"
-    unified "9.1.0"
-    unist-util-remove "2.0.0"
-    unist-util-visit "2.0.3"
-    url-loader "4.1.0"
-    vfile-reporter "6.0.1"
-    webpack "5.76.3"
-    webpack-bundle-analyzer "4.8.0"
-    webpack-cli "5.0.1"
-    webpack-dev-server "4.13.1"
-    webpack-merge "5.8.0"
-
 "@patternfly/patternfly-a11y@4.3.1":
   version "4.3.1"
   resolved "https://registry.npmjs.org/@patternfly/patternfly-a11y/-/patternfly-a11y-4.3.1.tgz#09f050d3a899a60471519f552d64ecaaeb5fec2f"
@@ -5572,10 +5504,10 @@ exponential-backoff@^3.1.1:
   resolved "https://registry.npmjs.org/exponential-backoff/-/exponential-backoff-3.1.1.tgz#64ac7526fe341ab18a39016cd22c787d01e00bf6"
   integrity sha512-dX7e/LHVJ6W3DE1MHWi9S1EYzDESENfLrYohG2G++ovZrYOkm4Knwa0mc1cn84xJOR4KEU0WSchhLbd0UklbHw==
 
-express@4.20.0:
-  version "4.20.0"
-  resolved "https://registry.yarnpkg.com/express/-/express-4.20.0.tgz#f1d08e591fcec770c07be4767af8eb9bcfd67c48"
-  integrity sha512-pLdae7I6QqShF5PnNTCVn4hI91Dx0Grkn2+IAsMTgMIKuQVte2dN9PeGSSAME2FR8anOhVA62QDIUaWVfEXVLw==
+express@4.21.0:
+  version "4.21.0"
+  resolved "https://registry.yarnpkg.com/express/-/express-4.21.0.tgz#d57cb706d49623d4ac27833f1cbc466b668eb915"
+  integrity sha512-VqcNGcj/Id5ZT1LZ/cfihi3ttTn+NJmkli2eZADigjq29qTlWi/hAQ43t/VLPq8+UX06FCEx3ByOYet6ZFblng==
   dependencies:
     accepts "~1.3.8"
     array-flatten "1.1.1"
@@ -5589,7 +5521,7 @@ express@4.20.0:
     encodeurl "~2.0.0"
     escape-html "~1.0.3"
     etag "~1.8.1"
-    finalhandler "1.2.0"
+    finalhandler "1.3.1"
     fresh "0.5.2"
     http-errors "2.0.0"
     merge-descriptors "1.0.3"
@@ -5598,11 +5530,11 @@ express@4.20.0:
     parseurl "~1.3.3"
     path-to-regexp "0.1.10"
     proxy-addr "~2.0.7"
-    qs "6.11.0"
+    qs "6.13.0"
     range-parser "~1.2.1"
     safe-buffer "5.2.1"
     send "0.19.0"
-    serve-static "1.16.0"
+    serve-static "1.16.2"
     setprototypeof "1.2.0"
     statuses "2.0.1"
     type-is "~1.6.18"
@@ -5828,6 +5760,19 @@ finalhandler@1.2.0:
   dependencies:
     debug "2.6.9"
     encodeurl "~1.0.2"
+    escape-html "~1.0.3"
+    on-finished "2.4.1"
+    parseurl "~1.3.3"
+    statuses "2.0.1"
+    unpipe "~1.0.0"
+
+finalhandler@1.3.1:
+  version "1.3.1"
+  resolved "https://registry.yarnpkg.com/finalhandler/-/finalhandler-1.3.1.tgz#0c575f1d1d324ddd1da35ad7ece3df7d19088019"
+  integrity sha512-6BN9trH7bp3qvnrRyzsBz+g3lZxTNZTbVO2EV1CS0WIcDbawYVdYvGflME/9QP0h0pYlCDBCTjYa9nZzMDpyxQ==
+  dependencies:
+    debug "2.6.9"
+    encodeurl "~2.0.0"
     escape-html "~1.0.3"
     on-finished "2.4.1"
     parseurl "~1.3.3"
@@ -11025,15 +10970,15 @@ serve-static@1.15.0:
     parseurl "~1.3.3"
     send "0.18.0"
 
-serve-static@1.16.0:
-  version "1.16.0"
-  resolved "https://registry.yarnpkg.com/serve-static/-/serve-static-1.16.0.tgz#2bf4ed49f8af311b519c46f272bf6ac3baf38a92"
-  integrity sha512-pDLK8zwl2eKaYrs8mrPZBJua4hMplRWJ1tIFksVC3FtBEBnl8dxgeHtsaMS8DhS9i4fLObaon6ABoc4/hQGdPA==
+serve-static@1.16.2:
+  version "1.16.2"
+  resolved "https://registry.yarnpkg.com/serve-static/-/serve-static-1.16.2.tgz#b6a5343da47f6bdd2673848bf45754941e803296"
+  integrity sha512-VqpjJZKadQB/PEbEwvFdO43Ax5dFBZ2UECszz8bQ7pi7wt//PWe1P6MN7eCnjsatYtBT6EuiClbjSWP2WrIoTw==
   dependencies:
-    encodeurl "~1.0.2"
+    encodeurl "~2.0.0"
     escape-html "~1.0.3"
     parseurl "~1.3.3"
-    send "0.18.0"
+    send "0.19.0"
 
 set-blocking@^2.0.0:
   version "2.0.0"
