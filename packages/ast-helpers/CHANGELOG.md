@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.4.0-alpha.92 (2024-09-25)
+
+
+### Bug Fixes
+
+* Reenabled patternfly quickstarts. ([#4267](https://github.com/patternfly/patternfly-org/issues/4267)) ([25c87bb](https://github.com/patternfly/patternfly-org/commit/25c87bb5f1dbc42d04a95c2e9e254692c7f99b5c))
+
+
+
+
+
 # 1.4.0-alpha.91 (2024-09-23)
 
 
