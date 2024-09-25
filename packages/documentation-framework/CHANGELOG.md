@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 6.0.0-alpha.104 (2024-09-25)
+
+
+### Bug Fixes
+
+* **search:** add search bar back in ([#4199](https://github.com/patternfly/patternfly-org/issues/4199)) ([f8e7ec8](https://github.com/patternfly/patternfly-org/commit/f8e7ec8281b95b683e168f3ca74400747ac10fcc))
+
+
+
+
+
 # 6.0.0-alpha.103 (2024-09-25)
 
 
