@@ -14,6 +14,20 @@ section: components
 ## Usage
 Accordions are one of many ways to organize large amounts of content when there is limited space. It provides a grouping structure while the header title gives an overview of the content hidden underneath it. Due to their high interaction cost, we recommend that you use accordions sparingly when you need an additional layer of structure to your content. 
 
+### When to use accordions vs. tree tables vs. tree views
+
+**Use accordions:**
+- When you have content that users should be able to hide and display as needed.
+- When you need to make long content sections easier to navigate and parse through. 
+- When your content only includes simple blocks of text or lists&mdash;not complex information, like tables. 
+
+**Use [tree tables](/components/table#tree-table):** 
+- When you need to nest related information within a table.
+
+**Use [tree views](/components/tree-view):** 
+- When you need to communicate a hierarchical structure.
+- When you need to change content on a page, based on selection in a tree view.
+
 ## Behavior
 Users click or tap on section header of collapsed accordion and content area will expand.
 

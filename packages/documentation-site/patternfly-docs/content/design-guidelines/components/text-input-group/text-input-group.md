@@ -13,7 +13,7 @@ section: components
 
 3. **Clear button (optional):** A clear button can be added to clear the contents of the field.
 
-4. **Chip group (optional):** A chip group can be nested inside of the text input as shown here.
+4. **Label group (optional):** A label group can be nested inside of the text input as shown here.
 
 ## Usage
 
@@ -21,7 +21,7 @@ The text input group component is useful for building more complex custom inputs
 
 ### Attribute value filtering
 
-The text input group can be used to create an attribute-value filter as shown below where the user selects attributes (or keys), then values, and the results are displayed in chips as a key-value pair.
+The text input group can be used to create an attribute-value filter as shown below where the user selects attributes (or keys), then values, and the results are displayed in labels as a key-value pair.
 
 <img src="./img/attribute-value-filter.png" alt="attribute value filter" width="464"/>
 

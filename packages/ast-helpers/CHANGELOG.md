@@ -3,6 +3,265 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.4.0-alpha.92 (2024-09-25)
+
+
+### Bug Fixes
+
+* Reenabled patternfly quickstarts. ([#4267](https://github.com/patternfly/patternfly-org/issues/4267)) ([25c87bb](https://github.com/patternfly/patternfly-org/commit/25c87bb5f1dbc42d04a95c2e9e254692c7f99b5c))
+
+
+
+
+
+# 1.4.0-alpha.91 (2024-09-23)
+
+
+### Bug Fixes
+
+* **sideNav:** revert temp fix for tokens update ([#4270](https://github.com/patternfly/patternfly-org/issues/4270)) ([4ccd2f0](https://github.com/patternfly/patternfly-org/commit/4ccd2f01f780e706cbfa0664007f3bdf873797ad))
+
+
+
+
+
+# 1.4.0-alpha.90 (2024-09-23)
+
+
+### Features
+
+* **site:** version bump ([#4276](https://github.com/patternfly/patternfly-org/issues/4276)) ([d9c2648](https://github.com/patternfly/patternfly-org/commit/d9c26480a5ac2c7922d0de4c912b9bbe2e25e18c))
+
+
+
+
+
+# 1.4.0-alpha.89 (2024-09-23)
+
+
+### Bug Fixes
+
+* **chokidar:** update chokidar watch calls as v4 does not support globs ([#4272](https://github.com/patternfly/patternfly-org/issues/4272)) ([82232ec](https://github.com/patternfly/patternfly-org/commit/82232ecbfc928a61b57f80ccc43bbb729dce94db))
+
+
+
+
+
+# 1.4.0-alpha.88 (2024-09-19)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 1.4.0-alpha.87 (2024-09-19)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 1.4.0-alpha.86 (2024-09-19)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 1.4.0-alpha.85 (2024-09-18)
+
+
+### Bug Fixes
+
+* **sideNav:** Temporarily harcode breakpoint tokem token value ([#4262](https://github.com/patternfly/patternfly-org/issues/4262)) ([e91a93c](https://github.com/patternfly/patternfly-org/commit/e91a93c6bff7f99efd10d6f9577b21f82c20e749))
+
+
+
+
+
+# 1.4.0-alpha.84 (2024-09-17)
+
+
+### Bug Fixes
+
+* **homepage:** remove is full height ([#4211](https://github.com/patternfly/patternfly-org/issues/4211)) ([9875ac8](https://github.com/patternfly/patternfly-org/commit/9875ac827996b874048507df270bf4b07ecb8d64))
+
+
+
+
+
+# 1.4.0-alpha.83 (2024-09-13)
+
+
+### Bug Fixes
+
+* packages/documentation-framework/package.json to reduce vulnerabilities ([#4255](https://github.com/patternfly/patternfly-org/issues/4255)) ([79a21e3](https://github.com/patternfly/patternfly-org/commit/79a21e34c3b7464c8e7da9bd0c7c600c44af8f52))
+
+
+
+
+
+# 1.4.0-alpha.82 (2024-09-11)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 1.4.0-alpha.81 (2024-09-10)
+
+
+### Bug Fixes
+
+* **docs:** updated width on table of contents ([#4202](https://github.com/patternfly/patternfly-org/issues/4202)) ([66eb44a](https://github.com/patternfly/patternfly-org/commit/66eb44abad283ae1168fe727361cf78cf52ed517))
+
+
+
+
+
+# 1.4.0-alpha.80 (2024-09-09)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 1.4.0-alpha.79 (2024-08-29)
+
+
+### Features
+
+* **org-v6:** update versions, update ver script ([#4234](https://github.com/patternfly/patternfly-org/issues/4234)) ([1baa6dd](https://github.com/patternfly/patternfly-org/commit/1baa6dd17332691a57a139257971dac2dcc8d4a9))
+
+
+
+
+
+# 1.4.0-alpha.78 (2024-08-27)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 1.4.0-alpha.77 (2024-08-26)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 1.4.0-alpha.76 (2024-08-26)
+
+
+### Bug Fixes
+
+* **docs:** tokenize footer styles ([#4167](https://github.com/patternfly/patternfly-org/issues/4167)) ([622560c](https://github.com/patternfly/patternfly-org/commit/622560c903042e6ec5841280d7247697c51ca88c))
+
+
+
+
+
+# 1.4.0-alpha.75 (2024-08-26)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 1.4.0-alpha.74 (2024-08-21)
+
+
+### Bug Fixes
+
+* **docs:** fix broken link on get started-develop ([#4205](https://github.com/patternfly/patternfly-org/issues/4205)) ([ebc14eb](https://github.com/patternfly/patternfly-org/commit/ebc14eb96e1d471a89f9b45fa367725d90426ed6))
+
+
+
+
+
+# 1.4.0-alpha.73 (2024-08-21)
+
+
+### Features
+
+* **docs:** update design-tokens version ([#4190](https://github.com/patternfly/patternfly-org/issues/4190)) ([5a4b2d1](https://github.com/patternfly/patternfly-org/commit/5a4b2d1459c5916069565bf49b3dde4ec71a81b8))
+
+
+
+
+
+# 1.4.0-alpha.72 (2024-08-20)
+
+
+### Bug Fixes
+
+* **docs:** switched from v4 to evergreen badge link ([#4186](https://github.com/patternfly/patternfly-org/issues/4186)) ([9bbd121](https://github.com/patternfly/patternfly-org/commit/9bbd121302dc3f84231c6bf1de2680b47766b56c))
+
+
+
+
+
+# 1.4.0-alpha.71 (2024-08-20)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 1.4.0-alpha.70 (2024-08-20)
+
+
+### Bug Fixes
+
+* **docs:** removed extra link tags in card title ([#4166](https://github.com/patternfly/patternfly-org/issues/4166)) ([e9a0f3e](https://github.com/patternfly/patternfly-org/commit/e9a0f3e4e79e145af6880d8dd204bf65bcb20125))
+
+
+
+
+
+# 1.4.0-alpha.69 (2024-08-20)
+
+
+### Bug Fixes
+
+* **docs:** updated scroll selector for jumplinks, router links ([#4197](https://github.com/patternfly/patternfly-org/issues/4197)) ([f5de805](https://github.com/patternfly/patternfly-org/commit/f5de80593323739d08397c0bb8ad69c479ec8367))
+
+
+
+
+
+# 1.4.0-alpha.68 (2024-08-19)
+
+
+### Bug Fixes
+
+* another beta bump ([#4204](https://github.com/patternfly/patternfly-org/issues/4204)) ([0b30482](https://github.com/patternfly/patternfly-org/commit/0b304827c5bedb7ac52104764bf7ddd914138754))
+
+
+
+
+
+# 1.4.0-alpha.67 (2024-08-19)
+
+
+### Bug Fixes
+
+* **docs:** update theme toggle icon colors ([#4203](https://github.com/patternfly/patternfly-org/issues/4203)) ([7979777](https://github.com/patternfly/patternfly-org/commit/79797771cecd9f0db801273567776d78417a0080))
+
+
+
+
+
 # 1.4.0-alpha.66 (2024-08-09)
 
 **Note:** Version bump only for package @patternfly/ast-helpers

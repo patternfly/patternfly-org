@@ -127,18 +127,18 @@ export const ReleaseNotesTable = () => {
         <SelectGroup label="Repo">
           <SelectList>
             <SelectOption
-              itemId="HTML/CSS"
-              hasCheckbox
-              isSelected={filters.includes("HTML/CSS")}
-            >
-              HTML/CSS
-            </SelectOption>
-            <SelectOption
               itemId="React"
               hasCheckbox
               isSelected={filters.includes("React")}
             >
               React
+            </SelectOption>
+            <SelectOption
+              itemId="React-component-groups"
+              hasCheckbox
+              isSelected={filters.includes("React-component-groups")}
+            >
+              React-component-groups
             </SelectOption>
           </SelectList>
         </SelectGroup>
@@ -178,13 +178,13 @@ export const ReleaseNotesTable = () => {
   };
 
   const findText = (node) => {
-    if (!node.props || !node.props.children) {
-      if (typeof node !== "string") {
-        return "";
-      }
+    if (node === undefined) {
+      return '';
+    }
+    if (typeof node === 'string'){
       return node;
     }
-    if (typeof node.props.children === "string") {
+    if (typeof node.props?.children === "string") {
       return node.props.children;
     }
     const multi = [];
@@ -210,13 +210,13 @@ export const ReleaseNotesTable = () => {
       (typeof note.description === "string"
         ? note.description.search(searchValueExp) >= 0
         : findText(note.description)?.search(searchValueExp) >= 0) ||
-      (typeof note.pullRequestURL === "string"
+      (note.pullRequestURL && (typeof note.pullRequestURL === "string"
         ? note.pullRequestURL.search(searchValueExp) >= 0
-        : note.pullRequestURL.findIndex(url => url.includes(searchValue)) >= 0) ||
+        : note.pullRequestURL.findIndex(url => url.includes(searchValue)) >= 0)) ||
       (note.details && findText(note.details)?.search(searchValueExp) >= 0);
 
     const hasRepoFilter =
-      filters.includes("react") || filters.includes("html/css");
+      filters.includes("react") || filters.includes("React-component-groups");
     const matchesRepo = filters.includes(note.repo);
 
     const hasCodemodFilter =
@@ -308,7 +308,7 @@ export const ReleaseNotesTable = () => {
                           </a>
                         ) : (
                           <Content component="ul" isPlainList>
-                            {row.pullRequestURL.map((url) => (
+                            {row.pullRequestURL?.map((url) => (
                               <Content component="li"
                                 key={`${rowIndex}-${url.slice(-4)}`}
                               >

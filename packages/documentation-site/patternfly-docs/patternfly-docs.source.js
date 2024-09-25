@@ -148,16 +148,16 @@ module.exports = (sourceMD, sourceProps, sourceFunctionDocs) => {
   // EXTENSIONS:
 
   // Quickstarts extension
-  // const qsPath = require.resolve("@patternfly/quickstarts/package.json");
-  // const qsContentBase = path.join(
-  //   qsPath.replace("package.json", "dist"),
-  //   "/patternfly-docs/quick-starts"
-  // );
-  // const qsPropsBase = qsPath.replace("package.json", "src");
-  // const qsPropsIgnore = ["**/*.test.tsx", "**/examples/*.tsx"];
+  const qsPath = require.resolve("@patternfly/quickstarts/package.json");
+  const qsContentBase = path.join(
+    qsPath.replace("package.json", "dist"),
+    "/patternfly-docs/quick-starts"
+  );
+  const qsPropsBase = qsPath.replace("package.json", "src");
+  const qsPropsIgnore = ["**/*.test.tsx", "**/examples/*.tsx"];
 
-  // sourceProps(path.join(qsPropsBase, "/**/*.tsx"), qsPropsIgnore);
-  // sourceMD(path.join(qsContentBase, "**/*.md"));
+  sourceProps(path.join(qsPropsBase, "/**/*.tsx"), qsPropsIgnore);
+  sourceMD(path.join(qsContentBase, "**/*.md"));
 
   // Catalog view extension
   const catalogViewPath = require.resolve(

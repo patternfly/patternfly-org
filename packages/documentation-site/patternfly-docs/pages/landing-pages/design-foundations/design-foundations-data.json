@@ -5,6 +5,9 @@
   "icons": {
     "summary": "We support a range of icons of different sizes and colors that can help enhance components and indicate functionality to users."
   },
+  "motion": {
+    "summary": "Our motion design framework drives the use of component animations that are intentional, engaging, consistent, and inclusive."
+  },
   "spacers": {
     "summary": "Our spacers help lay out components consistently, while simplifying communication between designers and developers."
   },
