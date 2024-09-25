@@ -20,7 +20,7 @@
         "@patternfly/react-topology": "6.0.0-prerelease.1",
         "@patternfly/react-user-feedback": "6.0.0-prerelease.1",
         "@patternfly/react-console": "6.0.0-prerelease.1",
-        "@patternfly/quickstarts": "6.0.0-alpha.5",
+        "@patternfly/quickstarts": "6.0.0-prerelease.1",
         "@patternfly/react-virtualized-extension": "6.0.0-prerelease.3",
         "@patternfly/react-templates": "6.0.0-prerelease.14"
       }
