@@ -58,7 +58,7 @@ export const SectionDataListLayout = ({
                       <Split className={hasListText ? "pf-v6-u-mb-md" : null}>
                         <SplitItem isFilled>
                           <Content isEditorial>
-                            <Content component={ContentVariants.h2} isEditorial>
+                            <Content component={ContentVariants.h2}>
                               <span>{title}</span>
                             </Content>
                           </Content>

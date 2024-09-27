@@ -23,7 +23,7 @@ export const TextSummary = ({ id, itemsData }) => {
 
   return (
     <Content isEditorial>
-      <Content component="p" isEditorial>
+      <Content component="p">
         <SummaryComponent id={id} itemsData={itemsData} />
       </Content>
     </Content>
