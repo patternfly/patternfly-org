@@ -3,7 +3,7 @@ name: release
 on:
   push:
     branches:
-      - main
+      - v5
 jobs:
   build-deploy:
     if: "!contains(github.event.head_commit.message, 'ci skip')"
@@ -57,7 +57,7 @@ jobs:
       - name: Upload extension only docs
         uses: dswistowski/surge-sh-action@v1
         with:
-          domain: 'extensions-staging.patternfly.org'
-          project: 'build/patternfly-org/site'
+          domain: "extensions-staging.patternfly.org"
+          project: "build/patternfly-org/site"
           login: ${{ secrets.SURGE_LOGIN }}
           token: ${{ secrets.SURGE_TOKEN }}
