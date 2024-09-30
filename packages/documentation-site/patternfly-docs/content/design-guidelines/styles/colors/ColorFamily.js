@@ -12,13 +12,13 @@ export function ColorFamily({
   family
 }) {
   const [expanded, setExpanded] = React.useState([]);
-  const rootTokens = tokens[':where(:root)'];
+  const rootTokens = tokens[':root'];
 
   const familyTokens = Object.values(rootTokens).filter(token => token.name.includes(`${palettePrefix}${family}--`));
   if (family === 'gray') {
-    const whiteToken = rootTokens.color_white;
+    const whiteToken = rootTokens.t_color_white;
     familyTokens.unshift(whiteToken);
-    const blackToken = rootTokens.color_black;
+    const blackToken = rootTokens.t_color_black;
     familyTokens.push(blackToken);
   }
 
