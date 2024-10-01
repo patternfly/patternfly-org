@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import {
   Brand,
   Grid,
@@ -7,11 +7,11 @@ import {
   ListItem,
   PageSection,
   Content,
-} from '@patternfly/react-core';
-import { Link } from '@patternfly/documentation-framework/components';
-import { GithubIcon, TwitterIcon } from '@patternfly/react-icons';
-import redhatLogo from './RHLogo.png';
-import redhatLogoDark from './RHLogoDark.png';
+} from "@patternfly/react-core";
+import { Link } from "@patternfly/documentation-framework/components";
+import { GithubIcon, TwitterIcon } from "@patternfly/react-icons";
+import redhatLogo from "./RHLogo.png";
+import redhatLogoDark from "./RHLogoDark.png";
 
 export const Footer = ({ isDarkTheme }) => (
   <React.Fragment>
@@ -39,7 +39,7 @@ export const Footer = ({ isDarkTheme }) => (
                   <ListItem className="ws-org-pfsite-footer-menu-list-item">
                     <Link
                       className="ws-org-pfsite-footer-menu-link"
-                      to={'/get-started/about-patternfly'}
+                      to={"/get-started/about-patternfly"}
                       aria-label="Get started with PatternFly"
                     >
                       Get started
@@ -237,6 +237,7 @@ export const Footer = ({ isDarkTheme }) => (
               <Content
                 component="p"
                 className="ws-org-pfsite-footer-menu-about-description"
+                isEditorial
               >
                 PatternFly is an open source design system built to drive
                 consistency and unify teams. From documentation and components
