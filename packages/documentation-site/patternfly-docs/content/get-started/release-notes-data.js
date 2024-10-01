@@ -601,6 +601,38 @@ export const LogSnippetRenameLeftBorderVariantInput = () => (
     ),
   },
   {
+    component: "Content header",
+    description: "In react-component-groups, we've renamed ContentHeader component to PageHeader",
+    pullRequestURL:
+      "https://github.com/patternfly/react-component-groups/pull/313",
+    repo: "React-component-groups",
+    fixedWithCodeMod: true,
+    title: "component-groups-contentHeader-rename-to-pageHeader",
+    details: (
+      <Content>
+        <p>Codemods will make the following updates:</p>
+        <h2>Example in</h2>
+        <CodeBlock>
+          <CodeBlockCode>
+            {`import { ContentHeader } from "@patternfly/react-component-groups";
+export const ComponentGroupsContentHeaderRenameToPageHeaderInput = () => (
+  <ContentHeader />
+);`}
+          </CodeBlockCode>
+        </CodeBlock>
+        <h2>Example out</h2>
+        <CodeBlock>
+          <CodeBlockCode>
+            {`import { PageHeader } from "@patternfly/react-component-groups";
+export const ComponentGroupsContentHeaderRenameToPageHeaderInput = () => (
+  <PageHeader data-codemods />
+);`}
+          </CodeBlockCode>
+        </CodeBlock>
+      </Content>
+    ),
+  },
+  {
     component: "Error state",
     description:
       "In react-component-groups, we've renamed some ErrorState props to comply with its base component, EmptyState.",
@@ -685,6 +717,37 @@ export const ComponentGroupsInvalidObjectRenamePropsInput = () => (
     ),
   },
   {
+    component: "Missing page",
+    description:
+      "In react-component-groups, we've renamed InvalidObject component to MissingPage",
+    pullRequestURL:
+      "https://github.com/patternfly/react-component-groups/pull/313",
+    repo: "React",
+    fixedWithCodeMod: true,
+    title: "component-groups-invalidObject-rename-to-missingPage",
+    details: (
+      <Content>
+        <p>Codemods will make the following updates:</p>
+        <h2>Example in</h2>
+        <CodeBlock>
+          <CodeBlockCode>
+            {`import { InvalidObject } from "@patternfly/react-component-groups";
+export const ComponentGroupsInvalidObjectRenameToMissingPageInput =
+  () => <InvalidObject />;`}
+          </CodeBlockCode>
+        </CodeBlock>
+        <h2>Example out</h2>
+        <CodeBlock>
+          <CodeBlockCode>
+            {`import { MissingPage } from "@patternfly/react-component-groups";
+export const ComponentGroupsInvalidObjectRenameToMissingPageInput =
+  () => <MissingPage data-codemods />;`}
+          </CodeBlockCode>
+        </CodeBlock>
+      </Content>
+    ),
+  },
+  {
     component: "Multi content card",
     description:
       "The `leftBorderVariant` and `withHeaderBorder` props have been removed from MultiContentCard.",
@@ -745,6 +808,37 @@ export const ComponentGroupsNotAuthorizedRenamePropsInput = () => (
 export const ComponentGroupsNotAuthorizedRenamePropsInput = () => (
   <NotAuthorized bodyText="Description text" titleText="Title text" />
 );`}
+          </CodeBlockCode>
+        </CodeBlock>
+      </Content>
+    ),
+  },
+  {
+    component: 'Unauthorized access',
+    description:
+      "In react-component-groups, we've renamed NotAuthorized component to UnauthorizedAccess",
+    pullRequestURL:
+      "https://github.com/patternfly/react-component-groups/pull/313",
+    repo: "React",
+    fixedWithCodeMod: true,
+    title: "component-groups-notAuthorized-rename-to-unauthorizedAccess",
+    details: (
+      <Content>
+        <p>Codemods will make the following updates:</p>
+        <h2>Example in</h2>
+        <CodeBlock>
+          <CodeBlockCode>
+            {`import { NotAuthorized } from "@patternfly/react-component-groups";
+export const ComponentGroupsNotAuthorizedRenameToUnauthorizedAccessInput =
+  () => <NotAuthorized />;`}
+          </CodeBlockCode>
+        </CodeBlock>
+        <h2>Example out</h2>
+        <CodeBlock>
+          <CodeBlockCode>
+            {`import { UnauthorizedAccess } from "@patternfly/react-component-groups";
+export const ComponentGroupsNotAuthorizedRenameToUnauthorizedAccessInput =
+  () => <UnauthorizedAccess data-codemods />;`}
           </CodeBlockCode>
         </CodeBlock>
       </Content>
@@ -878,6 +972,38 @@ export const DataCodemodsCleanupInput = () => (
     <LoginMainFooterLinksItem  />
     <MastheadLogo  />
   </>
+);`}
+          </CodeBlockCode>
+        </CodeBlock>
+      </Content>
+    ),
+  },
+  {
+    component: "Data list action",
+    description:
+      "The `isPlainButtonAction` prop has been removed from DataListAction as a wrapper is no longer needed.",
+    pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/10939",
+    repo: "React",
+    fixedWithCodeMod: true,
+    title: "dataListAction-remove-isPlainButtonAction-prop",
+    details: (
+      <Content>
+        <p>Codemods will make the following updates:</p>
+        <h2>Example in</h2>
+        <CodeBlock>
+          <CodeBlockCode>
+            {`import { DataListAction } from "@patternfly/react-core";
+export const DataListActionRemoveIsPlainButtonActionPropInput = () => (
+  <DataListAction isPlainButtonAction/>
+);`}
+          </CodeBlockCode>
+        </CodeBlock>
+        <h2>Example out</h2>
+        <CodeBlock>
+          <CodeBlockCode>
+            {`import { DataListAction } from "@patternfly/react-core";
+export const DataListActionRemoveIsPlainButtonActionPropInput = () => (
+  <DataListAction />
 );`}
           </CodeBlockCode>
         </CodeBlock>
@@ -1124,7 +1250,7 @@ export const DrawerReplaceColorVariantLight200Input = () => (
   {
     component: "Empty state header",
     description:
-      "EmptyStateHeader and EmptyStateIcon are now rendered internally within EmptyState and should only be customized using props. Content passed to the `icon` prop on EmptyState will also be wrapped by EmptyStateIcon automatically.Additionally, the `titleText` prop is now required on EmptyState.",
+      "EmptyStateHeader and EmptyStateIcon are now rendered internally within EmptyState and should only be customized using props. Content passed to the `icon` prop on EmptyState will also be wrapped by EmptyStateIcon automatically.",
     pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/9947",
     repo: "React",
     fixedWithCodeMod: true,
@@ -1162,7 +1288,26 @@ export const EmptyStateWithoutHeaderMoveIntoEmptyStateInput = () => (
     <EmptyStateIcon icon={CubesIcon} />
     <EmptyStateBody>Body</EmptyStateBody>
   </EmptyState>
-);`}
+
+);
+
+export const EmptyStateHeaderWithoutTitleTextMoveIntoEmptyStateInput = () => (
+  <EmptyState>
+    <EmptyStateHeader
+      className="some-class"
+      icon={<EmptyStateIcon icon={CubesIcon} />}
+    />
+  </EmptyState>
+);
+
+export const EmptyStateWithoutHeaderAndTitleTextMoveIntoEmptyStateInput =
+  () => (
+    <EmptyState>
+      <EmptyStateIcon icon={CubesIcon} />
+      <EmptyStateBody>Body</EmptyStateBody>
+    </EmptyState>
+  );
+`}
           </CodeBlockCode>
         </CodeBlock>
         <h2>Example out</h2>
@@ -1188,7 +1333,20 @@ export const EmptyStateWithoutHeaderMoveIntoEmptyStateInput = () => (
     </Title>} icon={CubesIcon}>
     <EmptyStateBody>Body</EmptyStateBody>
   </EmptyState>
-);`}
+);
+
+export const EmptyStateHeaderWithoutTitleTextMoveIntoEmptyStateInput = () => (
+  <EmptyState headerClassName="some-class"  icon={CubesIcon}  >
+    </EmptyState>
+);
+
+export const EmptyStateWithoutHeaderAndTitleTextMoveIntoEmptyStateInput =
+  () => (
+    <EmptyState icon={CubesIcon}>
+      <EmptyStateBody>Body</EmptyStateBody>
+    </EmptyState>
+  );
+`}
           </CodeBlockCode>
         </CodeBlock>
       </Content>
@@ -1902,6 +2060,32 @@ export const NoDuplicateImportSpecifiersInput = () => (
     repo: "React",
     fixedWithCodeMod: false,
     title: "notificationDrawerHeader-warn-update-markup",
+  },
+  {
+    component: "Tile",
+    description:
+      "Tile has been deprecated. Running the fix flag will update your imports to our deprecated package, but we suggest using Card instead. There is a new Card example on our documentation showcasing how to set up a Card as a Tile.",
+    pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/10821",
+    repo: "React",
+    fixedWithCodeMod: true,
+    title: "tile-deprecated",
+    details: (
+      <Content>
+        <p>Codemods will make the following updates:</p>
+        <h2>Example in</h2>
+        <CodeBlock>
+          <CodeBlockCode>
+            {`import { Tile } from "@patternfly/react-core";`}
+          </CodeBlockCode>
+        </CodeBlock>
+        <h2>Example out</h2>
+        <CodeBlock>
+          <CodeBlockCode>
+            {`import { Tile } from "@patternfly/react-core/deprecated";`}
+          </CodeBlockCode>
+        </CodeBlock>
+      </Content>
+    ),
   },
   {
     component: "Unused imports",
@@ -2638,8 +2822,8 @@ export const TextReplaceWithContentInput = () => {
   {
     component: "Tokens",
     description:
-      "We have updated our CSS tokens. About half of our tokens have been replaced with newer ones. To find a suitable replacement token, check our [v6 token documentation](https://staging-v6.patternfly.org/tokens/all-patternfly-tokens).",
-    repo: "React",
+      "React tokens, whose value is a Patternfly token variable (with prefix --pf-t), are now prefixed with t_",
+    pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/11002",    repo: "React",
     fixedWithCodeMod: true,
     title: "tokens-warn",
     details: (
@@ -2648,39 +2832,129 @@ export const TextReplaceWithContentInput = () => {
         <h2>Example in</h2>
         <CodeBlock>
           <CodeBlockCode>
-            {`import global_warning_color_100 from "@patternfly/react-tokens/dist/esm/global_warning_color_100";
-import { c_alert__FontSize } from "@patternfly/react-tokens";
-
-global_warning_color_100;
-c_alert__FontSize;
-
-<>
-  <div
-    style={{
-      "--pf-v5-global--success-color--200": "#abc",
-    }}
-  ></div>
-  <div style={{ borderWidth: "var(--pf-v5-global--BorderWidth--lg)" }}></div>
-</>;`}
+            {`import color_green_10 from "@patternfly/react-tokens/dist/esm/color_green_10";
+color_green_10;`}
           </CodeBlockCode>
         </CodeBlock>
         <h2>Example out</h2>
         <CodeBlock>
           <CodeBlockCode>
-            {`import global_warning_color_100 from "@patternfly/react-tokens/dist/esm/global_warning_color_100";
+            {`import t_color_green_10 from "@patternfly/react-tokens/dist/esm/t_color_green_10";
+t_color_green_10;`}
+          </CodeBlockCode>
+        </CodeBlock>
+      </Content>
+    ),
+  },
+  {
+    component: "Tokens",
+    description:
+      "We have updated our CSS tokens. About half of our tokens have been replaced with newer ones. \n\n- this rule provides an autofix for global non color tokens\n- global color tokens will be replaced with a temporary hot pink color token **that must be manually replaced** (`t_temp_dev_tbd` react token or `--pf-t--temp--dev--tbd` CSS variable)\n- other non-global (component or chart) tokens need to be replaced manually\n\nTo find a suitable replacement token, check our [v6 token documentation](/tokens/all-patternfly-tokens).",
+    repo: "React",
+    fixedWithCodeMod: true,
+    title: "tokens-update",
+    details: (
+      <Content>
+        <p>Codemods will make the following updates:</p>
+        <h2>Example in</h2>
+        <CodeBlock>
+          <CodeBlockCode>
+            {`// replacements (fixable with --fix)
+import global_BorderWidth_lg from "@patternfly/react-tokens/dist/esm/global_BorderWidth_lg";
+import { global_FontWeight_normal } from "@patternfly/react-tokens";
+global_BorderWidth_lg;
+global_FontWeight_normal;
+document.documentElement.style.setProperty("--pf-v5-global--ZIndex--lg", "3");
+<div
+  style={{
+    borderWidth: "var(--pf-v5-global--BorderWidth--lg)",
+    boxShadow: "var(--pf-v5-global--BoxShadow--sm)",
+    marginTop: "var(--pf-v5-global--spacer--3xl)",
+  }}
+></div>;
+  
+// warnings (not fixable)
+import c_badge_PaddingLeft from "@patternfly/react-tokens/dist/esm/c_badge_PaddingLeft";
 import { c_alert__FontSize } from "@patternfly/react-tokens";
-
-global_warning_color_100;
+c_badge_PaddingLeft;
 c_alert__FontSize;
-
 <>
   <div
     style={{
-      "--pf-v5-global--success-color--200": "#abc",
+      fontSize: "var(--pf-v5-c-alert__FontSize)",
+      width: "var(--pf-v5-global--arrow--width)",
     }}
-  ></div>
-  <div style={{ borderWidth: "var(--pf-v5-global--BorderWidth--lg)" }}></div>
-</>;`}
+  ></div>;
+
+// Colors
+import global_Color_100 from "@patternfly/react-tokens/dist/esm/global_Color_100";
+import { global_Color_200 } from "@patternfly/react-tokens/dist/esm/global_Color_200";
+import { global_Color_300 as color300 } from "@patternfly/react-tokens/dist/esm/global_Color_300";
+import { global_BorderColor_100 } from "@patternfly/react-tokens";
+
+global_Color_100;
+global_Color_200;
+color300;
+global_BorderColor_100;
+
+<div
+  style={{
+    color: "var(--pf-v5-global--Color--100)",
+    backgroundColor: "var(--pf-v5-global--Color--200)",
+  }}
+></div>;`}
+          </CodeBlockCode>
+        </CodeBlock>
+        <h2>Example out</h2>
+        <CodeBlock>
+          <CodeBlockCode>
+            {`// replacements (fixable with --fix)
+import global_border_width_extra_strong from "@patternfly/react-tokens/dist/esm/global_border_width_extra_strong";
+import { global_font_weight_body_default } from "@patternfly/react-tokens";
+
+global_border_width_extra_strong;
+global_font_weight_body_default;
+
+document.documentElement.style.setProperty("--pf-t--global--z-index--lg", "3");
+<div
+  style={{
+    borderWidth: "var(--pf-t--global--border--width--extra-strong)",
+    boxShadow: "var(--pf-t--global--box-shadow--sm)",
+    marginTop: "var(--pf-t--global--spacer--3xl)",
+  }}
+></div>;
+  
+// warnings (not fixable)
+import c_badge_PaddingLeft from "@patternfly/react-tokens/dist/esm/c_badge_PaddingLeft";
+import { c_alert__FontSize } from "@patternfly/react-tokens";
+
+c_badge_PaddingLeft;
+c_alert__FontSize;
+
+<div
+  style={{
+    fontSize: "var(--pf-v5-c-alert__FontSize)",
+    width: "var(--pf-v5-global--arrow--width)",
+  }}
+></div>;
+  
+// Colors
+import global_Color_100/* CODEMODS: you should update this color token */ from "@patternfly/react-tokens/dist/esm/t_temp_dev_tbd";
+import { t_temp_dev_tbd as global_Color_200 /* CODEMODS: you should update this color token */ } from "@patternfly/react-tokens/dist/esm/t_temp_dev_tbd";
+import { t_temp_dev_tbd as color300 /* CODEMODS: you should update this color token, original v5 token was global_Color_300 */ } from "@patternfly/react-tokens/dist/esm/t_temp_dev_tbd";
+import { t_temp_dev_tbd as global_BorderColor_100 /* CODEMODS: you should update this color token */ } from "@patternfly/react-tokens";
+
+global_Color_100;
+global_Color_200;
+color300;
+global_BorderColor_100;
+
+<div
+  style={{
+    color: "var(--pf-t--temp--dev--tbd)"/* CODEMODS: original v5 color was --pf-v5-global--Color--100 */,
+    backgroundColor: "var(--pf-t--temp--dev--tbd)"/* CODEMODS: original v5 color was --pf-v5-global--Color--200 */,
+  }}
+></div>;`}
           </CodeBlockCode>
         </CodeBlock>
       </Content>
