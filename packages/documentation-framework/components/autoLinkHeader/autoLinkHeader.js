@@ -22,6 +22,7 @@ export const AutoLinkHeader = ({
           component={headingLevel}
           className={css('ws-heading', className)}
           tabIndex={-1}
+          isEditorial
         >
           <Link href={`#${slug}`} className="ws-heading-anchor" tabIndex="-1" aria-hidden>
             <LinkIcon className="ws-heading-anchor-icon" style={{ verticalAlign: 'middle' }} />

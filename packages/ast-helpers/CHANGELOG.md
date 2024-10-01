@@ -3,6 +3,183 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.4.0-alpha.96 (2024-10-01)
+
+
+### Features
+
+* **site:** fix build for prerelease, use editorial content ([#4271](https://github.com/patternfly/patternfly-org/issues/4271)) ([154cca6](https://github.com/patternfly/patternfly-org/commit/154cca69e2d6f2b1aef48e983a131a39185f2028))
+
+
+
+
+
+# 1.4.0-alpha.95 (2024-09-27)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 1.4.0-alpha.94 (2024-09-26)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 1.4.0-alpha.93 (2024-09-25)
+
+
+### Bug Fixes
+
+* **search:** add search bar back in ([#4199](https://github.com/patternfly/patternfly-org/issues/4199)) ([f8e7ec8](https://github.com/patternfly/patternfly-org/commit/f8e7ec8281b95b683e168f3ca74400747ac10fcc))
+
+
+
+
+
+# 1.4.0-alpha.92 (2024-09-25)
+
+
+### Bug Fixes
+
+* Reenabled patternfly quickstarts. ([#4267](https://github.com/patternfly/patternfly-org/issues/4267)) ([25c87bb](https://github.com/patternfly/patternfly-org/commit/25c87bb5f1dbc42d04a95c2e9e254692c7f99b5c))
+
+
+
+
+
+# 1.4.0-alpha.91 (2024-09-23)
+
+
+### Bug Fixes
+
+* **sideNav:** revert temp fix for tokens update ([#4270](https://github.com/patternfly/patternfly-org/issues/4270)) ([4ccd2f0](https://github.com/patternfly/patternfly-org/commit/4ccd2f01f780e706cbfa0664007f3bdf873797ad))
+
+
+
+
+
+# 1.4.0-alpha.90 (2024-09-23)
+
+
+### Features
+
+* **site:** version bump ([#4276](https://github.com/patternfly/patternfly-org/issues/4276)) ([d9c2648](https://github.com/patternfly/patternfly-org/commit/d9c26480a5ac2c7922d0de4c912b9bbe2e25e18c))
+
+
+
+
+
+# 1.4.0-alpha.89 (2024-09-23)
+
+
+### Bug Fixes
+
+* **chokidar:** update chokidar watch calls as v4 does not support globs ([#4272](https://github.com/patternfly/patternfly-org/issues/4272)) ([82232ec](https://github.com/patternfly/patternfly-org/commit/82232ecbfc928a61b57f80ccc43bbb729dce94db))
+
+
+
+
+
+# 1.4.0-alpha.88 (2024-09-19)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 1.4.0-alpha.87 (2024-09-19)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 1.4.0-alpha.86 (2024-09-19)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 1.4.0-alpha.85 (2024-09-18)
+
+
+### Bug Fixes
+
+* **sideNav:** Temporarily harcode breakpoint tokem token value ([#4262](https://github.com/patternfly/patternfly-org/issues/4262)) ([e91a93c](https://github.com/patternfly/patternfly-org/commit/e91a93c6bff7f99efd10d6f9577b21f82c20e749))
+
+
+
+
+
+# 1.4.0-alpha.84 (2024-09-17)
+
+
+### Bug Fixes
+
+* **homepage:** remove is full height ([#4211](https://github.com/patternfly/patternfly-org/issues/4211)) ([9875ac8](https://github.com/patternfly/patternfly-org/commit/9875ac827996b874048507df270bf4b07ecb8d64))
+
+
+
+
+
+# 1.4.0-alpha.83 (2024-09-13)
+
+
+### Bug Fixes
+
+* packages/documentation-framework/package.json to reduce vulnerabilities ([#4255](https://github.com/patternfly/patternfly-org/issues/4255)) ([79a21e3](https://github.com/patternfly/patternfly-org/commit/79a21e34c3b7464c8e7da9bd0c7c600c44af8f52))
+
+
+
+
+
+# 1.4.0-alpha.82 (2024-09-11)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 1.4.0-alpha.81 (2024-09-10)
+
+
+### Bug Fixes
+
+* **docs:** updated width on table of contents ([#4202](https://github.com/patternfly/patternfly-org/issues/4202)) ([66eb44a](https://github.com/patternfly/patternfly-org/commit/66eb44abad283ae1168fe727361cf78cf52ed517))
+
+
+
+
+
+# 1.4.0-alpha.80 (2024-09-09)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 1.4.0-alpha.79 (2024-08-29)
+
+
+### Features
+
+* **org-v6:** update versions, update ver script ([#4234](https://github.com/patternfly/patternfly-org/issues/4234)) ([1baa6dd](https://github.com/patternfly/patternfly-org/commit/1baa6dd17332691a57a139257971dac2dcc8d4a9))
+
+
+
+
+
 # 1.4.0-alpha.78 (2024-08-27)
 
 **Note:** Version bump only for package @patternfly/ast-helpers

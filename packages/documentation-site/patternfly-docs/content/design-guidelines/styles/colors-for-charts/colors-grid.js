@@ -41,7 +41,7 @@ const ColorFamily = ({color, computedStyles}) => {
 
   return (
     <GridItem>
-      <Content className="ws-heading ws-title" component="h3">{color} family</Content>
+      <Content className="ws-heading ws-title" component="h3" isEditorial>{color} family</Content>
       <Flex direction={{ default: 'column' }}  gap={{ default: 'gapMd' }}>
         {entries}
       </Flex>

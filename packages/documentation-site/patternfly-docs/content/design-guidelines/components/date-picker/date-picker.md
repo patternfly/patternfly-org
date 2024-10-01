@@ -67,7 +67,7 @@ Consider using adding an "All day" checkbox to a date and time picker to simplif
 Use date pickers in a toolbar to filter by date ranges.
 
 #### Date picker in attribute filter
-Date range fields can be added to an attribute filter as an attribute. Selecting the Date range attribute will display a date picker, and push other content in the toolbar to the right - in this case, the CTA button. The date(s) selected should display as chips under the filter.
+Date range fields can be added to an attribute filter as an attribute. Selecting the Date range attribute will display a date picker, and push other content in the toolbar to the right - in this case, the CTA button. The date(s) selected should display as labels under the filter.
 
 <img src="./img/In toolbar attribute filter.png" alt="Example of date picker in toolbar attribute filter" width="500"/>
 

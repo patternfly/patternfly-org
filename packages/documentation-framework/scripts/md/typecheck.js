@@ -37,6 +37,11 @@ const reactStyles = globSync(path.join(reactStylesDir, 'css/**/*.d.ts'))
 const defaultImports = [
   'react',
   '@reach/router',
+  '@patternfly/react-charts/echarts',
+  '@patternfly/react-charts/next',
+  '@patternfly/react-charts/next/echarts',
+  '@patternfly/react-charts/next/victory',
+  '@patternfly/react-charts/victory',
   '@patternfly/react-core/next',
   '@patternfly/react-core/deprecated',
   '@patternfly/react-table/deprecated',
