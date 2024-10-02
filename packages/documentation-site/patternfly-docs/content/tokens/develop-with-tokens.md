@@ -71,3 +71,27 @@ The following scenarios provide examples (based on [the VS code plugin](https://
 - **Scenario 2:** You need to adjust spacing. 
     1. You probably want a spacer: start typing `pft`, then `sp` to get spacers, followed by the spacer size you want (`sm`, `md`, and so on). 
     1. You'll end up with something like `var(--pf-t--global--spacer--sm)`.
+
+### React tokens
+
+React tokens are the React version of our CSS variables. They include more than just token variables and will require additional attention to upgrade properly. [You can find the latest tokens here.](https://www.npmjs.com/package/@patternfly/react-tokens)
+
+A React token can be imported from its file directly: 
+
+`import t_token_name from '@patternfly/react-tokens/dist/esm/t_token_name'` 
+
+or from the whole package: 
+
+`import { t_token_name } from '@patternfly/react-tokens'`
+
+React token names are similar to the CSS token names, but use different formatting. Instead of a double-hyphen ( -- ), token segments are separated by an underscore ( _ ). Additionally the `--pf-t` prefix is replaced with `t`. For example, a CSS variable of `--pf-t--global--spacer--sm` becomes `t_global_spacer_sm` as a React token.
+
+Each React token is an object that stores name, value, and var properties:
+
+```
+const t_global_spacer_sm = {
+  "name": "--pf-t--global--spacer--sm",
+  "value": "0.5rem",
+  "var": "var(--pf-t--global--spacer--sm)"
+}
+```
