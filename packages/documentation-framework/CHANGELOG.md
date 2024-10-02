@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 5.24.0 (2024-10-02)
+
+
+### Features
+
+* **v5:** allow v5 branch to publish ([#4291](https://github.com/patternfly/patternfly-org/issues/4291)) ([169f285](https://github.com/patternfly/patternfly-org/commit/169f2853cb0be697669aeae5c6ad07ca3c3e2d06))
+
+
+
+
+
 # 5.23.0 (2024-08-28)
 
 
