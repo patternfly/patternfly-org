@@ -33,7 +33,7 @@
   },
   "background-image": {
     "illustration": "./images/component-illustrations/background-image.png",
-    "summary": "A <b>background image</b> is an image that is placed in the background of a page or area of a page."
+    "summary": "A <b>background image</b> is an image that fills the background of a page."
   },
   "badge": {
     "illustration": "./images/component-illustrations/badge.png",
