@@ -27,7 +27,7 @@ Following these best practices to help ensure that your users can complete their
 
 ## Writing for chatbots
 
-When chatbots are design to meet the needs of your users, they can improve the overall UX of your product, because they are convenient, efficient, and persistent. 
+When chatbots are designed to meet the needs of your users, they can improve the overall UX of your product. They are convenient, efficient, and persistent. 
 
 [Our virtual assistant extension](/patterfnfly-ai/chatbot/about-virtual-assistant) utilizes PatternFly components to create a foundation for an AI-based chatbot, with additional customization options.
 
@@ -72,4 +72,4 @@ Make sure to disclose any use of AI in chatbots. Our users should be able to tru
 
 - Use labels and other visual styling cues to clearly identify AI features. 
 - Add necessary legal disclosures where you can, like in the chatbot footer. 
-- Display an indicator when the bot is "thinking" or "typing", so that users know to expect feedback.
+- Display an indicator when the bot is "thinking" or "typing," so that users know to expect feedback.

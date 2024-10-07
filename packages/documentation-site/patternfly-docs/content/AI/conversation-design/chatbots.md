@@ -9,7 +9,7 @@ import ArrowRightIcon from '@patternfly/react-icons/dist/esm/icons/arrow-right-i
 
 ## Writing for chatbots 
 
-When chatbots are design to meet the needs of your users, they can improve the overall UX of your product, because they are convenient, efficient, and persistent. 
+When chatbots are designed to meet the needs of your users, they can improve the overall UX of your product, because they are convenient, efficient, and persistent. 
 
 Chatbots are only as good as the writing that goes into them. The language they use must build trust and clearly establish the “rules” of the conversation.
  
