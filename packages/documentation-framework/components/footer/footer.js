@@ -86,7 +86,7 @@ export const Footer = ({ isDarkTheme }) => (
                 <ListItem className="ws-org-pfsite-footer-menu-list-item">
                     <Link
                       className="ws-org-pfsite-footer-menu-link"
-                      to={"/get-started/about-patternfly"}
+                      to="/get-started/about-patternfly"
                       aria-label="Learn about PatternFly"
                     >
                       About PatternFly
