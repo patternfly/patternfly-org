@@ -29,7 +29,7 @@ Following these best practices to help ensure that your users can complete their
 
 When chatbots are designed to meet the needs of your users, they can improve the overall UX of your product. They are convenient, efficient, and persistent. 
 
-[Our virtual assistant extension](/patterfnfly-ai/chatbot/about-virtual-assistant) utilizes PatternFly components to create a foundation for an AI-based chatbot, with additional customization options.
+[Our virtual assistant extension](/patternfly-ai/chatbot/about-chatbot) utilizes PatternFly components to create a foundation for an AI-based chatbot, with additional customization options.
 
 <Flex>
 <FlexItem>
