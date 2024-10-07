@@ -12,13 +12,13 @@ export function ColorFamily({
   family
 }) {
   const [expanded, setExpanded] = React.useState([]);
-  const rootTokens = tokens[':where(:root)'];
-
+  const rootTokens = tokens[':root'];
   const familyTokens = Object.values(rootTokens).filter(token => token.name.includes(`${palettePrefix}${family}--`));
+
   if (family === 'gray') {
-    const whiteToken = rootTokens.color_white;
+    const whiteToken = rootTokens.t_color_white;
     familyTokens.unshift(whiteToken);
-    const blackToken = rootTokens.color_black;
+    const blackToken = rootTokens.t_color_black;
     familyTokens.push(blackToken);
   }
 
@@ -69,9 +69,9 @@ export function ColorFamily({
                 {tokenList?.length > 0 ? (
                   <>
                     <Title headingLevel="h4" size="md">Semantic tokens<span className='pf-v6-screen-reader'>for {token.value.toUpperCase()}</span></Title>
-                    <Content className="pf-v6-u-m-sm" component={ContentVariants.ol} isPlainList>
+                    <Content isEditorial className="pf-v6-u-m-sm" component={ContentVariants.ol} isPlainList>
                       {tokenList.map(tokenName =>
-                        <Content component={ContentVariants.li} key={tokenName}>{tokenName}</Content>
+                        <Content isEditorial component={ContentVariants.li} key={tokenName}>{tokenName}</Content>
                       )}
                     </Content>
                   </>

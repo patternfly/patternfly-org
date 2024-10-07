@@ -39,12 +39,12 @@ Checkbox select lists allow users to select one or more options from a known lis
 #### Use checkbox select when
 * Horizontal space is limited.
 * It is not crucial for the user to see their selections in the toggle itself.
-* Using a select list inside a toolbar. Toolbars have limited space, and the user will already be able to see their selection as chips below the filter itself.  
+* Using a select list inside a toolbar. Toolbars have limited space, and the user will already be able to see their selection as labels below the filter itself.  
 
 <img src="./img/checkbox-select.png" alt="Example of checkbox select in a toolbar" width="585"/>
 
 ### Multiple select
-Multiple select lists allow users to select one or more options from a list, with the selected options marked with a blue check. It differs from the checkbox select in that each option selected by the user appears in the top display area as chips. Once the number of selections reaches a certain number, the regular chips will be replaced by a gray chip indicating how many more items were selected. The default number of selections is 3, but you may change this number based on your use case.
+Multiple select lists allow users to select one or more options from a list, with the selected options marked with a blue check. It differs from the checkbox select in that each option selected by the user appears in the top display area as labels. Once the number of selections reaches a certain number, the regular labels will be replaced by a gray label indicating how many more items were selected. The default number of selections is 3, but you may change this number based on your use case.
 
 #### Use multiple select when
 * Horizontal space is not limited.

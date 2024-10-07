@@ -4,7 +4,7 @@ import { Label, Nav, NavList, NavExpandable, PageContextConsumer, capitalize, Fl
 import { css } from '@patternfly/react-styles';
 import { Location } from '@reach/router';
 import { makeSlug } from '../../helpers';
-import globalBreakpointXl from "@patternfly/react-tokens/dist/esm/global_breakpoint_xl";
+import globalBreakpointXl from "@patternfly/react-tokens/dist/esm/t_global_breakpoint_xl";
 import { trackEvent } from '../../helpers';
 
 const getIsActive = (location, section, subsection = null) => {

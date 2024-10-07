@@ -1,4 +1,7 @@
 {
+  "actions": {
+    "summary": "Allows users to trigger process via UI elements."
+  },
   "bulk-selection": {
     "summary": "Allows users to select or deselect multiple items in a content view."
   },
@@ -13,5 +16,11 @@
   },
   "primary-detail": {
     "summary": "Shows users a list of items and corresponding details for a selected item."
+  },
+  "right-to-left": {
+    "summary": "Demonstrates how the UI adapts to the writing mode of the page."
+  },
+  "status-and-severity": {
+    "summary": "Rules and guidelines for communicating status and severity in a UI."
   }
 }

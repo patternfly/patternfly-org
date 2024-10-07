@@ -4,7 +4,6 @@ import {
   Page,
   PageSidebar,
   PageSidebarBody,
-  Brand,
   Dropdown,
   DropdownItem,
   DropdownGroup,
@@ -24,7 +23,7 @@ import {
   ToolbarItem,
   SkipToContent,
   Switch,
-  // SearchInput,
+  SearchInput,
   ToggleGroup,
   ToggleGroupItem,
   MastheadLogo,
@@ -51,17 +50,14 @@ const HeaderTools = ({
   isDarkTheme,
   setIsDarkTheme,
 }) => {
-  const initialVersion = staticVersions.Releases.find(
-    (release) => release.latest
-  );
   const latestVersion = versions.Releases.find((version) => version.latest);
   const previousReleases = Object.values(versions.Releases).filter(
     (version) => !version.hidden && !version.latest
   );
-  // const hasSearch = algolia;
+  const hasSearch = algolia;
   const [isDropdownOpen, setDropdownOpen] = useState(false);
-  // const [searchValue, setSearchValue] = React.useState('');
-  // const [isSearchExpanded, setIsSearchExpanded] = React.useState(false);
+  const [searchValue, setSearchValue] = React.useState('');
+  const [isSearchExpanded, setIsSearchExpanded] = React.useState(false);
 
   const getDropdownItem = (version, isLatest = false) => (
     <DropdownItem
@@ -73,13 +69,13 @@ const HeaderTools = ({
     </DropdownItem>
   );
 
-  // const onChange = (_evt, value) => {
-  //   setSearchValue(value);
-  // };
+  const onChange = (_evt, value) => {
+     setSearchValue(value);
+  };
 
-  // const onToggleExpand = (_evt, isSearchExpanded) => {
-  //   setIsSearchExpanded(!isSearchExpanded);
-  // };
+   const onToggleExpand = (_evt, isSearchExpanded) => {
+     setIsSearchExpanded(!isSearchExpanded);
+   };
 
   const toggleDarkTheme = (_evt, selected) => {
     const darkThemeToggleClicked = !selected === isDarkTheme;
@@ -89,12 +85,12 @@ const HeaderTools = ({
     setIsDarkTheme(darkThemeToggleClicked);
   };
 
-  // useEffect(() => {
-  //   // reattach algolia to input each time search is expanded
-  //   if (hasSearch && isSearchExpanded) {
-  //     attachDocSearch(algolia, '.ws-global-search .pf-v6-c-text-input-group__text-input', 1000);
-  //   }
-  // }, [isSearchExpanded])
+  useEffect(() => {
+    // reattach algolia to input each time search is expanded
+    if (hasSearch && isSearchExpanded) {
+      attachDocSearch(algolia, '.ws-global-search .pf-v6-c-text-input-group__text-input', 1000);
+    }
+   }, [isSearchExpanded])
 
   return (
     <Toolbar isFullHeight>
@@ -133,7 +129,7 @@ const HeaderTools = ({
               />
             </ToolbarItem>
           )}
-          {/* {hasSearch && (
+          {hasSearch && (
             <ToolbarItem>
               <SearchInput
                 className="ws-global-search"
@@ -144,7 +140,7 @@ const HeaderTools = ({
                 expandableInput={{ isExpanded: isSearchExpanded, onToggleExpand, toggleAriaLabel: 'Expandable search input toggle' }}
               />
             </ToolbarItem>
-          )} */}
+          )}
           <ToolbarItem>
             <Button
               component="a"
@@ -164,7 +160,6 @@ const HeaderTools = ({
                 isOpen={isDropdownOpen}
                 toggle={(toggleRef) => (
                   <MenuToggle
-                    isFullHeight
                     ref={toggleRef}
                     onClick={() => setDropdownOpen(!isDropdownOpen)}
                     isExpanded={isDropdownOpen}
@@ -200,7 +195,7 @@ const HeaderTools = ({
                       key="PatternFly 6"
                       className="ws-patternfly-versions"
                       isExternalLink
-                      to="https://staging-v6.patternfly.org/"
+                      to="https://staging.patternfly.org/"
                       itemId="patternfly-6"
                     >
                       PatternFly 6

@@ -22,9 +22,9 @@ A local development server at http://localhost:8003 can be started with:
 
 ### Build
 
-The new v6 site can be built with:
+The site can be built with:
 
-    yarn build:v6
+    yarn build
 
 The static assets get copied to build/patternfly-org.
 
@@ -46,7 +46,7 @@ To update the screenshots (these are the images that you click on to see a full-
 
 Make sure that the version of Chromium you are using is relatively recent. Version 112.0.5614.0 (Developer Build), for example, isn't compatible with the latest versions of PatternFly, and your screenshots will be off.
 
-Browse the screenshots to make sure that nothing seems super off. For V6, you can compare to [PatternFly React V6 staging](https://patternfly-react-v6.surge.sh/) and [PatternFly Core V6 staging](https://pf6.patternfly.org/) to verify. You may need to bump PatternFly-React and Core versions if things are only off in the patternfly-org workspace.
+Browse the screenshots to make sure that nothing seems super off. You can compare to [PatternFly React staging](https://patternfly-react.surge.sh/) and [PatternFly Core staging](https://pf.patternfly.org/) to verify. You may need to bump PatternFly-React and Core versions if things are only off in the patternfly-org workspace.
 
 ### Old submodules
 
