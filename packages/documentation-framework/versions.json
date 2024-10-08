@@ -2,7 +2,7 @@
   "Releases": [
     {
       "name": "prerelease",
-      "date": "2023-12-03",
+      "date": "2024-10-08",
       "latest": true,
       "versions": {
         "@patternfly/patternfly": "6.0.0-prerelease.15",
@@ -21,7 +21,7 @@
         "@patternfly/react-user-feedback": "6.0.0-prerelease.2",
         "@patternfly/react-console": "6.0.0-prerelease.2",
         "@patternfly/quickstarts": "6.0.0-prerelease.2",
-        "@patternfly/react-virtualized-extension": "6.0.0-prerelease.3",
+        "@patternfly/react-virtualized-extension": "6.0.0-prerelease.4",
         "@patternfly/react-templates": "6.0.0-prerelease.21"
       }
     },{
