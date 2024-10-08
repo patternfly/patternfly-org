@@ -88,7 +88,7 @@ Some users may prefer to log in with their social networks or IdPs accounts. A s
 Please refer to branding guidelines when using logos for social login page. Examples of branding guidelines include:
 
 * [Facebook brand guidelines](https://en.facebookbrand.com/guidelines/brand)
-* [Twitter brand guidelines](https://about.twitter.com/en_us/company/brand-resources.html)
+* [X brand guidelines](https://about.x.com/en_us/company/brand-resources.html)
 * [GitHub brand guidelines](https://github.com/logos)
 * [Stack Exchange brand guidelines](https://stackexchange.com/legal/trademark-guidance)
 * [Google brand guidelines](https://developers.google.com/identity/branding-guidelines)
