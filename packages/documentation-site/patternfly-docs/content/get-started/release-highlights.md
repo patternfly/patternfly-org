@@ -5,7 +5,9 @@ section: get-started
 ---
 
 import './get-started.css';
-import { Divider } from '@patternfly/react-core';
+import { Divider, Timestamp } from '@patternfly/react-core';
+
+<Timestamp>August 2024</Timestamp>
 
 ## PatternFly 6 beta
 We’re excited to share the next milestone in our journey to PatternFly 6–our beta release! This beta introduces more improvements and refinement, and contains all major PatternFly 6 features. 
@@ -93,7 +95,9 @@ We fixed bugs that were reported throughout the alpha period including. We:
 
 <Divider />
 
-## PatternFly 6 alpha 1
+<Timestamp>June 2024</Timestamp>
+
+## PatternFly 6 alpha 
 
 We're excited to announce that our alpha release of PatternFly 6 is now live. Here are the highlights that you should know about!
 
