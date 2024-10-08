@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 6.0.0-alpha.112 (2024-10-08)
+
+
+### Features
+
+* **version:** update to extension prerelease ([#4309](https://github.com/patternfly/patternfly-org/issues/4309)) ([7259b79](https://github.com/patternfly/patternfly-org/commit/7259b79c01f45b33d84c848a8a01820fee75ddae))
+
+
+
+
+
 # 6.0.0-alpha.111 (2024-10-08)
 
 **Note:** Version bump only for package @patternfly/documentation-framework
