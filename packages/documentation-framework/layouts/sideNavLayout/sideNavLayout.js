@@ -9,7 +9,6 @@ import {
   DropdownGroup,
   DropdownList,
   Divider,
-  Icon,
   Masthead,
   MastheadToggle,
   MastheadMain,
