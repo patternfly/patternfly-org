@@ -291,11 +291,17 @@ Now that you've been introduced to PatternFly, you're ready to start designing o
 
 ## Release cadence
 
-We plan to release a new major version of PatternFly every year. These major releases will be the only releases with planned "breaking changes" that alter the way your code interacts with PatternFly's code. Along with each major release, we will provide detailed upgrade guides and codemods to support the work needed to upgrade your products to the latest version of PatternFly.
+### Major releases
 
-Minor feature releases will be available quarterly to introduce non-breaking changes, like new features and enhancements, with interim patch releases to fix any bugs that we find.
+A major release is one that sees the version of PatternFly increase, for example PatternFly 5 to PatternFly 6. Major releases are the only releases with planned "breaking changes" that alter the way your product's code interacts with PatternFly's code. 
 
-Occasionally, a component page will contain a "React next" tab, which contains details about planned changes for the implementation of the component. This updated implementation will be promoted to the main component page as part of a major release, and will become the new recommended implementation. When this happens, the previous implementation will be deprecated. Deprecated component implementations will remain available until a following major release, but will no longer be maintained or updated.
+Along with each major release, we will provide detailed upgrade guides and codemods to support the work needed to upgrade your products to the latest version.
+
+A major version of PatternFly will only be supported through the subsequent version. This means, with the release of PatternFly 6, we no longer offer support PatternFly 4.
+
+### Minor and patch releases
+
+Minor feature releases will be available quarterly to introduce non-breaking changes, like new features and enhancements. We will also share interim patch releases to fix any bugs that we find.
 
 ## Beta components 
 
@@ -312,10 +318,11 @@ If you are considering using a beta component, make sure to:
 1. Play with the examples in the component's documentation on the PatternFly website to determine if the current implementation meets your needs. Open issues for any missing features, enhancement requests, or bugs.
 2. Check the [PatternFly Issues GitHub Project board](https://github.com/orgs/patternfly/projects/7/views/1). Browse any open issues for the beta component to determine how much more the beta component could evolve in the near future.
 
-
 ## Deprecated components 
 
 Deprecated components are components that are no longer recommended for use in PatternFly, either due to significant design or code changes. Once deprecated, a component is replaced with a newer implementation, and the previous implementation is no longer maintained or enhanced. 
+
+Occasionally, a component page will contain a "React next" tab, which contains details about planned changes for the implementation of the component. This updated implementation will be promoted to the main component page as part of a major release, and will become the new recommended implementation. When this happens, the previous implementation will be deprecated. Deprecated component implementations will remain available until a following major release, but will no longer be maintained or updated.
 
 Deprecated components will typically be available to use until the next major release, after which no documentation will be included on the current release website.
 
