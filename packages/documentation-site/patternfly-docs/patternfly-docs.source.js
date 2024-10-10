@@ -31,6 +31,8 @@ module.exports = (sourceMD, sourceProps, sourceFunctionDocs) => {
 
     sourceMD(path.join(contentBase, 'tokens/**/*.md'), 'tokens');
 
+    sourceMD(path.join(contentBase, 'PatternFly-AI/**/*.md'), 'PatternFly-AI');
+
     // Gallery pages
     const galleryBase = path.join(__dirname, "../patternfly-docs/pages");
     sourceMD(path.join(galleryBase, "landing-pages/**/*.md"), "landing-pages");
