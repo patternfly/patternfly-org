@@ -51,13 +51,19 @@ Here are the most significant updates we made to our React components:
     - Removed `pf-m-actions` and, consequently, `SplitButtonOptions`. Items should now be passed directly to `splitButtonItems`.
     - Added `isPlaceholder` to support customizable placeholder text, as well as [a corresponding example](/components/menu-toggle#placeholder-text-in-toggle).
 
-### Design token updates 
+### Token updates 
 
-We updated existing tokens and added new tokens to support directional box-shadows. To see these tokens, search "box-tokens" in our [tokens documentation](/tokens/all-patternfly-tokens).
+#### Design tokens 
+
+We updated existing design tokens and added new tokens to support directional box-shadows. To see these tokens, search "box-tokens" in our [tokens documentation](/tokens/all-patternfly-tokens).
 
 We also added a few new tokens to support the needs of our new chatbot, including:
 - A tertiary background token that accommodates containers placed on a secondary background.
 - Inverse hover and inverse clicked tokens.
+
+#### React tokens
+
+We added a `t_` prefix to our React tokens. 
 
 ### Extensions maintenance 
 
@@ -70,17 +76,17 @@ We made a couple of updates to ensure that extensions are in line with PatternFl
 
 In addition to the previously mentioned documentation updates, we've made changes to the following content areas:
 
-- Design guidelines 
-    - Added a new [status and severity pattern](/patterns/status-and-severity), which provides guidance for using our new severity icons.
-    - Updated our [quick starts extension](/extensions/quick-starts) with more content guidance.
-    - Documented our tabular number modifier `.pf-v6-m-tabular-nums` in [typography](/design-foundations/typography), [numerics](/ux-writing/numerics), and [table.](/components/table/design-guidelines)
-    - Added guidance for editorial styling to our [content component](/components/content) (formerly called text content).
-    - We've started updating images across our design guidelines to represent PatternFly 6 styling.
+#### Design guidelines 
+- Added a new [status and severity pattern](/patterns/status-and-severity), which provides guidance for using our new severity icons.
+- Updated our [quick starts extension](/extensions/quick-starts) with more content guidance.
+- Documented our tabular number modifier `.pf-v6-m-tabular-nums` in [typography](/design-foundations/typography), [numerics](/ux-writing/numerics), and [table.](/components/table/design-guidelines)
+- Added guidance for editorial styling to our [content component](/components/content) (formerly called text content).
+- We've started updating images across our design guidelines to represent PatternFly 6 styling.
 
-- Miscellaneous cleanup and enhancements
-    - Shortened component descriptions shown in component page headers and [all components page](/components/all-components).
-    - Added more details about [React tokens](/tokens/develop-with-tokens#react-tokens) and [how to migrate them](/get-started/upgrade#utilize-our-tokens-update-codemod).
-    - Added React example documentation for [text input group](/components/text-input-group).
+#### Miscellaneous cleanup and enhancements
+- Shortened component descriptions shown in component page headers and [all components page](/components/all-components).
+- Added more details about [React tokens](/tokens/develop-with-tokens#react-tokens) and [how to migrate them](/get-started/upgrade#utilize-our-tokens-update-codemod).
+- Added React example documentation for [text input group](/components/text-input-group).
 
 <Divider />
 
