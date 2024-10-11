@@ -242,8 +242,26 @@ module.exports = (sourceMD, sourceProps, sourceFunctionDocs) => {
     "design-guidelines"
   );
 
+  // Virtual assistant (aka Chatbot)
+  const virtualAssistantPath = require
+    .resolve("@patternfly/virtual-assistant/package.json")
+    .replace("package.json", "src");
+
+  const virtualAssistantBase = require
+    .resolve("@patternfly/virtual-assistant/package.json")
+    .replace(
+      "package.json",
+      "patternfly-docs/content/extensions/virtual-assistant"
+    );
+
+  sourceProps(
+    path.join(virtualAssistantPath, "/**/*.tsx"),
+    reactPropsIgnore
+  );
+  sourceMD(path.join(virtualAssistantBase, 'examples/**/*.md'), 'PatternFly-AI');
+  sourceMD(path.join(virtualAssistantBase, '*.md'), 'PatternFly-AI');
+
   // Prerelease sections:
-  // Component Groups extension (Currently in PRERELEASE, so only include in PRERELEASE builds)
   if (process.env.PRERELEASE === "true") {
     const reactVirtualizedTablePath = require
       .resolve("@patternfly/react-virtualized-extension/package.json")

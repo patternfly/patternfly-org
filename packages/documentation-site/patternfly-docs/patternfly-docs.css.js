@@ -17,3 +17,5 @@ import "@patternfly/react-topology/src/css/topology-pipelines.css";
 import "@patternfly/react-log-viewer/src/LogViewer/css/log-viewer.css";
 // Patternfly user feedback
 import "@patternfly/react-user-feedback/src/Feedback/Feedback.css";
+// Patternfly virtual assistant
+import '@patternfly/virtual-assistant/dist/css/main.css';
