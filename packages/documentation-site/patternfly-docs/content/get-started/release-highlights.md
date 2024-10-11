@@ -7,6 +7,83 @@ section: get-started
 import './get-started.css';
 import { Divider, Timestamp } from '@patternfly/react-core';
 
+<Timestamp>October 2024</Timestamp>
+
+## PatternFly 6.0
+The official release of PatternFly 6 is here! It contains all of the previous features from our alpha and beta releases, but also adds everything described in these release highlights.
+
+### PatternFly AI
+
+We're excited to introduce PatternFly AI: our new effort to support and integrate AI into our design system. We've added guidance and resources, contained within a new section of our website:
+
+- [About PatternFly AI](/patternfly-ai/about-patternfly-ai)
+- [AI guidelines](/patternfly-ai/ai-guidelines)
+- [Chatbot](/patternfly-ai/chatbot/about-chatbot)
+- [Conversation design](/patternfly-ai/conversation-design)
+
+As with all things AI currently, this area will continue to grow and mature with time.
+
+### Component groups restructuring
+
+We made many updates to our component groups extension, to improve accuracy, usability, and alignment with PatternFly 6. We've moved its website section to our top-level navigation for better visibility, and also to support necessary sub-navigation. We've conceptually grouped the components into functional categories. Additionally, we renamed some of the components to be more accurate. 
+
+[Check out the updated documentation](/component-groups/about-component-groups), which includes:
+
+| **Category** | **Components** | 
+| --- | --- |
+| Content containers | - Details page <br /> - Multi-content card<br /> - Page header (previously named "content header")<br /> - Service card (new!) |
+| Controls | - Bulk select <br /> - Close button <br /> - Responsive actions (new!) |
+| Error communication | - Error boundary <br /> - Error state <br /> - Missing page (previously named "invalid object") <br /> - Unauthorized access (previously named "not authorized") <br /> - Unavailable content <br /> - Warning modal |
+| Helpers | - Column management modal <br /> - Log snippet <br /> - Shortcut grid |
+| Status and state indicators | - Ansible <br /> - Battery <br /> - Skeleton table <br /> - Status (new!) <br /> - Tag count |
+
+### React component updates 
+
+Here are the most significant updates we made to our React components: 
+
+- Data list
+    - Refactored `<DataListCheck>` to use `<Checkbox>` internally. As a result, `id` is now a required prop for ` <DataListCheck>`. This also fixes broken checkboxes in the examples. 
+- Dropdown
+    - Added delay before setting focus on the first dropdown item when `shouldFocusFirstItemOnOpen` is set. This gives enough time for the popover to be shown in the correct location, so the scrollable doesn't scroll to an invalid location.
+- Jumplinks
+    - Fixed improper offset in [demo](/components/jump-links/react-demos). 
+- Menu toggle
+    - Removed `pf-m-actions` and, consequently, `SplitButtonOptions`. Items should now be passed directly to `splitButtonItems`.
+    - Added `isPlaceholder` to support customizable placeholder text, as well as [a corresponding example](/components/menu-toggle#placeholder-text-in-toggle).
+
+### Design token updates 
+
+We updated existing tokens and added new tokens to support directional box-shadows. To see these tokens, search "box-tokens" in our [tokens documentation](/tokens/all-patternfly-tokens).
+
+We also added a few new tokens to support the needs of our new chatbot, including:
+- A tertiary background token that accommodates containers placed on a secondary background.
+- Inverse hover and inverse clicked tokens.
+
+### Extensions maintenance 
+
+We made a couple of updates to ensure that extensions are in line with PatternFly 6 styling:
+
+- Updated card title style in [quick starts](/extensions/quick-starts/Basic-quick-starts) to maintain the proper blue link style.
+- Updated [link catalog tiles](/extensions/catalog-view/catalog-tile#link-variant) in the catalog view extension to be actionable cards.
+
+### Content updates 
+
+In addition to the previously mentioned documentation updates, we've made changes to the following content areas:
+
+- Design guidelines 
+    - Added a new [status and severity pattern](/patterns/status-and-severity), which provides guidance for using our new severity icons.
+    - Updated our [quick starts extension](/extensions/quick-starts) with more content guidance.
+    - Documented our tabular number modifier `.pf-v6-m-tabular-nums` in [typography](/design-foundations/typography), [numerics](/ux-writing/numerics), and [table.](/components/table/design-guidelines)
+    - Added guidance for editorial styling to our [content component](/components/content) (formerly called text content).
+    - We've started updating images across our design guidelines to represent PatternFly 6 styling.
+
+- Miscellaneous cleanup and enhancements
+    - Shortened component descriptions shown in component page headers and [all components page](/components/all-components).
+    - Added more details about [React tokens](/tokens/develop-with-tokens#react-tokens) and [how to migrate them](/get-started/upgrade#utilize-our-tokens-update-codemod).
+    - Added React example documentation for [text input group](/components/text-input-group).
+
+<Divider />
+
 <Timestamp>August 2024</Timestamp>
 
 ## PatternFly 6 beta
