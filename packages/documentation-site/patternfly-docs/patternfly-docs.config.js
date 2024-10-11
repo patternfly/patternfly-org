@@ -33,6 +33,7 @@ if (process.env.EXTENSIONS_ONLY === 'true') {
       { section: 'get-started' },
       { section: 'design-foundations' },
       { section: 'tokens' },
+      { section: 'PatternFly-AI' },
       { section: 'accessibility' },
       { section: 'UX writing' },
       { section: 'components' },
