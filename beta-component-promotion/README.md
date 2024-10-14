@@ -5,7 +5,7 @@ initially released in `beta`. Such components are labelled with a blue informati
 
 There are two recommended steps to take when considering using a beta component in product:
 1. Play with the component examples in the docs and determine whether or not the current implementation meets your needs. Open issues for any missing features, enhancement requests, or bugs.
-2. Check the [PatternFly Issues GitHub Project board](https://github.com/orgs/patternfly/projects/7/views/5) where we have created a view to categorize most issues by component. Browse any open issues for the beta component to determine how much more the beta component could evolve in the near future.
+2. Check the [PatternFly Issues GitHub Project board](https://github.com/orgs/patternfly/projects/7/views/1). Browse any open issues for the beta component to determine how much more the beta component could evolve in the near future.
 
 Beta components are open to evolution and possible breaking changes 
 pending testing and feedback. Each beta component is evaluated on a quarterly basis to evaluate its stability
@@ -23,21 +23,16 @@ as well as relevant examples in the documentation are all labeled as beta.
 
 | *Component currently in beta*          | inital @patternfly/patternfly milestone | inital @patternfly/patternfly-react milestone |
 |----------------------------------------|-----------------------------------------|-----------------------------------------------|
-| Button: with count                     | 2022.11                                 | 2022.12                                       |
-| DataList: draggable                    | 2021.12                                 | 2020.13                                       |
-| Drag and drop                          | 2021.13                                 | 2021.14                                       |
-| Date and time picker demo              | --                                      | 2020.16                                       |
-| Expandable section: truncate expansion | 2022.11                                 | 2022.11                                       |
-| Label: Editable                        | 2021.07                                 | 2021.10                                       |
-| LabelGroup: Editable                   | 2022.08                                 | 2022.08                                       |
-| Menu: flyout                           | 2020.11                                 | 2021.10                                       |
-| Menu: drilldown                        | 2020.11                                 | 2021.03                                       |
-| Nav: flyout                            | 2021.13                                 | 2021.13                                       |
-| Nav: drilldown                         | 2021.12                                 | --                                            |
-| Pagination: insets                     | 2022.15                                 | 2022.16                                       |
-| Spinner: inline                        | 2022.14                                 | 2022.15                                       |
+| Chart skeleton theme                   | --                                      | 2024 Q2                                       |
 | Table: draggable rows                  | 2021.08                                 | 2021.08                                       |
-| TimePicker                             | --                                      | 2020.16                                       |
-| Timestamp                              | 2022.10                                 | 2022.11                                       |
+| Select templates                       | --                                      | 2024 Q1                                       |
+| Dropdown templates                     | --                                      | 2024 Q1                                       |
+| Menu: shouldFocusFirstItemOnOpen       | --                                      | 2024 Q1                                       |
+| Dropdown: shouldFocusFirstItemOnOpen   | --                                      | 2024 Q1                                       |
+| Select: shouldFocusFirstItemOnOpen     | --                                      | 2024 Q1                                       |
+| PageBreadcrumb: hasBodyWrapper         | --                                      | 2024 Q2                                       |
+| PageSection: hasBodyWrapper            | --                                      | 2024 Q2                                       |
+| Pagination: menuAppendTo               | --                                      | 2024 Q2                                       |
+| PaginationOptionsMenu: appendTo        | --                                      | 2024 Q2                                       |
 
 

@@ -54,10 +54,10 @@ const cardData = [
     hasExtLinkIcon: true,
   },
   {
-    title: 'Follow us on Twitter',
-    body: 'Stay up to date on timely PatternFly news and updates through our Twitter.',
+    title: 'Follow us on X',
+    body: 'Stay up to date on timely PatternFly news and updates through our X.',
     layout: 'withSubtitle',
-    link: 'https://twitter.com/patternfly',
+    link: 'https://x.com/patternfly',
     hasExtLinkIcon: true,
   },
   {
