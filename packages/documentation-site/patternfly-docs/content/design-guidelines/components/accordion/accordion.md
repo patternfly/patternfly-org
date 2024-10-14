@@ -3,9 +3,13 @@ id: Accordion
 section: components
 ---
 
+import '../components.css';
+
 ## Elements
 
-![Elements of accordion component](./img/accordion-elements.png)
+<div class="ws-docs-content-img">
+![Elements of accordion component](./img/accordion-elements.svg)
+</div>
 
 1. **Header:** Interactive link that expands or collapses to reveal the nested content.
 2. **Label:** Summary descriptions of the nested content.
@@ -37,14 +41,18 @@ Users click or tap on section header of collapsed accordion and content area wil
 Use when you are trying to bring focus to a single row at a time, by default the first row is always open. This is ideal for content that is mutually exclusive and doesn’t all need to be shown at once. Single expand accordions are particularly useful when working with forms, navigation and subnavigation.  
 
   <br />
-  
-  ![Accordion single expand behavior](./img/single-expand-accordion.png)
+
+  <div class="ws-docs-content-img">
+  ![Accordion single expand behavior](./img/single-expand-accordion.svg)
+  </div>
 
 * **Multiple expand behavior**: Use when users may want to view content from different sections simultaneously. This variation gives users the ability to open multiple rows at a time, content will expand or collapse per each interaction. This variation is frequently used in FAQ sections and product comparisons.
 
   <br />
-
-  ![Accordion multi-expand behavior](./img/multi-expand-accordion.png) 
+  
+  <div class="ws-docs-content-img">
+  ![Accordion multi-expand behavior](./img/multi-expand-accordion.svg) 
+  </div>
 
 ## Accessibility
 
