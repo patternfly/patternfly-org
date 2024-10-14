@@ -5,9 +5,13 @@ subsection: date-and-time
 related: ["Date picker", "Time picker"]
 ---
 
+import '../components.css';
+
 ## Elements
 
-![Calendar month elements](./img/calendar-month-elements.png)
+<div class="ws-docs-content-img">
+![Calendar month elements](./img/calendar-month-elements.svg)
+</div>
 
 1. **Selection arrow**: Allows users to navigate between months.
 2. **Selected date**
