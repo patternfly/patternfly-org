@@ -16,7 +16,7 @@ The basic layout of a page differs depending on whether your application uses ve
 
 **3. Breadcrumb (optional):** When breadcrumbs are included, they should be the topmost element in the header section. When breadcrumbs are included on a page, the top padding is reduced from 24px to 16px. See the [breadcrumb design guidelines](/components/breadcrumb/design-guidelines) for more information about breadcrumb usage.
 
-**4. Page header:** All pages should have a header section. The height of the header will vary to fit the content. We recommend keeping information in the header area brief to consume as little space as possible. The page header should contain the page title to help orient the user and an optional description to describe the contents of the page. You may optionally apply the `pf-m-sticky-top` modifier to the header section to create a sticky page header and prevent its content from scrolling off the page.
+**4. Page header:** All pages should have a header section. The height of the header will vary to fit the content. We recommend keeping information in the header area brief to consume as little space as possible. The page header should contain the page title to help orient the user and an optional description to describe the contents of the page. You may optionally apply the `pf-m-sticky-top` modifier to the header section to create a sticky page header and prevent its content from scrolling off the page. A sticky page header should have a drop shadow.
 
 **5. Body section:** Your main page content goes here. The body section can have a light gray `--pf-v6-global--BackgroundColor--200` or white background depending on the content it will contain. The default padding all around the page body should be 24px in all directions.
 
