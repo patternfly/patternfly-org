@@ -20,7 +20,7 @@ The basic layout of a page differs depending on whether your application uses ve
 
 **5. Body section:** Your main page content goes here. The body section can have a light gray `--pf-v6-global--BackgroundColor--200` or white background depending on the content it will contain. The default padding all around the page body should be 24px in all directions.
 
-**6. Footer section (optional):** You can optionally define a footer section for a page. You may optionally apply the `pf-m-sticky-bottom` modifier to the footer section to create a sticky page footer and prevent its content from scrolling off the page.
+**6. Footer section (optional):** You can optionally define a footer section for a page. You may optionally apply the `pf-m-sticky-bottom` modifier to the footer section to create a sticky page footer and prevent its content from scrolling off the page. A sticky page footer should have a drop shadow.
 
 ### Page with horizontal navigation
 
