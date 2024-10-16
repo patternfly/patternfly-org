@@ -28,7 +28,7 @@ import { featuredPostsData } from './featured-posts-data';
 
 const cardData = [
   {
-    title: 'Upgrade to PatternFly v5',
+    title: 'Upgrade to PatternFly 6',
     body: 'Reference our upgrade guide to learn how you can update to the latest version of PatternFly.',
     link: '/get-started/upgrade',
     layout: 'withSubtitle',
@@ -152,13 +152,6 @@ const FeaturedBlogCard = ({ postData, idx }) => {
 
 const HomePage = () => (
   <React.Fragment>
-    <Banner color="blue" isSticky>
-      Welcome to the PatternFly 6 staging website! PatternFly 6 is{' '}
-      <span className="pf-v6-u-font-weight-bold">
-        still under development, so documentation across this website will
-        continue to change.
-      </span>
-    </Banner>
     <PageSection isWidthLimited className="ws-homepage-main-section">
       <Flex
         direction={{ default: 'column', lg: 'row' }}
