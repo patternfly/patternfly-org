@@ -63,7 +63,7 @@ We also added a few new tokens to support the needs of our new chatbot, includin
 
 #### React tokens
 
-We added a `t_` prefix to our React tokens. 
+To address instances where chart tokens and chart variable names were unintentionally identical, we added a `t_` prefix to our React tokens. This makes it easier to differentiate between tokens and variables.
 
 ### Extensions maintenance 
 
