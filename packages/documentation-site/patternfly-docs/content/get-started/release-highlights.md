@@ -35,7 +35,7 @@ We made many updates to our component groups extension, to improve accuracy, usa
 | Controls | - Bulk select <br /> - Close button <br /> - Responsive actions (new!) |
 | Error communication | - Error boundary <br /> - Error state <br /> - Missing page (previously named "invalid object") <br /> - Unauthorized access (previously named "not authorized") <br /> - Unavailable content <br /> - Warning modal |
 | Helpers | - Column management modal <br /> - Log snippet <br /> - Shortcut grid |
-| Status and state indicators | - Ansible <br /> - Battery <br /> - Skeleton table <br /> - Status (new!) <br /> - Tag count |
+| Status and state indicators | - Ansible <br /> - Severity (previously Battery) <br /> - Skeleton table <br /> - Status (new!) <br /> - Tag count |
 
 ### React component updates 
 
