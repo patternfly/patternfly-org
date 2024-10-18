@@ -26,6 +26,7 @@ public
 static
 .cache
 /build
+.history
 
 # IDE - VSCode
 .vscode
