@@ -30,10 +30,10 @@
     ]
   },
   "devDependencies": {
-    "@patternfly/patternfly": "5.4.1",
-    "@patternfly/react-code-editor": "5.4.3",
-    "@patternfly/react-core": "5.4.1",
-    "@patternfly/react-table": "5.4.1",
+    "@patternfly/patternfly": "5.4.2",
+    "@patternfly/react-code-editor": "5.4.10",
+    "@patternfly/react-core": "5.4.8",
+    "@patternfly/react-table": "5.4.8",
     "@octokit/rest": "^19.0.7",
     "glob": "^8.1.0",
     "lerna": "^6.4.1",
