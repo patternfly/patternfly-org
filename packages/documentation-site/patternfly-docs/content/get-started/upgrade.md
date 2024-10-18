@@ -90,10 +90,10 @@ There are a few test failures that you're likely to encounter:
 
 1. **Button:** Cannot find `aria-disabled`
     - We changed button's `isDisabled` prop to assign a value for `disabled`, but none for `aria-disabled`. As a result, any test that looks for `aria-disabled` may fail.
-1. **Button:** Cannot find `disabled` when using `byText`
+1. **Button:** Cannot find button attributes when using `byText`
     - There's a new wrapping `div` around text in buttons. The RTL `byText` query returns that wrapper instead of the button element itself, which is where button's attributes live. Instead of `byText`, use `byRole` and pass the button text to `name`. This will return the top-level button element.
-1. **Select (when using Jest):** Cannot find `role`
-    - You may get an "unable to find role" error if the Popper menu is set to `aria-disabled` after a selection is made, because the RTL query can't find the menu options. This error only seems to occur with Jest, rather than within the browser. To resolve this, either: 
+1. **Select (when using React Testing Library):** Cannot find `role`
+    - You may get an "unable to find role" error if the Popper menu is set to `aria-disabled` after a selection is made, because the React Testing Library query can't find the menu options. This error only seems to occur in unit tests, rather than within the browser. To resolve this, either: 
         - Pass in the `{hidden: true}` option. 
         - Change select's `appendTo` to `inline`.
 
