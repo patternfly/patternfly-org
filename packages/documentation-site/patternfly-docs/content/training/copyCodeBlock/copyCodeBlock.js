@@ -1,9 +1,12 @@
 import React from 'react';
-import { CodeBlock, CodeBlockAction, CodeBlockCode, ClipboardCopyButton } from '@patternfly/react-core';
+import {
+  CodeBlock,
+  CodeBlockAction,
+  CodeBlockCode,
+  ClipboardCopyButton,
+} from '@patternfly/react-core';
 
-export const CopyCodeBlock = ({
-  children
-}) => {
+export const CopyCodeBlock = ({ id, children }) => {
   const [copied, setCopied] = React.useState(false);
 
   const clipboardCopyFunc = (event, text) => {
@@ -19,10 +22,10 @@ export const CopyCodeBlock = ({
     <React.Fragment>
       <CodeBlockAction>
         <ClipboardCopyButton
-          id="basic-copy-button"
+          id={`copy-${id}`}
           textId="code-content"
           aria-label="Copy to clipboard"
-          onClick={e => onClick(e, children)}
+          onClick={(e) => onClick(e, children)}
           exitDelay={copied ? 1500 : 600}
           maxWidth="110px"
           variant="plain"
@@ -34,10 +37,9 @@ export const CopyCodeBlock = ({
     </React.Fragment>
   );
 
-
   return (
     <CodeBlock actions={actions}>
-      <CodeBlockCode id="code-content">{children}</CodeBlockCode>
+      <CodeBlockCode id={`${id}-content`}>{children}</CodeBlockCode>
     </CodeBlock>
   );
 };
