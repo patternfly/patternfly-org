@@ -7,6 +7,59 @@ section: get-started
 import './get-started.css';
 import { Divider } from '@patternfly/react-core';
 
+## PatternFly 5.4 patches
+We've released a few patches for PatternFly 5.4, which primarily upgrade dependencies and fix bugs.
+
+### Promoted package versions
+- [@patternfly/patternfly: 5.4.2](https://www.npmjs.com/package/@patternfly/patternfly/v/5.4.2)
+- [@patternfly/react-charts: 7.4.5](https://www.npmjs.com/package/@patternfly/react-charts/v/7.4.5)
+- [@patternfly/react-code-editor: 5.4.10](https://www.npmjs.com/package/@patternfly/react-code-editor/v/5.4.10)
+- [@patternfly/react-core: 5.4.8](https://www.npmjs.com/package/@patternfly/react-core/v/5.4.8)
+- [@patternfly/react-drag-drop: 5.4.8](https://www.npmjs.com/package/@patternfly/react-drag-drop/v/5.4.8)
+- [@patternfly/react-icons: 5.4.2](https://www.npmjs.com/package/@patternfly/react-icons/v/5.4.2)
+- [@patternfly/react-styles: 5.4.1](https://www.npmjs.com/package/@patternfly/react-styles/v/5.4.1)
+- [@patternfly/react-table: 5.4.8](https://www.npmjs.com/package/@patternfly/react-table/v/5.4.8)
+- [@patternfly/react-templates: 1.1.8](https://www.npmjs.com/package/@patternfly/react-templates/v/1.1.8)
+- [@patternfly/react-tokens: 5.4.1](https://www.npmjs.com/package/@patternfly/react-tokens/v/5.4.1)
+- [@patternfly/react-component-groups: 5.5.3](https://www.npmjs.com/package/@patternfly/react-component-groups/v/5.5.3)
+
+### HTML updates
+- Menu toggle: Updated the secondary background color to be transparent, except for disabled states.
+
+### React updates
+
+#### Dependency upgrades
+- Updated `eslint-plugin-import` to ^2.30.0 
+- Updated `eslint-plugin-jsx-a11y` to ^6.10.0 
+- Updated `eslint-plugin-promise` to ^6.6.0 
+- Updated `tslib` to ^2.7.0 
+- Updated `eslint-plugin-react` to ^7.37.1 
+- Updated `focus-trap` to v7.6.0 
+- Updated `eslint-plugin-prettier` to ^5.2.1 
+
+#### Components
+- Menu: Fixed a focus event that caused inconsistent scrolling behavior across a number of menu components. 
+- Dropdown/select: Updated autofocus to be `false` by default. 
+- Dropdown: Delayed focus setting on first item to prevent inadvertent scrolling. 
+- Navigation: Reverted a previous PR that caused regression. 
+- "Next" modal: Updated to prevent auto `aria-labelledby` if `aria-label` is passed. 
+- Expandable section: Added checks for `contentRef` to avoid console errors.
+
+#### Charts
+- New and updated examples: 
+    - Bar chart: Added [a new example](/charts/bar-chart/#alerts-timeline) that demonstrates an alert timeline using horizontal bar charts.
+    - Pie chart: Updated [an existing example](/charts/pie-chart/#custom-color-scale) to demonstrate how to apply custom styles.
+    - Fixed a general issue that caused undesirable space between tick labels and bottom-positioned legends.
+
+- Bug fixes:
+    - Fixed `defaultProps` deprecation warning.
+    - Resolved issue with `victoryCreateContainer` that caused breakage when using the `createContainer` function.
+
+### Component groups
+
+- Multi content card: Fixed `ouiaId` issue in `<MenuToggle>`. 
+
+<Divider />
 
 ## PatternFly 5.4
 The final minor release within PatternFly 5 is now live! Next up is PatternFly 6. Don't forget to keep an eye on [our staging site](https://staging-v6.patternfly.org/) for updates. 
