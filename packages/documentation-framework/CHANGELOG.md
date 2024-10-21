@@ -3,6 +3,57 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 6.0.0-alpha.120 (2024-10-18)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+# 6.0.0-alpha.119 (2024-10-18)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+# 6.0.0-alpha.118 (2024-10-18)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+# 6.0.0-alpha.117 (2024-10-14)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+# 6.0.0-alpha.116 (2024-10-14)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+# 6.0.0-alpha.115 (2024-10-14)
+
+
+### Features
+
+* add chatbot docs ([#4316](https://github.com/patternfly/patternfly-org/issues/4316)) ([31432c1](https://github.com/patternfly/patternfly-org/commit/31432c1146b4a7b2ee56f2325b65c21f223218bc))
+
+
+
+
+
 # 6.0.0-alpha.114 (2024-10-10)
 
 **Note:** Version bump only for package @patternfly/documentation-framework

@@ -3,6 +3,57 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.4.0-alpha.109 (2024-10-18)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 1.4.0-alpha.108 (2024-10-18)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 1.4.0-alpha.107 (2024-10-18)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 1.4.0-alpha.106 (2024-10-14)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 1.4.0-alpha.105 (2024-10-14)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 1.4.0-alpha.104 (2024-10-14)
+
+
+### Features
+
+* add chatbot docs ([#4316](https://github.com/patternfly/patternfly-org/issues/4316)) ([31432c1](https://github.com/patternfly/patternfly-org/commit/31432c1146b4a7b2ee56f2325b65c21f223218bc))
+
+
+
+
+
 # 1.4.0-alpha.103 (2024-10-10)
 
 **Note:** Version bump only for package @patternfly/ast-helpers

@@ -33,43 +33,43 @@ export const Footer = ({ isDarkTheme }) => (
               md={4}
               className="pf-v6-u-ml-md pf-v6-u-ml-0-on-md pf-v6-u-mb-xl pf-v6-u-mb-0-on-md"
             >
-              <p className="ws-org-pfsite-footer-menu-list-title">Quicklinks</p>
+              <p className="ws-org-pfsite-footer-menu-list-title">What's new</p>
               <nav aria-label="Quick Links">
                 <List isPlain className="ws-org-pfsite-footer-menu-list">
-                  <ListItem className="ws-org-pfsite-footer-menu-list-item">
+                <ListItem className="ws-org-pfsite-footer-menu-list-item">
                     <Link
                       className="ws-org-pfsite-footer-menu-link"
-                      to={"/get-started/about-patternfly"}
-                      aria-label="Get started with PatternFly"
+                      to="/get-started/upgrade"
+                      aria-label="Latest PatternFly upgrade guide"
                     >
-                      Get started
+                      Upgrade
                     </Link>
                   </ListItem>
                   <ListItem className="ws-org-pfsite-footer-menu-list-item">
                     <Link
                       className="ws-org-pfsite-footer-menu-link"
-                      to="/components/all-components"
-                      aria-label="PatternFly components"
+                      to="/get-started/release-highlights/"
+                      aria-label="PatternFly release highlights"
                     >
-                      Components
+                      Releases
                     </Link>
                   </ListItem>
                   <ListItem className="ws-org-pfsite-footer-menu-list-item">
                     <Link
                       className="ws-org-pfsite-footer-menu-link"
-                      to="/layouts/about-layouts"
-                      aria-label="PatternFly layouts"
+                      to="/patternfly-ai/about-ai"
+                      aria-label="PatternFly's new AI resources"
                     >
-                      Layouts
+                      PatternFly AI
                     </Link>
                   </ListItem>
                   <ListItem className="ws-org-pfsite-footer-menu-list-item">
                     <Link
                       className="ws-org-pfsite-footer-menu-link"
-                      to="/design-foundations/about-design-foundations"
-                      aria-label="PatternFly styles"
+                      to="/tokens/about-tokens"
+                      aria-label="PatternFly's new token system"
                     >
-                      Styles
+                      Tokens
                     </Link>
                   </ListItem>
                 </List>
@@ -83,35 +83,34 @@ export const Footer = ({ isDarkTheme }) => (
               <p className="ws-org-pfsite-footer-menu-list-title">Contribute</p>
               <nav aria-label="Contribute">
                 <List isPlain className="ws-org-pfsite-footer-menu-list">
-                  <ListItem className="ws-org-pfsite-footer-menu-list-item">
+                <ListItem className="ws-org-pfsite-footer-menu-list-item">
                     <Link
                       className="ws-org-pfsite-footer-menu-link"
-                      to="/get-started/design"
-                      aria-label="How to contribute as a Designer"
+                      to="/get-started/about-patternfly"
+                      aria-label="Learn about PatternFly"
                     >
-                      Designers
-                    </Link>
-                  </ListItem>
-                  <ListItem className="ws-org-pfsite-footer-menu-list-item">
-                    <Link
-                      className="ws-org-pfsite-footer-menu-link"
-                      to="/get-started/develop"
-                      aria-label="How to contribute as a Developer"
-                    >
-                      Developers
+                      About PatternFly
                     </Link>
                   </ListItem>
                   <ListItem className="ws-org-pfsite-footer-menu-list-item">
                     <Link
                       className="ws-org-pfsite-footer-menu-link"
                       to="https://github.com/patternfly/patternfly/blob/main/CODE_OF_CONDUCT.md"
-                      target="top"
-                      aria-label="PatternFly Code of Conduct"
+                      aria-label="Our code of conduct for contributions"
                     >
-                      Code of Conduct
+                      Code of conduct
                     </Link>
                   </ListItem>
-                </List>
+                  <ListItem className="ws-org-pfsite-footer-menu-list-item">
+                    <Link
+                      className="ws-org-pfsite-footer-menu-link"
+                      to="/get-started/contribute"
+                      aria-label="Learn how to contribute to PatternFly"
+                    >
+                      Contribute
+                    </Link>
+                  </ListItem>
+                  </List>
               </nav>
             </GridItem>
             <GridItem
@@ -120,7 +119,7 @@ export const Footer = ({ isDarkTheme }) => (
               className="pf-v6-u-mt-lg pf-v6-u-mt-0-on-md pf-v6-u-ml-md pf-v6-u-ml-0-on-md"
             >
               <p className="ws-org-pfsite-footer-menu-list-title">
-                Stay in touch
+                Community
               </p>
               <nav aria-label="Stay in touch">
                 <List isPlain className="ws-org-pfsite-footer-menu-list">
@@ -137,11 +136,11 @@ export const Footer = ({ isDarkTheme }) => (
                   <ListItem className="ws-org-pfsite-footer-menu-list-item">
                     <Link
                       className="ws-org-pfsite-footer-menu-link"
-                      to="//github.com/orgs/patternfly/discussions"
+                      to="//medium.com/patternfly"
                       target="top"
-                      aria-label="Visit the PatternFly discussion forum"
+                      aria-label="Read the PatternFly blog"
                     >
-                      Discussions
+                     Blog
                     </Link>
                   </ListItem>
                   <ListItem className="ws-org-pfsite-footer-menu-list-item">
@@ -157,13 +156,22 @@ export const Footer = ({ isDarkTheme }) => (
                   <ListItem className="ws-org-pfsite-footer-menu-list-item">
                     <Link
                       className="ws-org-pfsite-footer-menu-link"
-                      to="//medium.com/patternfly"
-                      target="top"
-                      aria-label="Read the PatternFly blog"
+                      to="https://github.com/patternfly/patternfly/blob/main/CODE_OF_CONDUCT.md"
+                      aria-label="Join PatternFly meetings"
                     >
-                      PatternFly Medium
+                      Calendar
                     </Link>
                   </ListItem>
+                  <ListItem className="ws-org-pfsite-footer-menu-list-item">
+                    <Link
+                      className="ws-org-pfsite-footer-menu-link"
+                      to="//github.com/orgs/patternfly/discussions"
+                      target="top"
+                      aria-label="Visit the PatternFly discussion forum"
+                    >
+                      Discussions
+                    </Link>
+                </ListItem>
                 </List>
               </nav>
             </GridItem>
