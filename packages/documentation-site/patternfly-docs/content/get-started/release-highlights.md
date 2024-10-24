@@ -25,9 +25,9 @@ As with all things AI currently, this area will continue to grow and mature with
 
 ### Component groups restructuring
 
-We made many updates to our component groups extension, to improve accuracy, usability, and alignment with PatternFly 6. We've moved its website section to our top-level navigation for better visibility, and also to support necessary sub-navigation. We've conceptually grouped the components into functional categories. Additionally, we renamed some of the components to be more accurate. 
+We made many updates to our [component groups extension](/component-groups/about-component-groups) to improve accuracy, usability, and alignment with PatternFly 6. We've moved its website section to our top-level navigation for better visibility, and also to support necessary sub-navigation. We've conceptually grouped the components into functional categories. Additionally, we renamed some of the components to be more accurate. 
 
-[Check out the updated documentation](/component-groups/about-component-groups), which includes:
+Our updated documentation includes:
 
 | **Category** | **Components** | 
 | --- | --- |
@@ -42,20 +42,27 @@ We made many updates to our component groups extension, to improve accuracy, usa
 Here are the most significant updates we made to our React components: 
 
 - Data list
-    - Refactored `<DataListCheck>` to use `<Checkbox>` internally. As a result, `id` is now a required prop for ` <DataListCheck>`. This also fixes broken checkboxes in the examples. 
+    - Refactored `<DataListCheck>` to use `<Checkbox>` internally, which fixes broken checkboxes in the examples. 
 - Dropdown
-    - Added delay before setting focus on the first dropdown item when `shouldFocusFirstItemOnOpen` is set. This gives enough time for the popover to be shown in the correct location, so the scrollable doesn't scroll to an invalid location.
-- Jumplinks
+    - Added `focusTimeoutDelay`, which specifies the time to wait before setting focus on the first dropdown item when `shouldFocusFirstItemOnOpen` is set. 
+    - Fixed issues with invalid and jumpy scrolling when focusing on the first menu item.
+- Jump links
     - Fixed improper offset in [demo](/components/jump-links/react-demos). 
 - Menu toggle
     - Removed `pf-m-actions` and, consequently, `SplitButtonOptions`. Items should now be passed directly to `splitButtonItems`.
     - Added `isPlaceholder` to support customizable placeholder text, as well as [a corresponding example](/components/menu-toggle#placeholder-text-in-toggle).
+- Table
+    - Added `isPlaceholder` to the `<EditableSelectInputCell>` component, which can be used to add placeholder styles to the toggle. This is a feature available in the [deprecated editable table](/components/table/react-deprecated#editable-rows).
+- Text input group 
+    - Added validation support and a new `validated` prop. We also added a [text input group with validation example](/components/text-input-group#with-validation).
+- Tile 
+    - Deprecated the tile component in favor of card. For usage information, refer to the [cards as tiles example](/components/card#cards-as-tiles).
 
 ### Token updates 
 
 #### Design tokens 
 
-We updated existing design tokens and added new tokens to support directional box-shadows. To see these tokens, search "box-tokens" in our [tokens documentation](/tokens/all-patternfly-tokens).
+We updated existing design tokens and added new tokens to support directional box-shadows. To see these tokens, search "box-shadow" in our [tokens documentation](/tokens/all-patternfly-tokens).
 
 We also added a few new tokens to support the needs of our new chatbot, including:
 - A tertiary background token that accommodates containers placed on a secondary background.
@@ -63,7 +70,7 @@ We also added a few new tokens to support the needs of our new chatbot, includin
 
 #### React tokens
 
-To address instances where chart tokens and chart variable names were unintentionally identical, we added a `t_` prefix to our React tokens. This makes it easier to differentiate between tokens and variables.
+To address instances where design tokens and CSS variables for charts unintentionally created identical React tokens, we added a `t_` prefix to all design token references in our React tokens. This makes it easier to differentiate between design tokens and CSS variables.
 
 ### Extensions maintenance 
 
@@ -79,12 +86,12 @@ In addition to the previously mentioned documentation updates, we've made change
 #### Design guidelines 
 - Added a new [status and severity pattern](/patterns/status-and-severity), which provides guidance for using our new severity icons.
 - Updated our [quick starts extension](/extensions/quick-starts) with more content guidance.
-- Documented our tabular number modifier `.pf-v6-m-tabular-nums` in [typography](/design-foundations/typography), [numerics](/ux-writing/numerics), and [table.](/components/table/design-guidelines)
+- Documented our tabular number modifier `.pf-v6-m-tabular-nums` in [typography](/design-foundations/typography), [numerics](/ux-writing/numerics), and [table](/components/table/design-guidelines).
 - Added guidance for editorial styling to our [content component](/components/content) (formerly called text content).
 - We've started updating images across our design guidelines to represent PatternFly 6 styling.
 
 #### Miscellaneous cleanup and enhancements
-- Shortened component descriptions shown in component page headers and [all components page](/components/all-components).
+- Shortened component descriptions shown in component page headers and on the [all components page](/components/all-components).
 - Added more details about [React tokens](/tokens/develop-with-tokens#react-tokens) and [how to migrate them](/get-started/upgrade#utilize-our-tokens-update-codemod).
 - Added React example documentation for [text input group](/components/text-input-group).
 
