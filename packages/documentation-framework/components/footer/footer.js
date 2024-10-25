@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import {
   Brand,
   Grid,
@@ -7,11 +7,11 @@ import {
   ListItem,
   PageSection,
   Content,
-} from "@patternfly/react-core";
-import { Link } from "@patternfly/documentation-framework/components";
-import { GithubIcon } from "@patternfly/react-icons";
-import redhatLogo from "./RHLogo.png";
-import redhatLogoDark from "./RHLogoDark.png";
+} from '@patternfly/react-core';
+import { Link } from '@patternfly/documentation-framework/components';
+import { GithubIcon } from '@patternfly/react-icons';
+import redhatLogo from './RHLogo.png';
+import redhatLogoDark from './RHLogoDark.png';
 
 export const Footer = ({ isDarkTheme }) => (
   <React.Fragment>
@@ -36,7 +36,7 @@ export const Footer = ({ isDarkTheme }) => (
               <p className="ws-org-pfsite-footer-menu-list-title">What's new</p>
               <nav aria-label="Quick Links">
                 <List isPlain className="ws-org-pfsite-footer-menu-list">
-                <ListItem className="ws-org-pfsite-footer-menu-list-item">
+                  <ListItem className="ws-org-pfsite-footer-menu-list-item">
                     <Link
                       className="ws-org-pfsite-footer-menu-link"
                       to="/get-started/upgrade"
@@ -83,7 +83,7 @@ export const Footer = ({ isDarkTheme }) => (
               <p className="ws-org-pfsite-footer-menu-list-title">Contribute</p>
               <nav aria-label="Contribute">
                 <List isPlain className="ws-org-pfsite-footer-menu-list">
-                <ListItem className="ws-org-pfsite-footer-menu-list-item">
+                  <ListItem className="ws-org-pfsite-footer-menu-list-item">
                     <Link
                       className="ws-org-pfsite-footer-menu-link"
                       to="/get-started/about-patternfly"
@@ -110,7 +110,7 @@ export const Footer = ({ isDarkTheme }) => (
                       Contribute
                     </Link>
                   </ListItem>
-                  </List>
+                </List>
               </nav>
             </GridItem>
             <GridItem
@@ -118,9 +118,7 @@ export const Footer = ({ isDarkTheme }) => (
               md={4}
               className="pf-v6-u-mt-lg pf-v6-u-mt-0-on-md pf-v6-u-ml-md pf-v6-u-ml-0-on-md"
             >
-              <p className="ws-org-pfsite-footer-menu-list-title">
-                Community
-              </p>
+              <p className="ws-org-pfsite-footer-menu-list-title">Community</p>
               <nav aria-label="Stay in touch">
                 <List isPlain className="ws-org-pfsite-footer-menu-list">
                   <ListItem className="ws-org-pfsite-footer-menu-list-item">
@@ -140,7 +138,7 @@ export const Footer = ({ isDarkTheme }) => (
                       target="top"
                       aria-label="Read the PatternFly blog"
                     >
-                     Blog
+                      Blog
                     </Link>
                   </ListItem>
                   <ListItem className="ws-org-pfsite-footer-menu-list-item">
@@ -171,7 +169,7 @@ export const Footer = ({ isDarkTheme }) => (
                     >
                       Discussions
                     </Link>
-                </ListItem>
+                  </ListItem>
                 </List>
               </nav>
             </GridItem>
@@ -268,9 +266,19 @@ export const Footer = ({ isDarkTheme }) => (
                 target="top"
                 aria-label="Link to PatternFly X page"
               >
-                <svg class="pf-v6-svg" viewBox="0 0 512 512" fill="currentColor" aria-hidden="true" role="img" width="1em" height="1em"><path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"></path></svg>
+                <svg
+                  className="pf-v6-svg"
+                  viewBox="0 0 512 512"
+                  fill="currentColor"
+                  aria-hidden="true"
+                  role="img"
+                  width="1em"
+                  height="1em"
+                >
+                  <path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"></path>
+                </svg>
               </Link>
-               {/* Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.*/}
+              {/* Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.*/}
             </GridItem>
           </Grid>
         </GridItem>
