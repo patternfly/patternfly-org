@@ -51,8 +51,6 @@ Here are the most significant updates we made to our React components:
 - Menu toggle
     - Removed `pf-m-actions` and, consequently, `SplitButtonOptions`. Items should now be passed directly to `splitButtonItems`.
     - Added `isPlaceholder` to support customizable placeholder text, as well as [a corresponding example](/components/menu-toggle#placeholder-text-in-toggle).
-- Table
-    - Added `isPlaceholder` to the `<EditableSelectInputCell>` component, which can be used to add placeholder styles to the toggle. This is a feature available in the [deprecated editable table](/components/table/react-deprecated#editable-rows).
 - Text input group 
     - Added validation support and a new `validated` prop. We also added a [text input group with validation example](/components/text-input-group#with-validation).
 - Tile 
