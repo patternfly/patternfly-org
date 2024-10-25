@@ -58,7 +58,7 @@ const HeaderTools = ({
 
   const getDropdownItem = (version, isLatest = false) => (
     <DropdownItem itemId={version.name} key={version.name} to={isLatest ? '/' : `/${version.name}`}>
-      {`Current ${version.name}`}
+      {`Release ${version.name}`}
     </DropdownItem>
   );
 
