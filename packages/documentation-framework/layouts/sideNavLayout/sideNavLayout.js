@@ -159,7 +159,7 @@ const HeaderTools = ({
                     onClick={() => setDropdownOpen(!isDropdownOpen)}
                     isExpanded={isDropdownOpen}
                   >
-                    Current alphas
+                    Version
                   </MenuToggle>
                 )}
               >
@@ -174,20 +174,6 @@ const HeaderTools = ({
                   </DropdownGroup>
                 )}
                 <Divider key="divider1" />
-                <DropdownGroup key="Alpha preview version" label="Alpha preview version">
-                  <DropdownList>
-                    <DropdownItem
-                      key="PatternFly 6"
-                      className="ws-patternfly-versions"
-                      isExternalLink
-                      to="https://staging.patternfly.org/"
-                      itemId="patternfly-6"
-                    >
-                      PatternFly 6
-                    </DropdownItem>
-                  </DropdownList>
-                </DropdownGroup>
-                <Divider key="divider2" />
                 <DropdownGroup key="Previous versions" label="Previous versions">
                   <DropdownList>
                     <DropdownItem
