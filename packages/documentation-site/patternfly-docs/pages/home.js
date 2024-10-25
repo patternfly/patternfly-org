@@ -28,7 +28,7 @@ import { featuredPostsData } from './featured-posts-data';
 
 const cardData = [
   {
-    title: 'Upgrade to PatternFly v5',
+    title: 'Upgrade to PatternFly 6',
     body: 'Reference our upgrade guide to learn how you can update to the latest version of PatternFly.',
     link: '/get-started/upgrade',
     layout: 'withSubtitle',

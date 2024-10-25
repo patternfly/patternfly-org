@@ -72,6 +72,12 @@ We also made updates to some of our component structure and naming conventions. 
     - Updated the content passed to the icon prop on `<EmptyState>` to be wrapped by `<EmptyStateIcon>` automatically.
     - Made the `titleText` prop required.
 
+We made some updates to react-charts.
+- In order to support multiple chart libraries, Victory based charts have moved to a "victory" directory.
+- Victory is now an optional peer dependency, allowing future chart libraries to be installed without including Victory dependencies and vice versa
+    - You may choose to install the single "victory" package to cover all features
+    - Or, install packages based on the features used in your app (e.g., "victory-core", "victory-tooltip", etc.).
+
 ### Extension updates
 
 We applied PatternFly 6 styles to the rest of our extensions. All have now been upgraded to use the PatternFly 6 beta: 
