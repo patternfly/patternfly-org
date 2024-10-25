@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.4.0-alpha.111 (2024-10-25)
+
+
+### Bug Fixes
+
+* **docs:** hardcode Tile deprecation, fix console errors ([#4341](https://github.com/patternfly/patternfly-org/issues/4341)) ([f2a8ce7](https://github.com/patternfly/patternfly-org/commit/f2a8ce7df4937579e8868bde7b08863128f5671b))
+
+
+
+
+
 # 1.4.0-alpha.110 (2024-10-24)
 
 
