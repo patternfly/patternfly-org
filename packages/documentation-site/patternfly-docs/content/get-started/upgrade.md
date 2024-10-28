@@ -62,11 +62,13 @@ To run our codemods, follow these steps:
 
 PatternFly 6 supports our new design token system, which changes variable names across PatternFly. These changes mean that **all** existing CSS overrides must be updated (or removed), because they will be targeting outdated styles and will no longer work. 
 
+Variables were largely removed or added due to logical direction changes, refactoring, or deprecation. For more context, we've put together a list of [variables that have been removed](https://docs.google.com/spreadsheets/d/e/2PACX-1vQQLWzMGQTAFHr6ClxoOZPpSNhP-frqu9w0DBzFJG0SOyBKKvjVV5wqz2o_Nh6jnO73oiXH259t5-V0/pubhtml?gid=673459372&single=true) and a list of [variables that have been added](https://docs.google.com/spreadsheets/d/e/2PACX-1vQQLWzMGQTAFHr6ClxoOZPpSNhP-frqu9w0DBzFJG0SOyBKKvjVV5wqz2o_Nh6jnO73oiXH259t5-V0/pubhtml?gid=0&single=true).
+
 Wherever you have any custom CSS overrides that reference PatternFly class names or CSS variables, you should carefully review them and make updates to ensure that they align with our token variables, as described in our [tokens documentation](/tokens/all-patternfly-tokens). 
 
-If your product uses a custom solution to replicate PatternFly styling (without using PatternFly components), then it will need to be re-skinned. We recognize that this may be a large undertaking, so we encourage you to reach out to the PatternFly team so that we can help support this work. 
+**Note:** If your product uses a custom solution to replicate PatternFly styling (without using PatternFly components), then it will need to be re-skinned. We recognize that this may be a large undertaking, so we encourage you to reach out to the PatternFly team so that we can help support this work. 
 
-#### Utilize our class-name-updater codemod
+#### 1. Utilize our class-name-updater codemod
 [The class-name-updater codemod](https://github.com/patternfly/pf-codemods/tree/main/packages/class-name-updater) automatically identifies class names that need to be updated as a result of changes in PatternFly 6. This helps highlight places in your codebase that may require you to make adjustments. 
 
 This utility performs a simple ‘find and replace’, so it's possible that it will inadvertently identify code that is formatted similarly to a PatternFly class name, but is not one. You should check to ensure that this doesn't cause any unintentional changes.
@@ -75,7 +77,7 @@ When using this codemod, make sure to:
 - Add the `--v6` option if you are upgrading to v6. This codemod targets v5 of PatternFly by default.
 - Add the `--fix` flag to allow the codemod to fix issues where possible.
 
-#### Utilize our tokens-update codemod
+#### 2. Utilize our tokens-update codemod
 
 [The tokens-update codemod](https://github.com/patternfly/pf-codemods?tab=readme-ov-file#tokens-update) can help you update global CSS variables in your React code. Note that this will *only* fix JavaScript or TypeScript files: not CSS. 
 
