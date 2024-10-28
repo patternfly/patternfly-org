@@ -1,39 +1,39 @@
 export const featuredPostsData = {
   post1: {
-    title: "Introducing the PatternFly 6 beta",
+    title: "Welcome to PatternFly 6",
     author: "Erin Donehoo",
-    length: "3 min read",
-    URL: "https://medium.com/patternfly/introducing-the-patternfly-6-beta-364952dba6ba",
+    length: "5 min read",
+    URL: "https://medium.com/patternfly/welcome-to-patternfly-6-5c372f2fd5de",
     // Use resize:fit:600 in URL
     imageURL:
-      "https://cdn-images-1.medium.com/max/2400/1*-xS5YU2yAEwZSXFF_xjgow.png",
+      "https://miro.medium.com/v2/resize:fit:600/format:webp/1*FOVVqeJPmsoM6uJqsZHXZA.png",
   },
   post2: {
-    title: "Introducing component groups",
-    author: "Filip Hlavac",
-    length: "4 min read",
-    URL: "https://medium.com/patternfly/introducing-component-groups-dbe054cac726",
+    title: "UX writing mistakes as horror movie archetypes",
+    author: "Katie Edwards",
+    length: "3 min read",
+    URL: "https://medium.com/patternfly/ux-writing-mistakes-as-horror-movie-archetypes-7c30705762ae",
     // Use resize:fit:600 in URL
     imageURL:
-      "https://miro.medium.com/v2/resize:fit:600/format:webp/0*j9kT2OT7NJuKJRwX",
+      "https://miro.medium.com/v2/resize:fit:600/format:webp/1*TFIZCRKz6CbrLWMwBEOu_Q.png",
   },
   post3: {
     title:
-      "UX never goes out of style",
+      "Brainstorming when you're in a funk",
     author: "Allison Wolfe",
-    length: "8 min read",
-    URL: "https://medium.com/patternfly/ux-never-goes-out-of-style-de32633349c0",
+    length: "3 min read",
+    URL: "https://medium.com/patternfly/brainstorming-when-youre-in-a-funk-ca0882b5dc99",
     // Use resize:fit:600 in URL
     imageURL:
-      "https://miro.medium.com/v2/resize:fit:1400/format:webp/1*wAZoife0GEAmnLUKHC5XZA.jpeg",
+      "https://miro.medium.com/v2/resize:fit:600/format:webp/0*yX6KLyk2WGv5u2m8",
   },
   post4: {
-    title: "What we can learn from our non-target audience",
-    author: "Katie Edwards",
-    length: "7 min read",
-    URL: "https://medium.com/patternfly/what-we-can-learn-from-our-non-target-audience-c86d12dd93f5",
+    title: "PatternFly component groups grow!",
+    author: "Filip Hlavac",
+    length: "4 min read",
+    URL: "https://medium.com/patternfly/patternfly-component-groups-grow-90ac8df4a83e",
     // Use resize:fit:600 in URL
     imageURL:
-      "https://miro.medium.com/v2/resize:fit:1400/format:webp/0*VLU1_0U0jkNgqUlo",
+      "https://miro.medium.com/v2/resize:fit:600/format:webp/0*j9kT2OT7NJuKJRwX",
   },
 };
