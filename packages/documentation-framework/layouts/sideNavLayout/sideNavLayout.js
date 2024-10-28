@@ -9,7 +9,6 @@ import {
   DropdownGroup,
   DropdownList,
   Divider,
-  Icon,
   Masthead,
   MastheadToggle,
   MastheadMain,
@@ -26,7 +25,7 @@ import {
   SearchInput,
   ToggleGroup,
   ToggleGroupItem,
-  MastheadLogo,
+  MastheadLogo
 } from '@patternfly/react-core';
 import BarsIcon from '@patternfly/react-icons/dist/esm/icons/bars-icon';
 import GithubIcon from '@patternfly/react-icons/dist/esm/icons/github-icon';
@@ -48,40 +47,32 @@ const HeaderTools = ({
   isRTL,
   setIsRTL,
   isDarkTheme,
-  setIsDarkTheme,
+  setIsDarkTheme
 }) => {
   const latestVersion = versions.Releases.find((version) => version.latest);
-  const previousReleases = Object.values(versions.Releases).filter(
-    (version) => !version.hidden && !version.latest
-  );
+  const previousReleases = Object.values(versions.Releases).filter((version) => !version.hidden && !version.latest);
   const hasSearch = algolia;
   const [isDropdownOpen, setDropdownOpen] = useState(false);
   const [searchValue, setSearchValue] = React.useState('');
   const [isSearchExpanded, setIsSearchExpanded] = React.useState(false);
 
   const getDropdownItem = (version, isLatest = false) => (
-    <DropdownItem
-      itemId={version.name}
-      key={version.name}
-      to={isLatest ? '/' : `/${version.name}`}
-    >
-      {`Current ${version.name}`}
+    <DropdownItem itemId={version.name} key={version.name} to={isLatest ? '/' : `/${version.name}`}>
+      {`Release ${version.name}`}
     </DropdownItem>
   );
 
   const onChange = (_evt, value) => {
-     setSearchValue(value);
+    setSearchValue(value);
   };
 
-   const onToggleExpand = (_evt, isSearchExpanded) => {
-     setIsSearchExpanded(!isSearchExpanded);
-   };
+  const onToggleExpand = (_evt, isSearchExpanded) => {
+    setIsSearchExpanded(!isSearchExpanded);
+  };
 
   const toggleDarkTheme = (_evt, selected) => {
     const darkThemeToggleClicked = !selected === isDarkTheme;
-    document
-      .querySelector('html')
-      .classList.toggle('pf-v6-theme-dark', darkThemeToggleClicked);
+    document.querySelector('html').classList.toggle('pf-v6-theme-dark', darkThemeToggleClicked);
     setIsDarkTheme(darkThemeToggleClicked);
   };
 
@@ -90,7 +81,7 @@ const HeaderTools = ({
     if (hasSearch && isSearchExpanded) {
       attachDocSearch(algolia, '.ws-global-search .pf-v6-c-text-input-group__text-input', 1000);
     }
-   }, [isSearchExpanded])
+  }, [isSearchExpanded]);
 
   return (
     <Toolbar isFullHeight>
@@ -137,7 +128,11 @@ const HeaderTools = ({
                 value={searchValue}
                 onChange={onChange}
                 onClear={(_evt) => onChange(_evt, '')}
-                expandableInput={{ isExpanded: isSearchExpanded, onToggleExpand, toggleAriaLabel: 'Expandable search input toggle' }}
+                expandableInput={{
+                  isExpanded: isSearchExpanded,
+                  onToggleExpand,
+                  toggleAriaLabel: 'Expandable search input toggle'
+                }}
               />
             </ToolbarItem>
           )}
@@ -164,55 +159,29 @@ const HeaderTools = ({
                     onClick={() => setDropdownOpen(!isDropdownOpen)}
                     isExpanded={isDropdownOpen}
                   >
-                    Current alphas
+                    Release 6.0.0
                   </MenuToggle>
                 )}
+                popperProps={{ position: 'right' }}
               >
                 <DropdownGroup key="Latest" label="Latest">
-                  <DropdownList>
-                    {getDropdownItem(latestVersion, true)}
-                  </DropdownList>
+                  <DropdownList>{getDropdownItem(latestVersion, true)}</DropdownList>
                 </DropdownGroup>
                 {previousReleases.length > 0 && (
-                  <DropdownGroup
-                    key="Previous releases"
-                    label="Previous releases"
-                  >
+                  <DropdownGroup key="Previous releases" label="Previous releases">
                     <DropdownList>
-                      {previousReleases
-                        .slice(0, 3)
-                        .map((version) => getDropdownItem(version))}
+                      {previousReleases.slice(0, 3).map((version) => getDropdownItem(version))}
                     </DropdownList>
                   </DropdownGroup>
                 )}
                 <Divider key="divider1" />
-                <DropdownGroup
-                  key="Alpha preview version"
-                  label="Alpha preview version"
-                >
-                  <DropdownList>
-                    <DropdownItem
-                      key="PatternFly 6"
-                      className="ws-patternfly-versions"
-                      isExternalLink
-                      to="https://staging.patternfly.org/"
-                      itemId="patternfly-6"
-                    >
-                      PatternFly 6
-                    </DropdownItem>
-                  </DropdownList>
-                </DropdownGroup>
-                <Divider key="divider2" />
-                <DropdownGroup
-                  key="Previous versions"
-                  label="Previous versions"
-                >
+                <DropdownGroup key="Previous versions" label="Previous versions">
                   <DropdownList>
                     <DropdownItem
                       key="PatternFly 5"
                       className="ws-patternfly-versions"
                       isExternalLink
-                      to="https://www.patternfly.org"
+                      to="https://v5-archive.patternfly.org/"
                       itemId="patternfly-5"
                     >
                       PatternFly 5
@@ -253,21 +222,17 @@ export function attachDocSearch(algolia, inputSelector, timeout) {
       inputSelector,
       autocompleteOptions: {
         hint: false,
-        appendTo: `.ws-global-search .pf-v6-c-text-input-group`,
+        appendTo: `.ws-global-search .pf-v6-c-text-input-group`
       },
       debug: process.env.NODE_ENV !== 'production',
-      ...algolia,
+      ...algolia
     });
   } else {
     setTimeout(() => attachDocSearch(algolia, inputSelector, timeout), timeout);
   }
 }
 
-export const SideNavLayout = ({
-  children,
-  groupedRoutes,
-  navOpen: navOpenProp,
-}) => {
+export const SideNavLayout = ({ children, groupedRoutes, navOpen: navOpenProp }) => {
   const algolia = process.env.algolia;
   const hasGdprBanner = process.env.hasGdprBanner;
   const hasVersionSwitcher = process.env.hasVersionSwitcher;
@@ -319,19 +284,9 @@ export const SideNavLayout = ({
               <svg height="40px" viewBox="0 0 679 158">
                 <title>PF-HorizontalLogo-Color</title>
                 <defs>
-                  <linearGradient
-                    x1="68%"
-                    y1="2.25860997e-13%"
-                    x2="32%"
-                    y2="100%"
-                    id="linearGradient-website-masthead"
-                  >
+                  <linearGradient x1="68%" y1="2.25860997e-13%" x2="32%" y2="100%" id="linearGradient-website-masthead">
                     <stop stopColor="#2B9AF3" offset="0%"></stop>
-                    <stop
-                      stopColor="#73BCF7"
-                      stopOpacity="0.502212631"
-                      offset="100%"
-                    ></stop>
+                    <stop stopColor="#73BCF7" stopOpacity="0.502212631" offset="100%"></stop>
                   </linearGradient>
                 </defs>
                 <g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
@@ -400,9 +355,7 @@ export const SideNavLayout = ({
           mainComponent="div"
           masthead={masthead}
           sidebar={SideBar}
-          skipToContent={
-            <SkipToContent href="#ws-page-main">Skip to content</SkipToContent>
-          }
+          skipToContent={<SkipToContent href="#ws-page-main">Skip to content</SkipToContent>}
           isManagedSidebar
           defaultManagedSidebarIsOpen={navOpenProp}
         >

@@ -1,0 +1,6 @@
+# Ignore everything
+*
+# Except js files
+!*.js
+# Look for js files in subdirectories
+!*/
