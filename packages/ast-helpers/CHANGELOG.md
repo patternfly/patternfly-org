@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.4.0-alpha.113 (2024-10-28)
+
+
+### Features
+
+* **site:** update version switcher for v5 ([#4312](https://github.com/patternfly/patternfly-org/issues/4312)) ([84b72dd](https://github.com/patternfly/patternfly-org/commit/84b72dde9debe46b56973e2bdfcbba02afa13de7))
+
+
+
+
+
 # 1.4.0-alpha.112 (2024-10-25)
 
 **Note:** Version bump only for package @patternfly/ast-helpers
