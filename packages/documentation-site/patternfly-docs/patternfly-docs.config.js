@@ -19,9 +19,9 @@ if (process.env.EXTENSIONS_ONLY === 'true') {
   module.exports = {
     googleAnalyticsID: 'UA-47523816-6',
     algolia: {
-      apiKey: 'a8fb1726b78594ff97a3418757514404',
-      appId: '79P4ZBH7A3',
-      indexName: 'patternfly'
+      apiKey: '4a34ef26211aa889d6da13961e648b89',
+      appId: '9HOHO8TZX7',
+      indexName: 'v5-archive-patternfly'
     },
     hasGdprBanner: true,
     hasFooter: true,
