@@ -17,7 +17,9 @@ This guide outlines the steps required to upgrade your codebase to PatternFly 6 
 
 ## Get help 
 
-If you need support as you upgrade, the PatternFly team is here to help! Reach out to us on [Slack](https://join.slack.com/t/patternfly/shared_invite/zt-1npmqswgk-bF2R1E2rglV8jz5DNTezMQ) or ask a question on our [GitHub discussion board](https://github.com/orgs/patternfly/discussions). We'll always do our best to answer your questions and connect you with the right people quickly. 
+If you need support as you upgrade, the PatternFly team is here to help! 
+
+Don't hesitate to reach out to us on [Slack](https://join.slack.com/t/patternfly/shared_invite/zt-1npmqswgk-bF2R1E2rglV8jz5DNTezMQ) or ask a question on [our GitHub discussion board](https://github.com/orgs/patternfly/discussions). Since this upgrade includes significant visual changes, please contact us if you have a question about styles or if you think something looks wrong in your UI. We'll always do our best to answer your questions, double-check your work, and connect you with the right people quickly. 
 
 ## How to upgrade
 
@@ -66,7 +68,7 @@ If you do need to keep any CSS customizations, continue to step 3 and follow the
 ### 3. Review and update variable and class names
 A number of variables were removed or added with PatternFly 6, primarily due to logical direction changes, refactoring, or deprecation. For more context, we've put together a list of [variables that have been removed](https://docs.google.com/spreadsheets/d/e/2PACX-1vQQLWzMGQTAFHr6ClxoOZPpSNhP-frqu9w0DBzFJG0SOyBKKvjVV5wqz2o_Nh6jnO73oiXH259t5-V0/pubhtml?gid=673459372&single=true) and a list of [variables that have been added](https://docs.google.com/spreadsheets/d/e/2PACX-1vQQLWzMGQTAFHr6ClxoOZPpSNhP-frqu9w0DBzFJG0SOyBKKvjVV5wqz2o_Nh6jnO73oiXH259t5-V0/pubhtml?gid=0&single=true).
 
-Wherever you have any custom CSS overrides that reference PatternFly class names or CSS variables, you should carefully review them and make updates to ensure that they align with our new design tokens, as described in our [tokens documentation](/tokens/all-patternfly-tokens). 
+Wherever you have any custom CSS overrides that reference PatternFly class names or CSS variables, you should carefully review them and make updates to ensure that they align with our new design tokens, as described in [our tokens documentation](/tokens/all-patternfly-tokens). 
 
 To assist with naming updates, we offer 2 codemods: 
 - [class-name-updater](https://github.com/patternfly/pf-codemods/tree/main/packages/class-name-updater): Automatically identifies and renames classes that need to be updated as a result of changes in PatternFly 6.
