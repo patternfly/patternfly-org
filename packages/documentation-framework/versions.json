@@ -28,7 +28,7 @@
     },{
       "name": "prerelease",
       "date": "2024-10-08",
-      "latest": true,
+      "hidden": true,
       "versions": {
         "@patternfly/patternfly": "6.0.0-prerelease.15",
         "@patternfly/react-catalog-view-extension": "6.0.0-prerelease.1",
