@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 5.26.0 (2024-10-29)
+
+
+### Features
+
+* **v5 search:** update algolia keys ([#4349](https://github.com/patternfly/patternfly-org/issues/4349)) ([9344953](https://github.com/patternfly/patternfly-org/commit/93449538fee2da610fe11f46e84bfefee8c53891))
+
+
+
+
+
 ## 5.25.1 (2024-10-18)
 
 **Note:** Version bump only for package @patternfly/documentation-framework
