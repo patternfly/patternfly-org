@@ -40,7 +40,7 @@ The official release of PatternFly 6 is here! It contains all of the previous fe
 
 We're excited to introduce PatternFly AI: our new effort to support and integrate AI into our design system. We've added guidance and resources, contained within a new section of our website:
 
-- [About PatternFly AI](/patternfly-ai/about-patternfly-ai)
+- [About PatternFly AI](/patternfly-ai/about-ai)
 - [AI guidelines](/patternfly-ai/ai-guidelines)
 - [Chatbot](/patternfly-ai/chatbot/about-chatbot)
 - [Conversation design](/patternfly-ai/conversation-design)
@@ -74,7 +74,7 @@ Here are the most significant updates we made to our React components:
     - Fixed improper offset in [demo](/components/jump-links/react-demos). 
 - Menu toggle
     - Removed `pf-m-actions` and, consequently, `SplitButtonOptions`. Items should now be passed directly to `splitButtonItems`.
-    - Added `isPlaceholder` to support customizable placeholder text, as well as [a corresponding example](/components/menu-toggle#placeholder-text-in-toggle).
+    - Added `isPlaceholder` to support customizable placeholder text, as well as [a corresponding example](/components/menus/menu-toggle/#placeholder-text-in-toggle).
 - Text input group 
     - Added validation support and a new `validated` prop. We also added a [text input group with validation example](/components/text-input-group#with-validation).
 - Tile 
