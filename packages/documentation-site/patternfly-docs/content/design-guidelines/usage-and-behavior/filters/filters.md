@@ -38,7 +38,7 @@ There are various ways to allow users to filter down content. Filtering methods 
 A text entry filter provides the user with an input field to type in values that filter the view, whether or not their input is an exact match. The text entry filter uses the [search input](/components/search-input) component which can be used with or without a button. 
 
 <div class="ws-docs-content-img">
-![](./img/text-entry-filters.svg)
+![1 basic search input field and 1 search input with a submit button.](./img/text-entry-filters.svg)
 </div>
 
 1. **Basic search input:** Filters automatically, as soon as the user starts typing.
@@ -60,7 +60,7 @@ Text entry filters support [filter labels](#filter-label), but do not support [t
 **Filter labels** are supported for text entry filters, but in general, we recommend not showing a label to avoid redundancy, except for cases when text entry filters are used inside of [attribute-value filters](#attribute-value-filter). Since you can only search by one value at a time, the value will already be shown in the input field.
 
 <div class="ws-docs-content-img">
-![](./img/search-value.svg)
+![Search value shown in the search input field.](./img/search-value.svg)
 </div>
 
 ### Single select
@@ -69,13 +69,13 @@ A single select provides the user with a fixed set of values from which they can
 If the single select filter is the only filter in the toolbar, it should have an “All options” menu item that's selected by default, acting as an equivalent of no filter selected. 
 
 <div class="ws-docs-content-img">
-![](./img/single-select-default.svg)
+![Single select menu with 'all options' item selected.](./img/single-select-default.svg)
 </div>
 
 When a different menu item is selected, it should be displayed in the toggle. Selecting "All options" will reset any selected options. 
 
 <div class="ws-docs-content-img">
-![](./img/single-select-selection-mode.svg)
+![Single select menu with specific item selected.](./img/single-select-selection-mode.svg)
 </div>
 
 #### Behavior
@@ -88,10 +88,10 @@ Use a single select list when you’d like users to only select one option from 
 #### Supported features
 Single selects can include [type-aheads](#type-ahead) as an added feature.
 
-**Type-ahead** functionality can be added to single selects, allowing users to input a search inside the toggle, filtering down from the list of menu options shown. This is especially useful for very long lists that would be inconvenient for the user to scroll through. Type-ahead is recommended for lists that are more than 10 items long. 
+**Typeahead** functionality can be added to single selects, allowing users to input a search inside the toggle, filtering down from the list of menu options shown. This is especially useful for very long lists that would be inconvenient for the user to scroll through. Type-ahead is recommended for lists that are more than 10 items long. 
 
 <div class="ws-docs-content-img">
-![](./img/typeahead-input.svg)
+![Before and after typeahead filtering in a menu.](./img/typeahead-input.svg)
 </div>
 
 Stand alone single selects in a toolbar do not use badge counts or filter labels since only one selection can be made, and the selection will already be apparent in the toggle. 
@@ -100,7 +100,7 @@ Stand alone single selects in a toolbar do not use badge counts or filter labels
 A checkbox select provides the user with a fixed set of values from which they can select multiple values. This filter type uses the [checkbox select component](/components/select/react#checkbox-input).
 
 <div class="ws-docs-content-img">
-![](./img/checkbox-select-menus.svg)
+![Before and after multiple items are selected from a checkbox select menu.](./img/checkbox-select-menus.svg)
 </div>
 
 #### Behavior
@@ -113,7 +113,7 @@ Use a checkbox select for selecting multiple values from a predefined list. Mult
 Checkbox select supported features include [filter labels](#filter-label), and optionally, [badges](#badge-count). 
 
 <div class="ws-docs-content-img">
-![](./img/checkbox-select.svg)
+![Badge in select menu toggle that shows the number of selected items.](./img/checkbox-select.svg)
 </div>
 
 **Filter labels** are used as a way for users to view all their selections when the menu of selections is collapsed.
@@ -123,7 +123,7 @@ Checkbox select supported features include [filter labels](#filter-label), and o
 Although **typeahead** is not supported for checkbox selects, you can add a search input inside the menu, right above the items the user can select from. This will allow the user to filter down the list of options.
 
 <div class="ws-docs-content-img">
-![](./img/typeahead-search.svg)
+![Search field placed within a menu.](./img/typeahead-search.svg)
 </div>
 
 ## Variations for multiple attributes
@@ -133,19 +133,19 @@ There are multiple ways of combining variations for single attribute filters int
 The attribute-value filter gives users the ability to specify an attribute-value pair for filtering a data set.
 
 <div class="ws-docs-content-img">
-![](./img/attribute-a.svg)
+![Attribute selector with text entry field.](./img/attribute-a.svg)
 </div>
 
 <div class="ws-docs-content-img">
-![](./img/attribute-b.svg)
+![Attribute selector with a single select menu.](./img/attribute-b.svg)
 </div>
 
 <div class="ws-docs-content-img">
-![](./img/attribute-c.svg)
+![Attribute selector with a checkbox select menu.](./img/attribute-c.svg)
 </div>
 
 <div class="ws-docs-content-img">
-![](./img/attribute-d.svg)
+![Attribute selector with a date picker.](./img/attribute-d.svg)
 </div>
 
 The following elements make up an attribute-value (textbox) filter.
@@ -191,7 +191,7 @@ A filter group is a set of filters that appear side by side in a toolbar. This f
 **Filter group with only single selects** 
 
 <div class="ws-docs-content-img">
-![](./img/filter-group-single.svg)
+![Filter group with 2 single select menus.](./img/filter-group-single.svg)
 </div>
 
 1. When an option is selected, it is reflected in the toggle. 
@@ -201,7 +201,7 @@ A filter group is a set of filters that appear side by side in a toolbar. This f
 **Filter group with multiple selection types**
 
 <div class="ws-docs-content-img">
-![](./img/filter-group-multiple.svg)
+![Filter group with multiple, mixed selection types.](./img/filter-group-multiple.svg)
 </div>
 
 Filter group with single select, checkbox select, and date picker. When there are no selections, the toggle should contain the attribute name. 
@@ -232,7 +232,7 @@ Filter groups support [filter labels](#filter-label), [badges](#badge-count), an
 A toggle group filter allows users to select from a set of predefined different elements to filter something on. This filter uses the [toggle group component](/components/toggle-group).
 
 <div class="ws-docs-content-img">
-![](./img/toggle-filter.svg)
+![Toggle group for a chart visual.](./img/toggle-filter.svg)
 </div>
 
 #### When to use
@@ -248,7 +248,7 @@ Toggle groups do not use or support filter labels, badges, or type-ahead.
 Faceted filtering is useful when items can be described by categories according to multiple dimensions or facets. This filter usually uses the [grouped checkbox select list](/components/select#grouped-checkbox-input) component.
 
 <div class="ws-docs-content-img">
-![](./img/faceted-filter.svg)
+![Menu with 2 named groups of selectable items.](./img/faceted-filter.svg)
 </div>
 
 The following elements can be used in a faceted (checkbox) filter:
@@ -256,7 +256,7 @@ The following elements can be used in a faceted (checkbox) filter:
 2. **Values:** What users might filter on. Each category is made up of checkbox selects, where each category can have multiple options selected. Never include two selection types within the same faceted filter.
 
 <div class="ws-docs-content-img">
-![](./img/faceted-filter-collapsed.svg)
+![Filter labels that display items selected from filter groups.](./img/faceted-filter-collapsed.svg)
 </div>
 
 1. **Filter labels:**  Records of each selection, shown when the options menu is collapsed.
@@ -307,7 +307,7 @@ When filters are applied, filter labels may be used to provide feedback to the u
 Filter labels may be used to show boolean relationships between different attribute-value pairs. Individual filter labels can be removed by clicking the ‘x’ in each label, and entire filter groups can be removed using the group ‘x’.
 
 <div class="ws-docs-content-img">
-![](./img/filter-label.svg)
+![Filter label that shows an active filter based on the user's selection.](./img/filter-label.svg)
 </div>
 
 Follow these best practices for using filter labels:
@@ -333,21 +333,22 @@ Badges are used to indicate a count. In filters, badges can be used in the follo
 You may opt to use a badge in a checkbox select to indicate to the user how many items they have selected when the toggle is collapsed.
 
 <div class="ws-docs-content-img">
-![](./img/badge-count.svg)
-</svg>
-
-### Type-ahead
-Adding type-ahead capabilities to your filters is useful when there is a large number of items to select from the filter dropdown. Users can quickly find the value they would like to filter by typing in the field. 
-<div class="ws-docs-content-img">
-![](./img/typeahead.svg)
+![Badge in menu toggle that displays the number of items that have been selected as filter conditions.](./img/badge-count.svg)
 </div>
 
-Type-ahead is supported in single selects, faceted filters that can handle one input. Users may scroll through the dropdown list or type in the box to find the desired option.
+### Typeahead
+Adding typeahead capabilities to your filters is useful when there is a large number of items to select from the filter dropdown. Users can quickly find the value they would like to filter by typing in the field. 
+
+<div class="ws-docs-content-img">
+![Before and after typeahead filtering in a menu.](./img/typeahead.svg)
+</div>
+
+Typeahead is supported in single selects, faceted filters that can handle one input. Users may scroll through the dropdown list or type in the box to find the desired option.
 
 #### When to use
-Use a type-ahead filter when:
+Use a typeahead filter when:
 * A dropdown list has a large number of options. In these cases, type-ahead can help a user find their desired option in less time.
-* Type-ahead filters can be used in place of a textbox filter, in certain cases. For example, when filtering by name, using a type-ahead filter will ensure that only valid filters surface. This will avoid the need to present an empty state when invalid values are entered.
+* Typeahead filters can be used in place of a textbox filter, in certain cases. For example, when filtering by name, using a type-ahead filter will ensure that only valid filters surface. This will avoid the need to present an empty state when invalid values are entered.
 
 #### Behavior
 A filter query is triggered whenever a new value is set by the user. The following are triggers applicable to the variations of the type-ahead filter shown in the previous example.
@@ -365,7 +366,9 @@ If your filter has limitations, you may present an error state on your filter to
 
 When using error validation in a filter, include a tooltip on hover with an explanation of what went wrong. 
 
-![](./img/filter-error.svg)
+<div class="ws-docs-content-img">
+![Filter with a danger icon that has an informative tooltip.](./img/filter-error.svg)
+</div>
 
 ## Layout considerations
 Filters may be included in a [toolbar](/components/toolbar) and are usually left aligned. There may be more than one filter used in a single toolbar, and in some cases, custom filters may make up a full toolbar. Filters may also be used alone outside of a toolbar.
@@ -373,18 +376,26 @@ Filters may be included in a [toolbar](/components/toolbar) and are usually left
 ## Mobile considerations
 In responsive views, filters may be hidden within the filter icon. On click, the toolbar will expand to reveal the filter. If there are multiple filter elements, they will be collapsed into a single faceted filter. Read more about toolbars in mobile views in [the toolbar design guidelines](/components/toolbar/design-guidelines#the-toolbar-on-mobile).
 
-![](./img/mobile-before.svg)
+<div class="ws-docs-content-img">
+![Toolbar action required to open a filtering menu on mobile.](./img/mobile-before.svg)
+</div>
 
-![](./img/mobile-after.svg)
+<div class="ws-docs-content-img">
+![Mobile view of a toolbar after applying a filter.](./img/mobile-after.svg)
+</div>
 
 ## Examples
 **Filter group in data list toolbar**
 
-[add img]
+<div class="ws-docs-content-img">
+![Filters applied to a data list.](./img/filter-group-data-list.svg)
+</div>
 
 **Attribute filter in table toolbar**
 
-[Add img]
+<div class="ws-docs-content-img">
+![Attribute filter option for a table.](./img/attribute-filter-table.svg)
+</div>
 
 ## Content
 
