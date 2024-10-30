@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { useLocation } from '@reach/router';
 import {
   Button,
@@ -100,6 +100,8 @@ export const Example = ({
   hasDarkThemeSwitcher = process.env.hasDarkThemeSwitcher,
   // Show dark theme switcher on full page examples
   hasRTLSwitcher = process.env.hasRTLSwitcher,
+  // Show spooky switcher
+  hasSpookySwitcher = process.env.hasSpookySwitcher,
   // Map of relative imports matched to their npm package import path (passed to Codesandbox)
   relativeImports,
   // md file location in node_modules, used to resolve relative import paths in examples
@@ -192,11 +194,27 @@ export const Example = ({
   const previewId = getExampleId(source, section[0], id, title);
   const className = getExampleClassName(source, section[0], id);
 
+  const [isDark, setIsDark] = useState(false);
+  const toggleDark = () => {
+    document.documentElement.classList.toggle('pf-v6-theme-dark');
+    setIsDark(!isDark);
+  }
+
+  const [isSpooky, setIsSpooky] = useState(false);
+  const toggleSpooky = () => {
+    document.documentElement.classList.toggle('pf-v6-theme-spooky');
+    setIsSpooky(!isSpooky);
+
+    if (!isDark && !isSpooky) {
+      toggleDark();
+    }
+  };
+
   if (isFullscreenPreview) {
     return (
       <div id={previewId} className={css(className, 'pf-v6-u-h-100')}>
         {livePreview}
-        {(hasDarkThemeSwitcher || hasRTLSwitcher) && (
+        {(hasDarkThemeSwitcher || hasRTLSwitcher || hasSpookySwitcher) && (
           <Flex
             direction={{ default: 'column' }}
             gap={{ default: 'gapLg' }}
@@ -206,12 +224,8 @@ export const Example = ({
               <Switch
                 id="ws-example-theme-switch"
                 label="Dark theme"
-                defaultChecked={false}
-                onChange={() =>
-                  document
-                    .querySelector('html')
-                    .classList.toggle('pf-v6-theme-dark')
-                }
+                isChecked={isDark}
+                onChange={toggleDark}
               />
             )}
             {hasRTLSwitcher && (
@@ -226,6 +240,16 @@ export const Example = ({
                 }}
               />
             )}
+            {hasSpookySwitcher && (
+              <Switch
+              aria-label="Toggle spooky theme"
+              id="toggle-spooky"
+              label="Spooky theme"
+              onClick={toggleSpooky}
+              isChecked={isSpooky}
+            />
+            )
+            }
           </Flex>
         )}
       </div>
