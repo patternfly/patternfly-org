@@ -154,11 +154,11 @@ These changes include:
 ### Core CSS breaking changes 
 
 Breaking changes to our core CSS library are the result of code changes that include:
-- CSS variables
+- CSS variables:
   - Removing or renaming a CSS variable.
   - Repurposing or changing the role of a CSS variable.
   - Changing the relationship between tokens in the semantic layer (tokens that start with `--pf-t` and do not end in a number).
-- Class names
+- Class names:
   - Removing or renaming a class.
   - Making a class required that was not previously required.
 
