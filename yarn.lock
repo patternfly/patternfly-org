@@ -2055,10 +2055,10 @@
     react-virtualized "^9.22.5"
     tslib "^2.5.2"
 
-"@patternfly/virtual-assistant@2.0.0":
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/@patternfly/virtual-assistant/-/virtual-assistant-2.0.0.tgz#3d7bf037dffeafe61757e4969c6263c55f4e35e8"
-  integrity sha512-f80t06JP0Bphy48+qqs8LXdzDXZk0VtN3GMc2gGg1fZjrEPGc1xXKb/DztOUQjoTYiXP3osQev2tfuJTHL/DIA==
+"@patternfly/virtual-assistant@2.0.2":
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/@patternfly/virtual-assistant/-/virtual-assistant-2.0.2.tgz#b3144ea60d5d14053482e695bcf8550d0c8497c3"
+  integrity sha512-2qVQg1cU3Wv+mkFklAYQWyXWICbRlL/vgllSORGmBL0VIYM+Q3ICD3z/CkQrt0K1qdEqXp60dCnu1BKODrptxQ==
   dependencies:
     "@patternfly/react-code-editor" "^6.0.0"
     "@patternfly/react-core" "^6.0.0"

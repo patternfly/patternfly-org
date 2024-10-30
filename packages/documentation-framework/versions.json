@@ -2,7 +2,7 @@
   "Releases": [
     {
       "name": "6.0.0",
-      "date": "2024-10-24",
+      "date": "2024-10-30",
       "latest": true,
       "versions": {
         "@patternfly/patternfly": "6.0.0",
@@ -23,7 +23,7 @@
         "@patternfly/quickstarts": "6.0.0",
         "@patternfly/react-virtualized-extension": "6.0.0",
         "@patternfly/react-templates": "6.0.0",
-        "@patternfly/virtual-assistant": "2.0.0"
+        "@patternfly/virtual-assistant": "2.0.2"
       }
     },{
       "name": "prerelease",
