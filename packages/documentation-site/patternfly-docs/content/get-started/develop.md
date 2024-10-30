@@ -139,9 +139,9 @@ PatternFly is supported on the 2 latest major versions of the following browsers
 
 ## Breaking changes
 
-A breaking change is any modification that is significant enough to require code updates in order to maintain proper functionality in a UI. To avoid major and unexpected disruptions, PatternFly typically reserves breaking changes for major version releases, but critical bug fixes can require breaking changes outside of the major release schedule. 
-
-Breaking changes can occur in both the code and the design of PatternFly features, including our beta offerings. 
+A breaking change is any modification to our design system that is significant enough to require intervention to ensure proper functionality in a UI built with PatternFly. These changes can occur in both the code and design of PatternFly features. To minimize major and unexpected disruptions, PatternFly typically reserves breaking changes for major version releases, with the following exceptions:
+- Critical bug fixes reported outside of the major release schedule.
+- Updates to components and features labeled as "beta."
 
 ### Design breaking changes
 
@@ -154,9 +154,13 @@ These changes include:
 ### Core CSS breaking changes 
 
 Breaking changes to our core CSS library are the result of code changes that include:
-- New class names. 
-- New requirements for elements and classes. We will not require any elements that were not previously required in order for a component to function properly. Any new requirements will be offered as an “opt-in”. 
-- Renamed or removed CSS variables.
+- CSS variables
+  - Removing or renaming a CSS variable.
+  - Repurposing or changing the role of a CSS variable.
+  - Changing the relationship between tokens in the semantic layer (tokens that start with `--pf-t` and do not end in a number).
+- Class names
+  - Removing or renaming a class.
+  - Making a class required that was not previously required.
 
 ### React breaking changes
 
