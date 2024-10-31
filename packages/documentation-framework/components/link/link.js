@@ -16,13 +16,7 @@ const Promiseany = (
   }
 ).bind(Promise);
 
-export const Link = ({
-  href,
-  to,
-  onMouseOver = () => {},
-  onClick,
-  ...props
-}) => {
+export const Link = ({ href, to, onMouseOver = () => {}, onClick, ...props }) => {
   let preloadPromise;
   let url = href || to || '';
   if (url.startsWith('#') && !onClick) {
@@ -54,14 +48,9 @@ export const Link = ({
           if (!(ev.ctrlKey || ev.metaKey)) {
             // avoid disallowing cmnd/ctrl+click opening in new tab
             ev.preventDefault();
-            document
-              .querySelector('.pf-v6-c-page__main-container')
-              .scrollTo({ top: 0 }); // scroll to top of page
+            document.querySelector('#ws-page-main').scrollTo({ top: 0 }); // scroll to top of page
             if (typeof window !== 'undefined' && url !== location.pathname) {
-              Promiseany([
-                preloadPromise,
-                new Promise((res) => setTimeout(res, 500)),
-              ]).then(() => navigate(url));
+              Promiseany([preloadPromise, new Promise((res) => setTimeout(res, 500))]).then(() => navigate(url));
             }
           }
         };
