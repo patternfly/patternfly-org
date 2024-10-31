@@ -70,24 +70,19 @@ export const SectionGalleryWrapper = ({
       const id = itemData.id || title;
       // Display beta label if tab other than a '-next' tab is marked Beta
       const isDeprecated =
+        // TODO: remove hardcoded Tile when Core PR merges
+        // https://github.com/patternfly/patternfly/pull/7178
+        id === 'Tile' || (
         !isSubsection &&
         sources &&
         sources.some(
           (source) =>
-            (source.source === 'react-deprecated' ||
-              source.source === 'html-deprecated') &&
-            // TODO: remove hardcoded Tile when Core PR merges
-            // https://github.com/patternfly/patternfly/pull/7178
-            (source.id === 'Tile' ||
-              !sources.some(
-                (source) =>
-                  source.source === 'react' ||
-                  source.source === 'html'
-              ))
+            source.source === 'react-deprecated' ||
+            source.source === 'html-deprecated'
         ) &&
         !sources.some(
           (source) => source.source === 'react' || source.source === 'html'
-        );
+        ));
       const isBeta =
         !isSubsection &&
         sources &&
