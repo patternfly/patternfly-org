@@ -172,6 +172,5 @@ Breaking changes to our React library are the result of code changes that includ
 - Dependencies: 
   - Changes that alter component behavior. 
   - Changes that alter a consumer’s build process. 
-  - Changes that impact bundle size.
   - Changes to the signature of an event handler.
 
