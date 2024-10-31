@@ -6,7 +6,7 @@ section: get-started
 ---
 import { Alert } from '@patternfly/react-core';
 
-<Alert variant="info" isInline title="Before you upgrade"> Make sure that you have already completed [the PatternFly 5 upgrade](https://www.patternfly.org/get-started/upgrade) before attempting to support PatternFly 6. This will ensure that your product has addressed any necessary changes from our previous release.
+<Alert variant="info" isInline title="Before you upgrade"> Make sure that you have already completed [the PatternFly 5 upgrade](https://v5-archive.patternfly.org/get-started/upgrade) before attempting to support PatternFly 6. This will ensure that your product has addressed any necessary changes from our previous release.
 </Alert>
 
 PatternFly 6 introduces exciting new features and functionality, as described in [our release highlights](/get-started/release-highlights). To support these new offerings, we've introduced a long list of changes, the details of which can be found in [our major release notes](/get-started/upgrade/release-notes). 
