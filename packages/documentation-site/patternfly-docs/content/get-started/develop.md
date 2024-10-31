@@ -136,3 +136,41 @@ PatternFly is supported on the 2 latest major versions of the following browsers
 - Firefox
 - Safari
 - Edge
+
+## Breaking changes
+
+A breaking change is any modification to our design system that is significant enough to require intervention to ensure proper functionality in a UI built with PatternFly. These changes can occur in both the code and design of PatternFly features. To minimize major and unexpected disruptions, PatternFly typically reserves breaking changes for major version releases, with the following exceptions:
+- Critical bug fixes reported outside of the major release schedule.
+- Updates to components and features labeled as "beta."
+
+### Design breaking changes
+
+Breaking changes in PatternFly’s design include visual changes that would alter the UI and significantly disrupt the user experience. To restore the proper visual functioning of a UI, intentional updates are required to account for the changes.
+
+These changes include: 
+- Significant changes to a component’s style, which may be different enough to confuse users. 
+- Increases in the size of text or spacers that forcibly change content layout in a UI in ways that aren’t desired.
+
+### Core CSS breaking changes 
+
+Breaking changes to our core CSS library are the result of code changes that include:
+- CSS variables:
+  - Removing or renaming a CSS variable.
+  - Repurposing or changing the role of a CSS variable.
+  - Changing the relationship between tokens in the semantic layer (tokens that start with `--pf-t` and do not end in a number).
+- Class names:
+  - Removing or renaming a class.
+  - Making a class required that was not previously required.
+
+### React breaking changes
+
+Breaking changes to our React library are the result of code changes that include:
+- Component props: 
+  - Removing a prop. 
+  - Changing the name, type, role, or function of a prop. 
+  - Making a prop required that was not previously required.  
+- Dependencies: 
+  - Changes that alter component behavior. 
+  - Changes that alter a consumer’s build process. 
+  - Changes to the signature of an event handler.
+
