@@ -72,7 +72,6 @@ const HeaderTools = ({
 
   const toggleDarkTheme = (_evt, selected) => {
     const darkThemeToggleClicked = !selected === isDarkTheme;
-    document.querySelector('html').classList.toggle('pf-v6-theme-dark', darkThemeToggleClicked);
     setIsDarkTheme(darkThemeToggleClicked);
   };
 
@@ -247,16 +246,31 @@ export const SideNavLayout = ({ children, groupedRoutes, navOpen: navOpenProp })
   const [isRTL, setIsRTL] = useState(false);
   const [isDarkTheme, setIsDarkTheme] = React.useState(false);
 
+  const handleThemeChange = (darkThemeEnabled) => {
+    document.querySelector('html').classList.toggle('pf-v6-theme-dark', darkThemeEnabled);
+    localStorage.setItem('dark-theme', darkThemeEnabled);
+    setIsDarkTheme(darkThemeEnabled);
+  }
+
   useEffect(() => {
+    localStorage ? handleThemeChange(localStorage.getItem('dark-theme') === 'true') : handleThemeChange(false);
+
+    document.addEventListener('visibilitychange', () => handleThemeChange(localStorage.getItem('dark-theme') === 'true'));
+
     if (typeof window === 'undefined') {
       return;
     }
+
     if (hasVersionSwitcher && window.fetch) {
       fetch('/versions.json').then((res) => {
         if (res.ok) {
           res.json().then((json) => setVersions(json));
         }
       });
+    }
+
+    return () => {
+      document.removeEventListener('visibilitychange', handleVisibilityChange);
     }
   }, []);
 
@@ -339,7 +353,7 @@ export const SideNavLayout = ({ children, groupedRoutes, navOpen: navOpenProp })
             isRTL={isRTL}
             setIsRTL={setIsRTL}
             isDarkTheme={isDarkTheme}
-            setIsDarkTheme={setIsDarkTheme}
+            setIsDarkTheme={handleThemeChange}
           />
         )}
       </MastheadContent>
