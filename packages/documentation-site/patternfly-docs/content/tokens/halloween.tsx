@@ -158,7 +158,7 @@ export const TabsOpenDemo = () => {
   const drawer = (
     <>
       <DrawerHead>
-        <Content component="h2">POTION NOTES: WITCH'S BREW</Content>
+        <Content component="h2">Potion Notes: Witches Brew</Content>
       </DrawerHead>
       <DrawerPanelBody>
         <Content>
@@ -590,7 +590,7 @@ export const TabsOpenDemo = () => {
           </FlexItem>
           <FlexItem>
             <Title headingLevel="h1" size="2xl">
-              POTION BUILDER
+              Potion Builder
             </Title>
           </FlexItem>
         </Flex>
