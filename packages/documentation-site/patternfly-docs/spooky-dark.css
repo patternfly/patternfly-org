@@ -377,4 +377,5 @@
   --pf-t--global--text--color--status--warning--clicked: var(--pf-t--global--color--status--warning--clicked);
   --pf-t--global--text--color--status--warning--default: var(--pf-t--global--color--status--warning--default);
   --pf-t--global--text--color--status--warning--hover: var(--pf-t--global--color--status--warning--hover);
+  --pf-t--color--purple--80: #180d33;
 }
