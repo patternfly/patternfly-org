@@ -79,7 +79,7 @@ export const SectionGalleryWrapper = ({
             // TODO: remove hardcoded Tile when Core PR merges
             // https://github.com/patternfly/patternfly/pull/7178
             (source.id === 'Tile' ||
-              !navObj.sources.some(
+              !sources.some(
                 (source) =>
                   source.source === 'react' ||
                   source.source === 'html'
