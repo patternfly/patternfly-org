@@ -74,8 +74,16 @@ export const SectionGalleryWrapper = ({
         sources &&
         sources.some(
           (source) =>
-            source.source === 'react-deprecated' ||
-            source.source === 'html-deprecated'
+            (source.source === 'react-deprecated' ||
+              source.source === 'html-deprecated') &&
+            // TODO: remove hardcoded Tile when Core PR merges
+            // https://github.com/patternfly/patternfly/pull/7178
+            (source.id === 'Tile' ||
+              !navObj.sources.some(
+                (source) =>
+                  source.source === 'react' ||
+                  source.source === 'html'
+              ))
         ) &&
         !sources.some(
           (source) => source.source === 'react' || source.source === 'html'
