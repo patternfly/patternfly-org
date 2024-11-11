@@ -62,7 +62,7 @@ export const SectionGalleryLayout = ({
                       <img src={illustration} alt={`${itemName} illustration`} />
                     )}
                     {hasGridText && (
-                      <TextSummary id={`summary-${stripped_id}`} itemsData={galleryItemsData} />
+                      <TextSummary id={id} itemsData={galleryItemsData} />
                     )}
                   </CardBody>
                 )}
