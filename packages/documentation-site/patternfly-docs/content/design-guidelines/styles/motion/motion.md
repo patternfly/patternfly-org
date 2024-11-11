@@ -116,7 +116,7 @@ In Figma, you can find annotations and prototype videos for each animation...
 
 PatternFly component animations are created using design tokens that cover the different elements of an animation, including duration, delay, and timing. Like we do with color tokens, we implement motion by using semantic tokens, which are built off of base tokens. Motion tokens begin with `-pf-t--global--motion--`
 
-You can [search for motion tokens here.](/tokens/all-tokens)
+You can [search for motion tokens here.](/tokens/all-patternfly-tokens)
 
 If you aren't familiar with our token system, [refer to this overview](/tokens/about-tokens).
 

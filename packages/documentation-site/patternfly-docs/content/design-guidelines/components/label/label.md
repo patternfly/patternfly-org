@@ -26,7 +26,7 @@ You can customize labels by adjusting their visual styling or adding functionali
 Labels are useful in a few scenarios: 
 - When you want to highlight an element on a page to draw attention to it or make it more searchable. 
 - To tag items of the same category. If you want to show a count, use a [badge](/components/badge) instead.
-- For use in [filtering](/patterns/filters) to indicate user selections, similar to the now deprecated [chip](/component/chip) component.
+- For use in [filtering](/patterns/filters) to indicate user selections, similar to the now deprecated [chip](/components/chip) component.
 
 There are 2 label sizes:
 

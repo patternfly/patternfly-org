@@ -34,12 +34,24 @@
     "showdown": "^2.1.0"
   },
   "devDependencies": {
-    "@patternfly/patternfly-a11y": "4.3.1",
+    "@patternfly/patternfly-a11y": "5.0.0",
     "fs-extra": "^11.1.0",
     "glob": "^8.1.0",
     "react-jss": "^10.9.2",
     "react-router": "^6.3.0",
     "react-router-dom": "^6.3.0",
-    "classnames": "^2.2.5"
+    "classnames": "^2.2.5",
+    "victory-core": "^37.1.1",
+    "victory-scatter": "^37.1.1",
+    "victory-pie": "^37.1.1",
+    "victory-stack": "^37.1.1",
+    "victory-legend": "^37.1.1",
+    "victory-line": "^37.1.1",
+    "victory-group": "^37.1.1",
+    "victory-voronoi-container": "^37.1.1",
+    "victory-create-container": "^37.1.1",
+    "victory-cursor-container": "^37.1.1",
+    "victory-tooltip": "^37.1.1",
+    "victory-bar": "^37.1.1"
   }
 }

@@ -40,7 +40,7 @@ Use a progress stepper:
 * To indicate to the user where they are in a step-by-step linear process on a single page. 
 * When the steps in the process could be completed by the user or happening in the background without the user completing the task themselves. 
 
-Use a [wizard](/v4/components/wizard):
+Use a [wizard](/components/wizard):
 * To guide the user through a multi-step flow where they must complete specific tasks in order. 
 * When the steps are complex enough they need to be broken up into smaller, more manageable steps and does not keep user on the same screen.
 

@@ -42,7 +42,7 @@ For more information about using date and time pickers together, visit our [date
 
 ## Variations
 ### Time picker in a toolbar
-Use time pickers as filters in a toolbar. Note that time pickers aren't commonly used on their own, and will usually be accompanied by a [date picker](/components/date-picker).
+Use time pickers as filters in a toolbar. Note that time pickers aren't commonly used on their own, and will usually be accompanied by a [date picker](/components/date-and-time/date-picker).
 
 See the [date picker usage guidelines](/components/date-and-time/date-picker/design-guidelines) to learn more about using date pickers and time pickers in a toolbar. 
 

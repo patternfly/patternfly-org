@@ -54,7 +54,7 @@ module.exports = {
       viewportDimensions: {width: 400, height: 900},
     },
     {
-      url: '/components/table/react-legacy',
+      url: '/components/table/react-deprecated',
       crawl: false,
       label: 'legacy table content on mobile screen',
       viewportDimensions: {width: 400, height: 900},
@@ -67,5 +67,5 @@ module.exports = {
     }
   ],
   ignoreIncomplete: true,
-  skip: '(mailto)|(/(react|react-next|react-demos|react-deprecated|html|html-demos)/.+)|(/react$)'
+  skip: '(mailto)|(/(react|react-next|react-demos|react-deprecated|react-templates|html|html-demos)/.+)|(/react$)'
 };

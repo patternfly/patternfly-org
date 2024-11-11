@@ -50,13 +50,13 @@ For example:
 
 <Split>
 <SplitItem>
-<Tooltip content={"Settings"} aria="labelledby"> <Button variant="plain"> <CogIcon /></Button> </Tooltip>
+<Tooltip content={"Settings"} aria="labelledby"> <Button variant="plain" aria-label="More information about settings"> <CogIcon /></Button> </Tooltip>
 </SplitItem>
 <SplitItem>
-<Tooltip content={"Copy"} aria="labelledby"> <Button variant="plain"> <CopyIcon /></Button> </Tooltip>
+<Tooltip content={"Copy"} aria="labelledby"> <Button variant="plain" aria-label="Copy"> <CopyIcon /></Button> </Tooltip>
 </SplitItem>
 <SplitItem>
-<Tooltip content={"Search"} aria="labelledby"> <Button variant="plain"> <SearchIcon /></Button> </Tooltip>
+<Tooltip content={"Search"} aria="labelledby"> <Button variant="plain" aria-label="Search"> <SearchIcon /></Button> </Tooltip>
 </SplitItem>
 </Split>
 
