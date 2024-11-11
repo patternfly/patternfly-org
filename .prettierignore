@@ -2,5 +2,6 @@
 *
 # Except js files
 !*.js
+!*.tsx
 # Look for js files in subdirectories
 !*/
