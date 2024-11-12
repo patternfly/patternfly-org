@@ -3,6 +3,41 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 6.0.6 (2024-11-06)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 6.0.5 (2024-10-31)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 6.0.4 (2024-10-31)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 6.0.3 (2024-10-30)
+
+
+### Bug Fixes
+
+* Updated with patch from virtual assistant. ([#4358](https://github.com/patternfly/patternfly-org/issues/4358)) ([ccab899](https://github.com/patternfly/patternfly-org/commit/ccab899478cb48eafd0f39eca998f790d6ffb38b))
+
+
+
+
+
 ## 6.0.2 (2024-10-30)
 
 **Note:** Version bump only for package @patternfly/documentation-framework

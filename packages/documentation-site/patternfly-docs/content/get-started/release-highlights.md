@@ -33,7 +33,7 @@ The official release of PatternFly 6 is here! It contains all of the previous fe
     - [@patternfly/react-user-feedback@6.0.0](https://www.npmjs.com/package/@patternfly/react-user-feedback/v/6.0.0) ([changelog](https://github.com/patternfly/react-user-feedback/releases/tag/v6.0.0))
     - [@patternfly/react-virtualized-extension@6.0.0](https://www.npmjs.com/package/@patternfly/react-virtualized-extension/v/6.0.0) ([changelog](https://github.com/patternfly/react-virtualized-extension/releases/tag/v6.0.0))
     - [@patternfly/quickstarts@6.0.0](https://www.npmjs.com/package/@patternfly/quickstarts/v/6.0.0) ([changelog](https://github.com/patternfly/patternfly-quickstarts/releases/tag/v6.0.0))
-    - [@patternfly/virtual-assistant@2.0.0](https://www.npmjs.com/package/@patternfly/virtual-assistant/v/2.0.0) ([changelog](https://github.com/patternfly/patternfly-quickstarts/releases/tag/v2.0.0))
+    - [@patternfly/virtual-assistant@2.0.2](https://www.npmjs.com/package/@patternfly/virtual-assistant/v/2.0.2) ([changelog](https://github.com/patternfly/patternfly-quickstarts/releases/tag/v2.0.0))
     - [@patternfly/react-component-groups@6.0.0](https://www.npmjs.com/package/@patternfly/react-component-groups/v/6.0.0) ([changelog](https://github.com/patternfly/react-component-groups/releases/tag/v6.0.0))
 
 ### PatternFly AI
