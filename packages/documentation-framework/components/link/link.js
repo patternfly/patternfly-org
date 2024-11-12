@@ -48,9 +48,12 @@ export const Link = ({ href, to, onMouseOver = () => {}, onClick, ...props }) =>
           if (!(ev.ctrlKey || ev.metaKey)) {
             // avoid disallowing cmnd/ctrl+click opening in new tab
             ev.preventDefault();
-            document.querySelector('#ws-page-main').scrollTo({ top: 0 }); // scroll to top of page
             if (typeof window !== 'undefined' && url !== location.pathname) {
-              Promiseany([preloadPromise, new Promise((res) => setTimeout(res, 500))]).then(() => navigate(url));
+              Promiseany([preloadPromise, new Promise((res) => setTimeout(res, 500))])
+                .then(() => navigate(url))
+                .then(() => {
+                  document.querySelector('#ws-page-main').scrollTo({ top: 0 }); // scroll to top of page
+                });
             }
           }
         };
