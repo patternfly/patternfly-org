@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.4.0-alpha.123 (2024-11-15)
+
+
+### Bug Fixes
+
+* a11y scorecard update after PF6 ([#4375](https://github.com/patternfly/patternfly-org/issues/4375)) ([c4f3e65](https://github.com/patternfly/patternfly-org/commit/c4f3e65d9a9315ea105fddb6a4f15ca21df7fb23))
+
+
+
+
+
 # 1.4.0-alpha.122 (2024-11-06)
 
 **Note:** Version bump only for package @patternfly/ast-helpers
