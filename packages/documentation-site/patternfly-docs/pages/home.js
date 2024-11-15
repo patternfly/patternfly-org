@@ -159,7 +159,7 @@ const FeaturedBlogCard = ({postData, idx}) => {
 const HomePage = () => (
   <React.Fragment>
     <PageSection variant={PageSectionVariants.light} stickyOnBreakpoint={{ default: 'top' }} className="pf-v5-u-font-size-lg">
-      The PatternFly 6 alpha release is available! Our staging website has a fresh look, along with new styles, code samples, and documentation. <a href="https://staging-v6.patternfly.org/" className="pf-v5-u-font-weight-bold"> Go to PatternFly 6 <ArrowRightIcon /></a>
+      The PatternFly 6 alpha release is available! Our staging website has a fresh look, along with new styles, code samples, and documentation. <a href="https://patternfly.org/" className="pf-v5-u-font-weight-bold"> Go to PatternFly 6 <ArrowRightIcon /></a>
     </PageSection>
     <PageSection isWidthLimited className="ws-homepage-main-section">
       <Flex
