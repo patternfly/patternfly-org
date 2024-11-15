@@ -1,6 +1,7 @@
 ---
 id: Tile
 section: components
+deprecated: true
 ---
 
 ## Usage

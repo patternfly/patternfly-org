@@ -8,7 +8,7 @@ import {
   PageContextConsumer,
   capitalize,
   Flex,
-  FlexItem,
+  FlexItem
 } from '@patternfly/react-core';
 import { css } from '@patternfly/react-styles';
 import { Location } from '@reach/router';
@@ -24,8 +24,7 @@ const getIsActive = (location, section, subsection = null) => {
 const defaultValue = 50;
 
 const NavItem = ({ text, href, isDeprecated, isBeta, isDemo }) => {
-  const isMobileView =
-    window.innerWidth < Number.parseInt(globalBreakpointXl.value, 10);
+  const isMobileView = window.innerWidth < Number.parseInt(globalBreakpointXl.value, 10);
   return (
     <PageContextConsumer key={href + text}>
       {({ onSidebarToggle, isSidebarOpen }) => (
@@ -39,11 +38,7 @@ const NavItem = ({ text, href, isDeprecated, isBeta, isDemo }) => {
             getProps={({ isCurrent, href, location }) => {
               const { pathname } = location;
               return {
-                className: css(
-                  'pf-v6-c-nav__link',
-                  (isCurrent || pathname.startsWith(href + '/')) &&
-                    'pf-m-current'
-                ),
+                className: css('pf-v6-c-nav__link', (isCurrent || pathname.startsWith(href + '/')) && 'pf-m-current')
               };
             }}
             tabIndex={isSidebarOpen ? undefined : -1}
@@ -77,17 +72,10 @@ const NavItem = ({ text, href, isDeprecated, isBeta, isDemo }) => {
   );
 };
 
-const ExpandableNav = ({
-  groupedRoutes,
-  location,
-  section,
-  subsection = null,
-}) => {
+const ExpandableNav = ({ groupedRoutes, location, section, subsection = null }) => {
   const isActive = getIsActive(location, section, subsection);
   const isSubsection = subsection;
-  const routes = isSubsection
-    ? groupedRoutes[section][subsection]
-    : groupedRoutes[section];
+  const routes = isSubsection ? groupedRoutes[section][subsection] : groupedRoutes[section];
   const currentSection = isSubsection ? subsection : section;
   const analyticsName = isSubsection ? `${section}/${subsection}` : section;
 
@@ -102,59 +90,39 @@ const ExpandableNav = ({
         event.stopPropagation();
         // Don't trigger for bubbled events from NavItems
         if (!event.target.href) {
-          const isExpanded =
-            event.currentTarget.classList.contains('pf-m-expanded');
+          const isExpanded = event.currentTarget.classList.contains('pf-m-expanded');
           // 1 === expand section, 0 === collapse section
-          trackEvent(
-            'sidenav_section_click',
-            'click_event',
-            analyticsName,
-            isExpanded ? 0 : 1
-          );
+          trackEvent('sidenav_section_click', 'click_event', analyticsName, isExpanded ? 0 : 1);
         }
       }}
     >
       {Object.entries(routes || {})
-        .filter(
-          ([id, navObj]) =>
-            !Boolean(navObj.hideNavItem) && Object.entries(navObj).length > 0
-        )
+        .filter(([id, navObj]) => !Boolean(navObj.hideNavItem) && Object.entries(navObj).length > 0)
         .map(
           ([
             id,
-            {
-              slug,
-              isSubsection = false,
-              sortValue = defaultValue,
-              subsectionSortValue = defaultValue,
-              sources,
-            },
+            { slug, isSubsection = false, sortValue = defaultValue, subsectionSortValue = defaultValue, sources }
           ]) => ({
             text: id,
             href: slug,
             isSubsection,
             sortValue: isSubsection ? subsectionSortValue : sortValue,
-            sources,
+            sources
           })
         )
-        .sort(
-          (
-            { text: text1, sortValue: sortValue1 },
-            { text: text2, sortValue: sortValue2 }
-          ) => {
-            if (sortValue1 === sortValue2) {
-              return text1.localeCompare(text2);
-            }
-            return sortValue1 > sortValue2 ? 1 : -1;
+        .sort(({ text: text1, sortValue: sortValue1 }, { text: text2, sortValue: sortValue2 }) => {
+          if (sortValue1 === sortValue2) {
+            return text1.localeCompare(text2);
           }
-        )
+          return sortValue1 > sortValue2 ? 1 : -1;
+        })
         .map((navObj) => {
           return navObj.isSubsection
             ? ExpandableNav({
                 groupedRoutes,
                 location,
                 section,
-                subsection: navObj.text,
+                subsection: navObj.text
               })
             : NavItem({
                 ...navObj,
@@ -162,32 +130,17 @@ const ExpandableNav = ({
                   navObj.href?.includes('components') &&
                   navObj.sources.some(
                     (source) =>
-                      (source.source === 'react-deprecated' ||
-                        source.source === 'html-deprecated') &&
-                      // TODO: remove hardcoded Tile when Core PR merges
-                      // https://github.com/patternfly/patternfly/pull/7178
-                      (source.id === 'Tile' ||
-                        !navObj.sources.some(
-                          (source) =>
-                            source.source === 'react' ||
-                            source.source === 'html'
-                        ))
+                      (source.source === 'react-deprecated' || source.source === 'html-deprecated') &&
+                      !navObj.sources.some((source) => source.source === 'react' || source.source === 'html')
                   ),
                 isBeta: navObj.sources.some(
-                  (source) =>
-                    source.beta &&
-                    source.source !== 'react-next' &&
-                    source.source !== 'react-templates'
+                  (source) => source.beta && source.source !== 'react-next' && source.source !== 'react-templates'
                 ),
                 isDemo: navObj.sources.some(
                   (source) =>
-                    (source.source === 'react-demos' ||
-                      source.source === 'html-demos') &&
-                    !navObj.sources.some(
-                      (source) =>
-                        source.source === 'react' || source.source === 'html'
-                    )
-                ),
+                    (source.source === 'react-demos' || source.source === 'html-demos') &&
+                    !navObj.sources.some((source) => source.source === 'react' || source.source === 'html')
+                )
               });
         })}
     </NavExpandable>
@@ -203,8 +156,7 @@ export const SideNav = ({ groupedRoutes = {}, navItems = [] }) => {
     if (!overflowElement) {
       return;
     }
-    const activeElements =
-      overflowElement.getElementsByClassName('pf-m-current');
+    const activeElements = overflowElement.getElementsByClassName('pf-m-current');
     if (activeElements.length > 0) {
       const lastElement = activeElements[activeElements.length - 1];
       lastElement.scrollIntoView({ block: 'center' });
@@ -216,16 +168,11 @@ export const SideNav = ({ groupedRoutes = {}, navItems = [] }) => {
       <NavList className="ws-side-nav-list">
         {navItems.map(({ section, text, href }) =>
           section ? (
-            <Location key={section}>
-              {({ location }) =>
-                ExpandableNav({ groupedRoutes, location, section })
-              }
-            </Location>
+            <Location key={section}>{({ location }) => ExpandableNav({ groupedRoutes, location, section })}</Location>
           ) : (
             NavItem({
-              text:
-                text || capitalize(href.replace(/\//g, '').replace(/-/g, ' ')),
-              href: href,
+              text: text || capitalize(href.replace(/\//g, '').replace(/-/g, ' ')),
+              href: href
             })
           )
         )}
