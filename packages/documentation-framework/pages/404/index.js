@@ -107,7 +107,7 @@ const Page404 = () => {
           body="Visualize your facts and figures by designing the right charts for your data."
           link={{
             text: 'View charts',
-            to: '/charts/about',
+            to: '/charts/about-charts',
           }}
         />
       </Grid>

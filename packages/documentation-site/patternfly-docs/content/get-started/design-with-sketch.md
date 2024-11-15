@@ -60,8 +60,7 @@ Should you use a wizard or a form to solve this problem? How do you write a good
 ### Content guidelines
 How do you write great microcopy and text for your user interface? Read our content guidelines for general principles, guidance on voice, and a style guide to help you with everything from capitalization to date and time formats.
 
-
-[**View content guidelines**](/ux-writing/about) <i class="ws-content-blueArrow fas fa-arrow-right pf-v6-u-mx-sm"></i>
+[**View content guidelines**](/ux-writing/about-ux-writing <i class="ws-content-blueArrow fas fa-arrow-right pf-v6-u-mx-sm"></i>
 
 ### Start building with components.
 What does a toolbar look like? What about a filter chip? Components are the building blocks of the design system. Check out individual component pages to view examples, understand states and behaviors, and check out the code samples (if you’re into that kind of thing).
@@ -129,10 +128,6 @@ It’s important to understand some specific aspects about the design kit and th
 * [Layers styles](#layer-styles)
 * [Text styles](#text-styles)
 
-### Sketch design training
-There’s a lot to learn when it comes to making smart use of the Sketch template and library. Whether you are new to PatternFly, new to Sketch, or even an experienced Sketch user, just looking to see how other designers use the application, the Sketch design training is a great place to start when using the design kit.
-
-[**Start Sketch design training**](/training/design) <i class="ws-content-blueArrow fas fa-arrow-right pf-v6-u-mx-sm"></i>
 
 ### Spacers
 The layout for all visual elements in Patternfly is determined by spacers. The spacers are used as padding between elements to ensure consistent layout and placement of components into a design that adheres to PatternFly guidelines. All symbols in the symbol library and templates have been made using spacers which are built-in to ensure correct use of elements.

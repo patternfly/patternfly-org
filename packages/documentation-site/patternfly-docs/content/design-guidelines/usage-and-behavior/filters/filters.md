@@ -58,7 +58,7 @@ Text entry filters support [filter labels](#filter-label), but do not support [t
 <img src="./img/text-input-chips.png" alt="text input labels" width="880"/>
 
 ### Single select
-A single select provides the user with a fixed set of values from which they can only select one value. This filter type uses the [single select component](/components/select/react#single). If the single select filter is the only filter in the toolbar, it should have an “All options” menu item by default as a way to reset the filter (unless a selection must be made at all times). This “All” option will be selected by default, acting as an equivalent of no filter selected. 
+A single select provides the user with a fixed set of values from which they can only select one value. This filter type uses the [single select component](/components/menus/select/react#single). If the single select filter is the only filter in the toolbar, it should have an “All options” menu item by default as a way to reset the filter (unless a selection must be made at all times). This “All” option will be selected by default, acting as an equivalent of no filter selected. 
 
 <img src="./img/single-select.png" alt="single select list filter" width="880"/>
 
@@ -79,7 +79,7 @@ Single selects can include [type-aheads](#type-ahead) as an added feature.
 Stand alone single selects in a toolbar do not use badge counts or filter labels since only one selection can be made, and the selection will already be apparent in the toggle. 
 
 ### Checkbox select
-A checkbox select provides the user with a fixed set of values from which they can select multiple values. This filter type uses the [checkbox select component](/components/select/react#checkbox-input).
+A checkbox select provides the user with a fixed set of values from which they can select multiple values. This filter type uses the [checkbox select component](/components/menus/select/react#checkbox-input).
 
 <img src="./img/checkbox-select.png" alt="checkbox select"/>
 
@@ -154,7 +154,7 @@ Attribute-value filter features include [filter labels](#filter-label), [badges]
 **Type-ahead** allows the user to narrow down their search and is supported for all value selection types except checkbox selects. Although typeahead is **not supported** for checkbox selects, you can add a search input inside the menu, above the items the user can select from.
 
 ### Filter group
-A filter group is a set of filters that appear side by side in a toolbar. This filter type uses the [select list](/components/select) component.
+A filter group is a set of filters that appear side by side in a toolbar. This filter type uses the [select list](/components/menus/select) component.
 
 <img src="./img/filter-group-2.png" alt="filter group with multiple selects" />
 
@@ -191,7 +191,7 @@ Information will be shown to the user based on the toggles they select. If somet
 Toggle groups do not use or support filter labels, badges, or type-ahead.
 
 ### Faceted filter
-Faceted filtering is useful when items can be described by categories according to multiple dimensions or facets. This filter usually uses the [grouped checkbox select list](/components/select#grouped-checkbox-input) component.
+Faceted filtering is useful when items can be described by categories according to multiple dimensions or facets. This filter usually uses the [grouped checkbox select list](/components/menus/select#grouped-checkbox-input) component.
 
 <img src="./img/faceted-grouped.png" alt="faceted filter with checkbox" />
 

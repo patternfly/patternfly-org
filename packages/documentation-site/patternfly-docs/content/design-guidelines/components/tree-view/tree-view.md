@@ -32,10 +32,10 @@ A tree view can be used for:
 * You need to display hierarchies that have more than 2 levels.
 
 ### When not to use
-* You select 1 item from a small set. Instead, use [simple list](/components/simple-list), [select lists](/components/select), [radio buttons](/components/forms/radio), [checkboxes](/components/checkbox), or a [dropdown](/components/menus/dropdown).
+* You select 1 item from a small set. Instead, use [simple list](/components/simple-list), [select lists](/components/menus/select), [radio buttons](/components/forms/radio), [checkboxes](/components/forms/checkbox), or a [dropdown](/components/menus/dropdown).
 * You need to see an overview of a large amount of data.
-* You need to compare 2 large sets of data. Use [charts](/charts/about) for a better view. 
-* The hierarchy is too deep and includes hundreds of items. Instead, use a [drill-down menu](/components/menu#drilldown).
+* You need to compare 2 large sets of data. Use [charts](/charts/about-charts) for a better view. 
+* The hierarchy is too deep and includes hundreds of items. Instead, use a [drill-down menu](/components/menus/menu#with-drilldown).
 
 ### When to use accordions vs. tree tables vs. tree views
 
@@ -53,7 +53,7 @@ A tree view can be used for:
 
 ### Tree view in a page
 
-Tree views can be included in pages within these components: [dropdown](/components/menus/dropdown), [drawer](/components/drawer), [primary-detail](/demos/primary-detail), [modal](/components/modal), or [wizard](/components/wizard). 
+Tree views can be included in pages within these components: [dropdown](/components/menus/dropdown), [drawer](/components/drawer), [primary-detail](/patterns/primary-detail), [modal](/components/modal), or [wizard](/components/wizard). 
 
 ### Tree view in a wizard
 A tree view in a wizard allows users to apply multiple filters or select multiple items that are specific to their current step.
@@ -61,7 +61,7 @@ A tree view in a wizard allows users to apply multiple filters or select multipl
 <img src="./img/treeview-wizard.png" alt="Tree view in wizard usage" width="1500" />
 
 ### Tree view in a primary-detail or drawer 
-A tree view in a [primary-detail](/demos/primary-detail) or [drawer](/components/drawer) allows users to switch content based on their selection from a tree. 
+A tree view in a [primary-detail](/patterns/primary-detail) or [drawer](/components/drawer) allows users to switch content based on their selection from a tree. 
 
 <img src="./img/treeview-primarydetail-drawer.png" alt="Tree view in primary detail drawer usage" width="1500" />
 
@@ -82,7 +82,7 @@ Add a search bar to a tree view if you're including a large amount of data and n
 
 ### Adding checkboxes to a tree view
 
-Add checkboxes to a tree view if you’re selecting multiple items or applying multiple filters. Selecting should be a primary function of your use-case. If your dataset is small and you select just 1 item, use [select lists](/components/select), [radio buttons](/components/forms/radio), [checkboxes](/components/checkbox), or a [dropdown](/components/menus/dropdown) instead. 
+Add checkboxes to a tree view if you’re selecting multiple items or applying multiple filters. Selecting should be a primary function of your use-case. If your dataset is small and you select just 1 item, use [select lists](/components/menus/select), [radio buttons](/components/forms/radio), [checkboxes](/components/forms/checkbox), or a [dropdown](/components/menus/dropdown) instead. 
 
 <img src="./img/treeview-checkboxes.png" alt="Tree view with checkboxes usage" width="1004" />
 

@@ -36,55 +36,59 @@ export const SectionGalleryLayout = ({
           isDemo,
           title,
           galleryItemsData,
-        }) => (
-          <GalleryItem span={4} key={idx}>
-            <Card id={id} key={idx} isClickable>
-              <CardHeader
-                selectableActions={{
-                  onClickAction: (e) => {
-                    e.preventDefault();
-                    document.getElementById('ws-page-main').scrollIntoView();
-                    navigate(slug);
-                  },
-                  selectableActionId: `${id}-input`,
-                  selectableActionAriaLabelledby: id,
-                  name: `clickable-card-${idx}`,
-                }}
-              >
-                <CardTitle>{title}</CardTitle>
-              </CardHeader>
-              {(hasGridImages || hasGridText) && (
-                <CardBody>
-                  {hasGridImages && illustration && (
-                    <img src={illustration} alt={`${itemName} illustration`} />
-                  )}
-                  {hasGridText && (
-                    <TextSummary id={id} itemsData={galleryItemsData} />
-                  )}
-                </CardBody>
-              )}
-              {(isBeta || isDeprecated || isDemo) && (
-                <CardFooter>
-                  {isBeta && (
-                    <Label color="blue" isCompact>
-                      Beta
-                    </Label>
-                  )}
-                  {!isBeta && isDeprecated && (
-                    <Label color="grey" isCompact>
-                      Deprecated
-                    </Label>
-                  )}
-                  {!isBeta && !isDeprecated && isDemo && (
-                    <Label color="purple" isCompact>
-                      Demo
-                    </Label>
-                  )}
-                </CardFooter>
-              )}
-            </Card>
-          </GalleryItem>
-        )
+        }) => {
+          const stripped_id = id.replace(/\s+/g, '-');
+          
+          return (
+            <GalleryItem span={4} key={idx}>
+              <Card id={stripped_id} key={idx} isClickable>
+                <CardHeader
+                  selectableActions={{
+                    onClickAction: (e) => {
+                      e.preventDefault();
+                      document.getElementById('ws-page-main').scrollIntoView();
+                      navigate(slug);
+                    },
+                    selectableActionId: `${stripped_id}-input`,
+                    selectableActionAriaLabelledby: stripped_id,
+                    name: `clickable-card-${idx}`,
+                  }}
+                >
+                  <CardTitle>{title}</CardTitle>
+                </CardHeader>
+                {(hasGridImages || hasGridText) && (
+                  <CardBody>
+                    {hasGridImages && illustration && (
+                      <img src={illustration} alt={`${itemName} illustration`} />
+                    )}
+                    {hasGridText && (
+                      <TextSummary id={id} itemsData={galleryItemsData} />
+                    )}
+                  </CardBody>
+                )}
+                {(isBeta || isDeprecated || isDemo) && (
+                  <CardFooter>
+                    {isBeta && (
+                      <Label color="blue" isCompact>
+                        Beta
+                      </Label>
+                    )}
+                    {!isBeta && isDeprecated && (
+                      <Label color="grey" isCompact>
+                        Deprecated
+                      </Label>
+                    )}
+                    {!isBeta && !isDeprecated && isDemo && (
+                      <Label color="purple" isCompact>
+                        Demo
+                      </Label>
+                    )}
+                  </CardFooter>
+                )}
+              </Card>
+            </GalleryItem>
+          )
+        }
       )}
     </Gallery>
   );

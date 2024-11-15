@@ -11,7 +11,7 @@ section: components
 
 2. **Language selector (optional)**
 
-3. **Required fields:** Username and password are both required fields. Some applications may require additional fields like a specific server or geo-location. When additional fields are required, they should be placed directly below the password field. The login card will expand to accommodate additional fields. Try to limit the total number of additional fields to three or less. Also, you may use [progressive disclosure](/components/form/design-guidelines#use-progressive-disclosure) if the field value has dependency on the previous relevant field.
+3. **Required fields:** Username and password are both required fields. Some applications may require additional fields like a specific server or geo-location. When additional fields are required, they should be placed directly below the password field. The login card will expand to accommodate additional fields. Try to limit the total number of additional fields to three or less. Also, you may use [progressive disclosure](/components/forms/form/design-guidelines#use-progressive-disclosure) if the field value has dependency on the previous relevant field.
 
 4. **Show/Hide password (optional):** Allows users to view and hide passwords on password fields.
 
