@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.4.0-alpha.124 (2024-11-15)
+
+
+### Bug Fixes
+
+* **docs:** fix scroll selector to scroll to top on page change ([#4364](https://github.com/patternfly/patternfly-org/issues/4364)) ([c0a0c26](https://github.com/patternfly/patternfly-org/commit/c0a0c26bf10b7a784fab194d626342a7d71e86d6))
+
+
+
+
+
 # 1.4.0-alpha.123 (2024-11-15)
 
 
