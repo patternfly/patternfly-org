@@ -67,7 +67,7 @@ Use a [primary button](/components/button/design-guidelines#primary-button) to c
 
 If an action is difficult or impossible to undo, add a warning icon beside the headline. 
 
-If a destructive action has serious consequences, consider adding an additional step before its destructive button becomes active. Additional confirmation measures like [text input](/components/text-input/design-guidelines) fields safeguard a user from accidentally completing the action. 
+If a destructive action has serious consequences, consider adding an additional step before its destructive button becomes active. Additional confirmation measures like [text input](/components/forms/text-input/design-guidelines) fields safeguard a user from accidentally completing the action. 
 
 When a text input field is added to a confirmation dialog, the danger button will only become enabled once a user enters the entire word or phrase.
 
@@ -160,7 +160,7 @@ Example headline: *Permanently delete database?*<br />
 Example buttons: *Delete* and *Cancel* <br />
 For more button guidance, see our [button label guidelines](/components/button/design-guidelines#content).
 
-For general content guidance to help write effective modal dialogs, see our [UX writing style guide](/ux-writing/about).
+For general content guidance to help write effective modal dialogs, see our [UX writing style guide](/ux-writing/about-ux-writing).
 
 
 ### Icon use in modal dialogs

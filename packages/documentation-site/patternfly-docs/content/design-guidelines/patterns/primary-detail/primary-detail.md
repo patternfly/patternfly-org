@@ -26,9 +26,9 @@ When the page content has a white background, the drawer can be placed on the sa
 **Common detail components:**
 - Markdown text form or [code editor](/components/code-editor)
 - [Description list](/components/description-list)
-- [Charts or graphs](/charts/about)
+- [Charts or graphs](/charts/about-charts)
 - [Input forms](/components/input-group)
-- [Text](/components/text)
+- [Content](/components/content)
  
 ## Usage
 Use a primary-detail layout when viewing details from an item in a large list or group on the same page. A primary-detail layout is useful for navigating back and forth through a list and making edits in the details of each list item, without losing context of the larger list. Primary-detail layouts look best on wider screens, but they can be responsive, too.

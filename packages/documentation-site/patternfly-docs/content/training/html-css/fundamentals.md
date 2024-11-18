@@ -67,7 +67,7 @@ Add the badge inside the chip. To do this, add this block of code between `pf-v6
 7\n</span>`}
 </CopyCodeBlock>
 
-**Note:** Remember, this is a component and not a demo because the chip component includes styles that handle how the badge looks within the chip. For example, when the badge component is added to the chip, it receives styling that gives it a margin. You can see that the badge in a chip has its own CSS variable, `--pf-v6-c-chip__c-badge--MarginLeft`, defined for the right margin under the <a href="/components/chip/html#css-variables">CSS Variables section of the chip documentation</a>.
+**Note:** Remember, this is a component and not a demo because the chip component includes styles that handle how the badge looks within the chip. For example, when the badge component is added to the chip, it receives styling that gives it a margin. You can see that the badge in a chip has its own CSS variable, `--pf-v6-c-chip__c-badge--MarginLeft`, defined for the right margin under the <a href="/components/chip">CSS Variables section of the chip documentation</a>.
 
 The resulting chip should match the following image.
 

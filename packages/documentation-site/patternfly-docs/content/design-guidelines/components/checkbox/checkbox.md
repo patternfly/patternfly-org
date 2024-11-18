@@ -15,7 +15,7 @@ You can also use a single checkbox to allow a user to enable or disable a featur
 
 ### When to use
 
-* Use checkboxes if you’re presenting 5 or fewer options to the user. If you’re presenting more than 5 options, use a [select list](/components/select/design-guidelines) instead.
+* Use checkboxes if you’re presenting 5 or fewer options to the user. If you’re presenting more than 5 options, use a [select list](/components/menus/select/design-guidelines) instead.
 * Use checkboxes if the user can select multiple options. If the user can only select 1 option, then use radio buttons. 
 
 

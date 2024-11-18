@@ -3,6 +3,36 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 6.0.8 (2024-11-15)
+
+
+### Bug Fixes
+
+* **docs:** fix scroll selector to scroll to top on page change ([#4364](https://github.com/patternfly/patternfly-org/issues/4364)) ([c0a0c26](https://github.com/patternfly/patternfly-org/commit/c0a0c26bf10b7a784fab194d626342a7d71e86d6))
+
+
+
+
+
+## 6.0.7 (2024-11-15)
+
+
+### Bug Fixes
+
+* a11y scorecard update after PF6 ([#4375](https://github.com/patternfly/patternfly-org/issues/4375)) ([c4f3e65](https://github.com/patternfly/patternfly-org/commit/c4f3e65d9a9315ea105fddb6a4f15ca21df7fb23))
+
+
+
+
+
+## 6.0.6 (2024-11-06)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
 ## 6.0.5 (2024-10-31)
 
 **Note:** Version bump only for package @patternfly/documentation-framework
