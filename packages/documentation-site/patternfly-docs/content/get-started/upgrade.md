@@ -63,7 +63,7 @@ At the start of your upgrade process, we strongly recommend temporarily removing
 
 We recommend *completely* removing CSS overrides as much as possible, so that your product upgrade experience will be smoother for future releases. 
 
-If you do need to keep any CSS customizations, continue to step 3 and follow the instructions to [review and update variable and class names](#3-review-and-update-variable-and-class-names) and make sure you are using what's most appropriate.
+If you do need to keep any CSS customizations, continue to step 3 and follow the instructions to [review and update variable and class names](#3.-review-and-update-variable-and-class-names) and make sure you are using what's most appropriate.
 
 ### 3. Review and update variable and class names
 A number of variables were removed or added with PatternFly 6, primarily due to logical direction changes, refactoring, or deprecation. For more context, we've put together a list of [variables that have been removed](https://docs.google.com/spreadsheets/d/e/2PACX-1vQQLWzMGQTAFHr6ClxoOZPpSNhP-frqu9w0DBzFJG0SOyBKKvjVV5wqz2o_Nh6jnO73oiXH259t5-V0/pubhtml?gid=673459372&single=true) and a list of [variables that have been added](https://docs.google.com/spreadsheets/d/e/2PACX-1vQQLWzMGQTAFHr6ClxoOZPpSNhP-frqu9w0DBzFJG0SOyBKKvjVV5wqz2o_Nh6jnO73oiXH259t5-V0/pubhtml?gid=0&single=true).
