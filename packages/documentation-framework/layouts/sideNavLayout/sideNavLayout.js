@@ -246,14 +246,20 @@ export const SideNavLayout = ({ children, groupedRoutes, navOpen: navOpenProp })
   const [isRTL, setIsRTL] = useState(false);
   const [isDarkTheme, setIsDarkTheme] = React.useState(false);
 
-  const handleThemeChange = (darkThemeEnabled) => {
+  const enableDarkTheme = (darkThemeEnabled) => {
     document.querySelector('html').classList.toggle('pf-v6-theme-dark', darkThemeEnabled);
     localStorage.setItem('dark-theme', darkThemeEnabled);
     setIsDarkTheme(darkThemeEnabled);
   }
 
   useEffect(() => {
-    localStorage ? handleThemeChange(localStorage.getItem('dark-theme') === 'true') : handleThemeChange(false);
+    const darkTheme = localStorage.getItem('dark-theme');
+    if (darkTheme === null) {
+      const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
+      enableDarkTheme(mediaQuery.matches);
+    } else {
+      enableDarkTheme(localStorage.getItem('dark-theme') === 'true');
+    }
 
     document.addEventListener('visibilitychange', () => handleThemeChange(localStorage.getItem('dark-theme') === 'true'));
 
@@ -353,7 +359,7 @@ export const SideNavLayout = ({ children, groupedRoutes, navOpen: navOpenProp })
             isRTL={isRTL}
             setIsRTL={setIsRTL}
             isDarkTheme={isDarkTheme}
-            setIsDarkTheme={handleThemeChange}
+            setIsDarkTheme={enableDarkTheme}
           />
         )}
       </MastheadContent>
