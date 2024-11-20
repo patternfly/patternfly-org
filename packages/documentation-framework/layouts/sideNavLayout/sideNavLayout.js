@@ -263,68 +263,6 @@ export const SideNavLayout = ({ children, groupedRoutes, navOpen: navOpenProp })
   const SideBar = (
     <PageSidebar>
       <PageSidebarBody>
-      {hasVersionSwitcher && (
-            <ToolbarItem>
-              <Dropdown
-                onSelect={() => setDropdownOpen(!isDropdownOpen)}
-                onOpenChange={(isOpen) => setDropdownOpen(isOpen)}
-                isOpen={isDropdownOpen}
-                toggle={(toggleRef) => (
-                  <MenuToggle
-                    ref={toggleRef}
-                    onClick={() => setDropdownOpen(!isDropdownOpen)}
-                    isExpanded={isDropdownOpen}
-                  >
-                    Release 6.0.0
-                  </MenuToggle>
-                )}
-                popperProps={{ position: 'right' }}
-              >
-                <DropdownGroup key="Latest" label="Latest">
-                  <DropdownList>{getDropdownItem(latestVersion, true)}</DropdownList>
-                </DropdownGroup>
-                {previousReleases.length > 0 && (
-                  <DropdownGroup key="Previous releases" label="Previous releases">
-                    <DropdownList>
-                      {previousReleases.slice(0, 3).map((version) => getDropdownItem(version))}
-                    </DropdownList>
-                  </DropdownGroup>
-                )}
-                <Divider key="divider1" />
-                <DropdownGroup key="Previous versions" label="Previous versions">
-                  <DropdownList>
-                    <DropdownItem
-                      key="PatternFly 5"
-                      className="ws-patternfly-versions"
-                      isExternalLink
-                      to="https://v5-archive.patternfly.org/"
-                      itemId="patternfly-5"
-                    >
-                      PatternFly 5
-                    </DropdownItem>
-                    <DropdownItem
-                      key="PatternFly 4"
-                      className="ws-patternfly-versions"
-                      isExternalLink
-                      to="http://v4-archive.patternfly.org/v4/"
-                      itemId="patternfly-4"
-                    >
-                      PatternFly 4
-                    </DropdownItem>
-                    <DropdownItem
-                      key="PatternFly 3"
-                      className="ws-patternfly-versions"
-                      isExternalLink
-                      to="https://pf3.patternfly.org/"
-                      itemId="patternfly-3"
-                    >
-                      PatternFly 3
-                    </DropdownItem>
-                  </DropdownList>
-                </DropdownGroup>
-              </Dropdown>
-            </ToolbarItem>
-          )}
         <SideNav navItems={sideNavItems} groupedRoutes={groupedRoutes} />
       </PageSidebarBody>
     </PageSidebar>

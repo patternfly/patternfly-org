@@ -57,8 +57,8 @@ PatternFly's foundations create a strong base for the rest of the design system 
 
 PatternFly’s core elements are what you will work directly with when building a UI.
 
-<Grid hasGutter>
-<GridItem span={6}>
+<Grid sm={12} md={4} hasGutter className="pf-v5-u-my-lg pf-v5-u-text-align-center ws-building-grid">
+
 <Card isClickable isCompact isFullHeight>
     <CardHeader
         selectableActions={{
@@ -70,9 +70,7 @@ PatternFly’s core elements are what you will work directly with when building 
     </CardHeader>
     <CardBody> Flexible, modular, building blocks that you can mix and match to create UIs. </CardBody>
 </Card>
-</GridItem>
 
-<GridItem span={6}>
 <Card isClickable isCompact isFullHeight>
     <CardHeader
         selectableActions={{
@@ -84,9 +82,7 @@ PatternFly’s core elements are what you will work directly with when building 
     </CardHeader>
     <CardBody> Different methods for arranging components for different screen sizes and content presentations. </CardBody>
 </Card>
-</GridItem>
 
-<GridItem span={6}>
 <Card isClickable isCompact isFullHeight>
     <CardHeader
         selectableActions={{
@@ -98,9 +94,7 @@ PatternFly’s core elements are what you will work directly with when building 
     </CardHeader>
     <CardBody> Different methods to present data visualizations. </CardBody>
 </Card>
-</GridItem>
 
-<GridItem span={6}>
 <Card isClickable isCompact isFullHeight>
     <CardHeader
         selectableActions={{
@@ -112,7 +106,6 @@ PatternFly’s core elements are what you will work directly with when building 
     </CardHeader>
     <CardBody> Reusable solutions that utilize multiple PatternFly components for cross-project use cases. </CardBody>
 </Card>
-</GridItem>
 </Grid>
 
 ### Guidance
