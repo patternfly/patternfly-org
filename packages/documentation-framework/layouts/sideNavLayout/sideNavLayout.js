@@ -39,10 +39,11 @@ export const RtlContext = createContext(false);
 
 const DARK_MODE_CLASS = 'pf-v6-theme-dark';
 const DARK_MODE_STORAGE_KEY = 'dark-mode';
+const mediaQuery = () => window.matchMedia('(prefers-color-scheme: dark)');
+const localStorageDarkMode = () => localStorage.getItem(DARK_MODE_STORAGE_KEY);
 
 const updateDarkMode = () => {
-  const storedValue = localStorage.getItem(DARK_MODE_STORAGE_KEY);
-  const isEnabled = storedValue === null ? mediaQuery.matches : storedValue === 'true';
+  const isEnabled = localStorageDarkMode() === null ? mediaQuery.matches : storedValue === 'true';
   const { classList } = document.documentElement;
 
   if (isEnabled) {
@@ -52,11 +53,8 @@ const updateDarkMode = () => {
   }
 };
 
-const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
-console.log('mediaQuery', mediaQuery);
-
 const onDarkThemeToggle = (isEnabled) => {
-  localStorage.setItem(DARK_MODE_STORAGE_KEY, isEnabled);
+  localStorage?.setItem(DARK_MODE_STORAGE_KEY, isEnabled);
   updateDarkMode();
 };
 
@@ -265,12 +263,10 @@ export const SideNavLayout = ({ children, groupedRoutes, navOpen: navOpenProp })
   const prnum = process.env.prnum;
   const prurl = process.env.prurl;
 
-  const localStorageDarkMode = localStorage.getItem(DARK_MODE_STORAGE_KEY);
-
   const [versions, setVersions] = useState({ ...staticVersions });
   const [isRTL, setIsRTL] = useState(false);
   const [isDarkTheme, setIsDarkTheme] = React.useState(
-    localStorageDarkMode !== null ? localStorageDarkMode === 'true' : mediaQuery.matches
+    localStorageDarkMode !== null ? localStorageDarkMode === 'true' : mediaQuery().matches
   );
 
   const toggleDarkTheme = (darkThemeEnabled) => {
