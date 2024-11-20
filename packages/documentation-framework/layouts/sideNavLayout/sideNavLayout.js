@@ -43,7 +43,7 @@ const mediaQuery = () => window.matchMedia('(prefers-color-scheme: dark)');
 const localStorageDarkMode = () => localStorage.getItem(DARK_MODE_STORAGE_KEY);
 
 const updateDarkMode = () => {
-  const isEnabled = localStorageDarkMode() === null ? mediaQuery.matches : storedValue === 'true';
+  const isEnabled = localStorageDarkMode() === null ? mediaQuery().matches : localStorageDarkMode() === 'true';
   const { classList } = document.documentElement;
 
   if (isEnabled) {
@@ -266,7 +266,7 @@ export const SideNavLayout = ({ children, groupedRoutes, navOpen: navOpenProp })
   const [versions, setVersions] = useState({ ...staticVersions });
   const [isRTL, setIsRTL] = useState(false);
   const [isDarkTheme, setIsDarkTheme] = React.useState(
-    localStorageDarkMode !== null ? localStorageDarkMode === 'true' : mediaQuery().matches
+    localStorageDarkMode() !== null ? localStorageDarkMode() === 'true' : mediaQuery().matches
   );
 
   const toggleDarkTheme = (darkThemeEnabled) => {
