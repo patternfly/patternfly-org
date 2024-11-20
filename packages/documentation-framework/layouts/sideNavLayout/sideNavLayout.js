@@ -147,7 +147,7 @@ const HeaderTools = ({
               <GithubIcon />
             </Button>
           </ToolbarItem>
-          {hasVersionSwitcher && (
+          {/* {hasVersionSwitcher && (
             <ToolbarItem>
               <Dropdown
                 onSelect={() => setDropdownOpen(!isDropdownOpen)}
@@ -208,7 +208,7 @@ const HeaderTools = ({
                 </DropdownGroup>
               </Dropdown>
             </ToolbarItem>
-          )}
+          )} */}
         </ToolbarGroup>
       </ToolbarContent>
     </Toolbar>
