@@ -37,6 +37,29 @@ import { Footer } from '@patternfly/documentation-framework/components';
 
 export const RtlContext = createContext(false);
 
+const DARK_MODE_CLASS = 'pf-v6-theme-dark';
+const DARK_MODE_STORAGE_KEY = 'dark-mode';
+
+const updateDarkMode = () => {
+  const storedValue = localStorage.getItem(DARK_MODE_STORAGE_KEY);
+  const isEnabled = storedValue === null ? mediaQuery.matches : storedValue === 'true';
+  const { classList } = document.documentElement;
+
+  if (isEnabled) {
+    classList.add(DARK_MODE_CLASS);
+  } else {
+    classList.remove(DARK_MODE_CLASS);
+  }
+};
+
+const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+console.log('mediaQuery', mediaQuery);
+
+const onDarkThemeToggle = (isEnabled) => {
+  localStorage.setItem(DARK_MODE_STORAGE_KEY, isEnabled);
+  updateDarkMode();
+};
+
 const HeaderTools = ({
   versions,
   hasVersionSwitcher,
@@ -242,26 +265,21 @@ export const SideNavLayout = ({ children, groupedRoutes, navOpen: navOpenProp })
   const prnum = process.env.prnum;
   const prurl = process.env.prurl;
 
+  const localStorageDarkMode = localStorage.getItem(DARK_MODE_STORAGE_KEY);
+
   const [versions, setVersions] = useState({ ...staticVersions });
   const [isRTL, setIsRTL] = useState(false);
-  const [isDarkTheme, setIsDarkTheme] = React.useState(false);
+  const [isDarkTheme, setIsDarkTheme] = React.useState(
+    localStorageDarkMode !== null ? localStorageDarkMode === 'true' : mediaQuery.matches
+  );
 
-  const enableDarkTheme = (darkThemeEnabled) => {
-    document.querySelector('html').classList.toggle('pf-v6-theme-dark', darkThemeEnabled);
-    localStorage.setItem('dark-theme', darkThemeEnabled);
+  const toggleDarkTheme = (darkThemeEnabled) => {
+    onDarkThemeToggle(darkThemeEnabled);
     setIsDarkTheme(darkThemeEnabled);
-  }
+  };
 
   useEffect(() => {
-    const darkTheme = localStorage.getItem('dark-theme');
-    if (darkTheme === null) {
-      const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
-      enableDarkTheme(mediaQuery.matches);
-    } else {
-      enableDarkTheme(localStorage.getItem('dark-theme') === 'true');
-    }
-
-    document.addEventListener('visibilitychange', () => handleThemeChange(localStorage.getItem('dark-theme') === 'true'));
+    updateDarkMode();
 
     if (typeof window === 'undefined') {
       return;
@@ -277,7 +295,7 @@ export const SideNavLayout = ({ children, groupedRoutes, navOpen: navOpenProp })
 
     return () => {
       document.removeEventListener('visibilitychange', handleVisibilityChange);
-    }
+    };
   }, []);
 
   const SideBar = (
@@ -359,7 +377,7 @@ export const SideNavLayout = ({ children, groupedRoutes, navOpen: navOpenProp })
             isRTL={isRTL}
             setIsRTL={setIsRTL}
             isDarkTheme={isDarkTheme}
-            setIsDarkTheme={enableDarkTheme}
+            setIsDarkTheme={toggleDarkTheme}
           />
         )}
       </MastheadContent>
