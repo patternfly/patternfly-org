@@ -288,7 +288,7 @@ export const SideNavLayout = ({ children, groupedRoutes, navOpen: navOpenProp })
         }
       });
     }
-
+ 
     return () => {
       document.removeEventListener('visibilitychange', handleVisibilityChange);
     };
