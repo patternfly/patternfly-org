@@ -39,24 +39,6 @@ export const RtlContext = createContext(false);
 
 const DARK_MODE_CLASS = 'pf-v6-theme-dark';
 const DARK_MODE_STORAGE_KEY = 'dark-mode';
-const mediaQuery = () => window.matchMedia('(prefers-color-scheme: dark)');
-const localStorageDarkMode = () => localStorage.getItem(DARK_MODE_STORAGE_KEY);
-
-const updateDarkMode = () => {
-  const isEnabled = localStorageDarkMode() === null ? mediaQuery().matches : localStorageDarkMode() === 'true';
-  const { classList } = document.documentElement;
-
-  if (isEnabled) {
-    classList.add(DARK_MODE_CLASS);
-  } else {
-    classList.remove(DARK_MODE_CLASS);
-  }
-};
-
-const onDarkThemeToggle = (isEnabled) => {
-  localStorage?.setItem(DARK_MODE_STORAGE_KEY, isEnabled);
-  updateDarkMode();
-};
 
 const HeaderTools = ({
   versions,
@@ -265,12 +247,39 @@ export const SideNavLayout = ({ children, groupedRoutes, navOpen: navOpenProp })
 
   const [versions, setVersions] = useState({ ...staticVersions });
   const [isRTL, setIsRTL] = useState(false);
+
+  const mediaQuery = () => window.matchMedia('(prefers-color-scheme: dark)');
+  const getLocalStorageDarkMode = () => { 
+    if (localStorage !== undefined) {
+      return localStorage.getItem(DARK_MODE_STORAGE_KEY);
+    } else {
+      return null;
+    }
+  }
+  const setLocalStorageDarkMode = (isEnabled) => {
+    if (localStorage !== undefined) {
+      localStorage.setItem(DARK_MODE_STORAGE_KEY, isEnabled);
+      updateDarkMode();
+    }
+  }
+
+  const updateDarkMode = () => {
+    const isEnabled = getLocalStorageDarkMode() === null ? mediaQuery().matches : getLocalStorageDarkMode() === 'true';
+    const { classList } = document.documentElement;
+
+    if (isEnabled) {
+      classList.add(DARK_MODE_CLASS);
+    } else {
+      classList.remove(DARK_MODE_CLASS);
+    }
+  };
+
   const [isDarkTheme, setIsDarkTheme] = React.useState(
-    localStorageDarkMode() !== null ? localStorageDarkMode() === 'true' : mediaQuery().matches
+    getLocalStorageDarkMode() === null ? mediaQuery().matches : getLocalStorageDarkMode() === 'true'; 
   );
 
   const toggleDarkTheme = (darkThemeEnabled) => {
-    onDarkThemeToggle(darkThemeEnabled);
+    setLocalStorageDarkMode(darkThemeEnabled);
     setIsDarkTheme(darkThemeEnabled);
   };
 
