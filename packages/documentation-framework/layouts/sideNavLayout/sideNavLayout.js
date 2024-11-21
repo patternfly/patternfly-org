@@ -275,7 +275,7 @@ export const SideNavLayout = ({ children, groupedRoutes, navOpen: navOpenProp })
   };
 
   const [isDarkTheme, setIsDarkTheme] = React.useState(
-    getLocalStorageDarkMode() === null ? mediaQuery().matches : getLocalStorageDarkMode() === 'true'; 
+    getLocalStorageDarkMode() === null ? mediaQuery().matches : getLocalStorageDarkMode() === 'true'
   );
 
   const toggleDarkTheme = (darkThemeEnabled) => {
