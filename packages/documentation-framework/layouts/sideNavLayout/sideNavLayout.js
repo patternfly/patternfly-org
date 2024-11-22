@@ -1,4 +1,4 @@
-import React, { useEffect, useState, createContext } from 'react';
+import React, { useEffect, useState, createContext, useCallback } from 'react';
 import {
   Button,
   Page,
@@ -232,6 +232,26 @@ export function attachDocSearch(algolia, inputSelector, timeout) {
   }
 }
 
+const DARK_MODE_CLASS = "pf-v6-theme-dark";
+const DARK_MODE_STORAGE_KEY = "dark-mode";
+
+/**
+ * Determines if dark mode is enabled based on the stored value or the system preference.
+ * @returns {boolean} true if dark mode is enabled, false otherwise
+ */
+function isDarkModeEnabled() {
+  // When running in prerender mode we can't access the browser APIs.
+  if (process.env.PRERENDER) {
+    return false;
+  }
+
+  const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
+  const storedValue = localStorage.getItem(DARK_MODE_STORAGE_KEY);
+  const isEnabled = storedValue === null ? mediaQuery.matches : storedValue === "true";
+
+  return isEnabled;
+}
+
 export const SideNavLayout = ({ children, groupedRoutes, navOpen: navOpenProp }) => {
   const algolia = process.env.algolia;
   const hasGdprBanner = process.env.hasGdprBanner;
@@ -245,7 +265,63 @@ export const SideNavLayout = ({ children, groupedRoutes, navOpen: navOpenProp })
 
   const [versions, setVersions] = useState({ ...staticVersions });
   const [isRTL, setIsRTL] = useState(false);
-  const [isDarkTheme, setIsDarkTheme] = React.useState(false);
+  const [isDarkTheme, setIsDarkThemeInternal] = useState(() => isDarkModeEnabled());
+
+  /**
+   * Stores the dark mode preference in local storage and updates the dark mode class.
+   */
+  const setIsDarkTheme = useCallback((value) => {
+    localStorage.setItem(DARK_MODE_STORAGE_KEY, value.toString());
+    updateDarkMode();
+  }, []);
+
+  /**
+   * Updates the dark mode class to the root element depending on whether dark mode is enabled.
+   */
+  const updateDarkMode = useCallback(() => {
+    const isEnabled = isDarkModeEnabled();
+    const root = document.documentElement;
+
+    if (isEnabled) {
+      root.classList.add(DARK_MODE_CLASS);
+    } else {
+      root.classList.remove(DARK_MODE_CLASS);
+    }
+
+    setIsDarkThemeInternal(isEnabled);
+  }, []);
+
+  useEffect(() => {
+    // When running in prerender mode we can't access the browser APIs.
+    if (process.env.PRERENDER) {
+      return;
+    }
+
+    // Update the dark mode when the the user changes their system/browser preference.
+    const onQueryChange = () => {
+      // Remove the stored value to defer to the system preference.
+      localStorage.removeItem(DARK_MODE_STORAGE_KEY);
+      updateDarkMode();
+    };
+
+    // Update the dark mode when the user changes the preference in another context (e.g. tab or window).
+    /** @type {(event: StorageEvent) => void} */
+    const onStorageChange = (event) => {
+      if (event.key === DARK_MODE_STORAGE_KEY) {
+        updateDarkMode();
+      }
+    };
+
+    const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
+
+    mediaQuery.addEventListener("change", onQueryChange);
+    window.addEventListener("storage", onStorageChange);
+
+    return () => {
+      mediaQuery.removeEventListener("change", onQueryChange);
+      window.removeEventListener("storage", onStorageChange);
+    };
+  }, []);
 
   useEffect(() => {
     if (typeof window === 'undefined') {
