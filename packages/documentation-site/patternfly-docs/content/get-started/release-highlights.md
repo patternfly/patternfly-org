@@ -7,6 +7,52 @@ section: get-started
 import './get-started.css';
 import { Divider, Timestamp } from '@patternfly/react-core';
 
+<Timestamp>December 2024</Timestamp>
+
+## PatternFly 6.1
+
+### Promoted package versions
+
+### Component updates 
+
+- We fixed bugs that were reported in a few React components. More details are available in [the patternfly-react release notes](https://github.com/patternfly/patternfly-react/releases). 
+
+
+### Website updates 
+
+- We fixed an issue on PatternFly.org that prevented proper page loading when navigating to new pages via in-content links.
+
+- We updated [the PatternFly.org accessibility scorecard](/accessibility/accessibility-scorecard#patternfly.org-accessibility-scorecard). We will begin working on any accessibility violations that were identified.
+
+#### Documentation updates
+
+- We updated design guideline images for [context selector](/components/menus/context-selector/design-guidelines) to align with PatternFly 6 styles.  
+- We updated and added "draggable" examples to [dual list selector](/components/dual-list-selector#draggable) and [ data list](/components/data-list#draggable).
+- We updated our ChatBot documentation: 
+    - We renamed the extension to "ChatBot", to better brand our offering and help distinguish it from other general "chatbot" features.
+    - We combined and organized our documentation into a few cohesive pages: ["Overview"](/patternfly-ai/chatbot/overview), ["UI"](/patternfly-ai/chatbot/ui), and ["Messages"](/patternfly-ai/chatbot/message). Note that our documentation structure could continue to change as our extension grows. We will continue to share updates when changes occur. 
+    - We moved our [basic and embedded ChatBot demos](/patternfly-ai/chatbot/overview/demo) to the "Overview" page for better visibility. 
+    - We added initial [ChatBot design guidelines](/patternfly-ai/chatbot/overview/design-guidelines), which can also be found on the "Overview" page.
+    - We added documentation for new features, as described in the following section. 
+
+### Extension updates 
+
+#### ChatBot
+
+We've continued to evolve our new ChatBot:
+- We renamed the repo from "patternfly/visual-assistant" to "patternfly/chatbot" to align with our website docs.
+- We added support for new features, including: 
+    - [Multiple file attachments](/patternfly-ai/chatbot/messages#messages-with-attachments). 
+    - [Quick response buttons](/patternfly-ai/chatbot/messages#messages-with-quick-responses). 
+    - Additional customization options for [welcome messages](/patternfly-ai/chatbot/ui#welcome-message), [message avatars](/patternfly-ai/chatbot/messages#messages), [message actions](/patternfly-ai/chatbot/messages#custom-messages-actions), [modal](/patternfly-ai/chatbot/ui#modal), [toggle shape](/patternfly-ai/chatbot/ui#custom-toggle-shape).
+    - A variety of styling updates to shadows, sizing, and positioning. 
+
+#### Component groups
+
+- We added customization support to [error state](/component-groups/error-communication/error-state) via PatternFly empty state props, including a custom icon and title heading level.
+
+<Divider />
+
 <Timestamp>October 2024</Timestamp>
 
 ## PatternFly 6.0
