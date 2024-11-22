@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 6.0.12 (2024-11-22)
+
+
+### Bug Fixes
+
+* improve handling of dark mode preferences ([#4389](https://github.com/patternfly/patternfly-org/issues/4389)) ([1580900](https://github.com/patternfly/patternfly-org/commit/1580900ab1e27bdc3373d91e97c521da30878ac5)), closes [#4365](https://github.com/patternfly/patternfly-org/issues/4365)
+
+
+
+
+
 ## 6.0.11 (2024-11-22)
 
 
