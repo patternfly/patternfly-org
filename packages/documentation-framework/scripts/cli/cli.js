@@ -47,6 +47,7 @@ program
   .option('-u, --urlPrefix <prefix>', 'where fullscreen pages are hosted', 'http://localhost:5000')
   .option('-a, --allRoutes', 'true if screenshots of all examples - not just full screen', false)
   .option('-f --filterTerm <term>', 'search term to filter routes by', '')
+  .option('-d, --darkTheme', 'true if dark theme should be on in screenshots', false)
   .description('updates screenshots for generated components')
   .action(options => {
     const { writeScreenshots } = require('../writeScreenshots');

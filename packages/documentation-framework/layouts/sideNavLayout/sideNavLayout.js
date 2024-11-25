@@ -249,7 +249,7 @@ function isDarkModeEnabled() {
   const storedValue = localStorage.getItem(DARK_MODE_STORAGE_KEY);
   const isEnabled = storedValue === null ? mediaQuery.matches : storedValue === "true";
 
-  return isEnabled;
+  return false;
 }
 
 export const SideNavLayout = ({ children, groupedRoutes, navOpen: navOpenProp }) => {

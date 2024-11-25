@@ -9,6 +9,10 @@ const screenshotBase = path.join(process.cwd(), 'patternfly-docs/generated');
 sharp.cache(false);
 
 async function writeScreenshot({ page, data: { url, urlPrefix } }) {
+  await page.emulateMediaFeatures([
+    { name: "prefers-color-scheme", value: "light" },
+  ]);
+
   await page.goto(url);
   await page.addStyleTag({content: '*,*::before,*::after{animation-delay:-1ms !important;animation-duration:1ms !important;animation-iteration-count:1 !important;transition-duration:0s !important;transition-delay:0s !important;}'}); // disable animations/transitions so they don't interfere with screenshot tool
   await page.waitForSelector('.pf-v6-u-h-100');
@@ -27,7 +31,7 @@ async function writeScreenshot({ page, data: { url, urlPrefix } }) {
   await sharp(buffer).toFile(outfile);
 }
 
-async function writeScreenshots({ urlPrefix, allRoutes, filterTerm }) {
+async function writeScreenshots({ urlPrefix, allRoutes, filterTerm, darkTheme }) {
   const cluster = await Cluster.launch({
     concurrency: Cluster.CONCURRENCY_CONTEXT,
     maxConcurrency: os.cpus().length,
