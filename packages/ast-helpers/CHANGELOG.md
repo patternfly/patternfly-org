@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.4.0-alpha.129 (2024-11-26)
+
+
+### Bug Fixes
+
+* bump puppeteer and update screenshots ([#4394](https://github.com/patternfly/patternfly-org/issues/4394)) ([1ac1dac](https://github.com/patternfly/patternfly-org/commit/1ac1dace5994978d921008e0332ea55e21874137))
+
+
+
+
+
 # 1.4.0-alpha.128 (2024-11-22)
 
 
