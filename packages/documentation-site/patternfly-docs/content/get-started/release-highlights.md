@@ -41,11 +41,22 @@ import { Divider, Timestamp } from '@patternfly/react-core';
 
 We've continued to evolve our new ChatBot:
 - We renamed the repo from "patternfly/visual-assistant" to "patternfly/chatbot" to align with our website docs.
+- We removed the third-party `AutoTextArea` in the message bar and replaced it with our own custom solution.
+- We renamed the `toolTipLabel` prop to `tooltipLabel`.
 - We added support for new features, including: 
-    - [Multiple file attachments](/patternfly-ai/chatbot/messages#messages-with-attachments). 
-    - [Quick response buttons](/patternfly-ai/chatbot/messages#messages-with-quick-responses). 
-    - Additional customization options for [welcome messages](/patternfly-ai/chatbot/ui#welcome-message), [message avatars](/patternfly-ai/chatbot/messages#messages), [message actions](/patternfly-ai/chatbot/messages#custom-messages-actions), [modal](/patternfly-ai/chatbot/ui#modal), [toggle shape](/patternfly-ai/chatbot/ui#custom-toggle-shape).
-    - A variety of styling updates to shadows, sizing, and positioning. 
+    - A ["skip to ChatBot" button](patternfly-ai/chatbot/ui/#skip-to-content).
+    - New features in [ChatBot messages](/patternfly-ai/chatbot/messages#messages) and the message bar: 
+        - Truncation of long bot and user names. 
+        - More complex list formats.
+        - [Quick response buttons](/patternfly-ai/chatbot/messages#messages-with-quick-responses). 
+        - [Multiple file attachments](/patternfly-ai/chatbot/messages#messages-with-attachments). 
+         - A [stop streaming button](/patternfly-ai/chatbot/ui#message-bar-with-stop-button) that will pause the streaming of a ChatBot message.
+        - Additional customization options for [welcome messages](/patternfly-ai/chatbot/ui#welcome-message), [message avatars](/patternfly-ai/chatbot/messages#messages), [message actions](/patternfly-ai/chatbot/messages#custom-messages-actions), [modal](/patternfly-ai/chatbot/ui#modal), [toggle shape](/patternfly-ai/chatbot/ui#custom-toggle-shape).
+        - A variety of styling updates to shadows, sizing, and positioning. 
+    
+
+
+
 
 #### Component groups
 
