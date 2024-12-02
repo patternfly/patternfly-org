@@ -3,6 +3,47 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.4.0-alpha.129 (2024-11-26)
+
+
+### Bug Fixes
+
+* bump puppeteer and update screenshots ([#4394](https://github.com/patternfly/patternfly-org/issues/4394)) ([1ac1dac](https://github.com/patternfly/patternfly-org/commit/1ac1dace5994978d921008e0332ea55e21874137))
+
+
+
+
+
+# 1.4.0-alpha.128 (2024-11-22)
+
+
+### Bug Fixes
+
+* improve handling of dark mode preferences ([#4389](https://github.com/patternfly/patternfly-org/issues/4389)) ([1580900](https://github.com/patternfly/patternfly-org/commit/1580900ab1e27bdc3373d91e97c521da30878ac5)), closes [#4365](https://github.com/patternfly/patternfly-org/issues/4365)
+
+
+
+
+
+# 1.4.0-alpha.127 (2024-11-22)
+
+
+### Reverts
+
+* Revert "chore: upgrade Yarn to the latest version (#4387)" (#4391) ([14a81bf](https://github.com/patternfly/patternfly-org/commit/14a81bf15e81a7faa8ebea4c44e4fca2c6fae964)), closes [#4387](https://github.com/patternfly/patternfly-org/issues/4387) [#4391](https://github.com/patternfly/patternfly-org/issues/4391)
+
+
+
+
+
+# 1.4.0-alpha.126 (2024-11-21)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
 # 1.4.0-alpha.125 (2024-11-20)
 
 **Note:** Version bump only for package @patternfly/ast-helpers
