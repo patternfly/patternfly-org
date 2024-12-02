@@ -44,7 +44,7 @@ We've continued to evolve our new ChatBot:
 - We removed the third-party `AutoTextArea` in the message bar and replaced it with our own custom solution.
 - We renamed the `toolTipLabel` prop to `tooltipLabel`.
 - We added support for new features, including: 
-    - A ["skip to ChatBot" button](patternfly-ai/chatbot/ui/#skip-to-content).
+    - A ["skip to chatbot" button](patternfly-ai/chatbot/ui/#skip-to-content).
     - New features in [ChatBot messages](/patternfly-ai/chatbot/messages#messages) and the message bar: 
         - Truncation of long bot and user names. 
         - More complex list formats.
