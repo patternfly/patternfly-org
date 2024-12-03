@@ -222,7 +222,7 @@ const MDXChildTemplate = ({ Component, source, toc = [], index = 0, id }) => {
                 )
               }
             >
-              View source on GitHub
+              Edit this page on github
             </a>
           </StackItem>
         )}
