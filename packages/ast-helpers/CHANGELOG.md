@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.4.0-alpha.131 (2024-12-03)
+
+
+### Bug Fixes
+
+* Update text to 'Edit this page on Github' ([#4401](https://github.com/patternfly/patternfly-org/issues/4401)) ([22e6668](https://github.com/patternfly/patternfly-org/commit/22e6668c50c1a85f9a23f3bc0a7ed89d2637a7c0))
+
+
+
+
+
 # 1.4.0-alpha.130 (2024-12-03)
 
 **Note:** Version bump only for package @patternfly/ast-helpers
