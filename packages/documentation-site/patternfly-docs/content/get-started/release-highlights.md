@@ -15,19 +15,19 @@ import { Divider, Timestamp } from '@patternfly/react-core';
 
 ### Component updates 
 
-- We fixed bugs that were reported in a few React components. More details are available in [the patternfly-react release notes](https://github.com/patternfly/patternfly-react/releases). 
-
+- We fixed bugs that were reported in our components, the details of which can be found in [the patternfly-react release notes](https://github.com/patternfly/patternfly-react/releases) and the [patternfly (Core) release notes](https://github.com/patternfly/patternfly/releases). These changes mostly resolved functionality issues and made improvements to visual styles.
 
 ### Website updates 
 
 - We fixed an issue on PatternFly.org that prevented proper page loading when navigating to new pages via in-content links.
 
-- We updated [the PatternFly.org accessibility scorecard](/accessibility/accessibility-scorecard#patternfly.org-accessibility-scorecard). We will begin working on any accessibility violations that were identified.
+- We updated [the PatternFly.org accessibility scorecard](/accessibility/accessibility-scorecard#patternfly.org-accessibility-scorecard) and will begin to resolve accessibility violations that were identified.
 
-#### Documentation updates
+### Content updates
 
-- We updated design guideline images for [context selector](/components/menus/context-selector/design-guidelines) to align with PatternFly 6 styles.  
-- We updated and added "draggable" examples to [dual list selector](/components/dual-list-selector#draggable) and [ data list](/components/data-list#draggable).
+- We updated design guideline images for [context selector](/components/menus/context-selector/design-guidelines) to align with PatternFly 6 styles. There is an ongoing effort to update images across PatternFly.org to reflect our new visuals, tracked in this [PatternFly 6 design guidelines issue](https://github.com/patternfly/patternfly-org/issues/4235).
+- We updated the illustrations on [the component overview page](/components/all-components). 
+- We updated and added "draggable" examples to [dual list selector](/components/dual-list-selector#draggable) and [data list](/components/data-list#draggable).
 - We updated our ChatBot documentation: 
     - We renamed the extension to "ChatBot", to better brand our offering and help distinguish it from other general "chatbot" features.
     - We combined and organized our documentation into a few cohesive pages: ["Overview"](/patternfly-ai/chatbot/overview), ["UI"](/patternfly-ai/chatbot/ui), and ["Messages"](/patternfly-ai/chatbot/message). Note that our documentation structure could continue to change as our extension grows. We will continue to share updates when changes occur. 
@@ -54,10 +54,6 @@ We've continued to evolve our new ChatBot:
         - Additional customization options for [welcome messages](/patternfly-ai/chatbot/ui#welcome-message), [message avatars](/patternfly-ai/chatbot/messages#messages), [message actions](/patternfly-ai/chatbot/messages#custom-messages-actions), [modal](/patternfly-ai/chatbot/ui#modal), [toggle shape](/patternfly-ai/chatbot/ui#custom-toggle-shape).
         - A variety of styling updates to shadows, sizing, and positioning. 
     
-
-
-
-
 #### Component groups
 
 - We added customization support to [error state](/component-groups/error-communication/error-state) via PatternFly empty state props, including a custom icon and title heading level.
