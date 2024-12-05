@@ -15,7 +15,13 @@ import { Divider, Timestamp } from '@patternfly/react-core';
 
 ### Component updates 
 
-- We fixed bugs that were reported in our components, the details of which can be found in [the patternfly-react release notes](https://github.com/patternfly/patternfly-react/releases) and the [patternfly (Core) release notes](https://github.com/patternfly/patternfly/releases). These changes mostly resolved functionality issues and made improvements to visual styles.
+We fixed bugs that were reported in our components, the details of which can be found in [the patternfly-react release notes](https://github.com/patternfly/patternfly-react/releases) and the [patternfly (Core) release notes](https://github.com/patternfly/patternfly/releases). 
+
+These changes mostly resolved functionality issues and made improvements to visual styles. 
+
+The following fix could require manual updates depending on how you handle breakpoints in your code:
+
+- We fixed a breakpoint issue in our table component, which caused table breakpoints for the desktop/mobile responsive layout to be 1px off from our other component breakpoints. Now, the table will responsively update between desktop and mobile at the same width as our other components. If you've manually configured your own breakpoints to match table's previous breakpoints, this fix will require you to make CSS updates to bring your code in line with the updated breakpoint value.
 
 ### Website updates 
 
