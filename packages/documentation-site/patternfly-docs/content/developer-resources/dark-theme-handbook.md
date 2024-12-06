@@ -16,9 +16,11 @@ The only features which will require additional work in order to support dark th
 
 ### Charts
 
-The [PatternFly React charts package](https://www.npmjs.com/package/@patternfly/react-charts) uses default style values that align with our light theme. In order to support dark-themed charts, you must import the stylesheet that contains dark theme styles by adding the following line to the top of your file:
+The [PatternFly React charts package](https://www.npmjs.com/package/@patternfly/react-charts) uses default style values that align with our light theme. In order to support dark-themed charts, you must import the stylesheet that contains dark theme styles by adding the following import statement before your main application component is imported:
 
 `import '@patternfly/patternfly/patternfly-charts.css';`
+
+Note that you must also have the [@patternfly/patternfly package](https://www.npmjs.com/package/@patternfly/patternfly) installed. You can refer to the [PatternFly HTML/CSS setup instructions](https://www.patternfly.org/get-started/develop#develop-with-htmlcss) for more guidance.
 
 ### Images
 
