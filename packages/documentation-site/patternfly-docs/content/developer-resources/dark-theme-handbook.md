@@ -33,14 +33,16 @@ To create images that adapt to light and dark themes, there are a few approaches
         <img src="/light-theme.jpg" class="show-in-light">
         <img src="/dark-theme.jpg" class="show-in-dark">
 
+        <style>
         .show-in-dark, 
-        .pf-v5-theme-dark .show-in-light {
-        display: none;
+        .pf-v6-theme-dark .show-in-light {
+          display: none;
         }
 
-        .pf-v5-theme-dark .show-in-dark {
-        display: revert;
+        .pf-v6-theme-dark .show-in-dark {
+          display: revert;
         }
+        </style>
         ```
 
 ## Best practices
