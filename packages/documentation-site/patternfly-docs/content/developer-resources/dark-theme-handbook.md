@@ -20,7 +20,7 @@ The [PatternFly React charts package](https://www.npmjs.com/package/@patternfly/
 
 `import '@patternfly/patternfly/patternfly-charts.css';`
 
-Note that you must also have the [@patternfly/patternfly package](https://www.npmjs.com/package/@patternfly/patternfly) installed. You can refer to the [PatternFly HTML/CSS setup instructions](https://www.patternfly.org/get-started/develop#develop-with-htmlcss) for more guidance.
+**Note:** You must also have the [@patternfly/patternfly package](https://www.npmjs.com/package/@patternfly/patternfly) installed.
 
 ### Images
 
