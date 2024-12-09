@@ -242,16 +242,16 @@ module.exports = (sourceMD, sourceProps, sourceFunctionDocs) => {
     "design-guidelines"
   );
 
-  // Virtual assistant (aka Chatbot)
+  // Chatbot
   const virtualAssistantPath = require
-    .resolve("@patternfly/virtual-assistant/package.json")
+    .resolve("@patternfly/chatbot/package.json")
     .replace("package.json", "src");
 
   const virtualAssistantBase = require
-    .resolve("@patternfly/virtual-assistant/package.json")
+    .resolve("@patternfly/chatbot/package.json")
     .replace(
       "package.json",
-      "patternfly-docs/content/extensions/virtual-assistant"
+      "patternfly-docs/content/extensions/chatbot"
     );
 
   sourceProps(
