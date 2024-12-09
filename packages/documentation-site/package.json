@@ -27,7 +27,7 @@
     "@patternfly/react-component-groups": "6.1.0-prerelease.3",
     "@patternfly/react-virtualized-extension": "6.0.0",
     "@patternfly/quickstarts": "6.1.0-prerelease.6",
-    "@patternfly/chatbot": "2.1.0-prerelease.24",
+    "@patternfly/chatbot": "2.1.0-prerelease.25",
     "@patternfly/design-tokens": "1.13.0",
     "react": "^17.0.0 || ^18.0.0",
     "react-dom": "^17.0.0 || ^18.0.0",

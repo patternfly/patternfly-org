@@ -1790,10 +1790,10 @@
     node-addon-api "^3.2.1"
     node-gyp-build "^4.3.0"
 
-"@patternfly/chatbot@2.1.0-prerelease.24":
-  version "2.1.0-prerelease.24"
-  resolved "https://registry.yarnpkg.com/@patternfly/chatbot/-/chatbot-2.1.0-prerelease.24.tgz#f45b4acb02a82c5d4d315fab8bb3f3d987e9b460"
-  integrity sha512-nL0VrjIvcawB4SybIvRGmKiwfP/zTDNRmccgGAWq3digTfXPPef9XDmPt47yjPIUN8kEApeD+B0CMkn8S1H0rQ==
+"@patternfly/chatbot@2.1.0-prerelease.25":
+  version "2.1.0-prerelease.25"
+  resolved "https://registry.yarnpkg.com/@patternfly/chatbot/-/chatbot-2.1.0-prerelease.25.tgz#32b8e4c54cd79b61a31d6f5d0530895fa3021d26"
+  integrity sha512-Ox0+DnWG3iMwLpbDEYyRuPmxcElFQ/4yYpRZcho+jizK9FHdM1sFBf67swsWYiz6QTAxFEVO1jmrkWXWNDueZg==
   dependencies:
     "@patternfly/react-code-editor" "^6.0.0"
     "@patternfly/react-core" "^6.0.0"
