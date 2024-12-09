@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.4.0-alpha.133 (2024-12-09)
+
+
+### Bug Fixes
+
+* packages/documentation-framework/package.json to reduce vulnerabilities ([#4406](https://github.com/patternfly/patternfly-org/issues/4406)) ([4629e41](https://github.com/patternfly/patternfly-org/commit/4629e41a3446cb9c99b4c671ea4d44bf9fb7f219))
+
+
+
+
+
 # 1.4.0-alpha.132 (2024-12-04)
 
 **Note:** Version bump only for package @patternfly/ast-helpers
