@@ -3,6 +3,58 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 5.26.1 (2024-11-15)
+
+
+### Bug Fixes
+
+* Fixes invalid link for v5. ([#4377](https://github.com/patternfly/patternfly-org/issues/4377)) ([6ad185e](https://github.com/patternfly/patternfly-org/commit/6ad185e61e1d80d0520a8ed9245c93c937cb02ca))
+
+
+
+
+
+# 5.26.0 (2024-10-29)
+
+
+### Features
+
+* **v5 search:** update algolia keys ([#4349](https://github.com/patternfly/patternfly-org/issues/4349)) ([9344953](https://github.com/patternfly/patternfly-org/commit/93449538fee2da610fe11f46e84bfefee8c53891))
+
+
+
+
+
+## 5.25.1 (2024-10-18)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+# 5.25.0 (2024-10-18)
+
+
+### Features
+
+* **ver:** update v5 to 5.4.2 ([#4330](https://github.com/patternfly/patternfly-org/issues/4330)) ([c4df2f1](https://github.com/patternfly/patternfly-org/commit/c4df2f1d65debe57247c67555038c76629346401))
+
+
+
+
+
+# 5.24.0 (2024-10-02)
+
+
+### Features
+
+* **v5:** allow v5 branch to publish ([#4291](https://github.com/patternfly/patternfly-org/issues/4291)) ([169f285](https://github.com/patternfly/patternfly-org/commit/169f2853cb0be697669aeae5c6ad07ca3c3e2d06))
+
+
+
+
+
 # 5.23.0 (2024-08-28)
 
 
