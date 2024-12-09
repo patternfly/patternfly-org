@@ -9,13 +9,13 @@ export const featuredPostsData = {
       "https://miro.medium.com/v2/resize:fit:600/format:webp/1*FOVVqeJPmsoM6uJqsZHXZA.png",
   },
   post2: {
-    title: "UX writing mistakes as horror movie archetypes",
-    author: "Katie Edwards",
-    length: "3 min read",
-    URL: "https://medium.com/patternfly/ux-writing-mistakes-as-horror-movie-archetypes-7c30705762ae",
+    title: "From UX design to code",
+    author: "Tina Yip",
+    length: "10 min read",
+    URL: "https://medium.com/patternfly/from-ux-design-to-code-80af8291b04a",
     // Use resize:fit:600 in URL
     imageURL:
-      "https://miro.medium.com/v2/resize:fit:600/format:webp/1*TFIZCRKz6CbrLWMwBEOu_Q.png",
+      "https://miro.medium.com/v2/resize:fit:600/format:webp/0*9CY4zONMQaeU_-Z-",
   },
   post3: {
     title:
