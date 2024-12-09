@@ -2,7 +2,8 @@
 id: Card
 section: components
 ---
- 
+import '../components.css'; 
+
 ## Elements
  
 A card usually consists of four parts:
@@ -115,6 +116,31 @@ The selectable and clickable card can be utilized when there are multiple action
 An in-action card can be utilized when needing to link out to an external website or out of the context of the application. This would use a linked footer in the card and would be the interactable element of the card. Although this may be the only action on a card, the whole body of the card would not be clickable. If you want to have a clickable card AND a link in the footer, make the clickable action come from the header of the card, and keep the external link in the footer.
 
 <img src="./img/card-withlink.png" alt="example of cards with link" width="1568" />
+
+### Cards as tiles
+
+Our previous [tile component](/components/tile) has been deprecated in favor of the card component. Instead, you can implement a card as a tile.
+
+Tiles enable a selection method that provides users with more context than other methods, such as toggle groups or menus. Unlike selectable cards, tiles don't use radio buttons to indicate selection. Tiles also contain less content than a selectable card.
+
+<div class="ws-docs-content-img">
+![Default, selected, and disabled tile.](./img/tiles.svg)
+</div>
+
+There are 2 types of tiles:
+1. **Single selectable tiles:** Users can only select 1 tile from a set.
+1. **Multi selectable tiles:** Users can select multiple tiles from a set.
+
+#### When to use
+- The selection process would benefit from having the additional visual prominence that tiles provide.
+- The selection includes additional information, like a brief description or an icon.
+- The selection consists of brief, static content.
+- There are few (typically 2-6) selections for the user to choose from.
+
+#### When not to use
+- The option presented to the user includes an action link, button, or overflow menu. Instead, use a standard card.
+- The option presented to the user requires more than 3 lines of content description. Instead, use a selectable card.
+- The option opens an additional resource or triggers an action. Instead, use an actionable card.
 
 ## Spacing
 ### Content spacing
