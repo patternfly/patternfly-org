@@ -19,6 +19,7 @@ export { default as chip } from './chip.png';
 export { default as clipboard_copy } from './clipboard-copy.png';
 export { default as code_block } from './code-block.png';
 export { default as code_editor } from './code-editor.png';
+export { default as content } from './content.png';
 export { default as context_selector } from './context-selector.png';
 export { default as custom_menus } from './custom-menus.png';
 export { default as data_list } from './data-list.png';

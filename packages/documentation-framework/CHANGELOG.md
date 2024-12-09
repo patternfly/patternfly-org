@@ -3,6 +3,93 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 6.0.17 (2024-12-09)
+
+
+### Bug Fixes
+
+* packages/documentation-framework/package.json to reduce vulnerabilities ([#4406](https://github.com/patternfly/patternfly-org/issues/4406)) ([4629e41](https://github.com/patternfly/patternfly-org/commit/4629e41a3446cb9c99b4c671ea4d44bf9fb7f219))
+
+
+
+
+
+## 6.0.16 (2024-12-04)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 6.0.15 (2024-12-03)
+
+
+### Bug Fixes
+
+* Update text to 'Edit this page on Github' ([#4401](https://github.com/patternfly/patternfly-org/issues/4401)) ([22e6668](https://github.com/patternfly/patternfly-org/commit/22e6668c50c1a85f9a23f3bc0a7ed89d2637a7c0))
+
+
+
+
+
+## 6.0.14 (2024-12-03)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 6.0.13 (2024-11-26)
+
+
+### Bug Fixes
+
+* bump puppeteer and update screenshots ([#4394](https://github.com/patternfly/patternfly-org/issues/4394)) ([1ac1dac](https://github.com/patternfly/patternfly-org/commit/1ac1dace5994978d921008e0332ea55e21874137))
+
+
+
+
+
+## 6.0.12 (2024-11-22)
+
+
+### Bug Fixes
+
+* improve handling of dark mode preferences ([#4389](https://github.com/patternfly/patternfly-org/issues/4389)) ([1580900](https://github.com/patternfly/patternfly-org/commit/1580900ab1e27bdc3373d91e97c521da30878ac5)), closes [#4365](https://github.com/patternfly/patternfly-org/issues/4365)
+
+
+
+
+
+## 6.0.11 (2024-11-22)
+
+
+### Reverts
+
+* Revert "chore: upgrade Yarn to the latest version (#4387)" (#4391) ([14a81bf](https://github.com/patternfly/patternfly-org/commit/14a81bf15e81a7faa8ebea4c44e4fca2c6fae964)), closes [#4387](https://github.com/patternfly/patternfly-org/issues/4387) [#4391](https://github.com/patternfly/patternfly-org/issues/4391)
+
+
+
+
+
+## 6.0.10 (2024-11-21)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 6.0.9 (2024-11-20)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
 ## 6.0.8 (2024-11-15)
 
 

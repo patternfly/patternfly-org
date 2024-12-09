@@ -10,7 +10,42 @@ Dark theme styles ship with PatternFly CSS by default. To enable dark theme, add
 
 Dark theme can also be applied based on the browser’s `prefers-color-scheme` media query. When using this method, we recommend using JavaScript to detect the media query and apply the `pf-[version]-theme-dark` class. This allows you to manipulate a single class in order to toggle dark theme based on user preference. [Adam Argyle wrote a great article](https://web.dev/building-a-theme-switch-component/#javascript) on using JavaScript to manage dark theme preference, using the `prefers-color-scheme` media query alongside a manual button that toggles dark theme. 
 
-[Our token resources](https://github.com/patternfly/patternfly/tree/v6/src/patternfly/base/tokens) include styles for both light and dark themes. When dark theme is enabled, your product will automatically pull dark theme tokens in order to adapt visual styles appropriately.
+[Our token resources](https://github.com/patternfly/patternfly/tree/v6/src/patternfly/base/tokens) include styles for both light and dark themes. When dark theme is enabled, your product will automatically pull dark theme tokens in order to adapt visual styles appropriately. 
+
+The only features which will require additional work in order to support dark theme are charts and images. Instructions for enabling support in these areas are included in the following sections.
+
+### Charts
+
+The [PatternFly React charts package](https://www.npmjs.com/package/@patternfly/react-charts) uses default style values that align with our light theme. In order to support dark-themed charts, you must import the stylesheet that contains dark theme styles by adding the following import statement before your main application component is imported:
+
+`import '@patternfly/patternfly/patternfly-charts.css';`
+
+**Note:** You must also have the [@patternfly/patternfly package](https://www.npmjs.com/package/@patternfly/patternfly) installed.
+
+### Images
+
+To create images that adapt to light and dark themes, there are a few approaches you can take: 
+
+- Use inline SVG's with fill colors set to [PatternFly color tokens](/tokens/all-patternfly-tokens), which inherently adapt to light and dark themes.
+- Create images with colors that work well with both light and dark themes. These colors should meet [WCAG AA contrast requirements](https://webaim.org/resources/contrastchecker/).
+- Utilize background color, border color, border-radius, and padding/spacing to create a container that can hold dynamic/user-supplied images.
+- Write CSS and dynamically swap between 2 image variations:
+
+        ``` 
+        <img src="/light-theme.jpg" class="show-in-light">
+        <img src="/dark-theme.jpg" class="show-in-dark">
+
+        <style>
+        .show-in-dark, 
+        .pf-v6-theme-dark .show-in-light {
+          display: none;
+        }
+
+        .pf-v6-theme-dark .show-in-dark {
+          display: revert;
+        }
+        </style>
+        ```
 
 ## Best practices
 
