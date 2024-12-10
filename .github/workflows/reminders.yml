@@ -1,0 +1,20 @@
+name: Slack Reminder
+on: workflow_dispatch
+jobs:
+  post-office-hours-reminder:
+    name: Post reminder to test channel
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send custom JSON data to Slack workflow
+        id: slack
+        uses: slackapi/slack-github-action@v2.0.0
+        with:
+          payload: |
+            {
+              "username": "PatternFly Team",
+              "channel": "#patternfly-gitbot",
+              "text": "Join us for Developer Office Hours!",
+            }
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+          SLACK_WEBHOOK_TYPE: INCOMING_WEBHOOK
