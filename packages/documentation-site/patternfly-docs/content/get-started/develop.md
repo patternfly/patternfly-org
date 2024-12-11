@@ -13,7 +13,7 @@ In order to develop with PatternFly, you will need to:
 
 1. [Learn about our design token system](/tokens/about-tokens), which enables you to build interfaces with consistent PatternFly styling, including colors, shadows, spacing, and more.
 
-1. Install a package manager to help you install, update, and configure all necessary PatternFly packages. We recommend [npm](https://nodejs.org/en/download) or [Yarn](https://yarnpkg.com/en/docs/getting-started).
+1. Install a package manager to help you install, update, and configure all necessary PatternFly packages. We recommend [npm](https://nodejs.org/en/download) or [Yarn](https://yarnpkg.com/getting-started).
 
 1. Configure your environment to get started with our [React](#develop-with-react) and/or [HTML/CSS](#develop-with-htmlcss) libraries.
 
