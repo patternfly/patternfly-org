@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.4.0-alpha.137 (2024-12-12)
+
+
+### Bug Fixes
+
+* **dark-theme:** fixed issue with incorrect color-scheme being applied ([#4408](https://github.com/patternfly/patternfly-org/issues/4408)) ([29f1e10](https://github.com/patternfly/patternfly-org/commit/29f1e10f355c99b4ffc79e34626fd5efafae5809))
+
+
+
+
+
 # 1.4.0-alpha.136 (2024-12-09)
 
 **Note:** Version bump only for package @patternfly/ast-helpers
