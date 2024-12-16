@@ -154,7 +154,7 @@ const MDXChildTemplate = ({ Component, source, toc = [], index = 0, id }) => {
       {toc.length > 1 && <TableOfContents items={toc} />}
       <Stack
         hasGutter
-        style={{ ...(source !== 'landing-pages' && { maxWidth: '825px' }) }}
+        className={(source !== 'landing-pages' && 'ws-content')}
       >
         {InlineAlerts}
         <Component />

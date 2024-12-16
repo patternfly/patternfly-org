@@ -1,5 +1,9 @@
-.pf-v6-l-stack > p.pf-v6-c-content--p.ws-p {
-  margin: 0;
+.ws-content.pf-v6-l-stack > [class*="pf-v6-c-content"] {
+  margin-bottom: 0;
+}
+
+.ws-content {
+  max-width: 825px;
 }
 
 .ws-code {
@@ -22,4 +26,8 @@
 
 .ws-back-to-top {
   z-index: var(--pf-t--global--z-index--2xl);
+}
+
+.ws-autolink-header:not(:first-child) {
+  margin-top: var(--pf-t--global--spacer--md);
 }
