@@ -159,7 +159,7 @@ const HeaderTools = ({
                     onClick={() => setDropdownOpen(!isDropdownOpen)}
                     isExpanded={isDropdownOpen}
                   >
-                    Release 6.0.0
+                    {getDropdownItem(latestVersion, true)}
                   </MenuToggle>
                 )}
                 popperProps={{ position: 'right' }}
@@ -232,8 +232,8 @@ export function attachDocSearch(algolia, inputSelector, timeout) {
   }
 }
 
-const DARK_MODE_CLASS = "pf-v6-theme-dark";
-const DARK_MODE_STORAGE_KEY = "dark-mode";
+const DARK_MODE_CLASS = 'pf-v6-theme-dark';
+const DARK_MODE_STORAGE_KEY = 'dark-mode';
 
 /**
  * Determines if dark mode is enabled based on the stored value or the system preference.
@@ -245,9 +245,9 @@ function isDarkModeEnabled() {
     return false;
   }
 
-  const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
+  const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
   const storedValue = localStorage.getItem(DARK_MODE_STORAGE_KEY);
-  const isEnabled = storedValue === null ? mediaQuery.matches : storedValue === "true";
+  const isEnabled = storedValue === null ? mediaQuery.matches : storedValue === 'true';
 
   return isEnabled;
 }
@@ -312,14 +312,14 @@ export const SideNavLayout = ({ children, groupedRoutes, navOpen: navOpenProp })
       }
     };
 
-    const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
+    const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
 
-    mediaQuery.addEventListener("change", onQueryChange);
-    window.addEventListener("storage", onStorageChange);
+    mediaQuery.addEventListener('change', onQueryChange);
+    window.addEventListener('storage', onStorageChange);
 
     return () => {
-      mediaQuery.removeEventListener("change", onQueryChange);
-      window.removeEventListener("storage", onStorageChange);
+      mediaQuery.removeEventListener('change', onQueryChange);
+      window.removeEventListener('storage', onStorageChange);
     };
   }, []);
 
