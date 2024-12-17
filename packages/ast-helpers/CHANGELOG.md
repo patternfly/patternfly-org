@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.4.0-alpha.139 (2024-12-17)
+
+
+### Features
+
+* **ver:** fix dropdown ver ([#4418](https://github.com/patternfly/patternfly-org/issues/4418)) ([e2d297c](https://github.com/patternfly/patternfly-org/commit/e2d297cae19372728760f8cc025ff9ac38f06375))
+
+
+
+
+
 # 1.4.0-alpha.138 (2024-12-17)
 
 
