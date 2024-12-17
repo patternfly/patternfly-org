@@ -690,6 +690,13 @@ export const iconsData = [
   },
   {
     "Style": "fas",
+    "Name": "fa-sync-alt",
+    "React_name": "SyncAltIcon",
+    "Type": "Action",
+    "Contextual_usage": "Indicates the availability of a sync action",
+  },
+  {
+    "Style": "fas",
     "Name": "fa-star-icon",
     "React_name": "StarIcon",
     "Type": "Action",
