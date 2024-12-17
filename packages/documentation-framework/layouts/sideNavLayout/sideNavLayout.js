@@ -159,7 +159,7 @@ const HeaderTools = ({
                     onClick={() => setDropdownOpen(!isDropdownOpen)}
                     isExpanded={isDropdownOpen}
                   >
-                    {getDropdownItem(latestVersion, true)}
+                    {`Release ${latestVersion.name}`}
                   </MenuToggle>
                 )}
                 popperProps={{ position: 'right' }}
