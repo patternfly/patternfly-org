@@ -690,10 +690,18 @@ export const iconsData = [
   },
   {
     "Style": "fas",
-    "Name": "fa-sync-alt",
-    "React_name": "SyncAltIcon",
+    "Name": "fa-sort-amount-down-alt",
+    "React_name": "SortAmountDownAltIcon",
     "Type": "Action",
-    "Contextual_usage": "Indicates the availability of a sync action",
+    "Contextual_usage": "Represents the smallest-to-largest, lowest-to-highest or first-to-last (ascending) sort order for any data type.",
+    "Unicode": "f884"
+  },
+  {
+    "Style": "fas",
+    "Name": "fa-star-icon",
+    "React_name": "StarIcon",
+    "Type": "Action",
+    "Contextual_usage": "Indicates that an item is marked as a favorite.",
   },
   {
     "Style": "fas",
