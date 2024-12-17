@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.4.0-alpha.138 (2024-12-17)
+
+
+### Features
+
+* **ver:** update to 6.1 ([#4417](https://github.com/patternfly/patternfly-org/issues/4417)) ([ccf9ef5](https://github.com/patternfly/patternfly-org/commit/ccf9ef502f474ea6ce0383896fc718125e36f04f))
+
+
+
+
+
 # 1.4.0-alpha.137 (2024-12-12)
 
 
