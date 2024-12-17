@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 6.4.0 (2024-12-17)
+
+
+### Features
+
+* **ver:** fix release dropdown ([#4421](https://github.com/patternfly/patternfly-org/issues/4421)) ([efd6d87](https://github.com/patternfly/patternfly-org/commit/efd6d87d98fbf9b1f7036e9980da93ac256f7aed))
+
+
+
+
+
 # 6.3.0 (2024-12-17)
 
 
