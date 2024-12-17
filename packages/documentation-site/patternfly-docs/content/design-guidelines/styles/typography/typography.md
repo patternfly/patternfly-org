@@ -62,7 +62,7 @@ For example, you may decide that the default size of 20px for secondary headings
 Example: 
 
 <Title headingLevel="h2"> This is a default "xl" H2. </Title>
-```<Title headingLevel="h2" size='lg'> Aa </Title>```
+```<Title headingLevel="h2"> Aa </Title>```
 
 <Title headingLevel="h2" size='lg'> This is a customized "lg" H2. </Title>
 ```<Title headingLevel="h2" size='lg'> Aa </Title>```
