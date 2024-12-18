@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 6.5.0 (2024-12-18)
+
+
+### Features
+
+* **dark theme:** revert localstorage/pref feature ([#4424](https://github.com/patternfly/patternfly-org/issues/4424)) ([0ffa269](https://github.com/patternfly/patternfly-org/commit/0ffa269a06d474a6a3069047e506ca83767d9e9c))
+
+
+
+
+
 # 6.4.0 (2024-12-17)
 
 
