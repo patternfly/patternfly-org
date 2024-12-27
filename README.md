@@ -6,7 +6,7 @@ The PatternFly Org is the source for the official documentation for PatternFly.
 
 Development setup requires yarn. If you do not already have yarn installed on your system, see https://yarnpkg.com/en/.
 
-A Node version greater than 18.16.0 is also required.
+A Node version 22 or greater is also required.
 
 ### Live Reload Server
 
