@@ -20,7 +20,7 @@
     "@patternfly/chatbot": "2.1.0",
     "@patternfly/design-tokens": "1.13.0",
     "@patternfly/documentation-framework": "workspace:*",
-    "@patternfly/quickstarts": "6.1.0",
+    "@patternfly/quickstarts": "6.5.0",
     "@patternfly/react-catalog-view-extension": "6.0.0",
     "@patternfly/react-component-groups": "6.1.0",
     "@patternfly/react-console": "6.0.0",
