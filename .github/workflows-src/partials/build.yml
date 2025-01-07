@@ -2,7 +2,7 @@
   with:
     node-version: 22
 - run: corepack enable
-- run: yarn install --frozen-lockfile
+- run: yarn install --immutable
 # v5 build
 - uses: actions/cache@v2
   id: site-cache

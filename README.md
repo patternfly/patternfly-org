@@ -4,7 +4,7 @@ The PatternFly Org is the source for the official documentation for PatternFly.
 
 ## Development
 
-Development setup requires yarn. If you do not already have yarn installed on your system, see https://yarnpkg.com/en/.
+Development setup requires yarn. If you do not already have yarn installed on your system, see https://yarnpkg.com/getting-started.
 
 A Node version 22 or greater is also required.
 
@@ -27,8 +27,6 @@ The site can be built with:
     yarn build
 
 The static assets get copied to build/patternfly-org.
-
-If you see errors, make sure that the version of the `package.json` file in `packages/documentation-framework` matches the version of the `"@patternfly/documentation-framework"` dependency in the `package.json` file in `packages/documentation-site`.
 
 ### Deploy
 
