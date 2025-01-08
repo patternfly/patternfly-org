@@ -220,12 +220,7 @@ module.exports = (sourceMD, sourceProps, sourceFunctionDocs) => {
     );
   
   sourceProps(path.join(reactDataViewPath, "/**/*.tsx"), reactPropsIgnore);
-  sourceMD(path.join(reactDataViewContentBase, "/**/examples/*.md"), "react");
-  sourceMD(
-    path.join(reactDataViewContentBase, "/**/design-guidelines/*.md"),
-    "design-guidelines"
-  );
-
+  sourceMD(path.join(reactDataViewContentBase, "/examples/**/*.md"), "react");
   
   // User feedback extension
   const reactUserFeedbackPath = require
