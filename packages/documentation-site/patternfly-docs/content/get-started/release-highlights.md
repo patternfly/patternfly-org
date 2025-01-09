@@ -7,6 +7,14 @@ section: get-started
 import './get-started.css';
 import { Divider, Timestamp } from '@patternfly/react-core';
 
+<Timestamp>January 2024</Timestamp>
+
+## PatternFly 6.1.1
+
+### Extension updates 
+
+As a quick follow up to our last release, this update publishes the new data view extension.
+
 <Timestamp>December 2024</Timestamp>
 
 ## PatternFly 6.1
