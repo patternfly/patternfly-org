@@ -207,6 +207,21 @@ module.exports = (sourceMD, sourceProps, sourceFunctionDocs) => {
   sourceMD(path.join(logViewerContentBase, "/**/examples/*.md"), "react");
   sourceMD(path.join(logViewerContentBase, "/**/demos/*.md"), "react-demos");
 
+   // Data view extension
+   const reactDataViewPath = require
+   .resolve("@patternfly/react-data-view/package.json")
+   .replace("package.json", "src");
+
+    const reactDataViewContentBase = require
+    .resolve("@patternfly/react-data-view/package.json")
+    .replace(
+      "package.json",
+      "patternfly-docs/content/extensions/data-view"
+    );
+  
+  sourceProps(path.join(reactDataViewPath, "/**/*.tsx"), reactPropsIgnore);
+  sourceMD(path.join(reactDataViewContentBase, "/examples/**/*.md"), "react");
+  
   // User feedback extension
   const reactUserFeedbackPath = require
     .resolve("@patternfly/react-user-feedback/package.json")

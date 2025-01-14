@@ -2745,7 +2745,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@patternfly/react-component-groups@npm:6.1.0":
+"@patternfly/react-component-groups@npm:6.1.0, @patternfly/react-component-groups@npm:^6.1.0":
   version: 6.1.0
   resolution: "@patternfly/react-component-groups@npm:6.1.0"
   dependencies:
@@ -2845,6 +2845,23 @@ __metadata:
     react: ^17 || ^18
     react-dom: ^17 || ^18
   checksum: 10c0/a3533ee490c8eabb014cad8d248df34c0f3dbe5834e9d10014c219a04e62f87ee819fbcdab186c2530332fe9feeda491dbec5a31b89757ac4ce370771e16f93e
+  languageName: node
+  linkType: hard
+
+"@patternfly/react-data-view@npm:6.1.0":
+  version: 6.1.0
+  resolution: "@patternfly/react-data-view@npm:6.1.0"
+  dependencies:
+    "@patternfly/react-component-groups": "npm:^6.1.0"
+    "@patternfly/react-core": "npm:^6.0.0"
+    "@patternfly/react-icons": "npm:^6.0.0"
+    "@patternfly/react-table": "npm:^6.0.0"
+    clsx: "npm:^2.1.1"
+    react-jss: "npm:^10.10.0"
+  peerDependencies:
+    react: ^17 || ^18
+    react-dom: ^17 || ^18
+  checksum: 10c0/272a552ed6afd2b217078540b2c261fc73821aa69bc3bff5338389dde06dd903db12d7d1fa3ec125727a0d6261f363518c732ba435f02ee4ca9da27300121ca1
   languageName: node
   linkType: hard
 
@@ -14057,6 +14074,7 @@ __metadata:
     "@patternfly/react-catalog-view-extension": "npm:6.0.0"
     "@patternfly/react-component-groups": "npm:6.1.0"
     "@patternfly/react-console": "npm:6.0.0"
+    "@patternfly/react-data-view": "npm:6.1.0"
     "@patternfly/react-docs": "npm:7.1.0"
     "@patternfly/react-log-viewer": "npm:6.1.0"
     "@patternfly/react-topology": "npm:6.1.0"
