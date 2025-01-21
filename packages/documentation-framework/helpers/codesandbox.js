@@ -155,7 +155,7 @@ function getReactParams(title, code, scope, lang, relativeImports, relPath, sour
     const [ relImportStatement, _relImportItems, _relImportPath ] = relImportMatch;
     code = code.replace(relImportStatement, '');
   }
-  
+
   const dependencies = {
     '@patternfly/react-core': versions.Releases[0].versions['@patternfly/react-core']
   };
@@ -179,6 +179,10 @@ function getReactParams(title, code, scope, lang, relativeImports, relPath, sour
       res = `${importArr[0]}/${importArr[1]}`;
     }
     dependencies[res] = dependencies[res] || 'latest';
+  }
+
+  if (dependencies.hasOwnProperty('@patternfly/react-charts')) {
+    dependencies['victory'] = 'latest';
   }
 
   return {
