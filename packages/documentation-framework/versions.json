@@ -1,9 +1,35 @@
 {
   "Releases": [
     {
+      "name": "6.1.0",
+      "date": "2024-12-17",
+      "latest": true,
+      "versions": {
+        "@patternfly/patternfly": "6.1.0",
+        "@patternfly/react-catalog-view-extension": "6.0.0",
+        "@patternfly/react-charts": "8.1.0",
+        "@patternfly/react-code-editor": "6.1.0",
+        "@patternfly/react-component-groups": "6.1.0",
+        "@patternfly/react-core": "6.1.0",
+        "@patternfly/react-drag-drop": "6.1.0",
+        "@patternfly/react-icons": "6.1.0",
+        "@patternfly/react-log-viewer": "6.1.0",
+        "@patternfly/react-styles": "6.1.0",
+        "@patternfly/react-table": "6.1.0",
+        "@patternfly/react-tokens": "6.1.0",
+        "@patternfly/react-topology": "6.1.0",
+        "@patternfly/react-user-feedback": "6.0.0",
+        "@patternfly/react-console": "6.0.0",
+        "@patternfly/quickstarts": "6.1.0",
+        "@patternfly/react-virtualized-extension": "6.0.0",
+        "@patternfly/react-templates": "6.1.0",
+        "@patternfly/chatbot": "2.1.0",
+        "@patternfly/data-view": "6.1.0"
+      }
+    },{
       "name": "6.0.0",
       "date": "2024-10-30",
-      "latest": true,
+      "hidden": true,
       "versions": {
         "@patternfly/patternfly": "6.0.0",
         "@patternfly/react-catalog-view-extension": "6.0.0",

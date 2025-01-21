@@ -56,7 +56,7 @@ Multiple select lists allow users to select one or more options from a list, wit
 ## Variations
 
 ### Select list with typeahead
-Typeahead allows users to narrow a displayed list of options by typing into the input field. Type ahead is  recommended for lists with more than ten options and is available for single and multiple select lists. Although the typeahead within toggle functionality does not exist for the checkbox select, there is an option to add a typeahead capability within the menu of items if needed, as seen in this [grouped checkbox input with filtering](/components/select/react#grouped-checkbox-input-with-filtering) example.
+Typeahead allows users to narrow a displayed list of options by typing into the input field. Type ahead is  recommended for lists with more than ten options and is available for single and multiple select lists. Although the typeahead within toggle functionality does not exist for the checkbox select, there is an option to add a typeahead capability within the menu of items if needed, as seen in this [grouped checkbox input with filtering](/components/menus/select/react#grouped-checkbox-input-with-filtering) example.
 
 <img src="./img/typeahead.png" alt="Visual of a typeahead being used" width="361"/>
 
@@ -90,4 +90,4 @@ The Select component offers three validation-state presentations: Success, Warni
 
 <img src="./img/validated.png" alt="select list with valdation styling" width="374"/>
 
-For more information about general form validation, see the relevant material in the [Form guidelines](/components/form/design-guidelines#errors-and-validation).
+For more information about general form validation, see the relevant material in the [Form guidelines](/components/forms/form/design-guidelines#errors-and-validation).

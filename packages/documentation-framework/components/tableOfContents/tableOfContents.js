@@ -1,9 +1,5 @@
 import React from 'react';
-import {
-  JumpLinks,
-  JumpLinksItem,
-  JumpLinksList,
-} from '@patternfly/react-core';
+import { JumpLinks, JumpLinksItem, JumpLinksList } from '@patternfly/react-core';
 import { trackEvent } from '../../helpers';
 
 export const TableOfContents = ({ items }) => {
@@ -14,9 +10,7 @@ export const TableOfContents = ({ items }) => {
 
   React.useEffect(() => {
     if (document.getElementById('ws-sticky-nav-tabs')) {
-      setStickyNavHeight(
-        document.getElementById('ws-sticky-nav-tabs').offsetHeight
-      );
+      setStickyNavHeight(document.getElementById('ws-sticky-nav-tabs').offsetHeight);
     }
   }, []);
 
@@ -40,13 +34,7 @@ export const TableOfContents = ({ items }) => {
               className="ws-toc-item"
               onKeyDown={updateWidth}
               onMouseDown={updateWidth}
-              onClick={() =>
-                trackEvent(
-                  'jump_link_click',
-                  'click_event',
-                  curItem.id.toUpperCase()
-                )
-              }
+              onClick={() => trackEvent('jump_link_click', 'click_event', curItem.id.toUpperCase())}
             >
               {curItem.text}
             </JumpLinksItem>
@@ -74,13 +62,7 @@ export const TableOfContents = ({ items }) => {
                 className="ws-toc-item"
                 onKeyDown={updateWidth}
                 onMouseDown={updateWidth}
-                onClick={() =>
-                  trackEvent(
-                    'jump_link_click',
-                    'click_event',
-                    curItem.id.toUpperCase()
-                  )
-                }
+                onClick={() => trackEvent('jump_link_click', 'click_event', curItem.id.toUpperCase())}
               >
                 {curItem.text}
               </JumpLinksItem>
@@ -95,17 +77,9 @@ export const TableOfContents = ({ items }) => {
             className="ws-toc-item"
             onKeyDown={updateWidth}
             onMouseDown={updateWidth}
-            onClick={() =>
-              trackEvent(
-                'jump_link_click',
-                'click_event',
-                item.id.toUpperCase()
-              )
-            }
+            onClick={() => trackEvent('jump_link_click', 'click_event', item.id.toUpperCase())}
           >
-            {Array.isArray(nextItem)
-              ? renderSublist(item, nextItem)
-              : item.text}
+            {Array.isArray(nextItem) ? renderSublist(item, nextItem) : item.text}
           </JumpLinksItem>
         );
       }
@@ -117,7 +91,7 @@ export const TableOfContents = ({ items }) => {
     <JumpLinks
       label="Table of contents"
       isVertical
-      scrollableSelector=".pf-v6-c-page__main-container"
+      scrollableSelector="#ws-page-main"
       className="ws-toc"
       style={{ top: stickyNavHeight }}
       offset={width > 1450 ? 108 + stickyNavHeight : 148 + stickyNavHeight}

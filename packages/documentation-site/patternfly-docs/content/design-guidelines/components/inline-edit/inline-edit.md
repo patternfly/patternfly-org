@@ -36,7 +36,7 @@ Elements vary depending on inline edit variation
 1. **Toggle:** Indicates the edit action
 2. **[Tooltip](/components/tooltip):** Provides a short description of the inline edit toggle
 3. **Action group:** Allows the user to save or cancel changes
-4. **Form elements:** Examples include [text input](/components/text-input) or [text area](/components/text-area). See [forms](/components/forms/form) for more information about form elements.
+4. **Form elements:** Examples include [text input](/components/forms/text-input) or [text area](/components/forms/text-area). See [forms](/components/forms/form) for more information about form elements.
  
 ### Field-specific edit
  
@@ -82,7 +82,7 @@ Any editing is triggered by an edit link for the whole section. All edits should
 8. **Toggle:** Indicates the edit action
  
 ### Row editing
-Row editing allows a user to edit items that are visible in the table by having a pencil toggle pinned to the right side, with the [kebab](/components/dropdown#with-kebab). 
+Row editing allows a user to edit items that are visible in the table by having a pencil toggle pinned to the right side, with the [kebab](/components/menus/dropdown#with-kebab). 
  
 #### When to use
 Use row editing when:

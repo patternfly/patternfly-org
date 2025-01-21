@@ -7,6 +7,73 @@ section: get-started
 import './get-started.css';
 import { Divider, Timestamp } from '@patternfly/react-core';
 
+<Timestamp>January 2024</Timestamp>
+
+## PatternFly 6.1.1
+
+### Extension updates 
+
+As a quick follow up to our last release, this update publishes the new data view extension.
+
+<Timestamp>December 2024</Timestamp>
+
+## PatternFly 6.1
+
+### Promoted package versions
+
+### Component updates 
+
+We fixed bugs that were reported in our components, the details of which can be found in [the patternfly-react release notes](https://github.com/patternfly/patternfly-react/releases) and the [patternfly (Core) release notes](https://github.com/patternfly/patternfly/releases). 
+
+These changes mostly resolved functionality issues and made improvements to visual styles. 
+
+The following fix could require manual updates depending on how you handle breakpoints in your code:
+
+- We fixed a breakpoint issue in our table component, which caused table breakpoints for the desktop/mobile responsive layout to be 1px off from our other component breakpoints. Now, the table will responsively update between desktop and mobile at the same width as our other components. If you've manually configured your own breakpoints to match table's previous breakpoints, this fix will require you to make CSS updates to bring your code in line with the updated breakpoint value.
+
+### Website updates 
+
+- We fixed an issue on PatternFly.org that prevented proper page loading when navigating to new pages via in-content links.
+
+- We updated [the PatternFly.org accessibility scorecard](/accessibility/accessibility-scorecard#patternfly.org-accessibility-scorecard) and will begin to resolve accessibility violations that were identified.
+
+### Content updates
+
+- We updated design guideline images for [context selector](/components/menus/context-selector/design-guidelines) to align with PatternFly 6 styles. There is an ongoing effort to update images across PatternFly.org to reflect our new visuals, tracked in this [PatternFly 6 design guidelines issue](https://github.com/patternfly/patternfly-org/issues/4235).
+- We updated the illustrations on [the component overview page](/components/all-components). 
+- We updated and added "draggable" examples to [dual list selector](/components/dual-list-selector#draggable) and [data list](/components/data-list#draggable).
+- We updated our ChatBot documentation: 
+    - We renamed the extension to "ChatBot", to better brand our offering and help distinguish it from other general "chatbot" features.
+    - We combined and organized our documentation into a few cohesive pages: ["Overview"](/patternfly-ai/chatbot/overview), ["UI"](/patternfly-ai/chatbot/ui), and ["Messages"](/patternfly-ai/chatbot/message). Note that our documentation structure could continue to change as our extension grows. We will continue to share updates when changes occur. 
+    - We moved our [basic and embedded ChatBot demos](/patternfly-ai/chatbot/overview/demo) to the "Overview" page for better visibility. 
+    - We added initial [ChatBot design guidelines](/patternfly-ai/chatbot/overview/design-guidelines), which can also be found on the "Overview" page.
+    - We added documentation for new features, as described in the following section. 
+
+### Extension updates 
+
+#### ChatBot
+
+We've continued to evolve our new ChatBot:
+- We renamed the repo from "patternfly/visual-assistant" to "patternfly/chatbot" to align with our website docs.
+- We removed the third-party `AutoTextArea` in the message bar and replaced it with our own custom solution.
+- We renamed the `toolTipLabel` prop to `tooltipLabel`.
+- We added support for new features, including: 
+    - A ["skip to chatbot" button](patternfly-ai/chatbot/ui/#skip-to-content).
+    - New features in [ChatBot messages](/patternfly-ai/chatbot/messages#messages) and the message bar: 
+        - Truncation of long bot and user names. 
+        - More complex list formats.
+        - [Quick response buttons](/patternfly-ai/chatbot/messages#messages-with-quick-responses). 
+        - [Multiple file attachments](/patternfly-ai/chatbot/messages#messages-with-attachments). 
+         - A [stop streaming button](/patternfly-ai/chatbot/ui#message-bar-with-stop-button) that will pause the streaming of a ChatBot message.
+        - Additional customization options for [welcome messages](/patternfly-ai/chatbot/ui#welcome-message), [message avatars](/patternfly-ai/chatbot/messages#messages), [message actions](/patternfly-ai/chatbot/messages#custom-messages-actions), [modal](/patternfly-ai/chatbot/ui#modal), [toggle shape](/patternfly-ai/chatbot/ui#custom-toggle-shape).
+        - A variety of styling updates to shadows, sizing, and positioning. 
+    
+#### Component groups
+
+- We added customization support to [error state](/component-groups/error-communication/error-state) via PatternFly empty state props, including a custom icon and title heading level.
+
+<Divider />
+
 <Timestamp>October 2024</Timestamp>
 
 ## PatternFly 6.0

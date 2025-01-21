@@ -87,7 +87,7 @@ When using HTML, use the following syntax:
 - For 'fa' solid icons: `<i class="fas [insert-icon-name]"></i>`
 - For 'fa' regular icons: `<i class="far [insert-icon-name]"></i>`
 
-**Note:** Be sure to reference our [development onboarding guide](/develop#using-icons) when using 'fa' regular icons.
+**Note:** Be sure to reference our [development onboarding guide](/get-started/develop#using-icons) when using 'fa' regular icons.
 
 ### React icons
 When using React, you can import 'pficon' icons from our [react-icons package](https://www.npmjs.com/package/@patternfly/react-icons) by including the following line: `import { [insert-icon-name] } from '@patternfly/react-icons/dist/esm/icons/[insert-hyphenated-icon-name]';`

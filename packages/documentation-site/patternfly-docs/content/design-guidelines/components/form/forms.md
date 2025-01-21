@@ -83,7 +83,7 @@ Use [checkboxes](/components/forms/checkbox/design-guidelines) to enable users t
 
 #### Select lists
 
-Use a [select list](/components/select/design-guidelines) to enable users to select 1 or more options from a list of more than 5 items.
+Use a [select list](/components/menus/select/design-guidelines) to enable users to select 1 or more options from a list of more than 5 items.
 
 #### Data input arrangement
 

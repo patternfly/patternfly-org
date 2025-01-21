@@ -173,7 +173,7 @@ We offer more complex resources to assist with the development process.
 <Card isClickable isCompact isFullHeight>
     <CardHeader
         selectableActions={{
-            to: "/topology/getting-started",
+            to: "/topology/about-topology",
             selectableActionId: 'clickable-selectable-card-input-10',
           }}
     >
