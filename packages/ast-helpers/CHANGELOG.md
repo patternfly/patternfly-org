@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.4.0-alpha.151 (2025-01-29)
+
+
+### Bug Fixes
+
+* Update yarn.lock ([#4452](https://github.com/patternfly/patternfly-org/issues/4452)) ([563a053](https://github.com/patternfly/patternfly-org/commit/563a0538eff085c48a97000cfcc104b72e97cdfe))
+
+
+
+
+
 # 1.4.0-alpha.150 (2025-01-28)
 
 **Note:** Version bump only for package @patternfly/ast-helpers
