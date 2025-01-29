@@ -2571,6 +2571,17 @@
     clsx "^2.1.1"
     react-jss "^10.10.0"
 
+"@patternfly/react-component-groups@^5.5.2":
+  version "5.5.8"
+  resolved "https://registry.yarnpkg.com/@patternfly/react-component-groups/-/react-component-groups-5.5.8.tgz#3cf9d190901e60f0fc339aed13d199ad3350ab9f"
+  integrity sha512-v31FyvzewWiLVMOR8S4GgD1S+ZWqBPEawPkJG6Ja4BpF5dFJeke6lUovdEPTs4NQEUtBytF6Tsww38XGL6NaaA==
+  dependencies:
+    "@patternfly/react-core" "^5.4.1"
+    "@patternfly/react-icons" "^5.4.0"
+    "@patternfly/react-table" "^5.4.1"
+    clsx "^2.1.1"
+    react-jss "^10.10.0"
+
 "@patternfly/react-console@5.1.0":
   version "5.1.0"
   resolved "https://registry.yarnpkg.com/@patternfly/react-console/-/react-console-5.1.0.tgz#3b51662433486599480ecaba14af140b05947b33"
@@ -2631,6 +2642,18 @@
     focus-trap "7.5.4"
     react-dropzone "^14.2.3"
     tslib "^2.6.3"
+
+"@patternfly/react-data-view@5.8.0":
+  version "5.8.0"
+  resolved "https://registry.yarnpkg.com/@patternfly/react-data-view/-/react-data-view-5.8.0.tgz#7d568a62d0ce577d258aa39a1537e6ee372a28f5"
+  integrity sha512-+GDaWmr19t71q83yiamFPnyxeak0I70gTxWmkD/tQEnE/m6+5MZy+jtJ1lsT5BFPXNvwweEwfaXwiFzPTxTV3w==
+  dependencies:
+    "@patternfly/react-component-groups" "^5.5.2"
+    "@patternfly/react-core" "^5.4.1"
+    "@patternfly/react-icons" "^5.4.0"
+    "@patternfly/react-table" "^5.4.1"
+    clsx "^2.1.1"
+    react-jss "^10.10.0"
 
 "@patternfly/react-docs@6.4.12":
   version "6.4.12"
