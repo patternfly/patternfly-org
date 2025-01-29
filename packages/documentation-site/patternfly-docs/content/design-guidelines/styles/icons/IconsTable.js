@@ -47,7 +47,7 @@ export const IconsTable = () => {
   });
 
   const onDownloadSvg = (currentTarget, name) => {
-    const domNode = currentTarget.children[0].cloneNode(true);
+    const domNode = currentTarget.querySelector("svg").cloneNode(true);
     domNode.setAttribute("xmlns", "http://www.w3.org/2000/svg");
     domNode.setAttribute("width", "100%");
     domNode.setAttribute("height", "100%");
