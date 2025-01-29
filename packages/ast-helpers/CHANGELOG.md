@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.4.0-alpha.152 (2025-01-29)
+
+
+### Bug Fixes
+
+* export valid SVGs in all icons page ([#4450](https://github.com/patternfly/patternfly-org/issues/4450)) ([3f0a8da](https://github.com/patternfly/patternfly-org/commit/3f0a8da0396b91d9aebcd802f4a621917f102129))
+
+
+
+
+
 # 1.4.0-alpha.151 (2025-01-29)
 
 
