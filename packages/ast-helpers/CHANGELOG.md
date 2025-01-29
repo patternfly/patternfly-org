@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.26.2 (2025-01-29)
+
+
+### Bug Fixes
+
+* Dataview v5 update ([#4436](https://github.com/patternfly/patternfly-org/issues/4436)) ([8876d05](https://github.com/patternfly/patternfly-org/commit/8876d053176cf3108214cea71e71ea7beae0346a)), closes [#4429](https://github.com/patternfly/patternfly-org/issues/4429)
+
+
+
+
+
 ## 1.26.1 (2024-11-15)
 
 
