@@ -3,14 +3,14 @@ import { Grid, GridItem, Flex, FlexItem, Content } from '@patternfly/react-core'
 import '@patternfly/patternfly/patternfly-charts.css';
 
 const colorFamilies = [
-  'Blue',
-  'Green',
-  'Cyan',
-  'Purple',
-  'Gold',
+  'Red-orange',
   'Orange',
-  'Red',
-  'Black'
+  'Yellow',
+  'Teal',
+  'Green',
+  'Blue',  
+  'Purple',
+  'Black', 
 ];
 
 const ColorEntry = ({color, idx, computedStyles}) => {
