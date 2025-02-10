@@ -14,7 +14,7 @@ const colorFamilies = [
 ];
 
 const ColorEntry = ({color, idx, computedStyles}) => {
-  const varName = `--pf-v6-chart-color-${color.toLowerCase()}-${idx}00`;
+  const varName = `--pf-v6-chart-color-${color.replace(' ', '-').toLowerCase()}-${idx}00`;
   const varValue = computedStyles?.getPropertyValue
     ? computedStyles.getPropertyValue(varName).toUpperCase()
     : ''; 
@@ -72,7 +72,7 @@ const ColorsGrid = () => {
   }, []);
 
   return (
-    <Grid className="ws-colors-grid" hasGutter sm={12} md={6} lg={4}>
+    <Grid className="ws-colors-grid" hasGutter sm={12} md={6} lg={6}>
       {colorFamilies.map(color => (
         <ColorFamily color={color} computedStyles={computedStyles} key={color} />
       ))}
