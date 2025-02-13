@@ -5,21 +5,17 @@ const { getTitle } = require('../../helpers/getTitle');
 
 const templateDir = path.join(__dirname, '../../templates');
 
-async function getHtmlWebpackPlugin({
-  isProd,
-  googleAnalyticsID,
-  algolia,
-  url,
-  title,
-  isFullscreen
-}) {
+async function getHtmlWebpackPlugin({ isProd, googleAnalyticsID, algolia, url, title, isFullscreen }) {
   return new HtmlWebpackPlugin({
     template: path.join(templateDir, 'html.ejs'),
     filename: `${url}/index.html`.replace(/^\/+/, ''),
     templateParameters: {
       title: getTitle(title),
       // Don't prerender fullscreen pages (expensive!)
-      prerendering: (isProd && !isFullscreen && !url.includes('topology') && !url.includes('extensions')) ? await prerender(url) : null,
+      prerendering:
+        isProd && !isFullscreen && !url.includes('chatbot') && !url.includes('topology') && !url.includes('extensions')
+          ? await prerender(url)
+          : null,
       // Don't use GA in dev mode
       googleAnalyticsID: isProd ? googleAnalyticsID : false,
       algolia
@@ -27,7 +23,7 @@ async function getHtmlWebpackPlugin({
     scriptLoading: 'defer',
     inject: false,
     minify: false
-  })
+  });
 }
 
 async function getHtmlWebpackPlugins(options) {
@@ -40,11 +36,11 @@ async function getHtmlWebpackPlugins(options) {
       filename: 'sitemap.xml',
       templateParameters: {
         urls: Object.entries(routes)
-          .map(([path, { sources }]) => [path, ...(sources || []).slice(1).map(source => source.slug)])
+          .map(([path, { sources }]) => [path, ...(sources || []).slice(1).map((source) => source.slug)])
           .flat()
       },
       inject: false,
-      minify: false,
+      minify: false
     })
   ];
 
@@ -59,7 +55,7 @@ async function getHtmlWebpackPlugins(options) {
     .map(([url, { sources = [], title, isFullscreen }]) => [
       [url, { title, isFullscreen }],
       // Add pages for sources
-      ...sources.slice(1).map(source => [source.slug, source])
+      ...sources.slice(1).map((source) => [source.slug, source])
     ])
     .flat()
     .sort();
@@ -70,7 +66,7 @@ async function getHtmlWebpackPlugins(options) {
 
   console.log('done prerendering');
   return res;
-};
+}
 
 module.exports = {
   getHtmlWebpackPlugins
