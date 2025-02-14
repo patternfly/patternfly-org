@@ -2647,18 +2647,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@patternfly/quickstarts@npm:6.1.0":
-  version: 6.1.0
-  resolution: "@patternfly/quickstarts@npm:6.1.0"
+"@patternfly/quickstarts@npm:6.2.0-prerelease.5":
+  version: 6.2.0-prerelease.5
+  resolution: "@patternfly/quickstarts@npm:6.2.0-prerelease.5"
   dependencies:
     dompurify: "npm:^3.1.3"
     history: "npm:^5.0.0"
   peerDependencies:
     "@patternfly/react-core": ^6.0.0
+    marked: ^15.0.6
     react: ">=18.0.0"
     react-dom: ">=18.0.0"
-    showdown: ">=2.1.0"
-  checksum: 10c0/4d4383ed0d6e3ca46c679f09171d8a22ce1417d501048dbc0192be1fbabf8d0e3b1d43ca983dc257427371a542cadc14b0063b8f5096e22895c660d817d4b99f
+  checksum: 10c0/15e5ef779d3911696ef7d89480f022c501ee2b8586e8047357c3e5e42ff35ec5cb7312427646ed49506176115c20cd7e21d05643bf01c09025af027c484a2436
   languageName: node
   linkType: hard
 
@@ -6025,7 +6025,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"commander@npm:^9.0.0, commander@npm:^9.4.1":
+"commander@npm:^9.4.1":
   version: 9.5.0
   resolution: "commander@npm:9.5.0"
   checksum: 10c0/5f7784fbda2aaec39e89eb46f06a999e00224b3763dc65976e05929ec486e174fe9aac2655f03ba6a5e83875bd173be5283dc19309b7c65954701c02025b3c1d
@@ -11440,6 +11440,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"marked@npm:^15.0.7":
+  version: 15.0.7
+  resolution: "marked@npm:15.0.7"
+  bin:
+    marked: bin/marked.js
+  checksum: 10c0/0b9d07bace37bbf0548bae356c4184765afa4d2296ed0be4418aa4bb0ce703f323dc1a475125d536581f9fe264797e6265dd0b57499d97c0fe0f29bc6d016343
+  languageName: node
+  linkType: hard
+
 "marked@npm:^4.0.16":
   version: 4.3.0
   resolution: "marked@npm:4.3.0"
@@ -14076,7 +14085,7 @@ __metadata:
     "@patternfly/design-tokens": "npm:1.13.0"
     "@patternfly/documentation-framework": "workspace:*"
     "@patternfly/patternfly-a11y": "npm:5.0.0"
-    "@patternfly/quickstarts": "npm:6.1.0"
+    "@patternfly/quickstarts": "npm:6.2.0-prerelease.5"
     "@patternfly/react-catalog-view-extension": "npm:6.0.0"
     "@patternfly/react-component-groups": "npm:6.1.0"
     "@patternfly/react-console": "npm:6.0.0"
@@ -14089,12 +14098,12 @@ __metadata:
     classnames: "npm:^2.2.5"
     fs-extra: "npm:^11.1.0"
     glob: "npm:^8.1.0"
+    marked: "npm:^15.0.7"
     react: "npm:^17.0.0 || ^18.0.0"
     react-dom: "npm:^17.0.0 || ^18.0.0"
     react-jss: "npm:^10.9.2"
     react-router: "npm:^6.3.0"
     react-router-dom: "npm:^6.3.0"
-    showdown: "npm:^2.1.0"
     victory-bar: "npm:^37.1.1"
     victory-core: "npm:^37.1.1"
     victory-create-container: "npm:^37.1.1"
@@ -16108,17 +16117,6 @@ __metadata:
   dependencies:
     nanoid: "npm:^2.1.0"
   checksum: 10c0/7f389eb96cc11b569ac02655b861290a194f3a5402b3e3c86d21b9d016ac964683bdd6aac03b61fb6ddc5a727641442f56b70266742cf0911eee3bdc61be99eb
-  languageName: node
-  linkType: hard
-
-"showdown@npm:^2.1.0":
-  version: 2.1.0
-  resolution: "showdown@npm:2.1.0"
-  dependencies:
-    commander: "npm:^9.0.0"
-  bin:
-    showdown: bin/showdown.js
-  checksum: 10c0/8508e060874c42338b9ebfe884763e8042d9575185d9dd3a12f7380736732893a4738f37140add97bde0c4c87d6bad66ed0761505f310df6044ee3385e2ae349
   languageName: node
   linkType: hard
 

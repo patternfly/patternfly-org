@@ -20,7 +20,7 @@
     "@patternfly/chatbot": "2.1.0",
     "@patternfly/design-tokens": "1.13.0",
     "@patternfly/documentation-framework": "workspace:*",
-    "@patternfly/quickstarts": "6.1.0",
+    "@patternfly/quickstarts": "6.2.0-prerelease.5",
     "@patternfly/react-catalog-view-extension": "6.0.0",
     "@patternfly/react-component-groups": "6.1.0",
     "@patternfly/react-console": "6.0.0",
@@ -30,9 +30,9 @@
     "@patternfly/react-topology": "6.1.0",
     "@patternfly/react-user-feedback": "6.0.0",
     "@patternfly/react-virtualized-extension": "6.0.0",
+    "marked": "^15.0.7",
     "react": "^17.0.0 || ^18.0.0",
-    "react-dom": "^17.0.0 || ^18.0.0",
-    "showdown": "^2.1.0"
+    "react-dom": "^17.0.0 || ^18.0.0"
   },
   "devDependencies": {
     "@patternfly/patternfly-a11y": "5.0.0",
