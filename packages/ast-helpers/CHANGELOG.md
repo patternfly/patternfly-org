@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.4.0-alpha.154 (2025-02-17)
+
+
+### Bug Fixes
+
+* **getHtmlWebpackPlugins:** Turn off pre-render for ChatBot ([#4467](https://github.com/patternfly/patternfly-org/issues/4467)) ([9bd77f2](https://github.com/patternfly/patternfly-org/commit/9bd77f2c07b33697d6ddefddc8b89139f7027444))
+
+
+
+
+
 # 1.4.0-alpha.153 (2025-02-17)
 
 **Note:** Version bump only for package @patternfly/ast-helpers
