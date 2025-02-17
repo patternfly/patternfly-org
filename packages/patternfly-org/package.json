@@ -1,0 +1,14 @@
+{
+  "name": "patternfly-org-next",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "patternfly-doc-core start",
+    "patternfly-doc-core": "npx patternfly-doc-core",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@ausuliv/patternfly-doc-core": "^0.0.31",
+    "astro": "^5.3.0"
+  }
+}
