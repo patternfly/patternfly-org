@@ -23,7 +23,7 @@ Our spacers include the following sizes:
 | xs | `--pf-t--global--spacer--xs` | .25rem (4px) | <div class="ws-content-spacer4"></div> | 
 |  sm | `--pf-t--global--spacer--sm` | .5rem (8px) |<div class="ws-content-spacer8"></div> |
 |  md | `--pf-t--global--spacer--md` | 1rem (16px) |<div class="ws-content-spacer16"></div> | 
-|  lg | `--pf-t--global--spacer--lg` | 1.5rem (244px) |<div class="ws-content-spacer24"></div> |
+|  lg | `--pf-t--global--spacer--lg` | 1.5rem (24px) |<div class="ws-content-spacer24"></div> |
 |  xl | `--pf-t--global--spacer--xl` | 2rem (32px) |<div class="ws-content-spacer32"></div> |
 |  2xl | `--pf-t--global--spacer--2xl` | 3rem (48px) | <div class="ws-content-spacer48"></div> |
 |  3xl | `--pf-t--global--spacer--3xl` | 4rem (64px) | <div class="ws-content-spacer64"></div> |
