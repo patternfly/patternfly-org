@@ -12,6 +12,7 @@
     "build:analyze": "yarn workspace patternfly-org build:analyze && yarn copy",
     "build": "yarn workspace patternfly-org build && yarn copy",
     "build:extensions": "EXTENSIONS_ONLY=true PRERELEASE=true yarn build",
+    "dev": "yarn workspace patternfly-org-next dev",
     "copy": "rm -rf build/patternfly-org/site && mkdir -p build/patternfly-org && cp -r packages/documentation-site/public build/patternfly-org/site",
     "clean": "lerna run clean && rm -rf build",
     "serve": "npx pf-docs-framework serve build/patternfly-org/site",
@@ -29,9 +30,8 @@
     ]
   },
   "devDependencies": {
-    
+    "@ausuliv/patternfly-doc-core": "^0.0.31",
     "@octokit/rest": "^19.0.7",
-    "@ausuliv/patternfly-doc-core": "^0.0.31", 
     "@patternfly/patternfly": "^6.1.0",
     "@patternfly/react-code-editor": "^6.1.0",
     "@patternfly/react-core": "^6.1.0",
