@@ -29,7 +29,9 @@
     ]
   },
   "devDependencies": {
+    
     "@octokit/rest": "^19.0.7",
+    "@ausuliv/patternfly-doc-core": "^0.0.31", 
     "@patternfly/patternfly": "^6.1.0",
     "@patternfly/react-code-editor": "^6.1.0",
     "@patternfly/react-core": "^6.1.0",

@@ -1,0 +1,5 @@
+.ws-color-swatch > svg {
+  flex: 0 0 44px;
+  margin-right: var(--pf-t--global--spacer--md);
+  border-radius: 50%;
+}
