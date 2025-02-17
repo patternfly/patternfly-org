@@ -11,15 +11,38 @@ import { Divider, Timestamp } from '@patternfly/react-core';
 
 ## PatternFly 6.1.1
 
+### Promoted package versions
+- [@patternfly/data-view6.1.0](https://www.npmjs.com/package/@patternfly/react-data-view)
+
 ### Extension updates 
 
 As a quick follow up to our last release, this update publishes the new data view extension.
+
+<Divider />
 
 <Timestamp>December 2024</Timestamp>
 
 ## PatternFly 6.1
 
 ### Promoted package versions
+- patternfly/patternfly ([changelog](https://github.com/patternfly/patternfly/releases/tag/v6.1.0))
+    - [@patternfly/patternfly6.1.0](https://www.npmjs.com/package/@patternfly/patternfly)
+- patternfly/react ([changelog](https://github.com/patternfly/patternfly-react/releases/tag/v6.1.0))
+    - [patternfly/react-charts8.1.0](https://www.npmjs.com/package/@patternfly/react-charts)
+    - [patternfly/react-code-editor6.1.0](https://www.npmjs.com/package/@patternfly/react-code-editor)
+    - [@patternfly/react-core6.1.0](https://www.npmjs.com/package/@patternfly/react-core)
+    - [patternfly/react-drag-drop6.1.0](https://www.npmjs.com/package/@patternfly/react-drag-drop)
+    - [patternfly/react-icons6.1.0](https://www.npmjs.com/package/@patternfly/react-icons)
+    - [patternfly/react-styles6.1.0](https://www.npmjs.com/package/@patternfly/react-styles)
+    - [patternfly/react-table6.1.0](https://www.npmjs.com/package/@patternfly/react-table)
+    - [patternfly/react-templates6.1.0](https://www.npmjs.com/package/@patternfly/react-templates)
+    - [patternfly/react-tokens6.1.0](https://www.npmjs.com/package/@patternfly/react-tokens)
+- PatternFly extensions 
+    - [patternfly/react-component-groups](https://www.npmjs.com/package/@patternfly/react-component-groups) ([changelog](https://github.com/patternfly/react-component-groups/releases/tag/v6.1.0))
+    - [patternfly/react-log-viewer](https://www.npmjs.com/package/@patternfly/react-log-viewer) ([changelog](https://github.com/patternfly/react-log-viewer/releases/tag/v6.1.0))
+    - [patternfly/react-topology](https://www.npmjs.com/package/@patternfly/react-topology) ([changelog](https://github.com/patternfly/react-topology/releases/tag/v6.1.0))
+    - [patternfly/quickstarts](https://www.npmjs.com/package/@patternfly/quickstarts) ([changelog](https://github.com/patternfly/patternfly-quickstarts/releases/tag/v6.1.0))
+    - [patternfly/chatbot](https://www.npmjs.com/package/@patternfly/chatbot) ([changelog](https://github.com/patternfly/chatbot/releases/tag/v2.1.0))
 
 ### Component updates 
 
