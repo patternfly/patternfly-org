@@ -27,7 +27,7 @@
     "@patternfly/react-user-feedback": "^1.0.9",
     "react": "^16.8.0 || ^17.0.0",
     "react-dom": "^16.8.0 || ^17.0.0",
-    "marked": "^15.0.7"
+    "marked": "^4.0.0"
   },
   "devDependencies": {
     "@patternfly/patternfly-a11y": "4.3.0",
