@@ -22,6 +22,7 @@ We've released a few patches for PatternFly 5.4, which primarily upgrade depende
 - [@patternfly/react-templates: 1.1.8](https://www.npmjs.com/package/@patternfly/react-templates/v/1.1.8)
 - [@patternfly/react-tokens: 5.4.1](https://www.npmjs.com/package/@patternfly/react-tokens/v/5.4.1)
 - [@patternfly/react-component-groups: 5.5.3](https://www.npmjs.com/package/@patternfly/react-component-groups/v/5.5.3)
+- [@patternfly/quickstarts: 5.4.2](https://www.npmjs.com/package/@patternfly/quickstarts/v/5.4.2)
 
 ### HTML updates
 - Menu toggle: Updated the secondary background color to be transparent, except for disabled states.
@@ -61,7 +62,7 @@ We've released a few patches for PatternFly 5.4, which primarily upgrade depende
 
 ### Quickstarts
 
-@patternfly/quickstarts 5.4.2 ([npm](https://www.npmjs.com/package/@patternfly/quickstarts/v/5.4.2) [GitHub](https://github.com/patternfly/patternfly-quickstarts/releases/tag/v5.4.2)) has released with a new markdown parsing library.
+@patternfly/quickstarts 5.4.2 ([npm](https://www.npmjs.com/package/@patternfly/quickstarts/v/5.4.2), [GitHub](https://github.com/patternfly/patternfly-quickstarts/releases/tag/v5.4.2)) has released with a new markdown parsing library.
 
 The repo now uses a library called [marked](https://github.com/markedjs/marked) for its markdown parsing.
 
