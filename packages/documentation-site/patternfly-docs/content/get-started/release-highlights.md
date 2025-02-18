@@ -59,6 +59,14 @@ We've released a few patches for PatternFly 5.4, which primarily upgrade depende
 
 - Multi content card: Fixed `ouiaId` issue in `<MenuToggle>`. 
 
+### Quickstarts
+
+@patternfly/quickstarts 5.4.2 ([npm](https://www.npmjs.com/package/@patternfly/quickstarts/v/5.4.2) [GitHub](https://github.com/patternfly/patternfly-quickstarts/releases/tag/v5.4.2)) has released with a new markdown parsing library.
+
+The repo now uses a library called [marked](https://github.com/markedjs/marked) for its markdown parsing.
+
+We tested the base parsing functionality and verified that the custom markdown extensions we included with quickstarts still function, but if you added some custom markdown extensions of your own they _may_ no longer work. If they don't please raise an [issue](https://github.com/patternfly/patternfly-quickstarts/issues) on our GitHub and we'll be happy to try and help.
+
 <Divider />
 
 ## PatternFly 5.4
