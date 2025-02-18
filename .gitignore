@@ -34,3 +34,5 @@ size-plugin.json
 **/generated/**/*.js
 
 .history
+
+.yarn
