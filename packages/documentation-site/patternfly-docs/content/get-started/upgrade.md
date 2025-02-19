@@ -4,7 +4,7 @@ source: upgrade-guide
 title: Upgrade to PatternFly 6
 section: get-started
 ---
-import { Alert } from '@patternfly/react-core';
+import { Alert, Button, Divider } from '@patternfly/react-core';
 import ArrowRightIcon from '@patternfly/react-icons/dist/esm/icons/arrow-right-icon';
 
 <Alert variant="info" isInline title="Before you upgrade"> To ensure that your product is ready for PatternFly 6, make sure that you have first completed [the PatternFly 5 upgrade process](https://v5-archive.patternfly.org/get-started/upgrade) to address any necessary changes from our previous release.
@@ -14,15 +14,32 @@ PatternFly 6 introduces the exciting new features and functionality outlined [ou
 
 This upgrade guide outlines the steps required to migrate your codebase to PatternFly 6 and provides additional resources to support your journey.
 
-## Get help 
+## Notable changes
 
-If you need support as you upgrade, the PatternFly team is here to help! Since this upgrade includes significant visual changes, please contact us with questions about styles or concerns with your UI. We'll always do our best to answer your questions, double-check your work, and connect you with the right people quickly. 
+While significant changes are mentioned in our [release highlights](/get-started/release-highlights), with detailed in our [upgrade release notes](/get-started/upgrade/release-notes), there are some changes that require manual intervention, which you should especially keep in mind as you upgrade: 
 
-[Reach out to us on Slack <ArrowRightIcon />](https://join.slack.com/t/patternfly/shared_invite/zt-1npmqswgk-bF2R1E2rglV8jz5DNTezMQ)
+### Components
 
-[Ask a question on GitHub Discussions <ArrowRightIcon / >](https://github.com/orgs/patternfly/discussions). 
+#### Deprecated and renamed components
 
-**Note:** If you use a custom solution to replicate PatternFly styling (without using PatternFly components), then your product will need to be re-skinned. This may be a large undertaking, so we encourage you to get help from the PatternFly team.
+1. [Chip](/components/chip): Replaced with [label](/components/label).
+1. [Tile](/components/tile): Replaced with [card](components/card).
+1. [Text](https://v5-archive.patternfly.org/components/text): Renamed to ["content"](/components/content).  
+
+#### Prop changes
+
+1. [Expandable section](/components/expandable-section): Removed `isActive`.
+
+### Charts
+
+In order to support multiple chart libraries, Victory-based charts have moved to a "victory" directory in [@patternfly/react-charts](https://www.npmjs.com/package/@patternfly/react-charts). Your import paths will need to align with this change. 
+- For example: `import { Area } from '@patternfly/react-charts/victory';`
+
+To install Victory packages, you can either: 
+- Install the single "victory" package to cover all features.
+- Install specific packages, based on your product's features (such as "victory-core" or "victory-tooltip").
+
+<Divider />
 
 ## How to upgrade
 
@@ -62,6 +79,8 @@ To run our codemods, follow these steps:
 6. Build your product.
 
 7.  To ensure that all issues are flagged and addressed, complete steps 1-6 multiple times. Once everything looks correct, continue to [step 2](#2-remove-all-css-overrides).
+
+8. You will likely need to make updates to [React tokens](https://www.patternfly.org/tokens/develop-with-tokens/#react-tokens) in your product.
 
 ### 2. Remove all CSS overrides
 
@@ -129,10 +148,34 @@ If you have previously implemented any breakpoint logic based on a pixel value, 
 
 ### Potential test failures
 
-During your upgrade, you're likely to encounter these component test failures: 
+#### Button
 
-| **Component** | **Error** | **Explanation** | **Solution** |
-| --- | --- | --- | --- |
-| Button | *Cannot find `aria-disabled`* | We changed the `isDisabled` prop to assign a value for `disabled`, but none for `aria-disabled`. Any test that looks for `aria-disabled` may fail. | |
-| Button | *Cannot find button attributes when using `byText`* | We added a wrapping `div` around button text. The RTL `byText` query returns that wrapper instead of the button element itself, where button's attributes live. | Instead of `byText`, use `byRole` and pass the button text to `name`. This returns the top-level button element.  |
-| Select <br /><br />  (When using React Testing Library)  | *Cannot find `role`* | The React Testing Library query can't find the menu options if the Popper menu is set to `aria-disabled` after a selection is made. <br /><br /> This error only seems to occur in unit tests&mdash;not browsers.  | Pass in the `{hidden: true}` option. <br /><br /> or <br /><br /> Change select's `appendTo` to `inline`.  |
+1. *Cannot find aria-disabled*
+    - **Cause:** We changed the `isDisabled` prop to assign a value for `disabled`, but none for `aria-disabled`. 
+    - **Fix:** Remove tests that look for `aria-disabled` in buttons.
+
+1. *Cannot find button attributes when using byText*
+    - **Cause:** We added a wrapping `div` around button text. The RTL `byText` query returns that wrapper instead of the button element itself, where button's attributes live. 
+    - **Fix:** Instead of `byText`, use `byRole` and pass the button text to `name`. This returns the top-level button element. 
+
+#### Select 
+
+1.  *Cannot find role* (When using React Testing Library)  
+    - **Cause:** The React Testing Library query can't find the menu options if the Popper menu is set to `aria-disabled` after a selection is made. This error only seems to occur in unit tests&mdash;not browsers.
+    - **Fix:** Pass in the `{hidden: true}` option or change select's `appendTo` to `inline`. 
+
+<Divider />
+
+## Get help 
+
+If you need support as you upgrade, the PatternFly team is here to help! Since this upgrade includes significant visual changes, please contact us with questions about styles or concerns with your UI. We'll always do our best to answer your questions, double-check your work, and connect you with the right people quickly. 
+
+<Button variant="link" icon={<ArrowRightIcon />} iconPosition="end" isInline component="a" href="https://join.slack.com/t/patternfly/shared_invite/zt-1npmqswgk-bF2R1E2rglV8jz5DNTezMQ" target="_blank"> 
+Reach out to us on Slack
+</Button>
+
+<Button variant="link" icon={<ArrowRightIcon />} iconPosition="end" isInline component="a" href="https://github.com/orgs/patternfly/discussions" target="_blank"> 
+Ask a question in GitHub Discussions
+</Button>
+
+**Note:** If you use a custom solution to replicate PatternFly styling (without using PatternFly components), then your product will need to be re-skinned. This may be a large undertaking, so we encourage you to get help from the PatternFly team.
