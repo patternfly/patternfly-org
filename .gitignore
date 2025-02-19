@@ -32,3 +32,5 @@ static
 
 size-plugin.json
 **/generated/**/*.js
+
+.yarn
