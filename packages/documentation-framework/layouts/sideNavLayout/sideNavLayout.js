@@ -282,7 +282,7 @@ export const SideNavLayout = ({ children, groupedRoutes, navOpen: navOpenProp })
           ) : (
             <MastheadLogo href={prurl || '/'}>
               <svg height="40px" viewBox="0 0 679 158">
-                <title>PF-HorizontalLogo-Color</title>
+                <title>PatternFly</title>
                 <defs>
                   <linearGradient x1="68%" y1="2.25860997e-13%" x2="32%" y2="100%" id="linearGradient-website-masthead">
                     <stop stopColor="#2B9AF3" offset="0%"></stop>
