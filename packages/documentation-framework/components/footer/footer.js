@@ -183,7 +183,7 @@ export const Footer = ({ isDarkTheme }) => (
                 to="/"
               >
                 <svg height="40px" viewBox="0 0 679 158">
-                  <title>PF-HorizontalLogo-Color</title>
+                  <title>PatternFly</title>
                   <defs>
                     <linearGradient
                       x1="68%"
