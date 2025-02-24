@@ -169,7 +169,7 @@ The placement of buttons on wizards will depend on the layout of content you pre
 
 ### Button spacing and action lists
 
-The standard spacing between each button is 16px, even for danger buttons. If buttons are stacked vertically, the spacing between each button should be 8px.
+The standard spacing between each button is `--pf-t--global--spacer--md` (16px), even for danger buttons. If buttons are stacked vertically, the spacing between each button should be `--pf-t--global--spacer--sm` (8px).
 
 _Standard spacing_
 
@@ -185,7 +185,7 @@ Exceptions to the standard spacing guidelines are as follows:
 
 #### Wizards ####
 
-In wizards, the **Cancel** button is spaced 48px away from the primary and secondary **Next** and **Back** buttons, and 24px away if stacked.
+In wizards, the **Cancel** button is spaced `--pf-t--global--spacer--2xl` (48px) away from the primary and secondary **Next** and **Back** buttons, and `--pf-t--global--spacer--md` (24px) away if stacked.
 
 _Wizard spacing_
 
@@ -195,17 +195,9 @@ _Wizard stacked spacing_
 
 <img src="./img/button_wizard_stacked.png" alt="Stacked wizard button spacing with spacers" width="121"/>
 
-#### Modals ####
-
-In modals, the primary button is spaced only 8px away from the secondary button, rather than the standard 16px.
-
-_Modal spacing_
-
-<img src="./img/modal_exception.png" alt="Modal button spacing with spacers" width="446"/>
-
 #### Toolbars ####
 
-Button spacing in toolbars depends on the button type. Normal 16px spacing applies between primary and secondary buttons. However, there should only be 8px between icon buttons.
+Button spacing in toolbars depends on the button type and how they are grouped. For example, groups of primary and secondary buttons use `--pf-t--global--spacer--sm` (8px) spacing between buttons and `--pf-t--global--spacer--md` (16px) between groups. Icon buttons inside a grouping use `--pf-t--global--spacer--xs` (4px) spacing and `--pf-t--global--spacer--md` (16px) between groups.
 
 _Toolbar spacing_
 
