@@ -7,33 +7,38 @@ section: get-started
 import { Alert, Button, Divider } from '@patternfly/react-core';
 import ArrowRightIcon from '@patternfly/react-icons/dist/esm/icons/arrow-right-icon';
 
-<Alert variant="info" isInline title="Before you upgrade"> To ensure that your product is ready for PatternFly 6, make sure that you have first completed [the PatternFly 5 upgrade process](https://v5-archive.patternfly.org/get-started/upgrade) to address any necessary changes from our previous release.
+<Alert variant="info" isInline title="Are you ready for PatternFly 6?"> To ensure  your product is ready for PatternFly 6, [complete the PatternFly 5 upgrade process](https://v5-archive.patternfly.org/get-started/upgrade) first to address any necessary changes from our previous release.
 </Alert>
 
 PatternFly 6 introduces the exciting new features and functionality outlined [our release highlights](/get-started/release-highlights). For a detailed breakdown on the work that went into this release, you can view [the PatternFly 6 major release notes](/get-started/upgrade/release-notes). 
 
-This upgrade guide outlines the steps required to migrate your codebase to PatternFly 6 and provides additional resources to support your journey.
+In the following sections, this upgrade guide outlines steps required to migrate your codebase to PatternFly 6 and additional resources to support your journey:
+
+1. [Notable changes](#notable-changes): Significant changes you should be aware of before starting your upgrade.
+1. [Upgrade steps](#how-to-upgrade): Step-by-step instructions for upgrading.
+1. [Help resources](#get-help): Easy-access links to get help from the PatternFly team.
+
+<Divider />
 
 ## Notable changes
 
-While significant changes are mentioned in our [release highlights](/get-started/release-highlights), with detailed in our [upgrade release notes](/get-started/upgrade/release-notes), there are some changes that require manual intervention, which you should especially keep in mind as you upgrade: 
+Before you upgrade, familiarize yourself with these significant changes. These changes require manual intervention and you should keep them in mind as you upgrade.
 
 ### Components
-
-#### Deprecated and renamed components
 
 1. [Chip](/components/chip): Replaced with [label](/components/label).
 1. [Tile](/components/tile): Replaced with [card](components/card).
 1. [Text](https://v5-archive.patternfly.org/components/text): Renamed to ["content"](/components/content).  
-
-#### Prop changes
-
 1. [Expandable section](/components/expandable-section): Removed `isActive`.
+1. [Empty state](/components/empty-state): Refactored. 
+    - **This refactoring is not handled by codemods.** Take care and make sure to update your empty states as needed. For more details, search "empty state" in the [release notes table](/get-started/upgrade/release-notes). 
 
 ### Charts
 
-In order to support multiple chart libraries, Victory-based charts have moved to a "victory" directory in [@patternfly/react-charts](https://www.npmjs.com/package/@patternfly/react-charts). Your import paths will need to align with this change. 
-- For example: `import { Area } from '@patternfly/react-charts/victory';`
+To support multiple chart libraries, Victory-based charts have moved to a "victory" directory in [@patternfly/react-charts](https://www.npmjs.com/package/@patternfly/react-charts). Your import paths will need to align with this change. 
+
+- **Old path:** `import { Area } from '@patternfly/react-charts';` 
+- **New path:** `import { Area } from '@patternfly/react-charts/victory';` 
 
 To install Victory packages, you can either: 
 - Install the single "victory" package to cover all features.
@@ -43,20 +48,23 @@ To install Victory packages, you can either:
 
 ## How to upgrade
 
-When you upgrade to PatternFly 6, several breaking changes will likely be introduced to your product’s codebase. 
+Your upgrade process will require you to complete these steps:
 
-To navigate the upgrade journey and locate helpful migration resources, follow these steps:
-
-1. [Run our codemods suite](#1-run-our-codemods-suite) 
-1. [Remove all CSS overrides](#2-remove-all-css-overrides) 
+1. Update your dependencies to use PatternFly 6 instead of PatternFly 5.
+1. [Run our codemods suite](#1-run-our-codemods-suite).
+1. [Remove all CSS overrides](#2-remove-all-css-overrides). 
+1. [Review and update variable and class names](). 
+1. [Update any pixel-based logic for your breakpoints]().
 
 ### 1. Run our codemods suite
 
 **Note:** Do this _before_ making any manual changes to your codebase. Waiting until after will lead to even more manual intervention and cleanup. 
 
-We offer [a suite of PatternFly codemods](https://github.com/patternfly/pf-codemods/) to simplify and streamline your upgrade process. Instead of having you manually locate errors across your codebase, our codemods can quickly identify and fix major issues. Some changes will still require manual intervention, but our codemods can automatically fix many issues and flag any that require manual work.
+We offer a suite of PatternFly codemods to simplify and streamline your upgrade process. Instead of having you manually locate errors across your codebase, our codemods can quickly identify and fix major issues. Some changes will still require manual intervention, but our codemods can automatically fix many issues and flag any that require manual work.
 
-To run our codemods, follow these steps: 
+To run [our codemods](https://github.com/patternfly/pf-codemods/), follow these steps: 
+
+1. First, make sure that you have updated your dependencies to use PatternFly 6 instead of PatternFly 5. This is not handled by codemods.
 
 1. Run this command, adding in the path to your product's source code: 
 
@@ -78,11 +86,23 @@ To run our codemods, follow these steps:
 
 6. Build your product.
 
-7.  To ensure that all issues are flagged and addressed, complete steps 1-6 multiple times. Once everything looks correct, continue to [step 2](#2-remove-all-css-overrides).
+7.  To ensure that all issues are flagged and addressed, complete steps 1-6 multiple times. Once everything looks correct, continue to [step 3](#3-remove-all-css-overrides).
 
-8. You will likely need to make updates to [React tokens](https://www.patternfly.org/tokens/develop-with-tokens/#react-tokens) in your product.
+8. You will likely need to make updates to [React tokens](https://www.patternfly.org/tokens/develop-with-tokens/#react-tokens) in your product, discussed in step 2.
 
-### 2. Remove all CSS overrides
+### 2. Update React tokens
+
+Codemods will not fix tokens imported by `@patternfly/react-tokens`. As you use codemods, you will likely receive an error that says tokens in your code don’t exist. This doesn't necessarily mean that codemods didn't work; it could mean your React tokens point to old global variables. 
+
+Example:
+- PatternFly 5 token: `global_link_Color_hover`
+- PatternFly 6 token: `t_global_color_nonstatus_green_clicked`
+
+While these tokens have different uses, this example is meant to show how the general syntax changed, which is what leads to errors with your code.
+
+There is often no 1:1 match for a PatternFly 5 and PatternFly 6 React token, so you will need to double check your code when you get this error and replace any outdated tokens with the appropriate [PatternFly 6 React token](/tokens/develop-with-tokens#react-tokens).
+
+### 3. Remove all CSS overrides
 
 The new design token system in PatternFly 6 changes variable names across PatternFly. Any existing CSS overrides will be targeting outdated styles and will no longer work, so they must be updated or removed.
 
@@ -90,9 +110,9 @@ Once you've completed the standard codemods in step 1:
 1. Temporarily remove your overrides and see how things look.
     - Since there isn't a PatternFly 6 equivalent for every PatternFly 5 style, some of your previous overrides will likely have no effect and can be removed. 
 1. Completely remove CSS overrides as much as possible, so that your product upgrade experience will be smoother for future releases. 
-1. If you need to keep any CSS customizations, continue to [step 3](#3.-review-and-update-variable-and-class-names).
+1. If you need to keep any CSS customizations, continue to [step 4](#4.-review-and-update-variable-and-class-names).
 
-### 3. Review and update variable and class names
+### 4. Review and update variable and class names
 
 A number of variables have been removed or added&mdash;primarily due to logical direction changes, refactoring, or deprecation. For more context, we've put together these lists: 
 - [Removed variables](https://docs.google.com/spreadsheets/d/e/2PACX-1vQqeH7ThYi0jkhYEB8B2SXa7x8AaY5T9ajG6o-Ogz3p7YVp0OuTulb_L3DYLDrHlY4zUE3IBiup6tkN/pubhtml?gid=1160160856&single=true) 
@@ -131,7 +151,7 @@ For more details, refer to[ the css-vars-updater README](https://github.com/patt
 
 This codemod automatically identifies PatternFly 5 CSS variables that need to be updated after the introduction of [design tokens in PatternFly 6](https://www.patternfly.org/tokens/about-tokens/). It will help you update these CSS variables in non-React files, including .css, .scss, .md, or another file type that you choose.
 
-### 4. Update any pixel-based logic for breakpoints
+### 5. Update any pixel-based logic for breakpoints
 
 PatternFly 6 uses rem units for global breakpoint [design tokens](/tokens/all-tokens), rather than pixels. 
 
