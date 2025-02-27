@@ -22,7 +22,7 @@ In the following sections, this upgrade guide outlines steps required to migrate
 
 ## Notable changes
 
-Before you upgrade, familiarize yourself with these significant changes. These changes require manual intervention and you should keep them in mind as you upgrade.
+Before you upgrade, familiarize yourself with these significant changes. While some are handled by codemods, some changes *could* require manual intervention and should be kept in mind as you upgrade.
 
 ### Components
 
@@ -31,7 +31,7 @@ Before you upgrade, familiarize yourself with these significant changes. These c
 1. [Text](https://v5-archive.patternfly.org/components/text): Renamed to ["content"](/components/content).  
 1. [Expandable section](/components/expandable-section): Removed `isActive`.
 1. [Empty state](/components/empty-state): Refactored. 
-    - **This refactoring is not handled by codemods.** Take care and make sure to update your empty states as needed. For more details, search "empty state" in the [release notes table](/get-started/upgrade/release-notes). 
+    - This refactoring is not *entirely* handled by codemods. Depending on your implementation, your empty states could also require manual updates. For more details, search "empty state" in the [release notes table](/get-started/upgrade/release-notes). 
 
 ### Charts
 
@@ -92,15 +92,7 @@ To run [our codemods](https://github.com/patternfly/pf-codemods/), follow these 
 
 ### 2. Update React tokens
 
-Codemods will not fix tokens imported by `@patternfly/react-tokens`. As you use codemods, you will likely receive an error that says tokens in your code don’t exist. This doesn't necessarily mean that codemods didn't work; it could mean your React tokens point to old global variables. 
 
-Example:
-- PatternFly 5 token: `global_link_Color_hover`
-- PatternFly 6 token: `t_global_color_nonstatus_green_clicked`
-
-While these tokens have different uses, this example is meant to show how the general syntax changed, which is what leads to errors with your code.
-
-There is often no 1:1 match for a PatternFly 5 and PatternFly 6 React token, so you will need to double check your code when you get this error and replace any outdated tokens with the appropriate [PatternFly 6 React token](/tokens/develop-with-tokens#react-tokens).
 
 ### 3. Remove all CSS overrides
 
@@ -144,6 +136,17 @@ This codemod updates global color variables in .js and .tsx files to a temporary
 This codemod works both for CSS variables and React tokens. For example:
 - A CSS variable: `--pf-v5-global--FontSize--lg` becomes `--pf-t--global--font--size--lg`
 - A React token: `global_FontSize_lg` becomes `t_global_font_size_lg`
+
+##### Manual React token updates
+Codemods will sometimes be unable to fix *all* tokens imported by `@patternfly/react-tokens` because there is often no 1:1 match for a PatternFly 5 and PatternFly 6 React token. 
+
+If you continually receive errors that tokens in your code don’t exist, despite re-running codemods, it doesn't necessarily mean that codemods didn't work. It could mean your React tokens point to old global variables. If so, you must locate outdated tokens and replace them with the [PatternFly 6 React token](/tokens/develop-with-tokens#react-tokens) that best fits your use case.
+
+Example:
+- PatternFly 5 token: `global_link_Color_hover`
+- PatternFly 6 token: `t_global_color_nonstatus_green_clicked`
+
+While these tokens have different uses, this example is meant to show how the general syntax changed, which is what leads to errors with your code.
 
 #### Run css-vars-updater
 
