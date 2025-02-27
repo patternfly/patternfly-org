@@ -8,7 +8,7 @@ _Charts are only available in React_
 A **chart** visualizes data in an application. The type of chart you use will depend on your use case and the type of data you need to display.
 
 ## Elements
-<img src="./img/axis-labels.png" alt="Chart with axis labels" width="713"/> 
+<img src="./img/axis-labels.png" alt="Chart with axis labels" width="713"/> 
 
 1. **Title:** Titles should be left-aligned and appear above your chart.
 2. **Axis labels and scale values:**  We recommend using tick marks to clearly mark scale values on the y-axis. The text for axis labels and scale values should be 12px font in standard text color. All scale values should be equally distributed across the axis and the axis label should fall outside the scale values, centered with the axis line.
@@ -16,7 +16,7 @@ A **chart** visualizes data in an application. The type of chart you use will de
 4. **Chart tooltip:** A tooltip will appear on hover over certain elements of a chart, like bars in a bar chart or segments in a donut chart. [Chart tooltips](/charts/tooltips) should display the specific values related to the element the user is hovering over. 
 
 ## Chart types
-<img src="./img/chart-legend.png" alt="Image displaying what chart types to use when" width="1024"/> 
+<img src="./img/chart-legend.png" alt="Image displaying what chart types to use when" width="1024"/> 
 
 - [Area chart](/charts/area-chart/design-guidelines): Use to show (potentially multiple) trends over a continuous scale (usually time).
 - [Bar chart](/charts/bar-chart/design-guidelines): Use to show and compare categories and their respective data point/value. Bar charts can be plotted vertically or horizontally. The axis that labels the bar is the category, the axis that marks the end point of the bar displays the data points/values.
@@ -65,3 +65,15 @@ On click
 
 1. **Legend:** When a user clicks on a legend label, it becomes disabled and the color swatch is replaced with an eye-slashed icon.
 2. **Chart:** Data corresponding to the clicked legend label is hidden from view.
+
+## Develop with charts 
+
+Default styles in the [@patternfly/react-charts package](https://www.npmjs.com/package/@patternfly/react-charts) are aligned with our light theme. To use chart styles, you must also have the [@patternfly/patternfly package](https://www.npmjs.com/package/@patternfly/patternfly) installed.
+
+To utilize default chart styles, you don't need to import anything else. But, to support dark-themed charts, you must also import the stylesheet that contains dark theme styles. To do so, add this line before importing your main application component:
+
+`import '@patternfly/patternfly/patternfly-charts.css';`
+
+Once you import this file, you'll have access to [all chart variables](https://www.npmjs.com/package/@patternfly/patternfly?activeTab=code). Beyond dark theme, you could use these variables to match the style of other UI elements to your chart styles. 
+
+You can filter [the PatternFly design tokens table](/tokens/all-patternfly-tokens) to display the list of available chart tokens.
