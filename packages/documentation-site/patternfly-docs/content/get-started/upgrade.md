@@ -53,8 +53,8 @@ Your upgrade process will require you to complete these steps:
 1. Update your dependencies to use PatternFly 6 instead of PatternFly 5.
 1. [Run our codemods suite](#1-run-our-codemods-suite).
 1. [Remove all CSS overrides](#2-remove-all-css-overrides). 
-1. [Review and update variable and class names](). 
-1. [Update any pixel-based logic for your breakpoints]().
+1. [Review and update variable and class names](#3-review-and-update-variable-and-class-names). 
+1. [Update any pixel-based logic for your breakpoints](#4-update-any-pixel-based-logic-for-breakpoints).
 
 ### 1. Run our codemods suite
 
@@ -86,15 +86,11 @@ To run [our codemods](https://github.com/patternfly/pf-codemods/), follow these 
 
 6. Build your product.
 
-7.  To ensure that all issues are flagged and addressed, complete steps 1-6 multiple times. Once everything looks correct, continue to [step 3](#3-remove-all-css-overrides).
+7.  To ensure that all issues are flagged and addressed, complete steps 1-6 multiple times. Once everything looks correct, continue to [step 2](#2-remove-all-css-overrides).
 
-8. You will likely need to make updates to [React tokens](https://www.patternfly.org/tokens/develop-with-tokens/#react-tokens) in your product, discussed in step 2.
+8. You will likely need to make updates to [React tokens](https://www.patternfly.org/tokens/develop-with-tokens/#react-tokens) in your product, discussed in step 3.
 
-### 2. Update React tokens
-
-
-
-### 3. Remove all CSS overrides
+### 2. Remove all CSS overrides
 
 The new design token system in PatternFly 6 changes variable names across PatternFly. Any existing CSS overrides will be targeting outdated styles and will no longer work, so they must be updated or removed.
 
@@ -102,9 +98,9 @@ Once you've completed the standard codemods in step 1:
 1. Temporarily remove your overrides and see how things look.
     - Since there isn't a PatternFly 6 equivalent for every PatternFly 5 style, some of your previous overrides will likely have no effect and can be removed. 
 1. Completely remove CSS overrides as much as possible, so that your product upgrade experience will be smoother for future releases. 
-1. If you need to keep any CSS customizations, continue to [step 4](#4.-review-and-update-variable-and-class-names).
+1. If you need to keep any CSS customizations, continue to [step 3](#3.-review-and-update-variable-and-class-names).
 
-### 4. Review and update variable and class names
+### 3. Review and update variable and class names
 
 A number of variables have been removed or added&mdash;primarily due to logical direction changes, refactoring, or deprecation. For more context, we've put together these lists: 
 - [Removed variables](https://docs.google.com/spreadsheets/d/e/2PACX-1vQqeH7ThYi0jkhYEB8B2SXa7x8AaY5T9ajG6o-Ogz3p7YVp0OuTulb_L3DYLDrHlY4zUE3IBiup6tkN/pubhtml?gid=1160160856&single=true) 
@@ -154,7 +150,7 @@ For more details, refer to[ the css-vars-updater README](https://github.com/patt
 
 This codemod automatically identifies PatternFly 5 CSS variables that need to be updated after the introduction of [design tokens in PatternFly 6](https://www.patternfly.org/tokens/about-tokens/). It will help you update these CSS variables in non-React files, including .css, .scss, .md, or another file type that you choose.
 
-### 5. Update any pixel-based logic for breakpoints
+### 4. Update any pixel-based logic for breakpoints
 
 PatternFly 6 uses rem units for global breakpoint [design tokens](/tokens/all-tokens), rather than pixels. 
 
