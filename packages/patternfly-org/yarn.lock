@@ -158,32 +158,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@ausuliv/patternfly-doc-core@npm:^0.0.31":
-  version: 0.0.31
-  resolution: "@ausuliv/patternfly-doc-core@npm:0.0.31"
-  dependencies:
-    "@astrojs/check": "npm:^0.9.4"
-    "@astrojs/react": "npm:^4.1.5"
-    "@nanostores/react": "npm:^0.8.0"
-    "@patternfly/patternfly": "npm:^6.0.0"
-    "@patternfly/react-core": "npm:^6.0.0"
-    "@types/react": "npm:^18.3.12"
-    "@types/react-dom": "npm:^18.3.1"
-    astro: "npm:^5.1.7"
-    change-case: "npm:5.4.4"
-    commander: "npm:^13.0.0"
-    glob: "npm:^11.0.1"
-    nanostores: "npm:^0.11.3"
-    react: "npm:^18.3.1"
-    react-dom: "npm:^18.3.1"
-    sass: "npm:^1.81.0"
-    typescript: "npm:^5.6.3"
-  bin:
-    patternfly-doc-core: dist/cli/cli.js
-  checksum: 10c0/4d030aac216b927b065ceb839e25a517d0210eaf015d21ff33958c8b5f77f26fcb647e6c7171824d18206df82cd95e6950dd0085bb830bbd327ab4fa320dd936
-  languageName: node
-  linkType: hard
-
 "@babel/code-frame@npm:^7.26.2":
   version: 7.26.2
   resolution: "@babel/code-frame@npm:7.26.2"
@@ -1070,6 +1044,32 @@ __metadata:
     "@parcel/watcher-win32-x64":
       optional: true
   checksum: 10c0/8f35073d0c0b34a63d4c8d2213482f0ebc6a25de7b2cdd415d19cb929964a793cb285b68d1d50bfb732b070b3c82a2fdb4eb9c250eab709a1cd9d63345455a82
+  languageName: node
+  linkType: hard
+
+"@patternfly/patternfly-doc-core@npm:^1.0.5":
+  version: 1.0.5
+  resolution: "@patternfly/patternfly-doc-core@npm:1.0.5"
+  dependencies:
+    "@astrojs/check": "npm:^0.9.4"
+    "@astrojs/react": "npm:^4.1.5"
+    "@nanostores/react": "npm:^0.8.0"
+    "@patternfly/patternfly": "npm:^6.0.0"
+    "@patternfly/react-core": "npm:^6.0.0"
+    "@types/react": "npm:^18.3.12"
+    "@types/react-dom": "npm:^18.3.1"
+    astro: "npm:^5.1.7"
+    change-case: "npm:5.4.4"
+    commander: "npm:^13.1.0"
+    glob: "npm:^11.0.1"
+    nanostores: "npm:^0.11.3"
+    react: "npm:^18.3.1"
+    react-dom: "npm:^18.3.1"
+    sass: "npm:^1.81.0"
+    typescript: "npm:^5.6.3"
+  bin:
+    patternfly-doc-core: dist/cli/cli.js
+  checksum: 10c0/2e145f15236cc94da8021d0081da6ee86be668c6df0669b05aecbc88100ed6078337f67486c06048b36fe4cd2f316cee3a440689f76406751186a5b3b9a3064b
   languageName: node
   linkType: hard
 
@@ -2054,7 +2054,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"commander@npm:^13.0.0":
+"commander@npm:^13.1.0":
   version: 13.1.0
   resolution: "commander@npm:13.1.0"
   checksum: 10c0/7b8c5544bba704fbe84b7cab2e043df8586d5c114a4c5b607f83ae5060708940ed0b5bd5838cf8ce27539cde265c1cbd59ce3c8c6b017ed3eec8943e3a415164
@@ -4169,7 +4169,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "patternfly-org-next@workspace:."
   dependencies:
-    "@ausuliv/patternfly-doc-core": "npm:^0.0.31"
+    "@patternfly/patternfly-doc-core": "npm:^1.0.5"
     astro: "npm:^5.3.0"
   languageName: unknown
   linkType: soft
