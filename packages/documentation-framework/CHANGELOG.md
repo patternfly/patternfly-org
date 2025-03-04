@@ -3,6 +3,41 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 6.5.15 (2025-02-27)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 6.5.14 (2025-02-26)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 6.5.13 (2025-02-17)
+
+
+### Bug Fixes
+
+* **getHtmlWebpackPlugins:** Turn off pre-render for ChatBot ([#4467](https://github.com/patternfly/patternfly-org/issues/4467)) ([9bd77f2](https://github.com/patternfly/patternfly-org/commit/9bd77f2c07b33697d6ddefddc8b89139f7027444))
+
+
+
+
+
+## 6.5.12 (2025-02-17)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
 ## 6.5.11 (2025-01-29)
 
 
