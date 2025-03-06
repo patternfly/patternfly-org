@@ -22,7 +22,7 @@ jobs:
       - run: corepack enable
       - run: yarn install --immutable
       # build
-      - uses: actions/cache@v2
+      - uses: actions/cache@v4
         id: site-cache
         name: Load webpack cache
         with:
