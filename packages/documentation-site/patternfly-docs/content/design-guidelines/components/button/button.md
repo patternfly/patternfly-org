@@ -75,7 +75,7 @@ Links buttons are labeled buttons with no background or border. Link buttons can
 
 While all link buttons lack borders, they can still vary in appearance. Link buttons that navigate users to another page within the same window should be presented as stand-alone text. Link buttons that navigate users to an external page may include an icon on the left or right of the text to further emphasize the action. For example, you could add an external link icon to show that clicking on it will navigate users externally to another website or application.
 
-<img src="./img/externall_links.png" alt="Example of link button with icon on the left and the right" width="218"/>
+<img src="./img/external_links.png" alt="Example of link button with icon on the left and the right" width="218"/>
 
 You might use a link button instead of a secondary button format to create greater visual hierarchy between two buttons. Examples include using text buttons as cancel buttons in modals or wizards, as well as for secondary actions in empty states.
 
