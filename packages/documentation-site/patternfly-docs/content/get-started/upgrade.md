@@ -40,6 +40,8 @@ To support multiple chart libraries, Victory-based charts have moved to a "victo
 - **Old path:** `import { Area } from '@patternfly/react-charts';` 
 - **New path:** `import { Area } from '@patternfly/react-charts/victory';` 
 
+Victory is now an optional peer dependency, allowing future chart libraries to be installed without including Victory dependencies and vice versa.
+
 To install Victory packages, you can either: 
 - Install the single "victory" package to cover all features.
 - Install specific packages, based on your product's features (such as "victory-core" or "victory-tooltip").
