@@ -193,7 +193,9 @@ _Wizard spacing_
 
 _Wizard stacked spacing_
 
+<div class="ws-docs-content-img">
 <img src="./img/button_wizard_stacked.png" alt="Stacked wizard button spacing with spacers" width="360"/>
+</div>
 
 #### Toolbars ####
 
