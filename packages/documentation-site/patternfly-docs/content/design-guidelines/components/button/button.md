@@ -193,7 +193,7 @@ _Wizard spacing_
 
 _Wizard stacked spacing_
 
-<img src="./img/button_wizard_stacked.png" alt="Stacked wizard button spacing with spacers" width="121"/>
+<img src="./img/button_wizard_stacked.png" alt="Stacked wizard button spacing with spacers" width="360"/>
 
 #### Toolbars ####
 
