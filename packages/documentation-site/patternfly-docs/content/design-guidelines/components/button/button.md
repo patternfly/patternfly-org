@@ -185,7 +185,7 @@ Exceptions to the standard spacing guidelines are as follows:
 
 #### Wizards ####
 
-In wizards, the **Cancel** button is spaced `--pf-t--global--spacer--2xl` (48px) away from the primary and secondary **Next** and **Back** buttons, and `--pf-t--global--spacer--md` (24px) away if stacked.
+In wizards, the **Cancel** button is spaced `--pf-t--global--spacer--2xl` (48px) away from the primary and secondary **Next** and **Back** buttons, and `--pf-t--global--spacer--lg` (24px) away if stacked.
 
 _Wizard spacing_
 
