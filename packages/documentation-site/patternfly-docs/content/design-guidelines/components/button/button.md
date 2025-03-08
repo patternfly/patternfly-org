@@ -3,18 +3,26 @@ id: Button
 section: components
 ---
 
+import '../components.css';
+
 ## Usage
+
 There are certain cases where specific buttons must be used within your UI.
 
 Follow these guidelines for buttons in wizards (shown in the image below):  
+
 * The **Next** button should always be a [primary button](#primary-button).
 * The **Back** button should always be a [secondary button](#secondary-button).
 * The **Cancel** button should always be a [link button](#link-button).
 
-<img src="./img/wizard.png" alt="Example of buttons in a wizard"/>
+<div class="ws-docs-content-img">
+    <img src="./img/wizard.png" alt="Example of buttons in a wizard"/>
+</div>
 
 ## Variations
+
 The following button styles, shown in order of visual hierarchy, can be used in your designs according to your needs.
+
 * [Danger button](#danger-button)
 * [Primary button](#primary-button)
 * [Secondary button](#secondary-button)
@@ -24,7 +32,9 @@ The following button styles, shown in order of visual hierarchy, can be used in 
 * [Call To Action button](#call-to-action-button)
 * [Progress button](#progress-button)
 
-<img src="./img/buttons.png" alt="Images of all button types" width="607"/>
+<div class="ws-docs-content-img">
+    <img src="./img/buttons.png" alt="Images of all button types" width="607"/>
+</div>
 
 You don't need to use these buttons in the order that their labels imply. For example, you don't always need to use the secondary button as the second button in your designs. The most important thing is to establish a visual hierarchy between any buttons in your designs. There are, however, some best practices to keep in mind.
 
@@ -34,7 +44,9 @@ Danger buttons are the most prominent of all the button options. Use danger butt
 
 _Example of a danger button in a modal_
 
-<img src="./img/danger.png" alt="Example of danger button used in a modal" width="521"/>
+<div class="ws-docs-content-img">
+    <img src="./img/danger.png" alt="Example of danger button used in a modal" width="521"/>
+</div>
 
 ### Primary button ###
 
@@ -42,11 +54,15 @@ A primary button is the most prominent button on a page, used for the most impor
 
 _Example of a primary button inside a toolbar_
 
-<img src="./img/prim_ex_1.png" alt="Example of a primary button inside a toolbar" width="1159"/>
+<div class="ws-docs-content-img">
+    <img src="./img/prim_ex_1.png" alt="Example of a primary button inside a toolbar" width="1159"/>
+</div>
 
 _Example of a primary button inside an empty state_
 
-<img src="./img/prim_ex_2.png" alt="Example of a primary button inside an empty state" width="656"/>
+<div class="ws-docs-content-img">
+    <img src="./img/prim_ex_2.png" alt="Example of a primary button inside an empty state" width="656"/>
+</div>
 
 ### Secondary button ###
 
@@ -54,7 +70,9 @@ Secondary buttons are buttons with less visual prominence than primary buttons. 
 
 _Example of secondary buttons in data lists_
 
-<img src="./img/sec_ex.png" alt="Example of secondary buttons in data lists" />
+<div class="ws-docs-content-img">
+    <img src="./img/sec_ex.png" alt="Example of secondary buttons in data lists" />
+</div>
 
 ### Tertiary button ###
 
@@ -64,48 +82,65 @@ In this example, you can see a tertiary button used to show a possible “Edit�
 
 _Example of tertiary button on a page_
 
-<img src="./img/tert_edit.png" alt="Example of tertiary button on a page" width="1500" />
+<div class="ws-docs-content-img">
+    <img src="./img/tert_edit.png" alt="Example of tertiary button on a page" width="1500" />
+</div>
 
 ### Link button ###
 
 Links buttons are labeled buttons with no background or border. Link buttons can be used for actions that:
+
 * May not need as much emphasis.
 * Navigate users to another page within the same window.
 * Navigate users to an external page.
 
 While all link buttons lack borders, they can still vary in appearance. Link buttons that navigate users to another page within the same window should be presented as stand-alone text. Link buttons that navigate users to an external page may include an icon on the left or right of the text to further emphasize the action. For example, you could add an external link icon to show that clicking on it will navigate users externally to another website or application.
 
-<img src="./img/external_links.png" alt="Example of link button with icon on the left and the right" width="218"/>
+<div class="ws-docs-content-img">
+    <img src="./img/external_links.png" alt="Example of link button with icon on the left and the right" width="218"/>
+</div>
 
 You might use a link button instead of a secondary button format to create greater visual hierarchy between two buttons. Examples include using text buttons as cancel buttons in modals or wizards, as well as for secondary actions in empty states.
 
 _Example of a link button in a modal_
 
-<img src="./img/link_modal.png" alt="Example of a link button in a modal" width="446"/>
+<div class="ws-docs-content-img">
+    <img src="./img/link_modal.png" alt="Example of a link button in a modal" width="446"/>
+</div>
 
 _Example of link buttons in an empty state_
 
-<img src="./img/empty_state_links.png" alt="Example of link buttons in an empty state" width="640"/>
+<div class="ws-docs-content-img">
+    <img src="./img/empty_state_links.png" alt="Example of link buttons in an empty state" width="640"/>
+</div>
 
-### When to use 
+### When to use
 
 Always use link buttons in the following cases:
 
 * For cancel buttons in wizards or modals
 
+<div class="ws-docs-content-img">
      <img src="./img/link_modal.png" alt="Example of link button used in modal" width="446"/>
+</div>
 
 * For more actions in empty states
 
+<div class="ws-docs-content-img">
     <img src="./img/link_empty.png" alt="Example of a link button in an empty state" width="600"/>
+</div>
 
 * For action buttons in tables
 
+<div class="ws-docs-content-img">
     <img src="./img/link_table.png" alt="Example of link buttons in a table"/>
+</div>
 
 * For action buttons in alerts
 
+<div class="ws-docs-content-img">
     <img src="./img/link_alert.png" alt="Example of link button in an alert" width="309"/>
+</div>
 
 ### Icon button ###
 
@@ -113,19 +148,23 @@ Icon buttons are useful in places where space is limited. For example, if you ha
 
 For example, this toolbar uses a kebab icon as an action button due to limited space.
 
-<img src="./img/icon_button.png" alt="Example of kebab used as an icon button inside a toolbar" width="1159"/>
+<div class="ws-docs-content-img">
+    <img src="./img/icon_button.png" alt="Example of kebab used as an icon button inside a toolbar" width="1159"/>
+</div>
 
 ### Call To Action button ###
 
 Call To Action (CTA) buttons and links are used on websites to direct users to complete an action. For example, a product detail page could include a CTA button labeled 'Try it now,' which would guide users to a purchase page.
 
-<img src="./img/CTAs.png" alt="Images of all CTA types" width="708"/>
+<div class="ws-docs-content-img">
+    <img src="./img/CTAs.png" alt="Images of all CTA types" width="708"/>
+</div>
 
 Call To Actions have similar variants to regular buttons (although they have a larger padding), and follow the same visual hierarchy. However, CTA buttons are used only to indicate a desired next step, whereas other button types may also be used to link to additional information or actions. Call To Actions should be used sparingly (ideally one per page, or a primary and secondary CTA).
 
 ### Progress button ###
 
-A progress button can be used to provide the user with feedback that an action is in progress after the button is clicked. To indicate that an action is taking place, a spinner is inserted in front of the button label. 
+A progress button can be used to provide the user with feedback that an action is in progress after the button is clicked. To indicate that an action is taking place, a spinner is inserted in front of the button label.
 
 **When to use a progress button**
 
@@ -137,7 +176,9 @@ Do not use a progress button for operations that will take more than a few secon
 
 _Example of using a progress button to test a repository before final configuration_
 
-<img src="./img/progress_bar_stages.png" alt="Example of progress button usage" width="1828"/>
+<div class="ws-docs-content-img">
+    <img src="./img/progress_bar_stages.png" alt="Example of progress button usage" width="1828"/>
+</div>  
 
 1. The user clicks “try sample repository".
 
@@ -173,11 +214,15 @@ The standard spacing between each button is `--pf-t--global--spacer--md` (16px),
 
 _Standard spacing_
 
-<img src="./img/button_16px.png" alt="Standard button spacing with spacers" width="214"/>
+<div class="ws-docs-content-img">
+    <img src="./img/button_16px.png" alt="Standard button spacing with spacers" width="214"/>
+</div>
 
 _Stacked spacing_
 
-<img src="./img/button_stacked.png" alt="Stacked button spacing with spacers" width="222"/>
+<div class="ws-docs-content-img">
+    <img src="./img/button_stacked.png" alt="Stacked button spacing with spacers" width="222"/>
+</div>
 
 ### Exceptions ###
 
@@ -189,12 +234,13 @@ In wizards, the **Cancel** button is spaced `--pf-t--global--spacer--2xl` (48px)
 
 _Wizard spacing_
 
-<img src="./img/button_wizard.png" alt="Wizard button spacing with spacers" width="304"/>
-
+<div class="ws-docs-content-img">
+    <img src="./img/button_wizard.png" alt="Wizard button spacing with spacers" width="304"/>
+</div>
 _Wizard stacked spacing_
 
 <div class="ws-docs-content-img">
-<img src="./img/button_wizard_stacked.png" alt="Stacked wizard button spacing with spacers" width="360"/>
+    <img src="./img/button_wizard_stacked.png" alt="Stacked wizard button spacing with spacers" width="360"/>
 </div>
 
 #### Toolbars ####
@@ -209,7 +255,9 @@ If you have a specific use case where buttons need to be spaced further away fro
 
 _Action group spacing_
 
-<img src="./img/button_action_group.png" alt="Action group spacing with spacers" width="416"/>
+<div class="ws-docs-content-img">
+    <img src="./img/button_action_group.png" alt="Action group spacing with spacers" width="416"/>
+</div>
 
 ### Buttons and overflow menus
 
@@ -217,15 +265,20 @@ There are cases where you will have multiple buttons next to each other, like in
 
 _Buttons appear in the toolbar_
 
-<img src="./img/overflow_1.png" alt="Pre-over flow menu in toolbar, where all actions appear in the toolbar itself" width="1191"/>
+<div class="ws-docs-content-img">
+    <img src="./img/overflow_1.png" alt="Pre-over flow menu in toolbar, where all actions appear in the toolbar itself" width="1191"/>
+</div>
 
 _Buttons placed in overflow menu due to limited space, with primary button persisting_
 
-<img src="./img/overflow_2.png" alt="Post-overflow menu in toolbar, where toolbar has become smaller in width, prompting an overflow menu for secondary actions, while primary button persists in the toolbar itself" width="1010"/>
+<div class="ws-docs-content-img">
+    <img src="./img/overflow_2.png" alt="Post-overflow menu in toolbar, where toolbar has become smaller in width, prompting an overflow menu for secondary actions, while primary button persists in the toolbar itself" width="1010"/>
+</div>
 
 ## Placement
 
 Buttons in forms, modals, or wizards should always be left aligned in the box. This solves for:
+
 * **Modularity and flexibility:** A standard alignment creates consistency in how objects appear across all areas of an app.
 * **Accessibility:** The form submit buttons are on the same scan line as the form fields, which benefits users who are sight-limited. Also, users who are blind can more easily navigate left-aligned form submit buttons because the button order is consistent across all contexts.
 * **Responsiveness:** The most important actions (i.e., primary buttons) are encountered first when elements are stacked vertically.
@@ -249,6 +302,6 @@ When writing button labels:
 
 Use specific, action-focused labels that match what the user will see when they arrive at their location. For example, if you are sending a user to a dashboard, your link label might read _View dashboard_. For a link directing a user to a support forum, the label might read _Get help in the support forum_. See [PatternFly's content guidelines](/ux-writing/about-ux-writing) for additional guidance.
 
-## Accessibility 
+## Accessibility
 
 For information regarding accessibility, visit the [button accessibility page](/components/button/accessibility).
