@@ -7,6 +7,102 @@ section: get-started
 import './get-started.css';
 import { Divider, Timestamp } from '@patternfly/react-core';
 
+<Timestamp>March 2024</Timestamp>
+
+## PatternFly 6.2
+
+### Promoted package versions
+- patternfly/patternfly ([changelog](https://github.com/patternfly/patternfly/releases/tag/v6.2.0))
+    - [@patternfly/patternfly@6.2.0](https://www.npmjs.com/package/@patternfly/patternfly)
+- patternfly/react ([changelog](https://github.com/patternfly/patternfly-react/releases/tag/v6.2.0))
+- PatternFly extensions 
+    - [@patternfly/chatbot@2.2.0](https://www.npmjs.com/package/@patternfly/chatbot) ([changelog](https://github.com/patternfly/chatbot/releases/tag/v2.2.0))
+
+### Component updates
+
+#### Bugs 
+- Select: We fixed scrolling for menus with grouped items.
+- Masthead: We correct vertical centering.
+
+#### Features 
+-
+
+### Extension updates 
+
+#### ChatBot
+
+##### Bugs
+- We fixed an overflow issue in popovers with long titles.
+- We fixed the appearance of links.
+- We removed the cancel button from the user feedback form, which was unnecessary due to the present of a close button.
+- We made resize and form-control overrides more important to assist with downstream implementations.
+- We added loading and error states to the conversation history.
+- We made updates for general style consistency.
+
+##### Features 
+- We added the following new ChatBot features:
+    - [Inline drawer display mode](/patternfly-ai/chatbot/overview/demo/#inline-drawer-chatbot).
+    - [Message feedback and thank-you cards](/patternfly-ai/chatbot/messages#message-feedback).
+    - [Resizable function for the conversation history drawer](/patternfly-ai/chatbot/ui#resizable-drawer).
+    - [Layout for comparing ChatBots](/patternfly-ai/chatbot/overview/demo#comparing-chatbots).
+    - [Support for quick starts](/patternfly-ai/chatbot/messages#messages-with-quick-start-tiles).
+    - [Global ChatBot setting menu](/patternfly-ai/chatbot/ui#settings). 
+    - [Terms of use modal](/patternfly-ai/chatbot/ui#terms-of-use).
+    - Additional message content types (as shown in the [bot messages](/patternfly-ai/chatbot/messages#bot-messages) examples): 
+        - Inline error message.
+        - Block quotes.
+        - Headings.
+        - External links, with styling.
+        - Images.
+        - Tables in messages.
+    - **Note:** We're still updating our design guidelines to reflect these changes and will provide an update once they are complete.
+- New documentation to guide the use of [analytics in ChatBots](/patternfly-ai/chatbot/analytics).
+
+#### Component groups
+
+##### Bugs 
+- We updated the [responsive actions](/component-groups/controls/responsive-actions) component to make a disabled state available for overflow menu items.
+- We fixed props in a number of components, to include support for `ReactNode` objects.
+
+##### Features 
+- We added a new [stale data warning component](/component-groups/status-and-state-indicators/stale-data-warning).
+- We added a text confirmation option to the [warning modal](/component-groups/error-communication/warning-modal#warning-modal-with-a-text-confirmation).
+
+#### Topology 
+
+##### Bugs
+- We updated dynamic context menus (menus whose options depend on asynchronous processes like API calls) to fix an issue that caused menus to open downward (instead of upward) when there wasn't enough screen space. 
+
+#### User feedback 
+
+##### Bugs
+- We made updates to ensure that CSS overrides take precedent over PatternFly's default styles.
+
+#### Quick starts
+
+##### Bugs
+- We fixed an issue where plain code fences weren't being transformed.
+- We reduced the spacing between the catalog page title and hint.
+- We've changed the markdown parser to one that's more actively being maintained.
+    - If you're supplying any custom markdown extensions please verify that they still work properly, as this is the area where bugs are most likely from this change.
+    - If you see issues with custom markdown extensions, or any other issues with markdown parsing after this change, please [raise an issue](https://github.com/patternfly/patternfly-quickstarts/issues).
+- We improved style scoping to avoid clashing with PatternFly styles.
+
+##### Features 
+- We added support for the ChatBot extension.
+
+### Website updates
+
+##### Bugs 
+- We corrected a typo in the [PatternFly spacers table](/design-foundations/spacers/#patternfly-spacers).
+- We adjusted the SVG download behavior for [PatternFly icons](/design-foundations/icons/#all-icons), to remove a wrapping `<span>` that prevented imports into some design tools.
+- We improved accessibility for the hover text of PatternFly logos in the website masthead and footer.
+
+##### Features
+- We expanded the [PatternFly 6 upgrade guide](/get-started/upgrade) to include additional instructions that we've put together as products have been completing their migration.
+
+<Divider />
+
 <Timestamp>January 2024</Timestamp>
 
 ## PatternFly 6.1.1
@@ -290,7 +386,7 @@ We applied PatternFly 6 styles to the rest of our extensions. All have now been 
 - Catalog view
 - Quickstarts
 
-Related design resources can also be found in [our PatternFly 6 Figma kit.](https://www.figma.com/@patternfly)
+Related design resources can also be found in [our PatternFly 6 Figma kit](https://www.figma.com/@patternfly).
 
 ### Bug fixes
 We fixed bugs that were reported throughout the alpha period including. We:
@@ -316,8 +412,8 @@ All of our components have a new look to match. As you use the alpha website, ta
 
 ### Design tokens 
 
-In order to support PatternFly 6, and any future visual theming capabilities, we have implemented a design token system for PatternFly. For more details and instructions on how to use tokens, you can refer to our new [design token documentation.](/tokens/about-tokens)
+In order to support PatternFly 6, and any future visual theming capabilities, we have implemented a design token system for PatternFly. For more details and instructions on how to use tokens, you can refer to our new [design token documentation](/tokens/about-tokens).
 
 Our tokens cover both dark and light themes, and make it easier to support both in your product. We also updated our [dark theme handbook](/developer-resources/dark-theme-handbook) to align with our tokens.
 
-**Note:** The PatternFly 5 design library is not built with tokens. To take advantage of our token system, you must [upgrade your product to PatternFly 6.](/get-started/upgrade)
+**Note:** The PatternFly 5 design library is not built with tokens. To take advantage of our token system, you must [upgrade your product to PatternFly 6](/get-started/upgrade).
