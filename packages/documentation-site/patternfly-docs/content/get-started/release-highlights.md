@@ -29,34 +29,56 @@ import { Divider, Timestamp } from '@patternfly/react-core';
 
 ### Extension updates 
 
+#### Catalog view 
+
+##### Bugs
+- We resolved console errors that occurred when read-only badges were passed to `<CardHeader>` via the `actions` prop.
+- We adjusted [vertical tab](/extensions/catalog-view/vertical-tabs) styles to remove the underline.
+
 #### ChatBot
 
 ##### Bugs
 - We fixed an overflow issue in popovers with long titles.
-- We fixed the appearance of links.
+- We fixed the appearance of links in the sources card for Backstage consumers.
 - We removed the cancel button from the user feedback form, which was unnecessary due to the presence of a close button.
-- We made resize and form-control overrides more important to assist with downstream implementations.
-- We added loading and error states to the conversation history.
+- We made some styling adjustments to the `<MessageBar>` to assist with downstream implementations.
 - We made updates for general style consistency.
 
 ##### Features 
-- We added the following new ChatBot features:
-    - [Inline drawer display mode](/patternfly-ai/chatbot/overview/demo/#inline-drawer-chatbot).
-    - [Message feedback and thank-you cards](/patternfly-ai/chatbot/messages#message-feedback).
-    - [Resizable function for the conversation history drawer](/patternfly-ai/chatbot/ui#resizable-drawer).
-    - [Layout for comparing ChatBots](/patternfly-ai/chatbot/overview/demo#comparing-chatbots).
-    - [Support for quick starts](/patternfly-ai/chatbot/messages#messages-with-quick-start-tiles).
-    - [Global ChatBot setting menu](/patternfly-ai/chatbot/ui#settings). 
-    - [Terms of use modal](/patternfly-ai/chatbot/ui#terms-of-use).
-    - Additional message content types (as shown in the [bot messages](/patternfly-ai/chatbot/messages#bot-messages) examples): 
-        - Inline error message.
-        - Block quotes.
-        - Headings.
-        - External links, with styling.
-        - Images.
-        - Tables in messages.
-    - **Note:** We're still updating our design guidelines to reflect these changes and will provide an update once they are complete.
-- New documentation to guide the use of [analytics in ChatBots](/patternfly-ai/chatbot/analytics).
+We added the following list of new ChatBot features:
+
+- [Inline drawer display mode](/patternfly-ai/chatbot/overview/demo/#inline-drawer-chatbot).
+- [Message feedback and thank-you cards](/patternfly-ai/chatbot/messages#message-feedback).
+- [Resizable function for the conversation history drawer](/patternfly-ai/chatbot/ui#resizable-drawer).
+- [Layout for comparing ChatBots](/patternfly-ai/chatbot/overview/demo#comparing-chatbots).
+- [Support for quick starts](/patternfly-ai/chatbot/messages#messages-with-quick-start-tiles).
+- [Global ChatBot setting menu](/patternfly-ai/chatbot/ui#settings). 
+- [Terms of use modal](/patternfly-ai/chatbot/ui#terms-of-use).
+- [Loading and error states for the conversation history](/patternfly-ai/chatbot/ui/#drawer-with-search-and-new-chat-button).
+- Clicked-state styles for [message actions](/patternfly-ai/chatbot/messages/#message-actions).
+- Active-state and selected-state styles for [quick responses](/patternfly-ai/chatbot/messages/#messages-with-quick-responses).
+- [Support for custom message content](/patternfly-ai/chatbot/messages#custom-message-content) via the `extraContent` prop. Refer to the docs and use this feature with caution. 
+- Additional message content types (as shown in the [bot messages](/patternfly-ai/chatbot/messages#bot-messages) example): 
+    - Inline error message.
+    - Block quotes.
+    - Headings.
+    - External links, with styling.
+    - Images.
+    - Tables.
+
+**Note:** We're still updating our design guidelines to fully reflect these changes and will provide an update once they are complete.
+
+##### Other notable changes
+- We added [analytics examples and documentation](/patternfly-ai/chatbot/analytics) to provide general guidance on the implementation of analytics tracking.
+- We removed the "dompurify" external dependency requirement.
+- We updated `<Message>` to allow additional [rehype plugins](https://github.com/rehypejs/rehype) for further customization of Markdown parsing. 
+- We replaced the `<MessageBar>` component with a [PatternFly `<TextArea>` component](/components/forms/text-area). This led to the following type changes for `<MessageBarProps>`:
+  - For `onChange`:
+    - Before: `(event: React.ChangeEvent<HTMLDivElement>, value: string) => void;`
+     - After: `(event: React.ChangeEvent<HTMLTextAreaElement>, value: string | number) => void;`
+  - for `onSendMessage`:
+    - Before: `(message: string) => void;`
+    - After: `(message: string | number) => void;`
 
 #### Component groups
 
