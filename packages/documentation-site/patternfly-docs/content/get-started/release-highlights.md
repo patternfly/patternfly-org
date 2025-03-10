@@ -34,7 +34,7 @@ import { Divider, Timestamp } from '@patternfly/react-core';
 ##### Bugs
 - We fixed an overflow issue in popovers with long titles.
 - We fixed the appearance of links.
-- We removed the cancel button from the user feedback form, which was unnecessary due to the present of a close button.
+- We removed the cancel button from the user feedback form, which was unnecessary due to the presence of a close button.
 - We made resize and form-control overrides more important to assist with downstream implementations.
 - We added loading and error states to the conversation history.
 - We made updates for general style consistency.
@@ -76,7 +76,7 @@ import { Divider, Timestamp } from '@patternfly/react-core';
 #### User feedback 
 
 ##### Bugs
-- We made updates to ensure that CSS overrides take precedent over PatternFly's default styles.
+- We made updates to ensure that CSS overrides take precedence over PatternFly's default styles.
 
 #### Quick starts
 
