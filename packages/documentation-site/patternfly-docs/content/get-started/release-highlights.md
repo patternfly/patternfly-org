@@ -38,7 +38,6 @@ import { Divider, Timestamp } from '@patternfly/react-core';
 #### ChatBot
 
 ##### Bugs
-- We fixed an overflow issue in popovers with long titles.
 - We fixed the appearance of links in the sources card for Backstage consumers.
 - We removed the cancel button from the user feedback form, which was unnecessary due to the presence of a close button.
 - We made some styling adjustments to the `<MessageBar>` to assist with downstream implementations.
