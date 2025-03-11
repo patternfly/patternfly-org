@@ -21,13 +21,13 @@ import { Divider, Timestamp } from '@patternfly/react-core';
 ### Website updates
 
 ##### Bugs 
-- We corrected a typo in the [PatternFly spacers table](/design-foundations/spacers/#patternfly-spacers).
 - We adjusted the SVG download behavior for [PatternFly icons](/design-foundations/icons/#all-icons), to remove a wrapping `<span>` that prevented imports into some design tools.
 - We improved accessibility for the hover text of PatternFly logos in the website masthead and footer.
 - We fixed an issue in our demos where the PatternFly masthead logo was the wrong color. 
-- We updated the [alerts timeline example](/charts/bar-chart#alerts-timeline) to center tooltips above their respective bar.
+- Charts: We updated the [alerts timeline example](/charts/bar-chart#alerts-timeline) to center tooltips above their respective bar.
+- Charts: We fixed a few issues in CodeSandbox chart examples, including adding missing Victory dependency, adding missing `ChartThemeColor` import, ensuring Victory packages are up to date.
+
 - [Clipboard copy](/components/clipboard-copy): We added a missing action tooltip in the [inline compact with additional action](/clipboard-copy/#inline-compact-with-additional-action) example.
-- We fixed a few issues in CodeSandbox chart examples, including adding missing Victory dependency, adding missing `ChartThemeColor` import, ensuring Victory packages are up to date.
 
 ##### Features
 - We expanded the [PatternFly 6 upgrade guide](/get-started/upgrade) to include additional instructions that we've put together as products have been completing their migration.
@@ -42,8 +42,8 @@ import { Divider, Timestamp } from '@patternfly/react-core';
 - [Code editor](/components/code-editor): We updated `handleResize` to ensure that it properly adjusts with viewport changes.
 - [Data list](/components/data-list): We removed `aria-labelledby` and `aria-selected`, to align with best practices for accessibility. 
 - [Description list](/components/description-list): Added support to allow the help text button popover to open via keyboard.
-- File upload (both [simple file upload](/components/file-upload/simple-file-upload) and [multiple file upload(/components/file-upload/multiple-file-upload)]): We updated the input content to be hidden, to fix accessibility problems with keyboard focus.
-- [Masthead](/components/masthead): We correct vertical centering.
+- File upload (both [simple file upload](/components/file-upload/simple-file-upload) and [multiple file upload](/components/file-upload/multiple-file-upload)): We updated the input content to be hidden, to fix accessibility problems with keyboard focus.
+- [Masthead](/components/masthead): We corrected vertical centering.
 - [Menu](/components/menus/menu): We updated `<MenuItem>` so that a mouse can properly trigger a tooltip on `aria-disabled` items. 
 - [Search input](/components/search-input): We updated `isAdvancedSearchOpen` to be `false` by default.
 - [Select](/components/select): We fixed scrolling for menus with grouped items.
@@ -51,7 +51,7 @@ import { Divider, Timestamp } from '@patternfly/react-core';
 - [Text area](/components/forms/text-area): We added a missing modifier class that caused display issues when text areas were in focus. 
 
 #### Features 
-We added the following list of new component features:
+We added the following new features:
 
 - [Jump links](/components/jump-links): We added a new `shouldReplaceNavHistory` prop that enables you to replace the current state with clicked items, rather than pushing the new location onto the history.
 - [Label:](/components/label) We added the `isClickable` prop, to be used for [labels with custom render](/components/label#label-with-custom-render). This prop allows you to set the clickable modifier while the render prop is also used. 
