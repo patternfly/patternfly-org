@@ -249,7 +249,9 @@ Button spacing in toolbars depends on the button type and how they are grouped. 
 
 _Toolbar spacing_
 
-<img src="./img/toolbar_exception.png" alt="Toolbar button spacing with spacers" width="312"/>
+<div class="ws-docs-content-img">
+    <img src="./img/toolbar_exception.png" alt="Toolbar button spacing with spacers" width="312"/>
+</div>
 
 If you have a specific use case where buttons need to be spaced further away from the rest, the button groups action list allows for customization as needed.
 
