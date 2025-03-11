@@ -36,7 +36,7 @@ All headings use Red Hat Display bold.
 
 | Example | Tokens | Size | Line height | Usage | 
 | --- | --- | --- | --- | --- |
-| <Title headingLevel="h5" size='2xl'> Aa </Title> | --pf-t--global--font--size--heading--h1 | 1.375rem (22px) | 1.3 | Super hero headings <br /> H1 <br /> Page titles |
+| <Title headingLevel="h5" size='2xl'> Aa </Title> | --pf-t--global--font--size--heading--h1 | 1.5rem (24px) | 1.3 | Super hero headings <br /> H1 <br /> Page titles |
 | <Title headingLevel="h5" size='xl'> Aa </Title>  | --pf-t--global--font--size--heading--h2 | 1.25rem (20px) | 1.3 | Hero headings <br /> H2 |
 | <Title headingLevel="h5" size='lg'> Aa </Title>  | --pf-t--global--font--size--heading--h3 | 1.125rem (18px) | 1.3 | H3 |
 | <Title headingLevel="h5" size='md'> Aa </Title>  | --pf-t--global--font--size--heading--h4 <br /> --pf-t--global--font--size--heading--h5 <br /> --pf-t--global--font--size--heading--h6 |1rem (16px) | 1.3 | H4 <br /> H5 <br /> H6 |
@@ -48,7 +48,7 @@ The following table shows the default mapping of PatternFly heading levels to te
 
 | Heading level | Default size |
 |----|-----------|
-| H1 | 2xl (1.375rem, 22px)|
+| H1 | 2xl (1.5rem, 24px)|
 | H2 | xl (1.25rem, 20px) |
 | H3 | lg (1.125rem, 18px) |
 | H4 | md (1 rem, 16px) |
