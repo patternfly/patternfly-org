@@ -3,7 +3,6 @@ id: Release highlights
 title: Release highlights
 section: get-started
 ---
-
 import './get-started.css';
 import { Divider, Timestamp } from '@patternfly/react-core';
 
@@ -18,14 +17,48 @@ import { Divider, Timestamp } from '@patternfly/react-core';
 - PatternFly extensions 
     - [@patternfly/chatbot@2.2.0](https://www.npmjs.com/package/@patternfly/chatbot) ([changelog](https://github.com/patternfly/chatbot/releases/tag/v2.2.0))
 
+
+### Website updates
+
+##### Bugs 
+- We corrected a typo in the [PatternFly spacers table](/design-foundations/spacers/#patternfly-spacers).
+- We adjusted the SVG download behavior for [PatternFly icons](/design-foundations/icons/#all-icons), to remove a wrapping `<span>` that prevented imports into some design tools.
+- We improved accessibility for the hover text of PatternFly logos in the website masthead and footer.
+- We fixed an issue in our demos where the PatternFly masthead logo was the wrong color. 
+- We updated the [alerts timeline example](/charts/bar-chart#alerts-timeline) to center tooltips above their respective bar.
+- [Clipboard copy](/components/clipboard-copy): We added a missing action tooltip in the [inline compact with additional action](/clipboard-copy/#inline-compact-with-additional-action) example.
+- We fixed a few issues in CodeSandbox chart examples, including adding missing Victory dependency, adding missing `ChartThemeColor` import, ensuring Victory packages are up to date.
+
+##### Features
+- We expanded the [PatternFly 6 upgrade guide](/get-started/upgrade) to include additional instructions that we've put together as products have been completing their migration.
+
 ### Component updates
 
 #### Bugs 
-- Select: We fixed scrolling for menus with grouped items.
-- Masthead: We correct vertical centering.
+- [Alert](/components/alert): We added micro animations to alert and alert groups. You can observe this behavior across examples and demos for both.
+- [Button](/components/button): We updated the `aria-disabled` implementation so that it is appropriately `true` or `false` by default. 
+- [Clipboard copy](/components/clipboard-copy): We added the `string[]` type to `children`.
+- [Charts](/charts/about-charts): We fixed errors related to Victory 37.3.4. If you're using PatternFly 5, use [react-charts](https://www.npmjs.com/package/@patternfly/react-charts) v7.4.8 with Victory v37.3.4 or later.
+- [Code editor](/components/code-editor): We updated `handleResize` to ensure that it properly adjusts with viewport changes.
+- [Data list](/components/data-list): We removed `aria-labelledby` and `aria-selected`, to align with best practices for accessibility. 
+- [Description list](/components/description-list): Added support to allow the help text button popover to open via keyboard.
+- File upload (both [simple file upload](/components/file-upload/simple-file-upload) and [multiple file upload(/components/file-upload/multiple-file-upload)]): We updated the input content to be hidden, to fix accessibility problems with keyboard focus.
+- [Masthead](/components/masthead): We correct vertical centering.
+- [Menu](/components/menus/menu): We updated `<MenuItem>` so that a mouse can properly trigger a tooltip on `aria-disabled` items. 
+- [Search input](/components/search-input): We updated `isAdvancedSearchOpen` to be `false` by default.
+- [Select](/components/select): We fixed scrolling for menus with grouped items.
+- [Table](/components/table): We rewrote table's [column management](/components/table/react-demos#column-management) and [column management with draggable](/components/table/react-demos#column-management-with-draggable) features, to replace the use of the deprecated `<DragDrop>` component and update the demos accordingly.
+- [Text area](/components/forms/text-area): We added a missing modifier class that caused display issues when text areas were in focus. 
 
 #### Features 
--
+We added the following list of new component features:
+
+- [Jump links](/components/jump-links): We added a new `shouldReplaceNavHistory` prop that enables you to replace the current state with clicked items, rather than pushing the new location onto the history.
+- [Label:](/components/label) We added the `isClickable` prop, to be used for [labels with custom render](/components/label#label-with-custom-render). This prop allows you to set the clickable modifier while the render prop is also used. 
+- [Text area:](/components/forms/text-area) We added a [non-resizable text area variant](/components/forms/text-area#not-resizable), by adding a "none" option for the `resizeOrientation` prop.
+
+#### Other notable changes 
+- We removed the `@reach/router` dependency in patternfly-react, since it is no longer React 18 compatible. As a result, we replaced its use in a number of component examples/demos, including [button](/components/button#using-router-links), [label](/components/label#using-router-links), [masthead](/components/masthead#using-router-links), [menu](/components/menus/menu#using-router-links), and [page](/components/page/react-demos#context-selectorperspective-switcher-in-sidebar).
 
 ### Extension updates 
 
@@ -111,16 +144,6 @@ We added the following list of new ChatBot features:
 
 ##### Features 
 - We added support for the ChatBot extension.
-
-### Website updates
-
-##### Bugs 
-- We corrected a typo in the [PatternFly spacers table](/design-foundations/spacers/#patternfly-spacers).
-- We adjusted the SVG download behavior for [PatternFly icons](/design-foundations/icons/#all-icons), to remove a wrapping `<span>` that prevented imports into some design tools.
-- We improved accessibility for the hover text of PatternFly logos in the website masthead and footer.
-
-##### Features
-- We expanded the [PatternFly 6 upgrade guide](/get-started/upgrade) to include additional instructions that we've put together as products have been completing their migration.
 
 <Divider />
 
