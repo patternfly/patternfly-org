@@ -36,7 +36,7 @@ import { Divider, Timestamp } from '@patternfly/react-core';
 
 #### Bugs 
 - [Alert](/components/alert): We added micro animations to alert and alert groups. You can observe this behavior across examples and demos for both.
-- [Button](/components/button): We updated the `aria-disabled` implementation so that it is appropriately `true` or `false` by default. 
+- [Button](/components/button): We updated the `aria-disabled` implementation so that it will only render when true. If it's false or undefined, it will not render on the element.
 - [Clipboard copy](/components/clipboard-copy): We added the `string[]` type to `children`.
 - [Charts](/charts/about-charts): We fixed errors related to Victory 37.3.4. If you're using PatternFly 5, use [react-charts](https://www.npmjs.com/package/@patternfly/react-charts) v7.4.8 with Victory v37.3.4 or later.
 - [Code editor](/components/code-editor): We updated `handleResize` to ensure that it properly adjusts with viewport changes.
@@ -44,8 +44,8 @@ import { Divider, Timestamp } from '@patternfly/react-core';
 - [Description list](/components/description-list): Added support to allow the help text button popover to open via keyboard.
 - File upload (both [simple file upload](/components/file-upload/simple-file-upload) and [multiple file upload](/components/file-upload/multiple-file-upload)): We updated the input content to be hidden, to fix accessibility problems with keyboard focus.
 - [Masthead](/components/masthead): We corrected vertical centering.
-- [Menu](/components/menus/menu): We updated `<MenuItem>` so that a mouse can properly trigger a tooltip on `aria-disabled` items. 
-- [Search input](/components/search-input): We updated `isAdvancedSearchOpen` to be `false` by default.
+- [Menu](/components/menus/menu): We updated `<MenuItem>` so that a mouse can properly trigger a tooltip on `aria-disabled` items. We also fixed `<MenuItem>` tooltips in general, to allow their `onClick` behavior to be triggered as expected.
+- [Search input](/components/search-input): We updated `isAdvancedSearchOpen` to be `false` by default. This fixes an issue where `aria-expanded` was only applied when the state was updated by clicking the search open, rather than when the component first rendered.
 - [Select](/components/select): We fixed scrolling for menus with grouped items.
 - [Table](/components/table): We rewrote table's [column management](/components/table/react-demos#column-management) and [column management with draggable](/components/table/react-demos#column-management-with-draggable) features, to replace the use of the deprecated `<DragDrop>` component and update the demos accordingly.
 - [Text area](/components/forms/text-area): We added a missing modifier class that caused display issues when text areas were in focus. 
