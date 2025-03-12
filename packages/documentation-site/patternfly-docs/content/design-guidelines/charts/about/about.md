@@ -68,12 +68,11 @@ On click
 
 ## Develop with charts 
 
-Default styles in the [@patternfly/react-charts package](https://www.npmjs.com/package/@patternfly/react-charts) are aligned with our light theme. To use chart styles, you must also have the [@patternfly/patternfly package](https://www.npmjs.com/package/@patternfly/patternfly) installed.
+Default styles in the [@patternfly/react-charts package](https://www.npmjs.com/package/@patternfly/react-charts) are aligned with our light theme. Charts work with PatternFly's light theme by default&mdash;you don't need to import anything else. 
 
-To utilize default chart styles, you don't need to import anything else. But, to support dark-themed charts, you must also import the stylesheet that contains dark theme styles. To do so, add this line before importing your main application component:
+To support dark-themed charts, you must:
+1. Import the [@patternfly/patternfly package](https://www.npmjs.com/package/@patternfly/patternfly), so that you can use our global tokens.
+1. Import the stylesheet that contains dark theme styles by adding this line before importing your main application component: `import '@patternfly/patternfly/patternfly-charts.css';`
+    - Once you import this file, you'll have access to [all chart variables](https://www.npmjs.com/package/@patternfly/patternfly?activeTab=code). Beyond dark theme, you could use these variables to match the style of other UI elements to your chart styles. 
 
-`import '@patternfly/patternfly/patternfly-charts.css';`
-
-Once you import this file, you'll have access to [all chart variables](https://www.npmjs.com/package/@patternfly/patternfly?activeTab=code). Beyond dark theme, you could use these variables to match the style of other UI elements to your chart styles. 
-
-You can filter [the PatternFly design tokens table](/tokens/all-patternfly-tokens) to display the list of available chart tokens.
+To display the list of all available chart tokens, filter for "charts" in [the PatternFly design tokens table](/tokens/all-patternfly-tokens). 
