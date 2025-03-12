@@ -10,7 +10,7 @@ import ExternalLinkAltIcon from '@patternfly/react-icons/dist/esm/icons/external
 variant="info" 
 title="Under development" 
 actionLinks={
-    <AlertActionLink component="a" href="https://github.com/orgs/patternfly/projects/16/views/18">
+    <AlertActionLink component="a" href="https://github.com/orgs/patternfly/projects/7/views/66">
      View the project roadmap <ExternalLinkAltIcon /> 
     </AlertActionLink>
 }
