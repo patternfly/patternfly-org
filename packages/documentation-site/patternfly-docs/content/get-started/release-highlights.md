@@ -3,9 +3,149 @@ id: Release highlights
 title: Release highlights
 section: get-started
 ---
-
 import './get-started.css';
 import { Divider, Timestamp } from '@patternfly/react-core';
+
+<Timestamp>March 2024</Timestamp>
+
+## PatternFly 6.2
+
+### Promoted package versions
+- patternfly/patternfly ([changelog](https://github.com/patternfly/patternfly/releases/tag/v6.2.0))
+    - [@patternfly/patternfly@6.2.0](https://www.npmjs.com/package/@patternfly/patternfly)
+- patternfly/react ([changelog](https://github.com/patternfly/patternfly-react/releases/tag/v6.2.0))
+- PatternFly extensions 
+    - [@patternfly/chatbot@2.2.0](https://www.npmjs.com/package/@patternfly/chatbot) ([changelog](https://github.com/patternfly/chatbot/releases/tag/v2.2.0))
+
+
+### Website updates
+
+##### Bugs 
+- We adjusted the SVG download behavior for [PatternFly icons](/design-foundations/icons/#all-icons), to remove a wrapping `<span>` that prevented imports into some design tools.
+- We improved accessibility for the hover text of PatternFly logos in the website masthead and footer.
+- We fixed an issue in our demos where the PatternFly masthead logo was the wrong color. 
+- Charts: We updated the [alerts timeline example](/charts/bar-chart#alerts-timeline) to center tooltips above their respective bar.
+- Charts: We fixed a few issues in CodeSandbox chart examples, including adding missing Victory dependency, adding missing `ChartThemeColor` import, ensuring Victory packages are up to date.
+
+- [Clipboard copy](/components/clipboard-copy): We added a missing action tooltip in the [inline compact with additional action](/clipboard-copy/#inline-compact-with-additional-action) example.
+
+##### Features
+- We expanded the [PatternFly 6 upgrade guide](/get-started/upgrade) to include additional instructions that we've put together as products have been completing their migration.
+
+### Component updates
+
+#### Bugs 
+- [Alert](/components/alert): We added micro animations to alert and alert groups. You can observe this behavior across examples and demos for both.
+- [Button](/components/button): We updated the `aria-disabled` implementation so that it will only render when true. If it's false or undefined, it will not render on the element.
+- [Clipboard copy](/components/clipboard-copy): We added the `string[]` type to `children`.
+- [Charts](/charts/about-charts): We fixed errors related to Victory 37.3.4. If you're using PatternFly 5, use [react-charts](https://www.npmjs.com/package/@patternfly/react-charts) v7.4.8 with Victory v37.3.4 or later.
+- [Code editor](/components/code-editor): We updated `handleResize` to ensure that it properly adjusts with viewport changes.
+- [Data list](/components/data-list): We removed `aria-labelledby` and `aria-selected`, to align with best practices for accessibility. 
+- [Description list](/components/description-list): Added support to allow the help text button popover to open via keyboard.
+- File upload (both [simple file upload](/components/file-upload/simple-file-upload) and [multiple file upload](/components/file-upload/multiple-file-upload)): We updated the input content to be hidden, to fix accessibility problems with keyboard focus.
+- [Masthead](/components/masthead): We corrected vertical centering.
+- [Menu](/components/menus/menu): We updated `<MenuItem>` so that a mouse can properly trigger a tooltip on `aria-disabled` items. We also fixed `<MenuItem>` tooltips in general, to allow their `onClick` behavior to be triggered as expected.
+- [Search input](/components/search-input): We updated `isAdvancedSearchOpen` to be `false` by default. This fixes an issue where `aria-expanded` was only applied when the state was updated by clicking the search open, rather than when the component first rendered.
+- [Select](/components/select): We fixed scrolling for menus with grouped items.
+- [Table](/components/table): We rewrote table's [column management](/components/table/react-demos#column-management) and [column management with draggable](/components/table/react-demos#column-management-with-draggable) features, to replace the use of the deprecated `<DragDrop>` component and update the demos accordingly.
+- [Text area](/components/forms/text-area): We added a missing modifier class that caused display issues when text areas were in focus. 
+
+#### Features 
+We added the following new features:
+
+- [Jump links](/components/jump-links): We added a new `shouldReplaceNavHistory` prop that enables you to replace the current state with clicked items, rather than pushing the new location onto the history.
+- [Label:](/components/label) We added the `isClickable` prop, to be used for [labels with custom render](/components/label#label-with-custom-render). This prop allows you to set the clickable modifier while the render prop is also used. 
+- [Text area:](/components/forms/text-area) We added a [non-resizable text area variant](/components/forms/text-area#not-resizable), by adding a "none" option for the `resizeOrientation` prop.
+
+#### Other notable changes 
+- We removed the `@reach/router` dependency in patternfly-react, since it is no longer React 18 compatible. As a result, we replaced its use in a number of component examples/demos, including [button](/components/button#using-router-links), [label](/components/label#using-router-links), [masthead](/components/masthead#using-router-links), [menu](/components/menus/menu#using-router-links), and [page](/components/page/react-demos#context-selectorperspective-switcher-in-sidebar).
+
+### Extension updates 
+
+#### Catalog view 
+
+##### Bugs
+- We resolved console errors that occurred when read-only badges were passed to `<CardHeader>` via the `actions` prop.
+- We adjusted [vertical tab](/extensions/catalog-view/vertical-tabs) styles to remove the underline.
+
+#### ChatBot
+
+##### Bugs
+- We fixed the appearance of links in the sources card for Backstage consumers.
+- We removed the cancel button from the user feedback form, which was unnecessary due to the presence of a close button.
+- We made some styling adjustments to the `<MessageBar>` to assist with downstream implementations.
+- We made updates for general style consistency.
+
+##### Features 
+We added the following list of new ChatBot features:
+
+- [Inline drawer display mode](/patternfly-ai/chatbot/overview/demo/#inline-drawer-chatbot).
+- [Message feedback and thank-you cards](/patternfly-ai/chatbot/messages#message-feedback).
+- [Resizable function for the conversation history drawer](/patternfly-ai/chatbot/ui#resizable-drawer).
+- [Layout for comparing ChatBots](/patternfly-ai/chatbot/overview/demo#comparing-chatbots).
+- [Support for quick starts](/patternfly-ai/chatbot/messages#messages-with-quick-start-tiles).
+- [Global ChatBot setting menu](/patternfly-ai/chatbot/ui#settings). 
+- [Terms of use modal](/patternfly-ai/chatbot/ui#terms-of-use).
+- [Loading and error states for the conversation history](/patternfly-ai/chatbot/ui/#drawer-with-search-and-new-chat-button).
+- Clicked-state styles for [message actions](/patternfly-ai/chatbot/messages/#message-actions).
+- Active-state and selected-state styles for [quick responses](/patternfly-ai/chatbot/messages/#messages-with-quick-responses).
+- [Support for custom message content](/patternfly-ai/chatbot/messages#custom-message-content) via the `extraContent` prop. Refer to the docs and use this feature with caution. 
+- Additional message content types (as shown in the [bot messages](/patternfly-ai/chatbot/messages#bot-messages) example): 
+    - Inline error message.
+    - Block quotes.
+    - Headings.
+    - External links, with styling.
+    - Images.
+    - Tables.
+
+**Note:** We're still updating our design guidelines to fully reflect these changes and will provide an update once they are complete.
+
+##### Other notable changes
+- We added [analytics examples and documentation](/patternfly-ai/chatbot/analytics) to provide general guidance on the implementation of analytics tracking.
+- We removed the "dompurify" external dependency requirement.
+- We updated `<Message>` to allow additional [rehype plugins](https://github.com/rehypejs/rehype) for further customization of Markdown parsing. 
+- We replaced the `<MessageBar>` component with a [PatternFly `<TextArea>` component](/components/forms/text-area). This led to the following type changes for `<MessageBarProps>`:
+  - For `onChange`:
+    - Before: `(event: React.ChangeEvent<HTMLDivElement>, value: string) => void;`
+     - After: `(event: React.ChangeEvent<HTMLTextAreaElement>, value: string | number) => void;`
+  - for `onSendMessage`:
+    - Before: `(message: string) => void;`
+    - After: `(message: string | number) => void;`
+
+#### Component groups
+
+##### Bugs 
+- We updated the [responsive actions](/component-groups/controls/responsive-actions) component to make a disabled state available for overflow menu items.
+- We fixed props in a number of components, to include support for `ReactNode` objects.
+
+##### Features 
+- We added a new [stale data warning component](/component-groups/status-and-state-indicators/stale-data-warning).
+- We added a text confirmation option to the [warning modal](/component-groups/error-communication/warning-modal#warning-modal-with-a-text-confirmation).
+
+#### Topology 
+
+##### Bugs
+- We updated dynamic context menus (menus whose options depend on asynchronous processes like API calls) to fix an issue that caused menus to open downward (instead of upward) when there wasn't enough screen space. 
+
+#### User feedback 
+
+##### Bugs
+- We made updates to ensure that CSS overrides take precedence over PatternFly's default styles.
+
+#### Quick starts
+
+##### Bugs
+- We fixed an issue where plain code fences weren't being transformed.
+- We reduced the spacing between the catalog page title and hint.
+- We've changed the markdown parser to one that's more actively being maintained.
+    - If you're supplying any custom markdown extensions please verify that they still work properly, as this is the area where bugs are most likely from this change.
+    - If you see issues with custom markdown extensions, or any other issues with markdown parsing after this change, please [raise an issue](https://github.com/patternfly/patternfly-quickstarts/issues).
+- We improved style scoping to avoid clashing with PatternFly styles.
+
+##### Features 
+- We added support for the ChatBot extension.
+
+<Divider />
 
 <Timestamp>January 2024</Timestamp>
 
@@ -290,7 +430,7 @@ We applied PatternFly 6 styles to the rest of our extensions. All have now been 
 - Catalog view
 - Quickstarts
 
-Related design resources can also be found in [our PatternFly 6 Figma kit.](https://www.figma.com/@patternfly)
+Related design resources can also be found in [our PatternFly 6 Figma kit](https://www.figma.com/@patternfly).
 
 ### Bug fixes
 We fixed bugs that were reported throughout the alpha period including. We:
@@ -316,8 +456,8 @@ All of our components have a new look to match. As you use the alpha website, ta
 
 ### Design tokens 
 
-In order to support PatternFly 6, and any future visual theming capabilities, we have implemented a design token system for PatternFly. For more details and instructions on how to use tokens, you can refer to our new [design token documentation.](/tokens/about-tokens)
+In order to support PatternFly 6, and any future visual theming capabilities, we have implemented a design token system for PatternFly. For more details and instructions on how to use tokens, you can refer to our new [design token documentation](/tokens/about-tokens).
 
 Our tokens cover both dark and light themes, and make it easier to support both in your product. We also updated our [dark theme handbook](/developer-resources/dark-theme-handbook) to align with our tokens.
 
-**Note:** The PatternFly 5 design library is not built with tokens. To take advantage of our token system, you must [upgrade your product to PatternFly 6.](/get-started/upgrade)
+**Note:** The PatternFly 5 design library is not built with tokens. To take advantage of our token system, you must [upgrade your product to PatternFly 6](/get-started/upgrade).
