@@ -3,12 +3,16 @@ id: Page
 section: components
 ---
 
+import '../components.css';
+
 ## Elements
 The basic layout of a page differs depending on whether your application uses vertical or horizontal primary navigation as illustrated below.
 
 ### Page with vertical navigation
 
-<img src="./img/page-vertical-nav.png" alt="page with vertical navigation" width="832"/>
+<div class="ws-docs-content-img">
+    ![page with vertical navigation](.img/page-vertical-nav.svg)
+</div>
 
 **1. Masthead:** The masthead provides a consistent header for every page in your application. See the [masthead design guidelines](/components/masthead/design-guidelines) for more details.
 
@@ -24,7 +28,9 @@ The basic layout of a page differs depending on whether your application uses ve
 
 ### Page with horizontal navigation
 
-<img src="./img/page-horizontal-nav.png" alt="page with horizontal navigation" width="832"/>
+<div class="ws-docs-content-img">
+    ![page with horizontal navigation](.img/page-horizontal-nav.svg)
+</div>
 
 When using a horizontal primary navigation, the left-hand sidebar is removed and the navigation is placed inline with other masthead elements. All other page elements remain the same.
 
