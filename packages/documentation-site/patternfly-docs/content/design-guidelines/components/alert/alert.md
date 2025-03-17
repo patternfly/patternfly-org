@@ -105,7 +105,9 @@ Toast alerts stack in the upper-right corner of a page. To properly position and
 
 Toast alerts should always have a close button so that the user can dismiss them. If you include an automatic timeout for your toast alert, 8 seconds is recommended. Toast alerts should not disappear while the user is hovering over them.
 
-<img src="./img/Toast-alerts-desktop.png" alt="toast alerts in a page" />
+<div class="ws-docs-content-img">
+![toast alerts in a page](./img/toast-alerts-desktop.svg)
+</div>
 
 Toast alerts are commonly used in the following situations:
 
@@ -116,11 +118,15 @@ Toast alerts are commonly used in the following situations:
 
 **For desktop views**, right align toast alert groups over your page content. Each alert should stack on top of one another with 8px of padding in between.
 
-<img src="./img/alert-group-desktop.png" alt="An example of a right-aligned toast alert group over a desktop view." />
+<div class="ws-docs-content-img">
+![An example of a right-aligned toast alert group over a desktop view](./img/alert-group-desktop.svg)
+</div>
 
 **For mobile views**, center toast alert groups over your page content.
 
-<img src="./img/alert-group-mobile.png" alt="An example of a centered toast alert group over a mobile view." width="375" />
+<div class="ws-docs-content-img">
+![An example of a centered toast alert group over a mobile view](./img/alert-group-mobile.svg)
+</div>
 
 See our [toast alert guidelines](#using-toast-alerts) for more information about using toast alerts.
 
@@ -128,7 +134,9 @@ See our [toast alert guidelines](#using-toast-alerts) for more information about
 
 Bordered inline alerts communicate information about a specific user action on a page. An inline alert appears within the content area and disappears when the user closes it or navigates away from the page.
 
-![inline notification placement](./img/inline-notification.png)
+<div class="ws-docs-content-img">
+![inline notification placement](./img/inline-notification.svg)
+</div>
 
 #### Using bordered inline alerts
 
@@ -136,11 +144,15 @@ Use bordered inline alerts to return feedback as the result of a user action wit
 
 - **If an alert message applies globally to the content on a page,** place the alert in the page header area just below the title.
 
-  <img src="./img/Inline-alert-page-level.png" alt="global inline alert in a page" />
+<div class="ws-docs-content-img">
+![global inline alert in a page](./img/inline-alert-page-level.svg)
+</div>
 
 - **If the alert applies only to specific content,** place it inline with the page content to call attention to the error.
 
-  <img src="./img/Inline-alert-specific-context.png" alt="inline alert inline with content" />
+<div class="ws-docs-content-img">
+![inline alert inline with content](./img/inline-alert-specific-context.svg)
+</div>
 
 - **If the alert is being used to indicate errors,** use an error validation summary at the top of the page to indicate what errors are present. The summary should be a quick, general overview. Show an error alert next to the field that is causing the error. The error message should be concise and actionable. It should tell the user what happened and the next steps needed to fix it.
 
@@ -150,15 +162,15 @@ Use bordered inline alerts to return feedback as the result of a user action wit
 
 - **If multiple errors are present in the same location,** order them from most to least severe.
 
-  <img src="./img/Multiplealert.png" alt="multiple alerts on a page" />
+<div class="ws-docs-content-img">
+![multiple alerts on a page](./img/multiple-alerts.svg)
+</div>
 
 - **If the alert is being used to indicate errors on a modal,** use an error validation summary at the top of the modal below the title to indicate what errors are present. Show an error alert next to the field that is causing the error. The error message should be concise and actionable. It should tell the user what happened and the next steps needed to fix it.
 
 <div class="ws-docs-content-img">
 ![multiple alerts on a page demo 2](./img/inline-alert-modal-with-link-two.svg)
 </div>
-
-  <img src="./img/inline-alert-modal-with-link-two.png" alt="multiple alerts on a page demo 2" />
 
 - **If the alert is being used to indicate errors on a modal with an existing alert,** display the new alert above the existing alert.
 
