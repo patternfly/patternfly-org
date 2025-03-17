@@ -106,7 +106,7 @@ Toast alerts stack in the upper-right corner of a page. To properly position and
 Toast alerts should always have a close button so that the user can dismiss them. If you include an automatic timeout for your toast alert, 8 seconds is recommended. Toast alerts should not disappear while the user is hovering over them.
 
 <div class="ws-docs-content-img">
-![toast alerts in a page](./img/toast-alerts-desktop.svg)
+![toast alerts in a page](./img/toast-alert-desktop.svg)
 </div>
 
 Toast alerts are commonly used in the following situations:
@@ -157,7 +157,7 @@ Use bordered inline alerts to return feedback as the result of a user action wit
 - **If the alert is being used to indicate errors,** use an error validation summary at the top of the page to indicate what errors are present. The summary should be a quick, general overview. Show an error alert next to the field that is causing the error. The error message should be concise and actionable. It should tell the user what happened and the next steps needed to fix it.
 
 <div class="ws-docs-content-img">
-![inline alert inline with link demo](./img/inline-alert-page-level-with-link-one.svg)
+![inline alert inline with link demo](./img/inline-alert-page-level-with-link.svg)
 </div>
 
 - **If multiple errors are present in the same location,** order them from most to least severe.
