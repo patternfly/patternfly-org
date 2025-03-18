@@ -5,5 +5,6 @@ export const config = {
             pattern: "**/*.md",
             name: 'content'      
         }
-    ]
+    ],
+    outputDir: 'dist'
 };
