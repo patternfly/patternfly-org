@@ -64,9 +64,9 @@ If you wish to migrate an existing project to PatternFly you must install and co
     npm install @patternfly/react-core --save
     ```
 
-* Using Yarn, run the following command:
+* Usingpnpm, run the following command:
     ```sh
-    yarn add @patternfly/react-core
+   pnpm add @patternfly/react-core
     ```
 
 ## Develop with HTML/CSS 

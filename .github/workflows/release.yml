@@ -23,7 +23,7 @@ jobs:
         with:
           node-version: 22
       - run: corepack enable
-      - run: yarn install --immutable
+      - run:pnpm install --immutable
       # v6 build
       - uses: actions/cache@v4
         id: site-cache
@@ -31,7 +31,7 @@ jobs:
         with:
           path: "packages/documentation-site/.cache"
           key: ${{ runner.os }}-site-${{ hashFiles('yarn.lock') }}
-      - run: yarn build
+      - run:pnpm build
         name: Build docs
       - run: .github/release.sh
       - name: Configure AWS Credentials
@@ -46,7 +46,7 @@ jobs:
         name: Check size of docs
       - run: .github/upload-staging.sh
         name: Upload docs to staging
-      - run: yarn build:extensions
+      - run:pnpm build:extensions
         name: Build extension docs
       - name: Upload extension only docs
         uses: dswistowski/surge-sh-action@v1

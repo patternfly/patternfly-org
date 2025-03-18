@@ -12,7 +12,7 @@ We publish this theme [on npm.](https://www.npmjs.com/package/@patternfly/docume
 
     or
 
-    `yarn add -D @patternfly/documentation-framework`
+    `pnpm add -D @patternfly/documentation-framework`
 
 2. Provide or install the following either as dependencies if you want to use them in your own project, or as devDependencies:
     ```
@@ -21,7 +21,7 @@ We publish this theme [on npm.](https://www.npmjs.com/package/@patternfly/docume
     "@patternfly/react-table": "6.0.0-alpha.95",
     "@patternfly/react-code-editor": "6.0.0-alpha.94",
     ```
-    `yarn add -D @patternfly/patternfly @patternfly/react-core @patternfly/react-table @patternfly/react-code-editor`
+    `pnpm add -D @patternfly/patternfly @patternfly/react-core @patternfly/react-table @patternfly/react-code-editor`
 
 ## First time setup
 
