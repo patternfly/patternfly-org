@@ -1,2 +1,8 @@
-packages:   
-  - 'packages/*'
+packages:
+  - packages/*
+onlyBuiltDependencies:
+  - '@parcel/watcher'
+  - chromedriver
+  - nx
+  - puppeteer
+  - sharp

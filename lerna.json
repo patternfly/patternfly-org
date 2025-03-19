@@ -1,5 +1,5 @@
 {
-  "npmClient": "yarn",
+  "npmClient": "pnpm",
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org/"
@@ -10,11 +10,6 @@
       "conventionalCommits": true
     }
   },
-  "packages": [
-    "packages/ast-helpers",
-    "packages/documentation-framework",
-    "packages/documentation-site"
-  ],
   "version": "independent",
   "allowBranch": ["main", "v4", "v5"]
 }
