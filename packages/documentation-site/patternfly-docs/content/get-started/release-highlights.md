@@ -6,7 +6,7 @@ section: get-started
 import './get-started.css';
 import { Divider, Timestamp } from '@patternfly/react-core';
 
-<Timestamp>March 2024</Timestamp>
+<Timestamp date={new Date(2025, 3)}>March 2024</Timestamp>
 
 ## PatternFly 6.2
 
@@ -40,19 +40,29 @@ import { Divider, Timestamp } from '@patternfly/react-core';
 
 #### Bugs 
 - [Button](/components/button): We updated the `aria-disabled` implementation so that it will only render when `true`. If it's `false` or `undefined`, it will not render on the element.
+    - **Note:** If you have any tests checking for `aria-disabled` to be `false`, or to match the `disabled` property, those tests should be updated.
 - [Clipboard copy](/components/clipboard-copy): We added the `string[]` type to `children`.
 - [Charts](/charts/about-charts): We fixed errors related to Victory 37.3.4. If you're using PatternFly 5, use [react-charts](https://www.npmjs.com/package/@patternfly/react-charts) v7.4.8 with Victory v37.3.4 or later.
-- [Code editor](/components/code-editor): We updated `handleResize` to ensure that it properly adjusts with viewport changes.
+- [Code editor](/components/code-editor): 
+    - We updated `handleResize` to ensure that it properly adjusts with viewport changes.
+    - We removed extra padding around uploaded contents by changing the `pf-v6-c-code-editor__upload` class to only be used while users are hovering over the editor.
 - [Data list](/components/data-list): We removed `aria-labelledby` and `aria-selected`, to align with best practices for accessibility. 
 - [Description list](/components/description-list): Added support to allow the help text button popover to open via keyboard.
-- File upload (both [simple file upload](/components/file-upload/simple-file-upload) and [multiple file upload](/components/file-upload/multiple-file-upload)): We updated the input content to be hidden, to fix accessibility problems with keyboard focus.
-- [Form control:](/components/forms/form-control) Added additional theming variables.
+- File upload:
+    - For both [simple file upload](/components/file-upload/simple-file-upload) and [multiple file upload](/components/file-upload/multiple-file-upload)), we updated the input content to be hidden, to fix accessibility problems with keyboard focus.
+    - For [the custom simple file upload](/components/file-upload/simple-file-upload#custom-file-upload), we added the `isBrowseButtonDisabled` prop to allow you to disable the browse button as needed.
+- [Form control:](/components/forms/form-control) 
+    - We added additional, missing theming variables.
+    - We fixed an overlay bug that appeared for controls with long labels.
 - [Masthead](/components/masthead): We corrected vertical centering.
 - [Menu](/components/menus/menu): We updated `<MenuItem>` so that a mouse can properly trigger a tooltip on `aria-disabled` items. We also fixed `<MenuItem>` tooltips in general, to allow their `onClick` behavior to be triggered as expected.
 - [Search input](/components/search-input): We updated `isAdvancedSearchOpen` to be `false` by default. This fixes an issue where `aria-expanded` was only applied when the state was updated by clicking the search open, rather than when the component first rendered.
-- [Select](/components/select): We fixed scrolling for menus with grouped items.
+- [Select](/components/select): 
+    - We fixed scrolling for menus with grouped items.
+    - In the [select template](/components/menus/select/react-templates), we added support for custom keydown handling.
 - [Table](/components/table): We rewrote table's [column management](/components/table/react-demos#column-management) and [column management with draggable](/components/table/react-demos#column-management-with-draggable) features, to replace the use of the deprecated `<DragDrop>` component and update the demos accordingly.
 - [Text area](/components/forms/text-area): We added a missing modifier class that caused display issues when text areas were in focus. 
+- [Truncate](/components/truncate): Fixed a text-duplication bug that appeared for long, middle-truncated strings.
 
 #### Features 
 We added the following new features:
@@ -64,11 +74,17 @@ We added the following new features:
     - [Line chart (ECharts):](/charts/line-chart/ECharts/) We added a new line chart, based on Apache ECharts, with multiple examples in the docs.
     - [Sankey chart (ECharts):](/charts/sankey-chart/) We added a new sankey chart, based on Apache ECharts, with multiple examples in the docs.
 - [Clipboard copy:](/components/clipboard-copy) We added support for [truncation in the inline compact variant](/components/clipboard-copy#inline-compact-with-truncation).
+- [Data list:](/components/data-list) We added a tooltip to be displayed when the `wrap` of a `<DataListCell>` is set to `truncate` and the content is overflowing.
 - [Jump links](/components/jump-links): We added a new `shouldReplaceNavHistory` prop that enables you to replace the current state with clicked items, rather than pushing the new location onto the history.
 - [Label:](/components/label) We added the `isClickable` prop, to be used for [labels with custom render](/components/label#label-with-custom-render). This prop allows you to set the clickable modifier while the render prop is also used. 
+- [Navigation:](/components/navigation) We added micro animations.
 - [Notification badge:](/components/notification-badge) We added support for opt-in micro animations via the new `shouldNotify` prop. We also added a [notification badge "With animations" example](/components/notification-badge#with-animation), so that you can observe the animated behavior.
+- [Page:](/components/page) To improve the visibility of content, we removed page margins for small viewports.
+- [Progress:](/components/progress) To match other PatternFly 6 styles, we rounded out the corners of the progress bar.
 - Text area: We added a [non-resizable text area variant](/components/forms/text-area#not-resizable), by adding a "none" option for the `resizeOrientation` prop.
-- [Toolbar:](/components/toolbar) We added the new `hasNoPadding` prop, which removes the toolbar's default padding. This is useful for toolbars in certain layouts that apply spacing between the toolbar and surrounding elements
+- [Toolbar:](/components/toolbar) 
+    - We added the new `hasNoPadding` prop, which removes the toolbar's default padding. This is useful for toolbars in certain layouts that apply spacing between the toolbar and surrounding elements.
+    - We added the `rowWrap` prop, for `<ToolbarGroup>` and `<ToolbarItem>`.
 
 #### Other notable changes 
 - We removed the `@reach/router` dependency in patternfly-react, since it is no longer React 18 compatible. As a result, we replaced its use in a number of component examples/demos, including [button](/components/button#using-router-links), [label](/components/label#using-router-links), [masthead](/components/masthead#using-router-links), [menu](/components/menus/menu#using-router-links), and [page](/components/page/react-demos#context-selectorperspective-switcher-in-sidebar).
@@ -160,7 +176,7 @@ We added the following list of new ChatBot features:
 
 <Divider />
 
-<Timestamp>January 2024</Timestamp>
+<Timestamp date={new Date(2025, 1)}>January 2024</Timestamp>
 
 ## PatternFly 6.1.1
 
@@ -173,7 +189,7 @@ As a quick follow up to our last release, this update publishes the new data vie
 
 <Divider />
 
-<Timestamp>December 2024</Timestamp>
+<Timestamp date={new Date(2024, 12)}>December 2024</Timestamp>
 
 ## PatternFly 6.1
 
@@ -249,7 +265,7 @@ We've continued to evolve our new ChatBot:
 
 <Divider />
 
-<Timestamp>October 2024</Timestamp>
+<Timestamp date={new Date(2024, 10)}>October 2024</Timestamp>
 
 ## PatternFly 6.0
 The official release of PatternFly 6 is here! It contains all of the previous features from our alpha and beta releases, but also adds everything described in these release highlights.
@@ -361,7 +377,7 @@ In addition to the previously mentioned documentation updates, we've made change
 
 <Divider />
 
-<Timestamp>August 2024</Timestamp>
+<Timestamp date={new Date(2024, 8)}>August 2024</Timestamp>
 
 ## PatternFly 6 beta
 We’re excited to share the next milestone in our journey to PatternFly 6–our beta release! This beta introduces more improvements and refinement, and contains all major PatternFly 6 features. 
@@ -455,7 +471,7 @@ We fixed bugs that were reported throughout the alpha period including. We:
 
 <Divider />
 
-<Timestamp>June 2024</Timestamp>
+<Timestamp date={new Date(2024, 6)}>June 2024</Timestamp>
 
 ## PatternFly 6 alpha 
 
