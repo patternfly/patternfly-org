@@ -23,11 +23,15 @@ import { Divider, Timestamp } from '@patternfly/react-core';
 ##### Bugs 
 - We adjusted the SVG download behavior for [PatternFly icons](/design-foundations/icons/#all-icons), to remove a wrapping `<span>` that prevented imports into some design tools.
 - We improved accessibility for the hover text of PatternFly logos in the website masthead and footer.
-- We fixed an issue in our demos where the PatternFly masthead logo was the wrong color. 
-- Charts: We updated the [alerts timeline example](/charts/bar-chart#alerts-timeline) to center tooltips above their respective bar.
-- Charts: We fixed a few issues in CodeSandbox chart examples, including adding missing Victory dependency, adding missing `ChartThemeColor` import, ensuring Victory packages are up to date.
-
+- We fixed an issue across our demos where the PatternFly masthead logo was the wrong color. 
+- We removed the Design with Sketch page, since that information is no longer current. References to the old PatternFly Sketch library now point to the v5 archive site.
+- Charts: 
+    - We updated the [alerts timeline example](/charts/bar-chart#alerts-timeline) to center tooltips above their respective bar.
+    - We fixed a few issues in CodeSandbox chart examples, including adding missing Victory dependency, adding missing `ChartThemeColor` import, ensuring Victory packages are up to date.
 - [Clipboard copy](/components/clipboard-copy): We added a missing action tooltip in the [inline compact with additional action](/clipboard-copy/#inline-compact-with-additional-action) example.
+- [Tabs:](/components/tabs) 
+    - We added a missing [props table for `TabContentBody`](/components/tabs#tabcontentbody).
+    - We removed the independent tab content page and moved the content within [the tabs HTML documentation](/components/tabs#tab-content). 
 
 ##### Features
 - We expanded the [PatternFly 6 upgrade guide](/get-started/upgrade) to include additional instructions that we've put together as products have been completing their migration.
@@ -35,14 +39,14 @@ import { Divider, Timestamp } from '@patternfly/react-core';
 ### Component updates
 
 #### Bugs 
-- [Alert](/components/alert): We added micro animations to alert and alert groups. You can observe this behavior across examples and demos for both.
-- [Button](/components/button): We updated the `aria-disabled` implementation so that it will only render when true. If it's false or undefined, it will not render on the element.
+- [Button](/components/button): We updated the `aria-disabled` implementation so that it will only render when `true`. If it's `false` or `undefined`, it will not render on the element.
 - [Clipboard copy](/components/clipboard-copy): We added the `string[]` type to `children`.
 - [Charts](/charts/about-charts): We fixed errors related to Victory 37.3.4. If you're using PatternFly 5, use [react-charts](https://www.npmjs.com/package/@patternfly/react-charts) v7.4.8 with Victory v37.3.4 or later.
 - [Code editor](/components/code-editor): We updated `handleResize` to ensure that it properly adjusts with viewport changes.
 - [Data list](/components/data-list): We removed `aria-labelledby` and `aria-selected`, to align with best practices for accessibility. 
 - [Description list](/components/description-list): Added support to allow the help text button popover to open via keyboard.
 - File upload (both [simple file upload](/components/file-upload/simple-file-upload) and [multiple file upload](/components/file-upload/multiple-file-upload)): We updated the input content to be hidden, to fix accessibility problems with keyboard focus.
+- [Form control:](/components/forms/form-control) Added additional theming variables.
 - [Masthead](/components/masthead): We corrected vertical centering.
 - [Menu](/components/menus/menu): We updated `<MenuItem>` so that a mouse can properly trigger a tooltip on `aria-disabled` items. We also fixed `<MenuItem>` tooltips in general, to allow their `onClick` behavior to be triggered as expected.
 - [Search input](/components/search-input): We updated `isAdvancedSearchOpen` to be `false` by default. This fixes an issue where `aria-expanded` was only applied when the state was updated by clicking the search open, rather than when the component first rendered.
@@ -53,9 +57,18 @@ import { Divider, Timestamp } from '@patternfly/react-core';
 #### Features 
 We added the following new features:
 
+- [Alert](/components/alert): We added opt-in micro animations to alert and alert groups via the new `hasAnimations` prop. Animations will be visible in PatternFly.org examples soon.
+    - **Note:** By default, alert animations are opt-in and will only apply to alerts within an alert group. Opting into animations could require test updates. To ensure your test pass, the quickest solution is to set `hasAnimations` to `false`. Additionally, when alerts are dynamically added to an alert group, you must ensure that new alerts are prepended to the alert group list, rather than appended to the end of it.
+- [Card:](/components/card): We added the new `hasHeaderWrap` prop to use when there are long strings or multiple items in card headers.
+- Charts: 
+    - [Line chart (ECharts):](/charts/line-chart/ECharts/) We added a new line chart, based on Apache ECharts, with multiple examples in the docs.
+    - [Sankey chart (ECharts):](/charts/sankey-chart/) We added a new sankey chart, based on Apache ECharts, with multiple examples in the docs.
+- [Clipboard copy:](/components/clipboard-copy) We added support for [truncation in the inline compact variant](/components/clipboard-copy#inline-compact-with-truncation).
 - [Jump links](/components/jump-links): We added a new `shouldReplaceNavHistory` prop that enables you to replace the current state with clicked items, rather than pushing the new location onto the history.
 - [Label:](/components/label) We added the `isClickable` prop, to be used for [labels with custom render](/components/label#label-with-custom-render). This prop allows you to set the clickable modifier while the render prop is also used. 
-- [Text area:](/components/forms/text-area) We added a [non-resizable text area variant](/components/forms/text-area#not-resizable), by adding a "none" option for the `resizeOrientation` prop.
+- [Notification badge:](/components/notification-badge) We added support for opt-in micro animations via the new `shouldNotify` prop. We also added a [notification badge "With animations" example](/components/notification-badge#with-animation), so that you can observe the animated behavior.
+- Text area: We added a [non-resizable text area variant](/components/forms/text-area#not-resizable), by adding a "none" option for the `resizeOrientation` prop.
+- [Toolbar:](/components/toolbar) We added the new `hasNoPadding` prop, which removes the toolbar's default padding. This is useful for toolbars in certain layouts that apply spacing between the toolbar and surrounding elements
 
 #### Other notable changes 
 - We removed the `@reach/router` dependency in patternfly-react, since it is no longer React 18 compatible. As a result, we replaced its use in a number of component examples/demos, including [button](/components/button#using-router-links), [label](/components/label#using-router-links), [masthead](/components/masthead#using-router-links), [menu](/components/menus/menu#using-router-links), and [page](/components/page/react-demos#context-selectorperspective-switcher-in-sidebar).
