@@ -3,11 +3,15 @@ id: Banner
 section: components
 ---
 
+import '../components.css';
+
 ## Usage
 
 PatternFly offers 5 different banner types detailed below. We suggest that users adopt one of these 5 colors, as they’ve been tested with their text colors for accessibility. However, if colors outside of these variations are used, we encourage manually checking color contrast to ensure the banner text is accessible. The text can be positioned on the left, middle, and/or right of the banner.
- 
-<img src="./img/banner-types.png" alt="5 different types of banners" width="744" />
+
+<div class="ws-docs-content-img">
+![Small avatar in a masthead.](.img/Avatar - Usage - Small.svg)
+</div>
 
 A default banner should only be used when the banner color does not represent status or severity. When a banner is used to convey status, it is advised to add an icon that also conveys status visually.
 
