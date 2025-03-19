@@ -172,8 +172,10 @@ If you have previously implemented any breakpoint logic based on a pixel value, 
 #### Button
 
 1. *Cannot find aria-disabled*
-    - **Cause:** We changed the `isDisabled` prop to assign a value for `disabled`, but none for `aria-disabled`. 
-    - **Fix:** Remove tests that look for `aria-disabled` in buttons.
+    - **Cause:** We changed button's `isDisabled` prop to assign a value for `disabled`, but none for `aria-disabled`. The exception to this is when the `component` prop is passed anything other than "button" as a value. Additionally, `aria-disabled` will now only render when true.
+    - **Fix:** Remove tests that look for `aria-disabled` in buttons when the expectation is either:
+      - For `aria-disabled` to be false.
+      - For `aria-disabled` to match `isDisabled` when `component="button"`.
 
 1. *Cannot find button attributes when using byText*
     - **Cause:** We added a wrapping `div` around button text. The RTL `byText` query returns that wrapper instead of the button element itself, where button's attributes live. 
