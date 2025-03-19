@@ -39,7 +39,7 @@ const serverConfig = async (env, argv) => {
     },
     resolve: {
       alias: {
-        // This stops prerender from hanging in `yarn build:client`
+        // This stops prerender from hanging in `pnpm build:client`
         'd3-timer': '@patternfly/documentation-framework/helpers/d3-timer',
         // The maintainer will not allow his bundle to be required from a node context
         // https://github.com/xtermjs/xterm.js/pull/3134

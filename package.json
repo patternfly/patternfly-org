@@ -4,29 +4,24 @@
   "version": "0.0.1",
   "main": "index.js",
   "license": "MIT",
-  "packageManager": "yarn@4.5.3+sha512.3003a14012e2987072d244c720506549c1aab73ee728208f1b2580a9fd67b92d61ba6b08fe93f6dce68fd771e3af1e59a0afa28dd242dd0940d73b95fedd4e90",
+  "packageManager": "pnpm@10.6.4+sha512.da3d715bfd22a9a105e6e8088cfc7826699332ded60c423b14ec613a185f1602206702ff0fe4c438cb15c979081ce4cb02568e364b15174503a63c7a8e2a5f6c",
   "scripts": {
-    "analyze": "yarn workspace patternfly-org analyze",
-    "develop": "yarn workspace patternfly-org develop",
-    "develop:extensions": "EXTENSIONS_ONLY=true PRERELEASE=true yarn develop",
-    "build:analyze": "yarn workspace patternfly-org build:analyze && yarn copy",
-    "build": "yarn workspace patternfly-org build && yarn copy",
-    "build:extensions": "EXTENSIONS_ONLY=true PRERELEASE=true yarn build",
+    "analyze": "pnpm --filter patternfly-org analyze",
+    "develop": "pnpm --filter patternfly-org develop",
+    "develop:extensions": "EXTENSIONS_ONLY=true PRERELEASE=true pnpm develop",
+    "build:analyze": "pnpm --filter patternfly-org build:analyze && pnpm copy",
+    "build": "pnpm --filter patternfly-org build && pnpm copy",
+    "build:extensions": "EXTENSIONS_ONLY=true PRERELEASE=true pnpm build",
     "copy": "rm -rf build/patternfly-org/site && mkdir -p build/patternfly-org && cp -r packages/documentation-site/public build/patternfly-org/site",
     "clean": "lerna run clean && rm -rf build",
     "serve": "npx pf-docs-framework serve build/patternfly-org/site",
-    "test": "yarn workspace patternfly-org test:a11y:ci",
-    "screenshots": "yarn workspace patternfly-org screenshots",
-    "start": "yarn develop",
-    "start:extensions": "yarn develop:extensions",
+    "test": "pnpm --filter patternfly-org test:a11y:ci",
+    "screenshots": "pnpm --filter patternfly-org screenshots",
+    "start": "pnpm develop",
+    "start:extensions": "pnpm develop:extensions",
     "uninstall": "find . -name node_modules | xargs rm -rf",
     "workflows": "node .github/generate-workflows",
-    "test:a11y": "yarn workspace patternfly-org test:a11y"
-  },
-  "workspaces": {
-    "packages": [
-      "packages/*"
-    ]
+    "test:a11y": "pnpm --filter patternfly-org test:a11y"
   },
   "devDependencies": {
     "@octokit/rest": "^19.0.7",

@@ -13,13 +13,13 @@ In order to develop with PatternFly, you will need to:
 
 1. [Learn about our design token system](/tokens/about-tokens), which enables you to build interfaces with consistent PatternFly styling, including colors, shadows, spacing, and more.
 
-1. Install a package manager to help you install, update, and configure all necessary PatternFly packages. We recommend [npm](https://nodejs.org/en/download) or [Yarn](https://yarnpkg.com/getting-started).
+1. Install a package manager to help you install, update, and configure all necessary PatternFly packages. We recommend [NPM](https://nodejs.org/en/download) or [PNPM](https://pnpm.io/installation).
 
 1. Configure your environment to get started with our [React](#develop-with-react) and/or [HTML/CSS](#develop-with-htmlcss) libraries.
 
 ## Develop with React
 
-[PatternFly's React library](https://github.com/patternfly/patternfly-react) contains a collection of components that you can use to build interfaces with consistent markup, styling, and behavior. It is composed of a number of React packages, which are published in the following npm packages:
+[PatternFly's React library](https://github.com/patternfly/patternfly-react) contains a collection of components that you can use to build interfaces with consistent markup, styling, and behavior. It is composed of a number of React packages, which are published in the following NPM packages:
 
 * [@patternfly/react-core](https://www.npmjs.com/package/@patternfly/react-core): Most React core components.
 * [@patternfly/react-charts](https://www.npmjs.com/package/@patternfly/react-charts): PatternFly charting components.
@@ -59,15 +59,15 @@ To get started:
 
 If you wish to migrate an existing project to PatternFly you must install and configure PatternFly React using either of these methods:
 
-* Using npm, run the following command:
-    ```sh
-    npm install @patternfly/react-core --save
-    ```
+* Using NPM, run the following command:
+  ```sh
+  npm install @patternfly/react-core
+  ```
 
-* Using Yarn, run the following command:
-    ```sh
-    yarn add @patternfly/react-core
-    ```
+* Using PNPM, run the following command:
+  ```sh
+  pnpm add @patternfly/react-core
+  ```
 
 ## Develop with HTML/CSS 
 
@@ -86,7 +86,7 @@ Use these files to consume the library. The recommended consumption approach wil
 
 ### Install and configure PatternFly HTML/CSS
 
-1. Using npm, run the following command to install the HTML/CSS library:
+1. Using NPM, run the following command to install the HTML/CSS library:
     
     ```sh
     npm install @patternfly/patternfly --save
