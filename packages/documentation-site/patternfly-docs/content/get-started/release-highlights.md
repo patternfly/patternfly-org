@@ -14,9 +14,23 @@ import { Divider, Timestamp } from '@patternfly/react-core';
 - patternfly/patternfly ([changelog](https://github.com/patternfly/patternfly/releases/tag/v6.2.0))
     - [@patternfly/patternfly@6.2.0](https://www.npmjs.com/package/@patternfly/patternfly)
 - patternfly/react ([changelog](https://github.com/patternfly/patternfly-react/releases/tag/v6.2.0))
+    - [@patternfly/react-charts@8.2.0](https://www.npmjs.com/package/@patternfly/react-charts)
+    - [@patternfly/react-code-editor@6.2.0](https://www.npmjs.com/package/@patternfly/react-code-editor)
+    - [@patternfly/react-core@6.2.0](https://www.npmjs.com/package/@patternfly/react-core)
+    - [@patternfly/react-drag-drop@6.2.0](https://www.npmjs.com/package/@patternfly/react-drag-drop)
+    - [@patternfly/icons@6.2.0](https://www.npmjs.com/package/@patternfly/icons)
+    - [@patternfly/react-styles@6.2.0](https://www.npmjs.com/package/@patternfly/react-styles)
+    - [@patternfly/react-table@6.2.0](https://www.npmjs.com/package/@patternfly/react-table)
+    - [patternfly/react-templates@6.2.0](https://www.npmjs.com/package/@patternfly/react-templates)
+    - [@patternfly/react-tokens@6.2.0](https://www.npmjs.com/package/@patternfly/react-tokens)
 - PatternFly extensions 
     - [@patternfly/chatbot@2.2.0](https://www.npmjs.com/package/@patternfly/chatbot) ([changelog](https://github.com/patternfly/chatbot/releases/tag/v2.2.0))
-
+    - [@patternfly/quickstarts@6.2.0](https://www.npmjs.com/package/@patternfly/quickstarts) ([changelog](https://github.com/patternfly/patternfly-quickstarts/releases/tag/v6.2.0))
+    - [@patternfly/react-catalog-view-extension@6.1.0](https://www.npmjs.com/package/@patternfly/react-catalog-view-extension) ([changelog](https://github.com/patternfly/react-catalog-view/releases/tag/v6.1.0))
+    - [@patternfly/react-component-groups@6.2.0](https://www.npmjs.com/package/@patternfly/react-component-groups) ([changelog](https://github.com/patternfly/react-component-groups/releases/tag/v6.2.0))
+    - [@patternfly/react-log-viewer@6.1.0](https://www.npmjs.com/package/@patternfly/react-log-viewer) ([changelog](https://github.com/patternfly/react-log-viewer/releases/tag/v6.1.0))
+    - [@patternfly/react-topology@6.2.0](https://www.npmjs.com/package/@patternfly/react-topology) ([changelog](https://github.com/patternfly/react-topology/releases/tag/v6.2.0))
+    - [@patternfly/react-user-feedback@6.1.0](https://www.npmjs.com/package/@patternfly/react-user-feedback) ([changelog](https://github.com/patternfly/react-user-feedback/releases/tag/v6.1.0))
 
 ### Website updates
 
