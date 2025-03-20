@@ -69,7 +69,7 @@ We added the following new features:
 
 - [Alert](/components/alert): We added opt-in micro animations to alert and alert groups via the new `hasAnimations` prop. Animations will be visible in PatternFly.org examples soon.
     - **Note:** By default, alert animations are opt-in and will only apply to alerts within an alert group. Opting into animations could require test updates. To ensure your test pass, the quickest solution is to set `hasAnimations` to `false`. Additionally, when alerts are dynamically added to an alert group, you must ensure that new alerts are prepended to the alert group list, rather than appended to the end of it.
-- [Card:](/components/card): We added the new `hasHeaderWrap` prop to use when there are long strings or multiple items in card headers.
+- [Card:](/components/card) We added the new `hasHeaderWrap` prop to use when there are long strings or multiple items in card headers.
 - Charts: 
     - [Line chart (ECharts):](/charts/line-chart/ECharts/) We added a new line chart, based on Apache ECharts, with multiple examples in the docs.
     - [Sankey chart (ECharts):](/charts/sankey-chart/) We added a new sankey chart, based on Apache ECharts, with multiple examples in the docs.
@@ -77,7 +77,7 @@ We added the following new features:
 - [Data list:](/components/data-list) We added a tooltip to be displayed when the `wrap` of a `<DataListCell>` is set to `truncate` and the content is overflowing.
 - [Jump links](/components/jump-links): We added a new `shouldReplaceNavHistory` prop that enables you to replace the current state with clicked items, rather than pushing the new location onto the history.
 - [Label:](/components/label) We added the `isClickable` prop, to be used for [labels with custom render](/components/label#label-with-custom-render). This prop allows you to set the clickable modifier while the render prop is also used. 
-- [Navigation:](/components/navigation) We added micro animations.
+- [Navigation:](/components/navigation) We added micro animations, which add motion to navigation items as they expand and collapse.
 - [Notification badge:](/components/notification-badge) We added support for opt-in micro animations via the new `shouldNotify` prop. We also added a [notification badge "With animations" example](/components/notification-badge#with-animation), so that you can observe the animated behavior.
 - [Page:](/components/page) To improve the visibility of content, we removed page margins for small viewports.
 - [Progress:](/components/progress) To match other PatternFly 6 styles, we rounded out the corners of the progress bar.
