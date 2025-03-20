@@ -6,7 +6,7 @@ section: get-started
 import './get-started.css';
 import { Divider, Timestamp } from '@patternfly/react-core';
 
-<Timestamp date={new Date(2025, 3)}>March 2024</Timestamp>
+<Timestamp date={new Date(2025, 2)}>March 2025</Timestamp>
 
 ## PatternFly 6.2
 
@@ -176,7 +176,7 @@ We added the following list of new ChatBot features:
 
 <Divider />
 
-<Timestamp date={new Date(2025, 1)}>January 2024</Timestamp>
+<Timestamp date={new Date(2025, 0)}>January 2025</Timestamp>
 
 ## PatternFly 6.1.1
 
@@ -189,7 +189,7 @@ As a quick follow up to our last release, this update publishes the new data vie
 
 <Divider />
 
-<Timestamp date={new Date(2024, 12)}>December 2024</Timestamp>
+<Timestamp date={new Date(2024, 11)}>December 2024</Timestamp>
 
 ## PatternFly 6.1
 
@@ -265,7 +265,7 @@ We've continued to evolve our new ChatBot:
 
 <Divider />
 
-<Timestamp date={new Date(2024, 10)}>October 2024</Timestamp>
+<Timestamp date={new Date(2024, 9)}>October 2024</Timestamp>
 
 ## PatternFly 6.0
 The official release of PatternFly 6 is here! It contains all of the previous features from our alpha and beta releases, but also adds everything described in these release highlights.
@@ -377,7 +377,7 @@ In addition to the previously mentioned documentation updates, we've made change
 
 <Divider />
 
-<Timestamp date={new Date(2024, 8)}>August 2024</Timestamp>
+<Timestamp date={new Date(2024, 7)}>August 2024</Timestamp>
 
 ## PatternFly 6 beta
 We’re excited to share the next milestone in our journey to PatternFly 6–our beta release! This beta introduces more improvements and refinement, and contains all major PatternFly 6 features. 
@@ -471,7 +471,7 @@ We fixed bugs that were reported throughout the alpha period including. We:
 
 <Divider />
 
-<Timestamp date={new Date(2024, 6)}>June 2024</Timestamp>
+<Timestamp date={new Date(2024, 5)}>June 2024</Timestamp>
 
 ## PatternFly 6 alpha 
 
