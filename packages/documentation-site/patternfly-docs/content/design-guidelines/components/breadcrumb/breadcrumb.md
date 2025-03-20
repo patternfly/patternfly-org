@@ -8,7 +8,7 @@ import '../components.css';
 ## Usage
 
 <div class="ws-docs-content-img">
-![Breadcrumbs show under the masthead.](.img/breadcrumbs-usage.svg)
+![Breadcrumbs show under the masthead.](./img/breadcrumbs-usage.svg)
 </div>
 
 Use breadcrumbs in addition to your global navigation to display a user's location in the application.
@@ -22,7 +22,7 @@ Use breadcrumbs in addition to your global navigation to display a user's locati
 Breadcrumbs should be placed underneath the masthead, at the top of the page. There should be 16px of padding both between the breadcrumb and the masthead, and between the breadcrumbs and anything that comes below.
 
 <div class="ws-docs-content-img">
-![Breadcrumbs shown underneath the masthead and at the top of the page above the page content.](.img/breadcrumbs-placement.svg)
+![Breadcrumbs shown underneath the masthead and at the top of the page above the page content.](./img/breadcrumbs-placement.svg)
 </div>
 
 ## Accessibility
