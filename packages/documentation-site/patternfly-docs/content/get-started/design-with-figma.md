@@ -69,11 +69,11 @@ We plan to regularly release design kit updates to address any bugs and to evolv
 
 ### 2. Can I still use Sketch? 
 
-Before PatternFly 5, the PatternFly design kit was available within Sketch. We migrated our design system to Figma, with the release of [the PatternFly 5 library](https://www.figma.com/@patternfly). Sketch is no longer our recommendation, and the PatternFly 6 design kit is not available in Sketch. [See more details within our Sketch instruction.](/get-started/design#sketch-design-kit)
+Before PatternFly 5, the PatternFly design kit was available within Sketch. We migrated our design system to Figma, with the release of [the PatternFly 5 library](https://www.figma.com/@patternfly). Sketch is no longer our recommendation, and the PatternFly 6 design kit is not available in Sketch. [See more details on the PatternFly 5 archive site.](https://v5-archive.patternfly.org/get-started/design#sketch-design-kit)
 
 ### 3. How do I migrate to Figma? 
 
-To migrate to Figma, just begin to create all new design work within Figma. If you have existing designs in another design tool that you want to bring into Figma, you will need to manually recreate each UI mockup using the PatternFly 6 component library.
+To migrate to Figma, just begin to create all new design work within Figma. If you have existing designs in another design tool that you want to bring into Figma, you will need to manually recreate each UI mockup using the PatternFly 5 or 6 component library.
 
 ### 4. What if I haven't upgraded to PatternFly 6? 
 If your product hasn't been upgraded to PatternFly 6, you cannot use the PatternFly 6 design kit nor design tokens. Previous PatternFly libraries will no longer be maintained after the release of PatternFly 6. 
