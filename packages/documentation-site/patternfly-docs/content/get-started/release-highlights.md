@@ -18,7 +18,7 @@ import { Divider, Timestamp } from '@patternfly/react-core';
     - [@patternfly/react-code-editor@6.2.0](https://www.npmjs.com/package/@patternfly/react-code-editor)
     - [@patternfly/react-core@6.2.0](https://www.npmjs.com/package/@patternfly/react-core)
     - [@patternfly/react-drag-drop@6.2.0](https://www.npmjs.com/package/@patternfly/react-drag-drop)
-    - [@patternfly/icons@6.2.0](https://www.npmjs.com/package/@patternfly/icons)
+    - [@patternfly/icons@1.0.4](https://www.npmjs.com/package/@patternfly/icons)
     - [@patternfly/react-styles@6.2.0](https://www.npmjs.com/package/@patternfly/react-styles)
     - [@patternfly/react-table@6.2.0](https://www.npmjs.com/package/@patternfly/react-table)
     - [patternfly/react-templates@6.2.0](https://www.npmjs.com/package/@patternfly/react-templates)
