@@ -44,18 +44,6 @@ Only include meaningful images on your cards (don’t add them for decoration). 
  
 2. Place larger images or charts within the card’s body.
  
-### Border treatments
- 
-PatternFly offers 2 types of border treatments for cards:
- 
- <div class="ws-docs-content-img">
-![Example of cards with default and secondary styling.](./img/card-borders.svg)
-</div>
- 
-1. **Default card:** By default, cards will have a thin (1px) drop shadow to differentiate them from the background of a page and give them a slightly raised appearance. Use the default appearance when placing cards on a gray background.
- 
-2. **Flat card:** Flat cards have a 1px gray border. Flat cards are recommended for use against a white background as the solid border will better differentiate a card from the page background.
- 
 ### Cards in catalog views
  
 Use cards in a catalog view to present users with a series of selectable items, typically arranged into a grid.
@@ -83,6 +71,16 @@ Use cards in a dashboard view to visualize information. Each card should display
 </div>
  
 ## Variations
+ 
+PatternFly offers 2 types of card styles&mdash;default and secondary:
+ 
+ <div class="ws-docs-content-img">
+![Example of cards with default and secondary styling.](./img/card-borders.svg)
+</div>
+ 
+1. **Default card:** Use by default. Default cards have no fill and are instead distinguished by a thin border. 
+ 
+2. **Secondary card:** Use for secondary information. Secondary cards have a filled background that's the same color as the border. 
  
 Cards are flexible and customizable to your use case. Here are some different ways to use a card to represent the same content. Choose a layout that considers the usage context and the space you have to work with.
  
