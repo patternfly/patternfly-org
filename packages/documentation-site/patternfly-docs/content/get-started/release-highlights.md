@@ -141,9 +141,9 @@ We added the following list of new ChatBot features:
     - Images.
     - Tables.
 
-**Note:** We're still updating our design guidelines to fully reflect these changes and will provide an update once they are complete.
 
 ##### Other notable changes
+- We updated [the ChatBot design guidelines](/patternfly-ai/chatbot/overview/design-guidelines) to include guidance for new features, expand existing guidance, and add higher-level patterns for using ChatBots in your product.
 - We added [analytics examples and documentation](/patternfly-ai/chatbot/analytics) to provide general guidance on the implementation of analytics tracking.
 - We removed the "dompurify" external dependency requirement.
 - We updated `<Message>` to allow additional [rehype plugins](https://github.com/rehypejs/rehype) for further customization of Markdown parsing. 
