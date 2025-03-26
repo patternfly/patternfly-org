@@ -81,7 +81,7 @@ import { Divider, Timestamp } from '@patternfly/react-core';
 #### Features 
 We added the following new features:
 
-- [Alert](/components/alert): We added opt-in micro animations to alert and alert groups via the new `hasAnimations` prop. Animations will be visible in PatternFly.org examples soon.
+- [Alert](/components/alert): We added opt-in micro animations to alert and alert groups via the new `hasAnimations` prop. To visualize the motion behavior, you can interact with our website examples, which have opted in to animations.
     - **Note:** By default, alert animations are opt-in and will only apply to alerts within an alert group. Opting into animations could require test updates. To ensure your test pass, the quickest solution is to set `hasAnimations` to `false`. Additionally, when alerts are dynamically added to an alert group, you must ensure that new alerts are prepended to the alert group list, rather than appended to the end of it.
 - [Card:](/components/card) We added the new `hasHeaderWrap` prop to use when there are long strings or multiple items in card headers.
 - Charts: 
