@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 6.7.0 (2025-03-28)
+
+
+### Features
+
+* **ver:** update design tokens version & regenerate screenshots ([#4511](https://github.com/patternfly/patternfly-org/issues/4511)) ([4bd624d](https://github.com/patternfly/patternfly-org/commit/4bd624db116fae1f09aa75a3973ebb79be1aa803))
+
+
+
+
+
 # 6.6.0 (2025-03-27)
 
 
