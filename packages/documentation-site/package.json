@@ -18,7 +18,7 @@
   },
   "dependencies": {
     "@patternfly/chatbot": "2.2.0-prerelease.37",
-    "@patternfly/design-tokens": "1.13.0",
+    "@patternfly/design-tokens": "1.13.2",
     "@patternfly/documentation-framework": "workspace:*",
     "@patternfly/quickstarts": "6.2.0-prerelease.7",
     "@patternfly/react-catalog-view-extension": "6.1.0-prerelease.4",
