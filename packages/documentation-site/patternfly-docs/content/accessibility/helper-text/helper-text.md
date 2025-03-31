@@ -88,7 +88,7 @@ The following HTML attributes and PatternFly classes can be used for more fine-t
  
 ## Additional considerations
 
-Consumers must ensure they take any additional considerations when customizing an accordion, using it in a way not described or recommended by PatternFly, or in various other specific use-cases not outlined elsewhere on this page.
+Consumers must ensure they take any additional considerations when customizing helper text, using it in a way not described or recommended by PatternFly, or in various other specific use-cases not outlined elsewhere on this page.
 
 ### Visually hidden text
 
@@ -101,3 +101,4 @@ For the first scenario, if helper text item content will always remain static, a
 
 For the second scenario, it can be difficult for some users to understand the difference between messages of different status types depending on the wording. Including visually hidden text that helps convey that status can help differentiate between the two, or better understand whether a single helper text item is crucial to continuing through a workflow or not.
 
+It is also worth noting that localization must also be considered when it comes to the visually hidden text. If you provide localization elsewhere in your codebase - especially the area where helper text is being used - you must provide localization for the visually hidden text of the helper text item.
