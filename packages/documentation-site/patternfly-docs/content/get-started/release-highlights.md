@@ -6,7 +6,7 @@ section: get-started
 import './get-started.css';
 import { Divider, Timestamp } from '@patternfly/react-core';
 
-<Timestamp date={new Date(2025, 2)}>March 2025</Timestamp>
+<Timestamp date={new Date(2025, 3)}>April 2025</Timestamp>
 
 ## PatternFly 6.2
 
