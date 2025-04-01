@@ -58,7 +58,7 @@ With this release, 3 components now support animations:
     - **Note:** By default, alert animations are opt-in and will only apply to alerts within an alert group. Opting into animations could require test updates. To ensure your test pass, the quickest solution is to set `hasAnimations` to `false`. Additionally, when alerts are dynamically added to a group, you must ensure that new alerts are prepended to the alert group list, rather than appended to the end of it.  
 1. [Navigation](/components/navigation) 
     - **Animation type:** Opt-out.
-    - **Animation behavior:** For expandable navigation items,there's a rotation shown in the transition from the angle-right and angle-down icons, as navigation items are expanded and collapsed.
+    - **Animation behavior:** For expandable navigation items, the sub-menu fades in and out as navigation items are expanded and collapsed.
     - **Example:** As an opt-out animation, you can see this motion behavior by default across expandable navigation items.
 1. [Notification badge](/components/notification-badge)
     - **Animation type:** Opt-in.
