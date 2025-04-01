@@ -10,7 +10,12 @@ import { Divider, Timestamp } from '@patternfly/react-core';
 
 ## PatternFly 6.2
 
+For the Q2 2025 PatternFly release we made progress in a few of our key initiatives, including PatternFly 6 migration enablement, component animations, React 19 support, and the continued evolution of PatternFly AI. Updates for these key areas can be found here, in this quarter's release highlights.
+
 ### Promoted package versions
+
+The following packages were promoted with this release. Outside of our primary initiatives for this release, we addressed reported bugs and continued to enhance PatternFly with new features, as detailed in the linked changelogs. 
+
 - patternfly/patternfly ([changelog](https://github.com/patternfly/patternfly/releases/tag/v6.2.0))
     - [@patternfly/patternfly@6.2.0](https://www.npmjs.com/package/@patternfly/patternfly)
 - patternfly/react ([changelog](https://github.com/patternfly/patternfly-react/releases/tag/v6.2.0))
@@ -29,164 +34,90 @@ import { Divider, Timestamp } from '@patternfly/react-core';
     - [@patternfly/react-catalog-view-extension@6.1.0](https://www.npmjs.com/package/@patternfly/react-catalog-view-extension) ([changelog](https://github.com/patternfly/react-catalog-view/releases/tag/v6.1.0))
     - [@patternfly/react-component-groups@6.2.0](https://www.npmjs.com/package/@patternfly/react-component-groups) ([changelog](https://github.com/patternfly/react-component-groups/releases/tag/v6.2.0))
     - [@patternfly/react-log-viewer@6.1.0](https://www.npmjs.com/package/@patternfly/react-log-viewer) ([changelog](https://github.com/patternfly/react-log-viewer/releases/tag/v6.1.0))
-    - [@patternfly/react-topology@6.2.0](https://www.npmjs.com/package/@patternfly/react-topology) ([changelog](https://github.com/patternfly/react-topology/releases/tag/v6.2.0))
+- [@patternfly/react-topology@6.2.0](https://www.npmjs.com/package/@patternfly/react-topology) ([changelog](https://github.com/patternfly/react-topology/releases/tag/v6.2.0))
     - [@patternfly/react-user-feedback@6.1.0](https://www.npmjs.com/package/@patternfly/react-user-feedback) ([changelog](https://github.com/patternfly/react-user-feedback/releases/tag/v6.1.0))
 
-### Website updates
+### PatternFly 6 enablement
 
-##### Bugs 
-- We adjusted the SVG download behavior for [PatternFly icons](/design-foundations/icons/#all-icons), to remove a wrapping `<span>` that prevented imports into some design tools.
-- We improved accessibility for the hover text of PatternFly logos in the website masthead and footer.
-- We fixed an issue across our demos where the PatternFly masthead logo was the wrong color. 
-- We removed the Design with Sketch page, since that information is no longer current. References to the old PatternFly Sketch library now point to the v5 archive site.
-- Charts: 
-    - We updated the [alerts timeline example](/charts/bar-chart#alerts-timeline) to center tooltips above their respective bar.
-    - We fixed a few issues in CodeSandbox chart examples, including adding missing Victory dependency, adding missing `ChartThemeColor` import, ensuring Victory packages are up to date.
-- [Clipboard copy](/components/clipboard-copy): We added a missing action tooltip in the [inline compact with additional action](/clipboard-copy/#inline-compact-with-additional-action) example.
-- [Tabs:](/components/tabs) 
-    - We added a missing [props table for `TabContentBody`](/components/tabs#tabcontentbody).
-    - We removed the independent tab content page and moved the content within [the tabs HTML documentation](/components/tabs#tab-content). 
+As products have continued their PatternFly 6 migration journeys, we've received helpful feedback on the upgrade process, including common roadblocks and situations that could use more guidance. So, we expanded and reorganized the [PatternFly 6 upgrade guide](/get-started/upgrade) to more clearly and comprehensively support the upgrade process. 
 
-##### Features
-- We expanded the [PatternFly 6 upgrade guide](/get-started/upgrade) to include additional instructions that we've put together as products have been completing their migration.
+### Component animations
 
-### Component updates
+Our highly-anticipated animations project focuses on integrating motion design into PatternFly components, to enhance user experiences and provide additional cues for interaction. You can keep track of this project via [our micro-animations roadmap](https://github.com/orgs/patternfly/projects/16/views/23?pane=issue&itemId=86507128&issue=patternfly%7Cpf-roadmap%7C215). 
 
-#### Bugs 
-- [Button](/components/button): We updated the `aria-disabled` implementation so that it will only render when `true`. If it's `false` or `undefined`, it will not render on the element.
-    - **Note:** If you have any tests checking for `aria-disabled` to be `false`, or to match the `disabled` property, those tests should be updated.
-- [Clipboard copy](/components/clipboard-copy): We added the `string[]` type to `children`.
-- [Charts](/charts/about-charts): We fixed errors related to Victory 37.3.4. If you're using PatternFly 5, use [react-charts](https://www.npmjs.com/package/@patternfly/react-charts) v7.4.8 with Victory v37.3.4 or later.
-- [Code editor](/components/code-editor): 
-    - We updated `handleResize` to ensure that it properly adjusts with viewport changes.
-    - We removed extra padding around uploaded contents by changing the `pf-v6-c-code-editor__upload` class to only be used while users are hovering over the editor.
-- [Data list](/components/data-list): We removed `aria-labelledby` and `aria-selected`, to align with best practices for accessibility. 
-- [Description list](/components/description-list): Added support to allow the help text button popover to open via keyboard.
-- File upload:
-    - For both [simple file upload](/components/file-upload/simple-file-upload) and [multiple file upload](/components/file-upload/multiple-file-upload)), we updated the input content to be hidden, to fix accessibility problems with keyboard focus.
-    - For [the custom simple file upload](/components/file-upload/simple-file-upload#custom-file-upload), we added the `isBrowseButtonDisabled` prop to allow you to disable the browse button as needed.
-- [Form control:](/components/forms/form-control) 
-    - We added additional, missing theming variables.
-    - We fixed an overlay bug that appeared for controls with long labels.
-- [Masthead](/components/masthead): We corrected vertical centering.
-- [Menu](/components/menus/menu): We updated `<MenuItem>` so that a mouse can properly trigger a tooltip on `aria-disabled` items. We also fixed `<MenuItem>` tooltips in general, to allow their `onClick` behavior to be triggered as expected.
-- [Search input](/components/search-input): We updated `isAdvancedSearchOpen` to be `false` by default. This fixes an issue where `aria-expanded` was only applied when the state was updated by clicking the search open, rather than when the component first rendered.
-- [Select](/components/select): 
-    - We fixed scrolling for menus with grouped items.
-    - In the [select template](/components/menus/select/react-templates), we added support for custom keydown handling.
-- [Table](/components/table): We rewrote table's [column management](/components/table/react-demos#column-management) and [column management with draggable](/components/table/react-demos#column-management-with-draggable) features, to replace the use of the deprecated `<DragDrop>` component and update the demos accordingly.
-- [Text area](/components/forms/text-area): We added a missing modifier class that caused display issues when text areas were in focus. 
-- [Truncate](/components/truncate): Fixed a text-duplication bug that appeared for long, middle-truncated strings.
+Note that animations will either be specified as opt-in or opt-out:
+- **Opt-in:** Must be enabled in your code.
+- **Opt-out:** Turned on by default, can be disabled in your code.
 
-#### Features 
-We added the following new features:
+With this release, 3 components now support animations: 
 
-- [Alert](/components/alert): We added opt-in micro animations to alert and alert groups via the new `hasAnimations` prop. To visualize the motion behavior, you can interact with our website examples, which have opted in to animations.
-    - **Note:** By default, alert animations are opt-in and will only apply to alerts within an alert group. Opting into animations could require test updates. To ensure your test pass, the quickest solution is to set `hasAnimations` to `false`. Additionally, when alerts are dynamically added to an alert group, you must ensure that new alerts are prepended to the alert group list, rather than appended to the end of it.
-- [Card:](/components/card) We added the new `hasHeaderWrap` prop to use when there are long strings or multiple items in card headers.
-- Charts: 
-    - [Line chart (ECharts):](/charts/line-chart/ECharts/) We added a new line chart, based on Apache ECharts, with multiple examples in the docs.
-    - [Sankey chart (ECharts):](/charts/sankey-chart/) We added a new sankey chart, based on Apache ECharts, with multiple examples in the docs.
-- [Clipboard copy:](/components/clipboard-copy) We added support for [truncation in the inline compact variant](/components/clipboard-copy#inline-compact-with-truncation).
-- [Data list:](/components/data-list) We added a tooltip to be displayed when the `wrap` of a `<DataListCell>` is set to `truncate` and the content is overflowing.
-- [Jump links](/components/jump-links): We added a new `shouldReplaceNavHistory` prop that enables you to replace the current state with clicked items, rather than pushing the new location onto the history.
-- [Label:](/components/label) We added the `isClickable` prop, to be used for [labels with custom render](/components/label#label-with-custom-render). This prop allows you to set the clickable modifier while the render prop is also used. 
-- [Navigation:](/components/navigation) We added micro animations, which add motion to navigation items as they expand and collapse.
-- [Notification badge:](/components/notification-badge) We added support for opt-in micro animations via the new `shouldNotify` prop. We also added a [notification badge "With animations" example](/components/notification-badge#with-animation), so that you can observe the animated behavior.
-- [Page:](/components/page) To improve the visibility of content, we removed page margins for small viewports.
-- [Progress:](/components/progress) To match other PatternFly 6 styles, we rounded out the corners of the progress bar.
-- Text area: We added a [non-resizable text area variant](/components/forms/text-area#not-resizable), by adding a "none" option for the `resizeOrientation` prop.
-- [Toolbar:](/components/toolbar) 
-    - We added the new `hasNoPadding` prop, which removes the toolbar's default padding. This is useful for toolbars in certain layouts that apply spacing between the toolbar and surrounding elements.
-    - We added the `rowWrap` prop, for `<ToolbarGroup>` and `<ToolbarItem>`.
+1. [Alert](/components/alert)   
+    - **Animation type:** Opt-in.
+    - **Animation behavior:** For alerts within a group, there's a slide-in animation as new alerts are received and a slide-out animation as alerts are dismissed.
+    - **Example:** To visualize the motion behavior, you can interact with our website examples, which have opted in to animations.  
+    - **Note:** By default, alert animations are opt-in and will only apply to alerts within an alert group. Opting into animations could require test updates. To ensure your test pass, the quickest solution is to set `hasAnimations` to `false`. Additionally, when alerts are dynamically added to a group, you must ensure that new alerts are prepended to the alert group list, rather than appended to the end of it.  
+1. [Navigation](/components/navigation) 
+    - **Animation type:** Opt-out.
+    - **Animation behavior:** For expandable navigation items,there's a rotation shown in the transition from the angle-right and angle-down icons, as navigation items are expanded and collapsed.
+    - **Example:** As an opt-out animation, you can see this motion behavior by default across expandable navigation items.
+1. [Notification badge](/components/notification-badge)
+    - **Animation type:** Opt-in.
+    - **Animation behavior:** When a new notification arrives, the bell icon has a "ring" animation.
+    - **Example:** To illustrate the motion behavior of this animation, we added a [notification badge "With animations" example](/components/notification-badge#with-animation). 
 
-#### Other notable changes 
-- We removed the `@reach/router` dependency in patternfly-react, since it is no longer React 18 compatible. As a result, we replaced its use in a number of component examples/demos, including [button](/components/button#using-router-links), [label](/components/label#using-router-links), [masthead](/components/masthead#using-router-links), [menu](/components/menus/menu#using-router-links), and [page](/components/page/react-demos#context-selectorperspective-switcher-in-sidebar).
+### React 19 support
 
-### Extension updates 
+We’ve made significant progress towards React 19 support in PatternFly, which is being tracked in [the React 19 roadmap](https://github.com/patternfly/pf-roadmap/issues/201). Our remaining work involves updating our React dependencies, testing version support, and creating any necessary support resources or documentation. 
 
-#### Catalog view 
+### PatternFly AI 
 
-##### Bugs
-- We resolved console errors that occurred when read-only badges were passed to `<CardHeader>` via the `actions` prop.
-- We adjusted [vertical tab](/extensions/catalog-view/vertical-tabs) styles to remove the underline.
+In the world of PatternFly AI, we've continued our focus on expanding our ChatBot extension. As more Flyers have used ChatBot, we've gained insight into the types of new features that would have the most impact. To make progress on growing ChatBot needs, this release adds *many* new features, including [an inline drawer display mode](https://patternfly-org-pr-4493-site.surge.sh/patternfly-ai/chatbot/overview/demo/#inline-drawer-chatbot), the ability for users to give [message feedback](https://patternfly-org-pr-4493-site.surge.sh/patternfly-ai/chatbot/messages#message-feedback), [support for quick starts](https://patternfly-org-pr-4493-site.surge.sh/patternfly-ai/chatbot/messages#messages-with-quick-start-tiles), additional content types for [messages](/patternfly-ai/chatbot/messages#bot-messages), and much more. 
 
-#### ChatBot
+To see a complete list of new ChatBot features, [view the changelog](https://github.com/patternfly/chatbot/releases/tag/v2.2.0). 
 
-##### Bugs
-- We fixed the appearance of links in the sources card for Backstage consumers.
-- We removed the cancel button from the user feedback form, which was unnecessary due to the presence of a close button.
-- We made some styling adjustments to the `<MessageBar>` to assist with downstream implementations.
-- We made updates for general style consistency.
+Along with these new features, we've updated our documentation:
+- [The ChatBot design guidelines](/patternfly-ai/chatbot/overview/design-guidelines) have been updated to reflect new features, expand on previous guidance, and add higher-level patterns for ChatBots usage in products. 
+- New [ChatBot analytics documentation](/patternfly-ai/chatbot/analytics) is also now available, which provides general guidance on the implementation of analytics tracking.
 
-##### Features 
-We added the following list of new ChatBot features:
+### Notable changes
 
-- [Inline drawer display mode](/patternfly-ai/chatbot/overview/demo/#inline-drawer-chatbot).
-- [Message feedback and thank-you cards](/patternfly-ai/chatbot/messages#message-feedback).
-- [Resizable function for the conversation history drawer](/patternfly-ai/chatbot/ui#resizable-drawer).
-- [Layout for comparing ChatBots](/patternfly-ai/chatbot/overview/demo#comparing-chatbots).
-- [Support for quick starts](/patternfly-ai/chatbot/messages#messages-with-quick-start-tiles).
-- [Global ChatBot setting menu](/patternfly-ai/chatbot/ui#settings). 
-- [Terms of use modal](/patternfly-ai/chatbot/ui#terms-of-use).
-- [Loading and error states for the conversation history](/patternfly-ai/chatbot/ui/#drawer-with-search-and-new-chat-button).
-- Clicked-state styles for [message actions](/patternfly-ai/chatbot/messages/#message-actions).
-- Active-state and selected-state styles for [quick responses](/patternfly-ai/chatbot/messages/#messages-with-quick-responses).
-- [Support for custom message content](/patternfly-ai/chatbot/messages#custom-message-content) via the `extraContent` prop. Refer to the docs and use this feature with caution. 
-- Additional message content types (as shown in the [bot messages](/patternfly-ai/chatbot/messages#bot-messages) example): 
-    - Inline error message.
-    - Block quotes.
-    - Headings.
-    - External links, with styling.
-    - Images.
-    - Tables.
+Outside of our key initiatives, there are a few notable changes that may require changes to your codebase and tests. 
 
+#### Components
+- Button
+    - **Change:** The `aria-disabled` will now only render when `true`, not on elements where it is `false` or `undefined`. 
+    - **Required update:** Update tests that either:
+            - Check for `aria-disabled` to be `false`
+            - Match the disabled property 
+- Charts
+    - **Change:** Errors related to Victory 37.3.4 have been addressed.
+    - **Required update:** If you're using PatternFly 5, use [react-charts](https://www.npmjs.com/package/@patternfly/react-charts) v7.4.8 with Victory v37.3.4 or later. 
 
-##### Other notable changes
-- We updated [the ChatBot design guidelines](/patternfly-ai/chatbot/overview/design-guidelines) to include guidance for new features, expand existing guidance, and add higher-level patterns for using ChatBots in your product.
-- We added [analytics examples and documentation](/patternfly-ai/chatbot/analytics) to provide general guidance on the implementation of analytics tracking.
-- We removed the "dompurify" external dependency requirement.
-- We updated `<Message>` to allow additional [rehype plugins](https://github.com/rehypejs/rehype) for further customization of Markdown parsing. 
-- We replaced the `<MessageBar>` component with a [PatternFly `<TextArea>` component](/components/forms/text-area). This led to the following type changes for `<MessageBarProps>`:
-  - For `onChange`:
-    - Before: `(event: React.ChangeEvent<HTMLDivElement>, value: string) => void;`
-     - After: `(event: React.ChangeEvent<HTMLTextAreaElement>, value: string | number) => void;`
-  - for `onSendMessage`:
-    - Before: `(message: string) => void;`
-    - After: `(message: string | number) => void;`
+- Table
+    - **Change:** The [column management](/components/table/react-demos#column-management) and [column management with draggable](/components/table/react-demos#column-management-with-draggable) features have been rewritten to replace the use of the deprecated `<DragDrop>` component. 
+    - **Required update:** Remove the deprecated `<DragDrop>` component by referring to the updated table demos. 
 
-#### Component groups
+#### Extensions
+- ChatBot 
+    - **Change:** DOMpurify is no longer a dependency. 
+    - **Required updates:** Uninstall/remove DOMpurify from your codebases.
+- ChatBot
+    - **Change:** `<MessageBar>` is now a [PatternFly `<TextArea>`](/components/forms/text-area), which leads to the following type changes for `<MessageBarProps>`: 
+        - `onChange`:
+            - Before: `(event: React.ChangeEvent<HTMLDivElement>, value: string) => void;`
+            - After: `(event: React.ChangeEvent<HTMLTextAreaElement>, value: string | number) => void;`
+        - `onSendMessage`:
+            - Before: `(message: string) => void;`
+            - After: `(message: string | number) => void;`
+    - **Required change:** Where relevant, update the Typescript types for `<MessageBarProps>`.
+- Quick starts
+    - **Change:** The markdown parser has been changed to one that's more actively being maintained. 
+    - **Required change:** Verify that any custom markdown extensions you use still work properly. This is where bugs are most likely from this change.  
+        - If you see issues with custom markdown extensions, or any other issues with markdown parsing after this change, please [raise an issue](https://github.com/patternfly/patternfly-quickstarts/issues). 
 
-##### Bugs 
-- We updated the [responsive actions](/component-groups/controls/responsive-actions) component to make a disabled state available for overflow menu items.
-- We fixed props in a number of components, to include support for `ReactNode` objects.
+### What's next?
 
-##### Features 
-- We added a new [stale data warning component](/component-groups/status-and-state-indicators/stale-data-warning).
-- We added a text confirmation option to the [warning modal](/component-groups/error-communication/warning-modal#warning-modal-with-a-text-confirmation).
-
-#### Topology 
-
-##### Bugs
-- We updated dynamic context menus (menus whose options depend on asynchronous processes like API calls) to fix an issue that caused menus to open downward (instead of upward) when there wasn't enough screen space. 
-
-#### User feedback 
-
-##### Bugs
-- We made updates to ensure that CSS overrides take precedence over PatternFly's default styles.
-
-#### Quick starts
-
-##### Bugs
-- We fixed an issue where plain code fences weren't being transformed.
-- We reduced the spacing between the catalog page title and hint.
-- We've changed the markdown parser to one that's more actively being maintained.
-    - If you're supplying any custom markdown extensions please verify that they still work properly, as this is the area where bugs are most likely from this change.
-    - If you see issues with custom markdown extensions, or any other issues with markdown parsing after this change, please [raise an issue](https://github.com/patternfly/patternfly-quickstarts/issues).
-- We improved style scoping to avoid clashing with PatternFly styles.
-
-##### Features 
-- We added support for the ChatBot extension.
+For the Q3 release of PatternFly, we will continue to focus on the initiatives mentioned in this release, fix bugs, and address any new, critical priorities that come up. To stay up to date with our primary focus areas, you can keep track of [the PatternFly Roadmap initiatives board](https://github.com/orgs/patternfly/projects/16/views/23).
 
 <Divider />
 
@@ -325,7 +256,7 @@ We made many updates to our [component groups extension](/component-groups/about
 
 Our updated documentation includes:
 
-| **Category** | **Components** | 
+| **Category*- | **Components*- | 
 | --- | --- |
 | Content containers | - Details page <br /> - Multi-content card<br /> - Page header (previously named "content header")<br /> - Service card (new!) |
 | Controls | - Bulk select <br /> - Close button <br /> - Responsive actions (new!) |
@@ -416,7 +347,7 @@ We made more improvements to our website docs, to ensure that they're accurate a
     - [All PatternFly tokens](/tokens/all-patternfly-tokens)
     - [Develop with tokens](/tokens/develop-with-tokens)
     - [Design with tokens](/tokens/design-with-tokens)
-    - **Note:** Any @patternfly/react-tokens referencing global variables will need to be updated, since global variables have been replaced with tokens. Following our [token migration instructions](/tokens/develop-with-tokens#migrate-to-tokens) will help you determine the correct token to use. 
+    - **Note:*- Any @patternfly/react-tokens referencing global variables will need to be updated, since global variables have been replaced with tokens. Following our [token migration instructions](/tokens/develop-with-tokens#migrate-to-tokens) will help you determine the correct token to use. 
 - Our design foundations 
     - [Colors](/design-foundations/colors) 
     - [Icons](/design-foundations/icons) 
@@ -503,4 +434,4 @@ In order to support PatternFly 6, and any future visual theming capabilities, we
 
 Our tokens cover both dark and light themes, and make it easier to support both in your product. We also updated our [dark theme handbook](/developer-resources/dark-theme-handbook) to align with our tokens.
 
-**Note:** The PatternFly 5 design library is not built with tokens. To take advantage of our token system, you must [upgrade your product to PatternFly 6](/get-started/upgrade).
+**Note:*- The PatternFly 5 design library is not built with tokens. To take advantage of our token system, you must [upgrade your product to PatternFly 6](/get-started/upgrade).
