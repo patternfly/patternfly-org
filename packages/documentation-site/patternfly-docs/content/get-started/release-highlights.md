@@ -46,8 +46,8 @@ As products have continued their PatternFly 6 migration journeys, we've received
 Our highly-anticipated animations project focuses on integrating motion design into PatternFly components, to enhance user experiences and provide additional cues for interaction. You can keep track of this project via [our micro-animations roadmap](https://github.com/orgs/patternfly/projects/16/views/23?pane=issue&itemId=86507128&issue=patternfly%7Cpf-roadmap%7C215). 
 
 Note that animations will either be specified as opt-in or opt-out:
-- **Opt-in:** Must be enabled in your code.
-- **Opt-out:** Turned on by default, can be disabled in your code.
+- **Opt-in:** Requires additional updates to your codebase in order to function properly. These could cause test failures, depending on how your testing is set up, so you must manually opt into these animations and configure them appropriately. 
+- **Opt-out:** Turned on by default. To disable these animations, work with the PatternFly team to find a solution.
 
 With this release, 3 components now support animations: 
 
@@ -62,7 +62,7 @@ With this release, 3 components now support animations:
     - **Example:** As an opt-out animation, you can see this motion behavior by default across expandable navigation items.
 1. [Notification badge](/components/notification-badge)
     - **Animation type:** Opt-in.
-    - **Animation behavior:** When a new notification arrives, the bell icon has a "ring" animation.
+    - **Animation behavior:** When the animation is triggered (for example, when a new notification arrives), the bell icon has a "ring" animation.
     - **Example:** To illustrate the motion behavior of this animation, we added a [notification badge "With animations" example](/components/notification-badge#with-animation). 
 
 ### React 19 support
@@ -100,7 +100,7 @@ Outside of our key initiatives, there are a few notable changes that may require
 #### Extensions
 - ChatBot 
     - **Change:** DOMpurify is no longer a dependency. 
-    - **Required updates:** Uninstall/remove DOMpurify from your codebases.
+    - **Required update:** Uninstall/remove DOMpurify from your codebases.
 - ChatBot
     - **Change:** `<MessageBar>` is now a [PatternFly `<TextArea>`](/components/forms/text-area), which leads to the following type changes for `<MessageBarProps>`: 
         - `onChange`:
@@ -109,10 +109,10 @@ Outside of our key initiatives, there are a few notable changes that may require
         - `onSendMessage`:
             - Before: `(message: string) => void;`
             - After: `(message: string | number) => void;`
-    - **Required change:** Where relevant, update the Typescript types for `<MessageBarProps>`.
+    - **Required update:** Where relevant, update the Typescript types for `<MessageBarProps>`.
 - Quick starts
     - **Change:** The markdown parser has been changed to one that's more actively being maintained. 
-    - **Required change:** Verify that any custom markdown extensions you use still work properly. This is where bugs are most likely from this change.  
+    - **Required update:** Verify that any custom markdown extensions you use still work properly. This is where bugs are most likely from this change.  
         - If you see issues with custom markdown extensions, or any other issues with markdown parsing after this change, please [raise an issue](https://github.com/patternfly/patternfly-quickstarts/issues). 
 
 ### What's next?
