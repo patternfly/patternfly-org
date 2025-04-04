@@ -2505,9 +2505,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@patternfly/chatbot@npm:2.2.0-prerelease.37":
-  version: 2.2.0-prerelease.37
-  resolution: "@patternfly/chatbot@npm:2.2.0-prerelease.37"
+"@patternfly/chatbot@npm:2.2.0-prerelease.38":
+  version: 2.2.0-prerelease.38
+  resolution: "@patternfly/chatbot@npm:2.2.0-prerelease.38"
   dependencies:
     "@patternfly/react-code-editor": "npm:^6.1.0"
     "@patternfly/react-core": "npm:^6.1.0"
@@ -2527,7 +2527,7 @@ __metadata:
   peerDependencies:
     react: ^17 || ^18
     react-dom: ^17 || ^18
-  checksum: 10c0/db4ded5826435b7d379215d47abc94c56783b09ac1db4a026a71f19a0eccd54445b6cc5407b03ba4798a87b02c8aae68f6460657024c938f6973673f6d863255
+  checksum: 10c0/9a1617c2cbce5d3ab5fecea739ef3a782aa542109b6b7acd30e3d7641f45ec83141c6ca0e7b814467ede7b3db048fe64be8e71e95ce13c967f1a369ebb170f24
   languageName: node
   linkType: hard
 
@@ -14357,7 +14357,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "patternfly-org@workspace:packages/documentation-site"
   dependencies:
-    "@patternfly/chatbot": "npm:2.2.0-prerelease.37"
+    "@patternfly/chatbot": "npm:2.2.0-prerelease.38"
     "@patternfly/design-tokens": "npm:1.13.2"
     "@patternfly/documentation-framework": "workspace:*"
     "@patternfly/patternfly-a11y": "npm:5.0.0"
