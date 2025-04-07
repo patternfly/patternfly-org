@@ -80,9 +80,9 @@ Along with these new features, we've updated our documentation:
 - New [ChatBot analytics documentation](/patternfly-ai/chatbot/analytics) is also now available, which provides general guidance on the implementation of analytics tracking.
 
 ### Charts
-PatternFly historically provided a charting solution using the [Victory](https://formidable.com/open-source/victory/docs/victory-chart/) chart library. With this release, PatternFly is now delivering two charts based on the [Apache ECharts](https://echarts.apache.org/) chart library - [a line chart](/charts/line-chart/EChart) and [a Sankey chart](/charts/sankey-chart). This provides a collection of React based components you can use to build PatternFly patterns with consistent markup, styling, and behavior.
+PatternFly has historically provided a charting solution using the [Victory](https://formidable.com/open-source/victory/docs/victory-chart/) chart library. With this release, PatternFly is also now delivering 2 charts based on the [Apache ECharts](https://echarts.apache.org/) library, including [a line chart](/charts/line-chart/EChart) and [a Sankey chart](/charts/sankey-chart).
 
-To use these EChart solutions, PatternFly has listed EChart as a peer dependency, so consumers should add 'echart' to their project dependencies, and follow PatternFly's documentation to build out the charts.
+Additionally, EChart is now listed as a peer dependency for PatternFly. To use these new chart solutions, add 'echart' to your project dependencies and follow PatternFly's documentation to build out your charts.
 
 ### Notable changes
 
