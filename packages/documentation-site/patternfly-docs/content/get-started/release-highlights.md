@@ -79,6 +79,11 @@ Along with these new features, we've updated our documentation:
 - [The ChatBot design guidelines](/patternfly-ai/chatbot/overview/design-guidelines) have been updated to reflect new features, expand on previous guidance, and add higher-level patterns for ChatBots usage in products. 
 - New [ChatBot analytics documentation](/patternfly-ai/chatbot/analytics) is also now available, which provides general guidance on the implementation of analytics tracking.
 
+### Expanded chart library
+PatternFly has historically provided a charting solution using the [Victory](https://formidable.com/open-source/victory/docs/victory-chart/) chart library. With this release, PatternFly is also now delivering 2 charts based on the [Apache ECharts](https://echarts.apache.org/) library, including [a line chart](/charts/line-chart/EChart) and [a Sankey chart](/charts/sankey-chart).
+
+Additionally, EChart is now listed as a peer dependency for PatternFly. To use these new chart solutions, add 'echart' to your project dependencies and follow PatternFly's documentation to build out your charts.
+
 ### Notable changes
 
 Outside of our key initiatives, there are a few notable changes that may require changes to your codebase and tests. 
