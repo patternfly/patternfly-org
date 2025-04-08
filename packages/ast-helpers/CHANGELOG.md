@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.4.0-alpha.169 (2025-04-08)
+
+
+### Bug Fixes
+
+* update the echarts related documentation ([#4532](https://github.com/patternfly/patternfly-org/issues/4532)) ([660f2ff](https://github.com/patternfly/patternfly-org/commit/660f2ff5095c45767f3c3e1235ead07e188605b6))
+
+
+
+
+
 # 1.4.0-alpha.168 (2025-04-04)
 
 
