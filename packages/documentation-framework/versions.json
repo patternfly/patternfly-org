@@ -20,7 +20,7 @@
         "@patternfly/react-topology": "6.2.0",
         "@patternfly/react-user-feedback": "6.1.0",
         "@patternfly/react-console": "6.0.0",
-        "@patternfly/quickstarts": "6.1.0",
+        "@patternfly/quickstarts": "6.2.0",
         "@patternfly/react-virtualized-extension": "6.0.0",
         "@patternfly/react-templates": "6.2.0",
         "@patternfly/chatbot": "2.2.0",
