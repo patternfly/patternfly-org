@@ -6,17 +6,13 @@ sortValue: 2
 ---
 
 import theSystem from './thesystem.gif';
-import oneFamily from './onefamily.gif';
-import fewVariables from './fewvariables.png';
-import manyVariables from './manyvariables.png';
-import nestedVariables from './nestedvariables.png';
 import { Alert, Grid, GridItem, Divider } from '@patternfly/react-core';
 import ColorsGrid from './colors-grid.js';
 import './colors-for-charts.css';
 
 import '../../components/components.css';
 
-**Note:** Our charts use separate design tokens from our standard library. To view a list of all chart tokens, apply the "charts" category filter to [the all PatternFly tokens table](/tokens/all-patternfly-tokens).
+**Note:** Our charts use separate design tokens from our standard library. To view a list of all chart tokens, apply the "chart" category filter to [the PatternFly design tokens table](/tokens/all-patternfly-tokens).
 
 ## Color palettes
 
@@ -34,31 +30,45 @@ No matter which base colors you select, this process will remain the same.
 
 ### Example palette
 
-If you select 4 base colors (and therefore their 4 respective color families), your color palette could look like this:
-1. #1a-d base colors
-1. #2a-d [color]-100/[color]-500 alternating
-1. #3a-d [color]-500/[color]-100 alternating
-1. #4a-d [color]-200/[color]-400 alternating
-1. #5a-d [color]-400/[color]-200 alternating
+If you select 4 color families&mdash;blue, teal, green, and yellow color&mdash;your chart could look like this:
 
 <div class="ws-docs-content-img">
-![](./thesystem.gif)
+![Chart color palette for a bar chart that uses hues across 4 color families.](./img/example-palette.svg)
+</div>
+
+1. Base colors: `--pf-t-chart-color-[colorname]-300`
+1. Lightest: `--pf-t-chart-color-[colorname]-100`
+1. Darkest: `--pf-t-chart-color-[colorname]-500`
+1. Second-lightest: `--pf-t-chart-color-[colorname]-200`
+1. Second-darkest: `--pf-t-chart-color-[colorname]-400`
+
+### Figma color scales 
+
+To simplify the process of selecting hues for your design, we offer premade color scales in Figma for each color family. These color scales arrange a family's hues based off our recommendations, so you can use colors in the order that they appear within a color scale.
+
+<div class="ws-docs-content-img">
+![Color scale options within Figma.](./img/figma-colorscale.svg)
 </div>
 
 ### Best practices
 
 When selecting colors for your chart, adhere to these general rules:
 
-1. Within a color family, use the base color before the other, lighter or darker hues. 
+1. Within a color family, use the base color first. Then use the other lighter and darker hues. 
 1. Some families have predetermined uses:
-    - **Blue family:** Use to show success.
-    - **Red orange family:** Use to show failure.
-    - **Other color families:** Use for neutral purposes or categories.
-1. **Patterns:** Use to deemphasize a section of a chart.
-      - Only use for a single chart portion or type of portion to better highlight other sections that utilize solid colors. For example, you could use a pattern on your "success" portions to help "failure" portions stand out.
-      - Do not use for every section of a chart.
+    - **Blue:** Use to show success.
+    - **Red-orange:** Use to show failure. Do not use this family unless you're communicating failure.
+    - **Other colors:** Use for neutral purposes or categories.
 
-1. When using red and green together in a single chart, note that they do not pass accessibility requirements, so you must also utilize patterns. To improve your chart's accessibility, add a pattern  to the section that you want to deemphasize.
+<div class="ws-docs-content-img">
+![Pie chart measuring completion versus failure.](./img/success-and-failure.svg)
+</div>
+
+1. Use **patterns** to deemphasize a section of a chart.
+      - To best highlight chart sections that utilize solid colors, only use patterns for a single chart portion or type of portion. For example, you could use a pattern on your "success" portions to help "failure" portions stand out.
+      - Do not use patterns for every section of a chart.
+
+1. When using certain hues of red-orange and green together in a single chart, they might not always pass accessibility requirements. To improve your chart's accessibility in these cases, add a pattern to the section that you want to deemphasize.
 
 ## Variations
 
@@ -68,7 +78,7 @@ When working with *7 or fewer variables*, align each variable to an available ba
 For example, the following chart displays sales data per product over a period of time:
 
 <div class="ws-docs-content-img">
-![](./fewvariables.png)
+![Simple bar chart with few data points.](./img/few-variables.svg)
 </div>
 
 ### Many chart variables 
@@ -77,7 +87,7 @@ If the set of data includes *more than 7 variables*, apply a multichromatic orde
 For example, the following chart displays the cost of living expenses over a period of time:
 
 <div class="ws-docs-content-img">
-![](./manyvariables.png)
+![Complex bar chart with many data points.](./img/many-variables.svg)
 </div>
 
 ### Nested or grouped chart variables
@@ -86,22 +96,26 @@ If your dataset includes grouped variables, align each group to a color family. 
 For example, the following chart includes quarterly sales data that is broken down by geographical locations:
 
 <div class="ws-docs-content-img">
-![](./nestedvariables.png)
+![Bar chart with multiple bars nested within each data point.](./img/nested-variables.svg)
 </div>
 
 ### Monochromatic charts
 
 To create a monochromatic effect in your chart, you can also apply a color order system within 1 color family. This effect is particularly helpful for charts with nested variables. 
 
-Within a family, the color order begins by going at the base color, then the lightest, darkest, second lightest, and second darkest colors. Regardless of color family, hues will always follow this order. 
+<div class="ws-docs-content-img">
+![Nested bar chart with a different color family per data point.](./img/monochromatic.svg)
+</div>
 
-As design tokens, this order looks like: 
-1. `--pf-t-chart-color-[colorname]-300` (base color)
-1. `--pf-t-chart-color-[colorname]-100` (lightest)
-1. `--pf-t-chart-color-[colorname]-500` (darkest)
-1. `--pf-t-chart-color-[colorname]-200` (second lightest)
-1. `--pf-t-chart-color-[colorname]-400` (second darkest)
+Within a family, the color order follows the same pattern used when combining multiple families. The chart palette begins with the base hue, then uses the lightest, darkest, second lightest, and second darkest hues. Regardless of color family, hues will always follow this order. 
 
 <div class="ws-docs-content-img">
-![](./onefamily.gif)
+![Design tokens used within a nested bar chart.](./img/monochromatic-annotated.svg)
 </div>
+
+As design tokens, this order looks like: 
+1. Base hue: `--pf-t-chart-color-[colorname]-300` 
+1. Lightest hue: `--pf-t-chart-color-[colorname]-100`
+1. Darkest hue: `--pf-t-chart-color-[colorname]-500` 
+1. Second-lightest hue: `--pf-t-chart-color-[colorname]-200` 
+1. Second-darkest hue: `--pf-t-chart-color-[colorname]-400` 
