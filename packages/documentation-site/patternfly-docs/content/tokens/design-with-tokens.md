@@ -13,7 +13,7 @@ Figma tokens align with the segments in [our token variable structure](/tokens/a
 
 ![Table of brand color tokens.](./img/token-example-brand.png)  
 
-PatternFly 6 elements, including components, charts, and extensions, are built with tokens. Therefore, you will typically not need to work with tokens directly. The exception to this is if you are deviating from our built-in customization options. [See these instructions for more detail.](#making-customizations)
+PatternFly 6 elements, including components, charts, and extensions, are built with tokens. Therefore, you will typically not need to work with tokens directly. The exception to this is if you are deviating from our built-in customization options. For more detail, refer to [our guidelines for customizing with tokens](#customizing-designs-with-tokens).
 
 Because tokens are set up behind the scenes, they enable you to customize components as you add them to your design. Before you insert a component into a Figma design workspace, you can adjust its properties and variable modes to fit your specific use case. 
 

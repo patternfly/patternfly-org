@@ -3,6 +3,233 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 6.8.4 (2025-04-09)
+
+
+### Bug Fixes
+
+* css variables table has colors again & charts dependencies fixed ([#4535](https://github.com/patternfly/patternfly-org/issues/4535)) ([72f4744](https://github.com/patternfly/patternfly-org/commit/72f4744b13636d1252ede299e0ffa7421c0d0974))
+
+
+
+
+
+## 6.8.3 (2025-04-08)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 6.8.2 (2025-04-08)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 6.8.1 (2025-04-08)
+
+
+### Bug Fixes
+
+* update the echarts related documentation ([#4532](https://github.com/patternfly/patternfly-org/issues/4532)) ([660f2ff](https://github.com/patternfly/patternfly-org/commit/660f2ff5095c45767f3c3e1235ead07e188605b6))
+
+
+
+
+
+# 6.8.0 (2025-04-04)
+
+
+### Features
+
+* **ver:** update chatbot ver ([#4517](https://github.com/patternfly/patternfly-org/issues/4517)) ([82ceb93](https://github.com/patternfly/patternfly-org/commit/82ceb9368cf24277fdb30caa4c510af8fcb77445))
+
+
+
+
+
+## 6.7.4 (2025-04-04)
+
+
+### Bug Fixes
+
+* Updated to latest prerelease. ([#4516](https://github.com/patternfly/patternfly-org/issues/4516)) ([df7ebc4](https://github.com/patternfly/patternfly-org/commit/df7ebc4507e9f12a97aead5df8e8768c87363fcc))
+
+
+
+
+
+## 6.7.3 (2025-04-03)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 6.7.2 (2025-04-02)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 6.7.1 (2025-04-02)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+# 6.7.0 (2025-03-28)
+
+
+### Features
+
+* **ver:** update design tokens version & regenerate screenshots ([#4511](https://github.com/patternfly/patternfly-org/issues/4511)) ([4bd624d](https://github.com/patternfly/patternfly-org/commit/4bd624db116fae1f09aa75a3973ebb79be1aa803))
+
+
+
+
+
+# 6.6.0 (2025-03-27)
+
+
+### Features
+
+* **ver:** update to 6.2 prerelease versions ([#4510](https://github.com/patternfly/patternfly-org/issues/4510)) ([8a2f9b1](https://github.com/patternfly/patternfly-org/commit/8a2f9b1f89a2b930d38379e10caf943af57ae51f))
+
+
+
+
+
+## 6.5.20 (2025-03-18)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 6.5.19 (2025-03-12)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 6.5.18 (2025-03-11)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 6.5.17 (2025-03-11)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 6.5.16 (2025-03-05)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 6.5.15 (2025-02-27)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 6.5.14 (2025-02-26)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 6.5.13 (2025-02-17)
+
+
+### Bug Fixes
+
+* **getHtmlWebpackPlugins:** Turn off pre-render for ChatBot ([#4467](https://github.com/patternfly/patternfly-org/issues/4467)) ([9bd77f2](https://github.com/patternfly/patternfly-org/commit/9bd77f2c07b33697d6ddefddc8b89139f7027444))
+
+
+
+
+
+## 6.5.12 (2025-02-17)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 6.5.11 (2025-01-29)
+
+
+### Bug Fixes
+
+* export valid SVGs in all icons page ([#4450](https://github.com/patternfly/patternfly-org/issues/4450)) ([3f0a8da](https://github.com/patternfly/patternfly-org/commit/3f0a8da0396b91d9aebcd802f4a621917f102129))
+
+
+
+
+
+## 6.5.10 (2025-01-29)
+
+
+### Bug Fixes
+
+* Update yarn.lock ([#4452](https://github.com/patternfly/patternfly-org/issues/4452)) ([563a053](https://github.com/patternfly/patternfly-org/commit/563a0538eff085c48a97000cfcc104b72e97cdfe))
+
+
+
+
+
+## 6.5.9 (2025-01-28)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 6.5.8 (2025-01-27)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 6.5.7 (2025-01-27)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
 ## 6.5.6 (2025-01-24)
 
 **Note:** Version bump only for package @patternfly/documentation-framework

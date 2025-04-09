@@ -17,7 +17,7 @@ if (process.env.EXTENSIONS_ONLY === 'true') {
   };
 } else {
   module.exports = {
-    googleAnalyticsID: 'UA-47523816-6',
+    googleAnalyticsID: 'G-XRM3R81HJ6',
     algolia: {
       apiKey: 'a8fb1726b78594ff97a3418757514404',
       appId: '79P4ZBH7A3',
