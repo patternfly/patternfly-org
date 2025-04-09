@@ -5,7 +5,6 @@ hideSource: true
 sortValue: 2
 ---
 
-import theSystem from './thesystem.gif';
 import { Alert, Grid, GridItem, Divider } from '@patternfly/react-core';
 import ColorsGrid from './colors-grid.js';
 import './colors-for-charts.css';
