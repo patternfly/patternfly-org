@@ -19,18 +19,18 @@ Code block has 4 main components.
 
 ### Multiple action buttons
 
-<div class="ws-docs-content-img">
-![Example of a code block with multiple actions.](./img/code-block-multiple-actions.svg)
-</div>
-
 Code blocks can include multiple actions. Any actions are optional and customizable, but the copy action is the most common.
 
 The additional actions to the copy action can include the option to show a checkmark after the user has clicked the action button. The checkmark can be used to indicate to the user that the action was successfully triggered.
 
+<div class="ws-docs-content-img">
+![Example of a code block with multiple actions.](./img/code-block-multiple-actions.svg)
+</div>
+
 ### Show more/less
+
+There is the option to include a show more/less section in the code block. The show more/less section can be used to collapse larger code snippets. An expandable code block allows for long lines of code to be stored in an expansion panel. Expanding the code block allows the user to view the full string that they can copy.
 
 <div class="ws-docs-content-img">
 ![Examples of expanded and collapsed code blocks.](./img/code-block-expanded.svg)
 </div>
-
-There is the option to include a show more/less section in the code block. The show more/less section can be used to collapse larger code snippets. An expandable code block allows for long lines of code to be stored in an expansion panel. Expanding the code block allows the user to view the full string that they can copy.
