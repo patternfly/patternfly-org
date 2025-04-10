@@ -2583,7 +2583,7 @@ __metadata:
     puppeteer: "npm:^23.6.1"
     puppeteer-cluster: "npm:^0.24.0"
     react-docgen: "npm:5.3.1"
-    react-ssr-prepass: "npm:1.6.0"
+    react-ssr-prepass: "npm:1.5.0"
     remark-footnotes: "npm:1.0.0"
     remark-frontmatter: "npm:2.0.0"
     remark-mdx: "npm:2.0.0-next.8"
@@ -2611,8 +2611,8 @@ __metadata:
     "@patternfly/react-code-editor": ^6.2.0
     "@patternfly/react-core": ^6.2.0
     "@patternfly/react-table": ^6.2.0
-    react: ^17.0.0 || ^18.0.0 || ^19.0.0
-    react-dom: ^17.0.0 || ^18.0.0 || ^19.0.0
+    react: ^17.0.0 || ^18.0.0
+    react-dom: ^17.0.0 || ^18.0.0
   bin:
     pf-docs-framework: scripts/cli/cli.js
   languageName: unknown
@@ -15206,12 +15206,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-ssr-prepass@npm:1.6.0":
-  version: 1.6.0
-  resolution: "react-ssr-prepass@npm:1.6.0"
+"react-ssr-prepass@npm:1.5.0":
+  version: 1.5.0
+  resolution: "react-ssr-prepass@npm:1.5.0"
   peerDependencies:
-    react: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0 || ^19.0.0-rc
-  checksum: 10c0/3ce6cfbc4c181b793661917eb80419d2119825e48c4c9dce82822f76c81cddf33a0d4dd1c277cbc00f64bc0e0d674aa7e33aedc3383dadac9f8c1e3cf9532a2a
+    react: ^16.8.0 || ^17.0.0 || ^18.0.0
+  checksum: 10c0/5158b13cdc230b6342c986f73eb21bafc27a666701aa7a309f5f39832c445d69e0b9f94df71cbe708feb49823417bd6c16eed81afe612efa6a55d89e03d9f5d3
   languageName: node
   linkType: hard
 
