@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 6.9.0 (2025-04-10)
+
+
+### Features
+
+* **ver:** enable react 19 support in framework ([#4515](https://github.com/patternfly/patternfly-org/issues/4515)) ([07ed7ae](https://github.com/patternfly/patternfly-org/commit/07ed7ae30789543204f8c8f5031c96e478164957))
+
+
+
+
+
 ## 6.8.4 (2025-04-09)
 
 
