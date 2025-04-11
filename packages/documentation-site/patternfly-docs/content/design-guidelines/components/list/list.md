@@ -26,7 +26,7 @@ By default, you should use bullets when displaying an unordered list. Use an uno
 
 Use ordered lists to convey a sequence of events or steps in a process. An example of an ordered list is a numbered list.
 
-<img src="./img/ordered.png" alt="Example of an ordered, numbered list" />
+<img src="./img/list-ordered.svg" alt="Example of an ordered, numbered list" />
 
 
 ### With icons
