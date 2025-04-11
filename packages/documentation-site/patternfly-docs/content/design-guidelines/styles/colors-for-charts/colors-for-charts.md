@@ -2,102 +2,119 @@
 id: Colors for charts
 section: charts
 hideSource: true
+sortValue: 2
 ---
 
-import theSystem from './thesystem.gif';
-import oneFamily from './onefamily.gif';
-import fewVariables from './fewvariables.png';
-import manyVariables from './manyvariables.png';
-import nestedVariables from './nestedvariables.png';
 import { Alert, Grid, GridItem, Divider } from '@patternfly/react-core';
 import ColorsGrid from './colors-grid.js';
 import './colors-for-charts.css';
 
-## Chart colors
+import '../../components/components.css';
 
-PatternFly recommends colors to use with bar charts, donut charts and pie charts. There are six base colors (blue to orange) that the chart color system is built on. Each base color has its own monochromatic color family, which includes lighter and darker hues of the base color. Each family is ordered based on increasing color contrast. The variation of colors you use will depend on the type and amount of data you’re working with.
+**Note:** Our charts use separate design tokens from our standard library. To view a list of all chart tokens, apply the "chart" category filter to [the PatternFly design tokens table](/tokens/all-patternfly-tokens).
 
+## Color palettes
+
+To create well-designed charts, you typically need to use multiple colors to best communicate your data. Our chart color options are all pulled from [standard PatternFly color palettes](/design-foundations/charts), but the amount of hues within each color family are more limited to ensure that your chart colors are distinct enough from each other. Your data will determine the number of colors and the type of colors you will need. 
+ 
 <ColorsGrid />
 
-<Divider className="ws-chart-colors-divider" />
+## Usage
 
-## The system
+Our chart color system is completely customizable. Once you choose your base colors and the total number of colors you need, the system will sort them correctly. 
 
-<Grid hasGutter>
-  <GridItem xl={6} lg={12} className="ws-chart-colors-gridtext">
-    ### How it works
-    Although the system may seem complex, it is completely customizable. Once you choose the base colors you want to use and the total number of colors you will need, the system will still sort them correctly. 
-    <br />
-    For example, if you select four base colors (and therefore their four respective color families) the system will first use each base color in your chart. Once all base colors have been used, the system will select additional colors from the families you selected. The system alternates between choosing the lightest and darkest values of each family (shown in the animation). The color picking system will continue to alternate between the remaining  lightest and darkest colors of each family. In variable-terms: #1a-d base colors, #2a-d [color]-100/[color]-500 alternating, #3a-d [color]-500/[color]-100 alternating, #4a-d [color]-200/[color]-400 alternating, and #5a-d [color]-400/[color]-200 alternating. No matter which base colors you select, this process will remain the same.
-  </GridItem>
-  <GridItem xl={6} lg={12}>
-    <img width="480px" src={theSystem} alt="Chart color system example" />
-  </GridItem>
-</Grid>
+The system will first use each base color from the families you selected. Once all base colors have been used, the system alternates between choosing the lightest and darkest values of each family. The color picking system will continue to alternate between the remaining lightest and darkest colors of each family until it has reached the total number of colors you selected. 
 
-<Divider className="ws-chart-colors-divider" />
+No matter which base colors you select, this process will remain the same.
 
-## Color and pattern usage
+### Example palette
 
-When selecting colors for your chart, there are a few important usage considerations to keep in mind. Within a color family, use the base color before the other, lighter or darker hues. Additionally, consider other basic guidelines: 
+If you select 4 color families&mdash;blue, teal, green, and yellow color&mdash;your chart could look like this:
 
-* **Green family:** Use to show success
-* **Red family:** Use to show failure
-* **Other color families:** Use for neutral purposes or categories
-* **Patterns:** Use to deemphasize a section of a chart. Do not use patterns for every section of a chart. Instead, patterns should be used for a single chart portion or for one type of portion (such as for all successes) to deemphasize that section and highlight the other section, which utilizes a solid color.
+<div class="ws-docs-content-img">
+![Chart color palette for a bar chart that uses hues across 4 color families.](./img/example-palette.svg)
+</div>
 
-  
-**Note:** When showing success and failure together in a chart, the base color red and green do not pass accessibility requirements. When using both red and green base colors in a single chart, add a pattern to the section that you want to deemphasize to improve the chart’s accessibility.
+1. Base colors: `--pf-t-chart-color-[colorname]-300`
+1. Lightest: `--pf-t-chart-color-[colorname]-100`
+1. Darkest: `--pf-t-chart-color-[colorname]-500`
+1. Second-lightest: `--pf-t-chart-color-[colorname]-200`
+1. Second-darkest: `--pf-t-chart-color-[colorname]-400`
 
-<img src="./img/Color-and-pattern-usage.png" alt="Color and pattern usage example" width="739"/>
+### Figma color scales 
 
-<Divider className="ws-chart-colors-divider" />
+To simplify the process of selecting hues for your design, we offer premade color scales in Figma for each color family. These color scales arrange a family's hues based off our recommendations, so you can use colors in the order that they appear within a color scale.
 
-## Use cases
+<div class="ws-docs-content-img">
+![Color scale options within Figma.](./img/figma-colorscale.svg)
+</div>
 
-<Grid hasGutter>
-  <GridItem xl={6} lg={12} className="ws-chart-colors-gridtext">
-    ### Chart with few variables (1-7)
-    When working with  data that includes fewer than 7 variables, we recommend corresponding each with one of the available base colors. For example, if you collected data on how many sales were made per product at your organization during a period of time, a bar chart of your data may look similar to the following image.
-  </GridItem>
-  <GridItem xl={6} lg={12}>
-    <img width="480px" src={fewVariables} alt="Few variables examples" />
-  </GridItem>
-</Grid>
+### Best practices
 
-<Grid hasGutter>
-  <GridItem xl={6} lg={12} className="ws-chart-colors-gridtext">
-    ### Chart with nested (grouped) variables
-    If your dataset includes grouped variables, we recommend aligning each group to a color family. When you select more than one color family, your chart will arrange the order of colors as follows: blue, green, cyan, purple, gold, orange, red, and then gray. The colors would start over if there are more than 6 groups, returning back to the blue family. 
-    <br />
-    Shown in the following image is an example of this type of chart, which includes quarterly sales data broken down by geographical locations.
-  </GridItem>
-  <GridItem xl={6} lg={12}>
-    <img width="480px" src={nestedVariables} alt="Nested variables example" />
-  </GridItem>
-</Grid>
+When selecting colors for your chart, adhere to these general rules:
 
-<Grid hasGutter>
-  <GridItem xl={6} lg={12} className="ws-chart-colors-gridtext">
-    ### Chart with many variables (>7)
-    If the set of data includes more than 7 variables, we recommend applying a multichromatic order system, which includes all of the colors in the color system.
-    <br />
-    Shown in the following image is an example of this type of chart, which displays the cost of living expenses during a period of time.
-  </GridItem>
-  <GridItem xl={6} lg={12}>
-    <img width="480px" src={manyVariables} alt="Many variables example" />
-  </GridItem>
-</Grid>
+1. Within a color family, use the base color first. Then use the other lighter and darker hues. 
+1. Some families have predetermined uses:
+    - **Blue:** Use to show success.
+    - **Red-orange:** Use to show failure. Do not use this family unless you're communicating failure.
+    - **Other colors:** Use for neutral purposes or categories.
 
-<Divider className="ws-chart-colors-divider" />
+<div class="ws-docs-content-img">
+![Pie chart measuring completion versus failure.](./img/success-and-failure.svg)
+</div>
 
-## Using the system with one color family
+1. Use **patterns** to deemphasize a section of a chart.
+      - To best highlight chart sections that utilize solid colors, only use patterns for a single chart portion or type of portion. For example, you could use a pattern on your "success" portions to help "failure" portions stand out.
+      - Do not use patterns for every section of a chart.
 
-<Grid hasGutter>
-  <GridItem xl={6} lg={12} className="ws-chart-colors-gridtext">
-    You can also use the color order system with one color family to create a monochromatic effect. We recommend using this approach for charts with nested variables. The order begins by going through each base color, then the lightest, darkest, second lightest, and second darkest colors in a family. In variable-terms, this order looks like: #1 [color]-300 (base color), #2 [color]-100, #3 [color]-500, #4 [color]-200, #5 [color]-400. Regardless of color family, hues will always follow this order.
-  </GridItem>
-  <GridItem xl={6} lg={12}>
-    <img width="480px" src={oneFamily} alt="Monochromatic chart color system example" />
-  </GridItem>
-</Grid>
+1. When using certain hues of red-orange and green together in a single chart, they might not always pass accessibility requirements. To improve your chart's accessibility in these cases, add a pattern to the section that you want to deemphasize.
+
+## Variations
+
+### Few chart variables 
+When working with *7 or fewer variables*, align each variable to an available base color. 
+
+For example, the following chart displays sales data per product over a period of time:
+
+<div class="ws-docs-content-img">
+![Simple bar chart with few data points.](./img/few-variables.svg)
+</div>
+
+### Many chart variables 
+If the set of data includes *more than 7 variables*, apply a multichromatic order system that includes all of the colors in the color system.
+
+For example, the following chart displays the cost of living expenses over a period of time:
+
+<div class="ws-docs-content-img">
+![Complex bar chart with many data points.](./img/many-variables.svg)
+</div>
+
+### Nested or grouped chart variables
+If your dataset includes grouped variables, align each group to a color family. When you select multiple color families, your chart will automatically arrange the order of colors as follows: blue, green, teal, purple, yellow, orange, red orange, and then black. If there are more than 6 groups, this order would restart and continue to cycle.
+
+For example, the following chart includes quarterly sales data that is broken down by geographical locations:
+
+<div class="ws-docs-content-img">
+![Bar chart with multiple bars nested within each data point.](./img/nested-variables.svg)
+</div>
+
+### Monochromatic charts
+
+To create a monochromatic effect in your chart, you can also apply a color order system within 1 color family. This effect is particularly helpful for charts with nested variables. 
+
+<div class="ws-docs-content-img">
+![Nested bar chart with a different color family per data point.](./img/monochromatic.svg)
+</div>
+
+Within a family, the color order follows the same pattern used when combining multiple families. The chart palette begins with the base hue, then uses the lightest, darkest, second lightest, and second darkest hues. Regardless of color family, hues will always follow this order. 
+
+<div class="ws-docs-content-img">
+![Design tokens used within a nested bar chart.](./img/monochromatic-annotated.svg)
+</div>
+
+As design tokens, this order looks like: 
+1. Base hue: `--pf-t-chart-color-[colorname]-300` 
+1. Lightest hue: `--pf-t-chart-color-[colorname]-100`
+1. Darkest hue: `--pf-t-chart-color-[colorname]-500` 
+1. Second-lightest hue: `--pf-t-chart-color-[colorname]-200` 
+1. Second-darkest hue: `--pf-t-chart-color-[colorname]-400` 
