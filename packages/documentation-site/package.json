@@ -18,7 +18,7 @@
   },
   "dependencies": {
     "@patternfly/documentation-framework": "^5.24.0",
-    "@patternfly/quickstarts": "5.4.0",
+    "@patternfly/quickstarts": "5.4.2",
     "@patternfly/react-catalog-view-extension": "5.0.0",
     "@patternfly/react-console": "5.1.0",
     "@patternfly/react-docs": "6.4.12",
@@ -30,7 +30,7 @@
     "@patternfly/react-data-view": "5.8.0",
     "react": "^17.0.0 || ^18.0.0",
     "react-dom": "^17.0.0 || ^18.0.0",
-    "showdown": "^2.1.0"
+    "marked": "^15.0.7"
   },
   "devDependencies": {
     "@patternfly/patternfly-a11y": "4.3.1",
