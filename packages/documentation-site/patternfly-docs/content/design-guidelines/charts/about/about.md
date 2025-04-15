@@ -1,6 +1,7 @@
 ---
 id: About charts
 section: charts
+sortValue: 1
 ---
 
 _Charts are only available in React_
