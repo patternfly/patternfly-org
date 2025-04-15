@@ -3,6 +3,112 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.4.0-alpha.174 (2025-04-10)
+
+
+### Reverts
+
+* Revert "feat(ver): enable react 19 support in framework (#4515)" (#4541) ([93ae3ec](https://github.com/patternfly/patternfly-org/commit/93ae3ecc6bf551ae1eb8ab844aa82ca6619cf2bf)), closes [#4515](https://github.com/patternfly/patternfly-org/issues/4515) [#4541](https://github.com/patternfly/patternfly-org/issues/4541)
+
+
+
+
+
+# 1.4.0-alpha.173 (2025-04-10)
+
+
+### Features
+
+* **ver:** enable react 19 support in framework ([#4515](https://github.com/patternfly/patternfly-org/issues/4515)) ([07ed7ae](https://github.com/patternfly/patternfly-org/commit/07ed7ae30789543204f8c8f5031c96e478164957))
+
+
+
+
+
+# 1.4.0-alpha.172 (2025-04-09)
+
+
+### Bug Fixes
+
+* css variables table has colors again & charts dependencies fixed ([#4535](https://github.com/patternfly/patternfly-org/issues/4535)) ([72f4744](https://github.com/patternfly/patternfly-org/commit/72f4744b13636d1252ede299e0ffa7421c0d0974))
+
+
+
+
+
+# 1.4.0-alpha.171 (2025-04-08)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 1.4.0-alpha.170 (2025-04-08)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 1.4.0-alpha.169 (2025-04-08)
+
+
+### Bug Fixes
+
+* update the echarts related documentation ([#4532](https://github.com/patternfly/patternfly-org/issues/4532)) ([660f2ff](https://github.com/patternfly/patternfly-org/commit/660f2ff5095c45767f3c3e1235ead07e188605b6))
+
+
+
+
+
+# 1.4.0-alpha.168 (2025-04-04)
+
+
+### Features
+
+* **ver:** update chatbot ver ([#4517](https://github.com/patternfly/patternfly-org/issues/4517)) ([82ceb93](https://github.com/patternfly/patternfly-org/commit/82ceb9368cf24277fdb30caa4c510af8fcb77445))
+
+
+
+
+
+# 1.4.0-alpha.167 (2025-04-04)
+
+
+### Bug Fixes
+
+* Updated to latest prerelease. ([#4516](https://github.com/patternfly/patternfly-org/issues/4516)) ([df7ebc4](https://github.com/patternfly/patternfly-org/commit/df7ebc4507e9f12a97aead5df8e8768c87363fcc))
+
+
+
+
+
+# 1.4.0-alpha.166 (2025-04-03)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 1.4.0-alpha.165 (2025-04-02)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 1.4.0-alpha.164 (2025-04-02)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
 # 1.4.0-alpha.163 (2025-03-28)
 
 
