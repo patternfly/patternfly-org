@@ -30,4 +30,5 @@ jobs:
           SLACK_TOKEN: ${{ secrets.SLACK_TOKEN }}
           CHANNEL_ID: ${{ secrets.CHANNEL_ID }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: python scripts/app.py
+          EXCLUDED_USERS: ${{ secrets.EXCLUDED_USERS }}
+        run: python scripts/slack_monitor_rotation.py
