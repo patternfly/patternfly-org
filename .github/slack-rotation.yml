@@ -27,8 +27,8 @@ jobs:
       
       - name: Run rotation script
         env:
-          SLACK_TOKEN: ${{ secrets.SLACK_TOKEN }}
-          CHANNEL_ID: ${{ secrets.CHANNEL_ID }}
+          SLACK_TOKEN: ${{ secrets.SLACK_MONITOR_APP_SLACK_TOKEN }}
+          CHANNEL_ID: ${{ secrets.TEAM_UXD_PATTERNFLY_CHANNEL_ID }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          EXCLUDED_USERS: ${{ secrets.EXCLUDED_USERS }}
+          EXCLUDED_USERS: ${{ secrets.SLACK_MONITOR_EXCLUDED_USERS }}
         run: python scripts/slack_monitor_rotation.py
