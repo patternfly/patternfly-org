@@ -110,7 +110,7 @@ const MDXChildTemplate = ({ Component, source, toc = [], index = 0, id }) => {
   const ChildComponent = () => (
     <div className={source !== 'landing-pages' ? 'pf-v6-l-flex' : ''}>
       {toc.length > 1 && <TableOfContents items={toc} />}
-      <Stack hasGutter style={{ ...(source !== 'landing-pages' && { maxWidth: '825px' }) }}>
+      <Stack hasGutter className={(source !== 'landing-pages' && 'ws-example-page-wrapper')}>
         {InlineAlerts}
         <Component />
         {functionDocumentation.length > 0 && (
