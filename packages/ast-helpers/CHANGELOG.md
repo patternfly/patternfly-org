@@ -3,6 +3,55 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.4.0-alpha.177 (2025-04-23)
+
+
+### Bug Fixes
+
+* **example:** keeps example content from overflowing content area ([#4550](https://github.com/patternfly/patternfly-org/issues/4550)) ([8a4b648](https://github.com/patternfly/patternfly-org/commit/8a4b648a46aa710608557ce920e8070bf251d5ef))
+
+
+
+
+
+# 1.4.0-alpha.176 (2025-04-16)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 1.4.0-alpha.175 (2025-04-15)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 1.4.0-alpha.174 (2025-04-10)
+
+
+### Reverts
+
+* Revert "feat(ver): enable react 19 support in framework (#4515)" (#4541) ([93ae3ec](https://github.com/patternfly/patternfly-org/commit/93ae3ecc6bf551ae1eb8ab844aa82ca6619cf2bf)), closes [#4515](https://github.com/patternfly/patternfly-org/issues/4515) [#4541](https://github.com/patternfly/patternfly-org/issues/4541)
+
+
+
+
+
+# 1.4.0-alpha.173 (2025-04-10)
+
+
+### Features
+
+* **ver:** enable react 19 support in framework ([#4515](https://github.com/patternfly/patternfly-org/issues/4515)) ([07ed7ae](https://github.com/patternfly/patternfly-org/commit/07ed7ae30789543204f8c8f5031c96e478164957))
+
+
+
+
+
 # 1.4.0-alpha.172 (2025-04-09)
 
 

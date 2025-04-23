@@ -23,3 +23,7 @@ p.pf-v6-c-content--p.ws-p {
 .ws-back-to-top {
   z-index: var(--pf-t--global--z-index--2xl);
 }
+
+.ws-example-page-wrapper {
+  max-width: min(100%, 825px);
+}
