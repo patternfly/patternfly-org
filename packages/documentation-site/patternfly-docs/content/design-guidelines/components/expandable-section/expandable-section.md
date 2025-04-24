@@ -3,10 +3,14 @@ id: Expandable section
 section: components
 ---
 
+import '../components.css';
+
 ## Elements
 An expandable section has two main elements.
 
-<img src="./img/elements.png" alt="Elements of expandable section" width="284"/>
+<div class="ws-docs-content-img">
+![Elements of an expandable section.](./img/exp-sect-elements.svg)
+</div>
 
 1. **Caret:** Indicates whether the section is expanded or collapsed.
 2. **Toggle text:** Informs the user what will be shown when the component is expanded.
@@ -23,24 +27,29 @@ Use an expandable section with a blue border to add more visual weight. This var
 
 <img src="./img/disclosure.png" alt="Disclosure example" width="1060"/>
 
-
-
 ### Expandable section in a form
 
-<img src="./img/form.png" alt="Expandable section in a form" width="1514"/>
+<div class="ws-docs-content-img">
+![Example of an expandable section in a form.](./img/exp-sect-form.svg)
+</div>
 
 ### Expandable section in an inline alert
 
-<img src="./img/inline-alert.png" alt="Expandable section in an inline alert" width="502"/>
+<div class="ws-docs-content-img">
+![Example of an expandable section in an inline alert.](./img/exp-sect-inline-alert.svg)
+</div>
 
 ### Expandable section in a side panel
 
-<img src="./img/side-panel.png" alt="Expandable section in a side panel" width="1047"/>
+<div class="ws-docs-content-img">
+![Example of an expandable section in a side panel.](./img/exp-sect-panel.svg)
+</div>
 
 ### Expandable section in a documentation page
 
-<img src="./img/documentation.png" alt="Expandable section in a documentation page" width="644"/>
-
+<div class="ws-docs-content-img">
+![Example of an expandable section in a documentation page.](./img/exp-sect-docs-page.svg)
+</div>
 
 
 For more information regarding accessibility, visit the [expandable section accessibility tab](https://v4-archive.patternfly.org/v4/components/expandable-section/accessibility).
