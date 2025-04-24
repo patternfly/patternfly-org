@@ -2611,8 +2611,8 @@ __metadata:
     "@patternfly/react-code-editor": ^6.2.2
     "@patternfly/react-core": ^6.2.2
     "@patternfly/react-table": ^6.2.2
-    react: ^17.0.0 || ^18.0.0 || ^19.0.0
-    react-dom: ^17.0.0 || ^18.0.0 || ^19.0.0
+    react: ^17.0.0 || ^18.0.0
+    react-dom: ^17.0.0 || ^18.0.0
   bin:
     pf-docs-framework: scripts/cli/cli.js
   languageName: unknown
