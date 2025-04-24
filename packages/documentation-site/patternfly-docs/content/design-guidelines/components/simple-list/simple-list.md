@@ -3,8 +3,13 @@ id: Simple list
 section: components
 ---
 
+import '../components.css';
+
 ## Elements
-<img src="./img/simple-list.png" alt="a simple list diagram depicting the locations of the section title, item, default state, and selected state" width="270"/>
+
+<div class="ws-docs-content-img">
+![Elements of a simple list showing the locations of the section title, items, and their different states.](./img/simplelist-elements.svg)
+</div>
 
 1. **Section title (optional):** Section titles should be a few words. They are more commonly used in grouped lists. 
 2. **Item:** Items are typically single words or short phrases.
