@@ -3,6 +3,33 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 6.9.10 (2025-04-24)
+
+
+### Reverts
+
+* Revert "chore(deps): Temporarily allow for React 19 peer dependency (#4582)" (#4585) ([8845a7e](https://github.com/patternfly/patternfly-org/commit/8845a7e8cc29d0c4130d0dc37e338eed4f96a71a)), closes [#4582](https://github.com/patternfly/patternfly-org/issues/4582) [#4585](https://github.com/patternfly/patternfly-org/issues/4585)
+
+
+
+
+
+## 6.9.9 (2025-04-24)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 6.9.8 (2025-04-24)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
 ## 6.9.7 (2025-04-23)
 
 **Note:** Version bump only for package @patternfly/documentation-framework
