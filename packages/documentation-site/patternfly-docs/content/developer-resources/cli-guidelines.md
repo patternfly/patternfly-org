@@ -16,8 +16,6 @@ Accessibility matters in CLI design just as much as it does in graphical interfa
 
 While CLIs don't have visual UI elements, many accessibility principles still apply.
 
-
-
 ### Best Practices
 
 - Don’t rely on **color alone** to convey meaning  
@@ -78,8 +76,6 @@ Command-line inputs come in two main forms:
 - **Arguments** – Positional inputs that are required and order-dependent
 - **Flags** – Named inputs (using `-` or `--`) that modify behavior or provide optional parameters
 
-
-
 ### Arguments
 
 Use arguments for required, primary inputs that define the core action. Because arguments are positional, their order matters and should be kept minimal to avoid confusion.
@@ -115,8 +111,6 @@ These flags:
 - ❌ Don’t use too many arguments — it becomes hard to parse and remember
 - ✅ Document expected input types (e.g., string, int, boolean) for all flags
 
-
-
 ## Flags and options
 _when and why to use long/short/boolean_
 
@@ -125,8 +119,6 @@ Flags are named parameters that modify the behavior of a command. They provide f
 There are two main types of flags:
 - **Long-form flags**: More descriptive, ideal for clarity and scripting.
 - **Short-form flags**: Concise, best for highly-used commands or power users.
-
-
 
 ### Long-Form Flags
 
@@ -182,8 +174,6 @@ Every CLI should provide structured, easy-to-access help output that explains:
 - What a command does
 - What arguments or flags it accepts
 - How to use it, with clear Examples:
-
-
 
 ### Standard Help Flags
 
@@ -494,7 +484,6 @@ Results:
 ✓ 2 files skipped (already up to date)
 ✓ 1 warning: Unused flag --optimize
 ```
-
 
 ## Version listing and pagination
 
