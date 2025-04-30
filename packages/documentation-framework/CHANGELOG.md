@@ -8,7 +8,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Reverts
 
-* Revert "chore(deps): Downgrade to deps with React 19 support (#4583)" (#4587) ([7707f9f](https://github.com/patternfly/patternfly-org/commit/7707f9f1ced3115cc4d2615c95f6380b972d6c73)), closes [#4583](https://github.com/patternfly/patternfly-org/issues/4583) [#4587](https://github.com/patternfly/patternfly-org/issues/4587)
+* Revert "chore(deps): Downgrade to deps with React 19 support (#4583)" (#4587). ([7707f9f](https://github.com/patternfly/patternfly-org/commit/7707f9f1ced3115cc4d2615c95f6380b972d6c73)), closes [#4583](https://github.com/patternfly/patternfly-org/issues/4583) [#4587](https://github.com/patternfly/patternfly-org/issues/4587)
 
 
 
