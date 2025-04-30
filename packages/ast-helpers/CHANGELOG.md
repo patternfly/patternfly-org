@@ -3,6 +3,36 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.4.0-alpha.185 (2025-04-28)
+
+
+### Reverts
+
+* Revert "chore(deps): Downgrade to deps with React 19 support (#4583)" (#4587) ([7707f9f](https://github.com/patternfly/patternfly-org/commit/7707f9f1ced3115cc4d2615c95f6380b972d6c73)), closes [#4583](https://github.com/patternfly/patternfly-org/issues/4583) [#4587](https://github.com/patternfly/patternfly-org/issues/4587)
+
+
+
+
+
+# 1.4.0-alpha.184 (2025-04-28)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 1.4.0-alpha.183 (2025-04-24)
+
+
+### Reverts
+
+* Revert "chore(deps): Temporarily allow for React 19 peer dependency (#4582)" (#4585) ([8845a7e](https://github.com/patternfly/patternfly-org/commit/8845a7e8cc29d0c4130d0dc37e338eed4f96a71a)), closes [#4582](https://github.com/patternfly/patternfly-org/issues/4582) [#4585](https://github.com/patternfly/patternfly-org/issues/4585)
+
+
+
+
+
 # 1.4.0-alpha.182 (2025-04-24)
 
 **Note:** Version bump only for package @patternfly/ast-helpers
