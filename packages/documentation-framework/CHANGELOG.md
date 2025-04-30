@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 6.10.0 (2025-04-30)
+
+
+### Features
+
+* **misc:** change whitespace ([#4592](https://github.com/patternfly/patternfly-org/issues/4592)) ([a1de8d3](https://github.com/patternfly/patternfly-org/commit/a1de8d345f0f6a20f583599b4d7543b5497b8ff5))
+
+
+
+
+
 ## 6.9.12 (2025-04-28)
 
 
