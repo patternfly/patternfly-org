@@ -4,7 +4,7 @@ title: Release highlights
 section: get-started
 ---
 import './get-started.css';
-import { Divider, Timestamp } from '@patternfly/react-core';
+import { Divider, Timestamp } from '@patternfly/react-core'; 
 
 <Timestamp date={new Date(2025, 3)}>April 2025</Timestamp>
 
