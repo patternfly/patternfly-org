@@ -32,7 +32,7 @@
     "@octokit/rest": "^19.0.7",
     "@patternfly/patternfly": "^6.2.3",
     "@patternfly/react-code-editor": "^6.2.2",
-    "@patternfly/react-core": "^6.2.2",
+    "@patternfly/react-core": "^6.2.2", 
     "@patternfly/react-table": "^6.2.2",
     "glob": "^8.1.0",
     "lerna": "^6.4.1",
