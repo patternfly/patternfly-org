@@ -3,12 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 6.10.0 (2025-04-30)
+
+
+### Features
+
+* **misc:** change whitespace ([#4592](https://github.com/patternfly/patternfly-org/issues/4592)) ([a1de8d3](https://github.com/patternfly/patternfly-org/commit/a1de8d345f0f6a20f583599b4d7543b5497b8ff5))
+
+
+
+
+
 ## 6.9.12 (2025-04-28)
 
 
 ### Reverts
 
-* Revert "chore(deps): Downgrade to deps with React 19 support (#4583)" (#4587) ([7707f9f](https://github.com/patternfly/patternfly-org/commit/7707f9f1ced3115cc4d2615c95f6380b972d6c73)), closes [#4583](https://github.com/patternfly/patternfly-org/issues/4583) [#4587](https://github.com/patternfly/patternfly-org/issues/4587)
+* Revert "chore(deps): Downgrade to deps with React 19 support (#4583)" (#4587). ([7707f9f](https://github.com/patternfly/patternfly-org/commit/7707f9f1ced3115cc4d2615c95f6380b972d6c73)), closes [#4583](https://github.com/patternfly/patternfly-org/issues/4583) [#4587](https://github.com/patternfly/patternfly-org/issues/4587)
 
 
 
