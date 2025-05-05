@@ -78,7 +78,7 @@ Drag and drop functionality inside of a dual list allows users to customize the 
 ![dual list that is acitvely being dragged with a ghost row](./img/ghostrow.svg)
 </div>
 
-3. **postDrag event:** Once dropped, the items will be reordered based on the user’s action. The recently dropped row will receive a hover fill using `--pf-t--global--background--color--primary--hover`and the icon button will receive a fill of `--pf-t--global--background--color--action--plain--hover`.
+3. **postDrag event:** Once dropped, the items will be reordered based on the user’s action. The recently dropped row will receive a hover fill using `--pf-t--global--background--color--primary--hover`and the icon button will receive a background fill of `--pf-t--global--background--color--action--plain--hover`.
 
 <div class="ws-docs-content-img">
 ![dual list with an item that was dragged from one position to another](./img/postdrag-event.svg)
