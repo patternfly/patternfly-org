@@ -27,11 +27,6 @@ import '../components.css';
 ![Example of what happens after an item is dragged. The item is dropped into the new position and the border color disappears. The faded placeholder item also disappears.](./img/dnd-simple4.svg)
 </div>
 
-5. **Error state:** If the list item is dragged outside the bounding box the borders on the dragged item will switch to `--pf-v6-global--danger-color--100` and the cursor will change to `not-allowed` to indicate an invalid placement. If the user releases the cursor outside the bounding area the dragged item will return to its default position.
-
-<div class="ws-docs-content-img">
-![Dragging outside of the draggable area results in an error state on the item being dragged. The border color changes to red.](./img/dnd-simple5.svg)
-</div>
 
 ### Multiple lists
 PatternFly drag and drop allows users to move items between different list groups. For example, in a To-Do list scenario users can quickly drag list items from the ”In progress” column to the “Done” column.
@@ -54,12 +49,6 @@ PatternFly drag and drop allows users to move items between different list group
 ![Example of what happens after an item is dragged. The item is dropped into the new position and the border color disappears. The faded placeholder item also disappears.](./img/dnd-multi3.svg)
 </div>
 
-4. **Error state**
-
-<div class="ws-docs-content-img">
-![Dragging outside of the draggable area results in an error state on the item being dragged. The border color changes to red.](./img/dnd-multi4.svg)
-</div>
-
 
 ### Draggable cards
 In a card view, when the selected card has been dropped the others will reposition following a left-to-right flow by default.
@@ -80,10 +69,4 @@ In a card view, when the selected card has been dropped the others will repositi
 
 <div class="ws-docs-content-img">
 ![Example of what happens after a card is dragged. The card is dropped into the new position and the border color disappears. The faded placeholder card also disappears.](./img/dnd-cards3.svg)
-</div>
-
-4. **Error state**
-
-<div class="ws-docs-content-img">
-![Dragging outside of the draggable area results in an error state on the card being dragged. The border color changes to red.](./img/dnd-cards4.svg)
 </div>
