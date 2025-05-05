@@ -66,13 +66,19 @@ Multiple select lists allow users to select one or more options from a list, wit
 ## Variations
 
 ### Select list with typeahead
-Typeahead allows users to narrow a displayed list of options by typing into the input field. Type ahead is  recommended for lists with more than ten options and is available for single and multiple select lists. Although the typeahead within toggle functionality does not exist for the checkbox select, there is an option to add a typeahead capability within the menu of items if needed, as seen in this [grouped checkbox input with filtering](/components/menus/select/react#grouped-checkbox-input-with-filtering) example.
+Typeahead allows users to narrow a displayed list of options by typing into the input field. Typeahead is recommended for lists with more than ten options and is available for single and multiple select lists. Although the typeahead within toggle functionality does not exist for the checkbox select, there is an option to add a typeahead capability within the menu of items if needed, as seen in this [grouped checkbox input with filtering](/components/menus/select/react#grouped-checkbox-input-with-filtering) example.
 
 <div class="ws-docs-content-img">
 ![Visual of a typeahead being used](./img/typeahead-select.svg)
 </div>
 
 When providing fewer than 5 options, you can use [radio buttons](/components/forms/radio) or [checkboxes](/components/forms/checkbox) to display all options to the user simultaneously if you don’t have any space constraints.
+
+If there are no matches for the search term that a user has entered into the typeahead, display a message to communicate "No results found":
+
+<div class="ws-docs-content-img">
+![Typeahead menu with no results matching the search term.](./img/typeahead-search-no-results.svg)
+</div>
 
 ### Select list with count
 Select lists support the option of adding a number count to checkbox selects, both (1) as a badge in the toggle to indicate number of items selected, or (2) at the item level to indicate the number of items that match a certain filter option.
