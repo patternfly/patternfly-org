@@ -72,21 +72,14 @@ Drag and drop functionality inside of a dual list allows users to customize the 
 ![dual list with the second row item being dragged to a new position](./img/ondrag-event.svg)
 </div>
 
-1. **Selected item:** A selected item refers to the visual state of the item when it has been selected by a user.
-
-2. **Ghost Row:** Mid onDrag event, a duplicate ghost row will follow the active dragged item. The ghost row will fill the available space and use a `--pf-t--global--border--color--brand--clicked` border to highlight it as the item being dragged. The ghost row icon button will recieve a hover fill using `--pf-t--global--background--color--action--plain--hover`.
+2. **Ghost row:** Mid onDrag event, a duplicate ghost row will follow the active dragged item. The ghost row will fill the available space and use a `--pf-t--global--border--color--brand--clicked` border to highlight it as the item being dragged. The ghost row icon button will recieve a hover fill using `--pf-t--global--background--color--action--plain--hover`.
 
 <div class="ws-docs-content-img">
 ![dual list that is acitvely being dragged with a ghost row](./img/ghostrow.svg)
 </div>
-
-1. **Ghost row item:** A ghost row item refers to the visual state of the item when it has been selected by a user and is actively being moved to a new row.
-2. **Selected item:** A selected item refers to the visual state of the item when it has been selected by a user.
 
 3. **postDrag event:** Once dropped, the items will be reordered based on the user’s action. The recently dropped row will receive a hover fill using `--pf-t--global--background--color--primary--hover`and the icon button will receive a fill of `--pf-t--global--background--color--action--plain--hover`.
 
 <div class="ws-docs-content-img">
 ![dual list with an item that was dragged from one position to another](./img/postdrag-event.svg)
 </div>
-
-1. **Dropped item:** visual state of an item when it has been dragged and dropped by a user. 
