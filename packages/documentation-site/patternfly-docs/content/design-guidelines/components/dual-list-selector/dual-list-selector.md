@@ -20,11 +20,15 @@ Dual list selectors are useful when you have a large set of options for users to
 ## Behavior
 Users can select one or more items from the available list and use the arrows to move these items to the chosen list. Users can filter down the items by using the search input field.
 
-<img src="./img/dual list single.gif" alt="basic dual list behavior" width="880"/>
+<div class="ws-docs-content-img">
+![dual list behavior with an item being moved to the second row](./img/dual-list-1.gif)
+</div>
 
-In an expandable dual list, when users move an item from the available list to the chosen list, the item still appears in its original group structure. For example, if the item Option 6  in the group Folder 2  is moved from the available list to the chosen list, the Option 6 item will appear in the chosen list under the Folder 2 group.  It won’t appear as a stand-alone, single-level item.
+In an expandable dual list, when users move an item from the available list to the chosen list, the item still appears in its original group structure. For example, if the item Broccoli in the group Folder Vegetables is moved from the available list to the chosen list, the Broccoli item will appear in the chosen list under the Vegetable group. It won’t appear as a stand-alone, single-level item.
 
-<img src="./img/dual list folders.gif" alt="basic dual list behavior" width="880"/>
+<div class="ws-docs-content-img">
+![dual list behavior with 1 folder of item being moved to the second row](./img/dual-list-2.gif)
+</div>
 
 ## Variations
 There are two types of dual list selectors: basic dual lists and expandable dual lists.
@@ -32,7 +36,9 @@ There are two types of dual list selectors: basic dual lists and expandable dual
 ### Basic dual list 
 A basic dual list contains a flat list of items for the user to choose from. 
 
-<img src="./img/basic-dual.png" alt="basic dual list" width="880"/>
+<div class="ws-docs-content-img">
+![dual list with 2 search bars and 2 rows of items](./img/basic-dual-list.svg)
+</div>
 
 1. **List labels:** List labels distinguish between the list of available items and the list of chosen items. These labels can be changed based on your use case, and they should be clear and concise. 
 2. **Available items list:** The available items list is a list of items that users can choose from. Available list items can have a single level or multiple levels. 
@@ -47,25 +53,40 @@ A basic dual list contains a flat list of items for the user to choose from.
 ### Expandable dual list
 An expandable dual list contains a multi-leveled list of items for users to choose from. Items can be nested in a hierarchical tree to show different groupings or categories, and the list can have up to three levels.
 
-<img src="./img/expandable-dual.png" alt="basic dual list" width="880"/>
+<div class="ws-docs-content-img">
+![dual list with 2 rows of items of expandable items](./img/expandable-dual-list.svg)
+</div>
 
-1. **Folder:** group of items that can be selected and moved from one list of options to the other. When a folder has a mix of selected and unselected items, the checkbox should have a mixed state. When all items in a folder are selected, the folder checkbox should have a selected state.
-2. **Item:** item within a folder that can be selected and moved.
+1. **Number of items:** indicator of how many items are selected, among the total items available in the list. <u>In expandable lists, only non-folder items are included in the item count.</u>
+2. **Folder:** group of items that can be selected and moved from one list of options to the other. When a folder has a mix of selected and unselected items, the checkbox should have a mixed state. When all items in a folder are selected, the folder checkbox should have a selected state.
 3. **Selected item:** visual state of an item when it has been selected by a user. 
-4. **Number of items:** indicator of how many items are selected, among the total items available in the list. <u>In expandable lists, only non-folder items are included in the item count.</u>
+4. **Item:** item within a folder that can be selected and moved.
 5. **Badge (optional):** number of items inside a folder.
 
 ### Drag and drop dual list
 Drag and drop functionality inside of a dual list allows users to customize the order in which items within the Chosen options are displayed. The fa-grip icon at the start of the item row is used to indicate that the items are draggable.
 
-1. **onDrag event:** Upon click & hold a `--pf-v6-global--active-color--100` border will show the draggable area that is available. The list item being dragged will also use a `--pf-v6-global--active-color--100` border to highlight it as the item being dragged and all other list items will switch to a disabled state.
+1. **onDrag event:** Upon click & hold a `--pf-t--global--border--color--brand--clicked` border will show the draggable area that is available. The list item being dragged will also use a `--pf-t--global--border--color--brand--clicked` border to highlight it as the item being dragged.
 
-<img src="./img/Drag-drop-Dual-list-selector-selected-step-1-final.png" alt="Dual list drag interaction 1 - Drag in progress" width="880"/>
+<div class="ws-docs-content-img">
+![dual list with the second row item being dragged to a new position](./img/ondrag-event.svg)
+</div>
 
-2. **postDrag event:** Once dropped, the items will be reordered based on the user’s action. 
+1. **Selected item:** A selected item refers to the visual state of the item when it has been selected by a user.
 
-<img src="./img/Drag-drop-Dual-list-selector-selected-step-2-final.png" alt="Dual list drag interaction 2 - Drag & drop completed" width="880"/>
+2. **Ghost Row:** Mid onDrag event, a duplicate ghost row will follow the active dragged item. The ghost row will fill the available space and use a `--pf-t--global--border--color--brand--clicked` border to highlight it as the item being dragged. The ghost row icon button will recieve a hover fill using `--pf-t--global--background--color--action--plain--hover`.
 
-3. **Error state:** If the list item is dragged outside the bounding box the borders on the dragged item will switch to `--pf-v6-global--danger-color--100` and the cursor will change to not-allowed to indicate an invalid placement. If the user releases the cursor outside the bounding area the dragged item will return to its default position.
+<div class="ws-docs-content-img">
+![dual list that is acitvely being dragged with a ghost row](./img/ghostrow.svg)
+</div>
 
-<img src="./img/Drag-drop-Dual-list-selector-selected-step-3-final.png" alt="Dual list drag interactionstep 3 - Error state" width="880"/>
+1. **Ghost row item:** A ghost row item refers to the visual state of the item when it has been selected by a user and is actively being moved to a new row.
+2. **Selected item:** A selected item refers to the visual state of the item when it has been selected by a user.
+
+3. **postDrag event:** Once dropped, the items will be reordered based on the user’s action. The recently dropped row will receive a hover fill using `--pf-t--global--background--color--primary--hover`and the icon button will receive a fill of `--pf-t--global--background--color--action--plain--hover`.
+
+<div class="ws-docs-content-img">
+![dual list with an item that was dragged from one position to another](./img/postdrag-event.svg)
+</div>
+
+1. **Dropped item:** visual state of an item when it has been dragged and dropped by a user. 
