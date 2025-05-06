@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "@babel/core": "^7.24.3",
-    "@babel/preset-env": "^7.24.3",
+    "@babel/preset-env": "^7.27.1",
     "@babel/preset-react": "^7.24.1",
     "@mdx-js/util": "1.6.16",
     "@patternfly/ast-helpers": "^1.4.0-alpha.188",
@@ -46,7 +46,7 @@
     "process": "^0.11.10",
     "puppeteer": "^23.6.1",
     "puppeteer-cluster": "^0.24.0",
-    "react-docgen": "5.3.1",
+    "react-docgen": "6.0.0",
     "react-ssr-prepass": "1.5.0",
     "remark-footnotes": "1.0.0",
     "remark-frontmatter": "2.0.0",
