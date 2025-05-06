@@ -66,20 +66,20 @@ An expandable dual list contains a multi-leveled list of items for users to choo
 ### Drag and drop dual list
 Drag and drop functionality inside of a dual list allows users to customize the order in which items within the Chosen options are displayed. The fa-grip icon at the start of the item row is used to indicate that the items are draggable.
 
-1. **onDrag event:** Upon click & hold a `--pf-t--global--border--color--brand--clicked` border will show the draggable area that is available. The list item being dragged will also use a `--pf-t--global--border--color--brand--clicked` border to highlight it as the item being dragged.
-
 <div class="ws-docs-content-img">
 ![dual list with the second row item being dragged to a new position](./img/ondrag-event.svg)
 </div>
 
-2. **Ghost row:** Mid onDrag event, a duplicate ghost row will follow the active dragged item. The ghost row will fill the available space and use a `--pf-t--global--border--color--brand--clicked` border to highlight it as the item being dragged. The ghost row icon button will recieve a hover fill using `--pf-t--global--background--color--action--plain--hover`.
+1. **onDrag event:** Upon click & hold a `--pf-t--global--border--color--brand--clicked` border will show the draggable area that is available. The list item being dragged will also use a `--pf-t--global--border--color--brand--clicked` border to highlight it as the item being dragged.
 
 <div class="ws-docs-content-img">
 ![dual list that is acitvely being dragged with a ghost row](./img/ghost-row.svg)
 </div>
 
-3. **postDrag event:** Once dropped, the items will be reordered based on the user’s action. The recently dropped row will receive a hover fill using `--pf-t--global--background--color--primary--hover`and the icon button will receive a background fill of `--pf-t--global--background--color--action--plain--hover`.
+2. **Ghost row:** Mid onDrag event, a duplicate ghost row will follow the active dragged item. The ghost row will fill the available space and use a `--pf-t--global--border--color--brand--clicked` border to highlight it as the item being dragged. The ghost row icon button will recieve a hover fill using `--pf-t--global--background--color--action--plain--hover`.
 
 <div class="ws-docs-content-img">
 ![dual list with an item that was dragged from one position to another](./img/postdrag-event.svg)
 </div>
+
+3. **postDrag event:** Once dropped, the items will be reordered based on the user’s action. The recently dropped row will receive a hover fill using `--pf-t--global--background--color--primary--hover`and the icon button will receive a background fill of `--pf-t--global--background--color--action--plain--hover`.
