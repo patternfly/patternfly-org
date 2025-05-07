@@ -404,7 +404,7 @@ On a desktop, a full-page empty state should contain a 3xl spacer at the top and
 ![Example of the spacing tokens used on a full-page empty state.](./img/es-full-page-spacing.svg)
 </div>
 
-On a mobile device, a full-page empty state should contain a 2xl spacer at the top, with md spacer (or larger) on all remaining sides.  
+On a mobile device, a full-page empty state should contain a 2xl spacer at the top, with a md spacer (or larger) on all remaining sides.  
 
 <div class="ws-docs-content-img">
 ![Example of the spacing tokens used on a mobile empty state.](./img/es-mobile-spacing.svg)
