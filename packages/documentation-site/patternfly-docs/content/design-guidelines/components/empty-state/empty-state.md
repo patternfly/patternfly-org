@@ -398,20 +398,20 @@ For a filtering or search situation, you can use a stand-alone secondary button 
 Empty states can be a full page, or they can be included inside of other components on the page. 
 
 ### Full-page empty states 
-On a desktop, a full-page empty state should be 64px away from the top and horizontally centered with a minimum padding of 24px on all remaining sides.
+On a desktop, a full-page empty state should contain a 3xl spacer at the top and should be horizontally centered, with a lg spacer (or larger) on all remaining sides.
 
 <div class="ws-docs-content-img">
 ![Example of the spacing tokens used on a full-page empty state.](./img/es-full-page-spacing.svg)
 </div>
 
-On a mobile device, a full-page empty state should be 48px away from the top with a minimum of 16px padding on all remaining sides.  
+On a mobile device, a full-page empty state should contain a 2xl spacer at the top, with md spacer (or larger) on all remaining sides.  
 
 <div class="ws-docs-content-img">
 ![Example of the spacing tokens used on a mobile empty state.](./img/es-mobile-spacing.svg)
 </div>
 
 ### Empty states inside tables, cards, or wizards
-Empty states inside a table, card, or wizard should always be horizontally and vertically centered on their background. Outside padding on all remaining sides should be 24px. 
+Empty states inside a table, card, or wizard should always be horizontally and vertically centered on their background. There should be a lg spacer of outside padding on all remaining sides.
 
 <div class="ws-docs-content-img">
 ![Example of the spacing tokens used on a table.](./img/es-table-spacing.svg)
