@@ -22,11 +22,6 @@ We recommend using the dynamic toggle text when designing with the expandable se
 
 ## Variations
 
-### Expandable section with blue line
-Use an expandable section with a blue border to add more visual weight. This variation is recommended for marketing purposes.
-
-<img src="./img/disclosure.png" alt="Disclosure example" width="1060"/>
-
 ### Expandable section in a form
 
 <div class="ws-docs-content-img">
