@@ -9,7 +9,7 @@ import '../components.css';
 This is an example of a large, full-page empty state with all empty state elements. Other empty state variations contain the same elements and differ only in spacing and text sizes. 
 
 <div class="ws-docs-content-img">
-![Example of a large empty state with all elements.](./img/es-elements.svg)
+![Example of a large empty state with all elements.](./img/elements.svg)
 </div>
 
 1. **Icon**: The icon presents a visual component for easier recognition of the empty state’s message.
