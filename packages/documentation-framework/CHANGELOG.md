@@ -3,6 +3,57 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 6.10.9 (2025-05-08)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 6.10.8 (2025-05-08)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 6.10.7 (2025-05-08)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 6.10.6 (2025-05-08)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 6.10.5 (2025-05-07)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 6.10.4 (2025-05-06)
+
+
+### Bug Fixes
+
+* **documentation-framework:** Change file extension from js to jsx ([#4602](https://github.com/patternfly/patternfly-org/issues/4602)) ([e607f89](https://github.com/patternfly/patternfly-org/commit/e607f896bfc0ee1ed445055d57ebd70287777923))
+
+
+
+
+
 ## 6.10.3 (2025-05-06)
 
 **Note:** Version bump only for package @patternfly/documentation-framework
