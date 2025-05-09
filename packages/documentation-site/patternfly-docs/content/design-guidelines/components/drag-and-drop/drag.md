@@ -13,15 +13,15 @@ import '../components.css';
 ![Example of a data list with items that can be dragged.](./img/dnd-simple1.svg)
 </div>
 
-2. **Bounding box:** Upon click & hold a `--pf-v6-global--active-color--100` border will show the draggable area that is available. 
+2. **Ghost item:** Upon click and hold, a duplicate "ghost" item with a  `--pf-v6-global--active-color--100` border will appear "on top" of the list. This ghost item represents the initial item being moved.
 
-3. **onDrag event:** The list item being dragged will also use a `--pf-v6-global--active-color--100` border to highlight it as the item being dragged and all other list items will switch to a disabled state. The space where the item is being dragged from will remain empty to indicate its original position in the list.
+3. **onDrag event:** While a ghost item is being dragged, the original item will move its position in the list to align with the hovered position.
 
 <div class="ws-docs-content-img">
 ![Example of what happens when an item is dragged. A blue border appears around the item being dragged and a faded placeholder version stays in the original position.](./img/dnd-simple23.svg)
 </div>
 
-4. **postDrag event:** Once dropped, the items will be reordered based on the user’s action. The space left empty is then filled by the next item in the list.
+4. **postDrag event:** Once dropped, the ghost item will become an item in the list, which will be reordered based on the user’s action. 
 
 <div class="ws-docs-content-img">
 ![Example of what happens after an item is dragged. The item is dropped into the new position and the border color disappears. The faded placeholder item also disappears.](./img/dnd-simple4.svg)
