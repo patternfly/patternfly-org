@@ -26,11 +26,15 @@ There are 4 size variations available to use for different scenarios:
     - Default size.
     - Used in accordions, data lists, and tables:
 
-    <img src="./img/small-avatar-data list & accordion.png" alt="Image displaying small avatar usage in data list and accordion" width="802"/>
+    <div class="ws-docs-content-img">
+    ![Small avatar used in components.](./img/avatar-usage-sm-components.svg)
+    </div>
 
     - Also used in the masthead component:
 
-    <img src="./img/medium-avatar-masthead.png" alt="Image displaying medium avatar usage in masthead" width="1024"/> 
+    <div class="ws-docs-content-img">
+    ![Small avatar used in a masthead.](./img/avatar-usage-sm-masthead.svg)
+    </div>
 
 1. Medium (md), 36px
 
@@ -38,13 +42,19 @@ There are 4 size variations available to use for different scenarios:
     
     - Used in cards.
 
-    <img src="./img/large-avatar-card.png" alt="Image displaying large avatar usage in card" width="353"/> 
+    <div class="ws-docs-content-img">
+    ![Large avatar used in a card.](./img/avatar-usage-lg.svg)
+    </div>
+
 
 1. Extra large (xl), 128px
     
     - Used in profile displays.
 
-    <img src="./img/extra-large-avatar-profile display.png" alt="Image displaying extra large avatar usage in profile display" width="1024"/>
+    <div class="ws-docs-content-img">
+    ![Extra large avatar used in a profile display.](./img/avatar-usage-xl.svg)
+    </div>
+
 
 ## Accessibility
 For information regarding accessibility, visit the [avatar accessibility](/components/avatar/accessibility) tab. 
