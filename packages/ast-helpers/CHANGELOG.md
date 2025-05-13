@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.4.0-alpha.197 (2025-05-12)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
 # 1.4.0-alpha.196 (2025-05-09)
 
 **Note:** Version bump only for package @patternfly/ast-helpers
