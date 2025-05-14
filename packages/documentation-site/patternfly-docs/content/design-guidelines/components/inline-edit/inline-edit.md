@@ -20,6 +20,8 @@ Elements vary depending on inline edit variation
 ### When not to use
 * The editing is the primary function of the view. For example, in an edit modal.
 
+## Behavior
+
 <div class="ws-docs-content-img">
 ![Example of the behavior of an inline edit field.](./img/inline-edit-behavior.gif)
 </div>
