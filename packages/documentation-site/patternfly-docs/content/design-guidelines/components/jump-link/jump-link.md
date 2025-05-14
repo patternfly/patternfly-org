@@ -11,9 +11,11 @@ import '../components.css';
 ![Elements of a jump link.](./img/jump-links-elements.svg)
 </div>
 
-1. **Active section:** current section of the page the user is on.
+1. **Label (optional):** A descriptive header for a list of jump links.
 
-2. **Inactive section:** other sections of the page that the user is not currently on. Clicking on an inactive section will bring the user to the selected section and make the section active.
+2. **Active section:** current section of the page the user is on.
+
+3. **Inactive section:** other sections of the page that the user is not currently on. Clicking on an inactive section will bring the user to the selected section and make the section active.
 
 ## Usage
 Jump links provide a way to navigate through section headings on a page without scrolling. The highlighted active section changes as the user scrolls to the next section.
