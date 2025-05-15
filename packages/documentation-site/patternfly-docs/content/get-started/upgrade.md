@@ -27,7 +27,7 @@ Before you upgrade, familiarize yourself with these significant changes. While s
 ### Components
 
 1. [Chip](/components/chip): Replaced with [label](/components/label).
-1. [Tile](/components/tile): Replaced with [card](components/card).
+1. [Tile](/components/tile): Replaced with [card](/components/card).
 1. [Text](https://v5-archive.patternfly.org/components/text): Renamed to ["content"](/components/content).  
 1. [Expandable section](/components/expandable-section): Removed `isActive`.
 1. [Empty state](/components/empty-state): Refactored. 
