@@ -3,9 +3,13 @@ id: Login page
 section: components
 ---
 
+import '../components.css';
+
 ## Elements
 
-<img src="./img/elements.png" alt="Elements of a login page" width="1500"/>
+<div class="ws-docs-content-img">
+![Elements of a login page.](./img/login-elements.svg)
+</div>
 
 1. **Title:** Located at the top of the login card. The title can be the product name or any other term that makes sense for your application. If the text is longer than the space allowed, it should wrap to the next line.
 
@@ -62,19 +66,25 @@ The multi-factor login allows a user to gain access to an application by enterin
 
 When you need more security, you can incorporate additional authentication methods into the login process. This example shows both password and verification code methods:
 
-<img src="./img/multi-factor.png" alt="Example of multi factor login process" width="990"/>
+<div class="ws-docs-content-img">
+![Example of a multi-factor login process.](./img/login-authentication-multi-factor.svg)
+</div>
 
 **Enabling users to select their verification method (optional):**
 Once a user has provided a valid password, the system hides the gray bar at the bottom of the modal and displays the link text “More verification options." Clicking the link allows users to select an alternate verification type if they can’t use the default method.
 
 Examples of additional multi-factor authentication that could be used include authentication codes, SMS codes or backup codes.
 
-<img src="./img/verifications-methods.png" alt="Example of additional multi-factor authentication" width="990"/>
+<div class="ws-docs-content-img">
+![Example of additional multi-factor authentication.](./img/login-authentication-more-options.svg)
+</div>
 
 #### Single sign-on (SSO)
 Single sign-on (SSO) allows a user to log in once and access multiple applications within the same organization. This type of login supports displaying both single and multi-factor login.
 
-<img src="./img/sso.png" alt="Example of single sign on methods" width="990"/>
+<div class="ws-docs-content-img">
+![Example of single sign-on methods.](./img/login-authentication-sso.svg)
+</div>
 
 **Additional SSO elements**
 
@@ -102,13 +112,17 @@ Always present error states on the login screen if a login field submission resu
 
 #### Client-side errors
 
-![Client-side-errors](./img/client_side_error.png "Client-side-errors")
+<div class="ws-docs-content-img">
+![Example of client-side errors.](./img/login-client-errors.svg)
+</div>
 
 Client-side validation can be performed when a field is clicked away from or loses focus. It allows you to use inline validation to present errors or issues before the login is submitted. In most cases, client-side validations are performed as inline validations for each field. Some common examples are shown below.
 
 ##### Empty field(s)
 
-<img src="./img/empty-fields.png" alt="Example of empty login fields" width="543"/>
+<div class="ws-docs-content-img">
+![Example of empty login fields.](./img/login-empty-field-error.svg)
+</div>
 
 An error message should be displayed below any required field that is empty once the field loses focus or an action button (Log in/Next) is clicked. Once the field is filled, the error message should disappear. The following error messages are suggested for use:
 
@@ -120,7 +134,9 @@ An error message should be displayed below any required field that is empty once
 
 ##### Invalid characters
 
-<img src="./img/invalid-characters.png" alt="Example of invalid characters in login fields" width="543"/>
+<div class="ws-docs-content-img">
+![Example of invalid characters in login fields.](./img/login-invalid-error.svg)
+</div>
 
 An error message should be displayed when there is an invalid character in the username. Once the field has been modified, the error message should disappear. The following error messages are suggested for use:
 
@@ -134,7 +150,9 @@ An error message should be displayed when there is an invalid character in the u
 
 ##### Caps lock is on
 
-<img src="./img/caps-lock.png" alt="Example of empty login fields" width="678"/>
+<div class="ws-docs-content-img">
+![Example of an empty login field with a warning.](./img/login-caps-warning.svg)
+</div>
 
 A warning message should be displayed when caps lock is on so users avoid making a mistake when typing a case-sensitive password. The warning message should be displayed in a popover when a user clicks into the input field. Once caps lock has been turned off, the warning message should disappear. The following warning message is suggested for use:
 
@@ -146,13 +164,17 @@ A warning message should be displayed when caps lock is on so users avoid making
 
 #### Server-side errors
 
-![Server-side-error](./img/server-side-error.png "server-side-error")
+<div class="ws-docs-content-img">
+![Example of server-side errors.](./img/login-server-errors.svg)
+</div>
 
 If there are validation errors when users submit a form, the entire page is reloaded. At the same time, the password field should be cleared to provide additional security. Error messages display as inline errors below each field and/or as inline alerts below the header/description. If there are multiple messages, each message appears on its own line; spacing between fields should be enough so that the form doesn’t jump to fit the messages.
 
 ##### Account doesn’t exist/password is wrong
 
-<img src="./img/wrong-password.png" alt="Example of wrong password" width="543"/>
+<div class="ws-docs-content-img">
+![Example of an account error.](./img/login-no-account-error.svg)
+</div>
 
 An error message should be displayed when the user types an incorrect username or password. The most secure approach is to provide a generic message that the username or password is incorrect without specifying which is incorrect. This way, the identity of a valid user is protected. If your application doesn’t require this level of security, additional messages  can be used. Once the field has been modified, the error message should disappear. The following error messages are suggested for use.
 
@@ -167,7 +189,9 @@ An error message should be displayed when the user types an incorrect username o
 
 ##### General warning messages
 
-<img src="./img/warning-message.png" alt="Example of warning messages" width="990"/>
+<div class="ws-docs-content-img">
+![Example of general warning messages.](./img/login-general-warnings.svg)
+</div>
 
 Another form of error state message is a warning message. These messages are triggered by system level events or if a user is timed out of the application. Notifications should be displayed until the user attempts a new login. These messages should be displayed above the username field. The following are examples of general error messages.
 
