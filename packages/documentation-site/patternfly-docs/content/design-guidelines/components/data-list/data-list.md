@@ -49,16 +49,43 @@ Data lists can also appear in primary-detail views. Visit the [primary-detail gu
 
 ## Variations
 
-PatterFly supports 2 main types of data lists:
-
+PatterFly supports 2 main types of data lists: 
 1. **[Compact data list](#compact-spacing):** Use when you want to show as much data per page as possible.
 2. **[Default data list](#default-spacing):** Use when you don’t have to minimize paging.
-
-See [when to use compact vs. default spacing](#when-to-use-a-data-list-vs.-a-table)for more information about the styling and usage.
 
 <div class="ws-docs-content-img">
 ![Examples of compact and default data lists.](./img/datalist-variations.svg)
 </div>
+
+While using a compact or default data list largely depends on your use case, adhere to the following general guidelines.
+
+### Compact spacing 
+A data list may sometimes need to be compact to make more rows visible at a time. The more rows you can see, the less you need to use [pagination](/components/pagination/design-guidelines). Compact spacing is recommended for data with a simple structure.
+
+**Use compact spacing when:**
+* You need to show as much data as possible on one page.
+* You need to show data in a small space, like in a modal or wizard.
+* You need to minimize paging.
+* Readability is a secondary concern.
+
+**Example:**
+* You can see more data on one page. 
+* You have a good overview about the structure of data.
+* The structure of data is simple, informative and have less visual elements. 
+
+### Default spacing 
+A data list may sometimes need more space for rich graphical data. 
+
+**Use default spacing when:**
+* You don’t have to display a lot of data on one page.
+* You use many visual indicators that are placed in columns, such as icons or charts.
+* You don't have to minimize paging.
+* Readability is a primary concern. 
+
+**Example:**
+* You can see less data on one page. 
+* You will need a pagination to see more rows.
+* Data structure includes many visual elements.
 
 ### Data list capabilities
 Every data list can be extended with these functionalities:
@@ -146,38 +173,6 @@ Draggable data list rows can be added to any data list and allow you to customiz
 
 #### When to use
 Use draggable data list rows when you want to allow users to order their choices within a list. A common example of this is [column management](/components/table/react-demos#column-management-with-draggable). Users can choose the number of columns and the order they are shown in a table by selecting and dragging rows in the **Manage columns** modal. Another common use case is ordering the importance of roles or types relative to a resource.
-
-## Spacing
-
-Whether to use a data list with compact or default spacing is up to you and your use case. However, here is some guidance for when to use which option. You can see examples of each option for comparison. 
-
-### Compact spacing 
-A data list may sometimes need to be compact to make more rows visible at a time. The more rows you can see, the less you need to use [pagination](/components/pagination/design-guidelines). Compact spacing is recommended for data with a simple structure. See an example below. 
-
-**Use compact spacing when:**
-* You need to show as much data as possible on one page.
-* You need to show data in a small space, like in a modal or wizard.
-* You need to minimize paging.
-* Readability is a secondary concern.
-
-**Example:**
-* You can see more data on one page. 
-* You have a good overview about the structure of data.
-* The structure of data is simple, informative and have less visual elements. 
-
-### Default spacing 
-A data list may sometimes need more space for rich graphical data. See an example below.
-
-**Use default spacing when:**
-* You don’t have to display a lot of data on one page.
-* You use many visual indicators that are placed in columns, such as icons or charts.
-* You don't have to minimize paging.
-* Readability is a primary concern. 
-
-**Example:**
-* You can see less data on one page. 
-* You will need a pagination to see more rows.
-* Data structure includes many visual elements.
 
 ## Alternative solutions
 
