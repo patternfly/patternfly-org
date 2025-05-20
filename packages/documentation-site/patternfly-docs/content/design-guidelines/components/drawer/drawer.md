@@ -15,7 +15,7 @@ In addition to primary-details, the drawer component is frequently used in [noti
 
 ### Splitter in a drawer
 
-A **splitter** allows you to create a layout with resizable panes. The orientation of a splitter can be set to **vertical** or **horizontal**.
+A splitter allows you to create a layout with resizable panes. The orientation of a splitter can be set to vertical or horizontal.
 
 ### When to use a splitter
 Add a splitter to a drawer if you need to resize the width or height of a panel to give content more space. If data shown in a drawer has enough space, then you don’t need to use a splitter.
@@ -26,34 +26,40 @@ Add a splitter to a drawer if you need to resize the width or height of a panel 
 
 ## Variations
 
-### Inline 
+There are 2 types of drawer displays: overlay and inline.
+
+### Overlay drawer
+
+An overlay drawer appears "on top" of page content, and must be minimized or closed in order for users to view the content that is covered by the expanded drawer.
 
 <div class="ws-docs-content-img">
-![Example of a drawer with a splitter.](./img/drawer-inline.svg)
+![A drawer overlays page content, displaying a shadow where the primary page content is overlaid.](./img/drawer-overlay.svg)
 </div>
 
+### Inline drawer
 
-### Overlay
+An inline drawer is placed beside page content, making the rest of the page content more compact (but still visible).
 
 <div class="ws-docs-content-img">
-![Example of a drawer with a splitter.](./img/drawer-overlay.svg)
+![A drawer is beside page content, similar to a split screen view.](./img/drawer-inline.svg)
 </div>
 
 ## Placement
 
+By default, a drawer is placed on the right side of the UI. Depending on your user case, you can adjust this so that the drawer is on the left or at the bottom of the page instead. 
 
+### Right (default)
 <div class="ws-docs-content-img">
-![Example of a drawer with a splitter.](./img/drawer-placement-right.svg)
+![A drawer is placed on the right side of a page.](./img/drawer-placement-right.svg)
 </div>
 
-
-
+### Left
 <div class="ws-docs-content-img">
-![Example of a drawer with a splitter.](./img/drawer-placement-left.svg)
+![A drawer is placed on the left side of a page.](./img/drawer-placement-left.svg)
 </div>
 
-
+### Bottom
 <div class="ws-docs-content-img">
-![Example of a drawer with a splitter.](./img/drawer-placement-bottom.svg)
+![A drawer is placed on the bottom of a page.](./img/drawer-placement-bottom.svg)
 </div>
 
