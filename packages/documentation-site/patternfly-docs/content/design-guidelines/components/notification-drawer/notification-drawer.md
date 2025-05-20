@@ -4,11 +4,15 @@ section: components
 related: ['Notification drawer', 'Notification badge', 'Drawer']
 ---
 
+import '../components.css';
+
 ## Elements
 
 ### Basic notification drawer
 
-<img src="./img/Simple-Notification-Drawer.png" alt="basic notification drawer" width="743"/>
+<div class="ws-docs-content-img">
+![Elements of a basic notification drawer.](./img/drawer-elements.svg)
+</div>
 
 1. **Header:** The header contains the title of the drawer (default to “Notifications”).
 
@@ -32,7 +36,9 @@ related: ['Notification drawer', 'Notification badge', 'Drawer']
 ### Grouped notification drawer
 If you want to sort notifications by category, collapsible headers may be used to group content. The grouped notification drawer utilizes an accordion pattern where only one category will be opened at a time. By default, the first category will be opened, although if the drawer is closed and reopened, the prior state should persist.
 
-<img src="./img/Complex-Notification-Drawer.png" alt="grouped notification drawer" width="724"/>
+<div class="ws-docs-content-img">
+![Elements of a grouped notification drawer.](./img/grouped-drawer-elements.svg)
+</div>
 
 1. **Notification group:** Notifications can be grouped by category. You may have any number of categories, however more than 3-4 categories is not recommended. Each category header will have a name. Clicking on the header will expand the category (and collapse the current category).
 
@@ -79,8 +85,9 @@ In cases where it makes sense to immediately notify the user about a change in s
 
 ## Placement
 
-<img src="./img/Notification-drawer-in-page.png" alt="grouped notification drawer" width="677"/>
-
+<div class="ws-docs-content-img">
+![Example showing the placement of a notification drawer.](./img/drawer-placement.svg)
+</div>
 
 1. **Notification badge:** Whenever the notification drawer is used, a [notification badge](/components/notification-badge) must be placed in the masthead. Clicking on the badge will toggle the drawer open or closed. Depending on options supported in the application, the badge can also be used to display the number of notifications in the drawer and whether there are unread or critical notifications needing attention. See the [notification badge](/components/notification-badge) usage guidelines for more information about these options.
 
