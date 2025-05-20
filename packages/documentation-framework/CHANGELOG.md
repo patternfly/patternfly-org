@@ -3,6 +3,175 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 6.10.17 (2025-05-20)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 6.10.16 (2025-05-20)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 6.10.15 (2025-05-20)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 6.10.14 (2025-05-15)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 6.10.13 (2025-05-15)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 6.10.12 (2025-05-13)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 6.10.11 (2025-05-12)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 6.10.10 (2025-05-09)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 6.10.9 (2025-05-08)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 6.10.8 (2025-05-08)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 6.10.7 (2025-05-08)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 6.10.6 (2025-05-08)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 6.10.5 (2025-05-07)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 6.10.4 (2025-05-06)
+
+
+### Bug Fixes
+
+* **documentation-framework:** Change file extension from js to jsx ([#4602](https://github.com/patternfly/patternfly-org/issues/4602)) ([e607f89](https://github.com/patternfly/patternfly-org/commit/e607f896bfc0ee1ed445055d57ebd70287777923))
+
+
+
+
+
+## 6.10.3 (2025-05-06)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 6.10.2 (2025-05-06)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 6.10.1 (2025-05-01)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+# 6.10.0 (2025-04-30)
+
+
+### Features
+
+* **misc:** change whitespace ([#4592](https://github.com/patternfly/patternfly-org/issues/4592)) ([a1de8d3](https://github.com/patternfly/patternfly-org/commit/a1de8d345f0f6a20f583599b4d7543b5497b8ff5))
+
+
+
+
+
+## 6.9.12 (2025-04-28)
+
+
+### Reverts
+
+* Revert "chore(deps): Downgrade to deps with React 19 support (#4583)" (#4587). ([7707f9f](https://github.com/patternfly/patternfly-org/commit/7707f9f1ced3115cc4d2615c95f6380b972d6c73)), closes [#4583](https://github.com/patternfly/patternfly-org/issues/4583) [#4587](https://github.com/patternfly/patternfly-org/issues/4587)
+
+
+
+
+
+## 6.9.11 (2025-04-28)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
 ## 6.9.10 (2025-04-24)
 
 
