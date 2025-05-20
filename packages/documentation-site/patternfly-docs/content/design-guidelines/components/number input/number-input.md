@@ -3,8 +3,13 @@ id: Number input
 section: components
 ---
 
+import '../components.css';
+
 ## Elements
-<img src="./img/number_input_anatomy.png" alt="Number input elements" width="537px"/>
+
+<div class="ws-docs-content-img">
+![Number input elements](./img/number_input_anatomy.svg)
+</div>
 
 1. **Label:** Indicates what value the user should input in the numeric field.
 2. **Input field:** Area for the user to type in their numeric input.
@@ -30,7 +35,10 @@ section: components
 * Determine an increment size relative to your specific value range. Scale your increment size to accommodate for the types of values users will input in context.
 For example: If your range is from 0-10, have increments of 1, but if your range is from 0-100, have increments of 10.
 * Include unit symbols to the right of the text input and increase button, depending on your use case. Always use a unit’s standard abbreviation or symbol. For a list of recommended symbols, see our <a href="https://v4-archive.patternfly.org/v4/ux-writing/units-and-symbols#writing-units-of-measure">Units and symbols page</a>.
-<img src="./img/number_input_states.png" alt="Number input states" width="740px"/>
+
+<div class="ws-docs-content-img">
+![Number input states](./img/number_input_states.svg)
+</div>
 
 ## Variations
 Number inputs can function in one of two ways:
@@ -46,7 +54,9 @@ A number input with thresholds disables each button when a user’s numeric inpu
 
 When adding thresholds to a number input, be sure to inform users with text to minimize their risk for input errors. If a number input for the number of storage drives has a maximum input value of 20, communicate this limit in helper text: <i>Maximum capacity 20</i>.
 
-<img src="./img/with_threshold.png" alt="Number input with threshold" width="474px"/>
+<div class="ws-docs-content-img">
+![Number input with threshold](./img/with_threshold.svg)
+</div>
 
 ## Accessibility
 Consider the following guidance to ensure that your number input is <a href="https://www.section508.gov/">508 compliant</a>:
