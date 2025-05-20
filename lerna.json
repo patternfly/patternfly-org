@@ -13,8 +13,10 @@
   "packages": [
     "packages/ast-helpers",
     "packages/documentation-framework",
-    "packages/documentation-site"
+    "packages/documentation-site",
+    "packages/site"
   ],
   "version": "independent",
   "allowBranch": ["main", "v4", "v5"]
 }
+git
