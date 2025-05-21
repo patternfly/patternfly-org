@@ -4,14 +4,20 @@ section: components
 subsection: forms
 ---
 
+import '../components.css';
+
 ## Usage
 Checkboxes allow users to choose **1 or more items** from a list of options.
 
-<img src="./img/checkbox-horizontal.png" alt="Example of form question with checkboxes aligned horizontally" width="312"/>
+<div class="ws-docs-content-img">
+![Example of a form question with mutliple checkbox options stacked vertically.](./img/CB-usage-multi.svg)
+</div>
 
 You can also use a single checkbox to allow a user to enable or disable a feature or setting, along with a save button. 
 
-<img src="./img/one-checkbox.png" alt="Example of single checkbox" width="173"/>
+<div class="ws-docs-content-img">
+![Example of a single checkbox.](./img/CB-usage-single.svg)
+</div>
 
 ### When to use
 
@@ -25,23 +31,34 @@ Checkbox labels fall to the right of the checkbox control. If placed vertically,
 
 You can use headings to label a group of checkboxes. The placement of headings will depend on the layout of other content in the form or on the page you’re designing. For more information on how to arrange checkboxes, see our [forms documentation](/components/forms/form/design-guidelines).
 
-<img src="./img/group-checkbox.png" alt="Example of a group of checkboxes" width="443"/>
+<div class="ws-docs-content-img">
+![Example of a group of checkboxes.](./img/CB-alignment.svg)
+</div>
 
 You also have the option to use progressive disclosure by nesting other controls underneath a checkbox. The nested options would be enabled or disabled when the user selects or deselects a checkbox.
 
-<img src="./img/nested-controls-checkbox.png" alt="Example of nested control checkboxes" width="459"/>
+<div class="ws-docs-content-img">
+![Example of nested control checkboxes.](./img/CB-nested.svg)
+</div>
 
 ### When to use switches vs. checkboxes
 
 The main difference between a switch and a checkbox is that a switch changes an option and saves it simultaneously, while checkboxes require a separate action such as pressing a “Submit” or “Save” button to save the selection. 
 * Use checkboxes when the options do not save automatically and require the user to perform an additional action to save changes (in this case, pressing the “Save changes” button).
 
-    <img src="./img/switch-check-1.png" alt="Example 1 of do and don'ts for checkbox vs switch usee " width="661"/>
+    <div class="ws-docs-content-img">
+    ![Example 1 of do's and don'ts for using a checkbox or a switch.](./img/CB-vs-switch-1.svg)
+    </div>
+
 
 * Use a switch for situations where you are turning a series of one or more independent options on or off.
 
-    <img src="./img/switch-check-2.png" alt="Example 2 of do and don'ts for checkbox vs switch usee " width="661"/>
+    <div class="ws-docs-content-img">
+    ![Example 2 of do's and don'ts for using a checkbox or a switch.](./img/CB-vs-switch-2.svg)
+    </div>
 
 * Use checkboxes when you may have an indeterminate state where you can select all, none, or some actions.
 
-    <img src="./img/switch-check-3.png" alt="Example 3 of do and don'ts for checkbox vs switch usee " width="661"/>
+    <div class="ws-docs-content-img">
+    ![Example 3 of do's and don'ts for using a checkbox or a switch.](./img/CB-vs-switch-3.svg)
+    </div>
