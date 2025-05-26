@@ -19,7 +19,7 @@ import * as reactTableModule from '@patternfly/react-table';
 import * as reactTableDeprecatedModule from '@patternfly/react-table/deprecated';
 import { css } from '@patternfly/react-styles';
 import { getParameters } from 'codesandbox/lib/api/define';
-import { ExampleToolbar } from './exampleToolbar';
+import { ExampleToolbar } from './exampleToolbar.jsx';
 import { AutoLinkHeader } from '../autoLinkHeader/autoLinkHeader';
 import {
   slugger,

@@ -4,6 +4,8 @@ section: components
 subsection: file-upload
 ---
 
+import '../components.css';
+
 A file upload component is commonly found in forms, but can also live as a standalone element.
 
 *Note: This component is for both single and multiple file upload scenarios that do not require a text preview. For a single file upload that supports text preview, see the [file upload component](/components/file-upload/simple-file-upload).*
@@ -13,7 +15,9 @@ A file upload component is commonly found in forms, but can also live as a stand
 
 ### Multiple file upload component
 
-<img src="./img/elements.png" alt="Multiple File Upload" width="638"/>
+<div class="ws-docs-content-img">
+    <img src="./img/elements.svg" alt="Multiple File Upload"/>
+</div>
 
 Most multiple file upload components contain 5 basic elements:
 
@@ -38,7 +42,9 @@ Most multiple file upload components contain 5 basic elements:
 
 **Best practices:**
 
-<img src="./img/best-practices.png" alt="best practices for file upload" width="1145"/>
+<div class="ws-docs-content-img">
+    <img src="./img/best-practices.svg" alt="Best practices for file upload"/>
+</div>
 
 1. **Sizing:** Modify the drop zone to fit your context. For example, when placing the component in forms, align the width of the drop zone to the form fields.
 
@@ -58,23 +64,29 @@ The component can be set to restrict specific file types and sizes according to 
 ### Upload file(s) via the Upload button
 Users have the option to upload files by clicking the button inside the drop zone. Clicking on the button prompts a file selector dialog to open. Once users select 1 or more files from the dialog, the files will populate below the drop zone on the page. The file(s) may display a loading state before uploading is successfully completed.
 
-<img src="./img/upload-via-button.png" alt="file upload using the upload button" width="1145"/>
-
+<div class="ws-docs-content-img">
+    <img src="./img/upload-via-button.svg" alt="File upload using the upload button"/>
+</div>
 
 ### Drag and drop file(s)
 Users have the option to directly upload files by dragging and dropping them into the specified drop zone area.
 
 When dragging files into the drop zone area, the drop zone changes color to indicate the active area. Once the cursor hits the drop zone area it changes with a preview of the file(s) users are about to upload. The style of cursor change is rendered by the user's browser.
 
-<img src="./img/upload-via-drag-drop.png" alt="file upload using drag and drop" width="1145"/>
-
+<div class="ws-docs-content-img">
+    <img src="./img/upload-via-drag-drop.svg" alt="File upload using drag and drop"/>
+</div>
 
 ### Loading states
 A file that is being uploaded has 3 distinct states—waiting, in progress and uploaded.
 
-<img src="./img/loading-states.png" alt="A file that is being uploaded has 3 distinct states" width="1145"/>
+<div class="ws-docs-content-img">
+    <img src="./img/loading-states.svg" alt="A file that is being uploaded has 3 distinct states"/>
+</div>
 
 ### Validation
 When a specific file cannot be uploaded successfully, the corresponding file will show an error state. Error messages should provide clear guidance to help the user resolve the error.
 
-<img src="./img/validation.png" alt="file upload with error state" width="1145"/>
+<div class="ws-docs-content-img">
+    <img src="./img/validation.svg" alt="file upload with error state"/>
+</div>

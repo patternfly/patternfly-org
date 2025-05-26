@@ -12,15 +12,11 @@ Dark theme can also be applied based on the browser’s `prefers-color-scheme` m
 
 [Our token resources](https://github.com/patternfly/patternfly/tree/v6/src/patternfly/base/tokens) include styles for both light and dark themes. When dark theme is enabled, your product will automatically pull dark theme tokens in order to adapt visual styles appropriately. 
 
-The only features which will require additional work in order to support dark theme are charts and images. Instructions for enabling support in these areas are included in the following sections.
+The only features which will require additional work in order to support dark theme are charts and images. 
 
 ### Charts
 
-The [PatternFly React charts package](https://www.npmjs.com/package/@patternfly/react-charts) uses default style values that align with our light theme. In order to support dark-themed charts, you must import the stylesheet that contains dark theme styles by adding the following import statement before your main application component is imported:
-
-`import '@patternfly/patternfly/patternfly-charts.css';`
-
-**Note:** You must also have the [@patternfly/patternfly package](https://www.npmjs.com/package/@patternfly/patternfly) installed.
+To use charts with dark themes, refer to our guidance for [developing with charts](/charts/about-charts#develop-with-charts).
 
 ### Images
 
@@ -63,4 +59,3 @@ To make it easier to support light and dark theming in your application, we reco
     * For example,  `--pf-t--[version]--global--text--color--link--default`, `--pf-t--[version]--color--blue--20`, and  `#b9dafc` are all the same in PatternFly's default light theme. When you create something custom, where the color should match the application’s link text color, any of these values will work. However, in a different theme, these token values may not always be the same color.
 
 * **Use SVG files or icon fonts for icons, and use tokens for icon colors.** To easily manipulate icon colors between light and dark theme, SVG files and icon fonts can be changed via CSS by using the `fill` and `color` properties. When using semantic tokens, like `--pf-t--[version]--global--color--status--info--default`, colors will automatically adjust between light and dark theme. If images must be used, we advise you to use colors that work well in both light and dark themes and/or hide and show the appropriate images based on the presence of the dark theme body class.
-
