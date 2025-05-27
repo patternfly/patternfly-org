@@ -4,10 +4,14 @@ section: components
 subsection: forms
 ---
 
+import '../components.css';
+
 ## Usage
 Radio buttons allow users to select **1 item** from a list of options.
 
-<img src="./img/radio.png" alt="Example of radio button options" width="187"/>
+<div class="ws-docs-content-img">
+![Example of multiple radio buttons.](./img/radio-usage.svg)
+</div>
 
 **General guidelines**
 
@@ -17,7 +21,10 @@ Radio buttons allow users to select **1 item** from a list of options.
 * Use radio buttons if you’re presenting 5 or fewer options to the user. If you’re presenting more than 5 options, use a [single select list](/components/menus/select/design-guidelines#single-select). 
 * If space is limited, you can also use progressive disclosure by nesting other controls underneath a radio button.
 
-    <img src="./img/nested-controls-radio.png" alt="Example of nested control with radio buttons" width="465"/>
+    <div class="ws-docs-content-img">
+    ![Example of nested control radio buttons.](./img/radio-nested.svg)
+    </div>
+
 
 
 ### Labeling and alignment
