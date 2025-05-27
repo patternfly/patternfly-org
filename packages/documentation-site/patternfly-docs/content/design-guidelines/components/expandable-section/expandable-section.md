@@ -12,7 +12,7 @@ An expandable section has two main elements.
 ![Elements of an expandable section.](./img/exp-sect-elements.svg)
 </div>
 
-1. **Toggle (fa-angle-right	):** Indicates whether the section is expanded or collapsed.
+1. **Toggle (fa-angle-right):** Indicates whether the section is expanded or collapsed.
 2. **Toggle text:** Informs the user what will be shown when the component is expanded.
 
 ## Usage
