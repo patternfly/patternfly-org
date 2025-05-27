@@ -13,6 +13,10 @@ When using the content component, the content type that you use will align with 
 
 Margins will be automatically applied to the content component, based on its location in the overall page. If it's the first item on the page, there will be no top margin. If it's the final item on the page, there will be no bottom margin.
 
+### Line length 
+
+Follow our [typography guidelines](/design-guidelines/typography#line-length) for line length, which recommend staying between 20 and 100 characters for better readability. 
+
 ### When to use content vs. title
 
 **Use content:** 
