@@ -93,7 +93,9 @@ export const TableOfContents = ({ items }) => {
       isVertical
       scrollableSelector="#ws-page-main"
       className="ws-toc"
-      style={{ top: stickyNavHeight }}
+      style={{ top: stickyNavHeight,
+        '--jump-links-main-margin-bottom': `${stickyNavHeight}px`
+      }}
       offset={width > 1450 ? 108 + stickyNavHeight : 148 + stickyNavHeight}
       expandable={{ default: 'expandable', '2xl': 'nonExpandable' }}
     >
