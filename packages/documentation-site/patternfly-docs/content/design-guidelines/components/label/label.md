@@ -142,7 +142,6 @@ Use a dismissible label for labels that can be easily removed. Editable labels a
 #### When to use clickable labels
 Use a clickable label for labels that trigger actions or link to new pages. Clickable labels include a hover state as shown in the following image.
 
-![Example of clicking a label to filter on that label.](./img/clickable-labels.png)
 <div class="ws-docs-content-img">
 ![Example of a clickable label.](./img/clickable-labels.svg)
 </div>
@@ -219,7 +218,7 @@ When a user selects the **Add label** button, display a menu of available label 
 </div>
 
 The new label is added with the selected value and can not be edited. 
-##### Adding a new custom label to a label group
+##### Adding a new custom label to a label groupgit 
 
 You can allow users to customize the labels they add to a group. 
 
