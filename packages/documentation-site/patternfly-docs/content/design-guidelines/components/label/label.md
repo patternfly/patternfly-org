@@ -140,7 +140,7 @@ Use a dismissible label for labels that can be easily removed. Editable labels a
 </div>
 
 #### When to use clickable labels
-Use a clickable label for labels that trigger actions or link to new pages. Clickable labels include a hover state as shown below.
+Use a clickable label for labels that trigger actions or link to new pages. Clickable labels include a hover state as shown in the following image.
 
 ![Example of clicking a label to filter on that label.](./img/clickable-labels.png)
 <div class="ws-docs-content-img">
