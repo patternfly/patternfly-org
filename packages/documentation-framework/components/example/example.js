@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from 'react';
+import React, { useContext, useEffect, useState, useCallback } from 'react';
 import { useLocation } from '@reach/router';
 import {
   Button,
@@ -8,6 +8,10 @@ import {
   debounce,
   Label,
   Switch,
+  Select,
+  SelectOption,
+  SelectList,
+  MenuToggle,
   Tooltip,
   Stack,
   StackItem
@@ -19,6 +23,9 @@ import * as reactTableModule from '@patternfly/react-table';
 import * as reactTableDeprecatedModule from '@patternfly/react-table/deprecated';
 import { css } from '@patternfly/react-styles';
 import { getParameters } from 'codesandbox/lib/api/define';
+import SunIcon from '@patternfly/react-icons/dist/esm/icons/sun-icon';
+import MoonIcon from '@patternfly/react-icons/dist/esm/icons/moon-icon';
+import DesktopIcon from '@patternfly/react-icons/dist/esm/icons/desktop-icon';
 import { ExampleToolbar } from './exampleToolbar.jsx';
 import { AutoLinkHeader } from '../autoLinkHeader/autoLinkHeader';
 import {
@@ -32,8 +39,92 @@ import {
 import { convertToReactComponent } from '@patternfly/ast-helpers';
 import missingThumbnail from './missing-thumbnail.jpg';
 import { RtlContext } from '../../layouts';
+import { useTheme } from '../../hooks/useTheme';
 
 const errorComponent = (err) => <pre>{err.toString()}</pre>;
+
+// Full-screen theme selector component using shared theme hook
+const FullScreenThemeSelector = () => {
+  const { themeMode, setThemeMode, THEME_MODES } = useTheme();
+  const [isThemeSelectOpen, setIsThemeSelectOpen] = useState(false);
+
+  const handleThemeChange = (_event, selectedMode) => {
+    setThemeMode(selectedMode);
+    setIsThemeSelectOpen(false);
+  };
+
+  const getThemeDisplayText = (mode) => {
+    switch (mode) {
+      case THEME_MODES.SYSTEM:
+        return 'System';
+      case THEME_MODES.LIGHT:
+        return 'Light';
+      case THEME_MODES.DARK:
+        return 'Dark';
+      default:
+        return 'System';
+    }
+  };
+
+  const getThemeIcon = (mode) => {
+    switch (mode) {
+      case THEME_MODES.SYSTEM:
+        return <DesktopIcon />;
+      case THEME_MODES.LIGHT:
+        return <SunIcon />;
+      case THEME_MODES.DARK:
+        return <MoonIcon />;
+      default:
+        return <DesktopIcon />;
+    }
+  };
+
+  return (
+    <Select
+      id="ws-example-theme-select"
+      isOpen={isThemeSelectOpen}
+      selected={themeMode}
+      onSelect={handleThemeChange}
+      onOpenChange={(isOpen) => setIsThemeSelectOpen(isOpen)}
+      toggle={(toggleRef) => (
+        <MenuToggle
+          ref={toggleRef}
+          onClick={() => setIsThemeSelectOpen(!isThemeSelectOpen)}
+          isExpanded={isThemeSelectOpen}
+          icon={getThemeIcon(themeMode)}
+          aria-label="Theme selection"
+        >
+          {getThemeDisplayText(themeMode)}
+        </MenuToggle>
+      )}
+      shouldFocusToggleOnSelect
+    >
+      <SelectList>
+        <SelectOption 
+          value={THEME_MODES.SYSTEM}
+          icon={<DesktopIcon />}
+          description="Follow system preference"
+        >
+          System
+        </SelectOption>
+        <SelectOption 
+          value={THEME_MODES.LIGHT}
+          icon={<SunIcon />}
+          description="Always use light theme"
+        >
+          Light
+        </SelectOption>
+        <SelectOption 
+          value={THEME_MODES.DARK}
+          icon={<MoonIcon />}
+          description="Always use dark theme"
+        >
+          Dark
+        </SelectOption>
+      </SelectList>
+    </Select>
+  );
+};
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -199,21 +290,10 @@ export const Example = ({
         {(hasDarkThemeSwitcher || hasRTLSwitcher) && (
           <Flex
             direction={{ default: 'column' }}
-            gap={{ default: 'gapLg' }}
-            className="ws-full-page-utils pf-v6-m-dir-ltr "
+            gap={{ default: 'gapMd' }}
+            className="ws-full-page-utils pf-v6-m-dir-ltr"
           >
-            {hasDarkThemeSwitcher && (
-              <Switch
-                id="ws-example-theme-switch"
-                label="Dark theme"
-                defaultChecked={false}
-                onChange={() =>
-                  document
-                    .querySelector('html')
-                    .classList.toggle('pf-v6-theme-dark')
-                }
-              />
-            )}
+            {hasDarkThemeSwitcher && <FullScreenThemeSelector />}
             {hasRTLSwitcher && (
               <Switch
                 id="ws-example-rtl-switch"
