@@ -23,17 +23,20 @@ import {
   SkipToContent,
   Switch,
   SearchInput,
-  ToggleGroup,
-  ToggleGroupItem,
+  Select,
+  SelectOption,
+  SelectList,
   MastheadLogo
 } from '@patternfly/react-core';
 import BarsIcon from '@patternfly/react-icons/dist/esm/icons/bars-icon';
 import GithubIcon from '@patternfly/react-icons/dist/esm/icons/github-icon';
 import MoonIcon from '@patternfly/react-icons/dist/esm/icons/moon-icon';
 import SunIcon from '@patternfly/react-icons/dist/esm/icons/sun-icon';
+import DesktopIcon from '@patternfly/react-icons/dist/esm/icons/desktop-icon';
 import { SideNav, TopNav, GdprBanner } from '../../components';
 import staticVersions from '../../versions.json';
 import { Footer } from '@patternfly/documentation-framework/components';
+import { useTheme } from '../../hooks/useTheme';
 
 export const RtlContext = createContext(false);
 
@@ -46,8 +49,9 @@ const HeaderTools = ({
   topNavItems,
   isRTL,
   setIsRTL,
-  isDarkTheme,
-  setIsDarkTheme
+  themeMode,
+  setThemeMode,
+  THEME_MODES
 }) => {
   const latestVersion = versions.Releases.find((version) => version.latest);
   const previousReleases = Object.values(versions.Releases).filter((version) => !version.hidden && !version.latest);
@@ -55,6 +59,7 @@ const HeaderTools = ({
   const [isDropdownOpen, setDropdownOpen] = useState(false);
   const [searchValue, setSearchValue] = React.useState('');
   const [isSearchExpanded, setIsSearchExpanded] = React.useState(false);
+  const [isThemeSelectOpen, setIsThemeSelectOpen] = useState(false);
 
   const getDropdownItem = (version, isLatest = false) => (
     <DropdownItem itemId={version.name} key={version.name} to={isLatest ? '/' : `/${version.name}`}>
@@ -70,10 +75,35 @@ const HeaderTools = ({
     setIsSearchExpanded(!isSearchExpanded);
   };
 
-  const toggleDarkTheme = (_evt, selected) => {
-    const darkThemeToggleClicked = !selected === isDarkTheme;
-    document.querySelector('html').classList.toggle('pf-v6-theme-dark', darkThemeToggleClicked);
-    setIsDarkTheme(darkThemeToggleClicked);
+  const handleThemeChange = (_event, selectedMode) => {
+    setThemeMode(selectedMode);
+    setIsThemeSelectOpen(false);
+  };
+
+  const getThemeDisplayText = (mode) => {
+    switch (mode) {
+      case THEME_MODES.SYSTEM:
+        return 'System';
+      case THEME_MODES.LIGHT:
+        return 'Light';
+      case THEME_MODES.DARK:
+        return 'Dark';
+      default:
+        return 'System';
+    }
+  };
+
+  const getThemeIcon = (mode) => {
+    switch (mode) {
+      case THEME_MODES.SYSTEM:
+        return <DesktopIcon />;
+      case THEME_MODES.LIGHT:
+        return <SunIcon />;
+      case THEME_MODES.DARK:
+        return <MoonIcon />;
+      default:
+        return <DesktopIcon />;
+    }
   };
 
   useEffect(() => {
@@ -94,20 +124,49 @@ const HeaderTools = ({
         <ToolbarGroup align={{ default: 'alignEnd' }}>
           {hasDarkThemeSwitcher && (
             <ToolbarItem>
-              <ToggleGroup aria-label="Dark theme toggle group">
-                <ToggleGroupItem
-                  aria-label="light theme toggle"
-                  icon={<SunIcon />}
-                  isSelected={!isDarkTheme}
-                  onChange={toggleDarkTheme}
-                />
-                <ToggleGroupItem
-                  aria-label="dark theme toggle"
-                  icon={<MoonIcon />}
-                  isSelected={isDarkTheme}
-                  onChange={toggleDarkTheme}
-                />
-              </ToggleGroup>
+              <Select
+                id="ws-theme-select"
+                isOpen={isThemeSelectOpen}
+                selected={themeMode}
+                onSelect={handleThemeChange}
+                onOpenChange={(isOpen) => setIsThemeSelectOpen(isOpen)}
+                toggle={(toggleRef) => (
+                  <MenuToggle
+                    ref={toggleRef}
+                    onClick={() => setIsThemeSelectOpen(!isThemeSelectOpen)}
+                    isExpanded={isThemeSelectOpen}
+                    icon={getThemeIcon(themeMode)}
+                    aria-label="Theme selection"
+                  >
+                    {getThemeDisplayText(themeMode)}
+                  </MenuToggle>
+                )}
+                shouldFocusToggleOnSelect
+              >
+                <SelectList>
+                  <SelectOption 
+                    value={THEME_MODES.SYSTEM}
+                    icon={<DesktopIcon />}
+                    description="Follow system preference"
+                  >
+                    System
+                  </SelectOption>
+                  <SelectOption 
+                    value={THEME_MODES.LIGHT}
+                    icon={<SunIcon />}
+                    description="Always use light theme"
+                  >
+                    Light
+                  </SelectOption>
+                  <SelectOption 
+                    value={THEME_MODES.DARK}
+                    icon={<MoonIcon />}
+                    description="Always use dark theme"
+                  >
+                    Dark
+                  </SelectOption>
+                </SelectList>
+              </Select>
             </ToolbarItem>
           )}
           {hasRTLSwitcher && (
@@ -245,7 +304,8 @@ export const SideNavLayout = ({ children, groupedRoutes, navOpen: navOpenProp })
 
   const [versions, setVersions] = useState({ ...staticVersions });
   const [isRTL, setIsRTL] = useState(false);
-  const [isDarkTheme, setIsDarkTheme] = React.useState(false);
+  
+  const { themeMode, setThemeMode, resolvedTheme, THEME_MODES } = useTheme();
 
   useEffect(() => {
     if (typeof window === 'undefined') {
@@ -338,8 +398,9 @@ export const SideNavLayout = ({ children, groupedRoutes, navOpen: navOpenProp })
             topNavItems={topNavItems}
             isRTL={isRTL}
             setIsRTL={setIsRTL}
-            isDarkTheme={isDarkTheme}
-            setIsDarkTheme={setIsDarkTheme}
+            themeMode={themeMode}
+            setThemeMode={setThemeMode}
+            THEME_MODES={THEME_MODES}
           />
         )}
       </MastheadContent>
@@ -360,7 +421,7 @@ export const SideNavLayout = ({ children, groupedRoutes, navOpen: navOpenProp })
           defaultManagedSidebarIsOpen={navOpenProp}
         >
           {children}
-          {process.env.hasFooter && <Footer isDarkTheme={isDarkTheme} />}
+          {process.env.hasFooter && <Footer isDarkTheme={resolvedTheme === 'dark'} />}
         </Page>
         <div id="ws-page-banners">{hasGdprBanner && <GdprBanner />}</div>
       </RtlContext.Provider>
