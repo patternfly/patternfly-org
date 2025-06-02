@@ -7,6 +7,8 @@ related: [
  'Tooltip'
 ]
 ---
+
+import '../components.css';
  
 ## Usage
 Popovers are commonly used on form field labels, page titles or headings, or table column headings. Use popovers to:
@@ -14,19 +16,27 @@ Popovers are commonly used on form field labels, page titles or headings, or tab
 - Help explain unfamiliar terms.
 - Provide context around a task.    
  
-<img src="./img/popover-email.png" alt="popover for an email address form field explaining what the email address is used for" width="1500"/>
+<div class="ws-docs-content-img">
+![Example showing a popover on a form field label.](./img/popover-usage.svg)
+</div>
  
 When using a default popover to define a term or explain a concept, use a gray question-circle icon. Upon hover or click, the icon turns black.
  
-<img src="./img/popovers-colors.png" alt="Popover icon colors depending on state"  width="481"/>
+<div class="ws-docs-content-img">
+![Examples of the different popover icon states.](./img/popover-states.svg)
+</div>
  
 To provide more information to a user without an accompanying UI element, you can add a popover to a linked question.
  
-<img src="./img/popovers-2.png" alt="popover for a linked question" width="1500"/>
+<div class="ws-docs-content-img">
+![Example showing a popover on a linked question.](./img/popover-linked-question.svg)
+</div>
  
 Use link button styling for the linked question, and add a blue question-circle icon before it. Clicking the link text triggers a popover, which answers the linked question.
  
-<img src="./img/alert_popover_usage.png" alt="alert popover opens when user clicks or hovers over an alert label" width="1500"/>
+<div class="ws-docs-content-img">
+![Example showing an alert popover on a label in a table.](./img/popover-alert.svg)
+</div>
  
 To provide additional information about an alert, use an alert popover. The alert popover will open upon hover or click.
  
@@ -40,12 +50,15 @@ Both [tooltips](/components/tooltip/design-guidelines) and popovers provide more
 For information on other forms of on-screen help, see [Tooltip](/components/tooltip/design-guidelines) and [Hint](/components/hint/design-guidelines).
  
 ## Behavior
+
+<div class="ws-docs-content-img">
+![Example showing the different ways that a popover can be dismissed.](./img/popover-behavior.svg)
+</div>
+
 Popovers are triggered when a user clicks on the popover icon and are dismissed in one of the following ways:
-- The user clicks the exit icon.
-- The user clicks anywhere on the screen outside the popover.
-- The user clicks an action button inside the popover. (Note: This won't always close the popover; it depends on the action button.)
- 
-<img src="./img/popover-example.png" alt="popover example with placeholder text for the title and informational text" width="300"/>
+1. The user clicks the exit icon.
+2. The user clicks anywhere on the screen outside the popover.
+3. The user clicks an action button inside the popover. (Note: This won't always close the popover; it depends on the action button.)
 
 ## Variations
  
@@ -55,7 +68,9 @@ These popovers are plain-text and do not include icons. They are used to convey 
 ### Alert popovers
 These popover are similar to default popovers, the key difference being the inclusion of status-like headers for the following alert types: default, info, success, warning, and danger.
  
-<img src="./img/alert_popover_examples.png" alt="alert popover examples with placeholder text for the title and informational text" width="300"/>
+<div class="ws-docs-content-img">
+![Example of the different kinds of alert popovers.](./img/popover-variations-alert.svg)
+</div>
 
 ## Content considerations
 - Popover copy is longer than tooltip copy, but it should still be concise. Aim for 1–3 sentences. 
