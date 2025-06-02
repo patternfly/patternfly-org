@@ -55,8 +55,6 @@ const FullScreenThemeSelector = () => {
 
   const getThemeDisplayText = (mode) => {
     switch (mode) {
-      case THEME_MODES.SYSTEM:
-        return 'System';
       case THEME_MODES.LIGHT:
         return 'Light';
       case THEME_MODES.DARK:
@@ -68,8 +66,6 @@ const FullScreenThemeSelector = () => {
 
   const getThemeIcon = (mode) => {
     switch (mode) {
-      case THEME_MODES.SYSTEM:
-        return <DesktopIcon />;
       case THEME_MODES.LIGHT:
         return <SunIcon />;
       case THEME_MODES.DARK:
