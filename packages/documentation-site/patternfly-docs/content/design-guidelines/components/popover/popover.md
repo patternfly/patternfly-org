@@ -9,7 +9,7 @@ related: [
 ---
 
 import '../components.css';
- 
+
 ## Usage
 Popovers are commonly used on form field labels, page titles or headings, or table column headings. Use popovers to:
 - Anticipate and answer questions for the user.
