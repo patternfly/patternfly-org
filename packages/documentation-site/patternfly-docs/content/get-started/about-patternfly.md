@@ -9,194 +9,28 @@ import { Button, Card, CardHeader, CardTitle, CardBody, CardFooter, Divider, Ico
 import ExternalLinkAltIcon from '@patternfly/react-icons/dist/esm/icons/external-link-alt-icon';
 import { Link } from '@patternfly/documentation-framework/components';
 
-## What is PatternFly? 
+## What is PatternFly?
+PatternFly is an **open source design system**, built to support consistent, usable enterprise software. We're founded on principles of transparency and community contribution, making PatternFly accessible to everyone. Our goal is to empower designers and developers to work more efficiently and build better user experiences together.
 
-PatternFly is an open source design system that enables designers and developers to create consistent and usable software products. 
+Like most design systems, we provide standards and resources that guide and streamline your design process. These resources are designed to reduce redundancy and create a unified language for cross-functional teams, ensuring your products are visually consistent, accessible, and easy to use.
 
-A **design system** is a collection of software design standards and resources that facilitate more consistent and productive design processes. When you design and develop with a design system, you can reduce redundancy and enable a unified language between cross-functional teams. This means that products will be visually consistent, and will use patterns that support better usability and efficiency.
+While PatternFly is used extensively across Red Hat products, anyone can use or contribute to PatternFly. On this website, you'll find code samples, clear guidelines, and additional tools and resources. 
 
-The PatternFly design system is created and maintained by Red Hat, and is used across Red Hat's product catalog, but it's open for anyone to use. Across our website, we provide code samples, clear standards, and additional resources to help designers and developers work together more efficiently. Together, we can build better user experiences.
+## Why does Red Hat use PatternFly?
+PatternFly is Red Hat's design system of choice because we directly enable their commitment to open source, robust enterprise experiences, and developer empowerment. We are purpose-built for their complex enterprise demands, offering highly customized components and a design kit that translate quickly to code. As an MIT-licensed open source project, our philosophy aligns with Red Hat's foundation, fostering transparency and direct contribution. This enables us to deliver tailored solutions for critical enterprise workflows, while building a unified "open source" brand across Red Hat products.
 
-## What does PatternFly include?
+Our independent operation means we set priorities based directly on Red Hat product needs, avoiding external roadmaps. This control allows us to rapidly deliver custom solutions, ensure strong security and compliance, and predictably manage breaking changes, providing stability and confidence. We empower all front-end developers, from novices to experts, with comprehensive documentation and native accessibility support, and offer multiple libraries (React and HTML) to streamline development. 
 
-### Foundations
+Red Hat UX designers can use PatternFly alongside the [UXD Hub](https://www.uxd-hub.com/), which documents additional product-specific design patterns. 
 
-PatternFly's foundations create a strong base for the rest of the design system to be built with.
+## Where do I start?
 
-<Grid hasGutter>
-<GridItem span={6}>
-<Card isClickable isCompact isFullHeight>
-    <CardHeader
-        selectableActions={{
-            to: "/design-foundations/about-design-foundations",
-            selectableActionId: 'clickable-selectable-card-input-1',
-          }}
-    >
-    <CardTitle component="h4"> **Design foundations** </CardTitle>
-    </CardHeader>
-    <CardBody> The most foundational elements of our design system, like color, typography, icons, and spacing. </CardBody>
-</Card>
-</GridItem>
+Now that you've been introduced to PatternFly, you're ready to start designing or start developing your product. Looking to get involved in the behind-the-scenes work? Check out our contribution guidelines for more instruction.
 
-<GridItem span={6}>
-<Card isClickable isCompact isFullHeight>
-    <CardHeader
-        selectableActions={{
-            to: "/tokens/about-tokens",
-            selectableActionId: 'clickable-selectable-card-input-2',
-          }}
-    >    
-    <CardTitle component="h4"> **Design tokens** </CardTitle>
-    </CardHeader>
-    <CardBody> Semantically named variables that represent visual attributes and design styles. </CardBody>
-</Card>
-</GridItem>
-</Grid>
-
-### Elements 
-
-PatternFly’s core elements are what you will work directly with when building a UI.
-
-<Grid hasGutter>
-<GridItem span={6}>
-<Card isClickable isCompact isFullHeight>
-    <CardHeader
-        selectableActions={{
-            to: "/components/all-components",
-            selectableActionId: 'clickable-selectable-card-input-3',
-          }}
-    >    
-    <CardTitle component="h4"> **Components** </CardTitle>
-    </CardHeader>
-    <CardBody> Flexible, modular, building blocks that you can mix and match to create UIs. </CardBody>
-</Card>
-</GridItem>
-
-<GridItem span={6}>
-<Card isClickable isCompact isFullHeight>
-    <CardHeader
-        selectableActions={{
-            to: "/layouts/about-layouts",
-            selectableActionId: 'clickable-selectable-card-input-4',
-          }}
-    >
-    <CardTitle component="h4"> **Layouts** </CardTitle>
-    </CardHeader>
-    <CardBody> Different methods for arranging components for different screen sizes and content presentations. </CardBody>
-</Card>
-</GridItem>
-
-<GridItem span={6}>
-<Card isClickable isCompact isFullHeight>
-    <CardHeader
-        selectableActions={{
-            to: "/charts/about-charts",
-            selectableActionId: 'clickable-selectable-card-input-5',
-          }}
-    >
-    <CardTitle component="h4"> **Charts** </CardTitle>
-    </CardHeader>
-    <CardBody> Different methods to present data visualizations. </CardBody>
-</Card>
-</GridItem>
-
-<GridItem span={6}>
-<Card isClickable isCompact isFullHeight>
-    <CardHeader
-        selectableActions={{
-            to: "/extensions/about-extensions",
-            selectableActionId: 'clickable-selectable-card-input-6',
-          }}
-    >
-    <CardTitle component="h4"> **Extensions** </CardTitle>
-    </CardHeader>
-    <CardBody> Reusable solutions that utilize multiple PatternFly components for cross-project use cases. </CardBody>
-</Card>
-</GridItem>
-</Grid>
-
-### Guidance
-
-We provide extensive guidelines to help you create UIs following best practices. 
-
-<Grid hasGutter>
-<GridItem span={4}>
-<Card isClickable isCompact isFullHeight>
-    <CardHeader
-        selectableActions={{
-            to: "/patterns/about-patterns",
-            selectableActionId: 'clickable-selectable-card-input-7',
-          }}
-    >
-    <CardTitle component="h4"> **Patterns** </CardTitle>
-    </CardHeader>
-    <CardBody> Recommendations and solutions for common design problems that involve multiple components. </CardBody>
-</Card>
-</GridItem>
-
-<GridItem span={4}>
-<Card isClickable isCompact isFullHeight>
-    <CardHeader
-        selectableActions={{
-            to: "/accessibility/about-accessibility",
-            selectableActionId: 'clickable-selectable-card-input-8',
-          }}
-    >
-    <CardTitle component="h4"> **Accessibility** </CardTitle>
-    </CardHeader>
-    <CardBody> Guidelines to follow in order to create products that are usable and accessible by all users. </CardBody>
-</Card>
-</GridItem>
-
-<GridItem span={4}>
-<Card isClickable isCompact isFullHeight>
-    <CardHeader
-        selectableActions={{
-            to: "/ux-writing/about-ux-writing",
-            selectableActionId: 'clickable-selectable-card-input-9',
-          }}
-    >
-    <CardTitle component="h4"> **UX writing** </CardTitle>
-    </CardHeader>
-    <CardBody> Content guidelines that provide principles and best practices around writing for user experience. </CardBody>
-</Card>
-</GridItem>
-
-</Grid>
-
-### Additional developer resources
-
-We offer more complex resources to assist with the development process.
-
-<Grid hasGutter>
-<GridItem span={6}>
-<Card isClickable isCompact isFullHeight>
-    <CardHeader
-        selectableActions={{
-            to: "/topology/about-topology",
-            selectableActionId: 'clickable-selectable-card-input-10',
-          }}
-    >
-    <CardTitle component="h4"> **Topology** </CardTitle>
-    </CardHeader>
-    <CardBody> A method for modeling the arrangement of elements in a network. </CardBody>
-</Card>
-</GridItem>
-
-<GridItem span={6}>
-<Card isClickable isCompact isFullHeight>
-    <CardHeader
-        selectableActions={{
-            to: "/utility-classes/about-utility-classes",
-            selectableActionId: 'clickable-selectable-card-input-12',
-          }}
-    >
-    <CardTitle component="h4"> **Utility classes** </CardTitle>
-    </CardHeader>
-    <CardBody> Additional CSS classes that allow you to further customize and modify UI elements, like alignment, spacing, and shadows. </CardBody>
-</Card>
-</GridItem>
-
+<Grid sm={12} md={4} hasGutter>
+<Button size="lg" variant="secondary" component="a" href="/get-started/design"> Start designing </Button>
+<Button size="lg" variant="secondary" component="a" href="/get-started/develop"> Start developing </Button>
+<Button size="lg" variant="secondary" component="a" href="/get-started/contribute"> Contribute to PatternFly</Button>
 </Grid>
 
 ## Join the community
@@ -279,19 +113,11 @@ Sometimes Flyers branch out and build groups of their own, creating new communit
 
 - **[PatternFly for Yew](https://github.com/patternfly-yew/patternfly-yew)**: Provides PatternFly components for Yew—a Rust based framework for creating web applications that can run in the browser using WASM. The project aims to create Yew components for all components and concepts found in PatternFly. For a quick demo and starter template, [see the PatternFly Yew Quickstart.](https://github.com/patternfly-yew/patternfly-yew-quickstart)
 
-## Where do I start?
+## Learn about our design system 
 
-Now that you've been introduced to PatternFly, you're ready to start designing or start developing your product. Looking to get involved in the behind-the-scenes work? Check out our contribution guidelines for more instruction.
+### Release cadence
 
-<Grid sm={12} md={4} hasGutter>
-<Button size="lg" variant="secondary" component="a" href="/get-started/design"> Start designing </Button>
-<Button size="lg" variant="secondary" component="a" href="/get-started/develop"> Start developing </Button>
-<Button size="lg" variant="secondary" component="a" href="/get-started/contribute"> Contribute to PatternFly</Button>
-</Grid>
-
-## Release cadence
-
-### Major releases
+#### Major releases
 
 A major release is one that sees the version of PatternFly increase, for example PatternFly 5 to PatternFly 6. Major releases are the only releases with planned "breaking changes" that alter the way your product's code interacts with PatternFly's code. 
 
@@ -299,11 +125,11 @@ Along with each major release, we will provide detailed upgrade guides and codem
 
 A major version of PatternFly will only be supported through the subsequent version. This means, with the release of PatternFly 6, we no longer offer support PatternFly 4.
 
-### Minor and patch releases
+#### Minor and patch releases
 
 Minor feature releases will be available quarterly to introduce non-breaking changes, like new features and enhancements. We will also share interim patch releases to fix any bugs that we find.
 
-## Beta components 
+### Beta components 
 
 New PatternFly components are first released in beta. To help you identify beta components, we add a blue label beside the component in the PatternFly.org navigation menu and an informational alert at the top of the component’s documentation pages.
 
@@ -318,7 +144,7 @@ If you are considering using a beta component, make sure to:
 1. Play with the examples in the component's documentation on the PatternFly website to determine if the current implementation meets your needs. Open issues for any missing features, enhancement requests, or bugs.
 2. Check the [PatternFly Issues GitHub Project board](https://github.com/orgs/patternfly/projects/7/views/1). Browse any open issues for the beta component to determine how much more the beta component could evolve in the near future.
 
-## Deprecated components 
+### Deprecated components 
 
 Deprecated components are components that are no longer recommended for use in PatternFly, either due to significant design or code changes. Once deprecated, a component is replaced with a newer implementation, and the previous implementation is no longer maintained or enhanced. 
 
