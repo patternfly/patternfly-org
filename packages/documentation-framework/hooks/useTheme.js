@@ -9,6 +9,14 @@ const THEME_MODES = {
 const THEME_STORAGE_KEY = 'theme-preference';
 const DARK_MODE_CLASS = 'pf-v6-theme-dark';
 
+/**
+ * Custom hook for managing theme state with system preference detection
+ * @returns {Object} Theme state and controls
+ * @returns {string} themeMode - Current theme mode ('system'|'light'|'dark')
+ * @returns {Function} setThemeMode - Function to change theme mode
+ * @returns {string} resolvedTheme - The actual applied theme ('light'|'dark')
+ * @returns {Object} THEME_MODES - Available theme mode constants
+ */
 export const useTheme = () => {
   const getStoredThemeMode = () => {
     if (typeof window === 'undefined' || !window.localStorage) return null;
@@ -21,16 +29,27 @@ export const useTheme = () => {
   };
 
   const getResolvedTheme = (mode) => {
-    if (typeof window === 'undefined') return 'light';
+    // SSR-safe check for window and matchMedia
+    if (typeof window === 'undefined' || !window.matchMedia) return 'light';
+    
     if (mode === THEME_MODES.SYSTEM) {
-      return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      try {
+        return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      } catch (error) {
+        // Fallback if matchMedia fails
+        console.warn('matchMedia not supported, defaulting to light theme');
+        return 'light';
+      }
     }
     return mode;
   };
 
   const updateThemeClass = (resolvedTheme) => {
-    if (typeof window === 'undefined') return;
+    if (typeof window === 'undefined' || !document) return;
+    
     const htmlElement = document.querySelector('html');
+    if (!htmlElement) return;
+    
     if (resolvedTheme === 'dark') {
       htmlElement.classList.add(DARK_MODE_CLASS);
     } else {
@@ -56,9 +75,16 @@ export const useTheme = () => {
 
   // Listen for system preference changes
   useEffect(() => {
-    if (typeof window === 'undefined') return;
+    // Enhanced SSR-safe check
+    if (typeof window === 'undefined' || !window.matchMedia) return;
 
-    const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+    let mediaQuery;
+    try {
+      mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+    } catch (error) {
+      console.warn('matchMedia not supported, skipping system theme detection');
+      return;
+    }
     
     const handleSystemThemeChange = (e) => {
       if (themeMode === THEME_MODES.SYSTEM) {
@@ -68,11 +94,19 @@ export const useTheme = () => {
       }
     };
 
-    mediaQuery.addEventListener('change', handleSystemThemeChange);
-    
-    return () => {
-      mediaQuery.removeEventListener('change', handleSystemThemeChange);
-    };
+    // Check if addEventListener is available (some older browsers might not support it)
+    if (mediaQuery.addEventListener) {
+      mediaQuery.addEventListener('change', handleSystemThemeChange);
+      return () => {
+        mediaQuery.removeEventListener('change', handleSystemThemeChange);
+      };
+    } else if (mediaQuery.addListener) {
+      // Fallback for older browsers
+      mediaQuery.addListener(handleSystemThemeChange);
+      return () => {
+        mediaQuery.removeListener(handleSystemThemeChange);
+      };
+    }
   }, [themeMode]);
 
   // Initial theme application
