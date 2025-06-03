@@ -3,25 +3,35 @@ id: Tooltip
 section: components
 ---
 
+import '../components.css';
+
 For information on other forms of on-screen help, see [popover](/components/popover/design-guidelines) and [hint](/components/hint/design-guidelines). 
 
 ## Usage 
 Use tooltips to:
 - Provide labels for unlabeled icons.   
 
-  <img src="./img/tooltip-on-unlabeled-icons.png" alt="table with tooltip on an unlabeled kebab icon to provide more information" width="1489"/>  
+  <div class="ws-docs-content-img">
+  ![Example showing a tooltip on an unlabeled kebab icon in a toolbar.](./img/kebab-icon.svg)
+  </div>
 
 - Provide additional information on a data point or element in a chart or table.   
 
-  <img src="./img/tooltip-on-bar-chart.png" alt='bar chart with a tooltip on data point to describe it as Asia Pacific' width='612'/> 
+  <div class="ws-docs-content-img">
+  ![Example showing a tooltip on a data point in a bar chart.](./img/bar-chart.svg)
+  </div>
 
 - Define new or unfamiliar UI elements that aren’t described directly in the user interface. For example, you can use a tooltip on a disabled button.
 
-  <img src="./img/tooltip-on-disabled-button.png" alt= 'table with tooltip on a disabled edit button to provide more information regarding access' width='1500'/>
+  <div class="ws-docs-content-img">
+  ![Example showing a tooltip on a disabled edit button.](./img/disabled-button.svg)
+  </div>
 
 - Provide additional information on text or labels on hover. A way for users to see more information before clicking the element and being directed to a new page or producing an action on the page.
 
-  <img src="./img/tooltip-on-hyperlink.png" alt= 'table with tooltip on clickable text to provide more information' width='1489'/>
+  <div class="ws-docs-content-img">
+  ![Example showing a tooltip on a hyperlink.](./img/on-hyperlink.svg)
+  </div>
 
 ### Tooltip delay on hover
 By default, tooltips have a 300ms entry delay when hovering over an object. Although this is the recommended delay time, you may customize it via prop. For example, if you have a tooltip on an icon, and you would like for it to appear immediately on hover, you may set the delay to 0 ms.
