@@ -33,7 +33,9 @@ You can allow users to filter menu items via search input, which matches menu it
 ### Action menu
 An action menu presents a list of actions or links.
 
-<img src="./img/basic-menu.png" alt="actions dropdown" width="863"/>
+<div class="ws-docs-content-img">
+![Examples of action menus.](./img/menu-action.svg)
+</div>
 
 1. **Menu item:** Menu items represent discrete actions that can be taken. Selecting a menu item inside a dropdown will trigger the action and dismiss the menu, while selecting a menu item inside a select list will select the item.
 
@@ -46,7 +48,9 @@ An action menu presents a list of actions or links.
 ### Option select menus
 Use an option select menu when you want to persist selected items. This is typically the case for select menus or settings menus that allow users to select between multiple options. See the [select](/components/menus/select) and [options menu](/components/menus/options-menu) components for more details. You may present single or multiple [groups of options](#grouped-menus) within the same menu.
 
-<img src="./img/option-select-menu.png" alt="option select menus" width="863"/>
+<div class="ws-docs-content-img">
+![Examples of option select menus.](./img/menu-option-select.svg)
+</div>
 
 1. **Selected item:** Selected items are indicated by a checkmark to the right of their label.
 
@@ -57,7 +61,9 @@ Use an option select menu when you want to persist selected items. This is typic
 ### Grouped menus
 You may decide to group menu items to associate related items and/or to indicate a hierarchy of items. Items may be grouped using group headings and/or separators or in a [tree view](/components/tree-view).
 
-<img src="./img/grouped-menu.png" alt="Grouped menu options with separator, without, and in tree view" width="914"/>
+<div class="ws-docs-content-img">
+![Examples of grouped menus.](./img/menu-grouped.svg)
+</div>
 
 1. **Group heading (optional):** Add a group heading when you want to name the group.
 
@@ -76,27 +82,35 @@ You may decide to group menu items to associate related items and/or to indicate
 ### Multi-level fly-out menus
 Use fly-out menus when you want to expose sub-items from a parent node. PatternFly supports a single level fly-out, only.
 
-<img src="./img/flyout-menu.png" alt="flyout menu" width="348"/>
+<div class="ws-docs-content-img">
+![Example of a flyout menu.](./img/menu-multi-level.svg)
+</div>
 
 If a menu item has sub-items, a “>” character will be shown to the right of the item label. When hovering over the item, the secondary menu will be exposed.
 
 ### Filtering menu items
 If the list of possible items is very long, add a filter to make items more findable.
 
-<img src="./img/menu-filtering.png" alt="grouped menu" width="348"/>
+<div class="ws-docs-content-img">
+![Example of filtering menu items.](./img/menu-filtering.svg)
+</div>
 
 When filtering menu items, a search input will be added to the top of the menu and the list of items will be filtered as the user types.
 
 ### Favoriting and other actions
 Favoriting or other optional actions can be associated with any menu item. In this case, making an item a favorite will duplicate it at the top of the menu. This may be useful when you have a long list of possible actions and want to “pin” a subset of items to the top of the menu.
 
-<img src="./img/favorites-menu.png" alt="menu with favorites" width="348"/>
+<div class="ws-docs-content-img">
+![Example of a menu with favorites.](./img/menu-favoriting.svg)
+</div>
 
 
 Any action that can be represented as an icon button can be placed in one or more menu items. In this case, the favoriting action is used to mark an item as a favorite.
 
 ### Drilldown menu
-<img src="./img/drill-down-menu.png" alt="drilldown menu" width="935"/>
+<div class="ws-docs-content-img">
+![Examples of drilldown menus.](./img/menu-drilldown.svg)
+</div>
 
 Use a drilldown menu when data is structured into levels and includes a long list of options. When the parent with children is selected, the list is replaced with the children items. A header displays the name of the parent, with the option to go back one level. 
 
@@ -107,7 +121,9 @@ If you have destructive items in a dropdown menu, you can optionally use red tex
 
 When using red text for destructive actions, it is still recommended to require a confirmation dialog before proceeding.
 
-<img src="./img/red-delete-text.png" alt="drilldown menu" width="935"/>
+<div class="ws-docs-content-img">
+![Examples of menus with destructive red text.](./img/menu-red-text.svg)
+</div>
 
 ### Disabled menus and menu options
 
@@ -121,7 +137,9 @@ Use a disabled menu when:
 
     If a user needs to complete a prerequisite to enable an action, disable the action and add a [tooltip](/components/tooltip). The tooltip should explain what the user needs to do to enable the action. 
 
-    <img src="./img/dropdown-disabled-action-tooltip.png" alt="disabled action tooltip" width="385"/>
+    <div class="ws-docs-content-img">
+    ![Example of a menu with a disabled menu item.](./img/menu-disabled.svg)
+    </div>
 
     Example: A user can’t perform bulk actions until they select resources in the list.
 
