@@ -3,21 +3,29 @@ id: Overflow menu
 section: components
 ---
 
+import '../components.css';
+
 ## Usage 
 Use an overflow menu when additional options are available to the user but there is a space constraint. Common usage for overflow menu's happen when switching a UI from a desktop to a mobile device. 
 
 ### When to use
 * Use an overflow menu in a table toolbar to group a number of actions and create visual space. Avoid having more than 3 actions fully displayed within a toolbar.
 
-
-  <img src="./img/toolbaroverflow.png" alt="image showing toolbar overflow" width="1765" />
+<div class="ws-docs-content-img">
+![image showing toolbar overflow](./img/toolbaroverflow.svg)
+</div>
 
 * Use an overflow menu within a table row when additional actions are available that don’t correspond with a column header.
 
-  <img src="./img/tableoverflow.png" alt="image showing table with overflow" width="2315" />
+<div class="ws-docs-content-img">
+![image showing table with overflow](./img/tableoverflow.svg)
+</div>
+
 * Use an overflow menu within a card component to present additional menu options or provide action links.
  
-  <img src="./img/cardoverflow.png" alt="image showing card overflow" width="370" />
+ <div class="ws-docs-content-img">
+![image showing card overflow](./img/toolbarcardoverflowoverflow.svg)
+</div>
 
 ### When not to use
 * Do not use an overflow menu when there are 2 or fewer actions available to the user. 
