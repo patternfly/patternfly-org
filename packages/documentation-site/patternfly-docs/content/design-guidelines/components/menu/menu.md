@@ -108,13 +108,17 @@ Favoriting or other optional actions can be associated with any menu item. In th
 Any action that can be represented as an icon button can be placed in one or more menu items. In this case, the favoriting action is used to mark an item as a favorite.
 
 ### Drilldown menu
-<div class="ws-docs-content-img">
-![Examples of drilldown menus.](./img/menu-drilldown.svg)
-</div>
-
 Use a drilldown menu when data is structured into levels and includes a long list of options. When the parent with children is selected, the list is replaced with the children items. A header displays the name of the parent, with the option to go back one level. 
 
+<div class="ws-docs-content-img">
+![Example of a drilldown menu with a back button.](./img/menu-drilldown-back.svg)
+</div>
+
 If data is more complex and has more than 2 levels, use a drilldown menu with breadcrumbs instead. Breadcrumbs offer better navigation between different levels. The number of visited levels is shown in a grey badge with a dropdown menu showing the menu items between the first and last level. The badge allows you to go back to a specific visited level. If you need to see the whole structure of your data, use a [tree view](/components/tree-view) instead. 
+
+<div class="ws-docs-content-img">
+![Example of a drilldown menu with breadcrumbs.](./img/menu-drilldown-breadcrumbs.svg)
+</div>
 
 ### Red text menu
 If you have destructive items in a dropdown menu, you can optionally use red text styling for that item. A divider should be used to separate the destructive menu items from the non-destructive items. Red text is used to visually distinguish a dangerous action from other items. 
