@@ -85,7 +85,7 @@ Any editing is triggered by an edit link for the whole section. All edits should
 
 * **[Row edit](#row-editing):** Allows users to make changes to a specific table row.
  
-### Table inline elements
+#### Table inline elements
  
 <div class="ws-docs-content-img">
 ![Elements of inline edits in a table.](./img/inline-edit-table.svg)
@@ -100,15 +100,15 @@ Any editing is triggered by an edit link for the whole section. All edits should
 7. **[Tooltip](/components/tooltip):** Provides a short description of the inline edit toggle.
 8. **Toggle:** Indicates the edit action.
  
-### Row editing
+#### Row editing
 Row editing allows a user to edit items that are visible in the table by having a pencil toggle pinned to the right side, with the [kebab toggle (fa-ellipsis-v)](/components/menus/dropdown#with-kebab). 
  
-#### When to use
+##### When to use
 Use row editing when:
 * You need to change the data in a table.
 * The data is not dependent on each other. For example, changing the data in row 5 will not affect row 3.
  
-#### How to use
+##### How to use
 Clicking the pencil icon toggles the particular table row into edit mode. In the edit mode:
 * The kebab is replaced with a check icon for saving and a close icon for canceling. 
 * Once changes begin, the check icon turns to `global/icon/brand/default` (in this case, PatternFly blue) to increase the visibility of the save action.
