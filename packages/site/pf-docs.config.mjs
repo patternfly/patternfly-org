@@ -3,8 +3,8 @@ export const config = {
     // example content entry for local content, this would feed all markdown files in the content directory to the
     // documentation core with a content identifier of 'content':
     {
-      base: 'src/generated/content',
-      pattern: "*.md",
+      base: 'src/generated/content/',
+      pattern: "**/*.md",
       name: 'content'
     },
     //
