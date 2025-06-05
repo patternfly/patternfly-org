@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 6.10.25 (2025-06-05)
+
+
+### Bug Fixes
+
+* **styling:** last link in jump links sidenav is now visible ([#4638](https://github.com/patternfly/patternfly-org/issues/4638)) ([b391acc](https://github.com/patternfly/patternfly-org/commit/b391acca48db9f2b6f42145962834a67e3186b2a))
+
+
+
+
+
 ## 6.10.24 (2025-06-04)
 
 
