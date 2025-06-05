@@ -40,7 +40,7 @@ Use an overflow menu when additional options are available to the user but there
 * Use an overflow menu within a card component to present additional menu options or provide action links.
  
  <div class="ws-docs-content-img">
-![image showing card overflow](./img/toolbarcardoverflow.svg)
+![image showing card overflow](./img/card-overflow.svg)
 </div>
 
 ### When not to use
