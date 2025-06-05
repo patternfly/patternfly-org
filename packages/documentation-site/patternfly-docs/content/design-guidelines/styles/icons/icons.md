@@ -12,7 +12,7 @@ import StarIcon from '@patternfly/react-icons/dist/esm/icons/star-icon';
 import { IconsTable } from './IconsTable';
 import './icons.css';
 
-If you're a developer, check out our [development onboarding guide](/get-started//develop#using-icons) to learn how to install and use our icon set.
+If you're a developer, check out our [development onboarding guide](/get-started/develop#using-icons) to learn how to install and use our icon set.
 
 For additional usage instruction, [refer to the icon component pages.](/components/icon)
 
