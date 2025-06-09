@@ -118,6 +118,43 @@ const HeaderTools = ({
           </ToolbarItem>
         )}
         <ToolbarGroup align={{ default: 'alignEnd' }}>
+          {hasRTLSwitcher && (
+            <ToolbarItem>
+              <Switch
+                id="ws-rtl-switch"
+                label={'RTL'}
+                defaultChecked={isRTL}
+                onChange={() => setIsRTL((isRTL) => !isRTL)}
+              />
+            </ToolbarItem>
+          )}
+          {hasSearch && (
+            <ToolbarItem>
+              <SearchInput
+                className="ws-global-search"
+                placeholder="Search"
+                value={searchValue}
+                onChange={onChange}
+                onClear={(_evt) => onChange(_evt, '')}
+                expandableInput={{
+                  isExpanded: isSearchExpanded,
+                  onToggleExpand,
+                  toggleAriaLabel: 'Expandable search input toggle'
+                }}
+              />
+            </ToolbarItem>
+          )}
+          <ToolbarItem>
+            <Button
+              component="a"
+              variant="plain"
+              href="//github.com/patternfly"
+              target="top"
+              aria-label="PatternFly GitHub page"
+            >
+              <GithubIcon />
+            </Button>
+          </ToolbarItem>
           {hasDarkThemeSwitcher && (
             <ToolbarItem>
               <Select
@@ -165,43 +202,6 @@ const HeaderTools = ({
               </Select>
             </ToolbarItem>
           )}
-          {hasRTLSwitcher && (
-            <ToolbarItem>
-              <Switch
-                id="ws-rtl-switch"
-                label={'RTL'}
-                defaultChecked={isRTL}
-                onChange={() => setIsRTL((isRTL) => !isRTL)}
-              />
-            </ToolbarItem>
-          )}
-          {hasSearch && (
-            <ToolbarItem>
-              <SearchInput
-                className="ws-global-search"
-                placeholder="Search"
-                value={searchValue}
-                onChange={onChange}
-                onClear={(_evt) => onChange(_evt, '')}
-                expandableInput={{
-                  isExpanded: isSearchExpanded,
-                  onToggleExpand,
-                  toggleAriaLabel: 'Expandable search input toggle'
-                }}
-              />
-            </ToolbarItem>
-          )}
-          <ToolbarItem>
-            <Button
-              component="a"
-              variant="plain"
-              href="//github.com/patternfly"
-              target="top"
-              aria-label="PatternFly GitHub page"
-            >
-              <GithubIcon />
-            </Button>
-          </ToolbarItem>
           {hasVersionSwitcher && (
             <ToolbarItem>
               <Dropdown
