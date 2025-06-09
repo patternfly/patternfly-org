@@ -150,14 +150,14 @@ const HeaderTools = ({
                   <SelectOption 
                     value={THEME_MODES.LIGHT}
                     icon={<SunIcon />}
-                    description="Always use light theme"
+                    description="Always use light mode"
                   >
                     Light
                   </SelectOption>
                   <SelectOption 
                     value={THEME_MODES.DARK}
                     icon={<MoonIcon />}
-                    description="Always use dark theme"
+                    description="Always use dark mode"
                   >
                     Dark
                   </SelectOption>
