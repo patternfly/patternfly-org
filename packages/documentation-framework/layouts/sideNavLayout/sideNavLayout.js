@@ -132,7 +132,7 @@ const HeaderTools = ({
                     onClick={() => setIsThemeSelectOpen(!isThemeSelectOpen)}
                     isExpanded={isThemeSelectOpen}
                     icon={getThemeIcon(themeMode)}
-                    aria-label="Theme selection"
+                    aria-label={`Theme selection, current: ${getThemeDisplayText(themeMode)}`}
                   >
                     {getThemeDisplayText(themeMode)}
                   </MenuToggle>
