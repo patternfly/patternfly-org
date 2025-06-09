@@ -19,18 +19,24 @@ const DARK_MODE_CLASS = 'pf-v6-theme-dark';
  */
 export const useTheme = () => {
   const getStoredThemeMode = () => {
-    if (typeof window === 'undefined' || !window.localStorage) return null;
+    if (typeof window === 'undefined' || !window.localStorage) {
+      return null;
+    }
     return localStorage.getItem(THEME_STORAGE_KEY);
   };
 
   const setStoredThemeMode = (mode) => {
-    if (typeof window === 'undefined' || !window.localStorage) return;
+    if (typeof window === 'undefined' || !window.localStorage) {
+      return;
+    }
     localStorage.setItem(THEME_STORAGE_KEY, mode);
   };
 
   const getResolvedTheme = (mode) => {
     // SSR-safe check for window and matchMedia
-    if (typeof window === 'undefined' || !window.matchMedia) return 'light';
+    if (typeof window === 'undefined' || !window.matchMedia) {
+      return 'light';
+    }
     
     if (mode === THEME_MODES.SYSTEM) {
       try {
@@ -45,10 +51,14 @@ export const useTheme = () => {
   };
 
   const updateThemeClass = (resolvedTheme) => {
-    if (typeof window === 'undefined' || !document) return;
+    if (typeof window === 'undefined' || !document) {
+      return;
+    }
     
     const htmlElement = document.querySelector('html');
-    if (!htmlElement) return;
+    if (!htmlElement) {
+      return;
+    }
     
     if (resolvedTheme === 'dark') {
       htmlElement.classList.add(DARK_MODE_CLASS);
@@ -76,7 +86,9 @@ export const useTheme = () => {
   // Listen for system preference changes
   useEffect(() => {
     // Enhanced SSR-safe check
-    if (typeof window === 'undefined' || !window.matchMedia) return;
+    if (typeof window === 'undefined' || !window.matchMedia) {
+      return;
+    }
 
     let mediaQuery;
     try {
