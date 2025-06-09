@@ -154,7 +154,7 @@ export const Footer = ({ isDarkTheme }) => (
                   <ListItem className="ws-org-pfsite-footer-menu-list-item">
                     <Link
                       className="ws-org-pfsite-footer-menu-link"
-                      to="https://github.com/patternfly/patternfly/blob/main/CODE_OF_CONDUCT.md"
+                      to="https://calendar.google.com/calendar/embed?src=patternflyteam%40gmail.com&ctz=America%2FNew_York"
                       aria-label="Join PatternFly meetings"
                     >
                       Calendar
@@ -183,7 +183,7 @@ export const Footer = ({ isDarkTheme }) => (
                 to="/"
               >
                 <svg height="40px" viewBox="0 0 679 158">
-                  <title>PF-HorizontalLogo-Color</title>
+                  <title>PatternFly</title>
                   <defs>
                     <linearGradient
                       x1="68%"

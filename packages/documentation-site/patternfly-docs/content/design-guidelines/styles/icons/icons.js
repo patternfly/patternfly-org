@@ -697,6 +697,13 @@ export const iconsData = [
   },
   {
     "Style": "fas",
+    "Name": "fa-star-icon",
+    "React_name": "StarIcon",
+    "Type": "Action",
+    "Contextual_usage": "Indicates that an item is marked as a favorite",
+  },
+  {
+    "Style": "fas",
     "Name": "fa-tag",
     "React_name": "TagIcon",
     "Type": "Object",

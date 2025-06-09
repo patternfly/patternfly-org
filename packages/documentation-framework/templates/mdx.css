@@ -31,3 +31,7 @@
 .ws-autolink-header:not(:first-child) {
   margin-top: var(--pf-t--global--spacer--md);
 }
+
+.ws-example-page-wrapper {
+  max-width: min(100%, 825px);
+}

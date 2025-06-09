@@ -36,7 +36,7 @@ All headings use Red Hat Display bold.
 
 | Example | Tokens | Size | Line height | Usage | 
 | --- | --- | --- | --- | --- |
-| <Title headingLevel="h5" size='2xl'> Aa </Title> | --pf-t--global--font--size--heading--h1 | 1.375rem (22px) | 1.3 | Super hero headings <br /> H1 <br /> Page titles |
+| <Title headingLevel="h5" size='2xl'> Aa </Title> | --pf-t--global--font--size--heading--h1 | 1.5rem (24px) | 1.3 | Super hero headings <br /> H1 <br /> Page titles |
 | <Title headingLevel="h5" size='xl'> Aa </Title>  | --pf-t--global--font--size--heading--h2 | 1.25rem (20px) | 1.3 | Hero headings <br /> H2 |
 | <Title headingLevel="h5" size='lg'> Aa </Title>  | --pf-t--global--font--size--heading--h3 | 1.125rem (18px) | 1.3 | H3 |
 | <Title headingLevel="h5" size='md'> Aa </Title>  | --pf-t--global--font--size--heading--h4 <br /> --pf-t--global--font--size--heading--h5 <br /> --pf-t--global--font--size--heading--h6 |1rem (16px) | 1.3 | H4 <br /> H5 <br /> H6 |
@@ -48,7 +48,7 @@ The following table shows the default mapping of PatternFly heading levels to te
 
 | Heading level | Default size |
 |----|-----------|
-| H1 | 2xl (1.375rem, 22px)|
+| H1 | 2xl (1.5rem, 24px)|
 | H2 | xl (1.25rem, 20px) |
 | H3 | lg (1.125rem, 18px) |
 | H4 | md (1 rem, 16px) |
@@ -62,7 +62,7 @@ For example, you may decide that the default size of 20px for secondary headings
 Example: 
 
 <Title headingLevel="h2"> This is a default "xl" H2. </Title>
-```<Title headingLevel="h2" size='lg'> Aa </Title>```
+```<Title headingLevel="h2"> Aa </Title>```
 
 <Title headingLevel="h2" size='lg'> This is a customized "lg" H2. </Title>
 ```<Title headingLevel="h2" size='lg'> Aa </Title>```
@@ -97,3 +97,9 @@ Your overall line height can be calculated by multiplying the font's built-in li
 For example, if your font has a line height of 1.5 and a size of 16px, the final height of a line of text would be 24px (16px * 1.5 = 24px). In this example, you would consider the final line height of 24px when creating designs. 
 
 ![Correct and incorrect text spacing examples.](./line-height.png)
+
+## Line length
+
+Line length measures the number of characters in a single line of text, including spaces. To increase readability and contribute to well-balanced spacing on a screen, use line lengths between 20 and 100 characters. 
+
+Lines that are too long can be difficult to follow, while lines that only include a few words per line can use space inefficiently. 

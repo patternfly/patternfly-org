@@ -3,7 +3,6 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
-    <meta name="color-scheme" content="light dark">
     <meta name="description" content="PatternFly is Red Hat's open source design system. It consists of components, documentation, and code for building enterprise applications at scale.">
     <title><%= title %></title>
     <link rel="shortcut icon" href="/assets/Favicon-Light.png">
@@ -14,41 +13,6 @@
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="theme-color" content="#151515">
     <meta name="application-name" content="PatternFly docs">
-    <script>
-      (() => {
-        "use strict";
-
-        const DARK_MODE_CLASS = "pf-v6-theme-dark";
-        const DARK_MODE_STORAGE_KEY = "dark-mode";
-        const darkModeQuery = window.matchMedia("(prefers-color-scheme: dark)");
-        
-        // Ensure that the dark mode is correctly set before the page starts rendering.
-        updateDarkMode();
-
-        /**
-         * Applies the dark mode class to the root element if dark mode is enabled.
-         */
-        function updateDarkMode() {
-          const isEnabled = isDarkModeEnabled();
-          const root = document.documentElement;
-        
-          if (isEnabled) {
-            root.classList.add(DARK_MODE_CLASS);
-          }
-        }
-
-        /**
-         * Determines if dark mode is enabled based on the stored value or the system preference.
-         * @returns {boolean} true if dark mode is enabled, false otherwise
-         */
-        function isDarkModeEnabled() {
-          const storedValue = localStorage.getItem(DARK_MODE_STORAGE_KEY);
-          const isEnabled = storedValue === null ? darkModeQuery.matches : storedValue === "true";
-
-          return isEnabled;
-        }
-      })();
-    </script>
     <%= htmlWebpackPlugin.tags.headTags %>
   </head>
   <body>
