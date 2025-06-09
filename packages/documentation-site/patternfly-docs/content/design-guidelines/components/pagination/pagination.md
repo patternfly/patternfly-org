@@ -25,7 +25,7 @@ Use full pagination unless you're restricted to a narrow workspace, then use <a 
 
 Desktop and mobile views connect with the same breakpoint specifications. On mobile, full pagination condenses to an item count. As a toolbar item, you can add and keep the item count in two ways: in both desktop and mobile views, or just in mobile view.
 
-Desktop full pagination in toolbar
+#### Desktop full pagination in toolbar
 
 <div class="ws-docs-content-img">
 ![an example of a desktop pagination component within a toolbar.](./img/toolbar-pagination.svg)
@@ -35,7 +35,7 @@ Desktop full pagination in toolbar
 
 2. **Full pager:** Supplies all necessary pagination options including page-back and page-forward, page-first and page-last, and a manual option to type in a desired page number.
 
-Mobile full pagination in toolbar
+#### Mobile full pagination in toolbar
 
 <div class="ws-docs-content-img">
 ![Example of pagination on mobile table view.](./img/mobile-pagination.svg)
@@ -49,7 +49,7 @@ Mobile full pagination in toolbar
 
 Compact pagination fits more actions into top toolbars with limited space. Choose this compact variation when your top toolbar contains many items or looks overcrowded. As with full pagination, the compact variation condenses to an item count for mobile views.
 
-Desktop compact pagination in toolbar
+#### Desktop compact pagination in toolbar
 
 <div class="ws-docs-content-img">
 ![Example of a compact pagination.](./img/compact-pagination.svg)
