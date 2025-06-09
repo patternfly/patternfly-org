@@ -122,6 +122,4 @@ export const useTheme = () => {
     resolvedTheme,
     THEME_MODES
   };
-};
-
-export { THEME_MODES }; 
+}; 
