@@ -15,3 +15,9 @@ aws s3 sync build/patternfly-org/site s3://patternfly-org-staging --include "*" 
     --cache-control "public, max-age=31536000, immutable"
 
 aws cloudfront create-invalidation --distribution-id EQE4NPRH0CQXJ --paths "/*"
+
+if [ -d "packages/site/dist" ]; then
+  aws s3 rm --recursive s3://patternfly-org-preview
+  aws s3 sync packages/site/dist s3://patternfly-org-preview --include "*" \
+    --cache-control "public, max-age=31536000, immutable"
+fi

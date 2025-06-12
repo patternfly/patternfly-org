@@ -3,6 +3,76 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 6.10.29 (2025-06-11)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 6.10.28 (2025-06-10)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 6.10.27 (2025-06-09)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 6.10.26 (2025-06-05)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 6.10.25 (2025-06-05)
+
+
+### Bug Fixes
+
+* **styling:** last link in jump links sidenav is now visible ([#4638](https://github.com/patternfly/patternfly-org/issues/4638)) ([b391acc](https://github.com/patternfly/patternfly-org/commit/b391acca48db9f2b6f42145962834a67e3186b2a))
+
+
+
+
+
+## 6.10.24 (2025-06-04)
+
+
+### Bug Fixes
+
+* broken link on icons design guidelines ([50c1f66](https://github.com/patternfly/patternfly-org/commit/50c1f66fda953ca6d85cccc27c306e4b4eade2c8))
+
+
+
+
+
+## 6.10.23 (2025-06-03)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 6.10.22 (2025-05-27)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
 ## 6.10.21 (2025-05-26)
 
 **Note:** Version bump only for package @patternfly/documentation-framework
