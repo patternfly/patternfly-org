@@ -3,7 +3,6 @@ id: Contribute
 title: Contribute to PatternFly
 section: get-started
 ---
-
 ## Community contributions 
 
 Thank you for your interest in contributing to PatternFly! We depend on community contributions to help our design system grow and evolve. We encourage everyone, regardless of background, to get involved. Common contributions include (but aren't limited to): 
@@ -50,10 +49,10 @@ Be sure to view our detailed contribution instructions for both of these reposit
 If you believe that you've come across a PatternFly bug, alert our team, so that we can resolve the issue. To report a bug, follow these steps:
 
 1. View the documentation for the feature, to confirm that the behavior is not functioning as intended. 
-1. Search open issues in the [patternfly](https://github.com/patternfly/patternfly/issues) and [patternfly-react](https://github.com/patternfly/patternfly-react/issues) repositories to see if a related issue already exists.
+2. Search open issues in the [patternfly](https://github.com/patternfly/patternfly/issues) and [patternfly-react](https://github.com/patternfly/patternfly-react/issues) repositories to see if a related issue already exists.
     - If the bug is present in only the React implementation of PatternFly, [create a bug issue in patternfly-react.](https://github.com/patternfly/patternfly-react/issues)
     - If the bug can be seen on both the React and HTML/CSS side, [create a bug issue in patternfly](https://github.com/patternfly/patternfly/issues).
-1. Be sure to mention which project the bug was noticed in and if there is a deadline that the fix is needed for.
+3. Be sure to mention which project the bug was noticed in and if there is a deadline that the fix is needed for.
 
 ## Documentation 
 
