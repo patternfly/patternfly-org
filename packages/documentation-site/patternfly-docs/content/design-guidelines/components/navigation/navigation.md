@@ -150,19 +150,16 @@ Horizontal navigation is global navigation that displays navigation items from l
 
 Use secondary horizontal navigation when you want to provide more granular navigation specific to a particular page or window in your application. This differs from [tabs](/components/tabs), since tabs would allow you to switch perspective on the same page, while each secondary horizontal navigation item would be sending you to a distinct URL. For example, a user might use global navigation to get to a settings page, and then use local navigation to access privacy and general user settings.
 
-Secondary horizontal navigation can be paired with vertical or horizontal navigation. It provides deeper nesting to the vertical navigation, which may help prevent the navigation from becoming too long.
+Secondary horizontal navigation can be paired with vertical or horizontal navigation. It provides deeper nesting to the vertical navigation, which may help prevent the navigation from becoming too long. The title of the page should reflect the selected horizontal navigation item. You can provide further nested information by using tabs.
 
 <div class="ws-docs-content-img">
 ![Example of secondary horizontal navigation.](./img/nav-secondary-vertical.svg)
 </div>
 
-**Selected nav item:** The title of the page should reflect the selected horizontal navigation item. You can provide further nested information by using tabs.
-
-We recommend either using horizontal navigation OR vertical navigation as your primary. The secondary horizontal navigation can be added to either and contains similar styling to the primary navigation either way.
-
 <div class="ws-docs-content-img">
 ![Example of horizontal primary and secondary navigation.](./img/nav-secondary-horizontal.svg)
 </div>
+
 
 Secondary horizontal navigation follows a similar responsive design as our other horizontal navigation types.
 Overflow items can be navigated to by using horizontal scroll or the arrows.
