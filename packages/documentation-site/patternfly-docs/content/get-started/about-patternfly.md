@@ -10,16 +10,23 @@ import ExternalLinkAltIcon from '@patternfly/react-icons/dist/esm/icons/external
 import { Link } from '@patternfly/documentation-framework/components';
 
 ## What is PatternFly?
-PatternFly is an **open source design system**, built to support consistent, usable enterprise software. We're founded on principles of transparency and community contribution, making PatternFly accessible to everyone. Our goal is to empower designers and developers to work more efficiently and build better user experiences together.
+PatternFly is an **open source design system**, dedicated to building consistent, usable enterprise software. We operate on principles of transparency and community contribution, making PatternFly accessible to everyone. Our primary goal is to empower designers and developers, enabling them to work more efficiently and build better user experiences together.
 
-Like most design systems, we provide standards and resources that guide and streamline your design process. These resources are designed to reduce redundancy and create a unified language for cross-functional teams, ensuring your products are visually consistent, accessible, and easy to use.
+Like most design systems, we provide a comprehensive set of standards and resources to guide and streamline the design process. These resources are designed to reduce redundancy and establish a unified language for cross-functional teams, ultimately ensuring that products are visually consistent, accessible, and easy to use.
 
-While PatternFly is used extensively across Red Hat products, anyone can use or contribute to PatternFly. On this website, you'll find code samples, clear guidelines, and additional tools and resources. 
+While PatternFly is used extensively across Red Hat products, anyone can use or contribute to PatternFly. On our website, you'll find ready-to-use code samples, clear guidelines, and a variety of additional tools and resources. 
 
 ## Why does Red Hat use PatternFly?
-PatternFly is Red Hat's design system of choice because we directly enable their commitment to open source, robust enterprise experiences, and developer empowerment. We are purpose-built for their complex enterprise demands, offering highly customized components and a design kit that translate quickly to code. As an MIT-licensed open source project, our philosophy aligns with Red Hat's foundation, fostering transparency and direct contribution. This enables us to deliver tailored solutions for critical enterprise workflows, while building a unified "open source" brand across Red Hat products.
+Red Hat prefers PatternFly as its design system due to our shared commitment to open source and robust enterprise experiences. We're specifically designed to meet Red Hat's complex needs, offering customizable components and a design kit that easily translates to code.
 
-Our independent operation means we set priorities based directly on Red Hat product needs, avoiding external roadmaps. This control allows us to rapidly deliver custom solutions, ensure strong security and compliance, and predictably manage breaking changes, providing stability and confidence. We empower all front-end developers, from novices to experts, with comprehensive documentation and native accessibility support, and offer multiple libraries (React and HTML) to streamline development. 
+PatternFly's development is guided by Red Hat's product requirements, allowing us to deliver custom solutions quickly, ensure strong security and compliance, and manage changes predictably. This provides better stability and confidence for Red Hat's designers and developers.
+
+As an MIT-licensed open source project, PatternFly aligns with Red Hat's core values of transparency and direct contribution. This enables us to create tailored solutions for critical enterprise workflows and build a unified open source brand across all Red Hat products.
+
+### Benefits for developers and designers 
+PatternFly empowers front-end developers with comprehensive documentation, native accessibility support, and flexibility through React and HTML libraries. Even new developers can create effective and inclusive interfaces.
+
+Both designers and developers benefit from our extensive design guidelines, which offer well-documented shortcuts for simple components and complex UI solutions. Our open source approach encourages product teams to contribute or request changes, fostering a collaborative environment where they can actively shape the system they use. 
 
 Red Hat UX designers can use PatternFly alongside the [UXD Hub](https://www.uxd-hub.com/), which documents additional product-specific design patterns. 
 
