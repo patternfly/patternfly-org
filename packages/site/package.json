@@ -1,6 +1,7 @@
 {
   "name": "site",
   "type": "module",
+  "private": true,
   "version": "0.0.2",
   "scripts": {
     "clean": "rm -rf src/generated",
