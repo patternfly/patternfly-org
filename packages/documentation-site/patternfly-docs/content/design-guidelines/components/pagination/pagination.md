@@ -3,10 +3,14 @@ id: Pagination
 section: components
 ---
 
+import '../components.css';
+
 ## Usage
 Add pagination above and below content views so that users can easily navigate as they read through listed items on a page.
 
-<img src="./img/full-page.png" alt="Example of pagination on full page table" />
+<div class="ws-docs-content-img">
+![a full page demo with a table and a pagination component within a toolbar.](./img/pagination-elements.svg)
+</div>
 
 1. **Top pagination:** Always right-align pagination in the top toolbar, above content views.
 
@@ -21,17 +25,21 @@ Use full pagination unless you're restricted to a narrow workspace, then use <a 
 
 Desktop and mobile views connect with the same breakpoint specifications. On mobile, full pagination condenses to an item count. As a toolbar item, you can add and keep the item count in two ways: in both desktop and mobile views, or just in mobile view.
 
-Desktop full pagination in toolbar
+#### Desktop full pagination in toolbar
 
-<img src="./img/full-pagination.png" alt="Example of full pagination" />
+<div class="ws-docs-content-img">
+![an example of a desktop pagination component within a toolbar.](./img/toolbar-pagination.svg)
+</div>
 
 1. **Items in view:** Allows the user to select the item count (number of listed items) per page.
 
 2. **Full pager:** Supplies all necessary pagination options including page-back and page-forward, page-first and page-last, and a manual option to type in a desired page number.
 
-Mobile full pagination in toolbar
+#### Mobile full pagination in toolbar
 
-<img src="./img/mobile-pagination.png" alt="Example of pagination on mobile table view" width="375"/>
+<div class="ws-docs-content-img">
+![Example of pagination on mobile table view.](./img/mobile-pagination.svg)
+</div>
 
 1. **Items in view:** At this screen size, the top toolbar only shows the item count to indicate items currently in view. It hides all other pagination controls.
 
@@ -41,9 +49,11 @@ Mobile full pagination in toolbar
 
 Compact pagination fits more actions into top toolbars with limited space. Choose this compact variation when your top toolbar contains many items or looks overcrowded. As with full pagination, the compact variation condenses to an item count for mobile views.
 
-Desktop compact pagination in toolbar
+#### Desktop compact pagination in toolbar
 
-<img src="./img/compact-pagination.png" alt="Example of compact pagination" />
+<div class="ws-docs-content-img">
+![Example of a compact pagination.](./img/compact-pagination.svg)
+</div>
 
 1. **Items in view:** Allows the user to select the item count (number of listed items) per page, as seen in full pagination.
 
@@ -53,6 +63,8 @@ Desktop compact pagination in toolbar
 
 Use indeterminate pagination if it’s difficult to calculate the total number of items or page count upfront. In these cases, you may use “many” instead of the usual page count that would appear.
 
-<img src="./img/indeterminate-pagination.png" alt="Indeterminate pagination" width="446"/>
+<div class="ws-docs-content-img">
+![Example of a indeterminate pagination.](./img/indeterminate-pagination.svg)
+</div>
 
 The text indicator provides the user with a control that displays indeterminate page count or items.

@@ -3,6 +3,8 @@ id: Inline edit
 section: components
 ---
 
+import '../components.css';
+
 ## Elements
 
 Elements vary depending on inline edit variation
@@ -18,7 +20,11 @@ Elements vary depending on inline edit variation
 ### When not to use
 * The editing is the primary function of the view. For example, in an edit modal.
 
-<img src="./img/inline-edit.gif" alt="Inline edit components" width="960" height="540" />.
+## Behavior
+
+<div class="ws-docs-content-img">
+![Example of the behavior of an inline edit field.](./img/inline-edit-behavior.gif)
+</div>
 
 ## Variations
 1. **[Page inline edit](/components/inline-edit/design-guidelines#page-inline-edit):** enables the user to edit a [specific field](/components/inline-edit/design-guidelines#table-inline-edit) in a details page or in a [full page](/components/inline-edit/design-guidelines#full-page-edit).
@@ -31,7 +37,12 @@ Elements vary depending on inline edit variation
  
 ### Page inline elements
  
-<img src="./img/elements-form-inline-edit.png"  alt="Form inline edit elements"  width="785"/>
+<div class="ws-docs-content-img">
+![Elements of field specific inline edits.](./img/inline-edit-page-elements-1.svg)
+</div>
+<div class="ws-docs-content-img">
+![Elements of full page inline edits](./img/inline-edit-page-elements-2.svg)
+</div>
  
 1. **Toggle:** Indicates the edit action
 2. **[Tooltip](/components/tooltip):** Provides a short description of the inline edit toggle
@@ -49,7 +60,9 @@ The pencil toggle is placed inline with the header for fields that are editable.
 * **The check icon** saves the changes and switches the item back to read-only mode.
 * **The close icon** returns to the read-only mode without saving new data.
  
-<img src="./img/specific-field-edit.png"  alt="Specific field edit"  width="1013"/>
+<div class="ws-docs-content-img">
+![Example of field specific inline edits.](./img/inline-edit-field-specific.svg)
+</div>
  
 ### Full page edit
  
@@ -62,7 +75,9 @@ Any editing is triggered by an edit link for the whole section. All edits should
 * **Editable fields** should function like any form.
 * Users can save or cancel changes using the ‘Save’ or ‘Cancel’ button. Both actions return a page or description list to the read-only mode.
  
-<img src="./img/full-page-edit.png"  alt="Full page edit"  width="926"/>
+<div class="ws-docs-content-img">
+![Example of full page inline edits.](./img/inline-edit-full-page.svg)
+</div>
  
 ### Table inline edit
 
@@ -70,7 +85,9 @@ Any editing is triggered by an edit link for the whole section. All edits should
  
 ### Table inline elements
  
-<img src="./img/table-inline-edit-elements.png"  alt="Table inline edit elements"  width="1010"/>
+<div class="ws-docs-content-img">
+![Elements of inline edits in a table.](./img/inline-edit-table.svg)
+</div>
  
 1. **Editable inactive row:** Inactive row with read-only styling
 2. **Editable active row:** Ability to edit form components is enabled
@@ -96,7 +113,9 @@ Clicking the pencil icon toggles the particular table row into edit mode. In the
 * **The check icon button** submits the changes and switches the row back to the read-only mode.
 * **The close icon** returns to read-only mode without saving new data.
  
-<img src="./img/row-editing.png"  alt="Row editing"  width="1210"/>
+<div class="ws-docs-content-img">
+![Example of inline edits in a table.](./img/inline-edit-table-rows.svg)
+</div>
  
 Some are elements may be difficult to edit in a table. You can make them editable in a [modal](/components/modal) instead.
 

@@ -8,9 +8,10 @@
   "scripts": {
     "analyze": "yarn workspace patternfly-org analyze",
     "develop": "yarn workspace patternfly-org develop",
+    "dev": "yarn workspace site dev",
     "develop:extensions": "EXTENSIONS_ONLY=true PRERELEASE=true yarn develop",
     "build:analyze": "yarn workspace patternfly-org build:analyze && yarn copy",
-    "build": "yarn workspace patternfly-org build && yarn copy",
+    "build": "yarn workspace patternfly-org build && yarn workspace site build && yarn copy",
     "build:extensions": "EXTENSIONS_ONLY=true PRERELEASE=true yarn build",
     "copy": "rm -rf build/patternfly-org/site && mkdir -p build/patternfly-org && cp -r packages/documentation-site/public build/patternfly-org/site",
     "clean": "lerna run clean && rm -rf build",
