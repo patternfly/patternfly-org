@@ -109,7 +109,7 @@ Error dialogs may use an error icon for visual emphasis.
 
 ### Passive dialogs
 
-<div class="ws-docs-content-img">
+<div class="ws-docs-content-img" style="min-width:100%">
 ![Example of a passive dialog, with and without an optional warning icon.](./img/modal-passive-dialog.svg)
 </div>
 
