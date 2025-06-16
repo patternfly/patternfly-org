@@ -3,8 +3,12 @@ id: Progress
 section: components
 ---
 
+import '../components.css';
+
 ## Elements
-<img src="./img/progress-bar-callouts.png" alt="A progress bar with arrows pointing to each of its four elements: Its title, track, progress value, and indicator." width="608" />
+<div class="ws-docs-content-img">
+![Elements of a progress bar.](./img/progress-elements.svg)
+</div>
 
 1. **Title:** Describes the task or process underway.
 2. **Track:** Illustrates the path from task start (empty) to task completion (full).
@@ -46,19 +50,25 @@ Follow these general style guidelines when designing your progress bars. For inf
 
 A blue progress bar represents a process that is currently underway.
 
-<img src="./img/progress-bar-in-progress.png" alt="An example of a progress bar in an 'in progress' state, with a blue track and a title that indicates its status: 'Validating account credentials.'" width="560" />
+<div class="ws-docs-content-img">
+![Example of a progress bar in the "in progress" state.](./img/in-progress.svg)
+</div>
 
 ### Error state or failure
 
 A red progress bar represents a process that has failed. Accompany a failed progress bar with a [red danger icon](/design-foundations/icons/#all-icons) to demonstrate that an error occurred in the process.
 
-<img src="./img/progress-bar-error-state.png" alt="An example of a progress bar in an error or failed state, with a red track, optional danger icon, and a title that indicates its status: 'Could not validate account credentials.'" width="560" />
+<div class="ws-docs-content-img">
+![Example of a progress bar in the error or failed state.](./img/error.svg)
+</div>
 
 ### Complete or success
 
 A green progress bar represents the successful completion of a process. Accompany a complete progress bar with a [green check-circle icon](/design-foundations/icons/#all-icons) to demonstrate that the process has finished with no errors.
 
-<img src="./img/progress-bar-complete.png" alt="An example of a progress bar in a complete or successful state, with a green track, optional check-circle icon, and a title that indicates its status: 'Validated account credentials.'" width="560" />
+<div class="ws-docs-content-img">
+![Example of a progress bar in the complete or successful state.](./img/success.svg)
+</div>
 
 ### In a table
 
@@ -68,20 +78,25 @@ Place a progress bar into a table just as you would other table content. If a pr
 
 If your table includes multiple progress bars, designate a “Status” or “Progress” column for each one.
 
-
-<img src="./img/progress-bar-in-table.png" alt="A visual example of how to successfully place progress bars in a table." width="543" />
+<div class="ws-docs-content-img">
+![Example of progress bars in a table.](./img/progress-table.svg)
+</div>
 
 ### In a dashboard view
 
 Use a progress bar in a dashboard view to track the progress trends within each card component on a page.
 
-<img src="./img/progress-bar-in-dashboard.png" alt="A visual example of how to successfully place progress bars in dashboard views." width="543" />
+<div class="ws-docs-content-img">
+![Example of a progress bar in a card on a dashboard.](./img/card-dashboard.svg)
+</div>
 
 ### During a file download
 
 Use a [toast notification](/components/alert/design-guidelines/#using-toast-alerts) and a progress bar to demonstrate progress during a file download.
 
-<img src="./img/progress-bar-during-file-download.png" alt="A visual example of how to successfully place progress bars in toast alerts to communicate progress during a file download." width="543" />
+<div class="ws-docs-content-img">
+![Example of a progress bar in a toast alert to communicate progress during a file download.](./img/progress-file-download.svg)
+</div>
 
 ### In a wizard
 
@@ -89,7 +104,9 @@ Use a [toast notification](/components/alert/design-guidelines/#using-toast-aler
 
 Only use a progress bar in a wizard if its final validation process will take more than a few seconds. As users wait for their changes to be processed, display a progress screen that includes a progress title, progress bar, and an optional 1-2 sentence description to provide more details about the validation step or give users a better idea of how long this process might take.
 
-<img src="./img/progress-bar-in-wizard.png" alt="A visual example of how to successfully place a progress bar in a wizard to express a final validation process." width="543" />
+<div class="ws-docs-content-img">
+![Example of a progress bar in a wizard.](./img/progress-wizard.svg)
+</div>
 
 To learn more about using progress bars in wizard validation progress screens, see our [wizard guidelines](/components/wizard/design-guidelines).
 
@@ -97,17 +114,23 @@ To learn more about using progress bars in wizard validation progress screens, s
 
 Right-align progress value text when it’s placed above the progress track, in line with the title. 
 
-<img src="./img/progress-bar-right-aligned-progress-value.png" alt="A visual example of a progress bar with right-aligned progress value text above the progress track." width="560" />
+<div class="ws-docs-content-img">
+![Example of a progress bar with right-aligned value text above the progress track.](./img/progress-number-above.svg)
+</div>
 
 Left-align progress value text when it’s placed to the right of the track.
 
-<img src="./img/progress-bar-left-aligned-progress-value.png" alt="A visual example of a progress bar with left-aligned progress value text in line with the progress track." width="616" />
+<div class="ws-docs-content-img">
+![Example of a progress bar with left-aligned value text in line with the progress track.](./img/progress-number-outside.svg)
+</div>
 
 Always set an “outside fixed width measure” for determinate progress bars. This fixed spacing should solve alignment use cases in which stacked progress bar values vary in length. 
 
 ## Placement
 
-<img src="./img/progress-bar-do-dont.png" alt="A visual example of how to successfully place a progress bar in your designs, side by side with an example of unsuccessful placement. Never isolate a progress bar above, below, or outside of its corresponding content view — always align it with its relevant content." width="1135"/>
+<div class="ws-docs-content-img">
+![Examples of dos and don'ts for placing a progress bar in your designs.](./img/progress-placement.svg)
+</div>
 
 Always place progress bars in alignment with their relevant context, such as the feature, function, or task they reflect. Keep progress bars within the user’s line of sight: Never isolate a progress bar at the top or bottom of a page, or outside of its relevant content view.
 
