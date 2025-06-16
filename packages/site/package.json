@@ -1,7 +1,7 @@
 {
   "name": "site",
   "type": "module",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "scripts": {
     "clean": "rm -rf src/generated",
     "generate:content": "patternfly-doc-core convert-to-mdx ../documentation-site/patternfly-docs/content/",
