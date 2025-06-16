@@ -79,7 +79,7 @@ If a destructive action has serious consequences, consider adding an additional 
 
 When a text input field is added to a confirmation dialog, the danger button will only become enabled once a user enters the entire word or phrase.
 
-<div class="ws-docs-content-img">
+<div class="ws-docs-content-img" style="min-width:100%">
 ![Example of a destructive confirmation dialog that requires an input field be filled before continuing.](./img/modal-destructive-text-input.svg)
 </div>
 
