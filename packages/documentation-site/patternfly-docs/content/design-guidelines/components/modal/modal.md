@@ -67,7 +67,7 @@ When confirming a non-destructive action, provide specific context about what wi
 
 #### Confirm a destructive action
 
-<div class="ws-docs-content-img">
+<div class="ws-docs-content-img" style="min-width:100%">
 ![A side-by-side comparison of unsuccessful and successful destructive confirmaton dialogs.](./img/modal-destructive.svg)
 </div>
 
