@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.4.0-alpha.220 (2025-06-16)
+
+
+### Features
+
+* **ThemeSwitcher:** Enhanced theme switcher with system preference detection and tri-state selection ([#4639](https://github.com/patternfly/patternfly-org/issues/4639)) ([1b05742](https://github.com/patternfly/patternfly-org/commit/1b057425216a484dda1f46ba37842c22b77c7b87))
+
+
+
+
+
 # 1.4.0-alpha.219 (2025-06-16)
 
 **Note:** Version bump only for package @patternfly/ast-helpers
