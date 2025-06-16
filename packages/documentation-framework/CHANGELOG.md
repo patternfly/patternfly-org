@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 6.10.31 (2025-06-16)
+
+
+### Bug Fixes
+
+* Updated to prevent release to npm. ([37433c1](https://github.com/patternfly/patternfly-org/commit/37433c1e98a49cde2deee6bae361eb15876e31cd))
+
+
+
+
+
 ## 6.10.30 (2025-06-16)
 
 **Note:** Version bump only for package @patternfly/documentation-framework
