@@ -97,7 +97,7 @@ When using destructive actions, ensure that the user is informed about the conse
 
 ### Error dialogs
 
-<div class="ws-docs-content-img">
+<div class="ws-docs-content-img" style="min-width:100%">
 ![Example of an error dialog, with and without an optional error icon.](./img/modal-error-dialog.svg)
 </div>
 
