@@ -125,7 +125,7 @@ Users may need to provide additional input to complete an action. To accomplish 
 
 ### Modals with help
 
-<div class="ws-docs-content-img">
+<div class="ws-docs-content-img" style="min-width:100%">
 ![Example of a modal with a help icon and popover.](./img/modal-with-help.svg)
 </div>
 
