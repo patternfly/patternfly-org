@@ -93,7 +93,7 @@ export class CSSVariables extends React.Component {
                 >
                   <span
                     className="circle"
-                    style={{ backgroundColor: `var(${property})` }}
+                    style={{ backgroundColor: `${value}` }}
                   />
                 </div>
               )}

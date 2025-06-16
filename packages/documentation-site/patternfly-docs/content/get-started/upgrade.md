@@ -27,7 +27,7 @@ Before you upgrade, familiarize yourself with these significant changes. While s
 ### Components
 
 1. [Chip](/components/chip): Replaced with [label](/components/label).
-1. [Tile](/components/tile): Replaced with [card](components/card).
+1. [Tile](/components/tile): Replaced with [card](/components/card).
 1. [Text](https://v5-archive.patternfly.org/components/text): Renamed to ["content"](/components/content).  
 1. [Expandable section](/components/expandable-section): Removed `isActive`.
 1. [Empty state](/components/empty-state): Refactored. 
@@ -53,10 +53,10 @@ To install Victory packages, you can either:
 Your upgrade process will require you to complete these steps:
 
 1. Update your dependencies to use PatternFly 6 instead of PatternFly 5.
-1. [Run our codemods suite](#1-run-our-codemods-suite).
-1. [Remove all CSS overrides](#2-remove-all-css-overrides). 
-1. [Review and update variable and class names](#3-review-and-update-variable-and-class-names). 
-1. [Update any pixel-based logic for your breakpoints](#4-update-any-pixel-based-logic-for-breakpoints).
+1. [Run our codemods suite](#1.-run-our-codemods-suite).
+1. [Remove all CSS overrides](#2.-remove-all-css-overrides). 
+1. [Review and update variable and class names](#3.-review-and-update-variable-and-class-names). 
+1. [Update any pixel-based logic for your breakpoints](#4.-update-any-pixel-based-logic-for-breakpoints).
 
 ### 1. Run our codemods suite
 
