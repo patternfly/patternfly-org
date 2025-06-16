@@ -59,7 +59,7 @@ Use a confirmation dialog to validate user decisions and communicate their conse
 
 #### Confirm a non-destructive action
 
-<div class="ws-docs-content-img">
+<div class="ws-docs-content-img" style="min-width:100%"">
 ![A side-by-side comparison of unsuccessful and successful confirmaton dialogs for leaving a page without saving.](./img/modal-non-destructive.svg)
 </div>
 
