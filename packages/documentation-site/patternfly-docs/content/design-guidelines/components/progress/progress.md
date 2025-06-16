@@ -29,7 +29,6 @@ Depending on your use case, you might choose between 2 types of loading indicato
 Default to progress bars for processes that take longer than 4 seconds or require more specific information about process completion. If a process takes less than four seconds, use a [spinner](/components/spinner) instead. 
 
 ## Variations
-<img src="./img/progress_bar_blue_animated.gif" alt="An animated progress bar demonstrates how a progress track fills and progress value increases as a process moves toward completion." width="500" height="300" />
 
 ### Determinate progress bar
 
