@@ -2,11 +2,13 @@
 id: Slider
 section: components
 ---
+
+import '../components.css';
  
 ## Elements
- 
-<img src="./img/Slider.png" alt="Visual of slider" width="600"/>
- 
+
+<div class="ws-docs-content-img">![Visual elements of a slider](./img/slider-elements.svg)</div>
+
 1. **Slider value (optional)**: Displays selected numeric value.
 2. **Helper text (optional)**: Provides supplementary information about the slider such as minimum and maximum values.
 3. **Track**: Orders the range of values users can set and adjust onto one line.
@@ -41,13 +43,13 @@ instead.
  
 ### Continuous slider
 
-<img src="./img/slider-continuous.png" alt="Visual of continuous slider" width="600"/>
+<div class="ws-docs-content-img">![Visual of a continuous slider](./img/slider-continuous.svg)</div>
  
 Allows users to select any value within the slider's range using a thumb indicator. Use this variation when any value within your slider’s range is valid for your use case.
  
 ### Discrete slider
  
-<img src="./img/slider-discrete.png" alt="Visual of discrete slider" width="600"/>
+<div class="ws-docs-content-img">![Visual of a discrete slider](./img/slider-discrete.svg)</div>
 
 Allows users to select a value by adjusting a thumb indicator to predefined values represented by tick marks on a track. Users can only select values indicated by a tick mark.  If they attempt to select an unmarked value, the thumb indicator will always shift to the closest tick mark.
  
@@ -60,7 +62,7 @@ For more information about using input groups, visit our [input group guidelines
  
  #### With default value input
 
-<img src="./img/Input-value.png" alt="Visual of slider with input value" width="600"/>
+<div class="ws-docs-content-img">![Visual of a slider with an input value](./img/input-value.svg)</div>
  
 1. **Number input in hover state**: Allows users to type in their numeric input or to adapt the slider value by using caret buttons.
 2. **Unit (optional)**: Provides a unit symbol for the value in the input field, when applicable.
@@ -69,7 +71,7 @@ Value input is restrained by prescribed maximum and minimum parameters, and appe
 
 #### With thumb value
 
-<img src="./img/thumb value.png" alt="Visual of  slider with thumb value" width="600"/>
+<div class="ws-docs-content-img">![Visual of a slider with a thumb value](./img/thumb-value.svg)</div>
  
 1. **Input field**: Allows users to type in their numeric input.
 2. **Unit (optional)**: Provides a unit symbol for the value in the input field, when applicable.
@@ -80,7 +82,7 @@ For more information about using number inputs, visit our [number input guidelin
 
 #### With buttons
  
-<img src="./img/Slider-with-buttons.png" alt="Visual of slider with buttons" width="500"/>
+<div class="ws-docs-content-img">![Visual of a slider with action buttons](./img/slider-with-actions.svg)</div>
  
 Use buttons on either side of the slider to increase or decrease selected value by set increments.
  
@@ -88,11 +90,10 @@ Use buttons on either side of the slider to increase or decrease selected value 
  
 Unlocked value
 
-<img src="./img/Unlocked.png" alt="Visual of an unlocked slider" width="500"/>
+<div class="ws-docs-content-img">![Visual of an unlocked slider](./img/slider-unlocked.svg)</div>
  
 Locked value
 
-<img src="./img/Locked.png" alt="Visual of a locked slider" width="500
-"/>
+<div class="ws-docs-content-img">![Visual of a locked slider](./img/slider-locked.svg)</div>
  
 Use a lock icon along with a slider if there is a use case to lock or unlock the slider value. Use a lock icon to display different user permissions or to indicate the possibility of automatic value alteration. Clicking on a lock icon results in locking a selected value and disabling the slider. If the user permissions allow it, users can unlock value by clicking on a lock icon.
