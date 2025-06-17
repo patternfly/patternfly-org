@@ -4,7 +4,7 @@ section: components
 ---
 
 import '../components.css';
- 
+
 ## Elements
 
 <div class="ws-docs-content-img">![Visual elements of a slider](./img/slider-elements.svg)</div>
