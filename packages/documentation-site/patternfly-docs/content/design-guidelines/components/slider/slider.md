@@ -90,10 +90,10 @@ Use buttons on either side of the slider to increase or decrease selected value 
  
 Unlocked value
 
-<div class="ws-docs-content-img">![Visual of an unlocked slider](./img/slider-unlocked.svg)</div>
+<div class="ws-docs-content-img">![Visual of an unlocked slider](./img/unlocked.svg)</div>
  
 Locked value
 
-<div class="ws-docs-content-img">![Visual of a locked slider](./img/slider-locked.svg)</div>
+<div class="ws-docs-content-img">![Visual of a locked slider](./img/locked.svg)</div>
  
 Use a lock icon along with a slider if there is a use case to lock or unlock the slider value. Use a lock icon to display different user permissions or to indicate the possibility of automatic value alteration. Clicking on a lock icon results in locking a selected value and disabling the slider. If the user permissions allow it, users can unlock value by clicking on a lock icon.
