@@ -97,3 +97,9 @@ Your overall line height can be calculated by multiplying the font's built-in li
 For example, if your font has a line height of 1.5 and a size of 16px, the final height of a line of text would be 24px (16px * 1.5 = 24px). In this example, you would consider the final line height of 24px when creating designs. 
 
 ![Correct and incorrect text spacing examples.](./line-height.png)
+
+## Line length
+
+Line length measures the number of characters in a single line of text, including spaces. To increase readability and contribute to well-balanced spacing on a screen, use line lengths between 20 and 100 characters. 
+
+Lines that are too long can be difficult to follow, while lines that only include a few words per line can use space inefficiently. 
