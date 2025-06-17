@@ -64,7 +64,7 @@ For more information about using input groups, visit our [input group guidelines
 
 <div class="ws-docs-content-img">![Visual of a slider with an input value](./img/input-value.svg)</div>
  
-1. **Number input in hover state**: Allows users to type in their numeric input or to adapt the slider value by using caret buttons.
+1. **Number input in hover state**: Allows users to type in their numeric input or to update the slider value by using built-in browser options (like arrow buttons).
 2. **Unit (optional)**: Provides a unit symbol for the value in the input field, when applicable.
  
 Value input is restrained by prescribed maximum and minimum parameters, and appears on the right side of the slider.
