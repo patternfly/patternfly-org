@@ -370,7 +370,7 @@ export const Example = ({
         </AutoLinkHeader>
         {children}
       </StackItem>
-      <StackItem>
+      <StackItem className="ws-example-preview">
         {isFullscreen ? (
           <div>
             <a
@@ -399,7 +399,7 @@ export const Example = ({
           </div>
         )}
       </StackItem>
-      <StackItem>
+      <StackItem className="ws-example-toolbar">
         <ExampleToolbar
           lang={lang}
           isFullscreen={isFullscreen}
