@@ -3,10 +3,15 @@ id: Application launcher
 section: components
 subsection: menus
 ---
+
+import '../components.css';
+
 ## Elements
 An application launcher has two main elements.
 
-<img src="./img/elements.png" alt="Elements of the application launcher component" width="692"/>
+<div class="ws-docs-content-img">
+![Elements of the application launcher component.](./img/app-launcher-elements.svg)
+</div>
 
 1. **Icon:** used to open and close the menu.
 2. **Menu:** contains a list of links.
@@ -21,10 +26,14 @@ For longer lists, you can optionally add the ability to search the list and favo
 
 ## Examples
 **Application launcher with external links**
-<img src="./img/example1.png" alt="Example of the application launcher component" width="1680"/>
+<div class="ws-docs-content-img">
+![Example of an application launcher with external links.](./img/app-launcher-ext-links.svg)
+</div>
 
 **Application launcher with favorites and search**
-<img src="./img/example2.png" alt="Example of the application launcher component with favorites and search" width="1680"/>
+<div class="ws-docs-content-img">
+![Example of an application launcher with favorites and search.](./img/app-launcher-fave-search.svg)
+</div>
 
 ## Accessibility
 For information regarding accessibility, visit the [application launcher accessibility](/components/menus/application-launcher/accessibility) tab. 
