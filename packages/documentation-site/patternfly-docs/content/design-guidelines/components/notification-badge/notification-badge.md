@@ -4,13 +4,17 @@ section: components
 related: ['Notification drawer', 'Page']
 ---
 
+import '../components.css';
+
 ## Elements
 
-<img src="./img/notification-badge.png" alt="basic notification drawer" width="598"/>
+<div class="ws-docs-content-img">
+![Elements of a notification badge.](./img/badge-elements.svg)
+</div>
 
 1. **Icon:** The notification badge will be located in the masthead and display the 'fa-bell' icon in it's default state. Clicking the icon (or anywhere within the badge) will toggle the notification drawer open and closed.
 
-2. **Background:** In the default state, the background will change color to indicate that the notification drawer is opened. Optionally the background color can also convey status.
+2. **Border:** In the default state, the border will change color to indicate that the notification drawer is opened.
 
 3. **Unread status (optional):** Setting the background color to blue will indicate that one or more unread notifications are present in the drawer.
 

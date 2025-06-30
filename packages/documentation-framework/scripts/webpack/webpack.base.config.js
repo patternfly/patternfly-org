@@ -28,7 +28,7 @@ module.exports = (_env, argv) => {
       publicPath: '/',
       pathinfo: false, // https://webpack.js.org/guides/build-performance/#output-without-path-info,
       hashDigestLength: 8,
-      clean: true, // Clean the output directory before emit.
+      clean: true // Clean the output directory before emit.
     },
     amd: false, // We don't use any AMD modules, helps performance
     mode: isProd ? 'production' : 'development',
@@ -47,9 +47,9 @@ module.exports = (_env, argv) => {
             /react-[\w-]+\/patternfly-docs\/.*\/examples/, //fixes for extensions
             /react-[\w-]+\\patternfly-docs\\.*\\examples/,
             path.resolve(__dirname, '../../../../node_modules/@patternfly/design-tokens/patternfly-docs/content')
-          ].concat(includePaths.map(path => new RegExp(path))),
+          ].concat(includePaths.map((path) => new RegExp(path))),
           exclude: [
-            path.resolve(__dirname, '../../node_modules'), // Temporarily compile theme using webpack for development
+            path.resolve(__dirname, '../../node_modules') // Temporarily compile theme using webpack for development
           ],
           use: {
             loader: 'babel-loader',
@@ -58,13 +58,16 @@ module.exports = (_env, argv) => {
               cacheCompression: false,
               presets: [
                 '@babel/preset-react',
-                ['@babel/preset-env', {
-                  loose: true,
-                  targets: '> 1%, not dead'
-                }],
-              ],
+                [
+                  '@babel/preset-env',
+                  {
+                    loose: true,
+                    targets: '> 1%, not dead'
+                  }
+                ]
+              ]
             }
-          },
+          }
         },
         {
           test: /\.(png|jpe?g|webp)$/,
@@ -74,7 +77,7 @@ module.exports = (_env, argv) => {
               adapter: require('responsive-loader/sharp'),
               name: '[name].[contenthash].[ext]',
               outputPath: 'images/'
-            },
+            }
           }
         },
         {
@@ -101,6 +104,12 @@ module.exports = (_env, argv) => {
             filename: 'fonts/[name][ext][query]'
           }
         },
+        {
+          test: /\.m?js$/,
+          resolve: {
+            fullySpecified: false
+          }
+        }
       ]
     },
     resolve: {
@@ -109,23 +118,20 @@ module.exports = (_env, argv) => {
         'client-styles': path.resolve(process.cwd(), 'patternfly-docs/patternfly-docs.css.js'),
         './routes-client': path.resolve(process.cwd(), 'patternfly-docs/patternfly-docs.routes.js'),
         './routes-generated': path.resolve(process.cwd(), 'patternfly-docs/generated/index.js'),
-        process: "process/browser"
+        process: 'process/browser'
       },
-      modules: [
-        'node_modules',
-        ...module.paths,
-      ],
+      modules: ['node_modules', ...module.paths],
       fallback: {
-        "path": require.resolve("path-browserify")
-      },
+        path: require.resolve('path-browserify')
+      }
     },
     // Use this module's node_modules first (for use in Core/React workspaces)
     resolveLoader: {
-      modules: module.paths,
+      modules: module.paths
     },
     plugins: [
       new webpack.ProvidePlugin({
-        process: 'process/browser',
+        process: 'process/browser'
       }),
       new webpack.DefinePlugin({
         'process.env.NODE_ENV': JSON.stringify(mode),
@@ -144,11 +150,9 @@ module.exports = (_env, argv) => {
         'process.env.prurl': JSON.stringify(process.env.CIRCLE_PULL_REQUEST || '')
       }),
       new CopyWebpackPlugin({
-        patterns: [
-          { from: path.join(__dirname, '../../assets'), to: 'assets' }
-        ]
+        patterns: [{ from: path.join(__dirname, '../../assets'), to: 'assets' }]
       })
     ],
     stats: 'minimal'
   };
-}
+};
