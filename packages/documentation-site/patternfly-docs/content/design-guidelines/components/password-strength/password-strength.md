@@ -11,12 +11,11 @@ A **password strength indicator** is displayed to a user after they have entered
 
 <div class="ws-docs-content-img">![password strength indicator weak](./img/password-weak.svg)</div>
 <br/>
-<div class="ws-docs-content-img">![password strength indicator strong](./img/password-strong.svg)</div>
-<br/>
 
 The password strength indicator is located on the top right corner of the input field. It displays the following strength types:
-1. Weak
-2. Strong
+1. Password strength: Indicates if the password used is weak or strong.
+2. Toggle: Used to hide and unhide the password characters.
+3. Helper text: Displays password requirements and recommendations to improve password strength.
 
 ## Behavior
 
