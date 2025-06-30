@@ -71,7 +71,7 @@ Value input is restrained by prescribed maximum and minimum parameters, and appe
 
 #### With thumb value
 
-<div class="ws-docs-content-img">![Visual of a slider with a thumb and unit value](./img/thumb-value.svg)</div>
+<div class="ws-docs-content-img">![Visual of a slider with a thumb value](./img/thumb-value.svg)</div>
  
 1. **Input field**: Allows users to type in their numeric input.
 2. **Unit (optional)**: Provides a unit symbol for the value in the input field, when applicable.
