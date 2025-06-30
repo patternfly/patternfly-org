@@ -62,7 +62,7 @@ For more information about using input groups, visit our [input group guidelines
  
  #### With default value input
 
-<div class="ws-docs-content-img">![Visual of a slider with an input value](./img/input-value.svg)</div>
+<div class="ws-docs-content-img">![Visual of a slider with an input value](./img/default-input-value.svg)</div>
  
 1. **Number input in hover state**: Allows users to type in their numeric input or to adapt the slider value by using caret buttons.
 2. **Unit (optional)**: Provides a unit symbol for the value in the input field, when applicable.
