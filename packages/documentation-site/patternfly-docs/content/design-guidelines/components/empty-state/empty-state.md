@@ -3,10 +3,14 @@ id: Empty state
 section: components
 ---
 
+import '../components.css';
+
 ## Elements
 This is an example of a large, full-page empty state with all empty state elements. Other empty state variations contain the same elements and differ only in spacing and text sizes. 
 
-<img src="./img/empty-state.png" alt="large empty state example with all elements" width="1500px"/>
+<div class="ws-docs-content-img">
+![Example of a large empty state with all elements.](./img/elements.svg)
+</div>
 
 1. **Icon**: The icon presents a visual component for easier recognition of the empty state’s message.
 2. **Heading**: The title provides a concise description of the empty state’s purpose.
@@ -23,7 +27,9 @@ Getting started empty states appear when features haven’t been used yet. In yo
 
 Use the [extra large empty state](#extra-large-empty-state) variation for getting started empty states. 
 
-<img src="./img/xl-getstarted.png" alt="extra large empty state with welcome message" width="1500px"/>  
+<div class="ws-docs-content-img">
+![Example of an extra large Getting Started empty state.](./img/es-getting-started.svg)
+</div>
 
 **Heading**: Welcome the user to the product. Keep in mind that the user might be a bit nervous, so avoid exclamation points or other writing mechanics that make your tone sound excited.
 
@@ -62,7 +68,9 @@ In your empty state, explain that nothing was found and give the user a next ste
 
 Use the [small empty state](#small-empty-state) variation for no results empty states. 
 
-<img src="./img/no-data.png" alt="empty state showing no search results" width="1500px"/>    
+<div class="ws-docs-content-img">
+![Example of an empty state with no search results.](./img/es-no-results.svg)
+</div>
 
 **Heading**: Briefly state that no results were found.
 
@@ -89,7 +97,9 @@ Required configuration empty states appear when the user needs to configure, con
 
 Use the [large empty state](#large-empty-state) variation for required configuration empty states.
 
-<img src="./img/configuration.png" alt="empty state with system configuration information" width="1500px"/>  
+<div class="ws-docs-content-img">
+![Example of an empty state with system configuration information.](./img/es-required-config.svg)
+</div>
 
 **Heading**: State what needs to be done instead of what hasn’t been done yet. 
 
@@ -126,7 +136,9 @@ No access empty states appear when the user doesn’t have the entitlements or a
 
 Use the [large empty state](#large-empty-state) variation for no access empty states.
 
-<img src="./img/access-denied.png" alt="empty state with information about access permissions" width="1500px"/> 
+<div class="ws-docs-content-img">
+![Example of an empty state with information about access permissions.](./img/es-no-access.svg)
+</div>
 
 **Heading**: State what the user needs to access the page instead of what they don’t have or can’t do. 
 
@@ -163,7 +175,9 @@ Back-end failure empty states appear when an error occurs that prevents the syst
 
 Use the [large empty state](#large-empty-state) variation for back-end failure empty states.
 
-<img src="./img/back-end-failure.png" alt="empty state with information about a connection error" width="1500px"/> 
+<div class="ws-docs-content-img">
+![Example of an empty state with information about a connection error.](./img/es-failure.svg)
+</div>
 
 **Heading**: State what the error is in plain language so that the user can easily understand what the error means.  
 
@@ -190,11 +204,15 @@ Success empty states appear when the user successfully completes a process, such
 
 Use the standard empty state variation for success empty states in a table or wizard.
 
-<img src="./img/success-wizard.png" alt="empty state confirming that a project was created" width="1500px"/>  
+<div class="ws-docs-content-img">
+![Example of a success empty state in a wizard.](./img/es-success-wizard.svg)
+</div>
 
 Use the [extra large empty state](#extra-large-empty-state) variation for success empty states in a full page.
 
-<img src="./img/xl-success.png" alt="empty state confirming registration" width="1500px"/> 
+<div class="ws-docs-content-img">
+![Example of a full page success empty state.](./img/es-success-page.svg)
+</div>
 
 **Heading**: Confirm the action is completed. Because this is a success message, it’s OK to congratulate the user and show some excitement. Avoid extraneous terms like “success” and “successfully.”
 
@@ -231,7 +249,9 @@ Creation empty states appear when the user needs to add or create something to v
 
 Use the [large empty state](#large-empty-state) variation for creation empty states.
 
-<img src="./img/add-or-create.png" alt="empty state with no accounts yet" width="1500px"/>  
+<div class="ws-docs-content-img">
+![Example of an empty state with no accounts yet.](./img/es-creation.svg)
+</div>
 
 **Heading**: State what hasn’t been created or added yet. Avoid saying that something hasn’t been found because the user might interpret that as a system error.
 
@@ -265,9 +285,13 @@ Use the [large empty state](#large-empty-state) variation for creation empty sta
 
 **Secondary button**: Give the user the ability to access additional resources that can help them through the creation process, such as a tour. 
 
+### Card 
+
 You can also use the extra small empty state variation inside of a card to present the user with another way to add a new card to their view. Place the empty state card where a new card would be added, such as the first (or last) card in the view. Be sure to also include a primary button in the toolbar so that the user can still perform the action even if the empty state is out of view. 
 
-<img src="./img/add-card-empty-state.png" alt="empty state inside of a card" width="1500px"/> 
+<div class="ws-docs-content-img">
+![Example of an empty state in a card.](./img/es-card.svg)
+</div>
 
 ## Variations
 
@@ -312,14 +336,18 @@ Regardless of empty state variation and type, all empty states should have a spe
 ### Level of detail  
 State what isn't there, and then give the user a next step. Empty states should not describe in detail how to use the page—the design should be intuitive enough without extensive written explanation.    
 
-<img src="./img/level-of-detail.png" alt="do and don’t examples for level of detail" width="771px"/> 
+<div class="ws-docs-content-img">
+![Do and don't examples for level of detail in an empty state.](./img/es-details.svg)
+</div>
 
 ### Capitalization and punctuation 
 Use [sentence case](/ux-writing/capitalization) in your empty states: Capitalize only the first letter of the first word in the heading, body, buttons, or links. However, be sure to capitalize the first letter in all proper nouns, product names, acronyms, and initialisms, regardless of where they appear in the heading, body, buttons, or links.
 
 Add a period at the end of full sentences in the body, but do not add a period at the end of headings or buttons. 
 
-<img src="./img/sentence-case.png" alt="do and don’t examples for capitalization" width="771px"/> 
+<div class="ws-docs-content-img">
+![Do and don't examples for capitalization in an empty state.](./img/es-capitalization.svg)
+</div>
 
 ### Voice and tone
 Pay close attention to the [voice and tone](/ux-writing/brand-voice-and-tone) in your empty state. Your voice should align with your company’s unique brand voice. Your tone, on the other hand, should adjust depending on the context—consider the user’s emotions and adjust your approach accordingly. 
@@ -334,41 +362,57 @@ If you have one primary call to action, you can present it as a primary button o
 
 **Example: Call to action as a primary button** 
 
-<img src="./img/one-cta-primary.png" alt="empty state with one primary button" width="600px"/>   
+<div class="ws-docs-content-img">
+![Example of an empty state with one primary button.](./img/es-button-action.svg)
+</div>
 
 **Example: Call to action as a link in the body text** 
 
-<img src="./img/one-cta-body.png" alt="empty state with one hyperlink" width="600px"/>  
+<div class="ws-docs-content-img">
+![Example of an empty state with a hyperlink.](./img/es-link-action.svg)
+</div>
 
 ### Multiple calls to action
 If your primary call to action is presented as a primary button, your secondary call to action can be presented as a secondary button beneath the primary button.  
 
 **Example: Secondary call to action as a secondary button beneath the primary button** 
-<img src="./img/two-ctas-primary.png" alt="empty state with two buttons" width="600px"/>  
+<div class="ws-docs-content-img">
+![Example of an empty state with two action buttons.](./img/es-multi-action.svg)
+</div>
 
 If your primary call to action is presented as a link in the body text, your secondary call to action can be presented as a secondary button beneath the body text.  
 
 **Example: Secondary call to action as a secondary button beneath the body text**  
-<img src="./img/two-ctas-body.png" alt="empty state with two hyperlinks" width="600px"/>   
+<div class="ws-docs-content-img">
+![Example of an empty state with a hyperlink and secondary action button.](./img/es-secondary-action-multi.svg)
+</div>
 
 ### One secondary call to action
 For a filtering or search situation, you can use a stand-alone secondary button (with nothing linked in the body).
 
-<img src="./img/solo-link.png" alt="empty state with one hyperlink" width="393px"/>  
+<div class="ws-docs-content-img">
+![Example of an empty state with a secondary action button.](./img/es-secondary-action.svg)
+</div>
 
 ### Alignment 
 Empty states can be a full page, or they can be included inside of other components on the page. 
 
 ### Full-page empty states 
-On a desktop, a full-page empty state should be 64px away from the top and horizontally centered with a minimum padding of 24px on all remaining sides.
+On a desktop, a full-page empty state should contain a 3xl spacer at the top and should be horizontally centered, with a lg spacer (or larger) on all remaining sides.
 
-<img src="./img/desktop-page-es.png" alt="full-page empty state with padding on desktop" width="1500px"/>   
+<div class="ws-docs-content-img">
+![Example of the spacing tokens used on a full-page empty state.](./img/es-full-page-spacing.svg)
+</div>
 
-On a mobile device, a full-page empty state should be 48px away from the top with a minimum of 16px padding on all remaining sides.  
+On a mobile device, a full-page empty state should contain a 2xl spacer at the top, with a md spacer (or larger) on all remaining sides.  
 
-<img src="./img/mobile-page-es.png" alt="full-page empty state with padding on mobile" width="375px"/>   
+<div class="ws-docs-content-img">
+![Example of the spacing tokens used on a mobile empty state.](./img/es-mobile-spacing.svg)
+</div>
 
 ### Empty states inside tables, cards, or wizards
-Empty states inside a table, card, or wizard should always be horizontally and vertically centered on their background. Outside padding on all remaining sides should be 24px. 
+Empty states inside a table, card, or wizard should always be horizontally and vertically centered on their background. There should be a lg spacer of outside padding on all remaining sides.
 
-<img src="./img/table-es.png" alt="empty state inside card with padding" width="1500px"/>  
+<div class="ws-docs-content-img">
+![Example of the spacing tokens used on a table.](./img/es-table-spacing.svg)
+</div>
