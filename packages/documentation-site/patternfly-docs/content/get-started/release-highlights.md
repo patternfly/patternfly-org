@@ -6,6 +6,144 @@ section: get-started
 import './get-started.css';
 import { Divider, Timestamp } from '@patternfly/react-core'; 
 
+<Timestamp date={new Date(2025, 6)}>July 2025</Timestamp>
+## PatternFly 6.3
+
+### Promoted package versions
+The following packages were promoted with this release. Outside of our primary initiatives for this release, we addressed reported bugs and continued to enhance PatternFly with new features, as detailed in the linked changelogs. 
+
+- patternfly/patternfly ([changelog](https://github.com/patternfly/patternfly/releases/tag/v6.3.0))
+    - [@patternfly/patternfly@6.3.0](https://www.npmjs.com/package/@patternfly/patternfly)
+- patternfly/react ([changelog](https://github.com/patternfly/patternfly-react/releases/tag/v6.3.0))
+    - [@patternfly/react-charts@8.3.0](https://www.npmjs.com/package/@patternfly/react-charts)
+    - [@patternfly/react-code-editor@6.3.0](https://www.npmjs.com/package/@patternfly/react-code-editor)
+    - [@patternfly/react-core@6.3.0](https://www.npmjs.com/package/@patternfly/react-core)
+    - [@patternfly/react-docs@7.3.0](https://www.npmjs.com/package/@patternfly/react-docs)
+    - [@patternfly/react-drag-drop@6.3.0](https://www.npmjs.com/package/@patternfly/react-drag-drop)
+    - [@patternfly/react-icons@6.3.0](https://www.npmjs.com/package/@patternfly/react-icons)
+    - [@patternfly/react-styles@6.3.0](https://www.npmjs.com/package/@patternfly/react-styles)
+    - [@patternfly/react-table@6.3.0](https://www.npmjs.com/package/@patternfly/react-table)
+    - [@patternfly/react-templates@6.3.0](https://www.npmjs.com/package/@patternfly/react-templates)
+    - [@patternfly/react-tokens@6.3.0](https://www.npmjs.com/package/@patternfly/react-tokens)
+- PatternFly extensions 
+    - [@patternfly/chatbot@6.3.0](https://www.npmjs.com/package/@patternfly/chatbot) ([changelog](https://github.com/patternfly/chatbot/releases/tag/v6.3.0))
+    - [@patternfly/quickstarts@6.3.0](https://www.npmjs.com/package/@patternfly/quickstarts) ([changelog](https://github.com/patternfly/patternfly-quickstarts/releases/tag/v6.3.0))
+    - [@patternfly/react-catalog-view-extension@6.1.0](https://www.npmjs.com/package/@patternfly/react-catalog-view-extension) ([changelog](https://github.com/patternfly/react-catalog-view/releases/tag/v6.1.0))
+    - [@patternfly/react-component-groups@6.3.0](https://www.npmjs.com/package/@patternfly/react-component-groups) ([changelog](https://github.com/patternfly/react-component-groups/releases/tag/v6.3.0))
+    - [@patternfly/react-console@6.1.0](https://www.npmjs.com/package/@patternfly/react-console) ([changelog](https://github.com/patternfly/react-console/releases/tag/v6.1.0))
+    - [@patternfly/react-data-view@6.3.0](https://www.npmjs.com/package/@patternfly/react-data-view) ([changelog](https://github.com/patternfly/react-data-view/releases/tag/v6.3.0))
+    - [@patternfly/react-log-viewer@6.3.0](https://www.npmjs.com/package/@patternfly/react-log-viewer) ([changelog](https://github.com/patternfly/react-log-viewer/releases/tag/v6.3.0))
+    - [@patternfly/react-topology@6.3.0](https://www.npmjs.com/package/@patternfly/react-topology) ([changelog](https://github.com/patternfly/react-topology/releases/tag/v6.3.0))
+    - [@patternfly/react-user-feedback@6.2.0](https://www.npmjs.com/package/@patternfly/react-user-feedback) ([changelog](https://github.com/patternfly/react-user-feedback/releases/tag/v6.2.0))
+    - [@patternfly/react-virtualized-extension@6.1.0](https://www.npmjs.com/package/@patternfly/react-virtualized-extension) ([changelog](https://github.com/patternfly/react-virtualized-extension/releases/tag/v6.1.0))
+
+### React 19 support
+
+PatternFly now includes support for React 19 across all components and extensions, enabling you to benefit from its new features and performance enhancements.
+
+This update is non-breaking, and PatternFly 6 will continue to support React 17 and 18 in line with our support policy. In future releases, we plan to more fully leverage React 19's capabilities to enhance existing PatternFly features and introduce new ones.
+
+### Component animations
+
+As we progress in our effort to integrate motion design across PatternFly components, we added the following new animations in this release. To provide a holistic view of our animated components, we also put together [a motion demo](/design-foundations/motion/react-demos), which we will continue to update as we add additional animation support.   
+
+#### Expansion 
+
+As the following components are expanded (via clicks to toggles, items, and buttons), hidden content sections fade in and slide in from the direction of the toggle. A similar, reversed animation collapses expanded sections.
+
+1.  [Accordion](/components/accordion)   
+    - **Animation type:** Opt-out.
+    - **Example:** As an opt-out animation, you can see this motion behavior by default across accordion examples and demos.
+
+1.  [Dual list selector](/components/dual-list-selector#with-tree)   
+    - **Animation type:** Opt-in.
+    - **Example:** To visualize the motion behavior, interact with [the dual list selector with tree example](/components/dual-list-selector#with-tree), which has opted in to animations.
+
+1.  [Expandable section](/components/expandable-section)   
+    - **Animation type:** Opt-out.
+    - **Example:** As an opt-out animation, you can see this motion behavior by default across expandable section examples and demos.
+
+1.  [Form](/components/forms/form)   
+    - **Animation type:** Opt-in.
+    - **Example:** To visualize the motion behavior, interact with [the form field group example](/components/forms/form#field-groups), which has opted in to animations.  
+
+1.  [Search input](/components/search-input#with-expandable-button)   
+    - **Animation type:** Opt-out.
+    - **Example:** To visualize the motion behavior, interact with [the expandable search input example](/components/search-input#with-expandable-button).
+
+1.  [Tree view](/components/tree-view)   
+    - **Animation type:** Opt-in.
+    - **Example:** To visualize the motion behavior, interact with [the tree view examples](/components/tree-view), which have opted in to animations. 
+
+1.  [Table](/components/table#expandable)   
+    - **Animation type:** Opt-in.
+    - **Example:** To visualize the motion behavior, interact with [the expandable table examples](/components/table#expandable), which have opted in to animations. 
+    - **Note:** Tree tables are not included in this release but will be in the future.
+
+#### Feedback 
+
+The following feedback animations help communicate that an action has taken or will take place.  
+
+1.  [Buttons](/components/button)
+    - **Animation type:** Opt-out.
+    - **Animation behavior:** When a button is clicked, the active state color ripples outward from the center of the button.
+    - **Example:** As an opt-out animation, you can see this motion behavior by default when you click buttons in our examples and demos, or in our [animated favorite button example](/components/button#favorite).
+
+1.  Form validation
+    - **Animation type:** Opt-out.
+    - **Animation behavior:** When there's an error in a form field with validation, the component "jiggles" from side to side as danger styles are applied. 
+    - **Example:** As an opt-out animation, you can see this motion behavior by default across form validation in our examples and demos, including [validated form select](/components/forms/form-select#validated), [invalid text area](/components/forms/text-area#invalid), and [invalid text input](/components/forms/text-input#invalid).
+
+1.  [Progress](/components/progress#helper-text)
+    - **Animation type:** Opt-out.
+    - **Animation behavior:** When there's an error in a progress bar, the component "jiggles" from side to side as danger styles are applied. 
+    - **Example:** As an opt-out animation, you can see this motion behavior by selecting "Danger variant" in our [progress helper text example](/components/progress#helper-text).
+
+1.  [Tabs](/components/tabs)
+    - **Animation type:** Opt-in for HTML. Opt-out for React.
+    - **Animation behavior:** The bottom "active tab" line slides between tabs as they are selected.
+    - **Example:** As an opt-out animation, you can see this motion behavior by default across our tabs React examples and demos. This animation does not apply to boxed tabs.
+    - **Note:** To avoid a breaking change, this animation is opt-in for HTML-only implementations. To support your opt-in process, view our [HTML guidance for animating the tab accent mark](/components/tabs#animate-current-tab-accent).
+
+##### Icons
+
+1.  Favorite (`fa-star-icon`)
+    - **Animation type:** Opt-out.
+    - **Animation behavior:** When a favorite icon is clicked, the star "pulses" and fills with color.
+    - **Example:** As an opt-out animation, you can see this motion behavior by default across favorite buttons in our examples and demos, or in our [animated favorite button example](/components/button#favorite).
+
+1.  Hamburger menu (`fa-bars`)
+    - **Animation type:** Opt-out.
+    - **Animation behavior:** When a hamburger icon receives hover or keyboard focus, the middle bar becomes an arrow, pointing in the direction that the attached menu will move when the icon is clicked. This motion helps better indicate when a menu will open and close.
+    - **Example:** As an opt-out animation, you can see this by default across hamburger menus in our examples and demos. To visualize the motion behavior, interact with the navigation menu in [our page examples](/components/page#vertical-navigation).
+    - **Note:** Because the hamburger menu icon for the PatternFly.org navigation has more padding than standard PatternFly buttons, we've opted out of this animation to avoid fit issues.
+
+1.  Settings (`fa-cog`) 
+    - **Animation type:** Opt-out.
+    - **Animation behavior:** When a settings icon receives hover or keyboard focus, the cog rotates. When the icon loses hover or keyboard focus, it rotates back to its original position.
+    - **Example:** As an opt-out animation, you can see this motion behavior by default across settings icons in our examples and demos, or in our [animated settings button example](/components/button#settings).
+
+### New guidance for command-line interfaces
+
+With the help of a community contribution, we now have [a CLI handbook](/developer-resources/cli-handbook) that offers guidance for designing command-line interface experiences. This resource outlines unique accessibility considerations for CLIs, as well as writing guidelines for crafting well-designed messages, documentation, and interactive CLI experiences.
+
+### Updated AI guidelines
+
+We updated our high-level [AI principles and guidelines](/patternfly-ai/principles-and-guidelines) to expand guidance and improve the usability of this resource. We integrated community feedback and research to include new patterns and recommendations that have emerged from the increased inclusion of AI features in products. As the design and implementation of AI features continue to evolve, so will this guiding resource.
+
+### Notable changes
+
+Outside of our key initiatives, there are a few notable changes that may require changes to your codebase and tests. 
+
+#### Components
+
+#### Extensions
+
+### What's next?
+
+For the Q4 release of PatternFly, we look forward to sharing updates on our design guidelines audit, system-wide accessibility improvements, new extensions, and more. We'll share the next round of exciting news in a few months!
+
+<Divider /> 
 <Timestamp date={new Date(2025, 3)}>April 2025</Timestamp>
 
 ## PatternFly 6.2
