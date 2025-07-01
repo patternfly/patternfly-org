@@ -45,7 +45,7 @@ This update is non-breaking, and PatternFly 6 will continue to support React 17 
 
 ### Component animations
 
-As we progress in our effort to integrate motion design across PatternFly components, we added the following new animations in this release. To provide a holistic view of our animated components, we also put together [a motion demo](/design-foundations/motion/react-demos), which we will continue to update as we add additional animation support.   
+As we progress in our effort to integrate motion design across PatternFly components, we added the following new animations in this release. To provide a holistic view of our animated components, we also put together [an interactive animations demo](/design-foundations/motion/react-demos), which we will continue to update as we add additional animation support.   
 
 #### Expansion 
 
