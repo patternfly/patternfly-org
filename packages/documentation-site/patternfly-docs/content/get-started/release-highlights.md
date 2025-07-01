@@ -49,7 +49,7 @@ As we progress in our effort to integrate motion design across PatternFly compon
 
 #### Expansion 
 
-As the following components are expanded (via clicks to toggles, items, and buttons), hidden content sections fade in and slide in from the direction of the toggle. A similar, reversed animation collapses expanded sections.
+As the following components are expanded, hidden content sections fade in and slide in from the direction of the toggle. A similar, but reversed animation is shown when expanded sections are collapsed.
 
 1.  [Accordion](/components/accordion)   
     - **Animation type:** Opt-out.
@@ -82,7 +82,7 @@ As the following components are expanded (via clicks to toggles, items, and butt
 
 #### Feedback 
 
-The following feedback animations help communicate that an action has taken or will take place.  
+The following components contain animations that give users visual feedback, which will help communicate that an action has taken or will take place.  
 
 1.  [Buttons](/components/button)
     - **Animation type:** Opt-out.
