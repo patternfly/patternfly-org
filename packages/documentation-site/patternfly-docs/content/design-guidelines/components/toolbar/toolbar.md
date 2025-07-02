@@ -14,7 +14,7 @@ A toolbar is a container for holding a variety of elements (toolbar items and gr
 ![Elements of a basic toolbar.](./img/toolbar-elements.svg)
 </div>
 
-Toolbar items are individual components that can be placed inside of a toolbar. Often, it makes sense to group sets of like items to create desired associations and to enable items to respond together to changes in viewport width. The default spacing between items and groups is 16px, but this can be modified, if required. The following are some toolbar items and groups that come with special spacing considerations.
+Toolbar items are individual components that can be placed inside of a toolbar. Often, it makes sense to group sets of like items to create desired associations and to enable items to respond together to changes in viewport width. By default, there should be an md spacer between items and groups. The following are some toolbar items and groups that come with special spacing considerations.
 
 ### Bulk selector
 <div class="ws-docs-content-img">
