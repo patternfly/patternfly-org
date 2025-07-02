@@ -37,7 +37,7 @@ A filter group combines multiple select filters into a single group. See [filter
 ![Example of a search filter.](./img/search.svg)
 </div>
 
-A search filter is intended to be used with a filter group as shown below when you want to include a single search field together with one or more select filters. It includes an 8px spacer to the right of the item to enforce association with other filters. See the [filters](/patterns/filters) documentation for more information about using search filters.
+Add a search filter when you want to display a single search field alongside other filters. For more information about using search input filters, refer to [the filters pattern](/patterns/filters/design-guidelines#text-entry-filters.
 
 <div class="ws-docs-content-img">
 ![Example of a toolbar with a search filter and filter group.](./img/toolbar-multi-filters.svg)
