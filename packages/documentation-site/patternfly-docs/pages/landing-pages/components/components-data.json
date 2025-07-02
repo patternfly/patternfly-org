@@ -165,7 +165,7 @@
   },
   "hint": {
     "illustration": "./images/component-illustrations/hint.png",
-    "summary": "A <b>hint</b> is an in-app message that shares reminders, explanations, or calls to action within a page or modal."
+    "summary": "A <b>hint</b> is an in-app message that shares reminders, explanations, or calls to action within a page."
   },
   "icon": {
     "illustration": "./images/component-illustrations/icon.png",

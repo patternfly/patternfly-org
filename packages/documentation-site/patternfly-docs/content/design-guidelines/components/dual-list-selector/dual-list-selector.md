@@ -3,69 +3,93 @@ id: Dual list selector
 section: components
 ---
 
+import '../components.css';
+
+## Elements 
+
+The following image is a basic dual list selector. For details about the elements for expandable dual lists, refer to [the variations section](#variations).
+
+<div class="ws-docs-content-img">
+![dual list with 2 search bars and 2 rows of items](./img/dual-list-elements.svg)
+</div>
+
+1. **List labels:** Distinguish between the list of available options and the list of chosen options. You can change these for your use case, but they should remain clear and concise. 
+2. **Available options:** List of items that users can choose from. This list can have a single level or multiple levels. 
+3. **Chosen options:** List of items that users have selected from the available options list. 
+4. **Selected item:** A visual state for items selected by a user.
+5. **Arrows:** Buttons that allow users to move items between lists. These buttons are enabled and disabled based on user selections. Single arrows only move selected items, while double arrows move everything in one list to the other&mdash;in the direction of the arrow.
+6. **Number of items:** Indicator of the number of selected items compared to the total available items.
+7. **Filter:** Search field that allows users to filter the list of items.
+8. **Sorting (optional):** Enables users to sort the list of items for easier scanning.
+9. **More actions (optional):** Stores additional actions, such as Export.
+
 ## Usage
-Dual list selectors are useful when you have a large set of options for users to pick from that would be difficult to digest in a select list. They’re useful in forms, wizards, and modals as a way for users to make selections from a list of options.
+Dual list selectors are useful when there are a large set of options for users to choose from, which would be more difficult to understand in a menu. They’re useful in forms, wizards, and modals as a way for users to make selections from a list of options.
 
 ### When to use
 
 * You have a long list of items for users to pick from.
 * You want to distinguish the available items from the chosen items.
-* You want the ability to group the list of items
-* The user can select a large number of items and separating selections from available options would be helpful.
+* You want the ability to group the list of items.
+* Users can select a large number of items, and it would be helpful to distinguish selections from available options.
 
 ### When not to use
-* Users have a list of actions to choose from. Instead, use a dropdown menu or tree view 
-* The list of items to choose from has fewer than 20 items. Instead, use a select list.
+* Users have a list of actions to choose from. Instead, use a dropdown menu or tree view. 
+* The list of items to choose from has fewer than 20 items. Instead, use a select menu.
 
 ## Behavior
-Users can select one or more items from the available list and use the arrows to move these items to the chosen list. Users can filter down the items by using the search input field.
+Users can select 1 or more items from the available options, using the arrows to move these items to the chosen options list. Users can filter down the items by using the search input field.
 
-<img src="./img/dual list single.gif" alt="basic dual list behavior" width="880"/>
+<div class="ws-docs-content-img">
+![dual list behavior with an item being moved to the second row](./img/dual-list-1.gif)
+</div>
 
-In an expandable dual list, when users move an item from the available list to the chosen list, the item still appears in its original group structure. For example, if the item Option 6  in the group Folder 2  is moved from the available list to the chosen list, the Option 6 item will appear in the chosen list under the Folder 2 group.  It won’t appear as a stand-alone, single-level item.
+In an expandable dual list, when users move an item to the chosen list, the item still appears in its original group structure. For example, if the item Broccoli in the group Vegetables is moved from the available list to the chosen list, the Broccoli item will appear in the chosen list under the Vegetable group. It won’t appear as a stand-alone, single-level item.
 
-<img src="./img/dual list folders.gif" alt="basic dual list behavior" width="880"/>
+<div class="ws-docs-content-img">
+![dual list behavior with 1 folder of item being moved to the second row](./img/dual-list-2.gif)
+</div>
+
+### Drag and drop functionality 
+Drag and drop functionality allows users to customize the order of items in the chosen options. The fa-grip icon at the start of the item row indicates that an item is draggable.
+
+<div class="ws-docs-content-img">
+![dual list with the second row item being dragged to a new position](./img/ondrag-event.svg)
+</div>
+
+1. **Ghost item:** Upon click and hold, a duplicate "ghost" item with a  `--pf-v6-global--active-color--100` border will appear "on top" of the list. This ghost item represents the initial item being moved.
+
+<div class="ws-docs-content-img">
+![dual list that is actively being dragged with a ghost row](./img/ghost-row.svg)
+</div>
+
+2. **onDrag event:** While a ghost item is being dragged, the original item will move its position in the list to align with the hovered position.
+
+<div class="ws-docs-content-img">
+![dual list with an item that was dragged from one position to another](./img/postdrag-event.svg)
+</div>
+
+3. **postDrag event:** Once dropped, the ghost item will become an item in the list, which will be reordered based on the user’s action. 
 
 ## Variations
-There are two types of dual list selectors: basic dual lists and expandable dual lists.
+There are 2 types of dual list selectors: basic dual lists and expandable dual lists.
 
 ### Basic dual list 
 A basic dual list contains a flat list of items for the user to choose from. 
 
-<img src="./img/basic-dual.png" alt="basic dual list" width="880"/>
-
-1. **List labels:** List labels distinguish between the list of available items and the list of chosen items. These labels can be changed based on your use case, and they should be clear and concise. 
-2. **Available items list:** The available items list is a list of items that users can choose from. Available list items can have a single level or multiple levels. 
-3. **Chosen items list:** The chosen items list is a list of items that users have selected and moved from the available items list. 
-4. **Selected item:** A selected item refers to the  visual state of the item when it has been selected by a user.
-5. **Arrows:** Arrows are buttons that give users the ability to move items from one list to another. The arrows will enable and disable based on user selections. Single arrows move only selected items. Double arrows move everything from one list to the other (in the direction of the arrow), whether the list contains manually selected items or not.
-6. **Number of items:** The number of items is an indicator of how many items are selected among the total items available in the list.
-7. **Filter:** The filter is a search field that allows users to filter the list of items.
-8. **Sorting (optional):** The sorting ability enables users to sort the list of items presented for easier scanning.
-9. **More actions (optional):** The more actions (kebab) menu  stores added actions, such as exporting.
+<div class="ws-docs-content-img">
+![dual list with 2 rows of items of expandable items](./img/basic-dual-list.svg)
+</div>
 
 ### Expandable dual list
-An expandable dual list contains a multi-leveled list of items for users to choose from. Items can be nested in a hierarchical tree to show different groupings or categories, and the list can have up to three levels.
+An expandable dual list contains a multi-leveled list of items for users to choose from. Items can be nested in a hierarchical tree to show different groupings or categories, and the list can have up to 3 levels.
 
-<img src="./img/expandable-dual.png" alt="basic dual list" width="880"/>
+<div class="ws-docs-content-img">
+![dual list with 2 rows of items of expandable items](./img/expandable-dual-list.svg)
+</div>
 
-1. **Folder:** group of items that can be selected and moved from one list of options to the other. When a folder has a mix of selected and unselected items, the checkbox should have a mixed state. When all items in a folder are selected, the folder checkbox should have a selected state.
-2. **Item:** item within a folder that can be selected and moved.
-3. **Selected item:** visual state of an item when it has been selected by a user. 
-4. **Number of items:** indicator of how many items are selected, among the total items available in the list. <u>In expandable lists, only non-folder items are included in the item count.</u>
-5. **Badge (optional):** number of items inside a folder.
-
-### Drag and drop dual list
-Drag and drop functionality inside of a dual list allows users to customize the order in which items within the Chosen options are displayed. The fa-grip icon at the start of the item row is used to indicate that the items are draggable.
-
-1. **onDrag event:** Upon click & hold a `--pf-v6-global--active-color--100` border will show the draggable area that is available. The list item being dragged will also use a `--pf-v6-global--active-color--100` border to highlight it as the item being dragged and all other list items will switch to a disabled state.
-
-<img src="./img/Drag-drop-Dual-list-selector-selected-step-1-final.png" alt="Dual list drag interaction 1 - Drag in progress" width="880"/>
-
-2. **postDrag event:** Once dropped, the items will be reordered based on the user’s action. 
-
-<img src="./img/Drag-drop-Dual-list-selector-selected-step-2-final.png" alt="Dual list drag interaction 2 - Drag & drop completed" width="880"/>
-
-3. **Error state:** If the list item is dragged outside the bounding box the borders on the dragged item will switch to `--pf-v6-global--danger-color--100` and the cursor will change to not-allowed to indicate an invalid placement. If the user releases the cursor outside the bounding area the dragged item will return to its default position.
-
-<img src="./img/Drag-drop-Dual-list-selector-selected-step-3-final.png" alt="Dual list drag interactionstep 3 - Error state" width="880"/>
+1. **Number of items:** Indicates the number of selected items out of the total available. In expandable lists, only non-folder items are included in the item count.
+2. **Folder:** Group of items that can be moved between lists. When a folder has a mix of selected and unselected items, the checkbox should have a mixed state. When all items in a folder are selected, the folder checkbox should have a selected state.
+3. **Selected item:** A visual state for items selected by a user.
+4. **Selectable item:** Item within a folder that can be selected and moved.
+5. **Badge (optional):** Indicated the number of items inside a folder.

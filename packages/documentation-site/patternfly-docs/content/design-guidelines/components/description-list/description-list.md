@@ -3,31 +3,59 @@ id: Description list
 section: components
 ---
 
-## Usage
-Use a description list when you have a set of terms and definitions related to a single item. The content within the definitions is not limited to only plain text. This component can be extremely useful in context of Detail pages for a certain resource or item.
+import '../components.css';
 
-<img src="./img/definitionlist.png" alt="Definition list" width="1440"/>
+## Elements
+
+
+<div class="ws-docs-content-img">
+![Description list with annotation markers.](./img/description-list-elements.svg)
+</div>
+1. **Term:** The label for the list item.
+1. **Description:** The descriptive value for a term.
+1. **Contextual help (optional):** When clicked, will trigger a popover that offers more details or definition for a term. Marked by a dotted underline.
+1. **Editable item (optional):** Using an [inline edit component](/components/inline-edit), allows users to edit the description linked to a term. For more guidance, refer to [term help text](#term-help-text).
+
+## Usage
+
+Use a description list when you have a set of terms and definitions related to a single topic. Definitions can be plain text or links.
+
+This is particularly useful in context of detail pages, for a certain resource or item:
+
+<div class="ws-docs-content-img">
+![Example of a description list.](./img/descriptionlist-usage.svg)
+</div>
 
 ## Variations
 
 ### Default
 By default, the description list will be formatted so that the term stacks vertically above the description.
 
-<img src="./img/default.png" alt="Default" width="600"/>
+<div class="ws-docs-content-img">
+![Example of a default description list.](./img/descriptionlist-default.svg)
+</div>
 
 ### Horizontal
-Description lists can also be horizontally formatted so that the term and description sit inline and the term comes before the description. 
+Description lists can also be formatted horizontally, so that the term and description sit inline, with the term placed before the description. 
 
-<img src="./img/horizontal.png" alt="Horizontal" width="600"/>
+<div class="ws-docs-content-img">
+![Example of a horizontal description list.](./img/descriptionlist-horizontal.svg)
+</div>
 
 ### Using columns
-Columns can be applied in both vertical and horizontal formats. By default, there will be 24px gutters within the column grid.
+Columns can be applied in both vertical and horizontal formats. By default, there will be a 2xl spacer of gutters within the column grid.
 
-<img src="./img/default2column.png" alt="Default with 2 columns" width="600"/>
+<div class="ws-docs-content-img">
+![Example of a default description list with two columns.](./img/descriptionlist-columns1.svg)
+</div>
 
-<img src="./img/horizontal2column.png" alt="Horizontal with 2 columns" width="600"/>
+<div class="ws-docs-content-img">
+![Example of a horizontal description list with two columns.](./img/descriptionlist-columns2.svg)
+</div>
 
 ### Term help text
-To provide help text about a term in the description list, you may add popovers indicated by a dotted underline on the label. This is recommended in detailed lists where you have many popovers and using a blue link or icon would clutter the page.
+To provide help text about a term in the description list, you can add popovers indicated by a dotted underline on the label. This is recommended in detailed lists where you have many popovers and using a blue link or icon would clutter the page.
 
-<img src="./img/termhelptext.png" alt="Term help text" width="600"/>
+<div class="ws-docs-content-img">
+![Example of a description list with help text.](./img/descriptionlist-helptext.svg)
+</div>

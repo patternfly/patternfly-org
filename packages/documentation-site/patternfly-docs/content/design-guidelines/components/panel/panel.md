@@ -3,6 +3,8 @@ id: Panel
 section: components
 ---
 
+import '../components.css';
+
 ## Usage
 Panels are commonly used:
 - To provide more content structure through the UI.
@@ -11,7 +13,10 @@ Panels are commonly used:
 ### Examples
 
 The panel is used as a content block with a header, body, and footer.<br/>
-<img src="./img/basic_panel.jpg" alt="A basic panel with a header, body and footer" width="600" /><br/>
+<div class="ws-docs-content-img">![A basic panel with a header, body and footer.](./img/basic-panel.svg)</div><br/>
 
-The panel is used a dropdown menu for <a href="https://v4-archive.patternfly.org/v4/components/search-input/react-demos/#composable-advanced-search">advanced search input</a>.<br/>
-<img src="./img/search_panel.jpg" alt="The panel is used a dropdown menu for advanced search input" width="600" />
+The panel is used as a dropdown menu for <a href="https://www.patternfly.org/components/search-input/react-demos#composable-advanced-search">advanced search input</a>.<br/>
+
+<div class="ws-docs-content-img">
+![A panel being used as a dropdown menu for advanced search input.](./img/search-panel.svg)
+</div>

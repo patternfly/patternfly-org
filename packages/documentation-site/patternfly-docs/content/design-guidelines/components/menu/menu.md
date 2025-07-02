@@ -4,6 +4,8 @@ section: components
 subsection: menus
 ---
 
+import '../components.css';
+
 ## Elements
 Elements vary depending on [menu variation](#variations).
 
@@ -16,6 +18,15 @@ Elements vary depending on [menu variation](#variations).
 | Expose a list of nested actions | Use a fly-out menu. Any optional attributes of basic menus, including icons, groups, and descriptions can also be applied to flyout menus.|
 | Select from a list of options | Use an options select menu for selecting between values rather than actions. Icons, descriptions, and groupings can be used with option select menus to improve recognition or create logical option groups.| 
 
+## Behavior 
+
+### Menus with search
+
+You can allow users to filter menu items via search input, which matches menu items to a term that the user has entered. If there are no results for their search term, display a message to communicate "No results found":
+
+<div class="ws-docs-content-img">
+![Searchable menu with no results matching the search term.](./img/search-menu-no-results.svg)
+</div>
 
 ## Variations
 
