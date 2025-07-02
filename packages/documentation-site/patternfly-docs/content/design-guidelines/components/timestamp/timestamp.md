@@ -11,9 +11,9 @@ import '../components.css';
 ![Timestamp with tooltip underline](./img/timestamp-elements.svg)
 </div>
 
-1. **Day:** Spelled out or abbreviated format. [See Numerics guidelines for more information](https://www.patternfly.org/ux-writing/numerics).
-2. **Date:** Can be spelled out, abbreviated form, or digit format. [See Numerics guidelines for more information](https://www.patternfly.org/ux-writing/numerics).
-3. **Time:** Should be displayed in 12-hour or 24-hour (HH:MM:SS). [See Numerics guidelines for more information](https://www.patternfly.org/ux-writing/numerics).
+1. **Day:** Spelled out or abbreviated format. [See Numerics guidelines for more information](/ux-writing/numerics).
+2. **Date:** Can be spelled out, abbreviated form, or digit format. [See Numerics guidelines for more information](/ux-writing/numerics).
+3. **Time:** Should be displayed in 12-hour or 24-hour (HH:MM:SS). [See Numerics guidelines for more information](/ux-writing/numerics).
 
 4. **UTC/Timezone:** Should always be displayed last, in shorthand form and be in 24-hour format.
 5. **Tooltip:** Dotted line displayed if there is tooltip available.
@@ -37,7 +37,7 @@ Use a timestamp when:
 - Displays time in UTC (Universal Coordinated Time).
 - Should be formatted the same as the timestamp. 
 
-See [numerics guidelines](https://www.patternfly.org/ux-writing/numerics) for more information about relative time best practices.
+See [numerics guidelines](/ux-writing/numerics) for more information about relative time best practices.
 
 ## Variations
 ### 12-hour format
