@@ -156,7 +156,7 @@ To save space, you may represent some actions as icons. Use an icon group to pro
 ![Example of a custom toolbar layout.](./img/toolbar-custom.svg)
 </div>
 
-The Toolbar component is extremely flexible and you can create custom toolbar layouts by working with items, groups, and spacers. Here, a custom toolbar with three labeled filters is created by paring a text label and a Select component. Items are spaced by 16px by default but here the spacing to the right of each Select filter has been modified to 24px to help better group each filter with its related label.
+The toolbar component is extremely flexible and you can create custom toolbar layouts by working with items, groups, and spacers. Here, a custom toolbar with three labeled filters is created by paring a text label and a select component. While there is an md spacer between items by default, this image uses a lg spacer to better group each filter with its related label.
 
 ### The toolbar on mobile
 
