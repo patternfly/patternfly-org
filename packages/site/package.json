@@ -1,0 +1,22 @@
+{
+  "name": "site",
+  "type": "module",
+  "private": true,
+  "version": "0.0.2",
+  "scripts": {
+    "clean": "rm -rf src/generated",
+    "generate:content": "patternfly-doc-core convert-to-mdx ../documentation-site/patternfly-docs/content/",
+    "dev": "patternfly-doc-core start",
+    "build": "patternfly-doc-core build",
+    "serve": "patternfly-doc-core serve",
+    "sync": "patternfly-doc-core sync",
+    "init:docs": "patternfly-doc-core init"
+  },
+  "dependencies": {
+    "@patternfly/patternfly-doc-core": "^1.9.0",
+    "astro": "^5.7.13"
+  },
+  "devDependencies": {
+    "tsx": "^4.19.0"
+  }
+}
