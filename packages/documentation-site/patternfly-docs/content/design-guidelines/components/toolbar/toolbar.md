@@ -55,7 +55,7 @@ Add a search filter when you want to display a single search field alongside oth
 ![Example of a button group.](./img/buttons.svg)
 </div>
 
-Any global actions that apply to selected data items are included left-aligned following filter and icon buttons. Be selective about which actions to surface on the toolbar, exposing no more than two buttons and reserving the rest for an [overflow menu](#overflow-menu) component to save space.
+Include any global actions that apply to selected data items as buttons. Be selective about which actions to surface on the toolbar, exposing no more than 2 buttons and reserving the rest for an [overflow menu](#overflow-menu) component to save space.
 
 **One or two clickable actions**
 
