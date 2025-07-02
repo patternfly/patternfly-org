@@ -21,7 +21,7 @@ Toolbar items are individual components that can be placed inside of a toolbar. 
 ![Example of a bulk selector.](./img/bulk-selector.svg)
 </div>
 
-A [bulk selector]([/patterns/bulk-selection/#bulk-selector](https://www.patternfly.org/patterns/bulk-selection/#bulk-selector) can be added to let users select multiple items within a page. Besides allowing the user to select and deselect all items on a page, other application specific options can be added in the dropdown. Bulk selection allows the user to select or deselect all items on a page and provide an indeterminate state that notifies the user when only some items are selected. Bulk selectors should always be the left-most element in a toolbar.
+A [bulk selector](/patterns/bulk-selection/#bulk-selector) can be added to let users select multiple items within a page. Besides allowing the user to select and deselect all items on a page, other application specific options can be added in the dropdown. Bulk selection allows the user to select or deselect all items on a page and provide an indeterminate state that notifies the user when only some items are selected. Bulk selectors should always be the left-most element in a toolbar.
 
 ### Filter group
 
