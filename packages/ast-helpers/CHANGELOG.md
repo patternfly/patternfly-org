@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.4.0-alpha.230 (2025-07-02)
+
+
+### Features
+
+* **ver:** use react-icons prerelease.10 ([#4690](https://github.com/patternfly/patternfly-org/issues/4690)) ([f618f5e](https://github.com/patternfly/patternfly-org/commit/f618f5e149b6bb3b6f631233b1a65dbec5e486b4))
+
+
+
+
+
 # 1.4.0-alpha.229 (2025-07-02)
 
 **Note:** Version bump only for package @patternfly/ast-helpers
