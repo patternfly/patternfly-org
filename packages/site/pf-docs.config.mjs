@@ -4,7 +4,7 @@ export const config = {
     // documentation core with a content identifier of 'content':
     {
       base: 'src/',
-      pattern: "**/*.{md,mdx}",
+      pattern: "**/*.md*",
       name: 'content'
     },
     //

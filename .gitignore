@@ -45,3 +45,6 @@ size-plugin.json
 !.yarn/releases
 !.yarn/sdks
 !.yarn/versions
+
+.yalc
+yalc.lock
