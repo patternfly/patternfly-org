@@ -55,7 +55,7 @@ If you believe that you've come across a PatternFly bug, alert our team, so that
     - If the bug can be seen on both the React and HTML/CSS side, [create a bug issue in patternfly](https://github.com/patternfly/patternfly/issues).
 1. Be sure to mention which project the bug was noticed in and if there is a deadline that the fix is needed for.
 
-### AI-Assisted Development Guidelines
+### AI-assisted development guidelines
 
 AI-generated code can be accepted as a contribution to this project as long as the contributor follows the following guidance.
 
