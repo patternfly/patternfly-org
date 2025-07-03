@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 6.13.4 (2025-07-03)
+
+
+### Bug Fixes
+
+* **Lockfile:** Remove PF deps from ChatBot ([#4691](https://github.com/patternfly/patternfly-org/issues/4691)) ([634dc21](https://github.com/patternfly/patternfly-org/commit/634dc2173b888301ede556c19db2ff02294cb503))
+
+
+
+
+
 ## 6.13.3 (2025-07-03)
 
 **Note:** Version bump only for package @patternfly/documentation-framework
