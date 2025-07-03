@@ -39,7 +39,7 @@ The following packages were promoted with this release. Outside of our primary i
 
 ### React 19 support
 
-PatternFly now includes support for React 19 across all components and extensions, enabling you to benefit from its new features and performance enhancements.
+PatternFly now includes support for React 19 across all components and extensions, enabling you to benefit from  new React features and performance enhancements.
 
 This update is non-breaking, and PatternFly 6 will continue to support React 17 and 18 in line with our support policy. In future releases, we plan to more fully leverage React 19's capabilities to enhance existing PatternFly features and introduce new ones.
 
@@ -49,95 +49,97 @@ As we progress in our effort to integrate motion design across PatternFly compon
 
 #### Expansion 
 
-As the following components are expanded, hidden content sections fade in and slide in from the direction of the toggle. A similar, but reversed animation is shown when expanded sections are collapsed.
+We added expansion animations that apply a fade-in and slide-in transition as hidden content sections are expanded in a variety of components. A similar, reversed animation applies when expanded sections are collapsed.
 
-1.  [Accordion](/components/accordion)   
-    - **Animation type:** Opt-out.
-    - **Example:** As an opt-out animation, you can see this motion behavior by default across accordion examples and demos.
+The following list highlights opt-in requirements and links to examples. Unless an animation is marked with "Requires opt-in," it will be enabled by default. 
 
-1.  [Dual list selector](/components/dual-list-selector#with-tree)   
-    - **Animation type:** Opt-in.
-    - **Example:** To visualize the motion behavior, interact with [the dual list selector with tree example](/components/dual-list-selector#with-tree), which has opted in to animations.
+- Accordion 
+    - **Example:** All [accordions](/components/accordion) in our examples and demos.
 
-1.  [Expandable section](/components/expandable-section)   
-    - **Animation type:** Opt-out.
-    - **Example:** As an opt-out animation, you can see this motion behavior by default across expandable section examples and demos.
+- Dual list selector 
+    - **Requires opt-in.**
+    - **Example:** [Dual list selector with tree](/components/dual-list-selector#with-tree), which has opted in.
 
-1.  [Form](/components/forms/form)   
-    - **Animation type:** Opt-in.
-    - **Example:** To visualize the motion behavior, interact with [the form field group example](/components/forms/form#field-groups), which has opted in to animations.  
+- Expandable section 
+    - **Example:** All [expandable sections](/components/expandable-section) in our examples and demos.
 
-1.  [Search input](/components/search-input#with-expandable-button)   
-    - **Animation type:** Opt-out.
-    - **Example:** To visualize the motion behavior, interact with [the expandable search input example](/components/search-input#with-expandable-button).
+- Form
+    - **Requires opt-in.**
+    - **Example:** [Form field groups](/components/forms/form#field-groups), which have opted in.  
 
-1.  [Tree view](/components/tree-view)   
-    - **Animation type:** Opt-in.
-    - **Example:** To visualize the motion behavior, interact with [the tree view examples](/components/tree-view), which have opted in to animations. 
+- Navigation
+    - **Example:** [Expandable navigation examples](/components/navigation#expandable).
+    - **Note:** This animation was introduced in our 6.2 release, but performance issues were reported. For this release, we reworked the animation to resolve these issues.
 
-1.  [Table](/components/table#expandable)   
-    - **Animation type:** Opt-in.
-    - **Example:** To visualize the motion behavior, interact with [the expandable table examples](/components/table#expandable), which have opted in to animations. 
-    - **Note:** Tree tables are not included in this release but will be in the future.
+- Search input   
+    - **Example:** [Expandable search input](/components/search-input#with-expandable-button).
+
+- Tree view
+    - **Requires opt-in.**
+    - **Example:** All [tree view](/components/tree-view) examples and demos, which have opted in. 
+
+- Table
+    - **Requires opt-in.**
+    - **Example:** [Expandable table](/components/table#expandable), which has opted in.
+    - **Note:** This release does not include expansion animations for tree tables.
 
 #### Feedback 
 
-The following components contain animations that give users visual feedback, which will help communicate that an action has taken or will take place.  
+The following components contain animations that give users dynamic feedback, helping to communicate that an action has taken or will take place.  
 
-1.  [Buttons](/components/button)
-    - **Animation type:** Opt-out.
-    - **Animation behavior:** When a button is clicked, the active state color ripples outward from the center of the button.
-    - **Example:** As an opt-out animation, you can see this motion behavior by default when you click buttons in our examples and demos, or in our [animated favorite button example](/components/button#favorite).
+1.  Buttons
+    - **Animation:** When a button is clicked, the active state color ripples outward from the center of the button.
+    - **Example:** All buttons in our examples and demos, including our [animated favorite button example](/components/button#favorite).
 
 1.  Form validation
-    - **Animation type:** Opt-out.
-    - **Animation behavior:** When there's an error in a form field with validation, the component "jiggles" from side to side as danger styles are applied. 
-    - **Example:** As an opt-out animation, you can see this motion behavior by default across form validation in our examples and demos, including [validated form select](/components/forms/form-select#validated), [invalid text area](/components/forms/text-area#invalid), and [invalid text input](/components/forms/text-input#invalid).
+    - **Animation:** When an error occurs in a form field with validation, the component "jiggles" from side to side as danger styles are applied. 
+    - **Example:** The [validated form select](/components/forms/form-select#validated), [invalid text area](/components/forms/text-area#invalid), and [invalid text input](/components/forms/text-input#invalid) examples.
 
-1.  [Progress](/components/progress#helper-text)
-    - **Animation type:** Opt-out.
-    - **Animation behavior:** When there's an error in a progress bar, the component "jiggles" from side to side as danger styles are applied. 
-    - **Example:** As an opt-out animation, you can see this motion behavior by selecting "Danger variant" in our [progress helper text example](/components/progress#helper-text).
+1.  Menu toggle validation
+    - **Animation:** When an error occurs in a menu toggle with validation, the component "jiggles" from side to side as danger styles are applied. 
+    - **Example:** The [danger option in the select with validation](/components/menus/select#with-validation) example.
 
-1.  [Tabs](/components/tabs)
-    - **Animation type:** Opt-in for HTML. Opt-out for React.
-    - **Animation behavior:** The bottom "active tab" line slides between tabs as they are selected.
-    - **Example:** As an opt-out animation, you can see this motion behavior by default across our tabs React examples and demos. This animation does not apply to boxed tabs.
-    - **Note:** To avoid a breaking change, this animation is opt-in for HTML-only implementations. To support your opt-in process, view our [HTML guidance for animating the tab accent mark](/components/tabs#animate-current-tab-accent).
+1.  Progress
+    - **Animation:** When an error occurs in a progress bar, the component "jiggles" from side to side as danger styles are applied. 
+    - **Example:** The "Danger variant" option in our [progress helper text example](/components/progress#helper-text).
+
+1.  Tabs 
+    - **Requires opt-in for HTML-only implementations.**
+    - **Animation:** The bottom "active tab" line slides between tabs as they are selected.
+    - **Example:** All [default tabs](/components/tabs) in our examples and demos. This animation does not apply to boxed tabs.
+    - **Note:** To avoid a breaking change, this animation is opt-in for HTML-only implementations. To support this, view our [HTML guidance for animating the tab accent mark](/components/tabs#animate-current-tab-accent).
 
 ##### Icons
 
-1.  Favorite (`fa-star-icon`)
-    - **Animation type:** Opt-out.
-    - **Animation behavior:** When a favorite icon is clicked, the star "pulses" and fills with color.
-    - **Example:** As an opt-out animation, you can see this motion behavior by default across favorite buttons in our examples and demos, or in our [animated favorite button example](/components/button#favorite).
+1.  Favorite: `fa-star-icon`
+    - **Animation:** When a favorite icon is clicked, the star "pulses" and fills with color.
+    - **Example:** All favorite buttons in our examples and demos, including our [animated favorite button example](/components/button#favorite).
 
-1.  Hamburger menu (`fa-bars`)
-    - **Animation type:** Opt-out.
-    - **Animation behavior:** When a hamburger icon receives hover or keyboard focus, the middle bar becomes an arrow, pointing in the direction that the attached menu will move when the icon is clicked. This motion helps better indicate when a menu will open and close.
-    - **Example:** As an opt-out animation, you can see this by default across hamburger menus in our examples and demos. To visualize the motion behavior, interact with the navigation menu in [our page examples](/components/page#vertical-navigation).
-    - **Note:** Because the hamburger menu icon for the PatternFly.org navigation has more padding than standard PatternFly buttons, we've opted out of this animation to avoid fit issues.
+1.  Hamburger menu 
+    - **Animation:** The middle bar of the hamburger icon transforms into an arrow to indicate whether the menu will expand or collapse when clicked. The behavior differs slightly for desktop and mobile views:
+        - **Desktop:** Both arrows appears on hover or keyboard focus as appropriate.
+        - **Mobile:** When the menu is expanded, a "collapse" arrow is displayed. When collapsed, an "expand" arrow appears on hover or focus.
+    - **Example:** All hamburger menu buttons in our examples and demos, including [our page examples](/components/page#vertical-navigation).
 
-1.  Settings (`fa-cog`) 
-    - **Animation type:** Opt-out.
-    - **Animation behavior:** When a settings icon receives hover or keyboard focus, the cog rotates. When the icon loses hover or keyboard focus, it rotates back to its original position.
-    - **Example:** As an opt-out animation, you can see this motion behavior by default across settings icons in our examples and demos, or in our [animated settings button example](/components/button#settings).
+1.  Settings: `fa-cog`
+    - **Animation:** When a settings icon receives hover or keyboard focus, the cog rotates. When focus is lost, it rotates back to its original position.
+    - **Example:** All settings icons in our examples and demos, including our [animated settings button example](/components/button#settings).
 
-### New guidance for command-line interfaces
+### PatternFly AI
+
+We updated our high-level [AI principles and guidelines](/patternfly-ai/principles-and-guidelines) to expand guidance and improve the usability of this resource. We integrated community feedback and research to include new patterns and recommendations that have emerged from the increased use of AI features in products. As the design and implementation of AI features continue to evolve, so will this guiding resource.
+
+#### ChatBot
+
+We expanded our ChatBot extension with improvements identified in a recent usability study, including [editable messages](/patternfly-ai/chatbot/messages#user-messages) and [compact styles](/patternfly-ai/chatbot/overview/demo#compact-chatbot). We also added other requested features, such as [auto-scrolling for messages](/patternfly-ai/chatbot/messages/demo#message-auto-scrolling) (a community contribution!), [empty and error states for the chat history drawer](/patternfly-ai/chatbot/ui#drawer-with-search-and-new-chat-button), and [expandable code blocks](/patternfly-ai/chatbot/messages#user-messages)&mdash;to name a few.
+
+On the documentation side, there's a new ["Customizing messages" guide](/patternfly-ai/chatbot/customizing-messages) that provides guidance for using rehype plugins for advanced HTML customization. 
+
+We also fixed reported bugs, which require no updates on your end.
+
+### CLI experience guidelines
 
 With the help of a community contribution, we now have [a CLI handbook](/developer-resources/cli-handbook) that offers guidance for designing command-line interface experiences. This resource outlines unique accessibility considerations for CLIs, as well as writing guidelines for crafting well-designed messages, documentation, and interactive CLI experiences.
-
-### Updated AI guidelines
-
-We updated our high-level [AI principles and guidelines](/patternfly-ai/principles-and-guidelines) to expand guidance and improve the usability of this resource. We integrated community feedback and research to include new patterns and recommendations that have emerged from the increased inclusion of AI features in products. As the design and implementation of AI features continue to evolve, so will this guiding resource.
-
-### Notable changes
-
-Outside of our key initiatives, there are a few notable changes that may require changes to your codebase and tests. 
-
-#### Components
-
-#### Extensions
 
 ### What's next?
 
@@ -191,17 +193,17 @@ With this release, 3 components now support animations:
 
 1. [Alert](/components/alert)   
     - **Animation type:** Opt-in.
-    - **Animation behavior:** For alerts within a group, there's a slide-in animation as new alerts are received and a slide-out animation as alerts are dismissed.
-    - **Example:** To visualize the motion behavior, you can interact with our website examples, which have opted in to animations.  
+    - **Animation:** For alerts within a group, there's a slide-in animation as new alerts are received and a slide-out animation as alerts are dismissed.
+    - **Example:** To visualize the motion, you can interact with our website examples, which have opted in to animations.  
     - **Note:** By default, alert animations are opt-in and will only apply to alerts within an alert group. Opting into animations could require test updates. To ensure your test pass, the quickest solution is to set `hasAnimations` to `false`. Additionally, when alerts are dynamically added to a group, you must ensure that new alerts are prepended to the alert group list, rather than appended to the end of it.  
 1. [Navigation](/components/navigation) 
     - **Animation type:** Opt-out.
-    - **Animation behavior:** For expandable navigation items, the sub-menu fades in and out as navigation items are expanded and collapsed.
-    - **Example:** As an opt-out animation, you can see this motion behavior by default across expandable navigation items.
+    - **Animation:** For expandable navigation items, the sub-menu fades in and out as navigation items are expanded and collapsed.
+    - **Example:** As an opt-out animation, you can see this motion by default across expandable navigation items.
 1. [Notification badge](/components/notification-badge)
     - **Animation type:** Opt-in.
-    - **Animation behavior:** When the animation is triggered (for example, when a new notification arrives), the bell icon has a "ring" animation.
-    - **Example:** To illustrate the motion behavior of this animation, we added a [notification badge "With animations" example](/components/notification-badge#with-animation). 
+    - **Animation:** When the animation is triggered (for example, when a new notification arrives), the bell icon has a "ring" animation.
+    - **Example:** To illustrate the motion of this animation, we added a [notification badge "With animations" example](/components/notification-badge#with-animation). 
 
 ### React 19 support
 
