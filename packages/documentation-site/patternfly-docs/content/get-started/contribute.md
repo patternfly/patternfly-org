@@ -89,7 +89,7 @@ Nontrivial and substantial AI-generated or AI-assisted content should be "marked
 
 #### Additional considerations
 
-- **Security review:** Pay special attention to security implications of AI-generated code, especially when dealing with user input, authentication, or data handling.
+1. **Review security:** Pay special attention to security implications of AI-generated code, especially when dealing with user input, authentication, or data handling.
 - **Testing:** Ensure that AI-generated code is thoroughly tested and meets all existing project standards for testing coverage.
 - **Code style:** Verify that AI-generated code follows PatternFly React's coding standards and style guidelines as outlined in this document.
 - **Documentation:** If AI assists in generating documentation or comments, review them for accuracy and completeness.
