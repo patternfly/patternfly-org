@@ -57,7 +57,7 @@ If you believe that you've come across a PatternFly bug, alert our team, so that
 
 ### AI-assisted development guidelines
 
-AI-generated code can be accepted as a contribution to this project as long as the contributor follows the following guidance.
+AI-generated code can be accepted as a contribution to this project as long as the contributor adheres to the following guidance.
 
 When using AI coding assistants (such as GitHub Copilot, ChatGPT, Claude, or other similar tools) to help with development work on PatternFly React, please follow these guidelines to ensure code quality, security, and transparency:
 
