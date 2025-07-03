@@ -3,10 +3,14 @@ id: Wizard
 section: components
 ---
 
+import '../components.css';
+
 ## Elements
 Except where noted, modal and in-page wizards have the same elements and behaviors. For the sake of simplicity, all screens here show the modal wizard.
 
-<img src="./img/simple-wizard.png" alt="Simple wizard" />
+<div class="ws-docs-content-img">
+![Example of a simple wizard.](./img/simple-wizard.svg)
+</div>
 
 1. **Header (modal wizard only):** Modal wizards always have a header area that minimally contains the wizard title and a close button. The title should be action oriented and reflect the intended outcome of the wizard, such as "Create resource." You may optionally also include a description below the wizard title.
 2. **Steps sidebar:** Enumerated steps are displayed in the sidebar. Steps can be fixed or updated as the user proceeds through the process (see progressive wizard).
@@ -38,7 +42,9 @@ In a standard wizard the user moves through the wizard sequentially, a step at a
 ### Mobile considerations
 When viewing a wizard on a mobile device, the steps sidebar will be hidden and collapse into a drop down menu panel as shown below.
 
-<img src="./img/mobile-wizard.png" alt="Mobile wizard" />
+<div class="ws-docs-content-img">
+![Example of a wizard on mobile.](./img/mobile-wizard.svg)
+</div>
 
 ## Variations
 Wizards can be modal or placed within the content area of a page. Behavior may change depending on variation. 
@@ -52,7 +58,9 @@ Wizards can be modal or placed within the content area of a page. Behavior may c
 ### In-page wizard
 A wizard may be embedded in a page as shown below.
 
-<img src="./img/in-page-wizard.png" alt="In-page wizard" />
+<div class="ws-docs-content-img">
+![Example of an in-page wizard.](./img/in-page-wizard.svg)
+</div>
 
 Wizards can also be added to the content area of a page. This will allow greater flexibility in navigating to other locations in your application while within a wizard flow, but it also places greater responsibility on the system to manage state.
 
@@ -70,30 +78,37 @@ A progressive wizard takes the same form as the standard wizard or wizard with s
 
 A walk-through of a progressive wizard might look like this:
 
-<img src="./img/wizard-progressive-step1.png" alt="Wizard progressive step 1" />
-
+<div class="ws-docs-content-img">
+![Example of the first step in a progressive wizard.](./img/wizard-progressive-step1.svg)
+</div>
 
 **Step 1**: The user is presented with a Get started screen where they can specify what they want to do.
 
-<img src="./img/wizard-progressive-step2-new.png" alt="Wizard progressive step 2" />
-
+<div class="ws-docs-content-img">
+![Example of the second step in a progressive wizard.](./img/wizard-progressive-step2.svg)
+</div>
 
 **Step 2**: Based on their choice to create a new object, a user is presented with a second set of options. But the remaining steps are still unknown.
 
-<img src="./img/wizard-progressive-step3-new.png" alt="Wizard progressive step 3" />
-
+<div class="ws-docs-content-img">
+![Example of the third step in a progressive wizard.](./img/wizard-progressive-step3.svg)
+</div>
 
 **Step 3**: After the user chooses “Quick create” and clicks "Next," they can now be presented with a full set of steps. It should be possible to revisit either of the first two steps making different choices and steps shown should update accordingly.
 
 ### Modal wizards
-<img src="./img/modal-wizard.png" alt="Modal wizard" />
+<div class="ws-docs-content-img">
+![Example of a wizard in a modal.](./img/modal-wizard.svg)
+</div>
 
 The modal wizard lives in a modal dialog. If necessary, the default width and height of the modal can be overridden to increase that available content area. In most cases, the modal wizard is recommended as it will keep users focused on the task at hand. Users must either complete all of the steps of the wizard or cancel before navigating elsewhere within an application.
 
 ### Wizard with sub-steps
 Sub-steps can be added to the sidebar. Use sub-steps when there is a hierarchical relationship between a group of steps, if a primary step contains too much content to be displayed on one page, or when there is a set of optional settings that make sense to group together where the user need not visit each page.
 
-<img src="./img/wizard-with-substeps.png" alt="Wizard with substeps" />
+<div class="ws-docs-content-img">
+![Example of a wizard with sub-steps.](./img/wizard-substeps.svg)
+</div>
 
 1. **Sub-steps:** Sub-steps are always nested inside of a major step.
 2. **Expansion (optional):** Sub-steps may be shown or hidden using the caret next to the parent step.
@@ -111,8 +126,9 @@ Sub-steps can be added to the sidebar. Use sub-steps when there is a hierarchica
 ### Wizard with optional steps
 Optional steps can be added to the wizard. Make steps optional when they do not need to be filled out to complete the wizard.
 
-<img src="./img/wizard-with-optional-steps.png" alt="Wizard with optional steps" />
-
+<div class="ws-docs-content-img">
+![Example of a wizard with optional steps.](./img/wizard-optional.svg)
+</div>
 
 1. **Optional steps:** It's recommended to group all optional steps under one parent step.
 2. **Tooltip (optional):** This tooltip is optional, but recommended. It would help explain that the following steps in the wizard are not required and would give more context to the new "Review and finish" button. 
@@ -127,8 +143,12 @@ Optional steps can be added to the wizard. Make steps optional when they do not 
 
 The drawer inside a wizard is useful in situations where you need to show more information while keeping the user in the context of the wizard. When opened, the drawer overlays the data, rather than pushing it to the side. There are two types of drawers: dismissable and non-dismissible. For opening and closing a drawer, use a link button or a link button with an icon.
 
-<img src="./img/wizard-with-drawer-closed.png" alt="Wizard with a closed drawer"/>
-<img src="./img/wizard-with-drawer-open.png" alt="Wizard with a open drawer"/>
+<div class="ws-docs-content-img">
+![Example of a wizard with a closed drawer.](./img/wizard-drawer-closed.svg)
+</div>
+<div class="ws-docs-content-img">
+![Example of a wizard with an open drawer.](./img/wizard-drawer-open.svg)
+</div>
 
 #### Use drawer when:
 
@@ -139,14 +159,18 @@ The drawer inside a wizard is useful in situations where you need to show more i
 ### Review and completion
 The last step in a wizard should always be a review step. This step should include a summary of what the user has input so the user may confirm them before committing their changes.
 
-<img src="./img/review-screen.png" alt="Review screen" />
+<div class="ws-docs-content-img">
+![Example of a review screen.](./img/wizard-review.svg)
+</div>
 
 1. **Review step**
 2. **Finish button:** On the last step of the wizard, the Next button is labeled Finish by default. This is a configurable choice and should be replaced by a more specific verb or verb-object word pair like “Create” or “Configure networks,” when possible.
 
 If it will take a long time (more than a few seconds) for changes to be applied, a progress screen is recommended. This can be constructed from a variation of the [empty state](/components/empty-state/design-guidelines) pattern by embedding a progress bar and appropriate messaging within the body of the wizard.
 
-<img src="./img/progress-screen.png" alt="Progress screen" />
+<div class="ws-docs-content-img">
+![Example of a progress screen.](./img/wizard-config.svg)
+</div>
 
 1. **Progress message:** Include a progress bar with appropriate messaging using an empty state pattern.
 2. **Cancel button (optional):** Include a cancel button only if the operation can be terminated once it is started. Cancel should back out all changes and leave the system in the state that existed before the user launched the wizard.
@@ -155,8 +179,9 @@ Note that once changes have been committed, the steps sidebar is hidden and the 
 
 Once the changes initiated by the wizard are completed, a final confirmation screen should be displayed. Again, this can leverage an empty state pattern to present a success (or failure) message to users.
 
-<img src="./img/completion-screen.png" alt="Completion screen" />
-
+<div class="ws-docs-content-img">
+![Example of a completion screen.](./img/completion-screen.svg)
+</div>
 
 1. **Completion message:** Provide appropriate messaging to inform the user about the outcome of the wizard.
 
