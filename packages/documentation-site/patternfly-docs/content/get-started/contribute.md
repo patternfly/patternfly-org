@@ -69,7 +69,7 @@ When using AI coding assistants (such as GitHub Copilot, ChatGPT, Claude, or oth
 
 - **Make sure you thoroughly understand any AI-generated code.** If the generated code you intend to incorporate in your work is outside your expertise, consult with someone knowledgeable in the area prior to making it available to others within Red Hat or externally.
 
-#### Mark code with substantial AI-generated portions
+1. **Mark any substantial AI-generated code portions.**
 
 Nontrivial and substantial AI-generated or AI-assisted content should be "marked" in appropriate cases. In deciding how to approach this, consider adopting one or more of the following recommendations:
 
