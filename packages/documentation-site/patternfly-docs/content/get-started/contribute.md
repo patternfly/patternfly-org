@@ -71,7 +71,7 @@ When using AI coding assistants (such as GitHub Copilot, ChatGPT, Claude, or oth
 
 1. **Mark any substantial AI-generated code portions.**
 
-Nontrivial and substantial AI-generated or AI-assisted content should be "marked" in appropriate cases. In deciding how to approach this, consider adopting one or more of the following recommendations:
+Nontrivial and substantial AI-generated or AI-assisted content should be "marked", using one of the following approaches:
 
 - **In a commit message, or in a pull request/merge request description field,** identify the code assistant that you used, perhaps elaborating on how it was used. You may wish to use a trailer like "Assisted-by:" or "Generated-by:". For example:
 
