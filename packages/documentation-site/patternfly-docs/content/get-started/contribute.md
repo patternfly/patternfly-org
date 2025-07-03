@@ -61,7 +61,7 @@ AI-generated code can be accepted as a contribution to this project as long as t
 
 When using AI coding assistants (such as GitHub Copilot, ChatGPT, Claude, or other similar tools) to help with development work on PatternFly React, please follow these guidelines to ensure code quality, security, and transparency:
 
-#### Human in the loop: Verify and validate AI-generated code
+1. **Verify and validate AI-generated code.**
 
 - **Treat AI-generated code as suggestions, not final code.** Review all generated code and modify as appropriate. Thoroughly review and test all code that you intend to integrate into your work.
 
