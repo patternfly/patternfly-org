@@ -3,9 +3,13 @@ id: Switch
 section: components
 ---
 
+import '../components.css';
+
 ## Elements
 
-![Examples of labeled and unlabeled switches](./img/switch-elements.png)
+<div class="ws-docs-content-img">
+![Elements of labeled and unlabeld switches.](./img/switch-elements.svg)
+</div>
 
 1. **Switch:** The switch itself, which uses active primary colors when turned "on" and inactive colors when turned "off". When a switch is disabled, it will use disabled colors.
 1. **Switch label:** The text label that represents the "on" state for a switch. This may simply be "On" (as long as it's paired with other meaningful text within a context, like a form label), or it may be something more descriptive, like "Allow edits." By default, the label is placed to the right of the switch, but this layout can be [swapped to the left](/components/switch#reversed-layout) if needed.

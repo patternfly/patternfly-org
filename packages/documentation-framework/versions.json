@@ -1,9 +1,36 @@
 {
   "Releases": [
     {
+      "name": "6.3.0-prerelease.27",
+      "date": "2025-07-02",
+      "latest": true,
+      "versions": {
+        "@patternfly/patternfly": "6.3.0-prerelease.36",
+        "@patternfly/react-catalog-view-extension": "6.1.0-prerelease.5",
+        "@patternfly/react-charts": "8.3.0-prerelease.17",
+        "@patternfly/react-code-editor": "6.3.0-prerelease.27",
+        "@patternfly/react-component-groups": "6.3.0-prerelease.2",
+        "@patternfly/react-core": "6.3.0-prerelease.27",
+        "@patternfly/react-drag-drop": "6.3.0-prerelease.27",
+        "@patternfly/react-icons": "6.3.0-prerelease.10",
+        "@patternfly/react-log-viewer": "6.3.0-prerelease.1",
+        "@patternfly/react-styles": "6.3.0-prerelease.9",
+        "@patternfly/react-table": "6.3.0-prerelease.27",
+        "@patternfly/react-tokens": "6.3.0-prerelease.9",
+        "@patternfly/react-topology": "6.3.0-prerelease.1",
+        "@patternfly/react-user-feedback": "6.2.0-prerelease.3",
+        "@patternfly/react-console": "6.1.0-prerelease.1",
+        "@patternfly/quickstarts": "6.3.0-prerelease.6",
+        "@patternfly/react-virtualized-extension": "6.1.0-prerelease.1",
+        "@patternfly/react-templates": "6.3.0-prerelease.27",
+        "@patternfly/chatbot": "6.3.0-prerelease.25",
+        "@patternfly/data-view": "6.3.0-prerelease.3"
+      }
+    },
+    {
       "name": "6.2.1",
       "date": "2025-04-21",
-      "latest": true,
+      "hidden": true,
       "versions": {
         "@patternfly/patternfly": "6.2.3",
         "@patternfly/react-catalog-view-extension": "6.1.0",
