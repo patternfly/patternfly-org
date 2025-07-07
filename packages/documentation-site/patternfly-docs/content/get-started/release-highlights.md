@@ -89,7 +89,7 @@ The following components contain animations that give users dynamic feedback, he
 
 1.  Buttons
     - **Animation:** When a button is clicked, the active state color ripples outward from the center of the button.
-    - **Example:** All buttons in our examples and demos, including our [animated favorite button example](/components/button#favorite).
+    - **Example:** All buttons in our components, including in our [button examples and demos](/components/button).
 
 1.  Form validation
     - **Animation:** When an error occurs in a form field with validation, the component "jiggles" from side to side as danger styles are applied. 
