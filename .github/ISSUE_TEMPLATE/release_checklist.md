@@ -15,6 +15,12 @@ title: PatternFly [version number] release checklist
 - [ ] Cost management [tag tester here]
 - [ ] Others?
 
+**Get the prerelease candidates approved by testers**
+- [ ] OCP [tag tester here]
+- [ ] RHOAI [tag tester here]
+- [ ] Cost management [tag tester here]
+- [ ] Others?
+
 **Update staging with the release candidate versions**
 - [ ] @kmcfaul
 
