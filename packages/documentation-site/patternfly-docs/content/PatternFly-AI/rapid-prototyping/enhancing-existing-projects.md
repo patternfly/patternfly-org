@@ -51,8 +51,8 @@ Once you've integrated this tool, you'll notice a variety of benefits for AI-ass
 
 ## Set up patternfly-ai-coding
 
-1. **Download the [patternfly-ai-coding tool](https://github.com/patternfly/patternfly-ai-coding)** from the repository.
-2. **Copy the tool files** into your existing project structure.
-3. **Configure your AI development environment** to recognize the new context files.
-4. **Test the integration** by generating some PatternFly components.
-5. **Customize as needed** for your specific project requirements.
+1. Download the [patternfly-ai-coding tool](https://github.com/patternfly/patternfly-ai-coding) from the repository.
+2. Copy the tool files into your existing project structure.
+3. Configure your AI development environment to recognize the new context files.
+4. Test the integration by generating some PatternFly components.
+5. Customize as needed for your specific project requirements.
