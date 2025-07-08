@@ -74,7 +74,8 @@ The following list highlights opt-in requirements and links to examples. Unless 
     - **Note:** This animation was introduced in our 6.2 release, but performance issues were reported. For this release, we reworked the animation to resolve these issues.
 
 - Search input   
-    - **Example:** [Expandable search input](/components/search-input#with-expandable-button).
+    - **Requires opt-in.**
+    - **Example:** [Expandable search input](/components/search-input#with-expandable-button), which has opted in.
 
 - Tree view
     - **Requires opt-in.**
