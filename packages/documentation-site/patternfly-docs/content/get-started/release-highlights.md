@@ -47,6 +47,8 @@ This update is non-breaking, and PatternFly 6 will continue to support React 17 
 
 As we progress in our effort to integrate motion design across PatternFly components, we added the following new animations in this release. To provide a holistic view of our animated components, we also put together [an interactive animations demo](/design-foundations/motion/react-demos), which we will continue to update as we add additional animation support.   
 
+We have also created an [enable animations codemod](packages/eslint-plugin-pf-codemods/src/rules/v6/enableAnimations/enable-animations.md), which can be used to enable animation across the opt-in components in your codebase.  
+
 #### Expansion 
 
 We added expansion animations that apply a fade-in and slide-in transition as hidden content sections are expanded in a variety of components. A similar, reversed animation applies when expanded sections are collapsed.
