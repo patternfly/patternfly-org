@@ -15,25 +15,25 @@ If you need to add AI tools to existing codebases instead, follow our guidelines
 
 ## Project setup
 
-For new prototypes, we recommend using the [patternfly-react-seed](https://github.com/patternfly/patternfly-react-seed) application as your starting point. This application provides AI tools with immediate access to PatternFly context and guidelines, which offers better support for vibe coding.
+For new prototypes, we recommend using the [patternfly-react-seed (ai_enabled branch)](https://github.com/patternfly/patternfly-react-seed/tree/ai_enabled) application as your starting point. This application provides AI tools with immediate access to PatternFly context and guidelines, which offers better support for vibe coding.
 
-The patternfly-react-seed comes pre-configured with:
+The patternfly-react-seed ai_enabled branch comes pre-configured with:
 
 - A basic PatternFly React application structure.
-- The patternfly-ai-coding tool already integrated and ready to use.
+- The [patternfly-ai-coding tool](https://github.com/patternfly/patternfly-ai-coding) already integrated and ready to use.
 - Essential dependencies and build configuration.
 - Example components and patterns to reference.
 
 ### Set up the patternfly-react-seed
 
-1. Clone or download the patternfly-react-seed repository.
-2. Install dependencies according to [the project's README](https://github.com/patternfly/patternfly-react-seed?tab=readme-ov-file#patternfly-seed).
+1. Clone or download the patternfly-react-seed repository using the ai_enabled branch.
+2. Install dependencies according to [the project's README](https://github.com/patternfly/patternfly-react-seed/tree/ai_enabled?tab=readme-ov-file#patternfly-seed).
 3. Start the development server.
 4. Begin prototyping with your AI development tools.
 
 ## How to prototype
 
-Once you've installed and set up the patternfly-react-seed, with the patternfly-ai-coding tool, follow these steps to begin prototyping: 
+Once you've installed and set up the patternfly-react-seed ai_enabled branch, with the [patternfly-ai-coding tool](https://github.com/patternfly/patternfly-ai-coding), follow these steps to begin prototyping: 
 
 1. **Define your scope**: Clearly articulate what you want to build using [vibe coding principles](/patternfly-ai/rapid-prototyping/rapid-prototyping#effective-prompting-with-vibe-coding). Describe the experience, not the technical implementation.
 2. **Leverage AI assistance**: Use AI tools to generate PatternFly components based on your requirements, communicating through natural language descriptions of user needs and design intent.

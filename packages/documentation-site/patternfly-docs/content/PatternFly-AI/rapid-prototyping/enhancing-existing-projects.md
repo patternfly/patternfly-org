@@ -15,7 +15,7 @@ If you need to start a new project, follow our guidelines for [starting a new pr
 
 ## Why enhance existing projects?
 
-If you have an existing codebase that you'd like to enhance with AI-driven PatternFly development, you can integrate the **patternfly-ai-coding tool** directly into your project. This tool can be pulled into any existing codebase to:
+If you have an existing codebase that you'd like to enhance with AI-driven PatternFly development, you can integrate the **[patternfly-ai-coding tool](https://github.com/patternfly/patternfly-ai-coding)** directly into your project. This tool can be pulled into any existing codebase to:
 
 - Improve future AI-driven development sessions.
 - Provide AI tools with PatternFly-specific context and best practices.
@@ -24,7 +24,7 @@ If you have an existing codebase that you'd like to enhance with AI-driven Patte
 
 ## The patternfly-ai-coding tool
 
-The patternfly-ai-coding tool is a collection of AI-friendly documentation files designed to guide Large Language Models and AI development assistants toward successful PatternFly implementation.
+The [patternfly-ai-coding tool](https://github.com/patternfly/patternfly-ai-coding) is a collection of AI-friendly documentation files designed to guide Large Language Models and AI development assistants toward successful PatternFly implementation.
 
 Once you've integrated this tool, you'll notice a variety of benefits for AI-assisted rapid prototyping, including:
 - More accurate PatternFly component suggestions.
@@ -51,7 +51,7 @@ Once you've integrated this tool, you'll notice a variety of benefits for AI-ass
 
 ## Set up patternfly-ai-coding
 
-1. **Download the patternfly-ai-coding tool** from the repository.
+1. **Download the [patternfly-ai-coding tool](https://github.com/patternfly/patternfly-ai-coding)** from the repository.
 2. **Copy the tool files** into your existing project structure.
 3. **Configure your AI development environment** to recognize the new context files.
 4. **Test the integration** by generating some PatternFly components.
