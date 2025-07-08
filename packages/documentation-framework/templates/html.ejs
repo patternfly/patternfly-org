@@ -1,6 +1,19 @@
 <!DOCTYPE html>
 <html lang="en-US">
   <head>
+    <script>
+      (function() {
+        try {
+          var mode = localStorage.getItem('theme-preference');
+          if (!mode || mode === 'system') {
+            mode = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+          }
+          if (mode === 'dark') {
+            document.documentElement.classList.add('pf-v6-theme-dark');
+          }
+        } catch (e) {}
+      })();
+    </script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
     <meta name="description" content="PatternFly is Red Hat's open source design system. It consists of components, documentation, and code for building enterprise applications at scale.">
