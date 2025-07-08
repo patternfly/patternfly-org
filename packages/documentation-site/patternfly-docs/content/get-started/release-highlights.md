@@ -13,29 +13,29 @@ import { Divider, Timestamp } from '@patternfly/react-core';
 The following packages were promoted with this release. Outside of our primary initiatives for this release, we addressed reported bugs and continued to enhance PatternFly with new features, as detailed in the linked changelogs. 
 
 - patternfly/patternfly ([changelog](https://github.com/patternfly/patternfly/releases/tag/v6.3.0))
-    - [@patternfly/patternfly@6.3.0](https://www.npmjs.com/package/@patternfly/patternfly)
+    - [@patternfly/patternfly@6.3.0](https://www.npmjs.com/package/@patternfly/patternfly/v/6.3.0)
 - patternfly/react ([changelog](https://github.com/patternfly/patternfly-react/releases/tag/v6.3.0))
-    - [@patternfly/react-charts@8.3.0](https://www.npmjs.com/package/@patternfly/react-charts)
-    - [@patternfly/react-code-editor@6.3.0](https://www.npmjs.com/package/@patternfly/react-code-editor)
-    - [@patternfly/react-core@6.3.0](https://www.npmjs.com/package/@patternfly/react-core)
-    - [@patternfly/react-docs@7.3.0](https://www.npmjs.com/package/@patternfly/react-docs)
-    - [@patternfly/react-drag-drop@6.3.0](https://www.npmjs.com/package/@patternfly/react-drag-drop)
-    - [@patternfly/react-icons@6.3.0](https://www.npmjs.com/package/@patternfly/react-icons)
-    - [@patternfly/react-styles@6.3.0](https://www.npmjs.com/package/@patternfly/react-styles)
-    - [@patternfly/react-table@6.3.0](https://www.npmjs.com/package/@patternfly/react-table)
-    - [@patternfly/react-templates@6.3.0](https://www.npmjs.com/package/@patternfly/react-templates)
-    - [@patternfly/react-tokens@6.3.0](https://www.npmjs.com/package/@patternfly/react-tokens)
+    - [@patternfly/react-charts@8.3.0](https://www.npmjs.com/package/@patternfly/react-charts/v/8.3.0)
+    - [@patternfly/react-code-editor@6.3.0](https://www.npmjs.com/package/@patternfly/react-code-editor/v/6.3.0)
+    - [@patternfly/react-core@6.3.0](https://www.npmjs.com/package/@patternfly/react-core/v/6.3.0)
+    - [@patternfly/react-docs@7.3.0](https://www.npmjs.com/package/@patternfly/react-docs/v/7.3.0)
+    - [@patternfly/react-drag-drop@6.3.0](https://www.npmjs.com/package/@patternfly/react-drag-drop/v/6.3.0)
+    - [@patternfly/react-icons@6.3.0](https://www.npmjs.com/package/@patternfly/react-icons/v/6.3.0)
+    - [@patternfly/react-styles@6.3.0](https://www.npmjs.com/package/@patternfly/react-styles/v/6.3.0)
+    - [@patternfly/react-table@6.3.0](https://www.npmjs.com/package/@patternfly/react-table/v/6.3.0)
+    - [@patternfly/react-templates@6.3.0](https://www.npmjs.com/package/@patternfly/react-templates/v/6.3.0)
+    - [@patternfly/react-tokens@6.3.0](https://www.npmjs.com/package/@patternfly/react-tokens/v/6.3.0)
 - PatternFly extensions 
-    - [@patternfly/chatbot@6.3.0](https://www.npmjs.com/package/@patternfly/chatbot) ([changelog](https://github.com/patternfly/chatbot/releases/tag/v6.3.0))
-    - [@patternfly/quickstarts@6.3.0](https://www.npmjs.com/package/@patternfly/quickstarts) ([changelog](https://github.com/patternfly/patternfly-quickstarts/releases/tag/v6.3.0))
-    - [@patternfly/react-catalog-view-extension@6.1.0](https://www.npmjs.com/package/@patternfly/react-catalog-view-extension) ([changelog](https://github.com/patternfly/react-catalog-view/releases/tag/v6.1.0))
-    - [@patternfly/react-component-groups@6.3.0](https://www.npmjs.com/package/@patternfly/react-component-groups) ([changelog](https://github.com/patternfly/react-component-groups/releases/tag/v6.3.0))
-    - [@patternfly/react-console@6.1.0](https://www.npmjs.com/package/@patternfly/react-console) ([changelog](https://github.com/patternfly/react-console/releases/tag/v6.1.0))
-    - [@patternfly/react-data-view@6.3.0](https://www.npmjs.com/package/@patternfly/react-data-view) ([changelog](https://github.com/patternfly/react-data-view/releases/tag/v6.3.0))
-    - [@patternfly/react-log-viewer@6.3.0](https://www.npmjs.com/package/@patternfly/react-log-viewer) ([changelog](https://github.com/patternfly/react-log-viewer/releases/tag/v6.3.0))
-    - [@patternfly/react-topology@6.3.0](https://www.npmjs.com/package/@patternfly/react-topology) ([changelog](https://github.com/patternfly/react-topology/releases/tag/v6.3.0))
-    - [@patternfly/react-user-feedback@6.2.0](https://www.npmjs.com/package/@patternfly/react-user-feedback) ([changelog](https://github.com/patternfly/react-user-feedback/releases/tag/v6.2.0))
-    - [@patternfly/react-virtualized-extension@6.1.0](https://www.npmjs.com/package/@patternfly/react-virtualized-extension) ([changelog](https://github.com/patternfly/react-virtualized-extension/releases/tag/v6.1.0))
+    - [@patternfly/chatbot@6.3.0](https://www.npmjs.com/package/@patternfly/chatbot/v/6.3.0) ([changelog](https://github.com/patternfly/chatbot/releases/tag/v6.3.0))
+    - [@patternfly/quickstarts@6.3.0](https://www.npmjs.com/package/@patternfly/quickstarts/v/6.3.0) ([changelog](https://github.com/patternfly/patternfly-quickstarts/releases/tag/v6.3.0))
+    - [@patternfly/react-catalog-view-extension@6.1.0](https://www.npmjs.com/package/@patternfly/react-catalog-view-extension/v/6.1.0) ([changelog](https://github.com/patternfly/react-catalog-view/releases/tag/v6.1.0))
+    - [@patternfly/react-component-groups@6.3.0](https://www.npmjs.com/package/@patternfly/react-component-groups/v/6.3.0) ([changelog](https://github.com/patternfly/react-component-groups/releases/tag/v6.3.0))
+    - [@patternfly/react-console@6.1.0](https://www.npmjs.com/package/@patternfly/react-console/v/6.31.0) ([changelog](https://github.com/patternfly/react-console/releases/tag/v6.1.0))
+    - [@patternfly/react-data-view@6.3.0](https://www.npmjs.com/package/@patternfly/react-data-view/v/6.3.0) ([changelog](https://github.com/patternfly/react-data-view/releases/tag/v6.3.0))
+    - [@patternfly/react-log-viewer@6.3.0](https://www.npmjs.com/package/@patternfly/react-log-viewer/v/6.3.0) ([changelog](https://github.com/patternfly/react-log-viewer/releases/tag/v6.3.0))
+    - [@patternfly/react-topology@6.3.0](https://www.npmjs.com/package/@patternfly/react-topology/v/6.3.0) ([changelog](https://github.com/patternfly/react-topology/releases/tag/v6.3.0))
+    - [@patternfly/react-user-feedback@6.2.0](https://www.npmjs.com/package/@patternfly/react-user-feedback/v/6.2.0) ([changelog](https://github.com/patternfly/react-user-feedback/releases/tag/v6.2.0))
+    - [@patternfly/react-virtualized-extension@6.1.0](https://www.npmjs.com/package/@patternfly/react-virtualized-extension/v/6.1.0) ([changelog](https://github.com/patternfly/react-virtualized-extension/releases/tag/v6.1.0))
 
 ### React 19 support
 
@@ -113,8 +113,8 @@ The following components contain animations that give users dynamic feedback, he
 
 ##### Icons
 
-1.  Favorite: `fa-star-icon`
-    - **Animation:** When a favorite icon is clicked, the star "pulses" and fills with color.
+1.  Favorite
+    - **Animation:** When a favorite button is clicked, the star "pulses" and fills with color.
     - **Example:** All favorite buttons in our examples and demos, including our [animated favorite button example](/components/button#favorite).
 
 1.  Hamburger menu 
@@ -123,9 +123,9 @@ The following components contain animations that give users dynamic feedback, he
         - **Mobile:** When the menu is expanded, a "collapse" arrow is displayed. When collapsed, an "expand" arrow appears on hover or focus.
     - **Example:** All hamburger menu buttons in our examples and demos, including [our page examples](/components/page#vertical-navigation).
 
-1.  Settings: `fa-cog`
-    - **Animation:** When a settings icon receives hover or keyboard focus, the cog rotates. When focus is lost, it rotates back to its original position.
-    - **Example:** All settings icons in our examples and demos, including our [animated settings button example](/components/button#settings).
+1.  Settings
+    - **Animation:** When a settings button or menu toggle receives hover or keyboard focus, the cog rotates. When focus is lost, it rotates back to its original position.
+    - **Example:** All settings buttons and menu toggles in our examples and demos, including our [animated settings button example](/components/button#settings).
 
 ### PatternFly AI
 
@@ -159,25 +159,25 @@ For the Q2 2025 PatternFly release we made progress in a few of our key initiati
 The following packages were promoted with this release. Outside of our primary initiatives for this release, we addressed reported bugs and continued to enhance PatternFly with new features, as detailed in the linked changelogs. 
 
 - patternfly/patternfly ([changelog](https://github.com/patternfly/patternfly/releases/tag/v6.2.0))
-    - [@patternfly/patternfly@6.2.0](https://www.npmjs.com/package/@patternfly/patternfly)
+    - [@patternfly/patternfly@6.2.0](https://www.npmjs.com/package/@patternfly/patternfly/v/6.2.0)
 - patternfly/react ([changelog](https://github.com/patternfly/patternfly-react/releases/tag/v6.2.0))
-    - [@patternfly/react-charts@8.2.0](https://www.npmjs.com/package/@patternfly/react-charts)
-    - [@patternfly/react-code-editor@6.2.0](https://www.npmjs.com/package/@patternfly/react-code-editor)
-    - [@patternfly/react-core@6.2.0](https://www.npmjs.com/package/@patternfly/react-core)
-    - [@patternfly/react-drag-drop@6.2.0](https://www.npmjs.com/package/@patternfly/react-drag-drop)
-    - [@patternfly/icons@1.0.4](https://www.npmjs.com/package/@patternfly/icons)
-    - [@patternfly/react-styles@6.2.0](https://www.npmjs.com/package/@patternfly/react-styles)
-    - [@patternfly/react-table@6.2.0](https://www.npmjs.com/package/@patternfly/react-table)
-    - [patternfly/react-templates@6.2.0](https://www.npmjs.com/package/@patternfly/react-templates)
-    - [@patternfly/react-tokens@6.2.0](https://www.npmjs.com/package/@patternfly/react-tokens)
+    - [@patternfly/react-charts@8.2.0](https://www.npmjs.com/package/@patternfly/react-charts/v/8.2.0)
+    - [@patternfly/react-code-editor@6.2.0](https://www.npmjs.com/package/@patternfly/react-code-editor/v/6.2.0)
+    - [@patternfly/react-core@6.2.0](https://www.npmjs.com/package/@patternfly/react-core/v/6.2.0)
+    - [@patternfly/react-drag-drop@6.2.0](https://www.npmjs.com/package/@patternfly/react-drag-drop/v/6.2.0)
+    - [@patternfly/icons@1.0.4](https://www.npmjs.com/package/@patternfly/icons/v/1.0.4)
+    - [@patternfly/react-styles@6.2.0](https://www.npmjs.com/package/@patternfly/react-styles/v/6.2.0)
+    - [@patternfly/react-table@6.2.0](https://www.npmjs.com/package/@patternfly/react-table/v/6.2.0)
+    - [patternfly/react-templates@6.2.0](https://www.npmjs.com/package/@patternfly/react-templates/v/6.2.0)
+    - [@patternfly/react-tokens@6.2.0](https://www.npmjs.com/package/@patternfly/react-tokens/v/6.2.0)
 - PatternFly extensions 
-    - [@patternfly/chatbot@2.2.0](https://www.npmjs.com/package/@patternfly/chatbot) ([changelog](https://github.com/patternfly/chatbot/releases/tag/v2.2.0))
-    - [@patternfly/quickstarts@6.2.0](https://www.npmjs.com/package/@patternfly/quickstarts) ([changelog](https://github.com/patternfly/patternfly-quickstarts/releases/tag/v6.2.0))
-    - [@patternfly/react-catalog-view-extension@6.1.0](https://www.npmjs.com/package/@patternfly/react-catalog-view-extension) ([changelog](https://github.com/patternfly/react-catalog-view/releases/tag/v6.1.0))
-    - [@patternfly/react-component-groups@6.2.0](https://www.npmjs.com/package/@patternfly/react-component-groups) ([changelog](https://github.com/patternfly/react-component-groups/releases/tag/v6.2.0))
-    - [@patternfly/react-log-viewer@6.1.0](https://www.npmjs.com/package/@patternfly/react-log-viewer) ([changelog](https://github.com/patternfly/react-log-viewer/releases/tag/v6.1.0))
+    - [@patternfly/chatbot@2.2.0](https://www.npmjs.com/package/@patternfly/chatbot/v/2.2.0) ([changelog](https://github.com/patternfly/chatbot/releases/tag/v2.2.0))
+    - [@patternfly/quickstarts@6.2.0](https://www.npmjs.com/package/@patternfly/quickstarts/v/6.2.0) ([changelog](https://github.com/patternfly/patternfly-quickstarts/releases/tag/v6.2.0))
+    - [@patternfly/react-catalog-view-extension@6.1.0](https://www.npmjs.com/package/@patternfly/react-catalog-view-extension/v/6.1.0) ([changelog](https://github.com/patternfly/react-catalog-view/releases/tag/v6.1.0))
+    - [@patternfly/react-component-groups@6.2.0](https://www.npmjs.com/package/@patternfly/react-component-groups/v/6.2.0) ([changelog](https://github.com/patternfly/react-component-groups/releases/tag/v6.2.0))
+    - [@patternfly/react-log-viewer@6.1.0](https://www.npmjs.com/package/@patternfly/react-log-viewer/v/6.1.0) ([changelog](https://github.com/patternfly/react-log-viewer/releases/tag/v6.1.0))
 - [@patternfly/react-topology@6.2.0](https://www.npmjs.com/package/@patternfly/react-topology) ([changelog](https://github.com/patternfly/react-topology/releases/tag/v6.2.0))
-    - [@patternfly/react-user-feedback@6.1.0](https://www.npmjs.com/package/@patternfly/react-user-feedback) ([changelog](https://github.com/patternfly/react-user-feedback/releases/tag/v6.1.0))
+    - [@patternfly/react-user-feedback@6.1.0](https://www.npmjs.com/package/@patternfly/react-user-feedback/v/6.1.0) ([changelog](https://github.com/patternfly/react-user-feedback/releases/tag/v6.1.0))
 
 ### PatternFly 6 enablement
 
@@ -287,22 +287,22 @@ As a quick follow up to our last release, this update publishes the new data vie
 
 ### Promoted package versions
 - patternfly/patternfly ([changelog](https://github.com/patternfly/patternfly/releases/tag/v6.1.0))
-    - [@patternfly/patternfly@6.1.0](https://www.npmjs.com/package/@patternfly/patternfly)
+    - [@patternfly/patternfly@6.1.0](https://www.npmjs.com/package/@patternfly/patternfly/v/6.1.0)
 - patternfly/react ([changelog](https://github.com/patternfly/patternfly-react/releases/tag/v6.1.0))
-    - [@patternfly/react-charts@8.1.0](https://www.npmjs.com/package/@patternfly/react-charts)
-    - [@patternfly/react-code-editor@6.1.0](https://www.npmjs.com/package/@patternfly/react-code-editor)
-    - [@patternfly/react-core@6.1.0](https://www.npmjs.com/package/@patternfly/react-core)
-    - [@patternfly/react-drag-drop@6.1.0](https://www.npmjs.com/package/@patternfly/react-drag-drop)
-    - [@patternfly/react-styles@6.1.0](https://www.npmjs.com/package/@patternfly/react-styles)
-    - [@patternfly/react-table@6.1.0](https://www.npmjs.com/package/@patternfly/react-table)
-    - [patternfly/react-templates@6.1.0](https://www.npmjs.com/package/@patternfly/react-templates)
-    - [@patternfly/react-tokens@6.1.0](https://www.npmjs.com/package/@patternfly/react-tokens)
+    - [@patternfly/react-charts@8.1.0](https://www.npmjs.com/package/@patternfly/react-charts/v/8.1.0)
+    - [@patternfly/react-code-editor@6.1.0](https://www.npmjs.com/package/@patternfly/react-code-editor/v/6.1.0)
+    - [@patternfly/react-core@6.1.0](https://www.npmjs.com/package/@patternfly/react-core/v/6.1.0)
+    - [@patternfly/react-drag-drop@6.1.0](https://www.npmjs.com/package/@patternfly/react-drag-drop/v/6.1.0)
+    - [@patternfly/react-styles@6.1.0](https://www.npmjs.com/package/@patternfly/react-styles/v/6.1.0)
+    - [@patternfly/react-table@6.1.0](https://www.npmjs.com/package/@patternfly/react-table/v/6.1.0)
+    - [patternfly/react-templates@6.1.0](https://www.npmjs.com/package/@patternfly/react-templates/v/6.1.0)
+    - [@patternfly/react-tokens@6.1.0](https://www.npmjs.com/package/@patternfly/react-tokens/v/6.1.0)
 - PatternFly extensions 
-    - [@patternfly/react-component-groups@6.1.0](https://www.npmjs.com/package/@patternfly/react-component-groups) ([changelog](https://github.com/patternfly/react-component-groups/releases/tag/v6.1.0))
-    - [@patternfly/react-log-viewer@6.1.0](https://www.npmjs.com/package/@patternfly/react-log-viewer) ([changelog](https://github.com/patternfly/react-log-viewer/releases/tag/v6.1.0))
-    - [@patternfly/react-topology@6.1.0](https://www.npmjs.com/package/@patternfly/react-topology) ([changelog](https://github.com/patternfly/react-topology/releases/tag/v6.1.0))
-    - [@patternfly/quickstarts@6.1.0](https://www.npmjs.com/package/@patternfly/quickstarts) ([changelog](https://github.com/patternfly/patternfly-quickstarts/releases/tag/v6.1.0))
-    - [@patternfly/chatbot@2.1.0](https://www.npmjs.com/package/@patternfly/chatbot) ([changelog](https://github.com/patternfly/chatbot/releases/tag/v2.1.0))
+    - [@patternfly/react-component-groups@6.1.0](https://www.npmjs.com/package/@patternfly/react-component-groups/v/6.1.0) ([changelog](https://github.com/patternfly/react-component-groups/releases/tag/v6.1.0))
+    - [@patternfly/react-log-viewer@6.1.0](https://www.npmjs.com/package/@patternfly/react-log-viewer/v/6.1.0) ([changelog](https://github.com/patternfly/react-log-viewer/releases/tag/v6.1.0))
+    - [@patternfly/react-topology@6.1.0](https://www.npmjs.com/package/@patternfly/react-topology/v/6.1.0) ([changelog](https://github.com/patternfly/react-topology/releases/tag/v6.1.0))
+    - [@patternfly/quickstarts@6.1.0](https://www.npmjs.com/package/@patternfly/quickstarts/v/6.1.0) ([changelog](https://github.com/patternfly/patternfly-quickstarts/releases/tag/v6.1.0))
+    - [@patternfly/chatbot@2.1.0](https://www.npmjs.com/package/@patternfly/chatbot/v/2.1.0) ([changelog](https://github.com/patternfly/chatbot/releases/tag/v2.1.0))
 
 ### Component updates 
 
