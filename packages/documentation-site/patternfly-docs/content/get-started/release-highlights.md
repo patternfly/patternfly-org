@@ -47,7 +47,13 @@ This update is non-breaking, and PatternFly 6 will continue to support React 17 
 
 As we progress in our effort to integrate motion design across PatternFly components, we added the following new animations in this release. To provide a holistic view of our animated components, we also put together [an interactive animations demo](/design-foundations/motion/react-demos), which we will continue to update as we add additional animation support.   
 
+#### enable-animations codemods
+
 We have also created an [enable-animations codemod](https://github.com/patternfly/pf-codemods/tree/main/packages/eslint-plugin-pf-codemods/src/rules/v6/enableAnimations), which adds the `hasAnimations` prop to components that support opt-in animations.  
+
+To enable the optional animations run the following command:
+
+`npx @patternfly/pf-codemods --only enable-animations /path-to-src`
 
 #### Expansion 
 
