@@ -49,7 +49,7 @@ As we progress in our effort to integrate motion design across PatternFly compon
 
 #### enable-animations codemods
 
-We have also created an [enable-animations codemod](https://github.com/patternfly/pf-codemods/tree/main/packages/eslint-plugin-pf-codemods/src/rules/v6/enableAnimations), which adds the `hasAnimations` prop to components that support opt-in animations.  
+We have also created an [enable-animations codemod](https://github.com/patternfly/pf-codemods/tree/main/packages/eslint-plugin-pf-codemods/src/rules/v6/enableAnimations), which adds the `hasAnimations` prop to components that require opt-in animations. Keep in mind that, depending on your codebase, this codemod could introduce breaking changes that require further attention.
 
 To enable the optional animations run the following command:
 
