@@ -58,12 +58,13 @@ The following list highlights opt-in requirements and links to examples. Unless 
 - Accordion 
     - **Example:** All [accordions](/components/accordion) in our examples and demos.
 
-- Dual list selector 
+- Dual list selector with tree
     - **Requires opt-in.**
     - **Example:** [Dual list selector with tree](/components/dual-list-selector#with-tree), which has opted in.
 
 - Expandable section 
     - **Example:** All [expandable sections](/components/expandable-section) in our examples and demos.
+    - **Note:** When using [detached expandable sections](/components/expandable-section#detached), you will need to use the new `direction` prop to set the direction of the expansion animation.
 
 - Form
     - **Requires opt-in.**
@@ -83,8 +84,11 @@ The following list highlights opt-in requirements and links to examples. Unless 
 
 - Table
     - **Requires opt-in.**
-    - **Example:** [Expandable table](/components/table#expandable), which has opted in.
-    - **Note:** This release does not include expansion animations for tree tables.
+    - **Example:** [Expandable table](/components/table#expandable) and [compound expandable table](/components/table/#compound-expandable), which have both opted in.
+    - **Notes:** 
+        - This release does not include expansion animations for tree tables.
+        - To prevent visual issues with the divider on expanded rows, ensure that both the `<Table>` and the first `Tr` in the `Tbody` contains `isExpanded` logic. 
+        - To avoid visual issues with animations in compound expandable tables, ensure that the `Tr` which contains `isControlRow` contains `isExpanded` logic. To dynamically render the content, each expandable row content should also be rendered in its own structure. 
 
 #### Feedback 
 
@@ -93,6 +97,10 @@ The following components contain animations that give users dynamic feedback, he
 1.  Buttons
     - **Animation:** When a button is clicked, the active state color ripples outward from the center of the button.
     - **Example:** All buttons in our components, including in our [button examples and demos](/components/button).
+
+1. Helper text validation
+    - **Animation:** When an error occurs in an input that supports helper text (such as in the form and progress components), the helper text fades in as danger styles are applied. 
+    - **Example:** The [static text and dynamic status example](/components/helper-text/react-demos#static-text-and-dynamic-status) for helper text.
 
 1.  Form validation
     - **Animation:** When an error occurs in a form field with validation, the component "jiggles" from side to side as danger styles are applied. 
@@ -114,6 +122,8 @@ The following components contain animations that give users dynamic feedback, he
 
 ##### Icons
 
+The following animations are unique to each icon and don't support any custom icons. For example, you cannot apply the favorite animation to any icon besides the favorite star. 
+
 1.  Favorite
     - **Animation:** When a favorite button is clicked, the star "pulses" and fills with color.
     - **Example:** All favorite buttons in our examples and demos, including our [animated favorite button example](/components/button#favorite).
@@ -122,7 +132,8 @@ The following components contain animations that give users dynamic feedback, he
     - **Animation:** The middle bar of the hamburger icon transforms into an arrow to indicate whether the menu will expand or collapse when clicked. The behavior differs slightly for desktop and mobile views:
         - **Desktop:** Both arrows appears on hover or keyboard focus as appropriate.
         - **Mobile:** When the menu is expanded, a "collapse" arrow is displayed. When collapsed, an "expand" arrow appears on hover or focus.
-    - **Example:** All hamburger menu buttons in our examples and demos, including [our page examples](/components/page#vertical-navigation).
+    - **Example:** All hamburger menu buttons in our examples and demos, including [our page examples](/components/page#vertical-navigation). 
+    - **Note:** This animation automatically occurs for hamburger menu buttons in mastheads, but not elsewhere. You can view implementation details in the [hamburger button example](/components/button#hamburger), which demonstrate how to set up the animation logic outside of mastheads.
 
 1.  Settings
     - **Animation:** When a settings button or menu toggle receives hover or keyboard focus, the cog rotates. When focus is lost, it rotates back to its original position.
