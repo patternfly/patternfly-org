@@ -4,15 +4,11 @@ section: design-foundations
 source: design-and-develop
 ---
 
-## Animated components
+## Component micro animations
 
-Different component animations are triggered by different events, including hover, click, loading, errors, and transitions. There are 5 general types of animations, including alerting, expansion, feedback, progression, and transition. 
+Micro animations are triggered by various events, including hover, click, loading, errors, and transitions. All animations respect a user's reduced motion preferences. 
 
-### Alerts 
-
-
-
-    - Alert
+Many components contain animations by default, but there are some [opt-in animations](#opt-in-animations), which require manual configuration to avoid breaking changes.
 
 ### Expansion 
 
@@ -31,7 +27,7 @@ The following components contain expansion animations wherever content can be ex
 
 ### Feedback
 
-By immediately responding to user input, feedback animations provide reassurance that the system is responding to their actions. This clarity reduces, confirms the results of an action, and can signal what will happen next.
+By responding to user input and system changes, feedback animations provide reassurance that the system is responding to their actions. This clarity reduces confusion, confirms the results of an action, and can signal what will happen next.
 
 The following components contain feedback animations:
 
@@ -46,15 +42,18 @@ The following components contain feedback animations:
 - Validation: Animations are triggered by errors in validated inputs. 
     - Forms 
     - Menu toggle
-    - Progress
+    - Progress stepper
 
-### Progression
+### Status
 
-- Progress 
+- Alerts
 - Progress stepper 
 - Skeleton
 
 ### Transitions
+- Drawer
+- Navigation menu
+- Menu
 
 
 ## Motion patterns
