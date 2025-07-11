@@ -103,19 +103,19 @@ The following list highlights opt-in requirements and links to examples. Unless 
 
                 ``` 
                 <Table isExpandable> // if opting into animations, pass the hasAnimations prop or run the enable-animations codemods to auto-apply the prop
-                ...Thead...
-                <Tbody isExpanded={...logic for checking for expansion}>
+                  ...Thead...
+                  <Tbody isExpanded={...logic for checking for expansion}>
                     <Tr isExpanded={...logic for checking for expansion}> // for compound expandable, pass isControlRow as well
-                    ..."control row" content...
+                      ..."control row" content...
                     </Tr>
                     <Tr isExpandable isExpanded={...logic for checking if expanded...}>
-                    <Td>
+                      <Td>
                         <ExpandableRowContent>
-                        ...the content to display for the cell...
+                          ...the content to display for the cell...
                         </ExpandableRowContent>
-                    </Td>
+                      </Td>
                     </Tr>
-                </Tbody>
+                  </Tbody>
                 </Table>
                 ```
 
