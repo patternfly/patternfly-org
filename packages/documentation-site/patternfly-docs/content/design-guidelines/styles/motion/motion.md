@@ -1,7 +1,7 @@
 ---
 id: Motion
 section: design-foundations
-source: About 
+source: about 
 ---
 
 import { Alert, AlertActionLink, Card, CardHeader, CardTitle, CardBody, CardFooter, Grid, GridItem} from '@patternfly/react-core';
@@ -25,10 +25,10 @@ Like color or typography, **motion** can create a strong foundation that helps c
 
 This resource outlines our motion design principles and the different types of motion in PatternFly.
 
-For detailed guidance on implementing and customizing animations, refer to our [motion design and development guidelines](/design-foundations/motion/design-and-develop).
+For detailed guidance on implementing and customizing animations, refer to our [motion development guidelines](/design-foundations/motion/development-guide).
 
 ## Principles 
-These principles guide the use of motion in PatternFly and align with our [brand voice and tone](https://www.patternfly.org/ux-writing/brand-voice-and-tone).
+These principles guide the use of motion in PatternFly and align with our [brand voice and tone](/ux-writing/brand-voice-and-tone).
 
 <Grid hasGutter>
 <GridItem span={6}>
@@ -69,16 +69,18 @@ These principles guide the use of motion in PatternFly and align with our [brand
 </GridItem>
 </Grid>
 
-## Component micro animations
+### Component micro animations
 
 PatternFly components support motion in the form of **micro animations**, which are small, unobtrusive, and often understated. These animations serve specific purposes within a UI, and are designed to be subtle and complementary. To ensure an accessible experience, every animation adapts to and respects a user's system-level settings for reduced motion.
 
-While our goal is to inherently support animations across our components, there may be instances where you need to use [our motion tokens](/design-foundations/motion/design-and-develop#motion-tokens) to enable an animation for your specific scenario. 
-
-If you want to implement additional motion, or if you'd like to customize the default PatternFly behavior, [follow these practices.](#custom-motion)
+While many components feature animations by default, there are [opt-in animations](/development guide#opt-in-animations) that require manual configuration. If you're interested in implementing motion outside of what we support by default, you can use [our motion tokens](/development-guide#motion-tokens) to create a custom animation for your specific scenario. Take care to stay aligned with our motion principles. 
 
 ### Anatomy of an animation 
-An animation is composed of 4 elements: triggers, duration, easing, and properties.
+An animation is composed of 4 elements: 
+- [Triggers](#triggers)
+- [Duration](#duration)
+- [Easing](#easing)
+- [Properties](#properties)
 
 #### Triggers
 
@@ -88,21 +90,110 @@ A trigger is the event that causes the animation to happen.
 
 #### Duration
 
-The duration of an animation refers to the amount of time that it takes to complete. Optimal timing can change based on viewport size. 
+The duration of an animation refers to the amount of time that it takes to complete. Optimal timing can change based on the size of the element itself and the viewport. 
 - **Short:** Quick animations for simpler effects and subtle motion, like fading or color changing.
 - **Long:** Longer animations for more complex effects and large-scale motion, like page transitions or objects that slide into the screen. 
 
 #### Easing
 
-The easing of an animation refers to how the animated element transitions over time.
+The easing of an animation refers to how the animated element transitions over time. Careful use of easing helps ensure that animations feel smooth and natural, rather than jarring and disjointed. For example, an element might accelerate quickly but decelerate slowly, or vice versa. 
 
 #### Properties
 
-An animation's properties are the characteristics of the element being transitioned. Animations may have multiple properties, including: 
-    - Fade in/out
-    - Scale
-    - Rotate
-    - Color transitions
-    - Slide in/out
-    - Expand/collapse
+An animation's properties are the specific visual characteristics of the element that change during a transition. An animation may combine multiple properties to create its effect, including:
+- **Fade in/out:** The opacity of the element.
+- **Scale:** The size of the element.
+- **Rotate:** The direction of the element.
+- **Color transitions:** Changes in the color of the element.
+- **Slide in/out:** Changes in the position of the element, relative to the edges of the screen.
+- **Expand/collapse:** Changes in the toggled visibility of an element.
 
+### Types of animations
+
+Animations typically fall into one of the following categories: 
+- [Container placement](#container-placement)
+- [Expansion](#expansion) 
+- [Feedback](#feedback) 
+- [Progression](#progression) 
+
+#### Container placement
+
+By managing how container components appear and disappear, container placement animations can better orient users. When triggered, containers move into place with purpose, creating a clear spatial relationship between a user's action and the result. 
+
+This can be observed in the following components:
+
+- [Drawer:](/components/drawer) Slide in from edge of screen
+- [Menus:](/components/dropdown) Fade into position beside menu toggle
+
+#### Expansion 
+
+By guiding a user's focus, expansion animations make newly revealed information easier to process. When a user opens a section, a gentle fade and slide transition draws their eye to the content. The reverse occurs upon closing, creating an engaging and predictable interaction. 
+
+This can be observed in the following components:
+
+- [Accordion](/components/accordion) 
+- [Dual list selector (with tree)](/components/dual-list-selector#with-tree) 
+- [Expandable section](/components/expandable-section)  
+- [Form (field groups)](/components/forms/form#field-groups)  
+- [Navigation (expandable)](/components/navigation#expandable)  
+- [Search input (expandable)](/components/search-input#with-expandable-button) 
+- [Tree view](/components/tree-view) 
+- Table: [Expandable table](/components/table#expandable) and [compound expandable table](/components/table#compound-expandable) 
+
+#### Feedback
+
+By responding to user input and system changes, feedback animations provide reassurance that the system is responding to their actions. This clarity reduces confusion, confirms the results of an action, and can signal what will happen next.
+
+This can be observed in the following components:
+
+##### Hover and clicks
+ 
+These components have animations that are triggered by hover, clicks, and focus.
+- [Buttons:](/components/button) Fill ripple on click
+- Icon buttons:
+    - [Favorite:](/components/button#favorite) Pulse and fill on click
+    - [Hamburger menu:](/components/button#hamburger) Transform on click 
+    - [Settings:](/components/button#settings) Rotate on hover
+- [Menu toggles:](/components/menus/dropdown#basic-dropdowns) Border fade in on click
+- [Tabs:](/components/tabs) Slide border on click
+
+##### Validation
+
+These components have animations that are triggered by errors in validated inputs. 
+- [Forms (validated inputs)](/components/forms/form#validated) 
+- [Menu toggle (status toggle)](/components/menus/menu-toggle#status-toggle)
+- [Progress (with error)](/components/progress#helper-text)
+- [Progress stepper (with error)](/components/progress-stepper#with-an-issue)
+
+##### System changes
+
+These components have animations that are triggered by system-level events. 
+- [Alerts (within groups)](/components/alert#alert-group-examples) Slide and fade in/out
+- [Notification badge:](/components/notification-badge#with-animation) Rotate icon 
+
+#### Progression
+
+By showing that a process is underway, progression animations manage user expectations during waiting periods and communicate that the system is working on a request. This feedback provides clarity that gives users confidence to wait for processes to complete.
+
+- [Progress stepper (in process)](/components/progress-stepper/html#basic-in-process): Animated spinner 
+- [Skeleton:](/components/skeleton) Gradient pulse
+
+## Motion patterns
+
+A **motion pattern** is a combination of tokens and properties that work together to solve common animation needs. These patterns help ensure that the behavior of a type of animation is consistent across similar use cases—even if different components are involved.
+
+### Button ripple
+
+Used within [feedback animations](#feedback), the "button ripple" pattern applies the appropriate clicked color in a ripple outward from the center of the button. This includes [all button variants](/components/button#variant-examples), with the exception of inline links. This pattern provides clear, tangible feedback that the button was successfully pressed, confirming the user's action.
+
+### Error jiggle 
+
+Used within [feedback animations](#feedback), the "error jiggle" pattern "jiggles" the animated component (and typically related helper text) from side to side as danger styles are applied. This pattern helps ensure that critical errors in a UI, which require correction, quickly catch users' attention. 
+
+In reduced motion conditions, the related error helper text instead simply fades into view, rather than jiggling as well.  
+
+### Expansion fade and slide
+
+Used within [expansion animations](#feedback), the "fade and slide" pattern applies a fade-in and slide-in transition as hidden content sections are expanded in a component. A similar, reversed animation applies when expanded sections are collapsed. This pattern orients the user by creating a clear, smooth connection between their action and the newly revealed content.
+
+In reduced motion conditions, the entire hidden section instead simply fades into view when expanded, rather than also sliding in.
