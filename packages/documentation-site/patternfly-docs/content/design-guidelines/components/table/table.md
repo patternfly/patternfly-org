@@ -3,11 +3,14 @@ id: Table
 section: components
 ---
 
+import '../components.css';
 
 ## Elements
 The elements mentioned below are similar for a table with compact or default spacing. This example shows a table with a compact spacing.
 
-<img src="./img/table-elements.png"  alt="example of table and the elements"  width="1189"/>
+<div class="ws-docs-content-img">
+![Elements of a table.](./img/table-elements.svg)
+</div>
 
 1. **[Toolbar](/components/toolbar/design-guidelines):** Sits above the table and contains controls for manipulating table data. Common actions include filtering, sorting, and pagination.
 2. **[Bulk selection](/patterns/bulk-selection):** When present, selects all items in a table. If pagination is being used, this will only select items on the current page. See [bulk selection](/patterns/bulk-selection) for more information.
@@ -37,7 +40,9 @@ Tables can also appear in primary-detail views. Visit the [primary-detail guidel
 ### Using lists and tables in a page
 Lists and tables should be placed in the body of a page. The width should be set by the containing element.
 
-<img src="./img/table-dataexample.png"  alt="example of compact data table example"  width="1500"/>
+<div class="ws-docs-content-img">
+![Example of a table in a page.](./img/table-page.svg)
+</div>
 
 In this example, a table is positioned in the body of a page in a card.
 
@@ -63,14 +68,16 @@ Clicking on the label would open up a popover or modal depending on the number o
 
 * When you have **7 or less items**, use a [popover](/components/popover#basic) to display remaining items.
   
-  <img src="./img/Label-with-popover.png"  alt="Label with popover"  width="857"/>
-  <img src="./img/Label-with-tooltip.png"  alt="Label with tooltip"  width="857"/>
-  <img src="./img/Labels-with-popover.png"  alt="Labels with popovers"  width="857"/>
+  <div class="ws-docs-content-img">
+![Example of a table with a popover.](./img/table-popover.svg)
+</div>
 
 
 * When you have **8 or more items**, use a modal with a search. The items inside the modal can be organized as needed for the use case. For example, it can be a list of labels, a text list, a table or data list.
 
-  <img src="./img/8-or-more-labels-in-modal.png"  alt="8 or more items modal"  width="500"/>
+  <div class="ws-docs-content-img">
+![Example of a modal with search.](./img/table-search-modal.svg)
+</div>
 
 ## Variations
 PatternFly supports 2 main types of tables:
@@ -80,7 +87,9 @@ PatternFly supports 2 main types of tables:
 
 See [when to use compact vs. default spacing](#compact-vs-default-spacing) for more information about the styling and usage.
 
-<img src="./img/compact-and-default-table.png"  alt="Compact and default table"  width="857"/>
+<div class="ws-docs-content-img">
+![Examples of default and compact tables.](./img/table-variations.svg)
+</div>
 
 ### Numeral styling
 
@@ -100,7 +109,9 @@ Every table can be extended with these functionalities:
 
 ### Expandable table
 
-<img src="./img/table-expandable.png"  alt="example of expandable table"  width="1198"/>
+<div class="ws-docs-content-img">
+![Example of an expandable table.](./img/table-expandable.svg)
+</div>
 
 1. **Expand all (optional)**: Expands every row at the same time.
 2. **Expansion:** Expands single row.
@@ -113,7 +124,9 @@ Every table can be extended with these functionalities:
 
 ### Compound-expandable table
 
-<img src="./img/table-compoundexpandable.png"  alt="example of compound expandable table"  width="1193"/>
+<div class="ws-docs-content-img">
+![Example of a compound expandable table.](./img/table-compound-expand.svg)
+</div>
 
 1. **Expandable cell:** A cell that can be clicked to reveal more detail about an item. If the expansion for an item is already open, clicking on a different cell will close the current item and open a new one.
 2. **Expansion panel:** Contains details associated with an expandable item.
@@ -125,7 +138,9 @@ Every table can be extended with these functionalities:
 ### Actionable table
 The actionable table provides checkboxes or radio buttons that enable users to select one or more rows in a table. Users may then act on those selections using options in the [toolbar](/components/toolbar/design-guidelines),.
 
-<img src="./img/table-actionable.png"  alt="example of actionable table"  width="1214"/>
+<div class="ws-docs-content-img">
+![Example of an actionable table.](./img/table-actionable.svg)
+</div>
 
 1. **[Bulk selection](/patterns/bulk-selection):** When present, selects all items in a table with checkboxes. If pagination is being used, this will only select items on the current page. See [bulk selection](/patterns/bulk-selection) for more information.
 2. **Checkbox**: Enables a user to select a row. Use when multiple rows can be selected at the same time.
@@ -142,9 +157,9 @@ The actionable table provides checkboxes or radio buttons that enable users to s
 
 For tables used to compare different items against different parameters, you may use a customized version of a table.
 
-
-<img src="./img/comparison-table.png"  alt="example of comparison table"  width="800"/>
-
+<div class="ws-docs-content-img">
+![Example of a comparison table.](./img/table-comparison.svg)
+</div>
 
 The comparison table differs from a standard table in the follow ways:
 * The items being compared should be shown as columns.
@@ -167,7 +182,9 @@ Although you could include the ability to remove certain parameters from inside 
 ### Row striping
 Row striping can help improve legibility of a table when presenting large amounts of data. With row striping enabled, table rows will alternate between ```--pf-v6-global--BackgroundColor--100``` and ```--pf-v6-global--BackgroundColor--150``` to visually separate dense data sets.
 
-<img src="./img/row-striping-example.png"  alt="Row striping in tables"  width="1500"/>
+<div class="ws-docs-content-img">
+![Example of row striping in tables.](./img/table-row-striping.svg)
+</div>
 
 #### When to use
 * Tables with 5 or more columns.
@@ -177,7 +194,9 @@ Row striping can help improve legibility of a table when presenting large amount
 ### Sorting by columns
 Sorting by columns is possible for any table variation. Enabling the component within a table eases the ability to scan and read through the content. This option is favored over adding sorting functionality to the [toolbar](/components/toolbar/design-guidelines).
 
-<img src="./img/sortable-data-table.png"  alt="Sortable table"  width="1161"/>
+<div class="ws-docs-content-img">
+![Example of a sortable table.](./img/table-column-sorting.svg)
+</div>
 
 1. **Sortable column:** When a column is sortable, the sort icon will appear to the right of the column header in a [light grey](/design-foundations/colors#typography-and-iconography-colors) color. Sorting will not become active until the user selects the column header. This triggers the arrow to point upwards and the content to be sorted in ascending order.
 3. **Hovered sort:** When a column is sortable, the sort icon will appear to the right of the column header. Upon hover, the  icon will change to a [darker grey](/design-foundations/colors#typography-and-iconography-colors) indicating that the icon is actionable.
@@ -194,7 +213,9 @@ If a table contains these three attributes: (System Name | Last Sync | Severity)
 ### Table with favoriting
 Adding the ability to favorite is possible for any table variation. Users can set their favorites by clicking the star icon in the favorites row. By default, the star is grey; when an item is favorited, the star becomes yellow. Clicking the star again will unfavorite the item. When an item is favorited or unfavorited, it does not move in the list unless sorting is on.
 
-<img src="./img/table-favoriting.png"  alt="Table with favoriting"  width="930"/>
+<div class="ws-docs-content-img">
+![Example of a table with favoriting.](./img/table-favoriting.svg)
+</div>
 
 1. **Favorites column**: Allows users to favorite and unfavorite items in the table by clicking the item’s associated star icon.
 2. **Favorites column header (optional):** Allows users to sort by favorites.
@@ -217,7 +238,9 @@ A table may sometimes need to be compact to make more rows visible at a time. Th
 * You need to minimize paging.
 * Readability is a secondary concern.
 
-<img src="./img/compact-spacing.png"  alt="Compact spacing"  width="1162"/>
+<div class="ws-docs-content-img">
+![Example of a table with compact spacing.](./img/table-compact-spacing.svg)
+</div>
 
 **Example:**
 * You can see more data on 1 page.
@@ -233,7 +256,9 @@ A table may sometimes need more space for rich graphical data. See an example be
 * You don't have to minimize paging.
 * Readability is a primary concern.
 
-<img src="./img/default-spacing.png"  alt="Default spacing"  width="1162"/>
+<div class="ws-docs-content-img">
+![Example of a table with default spacing.](./img/table-default-spacing.svg)
+</div>
 
 **Example:**
 * You can see less data on one page.
@@ -243,4 +268,6 @@ A table may sometimes need more space for rich graphical data. See an example be
 ## Tables on mobile
 The PatternFly table is designed to be fully responsive. When columns no longer fit within the width of the viewport, columns are stacked so that data in each row is displayed as sets of attribute-value pairs.
 
-<img src="./img/Mobile-data-table-example.png"  alt="Mobile data table"  width="375"/>
+<div class="ws-docs-content-img">
+![Example of a table on mobile.](./img/table-mobile.svg)
+</div>
