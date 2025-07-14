@@ -3,10 +3,14 @@ id: Toggle group
 section: components
 ---
 
+import '../components.css';
+
 ## Elements
 Toggle items can consist of icons, text, or both. Styling of toggles is dependent on the background color. 
 
-<img src="./img/elements-items.png" alt="Toggle group elements" width="1536"/>
+<div class="ws-docs-content-img">
+![Elements of a toggle group.](./img/toggle-elements.svg)
+</div>
 
 ## Usage
 Toggle groups can be used when the user must select a single choice from a mutually exclusive set of options and can be used with or without icons. 
@@ -29,12 +33,13 @@ Single select toggle groups are commonly used to switch between views including:
   - a form view and a YAML view
   - a card view and a table view
 
-<img src="./img/form-view.png" alt="Single select toggle group ex" width="1500"/>
+<div class="ws-docs-content-img">
+![Example of a single select toggle group in a form.](./img/toggle-form-view.svg)
+</div>
 
-<img src="./img/topology-actions-2.png" alt="Single select toggle group ex2" width="1500"/>
-
-1. **Zoom in**: By selecting this action, the view would zoom in by one increment.
-2. **Fit to screen**: This action will fit the topology view to screen. After selection, the item will return to its default state, with a white background.
+<div class="ws-docs-content-img">
+![Example of a single select toggle group in a table.](./img/toggle-table-view.svg)
+</div>
 
 ### Multi select toggle group
 Use single multi select toggle groups when you want to select multiple attributes from a group. This is most commonly used for filtering a content view when there is a lot of space available.
@@ -42,7 +47,9 @@ Use single multi select toggle groups when you want to select multiple attribute
 #### Examples
 Selecting an attribute will apply that filter to the table. In this case, only nodes that are “ready” are shown.
 
-<img src="./img/multi-select.png" alt="Multi select toggle group ex" width="1500"/>
+<div class="ws-docs-content-img">
+![Example of a multi select toggle group.](./img/multi-select.svg)
+</div>
 
 ### Toggle items
 
@@ -51,7 +58,10 @@ Use toggle items when you want to select a single action from a group. We recomm
 #### Examples
 Toggle items are most commonly used in canvas views, such as topology. Selecting a toggle item will switch the user into that “mode” or allow them to take that action.
 
-<img src="./img/topology-actions.png" alt="Toggle items ex" width="1500"/>
+<div class="ws-docs-content-img">
+![Example of toggle items.](./img/toggle-typology.svg)
+</div>
 
 1. **Zoom in**: This item changes the cursor into a zoom icon and allows the user to zoom, as long as that toggle is selected. 
-2. **Zoom cursor**: The cursor changes into a zoom icon and the user may exit that mode by selecting the “move” hand toggle item.
+2. **Fit to screen**: This action will fit the topology view to screen. After selection, the item will return to its default state, with a white background.
+3. **Zoom cursor**: The cursor changes into a zoom icon and the user may exit that mode by selecting the “move” hand toggle item.
