@@ -94,13 +94,33 @@ Links buttons are labeled buttons with no background or border. Link buttons can
 * Navigate users to another page within the same window.
 * Navigate users to an external page.
 
-While all link buttons lack borders, they can still vary in appearance. Link buttons that navigate users to another page within the same window should be presented as stand-alone text. Link buttons that navigate users to an external page may include an icon on the left or right of the text to further emphasize the action. For example, you could add an external link icon to show that clicking on it will navigate users externally to another website or application.
+While all link buttons lack borders, they can still vary in appearance. 
+
+#### External links 
+
+Link buttons that navigate users to another page within the same window should be presented as stand-alone text. 
+
+Links that navigate users to an external page should include an external link icon beside the text to show that clicking on it will bring users to another website or application. 
+
+This is the recommendation for both default and inline links:
 
 <div class="ws-docs-content-img">
-    <img src="./img/external_links.png" alt="Example of link button with icon on the left and the right" width="218"/>
+    ![External link icons, both with default and inline links. The external link icon displays an arrow, coming out of a box, towards the top right.](./img/external-links.svg)
 </div>
 
-You might use a link button instead of a secondary button format to create greater visual hierarchy between two buttons. Examples include using text buttons as cancel buttons in modals or wizards, as well as for secondary actions in empty states.
+#### Default link buttons 
+
+Default link buttons have no default background or border, but do have a hover background to indicate the clickable area.
+
+<div class="ws-docs-content-img">
+    ![A default link button, before and after being hovered. Before hover, there is no background style. After hover, there is a light gray background that fills the clickable area.](./img/default-link-style.svg)
+</div>
+
+##### When to use default links
+
+Use default link buttons for actions that do not require the visual emphasis of a standard button, or when a link will be placed alongside other buttons and should match the spacing. 
+
+For example, the ‘Cancel’ button in modals or links within an empty state.
 
 _Example of a link button in a modal_
 
@@ -114,20 +134,22 @@ _Example of link buttons in an empty state_
     <img src="./img/empty_state_links.png" alt="Example of link buttons in an empty state" width="640"/>
 </div>
 
-### When to use
+#### Inline links 
 
-Always use link buttons in the following cases:
-
-* For cancel buttons in wizards or modals
+Inline links are styled with a persistent underline, to indicate that they are clickable. When users hover over an inline link, the color changes from `global/text/color/link/default` to `global/text/color/link/hover`, which is darker. Once a link is clicked, the text color becomes `global/text/color/link/visited`.
 
 <div class="ws-docs-content-img">
-     <img src="./img/link_modal.png" alt="Example of link button used in modal" width="446"/>
+    ![Possible styles for different inline links and their states. A default state, with a standard blue text inline link and a link with an external link icon. Hover versions for both inline links, which are slightly darker in text color. Links that have already been visited, which makes the text purple.](./img/inline-link-styles.svg)
 </div>
 
-* For more actions in empty states
+##### When to use inline links 
+
+Inline link buttons are to be used for links placed within text content. If a link will take users to a different window or application, use an external icon link.
+
+* Within text content
 
 <div class="ws-docs-content-img">
-    <img src="./img/link_empty.png" alt="Example of a link button in an empty state" width="600"/>
+    ![An inline link in the middle in the middle of a short sentence.](./img/inline-link-in-text.svg)
 </div>
 
 * For action buttons in tables
@@ -141,6 +163,7 @@ Always use link buttons in the following cases:
 <div class="ws-docs-content-img">
     <img src="./img/link_alert.png" alt="Example of link button in an alert" width="309"/>
 </div>
+
 
 ### Icon button ###
 
