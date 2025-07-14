@@ -3,10 +3,14 @@ id: Progress stepper
 section: components
 ---
 
+import '../components.css';
+
 A **progress stepper** displays progress through a sequence of linear steps and highlights what step the user is currently on.
 
 ## Elements
-<img src="./img/progress-stepper-elements.png" alt="Image showing the different elements that can be contained in a progress stepper." width="1514" />
+<div class="ws-docs-content-img">
+![Elements of a progress stepper.](./img/stepper-elements.svg)
+</div>
 
 1. **Progress title:** Describes the task or process underway.
 2. **Progress description (optional):** Provides additional information on the task or process
@@ -22,17 +26,25 @@ Use a progress stepper to convey to a user how many steps are required to comple
 ### When to use
 * A user is completing a multi-step process in a card
 
-<img src="./img/progress-stepper-card-view.png" alt="Image showing example of progress stepper in a card view." width="1600" />
+<div class="ws-docs-content-img">
+![Example of a progress stepper in a card.](./img/multi-stepper-card.svg)
+</div>
 
 * A user is showing progression through a workflow in a table or card
 
-<img src="./img/progress-stepper-table-view.png" alt="Image showing example of progress stepper in a table view." width="1319" />
+<div class="ws-docs-content-img">
+![Example of a progress stepper in a table.](./img/stepper-table.svg)
+</div>
 
-<img src="./img/progress-stepper-canvas-view.png" alt="Image showing example of progress stepper in a card view." width="1600" />
+<div class="ws-docs-content-img">
+![Example of a progress stepper in a card.](./img/stepper-card.svg)
+</div>
 
 * A user is checking the status of the installation process in a popover
 
-<img src="./img/progress-stepper-table-view-popover.png" alt="Image showing example of progress stepper in a table view with a popover." width="1600" />
+<div class="ws-docs-content-img">
+![Example of a progress stepper in a popover.](./img/stepper-popover.svg)
+</div>
 
 ### When to use progress stepper vs. wizard
 
@@ -50,32 +62,44 @@ There are a few variations of the progress stepper that can be used for differen
 ### Basic progress stepper
 The basic progress stepper can be used when just the title of the step is enough to inform the user.
 
-<img src="./img/progress-stepper-basic.png" alt="Image showing example of a basic progress stepper." width="595" />
+<div class="ws-docs-content-img">
+![Example of a basic progress stepper.](./img/stepper-basic.svg)
+</div>
 
 ### Basic with descriptions
 If more description is needed, a basic progress stepper with descriptions can be used which allows for more context for each step.
 
-<img src="./img/progress-stepper-with-description.png" alt="Image showing examples of a basic progress stepper with descriptions." width="1317" />
+<div class="ws-docs-content-img">
+![Example of a progress stepper with descriptions.](./img/stepper-with-descriptions.svg)
+</div>
 
 ### Vertical progress stepper
 The vertical alignment can be used in pages with a split view where one side houses the progress stepper and the other side houses each step’s content. These can also be used to display progress in a popover.
 
-<img src="./img/progress-stepper-vertical.png" alt="Image showing examples of a vertical progress stepper." width="676" />
+<div class="ws-docs-content-img">
+![Example of a vertical progress stepper.](./img/stepper-vertical.svg)
+</div>
 
 ### Compact progress stepper
 In areas with less real estate such as table rows, the compact progress stepper can be used. The component will not display as much information such as each step’s title and/or description and will be smaller in size. The compact progress stepper also accounts for the alignment variations.
 
-<img src="./img/progress-stepper-compact.png" alt="Image showing examples of a compact progress stepper." width="1597" />
+<div class="ws-docs-content-img">
+![Example of a compact progress stepper.](./img/stepper-compact.svg)
+</div>
 
 ### Progress stepper with icons
 Custom icons can also be used for each step of the progress stepper based on the use case and the product’s need.
 
-<img src="./img/progress-stepper-custom-icons.png" alt="Image showing example of a progress stepper with custom icons." width="575" />
+<div class="ws-docs-content-img">
+![Example of a progress stepper with custom icons.](./img/stepper-custom-icons.svg)
+</div>
 
 ### Progress stepper with help popover
 If additional help information or help text is needed and there is not enough real estate for a description, a popover on each step’s title can be used.
 
-<img src="./img/progress-stepper-help-popover.png" alt="Image showing example of a progress stepper with help popver." width="586" />
+<div class="ws-docs-content-img">
+![Example of a progress stepper with a help popover.](./img/stepper-help-popover.svg)
+</div>
 
 ## Content considerations
 Progress steppers should be self-explanatory and therefore include minimal written content: A title and an optional description.
