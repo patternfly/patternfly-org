@@ -3,13 +3,17 @@ id: Timestamp
 section: components
 ---
 
+import '../components.css';
+
 ## Elements
 
-<img src="./img/timestamp-elements.png" alt="Timestamp with tooltip underline" width="352"/>
+<div class="ws-docs-content-img">
+![Timestamp with tooltip underline](./img/timestamp-elements.svg)
+</div>
 
-1. **Day:** Spelled out or abbreviated format. [See Numerics guidelines for more information](https://v4-archive.patternfly.org/v4/ux-writing/numerics).
-2. **Date:** Can be spelled out, abbreviated form, or digit format. [See Numerics guidelines for more information](https://v4-archive.patternfly.org/v4/ux-writing/numerics).
-3. **Time:** Should be displayed in 12-hour or 24-hour ((HH:MM:SS). [See Numerics guidelines for more information](https://v4-archive.patternfly.org/v4/ux-writing/numerics).
+1. **Day:** Spelled out or abbreviated format. [See Numerics guidelines for more information](/ux-writing/numerics).
+2. **Date:** Can be spelled out, abbreviated form, or digit format. [See Numerics guidelines for more information](/ux-writing/numerics).
+3. **Time:** Should be displayed in 12-hour or 24-hour (HH:MM:SS). [See Numerics guidelines for more information](/ux-writing/numerics).
 
 4. **UTC/Timezone:** Should always be displayed last, in shorthand form and be in 24-hour format.
 5. **Tooltip:** Dotted line displayed if there is tooltip available.
@@ -33,20 +37,26 @@ Use a timestamp when:
 - Displays time in UTC (Universal Coordinated Time).
 - Should be formatted the same as the timestamp. 
 
-See [numerics guidelines](https://v4-archive.patternfly.org/v4/ux-writing/numerics) for more information about relative time best practices.
+See [numerics guidelines](/ux-writing/numerics) for more information about relative time best practices.
 
 ## Variations
 ### 12-hour format
 In the 12-hour format, use AM to refer to a time of day before noon, and PM to speak of a time between noon and midnight.
 
-<img src="./img/timestamp-using-am-pm.png" alt="Timestamp AM/PM format" width="335"/>
+<div class="ws-docs-content-img">
+![Timestamp AM/PM format](./img/timestamp-using-am-pm.svg)
+</div>
 
 ### 24-hour format
 In the 24-hour clock format, each day runs from midnight to midnight and is divided into 24 hours, beginning with 00:00 AM at midnight. 
 
-<img src="./img/timestamp-24-hour-format.png" alt="Timestamp with 24 hour format" width="354"/>
+<div class="ws-docs-content-img">
+![Timestamp with 24 hour format](./img/timestamp-24-hour-format.svg)
+</div>
 
 ### Abbreviated date
 Abbreviated date usage is recommended when you have space restrictions. When abbreviating dates follow the date and time format. 
 
-<img src="./img/timestamp-Abbreviated-date.png" alt="Timestamp with abbreviated date format" width="245"/>
+<div class="ws-docs-content-img">
+![Timestamp with abbreviated date format](./img/timestamp-Abbreviated-date.svg)
+</div>

@@ -3,6 +3,178 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.4.0-alpha.237 (2025-07-10)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 1.4.0-alpha.236 (2025-07-08)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 1.4.0-alpha.235 (2025-07-08)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 1.4.0-alpha.234 (2025-07-03)
+
+
+### Bug Fixes
+
+* **Lockfile:** Remove PF deps from ChatBot ([#4691](https://github.com/patternfly/patternfly-org/issues/4691)) ([634dc21](https://github.com/patternfly/patternfly-org/commit/634dc2173b888301ede556c19db2ff02294cb503))
+
+
+
+
+
+# 1.4.0-alpha.233 (2025-07-03)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 1.4.0-alpha.232 (2025-07-03)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 1.4.0-alpha.231 (2025-07-03)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 1.4.0-alpha.230 (2025-07-02)
+
+
+### Features
+
+* **ver:** use react-icons prerelease.10 ([#4690](https://github.com/patternfly/patternfly-org/issues/4690)) ([f618f5e](https://github.com/patternfly/patternfly-org/commit/f618f5e149b6bb3b6f631233b1a65dbec5e486b4))
+
+
+
+
+
+# 1.4.0-alpha.229 (2025-07-02)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 1.4.0-alpha.228 (2025-07-02)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 1.4.0-alpha.227 (2025-07-02)
+
+
+### Features
+
+* **ver:** update to 6.3 prereleases ([#4689](https://github.com/patternfly/patternfly-org/issues/4689)) ([527444c](https://github.com/patternfly/patternfly-org/commit/527444c1eb088a7089d9c189488a81c71200e802))
+
+
+
+
+
+# 1.4.0-alpha.226 (2025-07-02)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 1.4.0-alpha.225 (2025-06-30)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 1.4.0-alpha.224 (2025-06-30)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 1.4.0-alpha.223 (2025-06-18)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 1.4.0-alpha.222 (2025-06-17)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 1.4.0-alpha.221 (2025-06-17)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 1.4.0-alpha.220 (2025-06-16)
+
+
+### Features
+
+* **ThemeSwitcher:** Enhanced theme switcher with system preference detection and tri-state selection ([#4639](https://github.com/patternfly/patternfly-org/issues/4639)) ([1b05742](https://github.com/patternfly/patternfly-org/commit/1b057425216a484dda1f46ba37842c22b77c7b87))
+
+
+
+
+
+# 1.4.0-alpha.219 (2025-06-16)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 1.4.0-alpha.218 (2025-06-16)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
 # 1.4.0-alpha.217 (2025-06-16)
 
 

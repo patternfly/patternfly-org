@@ -3,6 +3,178 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 6.13.7 (2025-07-10)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 6.13.6 (2025-07-08)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 6.13.5 (2025-07-08)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 6.13.4 (2025-07-03)
+
+
+### Bug Fixes
+
+* **Lockfile:** Remove PF deps from ChatBot ([#4691](https://github.com/patternfly/patternfly-org/issues/4691)) ([634dc21](https://github.com/patternfly/patternfly-org/commit/634dc2173b888301ede556c19db2ff02294cb503))
+
+
+
+
+
+## 6.13.3 (2025-07-03)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 6.13.2 (2025-07-03)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 6.13.1 (2025-07-03)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+# 6.13.0 (2025-07-02)
+
+
+### Features
+
+* **ver:** use react-icons prerelease.10 ([#4690](https://github.com/patternfly/patternfly-org/issues/4690)) ([f618f5e](https://github.com/patternfly/patternfly-org/commit/f618f5e149b6bb3b6f631233b1a65dbec5e486b4))
+
+
+
+
+
+## 6.12.2 (2025-07-02)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 6.12.1 (2025-07-02)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+# 6.12.0 (2025-07-02)
+
+
+### Features
+
+* **ver:** update to 6.3 prereleases ([#4689](https://github.com/patternfly/patternfly-org/issues/4689)) ([527444c](https://github.com/patternfly/patternfly-org/commit/527444c1eb088a7089d9c189488a81c71200e802))
+
+
+
+
+
+## 6.11.6 (2025-07-02)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 6.11.5 (2025-06-30)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 6.11.4 (2025-06-30)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 6.11.3 (2025-06-18)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 6.11.2 (2025-06-17)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 6.11.1 (2025-06-17)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+# 6.11.0 (2025-06-16)
+
+
+### Features
+
+* **ThemeSwitcher:** Enhanced theme switcher with system preference detection and tri-state selection ([#4639](https://github.com/patternfly/patternfly-org/issues/4639)) ([1b05742](https://github.com/patternfly/patternfly-org/commit/1b057425216a484dda1f46ba37842c22b77c7b87))
+
+
+
+
+
+## 6.10.33 (2025-06-16)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 6.10.32 (2025-06-16)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
 ## 6.10.31 (2025-06-16)
 
 
