@@ -21,6 +21,14 @@ The following components contain opt-in animations. To understand the opt-in imp
 - Tabs (HTML-only implementations): [Example](/components/tabs#animate-current-tab-accent)
 - Tree view: [Example](/components/tree-view/) (all examples) 
 
+### enable-animations codemod
+
+We have also created an [enable-animations codemod](https://github.com/patternfly/pf-codemods/tree/main/packages/eslint-plugin-pf-codemods/src/rules/v6/enableAnimations), which adds the `hasAnimations` prop to components that require opt-in animations. Keep in mind that, depending on your codebase, this codemod could introduce breaking changes that require further attention.
+
+To enable the optional animations run the following command:
+
+`npx @patternfly/pf-codemods --only enable-animations /path-to-src`
+
 ## Custom motion 
 
 For some scenarios, like creating a new [PatternFly extension](/extensions/about-extensions), you may need to implement custom motion behavior that doesn't already exist in PatternFly components. When you're creating a new animation, make sure that:
