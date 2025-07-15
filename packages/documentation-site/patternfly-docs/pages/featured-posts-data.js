@@ -9,23 +9,23 @@ export const featuredPostsData = {
       "https://miro.medium.com/v2/resize:fit:600/format:webp/1*FOVVqeJPmsoM6uJqsZHXZA.png",
   },
   post2: {
-    title: "From UX design to code",
-    author: "Tina Yip",
-    length: "10 min read",
-    URL: "https://medium.com/patternfly/from-ux-design-to-code-80af8291b04a",
+    title: "Vibe coding and beyond",
+    author: "Nicole Thoen",
+    length: "7 min read",
+    URL: "https://medium.com/patternfly/vibe-coding-and-beyond-b4bc80b7a74f",
     // Use resize:fit:600 in URL
     imageURL:
-      "https://miro.medium.com/v2/resize:fit:600/format:webp/0*9CY4zONMQaeU_-Z-",
+      "https://miro.medium.com/v2/resize:fit:600/format:webp/1*oHJSZu-i_5qI5MX4d11vjw.png",
   },
   post3: {
     title:
-      "Brainstorming when you're in a funk",
-    author: "Allison Wolfe",
-    length: "3 min read",
-    URL: "https://medium.com/patternfly/brainstorming-when-youre-in-a-funk-ca0882b5dc99",
+      "Why PatternFly?",
+    author: "Erin Donehoo",
+    length: "5 min read",
+    URL: "https://medium.com/patternfly/why-patternfly-26f65e21bdbd",
     // Use resize:fit:600 in URL
     imageURL:
-      "https://miro.medium.com/v2/resize:fit:600/format:webp/0*yX6KLyk2WGv5u2m8",
+      "https://miro.medium.com/v2/resize:fit:600/format:webp/1*xohZjJ1XyTwNP4lvjCBGbA.png",
   },
   post4: {
     title: "PatternFly component groups grow!",
@@ -34,6 +34,6 @@ export const featuredPostsData = {
     URL: "https://medium.com/patternfly/patternfly-component-groups-grow-90ac8df4a83e",
     // Use resize:fit:600 in URL
     imageURL:
-      "https://miro.medium.com/v2/resize:fit:600/format:webp/0*j9kT2OT7NJuKJRwX",
+      "https://miro.medium.com/v2/resize:fit:600/format:webp/0*fSEHqMin_tmdsiM4",
   },
 };
