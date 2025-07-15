@@ -3,6 +3,97 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.4.0-alpha.242 (2025-07-15)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 1.4.0-alpha.241 (2025-07-15)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 1.4.0-alpha.240 (2025-07-15)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 1.4.0-alpha.239 (2025-07-14)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 1.4.0-alpha.238 (2025-07-14)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 1.4.0-alpha.237 (2025-07-10)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 1.4.0-alpha.236 (2025-07-08)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 1.4.0-alpha.235 (2025-07-08)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 1.4.0-alpha.234 (2025-07-03)
+
+
+### Bug Fixes
+
+* **Lockfile:** Remove PF deps from ChatBot ([#4691](https://github.com/patternfly/patternfly-org/issues/4691)) ([634dc21](https://github.com/patternfly/patternfly-org/commit/634dc2173b888301ede556c19db2ff02294cb503))
+
+
+
+
+
+# 1.4.0-alpha.233 (2025-07-03)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 1.4.0-alpha.232 (2025-07-03)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
 # 1.4.0-alpha.231 (2025-07-03)
 
 **Note:** Version bump only for package @patternfly/ast-helpers
