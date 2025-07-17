@@ -88,7 +88,7 @@ The following list highlights opt-in requirements and links to examples. Unless 
     - **Requires opt-in.**
     - **Example:** All [tree view](/components/tree-view) examples and demos, which have opted in. 
 
-- Table
+- Table (beta)
     - **Requires opt-in.**
     - **Example:** [Expandable table](/components/table#expandable) and [compound expandable table](/components/table/#compound-expandable), which have both opted in.
     - **Notes:** 
@@ -96,7 +96,7 @@ The following list highlights opt-in requirements and links to examples. Unless 
         - To prevent possible visual issues with [expandable](/components/table#expandable) and [compound expandable tables](/components/table#compound-expandable), ensure that your implementation aligns with our currently recommended structure. In your table's code: 
             - `<Table>` must have `isExpandable` passed to it.
             - Any `<Tbody>` containing expandable rows must have `isExpanded` logic.
-            - Any `<Tr>` that acts as a "control row" (for normal expandable tables) or has the `isControlRow` prop (for compound expansion tables) must have `isContentExpanded` logic (this logic should match the `isExpanded` logic being passed to other sub-components).
+            - Any `<Tr>` that acts as a "control row" (for normal expandable tables) or has the `isControlRow` prop (for compound expansion tables) must have `isContentExpanded` logic. This logic should match the `isExpanded` logic being passed to other sub-components.
             - Any `<Tr>` that expands/collapses and contains the expandable content must have `isExpanded` logic (this should always have been the case in order for expansion to work).
             - Any `<Td>` within an expandable `<Tr>` must wrap any content in an `ExpandableRowContent`.
             - The basic structure, which is used in our expandable and compound expandable examples should resemble this: 
