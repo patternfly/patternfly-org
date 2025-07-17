@@ -96,19 +96,19 @@ The following list highlights opt-in requirements and links to examples. Unless 
         - To prevent possible visual issues with [expandable](/components/table#expandable) and [compound expandable tables](/components/table#compound-expandable), ensure that your implementation aligns with our currently recommended structure. In your table's code: 
             - `<Table>` must have `isExpandable` passed to it.
             - Any `<Tbody>` containing expandable rows must have `isExpanded` logic.
-            - Any `<Tr>` that acts as a "control row" (for normal expandable tables) or has the `isControlRow` prop (for compound expansion tables) must have `isExpanded` logic.
-            - Any `<Tr>` that expands/collapses and contains the expandable content must have `isExpandable` passed to it, in addition to `isExpanded` logic.
+            - Any `<Tr>` that acts as a "control row" (for normal expandable tables) or has the `isControlRow` prop (for compound expansion tables) must have `isContentExpanded` logic (this logic should match the `isExpanded` logic being passed to other sub-components).
+            - Any `<Tr>` that expands/collapses and contains the expandable content must have `isExpanded` logic (this should always have been the case in order for expansion to work).
             - Any `<Td>` within an expandable `<Tr>` must wrap any content in an `ExpandableRowContent`.
             - The basic structure, which is used in our expandable and compound expandable examples should resemble this: 
 
                 ``` 
                 <Table isExpandable> // if opting into animations, pass the hasAnimations prop or run the enable-animations codemods to auto-apply the prop
-                  ...Thead...
-                  <Tbody isExpanded={...logic for checking for expansion}>
-                    <Tr isExpanded={...logic for checking for expansion}> // for compound expandable, pass isControlRow as well
+                  ...Thead content...
+                  <Tbody isExpanded={...logic for checking for expansion...}>
+                    <Tr isContentExpanded={...logic for checking for expansion...}> // for compound expandable, pass isControlRow as well
                       ..."control row" content...
                     </Tr>
-                    <Tr isExpandable isExpanded={...logic for checking if expanded...}>
+                    <Tr isExpanded={...logic for checking for expansion...}>
                       <Td>
                         <ExpandableRowContent>
                           ...the content to display for the cell...
