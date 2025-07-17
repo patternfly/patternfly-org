@@ -8,6 +8,8 @@ source: development-guide
 
 We try to support animations by default in our components, but&mdash;to avoid introducing breaking changes&mdash;some animations require you to manually opt in. In order to function properly, opt-in animations require additional updates to your codebase. Depending on how your testing is set up, opt-in animation could cause test failures, so you must manually configure them appropriately.
 
+**Note:** In some edge cases, resource-intensive pages can cause browser memory issues where animations will fail to run correctly. For example, animated spinners are particularly memory intensive, so adding multiple spinners to a page might consume too much memory and disable all animations. 
+
 The following components contain opt-in animations. To understand the opt-in implementation, view the linked example code.
 
 - Alert (within alert groups): [Example](/components/alert/#dynamic-alert-groups) 
@@ -16,8 +18,8 @@ The following components contain opt-in animations. To understand the opt-in imp
 - Navigation (expandable): [Example](/components/navigation#expandable)  
 - Notification badge: [Example](/components/notification-badge/#with-animation)
 - Search input (expandable): [Example](/components/search-input#with-expandable-button)
-- Table (expandable): [Example](/components/table/#expandable)
-- Table (compound expandable): [Example](/components/table/#compound-expandable)
+- Table (expandable): [Example](/components/table/#expandable) (in beta)
+- Table (compound expandable): [Example](/components/table/#compound-expandable) (in beta)
 - Tabs (HTML-only implementations): [Example](/components/tabs#animate-current-tab-accent)
 - Tree view: [Example](/components/tree-view/) (all examples) 
 

@@ -73,7 +73,7 @@ These principles guide the use of motion in PatternFly and align with our [brand
 
 PatternFly components support motion in the form of **micro animations**, which are small, unobtrusive, and often understated. These animations serve specific purposes within a UI, and are designed to be subtle and complementary. To ensure an accessible experience, every animation adapts to and respects a user's system-level settings for reduced motion.
 
-While many components feature animations by default, there are [opt-in animations](/development guide#opt-in-animations) that require manual configuration. If you're interested in implementing motion outside of what we support by default, you can use [our motion tokens](/development-guide#motion-tokens) to create a custom animation for your specific scenario. Take care to stay aligned with our motion principles. 
+While many components feature animations by default, there are [opt-in animations](/development guide#opt-in-animations) that require manual configuration. If you're interested in implementing motion outside of what we support by default, you can use [our motion tokens](/design-foundations/motion/development-guide#motion-tokens) to create a custom animation for your specific scenario. Take care to stay aligned with our motion principles. 
 
 ### Anatomy of an animation 
 An animation is composed of 4 elements: 
@@ -138,7 +138,7 @@ This can be observed in the following components:
 - [Navigation (expandable)](/components/navigation#expandable)  
 - [Search input (expandable)](/components/search-input#with-expandable-button) 
 - [Tree view](/components/tree-view) 
-- Table: [Expandable table](/components/table#expandable) and [compound expandable table](/components/table#compound-expandable) 
+- Table (in beta): [Expandable table](/components/table#expandable) and [compound expandable table](/components/table#compound-expandable) 
 
 #### Feedback
 
