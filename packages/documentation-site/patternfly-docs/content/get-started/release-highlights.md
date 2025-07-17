@@ -47,7 +47,7 @@ This update is non-breaking, and PatternFly 6 will continue to support React 17 
 
 As we progress in our effort to integrate motion design across PatternFly components, we added the following new animations in this release. To provide a holistic view of our animated components, we also put together [an interactive animations demo](/design-foundations/motion/react-demos), which we will continue to update as we add additional animation support.   
 
-**Note:** In some edge cases, the browser can deactivate animations due to memory overload. For example, animated spinners are particularly memory intensive, so components including multiple spinners are more likely to consume a lot of memory and disable all animations. 
+**Note:** In some edge cases, resource-intensive pages can cause browser memory issues where animations will fail to run correctly. For example, animated spinners are particularly memory intensive, so adding multiple spinners to a page might consume too much memory and disable all animations. 
 
 #### enable-animations codemods
 
