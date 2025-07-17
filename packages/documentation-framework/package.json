@@ -72,10 +72,10 @@
     "webpack-merge": "5.8.0"
   },
   "peerDependencies": {
-    "@patternfly/patternfly": "^6.3.0-prerelease.36",
-    "@patternfly/react-code-editor": "^6.3.0-prerelease.27",
-    "@patternfly/react-core": "^6.3.0-prerelease.27",
-    "@patternfly/react-table": "^6.3.0-prerelease.27",
+    "@patternfly/patternfly": "^6.3.0-prerelease.40",
+    "@patternfly/react-code-editor": "^6.3.0-prerelease.32",
+    "@patternfly/react-core": "^6.3.0-prerelease.32",
+    "@patternfly/react-table": "^6.3.0-prerelease.32",
     "react": "^17.0.0 || ^18.0.0",
     "react-dom": "^17.0.0 || ^18.0.0"
   }
