@@ -51,7 +51,9 @@ As we progress in our effort to integrate motion design across PatternFly compon
 
 #### enable-animations codemods
 
-We have also created an [enable-animations codemod](https://github.com/patternfly/pf-codemods/tree/main/packages/eslint-plugin-pf-codemods/src/rules/v6/enableAnimations), which adds the `hasAnimations` prop to components that require opt-in animations. Keep in mind that, depending on your codebase, this codemod could introduce breaking changes that require further attention.
+We have also created an [enable-animations codemod](https://github.com/patternfly/pf-codemods/tree/main/packages/eslint-plugin-pf-codemods/src/rules/v6/enableAnimations), which adds the `hasAnimations` prop to components that require opt-in animations. 
+
+Keep in mind that, depending on your codebase, this codemod could introduce breaking changes that require further attention. In particular, when you run the codemod you will be asked whether you want to opt into animations for table components, or just for the react-core package.
 
 To enable the optional animations run the following command:
 
