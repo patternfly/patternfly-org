@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 6.15.3 (2025-07-21)
+
+
+### Bug Fixes
+
+* **docs-framework:** updates to theme switcher menu/icons ([#4710](https://github.com/patternfly/patternfly-org/issues/4710)) ([a62b4c4](https://github.com/patternfly/patternfly-org/commit/a62b4c4262f592865b5d7144357c8e3dd2a39993))
+
+
+
+
+
 ## 6.15.2 (2025-07-21)
 
 **Note:** Version bump only for package @patternfly/documentation-framework
