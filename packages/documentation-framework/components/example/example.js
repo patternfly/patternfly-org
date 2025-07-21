@@ -6,6 +6,7 @@ import {
   Flex,
   CodeBlockCode,
   debounce,
+  Icon,
   Label,
   Switch,
   Select,
@@ -87,7 +88,7 @@ const FullScreenThemeSelector = () => {
           ref={toggleRef}
           onClick={() => setIsThemeSelectOpen(!isThemeSelectOpen)}
           isExpanded={isThemeSelectOpen}
-          icon={getThemeIcon(themeMode)}
+          icon={<Icon size="lg">{getThemeIcon(themeMode)}</Icon>}
           aria-label={`Theme selection, current: ${getThemeDisplayText(themeMode)}`}
         />
       )}

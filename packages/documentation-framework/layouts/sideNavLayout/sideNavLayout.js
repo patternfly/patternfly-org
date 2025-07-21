@@ -9,6 +9,7 @@ import {
   DropdownGroup,
   DropdownList,
   Divider,
+  Icon,
   Masthead,
   MastheadToggle,
   MastheadMain,
@@ -168,7 +169,7 @@ const HeaderTools = ({
                     ref={toggleRef}
                     onClick={() => setIsThemeSelectOpen(!isThemeSelectOpen)}
                     isExpanded={isThemeSelectOpen}
-                    icon={getThemeIcon(themeMode)}
+                    icon={<Icon size="lg">{getThemeIcon(themeMode)}</Icon>}
                     aria-label={`Theme selection, current: ${getThemeDisplayText(themeMode)}`}
                   />
                 )}
