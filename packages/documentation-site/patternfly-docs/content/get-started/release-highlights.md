@@ -7,7 +7,10 @@ import './get-started.css';
 import { Divider, Timestamp } from '@patternfly/react-core'; 
 
 <Timestamp date={new Date(2025, 6)}>July 2025</Timestamp>
+
 ## PatternFly 6.3
+
+For the Q3 2025 PatternFly release, we completed our initiative to support React 19 across PatternFly and made significant progress towards finalizing our component animations. We also added new ChatBot features, new CLI guidelines, and updated docs for our AI principles and motion guidelines. Updates for these key areas can be found here, in this quarter's release highlights.
 
 ### Promoted package versions
 The following packages were promoted with this release. Outside of our primary initiatives for this release, we addressed reported bugs and continued to enhance PatternFly with new features, as detailed in the linked changelogs. 
@@ -187,6 +190,10 @@ We also fixed reported bugs, which require no updates on your end.
 ### CLI experience guidelines
 
 With the help of a community contribution, we now have [a CLI handbook](/developer-resources/cli-handbook) that offers guidance for designing command-line interface experiences. This resource outlines unique accessibility considerations for CLIs, as well as writing guidelines for crafting well-designed messages, documentation, and interactive CLI experiences.
+
+### Motion guidelines
+
+We updated our [motion guidelines](/design-foundations/motion) to bring our docs up to date with our new component animations, document [motion patterns](/design-foundations/motion#motion-patterns) we're using, and expand the [motion development guide](/design-foundations/motion/development-guide) with additional details and instruction.
 
 ### What's next?
 
