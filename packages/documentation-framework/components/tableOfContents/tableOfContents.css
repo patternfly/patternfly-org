@@ -39,7 +39,6 @@
 
 .ws-toc .pf-v6-c-jump-links__main {
   scrollbar-width: none;
-  margin-bottom: var(--jump-links-main-margin-bottom);
 }
 
 /* Hide TOC scrollbar Chrome, Safari & Opera */
@@ -71,4 +70,10 @@
 .ws-toc-item .pf-m-link {
   text-wrap: wrap;
   text-align: left;
+}
+
+@media (min-width: 1451px) {
+  .ws-toc .pf-v6-c-jump-links__main {
+    margin-bottom: var(--jump-links-main-margin-bottom);
+  }
 }
