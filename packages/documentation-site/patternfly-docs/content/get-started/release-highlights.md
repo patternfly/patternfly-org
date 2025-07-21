@@ -6,6 +6,193 @@ section: get-started
 import './get-started.css';
 import { Divider, Timestamp } from '@patternfly/react-core'; 
 
+<Timestamp date={new Date(2025, 6)}>July 2025</Timestamp>
+## PatternFly 6.3
+
+### Promoted package versions
+The following packages were promoted with this release. Outside of our primary initiatives for this release, we addressed reported bugs and continued to enhance PatternFly with new features, as detailed in the linked changelogs. 
+
+- patternfly/patternfly ([changelog](https://github.com/patternfly/patternfly/releases/tag/v6.3.0))
+    - [@patternfly/patternfly@6.3.0](https://www.npmjs.com/package/@patternfly/patternfly/v/6.3.0)
+- patternfly/react ([changelog](https://github.com/patternfly/patternfly-react/releases/tag/v6.3.0))
+    - [@patternfly/react-charts@8.3.0](https://www.npmjs.com/package/@patternfly/react-charts/v/8.3.0)
+    - [@patternfly/react-code-editor@6.3.0](https://www.npmjs.com/package/@patternfly/react-code-editor/v/6.3.0)
+    - [@patternfly/react-core@6.3.0](https://www.npmjs.com/package/@patternfly/react-core/v/6.3.0)
+    - [@patternfly/react-docs@7.3.0](https://www.npmjs.com/package/@patternfly/react-docs/v/7.3.0)
+    - [@patternfly/react-drag-drop@6.3.0](https://www.npmjs.com/package/@patternfly/react-drag-drop/v/6.3.0)
+    - [@patternfly/react-icons@6.3.0](https://www.npmjs.com/package/@patternfly/react-icons/v/6.3.0)
+    - [@patternfly/react-styles@6.3.0](https://www.npmjs.com/package/@patternfly/react-styles/v/6.3.0)
+    - [@patternfly/react-table@6.3.0](https://www.npmjs.com/package/@patternfly/react-table/v/6.3.0)
+    - [@patternfly/react-templates@6.3.0](https://www.npmjs.com/package/@patternfly/react-templates/v/6.3.0)
+    - [@patternfly/react-tokens@6.3.0](https://www.npmjs.com/package/@patternfly/react-tokens/v/6.3.0)
+- PatternFly extensions 
+    - [@patternfly/chatbot@6.3.0](https://www.npmjs.com/package/@patternfly/chatbot/v/6.3.0) ([changelog](https://github.com/patternfly/chatbot/releases/tag/v6.3.0))
+    - [@patternfly/quickstarts@6.3.0](https://www.npmjs.com/package/@patternfly/quickstarts/v/6.3.0) ([changelog](https://github.com/patternfly/patternfly-quickstarts/releases/tag/v6.3.0))
+    - [@patternfly/react-catalog-view-extension@6.1.0](https://www.npmjs.com/package/@patternfly/react-catalog-view-extension/v/6.1.0) ([changelog](https://github.com/patternfly/react-catalog-view/releases/tag/v6.1.0))
+    - [@patternfly/react-component-groups@6.3.0](https://www.npmjs.com/package/@patternfly/react-component-groups/v/6.3.0) ([changelog](https://github.com/patternfly/react-component-groups/releases/tag/v6.3.0))
+    - [@patternfly/react-console@6.1.0](https://www.npmjs.com/package/@patternfly/react-console/v/6.31.0) ([changelog](https://github.com/patternfly/react-console/releases/tag/v6.1.0))
+    - [@patternfly/react-data-view@6.3.0](https://www.npmjs.com/package/@patternfly/react-data-view/v/6.3.0) ([changelog](https://github.com/patternfly/react-data-view/releases/tag/v6.3.0))
+    - [@patternfly/react-log-viewer@6.3.0](https://www.npmjs.com/package/@patternfly/react-log-viewer/v/6.3.0) ([changelog](https://github.com/patternfly/react-log-viewer/releases/tag/v6.3.0))
+    - [@patternfly/react-topology@6.3.0](https://www.npmjs.com/package/@patternfly/react-topology/v/6.3.0) ([changelog](https://github.com/patternfly/react-topology/releases/tag/v6.3.0))
+    - [@patternfly/react-user-feedback@6.2.0](https://www.npmjs.com/package/@patternfly/react-user-feedback/v/6.2.0) ([changelog](https://github.com/patternfly/react-user-feedback/releases/tag/v6.2.0))
+    - [@patternfly/react-virtualized-extension@6.1.0](https://www.npmjs.com/package/@patternfly/react-virtualized-extension/v/6.1.0) ([changelog](https://github.com/patternfly/react-virtualized-extension/releases/tag/v6.1.0))
+
+### React 19 support
+
+PatternFly now includes support for React 19 across all components and extensions, enabling you to benefit from  new React features and performance enhancements.
+
+This update is non-breaking, and PatternFly 6 will continue to support React 17 and 18 in line with our support policy. In future releases, we plan to more fully leverage React 19's capabilities to enhance existing PatternFly features and introduce new ones.
+
+### Component animations
+
+As we progress in our effort to integrate motion design across PatternFly components, we added the following new animations in this release. To provide a holistic view of our animated components, we also put together [an interactive animations demo](/design-foundations/motion/react-demos), which we will continue to update as we add additional animation support.   
+
+**Note:** Browsers may slow down or deactivate animations on resource-intensive pages. This can occur when continuous animations (like multiple spinners) are active at the same time as other demanding tasks (like frequent data polling), which can overload the browser's processing capacity.
+
+#### enable-animations codemods
+
+We have also created an [enable-animations codemod](https://github.com/patternfly/pf-codemods/tree/main/packages/eslint-plugin-pf-codemods/src/rules/v6/enableAnimations), which adds the `hasAnimations` prop to components that require opt-in animations. 
+
+Keep in mind that, depending on your codebase, this codemod could introduce breaking changes that require further attention. In particular, when you run the codemod you will be asked whether you want to opt into animations for table components, or just for the react-core package.
+
+To enable the optional animations run the following command:
+
+`npx @patternfly/pf-codemods --only enable-animations /path-to-src`
+
+#### Expansion 
+
+We added expansion animations that apply a fade-in and slide-in transition as hidden content sections are expanded in a variety of components. A similar, reversed animation applies when expanded sections are collapsed.
+
+The following list highlights opt-in requirements and links to examples. Unless an animation is marked with "Requires opt-in," it will be enabled by default. 
+
+- Accordion 
+    - **Example:** All [accordions](/components/accordion) in our examples and demos.
+
+- Dual list selector with tree
+    - **Requires opt-in.**
+    - **Example:** [Dual list selector with tree](/components/dual-list-selector#with-tree), which has opted in.
+
+- Expandable section 
+    - **Example:** All [expandable sections](/components/expandable-section) in our examples and demos.
+    - **Note:** When using [detached expandable sections](/components/expandable-section#detached), you will need to use the new `direction` prop to set the direction of the expansion animation.
+
+- Form
+    - **Requires opt-in.**
+    - **Example:** [Form field groups](/components/forms/form#field-groups), which have opted in.  
+
+- Navigation
+    - **Example:** [Expandable navigation examples](/components/navigation#expandable).
+    - **Note:** This animation was introduced in our 6.2 release, but performance issues were reported. For this release, we reworked the animation to resolve these issues.
+
+- Search input   
+    - **Requires opt-in.**
+    - **Example:** [Expandable search input](/components/search-input#with-expandable-button), which has opted in.
+
+- Tree view
+    - **Requires opt-in.**
+    - **Example:** All [tree view](/components/tree-view) examples and demos, which have opted in. 
+
+- Table (in beta)
+    - **Requires opt-in.**
+    - **Example:** [Expandable table](/components/table#expandable) and [compound expandable table](/components/table/#compound-expandable), which have both opted in.
+    - **Notes:** 
+        - This release does not include expansion animations for tree tables.
+        - To prevent possible visual issues with [expandable](/components/table#expandable) and [compound expandable tables](/components/table#compound-expandable), ensure that your implementation aligns with our currently recommended structure. In your table's code: 
+            - `<Table>` must have `isExpandable` passed to it.
+            - Any `<Tbody>` containing expandable rows must have `isExpanded` logic.
+            - Any `<Tr>` that acts as a "control row" (for normal expandable tables) or has the `isControlRow` prop (for compound expansion tables) must have `isContentExpanded` logic. This logic should match the `isExpanded` logic being passed to other sub-components.
+            - Any `<Tr>` that expands/collapses and contains the expandable content must have `isExpanded` logic (this should always have been the case in order for expansion to work).
+            - Any `<Td>` within an expandable `<Tr>` must wrap any content in an `ExpandableRowContent`.
+            - The basic structure, which is used in our expandable and compound expandable examples should resemble this: 
+
+                ``` 
+                <Table isExpandable> // if opting into animations, pass the hasAnimations prop or run the enable-animations codemods to auto-apply the prop
+                  ...Thead content...
+                  <Tbody isExpanded={...logic for checking for expansion...}>
+                    <Tr isContentExpanded={...logic for checking for expansion...}> // for compound expandable, pass isControlRow as well
+                      ..."control row" content...
+                    </Tr>
+                    <Tr isExpanded={...logic for checking for expansion...}>
+                      <Td>
+                        <ExpandableRowContent>
+                          ...the content to display for the cell...
+                        </ExpandableRowContent>
+                      </Td>
+                    </Tr>
+                  </Tbody>
+                </Table>
+                ```
+
+#### Feedback 
+
+The following components contain animations that give users dynamic feedback, helping to communicate that an action has taken or will take place.  
+
+1.  Buttons
+    - **Animation:** When a button is clicked, the active state color ripples outward from the center of the button.
+    - **Example:** All buttons in our components, including in our [button examples and demos](/components/button).
+
+1. Helper text validation
+    - **Animation:** When an error occurs in an input that supports helper text (such as in the form and progress components), the helper text fades in as danger styles are applied. 
+    - **Example:** The [static text and dynamic status example](/components/helper-text/react-demos#static-text-and-dynamic-status) for helper text.
+
+1.  Form validation
+    - **Animation:** When an error occurs in a form field with validation, the component "jiggles" from side to side as danger styles are applied. 
+    - **Example:** The [validated form select](/components/forms/form-select#validated), [invalid text area](/components/forms/text-area#invalid), and [invalid text input](/components/forms/text-input#invalid) examples.
+
+1.  Menu toggle validation
+    - **Animation:** When an error occurs in a menu toggle with validation, the component "jiggles" from side to side as danger styles are applied. 
+    - **Example:** The [danger option in the select with validation](/components/menus/select#with-validation) example.
+
+1.  Progress
+    - **Animation:** When an error occurs in a progress bar, the component "jiggles" from side to side as danger styles are applied. 
+    - **Example:** The "Danger variant" option in our [progress helper text example](/components/progress#helper-text).
+
+1.  Tabs 
+    - **Requires opt-in for HTML-only implementations.**
+    - **Animation:** The bottom "active tab" line slides between tabs as they are selected.
+    - **Example:** All [default tabs](/components/tabs) in our examples and demos. This animation does not apply to boxed tabs.
+    - **Note:** To avoid a breaking change, this animation is opt-in for HTML-only implementations. To support this, view our [HTML guidance for animating the tab accent mark](/components/tabs#animate-current-tab-accent).
+
+##### Icons
+
+The following animations are unique to each icon and don't support any custom icons. For example, you cannot apply the favorite animation to any icon besides the favorite star. 
+
+1.  Favorite
+    - **Animation:** When a favorite button is clicked, the star "pulses" and fills with color.
+    - **Example:** All favorite buttons in our examples and demos, including our [animated favorite button example](/components/button#favorite).
+
+1.  Hamburger menu 
+    - **Animation:** The middle bar of the hamburger icon transforms into an arrow to indicate whether the menu will expand or collapse when clicked. The behavior differs slightly for desktop and mobile views:
+        - **Desktop:** Both arrows appears on hover or keyboard focus as appropriate.
+        - **Mobile:** When the menu is expanded, a "collapse" arrow is displayed. When collapsed, an "expand" arrow appears on hover or focus.
+    - **Example:** All hamburger menu buttons in our examples and demos, including [our page examples](/components/page#vertical-navigation). 
+    - **Note:** This animation automatically occurs for hamburger menu buttons in mastheads, but not elsewhere. You can view implementation details in the [hamburger button example](/components/button#hamburger), which demonstrate how to set up the animation logic outside of mastheads.
+
+1.  Settings
+    - **Animation:** When a settings button or menu toggle receives hover or keyboard focus, the cog rotates. When focus is lost, it rotates back to its original position.
+    - **Example:** All settings buttons and menu toggles in our examples and demos, including our [animated settings button example](/components/button#settings).
+
+### PatternFly AI
+
+We updated our high-level [AI principles and guidelines](/patternfly-ai/principles-and-guidelines) to expand guidance and improve the usability of this resource. We integrated community feedback and research to include new patterns and recommendations that have emerged from the increased use of AI features in products. As the design and implementation of AI features continue to evolve, so will this guiding resource.
+
+#### ChatBot
+
+We expanded our ChatBot extension with improvements identified in a recent usability study, including [editable messages](/patternfly-ai/chatbot/messages#user-messages) and [compact styles](/patternfly-ai/chatbot/overview/demo#compact-chatbot). We also added other requested features, such as [auto-scrolling for messages](/patternfly-ai/chatbot/messages/demo#message-auto-scrolling) (a community contribution!), [empty and error states for the chat history drawer](/patternfly-ai/chatbot/ui#drawer-with-search-and-new-chat-button), and [expandable code blocks](/patternfly-ai/chatbot/messages#user-messages)&mdash;to name a few.
+
+On the documentation side, there's a new ["Customizing messages" guide](/patternfly-ai/chatbot/customizing-messages) that provides guidance for using rehype plugins for advanced HTML customization. 
+
+We also fixed reported bugs, which require no updates on your end.
+
+### CLI experience guidelines
+
+With the help of a community contribution, we now have [a CLI handbook](/developer-resources/cli-handbook) that offers guidance for designing command-line interface experiences. This resource outlines unique accessibility considerations for CLIs, as well as writing guidelines for crafting well-designed messages, documentation, and interactive CLI experiences.
+
+### What's next?
+
+For the Q4 release of PatternFly, we look forward to sharing updates on our design guidelines audit, system-wide accessibility improvements, new extensions, and more. We'll share the next round of exciting news in a few months!
+
+<Divider /> 
 <Timestamp date={new Date(2025, 3)}>April 2025</Timestamp>
 
 ## PatternFly 6.2
@@ -17,25 +204,25 @@ For the Q2 2025 PatternFly release we made progress in a few of our key initiati
 The following packages were promoted with this release. Outside of our primary initiatives for this release, we addressed reported bugs and continued to enhance PatternFly with new features, as detailed in the linked changelogs. 
 
 - patternfly/patternfly ([changelog](https://github.com/patternfly/patternfly/releases/tag/v6.2.0))
-    - [@patternfly/patternfly@6.2.0](https://www.npmjs.com/package/@patternfly/patternfly)
+    - [@patternfly/patternfly@6.2.0](https://www.npmjs.com/package/@patternfly/patternfly/v/6.2.0)
 - patternfly/react ([changelog](https://github.com/patternfly/patternfly-react/releases/tag/v6.2.0))
-    - [@patternfly/react-charts@8.2.0](https://www.npmjs.com/package/@patternfly/react-charts)
-    - [@patternfly/react-code-editor@6.2.0](https://www.npmjs.com/package/@patternfly/react-code-editor)
-    - [@patternfly/react-core@6.2.0](https://www.npmjs.com/package/@patternfly/react-core)
-    - [@patternfly/react-drag-drop@6.2.0](https://www.npmjs.com/package/@patternfly/react-drag-drop)
-    - [@patternfly/icons@1.0.4](https://www.npmjs.com/package/@patternfly/icons)
-    - [@patternfly/react-styles@6.2.0](https://www.npmjs.com/package/@patternfly/react-styles)
-    - [@patternfly/react-table@6.2.0](https://www.npmjs.com/package/@patternfly/react-table)
-    - [patternfly/react-templates@6.2.0](https://www.npmjs.com/package/@patternfly/react-templates)
-    - [@patternfly/react-tokens@6.2.0](https://www.npmjs.com/package/@patternfly/react-tokens)
+    - [@patternfly/react-charts@8.2.0](https://www.npmjs.com/package/@patternfly/react-charts/v/8.2.0)
+    - [@patternfly/react-code-editor@6.2.0](https://www.npmjs.com/package/@patternfly/react-code-editor/v/6.2.0)
+    - [@patternfly/react-core@6.2.0](https://www.npmjs.com/package/@patternfly/react-core/v/6.2.0)
+    - [@patternfly/react-drag-drop@6.2.0](https://www.npmjs.com/package/@patternfly/react-drag-drop/v/6.2.0)
+    - [@patternfly/icons@1.0.4](https://www.npmjs.com/package/@patternfly/icons/v/1.0.4)
+    - [@patternfly/react-styles@6.2.0](https://www.npmjs.com/package/@patternfly/react-styles/v/6.2.0)
+    - [@patternfly/react-table@6.2.0](https://www.npmjs.com/package/@patternfly/react-table/v/6.2.0)
+    - [patternfly/react-templates@6.2.0](https://www.npmjs.com/package/@patternfly/react-templates/v/6.2.0)
+    - [@patternfly/react-tokens@6.2.0](https://www.npmjs.com/package/@patternfly/react-tokens/v/6.2.0)
 - PatternFly extensions 
-    - [@patternfly/chatbot@2.2.0](https://www.npmjs.com/package/@patternfly/chatbot) ([changelog](https://github.com/patternfly/chatbot/releases/tag/v2.2.0))
-    - [@patternfly/quickstarts@6.2.0](https://www.npmjs.com/package/@patternfly/quickstarts) ([changelog](https://github.com/patternfly/patternfly-quickstarts/releases/tag/v6.2.0))
-    - [@patternfly/react-catalog-view-extension@6.1.0](https://www.npmjs.com/package/@patternfly/react-catalog-view-extension) ([changelog](https://github.com/patternfly/react-catalog-view/releases/tag/v6.1.0))
-    - [@patternfly/react-component-groups@6.2.0](https://www.npmjs.com/package/@patternfly/react-component-groups) ([changelog](https://github.com/patternfly/react-component-groups/releases/tag/v6.2.0))
-    - [@patternfly/react-log-viewer@6.1.0](https://www.npmjs.com/package/@patternfly/react-log-viewer) ([changelog](https://github.com/patternfly/react-log-viewer/releases/tag/v6.1.0))
+    - [@patternfly/chatbot@2.2.0](https://www.npmjs.com/package/@patternfly/chatbot/v/2.2.0) ([changelog](https://github.com/patternfly/chatbot/releases/tag/v2.2.0))
+    - [@patternfly/quickstarts@6.2.0](https://www.npmjs.com/package/@patternfly/quickstarts/v/6.2.0) ([changelog](https://github.com/patternfly/patternfly-quickstarts/releases/tag/v6.2.0))
+    - [@patternfly/react-catalog-view-extension@6.1.0](https://www.npmjs.com/package/@patternfly/react-catalog-view-extension/v/6.1.0) ([changelog](https://github.com/patternfly/react-catalog-view/releases/tag/v6.1.0))
+    - [@patternfly/react-component-groups@6.2.0](https://www.npmjs.com/package/@patternfly/react-component-groups/v/6.2.0) ([changelog](https://github.com/patternfly/react-component-groups/releases/tag/v6.2.0))
+    - [@patternfly/react-log-viewer@6.1.0](https://www.npmjs.com/package/@patternfly/react-log-viewer/v/6.1.0) ([changelog](https://github.com/patternfly/react-log-viewer/releases/tag/v6.1.0))
 - [@patternfly/react-topology@6.2.0](https://www.npmjs.com/package/@patternfly/react-topology) ([changelog](https://github.com/patternfly/react-topology/releases/tag/v6.2.0))
-    - [@patternfly/react-user-feedback@6.1.0](https://www.npmjs.com/package/@patternfly/react-user-feedback) ([changelog](https://github.com/patternfly/react-user-feedback/releases/tag/v6.1.0))
+    - [@patternfly/react-user-feedback@6.1.0](https://www.npmjs.com/package/@patternfly/react-user-feedback/v/6.1.0) ([changelog](https://github.com/patternfly/react-user-feedback/releases/tag/v6.1.0))
 
 ### PatternFly 6 enablement
 
@@ -53,17 +240,17 @@ With this release, 3 components now support animations:
 
 1. [Alert](/components/alert)   
     - **Animation type:** Opt-in.
-    - **Animation behavior:** For alerts within a group, there's a slide-in animation as new alerts are received and a slide-out animation as alerts are dismissed.
-    - **Example:** To visualize the motion behavior, you can interact with our website examples, which have opted in to animations.  
+    - **Animation:** For alerts within a group, there's a slide-in animation as new alerts are received and a slide-out animation as alerts are dismissed.
+    - **Example:** To visualize the motion, you can interact with our website examples, which have opted in to animations.  
     - **Note:** By default, alert animations are opt-in and will only apply to alerts within an alert group. Opting into animations could require test updates. To ensure your test pass, the quickest solution is to set `hasAnimations` to `false`. Additionally, when alerts are dynamically added to a group, you must ensure that new alerts are prepended to the alert group list, rather than appended to the end of it.  
 1. [Navigation](/components/navigation) 
     - **Animation type:** Opt-out.
-    - **Animation behavior:** For expandable navigation items, the sub-menu fades in and out as navigation items are expanded and collapsed.
-    - **Example:** As an opt-out animation, you can see this motion behavior by default across expandable navigation items.
+    - **Animation:** For expandable navigation items, the sub-menu fades in and out as navigation items are expanded and collapsed.
+    - **Example:** As an opt-out animation, you can see this motion by default across expandable navigation items.
 1. [Notification badge](/components/notification-badge)
     - **Animation type:** Opt-in.
-    - **Animation behavior:** When the animation is triggered (for example, when a new notification arrives), the bell icon has a "ring" animation.
-    - **Example:** To illustrate the motion behavior of this animation, we added a [notification badge "With animations" example](/components/notification-badge#with-animation). 
+    - **Animation:** When the animation is triggered (for example, when a new notification arrives), the bell icon has a "ring" animation.
+    - **Example:** To illustrate the motion of this animation, we added a [notification badge "With animations" example](/components/notification-badge#with-animation). 
 
 ### React 19 support
 
@@ -145,22 +332,22 @@ As a quick follow up to our last release, this update publishes the new data vie
 
 ### Promoted package versions
 - patternfly/patternfly ([changelog](https://github.com/patternfly/patternfly/releases/tag/v6.1.0))
-    - [@patternfly/patternfly@6.1.0](https://www.npmjs.com/package/@patternfly/patternfly)
+    - [@patternfly/patternfly@6.1.0](https://www.npmjs.com/package/@patternfly/patternfly/v/6.1.0)
 - patternfly/react ([changelog](https://github.com/patternfly/patternfly-react/releases/tag/v6.1.0))
-    - [@patternfly/react-charts@8.1.0](https://www.npmjs.com/package/@patternfly/react-charts)
-    - [@patternfly/react-code-editor@6.1.0](https://www.npmjs.com/package/@patternfly/react-code-editor)
-    - [@patternfly/react-core@6.1.0](https://www.npmjs.com/package/@patternfly/react-core)
-    - [@patternfly/react-drag-drop@6.1.0](https://www.npmjs.com/package/@patternfly/react-drag-drop)
-    - [@patternfly/react-styles@6.1.0](https://www.npmjs.com/package/@patternfly/react-styles)
-    - [@patternfly/react-table@6.1.0](https://www.npmjs.com/package/@patternfly/react-table)
-    - [patternfly/react-templates@6.1.0](https://www.npmjs.com/package/@patternfly/react-templates)
-    - [@patternfly/react-tokens@6.1.0](https://www.npmjs.com/package/@patternfly/react-tokens)
+    - [@patternfly/react-charts@8.1.0](https://www.npmjs.com/package/@patternfly/react-charts/v/8.1.0)
+    - [@patternfly/react-code-editor@6.1.0](https://www.npmjs.com/package/@patternfly/react-code-editor/v/6.1.0)
+    - [@patternfly/react-core@6.1.0](https://www.npmjs.com/package/@patternfly/react-core/v/6.1.0)
+    - [@patternfly/react-drag-drop@6.1.0](https://www.npmjs.com/package/@patternfly/react-drag-drop/v/6.1.0)
+    - [@patternfly/react-styles@6.1.0](https://www.npmjs.com/package/@patternfly/react-styles/v/6.1.0)
+    - [@patternfly/react-table@6.1.0](https://www.npmjs.com/package/@patternfly/react-table/v/6.1.0)
+    - [patternfly/react-templates@6.1.0](https://www.npmjs.com/package/@patternfly/react-templates/v/6.1.0)
+    - [@patternfly/react-tokens@6.1.0](https://www.npmjs.com/package/@patternfly/react-tokens/v/6.1.0)
 - PatternFly extensions 
-    - [@patternfly/react-component-groups@6.1.0](https://www.npmjs.com/package/@patternfly/react-component-groups) ([changelog](https://github.com/patternfly/react-component-groups/releases/tag/v6.1.0))
-    - [@patternfly/react-log-viewer@6.1.0](https://www.npmjs.com/package/@patternfly/react-log-viewer) ([changelog](https://github.com/patternfly/react-log-viewer/releases/tag/v6.1.0))
-    - [@patternfly/react-topology@6.1.0](https://www.npmjs.com/package/@patternfly/react-topology) ([changelog](https://github.com/patternfly/react-topology/releases/tag/v6.1.0))
-    - [@patternfly/quickstarts@6.1.0](https://www.npmjs.com/package/@patternfly/quickstarts) ([changelog](https://github.com/patternfly/patternfly-quickstarts/releases/tag/v6.1.0))
-    - [@patternfly/chatbot@2.1.0](https://www.npmjs.com/package/@patternfly/chatbot) ([changelog](https://github.com/patternfly/chatbot/releases/tag/v2.1.0))
+    - [@patternfly/react-component-groups@6.1.0](https://www.npmjs.com/package/@patternfly/react-component-groups/v/6.1.0) ([changelog](https://github.com/patternfly/react-component-groups/releases/tag/v6.1.0))
+    - [@patternfly/react-log-viewer@6.1.0](https://www.npmjs.com/package/@patternfly/react-log-viewer/v/6.1.0) ([changelog](https://github.com/patternfly/react-log-viewer/releases/tag/v6.1.0))
+    - [@patternfly/react-topology@6.1.0](https://www.npmjs.com/package/@patternfly/react-topology/v/6.1.0) ([changelog](https://github.com/patternfly/react-topology/releases/tag/v6.1.0))
+    - [@patternfly/quickstarts@6.1.0](https://www.npmjs.com/package/@patternfly/quickstarts/v/6.1.0) ([changelog](https://github.com/patternfly/patternfly-quickstarts/releases/tag/v6.1.0))
+    - [@patternfly/chatbot@2.1.0](https://www.npmjs.com/package/@patternfly/chatbot/v/2.1.0) ([changelog](https://github.com/patternfly/chatbot/releases/tag/v2.1.0))
 
 ### Component updates 
 
