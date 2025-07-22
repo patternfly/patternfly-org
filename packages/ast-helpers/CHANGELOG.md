@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.4.0-alpha.251 (2025-07-22)
+
+
+### Bug Fixes
+
+* **TableOfContents:** Adjust height on mobile ([#4713](https://github.com/patternfly/patternfly-org/issues/4713)) ([a6365a0](https://github.com/patternfly/patternfly-org/commit/a6365a0ab8f7d8572cc83f65f6a43abf70705556))
+
+
+
+
+
 # 1.4.0-alpha.250 (2025-07-21)
 
 **Note:** Version bump only for package @patternfly/ast-helpers
