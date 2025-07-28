@@ -1,7 +1,7 @@
 ---
 id: Motion
 section: design-foundations
-source: react-demos
+source: demo
 ---
 
 import { Fragment, useRef, useState, useEffect, useCallback } from 'react';
@@ -43,7 +43,7 @@ import emptyStateLogo from './Summit-collage-hybrid-cloud-dark-RH.png'
 
 
 
-## Demos
+## Demo
 
 Explore the current state of [PatternFly component animations](https://github.com/orgs/patternfly/projects/7/views/66).
 
