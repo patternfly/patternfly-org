@@ -33,6 +33,8 @@ module.exports = (sourceMD, sourceProps, sourceFunctionDocs) => {
 
     sourceMD(path.join(contentBase, 'PatternFly-AI/**/*.md'), 'PatternFly-AI');
 
+    sourceMD(path.join(contentBase, 'design-guidelines/**/Animations/*.md'), 'demo');
+
     // Gallery pages
     const galleryBase = path.join(__dirname, "../patternfly-docs/pages");
     sourceMD(path.join(galleryBase, "landing-pages/**/*.md"), "landing-pages");
@@ -222,10 +224,10 @@ module.exports = (sourceMD, sourceProps, sourceFunctionDocs) => {
       "package.json",
       "patternfly-docs/content/extensions/data-view"
     );
-  
+
   sourceProps(path.join(reactDataViewPath, "/**/*.tsx"), reactPropsIgnore);
   sourceMD(path.join(reactDataViewContentBase, "/examples/**/*.md"), "react");
-  
+
   // User feedback extension
   const reactUserFeedbackPath = require
     .resolve("@patternfly/react-user-feedback/package.json")

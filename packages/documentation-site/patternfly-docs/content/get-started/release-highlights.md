@@ -48,7 +48,7 @@ This update is non-breaking, and PatternFly 6 will continue to support React 17 
 
 ### Component animations
 
-As we progress in our effort to integrate motion design across PatternFly components, we added the following new animations in this release. To provide a holistic view of our animated components, we also put together [an interactive animations demo](/design-foundations/motion/react-demos), which we will continue to update as we add additional animation support.   
+As we progress in our effort to integrate motion design across PatternFly components, we added the following new animations in this release. To provide a holistic view of our animated components, we also put together [an interactive animations demo](/design-foundations/motion/demo), which we will continue to update as we add additional animation support.   
 
 **Note:** Browsers may slow down or deactivate animations on resource-intensive pages. This can occur when continuous animations (like multiple spinners) are active at the same time as other demanding tasks (like frequent data polling), which can overload the browser's processing capacity.
 
