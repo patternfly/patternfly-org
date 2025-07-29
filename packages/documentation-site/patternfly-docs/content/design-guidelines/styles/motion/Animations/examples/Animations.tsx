@@ -104,15 +104,7 @@ export const GuidedTourSteps: GuidedTourStep[] = [
   {
     stepId: 'navToggle',
     header: <div>Buttons: Hamburger menu</div>,
-    content: (
-      <>
-        <Content component="p">Hover over the hamburger menu to see an arrow indicator appear.</Content>
-        <Content component="p">
-          Click the button and watch the arrow's direction change as the menu opens and closes, always showing you what
-          will happen next.
-        </Content>
-      </>
-    ),
+    content: '===== This content is customized ======',
     spotlightSelector: '#nav-toggle'
   },
   {
@@ -463,12 +455,29 @@ const AnimationsPage: FunctionComponent = () => {
             </Content>
           ) : null}
           <Content component="p">
-            {`Click ${isMobile ? 'the settings button' : 'it'} to see the new ripple effect we've added to all buttons.`}
+            {isMobile ?
+              'Click the settings button to see the cog icon rotate, as well as our new button ripple effect.' :
+              `Click it to see the new ripple effect we've added to all buttons.`
+            }
           </Content>
         </>
       );
     }
-
+    if (tourStep?.stepId === 'navToggle') {
+      setCustomStepContent(
+        <>
+          {!isMobile ? (
+            <Content component="p">
+              Hover over the hamburger menu to see an arrow indicator appear.
+            </Content>
+          ) : null}
+          <Content component="p">
+            {`Click the ${isMobile ? 'hamburger menu button' : 'button'} and watch the arrow's direction change as the menu opens and closes,
+            always showing you what will happen next.`}
+          </Content>
+        </>
+      );
+    }
     if (tourStep?.stepId === 'notificationBadge') {
       setCustomStepContent(
         <>

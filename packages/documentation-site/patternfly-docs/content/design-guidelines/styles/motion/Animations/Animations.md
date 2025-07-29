@@ -41,7 +41,7 @@ import emptyStateLogo from './Summit-collage-hybrid-cloud-dark-RH.png'
 
 
 ## Demo
-To see how our components can now use motion to provide clear feedback and improve usability, this demo guides you through a UI that contains a variety of motion updates, including animated alerts, icons, expansion, and more.
+Our components can now use motion to provide clear visual feedback to users, improving engagement and usability. To see our new animations in motion, take this interactive tour, which guides you through a UI that includes animated alerts, icons, expansion, and more.
 
 ### Animated UI
 
