@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.4.0-alpha.255 (2025-07-29)
+
+
+### Features
+
+* **docs:** add guided animation demo ([#4721](https://github.com/patternfly/patternfly-org/issues/4721)) ([75c3933](https://github.com/patternfly/patternfly-org/commit/75c3933b7204ff6c3f015614fe4d0985b28f2f64))
+
+
+
+
+
 # 1.4.0-alpha.254 (2025-07-29)
 
 **Note:** Version bump only for package @patternfly/ast-helpers
