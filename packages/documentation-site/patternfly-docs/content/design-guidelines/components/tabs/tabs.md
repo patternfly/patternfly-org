@@ -65,9 +65,7 @@ Horizontal overflow menus are useful when there is not enough space on a screen 
 
 ### Hierarchy
 
-When designing tab organization with two levels of tabs, it's important to create a clear hierarchy. To achieve this, the top level tabs should use the default open tabs, which use the `--pf-t--global--font--size--sm` token(14px) for the font size.
-
-Meanwhile, the bottom level tabs should use the secondary open tabs, which uses the `--pf-t--global--font--size--xs` token (12px) for the font size.
+When designing tab organization with 2 levels of tabs, it's important to create a clear hierarchy. To achieve this, the top-level tabs should use [default tabs](#default-tabs), which use the `--pf-t--global--font--size--sm` token (14px) for the font size. The bottom-level tabs should use [secondary tabs](#secondary-tabs), which uses the `--pf-t--global--font--size--xs` token (12px) for the font size.
 
 ### Primary tabs
 
