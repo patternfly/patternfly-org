@@ -77,7 +77,7 @@ Use primary tabs only for top page header tabs and vertical tabs. Primary tabs u
 
 ### Secondary tabs
 
-Use secondary tabs to help differentiate between two levels of tabs and make it easier for users to navigate through the interface.
+Use secondary tabs to help differentiate between 2 levels of tabs and make it easier for users to navigate through the interface.
 
 <div class="ws-docs-content-img">
 ![Example of primary and secondary tabs.](./img/tabs-secondary.svg)
