@@ -67,7 +67,11 @@ export const StorageCard: React.FunctionComponent = () => {
         </CardTitle>
       </CardHeader>
       <CardBody>
-        <Flex direction={{ default: 'row' }} spaceItems={{ default: 'spaceItemsSm' }}>
+        <Flex
+          direction={{ default: 'row' }}
+          justifyContent={{ default: 'justifyContentCenter' }}
+          alignItems={{ default: 'alignItemsCenter' }}
+        >
           <FlexItem>
             <ChartDonutThreshold
               ariaDesc="Mock storage capacity"
@@ -91,7 +95,7 @@ export const StorageCard: React.FunctionComponent = () => {
                 data={{ x: 'Storage capacity', y: 80 }}
                 labels={({ datum }) => (datum.x ? `${datum.x}: ${datum.y}%` : null)}
                 title="80%"
-                subTitle="CPU"
+                subTitle="Available"
                 thresholds={[{ value: 60 }, { value: 90 }]}
               />
             </ChartDonutThreshold>

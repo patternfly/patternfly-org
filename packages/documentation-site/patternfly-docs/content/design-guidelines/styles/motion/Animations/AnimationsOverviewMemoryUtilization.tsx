@@ -67,7 +67,11 @@ export const MemoryUtilizationCard: React.FunctionComponent = () => {
         </CardTitle>
       </CardHeader>
       <CardBody>
-        <Flex direction={{ default: 'row' }} justifyContent={{ default: 'justifyContentSpaceAround' }}>
+        <Flex
+          direction={{ default: 'column' }}
+          justifyContent={{ default: 'justifyContentCenter' }}
+          alignItems={{ default: 'alignItemsCenter' }}
+        >
           <FlexItem>
             <ChartDonutThreshold
               ariaDesc="Mock memory utilization"
@@ -81,9 +85,9 @@ export const MemoryUtilizationCard: React.FunctionComponent = () => {
               labels={({ datum }) => (datum.x ? datum.x : null)}
               padding={{
                 bottom: 0,
-                left: 0,
-                right: 0,
-                top: 10
+                left: 10,
+                right: 10,
+                top: 0
               }}
               width={200}
             >
@@ -109,9 +113,9 @@ export const MemoryUtilizationCard: React.FunctionComponent = () => {
               labels={({ datum }) => (datum.x ? datum.x : null)}
               padding={{
                 bottom: 0,
-                left: 0,
-                right: 0,
-                top: 10
+                left: 10,
+                right: 10,
+                top: 0
               }}
               width={200}
             >
