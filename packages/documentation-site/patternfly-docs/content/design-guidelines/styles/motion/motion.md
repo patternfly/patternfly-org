@@ -7,20 +7,6 @@ source: about
 import { Alert, AlertActionLink, Card, CardHeader, CardTitle, CardBody, CardFooter, Grid, GridItem} from '@patternfly/react-core';
 import ExternalLinkAltIcon from '@patternfly/react-icons/dist/esm/icons/external-link-alt-icon';
 
-<Alert 
-variant="info" 
-title="Under development" 
-actionLinks={
-    <AlertActionLink component="a" href="https://github.com/orgs/patternfly/projects/7/views/66">
-     View the project roadmap <ExternalLinkAltIcon /> 
-    </AlertActionLink>
-}
->
-<p> 
-We are actively adding motion to PatternFly components and will release updates in batches each quarter.
-</p>
-</Alert>
-
 Like color or typography, **motion** can create a strong foundation that helps connect the complex elements within your designs. By carefully incorporating motion into the design of a UI, you can create products that are more clear, engaging, and expressive.  Effective motion design should be intentional, and should be used to help guide users through their experiences more efficiently.
 
 This resource outlines our motion design principles and the different types of motion in PatternFly.

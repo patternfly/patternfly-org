@@ -57,7 +57,7 @@ import PortIcon from '@patternfly/react-icons/dist/esm/icons/port-icon';
 // @ts-ignore
 import pfLogo from '@patternfly/react-core/src/demos/assets/pf-logo.PF-HorizontalLogo-Color.svg';
 // @ts-ignore
-import openshiftLogo from '../Summit-collage-depoying-openshift-product-icon-RH.png';
+import openshiftLogo from '../Summit-collage-deploying-openshift-product-icon-RH.png';
 // @ts-ignore
 import emptyStateLogo from '../Summit-collage-hybrid-cloud-dark-RH.png';
 import { Application, GuidedTourStep, NotificationType } from '../types';

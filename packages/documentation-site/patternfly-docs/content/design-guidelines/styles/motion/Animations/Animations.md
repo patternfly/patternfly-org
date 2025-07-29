@@ -18,8 +18,6 @@ import EllipsisVIcon from '@patternfly/react-icons/dist/esm/icons/ellipsis-v-ico
 import pfLogo from '@patternfly/react-core/src/demos/assets/PF-HorizontalLogo-Color.svg';
 import MultiContentCard from "@patternfly/react-component-groups/dist/dynamic/MultiContentCard";
 import { ArrowRightIcon, LockIcon, PortIcon, CubeIcon, AutomationIcon, ExclamationCircleIcon, CheckCircleIcon, ExclamationTriangleIcon, HamburgerIcon, TimesIcon} from '@patternfly/react-icons';
-import { createUseStyles } from 'react-jss';
-import clsx from 'clsx';
 import UnpluggedIcon from '@patternfly/react-icons/dist/esm/icons/unplugged-icon';
 import l_gallery_GridTemplateColumns_min from '@patternfly/react-tokens/dist/esm/l_gallery_GridTemplateColumns_min';
 import {applicationsData} from './examples/ResourceTableData.jsx';
@@ -38,15 +36,11 @@ import PendingIcon from '@patternfly/react-icons/dist/esm/icons/pending-icon';
 import CheckIcon from '@patternfly/react-icons/dist/esm/icons/check-icon';
 import InfoIcon from '@patternfly/react-icons/dist/esm/icons/info-icon';
 import ResourcesFullIcon from '@patternfly/react-icons/dist/esm/icons/resources-full-icon';
-import openshiftLogo from './Summit-collage-depoying-openshift-product-icon-RH.png'
+import openshiftLogo from './Summit-collage-deploying-openshift-product-icon-RH.png'
 import emptyStateLogo from './Summit-collage-hybrid-cloud-dark-RH.png'
 
 
-
 ## Demo
-
-Explore the current state of [PatternFly component animations](https://github.com/orgs/patternfly/projects/7/views/66).
-
 To see how our components can now use motion to provide clear feedback and improve usability, this demo guides you through a UI that contains a variety of motion updates, including animated alerts, icons, expansion, and more.
 
 ### Animated UI
