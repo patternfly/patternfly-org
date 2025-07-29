@@ -65,11 +65,11 @@ Horizontal overflow menus are useful when there is not enough space on a screen 
 
 ### Hierarchy
 
-When designing tab organization with two levels of tabs, it's important to create a clear hierarchy. To achieve this, the top level tabs should use the default open tabs, which feature a 16pt font. Meanwhile, the bottom level tabs should use the secondary open tabs, which feature a 14pt font.
+When designing tab organization with 2 levels of tabs, it's important to create a clear hierarchy. To achieve this, the top-level tabs should use [default tabs](#default-tabs), which use the `--pf-t--global--font--size--sm` token (14px) for the font size. The bottom-level tabs should use [secondary tabs](#secondary-tabs), which uses the `--pf-t--global--font--size--xs` token (12px) for the font size.
 
 ### Primary tabs
 
-Use primary tabs only for top page header tabs and vertical tabs. Primary tabs use 16px text. 
+Use primary tabs only for top page header tabs and vertical tabs. Primary tabs use the `--pf-t--global--font--size--sm` token (14px) for the font size. 
 
 <div class="ws-docs-content-img">
 ![Example of primary tabs.](./img/tabs-primary.svg)
@@ -77,7 +77,7 @@ Use primary tabs only for top page header tabs and vertical tabs. Primary tabs u
 
 ### Secondary tabs
 
-Use secondary tabs to help differentiate between two levels of tabs and make it easier for users to navigate through the interface.
+Use secondary tabs to help differentiate between 2 levels of tabs and make it easier for users to navigate through the interface.
 
 <div class="ws-docs-content-img">
 ![Example of primary and secondary tabs.](./img/tabs-secondary.svg)
