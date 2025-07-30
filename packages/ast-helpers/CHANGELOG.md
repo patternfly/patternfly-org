@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.4.0-alpha.257 (2025-07-30)
+
+
+### Bug Fixes
+
+* Update release.yml to new surge URL ([6490201](https://github.com/patternfly/patternfly-org/commit/6490201e8b5ca627f31b33ca33d2db669283caf4))
+
+
+
+
+
 # 1.4.0-alpha.256 (2025-07-30)
 
 
