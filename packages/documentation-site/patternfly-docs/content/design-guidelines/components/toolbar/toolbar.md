@@ -16,7 +16,7 @@ A toolbar is a container for elements that can be used to manipulate data. A var
 
 Within a toolbar, there can be items or groups of items: 
 1. **Toolbar items:** Individual components within a toolbar, which operate independent of other toolbar elements. 
-1. **Toolbar item groups:** Sets of associated components that respond to changes in viewport width together together. By default, there should be an md spacer between items and groups. 
+1. **Toolbar item groups:** Sets of associated components that respond to changes in viewport width together together. By default, there should be a md spacer between items and groups. 
 
 ## Usage
 The toolbar component is designed to be very flexible and support a variety of combinations of items and groups. When laying out your toolbar, be sure to:
@@ -40,7 +40,7 @@ Bulk selectors should always be the first element in a toolbar.
 
 ### Filter group
 
-To let users filter data based on a few, related conditions, use a [filter group](/patterns/filters#mixed-select-filter-group) that combines multiple select filters within a single group. 
+To let users filter data based on a few related conditions, use a [filter group](/patterns/filters#mixed-select-filter-group) that combines multiple select filters within a single group. 
 
 <div class="ws-docs-content-img">
 ![Example of a filter group.](./img/filter-group.svg)
