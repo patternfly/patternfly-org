@@ -67,7 +67,7 @@ When using AI coding assistants (such as GitHub Copilot, ChatGPT, Claude, or oth
 
     - **Do not automatically trust the code assistant output.** Always apply your own judgment and expertise. AI coding assistants can introduce security vulnerabilities if not used carefully, and AI models can sometimes hallucinate and provide incorrect or non-functional code.
 
-    - **Make sure you thoroughly understand any AI-generated code.** If the generated code you intend to incorporate in your work is outside your expertise, consult with someone knowledgeable in the area prior to making it available to others within Red Hat or externally.
+    - **Make sure you thoroughly understand any AI-generated code.** If the generated code you intend to incorporate in your work is outside your expertise, consult with someone knowledgeable in the area prior to making it available to others.
 
 1. **Mark any substantial AI-generated code portions.**
 
