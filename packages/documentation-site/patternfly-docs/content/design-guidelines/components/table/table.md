@@ -221,7 +221,7 @@ Although you could include the ability to remove certain parameters from inside 
 If you need to make more rows visible at a time, or if you don't want to use pagination, you can make your table compact. Compact spacing is recommended for data with a simple structure.
 
 **Use compact spacing when:**
-* You need to show as much data as possible on 1 page.
+* You need to show as much data as possible on a single page.
 * You need to show data in a small space. For example, in a modal or wizard.
 * You need to minimize paging.
 * Readability is a secondary concern.
@@ -232,7 +232,7 @@ If you need to make more rows visible at a time, or if you don't want to use pag
 ![Example of a table with compact spacing.](./img/table-compact-spacing.svg)
 </div>
 
-* You can see more data on 1 page.
+* You can see more data on a single page.
 * You have a good overview of the structure of data.
 * The structure of the data is simple, informative and there are fewer visual elements.
 
@@ -240,7 +240,7 @@ If you need to make more rows visible at a time, or if you don't want to use pag
 If your table needs more space for many rows or for rich graphical data, use default spacing.
 
 **Use default spacing when:**
-* You don’t have to display a lot of data on 1 page.
+* You don’t have to display a lot of data on a single page.
 * You use many visual indicators that are placed in columns, such as icons or charts.
 * You don't have to minimize paging.
 * Readability is a primary concern.
@@ -251,7 +251,7 @@ If your table needs more space for many rows or for rich graphical data, use def
 ![Example of a table with default spacing.](./img/table-default-spacing.svg)
 </div>
 
-* You can see less data on one page.
+* You can see less data on a page.
 * You will need pagination to see more rows.
 * The data structure includes many visual elements.
 
