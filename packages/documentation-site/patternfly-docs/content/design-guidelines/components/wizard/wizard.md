@@ -17,7 +17,7 @@ Except where noted, modal and in-page wizards have the same elements and behavio
 3. **Visited step:** A step that has been already visited. In most cases users can click this step to return to a prior point in the flow.
 4. **Current step:** The current step is always highlighted.
 5. **Disabled step:** Steps that follow the current step are usually disabled to enforce the sequential flow.
-6. **Step title:** The step title is unique to each step, and should reinforce the outcome of the individual step. It may match the Current step indicated in the steps sidebar, or as in the example image, it may be more verbose.
+6. **Step title:** The step title is unique to each step, and should reinforce the outcome of the individual step. This can match the current step, or it can be more verbose.
 7. **Body:** The contents of a step itself. Any valid form elements can be incorporated within the body. The size of the modal that contains the wizard can be adjusted based on the contents of the body section. If the height of the body section causes the bottom of the modal to push beyond the height of the viewport, a vertical scrollbar will appear. However it is recommended to break your workflow into small enough steps so that scrolling is not necessary on typical monitor sizes.
 8. **Button footer:** Buttons control the wizard flow. Default buttons are **Back**, **Next**, and **Cancel**. You may optionally add other actions, such as **Skip to finish** or **Start over**. There should only be 1 primary action in the footer and it should typically be the **Next** button.
 
@@ -47,7 +47,7 @@ When viewing a wizard on a mobile device, the steps sidebar will be hidden and c
 </div>
 
 ## Variations
-Wizards can be modal or placed within the content area of a page. Behavior may change depending on variation. 
+Wizards can be placed in a modal or within the content area of a page. Behavior may change depending on variation. 
 * [Modal wizard](#modal-wizards)
 * [In-page wizard](#in-page-wizard)
 * [Progressive wizard](#progressive-wizard)
@@ -186,11 +186,11 @@ Once the changes initiated by the wizard are completed, a final confirmation scr
 
 1. **Completion message:** Provide appropriate messaging to inform the user about the outcome of the wizard.
 
-2. **Primary action:** In most cases this will be a navigational button to close the wizard and take the user to a page where they can see the results of their changes, e.g. a new project that was created. If there is no appropriate destination or if results will be seen on the current page, make the primary action Close.
+2. **Primary action:** In most cases this will be a navigational button to close the wizard and take the user to a page where they can see the results of their changes, like a new project that was created. If there is no appropriate destination or if results will be seen on the current page, make the primary action close.
 
-3. **Secondary action(s) (optional):** If the primary action is other than Close, include a Close button here to close the wizard and return to the prior page. Other secondary actions can also be included. See [empty state guidelines](/components/empty-state) for button placement.
+3. **Secondary action(s) (optional):** If the primary action is something other than closing the wizard, add a **Close** button here to exit the wizard and return to the prior page. Other secondary actions can also be included. See [empty state guidelines](/components/empty-state) for button placement.
 
-In some cases the result of a wizard is to dispatch a task to the background to execute changes in the back end. In these circumstances, we recommend that you provide a navigation link to monitor task progress and/or simply a Close button.
+In some cases the result of a wizard is to dispatch a task to the background to execute changes in the back end. In these circumstances, we recommend that you provide a navigation link to monitor task progress and/or simply a close button.
 
 
 ## Content considerations
@@ -198,4 +198,4 @@ You should keep the following in mind while designing your wizard screens:
 
 * Keep step labels short. The title at the top of each screen may be used to elaborate on the step label, but in all cases there should be a direct relationship between the step label and the screen title.
 * The final step to submit the wizard should always be labeled "Review"".
-* Default button labels for wizard navigation are: **Back**, **Next**, and **Cancel** If you are replacing the default button labels, keep them short and action oriented, such as “Create network.”
+* Default button labels for wizard navigation are: **Back**, **Next**, and **Cancel**. If you are replacing the default button labels, keep them short and action oriented, such as “Create network.”
