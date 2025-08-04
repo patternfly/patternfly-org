@@ -34,7 +34,7 @@ Our spacer tokens are based on the values in the previous table, but there are c
 - **Control spacers:** Used to set horizontal and vertical padding within controls, like menu toggles and text inputs. 
   - Control spacer tokens begin with `--pf-t--global--spacer--control`
 - **Layout spacers:** Used to define spacing with [PatternFly layouts](/layouts/about-layouts).
-  - **Inset spacer:** Used to set a 1.5rem/24px margin around primary page content. 
+  - **Inset spacer:** Used to define inner padding for structural elements in order to ensure proper alignment, like in the masthead, navigation menu, or the main page content area. 
     - Inset spacer tokens begin with `--pf-t--global--spacer--inset`
   - **Gutter spacer:** Used to define gutters between layout elements, like the space between elements in a grid layout.
     - Gutter spacer tokens begin with `--pf-t--global--spacer--gutter`
