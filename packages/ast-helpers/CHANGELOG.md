@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.4.0-alpha.258 (2025-08-05)
+
+
+### Features
+
+* Highlight new animations article ([#4731](https://github.com/patternfly/patternfly-org/issues/4731)) ([984550d](https://github.com/patternfly/patternfly-org/commit/984550d597f9053189b20cd1cb98104689846940))
+
+
+
+
+
 # 1.4.0-alpha.257 (2025-07-30)
 
 
