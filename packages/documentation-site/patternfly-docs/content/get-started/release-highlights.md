@@ -10,7 +10,7 @@ import { Divider, Timestamp } from '@patternfly/react-core';
 
 ## PatternFly 6.3.1
 
-As a follow up to the Q2 2025 PatternFly release, we have released a patch to address a number of specific, timely product requests.
+As a follow-up to our main Q2 2025 PatternFly release, this patch resolves several bugs found in product implementations and our ChatBot extension. No code changes are required on your part to address these issues. Simply update to the following package versions:```
 
 ### Promoted package versions
 - patternfly/patternfly ([changelog](https://github.com/patternfly/patternfly/releases/tag/v6.3.1))
