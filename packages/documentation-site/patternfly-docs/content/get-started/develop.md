@@ -104,6 +104,9 @@ Use these files to consume the library. The recommended consumption approach wil
   ```html noLive
   <link rel="stylesheet" href="css/patternfly.css">
   ```
+  ```html noLive
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@patternfly/patternfly@6.3.0/dist/css/patternfly.min.css"/>
+  ```
   <br />
   This will ensure that PatternFly styles take precedence over anything that currently resides in your application.
 
