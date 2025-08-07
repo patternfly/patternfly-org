@@ -20,13 +20,24 @@ import '../components.css';
 Use a progress bar to keep users informed about how much effort or time they can expect to allocate for long or ongoing processes like loading or updating an app, submitting a form, or completing a multi-step tutorial.
 
 ### When to use
-* A user must complete a series of tasks and will want indication that they are making progress.
-* A user needs indication that the system is progressing through loading, saving, or downloading.
-* A user needs to monitor a background process, especially if that process may take a long time.
+* To show progress as a user completes a series of tasks.
+* To indicate that the system is progressing through loading, saving, or downloading.
+* To allow users to monitor a background process, especially if that process may take a long time.
 
+### When to use progress bar vs. spinner
 Depending on your use case, you might choose between 2 types of loading indicators: Progress bars and [spinners](/components/spinner). Never use a progress bar and spinner together. 
 
-Default to progress bars for processes that take longer than 4 seconds or require more specific information about process completion. If a process takes less than four seconds, use a [spinner](/components/spinner) instead. 
+- Default to progress bars for processes that take longer than 4 seconds or require more specific information about process completion.
+- If a process takes less than 4 seconds, use a [spinner](/components/spinner) instead. 
+
+### When to use progress bar vs. progress stepper
+
+Use a progress bar: 
+- To indicate to a user that the system is progressing through a task.
+- To let users monitor background tasks.
+
+Use a [progress stepper](/components/progress-stepper):
+- To indicate to a user where they are in a step-by-step linear process on a single page. 
 
 ## Variations
 
@@ -34,20 +45,29 @@ Default to progress bars for processes that take longer than 4 seconds or requir
 
 Whenever possible, use a determinate progress bar to communicate progress with measurable values like time or percentage. 
 
-Use a percentage as a progress value if the process will take less than a minute to complete or a percentage will be more accurate than estimating a task’s duration.
-
-Use a time interval value such as “4 minutes remaining” to communicate progress if the process takes more than one minute to complete. 
+- **Percentage:** Use as a progress value if the process will take less than 1 minute to complete or a percentage will be more accurate than estimating a task’s duration.
+- **Time interval:** Use as a progress value to communicate progress if the process takes more than one minute to complete. For example, “4 minutes remaining.”
 
 ### Indeterminate progress bar
 
 Avoid using indeterminate progress bars to communicate progress that can’t be measured. To track progress that can’t be quantified with a percentage, time, or step, use a [spinner](/components/spinner) instead.
 
+Follow these general style guidelines when designing your progress bars. For information about writing progress bar titles for each status type, see the [content considerations](#content-considerations).
 
-Follow these general style guidelines when designing your progress bars. For information about writing progress bar titles for each status type, see the [Content](#content) section.
+### Progress bar sizes
+
+There are 3 size options for progress bars depending on your use case: 
+- **Small:** A thin progress bar to use in pages or elements without much space.
+- **Default:** A basic progress bar to use in the majority of situations.
+- **Large:** A thick progress bar to use when a progress value (like a percentage) is displayed within the progress bar
+
+<div class="ws-docs-content-img">
+![Three progress bars, one small, one default sized, and one large.](./img/progress-sizes.svg)
+</div>
 
 ### In progress
 
-A blue progress bar represents a process that is currently underway.
+A `--pf-t--global--color--brand--default` progress bar represents a process that is currently underway.
 
 <div class="ws-docs-content-img">
 ![Example of a progress bar in the "in progress" state.](./img/in-progress.svg)
@@ -55,7 +75,7 @@ A blue progress bar represents a process that is currently underway.
 
 ### Error state or failure
 
-A red progress bar represents a process that has failed. Accompany a failed progress bar with a [red danger icon](/design-foundations/icons/#all-icons) to demonstrate that an error occurred in the process.
+A `--pf-t--global--color--status--danger--default` progress bar represents a process that has failed. Accompany a failed progress bar with a [danger icon](/design-foundations/icons/#all-icons) to demonstrate that an error occurred in the process.
 
 <div class="ws-docs-content-img">
 ![Example of a progress bar in the error or failed state.](./img/error.svg)
@@ -63,7 +83,7 @@ A red progress bar represents a process that has failed. Accompany a failed prog
 
 ### Complete or success
 
-A green progress bar represents the successful completion of a process. Accompany a complete progress bar with a [green check-circle icon](/design-foundations/icons/#all-icons) to demonstrate that the process has finished with no errors.
+A `--pf-t--global--color--status--success--default` progress bar represents the successful completion of a process. Accompany a complete progress bar with a [check-circle icon](/design-foundations/icons/#all-icons) to demonstrate that the process has finished with no errors.
 
 <div class="ws-docs-content-img">
 ![Example of a progress bar in the complete or successful state.](./img/success.svg)
@@ -73,12 +93,16 @@ A green progress bar represents the successful completion of a process. Accompan
 
 Use a progress bar in a table to communicate the status of processes or tasks within it.
 
-Place a progress bar into a table just as you would other table content. If a progress bar records the progress of multiple line items, group these items in adjoining cells and keep the progress bar in-line with the first item it pertains to. For multi-item progress bars that apply to non-consecutive items, consider adding a progress bar in-line with each individual item.
+<div class="ws-docs-content-img">
+![Example of progress bars in a table.](./img/progress-table.svg)
+</div>
+
+Place a progress bar into a table just as you would other table content. If a progress bar records the progress of multiple line items, group these items in adjoining cells and keep the progress bar inline with the first item it pertains to. For multi-item progress bars that apply to non-consecutive items, consider adding a progress bar inline with each individual item.
 
 If your table includes multiple progress bars, designate a “Status” or “Progress” column for each one.
 
 <div class="ws-docs-content-img">
-![Example of progress bars in a table.](./img/progress-table.svg)
+![Multiple columns containing progress bars in a table, with a "status" and "progress" heading.](./img/progress-table-multiple.svg)
 </div>
 
 ### In a dashboard view
@@ -91,7 +115,7 @@ Use a progress bar in a dashboard view to track the progress trends within each 
 
 ### During a file download
 
-Use a [toast notification](/components/alert/design-guidelines/#using-toast-alerts) and a progress bar to demonstrate progress during a file download.
+Use a [toast alert](/components/alert/design-guidelines) and a progress bar to demonstrate progress during a file download.
 
 <div class="ws-docs-content-img">
 ![Example of a progress bar in a toast alert to communicate progress during a file download.](./img/progress-file-download.svg)
@@ -127,11 +151,11 @@ Always set an “outside fixed width measure” for determinate progress bars. T
 
 ## Placement
 
+Always place progress bars in alignment with their relevant context, such as the feature, function, or task they reflect. Keep progress bars within the user’s line of sight: Never isolate a progress bar at the top or bottom of a page, or outside of its relevant content view.
+
 <div class="ws-docs-content-img">
 ![Examples of dos and don'ts for placing a progress bar in your designs.](./img/progress-placement.svg)
 </div>
-
-Always place progress bars in alignment with their relevant context, such as the feature, function, or task they reflect. Keep progress bars within the user’s line of sight: Never isolate a progress bar at the top or bottom of a page, or outside of its relevant content view.
 
 Use progress bars to communicate progress in a variety of contexts including:
 
@@ -145,7 +169,10 @@ Use progress bars to communicate progress in a variety of contexts including:
 
 Progress bars should be self-explanatory and therefore include minimal written content: A title and an optional progress value. 
 
-In some use cases, longer progress bars might feature multiple lines of copy that change as a process moves through several phases. Default to one title per progress bar, unless your progress bar measures a multi-step process or procedure that isn’t detailed elsewhere.
+In some use cases, longer progress bars might feature multiple lines of copy that change as a process moves through several phases. Default to 1 title per progress bar, unless your progress bar measures a multi-step process or procedure that isn’t detailed elsewhere.
+
+### Styling for statuses
+Styling for progress bar statuses should follow accessibility guidelines by communicating each state through several messaging types: color, microcopy, and icons. 
 
 ### Titles
 
@@ -155,11 +182,11 @@ Never punctuate progress bar titles, since they consist of fragments, not full s
 
 <div class="ws-content-table">
 
-| **Do**                      | **Don't**                  |
+| **Don't**                      | **Do**                  |
 |:-------------------------------:|:--------------------------:|
-| Downloading [application name] | Your application is downloading... | 
-| Creating cache | This may take a few minutes... | 
-| Validating account credentials | We're validating your account credentials| 
+| Your application is downloading... | Downloading [application name]  | 
+| This may take a few minutes... | Creating cache | 
+| We're validating your account credentials | Validating account credentials | 
 
 </div> 
 
@@ -169,10 +196,10 @@ For **in progress** statuses, write your progress bar title with present partici
 
 <div class="ws-content-table">
 
-| **Do**                      | **Don't**                  |
+| **Don't**                      | **Do**                  |
 |:-------------------------------:|:--------------------------:|
-| Installing cluster | Cluster is installing | 
-| Creating cache | Cluster creation in progress | 
+| Cluster is installing | Installing cluster | 
+| Cluster creation in progress | Creating cache | 
 
 </div>
 
@@ -180,10 +207,10 @@ For **failed** statuses, write your progress bar title in past tense. Avoid tell
 
 <div class="ws-content-table">
 
-| **Do**                      | **Don't**                  |
+| **Don't**                      | **Do**                  |
 |:-------------------------------:|:--------------------------:|
-| Could not install cluster | Cluster installation failed | 
-| Could not validate account credentials | Account validation unsuccessful | 
+| Cluster installation failed | Could not install cluster | 
+| Account validation unsuccessful | Could not validate account credentials | 
 
 </div>
 
@@ -191,14 +218,11 @@ For **complete** statuses, write your progress bar title in past tense. Use this
 
 <div class="ws-content-table">
 
-| **Do**                      | **Don't**                  |
+| **Don't**                      | **Do**                  |
 |:-------------------------------:|:--------------------------:|
-| Cluster installed | Installation is complete | 
-| Validated account credentials | Successfully validated account credentials | 
+| Installation is complete | Cluster installed | 
+| Successfully validated account credentials | Validated account credentials | 
 
 </div>
 
 Progress bars should only use content in their title and progress value. Never write additional content inside the progress track.
-
-### Styling for statuses
-Styling for progress bar statuses should follow accessibility guidelines by communicating each state through several messaging types: Color, microcopy, and icons. 
