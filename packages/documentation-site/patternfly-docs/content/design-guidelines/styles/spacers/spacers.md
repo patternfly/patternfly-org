@@ -33,14 +33,14 @@ Our spacer tokens are based on the values in the previous table, but there are c
   - Action spacer tokens begin with `--pf-t--global--spacer--action`
 - **Control spacers:** Used to set horizontal and vertical padding within controls, like menu toggles and text inputs. 
   - Control spacer tokens begin with `--pf-t--global--spacer--control`
-- **Layout spacers:** Used to define spacing with [PatternFly layouts](/layouts/about-layouts).
+- **Layout spacers:** Used to define spacing within a page.
+  - **Gap spacers:** Used to set space between elements or groups of elements, like gaps between multiple actions, gaps between items in a group, gaps between controls, and so on. 
+    - Gap spacer tokens begin with `--pf-t--global--spacer--gap`
+  - **Gutter spacer:** Used to define gutters within a [layout](/layouts/about-layouts), like the space between elements in a grid layout.
+    - Gutter spacer tokens begin with `--pf-t--global--spacer--gutter`
   - **Inset spacer:** Used to define inner padding for structural elements in order to ensure proper alignment, like in the masthead, navigation menu, or the main page content area. 
     - Inset spacer tokens begin with `--pf-t--global--spacer--inset`
-  - **Gutter spacer:** Used to define gutters between layout elements, like the space between elements in a grid layout.
-    - Gutter spacer tokens begin with `--pf-t--global--spacer--gutter`
-- **Gap spacers:** Used to set space between elements or groups of elements, like gaps between multiple actions, gaps between items in a group, gaps between controls, and so on. 
-  - Gap spacer tokens begin with `--pf-t--global--spacer--gap`
-
+ 
 You can search for spacer tokens in [our list of all tokens.](/tokens/all-patternfly-tokens)
 
 ## Considering line height and padding
