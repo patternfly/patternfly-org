@@ -3,6 +3,39 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.4.0-alpha.260 (2025-08-07)
+
+
+### Bug Fixes
+
+* update various dependencies ([#4724](https://github.com/patternfly/patternfly-org/issues/4724)) ([932fb8f](https://github.com/patternfly/patternfly-org/commit/932fb8fff7ffeca9d43b4a6d58774080fdd1f1fb))
+
+
+
+
+
+# 1.4.0-alpha.259 (2025-08-05)
+
+
+### Bug Fixes
+
+* update docs with 6.3.1 patch release ([#4734](https://github.com/patternfly/patternfly-org/issues/4734)) ([9ea970a](https://github.com/patternfly/patternfly-org/commit/9ea970a09b65443664161bcab2fc7539dde8cbce))
+
+
+
+
+
+# 1.4.0-alpha.258 (2025-08-05)
+
+
+### Features
+
+* Highlight new animations article ([#4731](https://github.com/patternfly/patternfly-org/issues/4731)) ([984550d](https://github.com/patternfly/patternfly-org/commit/984550d597f9053189b20cd1cb98104689846940))
+
+
+
+
+
 # 1.4.0-alpha.257 (2025-07-30)
 
 
