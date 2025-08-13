@@ -7,25 +7,26 @@
   "license": "MIT",
   "scripts": {
     "analyze": "pf-docs-framework build all --analyze",
-    "build": "pf-docs-framework build all",
+    "build": "yarn build:ts && pf-docs-framework build all",
     "build:server": "pf-docs-framework build server",
     "build:client": "pf-docs-framework build client",
+    "build:ts": "tsc --project patternfly-docs/content/design-guidelines/styles/motion/tsconfig.json",
     "clean": "rimraf -rf .cache public size-plugin.json patternfly-docs/generated/**/*.js",
-    "develop": "pf-docs-framework start",
+    "develop": "yarn build:ts && pf-docs-framework start",
     "generate": "pf-docs-framework generate",
     "test:a11y": "patternfly-a11y --config patternfly-a11y.config",
     "screenshots": "pf-docs-framework screenshots"
   },
   "dependencies": {
-    "@patternfly/chatbot": "6.3.0",
+    "@patternfly/chatbot": "6.3.2",
     "@patternfly/design-tokens": "1.13.2",
     "@patternfly/documentation-framework": "workspace:*",
-    "@patternfly/quickstarts": "6.3.0",
+    "@patternfly/quickstarts": "6.3.1",
     "@patternfly/react-catalog-view-extension": "6.2.0",
     "@patternfly/react-component-groups": "6.3.0",
     "@patternfly/react-console": "6.1.0",
     "@patternfly/react-data-view": "6.3.0",
-    "@patternfly/react-docs": "7.3.0",
+    "@patternfly/react-docs": "7.3.1",
     "@patternfly/react-log-viewer": "6.3.0",
     "@patternfly/react-topology": "6.3.0",
     "@patternfly/react-user-feedback": "6.2.0",
@@ -43,6 +44,7 @@
     "glob": "^8.1.0",
     "react-jss": "^10.9.2",
     "react-router": "^6.3.0",
-    "react-router-dom": "^6.3.0"
+    "react-router-dom": "^6.3.0",
+    "typescript": "^5.4.5"
   }
 }

@@ -3,6 +3,80 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 6.18.2 (2025-08-07)
+
+
+### Bug Fixes
+
+* update various dependencies ([#4724](https://github.com/patternfly/patternfly-org/issues/4724)) ([932fb8f](https://github.com/patternfly/patternfly-org/commit/932fb8fff7ffeca9d43b4a6d58774080fdd1f1fb))
+
+
+
+
+
+## 6.18.1 (2025-08-05)
+
+
+### Bug Fixes
+
+* update docs with 6.3.1 patch release ([#4734](https://github.com/patternfly/patternfly-org/issues/4734)) ([9ea970a](https://github.com/patternfly/patternfly-org/commit/9ea970a09b65443664161bcab2fc7539dde8cbce))
+
+
+
+
+
+# 6.18.0 (2025-08-05)
+
+
+### Features
+
+* Highlight new animations article ([#4731](https://github.com/patternfly/patternfly-org/issues/4731)) ([984550d](https://github.com/patternfly/patternfly-org/commit/984550d597f9053189b20cd1cb98104689846940))
+
+
+
+
+
+## 6.17.2 (2025-07-30)
+
+
+### Bug Fixes
+
+* Update release.yml to new surge URL ([6490201](https://github.com/patternfly/patternfly-org/commit/6490201e8b5ca627f31b33ca33d2db669283caf4))
+
+
+
+
+
+## 6.17.1 (2025-07-30)
+
+
+### Bug Fixes
+
+* white space change to trigger release ([110cb01](https://github.com/patternfly/patternfly-org/commit/110cb01be9df7a372ac923025ef079d10388a3d0))
+
+
+
+
+
+# 6.17.0 (2025-07-29)
+
+
+### Features
+
+* **docs:** add guided animation demo ([#4721](https://github.com/patternfly/patternfly-org/issues/4721)) ([75c3933](https://github.com/patternfly/patternfly-org/commit/75c3933b7204ff6c3f015614fe4d0985b28f2f64))
+
+
+
+
+
+## 6.16.2 (2025-07-29)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
 ## 6.16.1 (2025-07-28)
 
 **Note:** Version bump only for package @patternfly/documentation-framework

@@ -6,11 +6,32 @@ section: get-started
 import './get-started.css';
 import { Divider, Timestamp } from '@patternfly/react-core'; 
 
-<Timestamp date={new Date(2025, 6)}>July 2025</Timestamp>
+<Timestamp date={new Date(2025, 6)}>August 2025</Timestamp>
+
+## PatternFly 6.3.1
+
+As a follow-up to our main Q2 2025 PatternFly release, this patch resolves several bugs found in product implementations and our ChatBot extension. No code changes are required on your part to address these issues. Simply update to the following package versions:
+
+### Promoted package versions
+- patternfly/patternfly ([changelog](https://github.com/patternfly/patternfly/releases/tag/v6.3.1))
+    - [@patternfly/patternfly@6.3.1](https://www.npmjs.com/package/@patternfly/patternfly/v/6.3.1)
+- patternfly/react ([changelog](https://github.com/patternfly/patternfly-react/releases/tag/v6.3.1))
+    - [@patternfly/react-charts@8.3.1](https://www.npmjs.com/package/@patternfly/react-charts/v/8.3.1)
+    - [@patternfly/react-code-editor@6.3.1](https://www.npmjs.com/package/@patternfly/react-code-editor/v/6.3.1)
+    - [@patternfly/react-core@6.3.1](https://www.npmjs.com/package/@patternfly/react-core/v/6.3.1)
+    - [@patternfly/react-drag-drop@6.3.1](https://www.npmjs.com/package/@patternfly/react-drag-drop/v/6.3.1)
+    - [@patternfly/react-icons@6.3.1](https://www.npmjs.com/package/@patternfly/react-icons/v/6.3.1)
+    - [@patternfly/react-styles@6.3.1](https://www.npmjs.com/package/@patternfly/react-styles/v/6.3.1)
+    - [@patternfly/react-table@6.3.1](https://www.npmjs.com/package/@patternfly/react-table/v/6.3.1)
+    - [@patternfly/react-templates@6.3.1](https://www.npmjs.com/package/@patternfly/react-templates/v/6.3.1)
+    - [@patternfly/react-tokens@6.3.1](https://www.npmjs.com/package/@patternfly/react-tokens/v/6.3.1)
+- PatternFly extensions 
+    - [@patternfly/chatbot@6.3.2](https://www.npmjs.com/package/@patternfly/chatbot/v/6.3.2) ([changelog](https://github.com/patternfly/chatbot/releases/tag/v6.3.2))
+    - [@patternfly/quickstarts@6.3.1](https://www.npmjs.com/package/@patternfly/quickstarts/v/6.3.1) ([changelog](https://github.com/patternfly/patternfly-quickstarts/releases/tag/v6.3.1))
 
 ## PatternFly 6.3
 
-For the Q3 2025 PatternFly release, we completed our initiative to support React 19 across PatternFly and made significant progress towards finalizing our component animations. We also added new ChatBot features, new CLI guidelines, and updated docs for our AI principles and motion guidelines. Updates for these key areas can be found here, in this quarter's release highlights.
+For the Q2 2025 PatternFly release, we completed our initiative to support React 19 across PatternFly and made significant progress towards finalizing our component animations. We also added new ChatBot features, new CLI guidelines, and updated docs for our AI principles and motion guidelines. Updates for these key areas can be found here, in this quarter's release highlights.
 
 ### Promoted package versions
 The following packages were promoted with this release. Outside of our primary initiatives for this release, we addressed reported bugs and continued to enhance PatternFly with new features, as detailed in the linked changelogs. 
@@ -48,7 +69,7 @@ This update is non-breaking, and PatternFly 6 will continue to support React 17 
 
 ### Component animations
 
-As we progress in our effort to integrate motion design across PatternFly components, we added the following new animations in this release. To provide a holistic view of our animated components, we also put together [an interactive animations demo](/design-foundations/motion/react-demos), which we will continue to update as we add additional animation support.   
+As we progress in our effort to integrate motion design across PatternFly components, we added the following new animations in this release. To provide a holistic view of our animated components, we also put together [an interactive animations demo](/design-foundations/motion/demo), which we will continue to update as we add additional animation support.   
 
 **Note:** Browsers may slow down or deactivate animations on resource-intensive pages. This can occur when continuous animations (like multiple spinners) are active at the same time as other demanding tasks (like frequent data polling), which can overload the browser's processing capacity.
 
