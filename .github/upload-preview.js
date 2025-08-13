@@ -20,7 +20,7 @@ if (!uploadFolder) {
 }
 
 const uploadFolderName = path.basename(uploadFolder);
-let uploadURL = `${repo}${prnum ? `-pr-${prnum}` : ''}`.replace(/[\/|\.]/g, '-');
+let uploadURL = `pf-org-${prnum ? `-pr-${prnum}` : ''}`.replace(/[\/|\.]/g, '-');
 
 uploadURL += `-${uploadName}`;
 uploadURL += '.surge.sh';
