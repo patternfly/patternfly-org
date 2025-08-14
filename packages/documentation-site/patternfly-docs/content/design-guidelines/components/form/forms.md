@@ -23,11 +23,15 @@ related: [
 ]
 ---
 
+import '../components.css';
+
 Use forms to accomplish tasks reliant on user-inputted information like logging in, registering for accounts or services, configuring settings, or completing surveys.
 
 ## Elements
 
-<img src="./img/form-elements.png" alt="Example of a form with four typical form elements called out corresponding to forthcoming elements list" width="459"/>
+<div class="ws-docs-content-img">
+![Example of common form elements.](./img/form-elements.svg)
+</div>
 
 Most forms contain four basic elements:
 
@@ -43,13 +47,17 @@ Maintain consistent form label alignment throughout your application or interfac
 
 #### Top-aligned labels
 
-<img src="./img/top-labels.png" alt="Top-aligned labels appear above their text input fields" width="323"/>
+<div class="ws-docs-content-img">
+![Top-aligned labels are shown above their text input fields.](./img/form-top-labels.svg)
+</div>
 
 Top-aligned labels are preferred over left-aligned labels because they provide a closer proximity between a label and its corresponding input and allow the most horizontal space to accommodate long label content. These characteristics support more responsive and scannable form design.
 
 #### Left-aligned labels
 
-<img src="./img/left-labels.png" alt="Left-aligned labels appear beside their text input fields" width="323"/>
+<div class="ws-docs-content-img">
+![Left-aligned labels are shown beside their text input fields.](./img/form-left-labels.svg)
+</div>
 
 Avoid using left-aligned labels unless you’re working with limited vertical space. 
 
@@ -66,7 +74,9 @@ Follow our [text input guidelines](/components/forms/text-input/design-guideline
 
 PatternFly provides a variety of input components that enable a user to make a selection. Each component supports a specific use case:
 
-<img src="./img/data-inputs.png" alt="A visual representation of each data input type and their purpose: Switches for toggling between two states, radio buttons for choosing one option from multiple options, checkboxes for choosing any number of items from a list, and select lists for choosing one or more options from a list of more than five options" width="804"/>
+<div class="ws-docs-content-img">
+![A visual representation of each data input type and their purpose: Switches for toggling between two states, radio buttons for choosing one option from multiple options, checkboxes for choosing any number of items from a list, and select lists for choosing one or more options from a list of more than five options](./img/form-data-inputs.svg)
+</div>
 
 
 #### Switch
@@ -91,17 +101,23 @@ Data inputs can be arranged in 3 different ways depending on space consideration
 
 1. **Horizontal placement:** Use when vertical space is scarce or to arrange three inputs or fewer.
 
-    <img src="./img/horizontal-list.png" alt="Example of data inputs arranged in a horizontal placement" width="466"/>
+    <div class="ws-docs-content-img">
+    ![Example of data inputs arranged horizontally.](./img/form-data-horizontal.svg)
+    </div>
     
 
 2. **Vertical placement:** Use when quick scanning is ideal or to arrange more than three inputs.
 
-    <img src="./img/vertical-list.png" alt="Example of data inputs arranged in a vertical placement" width="225"/>
+    <div class="ws-docs-content-img">
+    ![Example of data inputs arranged vertically.](./img/form-data-vertical.svg)
+    </div>
 
 
 3. **Multi-column grid:** Use when space is constricted and labels are short.
 
-    <img src="./img/multicolumn-list.png" alt="Example of data inputs arranged in a multi-column grid" width="466"/>
+    <div class="ws-docs-content-img">
+    ![Example of data inputs arranged in a multi-column grid.](./img/form-data-columns.svg)
+    </div>
 
 ### Buttons
 
@@ -127,11 +143,15 @@ Types of user guidance include:
 
 Reserve required fields for information vital to user success. Indicate a required field with an asterisk ( * ) to the right of its field label.
 
-<img src="./img/required-field.png" alt="Example of field with required field indication" width="444"/>
+<div class="ws-docs-content-img">
+![Example of a required input field.](./img/form-required-field.svg)
+</div>
 
 If all form fields are required, don’t use an asterisk for each one. Instead, provide a message at the top of the form: “All fields are required.” If all fields are optional, provide a similar message at the top of the form: “All fields are optional." 
 
-<img src="./img/required-optional-forms.png" alt="Example of two forms with an indication at the top of whether all fields are required or all fields are optional"/>
+<div class="ws-docs-content-img">
+![Example of two forms with an indication at the top of whether all fields are required or all fields are optional.](./img/form-required-message.svg)
+</div>
 
 
 #### User help
@@ -141,7 +161,9 @@ There are 3 different methods for providing assistance within a form: [placehold
 
 ##### Placeholder text
 
-<img src="./img/placeholder-text.png" alt="Example of a date placeholder text inside text input field" width="323"/>
+<div class="ws-docs-content-img">
+![Example of placeholder text inside an input field.](./img/form-placeholders.svg)
+</div>
 
 Within a form field, placeholder text provides an example of the required or recommended format for text input. 
 
@@ -156,21 +178,13 @@ Within a form field, placeholder text provides an example of the required or rec
 
 If your placeholder text shares an example, precede it with “Example,” followed by a space so that users accessing the form with screen readers will know the difference between the field label and the provided placeholder text. 
 
-**Examples:**
-
-* *Example, John Smith*
-* *Example, (555) 555-5555*
-* *MM-DD-YYYY*
-
-<img src="./img/placeholder-example.png" alt="Example of a phone number placeholder text inside text input field" width="323"/>
-
-<img src="./img/placeholder-format.png" alt="Example of a date placeholder text inside text input field" width="323"/>
-
 For more information about writing effective placeholder text, see the [content](#content-considerations) section.
 
 ##### Helper text
 
-<img src="./img/helper-text.png" alt="Example of helper text underneath the text input field" width="323"/>
+<div class="ws-docs-content-img">
+![Example of an input field with helpter text underneath.](./img/form-helper-text.svg)
+</div>
 
 Helper text is brief, permanent text below a form field that helps a user provide the right information specific to that input, like entering a unique project name or data point. Helper text may wrap to two lines, but it should never extend past the width of its corresponding input field.
 
@@ -184,7 +198,9 @@ For more information about writing effective helper text, see the [content](#con
 
 In a form, indicate a popover with an unfilled question mark circle that reveals information when clicked. Place popovers to the right of their corresponding form label.
 
- <img src="./img/popover.png" alt="Example of a popover used in a form field to provide additional context for where a user can find the required information" width="411"/>
+ <div class="ws-docs-content-img">
+![Example of a popover used in a form field to provide additional context for where a user can find the required information.](./img/form-popovers.svg)
+</div>
 
  **Use popovers when:**
 
@@ -199,7 +215,12 @@ For more information about writing effective popovers, see the [content](#conten
 #### Progressive disclosure
 Use progressive disclosure to hide and show form fields based on a user’s selection to keep their workflow short and allow them to focus on fields relevant to them. Progressive disclosure also avoids using color to indicate whether or not a field is available, making forms more accessible for users with visual impairments.
 
- <img src="./img/progressive-disclosure.png" alt="Example of progressive disclosure with one radio button selected to only show the inputs associated with that option" width="562"/>
+ <div class="ws-docs-content-img">
+![Example of progressive disclosure with one radio button selected to only show the inputs associated with that option.](./img/form-progressive-disclosure.svg)
+</div>
+
+1. Fields shown because they apply to the selected option.
+2. Fields hidden because they apply to an unselected option.
 
 ### Errors and validation
 
@@ -214,7 +235,9 @@ After a form error occurs, users won’t have access to placeholder text (replac
 
 **Example:** Instead of “Invalid input,” provide an error message that includes the correct format to re-write the input: “Date format must be MM-DD-YYYY.”
 
- <img src="./img/error-message.png" alt="Visualized example for right vs. wrong way to write an input error. Do communicate specific format errors; don't just indicate an 'invalid input.'" width="649"/>
+ <div class="ws-docs-content-img">
+![Visualized example for right vs. wrong way to write an input error. Do communicate specific format errors; don't just indicate an 'invalid input.](./img/form-errors.svg)
+</div>
 
 Errors can be validated at two points in the workflow: On loss of focus or on submission. The error state you use depends on whether validation happens on the client side (loss of focus) or server side (on submission).
 
@@ -231,14 +254,18 @@ Validate errors on loss of focus when:
 
 An inline Test button can be used as a way to validate the contents of a single input at any stage of a form workflow. For example, if users want to check a link to an external code repository they can use the Test button to confirm access without changing focus to and from the form input or waiting until for final submission.   
 
-<img src="./img/inline-validation-on-fields.png" alt="Example of errors after validation with a test button, including an inline alert at the top, and field level errors" width="794"/>  
+<div class="ws-docs-content-img">
+![Example of validation with a button.](./img/form-button-validation.svg)
+</div>
 
 #### Error validation on submission
 Validation on submission occurs when a user attempts to submit a form. In this scenario, the user completes the form in its entirety and the page reloads with any errors detected.
 
 For validation on submission, supplement field level errors with an [inline alert](/components/alert/design-guidelines#inline-alerts) to make it simple for the user to quickly identify and address areas that need attention. The inline alert should be placed below the form’s header and description, and it should equal the total width of the form. 
 
-<img src="./img/validation-submission.png" alt="Example of errors after validation on submission, including an inline alert at the top, and field level errors" width="794"/>
+<div class="ws-docs-content-img">
+![Example of errors after validation on submission, including an inline alert at the top and field-level errors.](./img/form-error-validation.svg)
+</div>
 
 Learn more about writing error messages in the [content](#content-considerations) section.
 
@@ -252,7 +279,9 @@ Default to grouping data with form sections, especially if all form fields are r
 
 To distinguish between form sections, title them based on the reason you grouped their inputs together. You may forego form section titles and solely rely on the added spacing between sections, but don't leave section titles blank if that empty space will confuse your users. If you do decide to forego the form section titles, add an `aria-label` to indicate why you're sectioning each set of form fields together.
 
-<img src="./img/form-sections.png" alt="Example of form sections used to separate out a form." width="570"/>
+<div class="ws-docs-content-img">
+![Example of a form with sections.](./img/form-sections.svg)
+</div>
 
 To view an interactive example of form sections, see our [form sections demo](/components/forms/form).
 
@@ -274,7 +303,9 @@ Because field groups call for more clicks, tabs, and interactions to reach form 
 
 **Example:** For a form with multiple field groups, distinguish between each one by adding titles that convey each group's unique theme such as *Routing*, *Build configuration*, *Deployment*, or *Scaling*.
 
-<img src="./img/field-groups.png" alt="Example of nested, expandable field groups in a form." width="800"/>
+<div class="ws-docs-content-img">
+![Example of nested expandable field groups in a form.](./img/form-multi-groups.svg)
+</div>
 
 To view an interactive example of field groups, see our [field groups demo](/components/form#field-groups).
 
@@ -284,7 +315,9 @@ Forms may be placed in several contexts including on a page, in a wizard, or in 
 ### General spacing
 Always add 24px of spacing underneath each form input. If a form input includes helper text, this 24px spacing should start below the helper text. Spacing between data inputs like checkboxes and radio buttons should also be 24px when on the same line or stacked on one another. For more spacing information, consult the [PatternFly spacer guidelines](/design-foundations/spacers#considering-line-height-and-padding).
 
-<img src="./img/form-spacing.png" alt="Basic form example with spacers to demonstrate how elements should be spaced within it" width="460"/>
+<div class="ws-docs-content-img">
+![Example of a basic form with spacers to show how elements should be spaced within it.](./img/form-spacing.svg)
+</div>
 
 
 ### Button spacing
@@ -293,13 +326,17 @@ Place submit or cancel buttons on the bottom left of a form, left-aligned with a
 
 For more guidance on button placement, see our [button guidelines](/components/button/design-guidelines#button-placement). 
 
-<img src="./img/button-placement.png" alt="Examples of correct button placement and incorrect button placement in a form"/>
+<div class="ws-docs-content-img">
+![Examples of correct and incorrect button placement in a form.](./img/form-button-spacing.svg)
+</div>
 
 ### Forms on a page
 
 Left and top align a form within a page’s content area. A minimum of 24px padding should separate the form from neighboring elements.
 
-<img src="./img/page-form.png" alt="Example of a form on a page"/>
+<div class="ws-docs-content-img">
+![Example of a form on a page.](./img/form-page-spacing.svg)
+</div>
 
 When placing a form on a page, its width is customizable to your use case and should reflect factors including:
 
@@ -315,12 +352,16 @@ Similar to an in-page form, forms in wizards should be left-aligned in the conte
 
 In a wizard, form error validation should occur when or by the time the user clicks the “Next” button. Don’t wait until the user has completed the whole wizard to notify them of possible errors and their location.
 
-<img src="./img/wizard-form.png" alt="Example of a form in an in-page wizard"/>
+<div class="ws-docs-content-img">
+![Example of a form in an in-page wizard.](./img/form-wizard-spacing.svg)
+</div>
 
 ### Forms in a modal
 Forms in a modal should be horizontally centered with the modal background and fill the modal width, leaving 24px between the form content and the modal background edges.
 
-<img src="./img/modal-form.png" alt="Example of form in a modal" width="384"/>
+<div class="ws-docs-content-img">
+![Example of a form in a modal.](./img/form-modal.svg)
+</div>
 
 ### Multi-column forms
 
@@ -334,11 +375,15 @@ When grouping columns together in a multi-column form, organize them so that fie
 * City, State, ZIP code
 * Credit card number, Expiration date, Security code
 
-<img src="./img/multi-column-eg.png" alt="Example of correct and incorrect multi-column forms"/>
+<div class="ws-docs-content-img">
+![Example of correct and incorrect multi-column forms.](./img/form-columns-rules-1.svg)
+</div>
 
 Never design multi-column forms to read like a magazine or newspaper column, where the left column is completed first before moving on to the right. The form itself should still move and be filled line by line from top to bottom, with related fields placed on the same line.
 
-<img src="./img/multi-column-read.png" alt="Example of how multi-column forms should be read and presented, demonstrated by arrows that follow a user's path of consumption"/>
+<div class="ws-docs-content-img">
+![Example of how multi-column forms should be read and presented, demonstrated by arrows that follow a user's path of consumption.](./img/form-columns-rules-2.svg)
+</div>
 
 ## Content considerations
 
