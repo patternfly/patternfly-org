@@ -15,22 +15,22 @@ export const AutoLinkHeader = ({
   const slug = id || slugger(children);
 
   return (
-    <Flex alignItems={{ default: 'alignItemsCenter'}} spaceItems={{ default: "spaceItemsSm" }}>
+  <Content
+    id={slug}
+    component={headingLevel}
+    className={css('ws-heading', className)}
+    tabIndex={-1}
+    isEditorial
+  >
+    <Flex alignItems={{ default: 'alignItemsCenter'}} spaceItems={{ default: "spaceItemsSm" }} className={`ws-autolink-header ws-autolink-header-${headingLevel}`}>
       <FlexItem>
-        <Content
-          id={slug}
-          component={headingLevel}
-          className={css('ws-heading', className)}
-          tabIndex={-1}
-          isEditorial
-        >
-          <Link href={`#${slug}`} className="ws-heading-anchor" tabIndex="-1" aria-hidden>
-            <LinkIcon className="ws-heading-anchor-icon" style={{ verticalAlign: 'middle' }} />
-          </Link>
-          {children}
-        </Content>
+        <Link href={`#${slug}`} className="ws-heading-anchor" tabIndex="-1" aria-hidden>
+          <LinkIcon className="ws-heading-anchor-icon" style={{ verticalAlign: 'middle' }} />
+        </Link>
+        {children}
       </FlexItem>
       {metaText && <FlexItem>{metaText}</FlexItem>}
     </Flex>
+  </Content>
   )
 };
