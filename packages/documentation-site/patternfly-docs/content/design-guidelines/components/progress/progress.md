@@ -59,7 +59,7 @@ Follow these general style guidelines when designing your progress bars. For inf
 There are 3 size options for progress bars depending on your use case: 
 - **Small:** A thin progress bar to use in pages or elements without much space.
 - **Default:** A basic progress bar to use in the majority of situations.
-- **Large:** A thick progress bar to use when a progress value (like a percentage) is displayed within the progress bar
+- **Large:** A thick progress bar to use when a progress value (like a percentage) is displayed within the bar or to use for prominent progress bars, like those [in a wizard](#in-a-wizard).
 
 <div class="ws-docs-content-img">
 ![Three progress bars, one small, one default sized, and one large.](./img/progress-sizes.svg)

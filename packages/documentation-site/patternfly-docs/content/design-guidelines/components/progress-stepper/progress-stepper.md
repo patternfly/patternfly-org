@@ -104,7 +104,7 @@ Custom icons can also be used for each step of the progress stepper based on the
 </div>
 
 ### Progress stepper with help popover
-If additional help information or help text is needed and there is not enough space for a description, a popover on each step’s title can be used.
+If additional information or help text is needed and there is not enough space for a description, a popover on each step’s title can be used.
 
 <div class="ws-docs-content-img">
 ![Example of a progress stepper with a help popover.](./img/stepper-help-popover.svg)
