@@ -2,8 +2,9 @@
   --ws-code-editor--tooltip--MaxWidth: 16ch;
 }
 
-.ws-code-editor:not(.ws-example-code-expanded) > .pf-v6-c-code-editor__header::before {
-  --pf-v6-c-code-editor__header--before--BorderBottomWidth: 0;
+.ws-code-editor {
+  --pf-v6-c-code-editor__header-content--PaddingInlineStart: 0;
+  --pf-v6-c-code-editor__header-content--PaddingInlineEnd: 0;
 }
 
 .ws-code-editor-control {
@@ -85,4 +86,8 @@
   background-color: var(--pf-t--global--background--color--floating--default);
   opacity: 0.8;
   box-shadow: var(--pf-t--global--box-shadow--sm);
+}
+
+.ws-example-toolbar {
+  margin-block-end: var(--pf-t--global--spacer--lg);
 }
