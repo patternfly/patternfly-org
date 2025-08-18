@@ -4,21 +4,25 @@ section: components
 related: ['Button']
 ---
 
+import '../components.css';
+
 import CheckIcon from '@patternfly/react-icons/dist/esm/icons/check-icon';
 import TimesIcon from '@patternfly/react-icons/dist/esm/icons/times-icon';
 
 ## Elements
 
-<img src="./img/modal-call-outs.png" alt="An example of a modal in context with call outs to highlight each listed element" width="756"/>
+<div class="ws-docs-content-img">
+![Elements of a modal.](./img/modal-elements.svg)
+</div>
 
-1. **Backdrop**
-2. **Modal box**
-3. **Headline**
-4. **Close icon**
-5. **Content area**
-6. **Buttons**
+1. [**Backdrop:**](/components/backdrop) A screen that covers the main content of a page when a modal is opened, to prevent page interaction until the modal is dismissed.
+2. **Modal box:** The container for a modal, which sits on top of other page content.
+3. **Headline:** A concise, descriptive title.
+4. **Close icon:** Used to close and cancel a modal, without making any changes.
+5. **Content area:** Contains the description and body content.
+6. **Buttons:** Used to interact with the contents of the modal.
 
-See the [Content](#content) section for information about writing modal copy.
+For guidance on writing copy for modals, refer to the [content considerations](#content-considerations) section.
 
 ## Usage
 
@@ -55,13 +59,17 @@ Use a confirmation dialog to validate user decisions and communicate their conse
 
 #### Confirm a non-destructive action
 
-<img src="./img/non-destructive-confirmation-dialog.png" alt="A side-by-side comparison of unsuccessful and successful confirmaton dialogs for leaving a page without saving. The successful dialog explains the consequence of this action: All unsaved informaton will be lost" />
+<div class="ws-docs-content-img" style="min-width:100%">
+![A side-by-side comparison of unsuccessful and successful confirmaton dialogs for leaving a page without saving.](./img/modal-non-destructive.svg)
+</div>
 
 When confirming a non-destructive action, provide specific context about what will happen once a user confirms it.
 
 #### Confirm a destructive action
 
-<img src="./img/destructive-confirmation-dialog.png" alt="A side-by-side comparison of unsuccessful and successful destructive confirmaton dialogs for deleting a record. The successful dialog explains the consequence of deleting this record: Record name, location, and notes will be lost" />
+<div class="ws-docs-content-img" style="min-width:100%">
+![A side-by-side comparison of unsuccessful and successful destructive confirmaton dialogs.](./img/modal-destructive.svg)
+</div>
 
 Use a [primary button](/components/button/design-guidelines#primary-button) to confirm a destructive action. If the action carries serious consequences, then use a [danger button](/components/button/design-guidelines#danger-button) instead.
 
@@ -71,7 +79,9 @@ If a destructive action has serious consequences, consider adding an additional 
 
 When a text input field is added to a confirmation dialog, the danger button will only become enabled once a user enters the entire word or phrase.
 
-<img src="./img/destructive-confirmation-dialog-steps.png" alt="A multi-step destructive confirmation dialog's button activates only after a user types DELETE into the input field" />
+<div class="ws-docs-content-img" style="min-width:100%">
+![Example of a destructive confirmation dialog that requires an input field be filled before continuing.](./img/modal-destructive-text-input.svg)
+</div>
 
 ### Edit dialogs
 
@@ -79,13 +89,17 @@ Use an edit dialog for managing assets. Edit dialogs contain multiple actions wh
 
 For example, and edit dialogue might contain a "Save" button as the primary action, and a "Delete" button as a secondary action. If the secondary action is destructive, the button should be styled as a [secondary danger  button](/components/button/#variant-examples). Additionally, it should be aligned to the right-side of the modal, directly across from the primary action and cancel buttons. 
 
-<img src="./img/secondary-destructive-action.png" alt="An edit dialogs with three action buttons: save, cancel and delete" width="500"/>
+<div class="ws-docs-content-img">
+![Example of an edit dialog.](./img/modal-edit-dialog.svg)
+</div>
 
 When using destructive actions, ensure that the user is informed about the consequences of taking this action. Review the general guidelines for [danger button](/components/button/design-guidelines#danger-button) and destructive actions for additional guidance. 
 
 ### Error dialogs
 
-<img src="./img/error-dialog.png" alt="An example of a successful error dialog, with and without an optional error icon" />
+<div class="ws-docs-content-img" style="min-width:100%">
+![Example of an error dialog, with and without an optional error icon.](./img/modal-error-dialog.svg)
+</div>
 
 Use an error dialog to inform users of problems that interrupt normal or expected behavior. Briefly contextualize the problem and why it happened, then provide actionable steps toward a solution.
 
@@ -95,7 +109,9 @@ Error dialogs may use an error icon for visual emphasis.
 
 ### Passive dialogs
 
-<img src="./img/passive-dialog.png" alt="An example of a successful passive dialog, with and without an optional warning icon" />
+<div class="ws-docs-content-img" style="min-width:100%">
+![Example of a passive dialog, with and without an optional warning icon.](./img/modal-passive-dialog.svg)
+</div>
 
 Use a passive dialog to communicate critical and immediately relevant information like the status of an application or an action’s result. Passive dialog content should require or lead to user action.
 
@@ -109,7 +125,9 @@ Users may need to provide additional input to complete an action. To accomplish 
 
 ### Modals with help
 
-<img src="./img/modal-with-help.png" alt="A modal with help uses a help icon to open a help popover when clicked" />
+<div class="ws-docs-content-img" style="min-width:100%">
+![Example of a modal with a help icon and popover.](./img/modal-with-help.svg)
+</div>
 
 Use a [modal with help](/components/modal#with-help) to make complex tasks easier to understand within a modal. If needed, link to further documentation in the help popover.
 
@@ -117,14 +135,14 @@ Help popovers at the modal level explain and provide documentation for an entire
 
 ## Spacing
 
-<img src="./img/modal-basic.png" alt="A basic modal with 24px spacers between the modal box and content, and 16px spacers between the headline and content area, and between each button" width="487" />
+<div class="ws-docs-content-img">
+![Example of the spacing used in a basic modal.](./img/modal-spacing.svg)
+</div>
 
-Basic modals use a primary spacing of 24px to separate:
-
-- Each edge of the modal box from all modal content.
-- The content area from both buttons.
-
-A 16px spacing separates the modal's headline from the content area. 16px also separates each button.
+Basic modals use: 
+- A md spacer between the headline and modal content.
+- A lg spacer between the modal content and the buttons.
+- An xl spacer to separate between the edges of the modal box and modal content.
 
 ## Placement
 
@@ -134,7 +152,9 @@ A modal can be aligned at the center or top of a page.
 
 A [center-aligned modal](/components/modal/html-demos/basic/) appears horizontally and vertically centered on a page, and should be used by default for most use cases.
 
-<img src="./img/center-aligned-modal.png" alt="A modal pictured in center alignment on a page" />
+<div class="ws-docs-content-img">
+![Example of a modal in center alignment on a page.](./img/modal-center.svg)
+</div>
 
 ### Top-aligned modal
 
@@ -142,7 +162,9 @@ A [top-aligned modal](/components/modal/html-demos/top-aligned/) appears horizon
 
 Use a top-aligned modal when your modal contains expanding content or when you'd like to keep content behind the modal visible to the user.
 
-<img src="./img/top-aligned-modal.png" alt="A modal pictured in top alignment on a page" />
+<div class="ws-docs-content-img">
+![Example of a modal in top alignment on a page.](./img/modal-top.svg)
+</div>
 
 
 ## Content considerations

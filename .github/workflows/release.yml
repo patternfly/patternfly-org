@@ -25,7 +25,7 @@ jobs:
       - run: corepack enable
       - run: yarn install --immutable
       # v6 build
-      - uses: actions/cache@v2
+      - uses: actions/cache@v4
         id: site-cache
         name: Load webpack cache
         with:
@@ -51,7 +51,7 @@ jobs:
       - name: Upload extension only docs
         uses: dswistowski/surge-sh-action@v1
         with:
-          domain: 'v6-extensions-staging.patternfly.org'
+          domain: 'pf-extensions-staging.patternfly.org'
           project: 'build/patternfly-org/site'
           login: ${{ secrets.SURGE_LOGIN }}
           token: ${{ secrets.SURGE_TOKEN }}

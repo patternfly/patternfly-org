@@ -71,3 +71,9 @@
   text-wrap: wrap;
   text-align: left;
 }
+
+@media (min-width: 1451px) {
+  .ws-toc .pf-v6-c-jump-links__main {
+    margin-bottom: var(--jump-links-main-margin-bottom);
+  }
+}

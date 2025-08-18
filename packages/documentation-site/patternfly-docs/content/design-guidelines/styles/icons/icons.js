@@ -531,14 +531,14 @@ export const iconsData = [
     "Name": "fa-minus",
     "React_name": "MinusIcon",
     "Type": "Action",
-    "Contextual_usage": "Indicates the ability to remove an item",
+    "Contextual_usage": "Indicates the ability to remove an item (such as a table row), decrease (in number input controls), or minimize",
   },
   {
     "Style": "fas",
     "Name": "fa-minus-circle",
     "React_name": "MinusCircleIcon",
     "Type": "Action",
-    "Contextual_usage": "Indicates the ability to remove an item (alt concept)",
+    "Contextual_usage": "Alternative option that indicates the ability to remove an item (such as a table row), decrease (in number input controls), or minimize",
   },
   {
     "Style": "fas",
@@ -770,7 +770,7 @@ export const iconsData = [
     "Name": "fa-trash",
     "React_name": "TrashIcon",
     "Type": "Action",
-    "Contextual_usage": "Indicates the ability to delete",
+    "Contextual_usage": "Indicates the ability to delete an item/element or remove an uploaded file",
   },
   {
     "Style": "fas",

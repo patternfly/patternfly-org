@@ -257,7 +257,7 @@ Now that you have a prioritized and sized list of cards, use it to create the ca
 - For a standard desktop size (1200-1400px), try to have the column layout fill the full width of the page.
 - Draw your columns within the context of your project. For our example, we know we have a top masthead, a top header information area, a left hand navigation, and a canvas for the dashboard.
 
-You can use any common amount of columns for this step, but three and four column layouts are the most common. If you use Sketch, you can find templates for these layouts in the [PatternFly template](https://www.sketch.com/s/729c2eee-e8b6-4fcd-8a79-f6faa8c30f89). For the purpose of this tutorial, we will work with a standard four column layout.
+You can use any common amount of columns for this step, but three and four column layouts are the most common. For the purpose of this tutorial, we will work with a standard four column layout.
 
 <img src="./img/dashboard-4-column.png" alt="four column dashboard layout" width="1680"/>
 
