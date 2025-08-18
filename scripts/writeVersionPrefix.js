@@ -1,11 +1,11 @@
-const glob = require('glob');
+const { globSync } = require('glob');
 const path = require('path');
 const fs = require('fs-extra');
 const versions = require('@patternfly/documentation-framework/versions.json');
 
 const version = versions.Releases.find(release => release.latest).name;
 
-glob.sync(path.join(__dirname, "../build/patternfly-org/site/**"))
+globSync(path.join(__dirname, "../build/patternfly-org/site/**"))
   .filter(file => fs.lstatSync(file).isFile())
   .forEach(file => {
     const newPath = file.replace("patternfly-org/site", `patternfly-org/${version}`);
