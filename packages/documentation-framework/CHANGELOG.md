@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 6.18.6 (2025-08-19)
+
+
+### Bug Fixes
+
+* **charts:** update chart types for latest directory structure ([#4468](https://github.com/patternfly/patternfly-org/issues/4468)) ([0739ba1](https://github.com/patternfly/patternfly-org/commit/0739ba15bc3a35fa09a9f38d847bcaf7ef5ccee9))
+
+
+
+
+
 ## 6.18.5 (2025-08-18)
 
 
