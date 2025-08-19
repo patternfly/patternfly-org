@@ -320,11 +320,17 @@ export const Example = ({
           sourceLink
         )
   );
-  const fullscreenLink =
-    loc.pathname.replace(/\/$/, '') +
-    (loc.pathname.endsWith(source) ? '' : `/${source}`) +
-    '/' +
-    slugger(title);
+  const fullscreenLink = (() => {
+    const cleanPathname = loc.pathname.replace(/\/$/, '');
+    const sourcePath = `/${source}`;
+    
+    // Check if the source is already in the pathname to avoid duplication
+    if (cleanPathname.includes(sourcePath)) {
+      return `${cleanPathname}/${slugger(title)}`;
+    } else {
+      return `${cleanPathname}${sourcePath}/${slugger(title)}`;
+    }
+  })();
 
   const hasMetaText = isBeta || isDemo || isDeprecated || false;
   const tooltips = (<React.Fragment>

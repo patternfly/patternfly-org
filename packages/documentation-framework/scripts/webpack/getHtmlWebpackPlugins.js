@@ -36,7 +36,12 @@ async function getHtmlWebpackPlugins(options) {
       filename: 'sitemap.xml',
       templateParameters: {
         urls: Object.entries(routes)
-          .map(([path, { sources }]) => [path, ...(sources || []).slice(1).map((source) => source.slug)])
+          .map(([path, { sources }]) => [
+            path, 
+            ...(sources || []).slice(1)
+              .filter(source => source.slug !== path) // Filter out sources that would create duplicate routes
+              .map((source) => source.slug)
+          ])
           .flat()
       },
       inject: false,
@@ -54,8 +59,10 @@ async function getHtmlWebpackPlugins(options) {
     .concat(Object.entries(fullscreenRoutes))
     .map(([url, { sources = [], title, isFullscreen }]) => [
       [url, { title, isFullscreen }],
-      // Add pages for sources
-      ...sources.slice(1).map((source) => [source.slug, source])
+      // Add pages for sources, but filter out duplicates
+      ...sources.slice(1)
+        .filter(source => source.slug !== url) // Filter out sources that would create duplicate routes
+        .map((source) => [source.slug, source])
     ])
     .flat()
     .sort();
