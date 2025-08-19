@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 6.18.7 (2025-08-19)
+
+
+### Bug Fixes
+
+* fix glob reference ([#4742](https://github.com/patternfly/patternfly-org/issues/4742)) ([bb16c5e](https://github.com/patternfly/patternfly-org/commit/bb16c5e1757a07a97b293826c583a4ed9ab71feb))
+
+
+
+
+
 ## 6.18.6 (2025-08-19)
 
 
