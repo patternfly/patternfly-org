@@ -6,8 +6,17 @@ const THEME_MODES = {
   DARK: 'dark'
 };
 
+export const HIGH_CONTRAST_THEME_MODES = {
+  SYSTEM: 'high-contrast-system',
+  ON: 'high-contrast-on',
+  OFF: 'high-contrast-off'
+};
+
 const THEME_STORAGE_KEY = 'theme-preference';
 const DARK_MODE_CLASS = 'pf-v6-theme-dark';
+
+const HIGH_CONTRAST_STORAGE_KEY = 'high-contrast-preference';
+const HIGH_CONTRAST_MODE_CLASS = 'pf-v6-theme-high-contrast';
 
 /**
  * Custom hook for managing theme state with system preference detection
@@ -25,11 +34,25 @@ export const useTheme = () => {
     return localStorage.getItem(THEME_STORAGE_KEY);
   };
 
+  const getStoredHighContrastMode = () => {
+    if (typeof window === 'undefined' || !window.localStorage) {
+      return null;
+    }
+    return localStorage.getItem(HIGH_CONTRAST_STORAGE_KEY);
+  };
+
   const setStoredThemeMode = (mode) => {
     if (typeof window === 'undefined' || !window.localStorage) {
       return;
     }
     localStorage.setItem(THEME_STORAGE_KEY, mode);
+  };
+
+  const setStoredHighContrastMode = (mode) => {
+    if (typeof window === 'undefined' || !window.localStorage) {
+      return;
+    }
+    localStorage.setItem(HIGH_CONTRAST_STORAGE_KEY, mode);
   };
 
   const getResolvedTheme = (mode) => {
@@ -47,6 +70,18 @@ export const useTheme = () => {
         return 'light';
       }
     }
+
+    if (mode === HIGH_CONTRAST_THEME_MODES.SYSTEM) {
+      try {
+        const { ON, OFF } = HIGH_CONTRAST_THEME_MODES;
+        return window.matchMedia('(prefers-contrast: more)').matches ? ON : OFF;
+      } catch (error) {
+        // Fallback if matchMedia fails
+        console.warn('matchMedia not supported, defaulting to high contrast off');
+        return OFF;
+      }
+    }
+
     return mode;
   };
 
@@ -62,8 +97,14 @@ export const useTheme = () => {
     
     if (resolvedTheme === 'dark') {
       htmlElement.classList.add(DARK_MODE_CLASS);
-    } else {
+    } else if (resolvedTheme === 'light') {
       htmlElement.classList.remove(DARK_MODE_CLASS);
+    }
+
+    if (resolvedTheme === HIGH_CONTRAST_THEME_MODES.ON) {
+      htmlElement.classList.add(HIGH_CONTRAST_MODE_CLASS);
+    } else if (resolvedTheme === HIGH_CONTRAST_THEME_MODES.OFF) {
+      htmlElement.classList.remove(HIGH_CONTRAST_MODE_CLASS);
     }
   };
 
@@ -72,7 +113,13 @@ export const useTheme = () => {
     return stored && Object.values(THEME_MODES).includes(stored) ? stored : THEME_MODES.SYSTEM;
   });
 
+  const [highContrastMode, setHighContrastModeState] = useState(() => {
+    const stored = getStoredHighContrastMode();
+    return stored && Object.values(HIGH_CONTRAST_THEME_MODES).includes(stored) ? stored : HIGH_CONTRAST_THEME_MODES.SYSTEM;
+  });
+
   const [resolvedTheme, setResolvedTheme] = useState(() => getResolvedTheme(themeMode));
+  const [resolvedHighContrastTheme, setResolvedHighContrastTheme] = useState(() => getResolvedTheme(highContrastMode));
 
   const setThemeMode = useCallback((newMode) => {
     setThemeModeState(newMode);
@@ -81,6 +128,15 @@ export const useTheme = () => {
     const newResolvedTheme = getResolvedTheme(newMode);
     setResolvedTheme(newResolvedTheme);
     updateThemeClass(newResolvedTheme);
+  }, []);
+
+  const setHighContrastMode = useCallback((newMode) => {
+    setHighContrastModeState(newMode);
+    setStoredHighContrastMode(newMode);
+    
+    const newResolvedHighContrastTheme = getResolvedTheme(newMode);
+    setResolvedHighContrastTheme(newResolvedHighContrastTheme);
+    updateThemeClass(newResolvedHighContrastTheme);
   }, []);
 
   // Listen for system preference changes
@@ -121,17 +177,59 @@ export const useTheme = () => {
     }
   }, [themeMode]);
 
+  useEffect(() => {
+    if (typeof window === 'undefined' || !window.matchMedia) {
+      return;
+    }
+
+    let mediaQuery;
+    try {
+      mediaQuery = window.matchMedia('(prefers-contrast: more)');
+    } catch (error) {
+      console.warn('matchMedia not supported, skipping high contrast theme detection');
+      return;
+    }
+
+    const handleHighContrastThemeChange = (e) => {
+      if (highContrastMode === HIGH_CONTRAST_THEME_MODES.SYSTEM) {
+        const newHighContrastTheme = e.matches ? HIGH_CONTRAST_THEME_MODES.ON : HIGH_CONTRAST_THEME_MODES.OFF;
+        setResolvedHighContrastTheme(newHighContrastTheme);
+        updateThemeClass(newHighContrastTheme);
+      }
+    };
+
+    if (mediaQuery.addEventListener) {
+      mediaQuery.addEventListener('change', handleHighContrastThemeChange);
+      return () => {
+        mediaQuery.removeEventListener('change', handleHighContrastThemeChange);
+      };
+    } else if (mediaQuery.addListener) {
+      mediaQuery.addListener(handleHighContrastThemeChange);
+      return () => {
+        mediaQuery.removeListener(handleHighContrastThemeChange);
+      };
+    }
+  }, [highContrastMode]);
+
   // Initial theme application
   useEffect(() => {
     const initialResolvedTheme = getResolvedTheme(themeMode);
     setResolvedTheme(initialResolvedTheme);
     updateThemeClass(initialResolvedTheme);
+
+    const initialResolvedHighContrastTheme = getResolvedTheme(highContrastMode);
+    setResolvedHighContrastTheme(initialResolvedHighContrastTheme);
+    updateThemeClass(initialResolvedHighContrastTheme);
   }, [themeMode]);
 
   return {
     themeMode,
     setThemeMode,
     resolvedTheme,
-    THEME_MODES
+    THEME_MODES,
+    HIGH_CONTRAST_THEME_MODES,
+    highContrastMode,
+    setHighContrastMode,
+    resolvedHighContrastTheme
   };
 }; 
