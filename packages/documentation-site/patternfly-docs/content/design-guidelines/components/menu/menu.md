@@ -6,21 +6,20 @@ subsection: menus
 
 import '../components.css';
 
-## Elements
-Elements vary depending on [menu variation](#variations).
-
 ## Usage
 
-| **When you want to...** |                     |
+We offer a variety of [menu variations](#variations), which address a range of design goals. The type of menu you should use depends on your scenario. 
+
+| **Goal** | **Solution** |
 | ------------------- | ------------------- |
-| Expose a list of actions | Use an actions menu with actions and/or links. Add icons in front of menu items only if they will help to make items more recognizable. Include descriptive text for menu items that may require further definition. |
-| Create logical groupings of menu items | Use separators to group items. Include group headings if you don’t feel like the meaning of the groups will be obvious. |
-| Expose a list of nested actions | Use a fly-out menu. Any optional attributes of basic menus, including icons, groups, and descriptions can also be applied to flyout menus.|
-| Select from a list of options | Use an options select menu for selecting between values rather than actions. Icons, descriptions, and groupings can be used with option select menus to improve recognition or create logical option groups.| 
+| Expose a list of actions | [Action menu](#action-menu) <br/><br/> Menu items are actions or links, with optional preceding icons to improve recognizability or an optional description to provide more context. |
+| Create logical groupings of menu items | [Grouped menu with separators](#grouped-menus) <br/><br/> If the meaning of the groups isn't obvious, add group headings. |
+| Expose a list of nested actions | [Fly-out menu](#multi-level-fly-out-menus) <br/><br/> Optionally, add basic menu attributes, including icons, groups, and descriptions.|
+| Select from a list of options | [Options select menu](#option-select-menus) <br/><br/> Let users select between values rather than actions. To further improve recognition or create logical option groups, use icons, descriptions, and groupings.| 
 
 ## Behavior 
 
-### Menus with search
+### Searchable menus
 
 You can allow users to filter menu items via search input, which matches menu items to a term that the user has entered. If there are no results for their search term, display a message to communicate "No results found":
 
@@ -43,10 +42,10 @@ An action menu presents a list of actions or links.
 
 3. **Links:** Links navigate the user to a new page. They may be mixed with actions in a menu or used in their place. If the link will open in a new window, use the external link icon to annotate the link so that users can expect this behavior.
 
-4. **Descriptions (optional):** Descriptive text may be added below each menu item, but only when the menu item label itself may not be clear to all users. Keep descriptive text to two lines or less.
+4. **Descriptions (optional):** Descriptive text may be added below each menu item, but only when the menu item label itself may not be clear to all users. Keep descriptive text to 2 lines or less.
 
 ### Option select menus
-Use an option select menu when you want to persist selected items. This is typically the case for select menus or settings menus that allow users to select between multiple options. See the [select](/components/menus/select) and [options menu](/components/menus/options-menu) components for more details. You may present single or multiple [groups of options](#grouped-menus) within the same menu.
+Use an option select menu when you want to persist selected items. This is typically the case for select menus or settings menus that allow users to select between multiple options. For more details, see the [select](/components/menus/select) and [options menu](/components/menus/options-menu) components. You may present single or multiple [groups of options](#grouped-menus) within the same menu.
 
 <div class="ws-docs-content-img">
 ![Examples of option select menus.](./img/menu-option-select.svg)
@@ -56,7 +55,7 @@ Use an option select menu when you want to persist selected items. This is typic
 
 2. **Icon (optional):** Familiar icons may be placed before each menu item to accelerate text label recognition. Only use icons if they will be easily recognized and distinguished from one another. Never use icons simply for decoration.
 
-3. **Descriptions (optional):** Descriptive text may be added below each menu item, but only when the menu item label itself may not be clear to all users. Keep descriptive text to two lines or less.
+3. **Descriptions (optional):** Descriptive text may be added below each menu item, but only when the menu item label itself may not be clear to all users. Keep descriptive text to 2 lines or less.
 
 ### Grouped menus
 You may decide to group menu items to associate related items and/or to indicate a hierarchy of items. Items may be grouped using group headings and/or separators or in a [tree view](/components/tree-view).
@@ -67,7 +66,7 @@ You may decide to group menu items to associate related items and/or to indicate
 
 1. **Group heading (optional):** Add a group heading when you want to name the group.
 
-2. **Separator (optional):** Separators are horizontal dividers that help to group the menu items by clearly showing where one group ends and the next begins. You should consider whether a separator is needed to create visually distinct groups. In the first example above, a separator is used to create separation between the two groups of items. In the second example, the separator is not needed because the titled checkbox groups create two clearly grouped set of options on their own.
+2. **Separator (optional):** Separators are horizontal dividers that help to group the menu items by clearly showing where one group ends and the next begins. You should consider whether a separator is needed to create visually distinct groups. In the first example above, a separator is used to create separation between the two groups of items. In the second example, the separator is not needed because the titled checkbox groups create 2 clearly grouped sets of options on their own.
 
 3. **Expand/collapse:** The group heading or parent node would have the option to expand or collapse to reveal child nodes.
 
@@ -79,16 +78,16 @@ You may decide to group menu items to associate related items and/or to indicate
 
 7. **Truncation indicator:** Ellipses indicating truncated text for longer names that don't fit in the node width.
 
-### Multi-level fly-out menus
-Use fly-out menus when you want to expose sub-items from a parent node. PatternFly supports a single level fly-out, only.
+### Flyout menus
+Use [flyout menus](/components/menus/menu/html#with-flyout) when you want to expose sub-items from a parent node. PatternFly only supports a single-level flyout.
 
 <div class="ws-docs-content-img">
 ![Example of a flyout menu.](./img/menu-multi-level.svg)
 </div>
 
-If a menu item has sub-items, a “>” character will be shown to the right of the item label. When hovering over the item, the secondary menu will be exposed.
+If a menu item has sub-items, an angle right icon will be shown to the right of the item label. When hovering over the item, the secondary menu will be exposed.
 
-### Filtering menu items
+### Filtering 
 If the list of possible items is very long, add a filter to make items more findable.
 
 <div class="ws-docs-content-img">
@@ -97,18 +96,17 @@ If the list of possible items is very long, add a filter to make items more find
 
 When filtering menu items, a search input will be added to the top of the menu and the list of items will be filtered as the user types.
 
-### Favoriting and other actions
-Favoriting or other optional actions can be associated with any menu item. In this case, making an item a favorite will duplicate it at the top of the menu. This may be useful when you have a long list of possible actions and want to “pin” a subset of items to the top of the menu.
+### Favoriting 
+When a user favorites an item, it will be duplicated and placed at the top of the menu. This can be useful for long lists of possible actions, where users might want to “pin” a subset of items for convenience.
 
 <div class="ws-docs-content-img">
 ![Example of a menu with favorites.](./img/menu-favoriting.svg)
 </div>
 
-
-Any action that can be represented as an icon button can be placed in one or more menu items. In this case, the favoriting action is used to mark an item as a favorite.
+Menu items can contain icons when the related action can be easily represented. For example, the favoriting action lets users interact with a star icon to mark an item as a favorite.
 
 ### Drilldown menu
-Use a drilldown menu when data is structured into levels and includes a long list of options. When the parent with children is selected, the list is replaced with the children items. A header displays the name of the parent, with the option to go back one level. 
+Use a drilldown menu when data is structured into levels and includes a long list of options. When the parent with children is selected, the list is replaced with the child items. A header displays the name of the parent, with the option to go back 1 level. 
 
 <div class="ws-docs-content-img">
 ![Example of a drilldown menu with a back button.](./img/menu-drilldown-back.svg)
@@ -121,9 +119,9 @@ If data is more complex and has more than 2 levels, use a drilldown menu with br
 </div>
 
 ### Red text menu
-If you have destructive items in a dropdown menu, you can optionally use red text styling for that item. A divider should be used to separate the destructive menu items from the non-destructive items. Red text is used to visually distinguish a dangerous action from other items. 
+If you have destructive items in a dropdown menu, you can optionally use danger text styling for that item (via the `--pf-t--global--text--color--status--danger` design tokens). A divider should be used to separate the destructive menu items from the non-destructive items. Danger text is used to visually distinguish a destructive action from other items. 
 
-When using red text for destructive actions, it is still recommended to require a confirmation dialog before proceeding.
+When using danger text, you should still require a confirmation dialog before proceeding with a permanent destructive action.
 
 <div class="ws-docs-content-img">
 ![Examples of menus with destructive red text.](./img/menu-red-text.svg)
@@ -145,15 +143,15 @@ Use a disabled menu when:
     ![Example of a menu with a disabled menu item.](./img/menu-disabled.svg)
     </div>
 
-    Example: A user can’t perform bulk actions until they select resources in the list.
-
-    Example: A user cannot view past logs until their container is finished restarting.
+    - Examples: 
+        - A user can’t perform bulk actions until they select resources in the list.
+        - A user cannot view past logs until their container is finished restarting.
 
 * **An action cannot be performed due to a product constraint or rule.**
 
     If an action cannot be taken because of a product constraint or rule, hide the action. 
 
-    Example: While a user can delete a resource they own, they cannot delete a template or default resource.
+    - Example: While a user can delete a resource they own, they cannot delete a template or default resource.
 
 #### When not to use a disabled menu
 
@@ -163,7 +161,7 @@ Do not use a disabled menu when:
 
     When an action can be performed but may result in an undesirable outcome, do not disable it. Instead, add a [confirmation modal](/components/modal). When the user clicks on the action, use a modal to explain the potential consequences and ask the user if they are sure they want to proceed.
 
-    Example: A user wants to delete a system.
+    - Example: A user wants to delete a system.
 
 
 ## Content considerations

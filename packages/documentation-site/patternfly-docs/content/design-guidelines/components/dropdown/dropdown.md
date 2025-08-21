@@ -13,12 +13,12 @@ A basic dropdown consists of a toggle control to open and close a menu of action
 ![Elements of a basic dropdown.](./img/dropdown-elements.svg)
 </div>
 
-1. **Toggle:** The toggle is used to open and close the menu. It takes on all of the behaviors of a button. The toggle label is used to name the menu and should be descriptive of the actions that it contains. If no more descriptive name makes sense, use “Actions” as a default name.
+1. **Toggle:** Used to open and close the dropdown menu. It takes on all of the behaviors of a [button](/components/button). The toggle label is used to name the menu and should describe the actions that it contains. If no unique descriptive name applies, default to using “Actions”.
 
-2. **Menu:** The menu contains a list of actions or links. Menus should optimally contain seven (7) or less items for easy scanning by the user. For longer menus, items may be grouped. See the [menu component guidelines](/components/menus/menu/design-guidelines) for more information about supported options, including use of icons, grouping, and descriptions. The Dropdown component includes many common built-in menu variants. It’s also possible to attach a custom menu by using the [basic panel variant](/components/menus/dropdown#basic-panel).
+2. **Menu:** Contains a list of options, which could be actions or links. Menus should optimally contain 7 items for fewer to enable better scannability. For longer menus, items can be grouped. For more guidance on supported options in menus (use of icons, grouping, and descriptions) refer to the [menu component guidelines](/components/menus/menu/design-guidelines).
 
 ## Variations
-In addition to the basic dropdown shown above, you may apply the following variants to the dropdown toggle element.
+In addition to the basic dropdown toggle, you can use the following dropdown toggle variants.
 
 <div class="ws-docs-content-img">
 ![Example of different dropdown variations.](./img/dropdown-variations.svg)
@@ -27,21 +27,39 @@ In addition to the basic dropdown shown above, you may apply the following varia
 ### Primary toggle
 The primary toggle should be used in the same way as you would use a primary button. If you want to draw the user’s attention to a dropdown menu as the primary place to take action on a page, consider using a dropdown with primary styling.
 
-### Secondary toggle
-The secondary toggle is a variation of the primary toggle. It has less visual prominence than the primary toggle, but more visual prominence than the basic toggle and other toggle variations. Use a secondary toggle when the actions in the dropdown are the secondary actions you’d want a user to take.
+<div class="ws-docs-content-img">
+![A menu toggle that is pill-shaped with a blue fill and white label.](./img/primary-toggle.svg)
+</div>
 
-Use a secondary toggle when other toggle variations would appear visually inconsistent, or lack the sufficient prominence needed to create a visual hierarchy.
+### Secondary toggle
+The secondary toggle is a variation of the primary toggle. It has less visual prominence than the primary toggle, but more visual prominence than the basic toggle and other toggle variations. 
+
+<div class="ws-docs-content-img">
+![A menu toggle that is pill-shaped with a blue border and label.](./img/secondary-toggle.svg)
+</div>
+
+Use a secondary toggle when the actions in the dropdown are the secondary actions you’d want a user to take. You can also use a secondary toggle when other toggle variations would appear visually inconsistent, or lack the sufficient prominence needed to create a visual hierarchy.
 
 ### Plain toggle
-Plain styling removes the border treatment from a dropdown toggle. This is useful in places where the default border treatment might make your layout feel visually cluttered or crowded. Use a plain toggle when further action hierarchy needs to be established and you already have primary or secondary action toggle on the page.
+Plain styling removes the border from a dropdown toggle, which is useful when the default border treatment might make your layout feel visually cluttered or crowded. 
+
+<div class="ws-docs-content-img">
+![A menu toggle that is only text with a dropdown caret. There is no fill or border.](./img/plain-toggle.svg)
+</div>
+
+Use a plain toggle when further action hierarchy needs to be established and you already have primary or secondary action toggle on the page.
 
 ### Icon toggle
-When there is not enough space for a labeled button, an icon can be used instead. Icon toggles are best used when you can use a common icon that has a well understood meaning or when you are working with limited space. A common default is to use the vertical ellipses (kebab) icon to generally indicate that it is connected with a menu as shown above.
+When there is not enough space for a labeled button, use an icon toggle instead. Icon toggles are most effective when you use a common icon with a well-understood meaning, like the vertical ellipses (kebab) icon.
+
+<div class="ws-docs-content-img">
+![A kebab ellipsis icon above a menu that has two items.](./img/icon-toggle.svg)
+</div>
 
 ### Split button
 A split button can be used when you want to combine an action button or other control with a dropdown menu. Use a split button action dropdown when you have multiple actions to show that are related to each other, but one action is more likely or important than the rest.
 
-There are two types of split buttons: split buttons with checkboxes and split buttons with actions.
+There are 2 types of split buttons: split buttons with checkboxes and split buttons with actions.
 
 #### Split button with checkbox
 
@@ -59,14 +77,10 @@ A split button with actions is useful when you want to expose a default action w
 ![Example of split button actions.](./img/split-button-actions.svg)
 </div>
 
-**Behavior**
+#### Example 
 
-In this case, the user can either click on the primary button, or on the caret to open/view the rest of the related options. When a user clicks on an action whether the surfaced one, or one from inside the menu, the action will be selected and applied immediately. 
-
-**Example**
+In this case, the user can either click on the primary button, or on the caret to open/view the rest of the related options. When a user clicks on an action&mdash;either the surfaced action or one from inside the menu&mdash;the action will be selected and applied immediately. 
 
 <div class="ws-docs-content-img">
 ![Example of a split button used in a modal.](./img/split-button-behavior.svg)
 </div>
-
-A split action button is used in a modal where there are different possible submit variations. Here, all the buttons are related in that they are different ways to submit the modal, but the surfaced option is the most likely to be used, while the ones housed in the toggle are other less likely options.
