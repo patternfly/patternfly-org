@@ -73,13 +73,14 @@ import {
 import { convertToReactComponent } from '@patternfly/ast-helpers';
 import missingThumbnail from './missing-thumbnail.jpg';
 import { RtlContext } from '../../layouts';
-import { useTheme, HIGH_CONTRAST_THEME_MODES } from '../../hooks/useTheme';
+import { useTheme, THEME_TYPES } from '../../hooks/useTheme';
 
 const errorComponent = (err) => <pre>{err.toString()}</pre>;
 
-// Full-screen theme selector component using shared theme hook
+// Full-screen theme selector component using parameterized theme hooks
 const FullScreenThemeSelector = () => {
-  const { themeMode, setThemeMode, THEME_MODES, highContrastMode, setHighContrastMode } = useTheme();
+  const { mode: themeMode, setMode: setThemeMode, modes: colorModes } = useTheme(THEME_TYPES.COLOR);
+  const { mode: highContrastMode, setMode: setHighContrastMode, modes: highContrastModes } = useTheme(THEME_TYPES.HIGH_CONTRAST);
   const [isThemeSelectOpen, setIsThemeSelectOpen] = useState(false);
 
   const handleThemeChange = (_event, selectedMode) => {
@@ -93,9 +94,9 @@ const FullScreenThemeSelector = () => {
 
   const getThemeDisplayText = (mode) => {
     switch (mode) {
-      case THEME_MODES.LIGHT:
+      case colorModes.LIGHT:
         return 'Light';
-      case THEME_MODES.DARK:
+      case colorModes.DARK:
         return 'Dark';
       default:
         return 'System';
@@ -104,9 +105,9 @@ const FullScreenThemeSelector = () => {
 
   const getThemeIcon = (mode) => {
     switch (mode) {
-      case THEME_MODES.LIGHT:
+      case colorModes.LIGHT:
         return SunIcon;
-      case THEME_MODES.DARK:
+      case colorModes.DARK:
         return MoonIcon;
       default:
         return DesktopIcon;
@@ -133,13 +134,13 @@ const FullScreenThemeSelector = () => {
     >
       <SelectGroup>
         <SelectList>
-          <SelectOption value={THEME_MODES.SYSTEM} icon={DesktopIcon} description="Follow system preference">
+          <SelectOption value={colorModes.SYSTEM} icon={DesktopIcon} description="Follow system preference">
             System
           </SelectOption>
-          <SelectOption value={THEME_MODES.LIGHT} icon={SunIcon} description="Always use light mode">
+          <SelectOption value={colorModes.LIGHT} icon={SunIcon} description="Always use light mode">
             Light
           </SelectOption>
-          <SelectOption value={THEME_MODES.DARK} icon={MoonIcon} description="Always use dark mode">
+          <SelectOption value={colorModes.DARK} icon={MoonIcon} description="Always use dark mode">
             Dark
           </SelectOption>
         </SelectList>
@@ -151,20 +152,20 @@ const FullScreenThemeSelector = () => {
             <ToggleGroup aria-label="High contrast theme switcher">
               <ToggleGroupItem
                 text="System"
-                buttonId={HIGH_CONTRAST_THEME_MODES.SYSTEM}
-                isSelected={highContrastMode === HIGH_CONTRAST_THEME_MODES.SYSTEM}
+                buttonId={highContrastModes.SYSTEM}
+                isSelected={highContrastMode === highContrastModes.SYSTEM}
                 onChange={handleHighContrastThemeSelection}
               />
               <ToggleGroupItem
                 text="On"
-                buttonId={HIGH_CONTRAST_THEME_MODES.ON}
-                isSelected={highContrastMode === HIGH_CONTRAST_THEME_MODES.ON}
+                buttonId={highContrastModes.ON}
+                isSelected={highContrastMode === highContrastModes.ON}
                 onChange={handleHighContrastThemeSelection}
               />
               <ToggleGroupItem
                 text="Off"
-                buttonId={HIGH_CONTRAST_THEME_MODES.OFF}
-                isSelected={highContrastMode === HIGH_CONTRAST_THEME_MODES.OFF}
+                buttonId={highContrastModes.OFF}
+                isSelected={highContrastMode === highContrastModes.OFF}
                 onChange={handleHighContrastThemeSelection}
               />
             </ToggleGroup>

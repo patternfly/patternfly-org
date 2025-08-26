@@ -69,7 +69,7 @@ const DesktopIcon = (
 import { SideNav, TopNav, GdprBanner } from '../../components';
 import staticVersions from '../../versions.json';
 import { Footer } from '@patternfly/documentation-framework/components';
-import { useTheme, HIGH_CONTRAST_THEME_MODES } from '../../hooks/useTheme';
+import { useTheme, THEME_TYPES } from '../../hooks/useTheme';
 
 export const RtlContext = createContext(false);
 
@@ -84,8 +84,9 @@ const HeaderTools = ({
   setIsRTL,
   themeMode,
   setThemeMode,
-  THEME_MODES,
+  colorModes,
   highContrastMode,
+  highContrastModes,
   setHighContrastMode,
 }) => {
   const latestVersion = versions.Releases.find((version) => version.latest);
@@ -117,9 +118,9 @@ const HeaderTools = ({
 
   const getThemeDisplayText = (mode) => {
     switch (mode) {
-      case THEME_MODES.LIGHT:
+      case colorModes.LIGHT:
         return 'Light';
-      case THEME_MODES.DARK:
+      case colorModes.DARK:
         return 'Dark';
       default:
         return 'System';
@@ -128,9 +129,9 @@ const HeaderTools = ({
 
   const getThemeIcon = (mode) => {
     switch (mode) {
-      case THEME_MODES.LIGHT:
+      case colorModes.LIGHT:
         return SunIcon;
-      case THEME_MODES.DARK:
+      case colorModes.DARK:
         return MoonIcon;
       default:
         return DesktopIcon;
@@ -139,7 +140,7 @@ const HeaderTools = ({
 
   const handleHighContrastThemeSelection = (evt) => {
     setHighContrastMode(evt.currentTarget.id);
-  }
+  };
 
   useEffect(() => {
     // reattach algolia to input each time search is expanded
@@ -215,13 +216,13 @@ const HeaderTools = ({
               >
                 <SelectGroup>
                   <SelectList>
-                    <SelectOption value={THEME_MODES.SYSTEM} icon={DesktopIcon} description="Follow system preference">
+                    <SelectOption value={colorModes.SYSTEM} icon={DesktopIcon} description="Follow system preference">
                       System
                     </SelectOption>
-                    <SelectOption value={THEME_MODES.LIGHT} icon={SunIcon} description="Always use light mode">
+                    <SelectOption value={colorModes.LIGHT} icon={SunIcon} description="Always use light mode">
                       Light
                     </SelectOption>
-                    <SelectOption value={THEME_MODES.DARK} icon={MoonIcon} description="Always use dark mode">
+                    <SelectOption value={colorModes.DARK} icon={MoonIcon} description="Always use dark mode">
                       Dark
                     </SelectOption>
                   </SelectList>
@@ -233,20 +234,20 @@ const HeaderTools = ({
                       <ToggleGroup aria-label="High contrast theme switcher">
                         <ToggleGroupItem
                           text="System"
-                          buttonId={HIGH_CONTRAST_THEME_MODES.SYSTEM}
-                          isSelected={highContrastMode === HIGH_CONTRAST_THEME_MODES.SYSTEM}
+                          buttonId={highContrastModes.SYSTEM}
+                          isSelected={highContrastMode === highContrastModes.SYSTEM}
                           onChange={handleHighContrastThemeSelection}
                         />
                         <ToggleGroupItem
                           text="On"
-                          buttonId={HIGH_CONTRAST_THEME_MODES.ON}
-                          isSelected={highContrastMode === HIGH_CONTRAST_THEME_MODES.ON}
+                          buttonId={highContrastModes.ON}
+                          isSelected={highContrastMode === highContrastModes.ON}
                           onChange={handleHighContrastThemeSelection}
                         />
                         <ToggleGroupItem
                           text="Off"
-                          buttonId={HIGH_CONTRAST_THEME_MODES.OFF}
-                          isSelected={highContrastMode === HIGH_CONTRAST_THEME_MODES.OFF}
+                          buttonId={highContrastModes.OFF}
+                          isSelected={highContrastMode === highContrastModes.OFF}
                           onChange={handleHighContrastThemeSelection}
                         />
                       </ToggleGroup>
@@ -355,7 +356,8 @@ export const SideNavLayout = ({ children, groupedRoutes, navOpen: navOpenProp })
   const [versions, setVersions] = useState({ ...staticVersions });
   const [isRTL, setIsRTL] = useState(false);
 
-  const { themeMode, setThemeMode, resolvedTheme, THEME_MODES, highContrastMode, setHighContrastMode } = useTheme();
+  const { mode: themeMode, setMode: setThemeMode, resolvedTheme, modes: colorModes } = useTheme(THEME_TYPES.COLOR);
+  const { mode: highContrastMode, setMode: setHighContrastMode, modes: highContrastModes } = useTheme(THEME_TYPES.HIGH_CONTRAST);
 
   useEffect(() => {
     if (typeof window === 'undefined') {
@@ -450,8 +452,9 @@ export const SideNavLayout = ({ children, groupedRoutes, navOpen: navOpenProp })
             setIsRTL={setIsRTL}
             themeMode={themeMode}
             setThemeMode={setThemeMode}
-            THEME_MODES={THEME_MODES}
+            colorModes={colorModes}
             highContrastMode={highContrastMode}
+            highContrastModes={highContrastModes}
             setHighContrastMode={setHighContrastMode}
           />
         )}
