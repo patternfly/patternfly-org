@@ -29,6 +29,9 @@ class ThemeManager {
   }
 
   getMediaQuery() {
+    if (!this.isBrowser) {
+      return;
+    }
     return window.matchMedia(this.mediaQueryString);
   }
 
