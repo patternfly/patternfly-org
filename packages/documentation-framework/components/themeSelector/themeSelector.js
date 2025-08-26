@@ -101,9 +101,10 @@ export const ThemeSelector = ({ id }) => {
         />
       )}
       shouldFocusToggleOnSelect
+      onOpenChangeKeys={['Escape']}
     >
       <SelectGroup>
-        <SelectList>
+        <SelectList aria-label="Light/Dark theme switcher">
           <SelectOption value={colorModes.SYSTEM} icon={DesktopIcon} description="Follow system preference">
             System
           </SelectOption>
