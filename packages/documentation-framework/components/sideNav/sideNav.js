@@ -4,14 +4,21 @@ import {
   Label,
   Nav,
   NavList,
+  NavGroup,
   NavExpandable,
   PageContextConsumer,
   capitalize,
   Flex,
-  FlexItem
+  FlexItem,
+  Divider
 } from '@patternfly/react-core';
 import { css } from '@patternfly/react-styles';
 import { Location } from '@reach/router';
+
+const DIVIDER_STYLES = {
+  marginTop: 'var(--pf-t--global--spacer--md)',
+  marginBottom: 'var(--pf-t--global--spacer--md)'
+};
 import { makeSlug } from '../../helpers';
 import globalBreakpointXl from '@patternfly/react-tokens/dist/esm/t_global_breakpoint_xl';
 import { trackEvent } from '../../helpers';
@@ -163,19 +170,75 @@ export const SideNav = ({ groupedRoutes = {}, navItems = [] }) => {
     }
   }, []);
 
+  const processedItems = React.useMemo(() => {
+    const result = [];
+    let currentGroup = null;
+    let groupItems = [];
+
+    for (let i = 0; i < navItems.length; i++) {
+      const item = navItems[i];
+      
+      if (item.header) {
+        if (currentGroup) {
+          result.push({ type: 'group', title: currentGroup, items: groupItems });
+        }
+        currentGroup = item.header;
+        groupItems = [];
+      } else if (item.divider) {
+        if (currentGroup) {
+          result.push({ type: 'group', title: currentGroup, items: groupItems });
+          currentGroup = null;
+          groupItems = [];
+        }
+        result.push({ type: 'divider', key: item.divider });
+      } else {
+        currentGroup ? groupItems.push(item) : result.push({ type: 'item', ...item });
+      }
+    }
+
+    if (currentGroup) {
+      result.push({ type: 'group', title: currentGroup, items: groupItems });
+    }
+
+    return result;
+  }, [navItems]);
+
   return (
     <Nav aria-label="Side Nav" theme="light">
       <NavList className="ws-side-nav-list">
-        {navItems.map(({ section, text, href }) =>
-          section ? (
-            <Location key={section}>{({ location }) => ExpandableNav({ groupedRoutes, location, section })}</Location>
-          ) : (
-            NavItem({
-              text: text || capitalize(href.replace(/\//g, '').replace(/-/g, ' ')),
-              href: href
-            })
-          )
-        )}
+        {processedItems.map(processed => {
+          if (processed.type === 'divider') {
+            return <Divider key={processed.key} style={DIVIDER_STYLES} />;
+          }
+          
+          if (processed.type === 'group') {
+            return (
+              <NavGroup key={processed.title} title={processed.title}>
+                {processed.items.map(item =>
+                  item.section ? (
+                    <Location key={item.section}>
+                      {({ location }) => ExpandableNav({ groupedRoutes, location, section: item.section })}
+                    </Location>
+                  ) : NavItem({
+                    key: item.href,
+                    text: item.text || capitalize(item.href.replace(/\//g, '').replace(/-/g, ' ')),
+                    href: item.href
+                  })
+                )}
+              </NavGroup>
+            );
+          }
+          
+          return processed.section ? (
+            <Location key={processed.section}>
+              {({ location }) => ExpandableNav({ groupedRoutes, location, section: processed.section })}
+            </Location>
+          ) : NavItem({
+            key: processed.href,
+            text: processed.text || capitalize(processed.href.replace(/\//g, '').replace(/-/g, ' ')),
+            href: processed.href
+          });
+        })}
       </NavList>
     </Nav>
   );
