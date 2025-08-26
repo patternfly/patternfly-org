@@ -6,7 +6,7 @@ if (process.env.EXTENSIONS_ONLY === 'true') {
     hasGdprBanner: false,
     hasFooter: false,
     hasVersionSwitcher: false,
-    hasDarkThemeSwitcher: true,
+    hasThemeSwitcher: true,
     hasRTLSwitcher: false,
     sideNavItems: [
       { section: 'extensions' }
@@ -27,7 +27,7 @@ if (process.env.EXTENSIONS_ONLY === 'true') {
     hasFooter: true,
     hasVersionSwitcher: true,
     hasDesignGuidelines: true,
-    hasDarkThemeSwitcher: true,
+    hasThemeSwitcher: true,
     componentsData,
     sideNavItems: [
       { section: 'get-started' },
