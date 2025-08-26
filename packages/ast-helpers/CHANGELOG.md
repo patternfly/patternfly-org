@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.4.0-alpha.266 (2025-08-26)
+
+
+### Features
+
+* **docs-framework:** add high contrast theme switcher ([#4749](https://github.com/patternfly/patternfly-org/issues/4749)) ([1a24fb2](https://github.com/patternfly/patternfly-org/commit/1a24fb234bbaee2d569c16b4b1a90609fe006ddf))
+
+
+
+
+
 # 1.4.0-alpha.265 (2025-08-19)
 
 
