@@ -98,7 +98,7 @@ export const Example = ({
   // Content that appears between h3 and code block to explain example
   children,
   // Show dark theme switcher on full page examples
-  hasDarkThemeSwitcher = process.env.hasDarkThemeSwitcher,
+  hasThemeSwitcher = process.env.hasThemeSwitcher,
   // Show dark theme switcher on full page examples
   hasRTLSwitcher = process.env.hasRTLSwitcher,
   // Map of relative imports matched to their npm package import path (passed to Codesandbox)
@@ -188,13 +188,13 @@ export const Example = ({
     return (
       <div id={previewId} className={css(className, 'pf-v6-u-h-100')}>
         {livePreview}
-        {(hasDarkThemeSwitcher || hasRTLSwitcher) && (
+        {(hasThemeSwitcher || hasRTLSwitcher) && (
           <Flex
             direction={{ default: 'column' }}
             gap={{ default: 'gapMd' }}
             className="ws-full-page-utils pf-v6-m-dir-ltr"
           >
-            {hasDarkThemeSwitcher && <ThemeSelector id="ws-example-theme-select" />}
+            {hasThemeSwitcher && <ThemeSelector id="ws-example-theme-select" />}
             {hasRTLSwitcher && (
               <Switch
                 id="ws-example-rtl-switch"

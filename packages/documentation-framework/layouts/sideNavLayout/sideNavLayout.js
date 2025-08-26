@@ -38,7 +38,7 @@ const HeaderTools = ({
   versions,
   hasVersionSwitcher,
   algolia,
-  hasDarkThemeSwitcher,
+  hasThemeSwitcher,
   hasRTLSwitcher,
   topNavItems,
   isRTL,
@@ -118,7 +118,7 @@ const HeaderTools = ({
               <GithubIcon />
             </Button>
           </ToolbarItem>
-          {hasDarkThemeSwitcher && (
+          {hasThemeSwitcher && (
             <ToolbarItem>
               <ThemeSelector id="ws-theme-select" />
             </ToolbarItem>
@@ -212,7 +212,7 @@ export const SideNavLayout = ({ children, groupedRoutes, navOpen: navOpenProp })
   const algolia = process.env.algolia;
   const hasGdprBanner = process.env.hasGdprBanner;
   const hasVersionSwitcher = process.env.hasVersionSwitcher;
-  const hasDarkThemeSwitcher = process.env.hasDarkThemeSwitcher;
+  const hasThemeSwitcher = process.env.hasThemeSwitcher;
   const hasRTLSwitcher = process.env.hasRTLSwitcher;
   const sideNavItems = process.env.sideNavItems;
   const topNavItems = process.env.topNavItems;
@@ -310,7 +310,7 @@ export const SideNavLayout = ({ children, groupedRoutes, navOpen: navOpenProp })
             versions={versions}
             algolia={algolia}
             hasVersionSwitcher={hasVersionSwitcher}
-            hasDarkThemeSwitcher={hasDarkThemeSwitcher}
+            hasThemeSwitcher={hasThemeSwitcher}
             hasRTLSwitcher={hasRTLSwitcher}
             topNavItems={topNavItems}
             isRTL={isRTL}
