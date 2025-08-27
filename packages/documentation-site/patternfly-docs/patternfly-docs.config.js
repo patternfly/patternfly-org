@@ -8,6 +8,7 @@ if (process.env.EXTENSIONS_ONLY === 'true') {
     hasVersionSwitcher: false,
     hasThemeSwitcher: true,
     hasRTLSwitcher: false,
+    hasFeedbackButton: true,
     sideNavItems: [
       { section: 'extensions' }
     ],
@@ -28,6 +29,7 @@ if (process.env.EXTENSIONS_ONLY === 'true') {
     hasVersionSwitcher: true,
     hasDesignGuidelines: true,
     hasThemeSwitcher: true,
+    hasFeedbackButton: true,
     componentsData,
     sideNavItems: [
       { section: 'get-started' },
