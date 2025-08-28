@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.4.0-alpha.267 (2025-08-28)
+
+
+### Features
+
+* **theme:** Add high contrast switcher feature flag ([#4761](https://github.com/patternfly/patternfly-org/issues/4761)) ([94b1bf1](https://github.com/patternfly/patternfly-org/commit/94b1bf11fdf0f9daa230671b9ea6cb8258190db2))
+
+
+
+
+
 # 1.4.0-alpha.266 (2025-08-26)
 
 
