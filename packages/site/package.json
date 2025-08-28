@@ -7,13 +7,13 @@
     "clean": "rm -rf src/generated",
     "generate:content": "patternfly-doc-core convert-to-mdx ../documentation-site/patternfly-docs/content/",
     "dev": "patternfly-doc-core start",
-    "build": "patternfly-doc-core build",
+    "build": "patternfly-doc-core build --props",
     "serve": "patternfly-doc-core serve",
     "sync": "patternfly-doc-core sync",
     "init:docs": "patternfly-doc-core init"
   },
   "dependencies": {
-    "@patternfly/patternfly-doc-core": "^1.12.0",
+    "@patternfly/patternfly-doc-core": "^1.13.1",
     "astro": "^5.7.13"
   },
   "devDependencies": {
