@@ -84,6 +84,7 @@ export const ThemeSelector = ({ id }) => {
         return DesktopIcon;
     }
   };
+
   return (
     <Select
       id={id}
@@ -116,6 +117,7 @@ export const ThemeSelector = ({ id }) => {
           </SelectOption>
         </SelectList>
       </SelectGroup>
+      {process.env.hasHighContrastSwitcher && (<>
       <Divider />
       <SelectGroup label="High Contrast">
         <MenuSearch>
@@ -143,6 +145,8 @@ export const ThemeSelector = ({ id }) => {
           </MenuSearchInput>
         </MenuSearch>
       </SelectGroup>
+      </>
+      )}
     </Select>
   );
 };
