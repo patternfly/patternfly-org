@@ -7,6 +7,7 @@ if (process.env.EXTENSIONS_ONLY === 'true') {
     hasFooter: false,
     hasVersionSwitcher: false,
     hasThemeSwitcher: true,
+    hasHighContrastSwitcher: false,
     hasRTLSwitcher: false,
     sideNavItems: [
       { section: 'extensions' }
@@ -28,6 +29,7 @@ if (process.env.EXTENSIONS_ONLY === 'true') {
     hasVersionSwitcher: true,
     hasDesignGuidelines: true,
     hasThemeSwitcher: true,
+    hasHighContrastSwitcher: false,
     componentsData,
     sideNavItems: [
       { section: 'get-started' },
