@@ -4,14 +4,21 @@ import {
   Label,
   Nav,
   NavList,
+  NavGroup,
   NavExpandable,
   PageContextConsumer,
   capitalize,
   Flex,
-  FlexItem
+  FlexItem,
+  Divider
 } from '@patternfly/react-core';
 import { css } from '@patternfly/react-styles';
 import { Location } from '@reach/router';
+
+const DIVIDER_STYLES = {
+  marginTop: 'var(--pf-t--global--spacer--md)',
+  marginBottom: 'var(--pf-t--global--spacer--md)'
+};
 import { makeSlug } from '../../helpers';
 import globalBreakpointXl from '@patternfly/react-tokens/dist/esm/t_global_breakpoint_xl';
 import { trackEvent } from '../../helpers';
@@ -163,20 +170,91 @@ export const SideNav = ({ groupedRoutes = {}, navItems = [] }) => {
     }
   }, []);
 
+  const sections = React.useMemo(() => {
+    const result = [];
+    let currentGroup = null;
+    let groupItems = [];
+    let ungroupedItems = [];
+
+    const flushUngrouped = () => {
+      if (ungroupedItems.length > 0) {
+        result.push({ type: 'ungrouped', items: ungroupedItems });
+        ungroupedItems = [];
+      }
+    };
+
+    navItems.forEach(item => {
+      if (item.header) {
+        flushUngrouped();
+        if (currentGroup) result.push({ type: 'group', title: currentGroup, items: groupItems });
+        currentGroup = item.header;
+        groupItems = [];
+      } else if (item.divider) {
+        flushUngrouped();
+        if (currentGroup) {
+          result.push({ type: 'group', title: currentGroup, items: groupItems });
+          currentGroup = null;
+          groupItems = [];
+        }
+        result.push({ type: 'divider', key: item.divider });
+      } else {
+        currentGroup ? groupItems.push(item) : ungroupedItems.push(item);
+      }
+    });
+
+    flushUngrouped();
+    if (currentGroup) result.push({ type: 'group', title: currentGroup, items: groupItems });
+    return result;
+  }, [navItems]);
+
   return (
     <Nav aria-label="Side Nav" theme="light">
-      <NavList className="ws-side-nav-list">
-        {navItems.map(({ section, text, href }) =>
-          section ? (
-            <Location key={section}>{({ location }) => ExpandableNav({ groupedRoutes, location, section })}</Location>
-          ) : (
-            NavItem({
-              text: text || capitalize(href.replace(/\//g, '').replace(/-/g, ' ')),
-              href: href
-            })
-          )
-        )}
-      </NavList>
+      {sections.map((section, i) => {
+        if (section.type === 'divider') {
+          return <Divider key={section.key} style={DIVIDER_STYLES} />;
+        }
+        
+        if (section.type === 'group') {
+          return (
+            <NavGroup key={section.title} title={section.title}>
+              <NavList className="ws-side-nav-list">
+                {section.items.map(item => 
+                  item.section ? (
+                    <Location key={item.section}>
+                      {({ location }) => ExpandableNav({ groupedRoutes, location, section: item.section })}
+                    </Location>
+                  ) : NavItem({
+                    key: item.href,
+                    text: item.text || capitalize((item.href || '').replace(/\//g, '').replace(/-/g, ' ')),
+                    href: item.href
+                  })
+                )}
+              </NavList>
+            </NavGroup>
+          );
+        }
+
+        // Ungrouped items
+        if (section.type === 'ungrouped') {
+          return (
+            <NavList key={`ungrouped-${i}`} className="ws-side-nav-list">
+              {section.items.map(item => 
+                item.section ? (
+                  <Location key={item.section}>
+                    {({ location }) => ExpandableNav({ groupedRoutes, location, section: item.section })}
+                  </Location>
+                ) : NavItem({
+                  key: item.href,
+                  text: item.text || capitalize((item.href || '').replace(/\//g, '').replace(/-/g, ' ')),
+                  href: item.href
+                })
+              )}
+            </NavList>
+          );
+        }
+
+        return null;
+      })}
     </Nav>
   );
 };
