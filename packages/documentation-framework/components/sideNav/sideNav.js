@@ -170,21 +170,27 @@ export const SideNav = ({ groupedRoutes = {}, navItems = [] }) => {
     }
   }, []);
 
-  const processedItems = React.useMemo(() => {
+  const sections = React.useMemo(() => {
     const result = [];
     let currentGroup = null;
     let groupItems = [];
+    let ungroupedItems = [];
 
-    for (let i = 0; i < navItems.length; i++) {
-      const item = navItems[i];
-      
+    const flushUngrouped = () => {
+      if (ungroupedItems.length > 0) {
+        result.push({ type: 'ungrouped', items: ungroupedItems });
+        ungroupedItems = [];
+      }
+    };
+
+    navItems.forEach(item => {
       if (item.header) {
-        if (currentGroup) {
-          result.push({ type: 'group', title: currentGroup, items: groupItems });
-        }
+        flushUngrouped();
+        if (currentGroup) result.push({ type: 'group', title: currentGroup, items: groupItems });
         currentGroup = item.header;
         groupItems = [];
       } else if (item.divider) {
+        flushUngrouped();
         if (currentGroup) {
           result.push({ type: 'group', title: currentGroup, items: groupItems });
           currentGroup = null;
@@ -192,54 +198,63 @@ export const SideNav = ({ groupedRoutes = {}, navItems = [] }) => {
         }
         result.push({ type: 'divider', key: item.divider });
       } else {
-        currentGroup ? groupItems.push(item) : result.push({ type: 'item', ...item });
+        currentGroup ? groupItems.push(item) : ungroupedItems.push(item);
       }
-    }
+    });
 
-    if (currentGroup) {
-      result.push({ type: 'group', title: currentGroup, items: groupItems });
-    }
-
+    flushUngrouped();
+    if (currentGroup) result.push({ type: 'group', title: currentGroup, items: groupItems });
     return result;
   }, [navItems]);
 
   return (
     <Nav aria-label="Side Nav" theme="light">
-      <NavList className="ws-side-nav-list">
-        {processedItems.map(processed => {
-          if (processed.type === 'divider') {
-            return <Divider key={processed.key} style={DIVIDER_STYLES} />;
-          }
-          
-          if (processed.type === 'group') {
-            return (
-              <NavGroup key={processed.title} title={processed.title}>
-                {processed.items.map(item =>
+      {sections.map((section, i) => {
+        if (section.type === 'divider') {
+          return <Divider key={section.key} style={DIVIDER_STYLES} />;
+        }
+        
+        if (section.type === 'group') {
+          return (
+            <NavGroup key={section.title} title={section.title}>
+              <NavList className="ws-side-nav-list">
+                {section.items.map(item => 
                   item.section ? (
                     <Location key={item.section}>
                       {({ location }) => ExpandableNav({ groupedRoutes, location, section: item.section })}
                     </Location>
                   ) : NavItem({
                     key: item.href,
-                    text: item.text || capitalize(item.href.replace(/\//g, '').replace(/-/g, ' ')),
+                    text: item.text || capitalize((item.href || '').replace(/\//g, '').replace(/-/g, ' ')),
                     href: item.href
                   })
                 )}
-              </NavGroup>
-            );
-          }
-          
-          return processed.section ? (
-            <Location key={processed.section}>
-              {({ location }) => ExpandableNav({ groupedRoutes, location, section: processed.section })}
-            </Location>
-          ) : NavItem({
-            key: processed.href,
-            text: processed.text || capitalize(processed.href.replace(/\//g, '').replace(/-/g, ' ')),
-            href: processed.href
-          });
-        })}
-      </NavList>
+              </NavList>
+            </NavGroup>
+          );
+        }
+
+        // Ungrouped items
+        if (section.type === 'ungrouped') {
+          return (
+            <NavList key={`ungrouped-${i}`} className="ws-side-nav-list">
+              {section.items.map(item => 
+                item.section ? (
+                  <Location key={item.section}>
+                    {({ location }) => ExpandableNav({ groupedRoutes, location, section: item.section })}
+                  </Location>
+                ) : NavItem({
+                  key: item.href,
+                  text: item.text || capitalize((item.href || '').replace(/\//g, '').replace(/-/g, ' ')),
+                  href: item.href
+                })
+              )}
+            </NavList>
+          );
+        }
+
+        return null;
+      })}
     </Nav>
   );
 };
