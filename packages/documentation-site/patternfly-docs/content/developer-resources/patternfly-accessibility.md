@@ -25,11 +25,13 @@ We strive for compliance in accordance to [level AA in the Web Content Accessibi
 | Contents that appear on hover and focus are dismissible, hoverable, and persistent. | [WCAG 1.4.13](//www.w3.org/WAI/WCAG22/quickref#content-on-hover-or-focus) | `html` `css` `js` | Manual testing | 
 | All functionality is keyboard accessible. | [WCAG 2.1.1](//www.w3.org/WAI/WCAG22/quickref#keyboard) and [2.1.2](//www.w3.org/WAI/WCAG22/quickref#no-keyboard-trap) | `html` | Manual testing |
 | Elements in the HTML and in the layout follow a logical order. | [WCAG 1.3.2](//www.w3.org/WAI/WCAG22/quickref#meaningful-sequence) and [2.4.3](//www.w3.org/WAI/WCAG22/quickref#focus-order) | `design` `html` `css` | Manual testing |
-| Elements with focus are clearly visible. | [WCAG 2.4.7](//www.w3.org/WAI/WCAG22/quickref#focus-visible) | `css` | Manual testing |
 | Flashing content does not flash more than three times in any one-second period, or the flash is below the general flash and red flash thresholds. | [WCAG 2.3.1](//www.w3.org/WAI/WCAG22/quickref/?showtechniques=231#three-flashes-or-below-threshold) | `css` | Manual testing|
+| Elements with focus are clearly visible. | [WCAG 2.4.7](//www.w3.org/WAI/WCAG22/quickref#focus-visible) | `css` | Manual testing |
+| Elements that are focusable are not entirely obscured. | [WCAG 2.4.11](//www.w3.org/WAI/WCAG22/quickref#focus-not-obscured-minimum) | Manual testing |
 | Functionality that uses complex gestures can also be operated with a single pointer without a path-based gesture. | [WCAG 2.5.1](//www.w3.org/WAI/WCAG22/quickref#pointer-gestures) | `design` | Manual testing |
 | Pointer events can be canceled.  | [WCAG 2.5.2](//www.w3.org/WAI/WCAG22/quickref#pointer-cancellation) | `js` | Manual testing |
 | Visible labels of UI components are either the same as the accessible name or used in the beginning of the accessible name. | [WCAG 2.5.3](//www.w3.org/WAI/WCAG22/quickref#label-in-name) | `html` | Automated testing with aXe and manual testing |
+| Any action that involves dragging has a pointer alternative. | [WCAG 2.5.7](//www.w3.org/WAI/WCAG22/quickref#dragging-movements) | Manual testing |
 | The target area for clickable elements is at least 24 by 24 [CSS pixels](//www.w3.org/TR/WCAG22#dfn-css-pixels), with specific exceptions. | [WCAG 2.5.8](//www.w3.org/WAI/WCAG22/quickref/#target-size-minimum) | `css` | Manual testing |
 | An accessible name, role, and value are provided for all user interface elements. | [WCAG 4.1.2](//www.w3.org/WAI/WCAG22/quickref#name-role-value) | `design` `html` | Automated testing with aXe and manual testing with VoiceOver
 | Status messages can be programmatically determined through role or properties. | [WCAG 4.1.3](//www.w3.org/WAI/WCAG22/quickref#status-messages) | `html` | Manual testing |
