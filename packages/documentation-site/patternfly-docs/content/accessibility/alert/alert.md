@@ -145,4 +145,4 @@ You can further customize the way assistive technologies announce the contents o
 To read more about accessibility with alerts and alert groups, refer to the following resources:
 
 - [ARIA Authoring Practices Guide - Alerts](https://www.w3.org/WAI/ARIA/apg/patterns/alert/)
-- [WCAG 2.0 success criterion 2.2.3 - no timing](https://www.w3.org/TR/UNDERSTANDING-WCAG20/time-limits-no-exceptions.html), if intending to use alerts that automatically get dismissed
+- [Understanding Success Criterion 2.2.3: No Timing (Level AAA)](https://www.w3.org/WAI/WCAG22/Understanding/no-timing.html), if intending to use alerts that automatically get dismissed

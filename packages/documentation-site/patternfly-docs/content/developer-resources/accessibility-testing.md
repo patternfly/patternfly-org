@@ -56,9 +56,9 @@ You can test with any screen reader that is available in your operating system. 
 ### Check color contrast
 
 Your UI's colors should pass the following contrast checks to ensure that users across the vision spectrum can understand your product:
-    - Text color against background color ([Understanding WCAG 1.4.3](//www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html))
-    - Text color against link color ([Technique G183](//www.w3.org/TR/WCAG20-TECHS/G183.html))
-    - Visible boundaries of buttons and form elements against adjacent background color ([Understanding WCAG 1.4.11](//www.w3.org/WAI/WCAG21/Understanding/non-text-contrast.html))
+    - Text color against background color ([Understanding WCAG 1.4.3](//www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html))
+    - Text color against link color ([WCAG Technique G183](https://www.w3.org/WAI/WCAG22/Techniques/general/G183))
+    - Visible boundaries of buttons and form elements against adjacent background color ([Understanding WCAG 1.4.11](//www.w3.org/WAI/WCAG22/Understanding/non-text-contrast.html))
 
 ## Accessibility testing checklist
 

@@ -24,7 +24,7 @@ These are some of the items outside the scope of PatternFly that you should prio
 
 ### UI element accessibility techniques
 
-The [WCAG 2.0 techniques](https://www.w3.org/TR/WCAG20-TECHS/Overview.html#contents) provide examples on how to meet accessibility guidelines. The following techniques are standard across PatternFly for specific patterns.
+The [WCAG 2.2 techniques](https://www.w3.org/WAI/WCAG22/Techniques/) provide examples on how to meet accessibility guidelines. The following techniques are standard across PatternFly for specific patterns.
 
 #### Labeling with ARIA
 
@@ -38,11 +38,11 @@ Note that ARIA can only affect the semantics of an element; it has no effect on 
 
 #### Form fields
 
-Use [explicit linking](https://www.w3.org/TR/WCAG20-TECHS/H44.html) between `label` and form input elements (such as `input`, `textarea`, or `select`) when both are present. [This "H44" guidelines](//www.w3.org/TR/WCAG20-TECHS/H44.html) provides an accessible name to screen readers and makes the label clickable to increase the overall clickable area of the form element.
+[Use label elements to associate text labels with form controls](https://www.w3.org/WAI/WCAG22/Techniques/html/H44) (such as `input`, `textarea`, or `select`) when both are present. This technique provides an accessible name to screen readers and makes the label clickable to increase the overall clickable area of the form element.
 
-When a `label` element cannot accompany a form input element, provide one using using `aria-label` or `aria-labelledby`, as outline by the ["ARIA14" guidelines](//www.w3.org/TR/WCAG20-TECHS/ARIA14.html). 
+When a `label` element cannot accompany a form input element, provide one using using `aria-label` or `aria-labelledby`, as outline by the [WCAG technique ARIA14](https://www.w3.org/WAI/WCAG22/Techniques/aria/ARIA14). 
 
-In a single-field form, the submit button label can serve as the field label for sighted users, [following the "G167" guidelines](//www.w3.org/TR/WCAG20-TECHS/general.html#G167). For assistive devices, use `aria-labelledby`.
+In a single-field form, the submit button label can serve as the field label for sighted users, followwing the [WCAG technique G167](https://www.w3.org/WAI/WCAG22/Techniques/general/G167). For assistive devices, use `aria-labelledby`.
 
 #### Icons
 
