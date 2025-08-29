@@ -473,7 +473,7 @@ export const TabsOpenDemo = () => {
     <PageSidebar isSidebarOpen={isNavOpen}>
       <div className="pf-v6-c-page__sidebar-header">
         <PageSidebarBody>
-          <Title headingLevel="h6">PatternFly high contrast mode</Title>
+          <Title headingLevel="h6">PatternFly</Title>
         </PageSidebarBody>
       </div>
       <PageSidebarBody>{PageNav}</PageSidebarBody>
