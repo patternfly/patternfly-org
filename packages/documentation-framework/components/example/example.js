@@ -98,7 +98,7 @@ export const Example = ({
   // Content that appears between h3 and code block to explain example
   children,
   // Show dark theme switcher on full page examples
-  hasThemeSwitcher = process.env.hasThemeSwitcher,
+  hasThemeSwitcher = false,
   // Show dark theme switcher on full page examples
   hasRTLSwitcher = process.env.hasRTLSwitcher,
   // Map of relative imports matched to their npm package import path (passed to Codesandbox)

@@ -24,6 +24,7 @@ import QuestionCircleIcon from '@patternfly/react-icons/dist/esm/icons/question-
 import BarsIcon from '@patternfly/react-icons/dist/esm/icons/bars-icon';
 import ExclamationCircleIcon from '@patternfly/react-icons/dist/esm/icons/exclamation-circle-icon';
 import { useState } from 'react';
+import { ThemeSelector } from '@patternfly/documentation-framework/components/themeSelector/themeSelector';
 
 ### High contrast
 

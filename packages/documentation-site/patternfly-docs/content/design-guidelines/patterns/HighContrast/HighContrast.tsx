@@ -58,6 +58,7 @@ import EllipsisVIcon from '@patternfly/react-icons/dist/esm/icons/ellipsis-v-ico
 import ExclamationCircleIcon from '@patternfly/react-icons/dist/esm/icons/exclamation-circle-icon';
 import { Ref, RefObject, useState, MouseEvent as ReactMouseEvent, FormEvent } from 'react';
 import { DashboardWrapper } from '@patternfly/react-core/dist/js/demos/DashboardWrapper';
+import { ThemeSelector } from '@patternfly/documentation-framework/components/themeSelector/themeSelector';
 
 type Validate = 'success' | 'warning' | 'error' | 'default';
 const emailRegex = /^[^@]+@[^@]+\.[a-zA-Z]+$/i;
@@ -190,22 +191,21 @@ export const TabsOpenDemo = () => {
         </FormHelperText>
       </FormGroup>
       <FormGroup
-        label="Options"
+        label="Preferred contact method"
         isStack
         isRequired
         fieldId="horizontal-form-checkbox-group"
         role="group"
         labelHelp={<FormGroupLabelHelp aria-label="Help" />}
       >
-        <Checkbox label="Option 1" id="alt-form-checkbox-1" name="alt-form-checkbox-1" />
+        <Checkbox label="Email" id="alt-form-checkbox-1" name="alt-form-checkbox-1"           isChecked={isChecked}
+          onChange={() => setIsChecked(!isChecked)}/>
         <Checkbox
-          label="Option 2"
+          label="Phone call"
           id="alt-form-checkbox-2"
           name="alt-form-checkbox-2"
-          isChecked={isChecked}
-          onChange={() => setIsChecked(!isChecked)}
         />
-        <Checkbox label="Option 3" id="alt-form-checkbox-3" name="alt-form-checkbox-3" />
+        <Checkbox label="Text message" id="alt-form-checkbox-3" name="alt-form-checkbox-3" />
       </FormGroup>
       <FormGroup
         label="Description"
@@ -587,6 +587,9 @@ export const TabsOpenDemo = () => {
               align={{ default: 'alignEnd' }}
               gap={{ default: 'gapNone', md: 'gapMd' }}
             >
+              <ToolbarItem>
+                <ThemeSelector id="hc-demo-theme-selector" />
+              </ToolbarItem>
               <ToolbarItem>
                 <NotificationBadge
                   variant={NotificationBadgeVariant.read}
