@@ -170,91 +170,45 @@ export const SideNav = ({ groupedRoutes = {}, navItems = [] }) => {
     }
   }, []);
 
-  const sections = React.useMemo(() => {
-    const result = [];
-    let currentGroup = null;
-    let groupItems = [];
-    let ungroupedItems = [];
+  const groupedItems = React.useMemo(() => 
+    (navItems || []).filter(entry => entry && entry.title), [navItems]);
+  const ungroupedItems = React.useMemo(() => 
+    (navItems || []).filter(entry => entry && !entry.title), [navItems]);
 
-    const flushUngrouped = () => {
-      if (ungroupedItems.length > 0) {
-        result.push({ type: 'ungrouped', items: ungroupedItems });
-        ungroupedItems = [];
-      }
-    };
-
-    navItems.forEach(item => {
-      if (item.header) {
-        flushUngrouped();
-        if (currentGroup) result.push({ type: 'group', title: currentGroup, items: groupItems });
-        currentGroup = item.header;
-        groupItems = [];
-      } else if (item.divider) {
-        flushUngrouped();
-        if (currentGroup) {
-          result.push({ type: 'group', title: currentGroup, items: groupItems });
-          currentGroup = null;
-          groupItems = [];
-        }
-        result.push({ type: 'divider', key: item.divider });
-      } else {
-        currentGroup ? groupItems.push(item) : ungroupedItems.push(item);
-      }
+  const renderNavItem = React.useCallback((item) => {
+    if (!item) return null;
+    
+    return item.section ? (
+      <Location key={item.section}>
+        {({ location }) => ExpandableNav({ groupedRoutes, location, section: item.section })}
+      </Location>
+    ) : NavItem({
+      key: item.href || `nav-item-${Math.random()}`,
+      text: item.text || (item.href ? capitalize(item.href.replace(/\//g, '').replace(/-/g, ' ')) : 'Untitled'),
+      href: item.href
     });
-
-    flushUngrouped();
-    if (currentGroup) result.push({ type: 'group', title: currentGroup, items: groupItems });
-    return result;
-  }, [navItems]);
+  }, [groupedRoutes]);
 
   return (
     <Nav aria-label="Side Nav" theme="light">
-      {sections.map((section, i) => {
-        if (section.type === 'divider') {
-          return <Divider key={section.key} style={DIVIDER_STYLES} />;
-        }
-        
-        if (section.type === 'group') {
-          return (
-            <NavGroup key={section.title} title={section.title}>
-              <NavList className="ws-side-nav-list">
-                {section.items.map(item => 
-                  item.section ? (
-                    <Location key={item.section}>
-                      {({ location }) => ExpandableNav({ groupedRoutes, location, section: item.section })}
-                    </Location>
-                  ) : NavItem({
-                    key: item.href,
-                    text: item.text || capitalize((item.href || '').replace(/\//g, '').replace(/-/g, ' ')),
-                    href: item.href
-                  })
-                )}
-              </NavList>
-            </NavGroup>
-          );
-        }
-
-        // Ungrouped items
-        if (section.type === 'ungrouped') {
-          return (
-            <NavList key={`ungrouped-${i}`} className="ws-side-nav-list">
-              {section.items.map(item => 
-                item.section ? (
-                  <Location key={item.section}>
-                    {({ location }) => ExpandableNav({ groupedRoutes, location, section: item.section })}
-                  </Location>
-                ) : NavItem({
-                  key: item.href,
-                  text: item.text || capitalize((item.href || '').replace(/\//g, '').replace(/-/g, ' ')),
-                  href: item.href
-                })
-              )}
+      {/* Render grouped items */}
+      {groupedItems.map((group) => (
+        <React.Fragment key={group.title}>
+          <NavGroup title={group.title}>
+            <NavList className="ws-side-nav-list" aria-label={`${group.title} navigation`}>
+              {group.items.map(renderNavItem)}
             </NavList>
-          );
-        }
-
-        return null;
-      })}
+          </NavGroup>
+          {group.hasDivider && <Divider style={DIVIDER_STYLES} />}
+        </React.Fragment>
+      ))}
+      
+      {/* Render ungrouped items - this handles the current flat structure */}
+      {ungroupedItems.length > 0 && (
+        <NavList className="ws-side-nav-list">
+          {ungroupedItems.map(renderNavItem)}
+        </NavList>
+      )}
     </Nav>
   );
 };
