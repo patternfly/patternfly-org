@@ -39,7 +39,8 @@ class ThemeManager {
     if (!this.isBrowser) {
       return;
     }
-    return localStorage.getItem(this.storageKey);
+    const storedValue = localStorage.getItem(this.storageKey);
+    return storedValue || this.defaultMode;
   }
 
   setStoredValue(value) {
