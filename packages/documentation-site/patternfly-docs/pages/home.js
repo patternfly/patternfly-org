@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from '@patternfly/documentation-framework/components';
+import { Link, FeedbackButton } from '@patternfly/documentation-framework/components';
 import {
   Banner,
   Button,
@@ -289,6 +289,7 @@ const HomePage = () => (
     <PageSection isWidthLimited className="v6-stay-informed-cards">
       <AggregateCards />
     </PageSection>
+    <FeedbackButton />
   </React.Fragment>
 );
 

@@ -1,0 +1,48 @@
+.ws-feedback-button-container {
+  position: fixed;
+  right: 0;
+  top: 50vh;
+  transform: translateY(-50%);
+  transform: rotate(-90deg);
+  z-index: 9999;
+  pointer-events: auto;
+}
+
+.ws-feedback-button {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Ensure the button is visible on all screen sizes */
+@media (max-width: 768px) {
+  .ws-feedback-button-container {
+    right: -20px;
+  }
+}
+
+/* Ensure the button doesn't interfere with other elements */
+.ws-feedback-button-container .pf-v6-c-button {
+  min-width: auto;
+}
+
+/* Make the feedback modal taller */
+.ws-feedback-modal {
+  max-height: 90vh !important;
+}
+
+.ws-feedback-modal .pf-v6-c-modal-box {
+  max-height: 90vh !important;
+  height: 90vh !important;
+}
+
+.ws-feedback-modal .pf-v6-c-modal-box__body {
+  height: calc(90vh - 120px) !important;
+  overflow-y: auto;
+}
+
+/* Make the iframe fill the modal body */
+.ws-feedback-iframe {
+  width: 100% !important;
+  height: 100% !important;
+  border: none;
+  display: block;
+}

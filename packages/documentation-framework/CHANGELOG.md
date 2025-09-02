@@ -3,6 +3,39 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 6.21.0 (2025-09-02)
+
+
+### Features
+
+* **Feedback:** Add a feedback button with qualtrics form ([#4755](https://github.com/patternfly/patternfly-org/issues/4755)) ([21a8823](https://github.com/patternfly/patternfly-org/commit/21a88238b7187e3c98fbb2f4d8c94483796dfcf0))
+
+
+
+
+
+# 6.20.0 (2025-08-28)
+
+
+### Features
+
+* **theme:** Add high contrast switcher feature flag ([#4761](https://github.com/patternfly/patternfly-org/issues/4761)) ([94b1bf1](https://github.com/patternfly/patternfly-org/commit/94b1bf11fdf0f9daa230671b9ea6cb8258190db2))
+
+
+
+
+
+# 6.19.0 (2025-08-26)
+
+
+### Features
+
+* **docs-framework:** add high contrast theme switcher ([#4749](https://github.com/patternfly/patternfly-org/issues/4749)) ([1a24fb2](https://github.com/patternfly/patternfly-org/commit/1a24fb234bbaee2d569c16b4b1a90609fe006ddf))
+
+
+
+
+
 ## 6.18.7 (2025-08-19)
 
 
