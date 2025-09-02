@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 6.21.0 (2025-09-02)
+
+
+### Features
+
+* **Feedback:** Add a feedback button with qualtrics form ([#4755](https://github.com/patternfly/patternfly-org/issues/4755)) ([21a8823](https://github.com/patternfly/patternfly-org/commit/21a88238b7187e3c98fbb2f4d8c94483796dfcf0))
+
+
+
+
+
 # 6.20.0 (2025-08-28)
 
 
