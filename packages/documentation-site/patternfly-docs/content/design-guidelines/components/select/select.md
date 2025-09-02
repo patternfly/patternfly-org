@@ -26,7 +26,7 @@ A select component consists of a toggle control to open and close a menu of acti
 
 ## Usage
 
-Guidance for usage varies depending on type of select list:
+Guidance for usage varies depending on the type of select list:
 * [Single select](#single-select)
 * [Checkbox select](#checkbox-select)
 * [Multiple select](#multiple-select)

@@ -129,7 +129,7 @@ When using danger text, you should still require a confirmation dialog before pr
 
 ### Disabled menus and menu options
 
-#### When to use disabled menus and menu options
+#### When to use
 
 Menus or menu items can be disabled for multiple reasons. The reason an action is disabled informs which design pattern you should use.
 

@@ -47,7 +47,7 @@ Plain styling removes the border from a dropdown toggle, which is useful when th
 ![A menu toggle that is only text with a dropdown caret. There is no fill or border.](./img/plain-toggle.svg)
 </div>
 
-Use a plain toggle when further action hierarchy needs to be established and you already have primary or secondary action toggle on the page.
+Use a plain toggle when further action hierarchy needs to be established and you already have a primary or secondary action toggle on the page.
 
 ### Icon toggle
 When there is not enough space for a labeled button, use an icon toggle instead. Icon toggles are most effective when you use a common icon with a well-understood meaning, like the vertical ellipses (kebab) icon.
@@ -71,11 +71,13 @@ A split button with a checkbox can be used in bulk selection use cases for a lis
 
 #### Split button with actions
 
-A split button with actions is useful when you want to expose a default action with a single click, but also allow access to other actions via the dropdown menu. This can be thought of as providing a shortcut to the most recent or frequently used item in the menu. A split button with actions can contain a labeled action or an icon in place of the label for use when there is limited space.
+A split button with actions is useful when you want to expose a default action with a single click, but also allow access to other actions via the dropdown menu. This can be thought of as providing a shortcut to the most recent or frequently used item in the menu. 
 
 <div class="ws-docs-content-img">
 ![Example of split button actions.](./img/split-button-actions.svg)
 </div>
+
+A split button with actions can contain a labeled action or an icon in place of the label for use when there is limited space.
 
 #### Example 
 
