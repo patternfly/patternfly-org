@@ -8,107 +8,149 @@ import '../components.css';
 
 ## Elements
 
-A toolbar is a container for holding a variety of elements (toolbar items and groups) that are used to manipulate a set of data. All items should be centered vertically within a toolbar.
+A toolbar is a container for elements that can be used to manipulate data. A variety of components can be used in toolbars, like buttons, controls, or inputs. 
 
 <div class="ws-docs-content-img">
 ![Elements of a basic toolbar.](./img/toolbar-elements.svg)
 </div>
 
-Toolbar items are individual components that can be placed inside of a toolbar. Often, it makes sense to group sets of like items to create desired associations and to enable items to respond together to changes in viewport width. By default, there should be an md spacer between items and groups. The following are some toolbar items and groups that come with special spacing considerations.
+Within a toolbar, there can be items or groups of items: 
+1. **Toolbar items:** Individual components within a toolbar, which operate independent of other toolbar elements. 
+1. **Toolbar item groups:** Sets of associated components that respond to changes in viewport width together together. By default, there should be a md spacer between items and groups. 
+
+## Usage
+The toolbar component is designed to be very flexible and support a variety of combinations of items and groups. When laying out your toolbar, be sure to:
+
+* Align bulk selection as the first element.
+* Align filters and global actions to the right of bulk selection.
+* Align pagination as the final element.
+* If pagination isn't used, align the item count as the final element.
 
 ### Bulk selector
+
+To let users select multiple items within a data view or page, use a [bulk selector](/patterns/bulk-selection/#bulk-selector). 
+
 <div class="ws-docs-content-img">
 ![Example of a bulk selector.](./img/bulk-selector.svg)
 </div>
 
-A [bulk selector](/patterns/bulk-selection/#bulk-selector) can be added to let users select multiple items within a page. Besides allowing the user to select and deselect all items on a page, other application specific options can be added in the dropdown. Bulk selection allows the user to select or deselect all items on a page and provide an indeterminate state that notifies the user when only some items are selected. Bulk selectors should always be the left-most element in a toolbar.
+Bulk selectors enable users to select and deselect all items via a checkbox or select other application-specific options via a dropdown menu. When only a portion of items are selected, there's an indeterminate state that signals to users that some items aren't selected. 
+
+Bulk selectors should always be the first element in a toolbar.
 
 ### Filter group
+
+To let users filter data based on a few related conditions, use a [filter group](/patterns/filters#mixed-select-filter-group) that combines multiple select filters within a single group. 
 
 <div class="ws-docs-content-img">
 ![Example of a filter group.](./img/filter-group.svg)
 </div>
 
-A filter group combines multiple select filters into a single group. See [filters](/patterns/filters) for more information about using filter groups.
-
 ### Search filter
 
-<div class="ws-docs-content-img">
-![Example of a search filter.](./img/search.svg)
-</div>
-
-Add a search filter when you want to display a single search field alongside other filters. For more information about using search input filters, refer to [the filters pattern](/patterns/filters/design-guidelines#text-entry-filters).
+To let users filter their data based on text input, add a search filter and refer to guidance on using [text entry filters](/patterns/filters/design-guidelines#text-entry-filters).
 
 <div class="ws-docs-content-img">
 ![Example of a toolbar with a search filter and filter group.](./img/toolbar-multi-filters.svg)
 </div>
 
-### Icon button group
-<div class="ws-docs-content-img">
-![Example of an icon button group.](./img/icon-buttons.svg)
-</div>
-
- Actions or settings that are represented by icons can be added in an icon button group.
-
 ### Button group
+
+Include any global actions that apply to selected data items as buttons.
+
 <div class="ws-docs-content-img">
 ![Example of a button group.](./img/buttons.svg)
 </div>
 
-Include any global actions that apply to selected data items as buttons. Be selective about which actions to surface on the toolbar, exposing no more than 2 buttons and reserving the rest for an [overflow menu](#overflow-menu) component to save space.
+Be selective about which actions to surface on the toolbar, exposing no more than 2 buttons and reserving the rest for an [overflow menu](#overflow-menu) component to save space. 
 
-**One or two clickable actions**
+Adhere to the following patterns for the number of actions you have.
+
+#### 1 or 2 clickable actions
 
 <div class="ws-docs-content-img">
 ![Example of a toolbar with 1-2 actions.](./img/1-2-actions.svg)
 </div>
 
-* Use a primary button for any call to action you want a user to take
-* In the case that using the action represented should not be encouraged, opt for a secondary button
+- Use a primary button for any call-to-action you want a user to take.
+- If you don't want to emphasize an action, use a secondary button instead.
 
-**Three clickable actions**
+#### 3 clickable actions
 
 <div class="ws-docs-content-img">
 ![Example of a toolbar with 3 actions.](./img/3-actions.svg)
 </div>
 
-* In the specific case where three actions are needed, the suggested guidance is to opt for an overflow menu with two items. This will prevent the toolbar from becoming too crowded, and also prevent the overflow menu from containing just one item. 
+- If you need to include 3 actions, add 1 to the toolbar and contain the remaining actions within an overflow menu. This will both prevent the toolbar from becoming too crowded, and also the overflow menu from containing just 1 item. 
 
-**More than three clickable actions**
+#### More than 3 clickable actions
 
 <div class="ws-docs-content-img">
 ![Example of a toolbar with 3 or more actions.](./img/3-or-more-actions.svg)
 </div>
 
-* Use a primary button to indicate the most important action within the table
-* Use a secondary button for a second action you want to surface in the toolbar, if it is too important to place in an overflow menu
-* Except for a primary button, and a secondary button in cases where absolutely necessary, put all other actions in an overflow menu
+* Use a primary button to indicate the most important action within the table.
+* Use a secondary button for an additional action you want to surface in the toolbar, if it is too important to place in an overflow menu.
+* Any actions beyond your primary and secondary buttons should be contained within an overflow menu.
+
+### Icon group
+
+To save space, icon groups can be used to contain actions or settings that can be well-represented by button icons.
+
+<div class="ws-docs-content-img">
+![Example of an icon button group.](./img/icon-buttons.svg)
+</div>
+
+An icon group should always be placed between filters and global button actions.
+
+<div class="ws-docs-content-img">
+![A toolbar with a filter and sort icon in a group.](./img/toolbar-icon-actions.svg)
+</div>
 
 ### Overflow menu
+
+An overflow menu groups together multiple actions, collapsing them into a menu with a kebab/options icon toggle. 
 
 <div class="ws-docs-content-img">
 ![Example of an overflow menu.](./img/overflow.svg)
 </div>
 
-An overflow menu is a component that can be used in a toolbar (or elsewhere) to group a number of actions that should be collapsed into a kebab at a certain breakpoint. In the toolbar, the overflow menu will commonly be used to group a set of actions that are intended to collapse into the kebab at smaller viewport sizes.
+At smaller viewport sizes, any primary and secondary buttons that are located in the toolbar can also be collapsed into the overflow menu to save space. 
+
+<div class="ws-docs-content-img">
+![An overflow menu is expanded from a kebab icon within a toolbar.](./img/overflow-small-view.svg)
+</div>
 
 ### Pagination
+
+To let users navigate through multiple pages of data, add a pagination component, which will always be the final toolbar item. 
+
+Compact pagination consumes less horizontal space and is the recommended choice, unless your application requires more precise control over paging options (like the ability to navigate to a specific page).
 
 <div class="ws-docs-content-img">
 ![Example of toolbar pagination.](./img/pagination.svg)
 </div>
 
- When pagination is supported, a pagination component will be included. Pagination will always be right aligned in the toolbar. If pagination is not used, substitute the item count for pagination control. For example, report “17 items” to represent the total number of items or “10 of 17 items” to indicate that 10 items were returned as the result of a filter event.
+### Item count 
 
+If pagination is not used, show the item count instead. 
+
+For example, display “17 items” to represent the total number of items or “10 of 17 items” to indicate that 10 items were returned after filtering.
+
+<div class="ws-docs-content-img">
+![Toolbar with a text label that specifies item count, rather than a pagination component.](./img/without-pagination.svg)
+</div>
 
 ### Toolbar toggle groups
-A [toolbar toggle group](/components/toolbar/html#toggle-group) can be used when you want to collapse a set of items into an overlay panel at a certain breakpoint for mobile applications. This allows complex toolbars with multiple items and groups of items to be responsive. A toolbar toggle group is useful for containing filter controls, for example. When the toolbar responds to adapt to a mobile viewport, the contents contained in a toggle group will collapse into an overlay panel that can be toggled by clicking the filter icon.
+To collapse toolbar items into an overlay panel at a certain breakpoint, use a [toolbar toggle group](/components/toolbar/html#toggle-group). This allows complex toolbars with many items and groups to be responsive for mobile devices. 
+
+For example, a toolbar toggle group is particularly useful for containing filter controls. When the toolbar adapts to a mobile viewport, the toggle group contents will collapse into an overlay panel that can be toggled via the filter icon.
 
 <div class="ws-docs-content-img">
 ![Example of a toolbar with filters hidden in a toggle group.](./img/filter-toggle.svg)
 </div>
 
-Note: this should not be confused with the [toggle group component](/components/toggle-group) that is used for selecting between options on a page.
+**Note:** This is not the same as the [toggle group component](/components/toggle-group), which is used for selecting between options on a page.
 
 ### Vertical dividers
 When you have a large toolbar containing many groups of items, use a vertical divider to further separate the groups visually.
@@ -117,74 +159,55 @@ When you have a large toolbar containing many groups of items, use a vertical di
 ![Example of a toolbar with a divider.](./img/divider.svg)
 </div>
 
-## Usage
-The PatternFly toolbar is designed to be very flexible and allow a variety of combinations of items and groups as outlined above. When laying out your toolbar, be sure to:
+### Basic toolbar
+For most cases, you should use a basic toolbar with default spacing and, generally, the following toolbar items and groups.
 
-* Align bulk selection as the left-most element, if used.
-* Align filters and global actions to the right of bulk selection, if used.
-* Align pagination as the right-most element, if used.
-* Align the item count as the right-most element, if pagination isn't used.
-
-### Examples
-**Basic toolbar**
 <div class="ws-docs-content-img">
 ![Example of a basic toolbar.](./img/toolbar-basic.svg)
 </div>
 
-The basic toolbar is sufficient for most cases. The example above shows the toolbar with default spacing. It includes the following elements:
-1. **Bulk selector:** The bulk selector supports selection of multiple items in a list, table, or card grid. It is always the leftmost item.
-2. **Filter:** The example shows an attribute-value filter, but any supported filter can be used here. See [filters](/patterns/filters) usage guidelines for more information.
-3. **Overflow menu:** In this example an overflow menu is used to hold global actions. But a simple button group could also be used here if you have two or less actions.
-4. **Item count**: When a filter is applied, the item count will be updated to represent the filtered subset of items. For example, “10 of 17 items.” The item count should be the right-most element.
+1. [**Bulk selector:**](#bulk-selector) Used to select multiple items.
+2. **Filter:** Any [filter](/patterns/filters) that best suits your use case. This example shows an attribute-value filter.
+3. [**Overflow menu:**](#overflow-menu) Contains additional actions that don't fit in the toolbar.
+4. [**Item count**:](#item-count) The amount of items in the associated data set. You can also use [pagination](#pagination) instead.
 
-**Toolbar with pagination**
-<div class="ws-docs-content-img">
-![Example of a basic toolbar with pagination.](./img/toolbar-pagination.svg)
-</div>
+### Custom toolbar
 
-When pagination is used, the pagination component replaces the item count. It should be the right-most element. Here, the toolbar is shown with both full and compact pagination options. Compact pagination consumes less horizontal space and is the recommended choice unless your application requires more precise control over paging options (like the ability to navigate to a specific page).
+The toolbar component is extremely flexible. You can create custom toolbar layouts using items, groups, and spacers.
 
-**Toolbar with an icon group**
-<div class="ws-docs-content-img">
-![Example of a toolbar with an icon group.](./img/toolbar-icon-actions.svg)
-</div>
+For example, in this image, a custom toolbar with 3 labeled filters is created by pairing a text label and a select component. To better group filters with related labels, a lg spacer is used in place of the default md spacer.
 
-To save space, you may represent some actions as icons. Use an icon group to provide the proper spacing between icons. Here, sort and export actions are represented as icons. The icon group should always be placed after the filters and before any global actions represented by buttons, if they exist.
-
-**Custom toolbar**
 <div class="ws-docs-content-img">
 ![Example of a custom toolbar layout.](./img/toolbar-custom.svg)
 </div>
 
-The toolbar component is extremely flexible and you can create custom toolbar layouts by working with items, groups, and spacers. Here, a custom toolbar with three labeled filters is created by paring a text label and a select component. While there is an md spacer between items by default, this image uses a lg spacer to better group each filter with its related label.
+### Mobile toolbars
 
-### The toolbar on mobile
+Toolbars adapt to smaller viewport sizes by collapsing or hiding elements that take significant space, including filters and actions. When used on mobile devices, pagination will be available in the footer of the data view, instead of within the toolbar. 
 
-The toolbar adapts to smaller viewport sizes by collapsing or hiding elements that take significant space, including filters and actions. On mobile devices, when used, pagination will be available from the footer, only. When designing toolbars to be responsive:
+To create responsive toolbar designs: 
 
-* Place filter controls in a [toggle group](#toggle-groups) so they will be hidden in a collapsible panel at mobile breakpoints.
-* Use an [overflow menu](#overflow-menu) to collapse actions into a kabob menu.
+- Place filter controls in a [toggle group](#toolbar-toggle-groups) so they will be hidden in a collapsible panel at mobile breakpoints.
+- Use an [overflow menu](#overflow-menu) to collapse actions into a kebab/options menu.
 
-The following is an example of a complex toolbar optimized for mobile.
+For example, this image contains a complex toolbar that's been optimized for mobile. The search filter and filter group (containing 3 drop-down filters) are placed in a toggle group, which is collapsed at mobile screen sizes. The 2 action buttons are collapsed into an overflow menu. The bulk selector and sort icon button remain visible at all breakpoints.
 
 <div class="ws-docs-content-img">
 ![Example of a toolbar on mobile.](./img/toolbar-mobile.svg)
 </div>
 
-Here, the search filter and filter group containing three drop-down filters are placed in a toggle group that collapsed when the screen shrinks to mobile size. The two action buttons are part of an overflow menu that collapses to a single kabob menu. The bulk selector and sort icon button are implemented as toolbar items that remain visible at all breakpoints.
-
 ## Placement 
 
-The toolbar should live as close to possible to the content it controls. For a card view or similar views, the toolbar should be placed inside of the page header. This arrangement is also recommended if the user may switch between views (e.g. view as cards or as a list). You may optionally apply the `pf-m-sticky-top` modifier to the header section to create a sticky toolbar and prevent it from scrolling off the page.
+Toolbars should be placed as close as possible to the content they control. They should stretch the full width of their enclosing container, with their elements aligned in a horizontal row. Don't place additional spacers before the first or after the last items; the toolbar component provides its own padding.
+
+For pages like card views, the toolbar should be placed inside of the page header. This arrangement is also recommended if the user can switch between views, like choosing between a card view and list view. You may optionally apply the `pf-m-sticky-top` modifier to the header section to create a sticky toolbar and prevent it from scrolling off the page.
 
 <div class="ws-docs-content-img">
 ![Example of a toolbar in a page header.](./img/toolbar-page-header.svg)
 </div>
 
-For list and table views that are placed inside of an enclosing card, the toolbar should always be placed inside the card and above the data set to which it applies.
+For lists or table views that are placed inside of a card, the toolbar should always be placed inside the card and above the data set to which it applies.
 
 <div class="ws-docs-content-img">
 ![Example of a toolbar in a card.](./img/toolbar-card.svg)
 </div>
-
-Toolbars should stretch to the width of the enclosing container, with the elements aligned in a horizontal row. There should be no spacers on the left and right edges of the toolbar as the toolbar provides its own padding.

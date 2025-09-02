@@ -96,7 +96,6 @@ export const ReleaseNotesTable = () => {
   const [searchValue, setSearchValue] = React.useState();
 
   const onSelect = (_event, value) => {
-    console.log("selected: ", value);
     setFilters(
       filters.includes(value)
         ? filters.filter((f) => f !== value)

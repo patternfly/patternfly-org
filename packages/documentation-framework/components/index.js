@@ -10,3 +10,5 @@ export * from './topNav/topNav';
 export * from './link/link';
 export * from './tableOfContents/tableOfContents';
 export * from './inlineAlert/inlineAlert';
+export * from './themeSelector/themeSelector';
+export * from './feedbackButton/feedbackButton';

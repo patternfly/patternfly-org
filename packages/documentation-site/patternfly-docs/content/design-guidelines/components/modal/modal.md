@@ -15,14 +15,14 @@ import TimesIcon from '@patternfly/react-icons/dist/esm/icons/times-icon';
 ![Elements of a modal.](./img/modal-elements.svg)
 </div>
 
-1. **Backdrop**
-2. **Modal box**
-3. **Headline**
-4. **Close icon**
-5. **Content area**
-6. **Buttons**
+1. [**Backdrop:**](/components/backdrop) A screen that covers the main content of a page when a modal is opened, to prevent page interaction until the modal is dismissed.
+2. **Modal box:** The container for a modal, which sits on top of other page content.
+3. **Headline:** A concise, descriptive title.
+4. **Close icon:** Used to close and cancel a modal, without making any changes.
+5. **Content area:** Contains the description and body content.
+6. **Buttons:** Used to interact with the contents of the modal.
 
-See the [Content](#content) section for information about writing modal copy.
+For guidance on writing copy for modals, refer to the [content considerations](#content-considerations) section.
 
 ## Usage
 
@@ -139,12 +139,10 @@ Help popovers at the modal level explain and provide documentation for an entire
 ![Example of the spacing used in a basic modal.](./img/modal-spacing.svg)
 </div>
 
-Basic modals use a primary spacing of 24px to separate:
-
-- Each edge of the modal box from all modal content.
-- The content area from both buttons.
-
-A 16px spacing separates the modal's headline from the content area. 16px also separates each button.
+Basic modals use: 
+- A md spacer between the headline and modal content.
+- A lg spacer between the modal content and the buttons.
+- An xl spacer to separate between the edges of the modal box and modal content.
 
 ## Placement
 
