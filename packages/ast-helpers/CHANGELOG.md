@@ -3,6 +3,121 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.4.0-alpha.268 (2025-09-02)
+
+
+### Features
+
+* **Feedback:** Add a feedback button with qualtrics form ([#4755](https://github.com/patternfly/patternfly-org/issues/4755)) ([21a8823](https://github.com/patternfly/patternfly-org/commit/21a88238b7187e3c98fbb2f4d8c94483796dfcf0))
+
+
+
+
+
+# 1.4.0-alpha.267 (2025-08-28)
+
+
+### Features
+
+* **theme:** Add high contrast switcher feature flag ([#4761](https://github.com/patternfly/patternfly-org/issues/4761)) ([94b1bf1](https://github.com/patternfly/patternfly-org/commit/94b1bf11fdf0f9daa230671b9ea6cb8258190db2))
+
+
+
+
+
+# 1.4.0-alpha.266 (2025-08-26)
+
+
+### Features
+
+* **docs-framework:** add high contrast theme switcher ([#4749](https://github.com/patternfly/patternfly-org/issues/4749)) ([1a24fb2](https://github.com/patternfly/patternfly-org/commit/1a24fb234bbaee2d569c16b4b1a90609fe006ddf))
+
+
+
+
+
+# 1.4.0-alpha.265 (2025-08-19)
+
+
+### Bug Fixes
+
+* fix glob reference ([#4742](https://github.com/patternfly/patternfly-org/issues/4742)) ([bb16c5e](https://github.com/patternfly/patternfly-org/commit/bb16c5e1757a07a97b293826c583a4ed9ab71feb))
+
+
+
+
+
+# 1.4.0-alpha.264 (2025-08-19)
+
+
+### Bug Fixes
+
+* **charts:** update chart types for latest directory structure ([#4468](https://github.com/patternfly/patternfly-org/issues/4468)) ([0739ba1](https://github.com/patternfly/patternfly-org/commit/0739ba15bc3a35fa09a9f38d847bcaf7ef5ccee9))
+
+
+
+
+
+# 1.4.0-alpha.263 (2025-08-18)
+
+
+### Bug Fixes
+
+* more dependency bumps ([#4741](https://github.com/patternfly/patternfly-org/issues/4741)) ([264f5dc](https://github.com/patternfly/patternfly-org/commit/264f5dc6c7c24775a448660dbefeaa6378f1be4c))
+
+
+
+
+
+# 1.4.0-alpha.262 (2025-08-13)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 1.4.0-alpha.261 (2025-08-13)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 1.4.0-alpha.260 (2025-08-07)
+
+
+### Bug Fixes
+
+* update various dependencies ([#4724](https://github.com/patternfly/patternfly-org/issues/4724)) ([932fb8f](https://github.com/patternfly/patternfly-org/commit/932fb8fff7ffeca9d43b4a6d58774080fdd1f1fb))
+
+
+
+
+
+# 1.4.0-alpha.259 (2025-08-05)
+
+
+### Bug Fixes
+
+* update docs with 6.3.1 patch release ([#4734](https://github.com/patternfly/patternfly-org/issues/4734)) ([9ea970a](https://github.com/patternfly/patternfly-org/commit/9ea970a09b65443664161bcab2fc7539dde8cbce))
+
+
+
+
+
+# 1.4.0-alpha.258 (2025-08-05)
+
+
+### Features
+
+* Highlight new animations article ([#4731](https://github.com/patternfly/patternfly-org/issues/4731)) ([984550d](https://github.com/patternfly/patternfly-org/commit/984550d597f9053189b20cd1cb98104689846940))
+
+
+
+
+
 # 1.4.0-alpha.257 (2025-07-30)
 
 

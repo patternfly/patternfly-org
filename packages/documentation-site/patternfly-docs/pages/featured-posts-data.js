@@ -28,12 +28,12 @@ export const featuredPostsData = {
       "https://miro.medium.com/v2/resize:fit:600/format:webp/1*xohZjJ1XyTwNP4lvjCBGbA.png",
   },
   post4: {
-    title: "PatternFly component groups grow!",
-    author: "Filip Hlavac",
-    length: "4 min read",
-    URL: "https://medium.com/patternfly/patternfly-component-groups-grow-90ac8df4a83e",
+    title: "Motion with purpose",
+    author: "Erin Donehoo",
+    length: "6 min read",
+    URL: "https://medium.com/patternfly/motion-with-purpose-7ac3bd08efba",
     // Use resize:fit:600 in URL
     imageURL:
-      "https://miro.medium.com/v2/resize:fit:600/format:webp/0*fSEHqMin_tmdsiM4",
+      "https://miro.medium.com/v2/resize:fit:600/format:webp/0*f2KRU4Bw2ZmoOSOy",
   },
 };
