@@ -18,7 +18,7 @@ import {
 import { css } from '@patternfly/react-styles';
 import ExternalLinkAltIcon from '@patternfly/react-icons/dist/esm/icons/external-link-alt-icon';
 import { Router, useLocation } from '@reach/router';
-import { CSSVariables, PropsTable, TableOfContents, Link, AutoLinkHeader, InlineAlert } from '../components';
+import { CSSVariables, PropsTable, TableOfContents, Link, AutoLinkHeader, InlineAlert, FeedbackButton } from '../components';
 import { capitalize, getTitle, slugger, trackEvent } from '../helpers';
 import './mdx.css';
 import { convertToReactComponent } from '@patternfly/ast-helpers';
@@ -167,6 +167,7 @@ const MDXChildTemplate = ({ Component, source, toc = [], index = 0, id }) => {
 };
 
 export const MDXTemplate = ({ title, sources = [], path, id, componentsData }) => {
+  const hasFeedbackButton = process.env.hasFeedbackButton;
   const isDeprecated =
     sources.some((source) => source.source === 'react-deprecated' || source.source === 'html-deprecated') &&
     !sources.some((source) => source.source === 'react' || source.source === 'html');
@@ -339,6 +340,7 @@ export const MDXTemplate = ({ title, sources = [], path, id, componentsData }) =
           )}
         </PageSection>
         <BackToTop className="ws-back-to-top" scrollableSelector="#ws-page-main" />
+        {hasFeedbackButton && <FeedbackButton />}
       </PageGroup>
     </React.Fragment>
   );
