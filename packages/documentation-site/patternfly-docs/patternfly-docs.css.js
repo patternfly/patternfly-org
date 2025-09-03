@@ -4,6 +4,7 @@ import '@patternfly/react-styles/src/css/layouts/Toolbar/toolbar.css';
 
 // Patternfly
 import '@patternfly/patternfly/patternfly.css';
+
 // Patternfly utilities
 import '@patternfly/patternfly/patternfly-addons.css';
 // Global theme CSS
@@ -20,3 +21,10 @@ import '@patternfly/react-log-viewer/src/LogViewer/css/log-viewer.css';
 import '@patternfly/react-user-feedback/src/Feedback/Feedback.css';
 // Patternfly chatbot
 import '@patternfly/chatbot/dist/css/main.css';
+
+import './temp-styles/patternfly-variables.css';
+import './temp-styles/button.css';
+import './temp-styles/drawer.css';
+import './temp-styles/nav.css';
+import './temp-styles/page.css';
+import './temp-styles/tabs.css';

@@ -105,7 +105,7 @@ const registerThemeManager = (themeType, manager) => {
 const colorThemeManager = new ThemeManager({
   storageKey: 'theme-preference',
   modes: COLOR_MODES,
-  defaultMode: COLOR_MODES.SYSTEM,
+  defaultMode: COLOR_MODES.LIGHT,
   cssClass: 'pf-v6-theme-dark',
   classEnabledMode: COLOR_MODES.DARK,
   mediaQueryString: '(prefers-color-scheme: dark)'
@@ -114,7 +114,7 @@ const colorThemeManager = new ThemeManager({
 const highContrastThemeManager = new ThemeManager({
   storageKey: 'high-contrast-preference',
   modes: HIGH_CONTRAST_MODES,
-  defaultMode: HIGH_CONTRAST_MODES.SYSTEM,
+  defaultMode: HIGH_CONTRAST_MODES.OFF,
   cssClass: 'pf-v6-theme-high-contrast',
   classEnabledMode: HIGH_CONTRAST_MODES.ON,
   mediaQueryString: '(prefers-contrast: more)'
@@ -139,7 +139,7 @@ export const useTheme = (themeType) => {
     throw new Error(`Theme manager not found for theme type: ${themeType}`);
   }
 
-  const [mode, setMode] = useState(theme.getStoredValue());
+  const [mode, setMode] = useState(theme.defaultMode);
   const [resolvedTheme, setResolvedTheme] = useState(theme.resolve());
 
   useEffect(() => {
