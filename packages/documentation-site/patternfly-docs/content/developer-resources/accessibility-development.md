@@ -40,9 +40,9 @@ Note that ARIA can only affect the semantics of an element; it has no effect on 
 
 [Use label elements to associate text labels with form controls](https://www.w3.org/WAI/WCAG22/Techniques/html/H44) (such as `input`, `textarea`, or `select`) when both are present. This technique provides an accessible name to screen readers and makes the label clickable to increase the overall clickable area of the form element.
 
-When a `label` element cannot accompany a form input element, provide one using using `aria-label` or `aria-labelledby`, as outline by the [WCAG technique ARIA14](https://www.w3.org/WAI/WCAG22/Techniques/aria/ARIA14). 
+When a `label` element cannot accompany a form input element, provide one using using `aria-label` or `aria-labelledby`, as outlined by the [WCAG technique ARIA14](https://www.w3.org/WAI/WCAG22/Techniques/aria/ARIA14). 
 
-In a single-field form, the submit button label can serve as the field label for sighted users, followwing the [WCAG technique G167](https://www.w3.org/WAI/WCAG22/Techniques/general/G167). For assistive devices, use `aria-labelledby`.
+In a single-field form, the submit button label can serve as the field label for sighted users, following the [WCAG technique G167](https://www.w3.org/WAI/WCAG22/Techniques/general/G167). For assistive devices, use `aria-labelledby`.
 
 #### Icons
 
