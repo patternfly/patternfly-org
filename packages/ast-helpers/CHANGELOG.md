@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.4.0-alpha.271 (2025-09-05)
+
+
+### Bug Fixes
+
+* add charts stylesheet to docs site for dark theme charts ([#4769](https://github.com/patternfly/patternfly-org/issues/4769)) ([636230d](https://github.com/patternfly/patternfly-org/commit/636230d7a56d71e243512f5d4b1a6b052260cc0c))
+
+
+
+
+
 # 1.4.0-alpha.270 (2025-09-05)
 
 
