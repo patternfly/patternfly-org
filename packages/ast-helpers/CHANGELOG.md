@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.4.0-alpha.270 (2025-09-05)
+
+
+### Features
+
+* **org:** pull in react & core docs to astro site ([#4758](https://github.com/patternfly/patternfly-org/issues/4758)) ([45b4059](https://github.com/patternfly/patternfly-org/commit/45b40595538b1584e9e0dba5fbe8d5f9c3d89d49))
+
+
+
+
+
 # 1.4.0-alpha.269 (2025-09-03)
 
 **Note:** Version bump only for package @patternfly/ast-helpers
