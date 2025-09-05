@@ -20,3 +20,5 @@ import '@patternfly/react-log-viewer/src/LogViewer/css/log-viewer.css';
 import '@patternfly/react-user-feedback/src/Feedback/Feedback.css';
 // Patternfly chatbot
 import '@patternfly/chatbot/dist/css/main.css';
+// Charts
+import '@patternfly/patternfly/patternfly-charts.css';
