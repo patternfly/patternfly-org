@@ -37,11 +37,10 @@ Dark mode is also available within our Figma libraries. You only need a single d
 variant="info" 
 title="Beta feature"
 actionLinks={
-<Fragment>
 <AlertActionLink component="a" href="MEDIUM ARTICLE">
 Learn more
 </AlertActionLink>
-</Fragment>}
+}
 >
 <p> High contrast mode is still under development and will continue to evolve. This beta allows you to preview our progress. </p>
 </Alert>
