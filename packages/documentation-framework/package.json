@@ -41,7 +41,7 @@
     "null-loader": "4.0.1",
     "parse-entities": "2.0.0",
     "path-browserify": "1.0.1",
-    "postcss": "8.5.0",
+    "postcss": "^8.4.31",
     "postcss-loader": "7.1.0",
     "process": "^0.11.10",
     "puppeteer": "^24.2.0",
@@ -93,6 +93,6 @@
     "parse-git-config": ">=3.0.0",
     "ip": ">=2.0.0",
     "http-cache-semantics": ">=4.1.1",
-    "nanoid": ">=3.3.8"
+    "nanoid": "3.3.8"
   }
 }
