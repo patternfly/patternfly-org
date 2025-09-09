@@ -1,7 +1,7 @@
 ---
-id: Dark theme handbook
+id: Theming
 section: design-foundations
-subsection: theming
+source: dark-theme-handbook
 ---
 
 ## Enabling dark theme
