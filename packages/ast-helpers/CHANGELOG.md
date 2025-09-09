@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.4.0-alpha.275 (2025-09-09)
+
+
+### Bug Fixes
+
+* address build issue with nanoid version ([#4774](https://github.com/patternfly/patternfly-org/issues/4774)) ([f78543a](https://github.com/patternfly/patternfly-org/commit/f78543acacb27e9fd638a2450d5ec37ef56de2d5))
+
+
+
+
+
 # 1.4.0-alpha.274 (2025-09-05)
 
 
