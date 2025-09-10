@@ -4,14 +4,21 @@ import {
   Label,
   Nav,
   NavList,
+  NavGroup,
   NavExpandable,
   PageContextConsumer,
   capitalize,
   Flex,
-  FlexItem
+  FlexItem,
+  Divider
 } from '@patternfly/react-core';
 import { css } from '@patternfly/react-styles';
 import { Location } from '@reach/router';
+
+const DIVIDER_STYLES = {
+  marginTop: 'var(--pf-t--global--spacer--md)',
+  marginBottom: 'var(--pf-t--global--spacer--md)'
+};
 import { makeSlug } from '../../helpers';
 import globalBreakpointXl from '@patternfly/react-tokens/dist/esm/t_global_breakpoint_xl';
 import { trackEvent } from '../../helpers';
@@ -163,20 +170,45 @@ export const SideNav = ({ groupedRoutes = {}, navItems = [] }) => {
     }
   }, []);
 
+  const groupedItems = React.useMemo(() => 
+    (navItems || []).filter(entry => entry && entry.title), [navItems]);
+  const ungroupedItems = React.useMemo(() => 
+    (navItems || []).filter(entry => entry && !entry.title), [navItems]);
+
+  const renderNavItem = React.useCallback((item) => {
+    if (!item) return null;
+    
+    return item.section ? (
+      <Location key={item.section}>
+        {({ location }) => ExpandableNav({ groupedRoutes, location, section: item.section })}
+      </Location>
+    ) : NavItem({
+      key: item.href || `nav-item-${Math.random()}`,
+      text: item.text || (item.href ? capitalize(item.href.replace(/\//g, '').replace(/-/g, ' ')) : 'Untitled'),
+      href: item.href
+    });
+  }, [groupedRoutes]);
+
   return (
     <Nav aria-label="Side Nav" theme="light">
-      <NavList className="ws-side-nav-list">
-        {navItems.map(({ section, text, href }) =>
-          section ? (
-            <Location key={section}>{({ location }) => ExpandableNav({ groupedRoutes, location, section })}</Location>
-          ) : (
-            NavItem({
-              text: text || capitalize(href.replace(/\//g, '').replace(/-/g, ' ')),
-              href: href
-            })
-          )
-        )}
-      </NavList>
+      {/* Render grouped items */}
+      {groupedItems.map((group) => (
+        <React.Fragment key={group.title}>
+          <NavGroup title={group.title}>
+            <NavList className="ws-side-nav-list" aria-label={`${group.title} navigation`}>
+              {group.items.map(renderNavItem)}
+            </NavList>
+          </NavGroup>
+          {group.hasDivider && <Divider style={DIVIDER_STYLES} />}
+        </React.Fragment>
+      ))}
+      
+      {/* Render ungrouped items - this handles the current flat structure */}
+      {ungroupedItems.length > 0 && (
+        <NavList className="ws-side-nav-list">
+          {ungroupedItems.map(renderNavItem)}
+        </NavList>
+      )}
     </Nav>
   );
 };
