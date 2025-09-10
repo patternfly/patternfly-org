@@ -59,3 +59,7 @@ To contribute to PatternFly's HTML/CSS core repo, refer to the [core contributio
 ### pf-docs-framework documentation
 
 There is some historic documentation on pf-docs-framework at [packages/documentation-framework/README.md](packages/documentation-framework/README.md).
+
+## AI-assisted development guidelines
+
+Please reference [PatternFly's AI-assisted development guidelines](https://github.com/patternfly/.github/blob/main/CONTRIBUTING.md) if you'd like to contribute code generated using AI.
