@@ -3020,8 +3020,8 @@ export { ToolbarLabelGroupContent as CustomThing };`}
       <Content>
         <p>The `variant` prop of ToolbarGroup and ToolbarToggleGroup had these options renamed:</p>
         <ul>
-          <li>button-group --> action-group</li>
-          <li>icon-button-group --> action-group-plain</li>
+          <li>button-group &rarr; action-group</li>
+          <li>icon-button-group &rarr; action-group-plain</li>
         </ul>
         <p>Codemods will make the following updates:</p>
         <h2>Example in</h2>
@@ -3276,9 +3276,9 @@ export const ToolbarReplaceChipInstancesInput = () => (
       <Content>
         <p>The following Toolbar interfaces have been renamed</p>
         <ul>
-          <li>ToolbarChipGroupContentProps --> ToolbarLabelGroupContentProps</li>
-          <li>ToolbarChipGroup --> ToolbarLabelGroup</li>
-          <li>ToolbarChip --> ToolbarLabel</li>
+          <li>ToolbarChipGroupContentProps &rarr; ToolbarLabelGroupContentProps</li>
+          <li>ToolbarChipGroup &rarr; ToolbarLabelGroup</li>
+          <li>ToolbarChip &rarr; ToolbarLabel</li>
         </ul>
         <p>Codemods will make the following updates:</p>
         <h2>Example in</h2>

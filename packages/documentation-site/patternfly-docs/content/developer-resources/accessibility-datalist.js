@@ -113,7 +113,7 @@ export class AccessibilityDatalist extends React.Component {
                     <div id="ex-item1">Skip to main links</div>
                   </DataListCell>,
                   <DataListCell key="secondary content">
-                    <a href="//www.w3.org/WAI/WCAG21/quickref#bypass-blocks">WCAG 2.4.1</a>
+                    <a href="//www.w3.org/WAI/WCAG22/quickref#bypass-blocks">WCAG 2.4.1</a>
                   </DataListCell>,
                   <DataListCell key="secondary content 2">
                     <span>development</span>
@@ -151,7 +151,7 @@ export class AccessibilityDatalist extends React.Component {
                     <div id="ex-item2">Page titles</div>
                   </DataListCell>,
                   <DataListCell key="secondary content 2">
-                    <a href="//www.w3.org/WAI/WCAG21/quickref#page-titled">WCAG 2.4.2</a>
+                    <a href="//www.w3.org/WAI/WCAG22/quickref#page-titled">WCAG 2.4.2</a>
                   </DataListCell>,
                   <DataListCell key="secondary content3">
                     <span>development</span>
@@ -194,7 +194,7 @@ export class AccessibilityDatalist extends React.Component {
                     <div id="ex-item3">Links</div>
                   </DataListCell>,
                   <DataListCell key="secondary content">
-                    <a href="//www.w3.org/WAI/WCAG21/quickref#link-purpose-in-context">WCAG 2.4.4</a>
+                    <a href="//www.w3.org/WAI/WCAG22/quickref#link-purpose-in-context">WCAG 2.4.4</a>
                   </DataListCell>,
                   <DataListCell key="secondary content 2">
                     <span>design, development</span>
@@ -249,7 +249,7 @@ export class AccessibilityDatalist extends React.Component {
               <br/>
               <br/>
               Landmark roles programmatically identify sections of a page. If more than one landmark role occurs in the page, use <code>aria-label</code> to differentiate the landmark elements.
-              Landmarks help assistive-technology users orient themselves to a page and help them navigate easily to various page sections. Whenever a landmark role is used more than once, provide a name using <code>aria-label</code> or <code>aria-labelledby</code> to provide context for that landmark. (<a href="https://www.w3.org/WAI/WCAG21/Techniques/aria/ARIA6"> ARIA6</a>, <a href="https://w3.org/WAI/WCAG22/Techniques/aria/ARIA16">ARIA16</a>)
+              Landmarks help assistive-technology users orient themselves to a page and help them navigate easily to various page sections. Whenever a landmark role is used more than once, provide a name using <code>aria-label</code> or <code>aria-labelledby</code> to provide context for that landmark. (<a href="https://www.w3.org/WAI/WCAG22/Techniques/aria/ARIA6"> ARIA6</a>, <a href="https://w3.org/WAI/WCAG22/Techniques/aria/ARIA16">ARIA16</a>)
               <br/>
               <br/>
               <strong>Note:</strong> While toolbar is not a landmark role, the same rule applies.
@@ -272,7 +272,7 @@ export class AccessibilityDatalist extends React.Component {
                     <div id="ex-item5">Headings</div>
                   </DataListCell>,
                   <DataListCell key="secondary content">
-                    <a href="//www.w3.org/WAI/WCAG21/quickref#section-headings">WCAG 2.4.10</a>
+                    <a href="//www.w3.org/WAI/WCAG22/quickref#section-headings">WCAG 2.4.10</a>
                   </DataListCell>,
                   <DataListCell key="secondary content 2">
                     <span>design, development</span>

@@ -49,5 +49,5 @@ The following HTML attributes and PatternFly classes can be used for more fine-t
 
 To read more about accessibility with a brand, refer to the following resources:
 
-- [WCAG 1.1: Text Alternatives](https://www.w3.org/TR/WCAG21/#text-alternatives)
+- [WCAG 1.1: Text Alternatives](https://www.w3.org/TR/WCAG22/#text-alternatives)
 - [Alternative text](https://webaim.org/techniques/alttext/) by WebAIM

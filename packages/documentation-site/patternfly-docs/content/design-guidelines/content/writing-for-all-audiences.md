@@ -6,7 +6,7 @@ section: UX writing
 By following accessibility and global writing best practices, you’ll be better equipped to create product experiences for users of all abilities and backgrounds. 
 
 ## Writing for all abilities 
-When designing interfaces, consider all users’ abilities, including physical and cognitive. Use words that are clear, concise, and consistent. Refer to the [Web Content Accessibility Guidelines (WCAG)](https://www.w3.org/TR/WCAG21/) for accessibility compliance information. 
+When designing interfaces, consider all users’ abilities, including physical and cognitive. Use words that are clear, concise, and consistent. Refer to the [Web Content Accessibility Guidelines (WCAG) 2.2 Guidelines](https://www.w3.org/TR/WCAG22/) for accessibility compliance information. 
 
 To create accessible content, refer to the following best practices: 
 
