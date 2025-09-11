@@ -1,6 +1,8 @@
 .ws-docs-content-img {
+    display:flex;
     text-align: center;
     margin-inline: auto;
     width: 100%;
     max-width: 700px;
+
 }
