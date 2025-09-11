@@ -69,6 +69,7 @@ export const ThemeSelector = ({ id }) => {
         return 'Light';
       case colorModes.DARK:
         return 'Dark';
+      case colorModes.SYSTEM:
       default:
         return 'System';
     }
@@ -80,6 +81,7 @@ export const ThemeSelector = ({ id }) => {
         return SunIcon;
       case colorModes.DARK:
         return MoonIcon;
+      case colorModes.SYSTEM:
       default:
         return DesktopIcon;
     }
@@ -89,7 +91,7 @@ export const ThemeSelector = ({ id }) => {
     <Select
       id={id}
       isOpen={isThemeSelectOpen}
-      selected={themeMode}
+      selected={themeMode || colorModes.SYSTEM}
       onSelect={handleThemeChange}
       onOpenChange={(isOpen) => setIsThemeSelectOpen(isOpen)}
       toggle={(toggleRef) => (
@@ -103,6 +105,11 @@ export const ThemeSelector = ({ id }) => {
       )}
       shouldFocusToggleOnSelect
       onOpenChangeKeys={['Escape']}
+      popperProps={{ 
+        position: 'right',
+        enableFlip: true,
+        preventOverflow: true
+      }}
     >
       <SelectGroup>
         <SelectList aria-label="Light/Dark theme switcher">
