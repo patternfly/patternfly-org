@@ -15,7 +15,7 @@ Use an overflow menu when a space constraint makes it impossible to display all 
 - Use an overflow menu within a card component to present additional menu options or provide action links.
  
  <div class="ws-docs-content-img">
-![image showing card overflow](./img/card-overflow.svg)
+<iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://embed.figma.com/design/sgafF2ibAiGVW5X2EPEW9T/PatternFly-6--Design-guidelines-assets?node-id=1566-10683&m=dev&embed-host=share" allowfullscreen></iframe>
 </div>
 
 
