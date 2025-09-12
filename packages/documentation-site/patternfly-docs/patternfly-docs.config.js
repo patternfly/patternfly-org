@@ -49,6 +49,7 @@ if (process.env.EXTENSIONS_ONLY === 'true') {
       { section: 'layouts' },
       { section: 'utility-classes' },
       { section: 'developer-resources' },
+      { section: 'get-involved' },
       { section: 'training' },
     ],
     topNavItems: [],
