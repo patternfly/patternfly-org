@@ -178,4 +178,3 @@ Breaking changes to our React library are the result of code changes that includ
   - Changes that alter component behavior. 
   - Changes that alter a consumer’s build process. 
   - Changes to the signature of an event handler.
-
