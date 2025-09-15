@@ -50,6 +50,7 @@ if (process.env.EXTENSIONS_ONLY === 'true') {
       { section: 'utility-classes' },
       { section: 'developer-resources' },
       { section: 'training' },
+      { section: 'get-help' },
     ],
     topNavItems: [],
     port: 8003,
