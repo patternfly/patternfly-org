@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.4.0-alpha.278 (2025-09-16)
+
+
+### Bug Fixes
+
+* **theme-selector:** prevent overflow of the menu ([#4779](https://github.com/patternfly/patternfly-org/issues/4779)) ([767811f](https://github.com/patternfly/patternfly-org/commit/767811f252a888d0795f0fd13142724e160bc0cd))
+
+
+
+
+
 # 1.4.0-alpha.277 (2025-09-10)
 
 **Note:** Version bump only for package @patternfly/ast-helpers

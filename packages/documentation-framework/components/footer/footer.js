@@ -39,7 +39,7 @@ export const Footer = ({ isDarkTheme }) => (
                   <ListItem className="ws-org-pfsite-footer-menu-list-item">
                     <Link
                       className="ws-org-pfsite-footer-menu-link"
-                      to="/get-started/upgrade"
+                      to="/releases/upgrade-guide"
                       aria-label="Latest PatternFly upgrade guide"
                     >
                       Upgrade
@@ -48,7 +48,7 @@ export const Footer = ({ isDarkTheme }) => (
                   <ListItem className="ws-org-pfsite-footer-menu-list-item">
                     <Link
                       className="ws-org-pfsite-footer-menu-link"
-                      to="/get-started/release-highlights/"
+                      to="/releases/release-highlights"
                       aria-label="PatternFly release highlights"
                     >
                       Releases
@@ -57,7 +57,7 @@ export const Footer = ({ isDarkTheme }) => (
                   <ListItem className="ws-org-pfsite-footer-menu-list-item">
                     <Link
                       className="ws-org-pfsite-footer-menu-link"
-                      to="/patternfly-ai/about-ai"
+                      to="/ai/about-ai"
                       aria-label="PatternFly's new AI resources"
                     >
                       PatternFly AI
@@ -66,7 +66,7 @@ export const Footer = ({ isDarkTheme }) => (
                   <ListItem className="ws-org-pfsite-footer-menu-list-item">
                     <Link
                       className="ws-org-pfsite-footer-menu-link"
-                      to="/tokens/about-tokens"
+                      to="/foundations-and-styles/design-tokens/about-tokens"
                       aria-label="PatternFly's new token system"
                     >
                       Tokens

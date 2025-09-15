@@ -103,6 +103,11 @@ export const ThemeSelector = ({ id }) => {
       )}
       shouldFocusToggleOnSelect
       onOpenChangeKeys={['Escape']}
+      popperProps={{ 
+        position: 'right',
+        enableFlip: true,
+        preventOverflow: true
+      }}
     >
       <SelectGroup>
         <SelectList aria-label="Light/Dark theme switcher">

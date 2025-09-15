@@ -19,25 +19,27 @@ module.exports = (sourceMD, sourceProps, sourceFunctionDocs) => {
       "pages-get-started"
     );
     sourceMD(
-      path.join(contentBase, "developer-resources/**/*.md"),
-      "developer-resources"
+      path.join(contentBase, "developer-guides/**/*.md"),
+      "developer-guides"
     );
     sourceMD(path.join(contentBase, "accessibility/**/*.md"), "accessibility");
-    sourceMD(
-      path.join(contentBase, "design-guidelines/**/*.md"),
-      "design-guidelines"
-    );
-    sourceMD(path.join(contentBase, "training/**/*.md"), "training");
+    // Individual sourcing of former design-guidelines directories
+    sourceMD(path.join(contentBase, "components/**/*.md"), "components");
+    sourceMD(path.join(contentBase, "content-design/**/*.md"), "Content design");
+    sourceMD(path.join(contentBase, "foundations-and-styles/**/*.md"), "foundations-and-styles");
+    sourceMD(path.join(contentBase, "patterns/**/*.md"), "patterns");
+    sourceMD(path.join(contentBase, "get-started/training/**/*.md"), "get-started");
+    sourceMD(path.join(contentBase, "releases/**/*.md"), "releases");
 
-    sourceMD(path.join(contentBase, 'tokens/**/*.md'), 'tokens');
+    sourceMD(path.join(contentBase, 'AI/**/*.md'), 'AI');
 
-    sourceMD(path.join(contentBase, 'PatternFly-AI/**/*.md'), 'PatternFly-AI');
-
-    sourceMD(path.join(contentBase, 'design-guidelines/**/Animations/*.md'), 'demo');
 
     // Gallery pages
     const galleryBase = path.join(__dirname, "../patternfly-docs/pages");
     sourceMD(path.join(galleryBase, "landing-pages/**/*.md"), "landing-pages");
+    
+    // Standalone pages
+    sourceMD(path.join(galleryBase, "about-us.md"), "pages");
 
     // Theme pages
     const themePagesPath = require
@@ -49,7 +51,7 @@ module.exports = (sourceMD, sourceProps, sourceFunctionDocs) => {
     const designTokensPath = require
       .resolve('@patternfly/design-tokens/package.json')
       .replace('package.json', 'patternfly-docs/content');
-    sourceMD(path.join(designTokensPath, '/*.md'), 'tokens');
+    sourceMD(path.join(designTokensPath, '/*.md'), 'foundations-and-styles');
 
     // Core MD
     const coreDocsPath = require
@@ -236,8 +238,8 @@ module.exports = (sourceMD, sourceProps, sourceFunctionDocs) => {
   sourceProps(path.join(reactUserFeedbackPath, "/**/*.tsx"), reactPropsIgnore);
   sourceMD(path.join(reactUserFeedbackPath, "/**/examples/*.md"), "react");
   sourceMD(
-    path.join(reactUserFeedbackPath, "/**/design-guidelines/*.md"),
-    "design-guidelines"
+    path.join(reactUserFeedbackPath, "/**/components/*.md"),
+    "components"
   );
 
   // component groups extension
@@ -259,8 +261,8 @@ module.exports = (sourceMD, sourceProps, sourceFunctionDocs) => {
   sourceMD(path.join(reactComponentGroupsBase, "/**/*.md"), "react");
   sourceMD(path.join(reactComponentGroupsPath, "/**/examples/*.md"), "react");
   sourceMD(
-    path.join(reactComponentGroupsPath, "/**/design-guidelines/*.md"),
-    "design-guidelines"
+    path.join(reactComponentGroupsPath, "/**/components/*.md"),
+    "components"
   );
 
   // Chatbot
@@ -279,8 +281,8 @@ module.exports = (sourceMD, sourceProps, sourceFunctionDocs) => {
     path.join(virtualAssistantPath, "/**/*.tsx"),
     reactPropsIgnore
   );
-  sourceMD(path.join(virtualAssistantBase, 'examples/**/*.md'), 'PatternFly-AI');
-  sourceMD(path.join(virtualAssistantBase, '*.md'), 'PatternFly-AI');
+  sourceMD(path.join(virtualAssistantBase, 'examples/**/*.md'), 'AI');
+  sourceMD(path.join(virtualAssistantBase, '*.md'), 'AI');
 
   // Prerelease sections:
   if (process.env.PRERELEASE === "true") {
