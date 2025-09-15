@@ -103,6 +103,7 @@ export const ThemeSelector = ({ id }) => {
       )}
       shouldFocusToggleOnSelect
       onOpenChangeKeys={['Escape']}
+      popperProps={{ position: 'right', preventOverflow: true, enableFlip: true }}
     >
       <SelectGroup>
         <SelectList aria-label="Light/Dark theme switcher">
@@ -117,35 +118,36 @@ export const ThemeSelector = ({ id }) => {
           </SelectOption>
         </SelectList>
       </SelectGroup>
-      {process.env.hasHighContrastSwitcher && (<>
-      <Divider />
-      <SelectGroup label="High Contrast">
-        <MenuSearch>
-          <MenuSearchInput>
-            <ToggleGroup aria-label="High contrast theme switcher">
-              <ToggleGroupItem
-                text="System"
-                buttonId={highContrastModes.SYSTEM}
-                isSelected={highContrastMode === highContrastModes.SYSTEM}
-                onChange={handleHighContrastThemeSelection}
-              />
-              <ToggleGroupItem
-                text="On"
-                buttonId={highContrastModes.ON}
-                isSelected={highContrastMode === highContrastModes.ON}
-                onChange={handleHighContrastThemeSelection}
-              />
-              <ToggleGroupItem
-                text="Off"
-                buttonId={highContrastModes.OFF}
-                isSelected={highContrastMode === highContrastModes.OFF}
-                onChange={handleHighContrastThemeSelection}
-              />
-            </ToggleGroup>
-          </MenuSearchInput>
-        </MenuSearch>
-      </SelectGroup>
-      </>
+      {process.env.hasHighContrastSwitcher && (
+        <>
+          <Divider />
+          <SelectGroup label="High Contrast">
+            <MenuSearch>
+              <MenuSearchInput>
+                <ToggleGroup aria-label="High contrast theme switcher">
+                  <ToggleGroupItem
+                    text="System"
+                    buttonId={highContrastModes.SYSTEM}
+                    isSelected={highContrastMode === highContrastModes.SYSTEM}
+                    onChange={handleHighContrastThemeSelection}
+                  />
+                  <ToggleGroupItem
+                    text="On"
+                    buttonId={highContrastModes.ON}
+                    isSelected={highContrastMode === highContrastModes.ON}
+                    onChange={handleHighContrastThemeSelection}
+                  />
+                  <ToggleGroupItem
+                    text="Off"
+                    buttonId={highContrastModes.OFF}
+                    isSelected={highContrastMode === highContrastModes.OFF}
+                    onChange={handleHighContrastThemeSelection}
+                  />
+                </ToggleGroup>
+              </MenuSearchInput>
+            </MenuSearch>
+          </SelectGroup>
+        </>
       )}
     </Select>
   );
