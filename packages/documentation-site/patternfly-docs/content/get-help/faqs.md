@@ -59,7 +59,7 @@ To learn how to use our Figma libraries, [refer to our Design Kit Onboarding Res
 
 ### How can I ensure cross-product design consistency?
 
-For maximum consistency, always start with PatternFly's official component and [pattern guidelines.](/patterns/overview) If your product has specific needs that require deviation, check for established product-specific patterns on [the UXD Hub.](https://www.uxd-hub.com/) before creating a new one. This ensures alignment across the broader Red Hat ecosystem. 
+For maximum consistency, always start with PatternFly's official component and [pattern guidelines.](/patterns/overview) If your product has specific needs that require deviation, check for established product-specific patterns on [the UXD Hub.](https://www.uxd-hub.com/) before creating a new one. This ensures alignment across the broader Red Hat ecosystem.
 
 ## Developer FAQs
 
