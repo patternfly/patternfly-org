@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import {
+  Content,
   Select,
   SelectGroup,
   SelectList,
@@ -11,8 +12,11 @@ import {
   ToggleGroupItem,
   Icon,
   Divider,
-  Label
+  Label,
+  Popover,
+  Button
 } from '@patternfly/react-core';
+import { HelpIcon, ExternalLinkAltIcon } from '@patternfly/react-icons';
 import { useTheme, THEME_TYPES } from '../../hooks/useTheme';
 
 const SunIcon = (
@@ -47,8 +51,37 @@ const DesktopIcon = (
 );
 
 const HCGroupLabel = () => {
+  const [isPopoverOpen, setIsPopoverOpen] = useState(false);
+
   return (
-    <h2 className="pf-v6-c-menu__group-title">High contrast &nbsp;<Label color="blue" isCompact>Beta</Label></h2>
+    <h2 className="pf-v6-c-menu__group-title">
+      High contrast{' '}
+      <Popover
+        headerContent={"Under development"}
+        headerComponent="h3"
+        bodyContent={
+          "We are still working to add high contrast support across all PatternFly components and extensions. This beta allows you to preview our progress."
+        }
+        footerContent={
+          <Button icon={<ExternalLinkAltIcon />} component="a" isInline variant="link" href="https://medium.com/patternfly" target="_blank">
+            Learn more (replace with link to blog post)
+          </Button>
+        }
+        isVisible={isPopoverOpen}
+        shouldClose={() => setIsPopoverOpen(false)}
+        aria-label="More info about high contrast"
+        appendTo={() => document.body}
+      >
+        <Button
+          variant="plain"
+          hasNoPadding
+          icon={<HelpIcon />}
+          onClick={() => setIsPopoverOpen(!isPopoverOpen)}
+          aria-label="High contrast help"
+        />
+      </Popover>{' '}&nbsp;
+      <Label color="blue" isCompact>Beta</Label>
+    </h2>
   )
 };
 
@@ -116,7 +149,7 @@ export const ThemeSelector = ({ id }) => {
         preventOverflow: true
       }}
     >
-      <SelectGroup>
+      <SelectGroup label={'Color scheme'} labelHeadingLevel="h2">
         <SelectList aria-label="Light/Dark theme switcher">
           <SelectOption value={colorModes.SYSTEM} icon={DesktopIcon} description="Follow system preference">
             System
