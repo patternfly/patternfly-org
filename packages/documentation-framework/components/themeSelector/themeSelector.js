@@ -69,7 +69,6 @@ export const ThemeSelector = ({ id }) => {
         return 'Light';
       case colorModes.DARK:
         return 'Dark';
-      case colorModes.SYSTEM:
       default:
         return 'System';
     }
@@ -81,7 +80,6 @@ export const ThemeSelector = ({ id }) => {
         return SunIcon;
       case colorModes.DARK:
         return MoonIcon;
-      case colorModes.SYSTEM:
       default:
         return DesktopIcon;
     }
@@ -91,7 +89,7 @@ export const ThemeSelector = ({ id }) => {
     <Select
       id={id}
       isOpen={isThemeSelectOpen}
-      selected={themeMode || colorModes.SYSTEM}
+      selected={themeMode}
       onSelect={handleThemeChange}
       onOpenChange={(isOpen) => setIsThemeSelectOpen(isOpen)}
       toggle={(toggleRef) => (
