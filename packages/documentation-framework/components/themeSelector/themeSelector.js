@@ -50,15 +50,24 @@ const DesktopIcon = (
   </svg>
 );
 
-const HCGroupLabel = () => {
+const ColorSchemeGroupLabel = () => {
+  return (
+    <div className="pf-v6-c-menu__group-title" id="theme-selector-color-scheme-title">
+      Color scheme
+    </div>
+  );
+};
+
+const HighContrastGroupLabel = () => {
   const [isPopoverOpen, setIsPopoverOpen] = useState(false);
 
   return (
-    <h2 className="pf-v6-c-menu__group-title">
+    <div className="pf-v6-c-menu__group-title">
       High contrast{' '}
       <Popover
+        onClick={(e) => e.stopPropagation()}
         headerContent={"Under development"}
-        headerComponent="h3"
+        headerComponent="h1"
         bodyContent={
           "We are still working to add high contrast support across all PatternFly components and extensions. This beta allows you to preview our progress."
         }
@@ -67,8 +76,6 @@ const HCGroupLabel = () => {
             Learn more (replace with link to blog post)
           </Button>
         }
-        isVisible={isPopoverOpen}
-        shouldClose={() => setIsPopoverOpen(false)}
         aria-label="More info about high contrast"
         appendTo={() => document.body}
       >
@@ -76,12 +83,11 @@ const HCGroupLabel = () => {
           variant="plain"
           hasNoPadding
           icon={<HelpIcon />}
-          onClick={() => setIsPopoverOpen(!isPopoverOpen)}
           aria-label="High contrast help"
         />
       </Popover>{' '}&nbsp;
       <Label color="blue" isCompact>Beta</Label>
-    </h2>
+    </div>
   )
 };
 
@@ -149,8 +155,8 @@ export const ThemeSelector = ({ id }) => {
         preventOverflow: true
       }}
     >
-      <SelectGroup label={'Color scheme'} labelHeadingLevel="h2">
-        <SelectList aria-label="Light/Dark theme switcher">
+      <SelectGroup label={ColorSchemeGroupLabel}>
+        <SelectList aria-labelledby="theme-selector-color-scheme-title">
           <SelectOption value={colorModes.SYSTEM} icon={DesktopIcon} description="Follow system preference">
             System
           </SelectOption>
@@ -164,7 +170,7 @@ export const ThemeSelector = ({ id }) => {
       </SelectGroup>
       {process.env.hasHighContrastSwitcher && (<>
       <Divider />
-      <SelectGroup label={HCGroupLabel}>
+      <SelectGroup label={HighContrastGroupLabel}>
         <MenuSearch>
           <MenuSearchInput>
             <ToggleGroup aria-label="High contrast theme switcher">
