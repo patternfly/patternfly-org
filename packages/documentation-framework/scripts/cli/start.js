@@ -1,15 +1,15 @@
-const WebpackDevServer = require('webpack-dev-server');
-const webpack = require('webpack');
+const rsDevServer = require('@rspack/dev-server');
+const rspack = require('@rspack/core');
 const clientConfig = require('../webpack/webpack.client.config');
 const { generate } = require('./generate');
 const { getConfig } = require('./helpers');
 const { watchMD } = require('../md/parseMD');
 
-function startWebpackDevServer(webpackConfig) {
+function startDevServer(webpackConfig) {
   webpackConfig.devServer.static = false;
   const { port } = webpackConfig.devServer;
-  const compiler = webpack(webpackConfig);
-  const server = new WebpackDevServer(webpackConfig.devServer, compiler);
+  const compiler = rspack(webpackConfig);
+  const server = new rspackDevServer(webpackConfig.devServer, compiler);
 
   (async () => {
     await server.start();
@@ -20,9 +20,9 @@ function startWebpackDevServer(webpackConfig) {
 async function start(options) {
   generate(options, true);
   const webpackClientConfig = await clientConfig(null, { mode: 'development', ...getConfig(options) });
-  console.log('start webpack-dev-server');
+  console.log('start rspack-dev-server');
   watchMD();
-  startWebpackDevServer(webpackClientConfig);
+  startDevServer(webpackClientConfig);
 }
 
 module.exports = {

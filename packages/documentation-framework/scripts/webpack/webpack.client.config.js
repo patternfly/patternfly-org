@@ -2,10 +2,7 @@ const path = require('path');
 const fs = require('fs');
 const { merge } = require('webpack-merge');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const TerserPlugin = require('terser-webpack-plugin');
-const CopyPlugin = require('copy-webpack-plugin');
-const webpack = require('webpack');
+const rspack = require('@rspack/core');
 const baseConfig = require('./webpack.base.config');
 const { getHtmlWebpackPlugins } = require('./getHtmlWebpackPlugins');
 
@@ -74,7 +71,7 @@ const clientConfig = async (env, argv) => {
       },
       minimize: isProd ? true : false,
       minimizer: [
-        new TerserPlugin(),
+        new rspack.SwcJsMinimizerRspackPlugin(),
       ],
       runtimeChunk: 'single',
     },
@@ -85,7 +82,7 @@ const clientConfig = async (env, argv) => {
           exclude: reactCSSRegex,
           use: [
             {
-              loader: MiniCssExtractPlugin.loader
+              loader: rspack.CssExtractRspackPlugin.loader
             },
             {
               loader: 'css-loader'
@@ -109,14 +106,14 @@ const clientConfig = async (env, argv) => {
       ]
     },
     plugins: [
-      new webpack.DefinePlugin({
+      new rspack.DefinePlugin({
         'process.env.PRERENDER': false,
       }),
-      new MiniCssExtractPlugin(!isProd ? {} : {
+      new rspack.CssExtractRspackPlugin(!isProd ? {} : {
         filename: 'css/[name].[contenthash].css',
         chunkFilename: 'css/[name].[contenthash].css',
       }),
-      new CopyPlugin({
+      new rspack.CopyRspackPlugin({
         patterns: [
           // versions.json will later be copied to the root www dir
           { from: path.join(__dirname, '../../versions.json'), to: 'versions.json' },
