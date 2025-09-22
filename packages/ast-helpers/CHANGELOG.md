@@ -3,6 +3,101 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.4.0-alpha.278 (2025-09-16)
+
+
+### Bug Fixes
+
+* **theme-selector:** prevent overflow of the menu ([#4779](https://github.com/patternfly/patternfly-org/issues/4779)) ([767811f](https://github.com/patternfly/patternfly-org/commit/767811f252a888d0795f0fd13142724e160bc0cd))
+
+
+
+
+
+# 1.4.0-alpha.277 (2025-09-10)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 1.4.0-alpha.276 (2025-09-10)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 1.4.0-alpha.275 (2025-09-09)
+
+
+### Bug Fixes
+
+* address build issue with nanoid version ([#4774](https://github.com/patternfly/patternfly-org/issues/4774)) ([f78543a](https://github.com/patternfly/patternfly-org/commit/f78543acacb27e9fd638a2450d5ec37ef56de2d5))
+
+
+
+
+
+# 1.4.0-alpha.274 (2025-09-05)
+
+
+### Bug Fixes
+
+* add resolutions to fix more dependency issues ([#4743](https://github.com/patternfly/patternfly-org/issues/4743)) ([4c237fa](https://github.com/patternfly/patternfly-org/commit/4c237faf6f8942ff8bfd480a968004221ebb6882))
+
+
+
+
+
+# 1.4.0-alpha.273 (2025-09-05)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 1.4.0-alpha.272 (2025-09-05)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 1.4.0-alpha.271 (2025-09-05)
+
+
+### Bug Fixes
+
+* add charts stylesheet to docs site for dark theme charts ([#4769](https://github.com/patternfly/patternfly-org/issues/4769)) ([636230d](https://github.com/patternfly/patternfly-org/commit/636230d7a56d71e243512f5d4b1a6b052260cc0c))
+
+
+
+
+
+# 1.4.0-alpha.270 (2025-09-05)
+
+
+### Features
+
+* **org:** pull in react & core docs to astro site ([#4758](https://github.com/patternfly/patternfly-org/issues/4758)) ([45b4059](https://github.com/patternfly/patternfly-org/commit/45b40595538b1584e9e0dba5fbe8d5f9c3d89d49))
+
+
+
+
+
+# 1.4.0-alpha.269 (2025-09-03)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
 # 1.4.0-alpha.268 (2025-09-02)
 
 
