@@ -71,13 +71,11 @@ A split button with a checkbox can be used in bulk selection use cases for a lis
 
 #### Split button with actions
 
-A split button with actions is useful when you want to expose a default action with a single click, but also allow access to other actions via the dropdown menu. This can be thought of as providing a shortcut to the most recent or frequently used item in the menu. 
+A split button with actions is useful when you want to expose a default action with a single click, but also allow access to other actions via the dropdown menu. This can be thought of as providing a shortcut to the most recent or frequently used item in the menu. The default action should be clearly labeled in the button.
 
 <div class="ws-docs-content-img">
 ![Example of split button actions.](./img/split-button-actions.svg)
 </div>
-
-A split button with actions can contain a labeled action or an icon in place of the label for use when there is limited space.
 
 #### Example 
 
