@@ -71,7 +71,9 @@ const clientConfig = async (env, argv) => {
       },
       minimize: isProd ? true : false,
       minimizer: [
-        new rspack.SwcJsMinimizerRspackPlugin(),
+        new rspack.SwcJsMinimizerRspackPlugin({
+          // options
+        }),
       ],
       runtimeChunk: 'single',
     },

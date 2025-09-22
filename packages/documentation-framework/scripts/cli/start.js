@@ -1,4 +1,4 @@
-const rsDevServer = require('@rspack/dev-server');
+const { RspackDevServer }= require('@rspack/dev-server');
 const rspack = require('@rspack/core');
 const clientConfig = require('../webpack/webpack.client.config');
 const { generate } = require('./generate');
@@ -9,7 +9,7 @@ function startDevServer(webpackConfig) {
   webpackConfig.devServer.static = false;
   const { port } = webpackConfig.devServer;
   const compiler = rspack(webpackConfig);
-  const server = new rspackDevServer(webpackConfig.devServer, compiler);
+  const server = new RspackDevServer(webpackConfig.devServer, compiler);
 
   (async () => {
     await server.start();

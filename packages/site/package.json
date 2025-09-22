@@ -7,8 +7,8 @@
     "clean": "rm -rf src/generated",
     "generate:content": "patternfly-doc-core convert-to-mdx ../documentation-site/patternfly-docs/content/",
     "dev": "patternfly-doc-core start",
-    "build": "patternfly-doc-core build --props",
-    "serve": "patternfly-doc-core serve",
+    "zbuild": "patternfly-doc-core build --props",
+    "zserve": "patternfly-doc-core serve",
     "sync": "patternfly-doc-core sync",
     "init:docs": "patternfly-doc-core init"
   },
