@@ -84,6 +84,7 @@ export const ThemeSelector = ({ id }) => {
         return DesktopIcon;
     }
   };
+
   return (
     <Select
       id={id}
@@ -102,6 +103,11 @@ export const ThemeSelector = ({ id }) => {
       )}
       shouldFocusToggleOnSelect
       onOpenChangeKeys={['Escape']}
+      popperProps={{ 
+        position: 'right',
+        enableFlip: true,
+        preventOverflow: true
+      }}
     >
       <SelectGroup>
         <SelectList aria-label="Light/Dark theme switcher">
@@ -116,6 +122,7 @@ export const ThemeSelector = ({ id }) => {
           </SelectOption>
         </SelectList>
       </SelectGroup>
+      {process.env.hasHighContrastSwitcher && (<>
       <Divider />
       <SelectGroup label="High Contrast">
         <MenuSearch>
@@ -143,6 +150,8 @@ export const ThemeSelector = ({ id }) => {
           </MenuSearchInput>
         </MenuSearch>
       </SelectGroup>
+      </>
+      )}
     </Select>
   );
 };

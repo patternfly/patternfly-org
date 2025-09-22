@@ -3,6 +3,123 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 6.22.8 (2025-09-16)
+
+
+### Bug Fixes
+
+* **theme-selector:** prevent overflow of the menu ([#4779](https://github.com/patternfly/patternfly-org/issues/4779)) ([767811f](https://github.com/patternfly/patternfly-org/commit/767811f252a888d0795f0fd13142724e160bc0cd))
+
+
+
+
+
+## 6.22.7 (2025-09-10)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 6.22.6 (2025-09-10)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 6.22.5 (2025-09-09)
+
+
+### Bug Fixes
+
+* address build issue with nanoid version ([#4774](https://github.com/patternfly/patternfly-org/issues/4774)) ([f78543a](https://github.com/patternfly/patternfly-org/commit/f78543acacb27e9fd638a2450d5ec37ef56de2d5))
+
+
+
+
+
+## 6.22.4 (2025-09-05)
+
+
+### Bug Fixes
+
+* add resolutions to fix more dependency issues ([#4743](https://github.com/patternfly/patternfly-org/issues/4743)) ([4c237fa](https://github.com/patternfly/patternfly-org/commit/4c237faf6f8942ff8bfd480a968004221ebb6882))
+
+
+
+
+
+## 6.22.3 (2025-09-05)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 6.22.2 (2025-09-05)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 6.22.1 (2025-09-05)
+
+
+### Bug Fixes
+
+* add charts stylesheet to docs site for dark theme charts ([#4769](https://github.com/patternfly/patternfly-org/issues/4769)) ([636230d](https://github.com/patternfly/patternfly-org/commit/636230d7a56d71e243512f5d4b1a6b052260cc0c))
+
+
+
+
+
+# 6.22.0 (2025-09-05)
+
+
+### Features
+
+* **org:** pull in react & core docs to astro site ([#4758](https://github.com/patternfly/patternfly-org/issues/4758)) ([45b4059](https://github.com/patternfly/patternfly-org/commit/45b40595538b1584e9e0dba5fbe8d5f9c3d89d49))
+
+
+
+
+
+## 6.21.1 (2025-09-03)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+# 6.21.0 (2025-09-02)
+
+
+### Features
+
+* **Feedback:** Add a feedback button with qualtrics form ([#4755](https://github.com/patternfly/patternfly-org/issues/4755)) ([21a8823](https://github.com/patternfly/patternfly-org/commit/21a88238b7187e3c98fbb2f4d8c94483796dfcf0))
+
+
+
+
+
+# 6.20.0 (2025-08-28)
+
+
+### Features
+
+* **theme:** Add high contrast switcher feature flag ([#4761](https://github.com/patternfly/patternfly-org/issues/4761)) ([94b1bf1](https://github.com/patternfly/patternfly-org/commit/94b1bf11fdf0f9daa230671b9ea6cb8258190db2))
+
+
+
+
+
 # 6.19.0 (2025-08-26)
 
 
