@@ -17,7 +17,7 @@ In the event that there isn't a semantic token that fits your use case, then you
 
 Our token system supports both light and dark themes by default. To enable dark theme, you just need to add the class `pf-[version]-theme-dark` (for example, `pf-v6-theme-dark`) to your application's `<html>` tag. Then, when dark theme is enabled, your product will automatically pull in dark theme tokens, in order to adapt visual styles appropriately.
 
-For more information, refer to our [dark theme handbook.](/design-foundations/dark-theme-handbook) 
+For more information, refer to our [dark theme handbook.](/design-foundations/theming/dark-theme-handbook) 
 
 ## Migrate to tokens
 
