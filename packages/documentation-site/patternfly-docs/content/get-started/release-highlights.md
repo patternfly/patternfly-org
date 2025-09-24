@@ -6,7 +6,74 @@ section: get-started
 import './get-started.css';
 import { Divider, Timestamp } from '@patternfly/react-core'; 
 
-<Timestamp date={new Date(2025, 6)}>August 2025</Timestamp>
+<Timestamp date={new Date(2025, 9)}>October 2025</Timestamp>
+
+## PatternFly 6.4
+
+For the Q3 2025 PatternFly release, we're excited to introduce a beta version of our new high contrast mode, deliver significant accessibility enhancements from our latest audit, and launch a highly requested resizable columns feature for tables. We've also continued to evolve PatternFly AI with community-driven ChatBot updates and new guidelines for AI-assisted code contributions. Updates for these key areas can be found here, in this quarter's release highlights.
+
+### Promoted package versions
+
+### Application-level animation control
+
+We've introduced a new application-level context for enabling animations. Previously, animations required a per-component opt-in, which could lead to inconsistencies in large applications built by multiple teams.
+
+Now, you can set the animation context at the root of your application to enable all opt-in animations by default. This ensures that motion behaves predictably across your entire UI while still allowing for individual components to override this setting when necessary. 
+
+[You can find more details in our motion development guide.]()
+
+### High contrast mode (Beta)
+
+To better support users with vision sensitivities and accessibility needs, we've shared a beta version of our new high contrast mode. This theme updates tokens to adjust component styling, primarily with higher-contrast colors and more prominent borders. 
+
+[image?]
+
+You can preview high contrast mode via the theme switcher on our website. This initial beta release includes high contrast support for most of our core components. The full release is planned for Q4 and will include support for focus styles, charts, and extensions.
+
+To support high contrast mode, and to provide clearer details around theming, we've also published [new theming documentation in our design foundations](). 
+
+### System-wide accessibility enhancements
+
+As part of our commitment to inclusive design, we've implemented numerous improvements based on a comprehensive accessibility audit. You'll benefit from the following component enhancements automatically when you update:
+- **Clearer focus states for buttons:** The focus indicator for buttons is now easier to perceive for keyboard navigators.
+- **More reliable tooltips:** We resolved an issue where tooltips were not correctly associated with their trigger elements, improving the experience for screen reader users. This also benefits components that use tooltips, such as menus and dropdowns.
+- **Smoother keyboard navigation in data lists:** Triggering a kebab toggle within a data list item no longer accidentally selects the entire item, creating a more predictable experience.
+
+We’ve also updated some of our documentation and examples to help you build more accessible products:
+- **Skeleton loaders:** We now recommend including visually hidden text that provides crucial context for screen reader users while content is still loading.
+- **Jump links:** Examples now include the expected ARIA attributes and unique naming for semantic elements.
+- **Data list labels:** We’ve added visually hidden text to data list labels that only contain an icon and a number, providing screen reader users with more meaning.
+
+### Community-driven ChatBot enhancements
+Based on feedback from usability workshops and our community, we've made significant enhancements to the ChatBot extension to improve usability and address user needs:
+- **Improved history management:** To provide users with more context, the [chat history drawer]() now includes a clearer title, an icon, and a prominent "new chat" button.
+- **Flexible layouts:** To support different presentation preferences, we've introduced [compact component styles]() and a new [demo for implementing ChatBot within a drawer]().
+- **Modern chat features:** To give users more control and flexibility, we added support for [message editing](), [pinning chat history items](), and [downloading chat transcripts]().
+- **Advanced interactions:** To support more complex agentic interactions, we've added new components to [display an AI's reasoning process (deep thinking)]() and to [manage tool calls]().
+
+[image?]
+
+### Resizable table columns
+Based on user feedback, we've added the ability for table columns to be resized within the [@patternfly/react-data-view extension](https://www.npmjs.com/package/@patternfly/react-data-view). This update allows users to click and drag column dividers to adjust widths, making it easier to view and work with data in dense tables.
+
+[image?]
+
+To see this feature in action, [view our resizable columns table demo]().
+
+### AI-generated code contribution guidelines
+To ensure legal compliance and consistent quality, we have established new guidelines for incorporating AI-generated code into PatternFly. These guidelines have been added to the contribution guides across [all PatternFly repositories](https://github.com/patternfly) to provide a clear, legally-approved framework for all contributors.
+
+### Share your feedback: New user survey
+To help us better understand your needs and guide our future roadmap, we've launched a user feedback survey. We want to hear from the designers, developers, and product managers who use PatternFly every day.
+
+We encourage you to take a few minutes to share your feedback in our [user feedback survey](), which you can find via the persistent "Give feedback" button on the right side of our website.
+
+### What's next?
+For the Q4 release of PatternFly, we'll be focused on the full release of our high contrast mode, continuing our work toward WCAG 2.2 AA compliance, and implementing further ChatBot enhancements based on our next round of user testing. Stay tuned!
+
+<Divider />
+
+<Timestamp date={new Date(2025, 7)}>August 2025</Timestamp>
 
 ## PatternFly 6.3.1
 
@@ -28,6 +95,10 @@ As a follow-up to our main Q2 2025 PatternFly release, this patch resolves sever
 - PatternFly extensions 
     - [@patternfly/chatbot@6.3.2](https://www.npmjs.com/package/@patternfly/chatbot/v/6.3.2) ([changelog](https://github.com/patternfly/chatbot/releases/tag/v6.3.2))
     - [@patternfly/quickstarts@6.3.1](https://www.npmjs.com/package/@patternfly/quickstarts/v/6.3.1) ([changelog](https://github.com/patternfly/patternfly-quickstarts/releases/tag/v6.3.1))
+
+<Divider />
+
+<Timestamp date={new Date(2025, 6)}>July 2025</Timestamp>
 
 ## PatternFly 6.3
 
