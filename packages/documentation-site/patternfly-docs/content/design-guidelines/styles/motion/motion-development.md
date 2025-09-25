@@ -48,11 +48,11 @@ import { AnimationsProvider } from '@patternfly/react-core';
 import { MyApplication } from './MyApplication';
 
 const App: React.FunctionComponent = () => {
-return (
+  return (
     <AnimationsProvider config={{ hasAnimations: true }}>
-    <MyApplication />
+      <MyApplication />
     </AnimationsProvider>
-);
+  );
 };
 
 export default App;
