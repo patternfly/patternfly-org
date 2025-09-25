@@ -46,7 +46,7 @@
   display: none;
 }
 
-@media (min-width: 1451px) {
+@media (min-width: 1450px) {
   .ws-toc {
     width: 260px;
     max-height: calc(100vh - 76px);
