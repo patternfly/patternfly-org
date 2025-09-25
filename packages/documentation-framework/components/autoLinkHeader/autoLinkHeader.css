@@ -4,11 +4,12 @@
 
 .ws-heading-anchor {
   color: var(--pf-t--global--icon--color--regular);
-  transform: translate(calc(-100% - var(--pf-t--global--spacer--xs)), -50%);
+  transform: translate(-100%, -50%);
   opacity: 0;
   position: absolute;
   left: 0;
   top: 50%;
+  padding-inline-end: var(--pf-t--global--spacer--xs);
 }
 
 .ws-heading-anchor-icon {

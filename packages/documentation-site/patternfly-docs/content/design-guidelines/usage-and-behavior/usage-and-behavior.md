@@ -3,8 +3,6 @@ id: Usage and behavior
 section: design-foundations
 ---
 
-# PatternFly component usage and behavior guidelines
-
 As you design with PatternFly, you might encounter common use cases where multiple components could be used. These guidelines outline which component to use in these situations and shares where to find more detailed usage guidelines.
 
 ## Displaying structured data
