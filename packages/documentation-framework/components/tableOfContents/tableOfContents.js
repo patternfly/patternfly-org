@@ -96,7 +96,7 @@ export const TableOfContents = ({ items }) => {
       style={{ top: stickyNavHeight,
         '--jump-links-main-margin-bottom': `${stickyNavHeight}px`
       }}
-      offset={width > 1450 ? 108 + stickyNavHeight : 148 + stickyNavHeight}
+      offset={width < 768 ? 190 + stickyNavHeight : width > 1450 ? 88 + stickyNavHeight : 142 + stickyNavHeight}
       expandable={{ default: 'expandable', '2xl': 'nonExpandable' }}
     >
       {renderJumpLinksItems()}
