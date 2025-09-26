@@ -36,4 +36,13 @@ export const featuredPostsData = {
     imageURL:
       "https://miro.medium.com/v2/resize:fit:600/format:webp/0*f2KRU4Bw2ZmoOSOy",
   },
+  post5: {
+    title: "Open source is a two-way street",
+    author: "Eric Olkowski",
+    length: "5 min read",
+    URL: "https://medium.com/patternfly/open-source-is-a-two-way-street-71c31f6c8384",
+    // Use resize:fit:600 in URL
+    imageURL:
+      "https://miro.medium.com/v2/resize:fit:600/format:webp/1*iyxUnqaepI63DxmM7U56cg.png",
+  },
 };
