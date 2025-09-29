@@ -1,21 +1,13 @@
 ---
-id: Rapid prototyping
+id: AI-assisted code migration
 section: PatternFly-AI
-source: migrating-to-patternfly
-sortValue: 2
 ---
 
-# Migrating to PatternFly
+This guide outlines steps you can take to leverage AI to migrate your project from a legacy or dated framework to PatternFly React components, to modernize your UI while adhering to best practices. 
 
-This document outlines a practical approach to leveraging Artificial Intelligence (AI) for the migration of applications from a legacy or dated framework to PatternFly React components, drawing insights from "Using AI as a PatternFly Enablement Developer." Our experiments with AI have shown that this approach can accelerate migration by 4 to 5 times compared to manual methods. This guide is intended for developers seeking to efficiently modernize their user interfaces while adhering to best practices.
+While AI is **not** a replacement for human developers, it is still a valuable accelerator for code migrations. Even when its initial output is imperfect, using AI in combination with engineering judgment and domain expertise can significantly speeds up the development process. Our team's experiments with this process have shown that, compared to manual migration, AI-assisted migrations for non complex page migrations can be 4 times faster if you have experties in the technolgies you are migrationg from and to along with a sound understanging of the product architecture. However, it can also hinder you development time since you may have dificulty debuging and finding issues if you have limited product and technology knowledge. 
 
-## Introduction: The PatternFly enablement developer role
-
-As a PatternFly enablement developer, the primary goal is to assist teams in building consistent, accessible, and scalable user interfaces. This often involves:
-
-- **Rapid adaptation**: Quickly adjusting to new products, teams, and tools.
-- **Quick onboarding**: Efficiently learning new codebases, architectures, patterns, and standards.
-- **Best practice application**: Implementing React and PatternFly best practices for both new and existing features.
+For example, in our experimination one developer spent almost an entire day trying to get an AI generated migrated page to work. This was 2 - 3 times as long as it took to migrate the page manually. Another developer took less than hour to get the AI migrated page to work versus 2 hours manually.
 
 ## Using AI in each migration phase
 
@@ -23,7 +15,9 @@ AI serves as a powerful accelerator throughout the migration process. Below, we 
 
 ### Learning phase
 
-AI bridges knowledge gaps, identifies relevant code sections, and assists in setting up development environments. For example:
+The learning phase of a migration project often requires building project-specific context, such as understanding the architecture, code-base, best practices and diffrences in technologies. You can query AI to help bridge knowledge gaps, set up development environments, and identify relevant code sections.
+
+For example, if your project is written with Angular, AI can help explain Angular-specific patterns (like directives or services) and point to their equivalents in React and PatternFly.
 
 - Query AI to explain things such as Angular-specific patterns (like directives or services) and their React/PatternFly equivalents.
 - Query AI to explain project specific details.
@@ -44,6 +38,16 @@ AI can assist in building features iteratively, particularly in generating:
 - Validation logic
 - Reusable components
 
+In our experimentation we converted a simple Angular page to React using PatternFly components. A prompt we used after creating a placeholder page for our experimentation was: "Copy the Angular content credentials page content into the ReactPf5PlaceholderPage.js using React and PatternFly5 using best practices with bias towards how other React and PatternFly files in this project are doing things."
+
+We got the following results:
+
+**Before:**
+![Before migration - Angular Content Credentials page](./img/content-credentials-before.png)
+
+**After:**
+![After migration - React PatternFly Content Credentials page](./img/content-credentials-after.png)
+
 ### Testing phase
 
 AI can significantly accelerate test coverage by generating:
@@ -52,24 +56,22 @@ AI can significantly accelerate test coverage by generating:
 - Mocks for API integrations dependencies
 - End-to-end test outlines using tools like Cypress
 
-## Leveraging AI for PatternFly React migration: Findings and recommendations
+## Best practices
 
 To maximize the effectiveness of AI in development, consider the following tips:
 
 - **Prioritize tasks**: Avoid using AI for common tasks that can be done more easily manually. Explicitly instruct it not to perform such tasks.
 - **Leverage different models**: Utilize various language models to suit different needs.
 - **Optimize requests**: Avoid overloading requests to the AI; the "Stop" button is a useful tool.
-- **Utilize To-Do lists**: Take advantage of AI-generated to-do lists for task management.
+- **Utilize to-do lists**: Take advantage of AI-generated to-do lists for task management.
 
 ## Prompting tips for cursor
 
 When interacting with AI, especially with tools like Cursor, specificity is key:
 
-- **Be specific**: Clearly state what you want to achieve.
-- **Adhere to best practices**: Instruct the AI to follow best practices for React and PatternFly.
-- **Build incrementally**: Use previously completed features and functionalities as models for new requests.
-- **Visual aids**: When textual prompts are insufficient, screenshots can provide valuable context.
-
-## Key takeaway: AI as an accelerator
-
-AI is an accelerator, not a replacement for human developers. Even if the initial output from AI is not perfect, it significantly speeds up the development process when combined with engineering judgment and domain expertise.
+| **Don't** | **Do** |
+| --- | --- |
+| Expect AI to assume your needs. | Be specific and clearly state what you want to achieve. |
+| Let AI follow its own rules. | Instruct AI to follow best practices for React and PatternFly, providing clear definitions and examples for these practices. |
+| Restrict yourself to text-based prompts. | When texts prompts are insufficient, you can share screenshots with AI to provide valuable context. |
+| Reinvent the wheel|  Use previously completed features and functionalities as models for new requests. |
