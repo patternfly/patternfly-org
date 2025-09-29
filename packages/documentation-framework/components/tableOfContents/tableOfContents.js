@@ -18,6 +18,17 @@ export const TableOfContents = ({ items }) => {
     const { innerWidth } = window;
     innerWidth !== width && setWidth(innerWidth);
   };
+
+  const getOffset = () => {
+    if (width >= 1450) {
+      return 88 + stickyNavHeight;
+    } else if (width >= 768) {
+      return 142 + stickyNavHeight;
+    } else {
+      return 190 + stickyNavHeight;
+    }
+  };
+  
   let jumpLinksItems = [];
   let wasSublistRendered = false;
 
@@ -96,7 +107,7 @@ export const TableOfContents = ({ items }) => {
       style={{ top: stickyNavHeight,
         '--jump-links-main-margin-bottom': `${stickyNavHeight}px`
       }}
-      offset={width < 768 ? 190 + stickyNavHeight : width > 1450 ? 88 + stickyNavHeight : 142 + stickyNavHeight}
+      offset={getOffset()}
       expandable={{ default: 'expandable', '2xl': 'nonExpandable' }}
     >
       {renderJumpLinksItems()}
