@@ -37,9 +37,9 @@ export const AutoLinkHeader = ({
           isEditorial
         >
           <Tooltip
-            content="Link copied to clipboard"
+            content={showTooltip ? "Link copied to clipboard" : "Copy link"}
             isVisible={showTooltip}
-            trigger="manual"
+            trigger={showTooltip ? "manual" : "mouseenter focus"}
           >
             <button 
               onClick={handleCopyUrl}
