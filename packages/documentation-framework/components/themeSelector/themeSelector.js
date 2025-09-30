@@ -71,7 +71,7 @@ const HighContrastGroupLabel = () => {
           "We are still working to add high contrast support across all PatternFly components and extensions. This beta allows you to preview our progress."
         }
         footerContent={
-          <Button icon={<ExternalLinkAltIcon />} component="a" isInline variant="link" href="https://medium.com/patternfly" target="_blank">
+          <Button icon={<ExternalLinkAltIcon />} component="a" isInline variant="link" href="/design-foundations/theming" target="_blank">
             Learn more (replace with link to blog post)
           </Button>
         }
