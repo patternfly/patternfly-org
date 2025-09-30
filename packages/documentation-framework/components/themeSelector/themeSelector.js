@@ -72,7 +72,7 @@ const HighContrastGroupLabel = () => {
         }
         footerContent={
           <Button icon={<ExternalLinkAltIcon />} component="a" isInline variant="link" href="/design-foundations/theming" target="_blank">
-            Learn more (replace with link to blog post)
+            Learn more
           </Button>
         }
         aria-label="More info about high contrast"
