@@ -10,17 +10,34 @@ import { Divider, Timestamp } from '@patternfly/react-core';
 
 ## PatternFly 6.4
 
-For the Q3 2025 PatternFly release, we're excited to introduce a beta version of our new high contrast mode, deliver significant accessibility enhancements from our latest audit, and launch a highly requested resizable columns feature for tables. We've also continued to evolve PatternFly AI with community-driven ChatBot updates and new guidelines for AI-assisted code contributions. Updates for these key areas can be found here, in this quarter's release highlights.
+For the Q3 2025 PatternFly release, we're excited to introduce a beta version of our new high contrast mode, deliver significant accessibility enhancements from our latest audit, and launch a highly requested resizable columns feature for tables. We've also continued to evolve PatternFly AI with community-driven extension updates and new guidelines for AI-assisted code contributions. Updates for these key areas can be found here, in this quarter's release highlights.
+
+*We’ve also kicked off a user feedback survey! Your perspective is crucial for guiding our roadmap, so please take a few minutes to [share your thoughts with us](https://www.feedback.redhat.com/jfe/form/SV_9MKBjq8H7muINMy). You can also access the survey anytime via the  "Give feedback" button on our website.*
 
 ### Promoted package versions
+- patternfly/patternfly ([changelog](https://github.com/patternfly/patternfly/releases/tag/v6.4.0))
+    - [@patternfly/patternfly@6.4.0](https://www.npmjs.com/package/@patternfly/patternfly/v/6.4.0)
+- patternfly/react ([changelog](https://github.com/patternfly/patternfly-react/releases/tag/v6.4.0))
+    - [@patternfly/react-charts@8.4.0](https://www.npmjs.com/package/@patternfly/react-charts/v/8.4.0)
+    - [@patternfly/react-code-editor@6.4.0](https://www.npmjs.com/package/@patternfly/react-code-editor/v/6.4.0)
+    - [@patternfly/react-core@6.4.0](https://www.npmjs.com/package/@patternfly/react-core/v/6.4.0)
+    - [@patternfly/react-drag-drop@6.4.0](https://www.npmjs.com/package/@patternfly/react-drag-drop/v/6.4.0)
+    - [@patternfly/react-icons@6.4.0](https://www.npmjs.com/package/@patternfly/react-icons/v/6.4.0)
+    - [@patternfly/react-styles@6.4.0](https://www.npmjs.com/package/@patternfly/react-styles/v/6.4.0)
+    - [@patternfly/react-table@6.4.0](https://www.npmjs.com/package/@patternfly/react-table/v/6.4.0)
+    - [@patternfly/react-templates@6.4.0](https://www.npmjs.com/package/@patternfly/react-templates/v/6.4.0)
+    - [@patternfly/react-tokens@6.4.0](https://www.npmjs.com/package/@patternfly/react-tokens/v/6.4.0)
+- PatternFly extensions
+    - [@patternfly/chatbot@6.4.0](https://www.npmjs.com/package/@patternfly/chatbot/v/6.4.0) ([changelog](https://github.com/patternfly/chatbot/releases/tag/v6.4.0))
+    - [@patternfly/react-catalog-view-extension@6.3.0](https://www.npmjs.com/package/@patternfly/react-catalog-view-extension/v/6.3.0) ([changelog](https://github.com/patternfly/react-catalog-view/releases/tag/v6.3.0))
+    - [@patternfly/react-component-groups@6.4.0](https://www.npmjs.com/package/@patternfly/react-component-groups/v/6.4.0) ([changelog](https://github.com/patternfly/react-component-groups/releases/tag/v6.4.0))
+    - [@patternfly/react-data-view@6.4.0](https://www.npmjs.com/package/@patternfly/react-data-view/v/6.4.0) ([changelog](https://github.com/patternfly/react-data-view/releases/tag/v6.4.0))
+    - [@patternfly/react-log-viewer@6.4.0](https://www.npmjs.com/package/@patternfly/react-log-viewer/v/6.4.0) ([changelog](https://github.com/patternfly/react-log-viewer/releases/tag/v6.4.0))
+    - [@patternfly/react-topology@6.4.0](https://www.npmjs.com/package/@patternfly/react-topology/v/6.4.0) ([changelog](https://github.com/patternfly/react-topology/releases/tag/v6.4.0))
 
-### Application-level animation control
+### Simplified animation control
 
-We've introduced a new application-level context for enabling animations. Previously, animations required a per-component opt-in, which could lead to inconsistencies in large applications built by multiple teams.
-
-Now, you can set the animation context at the root of your application to enable all opt-in animations by default. This ensures that motion behaves predictably across your entire UI while still allowing for individual components to override this setting when necessary. 
-
-[You can find more details in our motion development guide.]()
+We've introduced a new application-level context provider for enabling animations. You can now set the animation context at the root of your application to enable all opt-in animations by default. This ensures motion behaves predictably across your entire UI while still allowing for individual overrides. [Find more details in our motion development guide.](/design-foundations/motion/development-guide/#global-animation-control)
 
 ### High contrast mode (Beta)
 
@@ -28,48 +45,52 @@ To better support users with vision sensitivities and accessibility needs, we've
 
 [image?]
 
-You can preview high contrast mode via the theme switcher on our website. This initial beta release includes high contrast support for most of our core components. The full release is planned for Q4 and will include support for focus styles, charts, and extensions.
+You can preview high contrast mode via the theme switcher on our website. This initial beta includes support for most of our core components, with the full release&mdash;including support for charts and extensions&mdash;planned for Q4.
 
-To support high contrast mode, and to provide clearer details around theming, we've also published [new theming documentation in our design foundations](). 
+To support high contrast mode, and to provide clearer details around theming, we've also published [new theming documentation in our design foundations](/design-foundations/theming). 
 
 ### System-wide accessibility enhancements
 
-As part of our commitment to inclusive design, we've implemented numerous improvements based on a comprehensive accessibility audit. You'll benefit from the following component enhancements automatically when you update:
+As part of our commitment to inclusive design, we've implemented numerous improvements in this release. You'll benefit from the following component enhancements automatically when you update:
 - **Clearer focus states for buttons:** The focus indicator for buttons is now easier to perceive for keyboard navigators.
 - **More reliable tooltips:** We resolved an issue where tooltips were not correctly associated with their trigger elements, improving the experience for screen reader users. This also benefits components that use tooltips, such as menus and dropdowns.
 - **Smoother keyboard navigation in data lists:** Triggering a kebab toggle within a data list item no longer accidentally selects the entire item, creating a more predictable experience.
+- **More accessible menus:** We fixed an issue that could create empty headings in React `<MenuGroups>`, improving the experience for screen reader users.
+    - Now, a heading will only render when the `label` prop is passed in. Note that, in order to fix this bug, your markup will be automatically updated when you consume this release. While this shouldn't be disruptive, it's possible this could affect any tests that were based on your previous markup, so you should review accordingly.
 
 We’ve also updated some of our documentation and examples to help you build more accessible products:
-- **Skeleton loaders:** We now recommend including visually hidden text that provides crucial context for screen reader users while content is still loading.
-- **Jump links:** Examples now include the expected ARIA attributes and unique naming for semantic elements.
-- **Data list labels:** We’ve added visually hidden text to data list labels that only contain an icon and a number, providing screen reader users with more meaning.
+- [**Skeletons:**](/components/skeleton/accessibility) We now recommend including visually hidden text that provides crucial context for screen reader users while content is still loading.
+- [**Jump links:**](/components/jump-links) Examples now include the expected ARIA attributes and unique naming for semantic elements.
+- [**Data list:**](/components/data-list/react-demos/basic/) We’ve added visually hidden text to icon-only labels to provide more meaning for screen reader users.
 
 ### Community-driven ChatBot enhancements
 Based on feedback from usability workshops and our community, we've made significant enhancements to the ChatBot extension to improve usability and address user needs:
-- **Improved history management:** To provide users with more context, the [chat history drawer]() now includes a clearer title, an icon, and a prominent "new chat" button.
+- **Clearer navigation:** To provide users with more context, the [chat history drawer]() now includes a clearer title, an icon, and a prominent "new chat" button.
 - **Flexible layouts:** To support different presentation preferences, we've introduced [compact component styles]() and a new [demo for implementing ChatBot within a drawer]().
-- **Modern chat features:** To give users more control and flexibility, we added support for [message editing](), [pinning chat history items](), and [downloading chat transcripts]().
+- **Modern features:** To give users more control and flexibility, we added support for [message editing](), [pinning chat history items](), and [downloading chat transcripts]().
 - **Advanced interactions:** To support more complex agentic interactions, we've added new components to [display an AI's reasoning process (deep thinking)]() and to [manage tool calls]().
 
 [image?]
 
 ### Resizable table columns
-Based on user feedback, we've added the ability for table columns to be resized within the [@patternfly/react-data-view extension](https://www.npmjs.com/package/@patternfly/react-data-view). This update allows users to click and drag column dividers to adjust widths, making it easier to view and work with data in dense tables.
+Based on user feedback, we've added resizable table columns within the [@patternfly/react-data-view extension](https://www.npmjs.com/package/@patternfly/react-data-view). This update allows users to click and drag column dividers to adjust widths, making it easier to view and work with data in dense tables.
 
 [image?]
 
-To see this feature in action, [view our resizable columns table demo]().
+To see this feature in action, [refer to our resizable columns table demo](/extensions/data-view/table#resizable-columns).
 
 ### AI-generated code contribution guidelines
-To ensure legal compliance and consistent quality, we have established new guidelines for incorporating AI-generated code into PatternFly. These guidelines have been added to the contribution guides across [all PatternFly repositories](https://github.com/patternfly) to provide a clear, legally-approved framework for all contributors.
-
-### Share your feedback: New user survey
-To help us better understand your needs and guide our future roadmap, we've launched a user feedback survey. We want to hear from the designers, developers, and product managers who use PatternFly every day.
-
-We encourage you to take a few minutes to share your feedback in our [user feedback survey](), which you can find via the persistent "Give feedback" button on the right side of our website.
+To ensure legal compliance and quality while keeping our contribution process modern, we've established new guidelines for incorporating AI-generated code. You can find them in [our contribution documentation on our website](https://www.patternfly.org/get-started/contribute#ai-assisted-development-guidelines) and [within GitHub](https://github.com/patternfly/.github/blob/main/CONTRIBUTING.md). 
 
 ### What's next?
-For the Q4 release of PatternFly, we'll be focused on the full release of our high contrast mode, continuing our work toward WCAG 2.2 AA compliance, and implementing further ChatBot enhancements based on our next round of user testing. Stay tuned!
+For the Q4 2025 release, we’ll be focused on:
+- The full release of high contrast mode.
+- Launch an updated website navigation.
+- Updating icons to better align with Red Hat’s brand standards.
+- Adding new extensions for guided tours and widgetized dashboards.
+- Continuing our work toward WCAG 2.2 AA compliance.
+
+Stay tuned!
 
 <Divider />
 
