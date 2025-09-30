@@ -6,7 +6,7 @@
 # v5 build
 - uses: actions/cache@v4
   id: site-cache
-  name: Load webpack cache
+  name: Load rspack cache
   with:
     path: "packages/documentation-site/.cache"
     key: ${{ runner.os }}-${{ hashFiles('yarn.lock') }}

@@ -1,7 +1,5 @@
 const path = require('path');
-const webpack = require('webpack');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-const CopyWebpackPlugin = require('copy-webpack-plugin');
+const rspack = require('@rspack/core');
 
 module.exports = (_env, argv) => {
   const {
@@ -132,10 +130,10 @@ module.exports = (_env, argv) => {
       modules: module.paths
     },
     plugins: [
-      new webpack.ProvidePlugin({
+      new rspack.ProvidePlugin({
         process: 'process/browser'
       }),
-      new webpack.DefinePlugin({
+      new rspack.DefinePlugin({
         'process.env.NODE_ENV': JSON.stringify(mode),
         'process.env.googleAnalyticsID': JSON.stringify(isProd ? googleAnalyticsID : ''),
         'process.env.algolia': JSON.stringify(algolia),
@@ -153,7 +151,7 @@ module.exports = (_env, argv) => {
         'process.env.prnum': JSON.stringify(process.env.CIRCLE_PR_NUMBER || process.env.PR_NUMBER || ''),
         'process.env.prurl': JSON.stringify(process.env.CIRCLE_PULL_REQUEST || '')
       }),
-      new CopyWebpackPlugin({
+      new rspack.CopyRspackPlugin({
         patterns: [{ from: path.join(__dirname, '../../assets'), to: 'assets' }]
       })
     ],

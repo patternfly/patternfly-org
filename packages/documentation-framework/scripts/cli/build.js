@@ -1,13 +1,13 @@
 const path = require('path');
 const { fork } = require('child_process');
-const webpack = require('webpack');
+const rspack = require('@rspack/core');
 const { generate } = require('./generate');
 const { getConfig } = require('./helpers');
 
 async function buildWebpack(webpackConfig) {
   let compiler;
   try {
-    compiler = webpack(webpackConfig);
+    compiler = rspack(webpackConfig);
   } catch (err) {
     if (err.name === "WebpackOptionsValidationError") {
       console.error(err.message);
