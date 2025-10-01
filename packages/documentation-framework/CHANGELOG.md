@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 6.24.1 (2025-10-01)
+
+
+### Bug Fixes
+
+* **docs:** Update demo screenshots ([#4812](https://github.com/patternfly/patternfly-org/issues/4812)) ([5764878](https://github.com/patternfly/patternfly-org/commit/5764878e42a60a04701422d90107b8a8da73cc07))
+
+
+
+
+
 # 6.24.0 (2025-10-01)
 
 
