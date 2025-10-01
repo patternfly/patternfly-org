@@ -4067,9 +4067,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@patternfly/chatbot@npm:6.4.0-prerelease.25":
-  version: 6.4.0-prerelease.25
-  resolution: "@patternfly/chatbot@npm:6.4.0-prerelease.25"
+"@patternfly/chatbot@npm:6.4.0-prerelease.26":
+  version: 6.4.0-prerelease.26
+  resolution: "@patternfly/chatbot@npm:6.4.0-prerelease.26"
   dependencies:
     "@segment/analytics-next": "npm:^1.76.0"
     clsx: "npm:^2.1.0"
@@ -4084,7 +4084,7 @@ __metadata:
   peerDependencies:
     react: ^18 || ^19
     react-dom: ^18 || ^19
-  checksum: 10c0/e57d1c3a3c8d072b63249f29cdc53cb31369627c6c6d340e0f4bda3d0ae12b318340fea2640fb56f7e3f56b4582410bb83ffd8abfd850992c8950653a7a9a3e8
+  checksum: 10c0/92a29aebfcfb317dda12dce8da4f448b74cb9d2a836990835c749c2d7a56cdfc04dc5ab1e2c0196038047105478600e3680a45e9317edcc6e3ed9301e797d92d
   languageName: node
   linkType: hard
 
@@ -18134,7 +18134,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "patternfly-org@workspace:packages/documentation-site"
   dependencies:
-    "@patternfly/chatbot": "npm:6.4.0-prerelease.25"
+    "@patternfly/chatbot": "npm:6.4.0-prerelease.26"
     "@patternfly/design-tokens": "npm:1.13.2"
     "@patternfly/documentation-framework": "workspace:*"
     "@patternfly/patternfly-a11y": "npm:5.0.0"
