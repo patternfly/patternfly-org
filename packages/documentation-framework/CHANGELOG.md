@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 6.22.9 (2025-09-30)
+
+
+### Bug Fixes
+
+* **screenshots:** force light theme, hide theme switcher ([#4803](https://github.com/patternfly/patternfly-org/issues/4803)) ([abff5aa](https://github.com/patternfly/patternfly-org/commit/abff5aa36fb2eccb757d27885f72408463e83f49))
+
+
+
+
+
 ## 6.22.8 (2025-09-16)
 
 
