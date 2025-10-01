@@ -3,6 +3,50 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 6.24.2 (2025-10-01)
+
+
+### Bug Fixes
+
+* **ChatBot:** Update version ([#4813](https://github.com/patternfly/patternfly-org/issues/4813)) ([a007287](https://github.com/patternfly/patternfly-org/commit/a007287f925d04a16769e49cf4400d27c59f77d2))
+
+
+
+
+
+## 6.24.1 (2025-10-01)
+
+
+### Bug Fixes
+
+* **docs:** Update demo screenshots ([#4812](https://github.com/patternfly/patternfly-org/issues/4812)) ([5764878](https://github.com/patternfly/patternfly-org/commit/5764878e42a60a04701422d90107b8a8da73cc07))
+
+
+
+
+
+# 6.24.0 (2025-10-01)
+
+
+### Features
+
+* **ver:** update prereleases ([#4810](https://github.com/patternfly/patternfly-org/issues/4810)) ([cf62a7f](https://github.com/patternfly/patternfly-org/commit/cf62a7ff5bbd6b16ac09ab7cc73b399304f9c5ff))
+
+
+
+
+
+# 6.23.0 (2025-10-01)
+
+
+### Features
+
+* **ver:** update to 6.4 prereleases ([#4809](https://github.com/patternfly/patternfly-org/issues/4809)) ([1805162](https://github.com/patternfly/patternfly-org/commit/1805162bb1e019c77023b51d26a4cf37981e3777))
+
+
+
+
+
 ## 6.22.9 (2025-09-30)
 
 
