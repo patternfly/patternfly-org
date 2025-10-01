@@ -34,7 +34,7 @@
   },
   "devDependencies": {
     "@octokit/rest": "^19.0.7",
-    "@patternfly/patternfly": "^6.4.0-prerelease.1",
+    "@patternfly/patternfly": "^6.4.0-prerelease.2",
     "@patternfly/react-code-editor": "^6.4.0-prerelease.1",
     "@patternfly/react-core": "^6.4.0-prerelease.1",
     "@patternfly/react-table": "^6.4.0-prerelease.2",

@@ -4168,7 +4168,7 @@ __metadata:
     webpack-dev-server: "npm:5.2.2"
     webpack-merge: "npm:5.8.0"
   peerDependencies:
-    "@patternfly/patternfly": ^6.4.0-prerelease.1
+    "@patternfly/patternfly": ^6.4.0-prerelease.2
     "@patternfly/react-code-editor": ^6.4.0-prerelease.1
     "@patternfly/react-core": ^6.4.0-prerelease.1
     "@patternfly/react-table": ^6.4.0-prerelease.2
@@ -4262,10 +4262,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@patternfly/patternfly@npm:^6.4.0-prerelease.1":
-  version: 6.4.0-prerelease.1
-  resolution: "@patternfly/patternfly@npm:6.4.0-prerelease.1"
-  checksum: 10c0/d6fba54ff1ff2430ffacd7469e475fa5bc3fe394f524d4e53eca7fe93a4dc13fb3b4f56966d8f8901b3c85e1f9284b36f89774d505759fa5618f2deb32bd5672
+"@patternfly/patternfly@npm:^6.4.0-prerelease.2":
+  version: 6.4.0-prerelease.2
+  resolution: "@patternfly/patternfly@npm:6.4.0-prerelease.2"
+  checksum: 10c0/37563646d1b7c12db4e99d78fbca3d967036d53949f11e9c162b18cedaa3d73da7f7917cb781503044c23de3403a5e18bbcf240db86d59ac82b1699cb6d744a2
   languageName: node
   linkType: hard
 
@@ -18064,7 +18064,7 @@ __metadata:
   resolution: "patternfly-org-workspace@workspace:."
   dependencies:
     "@octokit/rest": "npm:^19.0.7"
-    "@patternfly/patternfly": "npm:^6.4.0-prerelease.1"
+    "@patternfly/patternfly": "npm:^6.4.0-prerelease.2"
     "@patternfly/react-code-editor": "npm:^6.4.0-prerelease.1"
     "@patternfly/react-core": "npm:^6.4.0-prerelease.1"
     "@patternfly/react-table": "npm:^6.4.0-prerelease.2"

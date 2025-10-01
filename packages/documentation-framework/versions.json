@@ -5,7 +5,7 @@
       "date": "2025-09-30",
       "latest": true,
       "versions": {
-        "@patternfly/patternfly": "6.4.0-prerelease.1",
+        "@patternfly/patternfly": "6.4.0-prerelease.2",
         "@patternfly/react-catalog-view-extension": "6.3.0-prerelease.1",
         "@patternfly/react-charts": "8.4.0-prerelease.2",
         "@patternfly/react-code-editor": "6.4.0-prerelease.1",
