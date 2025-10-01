@@ -30,7 +30,6 @@ import GithubIcon from '@patternfly/react-icons/dist/esm/icons/github-icon';
 import { SideNav, TopNav, GdprBanner, ThemeSelector } from '../../components';
 import staticVersions from '../../versions.json';
 import { Footer } from '@patternfly/documentation-framework/components';
-import { useTheme, THEME_TYPES } from '../../hooks/useTheme';
 
 export const RtlContext = createContext(false);
 
@@ -222,8 +221,6 @@ export const SideNavLayout = ({ children, groupedRoutes, navOpen: navOpenProp })
   const [versions, setVersions] = useState({ ...staticVersions });
   const [isRTL, setIsRTL] = useState(false);
 
-  const { resolvedTheme } = useTheme(THEME_TYPES.COLOR);
-
   useEffect(() => {
     if (typeof window === 'undefined') {
       return;
@@ -335,7 +332,7 @@ export const SideNavLayout = ({ children, groupedRoutes, navOpen: navOpenProp })
           defaultManagedSidebarIsOpen={navOpenProp}
         >
           {children}
-          {process.env.hasFooter && <Footer isDarkTheme={resolvedTheme === 'dark'} />}
+          {process.env.hasFooter && <Footer />}
         </Page>
         <div id="ws-page-banners">{hasGdprBanner && <GdprBanner />}</div>
       </RtlContext.Provider>
