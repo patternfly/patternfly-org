@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.4.0-alpha.283 (2025-10-01)
+
+
+### Bug Fixes
+
+* **ChatBot:** Update version ([#4813](https://github.com/patternfly/patternfly-org/issues/4813)) ([a007287](https://github.com/patternfly/patternfly-org/commit/a007287f925d04a16769e49cf4400d27c59f77d2))
+
+
+
+
+
 # 1.4.0-alpha.282 (2025-10-01)
 
 
