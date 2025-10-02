@@ -7,8 +7,20 @@
   transform: translate(calc(-100% - var(--pf-t--global--spacer--xs)), -50%);
   opacity: 0;
   position: absolute;
+  display: flex;
   left: 0;
   top: 50%;
+  background: none;
+  border: none;
+  padding: 0;
+  tab-index: -1;
+}
+
+.ws-heading-anchor::before {
+  content: ''; 
+  position: absolute;
+  inset: 0;
+  margin: calc(var(--pf-t--global--spacer--xs) * -1);
 }
 
 .ws-heading-anchor-icon {

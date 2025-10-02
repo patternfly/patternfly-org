@@ -1,7 +1,6 @@
-import React from 'react';
-import { Flex, FlexItem, Content } from '@patternfly/react-core';
+import React, { useState } from 'react';
+import { Flex, FlexItem, Content, Tooltip } from '@patternfly/react-core';
 import LinkIcon from '@patternfly/react-icons/dist/esm/icons/link-icon';
-import { Link } from '../link/link';
 import { slugger } from '../../helpers/slugger';
 import { css } from '@patternfly/react-styles';
 
@@ -13,6 +12,15 @@ export const AutoLinkHeader = ({
   className
 }) => {
   const slug = id || slugger(children);
+  const [copied, setCopied] = useState(false);
+
+  const handleCopyUrl = (e) => {
+    e.preventDefault();
+    const url = `${window.location.origin}${window.location.pathname}#${slug}`;
+    navigator.clipboard.writeText(url).then(() => {
+      setCopied(true);
+    });
+  };
 
   return (
     <Flex alignItems={{ default: 'alignItemsCenter'}} spaceItems={{ default: "spaceItemsSm" }}>
@@ -24,9 +32,21 @@ export const AutoLinkHeader = ({
           tabIndex={-1}
           isEditorial
         >
-          <Link href={`#${slug}`} className="ws-heading-anchor" tabIndex="-1" aria-hidden>
-            <LinkIcon className="ws-heading-anchor-icon" style={{ verticalAlign: 'middle' }} />
-          </Link>
+          <Tooltip
+            content={copied ? "Link copied" : "Copy link to clipboard"}
+            exitDelay={copied ? 1600 : 300}
+            onTooltipHidden={() => setCopied(false)}
+          >
+            <button 
+              onClick={handleCopyUrl}
+              className="ws-heading-anchor" 
+              tabIndex="-1" 
+              aria-hidden
+              aria-label={`Copy link to ${children}`}
+            >
+              <LinkIcon className="ws-heading-anchor-icon" />
+            </button>
+          </Tooltip>
           {children}
         </Content>
       </FlexItem>
