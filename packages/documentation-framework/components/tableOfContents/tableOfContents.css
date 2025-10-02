@@ -54,7 +54,6 @@
     /* Hide TOC scrollbar IE, Edge & Firefox */
     -ms-overflow-style: none;
     scrollbar-width: none;
-    order: 1;
     padding: 0 var(--pf-t--global--spacer--lg) var(--pf-t--global--spacer--lg) var(--pf-t--global--spacer--2xl);
     flex-grow: 1;
     background: none;

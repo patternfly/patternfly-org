@@ -108,7 +108,7 @@ const MDXChildTemplate = ({ Component, source, toc = [], index = 0, id }) => {
   );
   // Create dynamic component for @reach/router
   const ChildComponent = () => (
-    <div className={source !== 'landing-pages' ? 'pf-v6-l-flex' : ''}>
+    <div className={source !== 'landing-pages' ? 'pf-v6-l-flex pf-v6-m-column pf-m-nowrap-on-2xl pf-m-row-reverse-on-2xl' : ''}>
       {toc.length > 1 && <TableOfContents items={toc} />}
       <Stack hasGutter className={(source !== 'landing-pages' && 'ws-example-page-wrapper')}>
         {InlineAlerts}
