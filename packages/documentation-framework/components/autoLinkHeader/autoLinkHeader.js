@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Flex, FlexItem, Content, Tooltip, Button } from '@patternfly/react-core';
+import { Flex, FlexItem, Content, Tooltip } from '@patternfly/react-core';
 import LinkIcon from '@patternfly/react-icons/dist/esm/icons/link-icon';
 import { slugger } from '../../helpers/slugger';
 import { css } from '@patternfly/react-styles';
@@ -12,17 +12,13 @@ export const AutoLinkHeader = ({
   className
 }) => {
   const slug = id || slugger(children);
-  const [showTooltip, setShowTooltip] = useState(false);
+  const [copied, setCopied] = useState(false);
 
   const handleCopyUrl = (e) => {
     e.preventDefault();
     const url = `${window.location.origin}${window.location.pathname}#${slug}`;
     navigator.clipboard.writeText(url).then(() => {
-      setShowTooltip(true);
-      setTimeout(() => setShowTooltip(false), 2000); // Hide tooltip after 2 seconds
-      console.log('URL copied to clipboard:', url);
-    }).catch(err => {
-      console.error('Failed to copy URL:', err);
+      setCopied(true);
     });
   };
 
@@ -37,9 +33,9 @@ export const AutoLinkHeader = ({
           isEditorial
         >
           <Tooltip
-            content={showTooltip ? "Link copied to clipboard" : "Copy link"}
-            isVisible={showTooltip}
-            trigger={showTooltip ? "manual" : "mouseenter focus"}
+            content={copied ? "Link copied" : "Copy link to clipboard"}
+            exitDelay={copied ? 1600 : 300}
+            onTooltipHidden={() => setCopied(false)}
           >
             <button 
               onClick={handleCopyUrl}
