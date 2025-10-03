@@ -10,7 +10,12 @@ sharp.cache(false);
 
 async function writeScreenshot({ page, data: { url, urlPrefix } }) {
   await page.goto(url);
-  await page.addStyleTag({content: '*,*::before,*::after{animation-delay:-1ms !important;animation-duration:1ms !important;animation-iteration-count:1 !important;transition-duration:0s !important;transition-delay:0s !important;}'}); // disable animations/transitions so they don't interfere with screenshot tool
+  // set light theme
+  await page.emulateMediaFeatures([{ name: 'prefers-color-scheme', value: 'light' }]);
+  // disable any transitions/animations
+  await page.addStyleTag({content: '*,*::before,*::after{animation-delay:-1ms !important;animation-duration:1ms !important;animation-iteration-count:1 !important;transition-duration:0s !important;transition-delay:0s !important;}'});
+  // hide theme switcher
+  await page.addStyleTag({content: '.ws-full-page-utils { display: none !important; }'});
   await page.waitForSelector('.pf-v6-u-h-100');
   const outfile = path.join(
     screenshotBase,
