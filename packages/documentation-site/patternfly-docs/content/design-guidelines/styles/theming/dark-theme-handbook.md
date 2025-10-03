@@ -1,7 +1,7 @@
 ---
-id: Dark theme handbook
-title: PatternFly dark theme handbook
-section: developer-resources
+id: Theming
+section: design-foundations
+source: dark-theme-handbook
 ---
 
 ## Enabling dark theme
