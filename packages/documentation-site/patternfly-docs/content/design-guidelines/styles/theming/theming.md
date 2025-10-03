@@ -28,6 +28,8 @@ Generally, light mode is the default appearance of PatternFly. In this mode, dar
 
 In dark mode, light text is presented on dark backgrounds backgrounds, and our color palette adapts to maintain a [text contrast ratio of at least 4.5:1](https://www.w3.org/WAI/WCAG22/quickref/?versions=2.1#contrast-minimum) and [non-text contrast ratio of at least 3:1](https://www.w3.org/WAI/WCAG22/quickref/?versions=2.1#non-text-contrast). Some users might prefer dark mode for aesthetics, while others find it to be easier on the eyes and less straining for those with light sensitivities. 
 
+For development guidance, refer to the [dark theme handbook](/design-foundations/theming/dark-theme-handbook).
+
 <div class="ws-docs-content-img" style="width:90%">
 ![A collage of multiple dark-themed PatternFly components, like a calendar, alert, and menu. The components have dark gray backgrounds and white text.](./img/components-dark.svg)
 </div>
@@ -62,13 +64,13 @@ Our Figma libraries fully support theming. Designers can create a single layout 
 
 To branch off of our themes and create your own, you can alter design token values to specify new styles. 
 
-Our layered design tokens allow you to create new themes simply by changing base token values in a single file. These adjustments will then apply appropriately to all semantic tokens across your codebase. 
+Our layered design tokens allow you to customize existing themes simply by changing base token values in a single file. These adjustments will then apply appropriately to all semantic tokens across your codebase. 
 
-### When to create a custom theme 
+### When to customize a theme
 
-| **Don't** | **Do** |
-| --- | --- |
-| Create a theme just for one-off adjustments, like changing a single button color. Instead, modify small design changes using component props or utility classes. | Create a theme to adjust the overall brand identity of your application. |
+There are a couple of instances when you might want to adjust an existing PatternFly theme: 
+- One-off adjustments, like changing a single button color, spacer, or font size, when intentional deviation is needed across your product. 
+- Application-wide adjustments, like changing all button colors and font sizes to adjust the overall brand identity of your product. 
 
 ### How to create a custom theme 
 
