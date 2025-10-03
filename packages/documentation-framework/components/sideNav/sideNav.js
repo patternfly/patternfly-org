@@ -24,14 +24,13 @@ const getIsActive = (location, section, subsection = null) => {
 const defaultValue = 50;
 
 const NavItem = ({ text, href, isDeprecated, isBeta, isDemo }) => {
-  const isMobileView = window.innerWidth < Number.parseInt(globalBreakpointXl.value, 10);
   return (
     <PageContextConsumer key={href + text}>
       {({ onSidebarToggle, isSidebarOpen }) => (
         <li
           key={href + text}
           className="pf-v6-c-nav__item"
-          onClick={() => isMobileView && onSidebarToggle && onSidebarToggle()}
+          onClick={() => onSidebarToggle && onSidebarToggle()}
         >
           <Link
             to={href}
