@@ -16,6 +16,8 @@ import { makeSlug } from '../../helpers';
 import globalBreakpointXl from '@patternfly/react-tokens/dist/esm/t_global_breakpoint_xl';
 import { trackEvent } from '../../helpers';
 
+const mobileBreakpoint = Number(globalBreakpointXl.value.replace('px', ''));
+
 const getIsActive = (location, section, subsection = null) => {
   const slug = makeSlug(null, section, null, null, subsection);
   return location.pathname.startsWith(slug);
@@ -26,11 +28,15 @@ const defaultValue = 50;
 const NavItem = ({ text, href, isDeprecated, isBeta, isDemo }) => {
   return (
     <PageContextConsumer key={href + text}>
-      {({ onSidebarToggle, isSidebarOpen }) => (
+      {({ onNavToggle, isNavOpen }) => (
         <li
           key={href + text}
           className="pf-v6-c-nav__item"
-          onClick={() => onSidebarToggle && onSidebarToggle()}
+          onClick={() => {
+            if (typeof window !== 'undefined' && onNavToggle && window.innerWidth < mobileBreakpoint) {
+              onNavToggle();
+            }
+          }}
         >
           <Link
             to={href}
@@ -40,7 +46,7 @@ const NavItem = ({ text, href, isDeprecated, isBeta, isDemo }) => {
                 className: css('pf-v6-c-nav__link', (isCurrent || pathname.startsWith(href + '/')) && 'pf-m-current')
               };
             }}
-            tabIndex={isSidebarOpen ? undefined : -1}
+            tabIndex={isNavOpen ? undefined : -1}
           >
             <Flex spaceItems={{ default: 'spaceItemsSm' }}>
               <FlexItem>{text}</FlexItem>
