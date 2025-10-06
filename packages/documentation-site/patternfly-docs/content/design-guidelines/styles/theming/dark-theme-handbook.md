@@ -4,6 +4,8 @@ section: design-foundations
 source: dark-theme-handbook
 ---
 
+# Dark theme developer handbook 
+
 ## Enabling dark theme
 
 Dark theme styles ship with PatternFly CSS by default. To enable dark theme, add the class `pf-[version]-theme-dark` (for example, `pf-v6-theme-dark`) to your application's `<html>` tag. This class can be added dynamically to toggle dark theme on and off in your application.
@@ -45,17 +47,9 @@ To create images that adapt to light and dark themes, there are a few approaches
 
 ## Best practices
 
-To make it easier to support light and dark theming in your application, we recommend following these best practices during design and development:
+The most important step to ensure your application supports dark theme is to follow our [general theming best practices](/design-foundations/theming#best-practices). Adhering to these guidelines, especially by using design tokens instead of hard-coded values, will resolve most adoption challenges.
 
-* **Use PatternFly components without customizations.** Most problems with dark theming are due to the use of custom styles, overrides to PatternFly styles, and non-PatternFly components. To ensure consistent styling and behavior when switching themes, try to use PatternFly components as they are.
+Additionally, keep these key points in mind:
 
-* **Use tokens and component variables to define any overrides.** 
-    * For example, to override a primary button’s background color, declare `.pf-[version]-c-button { --pf-[version]-c-button--m-primary--BackgroundColor: [color token]; }` instead of `.pf-[version]-c-button.pf-m-primary { background-color: [color token]; }`.
-
-* **Use tokens in custom styles.** 
-    * For example, use `background-color: var(--pf-t--[version]--global--background--color--primary--default)` for a primary background instead of `background-color: #fff` or `background-color: white`. Values like `#fff` and `white` will not change between light and dark theme, but tokens will.
-
-* **Always use the most relevant semantic token for your use case.** If there isn't a semantic token for your scenario, then you can use a base token. Never use a palette token directly in your code. 
-    * For example,  `--pf-t--[version]--global--text--color--link--default`, `--pf-t--[version]--color--blue--20`, and  `#b9dafc` are all the same in PatternFly's default light theme. When you create something custom, where the color should match the application’s link text color, any of these values will work. However, in a different theme, these token values may not always be the same color.
-
-* **Use SVG files or icon fonts for icons, and use tokens for icon colors.** To easily manipulate icon colors between light and dark theme, SVG files and icon fonts can be changed via CSS by using the `fill` and `color` properties. When using semantic tokens, like `--pf-t--[version]--global--color--status--info--default`, colors will automatically adjust between light and dark theme. If images must be used, we advise you to use colors that work well in both light and dark themes and/or hide and show the appropriate images based on the presence of the dark theme body class.
+- **Plan for static images:** If you can't use SVGs that are compatible with both light and dark backgrounds, you will need to create two versions of you image and swap them based on the active theme. 
+- **Test custom components in both themes:** When building custom components, always check your work in both light and dark themes. This helps you catch issues early, like hard-coded colors or styles that don't adapt as expected.

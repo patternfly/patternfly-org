@@ -52,13 +52,7 @@ High contrast mode adjusts our default colors to meet an [enhanced contrast rati
 
 In high contrast mode, distinct borders are also added to components to ensure that their boundaries are clearly defined without requiring users to rely on subtle background colors as a visual cue. 
 
-## Using themes in Figma
-
-Our Figma libraries fully support theming. Designers can create a single layout and then use Figma's appearance feature to swap a wireframe to light, dark, or high contrast mode. This makes it easy to visually test and validate designs across all supported themes.
-
-<div class="ws-docs-content-img">
-![A dark colored flyout menu within an "Appearance" section. The menu expands "Semantic Color Tokens" with selectable options for "Auto (Light)", "Light", and "Dark."](./img/figma-dark-mode.png)
-</div>
+For development guidance, refer to the [high contrast handbook](/design-foundations/theming/high-contrast-handbook).
 
 ## Custom themes 
 
@@ -72,11 +66,39 @@ There are a couple of instances when you might want to adjust an existing Patter
 - One-off adjustments, like changing a single button color, spacer, or font size, when intentional deviation is needed across your product. 
 - Application-wide adjustments, like changing all button colors and font sizes to adjust the overall brand identity of your product. 
 
-### How to create a custom theme 
+## Using themes in Figma
 
-When creating a custom theme, it is your responsibility to ensure that your new color combinations and styles continue to meet accessibility standards, such as a minimum text contrast ratio of 4.5:1.
+Our Figma libraries fully support theming. Designers can create a single layout and then use various Figma settings to swap a wireframe to light, dark, or high contrast mode. This makes it easy to visually test and validate designs across all supported themes.
 
-Add: Technical details and guidance (consider separate tab if this gets long)
-- In which files must you override default values?
-- Code example snippet. 
-- Tips or best practices? 
+### Dark theme
+
+To swap your designs to use dark theme, change the selection of **Charts** and **Semantic Color Tokens** to be "Dark":
+
+<div class="ws-docs-content-img" style="max-width:75%">
+![A dark colored flyout menu within an "Appearance" section. The menu expands "Semantic Color Tokens" with selectable options for "Auto (Light)", "Light", and "Dark."](./img/figma-light-default.svg)
+</div>
+
+### High contrast modes
+
+To swap your designs to use high contrast mode, change the selection of **Semantic Dimension Tokens** to be "High Contrast". Then, select your preference for light or dark high contrast within **Charts** and **Semantic Color Tokens**. 
+
+For example, your settings for a dark high contrast mode theme would look like this: 
+
+<div class="ws-docs-content-img" style="max-width:75%">
+![A dark colored flyout menu within an "Appearance" section. The menu expands "Semantic Color Tokens" with selectable options for "Auto (Light)", "Light", and "Dark."](./img/figma-dark-hc.svg)
+</div>
+
+## Best practices
+
+To ensure your application is robust, maintainable, and adaptable across different themes, we recommend following these best practices.
+
+- **Use default PatternFly components:** Whenever possible, use PatternFly components as they are. This ensures you stay up-to-date with our intended design, functionality, and accessibility standards. It also makes upgrades more seamless, decreases development time, and guarantees consistency across applications.
+- **Use design tokens and variables for customizations:** If you must customize a component, use the appropriate method:
+    - **Design tokens:** For global changes
+    - **Component variables:** For component-specific changes
+    - Example: To override a primary button’s background color, declare `.pf-[version]-c-button { --pf-[version]-c-button--m-primary--BackgroundColor: [color token]; }` instead of `.pf-[version]-c-button.pf-m-primary { background-color: [color token]; }`.
+- **Always use tokens to create custom styles:** When creating custom components or styles, never use hard-coded values like hex codes or color names (`#fff` or `white`). Instead, use the appropriate design token, such as `var(--pf-t--global--background--color--primary--default)`. Tokens automatically adapt to different themes, while hard-coded values do not.
+- **Prioritize semantic tokens:** Always use the most relevant semantic token for your use case to ensure the element's purpose is clear and that it receives the correct styling in any theme. If no semantic token exists, you can fall back to a base token. 
+- **Never use a palette token**: Do not use palette tokens (like `--pf-t--color--blue--20`) directly in your code, as the value is not guaranteed to be consistent across themes.
+- **Use scalable icons:** For icons, use SVG files or icon fonts instead of PNGs or JPEGs. This allows you to control their color with CSS `fill` and `color` properties. By assigning a design token to these properties, your icons will automatically change color to match the active theme.
+    - If you must use static images, you might need to hide and show different image files based presence of a theme-specific class (like `pf-v5-theme-dark`).
