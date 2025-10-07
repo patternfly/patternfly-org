@@ -69,12 +69,15 @@ AI can assist in building features iteratively, particularly in generating:
 - Validation logic
 - Reusable components
 
-In our experimentation we converted a simple Angular page to React using PatternFly components. A prompt we used after creating a placeholder page for our experimentation was: "Copy the Angular content credentials page content into the ReactPf5PlaceholderPage.js using React and PatternFly5 using best practices with bias towards how other React and PatternFly files in this project are doing things."
-
-AI was able to successfully recreate page content while adhering to our request: 
-
-**Before:**
+For example, you could use AI to migrate a simple Angular feature like this to React using PatternFly components:
+	
 ![Before migration - Angular Content Credentials page](./img/content-credentials-before.png)
+
+To migrate the code from Angular to PatternFly React:
+1. Create a placeholder page.
+2. Prompt AI to migrate the content. Your query might resemble this: "Copy the Angular content credentials page content into the ReactPf5PlaceholderPage.js using React and PatternFly5 using best practices with bias towards how other React and PatternFly files in this project are doing things."
+
+With this simple, but direct prompt, the same feature can be quickly and successfully recreated within PatternFly components: 
 
 **After:**
 ![After migration - React PatternFly Content Credentials page](./img/content-credentials-after.png)
