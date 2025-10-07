@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 6.26.0 (2025-10-07)
+
+
+### Features
+
+* **ver:** update missed dataview version ([#4821](https://github.com/patternfly/patternfly-org/issues/4821)) ([7d5f32d](https://github.com/patternfly/patternfly-org/commit/7d5f32dffd054a99bcc130e16ac0384cbd9943b3))
+
+
+
+
+
 # 6.25.0 (2025-10-07)
 
 
