@@ -20,7 +20,7 @@ High contrast mode is designed to work with both our standard light and dark the
 
 ### Automatic high contrast
 
-To apply high contrast mode automatically, based off of a user’s OS and browser contrast preferences, you can use `window.matchMedia()` to detect the browser’s `prefers-contrast` and `forced-colors` media queries. Because our high contrast mode often introduces additional borders, we recommend detecting `forced-colors: active` and applying high contrast styles when the value is `true`.
+To apply high contrast mode automatically, based off of a user’s OS and browser contrast preferences, you can use `window.matchMedia()` to detect the browser’s `prefers-contrast` and `forced-colors` media queries. Because our high contrast mode often introduces additional borders, we recommend detecting `forced-colors` and applying high contrast styles when the value is `active`.
 
 Even when high contrast mode is enabled automatically, it’s important to also add a manual toggle that allows users to toggle the theme on and off. A user's manual toggle of high contrast should always override the OS and browser preference.
 
