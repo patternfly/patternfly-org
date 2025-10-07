@@ -24,7 +24,7 @@
         "@patternfly/react-virtualized-extension": "6.1.0",
         "@patternfly/react-templates": "6.4.0-prerelease.2",
         "@patternfly/chatbot": "6.4.0-prerelease.26",
-        "@patternfly/react-data-view": "6.4.0-prerelease.3"
+        "@patternfly/react-data-view": "6.4.0-prerelease.4"
       }
     },
     {
