@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.4.0-alpha.284 (2025-10-07)
+
+
+### Features
+
+* **ver:** udpate DataView version ([#4819](https://github.com/patternfly/patternfly-org/issues/4819)) ([519d0e7](https://github.com/patternfly/patternfly-org/commit/519d0e7c31aec0c402b8d4e9a8a299378f9bdf6e))
+
+
+
+
+
 # 1.4.0-alpha.283 (2025-10-01)
 
 
