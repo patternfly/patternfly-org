@@ -57,7 +57,7 @@ As part of our commitment to inclusive design, we've implemented numerous improv
     - Now, a heading will only render when the `label` prop is passed in. Note that, in order to fix this bug, your markup will be automatically updated when you consume this release. While this shouldn't be disruptive, it's possible this could affect any tests that were based on your previous markup, so you should review accordingly.
 
 We’ve also updated some of our documentation and examples to help you build more accessible products:
-- [**Skeletons:**](/components/skeleton/accessibility) We now recommend including visually hidden text that provides crucial context for screen reader users while content is still loading.
+- [**Skeleton:**](/components/skeleton/accessibility) We now recommend including visually hidden text that provides crucial context for screen reader users while content is still loading.
 - [**Jump links:**](/components/jump-links) Examples now include the expected ARIA attributes and unique naming for semantic elements.
 - [**Data list:**](/components/data-list/react-demos/basic/) We’ve added visually hidden text to icon-only labels to provide more meaning for screen reader users.
 
