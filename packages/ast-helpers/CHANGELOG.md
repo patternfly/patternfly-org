@@ -3,6 +3,83 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.4.0-alpha.285 (2025-10-07)
+
+
+### Features
+
+* **ver:** update missed dataview version ([#4821](https://github.com/patternfly/patternfly-org/issues/4821)) ([7d5f32d](https://github.com/patternfly/patternfly-org/commit/7d5f32dffd054a99bcc130e16ac0384cbd9943b3))
+
+
+
+
+
+# 1.4.0-alpha.284 (2025-10-07)
+
+
+### Features
+
+* **ver:** udpate DataView version ([#4819](https://github.com/patternfly/patternfly-org/issues/4819)) ([519d0e7](https://github.com/patternfly/patternfly-org/commit/519d0e7c31aec0c402b8d4e9a8a299378f9bdf6e))
+
+
+
+
+
+# 1.4.0-alpha.283 (2025-10-01)
+
+
+### Bug Fixes
+
+* **ChatBot:** Update version ([#4813](https://github.com/patternfly/patternfly-org/issues/4813)) ([a007287](https://github.com/patternfly/patternfly-org/commit/a007287f925d04a16769e49cf4400d27c59f77d2))
+
+
+
+
+
+# 1.4.0-alpha.282 (2025-10-01)
+
+
+### Bug Fixes
+
+* **docs:** Update demo screenshots ([#4812](https://github.com/patternfly/patternfly-org/issues/4812)) ([5764878](https://github.com/patternfly/patternfly-org/commit/5764878e42a60a04701422d90107b8a8da73cc07))
+
+
+
+
+
+# 1.4.0-alpha.281 (2025-10-01)
+
+
+### Features
+
+* **ver:** update prereleases ([#4810](https://github.com/patternfly/patternfly-org/issues/4810)) ([cf62a7f](https://github.com/patternfly/patternfly-org/commit/cf62a7ff5bbd6b16ac09ab7cc73b399304f9c5ff))
+
+
+
+
+
+# 1.4.0-alpha.280 (2025-10-01)
+
+
+### Features
+
+* **ver:** update to 6.4 prereleases ([#4809](https://github.com/patternfly/patternfly-org/issues/4809)) ([1805162](https://github.com/patternfly/patternfly-org/commit/1805162bb1e019c77023b51d26a4cf37981e3777))
+
+
+
+
+
+# 1.4.0-alpha.279 (2025-09-30)
+
+
+### Bug Fixes
+
+* **screenshots:** force light theme, hide theme switcher ([#4803](https://github.com/patternfly/patternfly-org/issues/4803)) ([abff5aa](https://github.com/patternfly/patternfly-org/commit/abff5aa36fb2eccb757d27885f72408463e83f49))
+
+
+
+
+
 # 1.4.0-alpha.278 (2025-09-16)
 
 
