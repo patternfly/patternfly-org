@@ -10,7 +10,8 @@ import {
   ToggleGroup,
   ToggleGroupItem,
   Icon,
-  Divider
+  Divider,
+  Spinner
 } from '@patternfly/react-core';
 import { useTheme, THEME_TYPES } from '../../hooks/useTheme';
 
@@ -80,8 +81,10 @@ export const ThemeSelector = ({ id }) => {
         return SunIcon;
       case colorModes.DARK:
         return MoonIcon;
-      default:
+      case colorModes.SYSTEM:
         return DesktopIcon;
+      default:
+        return <Spinner size="sm" />;
     }
   };
 
@@ -103,7 +106,7 @@ export const ThemeSelector = ({ id }) => {
       )}
       shouldFocusToggleOnSelect
       onOpenChangeKeys={['Escape']}
-      popperProps={{ 
+      popperProps={{
         position: 'right',
         enableFlip: true,
         preventOverflow: true
@@ -122,35 +125,36 @@ export const ThemeSelector = ({ id }) => {
           </SelectOption>
         </SelectList>
       </SelectGroup>
-      {process.env.hasHighContrastSwitcher && (<>
-      <Divider />
-      <SelectGroup label="High Contrast">
-        <MenuSearch>
-          <MenuSearchInput>
-            <ToggleGroup aria-label="High contrast theme switcher">
-              <ToggleGroupItem
-                text="System"
-                buttonId={highContrastModes.SYSTEM}
-                isSelected={highContrastMode === highContrastModes.SYSTEM}
-                onChange={handleHighContrastThemeSelection}
-              />
-              <ToggleGroupItem
-                text="On"
-                buttonId={highContrastModes.ON}
-                isSelected={highContrastMode === highContrastModes.ON}
-                onChange={handleHighContrastThemeSelection}
-              />
-              <ToggleGroupItem
-                text="Off"
-                buttonId={highContrastModes.OFF}
-                isSelected={highContrastMode === highContrastModes.OFF}
-                onChange={handleHighContrastThemeSelection}
-              />
-            </ToggleGroup>
-          </MenuSearchInput>
-        </MenuSearch>
-      </SelectGroup>
-      </>
+      {process.env.hasHighContrastSwitcher && (
+        <>
+          <Divider />
+          <SelectGroup label="High Contrast">
+            <MenuSearch>
+              <MenuSearchInput>
+                <ToggleGroup aria-label="High contrast theme switcher">
+                  <ToggleGroupItem
+                    text="System"
+                    buttonId={highContrastModes.SYSTEM}
+                    isSelected={highContrastMode === highContrastModes.SYSTEM}
+                    onChange={handleHighContrastThemeSelection}
+                  />
+                  <ToggleGroupItem
+                    text="On"
+                    buttonId={highContrastModes.ON}
+                    isSelected={highContrastMode === highContrastModes.ON}
+                    onChange={handleHighContrastThemeSelection}
+                  />
+                  <ToggleGroupItem
+                    text="Off"
+                    buttonId={highContrastModes.OFF}
+                    isSelected={highContrastMode === highContrastModes.OFF}
+                    onChange={handleHighContrastThemeSelection}
+                  />
+                </ToggleGroup>
+              </MenuSearchInput>
+            </MenuSearch>
+          </SelectGroup>
+        </>
       )}
     </Select>
   );
