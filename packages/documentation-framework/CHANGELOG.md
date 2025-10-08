@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 6.26.2 (2025-10-08)
+
+
+### Bug Fixes
+
+* enable HC switcher, add beta label ([#4766](https://github.com/patternfly/patternfly-org/issues/4766)) ([bdcd2b8](https://github.com/patternfly/patternfly-org/commit/bdcd2b80a0939ae8362d8ebcd4d14f79ef0c1831))
+
+
+
+
+
 ## 6.26.1 (2025-10-08)
 
 **Note:** Version bump only for package @patternfly/documentation-framework
