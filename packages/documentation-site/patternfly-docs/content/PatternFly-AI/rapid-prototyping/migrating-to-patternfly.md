@@ -24,21 +24,26 @@ If you have a limited understanding of the product architecture or lack expertis
 
 Additionally, AI can make assumptions and often requires careful direction in order to perform reliably as you need. Our [best practices](#best-practices) and [prompting tips](#prompting-tips) document some of the important considerations and approaches to take to help ensure consistency in AI behavior.
 
+
 ## Best practices
-To maximize the effectiveness of using AI during code migrations, consider the following tips:
-- **Use AI as a helper for planning and managing tasks:** Use AI-generated to-do lists for easier and more streamlined task management.
-- **Prioritize tasks for AI assistance:** Avoid using AI for common tasks that can be done more easily manually. Explicitly instruct it not to perform these tasks, so that it will be more efficient and prioritize the areas where it can be the most impactful.
-- **Leverage different models:** Utilize various language models throughout your migration. One model might be better at a specific task than another. Be willing to swap between models for different tasks as needed.
-- **Optimize your requests and prompts:** Avoid overloading a model with a long or time consuming task. If a request is taking longer than you'd like, or going beyond what you intended, interrupt the AI with the "Stop" button.
+
+When using AI tools during code migrations:
+	
+- Use AI as a helper for planning and managing tasks. For example, use AI-generated to-do lists for easier and more streamlined task management.
+- Avoid using AI for common tasks that can be done more easily manually and explicitly instead ask it to focus on more complex tasks that will have more impact. 
+- Leverage different language models throughout your migration and swap to more efficient models for different tasks. 
+- Avoid overloading a model with a long or time consuming task. If a request is taking longer than you'd like, or is going beyond what you intended, interrupt the AI with the "Stop" button.
+
 ### Prompting tips
+
 When interacting with AI, especially with tools like Cursor, specificity is key. In order to efficiently and successfully request something from an AI tool, there are a few "do's and don'ts" to follow:
+
 | **Don't** | **Do** |
 | --- | --- |
 | Expect AI to assume your needs. | Be specific and clearly state what you want to achieve. |
-| Let AI follow its own rules. | Instruct AI to follow best practices for React and PatternFly, providing clear definitions and examples for these practices. |
-| Restrict yourself to text-based prompts. | When texts prompts are insufficient, you can share screenshots with AI to provide valuable context. |
-| Reinvent the wheel|  Use previously completed features and functionalities as models for new requests. |
-
+| Let AI follow its own rules. | Instruct AI to follow best practices for React and PatternFly, providing clear definitions and examples. |
+| Restrict yourself to text-based prompts. | When texts prompts are insufficient, share screenshots with AI to provide valuable context. |
+| Reinvent the wheel |  Use previously completed features and functionalities as models for new requests. |
 
 ## Multi-phased workflow example
 
@@ -46,45 +51,36 @@ AI serves as a powerful accelerator throughout all steps of the migration proces
 
 1. Learning phase
 
-The learning phase of a migration project often requires building project-specific context, such as understanding the architecture, code-base, best practices and diffrences in technologies. You can query AI to help bridge knowledge gaps, set up development environments, and identify relevant code sections.
+    Query AI to help build project-specific context by bridging knowledge gaps, setting up development environments, and identifying relevant code sections. For example, if your project is written with Angular, AI can help explain Angular-specific patterns (like directives or services) and point to their equivalents in React and PatternFly.
 
-For example, if your project is written with Angular, AI can help explain Angular-specific patterns (like directives or services) and point to their equivalents in React and PatternFly.
-
-- Query AI to explain things such as Angular-specific patterns (like directives or services) and their React/PatternFly equivalents.
-- Query AI to explain project specific details.
-- Use AI to configure tools like Podman.
+    For example, if your project is written with Angular, AI can help explain Angular-specific patterns (like directives or services) and point to their equivalents in React and PatternFly.
 
 2. Planning phase
 
-AI aids in estimating migration scope and mapping existing features to latest PatternFly React equivalents:
-
-- Query AI to generate a list of components that need to be migrated.
-- Query AI to identify areas that may be difficult. Examples could include state management and routing.
+    Use AI for scope estimation and mapping features:
+    - Generate a list of components that need migration.
+	- Identify potentially difficult areas, such as state management and routing.
 
 3. Development phase
 
-AI can assist in building features iteratively, particularly in generating:
+    Use AI to build features iteratively, especially for generating forms, validation logic, and creating reusable components.
 
-- Forms
-- Validation logic
-- Reusable components
+    For example, you could use AI to migrate a simple Angular feature like this to React using PatternFly components:
+        
+    ![Before migration - Angular Content Credentials page](./img/content-credentials-before.png)
 
-For example, you could use AI to migrate a simple Angular feature like this to React using PatternFly components:
-	
-![Before migration - Angular Content Credentials page](./img/content-credentials-before.png)
+    To migrate the code from Angular to PatternFly React:
+    1. Create a placeholder page.
+    2. Prompt AI to migrate the content. Your query might resemble this: "Copy the Angular content credentials page content into the ReactPf5PlaceholderPage.js using React and PatternFly5 using best practices with bias towards how other React and PatternFly files in this project are doing things."
 
-To migrate the code from Angular to PatternFly React:
-1. Create a placeholder page.
-2. Prompt AI to migrate the content. Your query might resemble this: "Copy the Angular content credentials page content into the ReactPf5PlaceholderPage.js using React and PatternFly5 using best practices with bias towards how other React and PatternFly files in this project are doing things."
+    With this simple, but direct prompt, the same feature can be quickly and successfully recreated within PatternFly components: 
 
-With this simple, but direct prompt, the same feature can be quickly and successfully recreated within PatternFly components: 
-
-**After:**
-![After migration - React PatternFly Content Credentials page](./img/content-credentials-after.png)
+    **After:**
+    ![After migration - React PatternFly Content Credentials page](./img/content-credentials-after.png)
 
 4. Testing phase
 
-Use AI to accelerate test coverage by generating boilerplate unit tests, mocks for API integrations or dependencies, and end-to-end test outlines using tools like Cypress.
+    Use AI to accelerate test coverage by generating boilerplate unit tests, mocks for API integrations or dependencies, and end-to-end test outlines using tools like Cypress.
 
 ## Experimentation and feedback 
 
