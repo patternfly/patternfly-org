@@ -3,6 +3,148 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 6.26.0 (2025-10-07)
+
+
+### Features
+
+* **ver:** update missed dataview version ([#4821](https://github.com/patternfly/patternfly-org/issues/4821)) ([7d5f32d](https://github.com/patternfly/patternfly-org/commit/7d5f32dffd054a99bcc130e16ac0384cbd9943b3))
+
+
+
+
+
+# 6.25.0 (2025-10-07)
+
+
+### Features
+
+* **ver:** udpate DataView version ([#4819](https://github.com/patternfly/patternfly-org/issues/4819)) ([519d0e7](https://github.com/patternfly/patternfly-org/commit/519d0e7c31aec0c402b8d4e9a8a299378f9bdf6e))
+
+
+
+
+
+## 6.24.2 (2025-10-01)
+
+
+### Bug Fixes
+
+* **ChatBot:** Update version ([#4813](https://github.com/patternfly/patternfly-org/issues/4813)) ([a007287](https://github.com/patternfly/patternfly-org/commit/a007287f925d04a16769e49cf4400d27c59f77d2))
+
+
+
+
+
+## 6.24.1 (2025-10-01)
+
+
+### Bug Fixes
+
+* **docs:** Update demo screenshots ([#4812](https://github.com/patternfly/patternfly-org/issues/4812)) ([5764878](https://github.com/patternfly/patternfly-org/commit/5764878e42a60a04701422d90107b8a8da73cc07))
+
+
+
+
+
+# 6.24.0 (2025-10-01)
+
+
+### Features
+
+* **ver:** update prereleases ([#4810](https://github.com/patternfly/patternfly-org/issues/4810)) ([cf62a7f](https://github.com/patternfly/patternfly-org/commit/cf62a7ff5bbd6b16ac09ab7cc73b399304f9c5ff))
+
+
+
+
+
+# 6.23.0 (2025-10-01)
+
+
+### Features
+
+* **ver:** update to 6.4 prereleases ([#4809](https://github.com/patternfly/patternfly-org/issues/4809)) ([1805162](https://github.com/patternfly/patternfly-org/commit/1805162bb1e019c77023b51d26a4cf37981e3777))
+
+
+
+
+
+## 6.22.9 (2025-09-30)
+
+
+### Bug Fixes
+
+* **screenshots:** force light theme, hide theme switcher ([#4803](https://github.com/patternfly/patternfly-org/issues/4803)) ([abff5aa](https://github.com/patternfly/patternfly-org/commit/abff5aa36fb2eccb757d27885f72408463e83f49))
+
+
+
+
+
+## 6.22.8 (2025-09-16)
+
+
+### Bug Fixes
+
+* **theme-selector:** prevent overflow of the menu ([#4779](https://github.com/patternfly/patternfly-org/issues/4779)) ([767811f](https://github.com/patternfly/patternfly-org/commit/767811f252a888d0795f0fd13142724e160bc0cd))
+
+
+
+
+
+## 6.22.7 (2025-09-10)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 6.22.6 (2025-09-10)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 6.22.5 (2025-09-09)
+
+
+### Bug Fixes
+
+* address build issue with nanoid version ([#4774](https://github.com/patternfly/patternfly-org/issues/4774)) ([f78543a](https://github.com/patternfly/patternfly-org/commit/f78543acacb27e9fd638a2450d5ec37ef56de2d5))
+
+
+
+
+
+## 6.22.4 (2025-09-05)
+
+
+### Bug Fixes
+
+* add resolutions to fix more dependency issues ([#4743](https://github.com/patternfly/patternfly-org/issues/4743)) ([4c237fa](https://github.com/patternfly/patternfly-org/commit/4c237faf6f8942ff8bfd480a968004221ebb6882))
+
+
+
+
+
+## 6.22.3 (2025-09-05)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 6.22.2 (2025-09-05)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
 ## 6.22.1 (2025-09-05)
 
 
