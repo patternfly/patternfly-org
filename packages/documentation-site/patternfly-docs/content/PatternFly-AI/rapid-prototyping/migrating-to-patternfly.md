@@ -43,7 +43,7 @@ When interacting with AI, especially with tools like Cursor, specificity is key.
 | Expect AI to assume your needs. | Be specific and clearly state what you want to achieve. |
 | Let AI follow its own rules. | Instruct AI to follow best practices for React and PatternFly, providing clear definitions and examples. |
 | Restrict yourself to text-based prompts. | When texts prompts are insufficient, share screenshots with AI to provide valuable context. |
-| Reinvent the wheel |  Use previously completed features and functionalities as models for new requests. |
+| Reinvent the wheel. |  Use previously completed features and functionalities as models for new requests. |
 
 ## Multi-phased workflow example
 
