@@ -25,7 +25,7 @@ p.pf-v6-c-content--p.ws-p {
 }
 
 .ws-example-page-wrapper {
-  width: min(825px, 100%);
+  min-width: 825px;
   max-width: 1200px;
-  flex-grow: 2;
+  flex-grow: 1;
 }
