@@ -48,16 +48,19 @@
 
 @media (min-width: 1450px) {
   .ws-toc {
-    width: 260px;
+    /* width: minmax(270px, 320px); */
+    min-width: 150px; /* 270px; */
+    max-width: 320px;
     max-height: calc(100vh - 76px);
     overflow-y: auto;
     /* Hide TOC scrollbar IE, Edge & Firefox */
     -ms-overflow-style: none;
     scrollbar-width: none;
-    padding: 0 var(--pf-t--global--spacer--lg) var(--pf-t--global--spacer--lg) var(--pf-t--global--spacer--2xl);
-    flex-grow: 1;
+    padding: 0 0 0 var(--pf-t--global--spacer--2xl);
     background: none;
     margin: 0;
+    order: 1;
+    flex: 1 1 320px;
   }
 
   .ws-toc,
