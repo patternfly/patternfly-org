@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 6.27.0 (2025-10-09)
+
+
+### Features
+
+* **sideNav:** Adds support for grouped nav with headers and dividers. ([#4754](https://github.com/patternfly/patternfly-org/issues/4754)) ([91f9227](https://github.com/patternfly/patternfly-org/commit/91f92276400dc255f931c7df6c75963adf2c54bc))
+
+
+
+
+
 ## 6.26.4 (2025-10-09)
 
 **Note:** Version bump only for package @patternfly/documentation-framework
