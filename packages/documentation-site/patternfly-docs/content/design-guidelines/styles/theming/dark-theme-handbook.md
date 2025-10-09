@@ -8,7 +8,7 @@ source: dark-theme-handbook
 
 ## Enabling dark theme
 
-Dark theme styles ship with PatternFly CSS by default. To enable dark theme, add the class `pf-[version]-theme-dark` (for example, `pf-v6-theme-dark`) to your application's `<html>` tag. This class can be added dynamically to toggle dark theme on and off in your application.
+Dark theme is available with PatternFly by default. To enable dark theme, add the class `pf-[version]-theme-dark` (for example, `pf-v6-theme-dark`) to your application's `<html>` tag. This class can be added dynamically to toggle dark theme on and off in your application.
 
 Dark theme can also be applied based on the browser’s `prefers-color-scheme` media query. When using this method, we recommend using JavaScript to detect the media query and apply the `pf-[version]-theme-dark` class. This allows you to manipulate a single class in order to toggle dark theme based on user preference. [Adam Argyle wrote a great article](https://web.dev/building-a-theme-switch-component/#javascript) on using JavaScript to manage dark theme preference, using the `prefers-color-scheme` media query alongside a manual button that toggles dark theme. 
 

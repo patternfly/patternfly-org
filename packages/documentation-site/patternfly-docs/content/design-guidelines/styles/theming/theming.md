@@ -10,7 +10,7 @@ import ExternalLinkAltIcon from '@patternfly/react-icons/dist/esm/icons/external
 
 A **theme** applies a specific visual style to all UI components in order to create a unique, cohesive, and purposeful look. The use of theming can provide more flexibility for user preferences, as well as different options for accessibility needs. 
 
-Theming is supported in PatternFly through [our design token system](/tokens/about-tokens), which was intentionally structured so that sets of tokens can be adjusted together to create alternate UI styles. By reassigning color and dimension token values, the fonts, spacing, shadows, and borders in a UI can be changed together to create a theme. This system has enabled us to create multiple PatternFly themes, while also supporting the ability for you to create custom themes. 
+Theming is supported in PatternFly through [our design token system](/tokens/about-tokens), which was intentionally structured so that sets of tokens can be adjusted together to create alternate UI styles. By reassigning token values, the fonts, spacing, shadows, and borders in a UI can be changed together to create a theme. This system has enabled us to create multiple PatternFly themes, while also supporting the ability for you to create custom themes. 
 
 ## PatternFly themes
 
@@ -56,9 +56,7 @@ For development guidance, refer to the [high contrast handbook](/design-foundati
 
 ## Custom themes 
 
-To branch off of our themes and create your own, you can alter design token values to specify new styles. 
-
-Our layered design tokens allow you to customize existing themes simply by changing base token values in a single file. These adjustments will then apply appropriately to all semantic tokens across your codebase. 
+To branch off of our themes and create your own, you can identify the design tokens you'd like to adjust on our [all tokens page](/tokens/all-patternfly-tokens) and provide new values to use within your application. 
 
 ### When to customize a theme
 
@@ -96,9 +94,9 @@ To ensure your application is robust, maintainable, and adaptable across differe
 - **Use design tokens and variables for customizations:** If you must customize a component, use the appropriate method:
     - **Design tokens:** For global changes
     - **Component variables:** For component-specific changes
-    - Example: To override a primary button’s background color, declare `.pf-[version]-c-button { --pf-[version]-c-button--m-primary--BackgroundColor: [color token]; }` instead of `.pf-[version]-c-button.pf-m-primary { background-color: [color token]; }`.
+    - Example: To override a primary button’s background color, declare `.pf-v6-c-button { --pf-v6-c-button--m-primary--BackgroundColor: [color token]; }` instead of `.pf-v6-c-button.pf-m-primary { background-color: [color token]; }`.
 - **Always use tokens to create custom styles:** When creating custom components or styles, never use hard-coded values like hex codes or color names (`#fff` or `white`). Instead, use the appropriate design token, such as `var(--pf-t--global--background--color--primary--default)`. Tokens automatically adapt to different themes, while hard-coded values do not.
 - **Prioritize semantic tokens:** Always use the most relevant semantic token for your use case to ensure the element's purpose is clear and that it receives the correct styling in any theme. If no semantic token exists, you can fall back to a base token. 
 - **Never use a palette token**: Do not use palette tokens (like `--pf-t--color--blue--20`) directly in your code, as the value is not guaranteed to be consistent across themes.
 - **Use scalable icons:** For icons, use SVG files or icon fonts instead of PNGs or JPEGs. This allows you to control their color with CSS `fill` and `color` properties. By assigning a design token to these properties, your icons will automatically change color to match the active theme.
-    - If you must use static images, you might need to hide and show different image files based presence of a theme-specific class (like `pf-v5-theme-dark`).
+    - If you must use static images, you might need to hide and show different image files based presence of a theme-specific class (like `pf-v6-theme-dark`).

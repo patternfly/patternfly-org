@@ -10,11 +10,11 @@ source: high-contrast-handbook
 
 Our high contrast mode increases the contrast of PatternFly components, often introducing additional borders to distinguish between elements, states, and interactions that otherwise rely on subtle background colors. High contrast mode is enabled by applying styles that are meant to target the [`prefers-contrast: more`](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-contrast) media query, which is the mode triggered on MacOS via **System Settings** > **Accessibility** > **Display** > **Increase contrast**. 
 
-This is different from [`forced-colors: active`](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/forced-colors), which is a more aggressive contrast mode where the browser enforces a limited, user-chosen color palette on a webpage, often by replacing author-defined colors with CSS system colors and removing styles like background colors and box shadows. Common triggers for forced colors mode are enabling Windows High Contrast Mode and Firefox High Contrast Mode. As outlined in “Automatically by the user’s OS/browser preferences”, we recommend applying high contrast mode when `forced-colors: active` is `true`.
+This is different from [`forced-colors: active`](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/forced-colors), which is a more aggressive contrast mode where the browser enforces a limited, user-chosen color palette on a webpage, often by replacing author-defined colors with CSS system colors and removing styles like background colors and box shadows. Common triggers for forced colors mode are enabling Windows High Contrast Mode and Firefox High Contrast Mode. As outlined in [“Automatic high contrast”](#automatic-high-contrast), we recommend applying high contrast mode when `forced-colors: active` is `true`.
 
 ## Enabling high contrast mode
 
-High contrast mode is designed to work with both our standard light and dark themes, with styles shipping by default with PatternFly CSS. To enable high contrast mode, add the class `.pf-v6-theme-high-contrast` to your application’s `<html>` tag. This class can be added dynamically to toggle high contrast mode on and off in your application.
+High contrast mode is designed to work with both our standard light and dark themes, and it's available with PatternFly by default. To enable high contrast mode, add the class `.pf-v6-theme-high-contrast` to your application’s `<html>` tag. This class can be added dynamically to toggle high contrast mode on and off in your application.
 
 [Adam Argyle's "Building a theme switch" article](https://web.dev/articles/building/a-theme-switch-component) outlines principles that should be applied to a high contrast mode theme switcher.
 
@@ -34,12 +34,12 @@ The following tokens have been introduced specifically for use in high contrast 
 
 | **Token** | **Default theme value** | **High contrast mode value** |
 | :---: | :---: | :---: |
-| `--pf-t--global--border--color--high-contrast` | `transparent` | `--pf-t--global--border--color--default` |
-| `--pf-t--global--border--width--high-contrast--regular` | 0rem | `--pf-t--global--border--width--regular` |
-| `--pf-t--global--border--width--high-contrast--strong` | 0rem | `--pf-t--global--border--width--strong` |
-| `--pf-t--global--border--width--high-contrast--extra-strong`| 0rem | `--pf-t--global--border--width--extra-strong`|
+| `--pf-t--global--border--color--high-contrast` | `transparent` | `--pf-t--global--border--color--default` <br /><br/>Light mode value: #4D4D4D<br />Dark mode value: #C7C7C7  |
+| `--pf-t--global--border--width--high-contrast--regular` | 0px | `--pf-t--global--border--width--regular` <br /><br/>Value: 1px |
+| `--pf-t--global--border--width--high-contrast--strong` | 0px | `--pf-t--global--border--width--strong`  <br /><br/>Value: 2px |
+| `--pf-t--global--border--width--high-contrast--extra-strong`| 0px | `--pf-t--global--border--width--extra-strong`  <br /><br/>Value: 3px|
 
-**Note:** The `--pf-t--global--border--color--high-contrast` token can be used strategically to support styles in `forced-colors` mode, as a previously transparent border will become visible when this mode is active.
+**Note:** The `--pf-t--global--border--color--high-contrast` token can be used strategically to support styles in `forced-colors` mode, as transparent borders will become visible when this mode is active.
 
 ### Plain action tokens
 
@@ -47,9 +47,9 @@ We also added the following tokens for plain actions (actions with a transparent
 
 | **Token** | **Default theme value** | **High contrast mode value** |
 | :---: | :---: | :---: |
-| `--pf-t--global--border--width--action--plain--default` | 0rem | 0rem|
-| `--pf-t--global--border--width--action--plain--hover` | 0rem | `--pf-t--global--border--width--100` |
-| `--pf-t--global--border--width--action--plain--clicked` | 0rem | `--pf-t--global--border--width--200`  |
+| `--pf-t--global--border--width--action--plain--default` | 0px| 0px|
+| `--pf-t--global--border--width--action--plain--hover` | 0px | `--pf-t--global--border--width--100`  <br /><br/>Value: 1px |
+| `--pf-t--global--border--width--action--plain--clicked` | 0px | `--pf-t--global--border--width--200`  <br /><br/>Value: 2px |
 
 ## Best practices
 
