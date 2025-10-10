@@ -51,7 +51,7 @@ Checkbox select lists allow users to select 1 or more options from a known list 
 </div>
 
 ### Multiple select
-Multiple select lists allow users to select 1 or more options from a list, with the selected options marked with a `-pf-t--global--icon--color--brand--default` checkmark. It differs from the checkbox select in that each option selected by the user appears in the top display area as labels. Once the number of selections reaches a certain number, the regular labels will be replaced by a `--pf-t--global--border--color--nonstatus--gray--default` label indicating how many more items were selected. The default number of selections is 3, but you may change this number based on your use case.
+Multiple select lists allow users to select 1 or more options from a list. Selected options are marked with a `-pf-t--global--icon--color--brand--default` checkmark and displayed in the menu toggle as labels. Once the number of selections reaches a certain number, the regular labels will be replaced by a `--pf-t--global--border--color--nonstatus--gray--default` label indicating how many more items were selected. The default number of selections is 3, but you may change this number based on your use case.
 
 #### When to use multiple select 
 * When horizontal space is not limited.

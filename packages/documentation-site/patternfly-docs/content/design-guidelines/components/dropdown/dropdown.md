@@ -15,7 +15,7 @@ A basic dropdown consists of a toggle control to open and close a menu of action
 
 1. **Toggle:** Used to open and close the dropdown menu. It takes on all of the behaviors of a [button](/components/button). The toggle label is used to name the menu and should describe the actions that it contains. If no unique descriptive name applies, default to using “Actions”.
 
-2. **Menu:** Contains a list of options, which could be actions or links. Menus should optimally contain 7 items for fewer to enable better scannability. For longer menus, items can be grouped. For more guidance on supported options in menus (use of icons, grouping, and descriptions) refer to the [menu component guidelines](/components/menus/menu/design-guidelines).
+2. **Menu:** Contains a list of options, which could be actions or links. Menus should optimally contain 7 items or fewer to enable better scannability. For longer menus, items can be grouped. For more guidance on supported options in menus (use of icons, grouping, and descriptions) refer to the [menu component guidelines](/components/menus/menu/design-guidelines).
 
 ## Variations
 In addition to the basic dropdown toggle, you can use the following dropdown toggle variants.

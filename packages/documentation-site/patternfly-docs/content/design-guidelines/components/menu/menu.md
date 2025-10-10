@@ -14,7 +14,7 @@ We offer a variety of [menu variations](#variations), which address a range of d
 | ------------------- | ------------------- |
 | Expose a list of actions | [Action menu](#action-menu) <br/><br/> Menu items are actions or links, with optional preceding icons to improve recognizability or an optional description to provide more context. |
 | Create logical groupings of menu items | [Grouped menu with separators](#grouped-menus) <br/><br/> If the meaning of the groups isn't obvious, add group headings. |
-| Expose a list of nested actions | [Fly-out menu](#multi-level-fly-out-menus) <br/><br/> Optionally, add basic menu attributes, including icons, groups, and descriptions.|
+| Expose a list of nested actions | [Fly-out menu](#fly-out-menus) <br/><br/> Optionally, add basic menu attributes, including icons, groups, and descriptions.|
 | Select from a list of options | [Options select menu](#option-select-menus) <br/><br/> Let users select between values rather than actions. To further improve recognition or create logical option groups, use icons, descriptions, and groupings.| 
 
 ## Behavior 
