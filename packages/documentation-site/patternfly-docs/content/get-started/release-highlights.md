@@ -45,7 +45,7 @@ To better support users with vision sensitivities and accessibility needs, we've
 
 You can preview high contrast mode via the theme switcher on our website. This initial beta includes support for most of our core components, with the full release&mdash;including support for charts and extensions&mdash;planned for Q4.
 
-To support high contrast mode, and to provide clearer details around theming, we've also published [new theming documentation](/design-foundations/theming). 
+To provide more guidance around theming, we've also published [new theming documentation](/design-foundations/theming) and a [high contrast handbook](/design-foundations/theming/high-contrast-handbook). 
 
 ### System-wide accessibility enhancements
 
