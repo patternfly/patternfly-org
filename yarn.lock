@@ -4055,7 +4055,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@patternfly/ast-helpers@npm:^1.4.0-alpha.283, @patternfly/ast-helpers@workspace:packages/ast-helpers":
+"@patternfly/ast-helpers@npm:^1.4.0-alpha.290, @patternfly/ast-helpers@workspace:packages/ast-helpers":
   version: 0.0.0-use.local
   resolution: "@patternfly/ast-helpers@workspace:packages/ast-helpers"
   dependencies:
@@ -4109,7 +4109,7 @@ __metadata:
     "@babel/preset-env": "npm:7.27.1"
     "@babel/preset-react": "npm:^7.24.1"
     "@mdx-js/util": "npm:1.6.16"
-    "@patternfly/ast-helpers": "npm:^1.4.0-alpha.283"
+    "@patternfly/ast-helpers": "npm:^1.4.0-alpha.290"
     "@reach/router": "npm:@gatsbyjs/reach-router@1.3.9"
     autoprefixer: "npm:10.4.19"
     babel-loader: "npm:^9.1.3"
@@ -4463,20 +4463,20 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@patternfly/react-core@npm:6.4.0-prerelease.1":
-  version: 6.4.0-prerelease.1
-  resolution: "@patternfly/react-core@npm:6.4.0-prerelease.1"
+"@patternfly/react-core@npm:6.4.0-prerelease.2, @patternfly/react-core@npm:^6.4.0-prerelease.1, @patternfly/react-core@npm:^6.4.0-prerelease.2":
+  version: 6.4.0-prerelease.2
+  resolution: "@patternfly/react-core@npm:6.4.0-prerelease.2"
   dependencies:
-    "@patternfly/react-icons": "npm:^6.4.0-prerelease.1"
-    "@patternfly/react-styles": "npm:^6.4.0-prerelease.1"
-    "@patternfly/react-tokens": "npm:^6.4.0-prerelease.1"
+    "@patternfly/react-icons": "npm:^6.4.0-prerelease.2"
+    "@patternfly/react-styles": "npm:^6.4.0-prerelease.2"
+    "@patternfly/react-tokens": "npm:^6.4.0-prerelease.2"
     focus-trap: "npm:7.6.4"
     react-dropzone: "npm:^14.3.5"
     tslib: "npm:^2.8.1"
   peerDependencies:
     react: ^17 || ^18 || ^19
     react-dom: ^17 || ^18 || ^19
-  checksum: 10c0/16e8c1ad82538ef1ed5cba78488ea974ce8c82b74d5f7d2a62c630697e43392cd79466b4223aa87c772221c36377532ce455dfab12d2c4e6dde84875b7aad946
+  checksum: 10c0/10a65d68a17f03e06ead6def634b79e6bcb8c00e17b951fad5e6ba481581b0a49336c466e1d46afc2efaa11c49e1940d552e9c7efea6fea5b0a11483e36e25c2
   languageName: node
   linkType: hard
 
@@ -4565,29 +4565,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@patternfly/react-core@npm:^6.4.0-prerelease.1, @patternfly/react-core@npm:^6.4.0-prerelease.2":
-  version: 6.4.0-prerelease.2
-  resolution: "@patternfly/react-core@npm:6.4.0-prerelease.2"
-  dependencies:
-    "@patternfly/react-icons": "npm:^6.4.0-prerelease.2"
-    "@patternfly/react-styles": "npm:^6.4.0-prerelease.2"
-    "@patternfly/react-tokens": "npm:^6.4.0-prerelease.2"
-    focus-trap: "npm:7.6.4"
-    react-dropzone: "npm:^14.3.5"
-    tslib: "npm:^2.8.1"
-  peerDependencies:
-    react: ^17 || ^18 || ^19
-    react-dom: ^17 || ^18 || ^19
-  checksum: 10c0/10a65d68a17f03e06ead6def634b79e6bcb8c00e17b951fad5e6ba481581b0a49336c466e1d46afc2efaa11c49e1940d552e9c7efea6fea5b0a11483e36e25c2
-  languageName: node
-  linkType: hard
-
-"@patternfly/react-data-view@npm:6.4.0-prerelease.3":
-  version: 6.4.0-prerelease.3
-  resolution: "@patternfly/react-data-view@npm:6.4.0-prerelease.3"
+"@patternfly/react-data-view@npm:6.4.0-prerelease.4":
+  version: 6.4.0-prerelease.4
+  resolution: "@patternfly/react-data-view@npm:6.4.0-prerelease.4"
   dependencies:
     "@patternfly/react-component-groups": "npm:^6.1.0"
-    "@patternfly/react-core": "npm:6.4.0-prerelease.1"
+    "@patternfly/react-core": "npm:6.4.0-prerelease.2"
     "@patternfly/react-icons": "npm:6.4.0-prerelease.1"
     "@patternfly/react-table": "npm:6.4.0-prerelease.2"
     clsx: "npm:^2.1.1"
@@ -4595,7 +4578,7 @@ __metadata:
   peerDependencies:
     react: ^17 || ^18 || ^19
     react-dom: ^17 || ^18 || ^19
-  checksum: 10c0/3fa8d0f40131628db3b97886ef9e910a15204e2e7f99cc6d66fd70daf533c518ef9a481ce3d2e3b1e2b2d79e28bf119d7f29b0e9d7a61be5f08d91bf560a8040
+  checksum: 10c0/64f413e10595f7ebdbd5114252383f842c98ae8c0c9a95163b549f5224ae438d5bdf3f84c9cb9271ebe976c81ea19bd0ead5dfbc40dfd6c7a9602e9c24d3fd6a
   languageName: node
   linkType: hard
 
@@ -18143,7 +18126,7 @@ __metadata:
     "@patternfly/react-charts": "npm:8.4.0-prerelease.3"
     "@patternfly/react-component-groups": "npm:6.4.0-prerelease.1"
     "@patternfly/react-console": "npm:6.1.0"
-    "@patternfly/react-data-view": "npm:6.4.0-prerelease.3"
+    "@patternfly/react-data-view": "npm:6.4.0-prerelease.4"
     "@patternfly/react-docs": "npm:7.4.0-prerelease.3"
     "@patternfly/react-log-viewer": "npm:6.4.0-prerelease.1"
     "@patternfly/react-topology": "npm:6.4.0-prerelease.1"
