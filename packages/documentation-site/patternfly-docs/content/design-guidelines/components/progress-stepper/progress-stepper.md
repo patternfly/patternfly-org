@@ -13,24 +13,24 @@ A **progress stepper** displays progress through a sequence of linear steps and 
 </div>
 
 1. **Progress title:** Describes the task or process underway.
-2. **Progress description (optional):** Provides additional information on the task or process
-3. **Completed status:** Informs the user of a successfully completed step
-4. **In progress status:** Informs the user what step they are on
-5. **Failure status:** Informs the user of a failure or error in the step
-6. **Warning status:** Informs the user of a non-critical error in step
-7. **Pending step:** Upcoming steps needed to complete the task or process
+2. **Progress description (optional):** Provides additional information on the task or process.
+3. **Completed status:** Informs the user of a successfully completed step.
+4. **In progress status:** Informs the user what step they are on.
+5. **Failure status:** Informs the user of a failure or error in the step.
+6. **Warning status:** Informs the user of a non-critical error in a step.
+7. **Pending step:** Upcoming steps needed to complete the task or process.
 
 ## Usage
-Use a progress stepper to convey to a user how many steps are required to complete a task or process. Similar to the [progress bar](/components/progress), the progress stepper can help to keep users informed about how much effort or time the task or process will take to complete. One advantage is it displays the total number of steps at all times. Additionally, it informs the user exactly where they are in the process and how much is left until their task or process is completed. 
+Use a progress stepper to convey the number of steps required to complete a task or process. Similar to the [progress component](/components/progress), the progress stepper can help keep users informed about how much effort or time a task or process will take to complete. An advantage of the progress stepper is that the total number of steps is displayed at all times, which informs users about where they are in a process and how much is left until completion. 
 
 ### When to use
-* A user is completing a multi-step process in a card
+- For multi-step processes within a card.
 
 <div class="ws-docs-content-img">
 ![Example of a progress stepper in a card.](./img/multi-stepper-card.svg)
 </div>
 
-* A user is showing progression through a workflow in a table or card
+- To show progression through a workflow in a table or card.
 
 <div class="ws-docs-content-img">
 ![Example of a progress stepper in a table.](./img/stepper-table.svg)
@@ -40,7 +40,7 @@ Use a progress stepper to convey to a user how many steps are required to comple
 ![Example of a progress stepper in a card.](./img/stepper-card.svg)
 </div>
 
-* A user is checking the status of the installation process in a popover
+- To display the status of a process, like an installation, in a popover.
 
 <div class="ws-docs-content-img">
 ![Example of a progress stepper in a popover.](./img/stepper-popover.svg)
@@ -49,53 +49,62 @@ Use a progress stepper to convey to a user how many steps are required to comple
 ### When to use progress stepper vs. wizard
 
 Use a progress stepper:
-* To indicate to the user where they are in a step-by-step linear process on a single page. 
-* When the steps in the process could be completed by the user or happening in the background without the user completing the task themselves. 
+- To indicate to the user where they are in a step-by-step linear process on a single page. 
+- When the steps in the process could be completed by the user or could happen automatically in the background. 
 
 Use a [wizard](/components/wizard):
-* To guide the user through a multi-step flow where they must complete specific tasks in order. 
-* When the steps are complex enough they need to be broken up into smaller, more manageable steps and does not keep user on the same screen.
+- To guide the user through a multi-step flow where they must complete specific tasks in order. 
+- When the steps are complex enough to be broken up into smaller, more manageable steps, that require navigating between different screens.
+
+### When to use progress bar vs. progress stepper
+
+Use a progress stepper:
+- To indicate to a user where they are in a step-by-step linear process on a single page. 
+
+Use a [progress bar](/components/progress): 
+- To indicate to a user that the system is progressing through a task.
+- To let users monitor background tasks.
 
 ## Variations
-There are a few variations of the progress stepper that can be used for different use cases. All variations can be displayed horizontally or vertically, and the text on each step can be left justified or centered.
+There are a few variations of the progress stepper that can be used for different use cases. All variations can be displayed horizontally or vertically, and the text on each step can be left-aligned or centered.
 
 ### Basic progress stepper
-The basic progress stepper can be used when just the title of the step is enough to inform the user.
+A basic progress stepper can be used when just the title of the step is enough to inform the user.
 
 <div class="ws-docs-content-img">
 ![Example of a basic progress stepper.](./img/stepper-basic.svg)
 </div>
 
 ### Basic with descriptions
-If more description is needed, a basic progress stepper with descriptions can be used which allows for more context for each step.
+If more description is needed, you can use a basic progress stepper with descriptions, which allows for more context for each step.
 
 <div class="ws-docs-content-img">
 ![Example of a progress stepper with descriptions.](./img/stepper-with-descriptions.svg)
 </div>
 
 ### Vertical progress stepper
-The vertical alignment can be used in pages with a split view where one side houses the progress stepper and the other side houses each step’s content. These can also be used to display progress in a popover.
+A vertical progress stepper can be used in pages with a split view, where one side contains the progress stepper and the other side contains each step’s content. These can also be used to display progress in a popover.
 
 <div class="ws-docs-content-img">
 ![Example of a vertical progress stepper.](./img/stepper-vertical.svg)
 </div>
 
 ### Compact progress stepper
-In areas with less real estate such as table rows, the compact progress stepper can be used. The component will not display as much information such as each step’s title and/or description and will be smaller in size. The compact progress stepper also accounts for the alignment variations.
+In areas with less space, like table rows, the compact progress stepper can be used. Compact progress steppers will not display as much information&mdash;like each step’s title or description&mdash;and will be smaller in size. The compact progress stepper also accounts for the alignment variations.
 
 <div class="ws-docs-content-img">
 ![Example of a compact progress stepper.](./img/stepper-compact.svg)
 </div>
 
 ### Progress stepper with icons
-Custom icons can also be used for each step of the progress stepper based on the use case and the product’s need.
+Custom icons can also be used for each step of the progress stepper based on the use case and  product needs.
 
 <div class="ws-docs-content-img">
 ![Example of a progress stepper with custom icons.](./img/stepper-custom-icons.svg)
 </div>
 
 ### Progress stepper with help popover
-If additional help information or help text is needed and there is not enough real estate for a description, a popover on each step’s title can be used.
+If additional information or help text is needed and there is not enough space for a description, a popover on each step’s title can be used.
 
 <div class="ws-docs-content-img">
 ![Example of a progress stepper with a help popover.](./img/stepper-help-popover.svg)
@@ -112,10 +121,10 @@ For **in progress** steps, write your progress stepper title with present partic
 
 <div class="ws-content-table">
 
-| **Do**                      | **Don't**                  |
+| **Don't**                      | **Do**                  |
 |:-------------------------------:|:--------------------------:|
-| Installing cluster | Cluster is installing | 
-| Creating cache | Cluster creation in progress | 
+| Cluster is installing | Installing cluster | 
+| Cluster creation in progress | Creating cache  | 
 
 </div>
 
@@ -123,10 +132,10 @@ For **failed** steps, write your progress stepper title in past tense. Avoid tel
 
 <div class="ws-content-table">
 
-| **Do**                      | **Don't**                  |
+| **Don't**                      | **Do**                  |
 |:-------------------------------:|:--------------------------:|
-| Could not install cluster | Cluster installation failed | 
-| Could not validate account credentials | Account validation unsuccessful | 
+| Cluster installation failed | Could not install cluster | 
+| Account validation unsuccessful | Could not validate account credentials | 
 
 </div>
 
@@ -134,10 +143,10 @@ For **complete** steps, write your progress stepper title in past tense. Use thi
 
 <div class="ws-content-table">
 
-| **Do**                      | **Don't**                  |
+| **Don't**                      | **Do**                  |
 |:-------------------------------:|:--------------------------:|
-| Cluster installed | Installation is complete | 
-| Validated account credentials | Successfully validated account credentials | 
+| Installation is complete | Cluster installed | 
+| Successfully validated account credentials | Validated account credentials | 
 
 </div>
 

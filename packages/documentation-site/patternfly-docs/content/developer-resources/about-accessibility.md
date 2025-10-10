@@ -87,7 +87,7 @@ To help you achieve this, consider these guidelines:
   - Don’t show interactive elements on hover. 
   - Interactive elements that display in a pop-up must also display on click, touch, or enter-key events.
 
-- Screen reader content should match visibly rendered content (refer to the [first note for `aria-hidden` state](https://www.w3.org/TR/wai-aria/#aria-hidden)).
+- Screen reader content should match visibly rendered content (refer to the [first note for `aria-hidden` state](https://www.w3.org/TR/wai-aria/#h-note-59), but keep in mind this references an older version of WCAG guidelines).
 
 - There should be parity between hover and focus events. Any information that’s available on hover for the mouse user should be available on keyboard focus.
   - Make content that appears on hover available to a screen reader by using `aria-describedby` (refer to [Tooltips & Toggletips example from Inclusive Components](https://inclusive-components.design/tooltips-toggletips/)).

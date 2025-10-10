@@ -1,5 +1,5 @@
 const path = require('path');
-const { globSync } = require('glob');
+const { sync } = require('glob');
 const ts = require('typescript');
 const versions = require('../../versions.json');
 
@@ -32,15 +32,12 @@ declare module '\\*.svg' {
 `;
 
 const reactStylesDir = path.join(require.resolve('@patternfly/react-styles/package.json'), '../');
-const reactStyles = globSync(path.join(reactStylesDir, 'css/**/*.d.ts'))
+const reactStyles = sync(path.join(reactStylesDir, 'css/**/*.d.ts'))
   .map(f => f.replace(reactStylesDir, '@patternfly/react-styles/').replace(/\.d.ts$/, ''));
 const defaultImports = [
   'react',
   '@reach/router',
   '@patternfly/react-charts/echarts',
-  '@patternfly/react-charts/next',
-  '@patternfly/react-charts/next/echarts',
-  '@patternfly/react-charts/next/victory',
   '@patternfly/react-charts/victory',
   '@patternfly/react-core/next',
   '@patternfly/react-core/deprecated',
