@@ -86,6 +86,8 @@ For the Q4 2025 release, we’ll be focused on:
 - Updating icons to better align with Red Hat’s brand standards.
 - Adding a new guided tour extension.
 - Continuing our work toward WCAG 2.2 AA compliance.
+- Adding new PatternFly starter applications in additional frameworks. 
+- Creating a new API that provides text-based versions of website content in a machine-readable format that’s easily consumed by AI.
 
 Stay tuned!
 
