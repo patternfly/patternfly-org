@@ -749,6 +749,6 @@ All of our components have a new look to match. As you use the alpha website, ta
 
 In order to support PatternFly 6, and any future visual theming capabilities, we have implemented a design token system for PatternFly. For more details and instructions on how to use tokens, you can refer to our new [design token documentation](/tokens/about-tokens).
 
-Our tokens cover both dark and light themes, and make it easier to support both in your product. We also updated our [dark theme handbook](/developer-resources/dark-theme-handbook) to align with our tokens.
+Our tokens cover both dark and light themes, and make it easier to support both in your product. We also updated our [dark theme handbook](/design-foundations/theming/dark-theme-handbook) to align with our tokens.
 
 **Note:*- The PatternFly 5 design library is not built with tokens. To take advantage of our token system, you must [upgrade your product to PatternFly 6](/get-started/upgrade).
