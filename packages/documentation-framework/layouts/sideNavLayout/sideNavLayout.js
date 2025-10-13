@@ -208,6 +208,10 @@ export function attachDocSearch(algolia, inputSelector, timeout) {
   }
 }
 
+function getIsDarkTheme() {
+  return document.documentElement.classList.contains('pf-v6-theme-dark');
+}
+
 export const SideNavLayout = ({ children, groupedRoutes, navOpen: navOpenProp }) => {
   const algolia = process.env.algolia;
   const hasGdprBanner = process.env.hasGdprBanner;
@@ -221,8 +225,30 @@ export const SideNavLayout = ({ children, groupedRoutes, navOpen: navOpenProp })
 
   const [versions, setVersions] = useState({ ...staticVersions });
   const [isRTL, setIsRTL] = useState(false);
+  const [isDarkTheme, setIsDarkTheme] = useState(true);
 
-  const { resolvedTheme } = useTheme(THEME_TYPES.COLOR);
+  useEffect(() => {
+    setIsDarkTheme(getIsDarkTheme());
+
+    const observer = new MutationObserver((mutationsList) => {
+      for (const mutation of mutationsList) {
+        if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
+          setIsDarkTheme(getIsDarkTheme());
+        }
+      }
+    });
+  
+    const config = {
+      attributes: true,
+      attributeFilter: ['class']
+    };
+  
+    observer.observe(document.documentElement, config);
+
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
 
   useEffect(() => {
     if (typeof window === 'undefined') {
@@ -335,7 +361,7 @@ export const SideNavLayout = ({ children, groupedRoutes, navOpen: navOpenProp })
           defaultManagedSidebarIsOpen={navOpenProp}
         >
           {children}
-          {process.env.hasFooter && <Footer isDarkTheme={resolvedTheme === 'dark'} />}
+          {process.env.hasFooter && <Footer isDarkTheme={isDarkTheme} />}
         </Page>
         <div id="ws-page-banners">{hasGdprBanner && <GdprBanner />}</div>
       </RtlContext.Provider>
