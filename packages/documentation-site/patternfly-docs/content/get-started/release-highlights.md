@@ -63,9 +63,12 @@ You get these improvements "for free" just by updating to the latest version of 
 #### New guidelines
 
 We’ve updated our documentation and examples with the following recommendations to help you build more accessible products:
-- [**Data list:**](/components/data-list/react-demos/basic/) We’ve added visually hidden text to icon-only labels to provide more meaning for screen reader users.
-- [**Jump links:**](/components/jump-links) Examples now include the expected ARIA attributes and unique naming for semantic elements.
-- [**Skeleton:**](/components/skeleton/accessibility) We now recommend including visually hidden text that provides crucial context for screen reader users while content is still loading.
+- [**Data list:**](/components/data-list/react-demos/basic/) We added guidance on adding visually hidden text to icon-only labels to clarify what the accompanying numbers represent (for example, "5 alerts"). This ensures a clear, accessible name for screen reader users where the purpose of the number was previously ambiguous.
+- [**Jump links:**](/components/jump-links/accessibility) We updated our guidance to help you create a more predictable and less ambiguous experience for screen reader users. We also made updates to our examples and demos to align with this guidance. New guidance clarifies how to:
+    - Correctly announce whether expandable sections are open or closed using `aria-expanded`.
+    - Avoid a React bug where a redundant `aria-label` is improperly used with visible text.
+    - Provide unique, descriptive names to help users differentiate between multiple jump link components on the same page.
+- [**Skeleton:**](/components/skeleton/accessibility) Our guidelines now recommend including visually hidden text. This provides crucial context for screen reader users while content is loading and assures them that they haven't landed on a blank or broken page.
 
 ### Community-driven ChatBot enhancements
 Based on feedback from usability workshops and our community, we've made significant enhancements to the ChatBot extension to improve usability and address user needs:
