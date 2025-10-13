@@ -65,4 +65,4 @@ In addition to the [general theming best practices](/design-foundations/theming#
 - **Add borders for clarity:** If an element's background color doesn't have a 4.5:1 contrast ratio, add a visible border. For example, add borders to elements with a secondary background color that are placed on top of a primary background.
 - **Replace shadows with borders:** To properly separate elements from the background, add a border to any elements that rely on a shadow in default themes.
 - **Thicken borders on interaction:** Use border width to provide clear feedback for interactive states. An element's border should become progressively thicker on hover, focus, and click.
-    - Example: An element with no default border should have a `1px` border on hover and a `2px` border when clicked.
+    - Example: An element with no default border should have a 1px border on hover and a 2px border when clicked.
