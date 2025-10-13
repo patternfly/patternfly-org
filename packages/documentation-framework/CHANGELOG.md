@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 6.28.1 (2025-10-13)
+
+
+### Bug Fixes
+
+* **docs-framework:** remove useTheme from footer to fix theme state bug ([#4817](https://github.com/patternfly/patternfly-org/issues/4817)) ([44c02a0](https://github.com/patternfly/patternfly-org/commit/44c02a07c8ba3443429d4fa8afa5bf0014a36e27))
+
+
+
+
+
 # 6.28.0 (2025-10-13)
 
 
