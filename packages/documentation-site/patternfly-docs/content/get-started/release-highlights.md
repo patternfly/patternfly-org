@@ -6,7 +6,94 @@ section: get-started
 import './get-started.css';
 import { Divider, Timestamp } from '@patternfly/react-core'; 
 
-<Timestamp date={new Date(2025, 6)}>August 2025</Timestamp>
+<Timestamp date={new Date(2025, 9)}>October 2025</Timestamp>
+
+## PatternFly 6.4
+
+For the Q3 2025 PatternFly release, we're excited to introduce a beta version of our new high contrast mode, deliver significant accessibility enhancements from our latest audit, and launch a highly requested resizable columns feature for tables. We've also continued to evolve PatternFly AI with community-driven extension updates and new guidelines for AI-assisted code contributions. Updates for these key areas can be found here, in this quarter's release highlights.
+
+*We’ve also kicked off a user feedback survey! Your perspective is crucial for guiding our roadmap, so please take a few minutes to [share your thoughts with us](https://www.feedback.redhat.com/jfe/form/SV_9MKBjq8H7muINMy). You can also access the survey anytime via the  "Give feedback" button on our website.*
+
+### Promoted package versions
+- patternfly/patternfly ([changelog](https://github.com/patternfly/patternfly/releases/tag/v6.4.0))
+    - [@patternfly/patternfly@6.4.0](https://www.npmjs.com/package/@patternfly/patternfly/v/6.4.0)
+- patternfly/react ([changelog](https://github.com/patternfly/patternfly-react/releases/tag/v6.4.0))
+    - [@patternfly/react-charts@8.4.0](https://www.npmjs.com/package/@patternfly/react-charts/v/8.4.0)
+    - [@patternfly/react-code-editor@6.4.0](https://www.npmjs.com/package/@patternfly/react-code-editor/v/6.4.0)
+    - [@patternfly/react-core@6.4.0](https://www.npmjs.com/package/@patternfly/react-core/v/6.4.0)
+    - [@patternfly/react-drag-drop@6.4.0](https://www.npmjs.com/package/@patternfly/react-drag-drop/v/6.4.0)
+    - [@patternfly/react-icons@6.4.0](https://www.npmjs.com/package/@patternfly/react-icons/v/6.4.0)
+    - [@patternfly/react-styles@6.4.0](https://www.npmjs.com/package/@patternfly/react-styles/v/6.4.0)
+    - [@patternfly/react-table@6.4.0](https://www.npmjs.com/package/@patternfly/react-table/v/6.4.0)
+    - [@patternfly/react-templates@6.4.0](https://www.npmjs.com/package/@patternfly/react-templates/v/6.4.0)
+    - [@patternfly/react-tokens@6.4.0](https://www.npmjs.com/package/@patternfly/react-tokens/v/6.4.0)
+- PatternFly extensions
+    - [@patternfly/chatbot@6.4.0](https://www.npmjs.com/package/@patternfly/chatbot/v/6.4.0) ([changelog](https://github.com/patternfly/chatbot/releases/tag/v6.4.0))
+    - [@patternfly/react-catalog-view-extension@6.3.0](https://www.npmjs.com/package/@patternfly/react-catalog-view-extension/v/6.3.0) ([changelog](https://github.com/patternfly/react-catalog-view/releases/tag/v6.3.0))
+    - [@patternfly/react-component-groups@6.4.0](https://www.npmjs.com/package/@patternfly/react-component-groups/v/6.4.0) ([changelog](https://github.com/patternfly/react-component-groups/releases/tag/v6.4.0))
+    - [@patternfly/react-data-view@6.4.0](https://www.npmjs.com/package/@patternfly/react-data-view/v/6.4.0) ([changelog](https://github.com/patternfly/react-data-view/releases/tag/v6.4.0))
+    - [@patternfly/react-log-viewer@6.4.0](https://www.npmjs.com/package/@patternfly/react-log-viewer/v/6.4.0) ([changelog](https://github.com/patternfly/react-log-viewer/releases/tag/v6.4.0))
+    - [@patternfly/react-topology@6.4.0](https://www.npmjs.com/package/@patternfly/react-topology/v/6.4.0) ([changelog](https://github.com/patternfly/react-topology/releases/tag/v6.4.0))
+
+### Simplified animation control
+
+We've introduced a new application-level context provider for enabling animations. You can now set the animation context at the root of your application to enable all opt-in animations by default. This ensures motion behaves predictably across your entire UI while still allowing for individual overrides. [Find more details in our motion development guide.](/design-foundations/motion/development-guide/#global-animation-control)
+
+### High contrast mode (Beta)
+
+To better support users with vision sensitivities and accessibility needs, we've shared a beta version of our new high contrast mode. This theme updates tokens to adjust component styling, primarily with higher-contrast colors and more prominent borders. 
+
+You can preview high contrast mode via the theme switcher on our website. This initial beta includes support for most of our core components, with the full release&mdash;including support for charts and extensions&mdash;planned for Q4.
+
+To provide more guidance around theming, we've also published [new theming documentation](/design-foundations/theming) and a [high contrast handbook](/design-foundations/theming/high-contrast-handbook). 
+
+### System-wide accessibility enhancements
+
+As part of our commitment to inclusive design, we've implemented numerous improvements in this release. You'll benefit from the following component enhancements automatically when you update:
+- **Clearer focus states for buttons:** The focus indicator for buttons is now easier to perceive for keyboard navigators.
+- **More reliable tooltips:** We resolved an issue where tooltips were not correctly associated with their trigger elements, improving the experience for screen reader users. This also benefits components that use tooltips, such as menus and dropdowns.
+- **Smoother keyboard navigation in data lists:** Triggering a kebab toggle within a data list item no longer accidentally selects the entire item, creating a more predictable experience.
+- **More accessible menus:** We fixed an issue that could create empty headings in React `<MenuGroups>`, improving the experience for screen reader users.
+    - Now, a heading will only render when the `label` prop is passed in. Note that, in order to fix this bug, your markup will be automatically updated when you consume this release. While this shouldn't be disruptive, it's possible this could affect any tests that were based on your previous markup, so you should review accordingly.
+
+We’ve also updated some of our documentation and examples to help you build more accessible products:
+- [**Skeleton:**](/components/skeleton/accessibility) We now recommend including visually hidden text that provides crucial context for screen reader users while content is still loading.
+- [**Jump links:**](/components/jump-links) Examples now include the expected ARIA attributes and unique naming for semantic elements.
+- [**Data list:**](/components/data-list/react-demos/basic/) We’ve added visually hidden text to icon-only labels to provide more meaning for screen reader users.
+
+### Community-driven ChatBot enhancements
+Based on feedback from usability workshops and our community, we've made significant enhancements to the ChatBot extension to improve usability and address user needs:
+- **Clearer navigation:** To provide users with more context, the [chat history drawer](/patternfly-ai/chatbot/ui#drawer-with-search-and-new-chat-button) now includes a clearer title, an icon, and a prominent "new chat" button.
+- **Flexible layouts:** To support different presentation preferences, we've introduced [compact component styles](/patternfly-ai/chatbot/overview/demo#compact-chatbot) and a new [demo for swapping between display modes](/patternfly-ai/chatbot/overview/demo#display-mode-switcher).
+- **Modern features:** To give users more control and flexibility, we added support for [message dividers](/patternfly-ai/chatbot/messages#message-dividers), [editing messages](/patternfly-ai/chatbot/messages#user-messages), [pinning chat history items](/patternfly-ai/chatbot/ui#pinning-conversations), [previewing images](/patternfly-ai/chatbot/messages#image-preview) and [downloading chat transcripts](/patternfly-ai/chatbot/overview/design-guidelines#downloading-chat-transcripts).
+- **Advanced interactions:** To support more complex agentic interactions, we've added new components to [display an AI's reasoning process (deep thinking)](/patternfly-ai/chatbot/messages#messages-with-deep-thinking), as well as [managing tool calls](/patternfly-ai/chatbot/messages#messages-with-tool-calls) and sharing [tool responses](/patternfly-ai/chatbot/messages#messages-with-tool-responses).
+
+### Resizable table columns
+Based on user feedback, we've added resizable table columns within the [@patternfly/react-data-view extension](https://www.npmjs.com/package/@patternfly/react-data-view). This update allows users to click and drag column dividers to adjust widths, making it easier to view and work with data in dense tables.
+
+To see this feature in action, [refer to our resizable columns table demo](/extensions/data-view/table#resizable-columns).
+
+### New guidelines for streamlined AI workflows
+
+To help you safely and effectively integrate AI into your development process, we’ve released two new sets of guidelines:
+- **AI-generated code contribution:** To ensure legal compliance and quality, we've established new guidelines for contributing AI-generated code. You can find them in [our contribution documentation on our website](https://www.patternfly.org/get-started/contribute#ai-assisted-development-guidelines) and [within GitHub](https://github.com/patternfly/.github/blob/main/CONTRIBUTING.md). 
+- **AI-assisted code migrations:** We've also published [new documentation on using AI to streamline code migrations](/patternfly-ai/ai-assisted-code-migration/). This guide offers strategies for using AI to make it easier and faster to migrate your project to PatternFly React from other frameworks.
+
+### What's next?
+For the Q4 2025 release, we’ll be focused on:
+- The full release of high contrast mode.
+- Launch an updated website navigation.
+- Updating icons to better align with Red Hat’s brand standards.
+- Adding a new guided tour extension.
+- Continuing our work toward WCAG 2.2 AA compliance.
+- Adding new PatternFly starter applications in additional frameworks. 
+- Creating a new API that provides text-based versions of website content in a machine-readable format that’s easily consumed by AI.
+
+Stay tuned!
+
+<Divider />
+
+<Timestamp date={new Date(2025, 7)}>August 2025</Timestamp>
 
 ## PatternFly 6.3.1
 
@@ -28,6 +115,10 @@ As a follow-up to our main Q2 2025 PatternFly release, this patch resolves sever
 - PatternFly extensions 
     - [@patternfly/chatbot@6.3.2](https://www.npmjs.com/package/@patternfly/chatbot/v/6.3.2) ([changelog](https://github.com/patternfly/chatbot/releases/tag/v6.3.2))
     - [@patternfly/quickstarts@6.3.1](https://www.npmjs.com/package/@patternfly/quickstarts/v/6.3.1) ([changelog](https://github.com/patternfly/patternfly-quickstarts/releases/tag/v6.3.1))
+
+<Divider />
+
+<Timestamp date={new Date(2025, 6)}>July 2025</Timestamp>
 
 ## PatternFly 6.3
 
@@ -652,6 +743,6 @@ All of our components have a new look to match. As you use the alpha website, ta
 
 In order to support PatternFly 6, and any future visual theming capabilities, we have implemented a design token system for PatternFly. For more details and instructions on how to use tokens, you can refer to our new [design token documentation](/tokens/about-tokens).
 
-Our tokens cover both dark and light themes, and make it easier to support both in your product. We also updated our [dark theme handbook](/developer-resources/dark-theme-handbook) to align with our tokens.
+Our tokens cover both dark and light themes, and make it easier to support both in your product. We also updated our [dark theme handbook](/design-foundations/theming/dark-theme-handbook) to align with our tokens.
 
 **Note:*- The PatternFly 5 design library is not built with tokens. To take advantage of our token system, you must [upgrade your product to PatternFly 6](/get-started/upgrade).
