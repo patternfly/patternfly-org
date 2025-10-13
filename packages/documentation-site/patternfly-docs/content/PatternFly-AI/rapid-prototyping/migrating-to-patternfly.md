@@ -18,13 +18,6 @@ While AI is *not* a replacement for human developers, it offers key benefits:
 - **Learning support:** Quickly develop an understanding of the project's unique context by prompting AI to explain topics. 
 - **Planning support:** Identify and scope all requirements and steps needed for the migration. 
 
-## What are the risks of AI-assisted migrations? 
-
-If you have a limited understanding of the product architecture or lack expertise in the technologies used, using AI for code migrations can actually be more time consuming than approaching the migration manually from the start.
-
-Additionally, AI can make assumptions and often requires careful direction in order to perform reliably as you need. Our [best practices](#best-practices) and [prompting tips](#prompting-tips) document some of the important considerations and approaches to take to help ensure consistency in AI behavior.
-
-
 ## Best practices
 
 When using AI tools during code migrations:
@@ -53,7 +46,9 @@ AI serves as a powerful accelerator throughout all steps of the migration proces
 
 Query AI to help build project-specific context by bridging knowledge gaps, setting up development environments, and identifying relevant code sections.
 
-For example, if your project is written with Angular, AI can help explain Angular-specific patterns (like directives or services) and point to their equivalents in React and PatternFly.
+For example, if your project is written with Angular, AI can help explain Angular-specific patterns (like directives or services) and point to their equivalents in React and PatternFly. An example prompt might be _"Can you explain the Angular directives to me?"_
+
+![Angular Directives information 1](./img/angular-directives-1.png) ![Angular Directives information 2](./img/angular-directives-2.png)
 
 ### 2. Planning phase
 
@@ -61,25 +56,39 @@ Use AI for scope estimation and mapping features:
 - Generate a list of components that need migration.
 - Identify potentially difficult areas, such as state management and routing.
 
+For example, a prompt might be: _"I want to convert all the Katello pages that are written in Angular to React. Can you list the Katello pages that would need to be converted. Give results in a table format."_
+
+![Results from scope query](./img/scope-results.png)
+
 ### 3. Development phase
 
 Use AI to build features iteratively, especially for generating forms, validation logic, and creating reusable components.
 
 For example, you could use AI to migrate a simple Angular feature like this to React using PatternFly components:
         
-![Before migration - Angular Content Credentials page](./img/content-credentials-before.png)
+![Before migration - Angular Products page](./img/products-before.png)
 
 To migrate the code from Angular to PatternFly React:
 1. Create a placeholder page.
-2. Prompt AI to migrate the content. Your query might resemble this: _"Copy the Angular content credentials page content into the ReactPf5PlaceholderPage.js using React and PatternFly5 using best practices with bias towards how other React and PatternFly files in this project are doing things."_
+2. Prompt AI to migrate the content. Your query might resemble this: _"Copy the Angular Products page content into  PF6placholder.js using React and PatternFly6, using best practices with bias towards how other React and PatternFly files in this project are doing things."_
 
 With this simple and direct prompt, the same feature can be quickly and successfully recreated within PatternFly components:  
 
-![After migration - React PatternFly Content Credentials page](./img/content-credentials-after.png)
+![After migration - React PatternFly Products page](./img/products-after.png)
 
 ### 4. Testing phase
 
 Use AI to accelerate test coverage by generating boilerplate unit tests, mocks for API integrations or dependencies, and end-to-end test outlines using tools like Cypress.
+
+For example you might use the following prompt _"Generate tests for PF6placeholder.js page following best practices and what is done in this project."_
+
+![Generated tests](./img/generated-tests.png)
+
+## What are the risks of AI-assisted migrations? 
+
+If you have a limited understanding of the product architecture or lack expertise in the technologies used, using AI for code migrations can actually be more time consuming than approaching the migration manually from the start.
+
+Additionally, AI can make assumptions and often requires careful direction in order to perform reliably as you need. Our [best practices](#best-practices) and [prompting tips](#prompting-tips) document some of the important considerations and approaches to take to help ensure consistency in AI behavior.
 
 ## Experimentation and feedback 
 
