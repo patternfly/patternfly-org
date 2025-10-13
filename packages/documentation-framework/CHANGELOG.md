@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 6.27.3 (2025-10-13)
+
+
+### Bug Fixes
+
+* **TOC:** fixes toc showing incorrectly at exactly 1450px ([#4802](https://github.com/patternfly/patternfly-org/issues/4802)) ([de0c2b4](https://github.com/patternfly/patternfly-org/commit/de0c2b4d1428045b71c78e4a15b4162a86f9956d))
+
+
+
+
+
 ## 6.27.2 (2025-10-13)
 
 **Note:** Version bump only for package @patternfly/documentation-framework
