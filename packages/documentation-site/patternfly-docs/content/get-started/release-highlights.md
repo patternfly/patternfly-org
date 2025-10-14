@@ -56,7 +56,7 @@ You get these improvements "for free" just by updating to the latest version of 
 
 - **Buttons:** Responding to a community request, the keyboard focus indicator is now thicker and more prominent, making it easier for users to locate the active element.
 - **Data lists:** Using the kebab menu with a keyboard no longer automatically selects the first menu item, creating a more consistent and predictable experience.
-- **Menus:** We fixed a bug where an empty heading could be rendered in React `<MenuGroups>`, causing confusion for screen readers. A heading will now only render when the `label` prop is passed in.
+- **Menus:** We fixed a bug where an empty heading could be rendered in React `<MenuGroups>`, causing confusion when navigating via screen readers. A heading will now only render when the `label` prop is passed in. This also helps avoid a potentially incorrect heading level hierarchy.
     - **Note:** While this is an automatic update, the change in markup could affect your tests. Please review them accordingly.
 - **Tooltips:** We fixed an issue that prevented tooltips from being announced by screen readers. This ensures assistive technologies can find and read tooltip content, which also benefits components using tooltips, like menus and dropdowns.
 
@@ -65,9 +65,9 @@ You get these improvements "for free" just by updating to the latest version of 
 We’ve updated our documentation and examples with the following recommendations to help you build more accessible products:
 - [**Data list:**](/components/data-list/react-demos/basic/) We added guidance on adding visually hidden text to icon-only labels to clarify what the accompanying numbers represent (for example, "5 alerts"). This ensures a clear, accessible name for screen reader users where the purpose of the number was previously ambiguous.
 - [**Jump links:**](/components/jump-links/accessibility) We updated our guidance to help you create a more predictable and less ambiguous experience for screen reader users. We also made updates to our examples and demos to align with this guidance. New guidance clarifies how to:
-    - Correctly announce whether expandable sections are open or closed using `aria-expanded`.
-    - Avoid a React bug where a redundant `aria-label` is improperly used with visible text.
-    - Provide unique, descriptive names to help users differentiate between multiple jump link components on the same page.
+    - Correctly announce whether expandable sections are open or closed using `aria-expanded`, which must always be present on content that can trigger expansion.
+    - Avoid using a redundant `aria-label` when an expandable jump links toggle contained visible text.
+    - Provide unique, descriptive names to help users differentiate between multiple jump link components on the same page and make it easier to understand the context of each jump link when using keyboard/rotor menu shortcuts with assistive tech.
 - [**Skeleton:**](/components/skeleton/accessibility) Our guidelines now recommend including visually hidden text. This provides crucial context for screen reader users while content is loading and assures them that they haven't landed on a blank or broken page.
 
 ### Community-driven ChatBot enhancements
