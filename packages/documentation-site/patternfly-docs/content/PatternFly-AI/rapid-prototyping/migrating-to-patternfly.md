@@ -20,13 +20,18 @@ While AI is *not* a replacement for human developers, it offers key benefits:
 
 ## Multi-phased workflow example
 
-AI serves as a powerful accelerator throughout all steps of the migration process, including learning, planning, and development phases. This example outlines an AI-assisted workflow through all phases of a migration project.
+AI serves as a powerful accelerator throughout all steps of the migration process, including learning, planning, development, and testing phases. This example outlines what an AI-assisted workflow could look like throughout a migration project. While your specific workflow will look different and be in context of your own codebase, this example is meant to serve as a reference point, outlining ideas that you can use in your own scenario.
 
 ### 1. Learning phase
 
-Query AI to help build project-specific context by bridging knowledge gaps, setting up development environments, and identifying relevant code sections.
+When you're first starting a migration project, AI can help you build project-specific context by bridging knowledge gaps, setting up development environments, and identifying relevant code sections.
 
-For example, if your project is written with Angular, AI can help explain Angular-specific patterns (like directives or services) and point to their equivalents in React and PatternFly. An example prompt might be _"Can you explain the Angular directives to me?"_
+In this workflow example, the original code is written with Angular. Here, AI can help to quickly explain Angular-specific patterns (like directives or services) and point to their equivalents in React and PatternFly. 
+
+**Prompt:** 
+_"Can you explain the Angular directives to me?"_
+
+**Response:** 
 
 ![Angular Directives information 1](./img/angular-directives-1.png) ![Angular Directives information 2](./img/angular-directives-2.png)
 
@@ -42,17 +47,20 @@ For example, a prompt might be: _"I want to convert all the Katello pages that a
 
 ### 3. Development phase
 
-Use AI to build features iteratively, especially for generating forms, validation logic, and creating reusable components.
+After establishing a migration plan, you can use AI to build new features iteratively. This can be especially useful for generating forms, validating logic, and creating reusable components.
 
-For example, you could use AI to migrate a simple Angular feature like this to React using PatternFly components:
+For example, you could use AI to migrate a simple Angular feature like this table:
         
 ![Before migration - Angular Products page](./img/products-before.png)
 
-To migrate the code from Angular to PatternFly React:
-1. Create a placeholder page.
-2. Prompt AI to migrate the content. Your query might resemble this: _"Copy the Angular Products page content into  PF6placholder.js using React and PatternFly6, using best practices with bias towards how other React and PatternFly files in this project are doing things."_
+During the development phase, you could take a couple of different approaches to migrate code. You might be able to simply change the code within the same file or you might want to start fresh, using the patternfly-react-seed and following [our rapid prototyping guide.](https://www.patternfly.org/patternfly-ai/rapid-prototyping/new-prototypes)
 
-With this simple and direct prompt, the same feature can be quickly and successfully recreated within PatternFly components:  
+In this example, we created a placeholder page (PF6placeholder.js) and asked AI to replicate the Angular component on the new page, using PatternFly. 
+
+**Prompt:**
+_"Copy the Angular Products page content into PF6placeholder.js using React and PatternFly6, using best practices with bias towards how other React and PatternFly files in this project are doing things."_
+
+This simple and direct prompt quickly and successfully recreated the table using PatternFly components:  
 
 ![After migration - React PatternFly Products page](./img/products-after.png)
 
@@ -60,7 +68,10 @@ With this simple and direct prompt, the same feature can be quickly and successf
 
 Use AI to accelerate test coverage by generating boilerplate unit tests, mocks for API integrations or dependencies, and end-to-end test outlines using tools like Cypress.
 
-For example you might use the following prompt _"Generate tests for PF6placeholder.js page following best practices and what is done in this project."_
+**Prompt:** 
+_"Generate tests for PF6placeholder.js page following best practices and what is done in this project."_
+
+**Response:**
 
 ![Generated tests](./img/generated-tests.png)
 
@@ -93,3 +104,4 @@ AI-assisted code migrations are still an evolving experiment, and we'd love to l
 - Connect with the community on our [PatternFly Slack workspace](https://join.slack.com/t/patternfly/shared_invite/zt-1npmqswgk-bF2R1E2rglV8jz5DNTezMQ).
  
 As this process evolves, we'll continue to refine our recommendations based on community feedback and real-world usage. 
+
