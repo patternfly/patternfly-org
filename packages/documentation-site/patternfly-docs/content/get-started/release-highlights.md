@@ -55,10 +55,10 @@ In our commitment to inclusive design, we've implemented numerous accessibility 
 You get these improvements "for free" just by updating to the latest version of PatternFly:
 
 - **Buttons:** Responding to a community request, the keyboard focus indicator is now thicker and more prominent, making it easier for users to locate the active element.
-- **Data lists:** Using the kebab menu with a keyboard no longer automatically selects the first menu item, creating a more consistent and predictable experience.
+- **Data lists:** Clicking an action menu toggle with a keyboard no longer automatically selects the first data list item and instead opens the action menu as expected, creating a more consistent and predictable experience. This was a bug fix for clickable implementations of our data list.
 - **Menus:** We fixed a bug where an empty heading could be rendered in React `<MenuGroups>`, causing confusion when navigating via screen readers. A heading will now only render when the `label` prop is passed in. This also helps avoid a potentially incorrect heading level hierarchy.
     - **Note:** While this is an automatic update, the change in markup could affect your tests. Please review them accordingly.
-- **Tooltips:** We fixed an issue that prevented tooltips from being announced by screen readers. This ensures assistive technologies can find and read tooltip content, which also benefits components using tooltips, like menus and dropdowns.
+- **Tooltips:** We fixed an issue that prevented tooltips from being announced by screen readers in certain scenarios, such as when using React refs to link a tooltip to its trigger. This ensures assistive technologies can find and read tooltip content regardless of how the tooltip is linked to is trigger. This fix also benefits other components using tooltips, like menus and dropdowns.
 
 #### New guidelines
 
