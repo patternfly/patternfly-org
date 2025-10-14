@@ -18,26 +18,6 @@ While AI is *not* a replacement for human developers, it offers key benefits:
 - **Learning support:** Quickly develop an understanding of the project's unique context by prompting AI to explain topics. 
 - **Planning support:** Identify and scope all requirements and steps needed for the migration. 
 
-## Best practices
-
-When using AI tools during code migrations:
-	
-- Use AI as a helper for planning and managing tasks. For example, use AI-generated to-do lists for easier and more streamlined task management.
-- Avoid using AI for common tasks that can be done more easily manually and explicitly. Instead ask it to focus on more complex tasks that will have more impact. 
-- Leverage different language models throughout your migration and swap to more efficient models for different tasks. 
-- Avoid overloading a model with a long or time consuming task. If a request is taking longer than you'd like, or is going beyond what you intended, use the "Stop" button and refine your prompt.
-
-### Prompting tips
-
-When interacting with AI, especially with tools like Cursor, specificity is key. In order to efficiently and successfully request something from an AI tool, there are a few "do's and don'ts" to follow:
-
-| **Don't** | **Do** |
-| --- | --- |
-| Expect AI to assume your needs. | Be specific and clearly state what you want to achieve. |
-| Let AI follow its own rules. | Instruct AI to follow best practices for React and PatternFly, providing clear definitions and examples. |
-| Restrict yourself to text-based prompts. | When text prompts are insufficient, share screenshots with AI to provide valuable context. |
-| Reinvent the wheel. |  Use previously completed features and functionalities as models for new requests. |
-
 ## Multi-phased workflow example
 
 AI serves as a powerful accelerator throughout all steps of the migration process, including learning, planning, and development phases. This example outlines an AI-assisted workflow through all phases of a migration project.
@@ -84,11 +64,27 @@ For example you might use the following prompt _"Generate tests for PF6placehold
 
 ![Generated tests](./img/generated-tests.png)
 
-## What are the risks of AI-assisted migrations? 
+## Best practices
+	
+Because AI can make inaccurate assumptions, providing it with careful direction helps ensure that it will perform more reliably. Follow these best practices to help ensure consistency in AI behavior.
+    
+- Use AI as a helper for planning and managing tasks. For example, use AI-generated to-do lists for easier and more streamlined task management.
+- Avoid using AI for common tasks that can be done more easily manually and explicitly. Instead ask it to focus on more complex tasks that will have more impact. 
+- Leverage different language models throughout your migration and swap to more efficient models for different tasks. 
+- Avoid overloading a model with a long or time consuming task. If a request is taking longer than you'd like, or is going beyond what you intended, use the "Stop" button and refine your prompt.
+- Ensure that you understand the product architecture and are familiar with any technologies used. Otherwise, using AI can actually be more time consuming than a manual migration.
+- Follow our [prompting tips](#prompting-tips) when requesting something from an AI model.
 
-If you have a limited understanding of the product architecture or lack expertise in the technologies used, using AI for code migrations can actually be more time consuming than approaching the migration manually from the start.
+### Prompting tips 
 
-Additionally, AI can make assumptions and often requires careful direction in order to perform reliably as you need. Our [best practices](#best-practices) and [prompting tips](#prompting-tips) document some of the important considerations and approaches to take to help ensure consistency in AI behavior.
+When interacting with AI, especially with tools like Cursor, specificity is key. In order to efficiently and successfully request something from an AI tool, there are a few "do's and don'ts" to follow:
+
+| **Don't** | **Do** |
+| --- | --- |
+| Expect AI to assume your needs. | Be specific and clearly state what you want to achieve. |
+| Let AI follow its own rules. | Instruct AI to follow best practices for React and PatternFly, providing clear definitions and examples. |
+| Restrict yourself to text-based prompts. | When text prompts are insufficient, share screenshots with AI to provide valuable context. |
+| Reinvent the wheel. |  Use previously completed features and functionalities as models for new requests. |
 
 ## Experimentation and feedback 
 
