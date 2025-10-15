@@ -37,11 +37,14 @@ _"Can you explain the Angular directives to me?"_
 
 ### 2. Planning phase
 
-Use AI for scope estimation and mapping features:
+Once you've gathered enough context in the learning phase, you can create a migration plan by asking AI to estimate scope and map features. To make the plan more concrete and comprehensive, you might find it useful to have AI:
 - Generate a list of components that need migration.
 - Identify potentially difficult areas, such as state management and routing.
 
-For example, a prompt might be: _"I want to convert all the Katello pages that are written in Angular to React. Can you list the Katello pages that would need to be converted. Give results in a table format."_
+**Prompt:**
+_"I want to convert all the Katello pages that are written in Angular to React. Can you list the Katello pages that would need to be converted. Give results in a table format."_
+
+**Response:**
 
 ![Results from scope query](./img/scope-results.png)
 
