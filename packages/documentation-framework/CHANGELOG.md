@@ -3,6 +3,55 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 6.28.1 (2025-10-13)
+
+
+### Bug Fixes
+
+* **docs-framework:** remove useTheme from footer to fix theme state bug ([#4817](https://github.com/patternfly/patternfly-org/issues/4817)) ([44c02a0](https://github.com/patternfly/patternfly-org/commit/44c02a07c8ba3443429d4fa8afa5bf0014a36e27))
+
+
+
+
+
+# 6.28.0 (2025-10-13)
+
+
+### Features
+
+* **ver:** bump design-tokens version ([#4828](https://github.com/patternfly/patternfly-org/issues/4828)) ([fd58279](https://github.com/patternfly/patternfly-org/commit/fd58279d550efa7bd936c70cdc4d42c9e1a0e176))
+
+
+
+
+
+## 6.27.3 (2025-10-13)
+
+
+### Bug Fixes
+
+* **TOC:** fixes toc showing incorrectly at exactly 1450px ([#4802](https://github.com/patternfly/patternfly-org/issues/4802)) ([de0c2b4](https://github.com/patternfly/patternfly-org/commit/de0c2b4d1428045b71c78e4a15b4162a86f9956d))
+
+
+
+
+
+## 6.27.2 (2025-10-13)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 6.27.1 (2025-10-10)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
 # 6.27.0 (2025-10-09)
 
 
