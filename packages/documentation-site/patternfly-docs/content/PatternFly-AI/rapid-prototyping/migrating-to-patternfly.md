@@ -65,7 +65,7 @@ _"Copy the Angular Products page content into PF6placeholder.js using React and 
 
 This simple and direct prompt quickly and successfully recreated the table using PatternFly components:  
 
-![After migration - React PatternFly Products page](./img/products-after.png)
+![After migration - React PatternFly Products page](./img/products-after.svg)
 
 ### 4. Testing phase
 
