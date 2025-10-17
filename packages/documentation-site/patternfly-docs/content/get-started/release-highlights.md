@@ -63,7 +63,6 @@ You get these improvements "for free" just by updating to the latest version of 
 #### New guidelines
 
 We’ve updated our documentation and examples with the following recommendations to help you build more accessible products:
-- [**Data list:**](/components/data-list/react-demos/basic/) We added guidance on adding visually hidden text to icon-only labels to clarify what the accompanying numbers represent (for example, "5 alerts"). This ensures a clear, accessible name for screen reader users where the purpose of the number was previously ambiguous.
 - [**Jump links:**](/components/jump-links/accessibility) We updated our guidance to help you create a more predictable and less ambiguous experience for screen reader users. We also made updates to our examples and demos to align with this guidance. New guidance clarifies how to:
     - Correctly announce whether expandable sections are open or closed using `aria-expanded`, which must always be present on content that can trigger expansion.
     - Avoid using a redundant `aria-label` when an expandable jump links toggle contained visible text.
