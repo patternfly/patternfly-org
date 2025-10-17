@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 6.28.5 (2025-10-17)
+
+
+### Bug Fixes
+
+* Release 6.4.0 updates. ([#4831](https://github.com/patternfly/patternfly-org/issues/4831)) ([928fd66](https://github.com/patternfly/patternfly-org/commit/928fd666647a50d077a82354732c1c8061124965))
+
+
+
+
+
 ## 6.28.4 (2025-10-16)
 
 **Note:** Version bump only for package @patternfly/documentation-framework
