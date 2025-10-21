@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.4.0-alpha.301 (2025-10-21)
+
+
+### Bug Fixes
+
+* **ChatBot:** Adjust yarn.lock file so dropdowns work ([#4837](https://github.com/patternfly/patternfly-org/issues/4837)) ([f180a55](https://github.com/patternfly/patternfly-org/commit/f180a554ebdc36a38783ac33873c399802be3e9f))
+
+
+
+
+
 # 1.4.0-alpha.300 (2025-10-17)
 
 **Note:** Version bump only for package @patternfly/ast-helpers
