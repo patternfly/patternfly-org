@@ -23,7 +23,7 @@
         "@patternfly/quickstarts": "6.4.0",
         "@patternfly/react-virtualized-extension": "6.2.0",
         "@patternfly/react-templates": "6.4.0",
-        "@patternfly/chatbot": "6.4.0",
+        "@patternfly/chatbot": "6.4.1",
         "@patternfly/react-data-view": "6.4.0"
       }
     },
