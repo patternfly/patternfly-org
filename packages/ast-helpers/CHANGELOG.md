@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.4.0-alpha.302 (2025-10-22)
+
+
+### Bug Fixes
+
+* re-enable theme switcher hc beta label ([#4836](https://github.com/patternfly/patternfly-org/issues/4836)) ([4e85fce](https://github.com/patternfly/patternfly-org/commit/4e85fce75834e4cde4adb2f6bc62408472426b0a))
+
+
+
+
+
 # 1.4.0-alpha.301 (2025-10-21)
 
 
