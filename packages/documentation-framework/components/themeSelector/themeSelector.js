@@ -66,29 +66,34 @@ const HighContrastGroupLabel = () => {
       High contrast{' '}
       <Popover
         onClick={(e) => e.stopPropagation()}
-        headerContent={"Under development"}
+        headerContent={'Under development'}
         headerComponent="h1"
         bodyContent={
-          "We are still working to add high contrast support across all PatternFly components and extensions. This beta allows you to preview our progress."
+          'We are still working to add high contrast support across all PatternFly components and extensions. This beta allows you to preview our progress.'
         }
         footerContent={
-          <Button icon={<ExternalLinkAltIcon />} component="a" isInline variant="link" href="/design-foundations/theming" target="_blank">
+          <Button
+            icon={<ExternalLinkAltIcon />}
+            component="a"
+            isInline
+            variant="link"
+            href="/design-foundations/theming"
+            target="_blank"
+          >
             Learn more
           </Button>
         }
         aria-label="More info about high contrast"
         appendTo={() => document.body}
       >
-        <Button
-          variant="plain"
-          hasNoPadding
-          icon={<HelpIcon />}
-          aria-label="High contrast help"
-        />
-      </Popover>{' '}&nbsp;
-      <Label color="blue" isCompact>Beta</Label>
+        <Button variant="plain" hasNoPadding icon={<HelpIcon />} aria-label="High contrast help" />
+      </Popover>{' '}
+      &nbsp;
+      <Label color="blue" isCompact>
+        Beta
+      </Label>
     </div>
-  )
+  );
 };
 
 export const ThemeSelector = ({ id }) => {
@@ -173,7 +178,7 @@ export const ThemeSelector = ({ id }) => {
       {process.env.hasHighContrastSwitcher && (
         <>
           <Divider />
-          <SelectGroup label="High Contrast">
+          <SelectGroup label={HighContrastGroupLabel}>
             <MenuSearch>
               <MenuSearchInput>
                 <ToggleGroup aria-label="High contrast theme switcher">
