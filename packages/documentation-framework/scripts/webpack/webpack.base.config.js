@@ -72,18 +72,7 @@ module.exports = (_env, argv) => {
           }
         },
         {
-          test: /\.(png|jpe?g|webp)$/,
-          use: {
-            loader: 'responsive-loader',
-            options: {
-              adapter: require('responsive-loader/sharp'),
-              name: '[name].[contenthash].[ext]',
-              outputPath: 'images/'
-            }
-          }
-        },
-        {
-          test: /\.(gif|svg)$/,
+          test: /\.(gif|svg|png|jpe?g|webp)$/,
           type: 'asset/resource',
           dependency: { not: ['url'] },
           generator: {
