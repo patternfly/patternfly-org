@@ -31,7 +31,7 @@ if (process.env.EXTENSIONS_ONLY === 'true') {
     hasDesignGuidelines: true,
     hasThemeSwitcher: true,
     hasFeedbackButton: true,
-    hasHighContrastSwitcher: false,
+    hasHighContrastSwitcher: true,
     componentsData,
     sideNavItems: [
       { section: 'get-started' },
