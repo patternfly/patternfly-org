@@ -4,18 +4,16 @@ section: foundations-and-styles
 ---
 import './spacers.css';
 
-
 PatternFly designs use **spacers** to define fixed amounts of space between UI elements. They help you create designs that are visually balanced and consistent. Spacers are built into PatternFly components, and are also available as tokens for you to use within Figma's auto layout system:
 
 ![Spacer tokens displayed as options in a Figma layout menu](./auto-layout-spacers.png)
 
 ## Spacer sizing 
-
 Like the rest of our dimension tokens, spacers use rem sizing, rather than pixels. Rems are relative units that adjust size based on a webpage's HTML document root element size. For example, if the root size is 10px, a rem size of 1.5 would be 15px.
 
 PatternFly's default root element size is 16px. If you change this default size, note that the following table will no longer show accurate pixel measurements (though the rem values will stay the same).
-## PatternFly spacers 
 
+## PatternFly spacers 
 Our spacers include the following sizes:
 
 | **Spacer** | **Token** | **Size** | **Example** | 
@@ -27,25 +25,29 @@ Our spacers include the following sizes:
 |  xl | `--pf-t--global--spacer--xl` | 2rem (32px) |<div class="ws-content-spacer32"></div> |
 |  2xl | `--pf-t--global--spacer--2xl` | 3rem (48px) | <div class="ws-content-spacer48"></div> |
 |  3xl | `--pf-t--global--spacer--3xl` | 4rem (64px) | <div class="ws-content-spacer64"></div> |
- | 4xl | `--pf-t--global--spacer--4xl` | 5rem (80px) | <div class="ws-content-spacer80"></div>
+| 4xl | `--pf-t--global--spacer--4xl` | 5rem (80px) | <div class="ws-content-spacer80"></div> |
 
 ### Spacer tokens 
-
 Our spacer tokens are based on the values in the previous table, but there are certain use cases that align with more specific tokens. When using spacers in these scenarios, always use these more specific semantic tokens, rather than a global spacer token. 
 - **Action spacers:** Used to set horizontal and vertical padding within actions, like buttons. 
-  - Action spacer tokens begin with `--pf-t--global--spacer--action--`
+  - Action spacer tokens begin with `--pf-t--global--spacer--action`
 - **Control spacers:** Used to set horizontal and vertical padding within controls, like menu toggles and text inputs. 
-  - Control spacer tokens begin with `--pf-t--global--spacer--control--`
-- **Gap spacers:** Used to set space between elements or groups of elements, like gaps between multiple actions, gaps between items in a group, gaps between controls, and so on. 
-  - Gap spacer tokens begin with `--pf-t--global--spacer--gap`
+  - Control spacer tokens begin with `--pf-t--global--spacer--control`
+- **Layout spacers:** Used to define spacing within a page.
+  - **Gap spacers:** Used to set space between elements or groups of elements, like gaps between multiple actions, gaps between items in a group, gaps between controls, and so on. 
+    - Gap spacer tokens begin with `--pf-t--global--spacer--gap`
+  - **Gutter spacer:** Used to define gutters within a [layout](/layouts/about-layouts), like the space between elements in a grid layout.
+    - Gutter spacer tokens begin with `--pf-t--global--spacer--gutter`
+  - **Inset spacer:** Used to define inner padding for structural elements in order to ensure proper alignment, like in the masthead, navigation menu, or the main page content area. 
+    - Inset spacer tokens begin with `--pf-t--global--spacer--inset`
+ 
+You can search for spacer tokens in [our list of all tokens.](/tokens/all-patternfly-tokens)
 
-You can search for spacer tokens in [our list of all tokens.](/foundations-and-styles/design-tokens/all-patternfly-tokens)
 ## Considering line height and padding
 
 There are additional considerations to keep in mind when adapting spacers to different line heights and padding, which are common with PatternFly components and text content.
 
 ### Using spacers with components
-
 Some components like icons, buttons, and input fields, have a fixed amount of padding built in. Remember to account for this extra space when laying the content out on your page. You may not have as much horizontal or vertical room as you think.
 
 For example, padding around this vertical ellipsis (or "kebab") icon increases the amount of space that it takes up in a component:
@@ -53,9 +55,9 @@ For example, padding around this vertical ellipsis (or "kebab") icon increases t
 ![A vertical ellipsis icon with an extra small spacer symbol.](./icon-spacing.png)
 
 When laying out your design, make sure to account for this extra padding.
-### Using spacers with text 
 
-When spacing out text-based content, use the standard [global spacer tokens.](/foundations-and-styles/spacers#patternfly-spacers)
+### Using spacers with text 
+When spacing out text-based content, use the standard [global spacer tokens.](/design-foundations/spacers#patternfly-spacers)
 
 You should consider line height to ensure that you’re leaving the right amount of vertical space between each line of text:
 
@@ -65,5 +67,4 @@ You also need to use different spacer sizes depending on the type of text you’
 
 ![Different-sized spacers placed between heading, body, and list text](./complex-text-spacing.png)
 
-For more information about line height and text spacing, read our [typography guidelines.](/foundations-and-styles/typography)
-
+For more information about line height and text spacing, read our [typography guidelines.](/design-foundations/typography)

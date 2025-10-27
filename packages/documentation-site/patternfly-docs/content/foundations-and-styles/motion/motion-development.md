@@ -4,52 +4,113 @@ section: foundations-and-styles
 source: development-guide
 ---
 
-## Opt-in animations
+## Enabling opt-in animations
 
-We try to support animations by default in our components, but&mdash;to avoid introducing breaking changes&mdash;some animations require you to manually opt in. In order to function properly, opt-in animations require additional updates to your codebase. Depending on how your testing is set up, opt-in animation could cause test failures, so you must manually configure them appropriately.
+We try to support animations by default in our components, but&mdash;to avoid introducing breaking changes&mdash;some animations require you to manually opt in. Opt-in animations require additional updates to your codebase and, depending on your testing setup, could cause test failures if not configured appropriately.
 
-**Note:** In some edge cases, resource-intensive pages can cause browser memory issues where animations will fail to run correctly. For example, animated spinners are particularly memory intensive, so adding multiple spinners to a page might consume too much memory and disable all animations. 
+The following components contain opt-in animations, with links to examples for proper implementation:
 
-The following components contain opt-in animations. To understand the opt-in implementation, view the linked example code.
+- [Alert (within alert groups)](/components/alert/#dynamic-alert-groups) 
+- [Dual list selector (with tree)](/components/dual-list-selector#with-tree)
+- [Form field groups](/components/forms/form/#field-groups) 
+- [Navigation (expandable)](/components/navigation#expandable)  
+- [Notification badge](/components/notification-badge/#with-animation)
+- [Search input (expandable)](/components/search-input#with-expandable-button)
+- [Table (expandable)](/components/table/#expandable) (in beta)
+- [Table (compound expandable)](/components/table/#compound-expandable) (in beta)
+- [Tabs (HTML-only implementations)](/components/tabs#animate-current-tab-accent)
+- [Tree view (all examples)](/components/tree-view/)
 
-- Alert (within alert groups): [Example](/components/alert/#dynamic-alert-groups) 
-- Dual list selector (with tree): [Example](/components/dual-list-selector#with-tree)
-- Form field groups: [Example](/components/forms/form/#field-groups) 
-- Navigation (expandable): [Example](/components/navigation#expandable)  
-- Notification badge: [Example](/components/notification-badge/#with-animation)
-- Search input (expandable): [Example](/components/search-input#with-expandable-button)
-- Table (expandable): [Example](/components/table/#expandable) (in beta)
-- Table (compound expandable): [Example](/components/table/#compound-expandable) (in beta)
-- Tabs (HTML-only implementations): [Example](/components/tabs#animate-current-tab-accent)
-- Tree view: [Example](/components/tree-view/) (all examples) 
+**Note:** In some edge cases, resource-intensive pages can cause browser memory issues where animations fail to run correctly. For example, animated spinners are particularly memory intensive, so a page with multiple spinners might consume too much memory and disable all animations. 
 
-### enable-animations codemod
+### Bulk-enabling animations
 
-We have also created an [enable-animations codemod](https://github.com/patternfly/pf-codemods/tree/main/packages/eslint-plugin-pf-codemods/src/rules/v6/enableAnimations), which adds the `hasAnimations` prop to components that require opt-in animations. 
+We offer the [enable-animations codemod](https://github.com/patternfly/pf-codemods/tree/main/packages/eslint-plugin-pf-codemods/src/rules/v6/enableAnimations) that automatically adds the `hasAnimations` prop to components that require opt-in. 
 
-Keep in mind that, depending on your codebase, this codemod could introduce breaking changes that require further attention. In particular, when you run the codemod you will be asked whether you want to opt into animations for table components, or just for the react-core package.
+Be aware that, depending on your codebase, this codemod could introduce breaking changes that require further attention. When you run the codemod you will be asked whether to opt into animations only for the [@patternfly/react-core](https://www.npmjs.com/package/@patternfly/react-core) package or for [@patternfly/react-table](https://www.npmjs.com/package/@patternfly/react-table) as well.
 
-To enable the optional animations run the following command:
+To enable opt-in animations run the following command:
 
 `npx @patternfly/pf-codemods --only enable-animations /path-to-src`
 
+### Global animation control
+
+The `AnimationsProvider` is a React context provider that gives you global control over animation behavior in your application. Using it allows you to centrally manage animations across all PatternFly components in your codebase, making it easy to disable them for users who prefer reduced motion or to optimize performance. 
+
+#### Recommended setup and usage
+
+Place the `AnimationsProvider` at the root of your application to provide global animation configuration for all PatternFly components, either passing in `hasAnimations: true` or `hasAnimations: false`:
+
+```tsx
+// App.tsx or index.tsx
+import React from 'react';
+import { AnimationsProvider } from '@patternfly/react-core';
+import { MyApplication } from './MyApplication';
+
+const App: React.FunctionComponent = () => {
+  return (
+    <AnimationsProvider config={{ hasAnimations: true }}>
+      <MyApplication />
+    </AnimationsProvider>
+  );
+};
+
+export default App;
+```
+
+#### Component overrides
+
+When using the `AnimationsProvider`, you can still pass `hasAnimations` directly to a component to override the global setting of `true` or `false`. For example: `<AlertGroup isToast hasAnimations={false}>` will override a global setting of `true`.
+
+You can also wrap components with the `AnimationsProvider` and control animations there:
+
+```tsx
+<AnimationsProvider config={{ hasAnimations: false }}>
+  <AlertGroup isToast>
+    {criticalAlerts.map(alert => (
+      <Alert key={alert.id} title={alert.title} variant={alert.variant} />
+    ))}
+  </AlertGroup>
+</AnimationsProvider>
+```
+
+#### Conditional animations 
+
+You can enable animations conditionally, based on user preferences or system settings:
+
+```tsx
+// App.tsx - Respect user's motion preferences
+import React from 'react';
+import { AnimationsProvider } from '@patternfly/react-core';
+import { MyApplication } from './MyApplication';
+
+const App: React.FunctionComponent = () => {
+  // Respect user's reduced motion preference
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  return (
+    <AnimationsProvider config={{ hasAnimations: !prefersReducedMotion }}>
+      <MyApplication />
+    </AnimationsProvider>
+  );
+};
+```
+
 ## Custom motion 
 
-For some scenarios, like creating a new [PatternFly extension](/extensions/about-extensions), you may need to implement custom motion behavior that doesn't already exist in PatternFly components. When you're creating a new animation, make sure that:
+For some scenarios, like creating a new [PatternFly extension](/extensions/about-extensions), you might need to implement custom motion behavior. When creating a new animation, ensure the following:
 - There is no existing support for the animation.
-- The animation adheres to our motion principles and respects users' [`prefers-reduced-motion` settings.](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-reduced-motion)
+- The animation adheres to our motion principles and respects [`prefers-reduced-motion` settings.](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-reduced-motion)
 - Your implementation uses appropriate semantic motion tokens, as detailed in the following section. 
 
 ## Motion tokens
 
-PatternFly component animations are created using design tokens that cover the different elements of an animation, including duration, delay, and timing. Like we do with color tokens, we implement motion by using semantic tokens, which are built off of base tokens. Motion tokens begin with `--pf-t--global--motion--`
+PatternFly component animations are created using design tokens that specify duration, delay, and timing. We implement motion by using semantic tokens, which are built off of base tokens. Semantic motion tokens begin with `--pf-t--global--motion--`
 
-You can [search for motion tokens here.](/foundations-and-styles/design-tokens/all-patternfly-tokens)
-
-If you aren't familiar with our token system, [refer to this overview](/foundations-and-styles/design-tokens/about-tokens).
+When implementing custom motion, you should [familiarize yourself with our token system](/tokens/about-tokens) and [use the motion tokens outlined in our documentation.](/tokens/all-patternfly-tokens)
 
 ### Duration 
-Duration tokens specify the length of time that different animation should take to complete. There are predefined duration tokens based on the type of animation, shown in the following table;
+Duration tokens specify the length of time that different animation should take to complete. We offer predefined duration tokens based on each type of animation.
 
 | **Animation** | **Description** | **Tokens** |
 | --- | --- | --- | 
@@ -60,7 +121,7 @@ Duration tokens specify the length of time that different animation should take 
 <br />
 
 ### Delay 
-Delay tokens specify the length of time that should pass before an animation begins. Delay options include none, short, default, and long.
+Delay tokens specify the length of time that should pass before an animation begins, including "none", "short", "default", and "long".
 
 | **Token** | **Value** | 
 | --- | --- |
@@ -71,9 +132,7 @@ Delay tokens specify the length of time that should pass before an animation beg
 <br />
 
 ### Timing 
-Timing-function tokens specify the easing path that an animation takes. These paths are defined by [cubic Bezier curves,](https://developer.mozilla.org/en-US/docs/Web/CSS/easing-function#cubic_b%C3%A9zier_easing_function) which define the start and end points of a curve, as well as its initial and final times and states. 
-
-The available options for timing are described in the following table:
+Timing tokens specify the easing path that an animation takes, defined as [cubic Bezier curves,](https://developer.mozilla.org/en-US/docs/Web/CSS/easing-function#cubic_b%C3%A9zier_easing_function) that indicate the start and end points of a curve, as well as the initial and final times and states. 
 
 | **Timing function** | **Description** | **Token** | **Value** | 
 | --- | --- | --- | --- |
@@ -83,7 +142,7 @@ The available options for timing are described in the following table:
 
 ## Testing reduced motion 
 
-You can manually test for reduced motion in 2 primary ways:
+You can manually test for reduced motion in 2 ways:
 
 1. In your browser:
     - [Chrome](https://developer.chrome.com/docs/devtools/rendering/emulate-css#emulate_css_media_feature_prefers-reduced-motion)
