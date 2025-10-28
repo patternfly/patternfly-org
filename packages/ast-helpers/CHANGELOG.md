@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.4.0-alpha.303 (2025-10-28)
+
+
+### Bug Fixes
+
+* **docs-framework:** update webpack to handle all images the same way ([#4843](https://github.com/patternfly/patternfly-org/issues/4843)) ([26cbb75](https://github.com/patternfly/patternfly-org/commit/26cbb7559e71bfaff0cf01c9afc378f48624abf9))
+
+
+
+
+
 # 1.4.0-alpha.302 (2025-10-22)
 
 
