@@ -140,7 +140,7 @@ Minor feature releases will be available quarterly to introduce non-breaking cha
 Significant changes to our components and design tokens are first released in beta. You can identify these features by the blue "beta" label in our site's navigation or in an alert within related documentation. Beta features are subject to change based on user feedback and are only promoted to fully-supported status once they are stable and thoroughly tested.
 
 <div class="ws-docs-content-img">
-![Blue, pill-shaped label that says "Beta", with a black text bubble beside the label.](./img/beta-tooltip.svg)
+![Blue, pill-shaped label that says "Beta", with a black text bubble beside the label.](../content/get-started/img/beta-tooltip.svg)
 </div>
 
 The API, visuals, or underlying code for a beta feature can receive breaking changes as we gather feedback. This includes changes to a component's CSS class names or React properties, as well as changes to specific token values for a visual theme. Once a feature is promoted out of beta, we will not make further breaking changes outside of a planned major release.
