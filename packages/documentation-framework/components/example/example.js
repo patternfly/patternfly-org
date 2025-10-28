@@ -267,8 +267,8 @@ export const Example = ({
   const metaText = hasMetaText && tooltips;
 
   const thumbnailDimensions = {
-    width: "800px",
-    height: "450px"
+    width: "800",
+    height: "450"
   }
 
   return (
