@@ -10,3 +10,10 @@
 #supported-browsers.ws-title + table {
   margin-bottom: 16px;
 }
+
+.ws-docs-content-img {
+  text-align: center;
+  margin-inline: auto;
+  width: 100%;
+  max-width: 700px;
+}

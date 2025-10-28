@@ -49,17 +49,25 @@ To provide more guidance around theming, we've also published [new theming docum
 
 ### System-wide accessibility enhancements
 
-As part of our commitment to inclusive design, we've implemented numerous improvements in this release. You'll benefit from the following component enhancements automatically when you update:
-- **Clearer focus states for buttons:** The focus indicator for buttons is now easier to perceive for keyboard navigators.
-- **More reliable tooltips:** We resolved an issue where tooltips were not correctly associated with their trigger elements, improving the experience for screen reader users. This also benefits components that use tooltips, such as menus and dropdowns.
-- **Smoother keyboard navigation in data lists:** Triggering a kebab toggle within a data list item no longer accidentally selects the entire item, creating a more predictable experience.
-- **More accessible menus:** We fixed an issue that could create empty headings in React `<MenuGroups>`, improving the experience for screen reader users.
-    - Now, a heading will only render when the `label` prop is passed in. Note that, in order to fix this bug, your markup will be automatically updated when you consume this release. While this shouldn't be disruptive, it's possible this could affect any tests that were based on your previous markup, so you should review accordingly.
+In our commitment to inclusive design, we've implemented numerous accessibility improvements, including automatic component enhancements and new accessibility guidelines.
 
-We’ve also updated some of our documentation and examples to help you build more accessible products:
-- [**Skeleton:**](/components/skeleton/accessibility) We now recommend including visually hidden text that provides crucial context for screen reader users while content is still loading.
-- [**Jump links:**](/components/jump-links) Examples now include the expected ARIA attributes and unique naming for semantic elements.
-- [**Data list:**](/components/data-list/react-demos/basic/) We’ve added visually hidden text to icon-only labels to provide more meaning for screen reader users.
+#### Component updates
+You get these improvements "for free" just by updating to the latest version of PatternFly:
+
+- **Buttons:** Responding to a community request, the keyboard focus indicator is now thicker and more prominent, making it easier for users to locate the active element.
+- **Data lists:** Clicking an action menu toggle with a keyboard no longer automatically selects the first data list item and instead opens the action menu as expected, creating a more consistent and predictable experience. This was a bug fix for clickable implementations of our data list.
+- **Menus:** We fixed a bug where an empty heading could be rendered in React `<MenuGroups>`, causing confusion when navigating via screen readers. A heading will now only render when the `label` prop is passed in. This also helps avoid a potentially incorrect heading level hierarchy.
+    - **Note:** While this is an automatic update, the change in markup could affect your tests. Please review them accordingly.
+- **Tooltips:** We fixed an issue that prevented tooltips from being announced by screen readers in certain scenarios, such as when using React refs to link a tooltip to its trigger. This ensures assistive technologies can find and read tooltip content regardless of how the tooltip is linked to is trigger. This fix also benefits other components using tooltips, like menus and dropdowns.
+
+#### New guidelines
+
+We’ve updated our documentation and examples with the following recommendations to help you build more accessible products:
+- [**Jump links:**](/components/jump-links/accessibility) We updated our guidance to help you create a more predictable and less ambiguous experience for screen reader users. We also made updates to our examples and demos to align with this guidance. New guidance clarifies how to:
+    - Correctly announce whether expandable sections are open or closed using `aria-expanded`, which must always be present on content that can trigger expansion.
+    - Avoid using a redundant `aria-label` when an expandable jump links toggle contained visible text.
+    - Provide unique, descriptive names to help users differentiate between multiple jump link components on the same page and make it easier to understand the context of each jump link when using keyboard/rotor menu shortcuts with assistive tech.
+- [**Skeleton:**](/components/skeleton/accessibility) Our guidelines now recommend including visually hidden text. This provides crucial context for screen reader users while content is loading and assures them that they haven't landed on a blank or broken page.
 
 ### Community-driven ChatBot enhancements
 Based on feedback from usability workshops and our community, we've made significant enhancements to the ChatBot extension to improve usability and address user needs:
@@ -745,4 +753,4 @@ In order to support PatternFly 6, and any future visual theming capabilities, we
 
 Our tokens cover both dark and light themes, and make it easier to support both in your product. We also updated our [dark theme handbook](/foundations-and-styles/theming/dark-theme-handbook) to align with our tokens.
 
-**Note:*- The PatternFly 5 design library is not built with tokens. To take advantage of our token system, you must [upgrade your product to PatternFly 6](/releases/upgrade-guide).
+**Note:** The PatternFly 5 design library is not built with tokens. To take advantage of our token system, you must [upgrade your product to PatternFly 6](/releases/upgrade-guide).

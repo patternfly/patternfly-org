@@ -135,20 +135,17 @@ A major version of PatternFly will only be supported through the subsequent vers
 
 Minor feature releases will be available quarterly to introduce non-breaking changes, like new features and enhancements. We will also share interim patch releases to fix any bugs that we find.
 
-### Beta components 
+### Beta features
 
-New PatternFly components are first released in beta. To help you identify beta components, we add a blue label beside the component in the PatternFly.org navigation menu and an informational alert at the top of the component’s documentation pages.
+Significant changes to our components and design tokens are first released in beta. You can identify these features by the blue "beta" label in our site's navigation or in an alert within related documentation. Beta features are subject to change based on user feedback and are only promoted to fully-supported status once they are stable and thoroughly tested.
 
-Beta components continue to evolve as users share feedback. As these components are tested, they are subject to breaking changes, which are changes that affect visuals, applied CSS class names, or existing React properties (including the addition of new properties). We review beta components every quarter to evaluate their stability and the degree to which they meet product requirements. Once a component is stable, it's proposed as a promotion candidate. Once promoted, breaking changes are not made to components outside of a well-advertised breaking change release. 
+<div class="ws-docs-content-img">
+![Blue, pill-shaped label that says "Beta", with a black text bubble beside the label.](./img/beta-tooltip.svg)
+</div>
 
-Occasionally, after a component is promoted out of beta, subsequent enhancement requests require the introduction of new CSS class names and React properties. Whenever these enhancements are substantial enough to lead to further component updates (pending testing and feedback), then a beta label is applied to the new class names and properties, as well as relevant examples in the component’s documentation.
+The API, visuals, or underlying code for a beta feature can receive breaking changes as we gather feedback. This includes changes to a component's CSS class names or React properties, as well as changes to specific token values for a visual theme. Once a feature is promoted out of beta, we will not make further breaking changes outside of a planned major release.
 
-[Learn more about beta components and view a list of current promotion candidates here.](https://github.com/patternfly/patternfly-org/tree/main/beta-component-promotion)
-
-If you are considering using a beta component, make sure to:
-
-1. Play with the examples in the component's documentation on the PatternFly website to determine if the current implementation meets your needs. Open issues for any missing features, enhancement requests, or bugs.
-2. Check the [PatternFly Issues GitHub Project board](https://github.com/orgs/patternfly/projects/7/views/1). Browse any open issues for the beta component to determine how much more the beta component could evolve in the near future.
+Before using a beta feature, we recommend reading its documentation and experimenting with the provided examples to ensure it meets your needs. You can track the development status and potential future changes for all beta features on the [PatternFly GitHub project board](https://github.com/orgs/patternfly/projects/7/views/1). For more specific information on the component promotion process, you can also refer to this [beta component promotion README](https://github.com/patternfly/patternfly-org/tree/main/beta-component-promotion).
 
 ### Deprecated components 
 
@@ -158,7 +155,9 @@ Occasionally, a component page will contain a "React next" tab, which contains d
 
 Deprecated components will typically be available to use until the next major release, after which no documentation will be included on the current release website.
 
+<div class="ws-docs-content-img">
 ![Onsite deprecated component messages](./img/deprecated-component.png)
+</div>
 
 Deprecation includes: 
 

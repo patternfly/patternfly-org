@@ -3,6 +3,104 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.4.0-alpha.302 (2025-10-22)
+
+
+### Bug Fixes
+
+* re-enable theme switcher hc beta label ([#4836](https://github.com/patternfly/patternfly-org/issues/4836)) ([4e85fce](https://github.com/patternfly/patternfly-org/commit/4e85fce75834e4cde4adb2f6bc62408472426b0a))
+
+
+
+
+
+# 1.4.0-alpha.301 (2025-10-21)
+
+
+### Bug Fixes
+
+* **ChatBot:** Adjust yarn.lock file so dropdowns work ([#4837](https://github.com/patternfly/patternfly-org/issues/4837)) ([f180a55](https://github.com/patternfly/patternfly-org/commit/f180a554ebdc36a38783ac33873c399802be3e9f))
+
+
+
+
+
+# 1.4.0-alpha.300 (2025-10-17)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 1.4.0-alpha.299 (2025-10-17)
+
+
+### Bug Fixes
+
+* Release 6.4.0 updates. ([#4831](https://github.com/patternfly/patternfly-org/issues/4831)) ([928fd66](https://github.com/patternfly/patternfly-org/commit/928fd666647a50d077a82354732c1c8061124965))
+
+
+
+
+
+# 1.4.0-alpha.298 (2025-10-16)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 1.4.0-alpha.297 (2025-10-15)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 1.4.0-alpha.296 (2025-10-15)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 1.4.0-alpha.295 (2025-10-13)
+
+
+### Bug Fixes
+
+* **docs-framework:** remove useTheme from footer to fix theme state bug ([#4817](https://github.com/patternfly/patternfly-org/issues/4817)) ([44c02a0](https://github.com/patternfly/patternfly-org/commit/44c02a07c8ba3443429d4fa8afa5bf0014a36e27))
+
+
+
+
+
+# 1.4.0-alpha.294 (2025-10-13)
+
+
+### Features
+
+* **ver:** bump design-tokens version ([#4828](https://github.com/patternfly/patternfly-org/issues/4828)) ([fd58279](https://github.com/patternfly/patternfly-org/commit/fd58279d550efa7bd936c70cdc4d42c9e1a0e176))
+
+
+
+
+
+# 1.4.0-alpha.293 (2025-10-13)
+
+
+### Bug Fixes
+
+* **TOC:** fixes toc showing incorrectly at exactly 1450px ([#4802](https://github.com/patternfly/patternfly-org/issues/4802)) ([de0c2b4](https://github.com/patternfly/patternfly-org/commit/de0c2b4d1428045b71c78e4a15b4162a86f9956d))
+
+
+
+
+
 # 1.4.0-alpha.292 (2025-10-13)
 
 **Note:** Version bump only for package @patternfly/ast-helpers
