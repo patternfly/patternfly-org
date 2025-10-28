@@ -16,8 +16,8 @@ import { css } from '@patternfly/react-styles';
 import { Location } from '@reach/router';
 
 const DIVIDER_STYLES = {
-  marginTop: 'var(--pf-t--global--spacer--md)',
-  marginBottom: 'var(--pf-t--global--spacer--md)'
+  marginTop: 'var(--pf-t--global--spacer--xs)',
+  marginBottom: 'var(--pf-t--global--spacer--xs)'
 };
 import { makeSlug } from '../../helpers';
 import globalBreakpointXl from '@patternfly/react-tokens/dist/esm/t_global_breakpoint_xl';

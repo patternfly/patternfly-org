@@ -1,6 +1,6 @@
 ---
 id: Theming
-section: design-foundations
+section: foundations-and-styles
 source: high-contrast-handbook
 ---
 
@@ -53,7 +53,7 @@ We also added the following tokens for plain actions (actions with a transparent
 
 ## Best practices
 
-In addition to the [general theming best practices](/design-foundations/theming#best-practices), ensure that you adhere to the following guidelines when working in high contrast mode.
+In addition to the [general theming best practices](/foundations-and-styles/theming#best-practices), ensure that you adhere to the following guidelines when working in high contrast mode.
 
 ### Color and contrast
 

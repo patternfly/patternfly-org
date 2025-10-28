@@ -1,6 +1,6 @@
 ---
 id: Theming
-section: design-foundations
+section: foundations-and-styles
 source: dark-theme-handbook
 ---
 
@@ -24,7 +24,7 @@ To use charts with dark themes, refer to our guidance for [developing with chart
 
 To create images that adapt to light and dark themes, there are a few approaches you can take: 
 
-- Use inline SVG's with fill colors set to [PatternFly color tokens](/tokens/all-patternfly-tokens), which inherently adapt to light and dark themes.
+- Use inline SVG's with fill colors set to [PatternFly color tokens](/foundations-and-styles/design-tokens/all-patternfly-tokens), which inherently adapt to light and dark themes.
 - Create images with colors that work well with both light and dark themes. These colors should meet [WCAG AA contrast requirements](https://webaim.org/resources/contrastchecker/).
 - Utilize background color, border color, border-radius, and padding/spacing to create a container that can hold dynamic/user-supplied images.
 - Write CSS and dynamically swap between 2 image variations:
@@ -47,7 +47,7 @@ To create images that adapt to light and dark themes, there are a few approaches
 
 ## Best practices
 
-The most important step to ensure your application supports dark theme is to follow our [general theming best practices](/design-foundations/theming#best-practices). Adhering to these guidelines, especially by using design tokens instead of hard-coded values, will resolve most adoption challenges.
+The most important step to ensure your application supports dark theme is to follow our [general theming best practices](/foundations-and-styles/theming#best-practices). Adhering to these guidelines, especially by using design tokens instead of hard-coded values, will resolve most adoption challenges.
 
 Additionally, keep these key points in mind:
 
