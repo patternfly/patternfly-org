@@ -37,7 +37,7 @@ For the Q3 2025 PatternFly release, we're excited to introduce a beta version of
 
 ### Simplified animation control
 
-We've introduced a new application-level context provider for enabling animations. You can now set the animation context at the root of your application to enable all opt-in animations by default. This ensures motion behaves predictably across your entire UI while still allowing for individual overrides. [Find more details in our motion development guide.](/design-foundations/motion/development-guide/#global-animation-control)
+We've introduced a new application-level context provider for enabling animations. You can now set the animation context at the root of your application to enable all opt-in animations by default. This ensures motion behaves predictably across your entire UI while still allowing for individual overrides. [Find more details in our motion development guide.](/foundations-and-styles/motion/development-guide/#global-animation-control)
 
 ### High contrast mode (Beta)
 
@@ -45,7 +45,7 @@ To better support users with vision sensitivities and accessibility needs, we've
 
 You can preview high contrast mode via the theme switcher on our website. This initial beta includes support for most of our core components, with the full release&mdash;including support for charts and extensions&mdash;planned for Q4.
 
-To provide more guidance around theming, we've also published [new theming documentation](/design-foundations/theming) and a [high contrast handbook](/design-foundations/theming/high-contrast-handbook). 
+To provide more guidance around theming, we've also published [new theming documentation](/foundations-and-styles/theming) and a [high contrast handbook](/foundations-and-styles/theming/high-contrast-handbook). 
 
 ### System-wide accessibility enhancements
 
@@ -743,6 +743,6 @@ All of our components have a new look to match. As you use the alpha website, ta
 
 In order to support PatternFly 6, and any future visual theming capabilities, we have implemented a design token system for PatternFly. For more details and instructions on how to use tokens, you can refer to our new [design token documentation](/foundations-and-styles/design-tokens/about-tokens).
 
-Our tokens cover both dark and light themes, and make it easier to support both in your product. We also updated our [dark theme handbook](/design-foundations/theming/dark-theme-handbook) to align with our tokens.
+Our tokens cover both dark and light themes, and make it easier to support both in your product. We also updated our [dark theme handbook](/foundations-and-styles/theming/dark-theme-handbook) to align with our tokens.
 
 **Note:*- The PatternFly 5 design library is not built with tokens. To take advantage of our token system, you must [upgrade your product to PatternFly 6](/releases/upgrade-guide).

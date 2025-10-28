@@ -34,19 +34,28 @@ if (process.env.EXTENSIONS_ONLY === 'true') {
     hasHighContrastSwitcher: true,
     componentsData,
     sideNavItems: [
-      { text: 'About us', href: '/about-us' },
-      { section: 'get-started' },
-      { section: 'releases' },
-      { section: 'components' },
-      { section: 'patterns' },
-      { section: 'extensions' },
-      { section: 'foundations-and-styles' },
-      { section: 'Content design' },
-      { section: 'accessibility' },
-      { section: 'AI' },
-      { section: 'developer-guides' },
-      { section: 'Component groups'},
-      { section: 'topology' }
+      {
+        title: 'Learn',
+        items: [
+          { text: 'About us', href: '/about-us' },
+          { section: 'get-started' },
+          { section: 'releases' }
+        ],
+        hasDivider: true
+      },
+      {
+        title: 'Design and develop',
+        items: [
+          { section: 'components' },
+          { section: 'patterns' },
+          { section: 'extensions' },
+          { section: 'foundations-and-styles' },
+          { section: 'accessibility' },
+          { section: 'AI' },
+          { section: 'Content design' },
+          { section: 'developer-guides' }
+        ]
+      }
     ],
     topNavItems: [],
     port: 8003,

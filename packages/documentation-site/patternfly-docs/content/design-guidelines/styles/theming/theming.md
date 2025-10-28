@@ -1,6 +1,6 @@
 ---
 id: Theming
-section: design-foundations
+section: foundations-and-styles
 source: about
 ---
 
@@ -28,7 +28,7 @@ Generally, light mode is the default appearance of PatternFly. In this mode, dar
 
 In dark mode, light text is presented on dark backgrounds backgrounds, and our color palette adapts to maintain a [text contrast ratio of at least 4.5:1](https://www.w3.org/WAI/WCAG22/quickref/?versions=2.1#contrast-minimum) and [non-text contrast ratio of at least 3:1](https://www.w3.org/WAI/WCAG22/quickref/?versions=2.1#non-text-contrast). Some users might prefer dark mode for aesthetics, while others find it to be easier on the eyes and less straining for those with light sensitivities. 
 
-For development guidance, refer to the [dark theme handbook](/design-foundations/theming/dark-theme-handbook).
+For development guidance, refer to the [dark theme handbook](/foundations-and-styles/theming/dark-theme-handbook).
 
 <div class="ws-docs-content-img" style="width:90%">
 ![A collage of multiple dark-themed PatternFly components, like a calendar, alert, and menu. The components have dark gray backgrounds and white text.](./img/components-dark.svg)
@@ -52,11 +52,11 @@ High contrast mode adjusts our default colors to meet an [enhanced contrast rati
 
 In high contrast mode, distinct borders are also added to components to ensure that their boundaries are clearly defined without requiring users to rely on subtle background colors as a visual cue. 
 
-For development guidance, refer to the [high contrast handbook](/design-foundations/theming/high-contrast-handbook).
+For development guidance, refer to the [high contrast handbook](/foundations-and-styles/theming/high-contrast-handbook).
 
 ## Custom themes 
 
-To branch off of our themes and create your own, you can identify the design tokens you'd like to adjust on our [all tokens page](/tokens/all-patternfly-tokens) and provide new values to use within your application. 
+To branch off of our themes and create your own, you can identify the design tokens you'd like to adjust on our [all tokens page](/foundations-and-styles/design-tokens/all-patternfly-tokens) and provide new values to use within your application. 
 
 ### When to customize a theme
 

@@ -59,7 +59,7 @@ These principles guide the use of motion in PatternFly and align with our [brand
 
 PatternFly components support motion in the form of **micro animations**, which are small, unobtrusive, and often understated. These animations serve specific purposes within a UI, and are designed to be subtle and complementary. To ensure an accessible experience, every animation adapts to and respects a user's system-level settings for reduced motion.
 
-While many components feature animations by default, there are [opt-in animations](/design-foundations/motion/development-guide#opt-in-animations) that require manual configuration. If you're interested in implementing motion outside of what we support by default, you can use [our motion tokens](/design-foundations/motion/development-guide#motion-tokens) to create a custom animation for your specific scenario. Take care to stay aligned with our motion principles. 
+While many components feature animations by default, there are [opt-in animations](/foundations-and-styles/motion/development-guide#opt-in-animations) that require manual configuration. If you're interested in implementing motion outside of what we support by default, you can use [our motion tokens](/foundations-and-styles/motion/development-guide#motion-tokens) to create a custom animation for your specific scenario. Take care to stay aligned with our motion principles. 
 
 ### Anatomy of an animation 
 An animation is composed of 4 elements: 

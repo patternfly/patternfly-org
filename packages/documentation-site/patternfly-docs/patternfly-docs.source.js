@@ -24,8 +24,8 @@ module.exports = (sourceMD, sourceProps, sourceFunctionDocs) => {
     );
     sourceMD(path.join(contentBase, "accessibility/**/*.md"), "accessibility");
     // Individual sourcing of former design-guidelines directories
-    sourceMD(path.join(contentBase, "components/**/*.md"), "components");
-    sourceMD(path.join(contentBase, "content-design/**/*.md"), "Content design");
+    sourceMD(path.join(contentBase, "components/**/*.md"), "design-guidelines");
+    sourceMD(path.join(contentBase, "content-design/**/*.md"), "content-design");
     sourceMD(path.join(contentBase, "foundations-and-styles/**/*.md"), "foundations-and-styles");
     sourceMD(path.join(contentBase, "patterns/**/*.md"), "patterns");
     sourceMD(path.join(contentBase, "get-started/training/**/*.md"), "get-started");

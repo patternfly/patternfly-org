@@ -41,7 +41,7 @@ Our spacer tokens are based on the values in the previous table, but there are c
   - **Inset spacer:** Used to define inner padding for structural elements in order to ensure proper alignment, like in the masthead, navigation menu, or the main page content area. 
     - Inset spacer tokens begin with `--pf-t--global--spacer--inset`
  
-You can search for spacer tokens in [our list of all tokens.](/tokens/all-patternfly-tokens)
+You can search for spacer tokens in [our list of all tokens.](/foundations-and-styles/design-tokens/all-patternfly-tokens)
 
 ## Considering line height and padding
 
@@ -57,7 +57,7 @@ For example, padding around this vertical ellipsis (or "kebab") icon increases t
 When laying out your design, make sure to account for this extra padding.
 
 ### Using spacers with text 
-When spacing out text-based content, use the standard [global spacer tokens.](/design-foundations/spacers#patternfly-spacers)
+When spacing out text-based content, use the standard [global spacer tokens.](/foundations-and-styles/spacers#patternfly-spacers)
 
 You should consider line height to ensure that you’re leaving the right amount of vertical space between each line of text:
 
@@ -67,4 +67,4 @@ You also need to use different spacer sizes depending on the type of text you’
 
 ![Different-sized spacers placed between heading, body, and list text](./complex-text-spacing.png)
 
-For more information about line height and text spacing, read our [typography guidelines.](/design-foundations/typography)
+For more information about line height and text spacing, read our [typography guidelines.](/foundations-and-styles/typography)
