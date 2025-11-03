@@ -3,6 +3,262 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.4.0-alpha.304 (2025-10-31)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 1.4.0-alpha.303 (2025-10-28)
+
+
+### Bug Fixes
+
+* **docs-framework:** update webpack to handle all images the same way ([#4843](https://github.com/patternfly/patternfly-org/issues/4843)) ([26cbb75](https://github.com/patternfly/patternfly-org/commit/26cbb7559e71bfaff0cf01c9afc378f48624abf9))
+
+
+
+
+
+# 1.4.0-alpha.302 (2025-10-22)
+
+
+### Bug Fixes
+
+* re-enable theme switcher hc beta label ([#4836](https://github.com/patternfly/patternfly-org/issues/4836)) ([4e85fce](https://github.com/patternfly/patternfly-org/commit/4e85fce75834e4cde4adb2f6bc62408472426b0a))
+
+
+
+
+
+# 1.4.0-alpha.301 (2025-10-21)
+
+
+### Bug Fixes
+
+* **ChatBot:** Adjust yarn.lock file so dropdowns work ([#4837](https://github.com/patternfly/patternfly-org/issues/4837)) ([f180a55](https://github.com/patternfly/patternfly-org/commit/f180a554ebdc36a38783ac33873c399802be3e9f))
+
+
+
+
+
+# 1.4.0-alpha.300 (2025-10-17)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 1.4.0-alpha.299 (2025-10-17)
+
+
+### Bug Fixes
+
+* Release 6.4.0 updates. ([#4831](https://github.com/patternfly/patternfly-org/issues/4831)) ([928fd66](https://github.com/patternfly/patternfly-org/commit/928fd666647a50d077a82354732c1c8061124965))
+
+
+
+
+
+# 1.4.0-alpha.298 (2025-10-16)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 1.4.0-alpha.297 (2025-10-15)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 1.4.0-alpha.296 (2025-10-15)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 1.4.0-alpha.295 (2025-10-13)
+
+
+### Bug Fixes
+
+* **docs-framework:** remove useTheme from footer to fix theme state bug ([#4817](https://github.com/patternfly/patternfly-org/issues/4817)) ([44c02a0](https://github.com/patternfly/patternfly-org/commit/44c02a07c8ba3443429d4fa8afa5bf0014a36e27))
+
+
+
+
+
+# 1.4.0-alpha.294 (2025-10-13)
+
+
+### Features
+
+* **ver:** bump design-tokens version ([#4828](https://github.com/patternfly/patternfly-org/issues/4828)) ([fd58279](https://github.com/patternfly/patternfly-org/commit/fd58279d550efa7bd936c70cdc4d42c9e1a0e176))
+
+
+
+
+
+# 1.4.0-alpha.293 (2025-10-13)
+
+
+### Bug Fixes
+
+* **TOC:** fixes toc showing incorrectly at exactly 1450px ([#4802](https://github.com/patternfly/patternfly-org/issues/4802)) ([de0c2b4](https://github.com/patternfly/patternfly-org/commit/de0c2b4d1428045b71c78e4a15b4162a86f9956d))
+
+
+
+
+
+# 1.4.0-alpha.292 (2025-10-13)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 1.4.0-alpha.291 (2025-10-10)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 1.4.0-alpha.290 (2025-10-09)
+
+
+### Features
+
+* **sideNav:** Adds support for grouped nav with headers and dividers. ([#4754](https://github.com/patternfly/patternfly-org/issues/4754)) ([91f9227](https://github.com/patternfly/patternfly-org/commit/91f92276400dc255f931c7df6c75963adf2c54bc))
+
+
+
+
+
+# 1.4.0-alpha.289 (2025-10-09)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 1.4.0-alpha.288 (2025-10-09)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 1.4.0-alpha.287 (2025-10-08)
+
+
+### Bug Fixes
+
+* enable HC switcher, add beta label ([#4766](https://github.com/patternfly/patternfly-org/issues/4766)) ([bdcd2b8](https://github.com/patternfly/patternfly-org/commit/bdcd2b80a0939ae8362d8ebcd4d14f79ef0c1831))
+
+
+
+
+
+# 1.4.0-alpha.286 (2025-10-08)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 1.4.0-alpha.285 (2025-10-07)
+
+
+### Features
+
+* **ver:** update missed dataview version ([#4821](https://github.com/patternfly/patternfly-org/issues/4821)) ([7d5f32d](https://github.com/patternfly/patternfly-org/commit/7d5f32dffd054a99bcc130e16ac0384cbd9943b3))
+
+
+
+
+
+# 1.4.0-alpha.284 (2025-10-07)
+
+
+### Features
+
+* **ver:** udpate DataView version ([#4819](https://github.com/patternfly/patternfly-org/issues/4819)) ([519d0e7](https://github.com/patternfly/patternfly-org/commit/519d0e7c31aec0c402b8d4e9a8a299378f9bdf6e))
+
+
+
+
+
+# 1.4.0-alpha.283 (2025-10-01)
+
+
+### Bug Fixes
+
+* **ChatBot:** Update version ([#4813](https://github.com/patternfly/patternfly-org/issues/4813)) ([a007287](https://github.com/patternfly/patternfly-org/commit/a007287f925d04a16769e49cf4400d27c59f77d2))
+
+
+
+
+
+# 1.4.0-alpha.282 (2025-10-01)
+
+
+### Bug Fixes
+
+* **docs:** Update demo screenshots ([#4812](https://github.com/patternfly/patternfly-org/issues/4812)) ([5764878](https://github.com/patternfly/patternfly-org/commit/5764878e42a60a04701422d90107b8a8da73cc07))
+
+
+
+
+
+# 1.4.0-alpha.281 (2025-10-01)
+
+
+### Features
+
+* **ver:** update prereleases ([#4810](https://github.com/patternfly/patternfly-org/issues/4810)) ([cf62a7f](https://github.com/patternfly/patternfly-org/commit/cf62a7ff5bbd6b16ac09ab7cc73b399304f9c5ff))
+
+
+
+
+
+# 1.4.0-alpha.280 (2025-10-01)
+
+
+### Features
+
+* **ver:** update to 6.4 prereleases ([#4809](https://github.com/patternfly/patternfly-org/issues/4809)) ([1805162](https://github.com/patternfly/patternfly-org/commit/1805162bb1e019c77023b51d26a4cf37981e3777))
+
+
+
+
+
+# 1.4.0-alpha.279 (2025-09-30)
+
+
+### Bug Fixes
+
+* **screenshots:** force light theme, hide theme switcher ([#4803](https://github.com/patternfly/patternfly-org/issues/4803)) ([abff5aa](https://github.com/patternfly/patternfly-org/commit/abff5aa36fb2eccb757d27885f72408463e83f49))
+
+
+
+
+
 # 1.4.0-alpha.278 (2025-09-16)
 
 
