@@ -34,6 +34,10 @@ const serverConfig = async (env, argv) => {
           test: /(novnc-core|@novnc\/novnc)\/.*\.js/,
           use: 'null-loader'
         },
+        {
+          test: /(posthog-js|rrweb|@segment\/analytics-next)\/.*\.js/,
+          use: 'null-loader'
+        }
       ]
     },
     resolve: {

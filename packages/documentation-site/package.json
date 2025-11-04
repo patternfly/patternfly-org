@@ -10,7 +10,7 @@
     "build": "yarn build:ts && pf-docs-framework build all",
     "build:server": "pf-docs-framework build server",
     "build:client": "pf-docs-framework build client",
-    "build:ts": "tsc --project patternfly-docs/content/design-guidelines/styles/motion/tsconfig.json",
+    "build:ts": "tsc --project patternfly-docs/content/design-guidelines/styles/motion/tsconfig.json && tsc --project patternfly-docs/content/layouts/compass/tsconfig.json",
     "clean": "rimraf -rf .cache public size-plugin.json patternfly-docs/generated/**/*.js",
     "develop": "yarn build:ts && pf-docs-framework start",
     "generate": "pf-docs-framework generate",
@@ -18,7 +18,7 @@
     "screenshots": "pf-docs-framework screenshots"
   },
   "dependencies": {
-    "@patternfly/chatbot": "6.4.0",
+    "@patternfly/chatbot": "6.5.0-prerelease.10",
     "@patternfly/design-tokens": "1.14.3",
     "@patternfly/documentation-framework": "workspace:*",
     "@patternfly/quickstarts": "6.4.0",
