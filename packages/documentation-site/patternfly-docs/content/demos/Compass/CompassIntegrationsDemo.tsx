@@ -37,6 +37,11 @@ import {
   Dropdown,
   MenuToggle,
   MenuToggleElement,
+  Brand,
+  DropdownItem,
+  DropdownList,
+  Flex,
+  Avatar,
 } from '@patternfly/react-core';
 import { ActionsColumn } from '@patternfly/react-table';
 import { DataViewToolbar } from '@patternfly/react-data-view/dist/dynamic/DataViewToolbar';
@@ -54,9 +59,12 @@ import ListIcon from '@patternfly/react-icons/dist/esm/icons/list-icon';
 
 import wallpaperLight from './assets/wallpaper-light.png'
 import wallpaperDark from './assets/wallpaper-dark.png'
+import pfLogo from './assets/PF-HorizontalLogo-Color.svg';
+import imgAvatar from './assets/avatar.jpg';
 
 export const CompassIntegrationsDemo: React.FunctionComponent = () => {
   const [isThinking, setIsThinking] = useState(false);
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [activeDisplay, setActiveDisplay] = useState<"table" | "card" | "add">("table");
 
   const integrations = [
@@ -255,7 +263,47 @@ export const CompassIntegrationsDemo: React.FunctionComponent = () => {
     </CompassPanel>
   );
 
-  const headerContent = <CompassHeader logo={<div>logo</div>} nav={navContent} profile={<div>Profile</div>} />;
+  const userDropdownItems = (
+    <>
+      <DropdownItem>My profile</DropdownItem>
+      <DropdownItem>User management</DropdownItem>
+      <DropdownItem>Logout</DropdownItem>
+    </>
+  );
+
+  const userDropdown = (
+    <Dropdown
+    isOpen={isDropdownOpen}
+    onSelect={() => setIsDropdownOpen(false)}
+    onOpenChange={(isOpen: boolean) => setIsDropdownOpen(isOpen)}
+    popperProps={{ position: "right" }}
+    toggle={(toggleRef: React.Ref<MenuToggleElement>) => (
+      <MenuToggle
+        ref={toggleRef}
+        onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+        isExpanded={isDropdownOpen}
+        variant="plain"
+        isCircle
+      >
+        <Flex
+          alignItems={{ default: "alignItemsCenter" }}
+          gap={{ default: "gapMd" }}
+        >
+          User Name
+          <Avatar src={imgAvatar} alt="" size="md" />
+        </Flex>
+      </MenuToggle>
+    )}
+  >
+    <DropdownList>{userDropdownItems}</DropdownList>
+  </Dropdown>
+  );
+
+  const headerContent = <CompassHeader 
+    logo={<Brand src={pfLogo} alt="Patternfly Logo" widths={{ default: '200px' }} />}
+    nav={navContent} 
+    profile={userDropdown}
+  />;
   const sidebarStartContent = sidebarContent;
 
   const cardViewContent = (
