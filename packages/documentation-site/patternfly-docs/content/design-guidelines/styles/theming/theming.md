@@ -70,9 +70,9 @@ There are a couple of instances when you might want to adjust an existing Patter
 
 ## Using themes in Figma
 
-Our Figma libraries fully support theming. Designers can create a single layout and then use various Figma "Appearance" settings to swap a wireframe to light, dark, or high contrast mode. This makes it easy to visually test and validate designs across all supported themes.
+Our Figma libraries fully support theming. Designers can create a single design and then swap between our themes using the "Apply Variable Mode" toggles in the "Appearance" section of the component properties panel. This makes it easy to visually test and validate designs across all supported themes.
 
-The standard light PatternFly theme will be applied to components by default. If you want your mockups to use our dark or high contrast themes, you will eed to adjust the following settings in Figma. 
+The standard light PatternFly theme will be applied to components by default. If you want your mockups to use our dark or high contrast themes, you will need to adjust the following settings in Figma. 
 
 ### Dark mode
 
@@ -89,6 +89,10 @@ To swap your components to our high contrast mode, change the Semantic Dimension
 <div class="ws-docs-content-img">
 ![Figma settings menu to select different token variables.](./img/figma-hc-mode.svg)
 </div>
+
+### Chart themes
+
+Our charts use a unique token collection, so you will need to adjust chart variable modes separately from components in order to swap themes. To change the variable mode for charts, follow the same steps previously outlined for component theme adjustments. 
 
 ## Best practices
 
