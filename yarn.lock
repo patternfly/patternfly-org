@@ -4946,10 +4946,10 @@ __metadata:
   version: 6.5.0-prerelease.9
   resolution: "@patternfly/react-templates@npm:6.5.0-prerelease.9"
   dependencies:
-    "@patternfly/react-core": "npm:^6.5.0-prerelease.9"
-    "@patternfly/react-icons": "npm:^6.5.0-prerelease.4"
-    "@patternfly/react-styles": "npm:^6.5.0-prerelease.4"
-    "@patternfly/react-tokens": "npm:^6.5.0-prerelease.4"
+    "@patternfly/react-core": "npm:^6.4.0"
+    "@patternfly/react-icons": "npm:^6.4.0"
+    "@patternfly/react-styles": "npm:^6.4.0"
+    "@patternfly/react-tokens": "npm:^6.4.0"
     tslib: "npm:^2.8.1"
   peerDependencies:
     react: ^17 || ^18 || ^19

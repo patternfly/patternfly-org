@@ -1,0 +1,112 @@
+# PatternFly Version Update Workflow
+
+## Context
+This repository contains PatternFly documentation and requires version updates when new PatternFly releases are published.
+
+## Workflow: Update PatternFly Versions
+
+When updating PatternFly versions, follow this exact sequence:
+
+### 1. Update package.json files
+
+Update PatternFly dependencies in these locations (ignore the "site" package):
+
+#### Root package.json
+- Update `devDependencies` section with new PatternFly versions:
+  - `@patternfly/patternfly`
+  - `@patternfly/react-code-editor` 
+  - `@patternfly/react-core`
+  - `@patternfly/react-table`
+
+#### packages/documentation-site/package.json  
+- Update `dependencies` section with new PatternFly versions for all `@patternfly/*` packages
+
+#### packages/documentation-framework/package.json
+- Update `peerDependencies` section with new PatternFly versions:
+  - `@patternfly/patternfly`
+  - `@patternfly/react-code-editor`
+  - `@patternfly/react-core` 
+  - `@patternfly/react-table`
+
+### 2. Update versions.json
+
+Located at: `packages/documentation-framework/versions.json`
+
+#### Steps:
+1. **Create new release object** at the start of the "Releases" array with:
+   - `"name"`: version number from `@patternfly/react-core` (e.g., "6.3.0")
+   - `"date"`: current date in YYYY-MM-DD format
+   - `"latest": true`
+   - `"versions"`: object containing all the new PatternFly package versions
+
+2. **Update previous latest release**:
+   - Find the previous object that had `"latest": true`
+   - Change `"latest": true` to `"hidden": true`
+
+3. **Validation rules**:
+   - Only ONE object should have `"latest": true` after the update
+   - All other objects should have `"hidden": true`
+   - New object must be first in the array
+
+4. **Version inheritance**:
+   - Not all package versions need to be updated at once
+   - If a new version is not provided for a package, use the version from the preexisting "latest" object
+   - Each "versions" field should contain the same list of packages going forward to maintain consistency
+
+#### Expected structure for new release object:
+```json
+{
+  "name": "X.Y.Z",
+  "date": "YYYY-MM-DD", 
+  "latest": true,
+  "versions": {
+    "@patternfly/patternfly": "X.Y.Z",
+    "@patternfly/react-catalog-view-extension": "X.Y.Z",
+    "@patternfly/react-charts": "X.Y.Z",
+    "@patternfly/react-code-editor": "X.Y.Z",
+    "@patternfly/react-component-groups": "X.Y.Z",
+    "@patternfly/react-core": "X.Y.Z",
+    "@patternfly/react-drag-drop": "X.Y.Z",
+    "@patternfly/react-icons": "X.Y.Z",
+    "@patternfly/react-log-viewer": "X.Y.Z",
+    "@patternfly/react-styles": "X.Y.Z",
+    "@patternfly/react-table": "X.Y.Z",
+    "@patternfly/react-tokens": "X.Y.Z",
+    "@patternfly/react-topology": "X.Y.Z",
+    "@patternfly/react-user-feedback": "X.Y.Z",
+    "@patternfly/react-console": "X.Y.Z",
+    "@patternfly/quickstarts": "X.Y.Z",
+    "@patternfly/react-virtualized-extension": "X.Y.Z",
+    "@patternfly/react-templates": "X.Y.Z",
+    "@patternfly/chatbot": "X.Y.Z",
+    "@patternfly/data-view": "X.Y.Z"
+  }
+}
+```
+
+### 3. Verification Checklist
+
+After making changes, verify:
+- [ ] Root package.json devDependencies updated
+- [ ] documentation-site package.json dependencies updated  
+- [ ] documentation-framework package.json peerDependencies updated
+- [ ] site package.json was NOT modified
+- [ ] New release object added at top of versions.json Releases array
+- [ ] New release object has `"latest": true`
+- [ ] Previous latest release now has `"hidden": true`
+- [ ] Only ONE object in versions.json has `"latest": true`
+- [ ] All version numbers are consistent across files
+
+### 4. Common Patterns
+
+When presented with version updates:
+- Use the `@patternfly/react-core` version as the release name
+- Apply the same version pattern across all core PatternFly packages
+- Some packages may have different versioning (like react-charts, chatbot, etc.) - use the provided versions for those
+- Always use current date for new releases
+- Maintain alphabetical order of packages in versions object
+
+### 5. Files to Exclude
+
+- Do NOT modify `packages/site/package.json`
+- Do NOT modify any other package.json files not explicitly mentioned 
