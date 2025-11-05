@@ -34,16 +34,6 @@ const serverConfig = async (env, argv) => {
           test: /(novnc-core|@novnc\/novnc)\/.*\.js/,
           use: 'null-loader'
         },
-        // PostHog and Segment are browser-only and rely on window/document/navigator
-        {
-          test: /(posthog-js|rrweb|@segment\/analytics-next)\/.*\.js/,
-          use: 'null-loader'
-        },
-        // React Flow is browser-only and accesses document.defaultView
-        {
-          test: /(@xyflow\/react|@xyflow\/system)\/.*\.js/,
-          use: 'null-loader'
-        }
       ]
     },
     resolve: {
