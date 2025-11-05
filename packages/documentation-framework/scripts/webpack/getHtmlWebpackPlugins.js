@@ -13,7 +13,7 @@ async function getHtmlWebpackPlugin({ isProd, googleAnalyticsID, algolia, url, t
       title: getTitle(title),
       // Don't prerender fullscreen pages (expensive!)
       prerendering:
-        isProd && !isFullscreen && !url.includes('chatbot') && !url.includes('topology') && !url.includes('extensions')
+        isProd && !isFullscreen && !url.includes('chatbot') && !url.includes('topology') && !url.includes('extensions') && !url.includes('compass')
           ? await prerender(url)
           : null,
       // Don't use GA in dev mode
