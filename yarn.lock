@@ -4495,6 +4495,23 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@patternfly/react-code-editor@npm:^6.1.0":
+  version: 6.4.0
+  resolution: "@patternfly/react-code-editor@npm:6.4.0"
+  dependencies:
+    "@monaco-editor/react": "npm:^4.6.0"
+    "@patternfly/react-core": "npm:^6.4.0"
+    "@patternfly/react-icons": "npm:^6.4.0"
+    "@patternfly/react-styles": "npm:^6.4.0"
+    react-dropzone: "npm:14.3.5"
+    tslib: "npm:^2.8.1"
+  peerDependencies:
+    react: ^17 || ^18 || ^19
+    react-dom: ^17 || ^18 || ^19
+  checksum: 10c0/42a2a119583c40f451cbcc8f60e4c5958b7c1ea110f2a44a4d79335197dec799e0fb1b75ba75472ff833441b551c25f6ede351ec35c9249e5cdc46aee8ff3a6c
+  languageName: node
+  linkType: hard
+
 "@patternfly/react-code-editor@npm:^6.2.2":
   version: 6.2.2
   resolution: "@patternfly/react-code-editor@npm:6.2.2"
@@ -5862,7 +5879,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/d3-drag@npm:*":
+"@types/d3-drag@npm:*, @types/d3-drag@npm:^3.0.7":
   version: 3.0.7
   resolution: "@types/d3-drag@npm:3.0.7"
   dependencies:
@@ -5931,7 +5948,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/d3-interpolate@npm:*, @types/d3-interpolate@npm:^3.0.1":
+"@types/d3-interpolate@npm:*, @types/d3-interpolate@npm:^3.0.1, @types/d3-interpolate@npm:^3.0.4":
   version: 3.0.4
   resolution: "@types/d3-interpolate@npm:3.0.4"
   dependencies:
@@ -5991,6 +6008,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/d3-selection@npm:^3.0.10":
+  version: 3.0.11
+  resolution: "@types/d3-selection@npm:3.0.11"
+  checksum: 10c0/0c512956c7503ff5def4bb32e0c568cc757b9a2cc400a104fc0f4cfe5e56d83ebde2a97821b6f2cb26a7148079d3b86a2f28e11d68324ed311cf35c2ed980d1d
+  languageName: node
+  linkType: hard
+
 "@types/d3-shape@npm:*, @types/d3-shape@npm:^3.1.0":
   version: 3.1.6
   resolution: "@types/d3-shape@npm:3.1.6"
@@ -6030,7 +6054,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/d3-zoom@npm:*":
+"@types/d3-transition@npm:^3.0.8":
+  version: 3.0.9
+  resolution: "@types/d3-transition@npm:3.0.9"
+  dependencies:
+    "@types/d3-selection": "npm:*"
+  checksum: 10c0/4f68b9df7ac745b3491216c54203cbbfa0f117ae4c60e2609cdef2db963582152035407fdff995b10ee383bae2f05b7743493f48e1b8e46df54faa836a8fb7b5
+  languageName: node
+  linkType: hard
+
+"@types/d3-zoom@npm:*, @types/d3-zoom@npm:^3.0.8":
   version: 3.0.8
   resolution: "@types/d3-zoom@npm:3.0.8"
   dependencies:
@@ -6570,6 +6603,37 @@ __metadata:
   version: 0.0.18
   resolution: "@vscode/l10n@npm:0.0.18"
   checksum: 10c0/d1fc797001f7d508ab3fa91175f7a50ea98516c4e47830ff2be79163cde9279279514a167a3bad15b7ab7fc243e7808d8f32d3eb41f4a7d6721d9dfdbb38d89e
+  languageName: node
+  linkType: hard
+
+"@xyflow/react@npm:^12.9.0":
+  version: 12.9.2
+  resolution: "@xyflow/react@npm:12.9.2"
+  dependencies:
+    "@xyflow/system": "npm:0.0.72"
+    classcat: "npm:^5.0.3"
+    zustand: "npm:^4.4.0"
+  peerDependencies:
+    react: ">=17"
+    react-dom: ">=17"
+  checksum: 10c0/1cef85006f4581ce1b8bc077361661a789a1c127fd22676d24d3b54949cd195ccbbbaf0199b553acc8e139d4d845aeab3fc4f86f25545ac52a4145fe94c8631c
+  languageName: node
+  linkType: hard
+
+"@xyflow/system@npm:0.0.72":
+  version: 0.0.72
+  resolution: "@xyflow/system@npm:0.0.72"
+  dependencies:
+    "@types/d3-drag": "npm:^3.0.7"
+    "@types/d3-interpolate": "npm:^3.0.4"
+    "@types/d3-selection": "npm:^3.0.10"
+    "@types/d3-transition": "npm:^3.0.8"
+    "@types/d3-zoom": "npm:^3.0.8"
+    d3-drag: "npm:^3.0.0"
+    d3-interpolate: "npm:^3.0.1"
+    d3-selection: "npm:^3.0.0"
+    d3-zoom: "npm:^3.0.0"
+  checksum: 10c0/832f2b0bacb8bd4403e9c5ec8a205758b1ee54dc2bcf580477f2b7de1a01accca0485a32b7dedfc13da7893f4be914b486882ce6481a151b86a29b1ba1579a6d
   languageName: node
   linkType: hard
 
@@ -8357,6 +8421,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"classcat@npm:^5.0.3":
+  version: 5.0.5
+  resolution: "classcat@npm:5.0.5"
+  checksum: 10c0/ff8d273055ef9b518529cfe80fd0486f7057a9917373807ff802d75ceb46e8f8e148f41fa094ee7625c8f34642cfaa98395ff182d9519898da7cbf383d4a210d
+  languageName: node
+  linkType: hard
+
 "classnames@npm:^2.2.5":
   version: 2.5.1
   resolution: "classnames@npm:2.5.1"
@@ -9377,7 +9448,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"d3-drag@npm:2 - 3, d3-drag@npm:3":
+"d3-drag@npm:2 - 3, d3-drag@npm:3, d3-drag@npm:^3.0.0":
   version: 3.0.0
   resolution: "d3-drag@npm:3.0.0"
   dependencies:
@@ -9542,7 +9613,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"d3-selection@npm:2 - 3, d3-selection@npm:3":
+"d3-selection@npm:2 - 3, d3-selection@npm:3, d3-selection@npm:^3.0.0":
   version: 3.0.0
   resolution: "d3-selection@npm:3.0.0"
   checksum: 10c0/e59096bbe8f0cb0daa1001d9bdd6dbc93a688019abc97d1d8b37f85cd3c286a6875b22adea0931b0c88410d025563e1643019161a883c516acf50c190a11b56b
@@ -9621,7 +9692,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"d3-zoom@npm:3":
+"d3-zoom@npm:3, d3-zoom@npm:^3.0.0":
   version: 3.0.0
   resolution: "d3-zoom@npm:3.0.0"
   dependencies:
@@ -18023,6 +18094,7 @@ __metadata:
     "@patternfly/react-topology": "npm:6.4.0"
     "@patternfly/react-user-feedback": "npm:6.2.0"
     "@patternfly/react-virtualized-extension": "npm:6.1.0"
+    "@xyflow/react": "npm:^12.9.0"
     classnames: "npm:^2.2.5"
     echarts: "npm:^5.6.0"
     file-saver: "npm:^2.0.5"
@@ -22817,6 +22889,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"use-sync-external-store@npm:^1.2.2":
+  version: 1.6.0
+  resolution: "use-sync-external-store@npm:1.6.0"
+  peerDependencies:
+    react: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0
+  checksum: 10c0/35e1179f872a53227bdf8a827f7911da4c37c0f4091c29b76b1e32473d1670ebe7bcd880b808b7549ba9a5605c233350f800ffab963ee4a4ee346ee983b6019b
+  languageName: node
+  linkType: hard
+
 "util-deprecate@npm:^1.0.1, util-deprecate@npm:^1.0.2, util-deprecate@npm:~1.0.1":
   version: 1.0.2
   resolution: "util-deprecate@npm:1.0.2"
@@ -24520,6 +24601,26 @@ __metadata:
   dependencies:
     tslib: "npm:2.3.0"
   checksum: 10c0/c794e05ee969c750de6d17cfff60d9d4e6342d1591cf6ba3e488fb084ac7a0415355fe4aec55f83a400fd4cda63792db0533362455058ac06f6e1343be28d0ce
+  languageName: node
+  linkType: hard
+
+"zustand@npm:^4.4.0":
+  version: 4.5.7
+  resolution: "zustand@npm:4.5.7"
+  dependencies:
+    use-sync-external-store: "npm:^1.2.2"
+  peerDependencies:
+    "@types/react": ">=16.8"
+    immer: ">=9.0.6"
+    react: ">=16.8"
+  peerDependenciesMeta:
+    "@types/react":
+      optional: true
+    immer:
+      optional: true
+    react:
+      optional: true
+  checksum: 10c0/55559e37a82f0c06cadc61cb08f08314c0fe05d6a93815e41e3376130c13db22a5017cbb0cd1f018c82f2dad0051afe3592561d40f980bd4082e32005e8a950c
   languageName: node
   linkType: hard
 

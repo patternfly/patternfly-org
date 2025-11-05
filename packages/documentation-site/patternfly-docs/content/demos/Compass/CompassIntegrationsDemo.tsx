@@ -233,29 +233,29 @@ export const CompassIntegrationsDemo: React.FunctionComponent = () => {
         <ActionListGroup>
           <ActionListItem>
             <Tooltip content="Play">
-              <Button variant="plain" icon={<PlayIcon />} aria-label="Play" />
+              <Button isCircle variant="plain" icon={<PlayIcon />} aria-label="Play" />
             </Tooltip>
           </ActionListItem>
           <ActionListItem>
             <Tooltip content="Add">
-              <Button variant="plain" icon={<OutlinedPlusSquare />} aria-label="Add" />
+              <Button isCircle variant="plain" icon={<OutlinedPlusSquare />} aria-label="Add" />
             </Tooltip>
           </ActionListItem>
         </ActionListGroup>
         <ActionListItem>
           <Tooltip content="Copy">
-            <Button variant="plain" icon={<OutlinedCopy />} aria-label="Copy" />
+            <Button className="pf-v6-m-ai-indicator" isCircle variant="plain" icon={<OutlinedCopy />} aria-label="Copy" />
           </Tooltip>
         </ActionListItem>
         <ActionListGroup>
           <ActionListItem>
             <Tooltip content="Help">
-              <Button variant="plain" icon={<OutlinedQuestionCircleIcon />} aria-label="Help" />
+              <Button isCircle variant="plain" icon={<OutlinedQuestionCircleIcon />} aria-label="Help" />
             </Tooltip>
           </ActionListItem>
           <ActionListItem>
             <Tooltip content="Second copy">
-              <Button variant="plain" icon={<OutlinedCopy />} aria-label="Copy2" />
+              <Button isCircle variant="plain" icon={<OutlinedCopy />} aria-label="Copy2" />
             </Tooltip>
           </ActionListItem>
         </ActionListGroup>
@@ -577,13 +577,14 @@ export const CompassIntegrationsDemo: React.FunctionComponent = () => {
   const sidebarEndContent = sidebarContent;
   const footerContent = (
     <CompassMessageBar>
-      <CompassPanel isPill hasNoPadding isThinking={isThinking}>
+      <CompassPanel isPill hasNoPadding>
         <MessageBar
-          className={`ai-border ${isThinking ? "thinking" : ""}`}
           isCompact
           onSendMessage={handleSendMessage}
           alwayShowSendButton
           hasAttachButton={false}
+          hasAiIndicator
+          isThinking={isThinking}
         />
       </CompassPanel>
     </CompassMessageBar>
