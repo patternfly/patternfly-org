@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.4.0-alpha.305 (2025-11-03)
+
+
+### Features
+
+* RSpack to improve performance. ([#4798](https://github.com/patternfly/patternfly-org/issues/4798)) ([aa4f948](https://github.com/patternfly/patternfly-org/commit/aa4f94852ef12d68e9424336df327a4d9849420a))
+
+
+
+
+
+# 1.4.0-alpha.304 (2025-10-31)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
 # 1.4.0-alpha.303 (2025-10-28)
 
 
