@@ -38,6 +38,11 @@ const serverConfig = async (env, argv) => {
         {
           test: /(posthog-js|rrweb|@segment\/analytics-next)\/.*\.js/,
           use: 'null-loader'
+        },
+        // React Flow is browser-only and accesses document.defaultView
+        {
+          test: /(@xyflow\/react|@xyflow\/system)\/.*\.js/,
+          use: 'null-loader'
         }
       ]
     },
