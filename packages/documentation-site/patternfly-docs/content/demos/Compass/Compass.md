@@ -25,7 +25,6 @@ import OutlinedQuestionCircleIcon from '@patternfly/react-icons/dist/esm/icons/o
 
 import wallpaperLight from './assets/wallpaper-light.png'
 import wallpaperDark from './assets/wallpaper-dark.png'
-import pfLogo from './assets/PF-HorizontalLogo-Color.svg';
 import imgAvatar from './assets/avatar.jpg';
 
 import {
