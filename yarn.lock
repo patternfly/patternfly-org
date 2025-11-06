@@ -4285,7 +4285,7 @@ __metadata:
     webpack-dev-server: "npm:5.2.2"
     webpack-merge: "npm:5.8.0"
   peerDependencies:
-    "@patternfly/patternfly": ^6.5.0-prerelease.19
+    "@patternfly/patternfly": ^6.5.0-prerelease.20
     "@patternfly/react-code-editor": ^6.5.0-prerelease.9
     "@patternfly/react-core": ^6.5.0-prerelease.9
     "@patternfly/react-table": ^6.5.0-prerelease.9
@@ -4365,7 +4365,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@patternfly/patternfly@npm:6.5.0-prerelease.19, @patternfly/patternfly@npm:^6.5.0-prerelease.19":
+"@patternfly/patternfly@npm:6.5.0-prerelease.19":
   version: 6.5.0-prerelease.19
   resolution: "@patternfly/patternfly@npm:6.5.0-prerelease.19"
   checksum: 10c0/581e18b078e146ad72553f8fb1177ffe84e7bfbeb5920f8e7ce7da22dd9c9334fee850cf7e8fe274a8dee72a9b1608aad5cbcc5679b52275970e2801669f56ab
@@ -4376,6 +4376,13 @@ __metadata:
   version: 6.2.3
   resolution: "@patternfly/patternfly@npm:6.2.3"
   checksum: 10c0/f9be9e21fd16270529a8f4ff8b9666496b629c61fbeec1ea642533a3d9cea1076f984c1ebb2c0b40e8cad661dbde5af874f079cfafdd07dc0b6a766f1fbdb5d7
+  languageName: node
+  linkType: hard
+
+"@patternfly/patternfly@npm:^6.5.0-prerelease.20":
+  version: 6.5.0-prerelease.20
+  resolution: "@patternfly/patternfly@npm:6.5.0-prerelease.20"
+  checksum: 10c0/b9bfad6e22009e1d3c97cddbdba01f0b0515115f518485c7d11385cd59c133899321a353dda2dd078ae906ae7796e91e707885a180817a23aba71122d9412c72
   languageName: node
   linkType: hard
 
@@ -18043,7 +18050,7 @@ __metadata:
   resolution: "patternfly-org-workspace@workspace:."
   dependencies:
     "@octokit/rest": "npm:^19.0.7"
-    "@patternfly/patternfly": "npm:^6.5.0-prerelease.19"
+    "@patternfly/patternfly": "npm:^6.5.0-prerelease.20"
     "@patternfly/react-code-editor": "npm:^6.5.0-prerelease.9"
     "@patternfly/react-core": "npm:^6.5.0-prerelease.9"
     "@patternfly/react-table": "npm:^6.5.0-prerelease.9"
