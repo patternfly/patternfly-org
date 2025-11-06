@@ -250,9 +250,17 @@ export const CompassBasic: React.FunctionComponent = () => {
     </CompassMessageBar>
   );
 
+  const skipToContentClick = (e: React.MouseEvent<HTMLDivElement>) => {
+    e.preventDefault();
+    const mainContent = document.getElementById('main');
+    if (mainContent) {
+      mainContent.focus();
+    }
+  };
+
   return (
     <>
-      <SkipToContent href="#main">Skip to content</SkipToContent>
+      <SkipToContent onClick={skipToContentClick} href="#main">Skip to content</SkipToContent>
       <Compass
         header={northContent}
         sidebarStart={westContent}
