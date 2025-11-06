@@ -116,7 +116,7 @@ export const RecentActivityCard: React.FunctionComponent = () => {
                     </Button>
                   </Td>
                   <Td>
-                    <ProgressStepper isCompact aria-label={`Progress for ${activity.name}`}>
+                    <ProgressStepper isCompact aria-label={`Progress for activity ${activity.name} in project ${activity.project}`}>
                       {activity.progress.map((stepVariant, stepIndex) => (
                         <ProgressStep
                           id={`progress-step-${rowIndex}-${stepVariant}-${stepIndex}`}
@@ -147,7 +147,7 @@ export const RecentActivityCard: React.FunctionComponent = () => {
                           variant="plain"
                           onClick={() => {}}
                           isExpanded={false}
-                          aria-label={`${activity.name} options`}
+                          aria-label={`Options for activity ${activity.name} in project ${activity.project}`}
                         >
                           <EllipsisVIcon />
                         </MenuToggle>
