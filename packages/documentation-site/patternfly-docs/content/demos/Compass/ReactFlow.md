@@ -23,11 +23,11 @@ import {
 import "@xyflow/react/dist/style.css";
 import "./reactFlowOverrides.css";
 
-### React flow
+### React Flow
 
-The React flow package `@xyflow/react` is compatible with Patternfly through customization of its [theme](https://reactflow.dev/learn/customization/theming) and [rendered nodes](https://reactflow.dev/learn/customization/custom-nodes). A custom override stylesheet can assign Patternfly's global tokens to react flow's own tokens to ensure a consistent styling. The following is a basic list of overrides used by the example, which also renders custom nodes using Patternfly's `Card` components:
+The React Flow package `@xyflow/react` is compatible with PatternFly through customization of its [theme](https://reactflow.dev/learn/customization/theming) and [rendered nodes](https://reactflow.dev/learn/customization/custom-nodes). A custom override stylesheet can assign PatternFly's global tokens to React Flow's own tokens to ensure a consistent styling. The following is a basic list of overrides used by the example, which also renders custom nodes using PatternFly's `Card` components:
 
-| React flow token | Patternfly token suggestion |
+| React Flow token | PatternFly token suggestion |
 | --- | --- |
 | --xy-node-border-radius-default | var(--pf-t--global--border--radius--medium) |
 | --xy-edge-stroke-default | var(--pf-t--global--border--color--default) |

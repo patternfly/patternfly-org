@@ -70,6 +70,7 @@ export const RHAiExperienceIcon: React.FunctionComponent = () => {
       width="1em"
       height="1em"
       viewBox="0 0 32 32"
+      aria-hidden="true"
     >
       <g id="uuid-75f76c23-c1b6-4d16-98c6-ad548b061af4">
         <rect width="32" height="32" fill="none" />
@@ -97,6 +98,7 @@ export const RHAutomationsLogo: React.FunctionComponent = () => {
         viewBox="0 0 192 39"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        aria-hidden="true"
       >
         <path
           d="M33.3807 22.9001C36.6672 22.9001 41.4287 22.2167 41.4287 18.2926C41.4287 17.9865 41.4209 17.6883 41.3472 17.3901L39.3885 8.85069C38.9336 6.97444 38.5392 6.11944 35.2501 4.47014C32.7023 3.16125 27.1468 1 25.5035 1C23.9733 1 23.5211 2.98972 21.7069 2.98972C19.8927 2.98972 18.6465 1.51194 17.0032 1.51194C15.3599 1.51194 14.395 2.59389 13.6036 4.81056C13.6036 4.81056 11.3924 11.0674 11.1085 11.9778C11.0506 12.1493 11.0506 12.3393 11.0506 12.4897C11.0506 14.9228 20.5921 22.9001 33.3833 22.9001M41.9414 19.8839C42.3963 22.0451 42.3963 22.2721 42.3963 22.5571C42.3963 26.2542 38.2579 28.3019 32.818 28.3019C20.5185 28.3019 9.74918 21.0767 9.74918 16.3003C9.74918 15.5614 9.92008 14.8779 10.1462 14.366C5.72383 14.5929 0 15.3899 0 20.4539C0 28.7585 19.6114 39 35.1396 39C47.0421 39 50.0447 33.5956 50.0447 29.3285C50.0447 25.9718 47.1552 22.1612 41.9388 19.8839"
@@ -186,7 +188,7 @@ export const RHAutomationsLogo: React.FunctionComponent = () => {
 export const CompassIntegrationsDemo: React.FunctionComponent = () => {
   const [isThinking, setIsThinking] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  const [activeDisplay, setActiveDisplay] = useState<"table" | "card" | "add">("table");
+  const [activeDisplay, setActiveDisplay] = useState<"table" | "card">("table");
 
   const integrations = [
     {
@@ -336,7 +338,7 @@ export const CompassIntegrationsDemo: React.FunctionComponent = () => {
           isNav
           onSelect={() => {}}
           component={TabsComponent.nav}
-          aria-label="Compass navigation tabs"
+          aria-label="Compass global"
           inset={{ default: 'insetXl' }}
         >
           <Tab eventKey={0} title={<TabTitleText>Tab 1</TabTitleText>} />
@@ -365,7 +367,7 @@ export const CompassIntegrationsDemo: React.FunctionComponent = () => {
         </ActionListGroup>
         <ActionListItem>
           <Tooltip content="Chat with AI">
-            <Button variant="plain" icon={<Icon style={{translate: ".05em .1em; scale: 1.1"}}><RHAiExperienceIcon /></Icon>} aria-label="Chat" isCircle className="pf-v6-m-ai-indicator" />
+            <Button variant="plain" icon={<Icon style={{translate: ".05em .1em; scale: 1.1"}}><RHAiExperienceIcon /></Icon>} aria-label="Chat with AI" isCircle className="pf-v6-m-ai-indicator" />
           </Tooltip>
         </ActionListItem>
         <ActionListGroup>
@@ -465,7 +467,7 @@ export const CompassIntegrationsDemo: React.FunctionComponent = () => {
           <ToggleGroup>
             <ToggleGroupItem
               icon={<ThIcon />}
-              aria-label="grid icon button"
+              aria-label="Grid view"
               isSelected={activeDisplay === "card"}
               onChange={() => {
                 setActiveDisplay("card");
@@ -473,7 +475,7 @@ export const CompassIntegrationsDemo: React.FunctionComponent = () => {
             ></ToggleGroupItem>
             <ToggleGroupItem
               icon={<ListIcon />}
-              aria-label="list icon button"
+              aria-label="Table view"
               isSelected={activeDisplay === "table"}
               onChange={() => {
                 setActiveDisplay("table");
@@ -527,7 +529,7 @@ export const CompassIntegrationsDemo: React.FunctionComponent = () => {
             </CardHeader>
             <CardBody isFilled>{product.description}</CardBody>
             <CardBody>
-              <DescriptionList aria-label="Details">
+              <DescriptionList aria-label={`${product.name} details`}>
                 <DescriptionListGroup>
                   <DescriptionListTerm>Status</DescriptionListTerm>
                   <DescriptionListDescription>
@@ -594,6 +596,7 @@ export const CompassIntegrationsDemo: React.FunctionComponent = () => {
               rowIndex: index,
               onSelect: () => { },
               isSelected: false,
+              'aria-label': `Select row ${name}`,
             },
           },
         },
@@ -633,12 +636,19 @@ export const CompassIntegrationsDemo: React.FunctionComponent = () => {
         select: {
           onSelect: () => { },
           isSelected: false,
+          'aria-label': "Select all",
         },
       },
     },
     "Name",
     "Type",
     "Status",
+    {
+      cell: undefined,
+      props: {
+        screenReaderText: "Actions",
+      },
+    }
   ];
 
   const tableViewContent = (
@@ -671,7 +681,7 @@ export const CompassIntegrationsDemo: React.FunctionComponent = () => {
         pagination={<Pagination page={1} perPage={10} isCompact />}
       />
       <DataViewTable
-        aria-label="Integrations table"
+        aria-label="Integrations"
         columns={columns}
         rows={rows}
         className="pf-m-plain"
@@ -688,7 +698,7 @@ export const CompassIntegrationsDemo: React.FunctionComponent = () => {
               <ToolbarItem>
                 <Button
                   variant="primary"
-                  onClick={() => setActiveDisplay("add")}
+                  onClick={() => {}}
                 >
                   Add integration
                 </Button>
@@ -699,7 +709,7 @@ export const CompassIntegrationsDemo: React.FunctionComponent = () => {
             </ToolbarGroup>
             <ToolbarGroup>
               <ToolbarItem>
-                <Button icon={<EllipsisVIcon />} variant="plain" />
+                <Button icon={<EllipsisVIcon />} variant="plain" aria-label="More options" />
               </ToolbarItem>
             </ToolbarGroup>
           </ToolbarContent>

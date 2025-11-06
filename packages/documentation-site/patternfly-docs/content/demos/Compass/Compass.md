@@ -29,15 +29,15 @@ import imgAvatar from './assets/avatar.jpg';
 
 ## Demo notes
 
-To facilitate building a compass layout, there several useful variants and props exposed on other Patternfly components that may be useful:
+To facilitate building a compass layout, there several are useful variants and props exposed on other PatternFly components that may be useful:
 
-- `isPlain` on both [DataList](/components/data-list#plain) and [Table](/components/table#table-plain). This flag will set a transparent background for these components, allow the glass effect in a wrapping `CompassPanel` to appear as the background.
+- `isPlain` on both [DataList](/components/data-list#plain) and [Table](/components/table#table-plain). This flag will set a transparent background for these components, allowing the glass effect in a wrapping `CompassPanel` to appear as the background.
 - `isVertical` on [ActionList](/components/action-list#vertical-action-list). This flag sets the orientation on `ActionList` to support vertical icon lists for the sidebars.
 - `isNav` on [Tabs](/components/tabs#tabs-used-for-site-navigation). This flag enables a new styling of `Tabs` to be used as a top site navigation.
 - `isCircle` on [Button](/components/button#circle-buttons) and [MenuToggle](/components/menus/menu-toggle#plain-circle-toggle). This flag sets a border radius on the `Button` and `MenuToggle`, allowing buttons and plain icon menu toggles to be circular and typical menu toggles to be a pill shape.
 - `isPill` on [Drawer](/components/drawer#pill). This flag sets a border radius and inset on the `Drawer`, giving it a more floating look.
 - `subtitle` on [CardTitle](/components/card#card-with-subtitle). This prop allows a smaller text description to be set in a `Card`'s title easily.
-- `isThinking` or `pf-v6-m-thinking` on `CompassPanel` and [MessageBar](/patternfly-ai/chatbot/ui/#message-bar-with-ai-indicator-styles). This prop, or class name, may be set to turn on a pusling color animation around the component.
+- `isThinking` or `pf-v6-m-thinking` on `CompassPanel` and [MessageBar](/patternfly-ai/chatbot/ui/#message-bar-with-ai-indicator-styles). This prop, or class name, may be set to turn on a pulsing color animation around the component.
 - `hasAiIndicator` or `pf-v6-m-ai-indicator` on [MessageBar](/patternfly-ai/chatbot/ui/#message-bar-with-ai-indicator-styles). This prop, or class name, may be set to enable a gradient border around the component.
 
 ### Card and dataview layout

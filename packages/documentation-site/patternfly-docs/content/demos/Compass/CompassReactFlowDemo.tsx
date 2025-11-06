@@ -53,7 +53,7 @@ const PFCardNode = memo(
                   alignItems: "center",
                 }}
               >
-                <Title headingLevel="h4" size="lg">
+                <Title headingLevel="h2" size="lg">
                   {data.title}
                 </Title>
                 <Badge isRead>{data.status}</Badge>
