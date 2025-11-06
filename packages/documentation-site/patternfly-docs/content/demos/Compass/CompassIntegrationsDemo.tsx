@@ -43,7 +43,12 @@ import {
   Avatar,
   Icon,
   SkipToContent,
-  Switch
+  Switch,
+  DrawerPanelContent,
+  DrawerHead,
+  DrawerActions,
+  DrawerCloseButton,
+  DrawerPanelBody
 } from '@patternfly/react-core';
 import { ActionsColumn } from '@patternfly/react-table';
 import { DataViewToolbar } from '@patternfly/react-data-view/dist/dynamic/DataViewToolbar';
@@ -191,6 +196,11 @@ export const CompassIntegrationsDemo: React.FunctionComponent = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [activeDisplay, setActiveDisplay] = useState<"table" | "card">("table");
   const [isGlassTheme, setIsGlassTheme] = useState(true);
+  const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+
+  const onDrawerToggle = () => {
+    setIsDrawerOpen(!isDrawerOpen);
+  };
 
   useEffect(() => {
     if (isGlassTheme) {
@@ -708,13 +718,10 @@ export const CompassIntegrationsDemo: React.FunctionComponent = () => {
               <ToolbarItem>
                 <Button
                   variant="primary"
-                  onClick={() => {}}
+                  onClick={onDrawerToggle}
                 >
-                  Add integration
+                  Toggle drawer
                 </Button>
-              </ToolbarItem>
-              <ToolbarItem>
-                <Button variant="secondary">Test integration</Button>
               </ToolbarItem>
             </ToolbarGroup>
             <ToolbarGroup>
@@ -765,35 +772,54 @@ export const CompassIntegrationsDemo: React.FunctionComponent = () => {
     }
   };
 
+  const drawerContent = (
+     <DrawerPanelContent>
+      <DrawerHead>
+        <span>Content Details</span>
+        <DrawerActions>
+          <DrawerCloseButton onClick={onDrawerToggle} />
+        </DrawerActions>
+      </DrawerHead>
+      <DrawerPanelBody>
+        <Content component="h3">Content Information</Content>
+        <Content component="p">
+          This drawer contains detailed information about the content.
+        </Content>
+      </DrawerPanelBody>
+    </DrawerPanelContent>
+  );
+
   return (
     <>
       <SkipToContent onClick={handleClick} href="#integrations-main-content">
         Skip to content
       </SkipToContent>
       <Compass
-      header={headerContent}
-      sidebarStart={startSidebarContent}
-      main={mainContent}
-      sidebarEnd={endSidebarContent}
-      footer={footerContent}
-      backgroundSrcDark={wallpaperDark}
-      backgroundSrcLight={wallpaperLight}
-    />
-      <div
-        style={{
-          position: 'absolute',
-          bottom: '1rem',
-          right: '1rem',
-          zIndex: 1000
-        }}
-      >
-        <Switch
-          id="glass-theme-toggle"
-          label="Glass theme"
-          isChecked={isGlassTheme}
-          onChange={(_, checked) => setIsGlassTheme(checked)}
-        />
-      </div>
-    </>
+        header={headerContent}
+        sidebarStart={startSidebarContent}
+        main={mainContent}
+        sidebarEnd={endSidebarContent}
+        footer={footerContent}
+        backgroundSrcDark={wallpaperDark}
+        backgroundSrcLight={wallpaperLight}
+        drawerContent={drawerContent}
+        drawerProps={{ isExpanded: isDrawerOpen, isPill: true }}
+      />
+        <div
+          style={{
+            position: 'absolute',
+            bottom: '1rem',
+            right: '1rem',
+            zIndex: 1000
+          }}
+        >
+          <Switch
+            id="glass-theme-toggle"
+            label="Glass theme"
+            isChecked={isGlassTheme}
+            onChange={(_, checked) => setIsGlassTheme(checked)}
+          />
+        </div>
+      </>
   );
 };
