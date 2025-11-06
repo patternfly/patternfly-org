@@ -37,12 +37,12 @@ import {
   Dropdown,
   MenuToggle,
   MenuToggleElement,
-  Brand,
   DropdownItem,
   DropdownList,
   Flex,
   Avatar,
   Icon,
+  SkipToContent
 } from '@patternfly/react-core';
 import { ActionsColumn } from '@patternfly/react-table';
 import { DataViewToolbar } from '@patternfly/react-data-view/dist/dynamic/DataViewToolbar';
@@ -691,7 +691,7 @@ export const CompassIntegrationsDemo: React.FunctionComponent = () => {
 
   const mainContent = (
     <>
-      <CompassMainHeader title={<Title headingLevel="h1">Integrations</Title>} toolbar={(
+      <CompassMainHeader id="integrations-main-header" title={<Title headingLevel="h1">Integrations</Title>} toolbar={(
         <Toolbar hasNoPadding>
           <ToolbarContent>
             <ToolbarGroup>
@@ -746,8 +746,21 @@ export const CompassIntegrationsDemo: React.FunctionComponent = () => {
     </CompassMessageBar>
   );
 
+  const handleClick = (e) => {
+    e.preventDefault();
+    const mainContentElement = document.getElementById('#integrations-main-header');
+    if (mainContentElement) {
+      mainContentElement.focus();
+      mainContentElement.scrollIntoView();
+    }
+  };
+
   return (
-    <Compass
+    <>
+      <SkipToContent onClick={handleClick} href="#integrations-main-header">
+        Skip to content
+      </SkipToContent>
+      <Compass
       header={headerContent}
       sidebarStart={startSidebarContent}
       main={mainContent}
@@ -756,5 +769,6 @@ export const CompassIntegrationsDemo: React.FunctionComponent = () => {
       backgroundSrcDark={wallpaperDark}
       backgroundSrcLight={wallpaperLight}
     />
+    </>
   );
 };
