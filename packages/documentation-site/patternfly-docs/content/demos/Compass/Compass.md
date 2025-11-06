@@ -6,7 +6,7 @@ subsection: Generative UIs
 
 ## Demo
 
-import { useState, memo, useCallback, useRef } from 'react';
+import { useState, memo, useCallback, useRef, useEffect } from 'react';
 
 import { ActionsColumn } from "@patternfly/react-table";
 import { DataViewTable } from "@patternfly/react-data-view/dist/dynamic/DataViewTable";

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import {
   Compass,
   CompassHeader,
@@ -42,7 +42,8 @@ import {
   Flex,
   Avatar,
   Icon,
-  SkipToContent
+  SkipToContent,
+  Switch
 } from '@patternfly/react-core';
 import { ActionsColumn } from '@patternfly/react-table';
 import { DataViewToolbar } from '@patternfly/react-data-view/dist/dynamic/DataViewToolbar';
@@ -189,6 +190,15 @@ export const CompassIntegrationsDemo: React.FunctionComponent = () => {
   const [isThinking, setIsThinking] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [activeDisplay, setActiveDisplay] = useState<"table" | "card">("table");
+  const [isGlassTheme, setIsGlassTheme] = useState(true);
+
+  useEffect(() => {
+    if (isGlassTheme) {
+      document.documentElement.classList.add('pf-v6-theme-glass');
+    } else {
+      document.documentElement.classList.remove('pf-v6-theme-glass');
+    }
+  }, [isGlassTheme]);
 
   const integrations = [
     {
@@ -769,6 +779,21 @@ export const CompassIntegrationsDemo: React.FunctionComponent = () => {
       backgroundSrcDark={wallpaperDark}
       backgroundSrcLight={wallpaperLight}
     />
+      <div
+        style={{
+          position: 'absolute',
+          bottom: '1rem',
+          right: '1rem',
+          zIndex: 1000
+        }}
+      >
+        <Switch
+          id="glass-theme-toggle"
+          label="Glass theme"
+          isChecked={isGlassTheme}
+          onChange={(_, checked) => setIsGlassTheme(checked)}
+        />
+      </div>
     </>
   );
 };
