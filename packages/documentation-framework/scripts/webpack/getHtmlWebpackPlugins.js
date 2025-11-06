@@ -18,7 +18,7 @@ async function getHtmlWebpackPlugin({ isProd, googleAnalyticsID, algolia, url, t
         !url.includes('chatbot') &&
         !url.includes('topology') &&
         !url.includes('extensions') &&
-        !url.includes('compass')
+        !url.includes('generative-uis')
           ? await prerender(url)
           : null,
       // Don't use GA in dev mode
