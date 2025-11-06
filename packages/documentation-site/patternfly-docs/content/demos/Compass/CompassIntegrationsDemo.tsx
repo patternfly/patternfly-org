@@ -364,8 +364,8 @@ export const CompassIntegrationsDemo: React.FunctionComponent = () => {
           </ActionListItem>
         </ActionListGroup>
         <ActionListItem>
-          <Tooltip content="Copy">
-            <Button variant="plain" icon={<Icon style={{translate: ".05em .1em; scale: 1.1"}}><RHAiExperienceIcon /></Icon>} aria-label="Copy" isCircle className="pf-v6-m-ai-indicator" />
+          <Tooltip content="Chat with AI">
+            <Button variant="plain" icon={<Icon style={{translate: ".05em .1em; scale: 1.1"}}><RHAiExperienceIcon /></Icon>} aria-label="Chat" isCircle className="pf-v6-m-ai-indicator" />
           </Tooltip>
         </ActionListItem>
         <ActionListGroup>
@@ -375,8 +375,8 @@ export const CompassIntegrationsDemo: React.FunctionComponent = () => {
             </Tooltip>
           </ActionListItem>
           <ActionListItem>
-            <Tooltip content="Second copy">
-              <Button variant="plain" icon={<OutlinedCopy />} aria-label="Copy2" isCircle />
+            <Tooltip content="Copy">
+              <Button variant="plain" icon={<OutlinedCopy />} aria-label="Copy" isCircle />
             </Tooltip>
           </ActionListItem>
         </ActionListGroup>
@@ -399,8 +399,8 @@ export const CompassIntegrationsDemo: React.FunctionComponent = () => {
             </Tooltip>
           </ActionListItem>
           <ActionListItem>
-            <Tooltip content="Help">
-              <Button variant="plain" icon={<OutlinedQuestionCircleIcon />} aria-label="Help" isCircle />
+            <Tooltip content="Other help icon">
+              <Button variant="plain" icon={<OutlinedQuestionCircleIcon />} aria-label="Other help" isCircle />
             </Tooltip>
           </ActionListItem>
         </ActionListGroup>
@@ -729,6 +729,9 @@ export const CompassIntegrationsDemo: React.FunctionComponent = () => {
           hasAiIndicator
           isThinking={isThinking}
         />
+        <div aria-live="polite" className="pf-v6-screen-reader">
+          {isThinking ? "Ai is thinking..." : "Ai is ready to chat"}
+        </div>
       </CompassPanel>
     </CompassMessageBar>
   );
