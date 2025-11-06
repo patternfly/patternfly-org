@@ -18,7 +18,7 @@
     "screenshots": "pf-docs-framework screenshots"
   },
   "dependencies": {
-    "@patternfly/chatbot": "6.4.0",
+    "@patternfly/chatbot": "6.5.0-prerelease.10",
     "@patternfly/design-tokens": "1.14.3",
     "@patternfly/documentation-framework": "workspace:*",
     "@patternfly/quickstarts": "6.4.0",
