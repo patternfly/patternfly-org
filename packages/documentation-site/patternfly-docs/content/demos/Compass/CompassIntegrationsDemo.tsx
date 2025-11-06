@@ -691,7 +691,7 @@ export const CompassIntegrationsDemo: React.FunctionComponent = () => {
 
   const mainContent = (
     <>
-      <CompassMainHeader id="integrations-main-header" title={<Title headingLevel="h1">Integrations</Title>} toolbar={(
+      <CompassMainHeader title={<Title headingLevel="h1">Integrations</Title>} toolbar={(
         <Toolbar hasNoPadding>
           <ToolbarContent>
             <ToolbarGroup>
@@ -716,7 +716,7 @@ export const CompassIntegrationsDemo: React.FunctionComponent = () => {
         </Toolbar>
       )} />
       <CompassContent>
-        <CompassPanel isScrollable>
+        <CompassPanel isScrollable id="integrations-main-content" tabIndex={-1}>
           {(() => {
             if (activeDisplay === "table") {
               return tableViewContent;
@@ -748,7 +748,7 @@ export const CompassIntegrationsDemo: React.FunctionComponent = () => {
 
   const handleClick = (e) => {
     e.preventDefault();
-    const mainContentElement = document.getElementById('#integrations-main-header');
+    const mainContentElement = document.getElementById('integrations-main-content');
     if (mainContentElement) {
       mainContentElement.focus();
       mainContentElement.scrollIntoView();
@@ -757,7 +757,7 @@ export const CompassIntegrationsDemo: React.FunctionComponent = () => {
 
   return (
     <>
-      <SkipToContent onClick={handleClick} href="#integrations-main-header">
+      <SkipToContent onClick={handleClick} href="#integrations-main-content">
         Skip to content
       </SkipToContent>
       <Compass
