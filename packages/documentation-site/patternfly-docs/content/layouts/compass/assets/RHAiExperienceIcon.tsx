@@ -3,6 +3,7 @@ import React from "react";
 export const RHAiExperienceIcon: React.FunctionComponent = () => {
   return (
     <svg
+      aria-hidden="true"
       xmlns="http://www.w3.org/2000/svg"
       fill="currentColor"
       width="1em"

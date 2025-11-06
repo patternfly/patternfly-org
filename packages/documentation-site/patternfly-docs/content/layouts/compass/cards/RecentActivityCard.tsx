@@ -25,26 +25,26 @@ export const RecentActivityCard: React.FunctionComponent = () => {
   const activityData = [
     {
       id: 1,
-      name: 'my-pod-name',
-      project: 'project-test',
+      name: 'frontend-deployment',
+      project: 'automation-platform',
       progress: ['success', 'success', 'success'],
     },
     {
       id: 2,
-      name: 'my-pod-name',
-      project: 'project-test',
+      name: 'backend-deployment',
+      project: 'automation-platform',
       progress: ['success', 'pending', 'default'],
     },
     {
       id: 3,
-      name: 'my-pod-name',
-      project: 'project-test',
+      name: 'database-deployment',
+      project: 'automation-platform',
       progress: ['success', 'success', 'danger'],
     },
     {
       id: 4,
-      name: 'my-pod-name',
-      project: 'project-test',
+      name: 'frontend-deployment',
+      project: 'ci-dashboard',
       progress: ['success', 'warning', 'pending'],
     },
   ];
@@ -73,6 +73,7 @@ export const RecentActivityCard: React.FunctionComponent = () => {
                     variant="plain"
                     onClick={() => {}}
                     isExpanded={false}
+                    aria-label="Recent activity card options"
                   >
                     <EllipsisVIcon />
                   </MenuToggle>
@@ -115,7 +116,7 @@ export const RecentActivityCard: React.FunctionComponent = () => {
                     </Button>
                   </Td>
                   <Td>
-                    <ProgressStepper isCompact>
+                    <ProgressStepper isCompact aria-label={`Progress for ${activity.name}`}>
                       {activity.progress.map((stepVariant, stepIndex) => (
                         <ProgressStep
                           id={`progress-step-${rowIndex}-${stepVariant}-${stepIndex}`}
@@ -146,6 +147,7 @@ export const RecentActivityCard: React.FunctionComponent = () => {
                           variant="plain"
                           onClick={() => {}}
                           isExpanded={false}
+                          aria-label={`${activity.name} options`}
                         >
                           <EllipsisVIcon />
                         </MenuToggle>

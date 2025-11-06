@@ -38,7 +38,7 @@ export const StorageCard: React.FunctionComponent = () => {
       variant="plain"
       onClick={() => setIsKebabOpen(!isKebabOpen)}
       isExpanded={isKebabOpen}
-      aria-label="Cluster inventory card kebab menu"
+      aria-label="Storage card options"
     >
       <EllipsisVIcon />
     </MenuToggle>
@@ -118,7 +118,7 @@ export const StorageCard: React.FunctionComponent = () => {
             component="a"
             href="#"
           >
-            Cluster details page
+            Storage page
           </Button>
         </CardFooter>
       </Card>

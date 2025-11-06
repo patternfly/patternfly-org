@@ -38,7 +38,7 @@ export const MemoryUtilizationCard: React.FunctionComponent = () => {
       variant="plain"
       onClick={() => setIsKebabOpen(!isKebabOpen)}
       isExpanded={isKebabOpen}
-      aria-label="Cluster inventory card kebab menu"
+      aria-label="Memory usage card options"
     >
       <EllipsisVIcon />
     </MenuToggle>
@@ -148,7 +148,7 @@ export const MemoryUtilizationCard: React.FunctionComponent = () => {
             component="a"
             href="#"
           >
-            Cluster details page
+            Memory usage page
           </Button>
         </CardFooter>
       </Card>

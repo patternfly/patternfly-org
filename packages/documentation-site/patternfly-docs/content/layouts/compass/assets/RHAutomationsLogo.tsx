@@ -4,6 +4,7 @@ export const RHAutomationsLogo: React.FunctionComponent = () => {
   return (
     <div id="brand-logo">
       <svg
+      aria-hidden="true"
         width="192"
         height="39"
         viewBox="0 0 192 39"

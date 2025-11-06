@@ -55,7 +55,7 @@ export const NetworkActivityCard: React.FunctionComponent = () => {
       variant="plain"
       onClick={() => setIsKebabOpen(!isKebabOpen)}
       isExpanded={isKebabOpen}
-      aria-label="Network activity card kebab menu"
+      aria-label="Network activity card options"
     >
       <EllipsisVIcon />
     </MenuToggle>

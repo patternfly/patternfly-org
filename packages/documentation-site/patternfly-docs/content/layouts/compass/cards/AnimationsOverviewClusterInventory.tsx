@@ -48,7 +48,7 @@ export const ClusterInventoryCard: React.FunctionComponent = () => {
       variant="plain"
       onClick={() => setIsKebabOpen(!isKebabOpen)}
       isExpanded={isKebabOpen}
-      aria-label="Cluster inventory card kebab menu"
+      aria-label="Cluster inventory card options"
     >
       <EllipsisVIcon />
     </MenuToggle>
@@ -114,7 +114,7 @@ export const ClusterInventoryCard: React.FunctionComponent = () => {
             component="a"
             href="#"
           >
-            Cluster details page
+            Cluster inventory page
           </Button>
         </CardFooter>
       </Card>

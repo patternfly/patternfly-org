@@ -17,12 +17,12 @@ export const ClusterDetailsCard: React.FunctionComponent = () => {
     <CompassPanel hasNoPadding isFullHeight>
       <Card isPlain isFullHeight>
         <CardTitle>
-          <Title headingLevel="h4" size="xl">
+          <Title id="cluster-details-title" headingLevel="h1" size="xl">
             Cluster Details
           </Title>
         </CardTitle>
         <CardBody>
-          <DescriptionList>
+          <DescriptionList aria-labelledby='cluster-details-title'>
             <DescriptionListGroup>
               <DescriptionListTerm>Cluster API Address</DescriptionListTerm>
               <DescriptionListDescription>

@@ -25,7 +25,8 @@ import {
   MenuToggleElement,
   Grid,
   GridItem,
-  Icon
+  Icon,
+  SkipToContent
 } from '@patternfly/react-core';
 import PlayIcon from '@patternfly/react-icons/dist/esm/icons/play-icon';
 import OutlinedPlusSquare from '@patternfly/react-icons/dist/esm/icons/outlined-plus-square-icon';
@@ -66,10 +67,10 @@ export const CompassBasic: React.FunctionComponent = () => {
         >
           <Tab eventKey={0} title={<TabTitleText>Dashboard</TabTitleText>} />
           <Tab eventKey={1} title={<TabTitleText>Builder</TabTitleText>} isDisabled />
-          <Tab eventKey={1} title={<TabTitleText>Automations</TabTitleText>} />
-          <Tab eventKey={2} title={<TabTitleText>Approvals</TabTitleText>} isDisabled />
-          <Tab eventKey={3} title={<TabTitleText>Configuration</TabTitleText>} />
-          <Tab eventKey={4} title={<TabTitleText>Test Page</TabTitleText>} />
+          <Tab eventKey={2} title={<TabTitleText>Automations</TabTitleText>} />
+          <Tab eventKey={3} title={<TabTitleText>Approvals</TabTitleText>} isDisabled />
+          <Tab eventKey={4} title={<TabTitleText>Configuration</TabTitleText>} />
+          <Tab eventKey={5} title={<TabTitleText>Test Page</TabTitleText>} />
         </Tabs>
       </CompassPanel>
     </>
@@ -77,7 +78,7 @@ export const CompassBasic: React.FunctionComponent = () => {
 
   const westContent = (
     <CompassPanel isPill>
-      <ActionList isIconList isVertical /* isVertical */>
+      <ActionList isIconList isVertical>
         <ActionListGroup>
           <ActionListItem>
             <Tooltip content="Play">
@@ -91,8 +92,8 @@ export const CompassBasic: React.FunctionComponent = () => {
           </ActionListItem>
         </ActionListGroup>
         <ActionListItem>
-          <Tooltip content="Copy">
-            <Button variant="plain" icon={<Icon style={{translate: ".05em .1em; scale: 1.1"}}><RHAiExperienceIcon /></Icon>} aria-label="Copy" isCircle className="pf-v6-m-ai-indicator" />
+          <Tooltip content="Assistant">
+            <Button variant="plain" icon={<Icon style={{ translate: ".05em .1em; scale: 1.1" }}><RHAiExperienceIcon /></Icon>} aria-label="Assistant" isCircle className="pf-v6-m-ai-indicator" />
           </Tooltip>
         </ActionListItem>
         <ActionListGroup>
@@ -102,8 +103,8 @@ export const CompassBasic: React.FunctionComponent = () => {
             </Tooltip>
           </ActionListItem>
           <ActionListItem>
-            <Tooltip content="Second copy">
-              <Button variant="plain" icon={<OutlinedCopy />} aria-label="Copy2" isCircle />
+            <Tooltip content="Copy">
+              <Button variant="plain" icon={<OutlinedCopy />} aria-label="Copy" isCircle />
             </Tooltip>
           </ActionListItem>
         </ActionListGroup>
@@ -177,38 +178,38 @@ export const CompassBasic: React.FunctionComponent = () => {
           </ActionList>
         </Content>
       </CompassHero>
-      <CompassContent>
-          <Grid hasGutter style={{ maxHeight: 'none' }}>
-            <GridItem span={12} sm={12} md={6} lg={4} xl={3} rowSpan={4}>
-              <ClusterDetailsCard />
-            </GridItem>
-            <GridItem span={12} sm={12} md={6} lg={4} xl={3} rowSpan={2}>
-              <AnimationsOverviewClusterInventory />
-            </GridItem>
-            <GridItem span={12} sm={12} md={6} lg={4} xl={3} rowSpan={2}>
-              <AnimationsOverviewStorage />
-            </GridItem>
-            <GridItem span={12} sm={12} md={12} lg={8} xl={3} rowSpan={2}>
-              <AnimationsOverviewMemoryUtilization />
-            </GridItem>
-            <GridItem span={12} sm={12} md={12} lg={12} xl={3} rowSpan={2}>
-              <AnimationsOverviewNetworkActivity />
-            </GridItem>
-            <GridItem span={12} sm={12} md={12} lg={8} xl={6} rowSpan={2}>
-              <RecentActivityCard />
-            </GridItem>
-          </Grid>
+      <CompassContent id="main">
+        <Grid hasGutter style={{ maxHeight: 'none' }}>
+          <GridItem span={12} sm={12} md={6} lg={4} xl={3} rowSpan={4}>
+            <ClusterDetailsCard />
+          </GridItem>
+          <GridItem span={12} sm={12} md={6} lg={4} xl={3} rowSpan={2}>
+            <AnimationsOverviewClusterInventory />
+          </GridItem>
+          <GridItem span={12} sm={12} md={6} lg={4} xl={3} rowSpan={2}>
+            <AnimationsOverviewStorage />
+          </GridItem>
+          <GridItem span={12} sm={12} md={12} lg={8} xl={3} rowSpan={2}>
+            <AnimationsOverviewMemoryUtilization />
+          </GridItem>
+          <GridItem span={12} sm={12} md={12} lg={12} xl={3} rowSpan={2}>
+            <AnimationsOverviewNetworkActivity />
+          </GridItem>
+          <GridItem span={12} sm={12} md={12} lg={8} xl={6} rowSpan={2}>
+            <RecentActivityCard />
+          </GridItem>
+        </Grid>
       </CompassContent>
     </>
   );
 
   const eastContent = (
     <CompassPanel isPill>
-      <ActionList isIconList isVertical /* isVertical */>
+      <ActionList isIconList isVertical>
         <ActionListGroup>
           <ActionListItem>
-            <Tooltip content="Help">
-              <Button variant="plain" icon={<OutlinedQuestionCircleIcon />} aria-label="Help" isCircle />
+            <Tooltip content="Help 2">
+              <Button variant="plain" icon={<OutlinedQuestionCircleIcon />} aria-label="Help 2" isCircle />
             </Tooltip>
           </ActionListItem>
           <ActionListItem>
@@ -217,8 +218,8 @@ export const CompassBasic: React.FunctionComponent = () => {
             </Tooltip>
           </ActionListItem>
           <ActionListItem>
-            <Tooltip content="Help">
-              <Button variant="plain" icon={<OutlinedQuestionCircleIcon />} aria-label="Help" isCircle />
+            <Tooltip content="Help 3">
+              <Button variant="plain" icon={<OutlinedQuestionCircleIcon />} aria-label="Help 3" isCircle />
             </Tooltip>
           </ActionListItem>
         </ActionListGroup>
@@ -245,18 +246,22 @@ export const CompassBasic: React.FunctionComponent = () => {
           isThinking={isThinking}
         />
       </CompassPanel>
+      <div className="pf-v6-screen-reader" aria-live="assertive">{isThinking && "AI is thinking..."}</div>
     </CompassMessageBar>
   );
 
   return (
-    <Compass
-      header={northContent}
-      sidebarStart={westContent}
-      main={mainContent}
-      sidebarEnd={eastContent}
-      footer={southContent}
-      backgroundSrcDark={wallpaperDark}
-      backgroundSrcLight={wallpaperLight}
-    />
+    <>
+      <SkipToContent href="#main">Skip to content</SkipToContent>
+      <Compass
+        header={northContent}
+        sidebarStart={westContent}
+        main={mainContent}
+        sidebarEnd={eastContent}
+        footer={southContent}
+        backgroundSrcDark={wallpaperDark}
+        backgroundSrcLight={wallpaperLight}
+      />
+    </>
   );
 };
