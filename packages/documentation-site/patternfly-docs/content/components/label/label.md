@@ -63,6 +63,20 @@ Labels are typically used in filter and selection use cases to indicate what sel
 ![Example of labels as filters in a toolbar.](./img/label-filters.svg)
 </div>
 
+#### Preview labels
+
+To communicate that a feature is in a preview mode, instead of fully released and supported, use a [nonstatus purple label](#nonstatus-labels). There are 2 common types of preview labels:
+1. **Developer preview:** Intended for early evaluation and feedback. These features are not supported and not ready for production environments.
+2. **Technology preview:** Available for early use and feedback. These features have limited support and are typically on the roadmap for a future full release.
+
+Preview labels should use the compact size variant and should be placed beside the title of the new feature or component&mdash;ideally to the right of the feature title. 
+
+Preview labels should also be clickable. When clicked, display a popover with a brief explanation of the preview type (stability, potential limitations) and include a "Learn more" link directing users to dedicated documentation.
+
+<div class="ws-docs-content-img">
+![Developer preview and technology preview labels with descriptive popover above each.](./img/preview-labels.svg)
+</div>
+
 #### Color considerations
 
 Labels can utilize both our [status](/foundations-and-styles/colors#status-and-state-colors)  and [nonstatus](/foundations-and-styles/colors#nonstatus-colors) color palettes.
