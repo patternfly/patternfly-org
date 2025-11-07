@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.4.0-alpha.308 (2025-11-07)
+
+
+### Bug Fixes
+
+* white space change to trigger release ([6759842](https://github.com/patternfly/patternfly-org/commit/67598426ca6efffadfa82f996c16156de5fd3981))
+
+
+
+
+
 # 1.4.0-alpha.307 (2025-11-07)
 
 

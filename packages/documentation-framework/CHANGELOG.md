@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 6.30.1 (2025-11-07)
+
+
+### Bug Fixes
+
+* white space change to trigger release ([6759842](https://github.com/patternfly/patternfly-org/commit/67598426ca6efffadfa82f996c16156de5fd3981))
+
+
+
+
+
 # 6.30.0 (2025-11-07)
 
 
