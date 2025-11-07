@@ -487,7 +487,7 @@ export const CompassIntegrationsDemo: React.FunctionComponent = () => {
           <ToggleGroup>
             <ToggleGroupItem
               icon={<ThIcon />}
-              aria-label="Grid view"
+              aria-label="Card view"
               isSelected={activeDisplay === "card"}
               onChange={() => {
                 setActiveDisplay("card");
