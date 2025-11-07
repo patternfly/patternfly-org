@@ -26,6 +26,16 @@ import OutlinedQuestionCircleIcon from '@patternfly/react-icons/dist/esm/icons/o
 import wallpaperLight from './assets/wallpaper-light.png'
 import wallpaperDark from './assets/wallpaper-dark.png'
 import imgAvatar from './assets/avatar.jpg';
+import { RHAutomationsLogo } from './assets/RHAutomationsLogo';
+import { RHAiExperienceIcon } from './assets/RHAiExperienceIcon';
+import AnimationsOverviewClusterInventory from "./cards/AnimationsOverviewClusterInventory";
+import AnimationsOverviewNetworkActivity from "./cards/AnimationsOverviewNetworkActivity";
+import AnimationsOverviewStorage from "./cards/AnimationsOverviewStorage";
+import AnimationsOverviewMemoryUtilization from "./cards/AnimationsOverviewMemoryUtilization";
+import { ClusterDetailsCard } from './cards/ClusterDetailsCard';
+import { RecentActivityCard } from './cards/RecentActivityCard';
+
+import heroBg from './assets/hero-bg.png';
 
 ## Demo notes
 
@@ -42,4 +52,9 @@ To facilitate building a compass layout, there several are useful variants and p
 ### Card and data view layout
 
 ```js file="./CompassIntegrationsDemo.tsx" isFullscreen
+```
+
+### Dashboard layout
+
+```js file="./dashboard.tsx" isFullscreen
 ```
