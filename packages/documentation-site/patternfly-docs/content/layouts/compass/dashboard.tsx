@@ -249,7 +249,7 @@ export const CompassBasic: React.FunctionComponent = () => {
           isThinking={isThinking}
         />
       </CompassPanel>
-      <div className="pf-v6-screen-reader" aria-live="assertive">{isThinking && "AI is thinking..."}</div>
+      <div className="pf-v6-screen-reader" aria-live="polite">{isThinking && "AI is thinking..."}</div>
     </CompassMessageBar>
   );
 
