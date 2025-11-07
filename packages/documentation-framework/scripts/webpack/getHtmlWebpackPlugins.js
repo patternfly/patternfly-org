@@ -13,7 +13,12 @@ async function getHtmlWebpackPlugin({ isProd, googleAnalyticsID, algolia, url, t
       title: getTitle(title),
       // Don't prerender fullscreen pages (expensive!)
       prerendering:
-        isProd && !isFullscreen && !url.includes('chatbot') && !url.includes('topology') && !url.includes('extensions') && !url.includes('compass')
+        isProd &&
+        !isFullscreen &&
+        !url.includes('chatbot') &&
+        !url.includes('topology') &&
+        !url.includes('extensions') &&
+        !url.includes('generative-uis')
           ? await prerender(url)
           : null,
       // Don't use GA in dev mode
@@ -37,9 +42,10 @@ async function getHtmlWebpackPlugins(options) {
       templateParameters: {
         urls: Object.entries(routes)
           .map(([path, { sources }]) => [
-            path, 
-            ...(sources || []).slice(1)
-              .filter(source => source.slug !== path) // Filter out sources that would create duplicate routes
+            path,
+            ...(sources || [])
+              .slice(1)
+              .filter((source) => source.slug !== path) // Filter out sources that would create duplicate routes
               .map((source) => source.slug)
           ])
           .flat()
@@ -60,8 +66,9 @@ async function getHtmlWebpackPlugins(options) {
     .map(([url, { sources = [], title, isFullscreen }]) => [
       [url, { title, isFullscreen }],
       // Add pages for sources, but filter out duplicates
-      ...sources.slice(1)
-        .filter(source => source.slug !== url) // Filter out sources that would create duplicate routes
+      ...sources
+        .slice(1)
+        .filter((source) => source.slug !== url) // Filter out sources that would create duplicate routes
         .map((source) => [source.slug, source])
     ])
     .flat()
