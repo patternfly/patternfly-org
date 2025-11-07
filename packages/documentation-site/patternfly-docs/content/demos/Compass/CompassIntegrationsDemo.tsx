@@ -467,7 +467,7 @@ export const CompassIntegrationsDemo: React.FunctionComponent = () => {
   );
 
   const headerContent = <CompassHeader 
-    logo={<RHAutomationsLogo />}
+    logo={<a href="#" aria-label="Red Hat automations" tabIndex={0}><RHAutomationsLogo /></a>}
     nav={navContent} 
     profile={userDropdown}
   />;
@@ -747,7 +747,7 @@ export const CompassIntegrationsDemo: React.FunctionComponent = () => {
   );
   const footerContent = (
     <CompassMessageBar>
-      <CompassPanel isPill hasNoPadding>
+      <CompassPanel isPill hasNoPadding hasNoBorder>
         <MessageBar
           isCompact
           onSendMessage={handleSendMessage}
