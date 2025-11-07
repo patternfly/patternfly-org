@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.4.0-alpha.307 (2025-11-07)
+
+
+### Features
+
+* **Compass:** add integrations & react-flow compass demo ([#4848](https://github.com/patternfly/patternfly-org/issues/4848)) ([c4ca08e](https://github.com/patternfly/patternfly-org/commit/c4ca08eaf906b48e21aeed80bf24d79feebe9804))
+
+
+
+
+
 # 1.4.0-alpha.306 (2025-11-06)
 
 **Note:** Version bump only for package @patternfly/ast-helpers
