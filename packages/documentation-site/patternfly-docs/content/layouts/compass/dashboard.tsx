@@ -141,6 +141,7 @@ export const CompassBasic: React.FunctionComponent = () => {
           onClick={onDropdownToggle}
           isExpanded={isDropdownOpen}
           variant="plain"
+          isCircle
         >
           <Flex
             alignItems={{ default: "alignItemsCenter" }}
@@ -156,7 +157,7 @@ export const CompassBasic: React.FunctionComponent = () => {
     </Dropdown>
   );
 
-  const northContent = <CompassHeader logo={<RHAutomationsLogo />} nav={navContent} profile={userDropdown} />;
+  const northContent = <CompassHeader logo={<a href="#" aria-label="Red Hat automations" tabIndex={0}><RHAutomationsLogo /></a>} nav={navContent} profile={userDropdown} />;
 
   const mainContent = (
     <>
@@ -169,12 +170,14 @@ export const CompassBasic: React.FunctionComponent = () => {
             automation to the teams, tasks, and environments that need it.
           </p>
           <ActionList>
-            <ActionListItem>
-              <Button variant="primary">Upgrade today</Button>
-            </ActionListItem>
-            <ActionListItem>
-              <Button variant="secondary">Talk to a Red Hatter</Button>
-            </ActionListItem>
+            <ActionListGroup>
+              <ActionListItem>
+                <Button variant="primary">Upgrade today</Button>
+              </ActionListItem>
+              <ActionListItem>
+                <Button variant="secondary">Talk to a Red Hatter</Button>
+              </ActionListItem>
+            </ActionListGroup>
           </ActionList>
         </Content>
       </CompassHero>
@@ -236,7 +239,7 @@ export const CompassBasic: React.FunctionComponent = () => {
 
   const southContent = (
     <CompassMessageBar>
-      <CompassPanel isPill hasNoPadding isThinking={isThinking}>
+      <CompassPanel isPill hasNoPadding hasNoBorder>
         <MessageBar
           isCompact
           onSendMessage={handleSendMessage}
