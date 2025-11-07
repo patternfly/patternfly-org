@@ -65,8 +65,8 @@
     "ip": ">=2.0.0",
     "http-cache-semantics": ">=4.1.1",
     "nanoid": "3.3.8",
-    "@patternfly/react-code-editor": "^6.4.0",
-    "@patternfly/react-core": "^6.5.0-prerelease.1",
-    "@patternfly/react-table": "^6.5.0-prerelease.1"
+    "@patternfly/react-code-editor": "^6.5.0-prerelease.9",
+    "@patternfly/react-core": "^6.5.0-prerelease.9",
+    "@patternfly/react-table": "^6.5.0-prerelease.9"
   }
 }
