@@ -53,7 +53,7 @@ const PFCardNode = memo(
                   alignItems: "center",
                 }}
               >
-                <Title headingLevel="h2" size="lg">
+                <Title headingLevel="h4" size="lg">
                   {data.title}
                 </Title>
                 <Badge isRead>{data.status}</Badge>
@@ -63,7 +63,7 @@ const PFCardNode = memo(
               <p>
                 {data.description}
               </p>
-              <DescriptionList>
+              <DescriptionList aria-label={`${data.title} details`}>
                 {data.details.map((detail, index) => (
                   <DescriptionListGroup key={index}>
                     <DescriptionListTerm>{detail.term}</DescriptionListTerm>

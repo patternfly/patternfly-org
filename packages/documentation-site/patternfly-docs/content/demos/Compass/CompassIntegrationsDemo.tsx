@@ -544,7 +544,7 @@ export const CompassIntegrationsDemo: React.FunctionComponent = () => {
                 ),
               }}
             >
-              <Content component="h4">{product.name}</Content>
+              <Content component="h2">{product.name}</Content>
               <Content component="small">{product.type}</Content>
             </CardHeader>
             <CardBody isFilled>{product.description}</CardBody>
