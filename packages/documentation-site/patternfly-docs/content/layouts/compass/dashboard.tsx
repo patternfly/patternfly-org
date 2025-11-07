@@ -62,7 +62,7 @@ export const CompassBasic: React.FunctionComponent = () => {
           isNav
           onSelect={(_event, tabIndex) => setActiveTab(tabIndex as number)}
           component={TabsComponent.nav}
-          aria-label="Compass navigation tabs"
+          aria-label="Compass global"
           inset={{ default: 'insetXl' }}
         >
           <Tab eventKey={0} title={<TabTitleText>Dashboard</TabTitleText>} />
