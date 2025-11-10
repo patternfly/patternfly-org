@@ -33,7 +33,7 @@ const serverConfig = async (env, argv) => {
         {
           test: /(novnc-core|@novnc\/novnc)\/.*\.js/,
           use: 'null-loader'
-        },
+        }
       ]
     },
     resolve: {

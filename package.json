@@ -14,6 +14,8 @@
     "build": "yarn workspace patternfly-org build && yarn workspace site build && yarn copy",
     "build:extensions": "EXTENSIONS_ONLY=true PRERELEASE=true yarn build",
     "build:doc-core": "yarn workspace site build",
+    "build:ts": "yarn workspace patternfly-org build:ts",
+    "build:ts:watch": "yarn build:ts --watch",
     "copy": "rm -rf build/patternfly-org/site && mkdir -p build/patternfly-org && cp -r packages/documentation-site/public build/patternfly-org/site",
     "clean": "lerna run clean && rm -rf build",
     "serve": "npx pf-docs-framework serve build/patternfly-org/site",
@@ -62,6 +64,9 @@
     "parse-git-config": ">=3.0.0",
     "ip": ">=2.0.0",
     "http-cache-semantics": ">=4.1.1",
-    "nanoid": "3.3.8"
+    "nanoid": "3.3.8",
+    "@patternfly/react-code-editor": "^6.5.0-prerelease.9",
+    "@patternfly/react-core": "^6.5.0-prerelease.9",
+    "@patternfly/react-table": "^6.5.0-prerelease.9"
   }
 }
