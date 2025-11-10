@@ -14,30 +14,60 @@ Generative UI is an emerging approach to user interface design that leverages ar
 
 Generative UI represents a significant opportunity for PatternFly to explore new patterns, layouts, and styles that support AI-driven interface generation. PatternFly has been calling this proof of concept Compass. It investigates how the design system can evolve to support generative UI use cases.
 
+**Important**: Compass is best suited for use as a POC in other proof-of-concept generative UI use cases. It is **not yet production quality code** and should be used for exploration and experimentation purposes only.
+
+### AI-enabled seed app
+
+We are creating an [AI-enabled seed app](https://github.com/gitdallas/patternfly-react-seed/tree/compass_theme) that you can use to create your own PatternFly Compass-based POC. The seed app includes the Compass layout fully wired out with all styles set up, providing a solid foundation that you can build on top of. It can be leveraged with AI tools like Cursor or Claude Code to build out your own POC, making it easier to experiment with generative UI patterns and explore new use cases.
+
 ### What Compass includes
 
 The Compass POC introduces several new capabilities:
 
-- **Compass layout component**: [link needed] A new layout component designed specifically for generative UI patterns
-- **Additional components and component variants**:
-  - [links needed]
 - **Design tokens**: New design tokens that enable:
-  - Glass-like visual effects (glassmorphism)
+  - Glass-like visual effects
   - Background and border gradients
   - Additional smooth animations
   - Background image explorations
-- **Demos**: a suite of full page demos showing how to wire up the building blocks into a Compass like experience [linked needed]
+- [**Compass layout component**](/components/compass): A new layout component designed specifically for generative UI patterns
+- **Additional components and component variants**:
+  - Transparency & Effects:
+    - `isPlain` makes cards, data lists, and tables transparent to allow background effects (like a glass look) to show through.
+  - Layout & Navigation:
+    - `isVertical` changes action lists to a vertical layout, suitable for sidebars.
+    - `isNav` applies a new style to tabs, optimized for top-site navigation bars.
+  - Shape & Form:
+    - `isCircle` creates circular buttons and icon menu toggles, and pill-shaped standard menu toggles.
+    - `isPill` gives the drawer (slide-out panel) a rounded, floating look.
+  - AI Indicators:
+    - `isThinking` adds a pulsing animation to show a system is actively processing (like an AI "thinking").
+    - `hasAiIndicator` adds a gradient border to visually highlight AI-related content.
+- **Demos**: a suite of full page demos showing how to wire up the building blocks into a Compass like experience
+  - [Full page demo with card view and table layouts](/patternfly-ai/generative-uis/compass#card-and-data-view-layout)
 
 ### Accessibility focus
 
 Accessibility has been a major focus throughout the Compass exploration. As generative UIs introduce new interaction patterns and visual styles, ensuring these experiences remain accessible to all users is paramount.
 
+### Integration with react-flow
+
+Some stakeholdres have been experimenting with Generative UI use cases using React Flow. The React Flow package `@xyflow/react` is compatible with PatternFly through customization of its [theme](https://reactflow.dev/learn/customization/theming) and [rendered nodes](https://reactflow.dev/learn/customization/custom-nodes). A custom override stylesheet can assign PatternFly's global tokens to React Flow's own tokens to ensure a consistent styling. We have created some [documentation and a demo](/patternfly-ai/generative-uis/react-flow) for integrations with PatternFly as a POC for these use cases.
+
 ### Current status
 
 The Compass effort is actively in progress. Components are being built, evaluated, and refined based on feedback. The design is continuously evolving as we learn more about generative UI patterns and their practical applications.
 
-**Important**: Compass is best suited for use as a POC in other proof-of-concept generative UI use cases. It is **not yet production quality code** and should be used for exploration and experimentation purposes only.
+As of Nov 10, 2025, these are the prereleases available for building out Compass based UI POCs.
 
-### AI-enabled seed app
-
-We are creating an AI-enabled seed app that you can use to create your own PatternFly Compass-based POC. The seed app includes the Compass layout fully wired out with all styles set up, providing a solid foundation that you can build on top of. It can be leveraged with AI tools like Cursor or Claude Code to build out your own POC, making it easier to experiment with generative UI patterns and explore new use cases. [link needed]
+- "@patternfly/react-catalog-view-extension": "6.2.0"
+- "@patternfly/react-charts": "8.5.0-prerelease.4"
+- "@patternfly/react-code-editor": "6.5.0-prerelease.9"
+- "@patternfly/react-component-groups": "6.4.0"
+- "@patternfly/react-core": "6.5.0-prerelease.9"
+- "@patternfly/react-drag-drop": "6.5.0-prerelease.9"
+- "@patternfly/react-icons": "6.5.0-prerelease.4"
+- "@patternfly/react-styles": "6.5.0-prerelease.4"
+- "@patternfly/react-table": "6.5.0-prerelease.9"
+- "@patternfly/react-tokens": "6.5.0-prerelease.4"
+- "@patternfly/react-templates": "6.5.0-prerelease.9"
+- "@patternfly/chatbot": "6.5.0-prerelease.10"
