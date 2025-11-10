@@ -1,5 +1,5 @@
 ---
-id: Upgrade
+id: Upgrade guide
 source: release-notes
 title: PatternFly 6 upgrade
 section: releases
@@ -14,6 +14,6 @@ Note that this table does not contain a completely comprehensive list of changes
 
 Comprehensive PatternFly 6 release notes can be found on GitHub, in [@patternfly/patternfly](https://github.com/patternfly/patternfly/releases) and [@patternfly/react-core](https://github.com/patternfly/patternfly-react/releases).
 
-A summary of the changes from PatternFly 6 can be found in our [release highlights](/get-started/release-highlights/).
+A summary of the changes from PatternFly 6 can be found in our [release highlights](/releases/release-highlights).
 
 <ReleaseNotesTable/>

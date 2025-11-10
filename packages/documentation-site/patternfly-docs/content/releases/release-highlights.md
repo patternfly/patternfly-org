@@ -71,10 +71,10 @@ We’ve updated our documentation and examples with the following recommendation
 
 ### Community-driven ChatBot enhancements
 Based on feedback from usability workshops and our community, we've made significant enhancements to the ChatBot extension to improve usability and address user needs:
-- **Clearer navigation:** To provide users with more context, the [chat history drawer](/patternfly-ai/chatbot/ui#drawer-with-search-and-new-chat-button) now includes a clearer title, an icon, and a prominent "new chat" button.
-- **Flexible layouts:** To support different presentation preferences, we've introduced [compact component styles](/patternfly-ai/chatbot/overview/demo#compact-chatbot) and a new [demo for swapping between display modes](/patternfly-ai/chatbot/overview/demo#display-mode-switcher).
-- **Modern features:** To give users more control and flexibility, we added support for [message dividers](/patternfly-ai/chatbot/messages#message-dividers), [editing messages](/patternfly-ai/chatbot/messages#user-messages), [pinning chat history items](/patternfly-ai/chatbot/ui#pinning-conversations), [previewing images](/patternfly-ai/chatbot/messages#image-preview) and [downloading chat transcripts](/patternfly-ai/chatbot/overview/design-guidelines#downloading-chat-transcripts).
-- **Advanced interactions:** To support more complex agentic interactions, we've added new components to [display an AI's reasoning process (deep thinking)](/patternfly-ai/chatbot/messages#messages-with-deep-thinking), as well as [managing tool calls](/patternfly-ai/chatbot/messages#messages-with-tool-calls) and sharing [tool responses](/patternfly-ai/chatbot/messages#messages-with-tool-responses).
+- **Clearer navigation:** To provide users with more context, the [chat history drawer](/ai/chatbot/ui#drawer-with-search-and-new-chat-button) now includes a clearer title, an icon, and a prominent "new chat" button.
+- **Flexible layouts:** To support different presentation preferences, we've introduced [compact component styles](/ai/chatbot/overview/demo#compact-chatbot) and a new [demo for swapping between display modes](/ai/chatbot/overview/demo#display-mode-switcher).
+- **Modern features:** To give users more control and flexibility, we added support for [message dividers](/ai/chatbot/messages#message-dividers), [editing messages](/ai/chatbot/messages#user-messages), [pinning chat history items](/ai/chatbot/ui#pinning-conversations), [previewing images](/ai/chatbot/messages#image-preview) and [downloading chat transcripts](/ai/chatbot/overview/design-guidelines#downloading-chat-transcripts).
+- **Advanced interactions:** To support more complex agentic interactions, we've added new components to [display an AI's reasoning process (deep thinking)](/ai/chatbot/messages#messages-with-deep-thinking), as well as [managing tool calls](/ai/chatbot/messages#messages-with-tool-calls) and sharing [tool responses](/ai/chatbot/messages#messages-with-tool-responses).
 
 ### Resizable table columns
 Based on user feedback, we've added resizable table columns within the [@patternfly/react-data-view extension](https://www.npmjs.com/package/@patternfly/react-data-view). This update allows users to click and drag column dividers to adjust widths, making it easier to view and work with data in dense tables.
@@ -84,8 +84,8 @@ To see this feature in action, [refer to our resizable columns table demo](/exte
 ### New guidelines for streamlined AI workflows
 
 To help you safely and effectively integrate AI into your development process, we’ve released two new sets of guidelines:
-- **AI-generated code contribution:** To ensure legal compliance and quality, we've established new guidelines for contributing AI-generated code. You can find them in [our contribution documentation on our website](https://www.patternfly.org/get-started/contribute#ai-assisted-development-guidelines) and [within GitHub](https://github.com/patternfly/.github/blob/main/CONTRIBUTING.md). 
-- **AI-assisted code migrations:** We've also published [new documentation on using AI to streamline code migrations](/patternfly-ai/ai-assisted-code-migration/). This guide offers strategies for using AI to make it easier and faster to migrate your project to PatternFly React from other frameworks.
+- **AI-generated code contribution:** To ensure legal compliance and quality, we've established new guidelines for contributing AI-generated code. You can find them [within GitHub](https://github.com/patternfly/.github/blob/main/CONTRIBUTING.md). 
+- **AI-assisted code migrations:** We've also published [new documentation on using AI to streamline code migrations](/ai/ai-assisted-code-migration/). This guide offers strategies for using AI to make it easier and faster to migrate your project to PatternFly React from other frameworks.
 
 ### What's next?
 For the Q4 2025 release, we’ll be focused on:

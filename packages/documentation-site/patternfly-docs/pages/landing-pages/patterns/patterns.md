@@ -1,6 +1,6 @@
 ---
-id: About patterns
-title: Patterns
+id: Overview
+title: Patterns overview
 section: patterns
 sortValue: 1
 ---

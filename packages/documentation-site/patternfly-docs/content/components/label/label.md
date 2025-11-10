@@ -67,7 +67,7 @@ Labels are typically used in filter and selection use cases to indicate what sel
 
 Labels can utilize both our [status](/foundations-and-styles/colors#status-and-state-colors)  and [nonstatus](/foundations-and-styles/colors#nonstatus-colors) color palettes.
 
-While you may use other colors for your labels, we recommend using the ones provided as they have been carefully selected to be accessible with the PatternFly library. If you choose to use other colors, be mindful of picking [accessible text color and icon color](/accessibility/accessibility-testing) to go with the label background.
+While you may use other colors for your labels, we recommend using the ones provided as they have been carefully selected to be accessible with the PatternFly library. If you choose to use other colors, be mindful of picking [accessible text color and icon color](/accessibility/testing-your-accessibility) to go with the label background.
 
 The colors you should use differs for status and nonstatus labels:
 

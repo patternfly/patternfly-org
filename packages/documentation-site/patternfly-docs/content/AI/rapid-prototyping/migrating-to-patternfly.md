@@ -1,6 +1,6 @@
 ---
 id: AI-assisted code migration
-section: PatternFly-AI
+section: AI
 ---
 
 This guide explores a workflow that enables developers to leverage AI to accelerate code migrations, with best practices and recommendations to follow when replicating the process.  

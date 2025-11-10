@@ -1,7 +1,7 @@
 ---
-id: About design foundations
-title: Design Foundations
-section: design-foundations
+id: Overview
+title: Foundations and styles overview
+section: foundations-and-styles
 sortValue: 1
 ---
 

@@ -10,7 +10,7 @@ import {Alert} from '@patternfly/react-core';
 
 In order to develop with PatternFly, you will need to:
 
-1. [Learn about the PatternFly design system](/get-started/about-patternfly) to get acquainted with all of its elements.
+1. [Learn about the PatternFly design system](/about-us) to get acquainted with all of its elements.
 
 1. [Learn about our design token system](/foundations-and-styles/design-tokens/about-tokens), which enables you to build interfaces with consistent PatternFly styling, including colors, shadows, spacing, and more.
 

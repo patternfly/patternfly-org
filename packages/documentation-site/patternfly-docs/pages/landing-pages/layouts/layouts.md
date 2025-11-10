@@ -1,7 +1,8 @@
 ---
-id: About layouts
-title: Layouts
-section: layouts
+id: Overview
+title: Layouts overview
+section: foundations-and-styles
+subsection: layouts
 sortValue: 1
 ---
 

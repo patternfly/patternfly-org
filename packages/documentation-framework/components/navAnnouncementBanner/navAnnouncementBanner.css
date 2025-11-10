@@ -1,0 +1,20 @@
+.ws-nav-announcement-banner-container {
+  position: fixed;
+  top: 20px;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 300;
+  display: flex;
+  justify-content: center;
+  padding: 0 var(--pf-t--global--spacer--xl);
+  pointer-events: none;
+}
+
+.ws-nav-announcement-banner {
+  max-width: 85vw;
+  width: 100%;
+  box-shadow: var(--pf-t--global--box-shadow--md);
+  pointer-events: auto;
+}
+

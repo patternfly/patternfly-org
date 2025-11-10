@@ -1,5 +1,6 @@
 ---
-id: Writing PatternFly design guidelines
+id: Design guidelines
+title: Writing PatternFly design guidelines
 section: Content design
 subsection: writing-guides
 ---

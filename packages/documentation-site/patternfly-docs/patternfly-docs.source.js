@@ -11,7 +11,7 @@ module.exports = (sourceMD, sourceProps, sourceFunctionDocs) => {
     "/**/__tests__/**",
     "/**/*.test.tsx",
   ];
-  sourceMD(path.join(contentBase, "extensions/**/*.md"), "extensions");
+  sourceMD(path.join(contentBase, "extensions/**/*.md"), "design-guidelines");
   if (!(process.env.EXTENSIONS_ONLY === "true")) {
     sourceMD(path.join(contentBase, "contribute/**/*.md"), "pages-contribute");
     sourceMD(
@@ -27,7 +27,7 @@ module.exports = (sourceMD, sourceProps, sourceFunctionDocs) => {
     sourceMD(path.join(contentBase, "components/**/*.md"), "design-guidelines");
     sourceMD(path.join(contentBase, "content-design/**/*.md"), "content-design");
     sourceMD(path.join(contentBase, "foundations-and-styles/**/*.md"), "foundations-and-styles");
-    sourceMD(path.join(contentBase, "patterns/**/*.md"), "patterns");
+    sourceMD(path.join(contentBase, "patterns/**/*.md"), "design-guidelines");
     sourceMD(path.join(contentBase, "get-started/training/**/*.md"), "get-started");
     sourceMD(path.join(contentBase, "releases/**/*.md"), "releases");
 
@@ -150,7 +150,7 @@ module.exports = (sourceMD, sourceProps, sourceFunctionDocs) => {
     );
 
     // React-topology MD
-    sourceMD(path.join(reactTopologyPath, "/**/*.md"), "extensions");
+    sourceMD(path.join(reactTopologyPath, "/**/*.md"), "design-guidelines");
 
     // React OUIA MD
     sourceMD(path.join(reactCorePath, "/**/helpers/OUIA/*.md"), "react");

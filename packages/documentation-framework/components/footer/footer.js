@@ -30,68 +30,12 @@ export const Footer = ({ isDarkTheme }) => (
           <Grid className="pf-v6-u-py-xl">
             <GridItem
               sm={6}
-              md={4}
+              md={6}
               className="pf-v6-u-ml-md pf-v6-u-ml-0-on-md pf-v6-u-mb-xl pf-v6-u-mb-0-on-md"
-            >
-              <p className="ws-org-pfsite-footer-menu-list-title">What's new</p>
-              <nav aria-label="Quick Links">
-                <List isPlain className="ws-org-pfsite-footer-menu-list">
-                  <ListItem className="ws-org-pfsite-footer-menu-list-item">
-                    <Link
-                      className="ws-org-pfsite-footer-menu-link"
-                      to="/releases/upgrade-guide"
-                      aria-label="Latest PatternFly upgrade guide"
-                    >
-                      Upgrade
-                    </Link>
-                  </ListItem>
-                  <ListItem className="ws-org-pfsite-footer-menu-list-item">
-                    <Link
-                      className="ws-org-pfsite-footer-menu-link"
-                      to="/releases/release-highlights"
-                      aria-label="PatternFly release highlights"
-                    >
-                      Releases
-                    </Link>
-                  </ListItem>
-                  <ListItem className="ws-org-pfsite-footer-menu-list-item">
-                    <Link
-                      className="ws-org-pfsite-footer-menu-link"
-                      to="/ai/about-ai"
-                      aria-label="PatternFly's new AI resources"
-                    >
-                      PatternFly AI
-                    </Link>
-                  </ListItem>
-                  <ListItem className="ws-org-pfsite-footer-menu-list-item">
-                    <Link
-                      className="ws-org-pfsite-footer-menu-link"
-                      to="/foundations-and-styles/design-tokens/about-tokens"
-                      aria-label="PatternFly's new token system"
-                    >
-                      Tokens
-                    </Link>
-                  </ListItem>
-                </List>
-              </nav>
-            </GridItem>
-            <GridItem
-              sm={6}
-              md={4}
-              className="pf-v6-u-mt-lg pf-v6-u-mt-0-on-sm pf-v6-u-ml-md pf-v6-u-ml-0-on-md pf-v6-u-mb-xl pf-v6-u-mb-0-on-md"
             >
               <p className="ws-org-pfsite-footer-menu-list-title">Contribute</p>
               <nav aria-label="Contribute">
                 <List isPlain className="ws-org-pfsite-footer-menu-list">
-                  <ListItem className="ws-org-pfsite-footer-menu-list-item">
-                    <Link
-                      className="ws-org-pfsite-footer-menu-link"
-                      to="/get-started/about-patternfly"
-                      aria-label="Learn about PatternFly"
-                    >
-                      About PatternFly
-                    </Link>
-                  </ListItem>
                   <ListItem className="ws-org-pfsite-footer-menu-list-item">
                     <Link
                       className="ws-org-pfsite-footer-menu-link"
@@ -101,22 +45,13 @@ export const Footer = ({ isDarkTheme }) => (
                       Code of conduct
                     </Link>
                   </ListItem>
-                  <ListItem className="ws-org-pfsite-footer-menu-list-item">
-                    <Link
-                      className="ws-org-pfsite-footer-menu-link"
-                      to="/get-started/contribute"
-                      aria-label="Learn how to contribute to PatternFly"
-                    >
-                      Contribute
-                    </Link>
-                  </ListItem>
                 </List>
               </nav>
             </GridItem>
             <GridItem
               sm={6}
-              md={4}
-              className="pf-v6-u-mt-lg pf-v6-u-mt-0-on-md pf-v6-u-ml-md pf-v6-u-ml-0-on-md"
+              md={6}
+              className="pf-v6-u-mt-lg pf-v6-u-mt-0-on-sm pf-v6-u-ml-md pf-v6-u-ml-0-on-md"
             >
               <p className="ws-org-pfsite-footer-menu-list-title">Community</p>
               <nav aria-label="Stay in touch">
@@ -136,9 +71,9 @@ export const Footer = ({ isDarkTheme }) => (
                       className="ws-org-pfsite-footer-menu-link"
                       to="//medium.com/patternfly"
                       target="top"
-                      aria-label="Read the PatternFly blog"
+                      aria-label="Read our blog articles on Medium"
                     >
-                      Blog
+                      Medium
                     </Link>
                   </ListItem>
                   <ListItem className="ws-org-pfsite-footer-menu-list-item">
@@ -167,7 +102,7 @@ export const Footer = ({ isDarkTheme }) => (
                       target="top"
                       aria-label="Visit the PatternFly discussion forum"
                     >
-                      Discussions
+                      GitHub Discussions
                     </Link>
                   </ListItem>
                 </List>
