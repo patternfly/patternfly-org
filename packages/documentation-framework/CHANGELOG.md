@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 6.31.0 (2025-11-10)
+
+
+### Features
+
+* **compass:** add compass dashboard demo ([#4850](https://github.com/patternfly/patternfly-org/issues/4850)) ([b360fc6](https://github.com/patternfly/patternfly-org/commit/b360fc699610785db3ed888863bf923cecf3876b))
+
+
+
+
+
 ## 6.30.1 (2025-11-07)
 
 
