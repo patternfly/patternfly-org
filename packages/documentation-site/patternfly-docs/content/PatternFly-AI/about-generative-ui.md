@@ -46,6 +46,9 @@ The Compass POC introduces several new capabilities:
     - `hasAiIndicator` adds a gradient border to visually highlight AI-related content.
 - **Demos**: a suite of full page demos showing how to wire up the building blocks into a Compass like experience
   - [Full page demo with card view and table layouts](/patternfly-ai/generative-uis/compass#card-and-data-view-layout)
+  - [Full page demo with dashboard layout](/patternfly-ai/generative-uis/compass/org-demos#dashboard-layout)
+  - [Static, full page HTML demo with multiple content sections](/patternfly-ai/generative-uis/compass/html-demos#multiple-sections)
+  - [Static, full page HTML demo with drawer](/patternfly-ai/generative-uis/compass/html-demos#with-drawer)
 
 ### Accessibility focus
 
