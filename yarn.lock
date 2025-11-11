@@ -4261,10 +4261,10 @@ __metadata:
     webpack-dev-server: "npm:5.2.2"
     webpack-merge: "npm:5.8.0"
   peerDependencies:
-    "@patternfly/patternfly": ^6.5.0-prerelease.20
-    "@patternfly/react-code-editor": ^6.5.0-prerelease.9
-    "@patternfly/react-core": ^6.5.0-prerelease.9
-    "@patternfly/react-table": ^6.5.0-prerelease.9
+    "@patternfly/patternfly": ^6.5.0-prerelease.23
+    "@patternfly/react-code-editor": ^6.5.0-prerelease.11
+    "@patternfly/react-core": ^6.5.0-prerelease.11
+    "@patternfly/react-table": ^6.5.0-prerelease.11
     react: ^17.0.0 || ^18.0.0
     react-dom: ^17.0.0 || ^18.0.0
   bin:
@@ -4355,10 +4355,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@patternfly/patternfly@npm:^6.5.0-prerelease.20":
-  version: 6.5.0-prerelease.20
-  resolution: "@patternfly/patternfly@npm:6.5.0-prerelease.20"
-  checksum: 10c0/b9bfad6e22009e1d3c97cddbdba01f0b0515115f518485c7d11385cd59c133899321a353dda2dd078ae906ae7796e91e707885a180817a23aba71122d9412c72
+"@patternfly/patternfly@npm:^6.5.0-prerelease.23":
+  version: 6.5.0-prerelease.23
+  resolution: "@patternfly/patternfly@npm:6.5.0-prerelease.23"
+  checksum: 10c0/d3358b7293f5e8478c622cb6b3e1554fc62ee371b2df2af9536eff418f8c0454c4b517e5b4f6805eb1e7d47204aef9202c86c2efe209658953b256f59c154aed
   languageName: node
   linkType: hard
 
@@ -17747,10 +17747,10 @@ __metadata:
   resolution: "patternfly-org-workspace@workspace:."
   dependencies:
     "@octokit/rest": "npm:^19.0.7"
-    "@patternfly/patternfly": "npm:^6.5.0-prerelease.20"
-    "@patternfly/react-code-editor": "npm:^6.5.0-prerelease.9"
-    "@patternfly/react-core": "npm:^6.5.0-prerelease.9"
-    "@patternfly/react-table": "npm:^6.5.0-prerelease.9"
+    "@patternfly/patternfly": "npm:^6.5.0-prerelease.23"
+    "@patternfly/react-code-editor": "npm:^6.5.0-prerelease.11"
+    "@patternfly/react-core": "npm:^6.5.0-prerelease.11"
+    "@patternfly/react-table": "npm:^6.5.0-prerelease.11"
     "@rspack/cli": "npm:^1.5.6"
     "@rspack/core": "npm:^1.5.6"
     "@rspack/dev-server": "npm:^1.1.4"
