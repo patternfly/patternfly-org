@@ -9,9 +9,11 @@ This guide provides an overview of the PatternFly MCP server, including its bene
 For full technical documentation, setup instructions, and to contribute, visit our [PatternFly MCP GitHub Repository](https://github.com/patternfly/patternfly-mcp).
 
 ## What is the PatternFly MCP?
-The **PatternFly MCP** is a new tool designed to integrate our design guidelines, component documentation, and accessibility best practices directly into your AI-powered development environment. 
+The **PatternFly MCP** is a tool designed to integrate our design guidelines, component documentation, and accessibility best practices directly into your AI-powered development environment. 
 
-MCP stands for Model Context Protocol, an open standard that allows AI assistants to securely and accurately access external data sources and tools. The PatternFly MCP is a server that connects your AI assistant (like those within Cursor or Claude Code) directly to official PatternFly documentation. Instead of relying on a model's potentially outdated or overgeneralized knowledge, your assistant can query the PatternFly MCP to get answers based on real, up-to-date, and verified sources.
+MCP stands for Model Context Protocol, an open standard that allows AI assistants to securely and accurately access external data sources and tools. The PatternFly MCP is a server that connects your AI assistant (like those within Cursor or Claude Code) directly to official PatternFly documentation. Instead of relying on a model's potentially outdated or overgeneralized knowledge, your assistant can query the PatternFly MCP to get answers based on real, up-to-date, and verified sources. 
+
+Beyond offering these enhanced AI assistant conversations, the PatternFly MCP can also work in the background and incorporate into your existing workflows. For example, it can ensure that vibe coding will automatically utilize the latest and most applicable PatternFly elements, without requiring you to specifically ask an assistant to do so. It will quietly supply an assistant with the information necessary to make these recommendations and decisions.
 
 ## What are the benefits of the PatternFly MCP?
 
@@ -35,17 +37,18 @@ You can install the PatternFly MCP in your preferred development environment. He
 1. At the bottom of the settings menu, click **New MCP Server** to open the `mcp.json` file.
 1. Add the following JSON block within the `mcpServers` object. If `mcpServers` already exists, just add the `patternfly-docs` block inside it.
 
-    ``` {
-    "mcpServers": {
-        "patternfly-docs": {
-        "command": "npx",
-        "args": [
-            "-y",
-            "@patternfly/patternfly-mcp"
-        ],
-        "description": "PatternFly React development rules and documentation"
+    ``` 
+    {
+        "mcpServers": {
+            "patternfly-docs": {
+            "command": "npx",
+            "args": [
+                "-y",
+                "@patternfly/patternfly-mcp"
+            ],
+            "description": "PatternFly React development rules and documentation"
+            }
         }
-    }
     }
     ```
 1. Save and close mcp.json. The MCP Settings will now show "patternfly-docs" as an installed server with its tools enabled.
@@ -77,12 +80,12 @@ Once installed, you can begin asking questions in your chat window and the Patte
 - **Response:** Yes, the PatternFly MCP is running successfully. There are 2 available tools for you to use: `mcp_patternfly-docs_usePatternFlyDocs` and `mcp_patternfly-docs_fetchDocs`.
 
 ### Fetching specific documentation
-- **Prompt:** "Yes, fetch docs for card"
+- **Prompt:** "Fetch docs for a PatternFly card"
 - **Expected AI behavior:**  This will trigger the `fetchDocs` tool. The assistant will return a detailed, organized summary of the card component's documentation, including design guidelines (elements, usage, variations), accessibility guidelines (key requirements, React props), and more.
 - **Response:** “Here’s the current PatternFly card documentation, including the general design guidelines and key accessibility requirements: [documentation summary]“
 
 ### Get design guidance
-- **Prompt:** "Which components should I use if we want a user to be able to select several different cards from a gallery view?"
+- **Prompt:** "Which PatternFly components should I use if we want a user to be able to select several different cards from a gallery view?"
 - **Expected AI behavior:**   This will trigger the `usePatternFlyDocs tool`. The AI assistant will analyze your request and provide a recommendation based on PatternFly's design guidelines, likely suggesting the use of selectable cards and noting that multi-select is achieved using cards with checkboxes.
 - **Response:** “If you want to let users select several cards within a gallery view, you could use the selectable cards variation, which would allow multiple card selection via checkboxes that are placed within a card’s header.”
 
