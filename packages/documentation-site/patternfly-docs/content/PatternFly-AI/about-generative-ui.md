@@ -4,6 +4,8 @@ section: PatternFly-AI
 subsection: Generative UIs
 ---
 
+import { Alert } from "@patternfly/react-core";
+
 # PatternFly + Generative UIs
 
 ## What is generative UI?
@@ -14,7 +16,7 @@ Generative UI is an emerging approach to user interface design that leverages ar
 
 Generative UI represents a significant opportunity for PatternFly to explore new patterns, layouts, and styles that support AI-driven interface generation. PatternFly has been calling this proof of concept Compass. It investigates how the design system can evolve to support generative UI use cases.
 
-**Important**: Compass is best suited for use as a POC in other proof-of-concept generative UI use cases. It is **not yet production quality code** and should be used for exploration and experimentation purposes only.
+<Alert isInline variant="info" title="Compass is best suited for use as a POC in other proof-of-concept generative UI use cases. It is not yet production quality code and should be used for exploration and experimentation purposes only." />
 
 ### AI-enabled seed app
 
@@ -59,10 +61,9 @@ The Compass effort is actively in progress. Components are being built, evaluate
 
 As of Nov 10, 2025, these are the prereleases available for building out Compass based UI POCs.
 
-- "@patternfly/react-catalog-view-extension": "6.2.0"
+- "@patternfly/patternfly": "6.5.0-prerelease.20"
 - "@patternfly/react-charts": "8.5.0-prerelease.4"
 - "@patternfly/react-code-editor": "6.5.0-prerelease.9"
-- "@patternfly/react-component-groups": "6.4.0"
 - "@patternfly/react-core": "6.5.0-prerelease.9"
 - "@patternfly/react-drag-drop": "6.5.0-prerelease.9"
 - "@patternfly/react-icons": "6.5.0-prerelease.4"
