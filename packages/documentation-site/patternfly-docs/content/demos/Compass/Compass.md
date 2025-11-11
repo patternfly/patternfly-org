@@ -39,7 +39,7 @@ import heroBg from './assets/hero-bg.png';
 
 ## Demo notes
 
-To facilitate building a compass layout, there several are useful variants and props exposed on other PatternFly components that may be useful:
+To facilitate building a compass layout, there are several useful variants and props exposed on other PatternFly components that may be useful:
 
 - `isPlain` on [Card](/components/card#modifiers), [DataList](/components/data-list#plain), and [Table](/components/table#plain). This flag will set a transparent background for these components, allowing the glass effect in a wrapping `CompassPanel` to appear as the background.
 - `isVertical` on [ActionList](/components/action-list#vertical-action-list). This flag sets the orientation on `ActionList` to support vertical icon lists for the sidebars.
