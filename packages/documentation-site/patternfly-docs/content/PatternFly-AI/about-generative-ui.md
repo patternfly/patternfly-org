@@ -6,11 +6,9 @@ subsection: Generative UIs
 
 import { Alert } from "@patternfly/react-core";
 
-# PatternFly + Generative UIs
-
 ## What is generative UI?
 
-Generative UI is an emerging approach to user interface design that leverages artificial intelligence to dynamically create and adapt interface elements based on context, user needs, and data. Unlike traditional static interfaces, generative UIs can produce layouts, components, and visual styles in real-time, offering more flexible and personalized user experiences.
+Generative UI (GenUI) refers to a user interface design approach where AI is leveraged to dynamically create and adapt UI elements based on context, user needs, and data. Unlike traditional, static UIs, GenUI can produce layouts, components, and visual styles in real-time, offering more flexible and personalized user experiences.
 
 ## PatternFly's exploration: Compass
 
@@ -22,9 +20,15 @@ Generative UI represents a significant opportunity for PatternFly to explore new
 
 We are creating an [AI-enabled seed app](https://github.com/gitdallas/patternfly-react-seed/tree/compass_theme) that you can use to create your own PatternFly Compass-based POC. The seed app includes the Compass layout fully wired out with all styles set up, providing a solid foundation that you can build on top of. It can be leveraged with AI tools like Cursor or Claude Code to build out your own POC, making it easier to experiment with generative UI patterns and explore new use cases.
 
-### What Compass includes
+### What does Compass include?
 
-The Compass POC introduces several new capabilities:
+To explore Compass and its features, take a look at a number of our full page demos:
+- [Full page demo with card view and table layouts](/patternfly-ai/generative-uis/compass#card-and-data-view-layout)
+- [Full page demo with dashboard layout](/patternfly-ai/generative-uis/compass/org-demos#dashboard-layout)
+- [Static, full page HTML demo with multiple content sections](/patternfly-ai/generative-uis/compass/html-demos#multiple-sections)
+- [Static, full page HTML demo with drawer](/patternfly-ai/generative-uis/compass/html-demos#with-drawer)
+
+To support the different ways you might use Compass, we've introduced several new capabilities to PatternFly:
 
 - **Design tokens**: New design tokens that enable:
   - Glass-like visual effects
@@ -44,11 +48,6 @@ The Compass POC introduces several new capabilities:
   - AI Indicators:
     - `isThinking` adds a pulsing animation to show a system is actively processing (like an AI "thinking").
     - `hasAiIndicator` adds a gradient border to visually highlight AI-related content.
-- **Demos**: a suite of full page demos showing how to wire up the building blocks into a Compass like experience
-  - [Full page demo with card view and table layouts](/patternfly-ai/generative-uis/compass#card-and-data-view-layout)
-  - [Full page demo with dashboard layout](/patternfly-ai/generative-uis/compass/org-demos#dashboard-layout)
-  - [Static, full page HTML demo with multiple content sections](/patternfly-ai/generative-uis/compass/html-demos#multiple-sections)
-  - [Static, full page HTML demo with drawer](/patternfly-ai/generative-uis/compass/html-demos#with-drawer)
 
 ### Accessibility focus
 
@@ -60,7 +59,7 @@ Some stakeholdres have been experimenting with Generative UI use cases using Rea
 
 ### Current status
 
-The Compass effort is actively in progress. Components are being built, evaluated, and refined based on feedback. The design is continuously evolving as we learn more about generative UI patterns and their practical applications.
+Compass is still under development, with new components being built, evaluated, and refined based on feedback. As we hear from your experiments and learn more about GenUI patterns, the design of Compass will continuously evolve to support practical applications.
 
 As of Nov 10, 2025, these are the prereleases available for building out Compass based UI POCs.
 
