@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.4.0-alpha.310 (2025-11-11)
+
+
+### Bug Fixes
+
+* Updated documentation for compass. ([#4858](https://github.com/patternfly/patternfly-org/issues/4858)) ([92dd0cb](https://github.com/patternfly/patternfly-org/commit/92dd0cb2394650e80735df62864c50cc34f63fe8))
+
+
+
+
+
 # 1.4.0-alpha.309 (2025-11-10)
 
 
