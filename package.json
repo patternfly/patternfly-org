@@ -33,6 +33,7 @@
     ]
   },
   "devDependencies": {
+    "@babel/plugin-bugfix-firefox-class-in-computed-class-key": "^7.28.5",
     "@octokit/rest": "^19.0.7",
     "@patternfly/patternfly": "^6.5.0-prerelease.12",
     "@patternfly/react-code-editor": "^6.4.0",
