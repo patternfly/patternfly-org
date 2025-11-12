@@ -6,7 +6,7 @@ import '../design-guidelines/components/components.css';
 
 This guide provides an overview of the PatternFly MCP server, including its benefits and instructions for setting up the tool.
 
-For full technical documentation, setup instructions, and to contribute, visit our [PatternFly MCP GitHub Repository](https://github.com/patternfly/patternfly-mcp).
+For full technical documentation, setup instructions, and to contribute, visit our [PatternFly MCP GitHub repository](https://github.com/patternfly/patternfly-mcp).
 
 ## What is the PatternFly MCP?
 The **PatternFly MCP** is a tool designed to integrate our design guidelines, component documentation, and accessibility best practices directly into your AI-powered development environment. 
@@ -35,12 +35,12 @@ You can install the PatternFly MCP in your preferred development environment. He
 1. While in Cursor, press **cmd** + **shift** +**P**. 
 1. Search for and select **View: Open MCP Settings**. 
 1. At the bottom of the settings menu, click **New MCP Server** to open the `mcp.json` file.
-1. Add the following JSON block within the `mcpServers` object. If `mcpServers` already exists, just add the `patternfly-docs` block inside it.
+1. Add the following JSON block within the `mcpServers` object. If `mcpServers` already exists, just add the `patternfly-mcp` block inside it.
 
     ``` 
     {
         "mcpServers": {
-            "patternfly-docs": {
+            "patternfly-mcp": {
             "command": "npx",
             "args": [
                 "-y",
@@ -51,10 +51,10 @@ You can install the PatternFly MCP in your preferred development environment. He
         }
     }
     ```
-1. Save and close mcp.json. The MCP Settings will now show "patternfly-docs" as an installed server with its tools enabled.
+1. Save and close mcp.json. The MCP Settings will now show "patternfly-mcp" as an installed server with its tools enabled.
 <br/ ><br/ >
 	<div class="ws-docs-content-img">
-    ![Cursor's MCP settings, which display patternfly-docs as turned "on".](./img/cursor-mcp-settings.svg)
+    ![Cursor's MCP settings, which display patternfly-mcp as turned "on".](./img/cursor-mcp-settings.svg)
     </div>
     
 ### Claude Code
@@ -76,8 +76,8 @@ Once installed, you can begin asking questions in your chat window and the Patte
 
 ### Verifying installation
 - **Prompt:** "Can you see the PF MCP running? If so, what are the tools?"
-- **Expected AI behavior:** The assistant will confirm it sees the PatternFly MCP and list the available tools: mcp_patternfly-docs_usePatternFlyDocs and mcp_patternfly-docs_fetchDocs.
-- **Response:** Yes, the PatternFly MCP is running successfully. There are 2 available tools for you to use: `mcp_patternfly-docs_usePatternFlyDocs` and `mcp_patternfly-docs_fetchDocs`.
+- **Expected AI behavior:** The assistant will confirm it sees the PatternFly MCP and list the available tools: mcp_patternfly-mcp_usePatternFlyDocs and mcp_patternfly-mcp_fetchDocs.
+- **Response:** Yes, the PatternFly MCP is running successfully. There are 2 available tools for you to use: `mcp_patternfly-mcp_usePatternFlyDocs` and `mcp_patternfly-mcp_fetchDocs`.
 
 ### Fetching specific documentation
 - **Prompt:** "Fetch docs for a PatternFly card"
