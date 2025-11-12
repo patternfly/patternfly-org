@@ -22,7 +22,7 @@
     "@patternfly/design-tokens": "1.14.4",
     "@patternfly/documentation-framework": "workspace:*",
     "@patternfly/quickstarts": "6.4.0",
-    "@patternfly/react-catalog-view-extension": "6.2.0",
+    "@patternfly/react-catalog-view-extension": "6.3.0",
     "@patternfly/react-charts": "8.5.0-prerelease.4",
     "@patternfly/react-component-groups": "6.4.0",
     "@patternfly/react-console": "6.1.0",

@@ -4377,16 +4377,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@patternfly/react-catalog-view-extension@npm:6.2.0":
-  version: 6.2.0
-  resolution: "@patternfly/react-catalog-view-extension@npm:6.2.0"
+"@patternfly/react-catalog-view-extension@npm:6.3.0":
+  version: 6.3.0
+  resolution: "@patternfly/react-catalog-view-extension@npm:6.3.0"
   dependencies:
     "@patternfly/react-core": "npm:^6.1.0"
     "@patternfly/react-styles": "npm:^6.1.0"
   peerDependencies:
     react: ^17 || ^18 || ^19
     react-dom: ^17 || ^18 || ^19
-  checksum: 10c0/4de36b7c33ac29644777b6dda68bdd9fbb5dd4d23b44ae0a2f9463f7389defdbd42e48be537c8d533264f84a4b18d492d1f41e90f52d758e3515874914f21c24
+  checksum: 10c0/a0e357b51c4ca720d84cb9fd0805114bf7fd78758da58dae27e1e35e762ace17727c5d45dc1cef5c47330a569a6b85f06b8f9daa13db6ce8542ee7d121245a08
   languageName: node
   linkType: hard
 
@@ -17757,7 +17757,7 @@ __metadata:
     "@patternfly/documentation-framework": "workspace:*"
     "@patternfly/patternfly-a11y": "npm:5.0.0"
     "@patternfly/quickstarts": "npm:6.4.0"
-    "@patternfly/react-catalog-view-extension": "npm:6.2.0"
+    "@patternfly/react-catalog-view-extension": "npm:6.3.0"
     "@patternfly/react-charts": "npm:8.5.0-prerelease.4"
     "@patternfly/react-component-groups": "npm:6.4.0"
     "@patternfly/react-console": "npm:6.1.0"
