@@ -18,7 +18,7 @@ Generative UI represents a significant opportunity for PatternFly to explore new
 
 ### AI-enabled seed app
 
-We are creating an [AI-enabled seed app](https://github.com/gitdallas/patternfly-react-seed/tree/compass_theme) that you can use to create your own PatternFly Compass-based POC. The seed app includes the Compass layout fully wired out with all styles set up, providing a solid foundation that you can build on top of. It can be leveraged with AI tools like Cursor or Claude Code to build out your own POC, making it easier to experiment with generative UI patterns and explore new use cases.
+We are creating an [AI-enabled seed app](https://github.com/patternfly/patternfly-react-seed/tree/compass_theme) that you can use to create your own PatternFly Compass-based POC. The seed app includes the Compass layout fully wired out with all styles set up, providing a solid foundation that you can build on top of. It can be leveraged with AI tools like Cursor or Claude Code to build out your own POC, making it easier to experiment with generative UI patterns and explore new use cases.
 
 ### What does Compass include?
 
