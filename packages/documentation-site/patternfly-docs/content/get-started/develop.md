@@ -12,7 +12,7 @@ In order to develop with PatternFly, you will need to:
 
 1. [Learn about the PatternFly design system](/get-started/about-patternfly) to get acquainted with all of its elements.
 
-1. [Learn about our design token system](/tokens/about-tokens), which enables you to build interfaces with consistent PatternFly styling, including colors, shadows, spacing, and more.
+1. [Learn about our design token system](/foundations-and-styles/design-tokens/about-tokens), which enables you to build interfaces with consistent PatternFly styling, including colors, shadows, spacing, and more.
 
 1. Install a package manager to help you install, update, and configure all necessary PatternFly packages. We recommend [npm](https://nodejs.org/en/download) or [Yarn](https://yarnpkg.com/getting-started).
 
@@ -34,7 +34,7 @@ PatternFly supports the 2 most recent versions of React at a time. PatternFly 6 
 * [@patternfly/react-table](https://www.npmjs.com/package/@patternfly/react-table): PatternFly table components.
 * [@patternfly/react-tokens](https://www.npmjs.com/package/@patternfly/react-tokens): PatternFly's CSS variables, transformed into JavaScript objects for use with React.
 
-These packages are maintained together. To determine which versions of each package are compatible with the rest, view our [release highlights](https://www.patternfly.org/get-started/release-highlights).
+These packages are maintained together. To determine which versions of each package are compatible with the rest, view our [release highlights](https://www.patternfly.org/releases/release-highlights).
 
 We support the following configurations:
 * [TypeScript](https://github.com/patternfly/patternfly-react-seed/blob/master/tsconfig.json)
@@ -132,7 +132,7 @@ PatternFly uses [Font Awesome 5](https://fontawesome.com/), which can be utilize
 
 ## Testing
 
-Many PatternFly components comply with the Open UI Automation (OUIA) guidelines, which are designed to ease the burden of creating and maintaining automated testing environments.  Additional details about OUIA and the full list of compliant components [can be found in our developer resources.](/developer-resources/open-ui-automation)
+Many PatternFly components comply with the Open UI Automation (OUIA) guidelines, which are designed to ease the burden of creating and maintaining automated testing environments.  Additional details about OUIA and the full list of compliant components [can be found in our developer resources.](/developer-guides/open-ui-automation)
 
 ## Supported browsers and operating systems
 
