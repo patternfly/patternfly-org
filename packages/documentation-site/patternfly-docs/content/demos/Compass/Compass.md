@@ -26,10 +26,20 @@ import OutlinedQuestionCircleIcon from '@patternfly/react-icons/dist/esm/icons/o
 import wallpaperLight from './assets/wallpaper-light.png'
 import wallpaperDark from './assets/wallpaper-dark.png'
 import imgAvatar from './assets/avatar.jpg';
+import { RHAutomationsLogo } from './assets/RHAutomationsLogo';
+import { RHAiExperienceIcon } from './assets/RHAiExperienceIcon';
+import AnimationsOverviewClusterInventory from "./cards/AnimationsOverviewClusterInventory";
+import AnimationsOverviewNetworkActivity from "./cards/AnimationsOverviewNetworkActivity";
+import AnimationsOverviewStorage from "./cards/AnimationsOverviewStorage";
+import AnimationsOverviewMemoryUtilization from "./cards/AnimationsOverviewMemoryUtilization";
+import { ClusterDetailsCard } from './cards/ClusterDetailsCard';
+import { RecentActivityCard } from './cards/RecentActivityCard';
+
+import heroBg from './assets/hero-bg.png';
 
 ## Demo notes
 
-To facilitate building a compass layout, there several are useful variants and props exposed on other PatternFly components that may be useful:
+To facilitate building a compass layout, there are several useful variants and props exposed on other PatternFly components that may be useful:
 
 - `isPlain` on [Card](/components/card#modifiers), [DataList](/components/data-list#plain), and [Table](/components/table#plain). This flag will set a transparent background for these components, allowing the glass effect in a wrapping `CompassPanel` to appear as the background.
 - `isVertical` on [ActionList](/components/action-list#vertical-action-list). This flag sets the orientation on `ActionList` to support vertical icon lists for the sidebars.
@@ -42,4 +52,9 @@ To facilitate building a compass layout, there several are useful variants and p
 ### Card and data view layout
 
 ```js file="./CompassIntegrationsDemo.tsx" isFullscreen
+```
+
+### Dashboard layout
+
+```js file="./dashboard.tsx" isFullscreen
 ```

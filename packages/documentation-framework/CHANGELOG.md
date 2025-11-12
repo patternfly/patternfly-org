@@ -3,6 +3,47 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 6.31.3 (2025-11-12)
+
+
+### Bug Fixes
+
+* **docs:** Compass doc wording fix ([#4859](https://github.com/patternfly/patternfly-org/issues/4859)) ([d438ed5](https://github.com/patternfly/patternfly-org/commit/d438ed5319b8f6c3ed4a3f28a817c912d5f10d34))
+
+
+
+
+
+## 6.31.2 (2025-11-11)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 6.31.1 (2025-11-11)
+
+
+### Bug Fixes
+
+* Updated documentation for compass. ([#4858](https://github.com/patternfly/patternfly-org/issues/4858)) ([92dd0cb](https://github.com/patternfly/patternfly-org/commit/92dd0cb2394650e80735df62864c50cc34f63fe8))
+
+
+
+
+
+# 6.31.0 (2025-11-10)
+
+
+### Features
+
+* **compass:** add compass dashboard demo ([#4850](https://github.com/patternfly/patternfly-org/issues/4850)) ([b360fc6](https://github.com/patternfly/patternfly-org/commit/b360fc699610785db3ed888863bf923cecf3876b))
+
+
+
+
+
 ## 6.30.1 (2025-11-07)
 
 
