@@ -3,6 +3,7 @@ id: Overview
 title: Design tokens overview
 section: foundations-and-styles
 subsection: design-tokens
+sortvalue: 1
 --- 
 
 **Design tokens** are variables that store visual design attributes like color, typography, and spacing. Tokens have a name and value that conveys their associated design style, making their purpose clear and recognizable.
