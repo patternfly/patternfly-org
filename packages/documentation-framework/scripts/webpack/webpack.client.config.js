@@ -81,7 +81,20 @@ const clientConfig = async (env, argv) => {
       rules: [
         {
           test: /\.css$/,
-          exclude: reactCSSRegex,
+          exclude: (modulePath) => {
+            // Exclude react-*/dist CSS files, but allow catalog-view-extension
+            const pathStr = modulePath.toString();
+            if (reactCSSRegex.test(pathStr)) {
+              // Allow catalog-view-extension through (don't exclude it)
+              if (pathStr.includes('react-catalog-view-extension/dist/css/')) {
+                return false;
+              }
+              // Exclude other react-*/dist CSS files
+              return true;
+            }
+            // Don't exclude files that don't match reactCSSRegex
+            return false;
+          },
           use: [
             {
               loader: rspack.CssExtractRspackPlugin.loader
@@ -103,6 +116,7 @@ const clientConfig = async (env, argv) => {
         },
         {
           test: reactCSSRegex,
+          exclude: /react-catalog-view-extension\/dist\/css\/.*\.css$/,
           use: 'null-loader'
         },
       ]
