@@ -1,6 +1,7 @@
 ---
 id: Develop with tokens
 section: foundations-and-styles
+subsection: design-tokens
 ---
 
 ## Using tokens in code
@@ -11,7 +12,7 @@ Our tokens are named semantically, so that they're meaningful and better communi
 
 In the event that there isn't a semantic token that fits your use case, then you can use a base token instead, but do so sparingly. Do not use palette tokens. They are the foundation of our token system and there will always be a better base or semantic token to use.
 
-[View all PatternFly design tokens.](/foundations-and-styles/design-tokens/all-patternfly-tokens)
+[View all design tokens.](/foundations-and-styles/design-tokens/all-patternfly-tokens)
 
 ### Dark theme support
 

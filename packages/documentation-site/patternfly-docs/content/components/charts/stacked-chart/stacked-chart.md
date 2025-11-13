@@ -1,6 +1,7 @@
 ---
 id: Stack chart
-section: charts
+section: components
+subsection: charts
 ---
 A **stacked bar chart** describes totals while allowing a degree of internal breakdown of its data. Stacked bar charts can be illustrated vertically and horizontally depending on available space and the described data.
 

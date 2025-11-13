@@ -1,6 +1,7 @@
 ---
 id: Sparkline chart
-section: charts
+section: components
+subsection: charts
 ---
 
 A **sparkline** is a small chart that helps users analyze data and understand trends and patterns.

@@ -394,7 +394,7 @@ Along with these new features, we've updated our documentation:
 - New [ChatBot analytics documentation](/AI/chatbot/analytics) is also now available, which provides general guidance on the implementation of analytics tracking.
 
 ### Expanded chart library
-PatternFly has historically provided a charting solution using the [Victory](https://formidable.com/open-source/victory/docs/victory-chart/) chart library. With this release, PatternFly is also now delivering 2 charts based on the [Apache ECharts](https://echarts.apache.org/) library, including [a line chart](/charts/line-chart/EChart) and [a Sankey chart](/charts/sankey-chart).
+PatternFly has historically provided a charting solution using the [Victory](https://formidable.com/open-source/victory/docs/victory-chart/) chart library. With this release, PatternFly is also now delivering 2 charts based on the [Apache ECharts](https://echarts.apache.org/) library, including [a line chart](/charts/line-chart) and [a Sankey chart](/charts/sankey-chart).
 
 Additionally, EChart is now listed as a peer dependency for PatternFly. To use these new chart solutions, add 'echart' to your project dependencies and follow PatternFly's documentation to build out your charts.
 
@@ -499,7 +499,7 @@ The following fix could require manual updates depending on how you handle break
 - We updated and added "draggable" examples to [dual list selector](/components/dual-list-selector#draggable) and [data list](/components/data-list#draggable).
 - We updated our ChatBot documentation: 
     - We renamed the extension to "ChatBot", to better brand our offering and help distinguish it from other general "chatbot" features.
-    - We combined and organized our documentation into a few cohesive pages: ["Overview"](/AI/chatbot/overview), ["UI"](/AI/chatbot/ui), and ["Messages"](/AI/chatbot/message). Note that our documentation structure could continue to change as our extension grows. We will continue to share updates when changes occur. 
+    - We combined and organized our documentation into a few cohesive pages: ["Overview"](/AI/chatbot/overview), ["UI"](/AI/chatbot/ui), and ["Messages"](/AI/chatbot/messages). Note that our documentation structure could continue to change as our extension grows. We will continue to share updates when changes occur. 
     - We moved our [basic and embedded ChatBot demos](/AI/chatbot/overview/demo) to the "Overview" page for better visibility. 
     - We added initial [ChatBot design guidelines](/AI/chatbot/overview/design-guidelines), which can also be found on the "Overview" page.
     - We added documentation for new features, as described in the following section. 
@@ -513,7 +513,7 @@ We've continued to evolve our new ChatBot:
 - We removed the third-party `AutoTextArea` in the message bar and replaced it with our own custom solution.
 - We renamed the `toolTipLabel` prop to `tooltipLabel`.
 - We added support for new features, including: 
-    - A ["skip to chatbot" button](patternfly-ai/chatbot/ui/#skip-to-content).
+    - A ["skip to chatbot" button](/AI/chatbot/ui#skip-to-content).
     - New features in [ChatBot messages](/AI/chatbot/messages#messages) and the message bar: 
         - Truncation of long bot and user names. 
         - More complex list formats.
@@ -636,7 +636,7 @@ In addition to the previously mentioned documentation updates, we've made change
 
 #### Miscellaneous cleanup and enhancements
 - Shortened component descriptions shown in component page headers and on the [all components page](/components/all-components).
-- Added more details about [React tokens](/foundations-and-styles/design-tokens/develop-with-tokens#react-tokens) and [how to migrate them](/releases/upgrade-guide#utilize-our-tokens-update-codemod).
+- Added more details about [React tokens](/foundations-and-styles/design-tokens/develop#react-tokens) and [how to migrate them](/releases/upgrade-guide#utilize-our-tokens-update-codemod).
 - Added React example documentation for [text input group](/components/text-input-group).
 
 <Divider />
@@ -663,10 +663,10 @@ We created a framework for micro animation CSS tokens, which will be used to ena
 We made more improvements to our website docs, to ensure that they're accurate and inline with our new token system. A variety of pages and sections were updated, including: 
 - All tokens pages: 
     - [About tokens](/foundations-and-styles/design-tokens/about-tokens)
-    - [All PatternFly tokens](/foundations-and-styles/design-tokens/all-patternfly-tokens)
-    - [Develop with tokens](/foundations-and-styles/design-tokens/develop-with-tokens)
-    - [Design with tokens](/foundations-and-styles/design-tokens/design-with-tokens)
-    - **Note:*- Any @patternfly/react-tokens referencing global variables will need to be updated, since global variables have been replaced with tokens. Following our [token migration instructions](/foundations-and-styles/design-tokens/develop-with-tokens#migrate-to-tokens) will help you determine the correct token to use. 
+    - [All design tokens](/foundations-and-styles/design-tokens/all-patternfly-tokens)
+    - [Develop with tokens](/foundations-and-styles/design-tokens/develop)
+    - [Design with tokens](/foundations-and-styles/design-tokens/design)
+    - **Note:*- Any @patternfly/react-tokens referencing global variables will need to be updated, since global variables have been replaced with tokens. Following our [token migration instructions](/foundations-and-styles/design-tokens/develop#migrate-to-tokens) will help you determine the correct token to use. 
 - Our design foundations 
     - [Colors](/foundations-and-styles/colors) 
     - [Icons](/foundations-and-styles/icons) 

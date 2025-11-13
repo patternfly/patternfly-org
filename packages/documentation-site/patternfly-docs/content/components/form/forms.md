@@ -307,7 +307,7 @@ Because field groups call for more clicks, tabs, and interactions to reach form 
 ![Example of nested expandable field groups in a form.](./img/form-multi-groups.svg)
 </div>
 
-To view an interactive example of field groups, see our [field groups demo](/components/form#field-groups).
+To view an interactive example of field groups, see our [field groups demo](/components/forms/form#field-groups).
 
 ## Spacing
 Forms may be placed in several contexts including on a page, in a wizard, or in a modal. Your chosen form placement may impact specific spacing considerations, but general form spacing requirements apply across these contexts.

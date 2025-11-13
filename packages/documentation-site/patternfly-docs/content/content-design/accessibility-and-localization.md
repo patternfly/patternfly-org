@@ -1,5 +1,5 @@
 ---
-id: Writing for all audiences
+id: Accessiblity and localization
 section: content-design
 --- 
 

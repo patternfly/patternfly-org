@@ -1,7 +1,7 @@
 ---
 id: Tooltips
 section: content-design
-subsection: grammar
+subsection: writing-guides
 ---
 
 import ArrowCircleUpIcon from '@patternfly/react-icons/dist/esm/icons/arrow-circle-up-icon';

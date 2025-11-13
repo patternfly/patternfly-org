@@ -1,6 +1,7 @@
 ---
 id: Bar chart
-section: charts
+section: components
+subsection: charts
 ---
 A **bar chart** is used to easily display two variables, one on the horizontal x-axis and one on the vertical y-axis. They are helpful to visualize and compare categorical data.
 

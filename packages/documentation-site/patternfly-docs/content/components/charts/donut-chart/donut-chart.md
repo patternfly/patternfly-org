@@ -1,6 +1,7 @@
 ---
 id: Donut chart
-section: charts
+section: components
+subsection: charts
 ---
 A **donut chart** represents relative amounts that must add up to 100%.
 

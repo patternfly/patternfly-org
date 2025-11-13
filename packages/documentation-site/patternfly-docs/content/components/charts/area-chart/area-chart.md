@@ -1,6 +1,7 @@
 ---
 id: Area chart
-section: charts
+section: components
+subsection: charts
 ---
 An **area chart** is used to provide metrics for a single data point. While similar to a line chart in both form and function, it offers an area fill for visual emphasis. The area fill below the line also functions to indicate cumulative data.
 

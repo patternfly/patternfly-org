@@ -1,6 +1,7 @@
 ---
 id: Bullet chart
-section: charts
+section: components
+subsection: charts
 ---
 A **bullet chart** can be thought of as an extension to a bar chart that measures a dynamic value with thresholds and target values. While similar to [donut utilization charts](/charts/donut-utilization-chart), bullet charts can show underages and overages of data (below 0% and above 100%), visualize horizontally or vertically, and pack large amounts of information into a compact space. 
 

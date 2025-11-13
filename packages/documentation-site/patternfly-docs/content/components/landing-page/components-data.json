@@ -169,7 +169,7 @@
   },
   "icon": {
     "illustration": "./images/component-illustrations/icon.png",
-    "summary": "An <b>icon</b> component is a container that supports <Link to='/design-foundations/icons#all-icons'>icons</Link> of varying dimensions and styles, as well as <Link to='/components/spinner'>spinners.</Link>"
+    "summary": "An <b>icon</b> component is a container that supports <Link to='/foundations-and-styles/icons#all-icons'>icons</Link> of varying dimensions and styles, as well as <Link to='/components/spinner'>spinners.</Link>"
   },
   "inline-edit": {
     "illustration": "./images/component-illustrations/inline-edit.png",

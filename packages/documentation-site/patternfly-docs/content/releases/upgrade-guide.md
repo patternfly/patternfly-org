@@ -90,7 +90,7 @@ To run [our codemods](https://github.com/patternfly/pf-codemods/), follow these 
 
 7.  To ensure that all issues are flagged and addressed, complete steps 1-6 multiple times. Once everything looks correct, continue to [step 2](#2-remove-all-css-overrides).
 
-8. You will likely need to make updates to [React tokens](https://www.patternfly.org/foundations-and-styles/design-tokens/develop-with-tokens/#react-tokens) in your product, discussed in step 3.
+8. You will likely need to make updates to [React tokens](/foundations-and-styles/design-tokens/develop#react-tokens) in your product, discussed in step 3.
 
 ### 2. Remove all CSS overrides
 
@@ -129,7 +129,7 @@ When using this codemod, make sure to add:
 #### Run tokens-update
 For more details, refer to [the tokens-update example in the pf-codemods README](https://github.com/patternfly/pf-codemods?tab=readme-ov-file#tokens-update).
 
-This codemod updates global color variables in .js and .tsx files to a temporary hot pink color to visibly mark the places where you need to manually replace tokens (`--pf-t--temp--dev--tbd`, or `t_temp_dev_tbd` when using [React tokens](/foundations-and-styles/design-tokens/develop-with-tokens#react-tokens)). For other global variables (like spacers, font size, or box shadows), it will attempt to provide an auto-fix to match the same or closest value.
+This codemod updates global color variables in .js and .tsx files to a temporary hot pink color to visibly mark the places where you need to manually replace tokens (`--pf-t--temp--dev--tbd`, or `t_temp_dev_tbd` when using [React tokens](/foundations-and-styles/design-tokens/develop#react-tokens)). For other global variables (like spacers, font size, or box shadows), it will attempt to provide an auto-fix to match the same or closest value.
 
 This codemod works both for CSS variables and React tokens. For example:
 - A CSS variable: `--pf-v5-global--FontSize--lg` becomes `--pf-t--global--font--size--lg`
@@ -138,7 +138,7 @@ This codemod works both for CSS variables and React tokens. For example:
 ##### Manual React token updates
 Codemods will sometimes be unable to fix *all* tokens imported by `@patternfly/react-tokens` because there is often no 1:1 match for a PatternFly 5 and PatternFly 6 React token. 
 
-If you continually receive errors that tokens in your code don’t exist, despite re-running codemods, it doesn't necessarily mean that codemods didn't work. It could mean your React tokens point to old global variables. If so, you must locate outdated tokens and replace them with the [PatternFly 6 React token](/foundations-and-styles/design-tokens/develop-with-tokens#react-tokens) that best fits your use case.
+If you continually receive errors that tokens in your code don't exist, despite re-running codemods, it doesn't necessarily mean that codemods didn't work. It could mean your React tokens point to old global variables. If so, you must locate outdated tokens and replace them with the [PatternFly 6 React token](/foundations-and-styles/design-tokens/develop#react-tokens) that best fits your use case.
 
 Example:
 - PatternFly 5 token: `global_link_Color_hover`

@@ -5,6 +5,7 @@ export * from './example/example';
 export * from './footer/footer';
 export * from './gdprBanner/gdprBanner';
 export * from './propsTable/propsTable';
+export * from './navAnnouncementBanner/navAnnouncementBanner';
 export * from './sideNav/sideNav';
 export * from './topNav/topNav';
 export * from './link/link';

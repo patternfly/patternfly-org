@@ -1,6 +1,7 @@
 ---
 id: Pie chart
-section: charts
+section: components
+subsection: charts
 ---
 A **pie chart** is commonly used to show percentages or proportional data.
 

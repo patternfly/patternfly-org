@@ -1,6 +1,7 @@
 ---
 id: Design with tokens
 section: foundations-and-styles
+subsection: design-tokens
 ---
 
 Tokens are only available as part of PatternFly 6. In order to make use of our token system, you will need to install the PatternFly 6 design kit [using our onboarding guide](/get-started/design) and make sure that your product is [upgraded to PatternFly 6](/releases/upgrade-guide). 

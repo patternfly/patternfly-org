@@ -43,7 +43,7 @@ After you install the PatternFly 6 Figma workspace, you will find a welcome page
 
 Once you're familiar with the kit you're ready to start designing! 
 
-If you're completely new to PatternFly, you should also first [read this overview of our design system](/get-started/about-patternfly), to learn about everything that PatternFly has to offer and get to know who we are.
+If you're completely new to PatternFly, you should also first [read this overview of our design system](/about-us), to learn about everything that PatternFly has to offer and get to know who we are.
 
 ## How do I stay up to date?
 

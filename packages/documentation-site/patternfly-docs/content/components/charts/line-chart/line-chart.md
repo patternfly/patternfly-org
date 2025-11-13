@@ -1,6 +1,7 @@
 ---
 id: Line chart
-section: charts
+section: components
+subsection: charts
 ---
 A **line chart** plots a series of discrete data samples to show continuous data and trend information. Sample values on the line can be measured and extracted.
 

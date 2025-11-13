@@ -39,11 +39,6 @@ For development guidance, refer to the [dark theme handbook](/foundations-and-st
 <Alert 
 variant="info" 
 title="Beta feature"
-actionLinks={
-<AlertActionLink component="a" href="MEDIUM ARTICLE">
-Learn more
-</AlertActionLink>
-}
 >
 <p> High contrast mode is still under development and will continue to evolve and be enabled for charts and extensions. This beta allows you to preview our progress. </p>
 </Alert>

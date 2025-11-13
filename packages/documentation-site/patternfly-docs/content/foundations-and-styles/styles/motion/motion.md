@@ -109,7 +109,7 @@ By managing how container components appear and disappear, container placement a
 This can be observed in the following components:
 
 - [Drawer:](/components/drawer) Slide in from edge of screen
-- [Menus:](/components/dropdown) Fade into position beside menu toggle
+- [Menus:](/components/menus/menu) Fade into position beside menu toggle
 
 #### Expansion 
 

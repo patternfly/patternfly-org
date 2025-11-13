@@ -1,6 +1,7 @@
 ---
 id: Colors for charts
-section: foundations-and-styles
+section: components
+subsection: charts
 hideSource: true
 sortValue: 2
 ---
@@ -9,13 +10,13 @@ import { Alert, Grid, GridItem, Divider } from '@patternfly/react-core';
 import ColorsGrid from './colors-grid.js';
 import './colors-for-charts.css';
 
-import '../../../components/components.css';
+import '../../components.css';
 
-**Note:** Our charts use separate design tokens from our standard library. To view a list of all chart tokens, apply the "chart" category filter to [the PatternFly design tokens table](/foundations-and-styles/design-tokens/all-patternfly-tokens).
+**Note:** Our charts use separate design tokens from our standard library. To view a list of all chart tokens, apply the "chart" category filter to [the design tokens table](/foundations-and-styles/design-tokens/all-patternfly-tokens).
 
 ## Color palettes
 
-To create well-designed charts, you typically need to use multiple colors to best communicate your data. Our chart color options are all pulled from [standard PatternFly color palettes](/foundations-and-styles/charts), but the amount of hues within each color family are more limited to ensure that your chart colors are distinct enough from each other. Your data will determine the number of colors and the type of colors you will need. 
+To create well-designed charts, you typically need to use multiple colors to best communicate your data. Our chart color options are all pulled from [standard PatternFly color palettes](/foundations-and-styles/colors), but the amount of hues within each color family are more limited to ensure that your chart colors are distinct enough from each other. Your data will determine the number of colors and the type of colors you will need. 
  
 <ColorsGrid />
 

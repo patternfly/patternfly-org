@@ -1,7 +1,8 @@
 ---
 id: Overview
 title: Charts overview
-section: charts
+section: components
+subsection: charts
 sortValue: 1
 ---
 
@@ -77,4 +78,4 @@ To support dark-themed charts, you must:
 1. Import the stylesheet that contains dark theme styles by adding this line before importing your main application component: `import '@patternfly/patternfly/patternfly-charts.css';`
     - Once you import this file, you'll have access to [all chart variables](https://www.npmjs.com/package/@patternfly/patternfly?activeTab=code). Beyond dark theme, you could use these variables to match the style of other UI elements to your chart styles. 
 
-To display the list of all available chart tokens, filter for "charts" in [the PatternFly design tokens table](/foundations-and-styles/design-tokens/all-patternfly-tokens). 
+To display the list of all available chart tokens, filter for "charts" in [the design tokens table](/foundations-and-styles/design-tokens/all-patternfly-tokens). 

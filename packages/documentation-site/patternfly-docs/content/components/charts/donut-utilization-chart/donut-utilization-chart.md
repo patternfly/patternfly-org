@@ -1,6 +1,7 @@
 ---
 id: Donut utilization chart
-section: charts
+section: components
+subsection: charts
 ---
 A **donut utlization chart** is a donut chart used specifically to show utilization metrics. 
 

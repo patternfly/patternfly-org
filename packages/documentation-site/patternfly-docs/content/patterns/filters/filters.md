@@ -143,7 +143,7 @@ Since you can only search by 1 value at a time, the value will already be shown 
 </div>
 
 ### Single select
-A single select provides the user with a fixed set of values from which they can only select 1 value. This filter type uses the [single select component](/components/select/react#single). 
+A single select provides the user with a fixed set of values from which they can only select 1 value. This filter type uses the [single select component](/components/menus/select/react#single). 
 
 If the single select filter is the only filter in the toolbar, it should have an “All options” menu item that's selected by default, acting as an equivalent of no filter selected. 
 

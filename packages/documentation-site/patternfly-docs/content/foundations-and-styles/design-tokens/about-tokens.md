@@ -2,13 +2,14 @@
 id: Overview
 title: Design tokens overview
 section: foundations-and-styles
+subsection: design-tokens
 --- 
 
 **Design tokens** are variables that store visual design attributes like color, typography, and spacing. Tokens have a name and value that conveys their associated design style, making their purpose clear and recognizable.
 
 PatternFly's tokens are set up as variables and styles within Figma, and are available as CSS variables for development. Tokens are only available as part of the PatternFly 6 release, so make sure you [upgrade to PatternFly 6](/releases/upgrade-guide) and/or [install our Figma library](/get-started/design#figma-library) in order to take advantage of tokens. PatternFly 6 components, charts, and extensions are all built with tokens.
 
-[View all PatternFly design tokens.](/foundations-and-styles/design-tokens/all-patternfly-tokens)
+[View all design tokens.](/foundations-and-styles/design-tokens/all-patternfly-tokens)
 
 ## Why use tokens? 
 

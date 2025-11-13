@@ -1,6 +1,7 @@
 ---
 id: Tooltips
-section: charts
+section: components
+subsection: charts
 ---
 
 A **tooltip chart** is a chart with tooltips that appear when users hover over items within it.
