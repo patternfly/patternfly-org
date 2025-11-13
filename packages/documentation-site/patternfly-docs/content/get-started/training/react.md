@@ -1,6 +1,7 @@
 ---
 id: React
-section: training
+section: get-started
+subsection: training
 ---
 
 import { TrainingCard } from './trainingCard/trainingCard';

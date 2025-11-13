@@ -84,7 +84,7 @@ To see this feature in action, [refer to our resizable columns table demo](/exte
 ### New guidelines for streamlined AI workflows
 
 To help you safely and effectively integrate AI into your development process, we’ve released two new sets of guidelines:
-- **AI-generated code contribution:** To ensure legal compliance and quality, we've established new guidelines for contributing AI-generated code. You can find them in [our contribution documentation on our website](https://www.patternfly.org/get-started/contribute#ai-assisted-development-guidelines) and [within GitHub](https://github.com/patternfly/.github/blob/main/CONTRIBUTING.md). 
+- **AI-generated code contribution:** To ensure legal compliance and quality, we've established new guidelines for contributing AI-generated code. You can find them [within GitHub](https://github.com/patternfly/.github/blob/main/CONTRIBUTING.md). 
 - **AI-assisted code migrations:** We've also published [new documentation on using AI to streamline code migrations](/AI/ai-assisted-code-migration/). This guide offers strategies for using AI to make it easier and faster to migrate your project to PatternFly React from other frameworks.
 
 ### What's next?

@@ -1,6 +1,7 @@
 ---
 id: HTML
-section: training
+section: get-started
+subsection: training
 ---
 
 import { Gallery, GalleryItem } from '@patternfly/react-core';

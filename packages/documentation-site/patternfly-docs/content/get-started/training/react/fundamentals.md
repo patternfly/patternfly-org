@@ -1,6 +1,6 @@
 ---
 id: React fundamentals training
-section: training
+section: get-started
 hideNavItem: true
 ---
 

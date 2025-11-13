@@ -1,6 +1,6 @@
 ---
 id: HTML CSS variables and overrides training
-section: training
+section: get-started
 hideNavItem: true
 ---
 import { Button, ClipboardCopy, Divider, PageSection } from '@patternfly/react-core';
