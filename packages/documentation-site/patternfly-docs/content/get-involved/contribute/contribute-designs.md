@@ -23,6 +23,6 @@ If you see something that you'd like to work on, leave a comment on the issue or
 If you have an idea for a new design pattern, a new component type, or an existing feature improvement, we'd love to hear it. Start by opening an issue in [our patternfly-design repository.](https://github.com/patternfly/patternfly-design/issues) From there, a member of our team will reach out and work with you to plan and design a solution.
 
 ## Propose a new icon
-We encourage designers to work with [the existing PatternFly icon set](/design-foundations/icons), which covers most common use cases. If your use case isn't covered, you can propose a new icon.
+We encourage designers to work with [the existing PatternFly icon set](/foundations-and-styles/iconography), which covers most common use cases. If your use case isn't covered, you can propose a new icon.
 
 To contribute a new icon, start by opening an issue in [our patternfly-design repository](https://github.com/patternfly/patternfly-design/issues) that describes your idea and why it's needed. A member of our team will reach out to you to discuss next steps.
