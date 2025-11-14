@@ -86,6 +86,7 @@ const sourceOrder = {
   'accessibility': 100,
   'upgrade-guide': 101,
   'release-notes': 102,
+  'org-demos': 103,
 };
 
 const sortSources = ({ source: s1 }, { source: s2 }) => {

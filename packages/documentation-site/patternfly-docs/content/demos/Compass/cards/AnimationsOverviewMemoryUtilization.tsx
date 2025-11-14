@@ -1,0 +1,160 @@
+import { useState } from "react";
+import {
+  Card,
+  CardTitle,
+  CardBody,
+  CardFooter,
+  Flex,
+  Button,
+  Dropdown,
+  DropdownItem,
+  MenuToggle,
+  CardHeader,
+  DropdownList,
+  FlexItem,
+  CompassPanel,
+} from "@patternfly/react-core";
+import {
+  ChartDonutThreshold,
+  ChartDonutUtilization,
+} from "@patternfly/react-charts/dist/esm/victory/components";
+import ArrowRightIcon from "@patternfly/react-icons/dist/esm/icons/arrow-right-icon";
+import EllipsisVIcon from "@patternfly/react-icons/dist/esm/icons/ellipsis-v-icon";
+import TachometerAltIcon from "@patternfly/react-icons/dist/esm/icons/tachometer-alt-icon";
+
+export const MemoryUtilizationCard: React.FunctionComponent = () => {
+  const [isKebabOpen, setIsKebabOpen] = useState(false);
+
+  const dropdownItems = [
+    <DropdownItem key="action1">Action 1</DropdownItem>,
+    <DropdownItem key="action2">Action 2</DropdownItem>,
+    <DropdownItem key="action3">Action 3</DropdownItem>,
+  ];
+
+  // The kebab menu toggle button
+  const kebabToggle = (toggleRef: React.Ref<any>) => (
+    <MenuToggle
+      ref={toggleRef}
+      variant="plain"
+      onClick={() => setIsKebabOpen(!isKebabOpen)}
+      isExpanded={isKebabOpen}
+      aria-label="Memory usage card options"
+    >
+      <EllipsisVIcon />
+    </MenuToggle>
+  );
+
+  return (
+    <CompassPanel hasNoPadding isFullHeight>
+      <Card isPlain isFullHeight>
+        <CardHeader
+          actions={{
+            actions: (
+              <Dropdown
+                isOpen={isKebabOpen}
+                onSelect={() => setIsKebabOpen(false)}
+                onOpenChange={(isOpen: boolean) => setIsKebabOpen(isOpen)}
+                toggle={kebabToggle}
+                popperProps={{ position: "right" }}
+              >
+                <DropdownList>{dropdownItems}</DropdownList>
+              </Dropdown>
+            ),
+            hasNoOffset: false,
+            className: "",
+          }}
+        >
+          <CardTitle>
+            <Flex alignItems={{ default: "alignItemsCenter" }}>
+              <TachometerAltIcon />
+              <span>Memory usage</span>
+            </Flex>
+          </CardTitle>
+        </CardHeader>
+        <CardBody>
+          <Flex
+            direction={{ default: "column" }}
+            justifyContent={{ default: "justifyContentCenter" }}
+            alignItems={{ default: "alignItemsCenter" }}
+          >
+            <FlexItem>
+              <ChartDonutThreshold
+                ariaDesc="Mock memory utilization"
+                ariaTitle="Mock memory utilization chart"
+                constrainToVisibleArea={true}
+                data={[
+                  { x: "Warning at 60%", y: 60 },
+                  { x: "Danger at 90%", y: 90 },
+                ]}
+                height={200}
+                labels={({ datum }) => (datum.x ? datum.x : null)}
+                padding={{
+                  bottom: 0,
+                  left: 10,
+                  right: 10,
+                  top: 0,
+                }}
+                width={200}
+              >
+                <ChartDonutUtilization
+                  data={{ x: "Memory capacity", y: 95 }}
+                  labels={({ datum }) =>
+                    datum.x ? `${datum.x}: ${datum.y}%` : null
+                  }
+                  title="95%"
+                  subTitle="CPU"
+                  thresholds={[{ value: 60 }, { value: 90 }]}
+                />
+              </ChartDonutThreshold>
+            </FlexItem>
+            <FlexItem>
+              <ChartDonutThreshold
+                ariaDesc="Mock memory utilization"
+                ariaTitle="Mock memory utilization chart"
+                constrainToVisibleArea={true}
+                data={[
+                  { x: "Warning at 60%", y: 60 },
+                  { x: "Danger at 90%", y: 90 },
+                ]}
+                height={200}
+                labels={({ datum }) => (datum.x ? datum.x : null)}
+                padding={{
+                  bottom: 0,
+                  left: 10,
+                  right: 10,
+                  top: 0,
+                }}
+                width={200}
+              >
+                <ChartDonutUtilization
+                  data={{ x: "GPU capacity", y: 55 }}
+                  labels={({ datum }) =>
+                    datum.x ? `${datum.x}: ${datum.y}%` : null
+                  }
+                  title="55%"
+                  subTitle="GPU"
+                  thresholds={[{ value: 60 }, { value: 90 }]}
+                />
+              </ChartDonutThreshold>
+            </FlexItem>
+          </Flex>
+        </CardBody>
+        <CardFooter>
+          <Button
+            variant="link"
+            isInline
+            icon={<ArrowRightIcon />}
+            iconPosition="end"
+            component="a"
+            href="#"
+          >
+            Memory usage page
+          </Button>
+        </CardFooter>
+      </Card>
+      </CompassPanel>
+  );
+};
+MemoryUtilizationCard.displayName = "MemoryUtilizationCard";
+
+export default MemoryUtilizationCard;

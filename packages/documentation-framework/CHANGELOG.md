@@ -3,6 +3,115 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 6.31.4 (2025-11-12)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 6.31.3 (2025-11-12)
+
+
+### Bug Fixes
+
+* **docs:** Compass doc wording fix ([#4859](https://github.com/patternfly/patternfly-org/issues/4859)) ([d438ed5](https://github.com/patternfly/patternfly-org/commit/d438ed5319b8f6c3ed4a3f28a817c912d5f10d34))
+
+
+
+
+
+## 6.31.2 (2025-11-11)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 6.31.1 (2025-11-11)
+
+
+### Bug Fixes
+
+* Updated documentation for compass. ([#4858](https://github.com/patternfly/patternfly-org/issues/4858)) ([92dd0cb](https://github.com/patternfly/patternfly-org/commit/92dd0cb2394650e80735df62864c50cc34f63fe8))
+
+
+
+
+
+# 6.31.0 (2025-11-10)
+
+
+### Features
+
+* **compass:** add compass dashboard demo ([#4850](https://github.com/patternfly/patternfly-org/issues/4850)) ([b360fc6](https://github.com/patternfly/patternfly-org/commit/b360fc699610785db3ed888863bf923cecf3876b))
+
+
+
+
+
+## 6.30.1 (2025-11-07)
+
+
+### Bug Fixes
+
+* white space change to trigger release ([6759842](https://github.com/patternfly/patternfly-org/commit/67598426ca6efffadfa82f996c16156de5fd3981))
+
+
+
+
+
+# 6.30.0 (2025-11-07)
+
+
+### Features
+
+* **Compass:** add integrations & react-flow compass demo ([#4848](https://github.com/patternfly/patternfly-org/issues/4848)) ([c4ca08e](https://github.com/patternfly/patternfly-org/commit/c4ca08eaf906b48e21aeed80bf24d79feebe9804))
+
+
+
+
+
+## 6.29.1 (2025-11-06)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+# 6.29.0 (2025-11-03)
+
+
+### Features
+
+* RSpack to improve performance. ([#4798](https://github.com/patternfly/patternfly-org/issues/4798)) ([aa4f948](https://github.com/patternfly/patternfly-org/commit/aa4f94852ef12d68e9424336df327a4d9849420a))
+
+
+
+
+
+## 6.28.10 (2025-10-31)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 6.28.9 (2025-10-28)
+
+
+### Bug Fixes
+
+* **docs-framework:** update webpack to handle all images the same way ([#4843](https://github.com/patternfly/patternfly-org/issues/4843)) ([26cbb75](https://github.com/patternfly/patternfly-org/commit/26cbb7559e71bfaff0cf01c9afc378f48624abf9))
+
+
+
+
+
 ## 6.28.8 (2025-10-22)
 
 
