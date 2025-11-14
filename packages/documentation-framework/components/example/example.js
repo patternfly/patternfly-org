@@ -108,6 +108,8 @@ export const Example = ({
   // absolute url to hosted file
   sourceLink = ''
 }) => {
+
+
   if (isFullscreenPreview) {
     isFullscreen = false;
   }
@@ -264,6 +266,11 @@ export const Example = ({
   );
   const metaText = hasMetaText && tooltips;
 
+  const thumbnailDimensions = {
+    width: "800",
+    height: "450"
+  }
+
   return (
     <Stack hasGutter>
       <StackItem>
@@ -281,7 +288,7 @@ export const Example = ({
               target="_blank"
               aria-label={`Open fullscreen ${title} example`}
             >
-              <img src={thumbnail.src} width={thumbnail.width} height={thumbnail.height} alt={`${title} screenshot`} />
+              <img src={thumbnail} width={thumbnailDimensions.width} height={thumbnailDimensions.height} alt={`${title} screenshot`} />
             </a>
           </div>
         ) : (

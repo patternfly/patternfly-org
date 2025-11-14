@@ -2,10 +2,7 @@ const path = require('path');
 const fs = require('fs');
 const { merge } = require('webpack-merge');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const TerserPlugin = require('terser-webpack-plugin');
-const CopyPlugin = require('copy-webpack-plugin');
-const webpack = require('webpack');
+const rspack = require('@rspack/core');
 const baseConfig = require('./webpack.base.config');
 const { getHtmlWebpackPlugins } = require('./getHtmlWebpackPlugins');
 
@@ -74,7 +71,9 @@ const clientConfig = async (env, argv) => {
       },
       minimize: isProd ? true : false,
       minimizer: [
-        new TerserPlugin(),
+        new rspack.SwcJsMinimizerRspackPlugin({
+          // options
+        }),
       ],
       runtimeChunk: 'single',
     },
@@ -82,10 +81,23 @@ const clientConfig = async (env, argv) => {
       rules: [
         {
           test: /\.css$/,
-          exclude: reactCSSRegex,
+          exclude: (modulePath) => {
+            // Exclude react-*/dist CSS files, but allow catalog-view-extension
+            const pathStr = modulePath.toString();
+            if (reactCSSRegex.test(pathStr)) {
+              // Allow catalog-view-extension through (don't exclude it)
+              if (pathStr.includes('react-catalog-view-extension/dist/css/')) {
+                return false;
+              }
+              // Exclude other react-*/dist CSS files
+              return true;
+            }
+            // Don't exclude files that don't match reactCSSRegex
+            return false;
+          },
           use: [
             {
-              loader: MiniCssExtractPlugin.loader
+              loader: rspack.CssExtractRspackPlugin.loader
             },
             {
               loader: 'css-loader'
@@ -104,19 +116,20 @@ const clientConfig = async (env, argv) => {
         },
         {
           test: reactCSSRegex,
+          exclude: /react-catalog-view-extension\/dist\/css\/.*\.css$/,
           use: 'null-loader'
         },
       ]
     },
     plugins: [
-      new webpack.DefinePlugin({
+      new rspack.DefinePlugin({
         'process.env.PRERENDER': false,
       }),
-      new MiniCssExtractPlugin(!isProd ? {} : {
+      new rspack.CssExtractRspackPlugin(!isProd ? {} : {
         filename: 'css/[name].[contenthash].css',
         chunkFilename: 'css/[name].[contenthash].css',
       }),
-      new CopyPlugin({
+      new rspack.CopyRspackPlugin({
         patterns: [
           // versions.json will later be copied to the root www dir
           { from: path.join(__dirname, '../../versions.json'), to: 'versions.json' },

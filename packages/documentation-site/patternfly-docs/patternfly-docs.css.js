@@ -22,3 +22,5 @@ import '@patternfly/react-user-feedback/src/Feedback/Feedback.css';
 import '@patternfly/chatbot/dist/css/main.css';
 // Charts
 import '@patternfly/patternfly/patternfly-charts.css';
+// catalog view
+import '@patternfly/react-catalog-view-extension/dist/css/react-catalog-view-extension.css';

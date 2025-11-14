@@ -1,8 +1,7 @@
 const path = require('path');
-const webpack = require('webpack');
+const rspack = require('@rspack/core');
 const { merge } = require('webpack-merge');
 const baseConfig = require('./webpack.base.config');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const reactCSSRegex = /(react-[\w-]+\/dist|react-styles\/css)\/.*\.css$/;
 
 const serverConfig = async (env, argv) => {
@@ -14,7 +13,7 @@ const serverConfig = async (env, argv) => {
     },
     target: 'node', // Load chunks using require
     plugins: [
-      new webpack.DefinePlugin({
+      new rspack.DefinePlugin({
         'process.env.PRERENDER': true // In app.js don't call ReactDOM.render
       }),
     ],
@@ -34,7 +33,7 @@ const serverConfig = async (env, argv) => {
         {
           test: /(novnc-core|@novnc\/novnc)\/.*\.js/,
           use: 'null-loader'
-        },
+        }
       ]
     },
     resolve: {
