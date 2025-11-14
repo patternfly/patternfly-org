@@ -11,7 +11,7 @@ This guide provides answers to some of the questions new Flyers may have, as wel
 
 ### About PatternFly 
 
-For more information about PatternFly, [check out our "About" page.](/get-started/about-patternfly)
+For more information about PatternFly, [check out our "About" page.](/about-us)
 
 #### What is PatternFly and who can use it? 
 
@@ -31,13 +31,13 @@ We occasionally share patch releases between our quarterly minor releases for ti
 
 #### What is the latest version of PatternFly?
 
-We are currently on version 6 of PatternFly&mdash;also known as "PatternFly 6". You can view the current minor and patch release version within [our release highlights.](https://www.patternfly.org/get-started/release-highlights)
+We are currently on version 6 of PatternFly&mdash;also known as "PatternFly 6". You can view the current minor and patch release version within [our release highlights.](https://www.patternfly.org/releases/release-highlights)
 
 ### Contributing 
 
 #### How can I contribute to PatternFly? 
 
-You can contribute to the design and development of PatternFly, including new features as well as assisting with existing backlog issues. For more details, [refer to our contribution guidelines.](/get-involved/contribute)
+You can contribute to the design and development of PatternFly, including new features as well as assisting with existing backlog issues. For more details, [refer to our contribution guidelines.](/get-involved/contribute/contribute-code)
 
 #### How can I report a bug that I've found? 
 
@@ -59,7 +59,7 @@ To learn how to use our Figma libraries, [refer to our Design Kit Onboarding Res
 
 ### How can I ensure cross-product design consistency?
 
-For maximum consistency, always start with PatternFly's official component and [pattern guidelines.](/patterns/about-patterns) If your product has specific needs that require deviation, check for established product-specific patterns on [the UXD Hub.](https://www.uxd-hub.com/) before creating a new one. This ensures alignment across the broader Red Hat ecosystem. 
+For maximum consistency, always start with PatternFly's official component and [pattern guidelines.](/patterns/overview) If your product has specific needs that require deviation, check for established product-specific patterns on [the UXD Hub.](https://www.uxd-hub.com/) before creating a new one. This ensures alignment across the broader Red Hat ecosystem. 
 
 ## Developer FAQs
 
