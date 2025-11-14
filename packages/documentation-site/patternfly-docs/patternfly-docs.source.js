@@ -19,6 +19,9 @@ module.exports = (sourceMD, sourceProps, sourceFunctionDocs) => {
 
     sourceMD(path.join(contentBase, 'PatternFly-AI/**/*.md'), 'PatternFly-AI');
 
+    sourceMD(path.join(contentBase, 'get-involved/**/*.md'), 'get-involved');
+
+
     sourceMD(path.join(contentBase, 'design-guidelines/**/Animations/*.md'), 'demo');
 
     sourceMD(path.join(contentBase, 'layouts/**/*.md'), 'layouts');
