@@ -321,7 +321,7 @@ When writing button labels:
 * Avoid using articles (for example, write “Add source” instead of “Add a source”).
 * Avoid punctuation on buttons.
 * Add an icon to the button to call a user's attention to it or to clarify the button's action.
-* Do not create icons on buttons using punctuation (for example, "+"). Instead, refer to [PatternFly's icons page](/foundations-and-styles/icons) for any icons you place on buttons.
+* Do not create icons on buttons using punctuation (for example, "+"). Instead, refer to [PatternFly's icons page](/foundations-and-styles/iconography) for any icons you place on buttons.
 
 ### Writing link labels
 

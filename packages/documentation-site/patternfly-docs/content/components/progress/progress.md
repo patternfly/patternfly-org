@@ -75,7 +75,7 @@ A `--pf-t--global--color--brand--default` progress bar represents a process that
 
 ### Error state or failure
 
-A `--pf-t--global--color--status--danger--default` progress bar represents a process that has failed. Accompany a failed progress bar with a [danger icon](/foundations-and-styles/icons/#all-icons) to demonstrate that an error occurred in the process.
+A `--pf-t--global--color--status--danger--default` progress bar represents a process that has failed. Accompany a failed progress bar with a [danger icon](/foundations-and-styles/iconography/#all-icons) to demonstrate that an error occurred in the process.
 
 <div class="ws-docs-content-img">
 ![Example of a progress bar in the error or failed state.](./img/error.svg)
@@ -83,7 +83,7 @@ A `--pf-t--global--color--status--danger--default` progress bar represents a pro
 
 ### Complete or success
 
-A `--pf-t--global--color--status--success--default` progress bar represents the successful completion of a process. Accompany a complete progress bar with a [check-circle icon](/foundations-and-styles/icons/#all-icons) to demonstrate that the process has finished with no errors.
+A `--pf-t--global--color--status--success--default` progress bar represents the successful completion of a process. Accompany a complete progress bar with a [check-circle icon](/foundations-and-styles/iconography/#all-icons) to demonstrate that the process has finished with no errors.
 
 <div class="ws-docs-content-img">
 ![Example of a progress bar in the complete or successful state.](./img/success.svg)

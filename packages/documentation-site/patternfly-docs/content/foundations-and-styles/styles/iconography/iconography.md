@@ -1,5 +1,5 @@
 ---
-id: Icons
+id: Iconography
 section: foundations-and-styles
 ---
 import { Icon, Content, ContentVariants } from '@patternfly/react-core';

@@ -46,7 +46,7 @@ For clarity, avoid using **ampersands** (&), and use "and" instead.
 ## Buttons 
 Avoid using punctuation on **buttons**. 
 
-Do not use punctuation to create icons on buttons (for example, do not use a plus sign "+"). Instead, refer to [PatternFly's icons page](/foundations-and-styles/icons) for any icons you place on buttons.
+Do not use punctuation to create icons on buttons (for example, do not use a plus sign "+"). Instead, refer to [PatternFly's icons page](/foundations-and-styles/iconography) for any icons you place on buttons.
 
 ## Colon and semicolon
 Use a **colon** to introduce a list or a series. You can also use it as a pause before introducing related information. For example:

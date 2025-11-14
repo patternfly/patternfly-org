@@ -206,8 +206,8 @@ module.exports = (sourceMD, sourceProps, sourceFunctionDocs) => {
     path.join(virtualAssistantPath, "/**/*.tsx"),
     reactPropsIgnore
   );
-  sourceMD(path.join(virtualAssistantBase, 'examples/**/*.md'), 'AI');
-  sourceMD(path.join(virtualAssistantBase, '*.md'), 'AI');
+  sourceMD(path.join(virtualAssistantBase, 'examples/**/*.md'), 'extensions');
+  sourceMD(path.join(virtualAssistantBase, '*.md'), 'extensions');
 
   // Prerelease sections:
   if (process.env.PRERELEASE === 'true') {

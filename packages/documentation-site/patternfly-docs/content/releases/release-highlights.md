@@ -669,7 +669,7 @@ We made more improvements to our website docs, to ensure that they're accurate a
     - **Note:*- Any @patternfly/react-tokens referencing global variables will need to be updated, since global variables have been replaced with tokens. Following our [token migration instructions](/foundations-and-styles/design-tokens/develop#migrate-to-tokens) will help you determine the correct token to use. 
 - Our design foundations 
     - [Colors](/foundations-and-styles/colors) 
-    - [Icons](/foundations-and-styles/icons) 
+    - [Icons](/foundations-and-styles/iconography) 
     - [Spacers](/foundations-and-styles/spacers)  
     - [Typography](/foundations-and-styles/typography)  
 

@@ -80,4 +80,4 @@ In PatternFly, there are commonly used icons that hold universal meanings. These
 | <ExportIcon />  | pficon-export | Export |
 | <TaskIcon />  | pficon-task | Tasks | 
 
-You can learn more about the usage of these icons in our [design foundations.](/foundations-and-styles/icons)
+You can learn more about the usage of these icons in our [design foundations.](/foundations-and-styles/iconography)

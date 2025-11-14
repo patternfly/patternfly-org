@@ -71,7 +71,7 @@ Background colors are used throughout components and, occasionally, for certain 
 
 ## Text and icon colors
 
-Text and icon colors overlap, because they can be used inline with each other. Note that there are different tokens for standalone icons, inline icons, and standalone text. For more details view our [icons](/foundations-and-styles/icons) and [typography](/foundations-and-styles/typography) guidelines.
+Text and icon colors overlap, because they can be used inline with each other. Note that there are different tokens for standalone icons, inline icons, and standalone text. For more details view our [icons](/foundations-and-styles/iconography) and [typography](/foundations-and-styles/typography) guidelines.
 
 Text and icons can also display status information, which is covered in the [status and state colors section.](#status-and-state-colors)
 
