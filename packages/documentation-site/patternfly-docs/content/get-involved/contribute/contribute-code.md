@@ -27,13 +27,13 @@ If you find an issue you'd like to work on, leave a comment and a team member wi
 Beyond component issues, you can also contribute to our extensions or to the PatternFly.org website itself. For any of these repositories, you can leave a comment on an issue you're interested in or ask questions in [our #general Slack channel](https://patternfly.slack.com/archives/C293LQ36J).
 
 - **Extensions:** These packages combine multiple base components to offer specific functionality. You can contribute to any of their repositories:
-    - [chatbot:](https://github.com/patternfly/chatbot) Code for [the ChatBot extension](/patternfly-ai/chatbot/about-chatbot).
+    - [chatbot:](https://github.com/patternfly/chatbot) Code for [the ChatBot extension](/extensions/chatbot/overview).
     - [patternfly-quickstarts:](https://github.com/patternfly/patternfly-quickstarts). Code for [the quick starts extensions](/extensions/quick-starts).
     - [react-catalog-view:](https://github.com/patternfly/react-catalog-view) Code for [the catalog view extension](/extensions/catalog-view/catalog-item-header).
-    - [react-component-groups:](https://github.com/patternfly/react-component-groups) Code for [the component groups extension](/component-groups/about-component-groups).
+    - [react-component-groups:](https://github.com/patternfly/react-component-groups) Code for [the component groups extension](/extensions/component-groups/overview).
     - [react-data-view:](https://github.com/patternfly/react-data-view) Code for [the data view extension](/extensions/data-view/overview).
     - [react-log-viewer:](https://github.com/patternfly/react-log-viewer) Code for [the log viewer extension](/extensions/log-viewer).
-    - [react-topology:](https://github.com/patternfly/react-topology) Code for [the Topology extension](/topology/about-topology).
+    - [react-topology:](https://github.com/patternfly/react-topology) Code for [the Topology extension](/extensions/topology/about-topology).
     - [react-user-feedback:](https://github.com/patternfly/react-user-feedback) Code for [the user feedback extension](/extensions/user-feedback).
 - **PatternFly.org website:** To contribute to the functionality of our website, you can work on issues in the [patternfly-org repo](https://github.com/patternfly/patternfly-org).
 
