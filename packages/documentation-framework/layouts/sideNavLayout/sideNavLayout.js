@@ -27,7 +27,7 @@ import {
 } from '@patternfly/react-core';
 import BarsIcon from '@patternfly/react-icons/dist/esm/icons/bars-icon';
 import GithubIcon from '@patternfly/react-icons/dist/esm/icons/github-icon';
-import { SideNav, TopNav, GdprBanner, ThemeSelector } from '../../components';
+import { SideNav, TopNav, GdprBanner, NavAnnouncementBanner, ThemeSelector } from '../../components';
 import staticVersions from '../../versions.json';
 import { Footer } from '@patternfly/documentation-framework/components';
 import { useTheme, THEME_TYPES } from '../../hooks/useTheme';
@@ -363,7 +363,10 @@ export const SideNavLayout = ({ children, groupedRoutes, navOpen: navOpenProp })
           {children}
           {process.env.hasFooter && <Footer isDarkTheme={isDarkTheme} />}
         </Page>
-        <div id="ws-page-banners">{hasGdprBanner && <GdprBanner />}</div>
+        <div id="ws-page-banners">
+          <NavAnnouncementBanner />
+          {hasGdprBanner && <GdprBanner />}
+        </div>
       </RtlContext.Provider>
     </React.Fragment>
   );

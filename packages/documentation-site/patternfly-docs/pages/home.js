@@ -30,13 +30,13 @@ const cardData = [
   {
     title: 'Upgrade to PatternFly 6',
     body: 'Reference our upgrade guide to learn how you can update to the latest version of PatternFly.',
-    link: '/get-started/upgrade',
+    link: '/releases/upgrade-guide',
     layout: 'withSubtitle',
   },
   {
     title: 'Read our latest release highlights',
     body: 'Stay informed about every PatternFly release by reading through our highlights, which lay out important code changes and design updates.',
-    link: '/get-started/release-highlights',
+    link: '/releases/release-highlights',
     layout: 'withSubtitle',
   },
   {

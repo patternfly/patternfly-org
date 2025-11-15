@@ -195,6 +195,16 @@ export const ExampleToolbar = ({
   // TODO: check if worth adding react, patternfly, and example types
   // https://microsoft.github.io/monaco-editor/api/interfaces/monaco.languages.typescript.languageservicedefaults.html#addextralib
   const onEditorDidMount = (_editor, monaco) => {
+    // Configure Monaco environment for web workers (required for Monaco 0.54+)
+    if (typeof window !== 'undefined' && !window.MonacoEnvironment) {
+      window.MonacoEnvironment = {
+        getWorker() {
+          // Return empty worker since we disable all diagnostics below anyway
+          return new Worker(URL.createObjectURL(new Blob([''], { type: 'application/javascript' })));
+        }
+      };
+    }
+
     monaco.languages.typescript.typescriptDefaults.setCompilerOptions({
       jsx: true,
       ...monaco.languages.typescript.typescriptDefaults.getCompilerOptions()

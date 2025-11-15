@@ -106,6 +106,7 @@ const getDefaultDesignGuidelines = ({ id, section, slug, title }) => {
     section,
     slug: `${slug}/design-guidelines`,
     source: 'design-guidelines',
+    tabName: 'design-guidelines',
     title,
     Component
   };
