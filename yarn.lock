@@ -4159,10 +4159,15 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@patternfly/chatbot@npm:6.5.0-prerelease.16":
-  version: 6.5.0-prerelease.16
-  resolution: "@patternfly/chatbot@npm:6.5.0-prerelease.16"
+"@patternfly/chatbot@npm:6.5.0-prerelease.18":
+  version: 6.5.0-prerelease.18
+  resolution: "@patternfly/chatbot@npm:6.5.0-prerelease.18"
   dependencies:
+    "@patternfly/react-code-editor": "npm:^6.1.0"
+    "@patternfly/react-core": "npm:^6.1.0"
+    "@patternfly/react-icons": "npm:^6.1.0"
+    "@patternfly/react-styles": "npm:^6.1.0"
+    "@patternfly/react-table": "npm:^6.1.0"
     "@segment/analytics-next": "npm:^1.76.0"
     clsx: "npm:^2.1.0"
     monaco-editor: "npm:^0.54.0"
@@ -4178,7 +4183,7 @@ __metadata:
   peerDependencies:
     react: ^18 || ^19
     react-dom: ^18 || ^19
-  checksum: 10c0/9eb81a768c8af0c6b58c1869d8e18122176f70ebbaffdb1db9368e71b922e3d8713dff89bcff91fed4d79370f10243d03d55cb4538d4c92db74cf4bf9debd881
+  checksum: 10c0/84e9e3642f277079a61e392c1f839fec1e32ea4a6937690f6094c8e87667041dc56f6e1081f717ef6aed58669fc70f773e0623e767bada80ef79c1ecfdf3dee0
   languageName: node
   linkType: hard
 
@@ -4473,9 +4478,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@patternfly/react-component-groups@npm:6.4.0-prerelease.5":
-  version: 6.4.0-prerelease.5
-  resolution: "@patternfly/react-component-groups@npm:6.4.0-prerelease.5"
+"@patternfly/react-component-groups@npm:6.4.0-prerelease.6":
+  version: 6.4.0-prerelease.6
+  resolution: "@patternfly/react-component-groups@npm:6.4.0-prerelease.6"
   dependencies:
     "@patternfly/react-core": "npm:^6.0.0"
     "@patternfly/react-icons": "npm:^6.0.0"
@@ -4486,7 +4491,7 @@ __metadata:
     "@patternfly/react-drag-drop": ^6.0.0
     react: ^17 || ^18 || ^19
     react-dom: ^17 || ^18 || ^19
-  checksum: 10c0/437ad24e75192b6909a4d0b805b0ca2005fd37878e4392470bc742c500808290a7a63dec8eb1d11a3b17eaf2c17aafe7d13acf3bfa990a83002a20f58eb4f23c
+  checksum: 10c0/8ad71a543489299cb7075d3829402d1c10bb62e3a817502f822f4ee3d4f73b8ac45e6ed99e3cfdd5ddbbfeb543dbb7af3c12a098212c77d02d491a07a802fdb4
   languageName: node
   linkType: hard
 
@@ -4625,7 +4630,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@patternfly/react-icons@npm:^6.4.0":
+"@patternfly/react-icons@npm:^6.1.0, @patternfly/react-icons@npm:^6.4.0":
   version: 6.4.0
   resolution: "@patternfly/react-icons@npm:6.4.0"
   peerDependencies:
@@ -17778,14 +17783,14 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "patternfly-org@workspace:packages/documentation-site"
   dependencies:
-    "@patternfly/chatbot": "npm:6.5.0-prerelease.16"
+    "@patternfly/chatbot": "npm:6.5.0-prerelease.18"
     "@patternfly/design-tokens": "npm:1.14.4"
     "@patternfly/documentation-framework": "workspace:*"
     "@patternfly/patternfly-a11y": "npm:5.0.0"
     "@patternfly/quickstarts": "npm:6.4.0"
     "@patternfly/react-catalog-view-extension": "npm:6.3.0"
     "@patternfly/react-charts": "npm:8.5.0-prerelease.6"
-    "@patternfly/react-component-groups": "npm:6.4.0-prerelease.5"
+    "@patternfly/react-component-groups": "npm:6.4.0-prerelease.6"
     "@patternfly/react-console": "npm:6.1.0"
     "@patternfly/react-data-view": "npm:6.4.0"
     "@patternfly/react-docs": "npm:7.5.0-prerelease.14"

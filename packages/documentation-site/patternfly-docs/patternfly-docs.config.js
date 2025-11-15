@@ -49,7 +49,6 @@ if (process.env.EXTENSIONS_ONLY === 'true') {
           { section: 'components' },
           { section: 'patterns' },
           { section: 'extensions' },
-          { section: 'Component groups' },
           { section: 'foundations-and-styles' },
           { section: 'accessibility' },
           { section: 'AI' },
