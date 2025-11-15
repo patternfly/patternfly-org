@@ -17,6 +17,7 @@ For example, you might use a utility class to add additional spacing between ele
 
 <SectionGallery
   section="foundations-and-styles"
+  subsection="utility-classes"
   galleryItemsData={utilityClassesData}
   placeholderText="Search utility classes by name"
   includeSubsections={true}

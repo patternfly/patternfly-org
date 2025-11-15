@@ -20,15 +20,15 @@ Generative UI represents a significant opportunity for PatternFly to explore new
 
 ### AI-enabled seed app
 
-We are creating an [AI-enabled seed app](https://github.com/gitdallas/patternfly-react-seed/tree/compass_theme) that you can use to create your own PatternFly Compass-based POC. The seed app includes the Compass layout fully wired out with all styles set up, providing a solid foundation that you can build on top of. It can be leveraged with AI tools like Cursor or Claude Code to build out your own POC, making it easier to experiment with generative UI patterns and explore new use cases.
+We are creating an [AI-enabled seed app](https://github.com/patternfly/patternfly-react-seed/tree/compass_theme) that you can use to create your own PatternFly Compass-based POC. The seed app includes the Compass layout fully wired out with all styles set up, providing a solid foundation that you can build on top of. It can be leveraged with AI tools like Cursor or Claude Code to build out your own POC, making it easier to experiment with generative UI patterns and explore new use cases.
 
 ### What does Compass include?
 
 To explore Compass and its features, take a look at a number of our full page demos:
-- [Full page demo with card view and table layouts](/AI/generative-uis/compass#card-and-data-view-layout)
-- [Full page demo with dashboard layout](/AI/generative-uis/compass/org-demos#dashboard-layout)
-- [Static, full page HTML demo with multiple content sections](/AI/generative-uis/compass/html-demos#multiple-sections)
-- [Static, full page HTML demo with drawer](/AI/generative-uis/compass/html-demos#with-drawer)
+- [Full page demo with card view and table layouts](/patternfly-ai/generative-uis/compass#card-and-data-view-layout)
+- [Full page demo with dashboard layout](/patternfly-ai/generative-uis/compass/org-demos#dashboard-layout)
+- [Static, full page HTML demo with multiple content sections](/patternfly-ai/generative-uis/compass/html-demos#multiple-sections)
+- [Static, full page HTML demo with drawer](/patternfly-ai/generative-uis/compass/html-demos#with-drawer)
 
 To support the different ways you might use Compass, we've introduced several new capabilities to PatternFly:
 
@@ -57,7 +57,7 @@ Accessibility has been a major focus throughout the Compass exploration. As gene
 
 ### Integration with react-flow
 
-Some stakeholdres have been experimenting with Generative UI use cases using React Flow. The React Flow package `@xyflow/react` is compatible with PatternFly through customization of its [theme](https://reactflow.dev/learn/customization/theming) and [rendered nodes](https://reactflow.dev/learn/customization/custom-nodes). A custom override stylesheet can assign PatternFly's global tokens to React Flow's own tokens to ensure a consistent styling. We have created some [documentation and a demo](/AI/generative-uis/react-flow) for integrations with PatternFly as a POC for these use cases.
+Some stakeholdres have been experimenting with Generative UI use cases using React Flow. The React Flow package `@xyflow/react` is compatible with PatternFly through customization of its [theme](https://reactflow.dev/learn/customization/theming) and [rendered nodes](https://reactflow.dev/learn/customization/custom-nodes). A custom override stylesheet can assign PatternFly's global tokens to React Flow's own tokens to ensure a consistent styling. We have created some [documentation and a demo](/patternfly-ai/generative-uis/react-flow) for integrations with PatternFly as a POC for these use cases.
 
 ### Current status
 

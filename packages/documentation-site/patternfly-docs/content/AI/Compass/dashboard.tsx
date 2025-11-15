@@ -2,10 +2,10 @@ import { useState } from 'react';
 import {
   Compass,
   CompassHeader,
-  CompassHero,
   CompassContent,
   CompassPanel,
   CompassMessageBar,
+  Hero,
   Tabs,
   TabsComponent,
   Tab,
@@ -161,7 +161,7 @@ export const CompassBasic: React.FunctionComponent = () => {
 
   const mainContent = (
     <>
-      <CompassHero gradientDark={{ stop1: '#3d2785', stop2: '#1b0d33', stop3: '#000' }} backgroundSrcDark={heroBg}>
+      <Hero gradientDark={{ stop1: '#3d2785', stop2: '#1b0d33', stop3: '#000' }} backgroundSrcDark={heroBg}>
         <Content>
           <h1>Automation that does more</h1>
           <p>
@@ -180,7 +180,7 @@ export const CompassBasic: React.FunctionComponent = () => {
             </ActionListGroup>
           </ActionList>
         </Content>
-      </CompassHero>
+      </Hero>
       <CompassContent id="main">
         <Grid hasGutter style={{ maxHeight: 'none' }}>
           <GridItem span={12} sm={12} md={6} lg={4} xl={3} rowSpan={4}>

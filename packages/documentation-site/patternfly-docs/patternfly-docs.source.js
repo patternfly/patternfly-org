@@ -15,7 +15,7 @@ module.exports = (sourceMD, sourceProps, sourceFunctionDocs) => {
     sourceMD(path.join(contentBase, 'components/accessibility/**/*.md'), 'accessibility');
     sourceMD(path.join(contentBase, 'components/**/*.md'), 'design-guidelines');
     sourceMD(path.join(contentBase, 'content-design/**/*.md'), 'content-design');
-    sourceMD(path.join(contentBase, 'foundations-and-styles/**/*.md'), 'foundations-and-styles');
+    sourceMD(path.join(contentBase, 'foundations-and-styles/**/*.md'), 'design-guidelines');
     sourceMD(path.join(contentBase, 'patterns/**/*.md'), 'design-guidelines');
     sourceMD(path.join(contentBase, 'get-started/training/**/*.md'), 'get-started');
     sourceMD(path.join(contentBase, 'releases/**/*.md'), 'releases');
@@ -26,9 +26,6 @@ module.exports = (sourceMD, sourceProps, sourceFunctionDocs) => {
     sourceMD(path.join(contentBase, 'components/landing-page/**/*.md'), 'components');
     sourceMD(path.join(contentBase, 'extensions/landing-page/**/*.md'), 'extensions');
     sourceMD(path.join(contentBase, 'patterns/landing-page/**/*.md'), 'patterns');
-    sourceMD(path.join(contentBase, 'foundations-and-styles/landing-page/**/*.md'), 'foundations-and-styles');
-    sourceMD(path.join(contentBase, 'foundations-and-styles/layouts/landing-page/**/*.md'), 'foundations-and-styles');
-    sourceMD(path.join(contentBase, 'foundations-and-styles/utility-classes/landing-page/**/*.md'), 'foundations-and-styles');
     
     // Standalone pages
     const pagesBase = path.join(__dirname, '../patternfly-docs/pages');
@@ -52,9 +49,9 @@ module.exports = (sourceMD, sourceProps, sourceFunctionDocs) => {
     // Core MD
     const coreDocsPath = require.resolve('@patternfly/patternfly/package.json').replace('package.json', 'docs');
     const coreDocsIgnore = path.join(coreDocsPath, '/pages/**'); // Compatibility for old gatsby workspace
-    sourceMD(path.join(coreDocsPath, '!(demos)/**/examples/**/*.md'), 'html', coreDocsIgnore);
-    sourceMD(path.join(coreDocsPath, 'demos/**/*.md'), 'html-demos', coreDocsIgnore);
-    sourceMD(path.join(coreDocsPath, 'components/**/deprecated/**/*.md'), 'html-deprecated', coreDocsIgnore);
+    sourceMD(path.join(coreDocsPath, '!(demos)/**/examples/**/*.{md,mdx}'), 'html', coreDocsIgnore);
+    sourceMD(path.join(coreDocsPath, 'demos/**/*.{md,mdx}'), 'html-demos', coreDocsIgnore);
+    sourceMD(path.join(coreDocsPath, 'components/**/deprecated/**/*.{md,mdx}'), 'html-deprecated', coreDocsIgnore);
 
     // React props
     const reactCorePath = require.resolve('@patternfly/react-core/package.json').replace('package.json', 'src');

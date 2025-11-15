@@ -1,6 +1,7 @@
 ---
 id: Compass
 section: AI
+source: org-demos
 subsection: Generative UIs
 ---
 
