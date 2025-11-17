@@ -10,12 +10,17 @@ module.exports = (sourceMD, sourceProps, sourceFunctionDocs) => {
   if (!(process.env.EXTENSIONS_ONLY === 'true')) {
     sourceMD(path.join(contentBase, 'contribute/**/*.md'), 'pages-contribute');
     sourceMD(path.join(contentBase, 'get-started/**/*.md'), 'pages-get-started');
-    sourceMD(path.join(contentBase, 'developer-resources/**/*.md'), 'developer-resources');
+    sourceMD(path.join(contentBase, 'developer-guides/**/*.md'), 'developer-guides');
     sourceMD(path.join(contentBase, 'accessibility/**/*.md'), 'accessibility');
-    sourceMD(path.join(contentBase, 'design-guidelines/**/*.md'), 'design-guidelines');
-    sourceMD(path.join(contentBase, 'training/**/*.md'), 'training');
+    sourceMD(path.join(contentBase, 'components/accessibility/**/*.md'), 'accessibility');
+    sourceMD(path.join(contentBase, 'components/**/*.md'), 'design-guidelines');
+    sourceMD(path.join(contentBase, 'content-design/**/*.md'), 'content-design');
+    sourceMD(path.join(contentBase, 'foundations-and-styles/**/*.md'), 'design-guidelines');
+    sourceMD(path.join(contentBase, 'patterns/**/*.md'), 'design-guidelines');
+    sourceMD(path.join(contentBase, 'get-started/training/**/*.md'), 'get-started');
+    sourceMD(path.join(contentBase, 'releases/**/*.md'), 'releases');
 
-    sourceMD(path.join(contentBase, 'tokens/**/*.md'), 'tokens');
+    sourceMD(path.join(contentBase, 'AI/**/*.md'), 'AI');
 
     sourceMD(path.join(contentBase, 'get-help/**/*.md'), 'get-help');
 

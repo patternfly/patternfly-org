@@ -1,4 +1,4 @@
-const componentsData = require('./pages/landing-pages/components/components-data.json');
+const componentsData = require('./content/components/landing-page/components-data.json');
 // This module is shared between NodeJS and babelled ES5, if this extension only build
 // exclude the other side nav items.
 if (process.env.EXTENSIONS_ONLY === 'true') {
@@ -54,7 +54,8 @@ if (process.env.EXTENSIONS_ONLY === 'true') {
           { section: 'AI' },
           { section: 'content-design' },
           { section: 'developer-guides' }
-        ]
+        ],
+        hasDivider: true
       },
       {
         title: 'Connect',
