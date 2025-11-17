@@ -34,23 +34,34 @@ if (process.env.EXTENSIONS_ONLY === 'true') {
     hasHighContrastSwitcher: true,
     componentsData,
     sideNavItems: [
-      { section: 'get-started' },
-      { section: 'design-foundations' },
-      { section: 'tokens' },
-      { section: 'PatternFly-AI' },
-      { section: 'accessibility' },
-      { section: 'UX writing' },
-      { section: 'components' },
-      { section: 'patterns' },
-      { section: 'extensions' },
-      { section: 'Component groups'},
-      { section: 'charts' },
-      { section: 'topology' },
-      { section: 'layouts' },
-      { section: 'utility-classes' },
-      { section: 'developer-resources' },
-      { section: 'training' },
-      { section: 'get-help' },
+      {
+        title: 'Learn',
+        items: [
+          { text: 'About us', href: '/about-us' },
+          { section: 'get-started' },
+          { section: 'releases' }
+        ],
+        hasDivider: true
+      },
+      {
+        title: 'Design and develop',
+        items: [
+          { section: 'components' },
+          { section: 'patterns' },
+          { section: 'extensions' },
+          { section: 'foundations-and-styles' },
+          { section: 'accessibility' },
+          { section: 'AI' },
+          { section: 'content-design' },
+          { section: 'developer-guides' }
+        ]
+      },
+      {
+        title: 'Connect',
+        items: [
+          { section: 'get-help' }
+        ]
+      }
     ],
     topNavItems: [],
     port: 8003,
