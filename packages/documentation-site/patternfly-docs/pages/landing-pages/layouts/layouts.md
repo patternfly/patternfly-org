@@ -1,6 +1,6 @@
 ---
-id: About layouts
-title: Layouts
+id: Overview
+title: Layouts overview
 section: layouts
 sortValue: 1
 ---
@@ -8,7 +8,7 @@ sortValue: 1
 import { SectionGallery } from '@patternfly/documentation-framework/components/sectionGallery/sectionGallery';
 import layoutsData from './layouts-data.json';
 
-# About
+# Overview
 
 PatternFly’s layouts are used to place components on a page. They create a fully responsive structure to keep components organized and aligned across screen sizes. 
 
