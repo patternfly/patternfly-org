@@ -55,6 +55,12 @@ if (process.env.EXTENSIONS_ONLY === 'true') {
           { section: 'content-design' },
           { section: 'developer-guides' }
         ]
+      },
+      {
+        title: 'Connect',
+        items: [
+          { section: 'get-involved' }
+        ]
       }
     ],
     topNavItems: [],
