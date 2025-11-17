@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 6.31.5 (2025-11-17)
+
+
+### Bug Fixes
+
+* Reorganizes and renames nav items for new design. ([#4861](https://github.com/patternfly/patternfly-org/issues/4861)) ([595e6a2](https://github.com/patternfly/patternfly-org/commit/595e6a2a83842fa1b7a211bef34feb7bda62c778))
+
+
+
+
+
 ## 6.31.4 (2025-11-12)
 
 **Note:** Version bump only for package @patternfly/documentation-framework
