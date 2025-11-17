@@ -54,6 +54,13 @@ if (process.env.EXTENSIONS_ONLY === 'true') {
           { section: 'AI' },
           { section: 'content-design' },
           { section: 'developer-guides' }
+        ],
+        hasDivider: true
+      },
+      {
+        title: 'Connect',
+        items: [
+          { section: 'get-help' }
         ]
       }
     ],
