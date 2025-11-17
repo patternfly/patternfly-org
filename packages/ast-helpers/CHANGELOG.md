@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.4.0-alpha.317 (2025-11-17)
+
+
+### Bug Fixes
+
+* **get-help:** Adds Get help section to site. ([#4866](https://github.com/patternfly/patternfly-org/issues/4866)) ([bae3675](https://github.com/patternfly/patternfly-org/commit/bae367583a177ba6a3e41a32954ffd8798b10644))
+
+
+
+
+
 # 1.4.0-alpha.316 (2025-11-17)
 
 **Note:** Version bump only for package @patternfly/ast-helpers
