@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.4.0-alpha.315 (2025-11-17)
+
+
+### Bug Fixes
+
+* **get-involved:** Creates new nav section for community and contribution info. ([#4781](https://github.com/patternfly/patternfly-org/issues/4781)) ([2ca34b2](https://github.com/patternfly/patternfly-org/commit/2ca34b24caa09d4cea6dfbc8c77a139501a7a391))
+
+
+
+
+
 # 1.4.0-alpha.314 (2025-11-17)
 
 
