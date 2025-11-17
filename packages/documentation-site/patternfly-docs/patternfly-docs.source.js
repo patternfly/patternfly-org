@@ -23,6 +23,7 @@ module.exports = (sourceMD, sourceProps, sourceFunctionDocs) => {
     sourceMD(path.join(contentBase, 'AI/**/*.md'), 'AI');
 
     sourceMD(path.join(contentBase, 'get-help/**/*.md'), 'get-help');
+    sourceMD(path.join(contentBase, 'get-involved/**/*.md'), 'get-involved');
 
     // Landing pages (now in their respective content folders)
     sourceMD(path.join(contentBase, 'components/landing-page/**/*.md'), 'components');

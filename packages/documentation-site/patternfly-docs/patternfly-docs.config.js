@@ -62,6 +62,12 @@ if (process.env.EXTENSIONS_ONLY === 'true') {
         items: [
           { section: 'get-help' }
         ]
+      },
+      {
+        title: 'Connect',
+        items: [
+          { section: 'get-involved' }
+        ]
       }
     ],
     topNavItems: [],
