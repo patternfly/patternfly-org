@@ -60,12 +60,6 @@ if (process.env.EXTENSIONS_ONLY === 'true') {
       {
         title: 'Connect',
         items: [
-          { section: 'get-help' }
-        ]
-      },
-      {
-        title: 'Connect',
-        items: [
           { section: 'get-involved' }
         ]
       }
