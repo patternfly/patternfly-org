@@ -6,7 +6,7 @@ module.exports = (sourceMD, sourceProps, sourceFunctionDocs) => {
 
   const contentBase = path.join(__dirname, '../patternfly-docs/content');
   const reactPropsIgnore = ['/**/examples/**', '/**/__mocks__/**', '/**/__tests__/**', '/**/*.test.tsx'];
-  sourceMD(path.join(contentBase, 'extensions/**/*.md'), 'design-guidelines');
+  sourceMD(path.join(contentBase, 'extensions/**/*.md'), 'extensions');
   if (!(process.env.EXTENSIONS_ONLY === 'true')) {
     sourceMD(path.join(contentBase, 'contribute/**/*.md'), 'pages-contribute');
     sourceMD(path.join(contentBase, 'get-started/**/*.md'), 'pages-get-started');
@@ -23,7 +23,6 @@ module.exports = (sourceMD, sourceProps, sourceFunctionDocs) => {
     sourceMD(path.join(contentBase, 'AI/**/*.md'), 'AI');
 
     sourceMD(path.join(contentBase, 'get-help/**/*.md'), 'get-help');
-
 
     // Landing pages (now in their respective content folders)
     sourceMD(path.join(contentBase, 'components/landing-page/**/*.md'), 'components');

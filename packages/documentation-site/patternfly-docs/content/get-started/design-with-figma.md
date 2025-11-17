@@ -18,7 +18,7 @@ To start designing with PatternFly, you will need to install our PatternFly 6 de
   <Button component="a" href='https://www.figma.com/@patternfly' target="_blank" variant='primary' size='lg' > Install the PatternFly 6 design kit <ArrowRightIcon /> </Button>
 </div>
 
-In order to use PatternFly 6, your product *must* be using the PatternFly 6 design kit. If you haven't yet, you can [follow our upgrade guide](/get-started/upgrade) to complete your upgrade. Doing so also ensures that you'll have access to the most current PatternFly features, resources, and guidance going forward! 
+In order to use PatternFly 6, your product *must* be using the PatternFly 6 design kit. If you haven't yet, you can [follow our upgrade guide](/releases/upgrade-guide) to complete your upgrade. Doing so also ensures that you'll have access to the most current PatternFly features, resources, and guidance going forward! 
 
 If you have questions about the kit, or have trouble with installation, [refer to our help section](#get-help) or [reach out to us on Slack](http://join.slack.com/t/patternfly/shared_invite/zt-1npmqswgk-bF2R1E2rglV8jz5DNTezMQ).
 
@@ -28,7 +28,7 @@ To install the fonts that PatternFly uses, [download this GitHub repository](htt
 
 ### Design tokens
 
-PatternFly 6 is built off of our new design token system. For more background and instructions regarding our token system, [check out our tokens documentation.](/tokens/about-tokens)
+PatternFly 6 is built off of our new design token system. For more background and instructions regarding our token system, [check out our tokens documentation.](/foundations-and-styles/design-tokens/about-tokens)
 
 ## What's in the design kit? 
 
@@ -43,7 +43,7 @@ After you install the PatternFly 6 Figma workspace, you will find a welcome page
 
 Once you're familiar with the kit you're ready to start designing! 
 
-If you're completely new to PatternFly, you should also first [read this overview of our design system](/get-started/about-patternfly), to learn about everything that PatternFly has to offer and get to know who we are.
+If you're completely new to PatternFly, you should also first [read this overview of our design system](/about-us), to learn about everything that PatternFly has to offer and get to know who we are.
 
 ## How do I stay up to date?
 
