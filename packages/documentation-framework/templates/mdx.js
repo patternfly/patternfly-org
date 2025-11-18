@@ -258,9 +258,7 @@ export const MDXTemplate = ({ title, sources = [], path, id, componentsData }) =
     return 'pf-m-light-100';
   };
 
-  // Only show tabs if there are multiple sources (not a single page)
-  // Single pages should never show tabs, regardless of section type
-  const showTabs = !isSinglePage && ((!hideTabName) || isComponent || isUtility || isPattern);
+  const showTabs = (!isSinglePage && !hideTabName) || isComponent || isUtility || isPattern;
 
   return (
     <React.Fragment>
