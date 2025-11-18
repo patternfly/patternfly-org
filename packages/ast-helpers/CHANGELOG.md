@@ -3,6 +3,63 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.4.0-alpha.318 (2025-11-18)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 1.4.0-alpha.317 (2025-11-17)
+
+
+### Bug Fixes
+
+* **get-help:** Adds Get help section to site. ([#4866](https://github.com/patternfly/patternfly-org/issues/4866)) ([bae3675](https://github.com/patternfly/patternfly-org/commit/bae367583a177ba6a3e41a32954ffd8798b10644))
+
+
+
+
+
+# 1.4.0-alpha.316 (2025-11-17)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 1.4.0-alpha.315 (2025-11-17)
+
+
+### Bug Fixes
+
+* **get-involved:** Creates new nav section for community and contribution info. ([#4781](https://github.com/patternfly/patternfly-org/issues/4781)) ([2ca34b2](https://github.com/patternfly/patternfly-org/commit/2ca34b24caa09d4cea6dfbc8c77a139501a7a391))
+
+
+
+
+
+# 1.4.0-alpha.314 (2025-11-17)
+
+
+### Bug Fixes
+
+* Reorganizes and renames nav items for new design. ([#4861](https://github.com/patternfly/patternfly-org/issues/4861)) ([595e6a2](https://github.com/patternfly/patternfly-org/commit/595e6a2a83842fa1b7a211bef34feb7bda62c778))
+
+
+
+
+
+# 1.4.0-alpha.313 (2025-11-12)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
 # 1.4.0-alpha.312 (2025-11-12)
 
 
