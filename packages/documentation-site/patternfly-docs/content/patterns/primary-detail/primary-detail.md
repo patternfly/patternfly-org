@@ -26,7 +26,7 @@ When the page content has a white background, the drawer can be placed on the sa
 **Common detail components:**
 - Markdown text form or [code editor](/components/code-editor)
 - [Description list](/components/description-list)
-- [Charts or graphs](/charts/about-charts)
+- [Charts or graphs](/components/charts/about-charts)
 - [Input forms](/components/input-group)
 - [Content](/components/content)
  

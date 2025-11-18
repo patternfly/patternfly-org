@@ -34,7 +34,7 @@ Next steps:
 
 When errors occur, explain what happened, why, and how to fix it.
 
-Expanding on our [UI error writing guidelines](/content-design/error-messages), CLI errors should:
+Expanding on our [UI error writing guidelines](/content-design/writing-guides/error-messages), CLI errors should:
 - Use plain language, avoiding internal jargon.
 - Offer suggestions and actionable next steps.
 - Conclude with the most important information. This is the opposite of content design for products with GUIs.

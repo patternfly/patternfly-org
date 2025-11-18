@@ -20,7 +20,7 @@ The following image of a card view demonstrates some of the more common uses of 
 
 Use actions to make it clear and convenient for users to complete tasks in a UI. When applied intentionally, actions can make the UI more efficient and effective. 
 
-When labeling or referring to actions in your UI, make sure that you adhere to our [terminology guidelines](/content-design/terminology) and align any icons you use with the usage behavior outlined in our [icon design foundations.](/foundations-and-styles/iconography#all-icons) 
+When labeling or referring to actions in your UI, make sure that you adhere to our [terminology guidelines](/content-design/grammar/terminology) and align any icons you use with the usage behavior outlined in our [icon design foundations.](/foundations-and-styles/iconography#all-icons) 
 
 ### Deletion vs removal 
 Make sure that users understand the purpose and consequences of deleting or removing data objects, items, or similar resources via the UI. Deleting is different from removing. 

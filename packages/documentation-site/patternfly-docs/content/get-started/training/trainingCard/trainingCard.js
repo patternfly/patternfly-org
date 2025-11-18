@@ -52,7 +52,7 @@ export const TrainingCard = ({
     </CardBody>
     <CardFooter>
     {name && (
-      <Link to={`/training/${name}`} >
+      <Link to={`/get-started/training/${name}`} >
         <Button isInline variant="link" size="lg" icon={<ArrowRightIcon />} iconPosition="end">
           Start
         </Button>

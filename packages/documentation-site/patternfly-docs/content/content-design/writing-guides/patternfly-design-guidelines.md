@@ -63,7 +63,7 @@ The following best practices should inform the way that you format the content i
 
 ### Capitalization
 
-Our [capitalization style guidelines](/content-design/capitalization/) outline best practices for capitalization across PatternFly. 
+Our [capitalization style guidelines](/content-design/grammar/capitalization/) outline best practices for capitalization across PatternFly. 
 
 Always write headings in sentence case. Write component names in lowercase. 
 
@@ -121,7 +121,7 @@ When writing design guidelines, use:
 - Second-person point of view ("you").
 - Active voice, unless you're using passive voice for emphasis.
 - Direct language and sentence structure.
-- Full words to introduce examples, instead of their abbreviations ("for example" instead of "e.g."), as seen on our [terms list](/content-design/terminology/).
+- Full words to introduce examples, instead of their abbreviations ("for example" instead of "e.g."), as seen on our [terms list](/content-design/grammar/terminology/).
 - Descriptive language instead of directional language (up, down, left, right) to refer to elements in your document.
 - Descriptive hyperlinks (not "click here").
 

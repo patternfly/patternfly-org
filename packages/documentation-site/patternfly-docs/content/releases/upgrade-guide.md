@@ -154,7 +154,7 @@ This codemod automatically identifies PatternFly 5 CSS variables that need to be
 
 ### 4. Update any pixel-based logic for breakpoints
 
-PatternFly 6 uses rem units for global breakpoint [design tokens](/foundations-and-styles/design-tokens/all-tokens), rather than pixels. 
+PatternFly 6 uses rem units for global breakpoint [design tokens](/foundations-and-styles/design-tokens/all-design-tokens), rather than pixels. 
 
 If you have previously implemented any breakpoint logic based on a pixel value, you will need to account for the fact that PatternFly 6 breakpoint tokens use rems. To find the rem equivalent, divide your pixel value by 16 or refer to this table:
 

@@ -6,7 +6,7 @@ section: accessibility
 
 import { Card, CardBody, Grid, GridItem } from '@patternfly/react-core';
 
-As described in our [accessibility guidelines](/accessibility/overview), users may interact with your product through a variety of assistive technologies. In addition to [developing for accessibility](/accessibility/develop-for-accessibility), you must also incorporate it into your product's visual design. 
+As described in our [accessibility guidelines](/accessibility/overview), users may interact with your product through a variety of assistive technologies. In addition to [developing for accessibility](/accessibility/develop), you must also incorporate it into your product's visual design. 
 
 ## Color and contrast
 

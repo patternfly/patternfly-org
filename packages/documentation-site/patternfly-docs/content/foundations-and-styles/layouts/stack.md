@@ -26,4 +26,4 @@ You can specify which stack items fill the remaining vertical space in the layou
 
 ### Gutters around items
 
-To adjust spacing between items, you can apply gutters, as shown in the related [React](/layouts/stack#with-gutter) and [HTML](/layouts/stack/html#with-gutter) examples.
+To adjust spacing between items, you can apply gutters, as shown in the related [React](/foundations-and-styles/layouts/stack#with-gutter) and [HTML](/foundations-and-styles/layouts/stack/html#with-gutter) examples.

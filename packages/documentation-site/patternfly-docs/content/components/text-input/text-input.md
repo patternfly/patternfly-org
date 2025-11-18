@@ -19,7 +19,7 @@ import '../components.css';
 
 ## Usage
 * Be sure to size input fields appropriately to anticipate the longest likely value (if a maximum character length is known).
-* When a value is too long to be fully displayed in a text field, use [truncation](/content-design/truncation).
+* When a value is too long to be fully displayed in a text field, use [truncation](/content-design/grammar/truncation).
 * Provide a [text area](/components/forms/text-area) for input anticipated to be longer than a single line.
 * Pre-populate fields with known values when possible, like a default IP address, for example.
 

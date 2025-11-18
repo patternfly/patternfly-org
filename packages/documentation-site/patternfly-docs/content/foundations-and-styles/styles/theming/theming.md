@@ -10,7 +10,7 @@ import ExternalLinkAltIcon from '@patternfly/react-icons/dist/esm/icons/external
 
 A **theme** applies a specific visual style to all UI components in order to create a unique, cohesive, and purposeful look. The use of theming can provide more flexibility for user preferences, as well as different options for accessibility needs. 
 
-Theming is supported in PatternFly through [our design token system](/foundations-and-styles/design-tokens/about-tokens), which was intentionally structured so that sets of tokens can be adjusted together to create alternate UI styles. By reassigning token values, the fonts, spacing, shadows, and borders in a UI can be changed together to create a theme. This system has enabled us to create multiple PatternFly themes, while also supporting the ability for you to create custom themes. 
+Theming is supported in PatternFly through [our design token system](/foundations-and-styles/design-tokens/overview), which was intentionally structured so that sets of tokens can be adjusted together to create alternate UI styles. By reassigning token values, the fonts, spacing, shadows, and borders in a UI can be changed together to create a theme. This system has enabled us to create multiple PatternFly themes, while also supporting the ability for you to create custom themes. 
 
 ## PatternFly themes
 

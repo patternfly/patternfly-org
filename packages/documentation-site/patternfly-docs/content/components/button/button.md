@@ -315,7 +315,7 @@ Buttons in forms, modals, or wizards should always be left aligned in the box. T
 When writing button labels:
 
 * Be specific and clearly communicate the button's action.
-* Make sure that button text is unique and easily understood on its own, so that screen readers may read buttons to users out of context. Refer to [PatternFly's accessibility guide](/accessibility/about-accessibility) for more information.
+* Make sure that button text is unique and easily understood on its own, so that screen readers may read buttons to users out of context. Refer to [PatternFly's accessibility guide](/accessibility/overview) for more information.
 * Use simple verbs or verb phrases.
 * Aim for short labels when possible (1–3 words), to avoid wrapping.
 * Avoid using articles (for example, write “Add source” instead of “Add a source”).
@@ -325,7 +325,7 @@ When writing button labels:
 
 ### Writing link labels
 
-Use specific, action-focused labels that match what the user will see when they arrive at their location. For example, if you are sending a user to a dashboard, your link label might read _View dashboard_. For a link directing a user to a support forum, the label might read _Get help in the support forum_. See [PatternFly's content guidelines](/content-design/about-ux-writing) for additional guidance.
+Use specific, action-focused labels that match what the user will see when they arrive at their location. For example, if you are sending a user to a dashboard, your link label might read _View dashboard_. For a link directing a user to a support forum, the label might read _Get help in the support forum_. See [PatternFly's content guidelines](/content-design/overview) for additional guidance.
 
 ## Accessibility
 

@@ -26,7 +26,7 @@ Use the flex layout with content heavy UIs and when it is necessary to wrap UI e
 
 ### When to use the flex layout vs the grid layout
 
-Use the flex layout when a rigid grid is not necessary or wanted. If you need a more structured layout, consider using a the [grid layout](/layouts/grid).
+Use the flex layout when a rigid grid is not necessary or wanted. If you need a more structured layout, consider using a the [grid layout](/foundations-and-styles/layouts/grid).
 
 ## Variations
 

@@ -13,7 +13,7 @@ import ArrowRightIcon from '@patternfly/react-icons/dist/esm/icons/arrow-right-i
 
 Good conversation design combines content strategy, writing, and design to ensure that the development and use of chatbots is centered on real user needs. This includes making sure that all text related to the conversational UI supports easy engagement with chatbots, while staying aligned with brand standards.
 
-When designing AI conversations alongside PatternFly-based projects, it is important to align with our established [brand voice and tone](/content-design/brand-voice-and-tone), as well as our [ethical guidelines for AI.](/AI/ai-guidelines)
+When designing AI conversations alongside PatternFly-based projects, it is important to align with our established [brand voice and tone](/content-design/brand-voice-and-tone), as well as our [ethical guidelines for AI.](/ai/overview)
 
 ## Best practices 
 
@@ -29,11 +29,11 @@ Following these best practices to help ensure that your users can complete their
 
 When chatbots are designed to meet the needs of your users, they can improve the overall UX of your product. They are convenient, efficient, and persistent. 
 
-[Our chatbot extension](/AI/chatbot/about-chatbot) utilizes PatternFly components to create a foundation for an AI-based chatbot, with additional customization options.
+[Our chatbot extension](/extensions/chatbot/overview) utilizes PatternFly components to create a foundation for an AI-based chatbot, with additional customization options.
 
 <Flex>
 <FlexItem>
-<Button component="a" href="/AI/chatbot/about-chatbot" target="_blank" variant="primary" size="lg">Use the chatbot extension <ArrowRightIcon /></Button>
+<Button component="a" href="/extensions/chatbot/overview" target="_blank" variant="primary" size="lg">Use the chatbot extension <ArrowRightIcon /></Button>
 </FlexItem>
 </Flex>
 

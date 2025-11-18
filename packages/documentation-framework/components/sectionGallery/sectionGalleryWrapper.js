@@ -1,4 +1,5 @@
 import React from 'react';
+import { useLocation } from '@reach/router';
 import { groupedRoutes } from '../../routes';
 
 export const SectionGalleryWrapper = ({
@@ -13,8 +14,16 @@ export const SectionGalleryWrapper = ({
   children,
 }) => {
   let sectionRoutes = subsection
-    ? groupedRoutes[section][subsection]
+    ? groupedRoutes[section]?.[subsection]
     : groupedRoutes[section];
+  // Safety check: if sectionRoutes is undefined/null, return empty array to prevent errors
+  if (!sectionRoutes) {
+    return (
+      <div className={`ws-section-gallery${isFullWidth ? ' ws-section-gallery-full-width' : ''}`}>
+        {children([], '', () => {}, initialLayout, () => {})}
+      </div>
+    );
+  }
   if (!includeSubsections || parseSubsections) {
     const sectionRoutesArr = Object.entries(sectionRoutes);
     // loop through galleryItems object and build new object to handle subsections
@@ -40,6 +49,7 @@ export const SectionGalleryWrapper = ({
     }, {});
   }
 
+  const location = useLocation();
   const [searchTerm, setSearchTerm] = React.useState('');
   const [layoutView, setLayoutView] = React.useState(initialLayout);
   const filteredItems = Object.entries(sectionRoutes).filter(
