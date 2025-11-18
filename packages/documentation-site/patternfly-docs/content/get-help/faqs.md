@@ -31,7 +31,7 @@ We occasionally share patch releases between our quarterly minor releases for ti
 
 #### What is the latest version of PatternFly?
 
-We are currently on version 6 of PatternFly&mdash;also known as "PatternFly 6". You can view the current minor and patch release version within [our release highlights.](https://www.patternfly.org/releases/release-highlights)
+We are currently on version 6 of PatternFly&mdash;also known as "PatternFly 6". You can view the current minor and patch release version within [our release highlights.](/releases/release-highlights)
 
 ### Contributing 
 

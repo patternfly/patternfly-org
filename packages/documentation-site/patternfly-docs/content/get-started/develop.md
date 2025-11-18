@@ -34,7 +34,7 @@ PatternFly supports the 2 most recent versions of React at a time. PatternFly 6 
 * [@patternfly/react-table](https://www.npmjs.com/package/@patternfly/react-table): PatternFly table components.
 * [@patternfly/react-tokens](https://www.npmjs.com/package/@patternfly/react-tokens): PatternFly's CSS variables, transformed into JavaScript objects for use with React.
 
-These packages are maintained together. To determine which versions of each package are compatible with the rest, view our [release highlights](https://www.patternfly.org/releases/release-highlights).
+These packages are maintained together. To determine which versions of each package are compatible with the rest, view our [release highlights](/releases/release-highlights).
 
 We support the following configurations:
 * [TypeScript](https://github.com/patternfly/patternfly-react-seed/blob/master/tsconfig.json)

@@ -33,7 +33,7 @@ Beyond component issues, you can also contribute to our extensions or to the Pat
     - [react-component-groups:](https://github.com/patternfly/react-component-groups) Code for [the component groups extension](/extensions/component-groups/overview).
     - [react-data-view:](https://github.com/patternfly/react-data-view) Code for [the data view extension](/extensions/data-view/overview).
     - [react-log-viewer:](https://github.com/patternfly/react-log-viewer) Code for [the log viewer extension](/extensions/log-viewer).
-    - [react-topology:](https://github.com/patternfly/react-topology) Code for [the Topology extension](/extensions/topology/about-topology).
+    - [react-topology:](https://github.com/patternfly/react-topology) Code for [the Topology extension](/extensions/topology/overview).
     - [react-user-feedback:](https://github.com/patternfly/react-user-feedback) Code for [the user feedback extension](/extensions/user-feedback).
 - **PatternFly.org website:** To contribute to the functionality of our website, you can work on issues in the [patternfly-org repo](https://github.com/patternfly/patternfly-org).
 

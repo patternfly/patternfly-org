@@ -525,7 +525,7 @@ We've continued to evolve our new ChatBot:
     
 #### Component groups
 
-- We added customization support to [error state](/extensions/component-groups/error-communication/error-state) via PatternFly empty state props, including a custom icon and title heading level.
+- We added customization support to [error state](/extensions/component-groups/error-state) via PatternFly empty state props, including a custom icon and title heading level.
 
 <Divider />
 
