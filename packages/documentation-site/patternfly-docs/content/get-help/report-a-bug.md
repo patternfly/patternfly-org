@@ -48,13 +48,13 @@ Bugs that appear in the base HTML/CSS or can be seen in *both* the React and HTM
 For bugs found in a PatternFly extension, please file the issue in that extension's specific repository:
 
 
-- [chatbot:](https://github.com/patternfly/chatbot) Code for [the ChatBot extension](/patternfly-ai/chatbot/about-chatbot).
+- [chatbot:](https://github.com/patternfly/chatbot) Code for [the ChatBot extension](/ai/chatbot/aoverview).
 - [patternfly-quickstarts:](https://github.com/patternfly/patternfly-quickstarts). Code for [the quick starts extensions](/extensions/quick-starts).
 - [react-catalog-view:](https://github.com/patternfly/react-catalog-view) Code for [the catalog view extension](/extensions/catalog-view/catalog-item-header).
 - [react-component-groups:](https://github.com/patternfly/react-component-groups) Code for [the component groups extension](/component-groups/about-component-groups).
 - [react-data-view:](https://github.com/patternfly/react-data-view) Code for [the data view extension](/extensions/data-view/overview).
 - [react-log-viewer:](https://github.com/patternfly/react-log-viewer) Code for [the log viewer extension](/extensions/log-viewer).
-- [react-topology:](https://github.com/patternfly/react-topology) Code for [the Topology extension](/topology/about-topology).
+- [react-topology:](https://github.com/patternfly/react-topology) Code for [the Topology extension](/topology/overview).
 - [react-user-feedback:](https://github.com/patternfly/react-user-feedback) Code for [the user feedback extension](/extensions/user-feedback).
 
 

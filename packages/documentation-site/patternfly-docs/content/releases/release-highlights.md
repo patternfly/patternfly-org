@@ -564,7 +564,7 @@ We're excited to introduce PatternFly AI: our new effort to support and integrat
 
 - [About PatternFly AI](/ai/overview)
 - [AI guidelines](/ai/overview)
-- [Chatbot](/extensions/chatbot/about-chatbot)
+- [Chatbot](/extensions/chatbot/overview)
 - [Conversation design](/ai/conversation-design)
 
 As with all things AI currently, this area will continue to grow and mature with time.

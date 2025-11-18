@@ -2,7 +2,6 @@
 id: Design
 title: Design with PatternFly
 section: get-started
-source: Design-with-Figma
 
 ---
 import './get-started.css';

@@ -2,6 +2,7 @@
 id: Develop
 section: foundations-and-styles
 subsection: design-tokens
+sortvalue: 10
 ---
 
 ## Using tokens in code

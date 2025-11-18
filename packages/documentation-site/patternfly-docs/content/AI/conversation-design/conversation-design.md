@@ -29,11 +29,11 @@ Following these best practices to help ensure that your users can complete their
 
 When chatbots are designed to meet the needs of your users, they can improve the overall UX of your product. They are convenient, efficient, and persistent. 
 
-[Our chatbot extension](/extensions/chatbot/about-chatbot) utilizes PatternFly components to create a foundation for an AI-based chatbot, with additional customization options.
+[Our chatbot extension](/extensions/chatbot/overview) utilizes PatternFly components to create a foundation for an AI-based chatbot, with additional customization options.
 
 <Flex>
 <FlexItem>
-<Button component="a" href="/extensions/chatbot/about-chatbot" target="_blank" variant="primary" size="lg">Use the chatbot extension <ArrowRightIcon /></Button>
+<Button component="a" href="/extensions/chatbot/overview" target="_blank" variant="primary" size="lg">Use the chatbot extension <ArrowRightIcon /></Button>
 </FlexItem>
 </Flex>
 
