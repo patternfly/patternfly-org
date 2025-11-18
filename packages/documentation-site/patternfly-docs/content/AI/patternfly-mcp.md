@@ -1,8 +1,8 @@
 ---
 id: PatternFly MCP
-section: PatternFly-AI
+section: AI
 --- 
-import '../design-guidelines/components/components.css';
+import '../components/components.css';
 
 This guide provides an overview of the PatternFly MCP server, including its benefits and instructions for setting up the tool.
 
@@ -44,7 +44,8 @@ You can install the PatternFly MCP in your preferred development environment. He
             "command": "npx",
             "args": [
                 "-y",
-                "@patternfly/patternfly-mcp"
+                "@patternfly/patternfly-mcp",
+                "@latest"
             ],
             "description": "PatternFly React development rules and documentation"
             }
@@ -61,9 +62,9 @@ You can install the PatternFly MCP in your preferred development environment. He
 
 1. From your terminal (before opening Claude Code), run the `claude mcp add` command with your preferred configuration: 
     - To install the server globally (recommended, so it's available across all your projects), use the `-s user` flag:
-        ```claude mcp add patternfly-mcp -s user -- npx -y @patternfly/patternfly-mcp```
+        ```claude mcp add patternfly-mcp -s user -- npx -y @patternfly/patternfly-mcp @latest```
     - To install for the current project only, run:
-        ```claude mcp add patternfly-mcp -- npx -y @patternfly/patternfly-mcp```
+        ```claude mcp add patternfly-mcp -- npx -y @patternfly/patternfly-mcp @latest```
 1. Open Claude Code by typing `claude`.
 1. Inside Claude Code, type the `/mcp` command to view and manage your running MCP servers. You should see `patternfly-mcp` listed as "connected".
 <br/ ><br/ >
