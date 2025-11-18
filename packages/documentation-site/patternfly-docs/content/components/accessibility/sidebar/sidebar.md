@@ -10,7 +10,7 @@ import { Link } from '@patternfly/documentation-framework/components/link/link';
 
 To implement an accessible PatternFly **sidebar**:
 
-- Ensure the sidebar panel follows our documentation on [accessible scrollable elements](/accessibility/develop-for-accessibility#scrollable-elements) if its content creates a scrollable container
+- Ensure the sidebar panel follows our documentation on [accessible scrollable elements](/accessibility/develop#scrollable-elements) if its content creates a scrollable container
 
 ## Testing
 
@@ -21,7 +21,7 @@ At a minimum, a sidebar should meet the following criteria:
     <Checkbox id="sidebar-a11y-checkbox-1" label="Standard keyboard navigation can be used to navigate between focusable elements within the sidebar panel." description={<span><kbd>Tab</kbd> navigates to the next focusable element, and <kbd>Shift</kbd> + <kbd>Tab</kbd> navigates to the previous focusable element.</span>} />
   </ListItem>
   <ListItem>
-    <Checkbox id="sidebar-a11y-checkbox-2" label={<span>If the sidebar panel content creates a scrollbale container, it follows our documentation on <Link href="/accessibility/develop-for-accessibility#scrollable-elements">accessible scrollable elements</Link>.</span>} />
+    <Checkbox id="sidebar-a11y-checkbox-2" label={<span>If the sidebar panel content creates a scrollbale container, it follows our documentation on <Link href="/accessibility/develop#scrollable-elements">accessible scrollable elements</Link>.</span>} />
   </ListItem>
 </List>
 

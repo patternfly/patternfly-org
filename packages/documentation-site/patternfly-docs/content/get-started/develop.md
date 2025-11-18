@@ -12,7 +12,7 @@ In order to develop with PatternFly, you will need to:
 
 1. [Learn about the PatternFly design system](/about-us) to get acquainted with all of its elements.
 
-1. [Learn about our design token system](/foundations-and-styles/design-tokens/about-tokens), which enables you to build interfaces with consistent PatternFly styling, including colors, shadows, spacing, and more.
+1. [Learn about our design token system](/foundations-and-styles/design-tokens/overview), which enables you to build interfaces with consistent PatternFly styling, including colors, shadows, spacing, and more.
 
 1. Install a package manager to help you install, update, and configure all necessary PatternFly packages. We recommend [npm](https://nodejs.org/en/download) or [Yarn](https://yarnpkg.com/getting-started).
 

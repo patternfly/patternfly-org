@@ -98,7 +98,7 @@ const App: React.FunctionComponent = () => {
 
 ## Custom motion 
 
-For some scenarios, like creating a new [PatternFly extension](/extensions/about-extensions), you might need to implement custom motion behavior. When creating a new animation, ensure the following:
+For some scenarios, like creating a new [PatternFly extension](/extensions/overview), you might need to implement custom motion behavior. When creating a new animation, ensure the following:
 - There is no existing support for the animation.
 - The animation adheres to our motion principles and respects [`prefers-reduced-motion` settings.](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-reduced-motion)
 - Your implementation uses appropriate semantic motion tokens, as detailed in the following section. 
@@ -107,7 +107,7 @@ For some scenarios, like creating a new [PatternFly extension](/extensions/about
 
 PatternFly component animations are created using design tokens that specify duration, delay, and timing. We implement motion by using semantic tokens, which are built off of base tokens. Semantic motion tokens begin with `--pf-t--global--motion--`
 
-When implementing custom motion, you should [familiarize yourself with our token system](/foundations-and-styles/design-tokens/about-tokens) and [use the motion tokens outlined in our documentation.](/foundations-and-styles/design-tokens/all-patternfly-tokens)
+When implementing custom motion, you should [familiarize yourself with our token system](/foundations-and-styles/design-tokens/overview) and [use the motion tokens outlined in our documentation.](/foundations-and-styles/design-tokens/all-design-tokens)
 
 ### Duration 
 Duration tokens specify the length of time that different animation should take to complete. We offer predefined duration tokens based on each type of animation.

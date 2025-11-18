@@ -21,4 +21,4 @@ If you find an issue you'd like to work on, leave a comment or reach out on [our
 
 ## Propose new documentation
 
-If you'd like to contribute new content, such as updates to design guidelines or entirely new pages, you can propose your idea by opening an issue in the [patternfly-org repo](https://github.com/patternfly/patternfly-org). Content for design guidelines should adhere to our [writing style guide](/ux-writing/writing-patternfly-design-guidelines). From there, our team will work with you to author and publish your new content.
+If you'd like to contribute new content, such as updates to design guidelines or entirely new pages, you can propose your idea by opening an issue in the [patternfly-org repo](https://github.com/patternfly/patternfly-org). Content for design guidelines should adhere to our [writing style guide](/content-design/writing-guides/patternfly-design-guidelines). From there, our team will work with you to author and publish your new content.

@@ -79,7 +79,7 @@ If there are no matches for the search term that a user has entered into the typ
 ![Typeahead menu with no results matching the search term.](./img/typeahead-search-no-results.svg)
 </div>
 
-Typeahead is available for single and multiple select lists, but is not supported by checkbox select list toggles by default. However, there is an option to add typeahead capability within a menu of items if needed, as seen in the [grouped checkbox input with filtering](/components/menus/select/react#grouped-checkbox-input-with-filtering) example.
+Typeahead is available for single and multiple select lists, but is not supported by checkbox select list toggles by default. However, there is an option to add typeahead capability within a menu of items if needed, as seen in the [grouped checkbox input with filtering](/components/menus/select/#grouped-checkbox-input-with-filtering) example.
 
 ### Selected item count
 You can add a number count to a select component, either as a badge in the toggle to indicate the number of selected items, or placed beside a menu item to indicate the number of items that match a certain filter option.

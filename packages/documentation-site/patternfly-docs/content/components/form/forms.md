@@ -367,7 +367,7 @@ Forms in a modal should be horizontally centered with the modal background and f
 
 Multi-column forms are forms that allow multiple inputs to share a single form line. Single column forms are recommended over multi-column forms since multiple columns can lead to confusion and may not support an accessible experience for all users.
 
-If you choose to create a multi-column form, you may do so using any of the [layouts](/layouts/bullseye) offered in PatternFly including [grid](/layouts/grid) or [flex](/layouts/flex).
+If you choose to create a multi-column form, you may do so using any of the [layouts](/foundations-and-styles/layouts/bullseye) offered in PatternFly including [grid](/foundations-and-styles/layouts/grid) or [flex](/foundations-and-styles/layouts/flex).
 
 When grouping columns together in a multi-column form, organize them so that field information on the same line relates to one another. Common cases for this input field grouping include:
 
@@ -458,7 +458,7 @@ If a user formats an input incorrectly, avoid unclear error messages like *Inval
 * *Date format must be MM-DD-YYYY*
 * *Enter a valid email: email@provider.com*
 
-For more error message guidance, see our [UX writing style guide](/content-design/error-messages).
+For more error message guidance, see our [UX writing style guide](/content-design/writing-guides/error-messages).
 
 ### Buttons
 
@@ -470,7 +470,7 @@ For more button text guidance, see our [button content guidelines](/components/b
 
 ## Accessibility
 
-This section highlights accessibility considerations to keep in mind when creating forms. For more accessibility guidance, see our [PatternFly accessibility guide](/accessibility/about-accessibility).
+This section highlights accessibility considerations to keep in mind when creating forms. For more accessibility guidance, see our [PatternFly accessibility guide](/accessibility/overview).
 
 ### Form sections
 Follow these best practices to create accessible form sections:

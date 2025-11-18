@@ -30,7 +30,7 @@ When displaying quantitative values for measurements in your UI, use the [Intern
 
 ## Currency
 
-Wherever possible, display currency in three-letter code according to [ISO Standard 4217](https://www.iso.org/iso-4217-currency-codes.html). See our [numerics](/content-design/numerics#numbers-and-currency) guidelines for more information about writing currency.
+Wherever possible, display currency in three-letter code according to [ISO Standard 4217](https://www.iso.org/iso-4217-currency-codes.html). See our [numerics](/content-design/grammar/numerics#numbers-and-currency) guidelines for more information about writing currency.
 
 ## Data bandwidth
 

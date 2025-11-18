@@ -32,7 +32,7 @@ Though both can be used to warn users of issues, severity icons and status icons
 
 ## Content considerations 
 
-Icons are often most meaningful when paired with text. If you're not certain that all users will recognize an icon on its own, add a descriptive text label or a tooltip. For guidance related to icon tooltips, refer to our [tooltips writing guide.](/content-design/tooltips)
+Icons are often most meaningful when paired with text. If you're not certain that all users will recognize an icon on its own, add a descriptive text label or a tooltip. For guidance related to icon tooltips, refer to our [tooltips writing guide.](/content-design/writing-guides/tooltips)
 
 ## Status icons
 

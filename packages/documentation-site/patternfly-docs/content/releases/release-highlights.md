@@ -71,10 +71,10 @@ We’ve updated our documentation and examples with the following recommendation
 
 ### Community-driven ChatBot enhancements
 Based on feedback from usability workshops and our community, we've made significant enhancements to the ChatBot extension to improve usability and address user needs:
-- **Clearer navigation:** To provide users with more context, the [chat history drawer](/AI/chatbot/ui#drawer-with-search-and-new-chat-button) now includes a clearer title, an icon, and a prominent "new chat" button.
-- **Flexible layouts:** To support different presentation preferences, we've introduced [compact component styles](/AI/chatbot/overview/demo#compact-chatbot) and a new [demo for swapping between display modes](/AI/chatbot/overview/demo#display-mode-switcher).
-- **Modern features:** To give users more control and flexibility, we added support for [message dividers](/AI/chatbot/messages#message-dividers), [editing messages](/AI/chatbot/messages#user-messages), [pinning chat history items](/AI/chatbot/ui#pinning-conversations), [previewing images](/AI/chatbot/messages#image-preview) and [downloading chat transcripts](/AI/chatbot/overview/design-guidelines#downloading-chat-transcripts).
-- **Advanced interactions:** To support more complex agentic interactions, we've added new components to [display an AI's reasoning process (deep thinking)](/AI/chatbot/messages#messages-with-deep-thinking), as well as [managing tool calls](/AI/chatbot/messages#messages-with-tool-calls) and sharing [tool responses](/AI/chatbot/messages#messages-with-tool-responses).
+- **Clearer navigation:** To provide users with more context, the [chat history drawer](/extensions/chatbot/ui#drawer-with-search-and-new-chat-button) now includes a clearer title, an icon, and a prominent "new chat" button.
+- **Flexible layouts:** To support different presentation preferences, we've introduced [compact component styles](/extensions/chatbot/overview/demo#compact-chatbot) and a new [demo for swapping between display modes](/extensions/chatbot/overview/demo#display-mode-switcher).
+- **Modern features:** To give users more control and flexibility, we added support for [message dividers](/extensions/chatbot/messages#message-dividers), [editing messages](/extensions/chatbot/messages#user-messages), [pinning chat history items](/extensions/chatbot/ui#pinning-conversations), [previewing images](/extensions/chatbot/messages#image-preview) and [downloading chat transcripts](/extensions/chatbot/overview/design-guidelines#downloading-chat-transcripts).
+- **Advanced interactions:** To support more complex agentic interactions, we've added new components to [display an AI's reasoning process (deep thinking)](/extensions/chatbot/messages#messages-with-deep-thinking), as well as [managing tool calls](/extensions/chatbot/messages#messages-with-tool-calls) and sharing [tool responses](/extensions/chatbot/messages#messages-with-tool-responses).
 
 ### Resizable table columns
 Based on user feedback, we've added resizable table columns within the [@patternfly/react-data-view extension](https://www.npmjs.com/package/@patternfly/react-data-view). This update allows users to click and drag column dividers to adjust widths, making it easier to view and work with data in dense tables.
@@ -85,7 +85,7 @@ To see this feature in action, [refer to our resizable columns table demo](/exte
 
 To help you safely and effectively integrate AI into your development process, we’ve released two new sets of guidelines:
 - **AI-generated code contribution:** To ensure legal compliance and quality, we've established new guidelines for contributing AI-generated code. You can find them [within GitHub](https://github.com/patternfly/.github/blob/main/CONTRIBUTING.md). 
-- **AI-assisted code migrations:** We've also published [new documentation on using AI to streamline code migrations](/AI/ai-assisted-code-migration/). This guide offers strategies for using AI to make it easier and faster to migrate your project to PatternFly React from other frameworks.
+- **AI-assisted code migrations:** We've also published [new documentation on using AI to streamline code migrations](/ai/ai-assisted-code-migration/). This guide offers strategies for using AI to make it easier and faster to migrate your project to PatternFly React from other frameworks.
 
 ### What's next?
 For the Q4 2025 release, we’ll be focused on:
@@ -297,19 +297,19 @@ The following animations are unique to each icon and don't support any custom ic
 
 ### PatternFly AI
 
-We updated our high-level [AI principles and guidelines](/AI/principles-and-guidelines) to expand guidance and improve the usability of this resource. We integrated community feedback and research to include new patterns and recommendations that have emerged from the increased use of AI features in products. As the design and implementation of AI features continue to evolve, so will this guiding resource.
+We updated our high-level [AI principles and guidelines](/ai/overview) to expand guidance and improve the usability of this resource. We integrated community feedback and research to include new patterns and recommendations that have emerged from the increased use of AI features in products. As the design and implementation of AI features continue to evolve, so will this guiding resource.
 
 #### ChatBot
 
-We expanded our ChatBot extension with improvements identified in a recent usability study, including [editable messages](/AI/chatbot/messages#user-messages) and [compact styles](/AI/chatbot/overview/demo#compact-chatbot). We also added other requested features, such as [auto-scrolling for messages](/AI/chatbot/messages/demo#message-auto-scrolling) (a community contribution!), [empty and error states for the chat history drawer](/AI/chatbot/ui#drawer-with-search-and-new-chat-button), and [expandable code blocks](/AI/chatbot/messages#user-messages)&mdash;to name a few.
+We expanded our ChatBot extension with improvements identified in a recent usability study, including [editable messages](/extensions/chatbot/messages#user-messages) and [compact styles](/extensions/chatbot/overview/demo#compact-chatbot). We also added other requested features, such as [auto-scrolling for messages](/extensions/chatbot/messages/demo#message-auto-scrolling) (a community contribution!), [empty and error states for the chat history drawer](/extensions/chatbot/ui#drawer-with-search-and-new-chat-button), and [expandable code blocks](/extensions/chatbot/messages#user-messages)&mdash;to name a few.
 
-On the documentation side, there's a new ["Customizing messages" guide](/AI/chatbot/customizing-messages) that provides guidance for using rehype plugins for advanced HTML customization. 
+On the documentation side, there's a new ["Customizing messages" guide](/extensions/chatbot/customizing-messages) that provides guidance for using rehype plugins for advanced HTML customization. 
 
 We also fixed reported bugs, which require no updates on your end.
 
 ### CLI experience guidelines
 
-With the help of a community contribution, we now have [a CLI handbook](/developer-guides/cli-handbook) that offers guidance for designing command-line interface experiences. This resource outlines unique accessibility considerations for CLIs, as well as writing guidelines for crafting well-designed messages, documentation, and interactive CLI experiences.
+With the help of a community contribution, we now have [a CLI handbook](/content-design/writing-guides/cli-handbook) that offers guidance for designing command-line interface experiences. This resource outlines unique accessibility considerations for CLIs, as well as writing guidelines for crafting well-designed messages, documentation, and interactive CLI experiences.
 
 ### Motion guidelines
 
@@ -385,16 +385,16 @@ We’ve made significant progress towards React 19 support in PatternFly, which 
 
 ### PatternFly AI 
 
-In the world of PatternFly AI, we've continued our focus on expanding our ChatBot extension. As more Flyers have used ChatBot, we've gained insight into the types of new features that would have the most impact. To make progress on growing ChatBot needs, this release adds *many* new features, including [an inline drawer display mode](https://patternfly-org-pr-4493-site.surge.sh/AI/chatbot/overview/demo/#inline-drawer-chatbot), the ability for users to give [message feedback](https://patternfly-org-pr-4493-site.surge.sh/AI/chatbot/messages#message-feedback), [support for quick starts](https://patternfly-org-pr-4493-site.surge.sh/AI/chatbot/messages#messages-with-quick-start-tiles), additional content types for [messages](/AI/chatbot/messages#bot-messages), and much more. 
+In the world of PatternFly AI, we've continued our focus on expanding our ChatBot extension. As more Flyers have used ChatBot, we've gained insight into the types of new features that would have the most impact. To make progress on growing ChatBot needs, this release adds *many* new features, including [an inline drawer display mode](https://patternfly-org-pr-4493-site.surge.sh/extensions/chatbot/overview/demo/#inline-drawer-chatbot), the ability for users to give [message feedback](https://patternfly-org-pr-4493-site.surge.sh/extensions/chatbot/messages#message-feedback), [support for quick starts](https://patternfly-org-pr-4493-site.surge.sh/extensions/chatbot/messages#messages-with-quick-start-tiles), additional content types for [messages](/extensions/chatbot/messages#bot-messages), and much more. 
 
 To see a complete list of new ChatBot features, [view the changelog](https://github.com/patternfly/chatbot/releases/tag/v2.2.0). 
 
 Along with these new features, we've updated our documentation:
-- [The ChatBot design guidelines](/AI/chatbot/overview/design-guidelines) have been updated to reflect new features, expand on previous guidance, and add higher-level patterns for ChatBots usage in products. 
-- New [ChatBot analytics documentation](/AI/chatbot/analytics) is also now available, which provides general guidance on the implementation of analytics tracking.
+- [The ChatBot design guidelines](/extensions/chatbot/overview/design-guidelines) have been updated to reflect new features, expand on previous guidance, and add higher-level patterns for ChatBots usage in products. 
+- New [ChatBot analytics documentation](/extensions/chatbot/analytics) is also now available, which provides general guidance on the implementation of analytics tracking.
 
 ### Expanded chart library
-PatternFly has historically provided a charting solution using the [Victory](https://formidable.com/open-source/victory/docs/victory-chart/) chart library. With this release, PatternFly is also now delivering 2 charts based on the [Apache ECharts](https://echarts.apache.org/) library, including [a line chart](/charts/line-chart) and [a Sankey chart](/charts/sankey-chart).
+PatternFly has historically provided a charting solution using the [Victory](https://formidable.com/open-source/victory/docs/victory-chart/) chart library. With this release, PatternFly is also now delivering 2 charts based on the [Apache ECharts](https://echarts.apache.org/) library, including [a line chart](/components/charts/line-chart) and [a Sankey chart](/components/charts/sankey-chart).
 
 Additionally, EChart is now listed as a peer dependency for PatternFly. To use these new chart solutions, add 'echart' to your project dependencies and follow PatternFly's documentation to build out your charts.
 
@@ -490,7 +490,7 @@ The following fix could require manual updates depending on how you handle break
 
 - We fixed an issue on PatternFly.org that prevented proper page loading when navigating to new pages via in-content links.
 
-- We updated [the PatternFly.org accessibility scorecard](/accessibility/accessibility-scorecard#patternfly.org-accessibility-scorecard) and will begin to resolve accessibility violations that were identified.
+- We updated [the PatternFly.org accessibility scorecard](/accessibility/product-scorecard#patternfly.org-accessibility-scorecard) and will begin to resolve accessibility violations that were identified.
 
 ### Content updates
 
@@ -499,9 +499,9 @@ The following fix could require manual updates depending on how you handle break
 - We updated and added "draggable" examples to [dual list selector](/components/dual-list-selector#draggable) and [data list](/components/data-list#draggable).
 - We updated our ChatBot documentation: 
     - We renamed the extension to "ChatBot", to better brand our offering and help distinguish it from other general "chatbot" features.
-    - We combined and organized our documentation into a few cohesive pages: ["Overview"](/AI/chatbot/overview), ["UI"](/AI/chatbot/ui), and ["Messages"](/AI/chatbot/messages). Note that our documentation structure could continue to change as our extension grows. We will continue to share updates when changes occur. 
-    - We moved our [basic and embedded ChatBot demos](/AI/chatbot/overview/demo) to the "Overview" page for better visibility. 
-    - We added initial [ChatBot design guidelines](/AI/chatbot/overview/design-guidelines), which can also be found on the "Overview" page.
+    - We combined and organized our documentation into a few cohesive pages: ["Overview"](/extensions/chatbot/overview), ["UI"](/extensions/chatbot/ui), and ["Messages"](/extensions/chatbot/messages). Note that our documentation structure could continue to change as our extension grows. We will continue to share updates when changes occur. 
+    - We moved our [basic and embedded ChatBot demos](/extensions/chatbot/overview/demo) to the "Overview" page for better visibility. 
+    - We added initial [ChatBot design guidelines](/extensions/chatbot/overview/design-guidelines), which can also be found on the "Overview" page.
     - We added documentation for new features, as described in the following section. 
 
 ### Extension updates 
@@ -513,19 +513,19 @@ We've continued to evolve our new ChatBot:
 - We removed the third-party `AutoTextArea` in the message bar and replaced it with our own custom solution.
 - We renamed the `toolTipLabel` prop to `tooltipLabel`.
 - We added support for new features, including: 
-    - A ["skip to chatbot" button](/AI/chatbot/ui#skip-to-content).
-    - New features in [ChatBot messages](/AI/chatbot/messages#messages) and the message bar: 
+    - A ["skip to chatbot" button](/extensions/chatbot/ui#skip-to-content).
+    - New features in [ChatBot messages](/extensions/chatbot/messages#messages) and the message bar: 
         - Truncation of long bot and user names. 
         - More complex list formats.
-        - [Quick response buttons](/AI/chatbot/messages#messages-with-quick-responses). 
-        - [Multiple file attachments](/AI/chatbot/messages#messages-with-attachments). 
-         - A [stop streaming button](/AI/chatbot/ui#message-bar-with-stop-button) that will pause the streaming of a ChatBot message.
-        - Additional customization options for [welcome messages](/AI/chatbot/ui#welcome-message), [message avatars](/AI/chatbot/messages#messages), [message actions](/AI/chatbot/messages#custom-messages-actions), [modal](/AI/chatbot/ui#modal), [toggle shape](/AI/chatbot/ui#custom-toggle-shape).
+        - [Quick response buttons](/extensions/chatbot/messages#messages-with-quick-responses). 
+        - [Multiple file attachments](/extensions/chatbot/messages#messages-with-attachments). 
+         - A [stop streaming button](/extensions/chatbot/ui#message-bar-with-stop-button) that will pause the streaming of a ChatBot message.
+        - Additional customization options for [welcome messages](/extensions/chatbot/ui#welcome-message), [message avatars](/extensions/chatbot/messages#messages), [message actions](/extensions/chatbot/messages#custom-messages-actions), [modal](/extensions/chatbot/ui#modal), [toggle shape](/extensions/chatbot/ui#custom-toggle-shape).
         - A variety of styling updates to shadows, sizing, and positioning. 
     
 #### Component groups
 
-- We added customization support to [error state](/component-groups/error-communication/error-state) via PatternFly empty state props, including a custom icon and title heading level.
+- We added customization support to [error state](/extensions/component-groups/error-communication/error-state) via PatternFly empty state props, including a custom icon and title heading level.
 
 <Divider />
 
@@ -562,16 +562,16 @@ The official release of PatternFly 6 is here! It contains all of the previous fe
 
 We're excited to introduce PatternFly AI: our new effort to support and integrate AI into our design system. We've added guidance and resources, contained within a new section of our website:
 
-- [About PatternFly AI](/AI/about-ai)
-- [AI guidelines](/AI/ai-guidelines)
-- [Chatbot](/AI/chatbot/about-chatbot)
-- [Conversation design](/AI/conversation-design)
+- [About PatternFly AI](/ai/overview)
+- [AI guidelines](/ai/overview)
+- [Chatbot](/extensions/chatbot/about-chatbot)
+- [Conversation design](/ai/conversation-design)
 
 As with all things AI currently, this area will continue to grow and mature with time.
 
 ### Component groups restructuring
 
-We made many updates to our [component groups extension](/component-groups/about-component-groups) to improve accuracy, usability, and alignment with PatternFly 6. We've moved its website section to our top-level navigation for better visibility, and also to support necessary sub-navigation. We've conceptually grouped the components into functional categories. Additionally, we renamed some of the components to be more accurate. 
+We made many updates to our [component groups extension](/extensions/component-groups/overview) to improve accuracy, usability, and alignment with PatternFly 6. We've moved its website section to our top-level navigation for better visibility, and also to support necessary sub-navigation. We've conceptually grouped the components into functional categories. Additionally, we renamed some of the components to be more accurate. 
 
 Our updated documentation includes:
 
@@ -630,7 +630,7 @@ In addition to the previously mentioned documentation updates, we've made change
 #### Design guidelines 
 - Added a new [status and severity pattern](/patterns/status-and-severity), which provides guidance for using our new severity icons.
 - Updated our [quick starts extension](/extensions/quick-starts) with more content guidance.
-- Documented our tabular number modifier `.pf-v6-m-tabular-nums` in [typography](/foundations-and-styles/typography), [numerics](/content-design/numerics), and [table](/components/table/design-guidelines).
+- Documented our tabular number modifier `.pf-v6-m-tabular-nums` in [typography](/foundations-and-styles/typography), [numerics](/content-design/grammar/numerics), and [table](/components/table/design-guidelines).
 - Added guidance for editorial styling to our [content component](/components/content) (formerly called text content).
 - We've started updating images across our design guidelines to represent PatternFly 6 styling.
 
@@ -662,8 +662,8 @@ We created a framework for micro animation CSS tokens, which will be used to ena
 
 We made more improvements to our website docs, to ensure that they're accurate and inline with our new token system. A variety of pages and sections were updated, including: 
 - All tokens pages: 
-    - [About tokens](/foundations-and-styles/design-tokens/about-tokens)
-    - [All design tokens](/foundations-and-styles/design-tokens/all-patternfly-tokens)
+    - [About tokens](/foundations-and-styles/design-tokens/overview)
+    - [All design tokens](/foundations-and-styles/design-tokens/all-design-tokens)
     - [Develop with tokens](/foundations-and-styles/design-tokens/develop)
     - [Design with tokens](/foundations-and-styles/design-tokens/design)
     - **Note:*- Any @patternfly/react-tokens referencing global variables will need to be updated, since global variables have been replaced with tokens. Following our [token migration instructions](/foundations-and-styles/design-tokens/develop#migrate-to-tokens) will help you determine the correct token to use. 
@@ -749,7 +749,7 @@ All of our components have a new look to match. As you use the alpha website, ta
 
 ### Design tokens 
 
-In order to support PatternFly 6, and any future visual theming capabilities, we have implemented a design token system for PatternFly. For more details and instructions on how to use tokens, you can refer to our new [design token documentation](/foundations-and-styles/design-tokens/about-tokens).
+In order to support PatternFly 6, and any future visual theming capabilities, we have implemented a design token system for PatternFly. For more details and instructions on how to use tokens, you can refer to our new [design token documentation](/foundations-and-styles/design-tokens/overview).
 
 Our tokens cover both dark and light themes, and make it easier to support both in your product. We also updated our [dark theme handbook](/foundations-and-styles/theming/dark-theme-handbook) to align with our tokens.
 

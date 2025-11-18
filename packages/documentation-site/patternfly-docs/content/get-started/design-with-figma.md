@@ -28,7 +28,7 @@ To install the fonts that PatternFly uses, [download this GitHub repository](htt
 
 ### Design tokens
 
-PatternFly 6 is built off of our new design token system. For more background and instructions regarding our token system, [check out our tokens documentation.](/foundations-and-styles/design-tokens/about-tokens)
+PatternFly 6 is built off of our new design token system. For more background and instructions regarding our token system, [check out our tokens documentation.](/foundations-and-styles/design-tokens/overview)
 
 ## What's in the design kit? 
 

@@ -47,8 +47,8 @@ To facilitate building a compass layout, there are several useful variants and p
 - `isNav` on [Tabs](/components/tabs#tabs-used-for-site-navigation). This flag enables a new styling of `Tabs` to be used as a top site navigation.
 - `isCircle` on [Button](/components/button#circle-buttons) and [MenuToggle](/components/menus/menu-toggle#plain-circle-toggle). This flag sets a border radius on the `Button` and `MenuToggle`, allowing buttons and plain icon menu toggles to be circular and typical menu toggles to be a pill shape.
 - `isPill` on [Drawer](/components/drawer#pill). This flag sets a border radius and inset on the `Drawer`, giving it a more floating look.
-- `isThinking` or `pf-v6-m-thinking` on `CompassPanel` and [MessageBar](/AI/chatbot/ui/#message-bar-with-ai-indicator-styles). This prop, or class name, may be set to turn on a pulsing color animation around the component.
-- `hasAiIndicator` or `pf-v6-m-ai-indicator` on [MessageBar](/AI/chatbot/ui/#message-bar-with-ai-indicator-styles). This prop, or class name, may be set to enable a gradient border around the component.
+- `isThinking` or `pf-v6-m-thinking` on `CompassPanel` and [MessageBar](/extensions/chatbot/ui/#message-bar-with-ai-indicator-styles). This prop, or class name, may be set to turn on a pulsing color animation around the component.
+- `hasAiIndicator` or `pf-v6-m-ai-indicator` on [MessageBar](/extensions/chatbot/ui/#message-bar-with-ai-indicator-styles). This prop, or class name, may be set to enable a gradient border around the component.
 
 ### Card and data view layout
 

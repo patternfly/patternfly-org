@@ -1,5 +1,5 @@
 ---
-id: Develop with tokens
+id: Develop
 section: foundations-and-styles
 subsection: design-tokens
 ---
@@ -32,7 +32,7 @@ As you migrate and [select tokens](#selecting-tokens), refer to these recommenda
 
 1. **Don’t start with the old value and work backwards.** For example, there are many things that are “blue” but it’s important to choose the right token for your purpose. In addition, PatternFly 6 has a completely new look&mdash;so what used to be “blue” might not be anymore!
 
-1. **Understand the naming layers for semantic tokens.** Remember [the structure of our token names:](/foundations-and-styles/design-tokens/about-tokens#token-names) 
+1. **Understand the naming layers for semantic tokens.** Remember [the structure of our token names:](/foundations-and-styles/design-tokens/overview#token-names) 
 `--pf-t--[scope]--[component]--[property]--[concept]--[variant]--[state]`
 
     For each segment, consider the following:

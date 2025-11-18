@@ -18,4 +18,4 @@ A bullseye layout can only contain one section of content.
 
 As an example, the bullseye layout is commonly used with the [modal component](/components/modal) to surface important information and place content on top of another layout.
 
-If you need to center more than one section of content on a page, you should choose a different [PatternFly layout](/layouts/about-layouts).
+If you need to center more than one section of content on a page, you should choose a different [PatternFly layout](/layouts/overview).

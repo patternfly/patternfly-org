@@ -18,7 +18,7 @@ The only features which will require additional work in order to support dark th
 
 ### Charts
 
-To use charts with dark themes, refer to our guidance for [developing with charts](/charts/about-charts#develop-with-charts).
+To use charts with dark themes, refer to our guidance for [developing with charts](/components/charts/about-charts#develop-with-charts).
 
 ### Images
 
