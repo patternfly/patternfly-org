@@ -1,6 +1,7 @@
 ---
 id: HTML fundamentals training
 section: get-started
+subsection: training
 hideNavItem: true
 ---
 import { Button, ClipboardCopy, Divider, PageSection } from '@patternfly/react-core';
