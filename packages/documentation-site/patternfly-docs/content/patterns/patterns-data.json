@@ -1,0 +1,35 @@
+{
+    "actions": {
+      "summary": "The best practices for designing processes that a user can <b>trigger by clicking or selecting a UI element</b>, such as a button or link."
+    },
+    "bulk-selection": {
+      "summary": "A defined method for users to <b>select or deselect multiple items</b> within complex content views or data tables."
+    },
+    "card-view": {
+      "summary": "A structured layout designed to display a <b>grid of cards in a gallery</b>, optimizing for browsing and interaction."
+    },
+    "component-usage-and-behavior": {
+      "summary": "Guidance on how to <b>choose between similar components and use them appropriately</b> based on specific user contexts and use cases."
+    },
+    "dashboard": {
+      "summary": "A highly customizable layout that serves as a high-level <b>overview of key metrics or performance indicators</b>."
+    },
+    "filters": {
+      "summary": "The design rules for implementing filtering mechanisms that allow users to <b>narrow down content from large datasets or complex views</b>."
+    },
+    "password-generator": {
+      "summary": "A guided process for <b>generating secure passwords</b>, often complementing input fields that require strong credentials."
+    },
+    "password-strength": {
+      "summary": "A defined visual mechanism for <b>displaying the strength of a password</b> and whether it meets necessary security requirements."
+    },
+    "primary-detail": {
+      "summary": "A two-pane layout that <b>shows a list of items and corresponding details</b> for the currently selected item."
+    },
+    "right-to-left": {
+      "summary": "Guidelines for <b>adapting a UI to support right-to-left writing modes</b> for localization."
+    },
+    "status-and-severity": {
+      "summary": "Guidance on the consistent and accessible use of color and iconography to <b>communicate status and severity</b> across the UI."
+    }
+  }
