@@ -2,6 +2,26 @@ import React from 'react';
 import { useLocation } from '@reach/router';
 import { groupedRoutes } from '../../routes';
 
+/**
+ * Converts a hyphenated or lowercase string to sentence case
+ * Example: "design-tokens" -> "Design tokens"
+ * Example: "colors" -> "Colors"
+ */
+const toSentenceCase = (str) => {
+  if (!str) return str;
+  return str
+    .split('-')
+    .map((word, index) => {
+      if (index === 0) {
+        // Capitalize first letter of first word only
+        return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
+      }
+      // Keep all other words lowercase
+      return word.toLowerCase();
+    })
+    .join(' ');
+};
+
 export const SectionGalleryWrapper = ({
   section,
   subsection,
@@ -76,7 +96,8 @@ export const SectionGalleryWrapper = ({
       }
       const { sources, isSubsection = false } = itemData;
       // Subsections don't have title or id, default to itemName aka sidenav text
-      const title = itemData.title || itemName;
+      // Convert itemName to sentence case if no title is provided
+      const title = itemData.title || toSentenceCase(itemName);
       const id = itemData.id || title;
       // Display beta label if tab other than a '-next' tab is marked Beta
       const isDeprecated =

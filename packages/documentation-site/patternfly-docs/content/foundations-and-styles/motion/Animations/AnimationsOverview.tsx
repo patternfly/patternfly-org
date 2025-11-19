@@ -55,7 +55,7 @@ export const AnimationsOverview: FunctionComponent<AnimationsOverviewProps> = ({
       </CardBody>
       <CardFooter>
         <Button variant="link" icon={<ArrowRightIcon />} iconPosition="end" isInline>
-          <a href="https://www.patternfly.org/foundations-and-styles/styles/motion">They're everywhere</a>
+          <a href="https://www.patternfly.org/foundations-and-styles/motion">They're everywhere</a>
         </Button>
       </CardFooter>
     </Card>,
