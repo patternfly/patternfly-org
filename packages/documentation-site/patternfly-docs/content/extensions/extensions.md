@@ -10,6 +10,8 @@ import extensionsData from './extensions-data.json';
 
 PatternFly's **extensions** are holistic solutions that utilize multiple PatternFly components, typically addressing specific, cross-project use cases. Extensions accelerate development by providing pre-built, reusable code for common interactions, making it easier to drive consistency throughout a user’s journey across multiple products and platforms.
 
+---
+
 ## How does an extension differ from a pattern?
 
 Extensions differ from [patterns](/patterns/overview) because they provide concrete code solutions for specific, repeated use cases, not just general design guidance and direction. Extensions are built from [components](/components/overview), with customizations that adhere to our core [foundations and styles](/foundations-and-styles/overview) to offer a ready-to-use code solution.
@@ -26,6 +28,8 @@ Extensions are a fantastic way to get involved in the PatternFly community. If y
 
 - [Start a discussion on GitHub.](https://github.com/orgs/patternfly/discussions/categories/extensions)
 - [Reach out to us on Slack.](http://join.slack.com/t/patternfly/shared_invite/zt-1npmqswgk-bF2R1E2rglV8jz5DNTezMQ)
+
+---
 
 ## Explore extensions
 

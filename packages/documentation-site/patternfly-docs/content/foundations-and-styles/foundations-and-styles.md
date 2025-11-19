@@ -10,6 +10,8 @@ import designFoundationsData from './design-foundations-data.json';
 
 PatternFly’s **foundations and styles** lay the groundwork for all components and extensions that we offer. These visual and structural frameworks describe how all of our components should be built and designed, with additional standards and guidance to help designers and developers work together more efficiently and create clear and consistent product experiences.
 
+---
+
 ## How do I use foundations and styles? 
 Our foundations and styles are the “atoms” of our design system, so their usage is typically built into PatternFly features. There are a variety of ways that this plays out in PatternFly, some of the most common being: 
 
@@ -19,6 +21,8 @@ Our foundations and styles are the “atoms” of our design system, so their us
 - [Accessibility:](/accessibility/overview) Foundations of color contrast, typography, and focus states influence the rules and guidance for building accessible products.
 
 Although many of these design decisions are already made in PatternFly, there might be instances where you need to adjust some of these smaller, foundational design decisions to better fit your use case. You can find specific guidance for usage and customization in the documentation for each foundation or style.
+
+---
 
 ## Explore foundations and styles
 <SectionGallery
