@@ -18,7 +18,8 @@
     "screenshots": "pf-docs-framework screenshots"
   },
   "dependencies": {
-    "@patternfly/chatbot": "6.5.0-prerelease.18",
+    "@monaco-editor/react": "^4.7.0",
+    "@patternfly/chatbot": "6.5.0-prerelease.19",
     "@patternfly/design-tokens": "1.14.5",
     "@patternfly/documentation-framework": "workspace:*",
     "@patternfly/quickstarts": "6.4.0",
@@ -36,6 +37,7 @@
     "echarts": "^5.6.0",
     "file-saver": "^2.0.5",
     "marked": "^15.0.7",
+    "monaco-editor": "^0.54.0",
     "react": "^17.0.0 || ^18.0.0",
     "react-dom": "^17.0.0 || ^18.0.0",
     "victory": "^37.3.6"
