@@ -7,7 +7,7 @@ jobs:
       SURGE_LOGIN: ${{ secrets.SURGE_LOGIN }}
       SURGE_TOKEN: ${{ secrets.SURGE_TOKEN }}
       GH_PR_TOKEN: ${{ secrets.GH_PR_TOKEN }}
-      GH_PR_NUM:   ${{ github.event.number }}
+      GH_PR_NUM: ${{ github.event.number }}
     steps:
       - uses: actions/checkout@v2
       # Yes, we really want to checkout the PR
@@ -18,3 +18,17 @@ jobs:
       %build%
       - run: node .github/upload-preview.js build/patternfly-org/site site
         name: Upload docs
+  build-upload-astro:
+    runs-on: ubuntu-latest
+    env:
+      SURGE_LOGIN: ${{ secrets.SURGE_LOGIN }}
+      SURGE_TOKEN: ${{ secrets.SURGE_TOKEN }}
+      GH_PR_TOKEN: ${{ secrets.GH_PR_TOKEN }}
+      GH_PR_NUM:   ${{ github.event.number }}
+    steps:
+      - uses: actions/checkout@v2
+      - run: |
+          git fetch origin pull/$GH_PR_NUM/head:tmp
+          git checkout tmp
+      # Injected by generate-workflows.js
+      %build-astro%
