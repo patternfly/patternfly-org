@@ -9,5 +9,5 @@
   with:
     path: "packages/documentation-site/.cache"
     key: ${{ runner.os }}-${{ hashFiles('yarn.lock') }}
-- run: yarn build
-  name: Build docs
+- run: yarn build:doc-core
+  name: Build astro docs
