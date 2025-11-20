@@ -77,4 +77,4 @@ As of Nov 10, 2025, these are the prereleases available for building out Compass
 - "@patternfly/react-table": "6.5.0-prerelease.11"
 - "@patternfly/react-tokens": "6.5.0-prerelease.4"
 - "@patternfly/react-templates": "6.5.0-prerelease.11"
-- "@patternfly/chatbot": "6.5.0-prerelease.15"
+- "@patternfly/chatbot": "6.5.0-prerelease.19"

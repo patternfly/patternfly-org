@@ -67,7 +67,6 @@
     "nanoid": "3.3.8",
     "@patternfly/react-code-editor": "^6.5.0-prerelease.13",
     "@patternfly/react-core": "^6.5.0-prerelease.13",
-    "@patternfly/react-table": "^6.5.0-prerelease.13",
-    "monaco-editor": "0.54.0"
+    "@patternfly/react-table": "^6.5.0-prerelease.13"
   }
 }
