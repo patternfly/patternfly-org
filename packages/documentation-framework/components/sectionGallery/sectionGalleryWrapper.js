@@ -31,6 +31,7 @@ export const SectionGalleryWrapper = ({
   parseSubsections,
   initialLayout,
   isFullWidth,
+  onlyShowInGalleryData = false,
   children,
 }) => {
   let sectionRoutes = subsection
@@ -247,6 +248,23 @@ export const SectionGalleryWrapper = ({
         id,
         galleryItemsData,
       };
+    })
+    .filter((item) => {
+      // If onlyShowInGalleryData is true, filter to only items that exist in galleryItemsData
+      if (!onlyShowInGalleryData || !galleryItemsData) {
+        return true;
+      }
+      // Try matching by itemName first (already in dasherized format from routes)
+      if (galleryItemsData[item.itemName]) {
+        return true;
+      }
+      // Convert id to dasherized format to match JSON keys (lowercase, spaces to hyphens)
+      const dasherizedId = item.id
+        .split(' ')
+        .join('-')
+        .toLowerCase();
+      // Check if this item exists in galleryItemsData
+      return galleryItemsData[dasherizedId] !== undefined;
     });
 
   return (
