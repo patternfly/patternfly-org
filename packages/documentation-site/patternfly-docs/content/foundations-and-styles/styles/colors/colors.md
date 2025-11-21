@@ -5,8 +5,8 @@ section: foundations-and-styles
 import { Alert, Grid, GridItem, Banner, Button, Stack } from '@patternfly/react-core';
 import { Table, Caption, Thead, Tr, Th, Tbody, Td } from '@patternfly/react-table';
 import ArrowRightIcon from '@patternfly/react-icons/dist/esm/icons/arrow-right-icon';
-import { ColorSwatch } from './ColorSwatch';
-import { ColorFamily } from './ColorFamily';
+import { ColorSwatch } from './ColorSwatch.js';
+import { ColorFamily } from './ColorFamily.js';
 
 # PatternFly's palette
 

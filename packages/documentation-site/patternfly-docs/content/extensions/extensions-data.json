@@ -1,0 +1,29 @@
+{
+  "catalog-view": {
+    "summary": "A <b>full-page, interactive layout</b> designed to simplify the browsing and interaction experience for items displayed in a grid of tiles."
+  },
+  "chatbot": {
+    "summary": "Multiple pre-built layouts and elements to quickly create and support <b>conversational interfaces</b>, such as chatbots."
+  },
+  "component-groups": {
+    "summary": "Additional React components that combine multiple base PatternFly components to address <b>complex, multi-component UI design scenarios</b>."
+  },
+  "data-view": {
+    "summary": "A defined <b>structure for displaying datasets</b> in organized layouts. It includes data representations and toolbars with actions that enable users to interact with the data."
+  },
+  "log-viewer": {
+    "summary": "A specialized interface designed to clearly <b>visualize and monitor a project's log content</b> in real time."
+  },
+  "quick-starts": {
+    "summary": "Structured <b>product documentation solutions</b> that provide users with embedded, step-by-step guidance directly within the application interface."
+  },
+  "react-console": {
+    "summary": "Additional React components that enable direct, <b>interactive access to virtual machines or server consoles</b>."
+  },
+  "topology": {
+    "summary": "A <b>visual map of your application architecture</b>, including all applications, services, and associated components within a project, and their build status."
+  },
+  "user-feedback": {
+    "summary": "A collection of elements designed to <b>facilitate and collect asynchronous user feedback</b> directly within the application."
+  }
+}
