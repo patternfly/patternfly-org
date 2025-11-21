@@ -48,6 +48,6 @@ To display the list of all available chart tokens, filter for "charts" in [the d
 
 To adjust the visual presentation of your chart, refer to the following guidelines for how to utilize: 
 - **[Chart design guidelines:](/components/charts/overview/design-guidelines)** General overview of chart elements and types, with guidelines for usage.
-- **[Colors:](/components/charts/colors)** Examples and guidance for applying themes and combining colors within charts.
+- **[Colors:](/components/charts/colors-for-charts)** Examples and guidance for applying themes and combining colors within charts.
 - **[Patterns:](/components/charts/patterns)** Examples of using patterns within charts, like stripes and lines. 
 - **[Tooltips:](/components/charts/tooltips)** Examples and guidance for adding tooltips to charts.

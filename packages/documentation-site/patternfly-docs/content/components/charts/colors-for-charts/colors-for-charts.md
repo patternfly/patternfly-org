@@ -1,5 +1,5 @@
 ---
-id: Colors
+id: Colors for charts
 section: components
 subsection: charts
 hideSource: true

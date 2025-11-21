@@ -13,4 +13,4 @@ Multiple lines on the same chart allow the user to visualize relationships betwe
 ### Example
 <img src="./img/line-chart.png" alt="Line chart" />
 
-Line charts can optionally represent data points as dots on the line. If so, the same interaction that occurs when hovering over one in an [area chart](/components/charts/area-chart) will occur in line charts. For line colors, we recommend consulting [chart colors](/components/charts/colors).
+Line charts can optionally represent data points as dots on the line. If so, the same interaction that occurs when hovering over one in an [area chart](/components/charts/area-chart) will occur in line charts. For line colors, we recommend consulting [chart colors](/components/charts/colors-for-charts).
