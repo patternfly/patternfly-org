@@ -22,15 +22,16 @@ Generative UI represents a significant opportunity for PatternFly to explore new
 
 ### AI-enabled seed app
 
-We are creating an [AI-enabled seed app](https://github.com/patternfly/patternfly-react-seed/tree/compass_theme) that you can use to create your own PatternFly Compass-based POC. The seed app includes the Compass layout fully wired out with all styles set up, providing a solid foundation that you can build on top of. It can be leveraged with AI tools like Cursor or Claude Code to build out your own POC, making it easier to experiment with generative UI patterns and explore new use cases.
+We are creating an [AI-enabled seed app](https://github.com/patternfly/patternfly-react-seed/tree/compass_theme) that you can use to create your own PatternFly Compass-based POC. The seed app includes the new layout fully wired out with developing unified theme and AI styles set up, providing a solid foundation that you can build on top of. It can be leveraged with AI tools like Cursor or Claude Code to build out your own POC, making it easier to experiment with generative UI patterns and explore new use cases with our PatternFly design system.
+
 
 ### What does Compass include?
 
 To explore Compass and its features, take a look at a number of our full page demos:
-- [Full page demo with card view and table layouts](/ai/generative-uis/compass#card-and-data-view-layout)
-- [Full page demo with dashboard layout](/ai/generative-uis/compass/org-demos#dashboard-layout)
-- [Static, full page HTML demo with multiple content sections](/ai/generative-uis/compass/html-demos#multiple-sections)
-- [Static, full page HTML demo with drawer](/ai/generative-uis/compass/html-demos#with-drawer)
+- [Conversational first full page demo with card view and table layouts](/ai/generative-uis/compass#card-and-data-view-layout)
+- [Conversational first full page demo with dashboard layout](/ai/generative-uis/compass/org-demos#dashboard-layout)
+- [Static, conversational first full page HTML demo with multiple content sections](/ai/generative-uis/compass/html-demos#multiple-sections)
+- [Static, conversational first full page HTML demo with drawer](/ai/generative-uis/compass/html-demos#with-drawer)
 
 To support the different ways you might use Compass, we've introduced several new capabilities to PatternFly:
 
@@ -39,7 +40,7 @@ To support the different ways you might use Compass, we've introduced several ne
   - Background and border gradients
   - Additional smooth animations
   - Background image explorations
-- [**Compass layout component**](/ai/generative-uis/compass): A new layout component designed specifically for generative UI patterns
+- [**Compass layout component**](/ai/generative-uis/compass): A new layout component designed specifically for generative UI patterns specifically for generative UI patterns that include: conversational first (explain how the footer contains the interactive message bar and that the center canvas is where the generated UI will be placed) and coming soon, a maximized canvas with a docked left navigation that is suitable for all enterprise experiences.
 - **Additional components and component variants**:
   - Transparency & Effects:
     - `isPlain` makes cards, data lists, and tables transparent to allow background effects (like a glass look) to show through.
@@ -65,16 +66,16 @@ Some stakeholdres have been experimenting with Generative UI use cases using Rea
 
 Compass is still under development, with new components being built, evaluated, and refined based on feedback. As we hear from your experiments and learn more about GenUI patterns, the design of Compass will continuously evolve to support practical applications.
 
-As of Nov 10, 2025, these are the prereleases available for building out Compass based UI POCs.
+As of Nov 19, 2025, these are the prereleases available for building out Compass based UI POCs.
 
-- "@patternfly/patternfly": "6.5.0-prerelease.23"
-- "@patternfly/react-charts": "8.5.0-prerelease.4"
-- "@patternfly/react-code-editor": "6.5.0-prerelease.11"
-- "@patternfly/react-core": "6.5.0-prerelease.11"
-- "@patternfly/react-drag-drop": "6.5.0-prerelease.11"
-- "@patternfly/react-icons": "6.5.0-prerelease.4"
-- "@patternfly/react-styles": "6.5.0-prerelease.4"
-- "@patternfly/react-table": "6.5.0-prerelease.11"
-- "@patternfly/react-tokens": "6.5.0-prerelease.4"
-- "@patternfly/react-templates": "6.5.0-prerelease.11"
+- "@patternfly/patternfly": "6.5.0-prerelease.27",
+- "@patternfly/react-charts": "8.5.0-prerelease.6",
+- "@patternfly/react-code-editor": "6.5.0-prerelease.14",
+- "@patternfly/react-core": "6.5.0-prerelease.14",
+- "@patternfly/react-drag-drop": "6.5.0-prerelease.14",
+- "@patternfly/react-icons": "6.5.0-prerelease.6",
+- "@patternfly/react-styles": "6.5.0-prerelease.6",
+- "@patternfly/react-table": "6.5.0-prerelease.14",
+- "@patternfly/react-templates": "6.5.0-prerelease.14",
+- "@patternfly/react-tokens": "6.5.0-prerelease.6",
 - "@patternfly/chatbot": "6.5.0-prerelease.19"

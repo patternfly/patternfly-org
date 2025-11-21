@@ -18,7 +18,6 @@
     "screenshots": "pf-docs-framework screenshots"
   },
   "dependencies": {
-    "@monaco-editor/react": "^4.7.0",
     "@patternfly/chatbot": "6.5.0-prerelease.19",
     "@patternfly/design-tokens": "1.14.5",
     "@patternfly/documentation-framework": "workspace:*",
