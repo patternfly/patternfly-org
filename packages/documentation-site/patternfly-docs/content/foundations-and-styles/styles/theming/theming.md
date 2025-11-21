@@ -4,7 +4,7 @@ section: foundations-and-styles
 source: about
 ---
 
-import '../../components/components.css'
+import '../../../components/components.css'
 import { Alert, AlertActionLink} from '@patternfly/react-core';
 import ExternalLinkAltIcon from '@patternfly/react-icons/dist/esm/icons/external-link-alt-icon';
 

@@ -10,7 +10,7 @@
     "build": "yarn build:ts && pf-docs-framework build all",
     "build:server": "pf-docs-framework build server",
     "build:client": "pf-docs-framework build client",
-    "build:ts": "tsc --project patternfly-docs/content/foundations-and-styles/motion/tsconfig.json && tsc --project patternfly-docs/content/AI/Compass/tsconfig.json",
+    "build:ts": "tsc --project patternfly-docs/content/foundations-and-styles/styles/motion/tsconfig.json && tsc --project patternfly-docs/content/AI/Compass/tsconfig.json",
     "clean": "rimraf -rf .cache public size-plugin.json patternfly-docs/generated/**/*.js",
     "develop": "yarn build:ts && pf-docs-framework start",
     "generate": "pf-docs-framework generate",
