@@ -7345,7 +7345,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"astro@npm:^5.15.6":
+"astro@npm:^5.15.9":
   version: 5.16.0
   resolution: "astro@npm:5.16.0"
   dependencies:
@@ -21212,7 +21212,7 @@ __metadata:
   resolution: "site@workspace:packages/site"
   dependencies:
     "@patternfly/patternfly-doc-core": "npm:^1.13.1"
-    astro: "npm:^5.15.6"
+    astro: "npm:^5.15.9"
     tsx: "npm:^4.19.0"
   languageName: unknown
   linkType: soft
