@@ -10,13 +10,15 @@ import { Alert } from "@patternfly/react-core";
 
 ## What is generative UI?
 
-Generative UI (GenUI) refers to a user interface design approach where AI is leveraged to dynamically create and adapt UI elements based on context, user needs, and data. Unlike traditional, static UIs, GenUI can produce layouts, components, and visual styles in real-time, offering more flexible and personalized user experiences.
+**Generative UI (GenUI)** refers to a user interface design approach where AI is leveraged to dynamically create and adapt UI elements based on context, user needs, and data. Unlike traditional, static UIs, GenUI can produce layouts, components, and visual styles in real-time, offering more flexible and personalized user experiences.
 
-## PatternFly's exploration: Compass
+---
+
+## Compass: PatternFly's GenUI exploration
 
 Generative UI represents a significant opportunity for PatternFly to explore new patterns, layouts, and styles that support AI-driven interface generation. PatternFly has been calling this proof of concept Compass. It investigates how the design system can evolve to support generative UI use cases.
 
-<Alert isInline variant="info" title="Compass is best suited for use as a POC in other proof-of-concept generative UI use cases. It is not yet production quality code and should be used for exploration and experimentation purposes only." />
+<Alert isInline variant="info" title="Beta feature">Compass is best suited for use as a POC in other proof-of-concept generative UI use cases. It is not yet production quality code and should be used for exploration and experimentation purposes only.</Alert>
 
 ### AI-enabled seed app
 
@@ -75,4 +77,4 @@ As of Nov 10, 2025, these are the prereleases available for building out Compass
 - "@patternfly/react-table": "6.5.0-prerelease.11"
 - "@patternfly/react-tokens": "6.5.0-prerelease.4"
 - "@patternfly/react-templates": "6.5.0-prerelease.11"
-- "@patternfly/chatbot": "6.5.0-prerelease.15"
+- "@patternfly/chatbot": "6.5.0-prerelease.19"

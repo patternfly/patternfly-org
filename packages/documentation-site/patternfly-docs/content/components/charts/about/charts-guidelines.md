@@ -3,10 +3,11 @@ id: Overview
 title: Charts overview
 section: components
 subsection: charts
+source: design-guidelines
 sortValue: 1
 ---
 
-_Charts are only available in React_
+**Note:** Charts are only available in React in their own package [@patternfly/react-charts](https://www.npmjs.com/package/@patternfly/react-charts).
 
 A **chart** visualizes data in an application. The type of chart you use will depend on your use case and the type of data you need to display.
 
@@ -68,14 +69,3 @@ On click
 
 1. **Legend:** When a user clicks on a legend label, it becomes disabled and the color swatch is replaced with an eye-slashed icon.
 2. **Chart:** Data corresponding to the clicked legend label is hidden from view.
-
-## Develop with charts 
-
-Default styles in the [@patternfly/react-charts package](https://www.npmjs.com/package/@patternfly/react-charts) are aligned with our light theme. Charts work with PatternFly's light theme by default&mdash;you don't need to import anything else. 
-
-To support dark-themed charts, you must:
-1. Import the [@patternfly/patternfly package](https://www.npmjs.com/package/@patternfly/patternfly), so that you can use our global tokens.
-1. Import the stylesheet that contains dark theme styles by adding this line before importing your main application component: `import '@patternfly/patternfly/patternfly-charts.css';`
-    - Once you import this file, you'll have access to [all chart variables](https://www.npmjs.com/package/@patternfly/patternfly?activeTab=code). Beyond dark theme, you could use these variables to match the style of other UI elements to your chart styles. 
-
-To display the list of all available chart tokens, filter for "charts" in [the design tokens table](/foundations-and-styles/design-tokens/all-design-tokens). 

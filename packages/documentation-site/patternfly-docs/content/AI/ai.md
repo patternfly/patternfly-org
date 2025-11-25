@@ -1,16 +1,32 @@
 ---
 id: Overview
+title: AI overview
 section: AI
 sortValue: 1
 --- 
 import { Alert, AlertActionLink, Accordion, AccordionItem, AccordionContent, AccordionToggle, Button, Card, CardHeader, CardTitle, CardBody, CardFooter, Checkbox, Divider,  DescriptionList, DescriptionListTerm, DescriptionListGroup,  DescriptionListDescription, Grid, GridItem} from '@patternfly/react-core';
 import ExternalLinkSquareAltIcon from '@patternfly/react-icons/dist/esm/icons/external-link-square-alt-icon';
 
-When used thoughtfully, AI can enhance user experiences through personalized interactions, increased efficiency, and innovative designs. **PatternFly AI** provides resources that can help you integrate AI into your design process, balancing a consideration for its potential benefits and unintended consequences.
+When used thoughtfully, **AI** can enhance user experiences through personalized interactions, increased efficiency, and innovative designs. 
 
-## Red Hat policies
+To support your AI practices, we provide a range of AI tools that you can integrate into your workflows, plus guidance for using AI with PatternFly:
 
-When using PatternFly to design Red Hat products, you must adhere to AI-related policies that Red Hat has previously outlined:
+- **[Rapid prototyping](/ai/rapid-prototyping):** How to quickly test and iterate on AI features during the early stages of design.
+- **[AI-assisted code migration](/ai/ai-assisted-code-migration):** How to quickly test and iterate on AI features during the early stages of design.
+- **[Conversational Design Principles](/ai/conversational-design):** Guidance for designing effective and human-centered text-based conversational flows.
+- **[Rapid Prototyping Guidelines](/ai/generative-uis/overview):** How to quickly test and iterate on AI features during the early stages of design.
+
+Regardless of the AI resources or workflow you're using, it's important to ensure that you're aligned with the compliance rules, ethical considerations, and best practies on this page. 
+
+---
+
+## How do I ensure compliance?
+
+There are important compliance rules and ethical considerations that must guide your use of AI with PatternFly.
+
+### Red hat policies
+
+When using PatternFly to design Red Hat products, you *must* adhere to AI-related policies that Red Hat has previously outlined. This means you must:
 - Gain approval before using AI technology for business related to Red Hat.
 - Gain approval before using certain information as input for AI technology.
 - Review, test, and validate generative AI model output.
@@ -20,9 +36,9 @@ When using PatternFly to design Red Hat products, you must adhere to AI-related 
       View policy details (requires Red Hat login)
 </Button>
 
-## Core principles 
+## How do I ensure ethical practice?
 
-There are 5 core principles of PatternFly AI: accountability, explainability, transparency, fairness, and human-centeredness. These principles create an ethics-first framework for AI use, and any AI system built with PatternFly should adhere to all 5.
+There are 5 core principles of PatternFly AI: accountability, explainability, transparency, fairness, and human-centeredness. These principles create an ethics-first framework for AI use, and any AI system built with PatternFly should adhere to all **five principles**.
 
 <Grid hasGutter>
 <GridItem span={6}>
@@ -31,7 +47,7 @@ There are 5 core principles of PatternFly AI: accountability, explainability, tr
     <CardTitle>Accountability</CardTitle>
     </CardHeader>
     <CardBody>
-        All people involved in any step of creating AI are **accountable** for considering its impact. There should be clearly defined roles for design, development, and deployment. Decisions and processes​ should be well-documented.
+        All people involved in any step of creating AI are **accountable** for considering its impact. There should be clearly defined roles for design, development, and deployment. Decisions and processes should be well-documented.
     </CardBody>
     </Card>
 </GridItem>
@@ -61,7 +77,7 @@ There are 5 core principles of PatternFly AI: accountability, explainability, tr
     <CardTitle>Fairness</CardTitle>
     </CardHeader>
     <CardBody>
-        AI systems that are **fair** should be intentionally designed to prioritize and promote inclusion. They should focus accessibility for all humans and should minimize&mdash;not amplify&mdash;bias.
+        AI systems that are **fair** should be intentionally designed to prioritize and promote inclusion. They should focus **on** accessibility for all humans and should minimize&mdash;not amplify&mdash;bias.
     </CardBody>
     </Card>
 </GridItem>
@@ -77,11 +93,11 @@ There are 5 core principles of PatternFly AI: accountability, explainability, tr
 </GridItem>
 </Grid>
 
-## Ethical design checklist 
+### Ethical design checklist 
 
 When working on an AI system, you should consciously check that you're in alignment with the core principles of PatternFly AI. While this is an area that will continue to evolve with the rest of the industry, the following checklists outline some of the key areas that you should consider for each principle.
 
-### Accountability
+#### Accountability
 
 | <div style="width:10rem">Key area</div> | Rule | <div style="width:10rem">Status</div>| 
 | --- | --- | --- |
@@ -89,7 +105,7 @@ When working on an AI system, you should consciously check that you're in alignm
 | Legal compliance | All necessary laws, regulations, and ethical guidelines are followed throughout the development process. AI does not enable illegal, unethical, or contract-breaking activities. | <Checkbox label="Compliant"></Checkbox>
 | Practices | AI does not answer unsafe questions or access unsecure data. | <Checkbox label="Compliant"></Checkbox>
 
-### Explainability
+#### Explainability
 
 | <div style="width:10rem">Key area</div> | Rule | <div style="width:10rem">Status</div>| 
 | --- | --- | --- |
@@ -97,7 +113,7 @@ When working on an AI system, you should consciously check that you're in alignm
 | Citations | Any related citations are provided to users. | <Checkbox label="Compliant"></Checkbox>|
 | Context | To support troubleshooting, AI gives context to Red Hatters who review its interactions. |<Checkbox label="Compliant"></Checkbox> |
 
-### Transparency
+#### Transparency
 
 | <div style="width:10rem">Key area</div> | Rule | <div style="width:10rem">Status</div>| 
 | --- | --- | --- |
@@ -106,7 +122,7 @@ When working on an AI system, you should consciously check that you're in alignm
 | Confidence | AI shares when it has low confidence in its response. |<Checkbox label="Compliant"></Checkbox>
 | Limitations | AI shares when it believes that it can’t fulfill a request. | <Checkbox label="Compliant"></Checkbox>
 
-### Fairness
+#### Fairness
 
 | <div style="width:10rem">Key area</div> | Rule | <div style="width:10rem">Status</div>| 
 | --- | --- | --- |
@@ -114,7 +130,7 @@ When working on an AI system, you should consciously check that you're in alignm
 | Inclusion | Designs are inclusive and accommodating of various user demographics. | <Checkbox label="Compliant"></Checkbox>
 | Equal access | Access to AI technologies is available and beneficial to as many users and communities as possible. | <Checkbox label="Compliant"></Checkbox>
 
-### Human-centeredness 
+#### Human-centeredness 
 
 | <div style="width:10rem">Key area</div> | Rule | <div style="width:10rem">Status</div>| 
 | --- | --- | --- |
@@ -125,11 +141,11 @@ When working on an AI system, you should consciously check that you're in alignm
 | Optional | There is an obvious and simple way for users to opt out of using AI. | <Checkbox label="Compliant"></Checkbox>
 | Privacy | Personally identifiable information is protected and used responsibly.  | <Checkbox label="Compliant"></Checkbox>
 
-## Design guidelines 
+## How do I apply AI design best practices?
 
 When designing, developing, and using AI, consider the following ethical and best-practice guidelines.
 
-### 1. Determine if AI adds value
+### Determine if AI adds value
 
 Not all uses of AI are good for your UX strategy. As much as possible, conduct research to identify real user needs that AI features could help solve
 
@@ -147,9 +163,9 @@ Depending on your users' needs, value-adding features could include:
 #### When not to use AI
 - Do not add AI features simply because they are new, trendy, or fun. They need to matter to the user.
 
-### 2. Enhance&mdash;don't replace&mdash;human abilities
+### Enhance—don't replace—human abilities
 
-AI is best when it enhances human abilities, not when it's used to replace humans. It cannot exist in a silo&mdash;humans help bring the value of AI to life.
+AI is best when it enhances human abilities, not when it's used to replace humans. It cannot exist in a silo—humans help bring the value of AI to life.
 
 To ensure that the design of AI systems is human-centered, follow these practices: 
 
@@ -157,7 +173,7 @@ To ensure that the design of AI systems is human-centered, follow these practice
 - Welcome multiple perspectives to encourage creativity and help mitigate bias. 
 - Check AI output for accuracy and identify areas where meaning is lost, language isn't inclusive, or information isn't true. Ask peers to review your AI-generated deliverables to help fact-check and catch mistakes.
 
-### 3. Be transparent with your users
+### Be transparent with your users
 
 As one of our core pillars, transparency is essential for ethical design with AI. 
 
@@ -169,7 +185,7 @@ To help people understand and trust AI features:
 - Keep users in control and let them decide how they interact with AI.
 - Be clear and honest when AI fails or hallucinates.
 
-### 4. Be prepared for something to go wrong 
+### Be prepared for something to go wrong 
 
 Errors and failure are inevitable when working with AI, so it is essential that you are prepared to handle undesired outcomes. You should understand the risk involved in AI and the impact that an error may have. 
 
