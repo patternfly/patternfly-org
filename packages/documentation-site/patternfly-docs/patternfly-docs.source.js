@@ -28,7 +28,7 @@ module.exports = (sourceMD, sourceProps, sourceFunctionDocs) => {
     // Landing pages (in pages directory, sourced with landing-pages source)
     const pagesBase = path.join(__dirname, '../patternfly-docs/pages');
     sourceMD(path.join(pagesBase, 'landing-pages/**/*.md'), 'landing-pages');
-    sourceMD(path.join(pagesBase, 'about-us.md'), 'pages-overview');
+    sourceMD(path.join(contentBase, 'about-us.md'), 'pages-overview');
 
     // Org demos
     sourceMD(path.join(contentBase, 'demos/**/*.md'), 'org-demos');
