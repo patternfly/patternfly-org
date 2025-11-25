@@ -108,7 +108,7 @@ A number of variables have been removed or added&mdash;primarily due to logical 
 - [Removed variables](https://docs.google.com/spreadsheets/d/e/2PACX-1vQqeH7ThYi0jkhYEB8B2SXa7x8AaY5T9ajG6o-Ogz3p7YVp0OuTulb_L3DYLDrHlY4zUE3IBiup6tkN/pubhtml?gid=1160160856&single=true) 
 - [Added variables](https://docs.google.com/spreadsheets/d/e/2PACX-1vQqeH7ThYi0jkhYEB8B2SXa7x8AaY5T9ajG6o-Ogz3p7YVp0OuTulb_L3DYLDrHlY4zUE3IBiup6tkN/pubhtml?gid=268831450&single=true).
 
-Wherever you have custom CSS overrides that reference PatternFly class names or CSS variables, carefully review them and make updates to ensure that they align with [our new design tokens](/foundations-and-styles/design-tokens/all-patternfly-tokens). 
+Wherever you have custom CSS overrides that reference PatternFly class names or CSS variables, carefully review them and make updates to ensure that they align with [our new design tokens](/foundations-and-styles/design-tokens/all-design-tokens). 
 
 To assist with naming updates, we offer 3 codemods: 
 1. [class-name-updater](https://github.com/patternfly/pf-codemods/tree/main/packages/class-name-updater): Automatically identifies and renames classes to align with changes in PatternFly 6.

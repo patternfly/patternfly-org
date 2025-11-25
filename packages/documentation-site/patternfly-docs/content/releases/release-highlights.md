@@ -495,7 +495,7 @@ The following fix could require manual updates depending on how you handle break
 ### Content updates
 
 - We updated design guideline images for [context selector](/components/menus/context-selector/design-guidelines) to align with PatternFly 6 styles. There is an ongoing effort to update images across PatternFly.org to reflect our new visuals, tracked in this [PatternFly 6 design guidelines issue](https://github.com/patternfly/patternfly-org/issues/4235).
-- We updated the illustrations on [the component overview page](/components/all-components). 
+- We updated the illustrations on [the component overview page](/components/overview). 
 - We updated and added "draggable" examples to [dual list selector](/components/dual-list-selector#draggable) and [data list](/components/data-list#draggable).
 - We updated our ChatBot documentation: 
     - We renamed the extension to "ChatBot", to better brand our offering and help distinguish it from other general "chatbot" features.
@@ -606,7 +606,7 @@ Here are the most significant updates we made to our React components:
 
 #### Design tokens 
 
-We updated existing design tokens and added new tokens to support directional box-shadows. To see these tokens, search "box-shadow" in our [tokens documentation](/foundations-and-styles/design-tokens/all-patternfly-tokens).
+We updated existing design tokens and added new tokens to support directional box-shadows. To see these tokens, search "box-shadow" in our [tokens documentation](/foundations-and-styles/design-tokens/all-design-tokens).
 
 We also added a few new tokens to support the needs of our new chatbot, including:
 - A tertiary background token that accommodates containers placed on a secondary background.
@@ -635,7 +635,7 @@ In addition to the previously mentioned documentation updates, we've made change
 - We've started updating images across our design guidelines to represent PatternFly 6 styling.
 
 #### Miscellaneous cleanup and enhancements
-- Shortened component descriptions shown in component page headers and on the [all components page](/components/all-components).
+- Shortened component descriptions shown in component page headers and on the [all components page](/components/overview).
 - Added more details about [React tokens](/foundations-and-styles/design-tokens/develop#react-tokens) and [how to migrate them](/releases/upgrade-guide#utilize-our-tokens-update-codemod).
 - Added React example documentation for [text input group](/components/text-input-group).
 

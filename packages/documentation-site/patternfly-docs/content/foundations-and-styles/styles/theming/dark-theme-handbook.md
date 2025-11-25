@@ -18,13 +18,13 @@ The only features which will require additional work in order to support dark th
 
 ### Charts
 
-To use charts with dark themes, refer to our guidance for [developing with charts](/components/charts/about-charts#develop-with-charts).
+To use charts with dark themes, refer to our guidance for [developing with charts](/components/charts/about/charts#develop-with-charts).
 
 ### Images
 
 To create images that adapt to light and dark themes, there are a few approaches you can take: 
 
-- Use inline SVG's with fill colors set to [PatternFly color tokens](/foundations-and-styles/design-tokens/all-patternfly-tokens), which inherently adapt to light and dark themes.
+- Use inline SVG's with fill colors set to [PatternFly color tokens](/foundations-and-styles/design-tokens/all-design-tokens), which inherently adapt to light and dark themes.
 - Create images with colors that work well with both light and dark themes. These colors should meet [WCAG AA contrast requirements](https://webaim.org/resources/contrastchecker/).
 - Utilize background color, border color, border-radius, and padding/spacing to create a container that can hold dynamic/user-supplied images.
 - Write CSS and dynamically swap between 2 image variations:
