@@ -12,7 +12,7 @@ import './colors-for-charts.css';
 
 import '../../components.css';
 
-**Note:** Our charts use separate design tokens from our standard library. To view a list of all chart tokens, apply the "chart" category filter to [the design tokens table](/foundations-and-styles/design-tokens/all-patternfly-tokens).
+**Note:** Our charts use separate design tokens from our standard library. To view a list of all chart tokens, apply the "chart" category filter to [the design tokens table](/foundations-and-styles/design-tokens/all-design-tokens).
 
 ## Color palettes
 

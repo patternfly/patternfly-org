@@ -32,7 +32,7 @@ Our grammar documentation includes common writing mechanics and style rules.
 - **[Capitalization:](/content-design/grammar/capitalization)** Rules detailing which casing style to use for different UI scenarios.
 - **[Numerics:](/content-design/grammar/numerics)** Includes rules for displaying and formatting dates, times, currency, and numerical values.
 - **[Punctuation:](/content-design/grammar/punctuation)** Rules for using punctuation properly within UI components and long-form content.
-- **[Sentence structure:](./grammar/sentence-structure)** Guidance on point of view and sentence voice to ensure clarity and active, user-focused language.
+- **[Sentence structure:](/content-design/grammar/sentence-structure)** Guidance on point of view and sentence voice to ensure clarity and active, user-focused language.
 - **[Terminology:](/content-design/grammar/terminology)** Outlines the preferred terms to use across different UI scenarios, including a list of words and phrases to avoid.
 - **[Truncation:](/content-design/grammar/truncation)** Guidance on replacing overflow content with ellipses to manage text when display space is limited.
 - **[Units and symbols:](/content-design/grammar/units-and-symbols)** Rules for displaying units of measurement and shorthand symbols.

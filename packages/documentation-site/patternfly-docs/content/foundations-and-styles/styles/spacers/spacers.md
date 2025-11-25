@@ -36,12 +36,12 @@ Our spacer tokens are based on the values in the previous table, but there are c
 - **Layout spacers:** Used to define spacing within a page.
   - **Gap spacers:** Used to set space between elements or groups of elements, like gaps between multiple actions, gaps between items in a group, gaps between controls, and so on. 
     - Gap spacer tokens begin with `--pf-t--global--spacer--gap`
-  - **Gutter spacer:** Used to define gutters within a [layout](/layouts/overview), like the space between elements in a grid layout.
+  - **Gutter spacer:** Used to define gutters within a [layout](/foundations-and-styles/layouts/overview), like the space between elements in a grid layout.
     - Gutter spacer tokens begin with `--pf-t--global--spacer--gutter`
   - **Inset spacer:** Used to define inner padding for structural elements in order to ensure proper alignment, like in the masthead, navigation menu, or the main page content area. 
     - Inset spacer tokens begin with `--pf-t--global--spacer--inset`
  
-You can search for spacer tokens in [our list of all tokens.](/foundations-and-styles/design-tokens/all-patternfly-tokens)
+You can search for spacer tokens in [our list of all tokens.](/foundations-and-styles/design-tokens/all-design-tokens)
 
 ## Considering line height and padding
 

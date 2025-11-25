@@ -51,7 +51,7 @@ For development guidance, refer to the [high contrast handbook](/foundations-and
 
 ## Custom themes 
 
-To branch off of our themes and create your own, you can identify the design tokens you'd like to adjust on our [all tokens page](/foundations-and-styles/design-tokens/all-patternfly-tokens) and provide new values to use within your application. 
+To branch off of our themes and create your own, you can identify the design tokens you'd like to adjust on our [all tokens page](/foundations-and-styles/design-tokens/all-design-tokens) and provide new values to use within your application. 
 
 ### When to customize a theme
 
