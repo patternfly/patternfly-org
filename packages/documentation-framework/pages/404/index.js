@@ -73,31 +73,31 @@ const Page404 = () => {
         <Card404
           img={PatternFlyIcon}
           alt="PatternFly icon"
-          title="Getting started"
-          body="Learn about designing and developing with PatternFly."
+          title="About us"
+          body="Learn about the PatternFly design system."
           link={{
-            text: 'View getting started resources',
-            to: '/get-started/about-patternfly',
+            text: 'Learn about PatternFly',
+            to: '/about-us',
           }}
         />
         <Card404
           img={GuidelinesIcon}
           alt="Guidelines icon"
-          title="Guidelines"
-          body="Check out PatternFly's design approach to icons, colors, and more."
+          title="Foundations and styles"
+          body="Check out our approach to foundational elements and styles, like icons, colors, and more."
           link={{
-            text: 'View guidelines',
-            to: '/design-foundations/colors',
+            text: 'View foundations and styles',
+            to: '/foundations-and-styles/overview',
           }}
         />
         <Card404
           img={ComponentsIcon}
           alt="Components icon"
           title="Components"
-          body="Start creating your applications with components -- the building blocks of user interfaces."
+          body="Start creating your applications with components, our UI building blocks."
           link={{
-            text: 'View components',
-            to: '/components/about-modal',
+            text: 'View all components',
+            to: '/components/all-components',
           }}
         />
         <Card404
@@ -107,7 +107,7 @@ const Page404 = () => {
           body="Visualize your facts and figures by designing the right charts for your data."
           link={{
             text: 'View charts',
-            to: '/charts/about-charts',
+            to: '/components/charts/overview',
           }}
         />
       </Grid>

@@ -106,6 +106,7 @@ const getDefaultDesignGuidelines = ({ id, section, slug, title }) => {
     section,
     slug: `${slug}/design-guidelines`,
     source: 'design-guidelines',
+    tabName: 'design-guidelines',
     title,
     Component
   };
@@ -153,7 +154,7 @@ function getAsyncComponent(url) {
   if (allRoutes[url]) {
     res = allRoutes[url].Component;
   }
-  else if (routes[url]) {
+  else if (routes[url] && routes[url].sources && routes[url].sources.length > 0) {
     res = routes[url].sources[0].Component;
   }
 

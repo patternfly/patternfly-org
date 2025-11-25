@@ -144,6 +144,9 @@ module.exports = (_env, argv) => {
         patterns: [{ from: path.join(__dirname, '../../assets'), to: 'assets' }]
       })
     ],
-    stats: 'minimal'
+    stats: 'minimal',
+    performance: {
+      hints: false // Disable performance hints to avoid [object Object] warnings
+    }
   };
 };

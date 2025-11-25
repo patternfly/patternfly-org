@@ -125,9 +125,12 @@ const clientConfig = async (env, argv) => {
       new rspack.DefinePlugin({
         'process.env.PRERENDER': false,
       }),
-      new rspack.CssExtractRspackPlugin(!isProd ? {} : {
+      new rspack.CssExtractRspackPlugin(!isProd ? {
+        ignoreOrder: true // Suppress CSS order warnings in dev mode
+      } : {
         filename: 'css/[name].[contenthash].css',
         chunkFilename: 'css/[name].[contenthash].css',
+        ignoreOrder: true // Suppress CSS order warnings (Monaco vs highlight.js conflicts)
       }),
       new rspack.CopyRspackPlugin({
         patterns: [
