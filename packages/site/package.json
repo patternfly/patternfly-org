@@ -13,7 +13,7 @@
     "init:docs": "patternfly-doc-core init"
   },
   "dependencies": {
-    "@patternfly/patternfly-doc-core": "^1.13.1",
+    "@patternfly/patternfly-doc-core": "^1.15.2",
     "astro": "^5.15.9"
   },
   "devDependencies": {
