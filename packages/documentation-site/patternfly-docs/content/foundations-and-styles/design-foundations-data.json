@@ -1,0 +1,29 @@
+{
+  "colors": {
+    "summary": "The supported <b>color palettes</b> that all PatternFly features use to ensure accessible contrast and enable flexible, effective visual communication."
+  },
+  "design-tokens": {
+    "summary": "The <b>semantic variables</b> that store and manage all visual design attributes to ensure consistency across products, including color, typography, and spacing."
+  },
+  "iconography": {
+    "summary": "The set of <b>simple, visual symbols</b> used to represent common concepts and quickly indicate functionality."
+  },
+  "layouts": {
+    "summary": "The <b>structural options</b> used to arrange and align components on a page, managing spacing, ordering, and flow to provide support for responsive design."
+  },
+  "motion": {
+    "summary": "The framework and rules for <b>component animations</b> that ensures motion in PatternFly is intentional, engaging, consistent, and inclusive."
+  },
+  "spacers": {
+    "summary": "The set of <b>dimension design tokens</b> that define padding and margins between UI elements to ensure that designs are visually balanced." 
+  },
+  "theming": {
+    "summary": "Pre-made <b>combinations of design tokens</b> that adjust the visual appearance of all UI elements at a global level to support different stylistic and accessibility needs."
+  },
+  "typography": {
+    "summary": "The <b>rules and font choices</b> that define text size, weight, and hierarchy. They ensure consistent legibility and a strong visual hierarchy across screens."
+  },
+  "utility-classes": {
+    "summary": "A defined set of <b>CSS classes</b> that allow developers to quickly and safely apply further customizations or modifications to UI elements in their product."
+  }
+}
