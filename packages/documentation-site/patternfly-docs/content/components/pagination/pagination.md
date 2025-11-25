@@ -14,7 +14,9 @@ Pagination allows users to conveniently navigate through content-dense component
 
 1. **Top pagination:** Placed above the component it controls and aligned to the right.
 
-2. **Bottom pagination:** Placed below the component it controls. Right-aligned for desktop views and center-aligned for mobile. If you want bottom pagination to be sticky so that it remains in view as users scroll through long content, place it directly after the component it controls and refer to the [React sticky pagination](/components/pagination#sticky) or [HTML sticky pagination](/components/pagination/html#bottom-sticky) examples for implementation guidance.
+2. **Bottom pagination:** Placed directly after the component it controls. On desktop, bottom pagination is right-aligned by default. On mobile, bottom pagination is center-aligned and sticky by default. 
+
+To make either top or bottom pagination sticky, so that it remains in view as users scroll through long content, refer to the [React sticky pagination](/components/pagination#sticky) or [HTML sticky pagination](/components/pagination/html#bottom-sticky) examples for implementation guidance.
 
 ## Variations 
 
@@ -49,29 +51,25 @@ Compact pagination reduces visual crowding and saves space for additional action
 
 ### Indeterminate pagination
 
-When it's difficult to calculate the total number of items or page count upfront, you can use an indeterminate pagination, which replaces the total page number in the per-page selector with a general label of “many”. Users can still choose the number of items shown at once, and the indeterminate label can be used within both full and compact pagination components.
+When it's difficult to calculate the total number of items or page count upfront, you can use an indeterminate pagination, which replaces the total page number in the per-page selector with a general label of “many”. Users can still choose the number of items shown at once, and the indeterminate label can be used within both full and compact pagination.
 
 <div class="ws-docs-content-img">
-![Example of a indeterminate pagination.](./img/indeterminate-pagination.svg)
+![Example of an indeterminate pagination.](./img/indeterminate-pagination.svg)
 </div>
 
 ## Placement
 
 ### Desktop
 
-For desktop views, place a full pagination component above the content it controls,  typically within a toolbar.
+For desktop views, place [full pagination](#full-pagination) above the content it controls, typically within a toolbar.
 
 <div class="ws-docs-content-img">
 ![an example of a desktop pagination component within a toolbar.](./img/toolbar-pagination.svg)
 </div>
 
-1. **Per-page selector:**  Used to choose the number of items displayed on a single page at once.
+When used in a toolbar, pagination may leave limited room for other items like filters or bulk selectors. These additional items should automatically move into an [overflow menu](/components/toolbar/design-guidelines#overflow-menu) as needed.
 
-2. **Full pagination:** Supplies data navigation controls, including previous page and next page, first page and last page, and a manual option to type in a desired page number.
-
-When used in a toolbar, pagination may leave limited room for other items like filters or bulk selectors. These additional items will automatically move into an [overflow menu](/components/toolbar/design-guidelines#overflow-menu) as needed.
-
-For components with long, scrolling content (like a table), you can add a second full pagination component below the content to ensure that users can navigate without having to scroll back to the top.
+For components with long, scrolling content (like a table), you can add a second full pagination component below the content to ensure that users can navigate without scrolling back to the top.
 
 ### Mobile 
 
@@ -83,9 +81,9 @@ Mobile pagination is formatted differently in order to conserve space. On mobile
 
 1. **Pagination summary:** A non-interactive count of items currently displayed. 
 
-2. **Mobile pagination:** A type of compact pagination, with a previous page, next page, and a per-page selector, which allows users to choose the number of items shown at once. Mobile views use compact styling, which removes the first page and last page controls. 
+2. **Bottom pagination:** When bottom pagination shrinks in size for mobile, it becomes more compact, with a previous page, next page, and a per-page selector that allows users to choose the number of items shown at once. There are no first-page and last-page controls for bottom pagination on mobile. 
 
 When using pagination in mobile views, follow these best practices: 
-- As shown in this example, place a pagination summary above the component it controls and a mobile pagination below the component. 
-- Do not use full pagination in both the top and bottom toolbars.
-- If you can't use bottom pagination, or if you can't use the compact pagination in the bottom toolbar for some reason, only then you can place the compact pagination in the top toolbar. 
+- Use a top-pagination summary and bottom pagination. 
+- Only use full pagination for top navigation on mobile when you can't use bottom pagination, or when you can only use the bottom-pagination summary (instead of a full bottom pagination).
+- Never use full pagination for both the top and bottom pagination on mobile.
