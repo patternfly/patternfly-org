@@ -635,7 +635,7 @@ In addition to the previously mentioned documentation updates, we've made change
 - We've started updating images across our design guidelines to represent PatternFly 6 styling.
 
 #### Miscellaneous cleanup and enhancements
-- Shortened component descriptions shown in component page headers and on the [all components page](/components/overview).
+- Shortened component descriptions shown in component page headers and on the [components overview page](/components/overview).
 - Added more details about [React tokens](/foundations-and-styles/design-tokens/develop#react-tokens) and [how to migrate them](/releases/upgrade-guide#utilize-our-tokens-update-codemod).
 - Added React example documentation for [text input group](/components/text-input-group).
 
