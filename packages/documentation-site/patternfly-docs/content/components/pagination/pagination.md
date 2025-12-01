@@ -61,7 +61,7 @@ When it's difficult to calculate the total number of items or page count upfront
 
 ### Desktop
 
-For desktop views, place [full pagination](#full-pagination) above the content it controls, typically within a toolbar.
+For desktop views, place [full pagination](#full-pagination) above the content it controls ("top pagination"), typically within a toolbar. 
 
 <div class="ws-docs-content-img">
 ![an example of a desktop pagination component within a toolbar.](./img/toolbar-pagination.svg)
@@ -69,11 +69,17 @@ For desktop views, place [full pagination](#full-pagination) above the content i
 
 When used in a toolbar, pagination may leave limited room for other items like filters or bulk selectors. These additional items should automatically move into an [overflow menu](/components/toolbar/design-guidelines#overflow-menu) as needed.
 
-For components with long, scrolling content (like a table), you can add a second full pagination component below the content to ensure that users can navigate without scrolling back to the top.
+Also place full pagination below the component it controls ("bottom pagination").
+
+<div class="ws-docs-content-img">
+![an example of a bottom pagination component placed after a table.](./img/bottom-pagination.svg)
+</div>
+
+Bottom pagination lets users easily navigate lengthy datasets without scrolling back to the top, while ensuring that pagination adapts appropriately when switching from desktop to mobile.
 
 ### Mobile 
 
-Mobile pagination is formatted differently in order to conserve space. On mobile, full pagination will collapse to a pagination summary with an item count. [Learn how to customize overflow menu breakpoints in our toolbar design guidelines](/components/toolbar/design-guidelines).
+On mobile, pagination adapts in order to better conserve space. When switching from desktop to mobile, top pagination will collapse to a pagination summary with an item count and bottom pagination will adapt to a more compact design. [Learn how to customize overflow menu breakpoints in our toolbar design guidelines](/components/toolbar/design-guidelines).
 
 <div class="ws-docs-content-img">
 ![Example of pagination on mobile table view.](./img/mobile-pagination.svg)
