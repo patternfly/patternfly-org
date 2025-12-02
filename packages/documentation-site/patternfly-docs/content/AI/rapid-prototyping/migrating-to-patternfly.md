@@ -56,7 +56,7 @@ For example, you could use AI to migrate a simple Angular feature like this tabl
         
 ![Before migration - Angular Products page](./img/products-before.png)
 
-During the development phase, you could take a couple of different approaches to migrate code. You might be able to simply change the code within the same file or you might want to start fresh, using the patternfly-react-seed and following [our rapid prototyping guide.](https://www.patternfly.org/AI/rapid-prototyping/new-prototypes)
+During the development phase, you could take a couple of different approaches to migrate code. You might be able to simply change the code within the same file or you might want to start fresh, using the patternfly-react-seed and following [our rapid prototyping guide.](https://www.patternfly.org/ai/rapid-prototyping/new-prototypes)
 
 In this example, we created a placeholder page (PF6placeholder.js) and asked AI to replicate the Angular component on the new page, using PatternFly. 
 

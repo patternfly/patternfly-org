@@ -341,7 +341,7 @@ State what isn't there, and then give the user a next step. Empty states should 
 </div>
 
 ### Capitalization and punctuation 
-Use [sentence case](/content-design/capitalization) in your empty states: Capitalize only the first letter of the first word in the heading, body, buttons, or links. However, be sure to capitalize the first letter in all proper nouns, product names, acronyms, and initialisms, regardless of where they appear in the heading, body, buttons, or links.
+Use [sentence case](/content-design/grammar/capitalization) in your empty states: Capitalize only the first letter of the first word in the heading, body, buttons, or links. However, be sure to capitalize the first letter in all proper nouns, product names, acronyms, and initialisms, regardless of where they appear in the heading, body, buttons, or links.
 
 Add a period at the end of full sentences in the body, but do not add a period at the end of headings or buttons. 
 

@@ -12,7 +12,7 @@ Our CLI handbook offers best practices for designing consistent, usable, and dev
 
 ## Accessibility considerations
 
-While CLIs don't have visual UI elements, many [accessibility principles](/accessibility/about-accessibility/) still apply.
+While CLIs don't have visual UI elements, many [accessibility principles](/accessibility/overview) still apply.
 
 Accessibility matters in CLI design just as much as it does in graphical interfaces. Clear, inclusive output ensures all users can successfully interact with the tool&mdash;including those using screen readers or alternative input devices. 
 

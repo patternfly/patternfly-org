@@ -100,7 +100,7 @@ When providing users with a resolution, start the sentence with their goal ("the
 
 A **404 page** is an error page that a user lands on when the content they're trying to view either doesn’t exist or can’t be found. 404 pages are named after the type of error they communicate: “Error 404: Not found.”
 
-Write 404 pages with [error message best practices](/content-design/error-messages) in mind: Explain what a 404 error is, define how users can proceed, and provide the tools they need to get there.
+Write 404 pages with [error message best practices](/content-design/writing-guides/error-messages) in mind: Explain what a 404 error is, define how users can proceed, and provide the tools they need to get there.
 
 Effective 404 pages combine several elements to regroup, redirect, and empower lost users to reach their desired destination or find a new one.
 

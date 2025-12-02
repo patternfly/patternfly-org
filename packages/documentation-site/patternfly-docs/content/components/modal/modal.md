@@ -182,7 +182,7 @@ Example headline: *Permanently delete database?*<br />
 Example buttons: *Delete* and *Cancel* <br />
 For more button guidance, see our [button label guidelines](/components/button/design-guidelines#content).
 
-For general content guidance to help write effective modal dialogs, see our [UX writing style guide](/content-design/about-ux-writing).
+For general content guidance to help write effective modal dialogs, see our [UX writing style guide](/content-design/overview).
 
 
 ### Icon use in modal dialogs

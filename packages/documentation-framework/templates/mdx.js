@@ -96,7 +96,7 @@ const MDXChildTemplate = ({ Component, source, toc = [], index = 0, id }) => {
             </React.Fragment>
           )}{' '}
           To learn more about deprecated components, visit{' '}
-          <Link to="/get-started/about-patternfly#deprecated-components">about PatternFly.</Link>
+          <Link to="/about-us#deprecated-components">about PatternFly.</Link>
         </InlineAlert>
       )}
       {(template || source === 'react-template') && (

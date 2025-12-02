@@ -1,6 +1,7 @@
 ---
 id: HTML fundamentals training
 section: get-started
+subsection: training
 hideNavItem: true
 ---
 import { Button, ClipboardCopy, Divider, PageSection } from '@patternfly/react-core';
@@ -102,7 +103,7 @@ Add the `pf-v6-l-bullseye` class to the card. This will center the card horizont
 Find the outermost `<div>` wrapper for the card and add the class `pf-v6-l-bullseye`.
 It should look like: `<div class="pf-v6-l-bullseye">`
 
-**Note:** It’s important to follow the documentation for layouts because it demonstrates where to add the layout class. The <a href="/layouts/bullseye/html" target="_blank">documentation for bullseye</a> specifies to add the class `pf-v6-l-bullseye` to the parent container of its child.
+**Note:** It's important to follow the documentation for layouts because it demonstrates where to add the layout class. The <a href="/foundations-and-styles/layouts/bullseye/html" target="_blank">documentation for bullseye</a> specifies to add the class `pf-v6-l-bullseye` to the parent container of its child.
 </PageSection>
 <Divider />
 <PageSection>
@@ -156,7 +157,7 @@ Adding the `pf-m-gutter` modifier class to the grid layout ensures there is equa
 
 Add the class `pf-m-gutter` after `pf-v6-l-grid` to the outermost wrapper, inside the quotation marks.
 It should look like: `<div class="pf-v6-l-grid pf-m-gutter">`
-**Note:** Learn how modifier classes work with layout classes by looking at PatternFly's <a href="/layouts/grid/html#usage" target="_blank">grid documentation</a>.
+**Note:** Learn how modifier classes work with layout classes by looking at PatternFly's <a href="/foundations-and-styles/layouts/grid/html#usage" target="_blank">grid documentation</a>.
 
 ### Step 5. Add modifier classes to the grid item classes.
 This step modifies the number of columns that a grid item spans. The maximum number of columns that a grid item can span is 12 (which is equivalent to 100%).

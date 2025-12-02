@@ -3,7 +3,6 @@
     node-version: 22
 - run: corepack enable
 - run: yarn install --immutable
-# v5 build
 - uses: actions/cache@v4
   id: site-cache
   name: Load rspack cache

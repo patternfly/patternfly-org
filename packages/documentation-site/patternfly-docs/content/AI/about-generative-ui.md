@@ -10,13 +10,15 @@ import { Alert } from "@patternfly/react-core";
 
 ## What is generative UI?
 
-Generative UI (GenUI) refers to a user interface design approach where AI is leveraged to dynamically create and adapt UI elements based on context, user needs, and data. Unlike traditional, static UIs, GenUI can produce layouts, components, and visual styles in real-time, offering more flexible and personalized user experiences.
+**Generative UI (GenUI)** refers to a user interface design approach where AI is leveraged to dynamically create and adapt UI elements based on context, user needs, and data. Unlike traditional, static UIs, GenUI can produce layouts, components, and visual styles in real-time, offering more flexible and personalized user experiences.
 
-## PatternFly's exploration: Compass
+---
+
+## Compass: PatternFly's GenUI exploration
 
 Generative UI represents a significant opportunity for PatternFly to explore new patterns, layouts, and styles that support AI-driven interface generation. PatternFly has been calling this proof of concept Compass. It investigates how the design system can evolve to support generative UI use cases.
 
-<Alert isInline variant="info" title="Compass is best suited for use as a POC in other proof-of-concept generative UI use cases. It is not yet production quality code and should be used for exploration and experimentation purposes only." />
+<Alert isInline variant="info" title="Beta feature">Compass is best suited for use as a POC in other proof-of-concept generative UI use cases. It is not yet production quality code and should be used for exploration and experimentation purposes only.</Alert>
 
 ### AI-enabled seed app
 
@@ -25,10 +27,10 @@ We are creating an [AI-enabled seed app](https://github.com/patternfly/patternfl
 ### What does Compass include?
 
 To explore Compass and its features, take a look at a number of our full page demos:
-- [Full page demo with card view and table layouts](/patternfly-ai/generative-uis/compass#card-and-data-view-layout)
-- [Full page demo with dashboard layout](/patternfly-ai/generative-uis/compass/org-demos#dashboard-layout)
-- [Static, full page HTML demo with multiple content sections](/patternfly-ai/generative-uis/compass/html-demos#multiple-sections)
-- [Static, full page HTML demo with drawer](/patternfly-ai/generative-uis/compass/html-demos#with-drawer)
+- [Full page demo with card view and table layouts](/ai/generative-uis/compass#card-and-data-view-layout)
+- [Full page demo with dashboard layout](/ai/generative-uis/compass/org-demos#dashboard-layout)
+- [Static, full page HTML demo with multiple content sections](/ai/generative-uis/compass/html-demos#multiple-sections)
+- [Static, full page HTML demo with drawer](/ai/generative-uis/compass/html-demos#with-drawer)
 
 To support the different ways you might use Compass, we've introduced several new capabilities to PatternFly:
 
@@ -37,7 +39,7 @@ To support the different ways you might use Compass, we've introduced several ne
   - Background and border gradients
   - Additional smooth animations
   - Background image explorations
-- [**Compass layout component**](/components/compass): A new layout component designed specifically for generative UI patterns
+- [**Compass layout component**](/ai/generative-uis/compass): A new layout component designed specifically for generative UI patterns
 - **Additional components and component variants**:
   - Transparency & Effects:
     - `isPlain` makes cards, data lists, and tables transparent to allow background effects (like a glass look) to show through.
@@ -57,7 +59,7 @@ Accessibility has been a major focus throughout the Compass exploration. As gene
 
 ### Integration with react-flow
 
-Some stakeholdres have been experimenting with Generative UI use cases using React Flow. The React Flow package `@xyflow/react` is compatible with PatternFly through customization of its [theme](https://reactflow.dev/learn/customization/theming) and [rendered nodes](https://reactflow.dev/learn/customization/custom-nodes). A custom override stylesheet can assign PatternFly's global tokens to React Flow's own tokens to ensure a consistent styling. We have created some [documentation and a demo](/patternfly-ai/generative-uis/react-flow) for integrations with PatternFly as a POC for these use cases.
+Some stakeholdres have been experimenting with Generative UI use cases using React Flow. The React Flow package `@xyflow/react` is compatible with PatternFly through customization of its [theme](https://reactflow.dev/learn/customization/theming) and [rendered nodes](https://reactflow.dev/learn/customization/custom-nodes). A custom override stylesheet can assign PatternFly's global tokens to React Flow's own tokens to ensure a consistent styling. We have created some [documentation and a demo](/ai/generative-uis/react-flow) for integrations with PatternFly as a POC for these use cases.
 
 ### Current status
 
@@ -75,4 +77,4 @@ As of Nov 10, 2025, these are the prereleases available for building out Compass
 - "@patternfly/react-table": "6.5.0-prerelease.11"
 - "@patternfly/react-tokens": "6.5.0-prerelease.4"
 - "@patternfly/react-templates": "6.5.0-prerelease.11"
-- "@patternfly/chatbot": "6.5.0-prerelease.15"
+- "@patternfly/chatbot": "6.5.0-prerelease.19"

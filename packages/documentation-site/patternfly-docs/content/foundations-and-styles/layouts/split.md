@@ -24,7 +24,7 @@ You can specify which split item fills the remaining horizontal space in the lay
 
 ### Items that wrap 
 
-You can wrap split items to ensure that they fit among other content as the screen is resized. To implement wrappable items, refer to the related [React](/layouts/split#wrappable) and [HTML](/layouts/split/html#wrappable) examples.
+You can wrap split items to ensure that they fit among other content as the screen is resized. To implement wrappable items, refer to the related [React](/foundations-and-styles/layouts/split#wrappable) and [HTML](/foundations-and-styles/layouts/split/html#wrappable) examples.
 
 ### Gutters around items
 

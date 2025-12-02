@@ -1,6 +1,6 @@
 ---
-id: Usage and behavior
-section: design-foundations
+id: Component usage and behavior
+section: patterns
 ---
 
 # PatternFly component usage and behavior guidelines

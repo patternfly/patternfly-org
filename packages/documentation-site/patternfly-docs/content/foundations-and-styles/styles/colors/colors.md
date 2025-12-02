@@ -5,12 +5,12 @@ section: foundations-and-styles
 import { Alert, Grid, GridItem, Banner, Button, Stack } from '@patternfly/react-core';
 import { Table, Caption, Thead, Tr, Th, Tbody, Td } from '@patternfly/react-table';
 import ArrowRightIcon from '@patternfly/react-icons/dist/esm/icons/arrow-right-icon';
-import { ColorSwatch } from './ColorSwatch';
-import { ColorFamily } from './ColorFamily';
+import { ColorSwatch } from './ColorSwatch.js';
+import { ColorFamily } from './ColorFamily.js';
 
 # PatternFly's palette
 
-Our color palettes align with <a href="https://www.redhat.com/en/about/brand/standards/color" target="_blank" alt="Red Hat brand colors"> Red Hat's brand colors </a> and are designed to reinforce content and support effective communication across different UI needs. Colors are applied to PatternFly elements using [semantic design tokens.](/foundations-and-styles/design-tokens/about-tokens) This guide offers guidance for color use in some of the most common scenarios, but it does not cover all tokens. Additional color usage information is included in our tokens documentation.
+Our color palettes align with <a href="https://www.redhat.com/en/about/brand/standards/color" target="_blank" alt="Red Hat brand colors"> Red Hat's brand colors </a> and are designed to reinforce content and support effective communication across different UI needs. Colors are applied to PatternFly elements using [semantic design tokens.](/foundations-and-styles/design-tokens/overview) This guide offers guidance for color use in some of the most common scenarios, but it does not cover all tokens. Additional color usage information is included in our tokens documentation.
 
 <div>
 <Button component="a" href="/foundations-and-styles/design-tokens/all-patternfly-tokens" variant="link" isInline> View all design tokens <ArrowRightIcon />
@@ -186,7 +186,7 @@ Status and state colors are indicators that communicate data and actions to user
 
 ## Contrast ratios
 
-[Our accessibility standards](/accessibility/patternflys-accessibility#accessibility-standards) are [level AA in the Web Content Accessibility Guidelines 2.2](https://www.w3.org/WAI/WCAG22/quickref/?versions=2.2&currentsidebar=%23col_customize&levels=aaa). To achieve level AA accessibility, your UI contrast ratios must be at or above 4.5:1 for normal text, 3:1 for large text, and 3:1 for graphics and other UI components. Additionally, on hover, link text color should have ample contrast from both the background color and the default state link color.
+[Our accessibility standards](/accessibility/overview#accessibility-standards) are [level AA in the Web Content Accessibility Guidelines 2.2](https://www.w3.org/WAI/WCAG22/quickref/?versions=2.2&currentsidebar=%23col_customize&levels=aaa). To achieve level AA accessibility, your UI contrast ratios must be at or above 4.5:1 for normal text, 3:1 for large text, and 3:1 for graphics and other UI components. Additionally, on hover, link text color should have ample contrast from both the background color and the default state link color.
 
 To check the contrast between background and text colors, use a <a href="https://color.a11y.com/?wc3" target="_blank" className="pf-m-link">WCAG AA-compliance tool.</a>
 

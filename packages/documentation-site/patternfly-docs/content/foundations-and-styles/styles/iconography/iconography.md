@@ -9,7 +9,7 @@ import ExclamationTriangleIcon from '@patternfly/react-icons/dist/esm/icons/excl
 import InfoCircleIcon from '@patternfly/react-icons/dist/esm/icons/info-circle-icon';
 import BellIcon from '@patternfly/react-icons/dist/esm/icons/bell-icon';
 import StarIcon from '@patternfly/react-icons/dist/esm/icons/star-icon';
-import { IconsTable } from './IconsTable';
+import { IconsTable } from './IconsTable.js';
 import './icons.css';
 
 If you're a developer, check out our [development onboarding guide](/get-started/develop#using-icons) to learn how to install and use our icon set.
@@ -107,7 +107,7 @@ The Font Awesome icons included with PatternFly are Font Awesome solid (FAS) web
 
 The following table provides details and usage information for all icons that PatternFly supports.
 
-For guidance related to icon tooltips, [refer to our tooltips writing guide.](/content-design/tooltips#icon-tooltips)
+For guidance related to icon tooltips, [refer to our tooltips writing guide.](/content-design/writing-guides/tooltips#icon-tooltips)
 
 Select any single icon in the table to download it as an SVG. You can also download all icon SVGs <a href="https://github.com/patternfly/patternfly-design/raw/master/resources/patternfly-icon-svgs" target="_blank">on GitHub (via patternfly-icons.zip.)</a>
 

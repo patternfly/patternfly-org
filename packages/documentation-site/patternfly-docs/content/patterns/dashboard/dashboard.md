@@ -41,7 +41,7 @@ Trend cards are used to display the change in some metric over time. It should b
 
 2. **Filter (optional):** Place a filter in the upper right corner of the card when you want to filter data in the chart. Most often this will be used to change the time range of the chart, e.g. “Last 24 hours,” “Last 7 days,” “Last 30 days,” etc.
 
-3. **Trend chart:** [Sparkline charts](/charts/sparkline-chart) are most often used to display trend data.
+3. **Trend chart:** [Sparkline charts](/components/charts/sparkline-chart) are most often used to display trend data.
 
 4. **Actions (optional):** If your card is to include actions include them as [link-style buttons](/components/button#variations) in the footer of your card.
 
@@ -59,7 +59,7 @@ A utilization card reports the current value of a single metric or multiple metr
 
 2. **Filter (optional):** Place a filter in the upper right corner of the card when you want to filter data in the chart.
 
-3. **Utilization chart:** [Bar charts](/charts/bar-chart) or [donut charts](/charts/donut-utilization-chart) are commonly used to report utilization.
+3. **Utilization chart:** [Bar charts](/components/charts/bar-chart) or [donut charts](/components/charts/donut-utilization-chart) are commonly used to report utilization.
 
 4. **Actions (optional):** If your card includes actions or links to another page, add them as [link-style buttons](/components/button#variations) in the footer.
 

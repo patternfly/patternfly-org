@@ -1,7 +1,8 @@
 ---
-id: Design with tokens
+id: Design
 section: foundations-and-styles
 subsection: design-tokens
+sortvalue: 5
 ---
 
 Tokens are only available as part of PatternFly 6. In order to make use of our token system, you will need to install the PatternFly 6 design kit [using our onboarding guide](/get-started/design) and make sure that your product is [upgraded to PatternFly 6](/releases/upgrade-guide). 
@@ -10,7 +11,7 @@ Tokens are only available as part of PatternFly 6. In order to make use of our t
 
 Our tokens are set up as [variables](https://help.figma.com/hc/en-us/articles/15339657135383-Guide-to-variables-in-Figma) and [styles](https://help.figma.com/hc/en-us/articles/360039238753-Styles-in-Figma) in Figma, within our [Design Tokens and Styles Library](https://www.figma.com/@PatternFly). They define all of the design elements used in PatternFly, including color, font size, spacing, dimensions, and more.
 
-Figma tokens align with the segments in [our token variable structure](/foundations-and-styles/design-tokens/about-tokens#token-names), but they use a forward slash (/) in place of a double hyphen (--).
+Figma tokens align with the segments in [our token variable structure](/foundations-and-styles/design-tokens/overview#token-names), but they use a forward slash (/) in place of a double hyphen (--).
 
 ![Table of brand color tokens.](./img/token-example-brand.png)  
 

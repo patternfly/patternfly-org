@@ -26,12 +26,12 @@ The elements mentioned below are similar for a data list with compact or default
 
 ## Usage
 
-Think of each row in a data list as a container for some formatted content. In PatternFly, data list rows can accept any [layout](/layouts/bullseye) supported by the design system as long as all rows apply the same layout. Here are some common layouts that may be useful in a data list:
+Think of each row in a data list as a container for some formatted content. In PatternFly, data list rows can accept any [layout](/foundations-and-styles/layouts/bullseye) supported by the design system as long as all rows apply the same layout. Here are some common layouts that may be useful in a data list:
 
-* **[Grid](/layouts/grid):** Displays content in a responsive grid.
-* **[Level](/layouts/level):** Justifies content evenly over the width of the row and vertically aligns items in the center of the row.
-* **[Split](/layouts/split):** Distributes content evenly with a main content area in the center.
-* **[Flex](/layouts/flex):** Enables more customization control over the alignment and spacing options provided in the other layouts.
+* **[Grid](/foundations-and-styles/layouts/grid):** Displays content in a responsive grid.
+* **[Level](/foundations-and-styles/layouts/level):** Justifies content evenly over the width of the row and vertically aligns items in the center of the row.
+* **[Split](/foundations-and-styles/layouts/split):** Distributes content evenly with a main content area in the center.
+* **[Flex](/foundations-and-styles/layouts/flex):** Enables more customization control over the alignment and spacing options provided in the other layouts.
 
 PatternFly offers 2 components for displaying large data sets: data lists and [tables](/components/table/design-guidelines). While they satisfy similar use cases, choosing the correct component to use in your design will be dependent on the type of data you need to display.
 

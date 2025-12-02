@@ -35,7 +35,8 @@ export const SectionGallery = ({
   hasGridImages = true,
   hasListText = true,
   hasListImages = true,
-  isFullWidth = true
+  isFullWidth = true,
+  onlyShowInGalleryData = false
 }) => (
   <SectionGalleryWrapper
     illustrations={illustrations}
@@ -46,6 +47,7 @@ export const SectionGallery = ({
     galleryItemsData={galleryItemsData}
     initialLayout={initialLayout}
     isFullWidth={isFullWidth}
+    onlyShowInGalleryData={onlyShowInGalleryData}
   >
     {(sectionGalleryItems, searchTerm, setSearchTerm, layoutView, setLayoutView) => (
       <>
