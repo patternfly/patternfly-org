@@ -14,7 +14,7 @@ import patternsData from './patterns-data.json';
 
 ## How do I use patterns?
 
-Patterns provide design guidance on how you should combine different **[components](/components/all-components)** and foundational styles for recurring design challenges, such as displaying complex data or managing user workflows. While patterns offer abstract guidance, they are distinct from extensions, which provide the actual pre-built coded solutions.
+Patterns provide design guidance on how you should combine different **[components](/components/overview)** and foundational styles for recurring design challenges, such as displaying complex data or managing user workflows. While patterns offer abstract guidance, they are distinct from extensions, which provide the actual pre-built coded solutions.
 
 Our more holistic design patterns, such as our dashboard and card view, are maintained in our separate [Patterns & Extensions Figma library.](https://www.figma.com/community/file/1357062621908564852/patternfly-6-patterns-extensions)
 

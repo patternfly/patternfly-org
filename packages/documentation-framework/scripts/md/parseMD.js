@@ -279,6 +279,11 @@ function sourceMDFile(file, source, buildMode) {
   if (path.basename(file).startsWith('_')) {
     return;
   }
+  // Skip accessibility files when sourcing as design-guidelines
+  // They should only be sourced with the 'accessibility' source
+  if (source === 'design-guidelines' && file.includes('/accessibility/')) {
+    return;
+  }
   const { jsx, pageData, outPath } = toReactComponent(file, source, buildMode);
 
   if (jsx) {
