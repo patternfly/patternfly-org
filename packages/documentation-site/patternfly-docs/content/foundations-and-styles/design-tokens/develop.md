@@ -13,7 +13,7 @@ Our tokens are named semantically, so that they're meaningful and better communi
 
 In the event that there isn't a semantic token that fits your use case, then you can use a base token instead, but do so sparingly. Do not use palette tokens. They are the foundation of our token system and there will always be a better base or semantic token to use.
 
-[View all design tokens.](/foundations-and-styles/design-tokens/all-patternfly-tokens)
+[View all design tokens.](/foundations-and-styles/design-tokens/all-design-tokens)
 
 ### Dark theme support
 
@@ -25,7 +25,7 @@ For more information, refer to our [dark theme handbook.](/foundations-and-style
 
 To support tokens, PatternFly's global CSS variable system has been updated. Variable names have been updated across all PatternFly components and extensions. To migrate to our token system, you must [upgrade to PatternFly 6.](/releases/upgrade-guide)
 
-If you make customizations to PatternFly components in your product, or use CSS overrides, you will need to manually update your CSS variable names to match an appropriate [semantic token](/foundations-and-styles/design-tokens/all-patternfly-tokens). There is no one-to-one recommendation for any particular CSS variable, so you will need to choose the most appropriate token for your use case. 
+If you make customizations to PatternFly components in your product, or use CSS overrides, you will need to manually update your CSS variable names to match an appropriate [semantic token](/foundations-and-styles/design-tokens/all-design-tokens). There is no one-to-one recommendation for any particular CSS variable, so you will need to choose the most appropriate token for your use case. 
 
 As you migrate and [select tokens](#selecting-tokens), refer to these recommendations and reminders:
 

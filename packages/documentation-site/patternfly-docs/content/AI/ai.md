@@ -13,7 +13,7 @@ To support your AI practices, we provide a range of AI tools that you can integr
 
 - **[Rapid prototyping](/ai/rapid-prototyping):** How to quickly test and iterate on AI features during the early stages of design.
 - **[AI-assisted code migration](/ai/ai-assisted-code-migration):** How to quickly test and iterate on AI features during the early stages of design.
-- **[Conversational Design Principles](/ai/conversational-design):** Guidance for designing effective and human-centered text-based conversational flows.
+- **[Conversational Design Principles](/ai/conversation-design):** Guidance for designing effective and human-centered text-based conversational flows.
 - **[Rapid Prototyping Guidelines](/ai/generative-uis/overview):** How to quickly test and iterate on AI features during the early stages of design.
 
 Regardless of the AI resources or workflow you're using, it's important to ensure that you're aligned with the compliance rules, ethical considerations, and best practies on this page. 

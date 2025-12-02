@@ -65,7 +65,7 @@ Occasionally, you may need to use a standalone icon that isn't aligned with any 
 Medium icons are typically the most versatile size to use in a UI. Most icons in PatternFly components are medium; other sizes are used sparingly.
 
 ## Icon colors
-All icon colors that you use should align with the proper [semantic design token.](/foundations-and-styles/design-tokens/all-patternfly-tokens) For example, a warning icon should use our approved warning color, a danger icon should use our approved danger color, and so on. 
+All icon colors that you use should align with the proper [semantic design token.](/foundations-and-styles/design-tokens/all-design-tokens) For example, a warning icon should use our approved warning color, a danger icon should use our approved danger color, and so on. 
 
 | **Icon state** | **Color token** | **Example** |
 | --- | --- | :---: |

@@ -103,7 +103,7 @@ When using destructive actions, ensure that the user is informed about the conse
 
 Use an error dialog to inform users of problems that interrupt normal or expected behavior. Briefly contextualize the problem and why it happened, then provide actionable steps toward a solution.
 
-Learn more about writing error messages in our [error message guidelines](/content-design/error-messages).
+Learn more about writing error messages in our [error message guidelines](/content-design/writing-guides/error-messages).
 
 Error dialogs may use an error icon for visual emphasis.
 

@@ -139,4 +139,4 @@ Examples:
 
 <img src="./img/Error message date picker.png" alt="Date picker with error message" width="200"/>
 
-For more information about writing effective error messages, see our [writing guide.](/content-design/error-messages)
+For more information about writing effective error messages, see our [writing guide.](/content-design/writing-guides/error-messages)

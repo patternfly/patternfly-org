@@ -97,7 +97,7 @@ const Page404 = () => {
           body="Start creating your applications with components, our UI building blocks."
           link={{
             text: 'View all components',
-            to: '/components/all-components',
+            to: '/components/overview',
           }}
         />
         <Card404
