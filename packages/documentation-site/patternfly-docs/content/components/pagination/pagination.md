@@ -79,7 +79,7 @@ Bottom pagination lets users easily navigate lengthy datasets without scrolling 
 
 ### Mobile 
 
-On mobile, pagination adapts in order to better conserve space. When switching from desktop to mobile, top pagination will collapse to a pagination summary with an item count and bottom pagination will adapt to a more compact design. [Learn how to customize overflow menu breakpoints in our toolbar design guidelines](/components/toolbar/design-guidelines).
+On mobile, pagination adapts in order to better conserve space. When switching from desktop to mobile, top pagination will collapse to a pagination summary with an item count and bottom pagination will adapt to a more compact design. 
 
 <div class="ws-docs-content-img">
 ![Example of pagination on mobile table view.](./img/mobile-pagination.svg)
