@@ -48,7 +48,7 @@ Bugs that appear in the base HTML/CSS or can be seen in *both* the React and HTM
 For bugs found in a PatternFly extension, please file the issue in that extension's specific repository:
 
 
-- [chatbot:](https://github.com/patternfly/chatbot) Code for [the ChatBot extension](/ai/chatbot/aoverview).
+- [chatbot:](https://github.com/patternfly/chatbot) Code for [the ChatBot extension](/extensions/chatbot/overview).
 - [patternfly-quickstarts:](https://github.com/patternfly/patternfly-quickstarts). Code for [the quick starts extensions](/extensions/quick-starts).
 - [react-catalog-view:](https://github.com/patternfly/react-catalog-view) Code for [the catalog view extension](/extensions/catalog-view/catalog-item-header).
 - [react-component-groups:](https://github.com/patternfly/react-component-groups) Code for [the component groups extension](/extensions/component-groups/overview).

@@ -3,7 +3,7 @@ id: Overview
 title: Design tokens overview
 section: foundations-and-styles
 subsection: design-tokens
-sortvalue: 1
+sortValue: 1
 --- 
 import '../../components/components.css';
 
