@@ -66,16 +66,16 @@ Some stakeholdres have been experimenting with Generative UI use cases using Rea
 
 Compass is still under development, with new components being built, evaluated, and refined based on feedback. As we hear from your experiments and learn more about GenUI patterns, the design of Compass will continuously evolve to support practical applications.
 
-As of Nov 19, 2025, these are the prereleases available for building out Compass based UI POCs.
+As of Dec 10, 2025, these are the prereleases available for building out Compass based UI POCs.
 
-- "@patternfly/patternfly": "6.5.0-prerelease.27",
+- "@patternfly/patternfly": "6.5.0-prerelease.31",
 - "@patternfly/react-charts": "8.5.0-prerelease.6",
-- "@patternfly/react-code-editor": "6.5.0-prerelease.14",
-- "@patternfly/react-core": "6.5.0-prerelease.14",
-- "@patternfly/react-drag-drop": "6.5.0-prerelease.14",
-- "@patternfly/react-icons": "6.5.0-prerelease.6",
+- "@patternfly/react-code-editor": "6.5.0-prerelease.22",
+- "@patternfly/react-core": "6.5.0-prerelease.21",
+- "@patternfly/react-drag-drop": "6.5.0-prerelease.21",
+- "@patternfly/react-icons": "6.5.0-prerelease.8",
 - "@patternfly/react-styles": "6.5.0-prerelease.6",
-- "@patternfly/react-table": "6.5.0-prerelease.14",
-- "@patternfly/react-templates": "6.5.0-prerelease.14",
+- "@patternfly/react-table": "6.5.0-prerelease.21",
+- "@patternfly/react-templates": "6.5.0-prerelease.21",
 - "@patternfly/react-tokens": "6.5.0-prerelease.6",
-- "@patternfly/chatbot": "6.5.0-prerelease.19"
+- "@patternfly/chatbot": "6.5.0-prerelease.25"

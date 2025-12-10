@@ -1,30 +1,30 @@
 {
   "Releases": [
     {
-      "name": "6.5.0-prerelease.9",
-      "date": "2025-11-06",
+      "name": "6.5.0-prerelease.31",
+      "date": "2025-12-10",
       "latest": true,
       "versions": {
-        "@patternfly/patternfly": "6.5.0-prerelease.27",
+        "@patternfly/patternfly": "6.5.0-prerelease.31",
         "@patternfly/react-catalog-view-extension": "6.2.0",
         "@patternfly/react-charts": "8.5.0-prerelease.6",
-        "@patternfly/react-code-editor": "6.5.0-prerelease.14",
-        "@patternfly/react-component-groups": "6.4.0-prerelease.6",
-        "@patternfly/react-core": "6.5.0-prerelease.14",
-        "@patternfly/react-drag-drop": "6.5.0-prerelease.11",
-        "@patternfly/react-icons": "6.5.0-prerelease.4",
+        "@patternfly/react-code-editor": "6.5.0-prerelease.22",
+        "@patternfly/react-component-groups": "6.4.0-prerelease.10",
+        "@patternfly/react-core": "6.5.0-prerelease.21",
+        "@patternfly/react-drag-drop": "6.5.0-prerelease.21",
+        "@patternfly/react-icons": "6.5.0-prerelease.8",
         "@patternfly/react-log-viewer": "6.3.0",
-        "@patternfly/react-styles": "6.5.0-prerelease.4",
-        "@patternfly/react-table": "6.5.0-prerelease.14",
-        "@patternfly/react-tokens": "6.5.0-prerelease.4",
-        "@patternfly/react-topology": "6.5.0-prerelease.2",
+        "@patternfly/react-styles": "6.5.0-prerelease.6",
+        "@patternfly/react-table": "6.5.0-prerelease.21",
+        "@patternfly/react-tokens": "6.5.0-prerelease.6",
+        "@patternfly/react-topology": "6.5.0-prerelease.3",
         "@patternfly/react-user-feedback": "6.2.0",
         "@patternfly/react-console": "6.1.0",
         "@patternfly/quickstarts": "6.4.0",
         "@patternfly/react-virtualized-extension": "6.1.0",
-        "@patternfly/react-templates": "6.5.0-prerelease.11",
-        "@patternfly/chatbot": "6.5.0-prerelease.19",
-        "@patternfly/react-data-view": "6.4.0"
+        "@patternfly/react-templates": "6.5.0-prerelease.21",
+        "@patternfly/chatbot": "6.5.0-prerelease.25",
+        "@patternfly/react-data-view": "6.4.0-prerelease.8"
       }
     },
     {
