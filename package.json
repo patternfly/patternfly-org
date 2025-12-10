@@ -11,9 +11,11 @@
     "dev": "yarn workspace site dev",
     "develop:extensions": "EXTENSIONS_ONLY=true PRERELEASE=true yarn develop",
     "build:analyze": "yarn workspace patternfly-org build:analyze && yarn copy",
-    "build": "yarn workspace patternfly-org build && yarn workspace site build && yarn copy",
+    "build": "yarn workspace patternfly-org build && yarn copy",
     "build:extensions": "EXTENSIONS_ONLY=true PRERELEASE=true yarn build",
     "build:doc-core": "yarn workspace site build",
+    "build:ts": "yarn workspace patternfly-org build:ts",
+    "build:ts:watch": "yarn build:ts --watch",
     "copy": "rm -rf build/patternfly-org/site && mkdir -p build/patternfly-org && cp -r packages/documentation-site/public build/patternfly-org/site",
     "clean": "lerna run clean && rm -rf build",
     "serve": "npx pf-docs-framework serve build/patternfly-org/site",
@@ -34,10 +36,13 @@
   },
   "devDependencies": {
     "@octokit/rest": "^19.0.7",
-    "@patternfly/patternfly": "^6.4.0",
-    "@patternfly/react-code-editor": "^6.4.0",
-    "@patternfly/react-core": "^6.4.0",
-    "@patternfly/react-table": "^6.4.0",
+    "@patternfly/patternfly": "^6.5.0-prerelease.27",
+    "@patternfly/react-code-editor": "^6.5.0-prerelease.13",
+    "@patternfly/react-core": "^6.5.0-prerelease.13",
+    "@patternfly/react-table": "^6.5.0-prerelease.13",
+    "@rspack/cli": "^1.5.6",
+    "@rspack/core": "^1.5.6",
+    "@rspack/dev-server": "^1.1.4",
     "glob": "^8.1.0",
     "lerna": "^6.4.1",
     "react": "^18",
@@ -59,6 +64,9 @@
     "parse-git-config": ">=3.0.0",
     "ip": ">=2.0.0",
     "http-cache-semantics": ">=4.1.1",
-    "nanoid": "3.3.8"
+    "nanoid": "3.3.8",
+    "@patternfly/react-code-editor": "^6.5.0-prerelease.13",
+    "@patternfly/react-core": "^6.5.0-prerelease.13",
+    "@patternfly/react-table": "^6.5.0-prerelease.13"
   }
 }

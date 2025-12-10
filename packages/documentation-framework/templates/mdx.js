@@ -81,7 +81,7 @@ const MDXChildTemplate = ({ Component, source, toc = [], index = 0, id }) => {
             Slack
           </a>
           . To learn more about the process, visit our{' '}
-          <Link to="/get-started/about-patternfly#beta-components">about page</Link> or our{' '}
+          <Link to="/about-us#beta-features">about page</Link> or our{' '}
           <a href="https://github.com/patternfly/patternfly-org/tree/main/beta-component-promotion">Beta components</a>{' '}
           page on GitHub.
         </InlineAlert>
@@ -96,7 +96,7 @@ const MDXChildTemplate = ({ Component, source, toc = [], index = 0, id }) => {
             </React.Fragment>
           )}{' '}
           To learn more about deprecated components, visit{' '}
-          <Link to="/get-started/about-patternfly#deprecated-components">about PatternFly.</Link>
+          <Link to="/about-us#deprecated-components">about PatternFly.</Link>
         </InlineAlert>
       )}
       {(template || source === 'react-template') && (

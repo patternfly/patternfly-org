@@ -3,6 +3,199 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 6.31.14 (2025-12-01)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 6.31.13 (2025-11-21)
+
+
+### Bug Fixes
+
+* Updates overview pages across website. ([#4880](https://github.com/patternfly/patternfly-org/issues/4880)) ([7871f1c](https://github.com/patternfly/patternfly-org/commit/7871f1c47d4a1b91b5cd1b16b4017aaf80252812))
+
+
+
+
+
+## 6.31.12 (2025-11-20)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 6.31.11 (2025-11-20)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 6.31.10 (2025-11-18)
+
+
+### Bug Fixes
+
+* Resolves broken links. ([#4869](https://github.com/patternfly/patternfly-org/issues/4869)) ([4a86755](https://github.com/patternfly/patternfly-org/commit/4a867550498b03efd7f62ca1b9e59f9237ae93f9))
+
+
+
+
+
+## 6.31.9 (2025-11-18)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 6.31.8 (2025-11-17)
+
+
+### Bug Fixes
+
+* **get-help:** Adds Get help section to site. ([#4866](https://github.com/patternfly/patternfly-org/issues/4866)) ([bae3675](https://github.com/patternfly/patternfly-org/commit/bae367583a177ba6a3e41a32954ffd8798b10644))
+
+
+
+
+
+## 6.31.7 (2025-11-17)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 6.31.6 (2025-11-17)
+
+
+### Bug Fixes
+
+* **get-involved:** Creates new nav section for community and contribution info. ([#4781](https://github.com/patternfly/patternfly-org/issues/4781)) ([2ca34b2](https://github.com/patternfly/patternfly-org/commit/2ca34b24caa09d4cea6dfbc8c77a139501a7a391))
+
+
+
+
+
+## 6.31.5 (2025-11-17)
+
+
+### Bug Fixes
+
+* Reorganizes and renames nav items for new design. ([#4861](https://github.com/patternfly/patternfly-org/issues/4861)) ([595e6a2](https://github.com/patternfly/patternfly-org/commit/595e6a2a83842fa1b7a211bef34feb7bda62c778))
+
+
+
+
+
+## 6.31.4 (2025-11-12)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 6.31.3 (2025-11-12)
+
+
+### Bug Fixes
+
+* **docs:** Compass doc wording fix ([#4859](https://github.com/patternfly/patternfly-org/issues/4859)) ([d438ed5](https://github.com/patternfly/patternfly-org/commit/d438ed5319b8f6c3ed4a3f28a817c912d5f10d34))
+
+
+
+
+
+## 6.31.2 (2025-11-11)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 6.31.1 (2025-11-11)
+
+
+### Bug Fixes
+
+* Updated documentation for compass. ([#4858](https://github.com/patternfly/patternfly-org/issues/4858)) ([92dd0cb](https://github.com/patternfly/patternfly-org/commit/92dd0cb2394650e80735df62864c50cc34f63fe8))
+
+
+
+
+
+# 6.31.0 (2025-11-10)
+
+
+### Features
+
+* **compass:** add compass dashboard demo ([#4850](https://github.com/patternfly/patternfly-org/issues/4850)) ([b360fc6](https://github.com/patternfly/patternfly-org/commit/b360fc699610785db3ed888863bf923cecf3876b))
+
+
+
+
+
+## 6.30.1 (2025-11-07)
+
+
+### Bug Fixes
+
+* white space change to trigger release ([6759842](https://github.com/patternfly/patternfly-org/commit/67598426ca6efffadfa82f996c16156de5fd3981))
+
+
+
+
+
+# 6.30.0 (2025-11-07)
+
+
+### Features
+
+* **Compass:** add integrations & react-flow compass demo ([#4848](https://github.com/patternfly/patternfly-org/issues/4848)) ([c4ca08e](https://github.com/patternfly/patternfly-org/commit/c4ca08eaf906b48e21aeed80bf24d79feebe9804))
+
+
+
+
+
+## 6.29.1 (2025-11-06)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+# 6.29.0 (2025-11-03)
+
+
+### Features
+
+* RSpack to improve performance. ([#4798](https://github.com/patternfly/patternfly-org/issues/4798)) ([aa4f948](https://github.com/patternfly/patternfly-org/commit/aa4f94852ef12d68e9424336df327a4d9849420a))
+
+
+
+
+
+## 6.28.10 (2025-10-31)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
 ## 6.28.9 (2025-10-28)
 
 
