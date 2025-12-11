@@ -2849,7 +2849,7 @@ t_color_green_10;`}
   {
     component: "Tokens",
     description:
-      "We have updated our CSS tokens. About half of our tokens have been replaced with newer ones. \n\n- this rule provides an autofix for global non color tokens\n- global color tokens will be replaced with a temporary hot pink color token **that must be manually replaced** (`t_temp_dev_tbd` react token or `--pf-t--temp--dev--tbd` CSS variable)\n- other non-global (component or chart) tokens need to be replaced manually\n\nTo find a suitable replacement token, check our [v6 token documentation](/foundations-and-styles/design-tokens/all-patternfly-tokens).",
+      "We have updated our CSS tokens. About half of our tokens have been replaced with newer ones. \n\n- this rule provides an autofix for global non color tokens\n- global color tokens will be replaced with a temporary hot pink color token **that must be manually replaced** (`t_temp_dev_tbd` react token or `--pf-t--temp--dev--tbd` CSS variable)\n- other non-global (component or chart) tokens need to be replaced manually\n\nTo find a suitable replacement token, check our [v6 token documentation](/foundations-and-styles/design-tokens/all-design-tokens).",
     repo: "React",
     fixedWithCodeMod: true,
     title: "tokens-update",

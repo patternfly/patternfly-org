@@ -44,7 +44,7 @@ Both tooltips and [popovers](/components/popover/design-guidelines) provide more
 - Tooltips appear on hover, while popovers appear on click.   
 
 ## Content considerations
-For content guidance, refer to [our tooltip writing guide.](/content-design/tooltips)
+For content guidance, refer to [our tooltip writing guide.](/content-design/writing-guides/tooltips)
 
 ## Accessibility
 
