@@ -1,5 +1,5 @@
-import React from 'react';
-import { Alert, AlertActionCloseButton } from '@patternfly/react-core';
+import React, { Fragment } from 'react';
+import { Alert, AlertActionCloseButton, AlertActionLink } from '@patternfly/react-core';
 import './navAnnouncementBanner.css';
 
 export const NavAnnouncementBanner = () => {
@@ -18,8 +18,20 @@ export const NavAnnouncementBanner = () => {
         isInline
         actionClose={<AlertActionCloseButton onClose={closeBanner} />}
         className="ws-nav-announcement-banner"
-        title={<>We've redesigned our website's navigation menu to make it easier to find the information you need. Learn more about the changes on <a href="https://medium.com/patternfly" target="_blank" rel="noopener noreferrer">Medium</a> and share any thoughts in our <a href="https://www.feedback.redhat.com/jfe/form/SV_9MKBjq8H7muINMy" target="_blank" rel="noopener noreferrer">user feedback survey</a>.</>}
-      />
+        title="Website update"
+        actionLinks={
+          <Fragment>
+            <AlertActionLink component="a" href="https://medium.com/patternfly/a-new-path-for-patternfly-org-91d14de4b93c" target="_blank">
+              Learn more
+            </AlertActionLink>
+            <AlertActionLink component="a" href="https://www.feedback.redhat.com/jfe/form/SV_9MKBjq8H7muINMy" target="_blank">
+              Share your feedback
+            </AlertActionLink>
+          </Fragment>
+        }
+      >
+      To make it easier for you to find what you need on PatternFly.org, we've redesigned our website navigation menu.
+    </Alert>
     </div>
   );
 }
