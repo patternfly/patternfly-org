@@ -14,6 +14,7 @@
     "build": "yarn workspace patternfly-org build && yarn copy",
     "build:extensions": "EXTENSIONS_ONLY=true PRERELEASE=true yarn build",
     "build:doc-core": "yarn workspace site build",
+    "preview:doc-core": "yarn workspace site wrangler:preview",
     "build:ts": "yarn workspace patternfly-org build:ts",
     "build:ts:watch": "yarn build:ts --watch",
     "copy": "rm -rf build/patternfly-org/site && mkdir -p build/patternfly-org && cp -r packages/documentation-site/public build/patternfly-org/site",
