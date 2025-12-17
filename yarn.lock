@@ -4951,9 +4951,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@patternfly/react-component-groups@npm:6.4.0-prerelease.6":
-  version: 6.4.0-prerelease.6
-  resolution: "@patternfly/react-component-groups@npm:6.4.0-prerelease.6"
+"@patternfly/react-component-groups@npm:6.4.0-prerelease.10":
+  version: 6.4.0-prerelease.10
+  resolution: "@patternfly/react-component-groups@npm:6.4.0-prerelease.10"
   dependencies:
     "@patternfly/react-core": "npm:^6.0.0"
     "@patternfly/react-icons": "npm:^6.0.0"
@@ -4964,7 +4964,7 @@ __metadata:
     "@patternfly/react-drag-drop": ^6.0.0
     react: ^17 || ^18 || ^19
     react-dom: ^17 || ^18 || ^19
-  checksum: 10c0/8ad71a543489299cb7075d3829402d1c10bb62e3a817502f822f4ee3d4f73b8ac45e6ed99e3cfdd5ddbbfeb543dbb7af3c12a098212c77d02d491a07a802fdb4
+  checksum: 10c0/4ddd378c0156a841a08a7f6a7be803de741b146b52f2e1bc438ef6cdb75b68c7c9aeb912e6e9bdc55f7ef8efa19a2369116c39ddffeb5a65720c0e64a8cb3ab6
   languageName: node
   linkType: hard
 
@@ -18545,7 +18545,7 @@ __metadata:
     "@patternfly/quickstarts": "npm:6.4.0"
     "@patternfly/react-catalog-view-extension": "npm:6.3.0-prerelease.2"
     "@patternfly/react-charts": "npm:8.5.0-prerelease.9"
-    "@patternfly/react-component-groups": "npm:6.4.0-prerelease.6"
+    "@patternfly/react-component-groups": "npm:6.4.0-prerelease.10"
     "@patternfly/react-console": "npm:6.1.0"
     "@patternfly/react-data-view": "npm:6.4.0-prerelease.8"
     "@patternfly/react-docs": "npm:7.5.0-prerelease.26"
