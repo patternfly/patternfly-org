@@ -68,14 +68,14 @@ Compass is still under development, with new components being built, evaluated, 
 
 As of Dec 10, 2025, these are the prereleases available for building out Compass based UI POCs.
 
-- "@patternfly/patternfly": "6.5.0-prerelease.31",
-- "@patternfly/react-charts": "8.5.0-prerelease.6",
-- "@patternfly/react-code-editor": "6.5.0-prerelease.22",
-- "@patternfly/react-core": "6.5.0-prerelease.21",
-- "@patternfly/react-drag-drop": "6.5.0-prerelease.21",
-- "@patternfly/react-icons": "6.5.0-prerelease.8",
-- "@patternfly/react-styles": "6.5.0-prerelease.6",
-- "@patternfly/react-table": "6.5.0-prerelease.21",
-- "@patternfly/react-templates": "6.5.0-prerelease.21",
-- "@patternfly/react-tokens": "6.5.0-prerelease.6",
-- "@patternfly/chatbot": "6.5.0-prerelease.25"
+- "@patternfly/patternfly": "6.5.0-prerelease.33",
+- "@patternfly/react-charts": "8.5.0-prerelease.9",
+- "@patternfly/react-code-editor": "6.5.0-prerelease.26",
+- "@patternfly/react-core": "6.5.0-prerelease.24",
+- "@patternfly/react-drag-drop": "6.5.0-prerelease.24",
+- "@patternfly/react-icons": "6.5.0-prerelease.11",
+- "@patternfly/react-styles": "6.5.0-prerelease.9",
+- "@patternfly/react-table": "6.5.0-prerelease.24",
+- "@patternfly/react-templates": "6.5.0-prerelease.24",
+- "@patternfly/react-tokens": "6.5.0-prerelease.9",
+- "@patternfly/chatbot": "6.5.0-prerelease.26"
