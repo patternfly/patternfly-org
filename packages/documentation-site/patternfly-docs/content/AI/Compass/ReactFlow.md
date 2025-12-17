@@ -23,7 +23,7 @@ import {
 import "@xyflow/react/dist/style.css";
 import "./reactFlowOverrides.css";
 
-### React Flow
+### React Flow and PatternFly tokens
 
 The React Flow package `@xyflow/react` is compatible with PatternFly through customization of its [theme](https://reactflow.dev/learn/customization/theming) and [rendered nodes](https://reactflow.dev/learn/customization/custom-nodes). A custom override stylesheet can assign PatternFly's global tokens to React Flow's own tokens to ensure a consistent styling. The following is a basic list of overrides used by the example, which also renders custom nodes using PatternFly's `Card` components:
 
@@ -49,3 +49,13 @@ The React Flow package `@xyflow/react` is compatible with PatternFly through cus
 
 ```js file="./CompassReactFlowDemo.tsx"
 ```
+
+### Accessibility considerations
+
+While React Flow is built with accessibility in mind, you should always check that your implementation when paired with PatternFly is accessible via mouse, keyboard, and other assistive technologies like screen readers. Some things to keep in mind include:
+
+- Providing an accessible name to the `<ReactFlow>` component, if its default role of "application" is kept or if it is given another semantic role that requires an accessible name.
+- Due to the nature of React Flow and howw you are able to click and drag nodes, if your draggable nodes contain other actions inside of them (kebab toggles, links, other action buttons), you should ensure those actions are large enough to prevent misclicks.
+  -  [WCAG 2.5.8 - Target size (Minimum)](https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum) requires at least 24z24 CSS pixels. While they also state exceptions, because a React Flow node itself can be clicked for some action, you should aim for sticking to this minimum, especially if implementing an action where clicking a node quickly can open a details drawer.
+- In general ensure that any actions that can be taken via mouse only can be taken via keyboard as well, whether that be actions inside a node or being able to drag a node around to reposition it.
+  - Dragging nodes via keyboard should be built into React Flow itself out of the box, but always double check in case.
