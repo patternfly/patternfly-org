@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 6.33.0 (2025-12-17)
+
+
+### Features
+
+* Update staging docs with latest prerelease versions ([#4893](https://github.com/patternfly/patternfly-org/issues/4893)) ([5c041ce](https://github.com/patternfly/patternfly-org/commit/5c041cebf71a43e395e404ac38a3465e6326a6b6))
+
+
+
+
+
 # 6.32.0 (2025-12-17)
 
 
