@@ -60,7 +60,7 @@ Accessibility has been a major focus throughout the Compass exploration. As gene
 
 ### Integration with react-flow
 
-Some stakeholdres have been experimenting with Generative UI use cases using React Flow. The React Flow package `@xyflow/react` is compatible with PatternFly through customization of its [theme](https://reactflow.dev/learn/customization/theming) and [rendered nodes](https://reactflow.dev/learn/customization/custom-nodes). A custom override stylesheet can assign PatternFly's global tokens to React Flow's own tokens to ensure a consistent styling. We have created some [documentation and a demo](/ai/generative-uis/react-flow) for integrations with PatternFly as a POC for these use cases.
+Some stakeholders have been experimenting with Generative UI use cases using React Flow. The React Flow package `@xyflow/react` is compatible with PatternFly through customization of its [theme](https://reactflow.dev/learn/customization/theming) and [rendered nodes](https://reactflow.dev/learn/customization/custom-nodes). A custom override stylesheet can assign PatternFly's global tokens to React Flow's own tokens to ensure a consistent styling. We have created some [documentation and a demo](/ai/generative-uis/react-flow) for integrations with PatternFly as a POC for these use cases.
 
 ### Current status
 
