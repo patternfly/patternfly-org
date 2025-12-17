@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.4.0-alpha.325 (2025-12-17)
+
+
+### Features
+
+* **API:** update patternfly-doc-core to 1.15.4 ([#4891](https://github.com/patternfly/patternfly-org/issues/4891)) ([064b9ba](https://github.com/patternfly/patternfly-org/commit/064b9baa0f52c64a129685b378ad7e5e7902c4a9))
+
+
+
+
+
 # 1.4.0-alpha.324 (2025-12-02)
 
 **Note:** Version bump only for package @patternfly/ast-helpers
