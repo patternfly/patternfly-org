@@ -73,7 +73,7 @@
 .ws-full-page-utils {
   position: fixed;
   inset-block-end: 0;
-  padding: var(--pf-t--global--spacer--lg);
+  padding: var(--pf-t--global--spacer--sm) var(--pf-t--global--spacer--lg) var(--pf-t--global--spacer--lg);
   z-index: var(--pf-t--global--z-index--2xl);
 }
 
