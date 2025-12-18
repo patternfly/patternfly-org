@@ -33,15 +33,15 @@ import { convertToReactComponent } from '@patternfly/ast-helpers';
 import missingThumbnail from './missing-thumbnail.jpg';
 import { RtlContext } from '../../layouts';
 import { ThemeSelector } from '../themeSelector/themeSelector';
-// import RhUiArrowCircleDownRightIcon from '@patternfly/react-icons/dist/esm/icons/rh-ui-arrow-circle-down-right-icon';
-// import RhUiArrowCircleDownLeftIcon from '@patternfly/react-icons/dist/esm/icons/rh-ui-arrow-circle-down-left-icon';
-// import RhUiArrowCircleTopRightIcon from '@patternfly/react-icons/dist/esm/icons/rh-ui-arrow-circle-top-right-icon';
-// import RhUiArrowCircleTopLeftIcon from '@patternfly/react-icons/dist/esm/icons/rh-ui-arrow-circle-top-left-icon';
 
-const RhUiArrowCircleUpRightIcon = <svg class="pf-v6-svg" viewBox="0 0 32 32" fill="currentColor" aria-labelledby="icon-title-1847" role="img" width="1em" height="1em"><title id="icon-title-1847">RhUiArrowCircleUpRightIcon</title><path d="M22 11.5V20a1 1 0 1 1-2 0v-6.586l-8.243 8.243a.997.997 0 0 1-1.414 0 .999.999 0 0 1 0-1.414L18.586 12H12a1 1 0 1 1 0-2h8.5c.827 0 1.5.673 1.5 1.5Zm9 4.5c0 8.271-6.729 15-15 15S1 24.271 1 16 7.729 1 16 1s15 6.729 15 15Zm-2 0c0-7.168-5.832-13-13-13S3 8.832 3 16s5.832 13 13 13 13-5.832 13-13Z"></path></svg>;
-const RhUiArrowCircleDownRightIcon = <svg class="pf-v6-svg" viewBox="0 0 32 32" fill="currentColor" aria-labelledby="icon-title-1837" role="img" width="1em" height="1em"><title id="icon-title-1837">RhUiArrowCircleDownRightIcon</title><path d="M22 12v8.5c0 .827-.673 1.5-1.5 1.5H12a1 1 0 1 1 0-2h6.586l-8.243-8.243a.999.999 0 1 1 1.414-1.414L20 18.586V12a1 1 0 1 1 2 0Zm9 4c0 8.271-6.729 15-15 15S1 24.271 1 16 7.729 1 16 1s15 6.729 15 15Zm-2 0c0-7.168-5.832-13-13-13S3 8.832 3 16s5.832 13 13 13 13-5.832 13-13Z"></path></svg>;
-const RhUiArrowCircleDownLeftIcon = <svg class="pf-v6-svg" viewBox="0 0 32 32" fill="currentColor" aria-labelledby="icon-title-1835" role="img" width="1em" height="1em"><title id="icon-title-1835">RhUiArrowCircleDownLeftIcon</title><path d="M21.657 10.343a.999.999 0 0 1 0 1.414L13.414 20H20a1 1 0 1 1 0 2h-8.5c-.827 0-1.5-.673-1.5-1.5V12a1 1 0 1 1 2 0v6.586l8.243-8.243a.999.999 0 0 1 1.414 0ZM31 16c0 8.271-6.729 15-15 15S1 24.271 1 16 7.729 1 16 1s15 6.729 15 15Zm-2 0c0-7.168-5.832-13-13-13S3 8.832 3 16s5.832 13 13 13 13-5.832 13-13Z"></path></svg>;
-const RhUiArrowCircleUpLeftIcon = <svg class="pf-v6-svg" viewBox="0 0 32 32" fill="currentColor" aria-labelledby="icon-title-1845" role="img" width="1em" height="1em"><title id="icon-title-1845">RhUiArrowCircleUpLeftIcon</title><path d="M21.657 20.243a.999.999 0 1 1-1.414 1.414L12 13.414V20a1 1 0 1 1-2 0v-8.5c0-.827.673-1.5 1.5-1.5H20a1 1 0 1 1 0 2h-6.586l8.243 8.243ZM31 16c0 8.271-6.729 15-15 15S1 24.271 1 16 7.729 1 16 1s15 6.729 15 15Zm-2 0c0-7.168-5.832-13-13-13S3 8.832 3 16s5.832 13 13 13 13-5.832 13-13Z"></path></svg>;
+import RhUiArrowCircleDownRightIcon from '@patternfly/react-icons/dist/esm/icons/rh-ui-arrow-circle-down-right-icon';
+import RhUiArrowCircleDownLeftIcon from '@patternfly/react-icons/dist/esm/icons/rh-ui-arrow-circle-down-left-icon';
+import RhUiArrowCircleUpRightIcon from '@patternfly/react-icons/dist/esm/icons/rh-ui-arrow-circle-up-right-icon';
+import RhUiArrowCircleUpLeftIcon from '@patternfly/react-icons/dist/esm/icons/rh-ui-arrow-circle-up-left-icon';
+import RhUiArrowCircleDownRightFillIcon from '@patternfly/react-icons/dist/esm/icons/rh-ui-arrow-circle-down-right-fill-icon';
+import RhUiArrowCircleDownLeftFillIcon from '@patternfly/react-icons/dist/esm/icons/rh-ui-arrow-circle-down-left-fill-icon';
+import RhUiArrowCircleUpRightFillIcon from '@patternfly/react-icons/dist/esm/icons/rh-ui-arrow-circle-up-right-fill-icon';
+import RhUiArrowCircleUpLeftFillIcon from '@patternfly/react-icons/dist/esm/icons/rh-ui-arrow-circle-up-left-fill-icon';
 
 const errorComponent = (err) => <pre>{err.toString()}</pre>;
 
@@ -214,7 +214,7 @@ export const Example = ({
                 isClicked={fullPageUtilsPosition === 'pf-m-top-left'}
                 onClick={() => setFullPageUtilsPosition('pf-m-top-left')}
                 aria-label="Position utilities top left"
-                icon={RhUiArrowCircleUpLeftIcon}
+                icon={fullPageUtilsPosition === 'pf-m-top-left' ? RhUiArrowCircleUpLeftFillIcon : RhUiArrowCircleUpLeftIcon}
               />
               <Button
                 variant="plain"
@@ -223,7 +223,7 @@ export const Example = ({
                 isClicked={fullPageUtilsPosition === 'pf-m-bottom-left'}
                 onClick={() => setFullPageUtilsPosition('pf-m-bottom-left')}
                 aria-label="Position utilities bottom left"
-                icon={RhUiArrowCircleDownLeftIcon}
+                icon={fullPageUtilsPosition === 'pf-m-bottom-left' ? RhUiArrowCircleDownLeftFillIcon : RhUiArrowCircleDownLeftIcon}
               />
               <Button
                 variant="plain"
@@ -232,7 +232,7 @@ export const Example = ({
                 isClicked={fullPageUtilsPosition === 'pf-m-bottom-right'}
                 onClick={() => setFullPageUtilsPosition('pf-m-bottom-right')}
                 aria-label="Position utilities bottom right"
-                icon={RhUiArrowCircleDownRightIcon}
+                icon={fullPageUtilsPosition === 'pf-m-bottom-right' ? RhUiArrowCircleDownRightFillIcon : RhUiArrowCircleDownRightIcon}
               />
               <Button
                 variant="plain"
@@ -241,7 +241,7 @@ export const Example = ({
                 isClicked={fullPageUtilsPosition === 'pf-m-top-right'}
                 onClick={() => setFullPageUtilsPosition('pf-m-top-right')}
                 aria-label="Position utilities top right"
-                icon={RhUiArrowCircleUpRightIcon}
+                icon={fullPageUtilsPosition === 'pf-m-top-right' ? RhUiArrowCircleUpRightFillIcon : RhUiArrowCircleUpRightIcon}
               />
             </Flex>
             {hasThemeSwitcher && <ThemeSelector id="ws-example-theme-select" />}
