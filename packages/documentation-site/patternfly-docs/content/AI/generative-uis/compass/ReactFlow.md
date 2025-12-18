@@ -54,10 +54,12 @@ This list outlines the overrides used in the following example, which also rende
 
 ### Accessibility considerations
 
-While React Flow is built with accessibility in mind, you should always check that your implementation when paired with PatternFly is accessible via mouse, keyboard, and other assistive technologies like screen readers. Some things to keep in mind include:
+While React Flow is built with accessibility in mind, you should always check that your implementation (when paired with PatternFly) is accessible via mouse, keyboard, and other assistive technologies like screen readers. 
 
-- Providing an accessible name to the `<ReactFlow>` component, if its default role of "application" is kept or if it is given another semantic role that requires an accessible name.
-- Due to the nature of React Flow and howw you are able to click and drag nodes, if your draggable nodes contain other actions inside of them (kebab toggles, links, other action buttons), you should ensure those actions are large enough to prevent misclicks.
-  -  [WCAG 2.5.8 - Target size (Minimum)](https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum) requires at least 24z24 CSS pixels. While they also state exceptions, because a React Flow node itself can be clicked for some action, you should aim for sticking to this minimum, especially if implementing an action where clicking a node quickly can open a details drawer.
-- In general ensure that any actions that can be taken via mouse only can be taken via keyboard as well, whether that be actions inside a node or being able to drag a node around to reposition it.
-  - Dragging nodes via keyboard should be built into React Flow itself out of the box, but always double check in case.
+Additionally, you should align with the following practices: 
+
+- Provide an accessible name to the `<ReactFlow>` component, if its default role of "application" is kept or if it is given another semantic role that requires an accessible name.
+- Because React Flow supports node clicking and dragging, ensure that actions within draggable nodes are large enough to prevent misclicks (for example, kebab toggles, links, or other action buttons).
+  -  [WCAG 2.5.8: Target size (Minimum)](https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum) requires targets to be at least 24 by 24 CSS pixels. While there are exceptions, you should still aim for this minimum because a React Flow node itself can be clicked for some actions. This is especially important for an action like opening a details drawer upon a quick click to a node.
+- Ensure that any actions that can be taken via mouse only can be taken via keyboard as well, including all actions within a node and node repositioning via dragging.
+  - Dragging nodes via keyboard should be built into React Flow itself by default, but always double check to confirm.
