@@ -203,7 +203,7 @@ export const Example = ({
         {(hasThemeSwitcher || hasRTLSwitcher) && (
           <Flex
             direction={{ default: 'column' }}
-            gap={{ default: 'gapMd' }}
+            gap={{ default: 'gapSm' }}
             className={css('ws-full-page-utils', 'pf-v6-m-dir-ltr', fullPageUtilsPosition)}
           >
             <Flex justifyContent={{ default: 'justifyContentCenter' }} gap={{ default: 'gapXs' }}>
@@ -214,7 +214,7 @@ export const Example = ({
                 isClicked={fullPageUtilsPosition === 'pf-m-top-left'}
                 onClick={() => setFullPageUtilsPosition('pf-m-top-left')}
                 aria-label="Position utilities top left"
-                icon={fullPageUtilsPosition === 'pf-m-top-left' ? RhUiArrowCircleUpLeftFillIcon : RhUiArrowCircleUpLeftIcon}
+                icon={fullPageUtilsPosition === 'pf-m-top-left' ? <RhUiArrowCircleUpLeftFillIcon /> : <RhUiArrowCircleUpLeftIcon />}
               />
               <Button
                 variant="plain"
@@ -223,7 +223,7 @@ export const Example = ({
                 isClicked={fullPageUtilsPosition === 'pf-m-bottom-left'}
                 onClick={() => setFullPageUtilsPosition('pf-m-bottom-left')}
                 aria-label="Position utilities bottom left"
-                icon={fullPageUtilsPosition === 'pf-m-bottom-left' ? RhUiArrowCircleDownLeftFillIcon : RhUiArrowCircleDownLeftIcon}
+                icon={fullPageUtilsPosition === 'pf-m-bottom-left' ? <RhUiArrowCircleDownLeftFillIcon /> : <RhUiArrowCircleDownLeftIcon />}
               />
               <Button
                 variant="plain"
@@ -232,7 +232,7 @@ export const Example = ({
                 isClicked={fullPageUtilsPosition === 'pf-m-bottom-right'}
                 onClick={() => setFullPageUtilsPosition('pf-m-bottom-right')}
                 aria-label="Position utilities bottom right"
-                icon={fullPageUtilsPosition === 'pf-m-bottom-right' ? RhUiArrowCircleDownRightFillIcon : RhUiArrowCircleDownRightIcon}
+                icon={fullPageUtilsPosition === 'pf-m-bottom-right' ? <RhUiArrowCircleDownRightFillIcon /> : <RhUiArrowCircleDownRightIcon />}
               />
               <Button
                 variant="plain"
@@ -241,7 +241,7 @@ export const Example = ({
                 isClicked={fullPageUtilsPosition === 'pf-m-top-right'}
                 onClick={() => setFullPageUtilsPosition('pf-m-top-right')}
                 aria-label="Position utilities top right"
-                icon={fullPageUtilsPosition === 'pf-m-top-right' ? RhUiArrowCircleUpRightFillIcon : RhUiArrowCircleUpRightIcon}
+                icon={fullPageUtilsPosition === 'pf-m-top-right' ? <RhUiArrowCircleUpRightFillIcon /> : <RhUiArrowCircleUpRightIcon />}
               />
             </Flex>
             {hasThemeSwitcher && <ThemeSelector id="ws-example-theme-select" />}
