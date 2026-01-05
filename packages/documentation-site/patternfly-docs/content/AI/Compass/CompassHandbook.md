@@ -1,22 +1,29 @@
 ---
 id: Compass
 section: AI
-source: guide
+source: Development-guide
 subsection: Generative UIs
 ---
 
-When building a layout for generative UIs using the Compass components, there are several common patterns that may be implemented using Patternfly components and component variants.
+When building generative UI layouts using the Compass components, there are several common patterns to considering during your development.
 
-### Compass structure
+## Structural patterns
 
-#### Containers & glass theme
-The glass look and feel is an opt-in global styling applied when `pf-v6-theme-glass` is present on the `html` element class list, similar to dark theme. For compass layouts, content that has the glass background and rounded borders should be wrapped in a `CompassPanel` (and some compass components will do this automatically). This component has various options to customize its own padding and behavior to fit the context of its usage, and so is present in nearly every area of a compass page. `CompassPanels` should not be directly nested if the glass theme is applied to prevent styling issues.
+### Transparent containers
+Transparent containers create a modern glass look and feel. To enable transparency on a container, apply `pf-v6-theme-glass` to the `html` element class list, similar to the approach for enabling the dark mode theme. 
 
-#### Header
-A compass layout header will typically be constructed using a `CompassHeader` component, which constructs three sections: logo, nav, and profile. These sections may be passed any content, but here are some recommendations when building a compass layout:
-- The logo should contain a `Brand` or other logo image or svg. 
-- The profile should contain a `Dropdown` with a user `Avatar` within the `MenuToggle`.
-- The nav should contain a `CompassNavContent` component, which usually contains `CompassNavHome`, `CompassNavMain`, and `CompassNavSearch` components as shown below in a snippet. `CompassNavHome` and `CompassNavSearch` are opinionated components that will automatically provide a home and search button, and are optional. `CompassNavMain` will usually contain a `Tabs` component with the `isNav` flag to enable a top-level navigation type of styling. 
+Within Compass layouts, elements with a transparent glass background and rounded borders should be wrapped in a `<CompassPanel>` (some Compass components do this automatically). You can adjust various options of the `<CompassPanel>` to adapt its padding and behavior to fit the context of your use case. 
+
+To prevent styling issues, do not nest`<CompassPanel>` components while using the glass effects.
+
+### Header
+You can add a header to a Compass layout via the `<CompassHeader>` component. `<CompassHeader>` constructs 3 sections, which can contain any custom content, but will typically include the following: 
+- **Logo:** Contains a [`<Brand>`](/components/brand) or other image or SVG to represent a product logo. 
+- **Profile:** Contains a [`<Dropdown>`](/components/menus/dropdown) with a user [`<Avatar>`](/components/avatar) displayed in the `<MenuToggle>`.
+- **Nav:** Contains a `<CompassNavContent>` component, which usually contains `<CompassNavHome>`, `<CompassNavMain>`, and `<CompassNavSearch>` components as shown in the following code example.
+    - `<CompassNavHome>` and `<CompassNavSearch>` are optional, but are opinionated components that will automatically provide a home and search button. 
+    - `<CompassNavMain>` will usually contain a [`<Tabs>`](/components/tabs) component that uses the `isNav` flag to enable a top-level navigation styles. 
+#### Code example
 
 ```
 <CompassNavContent>
@@ -28,11 +35,13 @@ A compass layout header will typically be constructed using a `CompassHeader` co
 </CompassNavContent>
 ```
 
-#### Sidebars
-There are two sidebars in a compass layout at the start and end of the page. There is no specific `Compass` helper component for these sections, and so usually a `CompassPanel` containing an `ActionList` with the `isVertical` flag will be passed to represent the side navigations.
+### Sidebars
+There are 2 vertical sidebars in a Compass layout: 1 at the start of the page and another at the end. There are no specific helper components for these sections, so they're usually created by passing the `isVertical` flag to a `<CompassPanel>` that contains an [`<ActionList>`](/components/action-list).
 
-#### Footer
-There are two methods of adding a footer to a compass layout. In either case, a footer's content will remain the same and will usually consist of a `@patternfly/chatbot` `MessageBar`, wrapped by a `CompassPanel` and `CompassMessageBar` component, as shown below:
+### Footer
+There are 2 methods of adding a footer to a compass layout. 
+
+In both methods, the footer content will remain the same, typically containing a [ChatBot `<MessageBar>`](/extensions/chatbot/messages/), wrapped in a `<CompassPanel>` and `<CompassMessageBar>` component:
 
 ```
  <CompassMessageBar>
@@ -45,21 +54,26 @@ There are two methods of adding a footer to a compass layout. In either case, a 
 </CompassMessageBar>
 ```
 
-In the first method of adding a footer, pass this content to the `footer` prop of the `Compass` component. This type of footer will extend the entire width of the viewport. However, if the footer content is expected to change in height (such as when MessageBar content expands), the sidebars will adjust their positioning. If this behavior is not desired, please use the second method and forego passing the `footer` prop.
+1. Via the `footer` prop.
 
-For the second method of adding a footer, wrap the content in `CompassMainFooter` and pass it as part of the `main` content of the `Compass`. This will allow the sidebars to extend through to the bottom of the viewport and prevents them from resizing based on changing footer content height.
+    To create a footer that will span the entire viewport width, pass content to the `footer` prop of the `<Compass>` component. If your footer content is expected to change in height (like `<MessageBar>` content that expands), the sidebars will adjust their positioning to align. If this behavior is not desired, don't use the `footer` prop and follow the second method.
 
-#### Main content
-The main content, taking up the center of viewport, will typically consist of a `Hero` or `CompassMainHeader`, a `CompassContent`, and an optional `CompassMainFooter`. 
+2. Via the `<CompassMainFooter>` components.
 
-A typical compass page will consist of a `CompassMainHeader` and `CompassContent` with a `CompassPanel` child, and content of the page should go inside of this `CompassPanel`.
+    To allow the sidebars to extend through the bottom of the viewport, preventing them from resizing based on changes to the footer container height, wrap footer content in `<CompassMainFooter>` and pass it to the `<Compass>` component as part of the `main` content.
 
-When making a dashboard view, use a `Hero` instead of a `CompassMainHeader`. And instead of having a single `CompassPanel` within a `CompassContent`, each individual dashbaord item should be wrapped in a `CompassPanel`. For example, in a dashboard that has many content cards, each `Card` (with `isPlain` flag) is wrapped by a `CompassPanel` inside of a `Grid`.
+### Main content
+The main content in a Compass layout includes the generated information displays. Main content fills the center of the viewport and typically consists of a `<Hero>` or `<CompassMainHeader>`, a `<CompassContent>`, and an optional `<CompassMainFooter>`. 
 
-### CSS
+Often, the main section will contain a `<CompassMainHeader>` and `<CompassContent>` with a `<CompassPanel>` child containing the primary page content.
 
-PatternFly's token system allows additional customization of the look and feel of a compass layout.
-For example, the following css mixin utilizes several global token overrides to better match the Red Hat Design System look and feel.
+When making [a dashboard view](/patterns/dashboard), use a `<Hero>` instead of a `<CompassMainHeader>`. Instead of having a single `<CompassPanel>` within a `<CompassContent>`, each individual dashboard item should be wrapped in a `<CompassPanel>`. For example, in a dashboard with many content cards, each `<Card>` (with `isPlain` flag) should be wrapped by a `<CompassPanel>` inside of a [`<Grid>`](/foundations-and-styles/layouts/grid).
+
+## CSS customization
+
+Our [design token system](/foundations-and-styles/design-tokens/overview) allows you to further customize the look and feel of a Compass layout.
+
+For example, the following CSS mixin utilizes several global token overrides to better match the Red Hat Design System look and feel.
 
 ```
 @mixin pf-v6-tokens {
