@@ -1,5 +1,5 @@
 ---
-id: Accessiblity and localization
+id: Accessibility and localization
 section: content-design
 --- 
 
