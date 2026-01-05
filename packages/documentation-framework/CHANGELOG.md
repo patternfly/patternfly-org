@@ -3,6 +3,28 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 6.33.0 (2025-12-17)
+
+
+### Features
+
+* Update staging docs with latest prerelease versions ([#4893](https://github.com/patternfly/patternfly-org/issues/4893)) ([5c041ce](https://github.com/patternfly/patternfly-org/commit/5c041cebf71a43e395e404ac38a3465e6326a6b6))
+
+
+
+
+
+# 6.32.0 (2025-12-17)
+
+
+### Features
+
+* **API:** update patternfly-doc-core to 1.15.4 ([#4891](https://github.com/patternfly/patternfly-org/issues/4891)) ([064b9ba](https://github.com/patternfly/patternfly-org/commit/064b9baa0f52c64a129685b378ad7e5e7902c4a9))
+
+
+
+
+
 ## 6.31.15 (2025-12-02)
 
 **Note:** Version bump only for package @patternfly/documentation-framework
