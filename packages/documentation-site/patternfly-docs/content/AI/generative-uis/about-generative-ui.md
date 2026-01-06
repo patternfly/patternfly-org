@@ -75,15 +75,16 @@ When creating GenUI concepts with PatternFly's compass component, you might want
 
 Compass is still under development, with new components being built, evaluated, and refined based on feedback. As we learn more about GenUI patterns and as more projects experiment with compass, the design will continuously evolve to support practical applications.
 
-As of Nov 19, 2025, these are the prereleases available for building out compass-based prototypes:
-- `"@patternfly/patternfly": "6.5.0-prerelease.27"`
-- `"@patternfly/react-charts": "8.5.0-prerelease.6"`
-- `"@patternfly/react-code-editor": "6.5.0-prerelease.14"`
-- `"@patternfly/react-core": "6.5.0-prerelease.14"`
-- `"@patternfly/react-drag-drop": "6.5.0-prerelease.14"`
-- `"@patternfly/react-icons": "6.5.0-prerelease.6"`
-- `"@patternfly/react-styles": "6.5.0-prerelease.6"`
-- `"@patternfly/react-table": "6.5.0-prerelease.14"`
-- `"@patternfly/react-templates": "6.5.0-prerelease.14"`
-- `"@patternfly/react-tokens": "6.5.0-prerelease.6"`
-- `"@patternfly/chatbot": "6.5.0-prerelease.18"`
+As of Dec 10, 2025, the following prereleases are available for building out Compass-based POCs.
+
+- `"@patternfly/patternfly": "6.5.0-prerelease.33"`
+- `"@patternfly/react-charts": "8.5.0-prerelease.9"`
+- `"@patternfly/react-code-editor": "6.5.0-prerelease.26"`
+- `"@patternfly/react-core": "6.5.0-prerelease.24"`
+- `"@patternfly/react-drag-drop": "6.5.0-prerelease.24"`
+- `"@patternfly/react-icons": "6.5.0-prerelease.11"`
+- `"@patternfly/react-styles": "6.5.0-prerelease.9"`
+- `"@patternfly/react-table": "6.5.0-prerelease.24"`
+- `"@patternfly/react-templates": "6.5.0-prerelease.24"`
+- `"@patternfly/react-tokens": "6.5.0-prerelease.9"`
+- `"@patternfly/chatbot": "6.5.0-prerelease.26"`
