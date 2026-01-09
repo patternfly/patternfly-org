@@ -71,6 +71,7 @@ As of Dec 10, 2025, these are the prereleases available for building out Compass
 - "@patternfly/patternfly": "6.5.0-prerelease.33",
 - "@patternfly/react-charts": "8.5.0-prerelease.9",
 - "@patternfly/react-code-editor": "6.5.0-prerelease.26",
+- "@patternfly/react-component-groups": "6.4.0-prerelease.12",
 - "@patternfly/react-core": "6.5.0-prerelease.24",
 - "@patternfly/react-drag-drop": "6.5.0-prerelease.24",
 - "@patternfly/react-icons": "6.5.0-prerelease.11",
