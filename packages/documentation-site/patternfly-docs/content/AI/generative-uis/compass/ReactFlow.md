@@ -1,10 +1,8 @@
 ---
-id: React flow
+id: React Flow
 section: AI
 subsection: Generative UIs
 ---
-
-## Demo
 
 import { useState, memo, useCallback, useRef } from 'react';
 
@@ -23,11 +21,15 @@ import {
 import "@xyflow/react/dist/style.css";
 import "./reactFlowOverrides.css";
 
-### React Flow
+When creating GenUI concepts with PatternFly's compass component, you might want to utilize [React Flow](https://reactflow.dev/). The React Flow package `@xyflow/react` is compatible with PatternFly through customization of its [theme](https://reactflow.dev/learn/customization/theming) and [rendered nodes](https://reactflow.dev/learn/customization/custom-nodes). 
 
-The React Flow package `@xyflow/react` is compatible with PatternFly through customization of its [theme](https://reactflow.dev/learn/customization/theming) and [rendered nodes](https://reactflow.dev/learn/customization/custom-nodes). A custom override stylesheet can assign PatternFly's global tokens to React Flow's own tokens to ensure a consistent styling. The following is a basic list of overrides used by the example, which also renders custom nodes using PatternFly's `Card` components:
+### Example 
 
-| React Flow token | PatternFly token suggestion |
+A custom override stylesheet can assign PatternFly's global design tokens to React Flow's own tokens to ensure consistent styling. 
+
+This list outlines the overrides used in the following example, which also renders custom nodes using PatternFly `<Card>` components:
+
+| React Flow token | Suggested PatternFly design token |
 | --- | --- |
 | --xy-node-border-radius-default | var(--pf-t--global--border--radius--medium) |
 | --xy-edge-stroke-default | var(--pf-t--global--border--color--default) |
