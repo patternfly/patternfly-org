@@ -3,6 +3,33 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.4.0-alpha.329 (2026-01-12)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 1.4.0-alpha.328 (2026-01-09)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 1.4.0-alpha.327 (2026-01-09)
+
+
+### Bug Fixes
+
+* update action version in gh action scripts ([#4902](https://github.com/patternfly/patternfly-org/issues/4902)) ([43abeea](https://github.com/patternfly/patternfly-org/commit/43abeea95b3a0b863332fcf867a0345707c93f68))
+
+
+
+
+
 # 1.4.0-alpha.326 (2025-12-17)
 
 
