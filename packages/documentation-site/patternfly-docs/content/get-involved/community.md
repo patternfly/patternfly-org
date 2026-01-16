@@ -108,7 +108,7 @@ Flyers sometimes branch out to build their own groups and projects. While the fo
 
 - **[PatternFly Elements](https://patternflyelements.org):** A community-led project creating web components to use across Red Hat's sites and products. It also offers theming options for your own brand library.
 
-- **[PatternFly Kotlin](https://github.com/patternfly-kotlin/patternfly-kotlin):** A Kotlin implementation of PatternFly based on fritz2, built for Kotlin/JS. This project provides reactive PatternFly components that match the fritz2 API. For a quick overview, refer to [the PatternFly Kotlin showcase](https://patternfly-kotlin.github.io/patternfly-kotlin-showcase/#home).
+- **[PatternFly Java](https://github.com/patternfly-java/patternfly-java):** A Java implementation of PatternFly targeting GWT and J2CL. The goal of this project is to provide all PatternFly charts, components, and layouts in Java. For a quick overview, view the [PatternFly Java showcase](https://patternfly-java.github.io/).
 
 - **[Ansible Component Guide and Figma Library](https://www.figma.com/design/dOVzoCFCRlPXifj2WstR79/AAP-PF6-Style---Component-Guide?node-id=3-10950&t=PBFhyMs7gUxzGRH2-1):** An additional Figma library built on PatternFly components. It's a rapid prototyping tool for repeatable design patterns, tailored for Ansible but with many components applicable to other products.
 
