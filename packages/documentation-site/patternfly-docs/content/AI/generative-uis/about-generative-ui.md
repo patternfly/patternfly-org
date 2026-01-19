@@ -87,4 +87,4 @@ As of Dec 10, 2025, the following prereleases are available for building out Com
 - `"@patternfly/react-table": "6.5.0-prerelease.24"`
 - `"@patternfly/react-templates": "6.5.0-prerelease.24"`
 - `"@patternfly/react-tokens": "6.5.0-prerelease.9"`
-- `"@patternfly/chatbot": "6.5.0-prerelease.26"`
+- `"@patternfly/chatbot": "6.5.0"`
