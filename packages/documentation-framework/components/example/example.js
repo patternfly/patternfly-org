@@ -34,6 +34,15 @@ import missingThumbnail from './missing-thumbnail.jpg';
 import { RtlContext } from '../../layouts';
 import { ThemeSelector } from '../themeSelector/themeSelector';
 
+import RhUiArrowCircleDownRightIcon from '@patternfly/react-icons/dist/esm/icons/rh-ui-arrow-circle-down-right-icon';
+import RhUiArrowCircleDownLeftIcon from '@patternfly/react-icons/dist/esm/icons/rh-ui-arrow-circle-down-left-icon';
+import RhUiArrowCircleUpRightIcon from '@patternfly/react-icons/dist/esm/icons/rh-ui-arrow-circle-up-right-icon';
+import RhUiArrowCircleUpLeftIcon from '@patternfly/react-icons/dist/esm/icons/rh-ui-arrow-circle-up-left-icon';
+import RhUiArrowCircleDownRightFillIcon from '@patternfly/react-icons/dist/esm/icons/rh-ui-arrow-circle-down-right-fill-icon';
+import RhUiArrowCircleDownLeftFillIcon from '@patternfly/react-icons/dist/esm/icons/rh-ui-arrow-circle-down-left-fill-icon';
+import RhUiArrowCircleUpRightFillIcon from '@patternfly/react-icons/dist/esm/icons/rh-ui-arrow-circle-up-right-fill-icon';
+import RhUiArrowCircleUpLeftFillIcon from '@patternfly/react-icons/dist/esm/icons/rh-ui-arrow-circle-up-left-fill-icon';
+
 const errorComponent = (err) => <pre>{err.toString()}</pre>;
 
 class ErrorBoundary extends React.Component {
@@ -137,6 +146,7 @@ export const Example = ({
   }
 
   const [editorCode, setEditorCode] = React.useState(code);
+  const [fullPageUtilsPosition, setFullPageUtilsPosition] = React.useState('pf-m-bottom-right');
   const loc = useLocation();
   const isRTL = useContext(RtlContext);
   const scope = {
@@ -193,9 +203,47 @@ export const Example = ({
         {(hasThemeSwitcher || hasRTLSwitcher) && (
           <Flex
             direction={{ default: 'column' }}
-            gap={{ default: 'gapMd' }}
-            className="ws-full-page-utils pf-v6-m-dir-ltr"
+            gap={{ default: 'gapSm' }}
+            className={css('ws-full-page-utils', 'pf-v6-m-dir-ltr', fullPageUtilsPosition)}
           >
+            <Flex justifyContent={{ default: 'justifyContentCenter' }} gap={{ default: 'gapXs' }}>
+            <Button
+                variant="plain"
+                size="sm"
+                hasNoPadding
+                isClicked={fullPageUtilsPosition === 'pf-m-top-left'}
+                onClick={() => setFullPageUtilsPosition('pf-m-top-left')}
+                aria-label="Position utilities top left"
+                icon={fullPageUtilsPosition === 'pf-m-top-left' ? <RhUiArrowCircleUpLeftFillIcon /> : <RhUiArrowCircleUpLeftIcon />}
+              />
+              <Button
+                variant="plain"
+                size="sm"
+                hasNoPadding
+                isClicked={fullPageUtilsPosition === 'pf-m-bottom-left'}
+                onClick={() => setFullPageUtilsPosition('pf-m-bottom-left')}
+                aria-label="Position utilities bottom left"
+                icon={fullPageUtilsPosition === 'pf-m-bottom-left' ? <RhUiArrowCircleDownLeftFillIcon /> : <RhUiArrowCircleDownLeftIcon />}
+              />
+              <Button
+                variant="plain"
+                size="sm"
+                hasNoPadding
+                isClicked={fullPageUtilsPosition === 'pf-m-bottom-right'}
+                onClick={() => setFullPageUtilsPosition('pf-m-bottom-right')}
+                aria-label="Position utilities bottom right"
+                icon={fullPageUtilsPosition === 'pf-m-bottom-right' ? <RhUiArrowCircleDownRightFillIcon /> : <RhUiArrowCircleDownRightIcon />}
+              />
+              <Button
+                variant="plain"
+                size="sm"
+                hasNoPadding
+                isClicked={fullPageUtilsPosition === 'pf-m-top-right'}
+                onClick={() => setFullPageUtilsPosition('pf-m-top-right')}
+                aria-label="Position utilities top right"
+                icon={fullPageUtilsPosition === 'pf-m-top-right' ? <RhUiArrowCircleUpRightFillIcon /> : <RhUiArrowCircleUpRightIcon />}
+              />
+            </Flex>
             {hasThemeSwitcher && <ThemeSelector id="ws-example-theme-select" />}
             {hasRTLSwitcher && (
               <Switch
