@@ -224,8 +224,9 @@ export const Example = ({
     const cleanPathname = loc.pathname.replace(/\/$/, '');
     const sourcePath = `/${source}`;
     
-    // Check if the source is already in the pathname to avoid duplication
-    if (cleanPathname.includes(sourcePath)) {
+    // Check if the source is already at the end of the pathname to avoid duplication
+    // Using endsWith instead of includes to prevent false positives (e.g., /react-console matching /react)
+    if (cleanPathname.endsWith(sourcePath)) {
       return `${cleanPathname}/${slugger(title)}`;
     } else {
       return `${cleanPathname}${sourcePath}/${slugger(title)}`;
