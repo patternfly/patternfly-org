@@ -56,22 +56,28 @@ A truncate component indicates that a text string has been shortened. When a use
 ### Default (end)
 The default truncate is used at the end of a text string to shorten the sequence and indicate that there is more content located elsewhere. 
 
-<div class="ws-docs-content-img">![A text string where the last several characters are replaced by an ellipsis at the end of the line.](./img/end-line.svg)</div>
+<div class="ws-docs-content-img">
+![A text string where the last several characters are replaced by an ellipsis at the end of the line.](./img/end-line.svg)
+</div>
 
 ### Start
 A start truncate is used at the beginning of a text string to indicate the text is being continued from a previous location. 
 
-<div class="ws-docs-content-img">![A text string where the beginning characters are replaced by an ellipsis, while the end of the string remains visible.](./img/front-line.svg)</div>
+<div class="ws-docs-content-img">
+![A text string where the beginning characters are replaced by an ellipsis, while the end of the string remains visible.](./img/front-line.svg)
+</div>
 
 ### Middle
 A middle truncate is used to shorten a text string when the end of it can’t be truncated by an ellipsis. Also used when several text strings have the exact same middle characters, but the beginning and endings vary. 
 
-<div class="ws-docs-content-img">![A text string where an ellipsis is placed in the center, keeping both the start and the end of the string visible.](./img/mid-line.svg)</div>
+<div class="ws-docs-content-img">
+![A text string where an ellipsis is placed in the center, keeping both the start and the end of the string visible.](./img/mid-line.svg)
+</div>
 
 ## Content considerations
 - Include the ellipsis as part of a link when the truncated text is a link.
 - Always provide a tooltip to display the entire string to the user upon hover.
 - Avoid truncating navigation items.
 - Truncate text within tables when it overflows the cell, but avoid truncating table headings.
-- Maintain at least 4 visible characters so users can better understand content (for example, don’t truncate “demo1.internal-el6satelite” to “de…”).
+- Maintain at least 4 visible characters so users can better understand content (for example, don’t truncate “demo1.internal-el6satellite” to “de…”).
 - Avoid placing truncation directly before or after punctuation.
