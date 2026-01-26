@@ -5,7 +5,8 @@ source: Development-guide
 subsection: Generative UIs
 ---
 
-When building generative UI layouts using the Compass components, there are several common patterns to considering during your development.
+## Structural patterns
+When building generative UI layouts using the Compass components, there are several common patterns to consider during your development process.
 
 ## Structural patterns
 
@@ -14,7 +15,7 @@ Transparent containers create a modern glass look and feel. To enable transparen
 
 Within Compass layouts, elements with a transparent glass background and rounded borders should be wrapped in a `<CompassPanel>` (some Compass components do this automatically). You can adjust various options of the `<CompassPanel>` to adapt its padding and behavior to fit the context of your use case. 
 
-To prevent styling issues, do not nest`<CompassPanel>` components while using the glass effects.
+To prevent styling issues, do not nest `<CompassPanel>` components while using the glass effects.
 
 ### Header
 You can add a header to a Compass layout via the `<CompassHeader>` component. `<CompassHeader>` constructs 3 sections, which can contain any custom content, but will typically include the following: 
