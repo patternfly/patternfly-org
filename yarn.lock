@@ -5143,13 +5143,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@patternfly/react-icons@npm:6.5.0-prerelease.11, @patternfly/react-icons@npm:^6.5.0-prerelease.11":
-  version: 6.5.0-prerelease.11
-  resolution: "@patternfly/react-icons@npm:6.5.0-prerelease.11"
+"@patternfly/react-icons@npm:6.5.0-prerelease.12":
+  version: 6.5.0-prerelease.12
+  resolution: "@patternfly/react-icons@npm:6.5.0-prerelease.12"
   peerDependencies:
     react: ^17 || ^18 || ^19
     react-dom: ^17 || ^18 || ^19
-  checksum: 10c0/d0d91d9e011747dde34a0d3521cd92d58ff29281f6fb1e442c72cf0ea1ca8b3a69e270497e0644ffa499601484394bc9fdf12b070f8568114a7fcfed0428a8c8
+  checksum: 10c0/c636f014b5274eb2aa1752270036105991ab56a011c85ffcdeae7dd2481ce1f25cc57039d20d6d368d5df9170fc51a040c546f1929c8cc5ebc631b4111e5f005
   languageName: node
   linkType: hard
 
@@ -18962,7 +18962,7 @@ __metadata:
     "@patternfly/react-console": "npm:6.1.0"
     "@patternfly/react-data-view": "npm:6.4.0-prerelease.8"
     "@patternfly/react-docs": "npm:7.5.0-prerelease.26"
-    "@patternfly/react-icons": "npm:6.5.0-prerelease.11"
+    "@patternfly/react-icons": "npm:6.5.0-prerelease.12"
     "@patternfly/react-log-viewer": "npm:6.3.0"
     "@patternfly/react-topology": "npm:6.5.0-prerelease.3"
     "@patternfly/react-user-feedback": "npm:6.2.0"

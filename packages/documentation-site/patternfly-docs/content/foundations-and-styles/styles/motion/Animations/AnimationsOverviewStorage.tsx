@@ -14,9 +14,9 @@ import {
   FlexItem
 } from '@patternfly/react-core';
 import { ChartDonutThreshold, ChartDonutUtilization } from '@patternfly/react-charts/dist/esm/victory/components';
-import StorageDomainIcon from '@patternfly/react-icons/dist/esm/icons/storage-domain-icon';
-import ArrowRightIcon from '@patternfly/react-icons/dist/esm/icons/arrow-right-icon';
-import EllipsisVIcon from '@patternfly/react-icons/dist/esm/icons/ellipsis-v-icon';
+import StorageDomainIcon from '@patternfly/react-icons/dist/esm/icons/rh-ui-storage-domain-icon';
+import ArrowRightIcon from '@patternfly/react-icons/dist/esm/icons/rh-ui-arrow-right-icon';
+import EllipsisVIcon from '@patternfly/react-icons/dist/esm/icons/rh-ui-ellipsis-vertical-icon';
 
 export const StorageCard: React.FunctionComponent = () => {
   const [isKebabOpen, setIsKebabOpen] = useState(false);

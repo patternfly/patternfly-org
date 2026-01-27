@@ -1,4 +1,4 @@
-import { useRef, useState, useEffect, FunctionComponent, FormEvent, useCallback } from 'react';
+import React, { useRef, useState, useEffect, FunctionComponent, FormEvent, useCallback } from 'react';
 import {
   AlertGroup,
   Alert,
@@ -44,16 +44,35 @@ import {
   Flex,
   ProgressStepper,
   ProgressStep,
-  Spinner
+  Spinner,
+  Modal,
+  ModalBody,
+  Wizard,
+  WizardHeader,
+  WizardStep,
+  ToolbarContent,
+  ToolbarItem,
+  Toolbar,
+  DrawerContent,
+  DrawerContentBody,
+  Drawer,
+  DrawerActions,
+  DrawerCloseButton,
+  DrawerHead,
+  DrawerPanelBody,
+  DrawerPanelContent,
+  DrawerPanelDescription
 } from '@patternfly/react-core';
 import { Table, Thead, Tbody, Tr, Th, Td, ExpandableRowContent } from '@patternfly/react-table';
 import SkeletonTable from '@patternfly/react-component-groups/dist/dynamic/SkeletonTable';
-import EllipsisVIcon from '@patternfly/react-icons/dist/esm/icons/ellipsis-v-icon';
-import ExclamationCircleIcon from '@patternfly/react-icons/dist/esm/icons/exclamation-circle-icon';
-import CheckCircleIcon from '@patternfly/react-icons/dist/esm/icons/check-circle-icon';
-import ExclamationTriangleIcon from '@patternfly/react-icons/dist/esm/icons/exclamation-triangle-icon';
-import ResourcesFullIcon from '@patternfly/react-icons/dist/esm/icons/resources-full-icon';
-import PortIcon from '@patternfly/react-icons/dist/esm/icons/port-icon';
+
+import EllipsisVIcon from '@patternfly/react-icons/dist/esm/icons/rh-ui-ellipsis-vertical-icon';
+import ExclamationCircleIcon from '@patternfly/react-icons/dist/esm/icons/rh-ui-error-icon';
+import CheckCircleIcon from '@patternfly/react-icons/dist/esm/icons/rh-ui-check-circle-icon';
+import ExclamationTriangleIcon from '@patternfly/react-icons/dist/esm/icons/rh-ui-warning-icon';
+import ResourcesFullIcon from '@patternfly/react-icons/dist/esm/icons/rh-ui-resources-full-icon';
+import PortIcon from '@patternfly/react-icons/dist/esm/icons/rh-ui-port-icon';
+
 // @ts-ignore
 import pfLogo from '@patternfly/react-core/src/demos/assets/pf-logo.PF-HorizontalLogo-Color.svg';
 // @ts-ignore
@@ -66,9 +85,9 @@ import { AnimationsNotificationsDrawer } from '../AnimationsNotificationsDrawer'
 import { AnimationsCreateDatabaseForm } from '../AnimationsCreateDatabaseForm';
 import { GuidedTourProvider, useGuidedTour } from '../GuidedTourContext';
 import { AnimationsHeaderToolbar } from '../AnimationsHeaderToolbar';
-import { AnimationsStartTourModal } from '../AnimationsStartTourModal';
-import { AnimationsEndTourModal } from '../AnimationsEndTourModal';
 import { applicationsData } from './ResourceTableData';
+
+import './glass.css';
 
 // Simple component to wrap the empty state logo
 const EmptyStateLogoIcon: React.FunctionComponent = () => (
@@ -258,8 +277,7 @@ const AnimationsPage: FunctionComponent = () => {
   ]);
   const [selectedTab, setSelectedTab] = useState(0);
   const [showForm, setShowForm] = useState(false);
-  const [showStartTourModal, setShowStartTourModal] = useState(true);
-  const [showEndTourModal, setShowEndTourModal] = useState(false);
+  const [showWizardModal, setShowWizardModal] = useState(false);
   const [activeItem, setActiveItem] = useState<number | string>(0);
   const { onStart, onFinish, renderTourStepElement, setCustomStepContent, tourStep, isFinished } = useGuidedTour();
   const [windowWidth, setWindowWidth] = useState<number>(1200);
@@ -517,10 +535,6 @@ const AnimationsPage: FunctionComponent = () => {
     }
   }, [tourStep?.stepId, setCustomStepContent, addNotification, isMobile]);
 
-  useEffect(() => {
-    setShowEndTourModal(isFinished);
-  }, [isFinished]);
-
   const measureRef = (ref: HTMLDivElement) => {
     // Remove any previous observer
     if (unObserver.current) {
@@ -616,8 +630,9 @@ const AnimationsPage: FunctionComponent = () => {
               notifications={notifications}
               isDrawerExpanded={isDrawerExpanded}
               setIsDrawerExpanded={setIsDrawerExpanded}
-              onStartGuidedTour={() => setShowStartTourModal(true)}
               onEndGuidedTour={() => onFinish()}
+              setShowWizardModal={setShowWizardModal}
+              showWizardModal={showWizardModal}
             />
           </MastheadContent>
         </Masthead>
@@ -703,7 +718,7 @@ const AnimationsPage: FunctionComponent = () => {
                     }, [])
                   );
                 }}
-                actionClose={<AlertActionCloseButton title={alert.title} onClose={() => {}} />}
+                actionClose={<AlertActionCloseButton title={alert.title} onClose={() => { }} />}
               >
                 {alert.message}
               </Alert>
@@ -753,8 +768,35 @@ const AnimationsPage: FunctionComponent = () => {
           )}
         </PageSection>
       )}
-      {showStartTourModal ? <AnimationsStartTourModal onClose={closeStartTourModal} /> : null}
-      {showEndTourModal ? <AnimationsEndTourModal /> : null}
+      <Modal
+        isOpen={showWizardModal}
+      >
+        <ModalBody>
+          <Wizard
+            height={400}
+            title="Header wizard"
+            onClose={() => setShowWizardModal(false)}
+            header={
+              <WizardHeader
+                title="You're a wizard, Harry"
+                description="To be clear, all those not named Harry are not wizards."
+                closeButtonAriaLabel="Close header"
+                onClose={() => setShowWizardModal(false)}
+              />
+            }
+          >
+            <WizardStep name="Step 1" id="header-first-step">
+              Step 1 content
+            </WizardStep>
+            <WizardStep name="Step 2" id="header-second-step">
+              Step 2 content
+            </WizardStep>
+            <WizardStep name="Review" id="header-review-step" footer={{ nextButtonText: 'Finish' }}>
+              Review step content
+            </WizardStep>
+          </Wizard>
+        </ModalBody>
+      </Modal>
     </Page>
   );
 };
@@ -794,98 +836,128 @@ const AnimationsResourcesTable: FunctionComponent = () => {
     setExpandedAppNames(isOpen ? applicationsData.map((app) => app.name) : []);
   };
 
-  return (
-    <Card component="div">
-      {loading || tourStep?.stepId === 'skeletonLoader' ? (
-        <>
-          {renderTourStepElement(
-            'skeletonLoader',
-            <SkeletonTable
-              id="skeleton-table"
-              columns={[
-                { cell: '', props: { name: 'expand', 'aria-label': 'expand' } },
-                ...expandableColumns.map((col) => ({ cell: col, props: { name: col, 'aria-label': col } }))
-              ]}
-              rows={8}
+  const [showDrawer, setShowDrawer] = useState(false);
+
+  const panelContent = (
+    <DrawerPanelContent>
+      <DrawerHead>
+        <span>
+          Drawer panel header
+        </span>
+        <DrawerActions>
+          <DrawerCloseButton onClick={() => setShowDrawer(false)} />
+        </DrawerActions>
+      </DrawerHead>
+      <DrawerPanelDescription>Drawer panel description</DrawerPanelDescription>
+      <DrawerPanelBody>Drawer panel body</DrawerPanelBody>
+    </DrawerPanelContent>
+  );
+
+  const drawerContent = (<Table id="resources-table" aria-label="Collapsible table" isExpandable hasAnimations>
+    <Thead>
+      <Tr>
+        <Th
+          expand={{
+            areAllExpanded: !areAllExpanded,
+            collapseAllAriaLabel,
+            onToggle: onCollapseAll
+          }}
+          aria-label="Row expansion"
+          name="expand"
+        />
+        {expandableColumns.map((column) => (
+          <Th key={column} name={column}>
+            {column}
+          </Th>
+        ))}
+      </Tr>
+    </Thead>
+
+    {applicationsData.map((app, idx) => (
+      <Tbody key={app.name} isExpanded={isAppExpanded(app)}>
+        <Tr>
+          {idx === 0 ? (
+            renderTourStepElement(
+              'expandableComponentsMobile',
+              <Td
+                expand={
+                  app.details
+                    ? {
+                      rowIndex: idx,
+                      isExpanded: isAppExpanded(app),
+                      onToggle: () => setAppExpanded(app, !isAppExpanded(app))
+                    }
+                    : undefined
+                }
+              />
+            )
+          ) : (
+            <Td
+              expand={
+                app.details
+                  ? {
+                    rowIndex: idx,
+                    isExpanded: isAppExpanded(app),
+                    onToggle: () => setAppExpanded(app, !isAppExpanded(app))
+                  }
+                  : undefined
+              }
             />
           )}
-        </>
-      ) : (
-        renderTourStepElement(
-          'expandableComponents',
-          <Table id="resources-table" aria-label="Collapsible table" isExpandable hasAnimations>
-            <Thead>
-              <Tr>
-                <Th
-                  expand={{
-                    areAllExpanded: !areAllExpanded,
-                    collapseAllAriaLabel,
-                    onToggle: onCollapseAll
-                  }}
-                  aria-label="Row expansion"
-                  name="expand"
-                />
-                {expandableColumns.map((column) => (
-                  <Th key={column} name={column}>
-                    {column}
-                  </Th>
-                ))}
-              </Tr>
-            </Thead>
+          <Td>{app.name}</Td>
+          <Td>{app.header}</Td>
+          <Td>{app.branch}</Td>
+          <Td>
+            {app.status === 'Running' && <Label status="success">Running</Label>}
+            {app.status === 'Degraded' && <Label status="warning">Degraded</Label>}
+            {app.status === 'Stopped' && <Label status="danger">Stopped</Label>}
+            {app.status !== 'Running' && app.status !== 'Degraded' && app.status !== 'Stopped' && app.status}
+          </Td>
+        </Tr>
+        <Tr isExpanded={isAppExpanded(app)}>
+          <Td />
+          <Td colSpan={expandableColumns.length}>
+            <ExpandableRowContent>{app.details}</ExpandableRowContent>
+          </Td>
+        </Tr>
+      </Tbody>
+    ))}
+  </Table>)
 
-            {applicationsData.map((app, idx) => (
-              <Tbody key={app.name} isExpanded={isAppExpanded(app)}>
-                <Tr>
-                  {idx === 0 ? (
-                    renderTourStepElement(
-                      'expandableComponentsMobile',
-                      <Td
-                        expand={
-                          app.details
-                            ? {
-                                rowIndex: idx,
-                                isExpanded: isAppExpanded(app),
-                                onToggle: () => setAppExpanded(app, !isAppExpanded(app))
-                              }
-                            : undefined
-                        }
-                      />
-                    )
-                  ) : (
-                    <Td
-                      expand={
-                        app.details
-                          ? {
-                              rowIndex: idx,
-                              isExpanded: isAppExpanded(app),
-                              onToggle: () => setAppExpanded(app, !isAppExpanded(app))
-                            }
-                          : undefined
-                      }
-                    />
-                  )}
-                  <Td>{app.name}</Td>
-                  <Td>{app.header}</Td>
-                  <Td>{app.branch}</Td>
-                  <Td>
-                    {app.status === 'Running' && <Label status="success">Running</Label>}
-                    {app.status === 'Degraded' && <Label status="warning">Degraded</Label>}
-                    {app.status === 'Stopped' && <Label status="danger">Stopped</Label>}
-                    {app.status !== 'Running' && app.status !== 'Degraded' && app.status !== 'Stopped' && app.status}
-                  </Td>
-                </Tr>
-                <Tr isExpanded={isAppExpanded(app)}>
-                  <Td />
-                  <Td colSpan={expandableColumns.length}>
-                    <ExpandableRowContent>{app.details}</ExpandableRowContent>
-                  </Td>
-                </Tr>
-              </Tbody>
-            ))}
-          </Table>
-        )
-      )}
-    </Card>
+  return (
+    <>
+      <Toolbar>
+        <ToolbarContent>
+          <ToolbarItem><Button variant="primary" onClick={() => setShowDrawer(!showDrawer)}>Show drawer</Button></ToolbarItem>
+        </ToolbarContent>
+      </Toolbar>
+      <Card component="div">
+        {loading || tourStep?.stepId === 'skeletonLoader' ? (
+          <>
+            {renderTourStepElement(
+              'skeletonLoader',
+              <SkeletonTable
+                id="skeleton-table"
+                columns={[
+                  { cell: '', props: { name: 'expand', 'aria-label': 'expand' } },
+                  ...expandableColumns.map((col) => ({ cell: col, props: { name: col, 'aria-label': col } }))
+                ]}
+                rows={8}
+              />
+            )}
+          </>
+        ) : (
+          renderTourStepElement(
+            'expandableComponents',
+            <Drawer isExpanded={showDrawer}>
+              <DrawerContent panelContent={panelContent}>
+                <DrawerContentBody>{drawerContent}</DrawerContentBody>
+              </DrawerContent>
+            </Drawer>
+          )
+        )}
+      </Card>
+    </>
   );
 };
 
