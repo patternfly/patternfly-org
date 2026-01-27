@@ -6,18 +6,12 @@ source: demo
 
 import { Fragment, useRef, useState, useEffect, useCallback } from 'react';
 
-import BellIcon from '@patternfly/react-icons/dist/esm/icons/bell-icon';
-import CogIcon from '@patternfly/react-icons/dist/esm/icons/cog-icon';
 import BarsIcon from '@patternfly/react-icons/dist/js/icons/bars-icon';
 import HelpIcon from '@patternfly/react-icons/dist/esm/icons/help-icon';
 import PowerOffIcon from '@patternfly/react-icons/dist/esm/icons/power-off-icon';
-import QuestionCircleIcon from '@patternfly/react-icons/dist/esm/icons/question-circle-icon';
-import SearchIcon from '@patternfly/react-icons/dist/esm/icons/search-icon';
 import imgAvatar from '@patternfly/react-core/src/components/assets/avatarImg.svg';
-import EllipsisVIcon from '@patternfly/react-icons/dist/esm/icons/ellipsis-v-icon';
 import pfLogo from '@patternfly/react-core/src/demos/assets/PF-HorizontalLogo-Color.svg';
 import MultiContentCard from "@patternfly/react-component-groups/dist/dynamic/MultiContentCard";
-import { ArrowRightIcon, LockIcon, PortIcon, CubeIcon, AutomationIcon, ExclamationCircleIcon, CheckCircleIcon, ExclamationTriangleIcon, HamburgerIcon, TimesIcon} from '@patternfly/react-icons';
 import UnpluggedIcon from '@patternfly/react-icons/dist/esm/icons/unplugged-icon';
 import l_gallery_GridTemplateColumns_min from '@patternfly/react-tokens/dist/esm/l_gallery_GridTemplateColumns_min';
 import {applicationsData} from './examples/ResourceTableData.jsx';
@@ -35,10 +29,22 @@ import { Table, Thead, Tbody, Tr, Th, Td, ExpandableRowContent } from '@patternf
 import PendingIcon from '@patternfly/react-icons/dist/esm/icons/pending-icon';
 import CheckIcon from '@patternfly/react-icons/dist/esm/icons/check-icon';
 import InfoIcon from '@patternfly/react-icons/dist/esm/icons/info-icon';
-import ResourcesFullIcon from '@patternfly/react-icons/dist/esm/icons/resources-full-icon';
 import openshiftLogo from './Summit-collage-deploying-openshift-product-icon-RH.png'
 import emptyStateLogo from './Summit-collage-hybrid-cloud-dark-RH.png'
+import ExclamationCircleIcon from '@patternfly/react-icons/dist/esm/icons/rh-ui-error-icon';
+import CheckCircleIcon from '@patternfly/react-icons/dist/esm/icons/rh-ui-check-circle-icon';
+import ExclamationTriangleIcon from '@patternfly/react-icons/dist/esm/icons/rh-ui-warning-icon';
+import ResourcesFullIcon from '@patternfly/react-icons/dist/esm/icons/rh-ui-resources-full-icon';
+import PortIcon from '@patternfly/react-icons/dist/esm/icons/rh-ui-port-icon';
+import CogIcon from '@patternfly/react-icons/dist/esm/icons/rh-ui-settings-icon';
+import QuestionCircleIcon from '@patternfly/react-icons/dist/esm/icons/rh-ui-question-mark-circle-icon';
+import EllipsisVIcon from '@patternfly/react-icons/dist/esm/icons/rh-ui-ellipsis-vertical-icon';
+import SearchIcon from '@patternfly/react-icons/dist/esm/icons/rh-ui-search-icon';
+import ArrowRightIcon from '@patternfly/react-icons/dist/esm/icons/rh-ui-arrow-right-icon';
+import TimesIcon from '@patternfly/react-icons/dist/esm/icons/rh-ui-close-icon';
 
+
+import './examples/glass.css';
 
 ## Demo
 Our components can now use motion to provide clear visual feedback to users, improving engagement and usability. To see our new animations in motion, take this interactive tour, which guides you through a UI that includes animated alerts, icons, expansion, and more.

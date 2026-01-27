@@ -19,8 +19,8 @@ import {
   NotificationDrawerListItemBody,
   NotificationDrawerListItemHeader
 } from '@patternfly/react-core';
-import EllipsisVIcon from '@patternfly/react-icons/dist/esm/icons/ellipsis-v-icon';
-import SearchIcon from '@patternfly/react-icons/dist/esm/icons/search-icon';
+import EllipsisVIcon from '@patternfly/react-icons/dist/esm/icons/rh-ui-ellipsis-vertical-icon';
+import SearchIcon from '@patternfly/react-icons/dist/esm/icons/rh-ui-search-icon';
 import { NotificationType } from './types';
 
 interface ItemProps {

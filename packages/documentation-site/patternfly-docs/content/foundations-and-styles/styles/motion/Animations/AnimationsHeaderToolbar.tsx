@@ -13,8 +13,8 @@ import {
   ToolbarGroup,
   ToolbarContent
 } from '@patternfly/react-core';
-import CogIcon from '@patternfly/react-icons/dist/esm/icons/cog-icon';
-import QuestionCircleIcon from '@patternfly/react-icons/dist/esm/icons/question-circle-icon';
+import CogIcon from '@patternfly/react-icons/dist/esm/icons/rh-ui-settings-icon';
+import QuestionCircleIcon from '@patternfly/react-icons/dist/esm/icons/rh-ui-question-mark-circle-icon';
 import imgAvatar from '@patternfly/react-core/src/components/assets/avatarImg.svg';
 import { NotificationType } from './types';
 import { useGuidedTour } from './GuidedTourContext';
@@ -23,8 +23,10 @@ interface Props {
   notifications: NotificationType[];
   isDrawerExpanded: boolean;
   setIsDrawerExpanded: (newVal: boolean) => void;
-  onStartGuidedTour: () => void;
-  onEndGuidedTour: () => void;
+  onStartGuidedTour?: () => void;
+  onEndGuidedTour?: () => void;
+  setShowWizardModal: (newVal: boolean) => void;
+  showWizardModal: boolean;
 }
 
 export const AnimationsHeaderToolbar: FunctionComponent<Props> = ({
@@ -32,7 +34,9 @@ export const AnimationsHeaderToolbar: FunctionComponent<Props> = ({
   isDrawerExpanded,
   setIsDrawerExpanded,
   onStartGuidedTour,
-  onEndGuidedTour
+  onEndGuidedTour,
+  setShowWizardModal,
+  showWizardModal
 }) => {
   const [isActionsMenuOpen, setIsActionsMenuOpen] = useState<boolean>(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -114,6 +118,9 @@ export const AnimationsHeaderToolbar: FunctionComponent<Props> = ({
                     </DropdownItem>
                   </DropdownList>
                 </Dropdown>
+              </ToolbarItem>
+              <ToolbarItem>
+                <Button variant="control" onClick={() => setShowWizardModal(!showWizardModal)}>Show wizard modal</Button>
               </ToolbarItem>
             </ToolbarGroup>
           </ToolbarGroup>
