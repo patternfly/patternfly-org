@@ -18,7 +18,6 @@ import {applicationsData} from './examples/ResourceTableData.jsx';
 import SkeletonTable from "@patternfly/react-component-groups/dist/dynamic/SkeletonTable";
 import t_global_text_color_subtle from '@patternfly/react-tokens/dist/esm/t_global_text_color_subtle';
 import { AnimationsOverview } from './AnimationsOverview';
-import { AnimationsNotificationsDrawer } from './AnimationsNotificationsDrawer';
 import { AnimationsHeaderToolbar } from './AnimationsHeaderToolbar';
 import { AnimationsStartTourModal } from './AnimationsStartTourModal';
 import { AnimationsEndTourModal } from './AnimationsEndTourModal';
