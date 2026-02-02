@@ -22,6 +22,10 @@ When using trademarks:
 - Limit trademark usage to body text rather than headlines, titles, or graphics.
 - Never use a third party's logo without explicit permission.
 
+| Before | After | 
+| :---: | :---: |
+| Unlike the overcomplicated and overpriced Competitor®, our solution is both easy to use and affordable. | While Competitor® provides robust support for virtualization, our solution offers more integrated support for containerized environments. |
+
 ## Glossary
 
 <div class="ws-content-table">
