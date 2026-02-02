@@ -29,11 +29,11 @@ Following these best practices to help ensure that your users can complete their
 
 When chatbots are designed to meet the needs of your users, they can improve the overall UX of your product. They are convenient, efficient, and persistent. 
 
-[Our chatbot extension](/extensions/chatbot/overview) utilizes PatternFly components to create a foundation for an AI-based chatbot, with additional customization options.
+[Our ChatBot extension](/extensions/chatbot/overview) utilizes PatternFly components to create a foundation for an AI-based chatbot, with additional customization options.
 
 <Flex>
 <FlexItem>
-<Button component="a" href="/extensions/chatbot/overview" target="_blank" variant="primary" size="lg">Use the chatbot extension <ArrowRightIcon /></Button>
+<Button component="a" href="/extensions/chatbot/overview" target="_blank" variant="primary" size="lg">Use the ChatBot extension <ArrowRightIcon /></Button>
 </FlexItem>
 </Flex>
 
@@ -73,3 +73,31 @@ Make sure to disclose any use of AI in chatbots. Our users should be able to tru
 - Use labels and other visual styling cues to clearly identify AI features. 
 - Add necessary legal disclosures where you can, like in the chatbot footer. 
 - Display an indicator when the bot is "thinking" or "typing," so that users know to expect feedback.
+
+### LLM guardrails
+
+Guardrails are safety mechanisms that moderate how a model handles sensitive, risky, or disrespectful prompts. [Research shows](https://arxiv.org/html/2506.00195v1) that a user's experience is shaped more by how a model handles a refusal than by the user's initial intent.
+
+Most models default to direct or explanation-based refusals (for example, "I can’t do that" or "I can’t assist because of a safety policy"), but these can be perceived as frustrating or patronizing.
+
+While users generally prefer full compliance from a model, safety and policy requirements often make this impossible. When a guardrail is triggered, your goal is to "let them down easy" to maintain trust and engagement.
+
+When a user requests something unsafe or inappropriate from a model: 
+
+- **Prioritize partial compliance:** Whenever possible, answer the general or theoretical parts of a user's request without providing actionable, dangerous, or sensitive details.
+- **Avoid explicit refusal statements:** To reduce user friction, the model should try to respond without using definitive phrases like "I refuse" or "I cannot." 
+- **Pivot to safer topics:** If a full refusal is unavoidable, briefly explain why and immediately suggest a related, safer topic to keep the conversation productive.
+
+| Strategy | When to use | Example |
+| :---: | :---: | :---: |
+| **Partial compliance** | Default for ambiguous intent. | "The process of [Topic] generally involves [General Principle]..." |
+| **Redirection** | When the specific request is blocked. | "I can’t provide specifics on that, but I can suggest some resources on [Related Topic]." |
+| **Explanation** | When transparency is required for trust. | "To ensure user privacy, I don't have access to individual [Data Type]..." |
+
+#### Message streaming considerations
+
+Streaming text in real-time presents unique challenges for guardrail implementation. 
+
+- **Handling late-trigger detections:** If a guardrail is triggered after a response has already started streaming, do not simply delete the message from the UI, as this is confusing. Instead, replace the partial text with a standard refusal or redirection message.
+- **Simulated streaming for safety:** To avoid the "wait time" of running guardrails before a message starts, you can run detectors in the background. If the initial check is fast enough, you can "simulate" the stream once the content is cleared, ensuring the user doesn't see harmful content that is later retracted.
+- **Guidance on blocked responses:** If a guardrail prevents a model response from ever being generated, provide a clear system-level message in the chat UI so the user isn't left waiting for a response that will never arrive.
