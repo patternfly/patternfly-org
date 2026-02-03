@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.4.0-alpha.333 (2026-02-03)
+
+
+### Bug Fixes
+
+* Update example.js to address react console docs bug. ([#4910](https://github.com/patternfly/patternfly-org/issues/4910)) ([7ff0a35](https://github.com/patternfly/patternfly-org/commit/7ff0a357e09071f287218dd247cc9c0bec7a16b8))
+
+
+
+
+
 # 1.4.0-alpha.332 (2026-02-03)
 
 **Note:** Version bump only for package @patternfly/ast-helpers
