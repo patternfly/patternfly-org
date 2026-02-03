@@ -151,7 +151,7 @@ const AnimationsPage: FunctionComponent = () => {
   const [selectedTab, setSelectedTab] = useState(0);
   const [showForm, setShowForm] = useState(false);
   const [showWizardModal, setShowWizardModal] = useState(false);
-  const [activeItem, setActiveItem] = useState<number | string>(0);
+  const [activeItem, setActiveItem] = useState<number | string>('dashboard');
 
   // HERE
   const [openKebabIndex, setOpenKebabIndex] = useState<number>(-1);
@@ -360,6 +360,51 @@ const AnimationsPage: FunctionComponent = () => {
                   isActive={activeItem === 'dashboard'}
                 >
                   Dashboard
+                </NavItem>
+                <NavItem
+                  preventDefault
+                  id="navItem1"
+                  to="#navItem1"
+                  itemId="navItem1"
+                  isActive={activeItem === 'navItem1'}
+                >
+                  Nav Item 1
+                </NavItem>
+                <NavItem
+                  preventDefault
+                  id="navItem2"
+                  to="#navItem2"
+                  itemId="navItem2"
+                  isActive={activeItem === 'navItem2'}
+                >
+                  Nav Item 2
+                </NavItem>
+                <NavItem
+                  preventDefault
+                  id="navItem3"
+                  to="#navItem3"
+                  itemId="navItem3"
+                  isActive={activeItem === 'navItem3'}
+                >
+                  Nav Item 3
+                </NavItem>
+                <NavItem
+                  preventDefault
+                  id="navItem4"
+                  to="#navItem4"
+                  itemId="navItem4"
+                  isActive={activeItem === 'navItem4'}
+                >
+                  Nav Item 4
+                </NavItem>
+                <NavItem
+                  preventDefault
+                  id="navItem5"
+                  to="#navItem5"
+                  itemId="navItem5"
+                  isActive={activeItem === 'navItem5'}
+                >
+                  Nav Item 5
                 </NavItem>
               </NavList>
             </Nav>
