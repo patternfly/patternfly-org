@@ -146,9 +146,21 @@ export const Example = ({
   }
 
   const [editorCode, setEditorCode] = React.useState(code);
-  const [fullPageUtilsPosition, setFullPageUtilsPosition] = React.useState('pf-m-bottom-right');
+  const [fullPageUtilsPosition, setFullPageUtilsPosition] = React.useState(() => {
+    if (typeof window !== 'undefined') {
+      return localStorage.getItem('fullPageUtilsPosition') || 'pf-m-bottom-left';
+    }
+    return 'pf-m-bottom-left';
+  });
   const loc = useLocation();
   const isRTL = useContext(RtlContext);
+
+  // Save fullPageUtilsPosition to localStorage when it changes
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      localStorage.setItem('fullPageUtilsPosition', fullPageUtilsPosition);
+    }
+  }, [fullPageUtilsPosition]);
   const scope = {
     ...liveContext,
     // These 2 are in the bundle anyways for the site since we dogfood
