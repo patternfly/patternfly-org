@@ -44,7 +44,7 @@ function toReactComponent(mdFilePath, source, buildMode) {
       if (!yamlNode) {
         return file.info('no frontmatter, skipping');
       }
-      frontmatter = yaml.safeLoad(yamlNode.value);
+      frontmatter = yaml.load(yamlNode.value);
 
       // Fail early
       if (!frontmatter.id) {
