@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.4.0-alpha.335 (2026-02-04)
+
+
+### Bug Fixes
+
+* **deps:** address missing and outdated dependencies ([#4921](https://github.com/patternfly/patternfly-org/issues/4921)) ([7fce04a](https://github.com/patternfly/patternfly-org/commit/7fce04a4e1bd1ecc3ba726b2fb0538706ddefa4d))
+
+
+
+
+
 # 1.4.0-alpha.334 (2026-02-03)
 
 **Note:** Version bump only for package @patternfly/ast-helpers
