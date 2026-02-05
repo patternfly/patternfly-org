@@ -209,6 +209,11 @@ export const Example = ({
   const className = getExampleClassName(source, section[0], id);
 
   if (isFullscreenPreview) {
+    const tooltipPosition =
+      fullPageUtilsPosition === 'pf-m-bottom-left' ? 'top-start' :
+      fullPageUtilsPosition === 'pf-m-bottom-right' ? 'top-end' :
+      fullPageUtilsPosition === 'pf-m-top-left' ? 'bottom-start' : 'bottom-end';
+
     return (
       <div id={previewId} className={css(className, 'pf-v6-u-h-100')}>
         {livePreview}
@@ -219,42 +224,66 @@ export const Example = ({
             className={css('ws-full-page-utils', 'pf-v6-m-dir-ltr', fullPageUtilsPosition)}
           >
             <Flex justifyContent={{ default: 'justifyContentCenter' }} gap={{ default: 'gapXs' }}>
-            <Button
-                variant="plain"
-                size="sm"
-                hasNoPadding
-                isClicked={fullPageUtilsPosition === 'pf-m-top-left'}
-                onClick={() => setFullPageUtilsPosition('pf-m-top-left')}
-                aria-label="Position utilities top left"
-                icon={fullPageUtilsPosition === 'pf-m-top-left' ? <RhUiArrowCircleUpLeftFillIcon /> : <RhUiArrowCircleUpLeftIcon />}
-              />
-              <Button
-                variant="plain"
-                size="sm"
-                hasNoPadding
-                isClicked={fullPageUtilsPosition === 'pf-m-bottom-left'}
-                onClick={() => setFullPageUtilsPosition('pf-m-bottom-left')}
-                aria-label="Position utilities bottom left"
-                icon={fullPageUtilsPosition === 'pf-m-bottom-left' ? <RhUiArrowCircleDownLeftFillIcon /> : <RhUiArrowCircleDownLeftIcon />}
-              />
-              <Button
-                variant="plain"
-                size="sm"
-                hasNoPadding
-                isClicked={fullPageUtilsPosition === 'pf-m-bottom-right'}
-                onClick={() => setFullPageUtilsPosition('pf-m-bottom-right')}
-                aria-label="Position utilities bottom right"
-                icon={fullPageUtilsPosition === 'pf-m-bottom-right' ? <RhUiArrowCircleDownRightFillIcon /> : <RhUiArrowCircleDownRightIcon />}
-              />
-              <Button
-                variant="plain"
-                size="sm"
-                hasNoPadding
-                isClicked={fullPageUtilsPosition === 'pf-m-top-right'}
-                onClick={() => setFullPageUtilsPosition('pf-m-top-right')}
-                aria-label="Position utilities top right"
-                icon={fullPageUtilsPosition === 'pf-m-top-right' ? <RhUiArrowCircleUpRightFillIcon /> : <RhUiArrowCircleUpRightIcon />}
-              />
+              <Tooltip
+                content={'Move to the top left corner'}
+                position={tooltipPosition}
+                enableFlip={false}
+              >
+                <Button
+                  variant="plain"
+                  size="sm"
+                  hasNoPadding
+                  isClicked={fullPageUtilsPosition === 'pf-m-top-left'}
+                  onClick={() => setFullPageUtilsPosition('pf-m-top-left')}
+                  aria-label="Position utilities top left"
+                  icon={fullPageUtilsPosition === 'pf-m-top-left' ? <RhUiArrowCircleUpLeftFillIcon /> : <RhUiArrowCircleUpLeftIcon />}
+                />
+              </Tooltip>
+              <Tooltip
+                content={'Move to the bottom left corner'}
+                position={tooltipPosition}
+                enableFlip={false}
+              >
+                <Button
+                  variant="plain"
+                  size="sm"
+                  hasNoPadding
+                  isClicked={fullPageUtilsPosition === 'pf-m-bottom-left'}
+                  onClick={() => setFullPageUtilsPosition('pf-m-bottom-left')}
+                  aria-label="Position utilities bottom left"
+                  icon={fullPageUtilsPosition === 'pf-m-bottom-left' ? <RhUiArrowCircleDownLeftFillIcon /> : <RhUiArrowCircleDownLeftIcon />}
+                />
+              </Tooltip>
+              <Tooltip
+                content={'Move to the bottom right corner'}
+                position={tooltipPosition}
+                enableFlip={false}
+              >
+                <Button
+                  variant="plain"
+                  size="sm"
+                  hasNoPadding
+                  isClicked={fullPageUtilsPosition === 'pf-m-bottom-right'}
+                  onClick={() => setFullPageUtilsPosition('pf-m-bottom-right')}
+                  aria-label="Position utilities bottom right"
+                  icon={fullPageUtilsPosition === 'pf-m-bottom-right' ? <RhUiArrowCircleDownRightFillIcon /> : <RhUiArrowCircleDownRightIcon />}
+                />
+              </Tooltip>
+              <Tooltip
+                content={'Move to the top right corner'}
+                position={tooltipPosition}
+                enableFlip={false}
+              >
+                <Button
+                  variant="plain"
+                  size="sm"
+                  hasNoPadding
+                  isClicked={fullPageUtilsPosition === 'pf-m-top-right'}
+                  onClick={() => setFullPageUtilsPosition('pf-m-top-right')}
+                  aria-label="Position utilities top right"
+                  icon={fullPageUtilsPosition === 'pf-m-top-right' ? <RhUiArrowCircleUpRightFillIcon /> : <RhUiArrowCircleUpRightIcon />}
+                />
+              </Tooltip>
             </Flex>
             {hasThemeSwitcher && <ThemeSelector id="ws-example-theme-select" />}
             {hasRTLSwitcher && (
