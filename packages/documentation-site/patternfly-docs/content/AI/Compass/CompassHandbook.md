@@ -8,8 +8,6 @@ subsection: Generative UIs
 ## Structural patterns
 When building generative UI layouts using the Compass components, there are several common patterns to consider during your development process.
 
-## Structural patterns
-
 ### Transparent containers
 Transparent containers create a modern glass look and feel. To enable transparency on a container, apply `pf-v6-theme-glass` to the `html` element class list, similar to the approach for enabling the dark mode theme. 
 
