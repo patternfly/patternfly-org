@@ -37,6 +37,11 @@ You can add a header to a Compass layout via the `<CompassHeader>` component. `<
 ### Sidebars
 There are 2 vertical sidebars in a Compass layout: 1 at the start of the page and another at the end. There are no specific helper components for these sections, so they're usually created by passing a `<CompassPanel>` that contains an [`<ActionList>`](/components/action-list) with the `isVertical` flag.
 
+### Docked navigation
+As an alternative to the above header and sidebars, a docked navigation may be used to organize navigation elements into a single anchored sidebar. You can add a docked nav to the Compass layout via the `dock` property.
+
+A docked nav will typically contain a [`<Masthead>`](/components/masthead) with the "docked" `variant` type. This masthead is formed similarly to a typical `Page` masthead, except `Toolbar` should be passed the `isVertical` flag, and `Nav` should also specify its `variant` as "docked". 
+
 ### Footer
 There are 2 methods of adding a footer to a compass layout. 
 
