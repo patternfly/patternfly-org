@@ -37,7 +37,7 @@ You can add a header to a Compass layout via the `<CompassHeader>` component. `<
 ```
 
 ### Sidebars
-There are 2 vertical sidebars in a Compass layout: 1 at the start of the page and another at the end. There are no specific helper components for these sections, so they're usually created by passing the `isVertical` flag to a `<CompassPanel>` that contains an [`<ActionList>`](/components/action-list).
+There are 2 vertical sidebars in a Compass layout: 1 at the start of the page and another at the end. There are no specific helper components for these sections, so they're usually created by passing a `<CompassPanel>` that contains an [`<ActionList>`](/components/action-list) with the `isVertical` flag.
 
 ### Footer
 There are 2 methods of adding a footer to a compass layout. 
