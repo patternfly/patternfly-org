@@ -146,8 +146,9 @@ export const Example = ({
   }
 
   const [editorCode, setEditorCode] = React.useState(code);
+  const isBrowser = typeof window !== 'undefined' && window.localStorage;
   const [fullPageUtilsPosition, setFullPageUtilsPosition] = React.useState(() => {
-    if (typeof window !== 'undefined') {
+    if (isBrowser) {
       return localStorage.getItem('fullPageUtilsPosition') || 'pf-m-bottom-left';
     }
     return 'pf-m-bottom-left';
@@ -157,7 +158,7 @@ export const Example = ({
 
   // Save fullPageUtilsPosition to localStorage when it changes
   useEffect(() => {
-    if (typeof window !== 'undefined') {
+    if (isBrowser) {
       localStorage.setItem('fullPageUtilsPosition', fullPageUtilsPosition);
     }
   }, [fullPageUtilsPosition]);
