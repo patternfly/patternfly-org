@@ -73,36 +73,45 @@
 .ws-full-page-utils {
   position: fixed;
   inset-block-end: 0;
-  padding: var(--pf-t--global--spacer--sm) var(--pf-t--global--spacer--lg) var(--pf-t--global--spacer--lg);
+  padding: var(--pf-t--global--spacer--xl);
   z-index: var(--pf-t--global--z-index--2xl);
 }
 
-.ws-full-page-utils.pf-m-top-right {
-  top: 0;
-  right: 0;
+.ws-full-page-utils-position-btn {
+  --ws-full-page-utils-btn--inset: var(--pf-t--global--spacer--xs);
+  position: absolute;
+}
+
+:is(.ws-full-page-utils, .ws-full-page-utils-position-btn).pf-m-top-right {
+  top: var(--ws-full-page-utils-btn--inset, 0);
+  right: var(--ws-full-page-utils-btn--inset, 0);
   bottom: auto;
   left: auto;
 }
 
-.ws-full-page-utils.pf-m-bottom-right {
+:is(.ws-full-page-utils, .ws-full-page-utils-position-btn).pf-m-bottom-right {
   top: auto;
-  right: 0;
-  bottom: 0;
+  right: var(--ws-full-page-utils-btn--inset, 0);
+  bottom: var(--ws-full-page-utils-btn--inset, 0);
   left: auto;
 }
 
-.ws-full-page-utils.pf-m-bottom-left {
+:is(.ws-full-page-utils, .ws-full-page-utils-position-btn).pf-m-bottom-left {
   top: auto;
   right: auto;
-  bottom: 0;
-  left: 0;
+  bottom: var(--ws-full-page-utils-btn--inset, 0);
+  left: var(--ws-full-page-utils-btn--inset, 0);
 }
 
-.ws-full-page-utils.pf-m-top-left {
-  top: 0;
+:is(.ws-full-page-utils, .ws-full-page-utils-position-btn).pf-m-top-left {
+  top: var(--ws-full-page-utils-btn--inset, 0);
   right: auto;
   bottom: auto;
-  left: 0;
+  left: var(--ws-full-page-utils-btn--inset, 0);
+}
+
+.ws-full-page-utils-position-btn.pf-m-clicked {
+  --pf-v6-c-button__icon--Color: var(--pf-t--global--text--color--regular);
 }
 
 .ws-full-page-utils::before {
@@ -112,8 +121,4 @@
   background-color: var(--pf-t--global--background--color--floating--default);
   opacity: 0.8;
   box-shadow: var(--pf-t--global--box-shadow--sm);
-}
-
-.ws-full-page-utils .pf-v6-c-button.pf-m-no-padding.pf-m-clicked {
-  --pf-v6-c-button__icon--Color: var(--pf-t--global--text--color--regular);
 }

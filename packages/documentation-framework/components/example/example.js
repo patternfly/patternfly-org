@@ -209,11 +209,42 @@ export const Example = ({
   const previewId = getExampleId(source, section[0], id, title);
   const className = getExampleClassName(source, section[0], id);
 
+  // Four corner position button props
+  const fullPageUtilsPositionProps = {
+    topLeft: {
+      className: 'pf-m-top-left',
+      label: 'Move to the top left corner',
+      tooltipPosition: 'bottom-start',
+      icon: <RhUiArrowCircleUpLeftIcon />,
+      iconClicked: <RhUiArrowCircleUpLeftFillIcon />
+    },
+    topRight: {
+      className: 'pf-m-top-right',
+      label: 'Move to the top right corner',
+      tooltipPosition: 'bottom-end',
+      icon: <RhUiArrowCircleUpRightIcon />,
+      iconClicked: <RhUiArrowCircleUpRightFillIcon />
+    },
+    bottomLeft: {
+      className: 'pf-m-bottom-left',
+      label: 'Move to the bottom left corner',
+      tooltipPosition: 'top-start',
+      icon: <RhUiArrowCircleDownLeftIcon />,
+      iconClicked: <RhUiArrowCircleDownLeftFillIcon />
+    },
+    bottomRight: {
+      className: 'pf-m-bottom-right',
+      label: 'Move to the bottom right corner',
+      tooltipPosition: 'top-end',
+      icon: <RhUiArrowCircleDownRightIcon />,
+      iconClicked: <RhUiArrowCircleDownRightFillIcon />
+    }
+  };
+
   if (isFullscreenPreview) {
-    const tooltipPosition =
-      fullPageUtilsPosition === 'pf-m-bottom-left' ? 'top-start' :
-      fullPageUtilsPosition === 'pf-m-bottom-right' ? 'top-end' :
-      fullPageUtilsPosition === 'pf-m-top-left' ? 'bottom-start' : 'bottom-end';
+    const activeFullPageUtilsTooltipPosition = Object.values(fullPageUtilsPositionProps).find(
+      (props) => props.className === fullPageUtilsPosition
+    )?.tooltipPosition;
 
     return (
       <div id={previewId} className={css(className, 'pf-v6-u-h-100')}>
@@ -224,68 +255,6 @@ export const Example = ({
             gap={{ default: 'gapSm' }}
             className={css('ws-full-page-utils', 'pf-v6-m-dir-ltr', fullPageUtilsPosition)}
           >
-            <Flex justifyContent={{ default: 'justifyContentCenter' }} gap={{ default: 'gapXs' }}>
-              <Tooltip
-                content={'Move to the top left corner'}
-                position={tooltipPosition}
-                enableFlip={false}
-              >
-                <Button
-                  variant="plain"
-                  size="sm"
-                  hasNoPadding
-                  isClicked={fullPageUtilsPosition === 'pf-m-top-left'}
-                  onClick={() => setFullPageUtilsPosition('pf-m-top-left')}
-                  aria-label="Position utilities top left"
-                  icon={fullPageUtilsPosition === 'pf-m-top-left' ? <RhUiArrowCircleUpLeftFillIcon /> : <RhUiArrowCircleUpLeftIcon />}
-                />
-              </Tooltip>
-              <Tooltip
-                content={'Move to the bottom left corner'}
-                position={tooltipPosition}
-                enableFlip={false}
-              >
-                <Button
-                  variant="plain"
-                  size="sm"
-                  hasNoPadding
-                  isClicked={fullPageUtilsPosition === 'pf-m-bottom-left'}
-                  onClick={() => setFullPageUtilsPosition('pf-m-bottom-left')}
-                  aria-label="Position utilities bottom left"
-                  icon={fullPageUtilsPosition === 'pf-m-bottom-left' ? <RhUiArrowCircleDownLeftFillIcon /> : <RhUiArrowCircleDownLeftIcon />}
-                />
-              </Tooltip>
-              <Tooltip
-                content={'Move to the bottom right corner'}
-                position={tooltipPosition}
-                enableFlip={false}
-              >
-                <Button
-                  variant="plain"
-                  size="sm"
-                  hasNoPadding
-                  isClicked={fullPageUtilsPosition === 'pf-m-bottom-right'}
-                  onClick={() => setFullPageUtilsPosition('pf-m-bottom-right')}
-                  aria-label="Position utilities bottom right"
-                  icon={fullPageUtilsPosition === 'pf-m-bottom-right' ? <RhUiArrowCircleDownRightFillIcon /> : <RhUiArrowCircleDownRightIcon />}
-                />
-              </Tooltip>
-              <Tooltip
-                content={'Move to the top right corner'}
-                position={tooltipPosition}
-                enableFlip={false}
-              >
-                <Button
-                  variant="plain"
-                  size="sm"
-                  hasNoPadding
-                  isClicked={fullPageUtilsPosition === 'pf-m-top-right'}
-                  onClick={() => setFullPageUtilsPosition('pf-m-top-right')}
-                  aria-label="Position utilities top right"
-                  icon={fullPageUtilsPosition === 'pf-m-top-right' ? <RhUiArrowCircleUpRightFillIcon /> : <RhUiArrowCircleUpRightIcon />}
-                />
-              </Tooltip>
-            </Flex>
             {hasThemeSwitcher && <ThemeSelector id="ws-example-theme-select" />}
             {hasRTLSwitcher && (
               <Switch
@@ -299,6 +268,27 @@ export const Example = ({
                 }}
               />
             )}
+            {/* Four corner position buttons */}
+            {Object.entries(fullPageUtilsPositionProps).map(([key, utilsProps]) => (
+              <Tooltip
+                key={key}
+                content={utilsProps.label}
+                position={activeFullPageUtilsTooltipPosition || utilsProps.tooltipPosition}
+                enableFlip={false}
+                aria-none
+                aria-life="off"
+              >
+                <Button
+                  variant="plain"
+                  size="sm"
+                  className={css('ws-full-page-utils-position-btn', utilsProps.className)}
+                  isClicked={fullPageUtilsPosition === utilsProps.className}
+                  onClick={() => setFullPageUtilsPosition(utilsProps.className)}
+                  aria-label={`${utilsProps.label}${fullPageUtilsPosition === utilsProps.className ? ', selected' : ''}`}
+                  icon={fullPageUtilsPosition === utilsProps.className ? utilsProps.iconClicked : utilsProps.icon}
+                />
+              </Tooltip>
+            ))}
           </Flex>
         )}
       </div>
