@@ -51,3 +51,15 @@ This list outlines the overrides used in the following example, which also rende
 
 ```js file="./CompassReactFlowDemo.tsx"
 ```
+
+### Accessibility considerations
+
+While React Flow is built with accessibility in mind, you should always check that your implementation (when paired with PatternFly) is accessible via mouse, keyboard, and other assistive technologies like screen readers. 
+
+Additionally, you should align with the following practices: 
+
+- Provide an accessible name to the `<ReactFlow>` component, if its default role of "application" is kept or if it is given another semantic role that requires an accessible name.
+- Because React Flow supports node clicking and dragging, ensure that actions within draggable nodes are large enough to prevent misclicks (for example, kebab toggles, links, or other action buttons).
+  -  [WCAG 2.5.8: Target size (Minimum)](https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum) requires targets to be at least 24 by 24 CSS pixels. While there are exceptions, you should still aim for this minimum because a React Flow node itself can be clicked for some actions. This is especially important for an action like opening a details drawer upon a quick click to a node.
+- Ensure that any actions that can be taken via mouse only can be taken via keyboard as well, including all actions within a node and node repositioning via dragging.
+  - Dragging nodes via keyboard should be built into React Flow itself by default, but always double check to confirm.
