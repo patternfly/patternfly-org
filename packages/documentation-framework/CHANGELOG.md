@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 6.35.0 (2026-02-06)
+
+
+### Features
+
+* allow full-page example utils to change position ([#4896](https://github.com/patternfly/patternfly-org/issues/4896)) ([d4b4ba3](https://github.com/patternfly/patternfly-org/commit/d4b4ba33277cd0c6173c0470502df3abfc810867))
+
+
+
+
+
 ## 6.34.1 (2026-02-06)
 
 **Note:** Version bump only for package @patternfly/documentation-framework

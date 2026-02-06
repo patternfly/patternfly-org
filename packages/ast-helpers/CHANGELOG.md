@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.4.0-alpha.340 (2026-02-06)
+
+
+### Features
+
+* allow full-page example utils to change position ([#4896](https://github.com/patternfly/patternfly-org/issues/4896)) ([d4b4ba3](https://github.com/patternfly/patternfly-org/commit/d4b4ba33277cd0c6173c0470502df3abfc810867))
+
+
+
+
+
 # 1.4.0-alpha.339 (2026-02-06)
 
 **Note:** Version bump only for package @patternfly/ast-helpers
