@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 6.34.0 (2026-02-06)
+
+
+### Features
+
+* **Compass:** add handbook doc page ([#4877](https://github.com/patternfly/patternfly-org/issues/4877)) ([bc7fe2e](https://github.com/patternfly/patternfly-org/commit/bc7fe2ee230c155971e5fb984b13b7c1f1ef0901))
+
+
+
+
+
 ## 6.33.11 (2026-02-06)
 
 **Note:** Version bump only for package @patternfly/documentation-framework
