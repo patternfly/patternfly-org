@@ -34,6 +34,15 @@ import missingThumbnail from './missing-thumbnail.jpg';
 import { RtlContext } from '../../layouts';
 import { ThemeSelector } from '../themeSelector/themeSelector';
 
+import RhUiArrowCircleDownRightIcon from '@patternfly/react-icons/dist/esm/icons/rh-ui-arrow-circle-down-right-icon';
+import RhUiArrowCircleDownLeftIcon from '@patternfly/react-icons/dist/esm/icons/rh-ui-arrow-circle-down-left-icon';
+import RhUiArrowCircleUpRightIcon from '@patternfly/react-icons/dist/esm/icons/rh-ui-arrow-circle-up-right-icon';
+import RhUiArrowCircleUpLeftIcon from '@patternfly/react-icons/dist/esm/icons/rh-ui-arrow-circle-up-left-icon';
+import RhUiArrowCircleDownRightFillIcon from '@patternfly/react-icons/dist/esm/icons/rh-ui-arrow-circle-down-right-fill-icon';
+import RhUiArrowCircleDownLeftFillIcon from '@patternfly/react-icons/dist/esm/icons/rh-ui-arrow-circle-down-left-fill-icon';
+import RhUiArrowCircleUpRightFillIcon from '@patternfly/react-icons/dist/esm/icons/rh-ui-arrow-circle-up-right-fill-icon';
+import RhUiArrowCircleUpLeftFillIcon from '@patternfly/react-icons/dist/esm/icons/rh-ui-arrow-circle-up-left-fill-icon';
+
 const errorComponent = (err) => <pre>{err.toString()}</pre>;
 
 class ErrorBoundary extends React.Component {
@@ -137,8 +146,22 @@ export const Example = ({
   }
 
   const [editorCode, setEditorCode] = React.useState(code);
+  const isBrowser = typeof window !== 'undefined' && window.localStorage;
+  const [fullPageUtilsPosition, setFullPageUtilsPosition] = React.useState(() => {
+    if (isBrowser) {
+      return localStorage.getItem('fullPageUtilsPosition') || 'pf-m-bottom-left';
+    }
+    return 'pf-m-bottom-left';
+  });
   const loc = useLocation();
   const isRTL = useContext(RtlContext);
+
+  // Save fullPageUtilsPosition to localStorage when it changes
+  useEffect(() => {
+    if (isBrowser) {
+      localStorage.setItem('fullPageUtilsPosition', fullPageUtilsPosition);
+    }
+  }, [fullPageUtilsPosition]);
   const scope = {
     ...liveContext,
     // These 2 are in the bundle anyways for the site since we dogfood
@@ -186,15 +209,51 @@ export const Example = ({
   const previewId = getExampleId(source, section[0], id, title);
   const className = getExampleClassName(source, section[0], id);
 
+  // Four corner position button props
+  const fullPageUtilsPositionProps = {
+    topLeft: {
+      className: 'pf-m-top-left',
+      label: 'Move to the top left corner',
+      tooltipPosition: 'bottom-start',
+      icon: <RhUiArrowCircleUpLeftIcon />,
+      iconClicked: <RhUiArrowCircleUpLeftFillIcon />
+    },
+    topRight: {
+      className: 'pf-m-top-right',
+      label: 'Move to the top right corner',
+      tooltipPosition: 'bottom-end',
+      icon: <RhUiArrowCircleUpRightIcon />,
+      iconClicked: <RhUiArrowCircleUpRightFillIcon />
+    },
+    bottomLeft: {
+      className: 'pf-m-bottom-left',
+      label: 'Move to the bottom left corner',
+      tooltipPosition: 'top-start',
+      icon: <RhUiArrowCircleDownLeftIcon />,
+      iconClicked: <RhUiArrowCircleDownLeftFillIcon />
+    },
+    bottomRight: {
+      className: 'pf-m-bottom-right',
+      label: 'Move to the bottom right corner',
+      tooltipPosition: 'top-end',
+      icon: <RhUiArrowCircleDownRightIcon />,
+      iconClicked: <RhUiArrowCircleDownRightFillIcon />
+    }
+  };
+
   if (isFullscreenPreview) {
+    const activeFullPageUtilsTooltipPosition = Object.values(fullPageUtilsPositionProps).find(
+      (props) => props.className === fullPageUtilsPosition
+    )?.tooltipPosition;
+
     return (
       <div id={previewId} className={css(className, 'pf-v6-u-h-100')}>
         {livePreview}
         {(hasThemeSwitcher || hasRTLSwitcher) && (
           <Flex
             direction={{ default: 'column' }}
-            gap={{ default: 'gapMd' }}
-            className="ws-full-page-utils pf-v6-m-dir-ltr"
+            gap={{ default: 'gapSm' }}
+            className={css('ws-full-page-utils', 'pf-v6-m-dir-ltr', fullPageUtilsPosition)}
           >
             {hasThemeSwitcher && <ThemeSelector id="ws-example-theme-select" />}
             {hasRTLSwitcher && (
@@ -209,6 +268,27 @@ export const Example = ({
                 }}
               />
             )}
+            {/* Four corner position buttons */}
+            {Object.entries(fullPageUtilsPositionProps).map(([key, utilsProps]) => (
+              <Tooltip
+                key={key}
+                content={utilsProps.label}
+                position={activeFullPageUtilsTooltipPosition || utilsProps.tooltipPosition}
+                enableFlip={false}
+                aria="none"
+                aria-live="off"
+              >
+                <Button
+                  variant="plain"
+                  size="sm"
+                  className={css('ws-full-page-utils-position-btn', utilsProps.className)}
+                  isClicked={fullPageUtilsPosition === utilsProps.className}
+                  onClick={() => setFullPageUtilsPosition(utilsProps.className)}
+                  aria-label={`${utilsProps.label}${fullPageUtilsPosition === utilsProps.className ? ', selected' : ''}`}
+                  icon={fullPageUtilsPosition === utilsProps.className ? utilsProps.iconClicked : utilsProps.icon}
+                />
+              </Tooltip>
+            ))}
           </Flex>
         )}
       </div>
