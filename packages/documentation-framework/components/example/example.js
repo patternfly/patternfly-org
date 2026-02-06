@@ -275,8 +275,8 @@ export const Example = ({
                 content={utilsProps.label}
                 position={activeFullPageUtilsTooltipPosition || utilsProps.tooltipPosition}
                 enableFlip={false}
-                aria-none
-                aria-life="off"
+                aria="none"
+                aria-live="off"
               >
                 <Button
                   variant="plain"
