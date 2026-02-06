@@ -5173,6 +5173,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@patternfly/react-icons@npm:^6.5.0-prerelease.11":
+  version: 6.5.0-prerelease.13
+  resolution: "@patternfly/react-icons@npm:6.5.0-prerelease.13"
+  peerDependencies:
+    react: ^17 || ^18 || ^19
+    react-dom: ^17 || ^18 || ^19
+  checksum: 10c0/518809f6d0deedb8079fbbaa3e503ccdfdfdd076bab6f3ad94575eb09d10b283ddbe921de0a58079580431d0a638e68878648873fc02a9be517b4fec4c06290b
+  languageName: node
+  linkType: hard
+
 "@patternfly/react-log-viewer@npm:6.3.0":
   version: 6.3.0
   resolution: "@patternfly/react-log-viewer@npm:6.3.0"
