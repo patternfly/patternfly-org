@@ -4871,7 +4871,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@patternfly/patternfly@npm:6.5.0-prerelease.33, @patternfly/patternfly@npm:^6.5.0-prerelease.33":
+"@patternfly/patternfly@npm:6.5.0-prerelease.33":
   version: 6.5.0-prerelease.33
   resolution: "@patternfly/patternfly@npm:6.5.0-prerelease.33"
   checksum: 10c0/d3714f12545a4784dd26abc4e60e979ba40b1a551027c6df1888a6839fa4fdc078c2370f049a326fb5fbd330075107ac36fb393bf40fa4b9fdbe4b4f8777ad81
@@ -4882,6 +4882,13 @@ __metadata:
   version: 6.2.3
   resolution: "@patternfly/patternfly@npm:6.2.3"
   checksum: 10c0/f9be9e21fd16270529a8f4ff8b9666496b629c61fbeec1ea642533a3d9cea1076f984c1ebb2c0b40e8cad661dbde5af874f079cfafdd07dc0b6a766f1fbdb5d7
+  languageName: node
+  linkType: hard
+
+"@patternfly/patternfly@npm:^6.5.0-prerelease.37":
+  version: 6.5.0-prerelease.37
+  resolution: "@patternfly/patternfly@npm:6.5.0-prerelease.37"
+  checksum: 10c0/73907ee81c42ba5257636d6a29034b68143305e8fba02cccb3308ed767d2c510ffd5c0e78082cc2f29cf29c0bda37ea80befd614cd62a2d08abd7a1d11ce0ddd
   languageName: node
   linkType: hard
 
@@ -18944,7 +18951,7 @@ __metadata:
   resolution: "patternfly-org-workspace@workspace:."
   dependencies:
     "@octokit/rest": "npm:^19.0.7"
-    "@patternfly/patternfly": "npm:^6.5.0-prerelease.33"
+    "@patternfly/patternfly": "npm:^6.5.0-prerelease.37"
     "@patternfly/react-code-editor": "npm:^6.5.0-prerelease.26"
     "@patternfly/react-core": "npm:^6.5.0-prerelease.24"
     "@patternfly/react-table": "npm:^6.5.0-prerelease.24"
