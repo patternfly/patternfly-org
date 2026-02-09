@@ -45,6 +45,8 @@ import TimesIcon from '@patternfly/react-icons/dist/esm/icons/rh-ui-close-icon';
 
 import './examples/glass.css';
 
+import { CodeEditor, Language } from '@patternfly/react-code-editor';
+
 ## Demo
 Our components can now use motion to provide clear visual feedback to users, improving engagement and usability. To see our new animations in motion, take this interactive tour, which guides you through a UI that includes animated alerts, icons, expansion, and more.
 
