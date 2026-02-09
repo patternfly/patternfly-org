@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect, FunctionComponent, FormEvent } from 'react';
+import React, { useRef, useState, useEffect, FunctionComponent, FormEvent, Fragment } from 'react';
 import {
   AlertGroup,
   Alert,
@@ -71,7 +71,15 @@ import {
   AccordionContent,
   AccordionItem,
   AccordionToggle,
-  Checkbox
+  Checkbox,
+  Gallery,
+  GalleryItem,
+  Pagination,
+  PaginationVariant,
+  Breadcrumb,
+  BreadcrumbItem,
+  PageBreadcrumb,
+  PageGroup
 } from '@patternfly/react-core';
 import { Table, Thead, Tbody, Tr, Th, Td, ExpandableRowContent } from '@patternfly/react-table';
 import SkeletonTable from '@patternfly/react-component-groups/dist/dynamic/SkeletonTable';
@@ -140,11 +148,11 @@ const expandableColumns = ['Applications', 'Server', 'Branch', 'Status'];
 const initialExpandedServerNames = ['Cost Management']; // Default to expanded
 
 export const AccordionSingleExpandBehavior: React.FunctionComponent = ({ children }) => {
-  const [expanded, setExpanded] = useState();
+  const [expanded, setExpanded] = useState(undefined);
 
   const onToggle = (id: string) => {
     if (id === expanded) {
-      setExpanded('');
+      setExpanded(undefined);
     } else {
       setExpanded(id);
     }
@@ -333,12 +341,80 @@ export const CodeEditorBasic: React.FunctionComponent = () => {
   );
 };
 
+export const PaginationSticky: React.FunctionComponent = () => {
+  const [page, setPage] = useState(1);
+  const [perPage, setPerPage] = useState(100);
+  const [isTopSticky, setIsTopSticky] = useState(false);
+  const itemCount = 523;
+
+  const onToggleSticky = () => {
+    setIsTopSticky((prev) => !prev);
+  };
+
+  const onSetPage = (_event, newPage) => {
+    setPage(newPage);
+  };
+
+  const onPerPageSelect = (
+    _event,
+    newPerPage,
+    newPage
+  ) => {
+    setPerPage(newPerPage);
+    setPage(newPage);
+  };
+
+  const buildCards = () => {
+    const numberOfCards = (page - 1) * perPage + perPage - 1 >= itemCount ? itemCount - (page - 1) * perPage : perPage;
+
+    return Array.from({ length: numberOfCards }).map((_value, index) => (
+      <GalleryItem key={index}>
+        <Card>
+          <CardBody>This is a card</CardBody>
+        </Card>
+      </GalleryItem>
+    ));
+  };
+
+  return isTopSticky ? (
+    <Fragment>
+      <Pagination
+        itemCount={itemCount}
+        perPage={perPage}
+        page={page}
+        onSetPage={onSetPage}
+        widgetId="pagination-options-menu-top"
+        onPerPageSelect={onPerPageSelect}
+        isSticky
+      >
+        <button onClick={onToggleSticky}>Toggle to bottom position</button>
+      </Pagination>
+      <Gallery hasGutter>{buildCards()}</Gallery>
+    </Fragment>
+  ) : (
+    <Fragment>
+      <Gallery hasGutter>{buildCards()}</Gallery>
+      <Pagination
+        itemCount={itemCount}
+        perPage={perPage}
+        page={page}
+        onSetPage={onSetPage}
+        widgetId="pagination-options-menu-top"
+        onPerPageSelect={onPerPageSelect}
+        isSticky
+        variant={PaginationVariant.bottom}
+      >
+        <button onClick={onToggleSticky}>Toggle to top position</button>
+      </Pagination>
+    </Fragment>
+  );
+};
 
 
 const AnimationsPage: FunctionComponent = () => {
-  const drawerRef = useRef<HTMLElement | null>(null);
+  const drawerRef = useRef(null);
   const [isDrawerExpanded, setIsDrawerExpanded] = useState(false);
-  const [notifications, setNotifications] = useState<NotificationType[]>([
+  const [notifications, setNotifications] = useState([
     {
       id: 'notification-1',
       title: 'Unread info notification title',
@@ -385,21 +461,14 @@ const AnimationsPage: FunctionComponent = () => {
   const [selectedTab, setSelectedTab] = useState(0);
   const [showForm, setShowForm] = useState(false);
   const [showWizardModal, setShowWizardModal] = useState(false);
-  const [activeItem, setActiveItem] = useState<number | string>('dashboard');
+  const [activeItem, setActiveItem] = useState('dashboard');
 
   // HERE
-  const [openKebabIndex, setOpenKebabIndex] = useState<number>(-1);
+  const [openKebabIndex, setOpenKebabIndex] = useState(-1);
 
-  interface Activity {
-    id: number;
-    name: string;
-    project: string;
-    // Each step is represented by its variant
-    progress: ('success' | 'info' | 'pending' | 'warning' | 'danger' | 'default')[];
-  }
 
   // Data for the table rows
-  const activityData: Activity[] = [
+  const activityData = [
     { id: 1, name: 'my-pod-name', project: 'project-test', progress: ['success', 'success', 'success'] },
     { id: 2, name: 'my-pod-name', project: 'project-test', progress: ['success', 'pending', 'default'] },
     { id: 3, name: 'my-pod-name', project: 'project-test', progress: ['success', 'success', 'danger'] },
@@ -413,7 +482,7 @@ const AnimationsPage: FunctionComponent = () => {
   ];
 
   // A function to create a kebab toggle for a specific row index
-  const kebabToggle = (index: number) => (toggleRef: React.Ref<any>) => (
+  const kebabToggle = (index) => (toggleRef) => (
     <MenuToggle
       ref={toggleRef}
       variant="plain"
@@ -536,12 +605,8 @@ const AnimationsPage: FunctionComponent = () => {
     firstTabbableItem?.focus();
   };
 
-  interface UnreadMap {
-    [notificationId: string]: boolean;
-  }
-
-  const [isUnreadMap, setIsUnreadMap] = useState<UnreadMap>(() => {
-    const map: UnreadMap = {};
+  const [isUnreadMap, setIsUnreadMap] = useState(() => {
+    const map = {};
     notifications.forEach((n) => {
       map[n.id] = !n.isRead;
     });
@@ -771,6 +836,7 @@ const AnimationsPage: FunctionComponent = () => {
           <Tab eventKey={1} title={<TabTitleText>Resources</TabTitleText>} tabContentId="resources" />
           <Tab eventKey={2} title={<TabTitleText>Database</TabTitleText>} tabContentId="database" />
           <Tab eventKey={3} title={<TabTitleText>Other components</TabTitleText>} tabContentId="other-components" />
+          <Tab eventKey={4} title={<TabTitleText>Pagination</TabTitleText>} tabContentId="pagination" />
         </Tabs>
       </PageSection>
       {selectedTab === 0 && (
@@ -802,12 +868,39 @@ const AnimationsPage: FunctionComponent = () => {
         </PageSection>
       )}
       {selectedTab === 3 && (
-        <PageSection>
-          <AccordionSingleExpandBehavior>
-            <AccordionSingleExpandBehavior />
-          </AccordionSingleExpandBehavior>
-          <CodeEditorBasic />
-        </PageSection>
+        <>
+          <PageSection>
+            <AccordionSingleExpandBehavior>
+              <AccordionSingleExpandBehavior />
+            </AccordionSingleExpandBehavior>
+            <CodeEditorBasic />
+          </PageSection>
+        </>
+      )}
+      {selectedTab === 4 && (
+        <>
+          <PageGroup stickyOnBreakpoint={{ default: 'top' }}>
+            <PageBreadcrumb>
+              <Breadcrumb>
+                <BreadcrumbItem>Section home</BreadcrumbItem>
+                <BreadcrumbItem to="#">Section title</BreadcrumbItem>
+                <BreadcrumbItem to="#">Section title</BreadcrumbItem>
+                <BreadcrumbItem to="#" isActive>
+                  Section landing
+                </BreadcrumbItem>
+              </Breadcrumb>
+            </PageBreadcrumb>
+            <PageSection isWidthLimited aria-labelledby="main-title">
+              <Content>
+                <h1 id="main-title">Main title</h1>
+                <p>This is a full page demo.</p>
+              </Content>
+            </PageSection>{' '}
+          </PageGroup>
+          <PageSection>
+            <PaginationSticky />
+          </PageSection>
+        </>
       )}
       <Modal
         isOpen={showWizardModal}
