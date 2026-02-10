@@ -24,7 +24,7 @@ import { AnimationsEndTourModal } from './AnimationsEndTourModal';
 import { AnimationsCreateDatabaseForm } from './AnimationsCreateDatabaseForm';
 import { GuidedTourProvider, useGuidedTour } from './GuidedTourContext';
 import BoltIcon from '@patternfly/react-icons/dist/esm/icons/bolt-icon';
-import { Table, Thead, Tbody, Tr, Th, Td, ExpandableRowContent } from '@patternfly/react-table';
+import { Table, Thead, Tbody, Tr, Th, Td, ExpandableRowContent, TableText } from '@patternfly/react-table';
 import PendingIcon from '@patternfly/react-icons/dist/esm/icons/pending-icon';
 import CheckIcon from '@patternfly/react-icons/dist/esm/icons/check-icon';
 import InfoIcon from '@patternfly/react-icons/dist/esm/icons/info-icon';
@@ -46,6 +46,7 @@ import TimesIcon from '@patternfly/react-icons/dist/esm/icons/rh-ui-close-icon';
 import './examples/glass.css';
 
 import { CodeEditor, Language } from '@patternfly/react-code-editor';
+import { rows, columns } from '@patternfly/react-table/dist/esm/demos/sampleData';
 
 ## Demo
 Our components can now use motion to provide clear visual feedback to users, improving engagement and usability. To see our new animations in motion, take this interactive tour, which guides you through a UI that includes animated alerts, icons, expansion, and more.

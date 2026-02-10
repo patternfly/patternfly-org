@@ -81,7 +81,8 @@ import {
   PageBreadcrumb,
   PageGroup
 } from '@patternfly/react-core';
-import { Table, Thead, Tbody, Tr, Th, Td, ExpandableRowContent } from '@patternfly/react-table';
+import { Table, Thead, Tbody, Tr, Th, Td, ExpandableRowContent, TableText } from '@patternfly/react-table';
+import { rows, columns } from '@patternfly/react-table/dist/esm/demos/sampleData';
 import SkeletonTable from '@patternfly/react-component-groups/dist/dynamic/SkeletonTable';
 
 import EllipsisVIcon from '@patternfly/react-icons/dist/esm/icons/rh-ui-ellipsis-vertical-icon';
@@ -406,6 +407,56 @@ export const PaginationSticky: React.FunctionComponent = () => {
         <button onClick={onToggleSticky}>Toggle to top position</button>
       </Pagination>
     </Fragment>
+  );
+};
+
+export const TableStickyHeader: React.FunctionComponent = () => {
+  const renderLabel = (labelText: string) => {
+    switch (labelText) {
+      case 'Running':
+        return <Label color="green">{labelText}</Label>;
+      case 'Stopped':
+        return <Label color="orange">{labelText}</Label>;
+      case 'Needs Maintenance':
+        return <Label color="blue">{labelText}</Label>;
+      case 'Down':
+        return <Label color="red">{labelText}</Label>;
+    }
+  };
+
+  return (
+    <Table aria-label="Sticky Header Table Demo" isStickyHeader>
+      <Thead>
+        <Tr>
+          <Th width={15}>{columns[0]}</Th>
+          <Th width={10}>{columns[1]}</Th>
+          <Th width={10}>{columns[2]}</Th>
+          <Th width={10}>{columns[3]}</Th>
+          <Th width={10}>{columns[4]}</Th>
+          <Th width={15}>{columns[5]}</Th>
+          <Th width={15}>{columns[6]}</Th>
+          <Th width={10}>{columns[7]}</Th>
+        </Tr>
+      </Thead>
+      <Tbody>
+        {rows.map((row) => (
+          <Tr key={row.name}>
+            <Td dataLabel={columns[0]}>{row.name}</Td>
+            <Td dataLabel={columns[1]}>{row.threads}</Td>
+            <Td dataLabel={columns[2]}>{row.applications}</Td>
+            <Td dataLabel={columns[3]}>{row.workspaces}</Td>
+            <Td dataLabel={columns[4]}>{renderLabel(row.status)}</Td>
+            <Td dataLabel={columns[5]}>{row.location}</Td>
+            <Td dataLabel={columns[6]}>{row.lastModified}</Td>
+            <Td dataLabel={columns[7]}>
+              <a href="#">
+                <TableText wrapModifier="truncate">{row.url} </TableText>
+              </a>
+            </Td>
+          </Tr>
+        ))}
+      </Tbody>
+    </Table>
   );
 };
 
@@ -836,6 +887,7 @@ const AnimationsPage: FunctionComponent = () => {
           <Tab eventKey={2} title={<TabTitleText>Database</TabTitleText>} tabContentId="database" />
           <Tab eventKey={3} title={<TabTitleText>Other components</TabTitleText>} tabContentId="other-components" />
           <Tab eventKey={4} title={<TabTitleText>Pagination</TabTitleText>} tabContentId="pagination" />
+          <Tab eventKey={5} title={<TabTitleText>Sticky header table</TabTitleText>} tabContentId="table" />
         </Tabs>
       </PageSection>
       {selectedTab === 0 && (
@@ -900,6 +952,11 @@ const AnimationsPage: FunctionComponent = () => {
             <PaginationSticky />
           </PageSection>
         </>
+      )}
+      {selectedTab === 5 && (
+        <PageSection>
+          <TableStickyHeader />
+        </PageSection>
       )}
       <Modal
         isOpen={showWizardModal}
