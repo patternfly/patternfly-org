@@ -4,7 +4,7 @@ import '@patternfly/react-styles/src/css/layouts/Toolbar/toolbar.css';
 
 // Patternfly
 import '@patternfly/patternfly/patternfly.css';
-import './custom-org.css';
+import './content/foundations-and-styles/styles/motion/Animations/examples/glass.css';
 // Patternfly utilities
 import '@patternfly/patternfly/patternfly-addons.css';
 // Global theme CSS

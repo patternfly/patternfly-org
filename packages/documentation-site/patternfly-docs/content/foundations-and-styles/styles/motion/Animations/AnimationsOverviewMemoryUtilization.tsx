@@ -100,7 +100,7 @@ export const MemoryUtilizationCard: React.FunctionComponent = () => {
               />
             </ChartDonutThreshold>
           </FlexItem>
-          <FlexItem>
+          {/* <FlexItem>
             <ChartDonutThreshold
               ariaDesc="Mock memory utilization"
               ariaTitle="Mock memory utilization chart"
@@ -127,7 +127,7 @@ export const MemoryUtilizationCard: React.FunctionComponent = () => {
                 thresholds={[{ value: 60 }, { value: 90 }]}
               />
             </ChartDonutThreshold>
-          </FlexItem>
+          </FlexItem> */}
         </Flex>
       </CardBody>
       <CardFooter>

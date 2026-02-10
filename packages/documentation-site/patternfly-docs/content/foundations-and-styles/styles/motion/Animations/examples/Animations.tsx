@@ -135,7 +135,6 @@ import { AnimationsCreateDatabaseForm } from '../AnimationsCreateDatabaseForm';
 import { AnimationsHeaderToolbar } from '../AnimationsHeaderToolbar';
 import { applicationsData } from './ResourceTableData';
 
-import './glass.css';
 import { CodeEditor, Language } from '@patternfly/react-code-editor';
 
 // Simple component to wrap the empty state logo

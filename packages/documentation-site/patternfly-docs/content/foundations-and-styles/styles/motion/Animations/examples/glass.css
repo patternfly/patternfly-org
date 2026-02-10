@@ -8,10 +8,10 @@ body {
 
 :root:where(.pf-v6-theme-glass) {
   /* --pf-t--global--background--color--glass--primary--default: blue; */
-  /* --pf-t--global--background--color--glass--floating--default: red; */
+  --pf-t--global--background--color--glass--floating--default: var(--pf-t--global--background--color--floating--default);
   /* --pf-t--global--background--color--glass--primary: blue; */
   /* --pf-t--global--background--color--glass--floating: blue; */
-  /* --pf-t--global--background--opacity--glass--primary: 50%; */
+  /* --pf-t--global--background--opacity--glass--primary: 70%; */
   /* --pf-t--global--background--opacity--glass--floating: 10%; */
   /* --pf-t--global--background--filter--glass--blur--primary: blur(0px); */
   /* --pf-t--global--background--filter--glass--blur--floating: blur(0px); */
@@ -50,14 +50,14 @@ body {
   }
 
   /* glass components */
-  .pf-v6-c-page__main-container,
+  .pf-v6-c-page__main-container::before,
   /* .pf-v6-c-nav__link.pf-m-current, */
   /* .pf-v6-c-nav, */
   /* .pf-v6-c-page__sidebar, */
   /* .pf-v6-c-masthead, */
-  .pf-v6-c-page__sidebar-body,
+  .pf-v6-c-page__sidebar-body
   /* .pf-v6-c-page__main-section, */
-  .pf-v6-c-drawer__panel {
+  {
     background-color: var(--pf-t--global--background--color--glass--primary--default) !important;
     backdrop-filter: var(--pf-t--global--background--filter--glass--blur--primary) !important;
     border: 1px solid var(--pf-t--global--border--color--alt) !important;
@@ -69,7 +69,20 @@ body {
     background-color: var(--pf-t--global--background--color--action--plain--clicked) !important;
   }
 
+  .pf-v6-c-page__main-container {
+    position: relative;
+  }
+  .pf-v6-c-page__main-container::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+  }
+
   /* floating class components */
+  .pf-v6-c-drawer__panel,
+  .pf-v6-c-popover__content,
+  .pf-v6-c-popover__arrow,
   .pf-v6-c-modal-box,
   .pf-v6-c-menu {
     background-color: var(--pf-t--global--background--color--glass--floating--default) !important;
@@ -81,6 +94,7 @@ body {
   .pf-v6-c-masthead,
   .pf-v6-c-page__sidebar,
   .pf-v6-c-page__main-section,
+  .pf-v6-c-page__main-breadcrumb,
   .pf-v6-c-notification-drawer,
   .pf-v6-c-notification-drawer__header,
   .pf-v6-c-data-list__item,
@@ -88,8 +102,8 @@ body {
   .pf-v6-c-nav,
   .pf-v6-c-wizard__outer-wrap,
   .pf-v6-c-wizard__footer,
-  .pf-v6-c-table__expandable-row-content
-  /* .pf-v6-c-page__main-container */
+  .pf-v6-c-table__expandable-row-content,
+  .pf-v6-c-page__main-container
   {
     background-color: transparent !important;
     border: none !important;
