@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.4.0-alpha.341 (2026-02-11)
+
+
+### Bug Fixes
+
+* **trainings:** updated trainings and fixed linked codesandboxes ([#4923](https://github.com/patternfly/patternfly-org/issues/4923)) ([e76918a](https://github.com/patternfly/patternfly-org/commit/e76918a7653d0106e396685e5b5a027925a47327))
+
+
+
+
+
 # 1.4.0-alpha.340 (2026-02-06)
 
 
