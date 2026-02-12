@@ -15,11 +15,11 @@ import {
   Icon
 } from '@patternfly/react-core';
 
-import ListIcon from '@patternfly/react-icons/dist/esm/icons/list-icon';
-import EllipsisVIcon from '@patternfly/react-icons/dist/esm/icons/ellipsis-v-icon';
-import CubesIcon from '@patternfly/react-icons/dist/esm/icons/cubes-icon';
+import ListIcon from '@patternfly/react-icons/dist/esm/icons/rh-ui-list-icon';
+import EllipsisVIcon from '@patternfly/react-icons/dist/esm/icons/rh-ui-ellipsis-vertical-icon';
+import CubesIcon from '@patternfly/react-icons/dist/esm/icons/rh-ui-cubes-icon';
 import CubeIcon from '@patternfly/react-icons/dist/esm/icons/cube-icon';
-import ArrowRightIcon from '@patternfly/react-icons/dist/esm/icons/arrow-right-icon';
+import ArrowRightIcon from '@patternfly/react-icons/dist/esm/icons/rh-ui-arrow-right-icon';
 
 export const ClusterInventoryCard: React.FunctionComponent = () => {
   const [isKebabOpen, setIsKebabOpen] = useState(false);

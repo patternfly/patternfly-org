@@ -14,7 +14,6 @@ import {
   Popover,
   ActionGroup
 } from '@patternfly/react-core';
-import { useGuidedTour } from './GuidedTourContext';
 
 interface Props {
   onClose: () => void;
@@ -29,7 +28,6 @@ export const AnimationsCreateDatabaseForm: FunctionComponent<Props> = ({ onClose
   // Submit state variables
   const [isSuccess, setIsSuccess] = useState(false);
   const [actionCompleted, setActionCompleted] = useState(false);
-  const { renderTourStepElement } = useGuidedTour();
 
   const labelHelpRef = useRef(null);
 
@@ -90,8 +88,7 @@ export const AnimationsCreateDatabaseForm: FunctionComponent<Props> = ({ onClose
     setIsEmailValid('default');
   };
 
-  return renderTourStepElement(
-    'validationErrors',
+  return (
     <Form isWidthLimited id="create-database-form">
       {actionCompleted && isSuccess ? (
         <FormAlert>

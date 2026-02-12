@@ -2,8 +2,6 @@ import React, { useState } from 'react';
 import {
   Select,
   SelectGroup,
-  SelectList,
-  SelectOption,
   MenuToggle,
   MenuSearch,
   MenuSearchInput,
@@ -11,12 +9,8 @@ import {
   ToggleGroupItem,
   Icon,
   Divider,
-  Spinner,
-  Label,
-  Popover,
-  Button
+  Spinner
 } from '@patternfly/react-core';
-import { HelpIcon, ExternalLinkAltIcon } from '@patternfly/react-icons';
 import { useTheme, THEME_TYPES } from '../../hooks/useTheme';
 
 const SunIcon = (
@@ -50,6 +44,14 @@ const DesktopIcon = (
   </svg>
 );
 
+const ThemeVariantGroupLabel = () => {
+  return (
+    <div className="pf-v6-c-menu__group-title" id="theme-selector-variant-title">
+      Theme
+    </div>
+  );
+};
+
 const ColorSchemeGroupLabel = () => {
   return (
     <div className="pf-v6-c-menu__group-title" id="theme-selector-color-scheme-title">
@@ -58,60 +60,34 @@ const ColorSchemeGroupLabel = () => {
   );
 };
 
-const HighContrastGroupLabel = () => {
-  const [isPopoverOpen, setIsPopoverOpen] = useState(false);
-
+const ContrastModeGroupLabel = () => {
   return (
-    <div className="pf-v6-c-menu__group-title">
-      High contrast{' '}
-      <Popover
-        onClick={(e) => e.stopPropagation()}
-        headerContent={'Under development'}
-        headerComponent="h1"
-        bodyContent={
-          'We are still working to add high contrast support across all PatternFly components and extensions. This beta allows you to preview our progress.'
-        }
-        footerContent={
-          <Button
-            icon={<ExternalLinkAltIcon />}
-            component="a"
-            isInline
-            variant="link"
-            href="/design-foundations/theming"
-            target="_blank"
-          >
-            Learn more
-          </Button>
-        }
-        aria-label="More info about high contrast"
-        appendTo={() => document.body}
-      >
-        <Button variant="plain" hasNoPadding icon={<HelpIcon />} aria-label="High contrast help" />
-      </Popover>{' '}
-      &nbsp;
-      <Label color="blue" isCompact>
-        Beta
-      </Label>
+    <div className="pf-v6-c-menu__group-title" id="theme-selector-contrast-title">
+      Contrast mode
     </div>
   );
 };
 
 export const ThemeSelector = ({ id }) => {
+  const { mode: themeVariant, setMode: setThemeVariant, modes: themeVariantModes } = useTheme(THEME_TYPES.THEME_VARIANT);
   const { mode: themeMode, setMode: setThemeMode, modes: colorModes } = useTheme(THEME_TYPES.COLOR);
   const {
-    mode: highContrastMode,
-    setMode: setHighContrastMode,
-    modes: highContrastModes
-  } = useTheme(THEME_TYPES.HIGH_CONTRAST);
+    mode: contrastMode,
+    setMode: setContrastMode,
+    modes: contrastModes
+  } = useTheme(THEME_TYPES.CONTRAST);
   const [isThemeSelectOpen, setIsThemeSelectOpen] = useState(false);
 
-  const handleThemeChange = (_event, selectedMode) => {
-    setThemeMode(selectedMode);
-    setIsThemeSelectOpen(false);
+  const handleThemeVariantChange = (evt) => {
+    setThemeVariant(evt.currentTarget.id);
   };
 
-  const handleHighContrastThemeSelection = (evt) => {
-    setHighContrastMode(evt.currentTarget.id);
+  const handleThemeChange = (evt) => {
+    setThemeMode(evt.currentTarget.id);
+  };
+
+  const handleContrastModeChange = (evt) => {
+    setContrastMode(evt.currentTarget.id);
   };
 
   const getThemeDisplayText = (mode) => {
@@ -126,6 +102,9 @@ export const ThemeSelector = ({ id }) => {
   };
 
   const getThemeIcon = (mode) => {
+    if (!colorModes) {
+      return <Spinner size="sm" />;
+    }
     switch (mode) {
       case colorModes.LIGHT:
         return SunIcon;
@@ -134,7 +113,7 @@ export const ThemeSelector = ({ id }) => {
       case colorModes.SYSTEM:
         return DesktopIcon;
       default:
-        return <Spinner size="sm" />;
+        return DesktopIcon; // Default to system icon
     }
   };
 
@@ -142,8 +121,6 @@ export const ThemeSelector = ({ id }) => {
     <Select
       id={id}
       isOpen={isThemeSelectOpen}
-      selected={themeMode}
-      onSelect={handleThemeChange}
       onOpenChange={(isOpen) => setIsThemeSelectOpen(isOpen)}
       toggle={(toggleRef) => (
         <MenuToggle
@@ -162,50 +139,86 @@ export const ThemeSelector = ({ id }) => {
         preventOverflow: true
       }}
     >
-      <SelectGroup label={ColorSchemeGroupLabel}>
-        <SelectList aria-labelledby="theme-selector-color-scheme-title">
-          <SelectOption value={colorModes.SYSTEM} icon={DesktopIcon} description="Follow system preference">
-            System
-          </SelectOption>
-          <SelectOption value={colorModes.LIGHT} icon={SunIcon} description="Always use light mode">
-            Light
-          </SelectOption>
-          <SelectOption value={colorModes.DARK} icon={MoonIcon} description="Always use dark mode">
-            Dark
-          </SelectOption>
-        </SelectList>
+      <SelectGroup label={ThemeVariantGroupLabel}>
+        <MenuSearch>
+          <MenuSearchInput>
+            <ToggleGroup aria-labelledby="theme-selector-variant-title">
+              <ToggleGroupItem
+                text="Default"
+                buttonId={themeVariantModes.DEFAULT}
+                isSelected={themeVariant === themeVariantModes.DEFAULT}
+                onChange={handleThemeVariantChange}
+              />
+              <ToggleGroupItem
+                text="Unified"
+                buttonId={themeVariantModes.UNIFIED}
+                isSelected={themeVariant === themeVariantModes.UNIFIED}
+                onChange={handleThemeVariantChange}
+              />
+            </ToggleGroup>
+          </MenuSearchInput>
+        </MenuSearch>
       </SelectGroup>
-      {process.env.hasHighContrastSwitcher && (
-        <>
-          <Divider />
-          <SelectGroup label={HighContrastGroupLabel}>
-            <MenuSearch>
-              <MenuSearchInput>
-                <ToggleGroup aria-label="High contrast theme switcher">
-                  <ToggleGroupItem
-                    text="System"
-                    buttonId={highContrastModes.SYSTEM}
-                    isSelected={highContrastMode === highContrastModes.SYSTEM}
-                    onChange={handleHighContrastThemeSelection}
-                  />
-                  <ToggleGroupItem
-                    text="On"
-                    buttonId={highContrastModes.ON}
-                    isSelected={highContrastMode === highContrastModes.ON}
-                    onChange={handleHighContrastThemeSelection}
-                  />
-                  <ToggleGroupItem
-                    text="Off"
-                    buttonId={highContrastModes.OFF}
-                    isSelected={highContrastMode === highContrastModes.OFF}
-                    onChange={handleHighContrastThemeSelection}
-                  />
-                </ToggleGroup>
-              </MenuSearchInput>
-            </MenuSearch>
-          </SelectGroup>
-        </>
-      )}
+      <Divider />
+      <SelectGroup label={ColorSchemeGroupLabel}>
+        <MenuSearch>
+          <MenuSearchInput>
+            <ToggleGroup aria-labelledby="theme-selector-color-scheme-title">
+              <ToggleGroupItem
+                text="System"
+                buttonId={colorModes.SYSTEM}
+                isSelected={themeMode === colorModes.SYSTEM}
+                onChange={handleThemeChange}
+              />
+              <ToggleGroupItem
+                text="Light"
+                buttonId={colorModes.LIGHT}
+                isSelected={themeMode === colorModes.LIGHT}
+                onChange={handleThemeChange}
+              />
+              <ToggleGroupItem
+                text="Dark"
+                buttonId={colorModes.DARK}
+                isSelected={themeMode === colorModes.DARK}
+                onChange={handleThemeChange}
+              />
+            </ToggleGroup>
+          </MenuSearchInput>
+        </MenuSearch>
+      </SelectGroup>
+      <Divider />
+      <SelectGroup label={ContrastModeGroupLabel}>
+        <MenuSearch>
+          <MenuSearchInput>
+            <ToggleGroup aria-labelledby="theme-selector-contrast-title">
+              <ToggleGroupItem
+                text="System"
+                buttonId={contrastModes.SYSTEM}
+                isSelected={contrastMode === contrastModes.SYSTEM}
+                onChange={handleContrastModeChange}
+              />
+              <ToggleGroupItem
+                text="Default"
+                buttonId={contrastModes.DEFAULT}
+                isSelected={contrastMode === contrastModes.DEFAULT}
+                onChange={handleContrastModeChange}
+              />
+              <ToggleGroupItem
+                text="High contrast"
+                buttonId={contrastModes.HIGH_CONTRAST}
+                isSelected={contrastMode === contrastModes.HIGH_CONTRAST}
+                onChange={handleContrastModeChange}
+              />
+              <ToggleGroupItem
+                text="Glass"
+                buttonId={contrastModes.GLASS}
+                isSelected={contrastMode === contrastModes.GLASS}
+                onChange={handleContrastModeChange}
+              />
+            </ToggleGroup>
+          </MenuSearchInput>
+        </MenuSearch>
+      </SelectGroup>
     </Select>
   );
 };

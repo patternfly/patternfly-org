@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import { Card, CardHeader, CardTitle, CardBody, Dropdown, DropdownList, DropdownItem, MenuToggle, Flex } from '@patternfly/react-core';
 
-import EllipsisVIcon from '@patternfly/react-icons/dist/esm/icons/ellipsis-v-icon';
-import NetworkIcon from '@patternfly/react-icons/dist/esm/icons/network-icon';
+import EllipsisVIcon from '@patternfly/react-icons/dist/esm/icons/rh-ui-ellipsis-vertical-icon';
+import NetworkIcon from '@patternfly/react-icons/dist/esm/icons/rh-ui-network-icon';
 
 import {
   Chart,

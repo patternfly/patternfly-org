@@ -18,8 +18,8 @@ import {
   PageSection,
   Title
 } from '@patternfly/react-core';
-import ArrowRightIcon from '@patternfly/react-icons/dist/esm/icons/arrow-right-icon';
-import TimesIcon from '@patternfly/react-icons/dist/esm/icons/times-icon';
+import ArrowRightIcon from '@patternfly/react-icons/dist/esm/icons/rh-ui-arrow-right-icon';
+import TimesIcon from '@patternfly/react-icons/dist/esm/icons/rh-ui-close-icon';
 import MultiContentCard from '@patternfly/react-component-groups/dist/dynamic/MultiContentCard';
 import AnimationsOverviewClusterInventory from './AnimationsOverviewClusterInventory';
 import AnimationsOverviewNetworkActivity from './AnimationsOverviewNetworkActivity';
