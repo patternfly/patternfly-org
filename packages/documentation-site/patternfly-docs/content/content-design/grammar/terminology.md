@@ -51,7 +51,7 @@ When using trademarks:
 
 <div class="ws-content-table">
 
-| **Term** | **Usage** | **Related&nbsp;icon** | **Opposite&nbsp;term** | **Notes** |
+| **Term** | **Usage** | **Related&nbsp;icons** | **Opposite&nbsp;term** | **Notes** |
 |------------------|-----------|-----|-----|-----|
 | **Add** <br /> (verb) | Use to describe adding an existing item to an existing list, group, view, or other container element. | <PlusIcon /> <br /> (fa-plus) | *Remove* | If the object being added is not readily apparent from the context, consider adding a noun (like "Add user"). If you're creating a new object, **do not use** *Add*. See *Create*.
 | **Cancel** <br /> (verb) | Use to describe ending an action in progress or ending an action where changes could be lost (like in a form). | | | Use *Canceling* instead of *Cancelling*. Use *Canceled* instead of *Cancelled*.|
