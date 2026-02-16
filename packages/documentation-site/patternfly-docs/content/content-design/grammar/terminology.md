@@ -23,6 +23,7 @@ import MinusCircleIcon from '@patternfly/react-icons/dist/esm/icons/minus-circle
 import SaveIcon from '@patternfly/react-icons/dist/esm/icons/save-icon';
 import SearchIcon from '@patternfly/react-icons/dist/esm/icons/search-icon';
 import EyeIcon from '@patternfly/react-icons/dist/esm/icons/eye-icon';
+import EyeSlashIcon from '@patternfly/react-icons/dist/esm/icons/eye-slash-icon';
 import UploadIcon from '@patternfly/react-icons/dist/esm/icons/upload-icon';
 
 This resource overviews common UI terms and their usage. Do not precede any terms in a UI with "please" as it is extraneous and overly formal.
@@ -71,7 +72,7 @@ When using trademarks:
 | **Export** <br /> (verb) | Use to describe packing the contents (like a project or spreadsheet) from a website or application to a file format (like .pdf or .xslx) to your system. | <ExportIcon /> <br /> (pficon-export) | *Import* | **Do not use** interchangeably with *Download*.
 | **Export** <br /> (verb) | Use to describe packing the contents (like a project or spreadsheet) from a website or application to a file format (like .pdf or .xslx) to your system. | <ExportIcon /> <br /> (pficon-export) | *Import* | **Do not use** interchangeably with *Download*.
 | **Filter** <br /> (verb) | Use to describe the action of narrowing a set of search results to show only items meeting a certain criteria. Filtering is mostly associated with views like tables, lists, and card grids and assumes that a search has previously been performed to return an initial results list. | <FilterIcon /> <br /> (fa-filter) | |
-| **Hide** <br /> (verb) | Use to describe hiding something that is displayed in the interface. | | *Show* |
+| **Hide** <br /> (verb) | Use to describe hiding something that is displayed in the interface. | <EyeSlashIcon /> <br /> (fa-eye-slash) | *Show* |
 | **Home page** <br /> (noun) | Use to describe the main page of a website. | | | Write *Home page* as two words, not one.
 | **Import** <br /> (verb) | Use to describe loading a copy of an object (like a file, image, or format) to your system, software, or application for use or processing. | <ImportIcon /> <br /> (pficon-import) | *Export* | **Do not use** interchangeably with *Upload* or *Add*.
 | **Log in** <br /> (verb) | Use to describe logging in. | | *Log out *| Use *log in to,* not *log into.*
