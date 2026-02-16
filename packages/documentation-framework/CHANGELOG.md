@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 6.36.0 (2026-02-16)
+
+
+### Features
+
+* **theme-switcher:** enhance theme switcher for theme development/testing ([#4929](https://github.com/patternfly/patternfly-org/issues/4929)) ([cf5a959](https://github.com/patternfly/patternfly-org/commit/cf5a95937b6a534f76e39cb4b2a19511842fbf2b))
+
+
+
+
+
 ## 6.35.1 (2026-02-11)
 
 
