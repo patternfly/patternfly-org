@@ -26,7 +26,7 @@ For guidance on writing copy for modals, refer to the [content considerations](#
 
 ## Usage
 
-Use a modal to communicate critical information that requires user input or action. 
+Use a **modal** to communicate critical information that requires user input or action. 
 
 Modals can:
 
@@ -38,29 +38,31 @@ Modals can:
 
 Don’t use a modal unless its information is vital to user success and worth disrupting a user’s task flow.
 
-
 ## Variations
-Modals serve several functions in a UI and appear in four main types:
+Modals serve several functions in a UI and appear in the following main types:
 
-* [Confirmation dialogs](#confirmation-dialogs)
+* [Confirmation modals](#confirmation-modals)
 
-* [Edit dialogs](#edit-dialogs)
+* [Edit modals](#edit-modals)
 
-* [Error dialogs](#error-dialogs)
+* [Error modals](#error-modals)
 
-* [Passive dialogs](#passive-dialogs)
+* [Passive modals](#passive-modals)
 
-* [Input dialogs](#input-dialogs)
+* [Session expiration modals](#session-expiration-modals)
 
+* [Input modals](#input-modals)
 
-### Confirmation dialogs
+* [Modals with help](#modals-with-help)
 
-Use a confirmation dialog to validate user decisions and communicate their consequences. Confirmation dialogs can confirm non-destructive and destructive actions.
+### Confirmation modals
+
+Use a confirmation modal to validate user decisions and communicate their consequences. Confirmation modals can confirm non-destructive and destructive actions.
 
 #### Confirm a non-destructive action
 
 <div class="ws-docs-content-img" style="min-width:100%">
-![A side-by-side comparison of unsuccessful and successful confirmaton dialogs for leaving a page without saving.](./img/modal-non-destructive.svg)
+![A side-by-side comparison of unsuccessful and successful confirmaton modals for leaving a page without saving.](./img/modal-non-destructive.svg)
 </div>
 
 When confirming a non-destructive action, provide specific context about what will happen once a user confirms it.
@@ -68,7 +70,7 @@ When confirming a non-destructive action, provide specific context about what wi
 #### Confirm a destructive action
 
 <div class="ws-docs-content-img" style="min-width:100%">
-![A side-by-side comparison of unsuccessful and successful destructive confirmaton dialogs.](./img/modal-destructive.svg)
+![A side-by-side comparison of unsuccessful and successful destructive confirmaton modals.](./img/modal-destructive.svg)
 </div>
 
 Use a [primary button](/components/button/design-guidelines#primary-button) to confirm a destructive action. If the action carries serious consequences, then use a [danger button](/components/button/design-guidelines#danger-button) instead.
@@ -77,49 +79,72 @@ If an action is difficult or impossible to undo, add a warning icon beside the h
 
 If a destructive action has serious consequences, consider adding an additional step before its destructive button becomes active. Additional confirmation measures like [text input](/components/forms/text-input/design-guidelines) fields safeguard a user from accidentally completing the action. 
 
-When a text input field is added to a confirmation dialog, the danger button will only become enabled once a user enters the entire word or phrase.
+When a text input field is added to a confirmation modal, the danger button will only become enabled once a user enters the entire word or phrase.
 
 <div class="ws-docs-content-img" style="min-width:100%">
-![Example of a destructive confirmation dialog that requires an input field be filled before continuing.](./img/modal-destructive-text-input.svg)
+![Example of a destructive confirmation modal that requires an input field be filled before continuing.](./img/modal-destructive-text-input.svg)
 </div>
 
-### Edit dialogs
+### Edit modals
 
-Use an edit dialog for managing assets. Edit dialogs contain multiple actions which can include, but are not limited to, saving your changes or deleting the asset. The primary action in the dialog should use a primary button, the secondary should use a secondary button, and the cancel button should remain a link button.
+Use an edit modal for managing assets. Edit modals contain multiple actions which can include, but are not limited to, saving your changes or deleting the asset. The primary action in the modal should use a primary button, the secondary should use a secondary button, and the cancel button should remain a link button.
 
-For example, and edit dialogue might contain a "Save" button as the primary action, and a "Delete" button as a secondary action. If the secondary action is destructive, the button should be styled as a [secondary danger  button](/components/button/#variant-examples). Additionally, it should be aligned to the right-side of the modal, directly across from the primary action and cancel buttons. 
+For example, an edit modal might contain a "Save" button as the primary action, and a "Delete" button as a secondary action. If the secondary action is destructive, the button should be styled as a [secondary danger button](/components/button/#variant-examples). Additionally, it should be aligned to the right-side of the modal, directly across from the primary action and cancel buttons. 
 
 <div class="ws-docs-content-img">
-![Example of an edit dialog.](./img/modal-edit-dialog.svg)
+![Example of an edit modal.](./img/edit-modal.svg)
 </div>
 
 When using destructive actions, ensure that the user is informed about the consequences of taking this action. Review the general guidelines for [danger button](/components/button/design-guidelines#danger-button) and destructive actions for additional guidance. 
 
-### Error dialogs
+### Error modals
 
 <div class="ws-docs-content-img" style="min-width:100%">
-![Example of an error dialog, with and without an optional error icon.](./img/modal-error-dialog.svg)
+![Example of an error modal, with and without an optional error icon.](./img/error-modal.svg)
 </div>
 
-Use an error dialog to inform users of problems that interrupt normal or expected behavior. Briefly contextualize the problem and why it happened, then provide actionable steps toward a solution.
+Use an error modal to inform users of problems that interrupt normal or expected behavior. Briefly contextualize the problem and why it happened, then provide actionable steps toward a solution.
 
 Learn more about writing error messages in our [error message guidelines](/content-design/writing-guides/error-messages).
 
-Error dialogs may use an error icon for visual emphasis.
+Error modals may use an error icon for visual emphasis.
 
-### Passive dialogs
+### Passive modals
 
 <div class="ws-docs-content-img" style="min-width:100%">
-![Example of a passive dialog, with and without an optional warning icon.](./img/modal-passive-dialog.svg)
+![Example of a passive modal, with and without an optional warning icon.](./img/passive-modal.svg)
 </div>
 
-Use a passive dialog to communicate critical and immediately relevant information like the status of an application or an action’s result. Passive dialog content should require or lead to user action.
+Use a passive modal to communicate critical and immediately relevant information like the status of an application or an action’s result. Passive modal content should require or lead to user action.
 
-Passive dialogs can also notify the user about the status or duration of a critical process, especially if the process may take an unusual amount of time to complete.
+Passive modals can also notify the user about the status or duration of a critical process, especially if the process may take an unusual amount of time to complete.
 
-Never use a passive dialog for non-critical information. Instead, use an [inline alert](/components/alert/design-guidelines/#inline-alerts) or a [toast alert](/components/alert/design-guidelines/#toast-alerts).
+Never use a passive modal for non-critical information. Instead, use an [inline alert](/components/alert/design-guidelines/#inline-alerts) or a [toast alert](/components/alert/design-guidelines/#toast-alerts).
 
-### Input dialogs
+### Session expiration modals
+
+Use a session expiration modal to communicate that a user will soon be logged out of their account. This modal should display the time remaining (in seconds) until the user will be logged out, and that number should dynamically update as time passes, like a countdown. 
+
+<div class="ws-docs-content-img" style="min-width:100%">
+![A modal is placed on top of a generic desktop page, with a yellow warning icon and a "Session expiring" title. There are two pink annotations pointing to different parts of the modal: one pointing to the amount of time remaining and one pointing to the footer actions.](./img/session-expiration-modal.svg)
+</div>
+
+1. **Timeout countdown:** Display a dynamic countdown until the user's session will expire.
+2. **Actions:** Display options that allow users to extend their session before timeout or choose to log out.
+
+Once a user's session has expired, the modal should be updated to display a "Session expired" message that informs users they have already been logged out.
+
+<div class="ws-docs-content-img" style="min-width:100%">
+![A modal is placed atop a gray background, with a red danger icon and a "Session expired" title. There's a single button in the footer with the label "Return to login page".](./img/session-expired-modal.svg)
+</div>
+
+If you choose to return the user back to the login page when their session expires, even if this happens in the background, you can display an inline info alert on the [login page](/components/login-page) that provides context.
+
+<div class="ws-docs-content-img" style="min-width:100%">
+![An alert is placed within a login page, above the username and password fields, with a purple information icon and a "Session expired" title.](./img/session-expired-login.svg)
+</div>
+
+### Input modals
 
 Users may need to provide additional input to complete an action. To accomplish this, use forms or other elements within the modal, like in a [modal wizard](/components/wizard#within-modal).
 
@@ -182,15 +207,18 @@ Example headline: *Permanently delete database?*<br />
 Example buttons: *Delete* and *Cancel* <br />
 For more button guidance, see our [button label guidelines](/components/button/design-guidelines#content).
 
-For general content guidance to help write effective modal dialogs, see our [UX writing style guide](/content-design/overview).
+For general content guidance to help write effective modals, see our [UX writing style guide](/content-design/overview).
 
+### Icon use in modals
 
-### Icon use in modal dialogs
+Icons are optional in modals. Use or omit them as your use case requires.
 
-Icons are optional in modal dialogs. Use or omit them as your use case requires.
+| Icon | Description | Usage |
+| --- |---|---|
+| <span style="color: var(--pf-t--global--icon--color--status--warning--default)" aria-label="warning" role="img"> <i class="fas fa-exclamation-triangle" /> </span> | **Warning:** Cautions or warns the user of a permanent action, or that information will be deleted upon action completion | Add to confirmation modals or passive modals to indicate a higher level of urgency and importance.|
+| <span style="color: var(--pf-t--global--icon--color--status--danger--default)" aria-label="critical warning" role="img"> <i class="fas fa-exclamation-circle" /> </span> | **Danger:** Indicates that an error has occured  | Add to error modals. |
+| <span style="color: var(--pf-t--global--icon--color--status--info--default)" aria-label="acknowledgement" role="img"> <i class="fas fa-info-circle" /> </span> | **Info:** Informs the user of an action or result  | Add to confirmation or passive modals to indicate a lower level of urgency. |
 
-| Icon | Use case(s) | Usage |
-| ------------- |-------------|-------------|
-| <span style="color: rgb(240, 171, 0)" aria-label="warning" role="img"> <i class="fas fa-exclamation-triangle" /> </span> | **Warning:** Cautions or warns the user of a permanent action, or that information will be deleted upon action completion | Add to confirmation dialogs or passive dialogs to indicate a higher level of urgency and importance.|
-| <span style="color: rgb(201, 25, 11)" aria-label="critical warning" role="img"> <i class="fas fa-exclamation-circle" /> </span> | **Critical Warning:** Indicates that an error has occured  | Add to error dialogs. |
-| <span style="color: rgb(43, 154, 243)" aria-label="acknowledgement" role="img"> <i class="fas fa-info-circle" /> </span> | **Acknowledgement:** Informs the user of an action or result  | Add to confirmation or passive dialogs to indicate a lower level of urgency. |
+## Accessibility 
+
+For information regarding accessibility, visit the [modal accessibility tab](/components/modal/accessibility).
