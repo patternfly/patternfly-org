@@ -37,29 +37,23 @@ import '../components.css';
 
 13. **Links (optional):** Provides an area for additional links to pages where the user can get more information or access help.
 
-
-
-
 ## Usage
 
-There are 3 main usage scenarios related to the login page:
-
-1. A user wants to gain access to an application.
-
-2. A user is automatically logged out due to inactivity and is redirected to the login page.
-    * If this happens, signing in should redirect the user back to the page they were on prior to being logged out.
-
-3. A user has forgotten their username and/or password. A link is available to reset the username and/or password.
-   * The login page should be replaced by the fields used to recover their username and/or password.
-   
-
-
+A **login page** is a standard screen that users can use to access an application. These pages are branded and can optionally display a description of the product and links to important related resources. 
 
 ### Authentication methods
 
 #### Standard login
 The standard login is shown in the example above and provides a commonly used pattern where both the username and password input fields are displayed at the same time. This is commonly used by applications that don’t require additional types of authentication.
 
+#### Other login methods
+Beyond the standard username/password or [social icons](#social-login), you can provide additional custom login methods at the bottom of the login page. These methods may include [SSO](#single-sign-on-sso), related or legacy accounts, or any other unique method that's supported by your application. 
+
+<div class="ws-docs-content-img">
+![A section at the bottom of a login page, below the username and password fields, that's dedicated to additional login methods. This section includes text headers, a dropdown menu, and links.](./img/login-multiple-methods.svg)
+</div>
+
+1. **Other login methods:** Includes additional login methods beyond a username/password or social login. You can utilize additional components, like menus or links, to provide access to these additional methods.
 
 #### Multi-factor login
 The multi-factor login allows a user to gain access to an application by entering their authentication information progressively. For example, a user enters only their username and then clicks next. The system validates the username before providing a field for the user to enter their password. Using this progressive process allows the application to validate information at each step and allows for an automatic redirect to an external identity provider (IdP) when the user is linked to an external IdP.
@@ -70,7 +64,7 @@ When you need more security, you can incorporate additional authentication metho
 ![Example of a multi-factor login process.](./img/login-authentication-multi-factor.svg)
 </div>
 
-**Enabling users to select their verification method (optional):**
+##### Enabling users to select their verification method (optional) 
 Once a user has provided a valid password, the system hides the gray bar at the bottom of the modal and displays the link text “More verification options." Clicking the link allows users to select an alternate verification type if they can’t use the default method.
 
 Examples of additional multi-factor authentication that could be used include authentication codes, SMS codes or backup codes.
@@ -86,13 +80,11 @@ Single sign-on (SSO) allows a user to log in once and access multiple applicatio
 ![Example of single sign-on methods.](./img/login-authentication-sso.svg)
 </div>
 
-**Additional SSO elements**
-
-1. **Title**
+1. **Title/subtitle:** Provides context for the application the user is logging into.
 
 2. **Supported services:** Provides a logo for all supported services logos.
 
-#### Social Login
+#### Social login
 Some users may prefer to log in with their social networks or IdPs accounts. A social login can utilize  standard, multi-factor, or SSO logins, depending on security requirements. When users click a social logo, they will be redirected to the social account’s login page. Once they successfully log in, they will be directed back to your application.
 
 Please refer to branding guidelines when using logos for social login page. Examples of branding guidelines include:
@@ -105,6 +97,16 @@ Please refer to branding guidelines when using logos for social login page. Exam
 * [LinkedIn brand guidelines](https://brand.linkedin.com/)
 * [OpenID brand guidelines](http://openid.net/add-openid/logos/)
 * [Instagram brand guidelines](https://about.meta.com/brand/resources/instagram/instagram-brand/)
+
+### Session expiration
+
+When a user is automatically logged out due to inactivity, they are redirected to the login page. An info alert should be displayed on the login page, informing the user that their session expried due to inactivity.  
+
+<div class="ws-docs-content-img">
+![A purple info alert at the top of a login page informs users that they were logged out due to inactivity.](./img/session-expired-login.svg)
+</div>
+
+In these situations, logging back in should bring the user back to the page they were on prior to being logged out.
 
 ### Error states
 
@@ -146,8 +148,6 @@ An error message should be displayed when there is an invalid character in the u
 | Invalid custom username                 | Invalid characters           |
 | Invalid character in an email address/phone number | Enter a valid email address or phone number |
 
-
-
 ##### Caps lock is on
 
 <div class="ws-docs-content-img">
@@ -156,11 +156,9 @@ An error message should be displayed when there is an invalid character in the u
 
 A warning message should be displayed when caps lock is on so users avoid making a mistake when typing a case-sensitive password. The warning message should be displayed in a popover when a user clicks into the input field. Once caps lock has been turned off, the warning message should disappear. The following warning message is suggested for use:
 
-
 | Situation     | Error message|
 | ------------- |-------------|
 | Caps lock is on   | Caps lock is on  |
-
 
 #### Server-side errors
 
@@ -178,14 +176,12 @@ If there are validation errors when users submit a form, the entire page is relo
 
 An error message should be displayed when the user types an incorrect username or password. The most secure approach is to provide a generic message that the username or password is incorrect without specifying which is incorrect. This way, the identity of a valid user is protected. If your application doesn’t require this level of security, additional messages  can be used. Once the field has been modified, the error message should disappear. The following error messages are suggested for use.
 
-
 | Situation | Error message |
 | ----------- | ----------- |
 | Incorrect username or password (most secure error message) | Incorrect login credentials |
 | Username does not exist | This account does not exist. Try again or [sign up](). |
 | Password is wrong | Incorrect password, try again |
 | User inputs an old password | Incorrect password. Your password was modified in the last 2 days. |
-
 
 ##### General warning messages
 
@@ -201,8 +197,7 @@ Another form of error state message is a warning message. These messages are tri
 | Too many unsuccessful attempts to log in | Your account is now locked. Contact your administrator for access. |
 | Session timed out | Your session has expired. Please log back in.
 
-
 ## Content considerations
 
 * Use “log in” to describe the verb of signing or logging in an account. Note, it is “log in” and not “log into”. 
-* Use “login” as an adjective to describe something related to the act of logging in to an application, like a page. The noun Login can also be used as an alternative for Username, but Username is recommended.
+* Use “login” as an adjective to describe something related to the act of logging in to an application, like a page. The noun "Login" can also be used as an alternative for "Username", but "Username" is recommended.
