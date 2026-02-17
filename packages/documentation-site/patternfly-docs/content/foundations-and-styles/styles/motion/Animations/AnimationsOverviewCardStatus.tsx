@@ -1,7 +1,7 @@
 import { FunctionComponent } from 'react';
 import { Card, CardHeader, CardBody, Flex, FlexItem, Icon, Title, Grid, GridItem } from '@patternfly/react-core';
-import ExclamationCircleIcon from '@patternfly/react-icons/dist/esm/icons/exclamation-circle-icon';
-import CheckCircleIcon from '@patternfly/react-icons/dist/esm/icons/check-circle-icon';
+import ExclamationCircleIcon from '@patternfly/react-icons/dist/esm/icons/rh-ui-error-icon';
+import CheckCircleIcon from '@patternfly/react-icons/dist/esm/icons/rh-ui-check-circle-icon';
 
 const AnimationsOverviewCardStatus: FunctionComponent = () => (
   <Card>

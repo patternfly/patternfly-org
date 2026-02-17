@@ -12,7 +12,7 @@
         "@patternfly/react-component-groups": "6.4.0-prerelease.12",
         "@patternfly/react-core": "6.5.0-prerelease.24",
         "@patternfly/react-drag-drop": "6.5.0-prerelease.24",
-        "@patternfly/react-icons": "6.5.0-prerelease.11",
+        "@patternfly/react-icons": "6.5.0-prerelease.12",
         "@patternfly/react-log-viewer": "6.3.0",
         "@patternfly/react-styles": "6.5.0-prerelease.9",
         "@patternfly/react-table": "6.5.0-prerelease.24",

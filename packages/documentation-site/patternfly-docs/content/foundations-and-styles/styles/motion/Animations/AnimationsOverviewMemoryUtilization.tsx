@@ -14,9 +14,9 @@ import {
   FlexItem
 } from '@patternfly/react-core';
 import { ChartDonutThreshold, ChartDonutUtilization } from '@patternfly/react-charts/dist/esm/victory/components';
-import ArrowRightIcon from '@patternfly/react-icons/dist/esm/icons/arrow-right-icon';
-import EllipsisVIcon from '@patternfly/react-icons/dist/esm/icons/ellipsis-v-icon';
-import TachometerAltIcon from '@patternfly/react-icons/dist/esm/icons/tachometer-alt-icon';
+import ArrowRightIcon from '@patternfly/react-icons/dist/esm/icons/rh-ui-arrow-right-icon';
+import EllipsisVIcon from '@patternfly/react-icons/dist/esm/icons/rh-ui-ellipsis-vertical-icon';
+import TachometerAltIcon from '@patternfly/react-icons/dist/esm/icons/rh-ui-speedometer-icon';
 
 export const MemoryUtilizationCard: React.FunctionComponent = () => {
   const [isKebabOpen, setIsKebabOpen] = useState(false);
@@ -100,7 +100,7 @@ export const MemoryUtilizationCard: React.FunctionComponent = () => {
               />
             </ChartDonutThreshold>
           </FlexItem>
-          <FlexItem>
+          {/* <FlexItem>
             <ChartDonutThreshold
               ariaDesc="Mock memory utilization"
               ariaTitle="Mock memory utilization chart"
@@ -127,7 +127,7 @@ export const MemoryUtilizationCard: React.FunctionComponent = () => {
                 thresholds={[{ value: 60 }, { value: 90 }]}
               />
             </ChartDonutThreshold>
-          </FlexItem>
+          </FlexItem> */}
         </Flex>
       </CardBody>
       <CardFooter>
