@@ -3,6 +3,112 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.4.0-alpha.342 (2026-02-16)
+
+
+### Features
+
+* **theme-switcher:** enhance theme switcher for theme development/testing ([#4929](https://github.com/patternfly/patternfly-org/issues/4929)) ([cf5a959](https://github.com/patternfly/patternfly-org/commit/cf5a95937b6a534f76e39cb4b2a19511842fbf2b))
+
+
+
+
+
+# 1.4.0-alpha.341 (2026-02-11)
+
+
+### Bug Fixes
+
+* **trainings:** updated trainings and fixed linked codesandboxes ([#4923](https://github.com/patternfly/patternfly-org/issues/4923)) ([e76918a](https://github.com/patternfly/patternfly-org/commit/e76918a7653d0106e396685e5b5a027925a47327))
+
+
+
+
+
+# 1.4.0-alpha.340 (2026-02-06)
+
+
+### Features
+
+* allow full-page example utils to change position ([#4896](https://github.com/patternfly/patternfly-org/issues/4896)) ([d4b4ba3](https://github.com/patternfly/patternfly-org/commit/d4b4ba33277cd0c6173c0470502df3abfc810867))
+
+
+
+
+
+# 1.4.0-alpha.339 (2026-02-06)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 1.4.0-alpha.338 (2026-02-06)
+
+
+### Features
+
+* **Compass:** add handbook doc page ([#4877](https://github.com/patternfly/patternfly-org/issues/4877)) ([bc7fe2e](https://github.com/patternfly/patternfly-org/commit/bc7fe2ee230c155971e5fb984b13b7c1f1ef0901))
+
+
+
+
+
+# 1.4.0-alpha.337 (2026-02-06)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 1.4.0-alpha.336 (2026-02-04)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 1.4.0-alpha.335 (2026-02-04)
+
+
+### Bug Fixes
+
+* **deps:** address missing and outdated dependencies ([#4921](https://github.com/patternfly/patternfly-org/issues/4921)) ([7fce04a](https://github.com/patternfly/patternfly-org/commit/7fce04a4e1bd1ecc3ba726b2fb0538706ddefa4d))
+
+
+
+
+
+# 1.4.0-alpha.334 (2026-02-03)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 1.4.0-alpha.333 (2026-02-03)
+
+
+### Bug Fixes
+
+* Update example.js to address react console docs bug. ([#4910](https://github.com/patternfly/patternfly-org/issues/4910)) ([7ff0a35](https://github.com/patternfly/patternfly-org/commit/7ff0a357e09071f287218dd247cc9c0bec7a16b8))
+
+
+
+
+
+# 1.4.0-alpha.332 (2026-02-03)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
 # 1.4.0-alpha.331 (2026-01-27)
 
 **Note:** Version bump only for package @patternfly/ast-helpers

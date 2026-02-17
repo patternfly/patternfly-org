@@ -6,15 +6,22 @@ const COLOR_MODES = {
   DARK: 'dark'
 };
 
-const HIGH_CONTRAST_MODES = {
-  SYSTEM: 'high-contrast-system',
-  ON: 'high-contrast-on',
-  OFF: 'high-contrast-off'
+const CONTRAST_MODES = {
+  SYSTEM: 'contrast-system',
+  DEFAULT: 'contrast-default',
+  HIGH_CONTRAST: 'contrast-high',
+  GLASS: 'contrast-glass'
+};
+
+const THEME_VARIANT_MODES = {
+  DEFAULT: 'theme-default',
+  UNIFIED: 'theme-unified'
 };
 
 export const THEME_TYPES = {
   COLOR: 'color',
-  HIGH_CONTRAST: 'high-contrast'
+  CONTRAST: 'contrast',
+  THEME_VARIANT: 'theme-variant'
 };
 
 class ThemeManager {
@@ -61,37 +68,105 @@ class ThemeManager {
     return this.defaultMode;
   }
 
-  addClass() {
+  getHtmlElement() {
     if (!this.isBrowser) {
-      return;
+      return null;
     }
-    document.querySelector('html').classList.add(this.cssClass);
+    return document.querySelector('html');
+  }
+
+  addClass() {
+    const htmlElement = this.getHtmlElement();
+    if (htmlElement && !htmlElement.classList.contains(this.cssClass)) {
+      htmlElement.classList.add(this.cssClass);
+    }
   }
 
   removeClass() {
-    if (!this.isBrowser) {
-      return;
+    const htmlElement = this.getHtmlElement();
+    if (htmlElement && htmlElement.classList.contains(this.cssClass)) {
+      htmlElement.classList.remove(this.cssClass);
     }
-    document.querySelector('html').classList.remove(this.cssClass);
   }
 
-  updateClass(mode) {
+  updateClass() {
     if (!this.isBrowser) {
       return;
     }
 
-    if (mode === this.modes.SYSTEM) {
-      if (this.resolve() === this.classEnabledMode) {
-        this.addClass();
-      } else {
-        this.removeClass();
-      }
+    // ALWAYS read from localStorage to ensure we have the correct mode for THIS theme
+    const storedMode = this.getStoredValue();
+
+    // Validate that the stored mode is valid for this theme
+    const validModes = Object.values(this.modes);
+    if (!validModes.includes(storedMode)) {
+      console.error(`[${this.storageKey}] Invalid stored mode "${storedMode}". Valid modes:`, validModes);
+      return;
+    }
+
+    const shouldHaveClass = storedMode === this.modes.SYSTEM
+      ? this.resolve() === this.classEnabledMode
+      : storedMode === this.classEnabledMode;
+
+    if (shouldHaveClass) {
+      this.addClass();
     } else {
-      if (mode === this.classEnabledMode) {
-        this.addClass();
-      } else {
-        this.removeClass();
-      }
+      this.removeClass();
+    }
+  }
+}
+
+class ContrastThemeManager extends ThemeManager {
+  constructor({ storageKey, modes, defaultMode, mediaQueryString }) {
+    super({
+      storageKey,
+      modes,
+      defaultMode,
+      cssClass: 'pf-v6-theme-high-contrast',
+      classEnabledMode: modes.HIGH_CONTRAST,
+      mediaQueryString
+    });
+    this.glassClass = 'pf-v6-theme-glass';
+  }
+
+  updateClass() {
+    if (!this.isBrowser) {
+      return;
+    }
+
+    const htmlElement = this.getHtmlElement();
+    if (!htmlElement) {
+      return;
+    }
+
+    // ALWAYS read from localStorage to ensure we have the correct mode for THIS theme
+    const storedMode = this.getStoredValue();
+
+    // Determine which class should be applied based on stored mode
+    let shouldHaveHighContrast = false;
+    let shouldHaveGlass = false;
+
+    if (storedMode === this.modes.SYSTEM) {
+      shouldHaveHighContrast = window.matchMedia(this.mediaQueryString).matches;
+    } else if (storedMode === this.modes.HIGH_CONTRAST) {
+      shouldHaveHighContrast = true;
+    } else if (storedMode === this.modes.GLASS) {
+      shouldHaveGlass = true;
+    }
+    // DEFAULT mode: both false
+
+    // Apply high contrast class
+    if (shouldHaveHighContrast && !htmlElement.classList.contains(this.cssClass)) {
+      htmlElement.classList.add(this.cssClass);
+    } else if (!shouldHaveHighContrast && htmlElement.classList.contains(this.cssClass)) {
+      htmlElement.classList.remove(this.cssClass);
+    }
+
+    // Apply glass class
+    if (shouldHaveGlass && !htmlElement.classList.contains(this.glassClass)) {
+      htmlElement.classList.add(this.glassClass);
+    } else if (!shouldHaveGlass && htmlElement.classList.contains(this.glassClass)) {
+      htmlElement.classList.remove(this.glassClass);
     }
   }
 }
@@ -111,26 +186,34 @@ const colorThemeManager = new ThemeManager({
   mediaQueryString: '(prefers-color-scheme: dark)'
 });
 
-const highContrastThemeManager = new ThemeManager({
-  storageKey: 'high-contrast-preference',
-  modes: HIGH_CONTRAST_MODES,
-  defaultMode: HIGH_CONTRAST_MODES.SYSTEM,
-  cssClass: 'pf-v6-theme-high-contrast',
-  classEnabledMode: HIGH_CONTRAST_MODES.ON,
+const themeVariantManager = new ThemeManager({
+  storageKey: 'theme-variant-preference',
+  modes: THEME_VARIANT_MODES,
+  defaultMode: THEME_VARIANT_MODES.DEFAULT,
+  cssClass: 'pf-v6-theme-unified',
+  classEnabledMode: THEME_VARIANT_MODES.UNIFIED,
+  mediaQueryString: '(prefers-color-scheme: dark)' // Not used for variant, but required
+});
+
+const contrastThemeManager = new ContrastThemeManager({
+  storageKey: 'contrast-preference',
+  modes: CONTRAST_MODES,
+  defaultMode: CONTRAST_MODES.SYSTEM,
   mediaQueryString: '(prefers-contrast: more)'
 });
 
 registerThemeManager(THEME_TYPES.COLOR, colorThemeManager);
-registerThemeManager(THEME_TYPES.HIGH_CONTRAST, highContrastThemeManager);
+registerThemeManager(THEME_TYPES.THEME_VARIANT, themeVariantManager);
+registerThemeManager(THEME_TYPES.CONTRAST, contrastThemeManager);
 
 /**
  * Unified theme hook that accepts a theme type parameter
- * @param {string} themeType - The type of theme to manage (THEME_TYPES.COLOR, THEME_TYPES.HIGH_CONTRAST, instantiate and register new themes above as needed)
+ * @param {string} themeType - The type of theme to manage (THEME_TYPES.COLOR, THEME_TYPES.CONTRAST, THEME_TYPES.THEME_VARIANT)
  * @returns {Object} Theme state and controls specific to the theme type
  */
 export const useTheme = (themeType) => {
   if (!themeType) {
-    throw new Error('useTheme requires a theme type parameter. Use THEME_TYPES.COLOR or THEME_TYPES.HIGH_CONTRAST');
+    throw new Error('useTheme requires a theme type parameter. Use THEME_TYPES.COLOR, THEME_TYPES.CONTRAST, or THEME_TYPES.THEME_VARIANT');
   }
 
   const theme = themeRegistry.get(themeType);
@@ -143,16 +226,34 @@ export const useTheme = (themeType) => {
   const [resolvedTheme, setResolvedTheme] = useState(theme.resolve());
 
   useEffect(() => {
-    theme.setStoredValue(mode);
-    theme.updateClass(mode);
-  }, [theme, mode, resolvedTheme]);
+    // Verify mode is valid for this theme
+    const validModes = Object.values(theme.modes);
+    if (!validModes.includes(mode)) {
+      console.error(`Invalid mode "${mode}" for theme ${theme.storageKey}. Valid modes:`, validModes);
+      return;
+    }
 
-  const handlePreferenceChange = () => {
-    setResolvedTheme(theme.resolve());
-  };
-  const mediaQuery = theme.getMediaQuery();
+    theme.setStoredValue(mode);
+    theme.updateClass();
+  }, [theme, mode]);
 
   useEffect(() => {
+    // Only update class when system preference changes AND mode is SYSTEM
+    if (mode === theme.modes.SYSTEM) {
+      theme.updateClass();
+    }
+  }, [theme, mode, resolvedTheme]);
+
+  useEffect(() => {
+    const handlePreferenceChange = () => {
+      setResolvedTheme(theme.resolve());
+    };
+
+    const mediaQuery = theme.getMediaQuery();
+
+    if (!mediaQuery) {
+      return;
+    }
     if (mediaQuery.addEventListener) {
       mediaQuery.addEventListener('change', handlePreferenceChange);
       return () => {
@@ -164,7 +265,7 @@ export const useTheme = (themeType) => {
         mediaQuery.removeListener(handlePreferenceChange);
       };
     }
-  }, [mediaQuery]);
+  }, []);
 
   return {
     mode,

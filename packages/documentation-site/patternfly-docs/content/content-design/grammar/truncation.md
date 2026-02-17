@@ -4,7 +4,7 @@ section: content-design
 subsection: grammar
 ---
 
-**Truncate**, or shorten, your content whenever a string overflows the container and you don't want multiple lines of text. Typically, this is done by utilizing ellipses (...).
+**Truncate**, or shorten, your content whenever a string overflows the container and you don't want multiple lines of text. Typically, this is done by utilizing ellipses (...), either manually, or via our [truncate component](/components/truncate).
 
 For example, use truncation when a URL overflows its container:
 
