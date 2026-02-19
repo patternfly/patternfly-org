@@ -190,7 +190,7 @@ const themeVariantManager = new ThemeManager({
   storageKey: 'theme-variant-preference',
   modes: THEME_VARIANT_MODES,
   defaultMode: THEME_VARIANT_MODES.DEFAULT,
-  cssClass: 'pf-v6-theme-unified',
+  cssClass: 'pf-v6-theme-redhat',
   classEnabledMode: THEME_VARIANT_MODES.UNIFIED,
   mediaQueryString: '(prefers-color-scheme: dark)' // Not used for variant, but required
 });
