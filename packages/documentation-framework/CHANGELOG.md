@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 6.36.1 (2026-02-19)
+
+
+### Bug Fixes
+
+* **theme switch:** change unified theme class name ([#4934](https://github.com/patternfly/patternfly-org/issues/4934)) ([1caa470](https://github.com/patternfly/patternfly-org/commit/1caa470c123ecaacb36cb732eae844616717fc9b))
+
+
+
+
+
 # 6.36.0 (2026-02-16)
 
 
