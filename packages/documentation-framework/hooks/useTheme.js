@@ -15,7 +15,7 @@ const CONTRAST_MODES = {
 
 const THEME_VARIANT_MODES = {
   DEFAULT: 'theme-default',
-  UNIFIED: 'theme-unified'
+  UNIFIED: 'theme-redhat'
 };
 
 export const THEME_TYPES = {
