@@ -63,6 +63,35 @@ Labels are typically used in filter and selection use cases to indicate what sel
 ![Example of labels as filters in a toolbar.](./img/label-filters.svg)
 </div>
 
+#### Beta and preview labels
+
+To communicate that a feature is in a beta or preview mode, rather than fully released and supported, use a [nonstatus purple label](#nonstatus-labels). 
+
+There are a few common types of preview labels:
+1. **Developer preview:** Shared for early evaluation and feedback. These features are likely unstable, unsupported, and not ready for production environments.
+2. **Technology preview:** Ready for early use and feedback. These features have limited support and are typically on the roadmap for a future full release.
+3. **Beta:** Publicly available but still subject to change. Beta features are typically feature-complete but might still undergo visual or functional changes based on user feedback before being promoted to full support.
+
+Beta and preview labels should use the compact size variant and should be placed beside the title of the new feature or component&mdash;ideally to the right of the title. 
+
+Preview labels should be clickable. When clicked, display a popover with a brief explanation of the preview type (stability, potential limitations) and a "Learn more" to dedicated documentation.
+
+<div class="ws-docs-content-img">
+![Developer preview and technology preview labels with descriptive popover above each.](./img/preview-labels.svg)
+</div>
+
+#### Deprecated labels
+
+To communicate that a feature or resource is no longer the current recommendation and might be removed in the future, use a [nonstatus gray label](#nonstatus-labels) with "Deprecated" as the text label.
+
+
+<div class="ws-docs-content-img">
+![A gray "deprecated" label with descriptive popover above.](./img/deprecated-label.svg)
+</div>
+
+#### Quick start labels
+To indicate that clicking a card will initiate a quick start experience, use a [nonstatus green label](#nonstatus-labels) with "Quick start" as the text label. For more guidance, refer to the [quick starts guidelines](/extensions/quick-starts/design-guidelines).
+
 #### Color considerations
 
 Labels can utilize both our [status](/foundations-and-styles/colors#status-and-state-colors)  and [nonstatus](/foundations-and-styles/colors#nonstatus-colors) color palettes.
@@ -93,7 +122,7 @@ We offer a nonstatus color palette, which you can use to color code labels that 
 - [Filled or unfilled labels](#when-to-use-filled-or-unfilled-labels)
 - [Labels with icons](#when-to-use-labels-with-icons)
 - [Editable labels](#when-to-use-editable-labels)
-- [dismissible labels](#when-to-use-dismissible-labels)
+- [Dismissible labels](#when-to-use-dismissible-labels)
 - [Clickable labels](#when-to-use-clickable-labels)
 
 #### When to use filled or unfilled labels

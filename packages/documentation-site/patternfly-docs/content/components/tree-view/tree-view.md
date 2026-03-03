@@ -36,7 +36,7 @@ A tree view can be used for:
 ### When not to use
 * You select 1 item from a small set. Instead, use [simple list](/components/simple-list), [select lists](/components/menus/select), [radio buttons](/components/forms/radio), [checkboxes](/components/forms/checkbox), or a [dropdown](/components/menus/dropdown).
 * You need to see an overview of a large amount of data.
-* You need to compare 2 large sets of data. Use [charts](/components/charts/about-charts) for a better view. 
+* You need to compare 2 large sets of data. Use [charts](/components/charts/overview) for a better view. 
 * The hierarchy is too deep and includes hundreds of items. Instead, use a [drill-down menu](/components/menus/menu#with-drilldown).
 
 ### When to use accordions vs. tree tables vs. tree views

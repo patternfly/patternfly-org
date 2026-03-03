@@ -76,8 +76,8 @@ const MDXChildTemplate = ({ Component, source, toc = [], index = 0, id }) => {
         <InlineAlert title="Beta feature">
           This beta component is currently under review and is still open for further evolution. It is available for use
           in product. Beta components are considered for promotion on a quarterly basis. Please join in and give us your
-          feedback or submit any questions on the <a href="https://forum.patternfly.org/">PatternFly forum</a> or via{' '}
-          <a href="//slack.patternfly.org/" target="_blank" rel="noopener noreferrer">
+          feedback or submit any questions via{' '}
+          <a href="https://patternfly.slack.com" target="_blank" rel="noopener noreferrer">
             Slack
           </a>
           . To learn more about the process, visit our{' '}

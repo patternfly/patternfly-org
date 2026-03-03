@@ -49,6 +49,10 @@ In high contrast mode, distinct borders are also added to components to ensure t
 
 For development guidance, refer to the [high contrast handbook](/foundations-and-styles/theming/high-contrast-handbook).
 
+<div class="ws-docs-content-img">
+![A collage of multiple PatternFly components, like a calendar, alert, and menu. The top half of the image has components on a white background with black text and the bottom half of the image has dark components on a black background with light text. All components have high contrast, with borders and noticeable colors.](./img/components-hc.svg)
+</div>
+
 ## Custom themes 
 
 To branch off of our themes and create your own, you can identify the design tokens you'd like to adjust on our [all tokens page](/foundations-and-styles/design-tokens/all-design-tokens) and provide new values to use within your application. 
@@ -61,7 +65,29 @@ There are a couple of instances when you might want to adjust an existing Patter
 
 ## Using themes in Figma
 
-Our Figma libraries fully support theming. Designers can create a single layout and then use various Figma "Appearance" settings to swap a wireframe to light, dark, or high contrast mode. This makes it easy to visually test and validate designs across all supported themes.
+Our Figma libraries fully support theming. Designers can create a single design and then swap between our themes using the "Apply Variable Mode" toggles in the "Appearance" section of the component properties panel. This makes it easy to visually test and validate designs across all supported themes.
+
+The standard light PatternFly theme will be applied to components by default. If you want your mockups to use our dark or high contrast themes, you will need to adjust the following settings in Figma. 
+
+### Dark mode
+
+To swap your components to our standard dark mode, change the Semantic Color Tokens variable mode to be "Dark":
+
+<div class="ws-docs-content-img">
+![Figma settings menu to select different token variables.](./img/figma-dark-mode.svg)
+</div>
+
+### High contrast mode
+
+To swap your components to our high contrast mode, change the Semantic Dimension Tokens variable mode to be "High Contrast" and choose either "Light - High Contrast" or "Dark - High Contrast" for the Semantic Color Tokens variable mode:
+
+<div class="ws-docs-content-img">
+![Figma settings menu to select different token variables.](./img/figma-hc-mode.svg)
+</div>
+
+### Chart themes
+
+Our charts use a unique token collection, so you will need to adjust chart variable modes separately from components in order to swap themes. To change the variable mode for charts, follow the same steps previously outlined for component theme adjustments. 
 
 ## Best practices
 

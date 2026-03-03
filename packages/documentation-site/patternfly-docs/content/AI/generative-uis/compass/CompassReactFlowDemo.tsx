@@ -227,6 +227,7 @@ const AddNodeOnEdgeDrop = () => {
         fitView
         fitViewOptions={{ padding: 2 }}
         nodeOrigin={nodeOrigin}
+        aria-label="React flow demo"
       >
         <Background />
       </ReactFlow>

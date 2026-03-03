@@ -4,11 +4,29 @@ section: content-design
 subsection: grammar
 ---
 
-This resource overviews common UI terms and their usage. 
+This resource overviews common UI terms and their usage. Do not precede any terms in a UI with "please" as it is extraneous and overly formal.
 
 For Red Hat product terminology and documentation standards, see [Red Hat's supplementary style guide for product documentation](https://redhat-documentation.github.io/supplementary-style-guide/#introduction).
 
-**Note:** Do not precede UI terms with "please." It is extraneous and overly formal.
+## Trademarked terms
+
+You can use third-party trademarked terms (including those of competitors) when necessary to describe their goods and services accurately, or to prevent marketplace confusion between Red Hat and third parties.. 
+
+When using trademarks:
+- Avoid using them as attention-getting devices.
+- Ensure their usage does not mislead users.
+- Use them only to objectively compare relevant and verifiable goods or services.
+- Do not discredit or denigrate a competitor's trademarks, trade names or other distinguishing signs.
+- Do not take unfair advantage of a competitor's trademark.
+- Do not present goods or services as imitations or replicas of trademarked products.
+- Limit trademark usage to body text rather than headlines, titles, or graphics.
+- Never use a third party's logo without explicit permission.
+
+| Before | After | 
+| :---: | :---: |
+| Why settle for VMware’s slow boot times? Our platform is 20% faster and costs half as much as their legacy junk. | In independent benchmarks, Red Hat OpenShift demonstrated 20% faster deployment times compared to VMware vSphere. Our solution offers a verifiable cost-efficiency advantage for enterprise-scale workloads.|
+
+## Glossary
 
 <div class="ws-content-table">
 
