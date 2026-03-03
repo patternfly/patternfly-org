@@ -4,6 +4,7 @@
   "private": true,
   "version": "0.0.2",
   "scripts": {
+    "ci:build": "yarn generate:content && yarn build",
     "clean": "rm -rf src/generated",
     "generate:content": "rm -rf src/content && cp -r ../documentation-site/patternfly-docs/content src/content",
     "dev": "patternfly-doc-core start",
