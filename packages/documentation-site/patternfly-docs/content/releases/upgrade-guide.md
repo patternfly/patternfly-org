@@ -7,7 +7,8 @@ section: releases
 import { Alert, Button, Divider } from '@patternfly/react-core';
 import ArrowRightIcon from '@patternfly/react-icons/dist/esm/icons/arrow-right-icon';
 
-<Alert variant="info" isInline title="Are you ready for PatternFly 6?"> To ensure  your product is ready for PatternFly 6, [complete the PatternFly 5 upgrade process](https://v5-archive.patternfly.org/releases/upgrade-guide) first to address any necessary changes from our previous release.
+<Alert variant="info" isInline title="Are you ready for PatternFly 6?">
+To ensure  your product is ready for PatternFly 6, [complete the PatternFly 5 upgrade process](https://v5-archive.patternfly.org/releases/upgrade-guide) first to address any necessary changes from our previous release.
 </Alert>
 
 PatternFly 6 introduces the exciting new features and functionality outlined [our release highlights](/releases/release-highlights). For a detailed breakdown on the work that went into this release, you can view [the PatternFly 6 major release notes](/releases/upgrade-guide/release-notes). 

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Table, Caption, Thead, Tr, Th, Tbody, Td } from '@patternfly/react-table';
 import { a11yScores } from './a11y-scores';
-import { capitalize } from '@patternfly/documentation-framework/helpers/capitalize';
+const { capitalize } = require('@patternfly/documentation-framework/helpers/capitalize');
 
 export const AccessibilityScorecard = () => {
   const columnNames = ['criteria', 'status', 'notes'];

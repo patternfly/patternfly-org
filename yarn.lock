@@ -4782,9 +4782,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@patternfly/patternfly-doc-core@npm:^1.15.5":
-  version: 1.15.5
-  resolution: "@patternfly/patternfly-doc-core@npm:1.15.5"
+"@patternfly/patternfly-doc-core@npm:^1.20.0":
+  version: 1.20.0
+  resolution: "@patternfly/patternfly-doc-core@npm:1.20.0"
   dependencies:
     "@astrojs/check": "npm:^0.9.4"
     "@astrojs/cloudflare": "npm:^12.6.5"
@@ -4817,7 +4817,7 @@ __metadata:
     typescript: "npm:^5.9.2"
   bin:
     patternfly-doc-core: dist/cli/cli.js
-  checksum: 10c0/8879c02430539bd2294699ad2d39ec0a2fa8a0a1c7ac3d42af66aafdc2c1e7b8cf147fb97da9dea9330722c980b59f1eb3e920858d6d680c4820ab1ff1c6d5ef
+  checksum: 10c0/39a9a22c1b2f28fc47c6e71dcd723445f64bfe16cbc7c2403ff181cf36e5f1e0efc27c464e5d9600935596a01b7130b309a9c7c4bbd98bc27c63dd0686faf36d
   languageName: node
   linkType: hard
 
@@ -5110,6 +5110,16 @@ __metadata:
     react: ^17 || ^18 || ^19
     react-dom: ^17 || ^18 || ^19
   checksum: 10c0/2072babe83bad4de05e71b27c1180886912c99f24de8e5358cad06e9410a9643171b5dcda69d7e5c36f1010a2457ec9fdbb89cc9d54d92e63ede82de12c543cb
+  languageName: node
+  linkType: hard
+
+"@patternfly/react-icons@npm:^6.5.0-prerelease.14":
+  version: 6.5.0-prerelease.14
+  resolution: "@patternfly/react-icons@npm:6.5.0-prerelease.14"
+  peerDependencies:
+    react: ^17 || ^18 || ^19
+    react-dom: ^17 || ^18 || ^19
+  checksum: 10c0/17b98dcfb3fab258801a4b6d094cb8b89876835851c6685009c517c9d28fa97f0c2f9c28140aaf2d11357349e886a47eb287bdf52ac0d4ba8ab847c514385517
   languageName: node
   linkType: hard
 
@@ -21395,7 +21405,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "site@workspace:packages/site"
   dependencies:
-    "@patternfly/patternfly-doc-core": "npm:^1.15.5"
+    "@patternfly/patternfly-doc-core": "npm:^1.20.0"
+    "@patternfly/react-icons": "npm:^6.5.0-prerelease.14"
     astro: "npm:^5.15.9"
     tsx: "npm:^4.19.0"
     wrangler: "npm:^4.20.0"

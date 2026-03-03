@@ -2,7 +2,7 @@
 id: Product scorecard
 section: accessibility
 ---
-import { AccessibilityScorecard } from './accessibility-scorecard.js';
+import { AccessibilityScorecard } from './accessibility-scorecard.jsx';
 
 ## Scoring your accessibility
 

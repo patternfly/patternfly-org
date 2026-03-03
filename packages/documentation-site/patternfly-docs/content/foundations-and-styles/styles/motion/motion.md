@@ -22,7 +22,8 @@ These principles guide the use of motion in PatternFly and align with our [brand
     <CardHeader>
     <CardTitle>Intentional</CardTitle>
     </CardHeader>
-    <CardBody> Motion should guide our users without being a distraction. It should be purposeful and simple, helping users complete their tasks and focus only on what is most important.
+    <CardBody>
+        Motion should guide our users without being a distraction. It should be purposeful and simple, helping users complete their tasks and focus only on what is most important.
     </CardBody>
     </Card>
 </GridItem>
@@ -31,7 +32,8 @@ These principles guide the use of motion in PatternFly and align with our [brand
     <CardHeader>
     <CardTitle>Consistent</CardTitle>
     </CardHeader>
-    <CardBody> Motion should create a familiar and predictable experience. It should be applied consistently to unify interactions and connect the user's journey across different products.
+    <CardBody>
+        Motion should create a familiar and predictable experience. It should be applied consistently to unify interactions and connect the user's journey across different products.
     </CardBody>
     </Card>
 </GridItem>
@@ -40,7 +42,8 @@ These principles guide the use of motion in PatternFly and align with our [brand
     <CardHeader>
     <CardTitle>Engaging</CardTitle>
     </CardHeader>
-    <CardBody> Motion should captivate users and add character to the interface. It should celebrate user accomplishments and make common interactions more expressive and interesting.
+    <CardBody>
+        Motion should captivate users and add character to the interface. It should celebrate user accomplishments and make common interactions more expressive and interesting.
     </CardBody>
     </Card>
 </GridItem>
@@ -49,7 +52,8 @@ These principles guide the use of motion in PatternFly and align with our [brand
     <CardHeader>
     <CardTitle>Inclusive</CardTitle>
     </CardHeader>
-    <CardBody> Motion should empower users by respecting their preferences. It must always be optional and accommodating to ensure a comfortable and accessible experience for all.
+    <CardBody>
+        Motion should empower users by respecting their preferences. It must always be optional and accommodating to ensure a comfortable and accessible experience for all.
     </CardBody>
     </Card>
 </GridItem>

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link as ReachLink, navigate } from '@reach/router';
-import { getAsyncComponent } from '../../routes';
+const { getAsyncComponent } = require('../../routes');
 
 const Promiseany = (
   Promise.any ||

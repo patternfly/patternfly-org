@@ -1,6 +1,7 @@
 ---
 id: About us
 title: About us
+section: Get started
 ---
 
 import './get-started/get-started.css';

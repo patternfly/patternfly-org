@@ -9,7 +9,7 @@ import ExclamationTriangleIcon from '@patternfly/react-icons/dist/esm/icons/excl
 import InfoCircleIcon from '@patternfly/react-icons/dist/esm/icons/info-circle-icon';
 import BellIcon from '@patternfly/react-icons/dist/esm/icons/bell-icon';
 import StarIcon from '@patternfly/react-icons/dist/esm/icons/star-icon';
-import { IconsTable } from './IconsTable.js';
+import { IconsTable } from './IconsTable.jsx';
 import './icons.css';
 
 If you're a developer, check out our [development onboarding guide](/get-started/develop#using-icons) to learn how to install and use our icon set.

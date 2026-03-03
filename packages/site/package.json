@@ -5,7 +5,7 @@
   "version": "0.0.2",
   "scripts": {
     "clean": "rm -rf src/generated",
-    "generate:content": "patternfly-doc-core convert-to-mdx ../documentation-site/patternfly-docs/content/",
+    "generate:content": "rm -rf src/content && cp -r ../documentation-site/patternfly-docs/content src/content",
     "dev": "patternfly-doc-core start",
     "build": "patternfly-doc-core build --props",
     "serve": "patternfly-doc-core serve",
@@ -14,7 +14,8 @@
     "wrangler:preview": "wrangler pages dev"
   },
   "dependencies": {
-    "@patternfly/patternfly-doc-core": "^1.15.5",
+    "@patternfly/patternfly-doc-core": "^1.20.0",
+    "@patternfly/react-icons": "^6.5.0-prerelease.14",
     "astro": "^5.15.9"
   },
   "devDependencies": {

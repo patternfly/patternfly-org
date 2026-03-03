@@ -7,7 +7,7 @@ import RunningIcon from '@patternfly/react-icons/dist/esm/icons/running-icon';
 import PuzzlePieceIcon from '@patternfly/react-icons/dist/esm/icons/puzzle-piece-icon';
 import ChartBarIcon from '@patternfly/react-icons/dist/esm/icons/chart-bar-icon';
 import { Link } from '@patternfly/documentation-framework/components/link/link';
-import { capitalize } from '@patternfly/documentation-framework/helpers/capitalize';
+const { capitalize } = require('@patternfly/documentation-framework/helpers/capitalize');
 
 const getTrainingIcon = trainingType => {
   if (['html-css', 'react'].includes(trainingType)) {
