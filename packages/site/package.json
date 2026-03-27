@@ -15,7 +15,7 @@
   },
   "dependencies": {
     "@patternfly/patternfly-doc-core": "^1.20.0",
-    "astro": "^5.18.0"
+    "astro": "^6.0.0"
   },
   "devDependencies": {
     "tsx": "^4.21.0",
