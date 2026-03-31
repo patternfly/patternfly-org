@@ -46,7 +46,7 @@ We support the following configurations:
 
 #### New projects
 
-If you'd like to start using PatternFly via a sample project, you can use the [PatternFly React seed](https://github.com/patternfly/patternfly-react-seed). We created this open-source build scaffolding utility to help developers jump start new PatternFly projects.
+If you'd like to start using PatternFly via a sample project, you can use the [PatternFly React seed](https://github.com/patternfly/patternfly-react-seed). We created this open-source build scaffolding utility to help developers jump start new PatternFly projects. You can also scaffold projects from the command line with the [PatternFly CLI](/get-started/patternfly-cli).
 
 To get started:
 
