@@ -5,83 +5,109 @@ section: get-started
 ---
 
 import './get-started.css';
-import { Alert } from '@patternfly/react-core';
 
-The [PatternFly CLI](https://github.com/patternfly/patternfly-cli) is a command-line tool for scaffolding projects, applying code changes, and running common project tasks. It is published as [`@patternfly/patternfly-cli` on npm](https://www.npmjs.com/package/@patternfly/patternfly-cli).
+The [PatternFly CLI](https://github.com/patternfly/patternfly-cli) is a command-line tool for scaffolding projects, performing code modifications, and running project-related tasks. It aims to streamline development workflows and improve productivity. The published package is [`@patternfly/patternfly-cli` on npm](https://www.npmjs.com/package/@patternfly/patternfly-cli).
 
-## What you can do
+## Features
 
-- **Scaffold projects** from built-in or custom templates.
-- **Automate code updates** for repetitive changes.
-- **Run workflows** such as init, sync with GitHub, updates, and deploys to GitHub Pages.
+- **Project scaffolding:** Quickly set up new PatternFly based projects for development, and prototyping. This is done using predefined templates.
+- **Code modifications:** Automate repetitive code changes that helps users upgrade to the latest version of PatternFly.
+- **Task runner:** Execute project-related tasks efficiently, such as source code management and task running.
+
 
 ## Prerequisites
 
-Before you install the CLI, set up:
+Prerequistes can be found below. For macOS, WSL, and Linux it is recommended that you use [install script](#install-script-macos-and-linux), it covers the items below (you may still need administrator access for system packages). Window based system you will need to install the following yourself before using the CLI:
 
-1. **[Node.js and npm](https://nodejs.org/)** (supported versions **20–24**).
-1. **[Corepack](https://nodejs.org/api/corepack.html)** — included with Node.js; enable it with `corepack enable` after installing Node.
-1. **[GitHub CLI](https://cli.github.com/)** (`gh`) — required for commands that talk to GitHub.
+- **[Node.js and npm](https://nodejs.org/)** (supported versions **20–24**) — also see [npm](https://www.npmjs.com/).
+- **[Corepack](https://nodejs.org/api/corepack.html)** — included with Node.js; enable with `corepack enable` after installing npm.
+- **[GitHub CLI](https://cli.github.com/)** (`gh`)
 
-## Install
+## Installation
 
-Install the CLI globally:
+### Install script (macOS and Linux)
+
+You can pipe the repository install script into `bash`. It installs Node.js with [nvm](https://github.com/nvm-sh/nvm) when `node` is not available, enables Corepack, installs GitHub CLI when it is missing, then installs the CLI globally from npm:
+
+```sh
+curl -fsSL https://raw.githubusercontent.com/patternfly/patternfly-cli/main/scripts/install.sh | bash
+```
+
+The script may prompt for `sudo` when your system package manager installs GitHub CLI.
+
+### Windows Install
+
+ After installing the [prerequisites](#prerequisites) on your machine, install the published package globally:
 
 ```sh
 npm install -g @patternfly/patternfly-cli
 ```
 
-## Check your setup
+## Uninstall
 
-Run the doctor command to verify prerequisites:
+### Uninstall script (macOS and Linux)
 
-```sh
-patternfly-cli doctor
-```
-
-To try to fix missing pieces automatically (Corepack and GitHub CLI only):
+If you ever wish to uninstall PatternFly Cli, you can do the following. Pipe the repository uninstall script into `bash`. It removes the globally installed `@patternfly/patternfly-cli` package with npm. It does **not** remove Node.js, nvm, Corepack, or GitHub CLI.
 
 ```sh
-patternfly-cli doctor --fix
+curl -fsSL https://raw.githubusercontent.com/patternfly/patternfly-cli/main/scripts/uninstall.sh | bash
 ```
 
-<Alert title="Node.js must be installed separately" variant="warning" isInline>
-The `doctor --fix` option does not install or upgrade Node.js. If Node.js is missing or below version 20, install the current **LTS** release from [nodejs.org](https://nodejs.org/).
-</Alert>
-
-## Commands
-
-After installation, run:
+Swap `main` for another branch or tag if you need a specific revision. To save the script and inspect it before running:
 
 ```sh
-patternfly-cli [command]
+curl -fsSL https://raw.githubusercontent.com/patternfly/patternfly-cli/main/scripts/uninstall.sh -o uninstall-patternfly-cli.sh
+bash uninstall-patternfly-cli.sh
 ```
+
+### Windows npm package uninstall
+
+If you installed the CLI on Windows, you can remove the CLI with:
+
+```sh
+npm uninstall -g @patternfly/patternfly-cli
+```
+
+## Usage
+
+After installation, you can verify the latest version of the CLI has been installed by running the following in the termianl:
+
+```sh
+patternfly-cli -v
+```
+
+### Available CLI commands
 
 | Command | Description |
 | --- | --- |
-| `doctor` | Check requirements; use `--fix` to enable Corepack and install `gh` where supported. |
-| `create` | Create a new project from a template. |
-| `list` | List available templates (built-in and custom). |
-| `update` | Update the project to a newer PatternFly-oriented version where applicable. |
-| `init` | Initialize a git repository and optionally create a GitHub repo. |
-| `save` | Commit and push changes on the current branch. |
-| `load` | Pull the latest changes from GitHub. |
-| `deploy` | Build and deploy the app to GitHub Pages. |
+| `create` | Create a new project from the available templates. |
+| `list` | List all available templates (built-in and optional custom). |
+| `update` | Update your project to a newer version. |
+| `cli-upgrade` | Upgrade the globally installed CLI to the latest npm release. It runs `npm install -g @patternfly/patternfly-cli@latest`; use your package manager’s equivalent if you did not install with npm. |
+| `init` | Initialize a git repository and optionally create a GitHub repository. |
+| `save` | Commit and push changes to the current branch. |
+| `load` | Pull the latest updates from GitHub. |
+| `deploy` | Build and deploy your app to GitHub Pages. |
 
 For the most up-to-date flags and behavior, see the [PatternFly CLI README](https://github.com/patternfly/patternfly-cli/blob/main/README.md) on GitHub.
 
 ## Custom templates
 
-You can merge your own templates with the built-ins by passing a JSON file with `--template-file` (or `-t`):
+You can add your own templates in addition to the built-in ones by passing a JSON file with `--template-file` (or `-t`). Custom templates are merged with the built-in list; if a custom template has the same `name` as a built-in one, the custom definition is used.
+
+**Create with custom templates:**
 
 ```sh
 patternfly-cli create my-app --template-file ./my-templates.json
+```
+
+**List templates including custom file:**
+
+```sh
 patternfly-cli list --template-file ./my-templates.json
 ```
 
-Each entry is an object with at least `name`, `description`, and `repo` (clone URL). Optional fields include `options` (extra `git clone` arguments) and `packageManager` (`npm`, `yarn`, or `pnpm`; default is `npm`). If a custom template uses the same `name` as a built-in one, the custom definition wins.
-
-Example:
+**JSON format** (array of template objects, same shape as the built-in templates):
 
 ```json
 [
@@ -94,6 +120,12 @@ Example:
   }
 ]
 ```
+
+- **`name`** (required): Template identifier.
+- **`description`** (required): Short description shown in prompts and `list`.
+- **`repo`** (required): Git clone URL.
+- **`options`** (optional): Array of extra arguments for `git clone` (e.g. `["--single-branch", "--branch", "main"]`).
+- **`packageManager`** (optional): `npm`, `yarn`, or `pnpm`; defaults to `npm` if omitted.
 
 ## Source and releases
 
