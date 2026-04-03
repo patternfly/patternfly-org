@@ -4,8 +4,6 @@ title: PatternFly CLI
 section: developer-guides
 ---
 
-import './get-started.css';
-
 The [PatternFly CLI](https://github.com/patternfly/patternfly-cli) is a command-line tool for scaffolding projects, performing code modifications, and running project-related tasks. It aims to streamline development workflows and improve productivity. The published package is [`@patternfly/patternfly-cli` on npm](https://www.npmjs.com/package/@patternfly/patternfly-cli).
 
 ## Features
