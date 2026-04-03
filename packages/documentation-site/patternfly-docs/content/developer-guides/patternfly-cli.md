@@ -1,7 +1,7 @@
 ---
 id: PatternFly CLI
 title: PatternFly CLI
-section: get-started
+section: developer-guides
 ---
 
 import './get-started.css';
