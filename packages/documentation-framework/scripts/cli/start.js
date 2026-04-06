@@ -7,6 +7,7 @@ const { watchMD } = require('../md/parseMD');
 
 function startDevServer(webpackConfig) {
   webpackConfig.devServer.static = false;
+  webpackConfig.output.clean = false;
   const { port } = webpackConfig.devServer;
   const compiler = rspack(webpackConfig);
   const server = new RspackDevServer(webpackConfig.devServer, compiler);
@@ -18,7 +19,7 @@ function startDevServer(webpackConfig) {
 }
 
 async function start(options) {
-  generate(options, true);
+  await generate(options, true);
   const webpackClientConfig = await clientConfig(null, { mode: 'development', ...getConfig(options) });
   console.log('start rspack-dev-server');
   watchMD();

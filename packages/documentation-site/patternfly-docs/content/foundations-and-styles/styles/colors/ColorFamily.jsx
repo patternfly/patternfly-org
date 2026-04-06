@@ -54,7 +54,7 @@ export function ColorFamily({
             .sort();
 
           return (
-            <AccordionItem isExpanded={isExpanded} style={itemStyle}>
+            <AccordionItem key={token.name} isExpanded={isExpanded} style={itemStyle}>
               <AccordionToggle
                 onClick={() => expand(token.name)}
                 id={token.value.replace('#', 'color-')}

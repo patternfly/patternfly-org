@@ -34,6 +34,7 @@ dist
 .history
 
 size-plugin.json
+lerna-debug.log
 **/generated/**/*.js
 
 # Yarn

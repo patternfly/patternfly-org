@@ -3,6 +3,71 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.4.0-alpha.351 (2026-04-06)
+
+
+### Features
+
+* bump preleases and update screenshots ([#4986](https://github.com/patternfly/patternfly-org/issues/4986)) ([96b5a86](https://github.com/patternfly/patternfly-org/commit/96b5a86cf62be502b202e5c736a161439d2c5710))
+
+
+
+
+
+# 1.4.0-alpha.350 (2026-03-25)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 1.4.0-alpha.349 (2026-03-18)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 1.4.0-alpha.348 (2026-03-16)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 1.4.0-alpha.347 (2026-03-11)
+
+
+### Bug Fixes
+
+* Changes for docs-gen v6 ESM compatibility ([#4956](https://github.com/patternfly/patternfly-org/issues/4956)) ([ce09638](https://github.com/patternfly/patternfly-org/commit/ce0963869e626e790ff36f59d745a625c7b36bdf))
+
+
+
+
+
+# 1.4.0-alpha.346 (2026-03-05)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 1.4.0-alpha.345 (2026-03-04)
+
+
+### Bug Fixes
+
+* **deps:** bump various dependencies, update screenshots, clean up build logging ([#4947](https://github.com/patternfly/patternfly-org/issues/4947)) ([2d5fec3](https://github.com/patternfly/patternfly-org/commit/2d5fec39ddb8aa32ce78c9a63cdfc1653692b193))
+
+
+
+
+
 # 1.4.0-alpha.344 (2026-02-19)
 
 **Note:** Version bump only for package @patternfly/ast-helpers

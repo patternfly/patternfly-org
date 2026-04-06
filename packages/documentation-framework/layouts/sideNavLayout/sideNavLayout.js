@@ -265,9 +265,11 @@ export const SideNavLayout = ({ children, groupedRoutes, navOpen: navOpenProp })
 
   const SideBar = (
     <PageSidebar>
-      <PageSidebarBody>
-        <SideNav navItems={sideNavItems} groupedRoutes={groupedRoutes} />
-      </PageSidebarBody>
+      <div className="pf-v6-c-page__sidebar-main">  {/** TODO: fix with updated React components after https://redhat.atlassian.net/browse/PF-3728 merges */}
+        <PageSidebarBody>
+          <SideNav navItems={sideNavItems} groupedRoutes={groupedRoutes} />
+        </PageSidebarBody>
+      </div>
     </PageSidebar>
   );
 

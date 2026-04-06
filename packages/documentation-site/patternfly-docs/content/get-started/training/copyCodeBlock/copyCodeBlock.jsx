@@ -20,7 +20,6 @@ export const CopyCodeBlock = ({
       <CodeBlockAction>
         <ClipboardCopyButton
           id="basic-copy-button"
-          textId="code-content"
           aria-label="Copy to clipboard"
           onClick={e => onClick(e, children)}
           exitDelay={copied ? 1500 : 600}

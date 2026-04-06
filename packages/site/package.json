@@ -17,10 +17,10 @@
   "dependencies": {
     "@patternfly/patternfly-doc-core": "^1.20.0",
     "@patternfly/react-icons": "^6.5.0-prerelease.14",
-    "astro": "^5.15.9"
+    "astro": "^5.18.0"
   },
   "devDependencies": {
-    "tsx": "^4.19.0",
-    "wrangler": "^4.20.0"
+    "tsx": "^4.21.0",
+    "wrangler": "^4.69.0"
   }
 }

@@ -26,7 +26,7 @@ PatternFly's default root element size is 16px. If you change this default size,
 
 [Inline icons](/components/icon#inline) must be center-aligned horizontally when placed next to text and center-aligned vertically when stacked.
 
-<img src="./icon-alignment.png" alt="Icon alignment" style="max-width:500px"></img>
+![Icons correctly center-aligned beside icons incorrectly front-aligned.](./icon-alignment.svg)
 
 Use the following semantic tokens to ensure that icons are properly aligned and match the correct font size:
 

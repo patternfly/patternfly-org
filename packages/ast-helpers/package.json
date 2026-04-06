@@ -1,7 +1,7 @@
 {
   "name": "@patternfly/ast-helpers",
   "description": "Acorn AST helpers for working with live code",
-  "version": "1.4.0-alpha.344",
+  "version": "1.4.0-alpha.351",
   "author": "Red Hat",
   "license": "MIT",
   "publishConfig": {
@@ -9,10 +9,10 @@
   },
   "main": "index.js",
   "dependencies": {
-    "acorn": "^8.4.1",
+    "acorn": "^8.16.0",
     "acorn-class-fields": "^1.0.0",
     "acorn-jsx": "^5.3.2",
     "acorn-static-class-features": "^1.0.0",
-    "astring": "^1.7.5"
+    "astring": "^1.9.0"
   }
 }

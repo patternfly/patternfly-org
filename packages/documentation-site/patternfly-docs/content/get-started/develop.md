@@ -21,7 +21,7 @@ In order to develop with PatternFly, you will need to:
 ## Develop with React
 
 <Alert title="Version support" variant="info" isInline>
-PatternFly supports the 2 most recent versions of React at a time. PatternFly 6 currently supports React 17 and 18, [with support for React 19 coming soon](https://github.com/orgs/patternfly/projects/16/views/23?pane=issue&itemId=83947829&issue=patternfly%7Cpf-roadmap%7C201).
+PatternFly supports the 2 most recent versions of React at a time. PatternFly 6 currently supports React 17, 18, and 19.
 </Alert>
 
 [PatternFly's React library](https://github.com/patternfly/patternfly-react) contains a collection of components that you can use to build interfaces with consistent markup, styling, and behavior. It is composed of a number of React packages, which are published in the following npm packages:

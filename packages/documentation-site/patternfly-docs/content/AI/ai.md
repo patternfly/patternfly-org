@@ -101,45 +101,45 @@ When working on an AI system, you should consciously check that you're in alignm
 
 | <div style="width:10rem">Key area</div> | Rule | <div style="width:10rem">Status</div>| 
 | --- | --- | --- |
-| Policies | Company AI policies are readily accessible to all team members. | <Checkbox label="Compliant"></Checkbox>
-| Legal compliance | All necessary laws, regulations, and ethical guidelines are followed throughout the development process. AI does not enable illegal, unethical, or contract-breaking activities. | <Checkbox label="Compliant"></Checkbox>
-| Practices | AI does not answer unsafe questions or access unsecure data. | <Checkbox label="Compliant"></Checkbox>
+| Policies | Company AI policies are readily accessible to all team members. | <Checkbox id="accountability-policies" label="Compliant"></Checkbox>
+| Legal compliance | All necessary laws, regulations, and ethical guidelines are followed throughout the development process. AI does not enable illegal, unethical, or contract-breaking activities. | <Checkbox id="accountability-legal" label="Compliant"></Checkbox>
+| Practices | AI does not answer unsafe questions or access unsecure data. | <Checkbox id="accountability-practices" label="Compliant"></Checkbox>
 
 #### Explainability
 
 | <div style="width:10rem">Key area</div> | Rule | <div style="width:10rem">Status</div>| 
 | --- | --- | --- |
-| Outcomes | There are clear explanations available that describe how AI conclusions are reached. | <Checkbox label="Compliant"></Checkbox>
-| Citations | Any related citations are provided to users. | <Checkbox label="Compliant"></Checkbox>|
-| Context | To support troubleshooting, AI gives context to Red Hatters who review its interactions. |<Checkbox label="Compliant"></Checkbox> |
+| Outcomes | There are clear explanations available that describe how AI conclusions are reached. | <Checkbox id="explainability-outcomes" label="Compliant"></Checkbox>
+| Citations | Any related citations are provided to users. | <Checkbox id="explainability-citations" label="Compliant"></Checkbox>|
+| Context | To support troubleshooting, AI gives context to Red Hatters who review its interactions. |<Checkbox id="explainability-context" label="Compliant"></Checkbox> |
 
 #### Transparency
 
 | <div style="width:10rem">Key area</div> | Rule | <div style="width:10rem">Status</div>| 
 | --- | --- | --- |
-| Documentation | Design processes and decisions are well documented.| <Checkbox label="Compliant"></Checkbox>
-| Data usage | Informed consent is obtained to collect and use data. The ways that user data is collected, stored, and used are openly shared. AI is clear about the data that it records. | <Checkbox label="Compliant"></Checkbox>
-| Confidence | AI shares when it has low confidence in its response. |<Checkbox label="Compliant"></Checkbox>
-| Limitations | AI shares when it believes that it can’t fulfill a request. | <Checkbox label="Compliant"></Checkbox>
+| Documentation | Design processes and decisions are well documented.| <Checkbox id="transparency-documentation" label="Compliant"></Checkbox>
+| Data usage | Informed consent is obtained to collect and use data. The ways that user data is collected, stored, and used are openly shared. AI is clear about the data that it records. | <Checkbox id="transparency-data-usage" label="Compliant"></Checkbox>
+| Confidence | AI shares when it has low confidence in its response. |<Checkbox id="transparency-confidence" label="Compliant"></Checkbox>
+| Limitations | AI shares when it believes that it can’t fulfill a request. | <Checkbox id="transparency-limitations" label="Compliant"></Checkbox>
 
 #### Fairness
 
 | <div style="width:10rem">Key area</div> | Rule | <div style="width:10rem">Status</div>| 
 | --- | --- | --- |
-| Bias | Potential biases are identified, reduced, and actively studied. | <Checkbox label="Compliant"></Checkbox>
-| Inclusion | Designs are inclusive and accommodating of various user demographics. | <Checkbox label="Compliant"></Checkbox>
-| Equal access | Access to AI technologies is available and beneficial to as many users and communities as possible. | <Checkbox label="Compliant"></Checkbox>
+| Bias | Potential biases are identified, reduced, and actively studied. | <Checkbox id="fairness-bias" label="Compliant"></Checkbox>
+| Inclusion | Designs are inclusive and accommodating of various user demographics. | <Checkbox id="fairness-inclusion" label="Compliant"></Checkbox>
+| Equal access | Access to AI technologies is available and beneficial to as many users and communities as possible. | <Checkbox id="fairness-equal-access" label="Compliant"></Checkbox>
 
 #### Human-centeredness 
 
 | <div style="width:10rem">Key area</div> | Rule | <div style="width:10rem">Status</div>| 
 | --- | --- | --- |
-| Value and need | AI is aligned with user needs and values and will be continuously refined based on user feedback and ethical considerations.  | <Checkbox label="Compliant"></Checkbox>
-| Communication | AI has a predictable tone and voice. It can handle emotional responses from users gracefully. | <Checkbox label="Compliant"></Checkbox>
-| Cultural sensitivity | Cultural differences are considered and respected.  | <Checkbox label="Compliant"></Checkbox>
-| Data rights and control | Users have control over their data, including the ability to access, modify, and delete their information. AI does not act on behalf of users without explicit permission and clear opportunities for permission withdrawal.  | <Checkbox label="Compliant"></Checkbox>
-| Optional | There is an obvious and simple way for users to opt out of using AI. | <Checkbox label="Compliant"></Checkbox>
-| Privacy | Personally identifiable information is protected and used responsibly.  | <Checkbox label="Compliant"></Checkbox>
+| Value and need | AI is aligned with user needs and values and will be continuously refined based on user feedback and ethical considerations.  | <Checkbox id="human-centered-value" label="Compliant"></Checkbox>
+| Communication | AI has a predictable tone and voice. It can handle emotional responses from users gracefully. | <Checkbox id="human-centered-communication" label="Compliant"></Checkbox>
+| Cultural sensitivity | Cultural differences are considered and respected.  | <Checkbox id="human-centered-cultural" label="Compliant"></Checkbox>
+| Data rights and control | Users have control over their data, including the ability to access, modify, and delete their information. AI does not act on behalf of users without explicit permission and clear opportunities for permission withdrawal.  | <Checkbox id="human-centered-data-rights" label="Compliant"></Checkbox>
+| Optional | There is an obvious and simple way for users to opt out of using AI. | <Checkbox id="human-centered-optional" label="Compliant"></Checkbox>
+| Privacy | Personally identifiable information is protected and used responsibly.  | <Checkbox id="human-centered-privacy" label="Compliant"></Checkbox>
 
 ## How do I apply AI design best practices?
 

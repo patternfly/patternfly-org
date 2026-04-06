@@ -19,4 +19,4 @@ Use an input group when the elements are directly connected to each other. Examp
 ### When not to use
 Do not use an input group when you're performing different actions on the item, such as a text entry and a remove action.
 
-View more examples in the [input group react tab](https://v4-archive.patternfly.org/v4/components/input-group#examples).
+View more examples in the [input group React tab](/components/input-group).

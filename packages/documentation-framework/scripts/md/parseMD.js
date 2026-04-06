@@ -19,6 +19,7 @@ const outputBase = path.join(process.cwd(), `patternfly-docs/generated`);
 const tsDocs = {};
 let functionDocs = {};
 const routes = {};
+const pendingProps = [];
 const globs = {
   props: [],
   md: [],
@@ -267,8 +268,8 @@ function toReactComponent(mdFilePath, source, buildMode) {
   };
 }
 
-function sourcePropsFile(file) {
-  tsDocgen(file)
+async function sourcePropsFile(file) {
+  (await tsDocgen(file))
     .filter(({ hide }) => !hide)
     .forEach(({ name, description, props }) => {
       tsDocs[getTsDocName(name, getTsDocNameVariant(file))] = { name, description, props };
@@ -345,19 +346,32 @@ function getTsDocNameVariant(source) {
 module.exports = {
   sourceProps(glob, ignore) {
     globs.props.push({ glob, ignore });
-    globSync(glob, { ignore }).forEach(sourcePropsFile);
+    const promise = Promise.all(globSync(glob, { ignore }).map(sourcePropsFile));
+    pendingProps.push(promise);
+  },
+  async waitForProps() {
+    await Promise.all(pendingProps);
   },
   sourceMD(glob, source, ignore, buildMode) {
-    globs.md.push({ glob, source, ignore });
-    globSync(glob, { ignore }).forEach(file => sourceMDFile(file, source, buildMode));
+    globs.md.push({ glob, source, ignore, buildMode });
+  },
+  processMD() {
+    globs.md.forEach(({ glob, source, ignore, buildMode }) => {
+      globSync(glob, { ignore }).forEach(file => sourceMDFile(file, source, buildMode));
+    });
   },
   sourceFunctionDocs,
   writeIndex,
   watchMD() {
     globs.props.forEach(({ glob, ignore }) => {
       const propWatcher = chokidar.watch(globSync(glob, { ignored: ignore, ignoreInitial: true}));
-      propWatcher.on('add', sourcePropsFile);
-      propWatcher.on('change', sourcePropsFile);
+      const onPropFile = (file) => {
+        sourcePropsFile(file).catch((err) => {
+          console.error('Error updating props from', file, err);
+        });
+      };
+      propWatcher.on('add', onPropFile);
+      propWatcher.on('change', onPropFile);
     });
     globs.md.forEach(({ glob, source, ignore }) => {
       const mdWatcher = chokidar.watch(globSync(glob, { ignored: ignore, ignoreInitial: true }));

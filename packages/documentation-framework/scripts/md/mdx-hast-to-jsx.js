@@ -8,6 +8,7 @@ const { parse } = require('@patternfly/ast-helpers');
 const { capitalize } = require('../../helpers/capitalize');
 const { slugger } = require('../../helpers/slugger');
 const { liveCodeTypes } = require('../../helpers/liveCodeTypes');
+const { stripReactTypeOnlyImports } = require('./stripReactTypeOnlyImports');
 
 // Adapted from https://github.com/mdx-js/mdx/blob/next/packages/mdx/mdx-hast-to-jsx.js
 function toJSX(node, parentNode = {}, options = {}) {
@@ -69,7 +70,9 @@ function serializeRoot(node, options) {
 
   const importStatements = groups.import
     .map(node => node.value)
-    .map(imp => imp.replace(/(['"])\./g, (_, match) => `${match}${getRelPath()}${path.posix.sep}\.`));
+    .map(imp => imp.replace(/(['"])\./g, (_, match) => `${match}${getRelPath()}${path.posix.sep}\.`))
+    .map(imp => stripReactTypeOnlyImports(imp))
+    .filter(Boolean);
 
   // Build array of absolute import paths for relative imports
   const relativeImportsRegex = /(import [^'"]*)['"](?:[\.\/]+(?:node_modules\/)?)(@?(?:(?!\.svg|\.jpe?g|\.png).)+)['"][;?]/gm;
@@ -168,12 +171,14 @@ function serializeElement(node, options) {
     res += ` src={${srcImport}}`;
     if (node.properties.isResponsive) {
       if (!props.width) {
-        res += ` width={${srcImport}.width}`;
-        res += ` height={${srcImport}.height}`;
+        // Only set width/height from import if the import provides dimensions (e.g. responsive-loader).
+        // asset/resource imports return a URL string without width/height properties.
+        res += ` width={${srcImport}.width || undefined}`;
+        res += ` height={${srcImport}.height || undefined}`;
       }
       else {
         props.width = props.width.replace('px', '');
-        res += ` height={${srcImport}.height * ${props.width} / ${srcImport}.width}`;
+        res += ` height={typeof ${srcImport}.height === 'number' ? ${srcImport}.height * ${props.width} / ${srcImport}.width : undefined}`;
       }
     }
   }

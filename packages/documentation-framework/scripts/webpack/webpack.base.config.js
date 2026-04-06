@@ -94,6 +94,10 @@ module.exports = (_env, argv) => {
           }
         },
         {
+          resourceQuery: /raw/,
+          type: 'asset/source'
+        },
+        {
           test: /\.m?js$/,
           resolve: {
             fullySpecified: false
