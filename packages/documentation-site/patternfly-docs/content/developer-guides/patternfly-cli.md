@@ -8,8 +8,8 @@ The [PatternFly CLI](https://github.com/patternfly/patternfly-cli) is a command-
 
 ## Features
 
-- **Project scaffolding:** Quickly set up new PatternFly based projects for development, and prototyping. This is done using predefined templates.
-- **Code modifications:** Automate repetitive code changes that helps users upgrade to the latest version of PatternFly.
+- **Project scaffolding:** Quickly set up new PatternFly based projects for development and prototyping via predefined templates.
+- **Code modifications:** Automate repetitive code changes to help accelerate PatternFly version upgrades.
 - **Task runner:** Execute project-related tasks efficiently, such as source code management and task running.
 
 
