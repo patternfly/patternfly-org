@@ -6,5 +6,5 @@
   "observability": {
     "enabled": true
   },
-  "pages_build_output_dir": "./dist/docs"
+  "pages_build_output_dir": "packages/site/dist/docs"
 }
