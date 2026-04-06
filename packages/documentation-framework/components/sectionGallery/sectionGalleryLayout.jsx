@@ -10,7 +10,7 @@ import {
   Label,
 } from '@patternfly/react-core';
 import { navigate } from '@reach/router';
-import { TextSummary } from './TextSummary';
+import { TextSummary } from './TextSummary.jsx';
 
 export const SectionGalleryLayout = ({
   galleryItems,

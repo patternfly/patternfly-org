@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from '../link/link';
+import { Link } from '../link/link.jsx';
 import {
   Label,
   Nav,

@@ -4,7 +4,7 @@ title: Components overview
 section: components
 sortValue: 1
 ---
-import { SectionGallery } from '@patternfly/documentation-framework/components/sectionGallery/sectionGallery';
+import { SectionGallery } from '@patternfly/documentation-framework/components/sectionGallery/sectionGallery.jsx';
 import * as illustrations from './img/component-illustrations';
 import componentsData from './components-data.json';
 

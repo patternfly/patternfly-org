@@ -8,7 +8,7 @@ export * from './propsTable/propsTable';
 export * from './navAnnouncementBanner/navAnnouncementBanner';
 export * from './sideNav/sideNav';
 export * from './topNav/topNav';
-export * from './link/link';
+export * from './link/link.jsx';
 export * from './tableOfContents/tableOfContents';
 export * from './inlineAlert/inlineAlert';
 export * from './themeSelector/themeSelector';

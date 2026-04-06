@@ -6,7 +6,7 @@ subsection: layouts
 sortValue: 1
 ---
 
-import { SectionGallery } from '@patternfly/documentation-framework/components/sectionGallery/sectionGallery';
+import { SectionGallery } from '@patternfly/documentation-framework/components/sectionGallery/sectionGallery.jsx';
 import layoutsData from './layouts-data.json';
 
 PatternFly’s **layouts** are used to place components on a page. They create a fully responsive structure to keep components organized and aligned across screen sizes. 

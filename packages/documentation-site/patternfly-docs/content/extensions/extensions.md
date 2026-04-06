@@ -5,7 +5,7 @@ section: extensions
 sortValue: 1
 ---
 
-import { SectionGallery } from '@patternfly/documentation-framework/components/sectionGallery/sectionGallery';
+import { SectionGallery } from '@patternfly/documentation-framework/components/sectionGallery/sectionGallery.jsx';
 import extensionsData from './extensions-data.json';
 
 PatternFly's **extensions** are holistic solutions that utilize multiple PatternFly components, typically addressing specific, cross-project use cases. Extensions accelerate development by providing pre-built, reusable code for common interactions, making it easier to drive consistency throughout a user’s journey across multiple products and platforms.

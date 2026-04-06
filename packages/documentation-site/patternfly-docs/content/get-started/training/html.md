@@ -5,7 +5,7 @@ subsection: training
 ---
 
 import { Gallery, GalleryItem } from '@patternfly/react-core';
-import { TrainingCard } from './trainingCard/trainingCard';
+import { TrainingCard } from './trainingCard/trainingCard.jsx';
 
 ## Fundamentals
 <TrainingCard

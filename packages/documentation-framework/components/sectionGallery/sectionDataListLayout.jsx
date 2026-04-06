@@ -11,8 +11,8 @@ import {
   ContentVariants,
   Label,
 } from "@patternfly/react-core";
-import { Link } from "../link/link";
-import { TextSummary } from "./TextSummary";
+import { Link } from "../link/link.jsx";
+import { TextSummary } from "./TextSummary.jsx";
 
 export const SectionDataListLayout = ({
   galleryItems,

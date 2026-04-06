@@ -1,10 +1,10 @@
 import React from "react";
 
 import './sectionGallery.css';
-import { SectionGalleryToolbar } from "./sectionGalleryToolbar";
-import { SectionGalleryLayout } from "./sectionGalleryLayout";
-import { SectionDataListLayout } from "./sectionDataListLayout";
-import { SectionGalleryWrapper } from "./sectionGalleryWrapper";
+import { SectionGalleryToolbar } from "./sectionGalleryToolbar.jsx";
+import { SectionGalleryLayout } from "./sectionGalleryLayout.jsx";
+import { SectionDataListLayout } from "./sectionDataListLayout.jsx";
+import { SectionGalleryWrapper } from "./sectionGalleryWrapper.jsx";
 
 /** 
  * Helper component returns gallery of items with search toolbar and switchable gallery/data list views.

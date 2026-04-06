@@ -6,7 +6,7 @@ subsection: utility-classes
 sortValue: 1
 ---
 
-import { SectionGallery } from '@patternfly/documentation-framework/components/sectionGallery/sectionGallery';
+import { SectionGallery } from '@patternfly/documentation-framework/components/sectionGallery/sectionGallery.jsx';
 import utilityClassesData from './utility-classes-data.json';
 
 PatternFly’s **utility classes** enable you to further customize and modify elements in your project without having to write any custom CSS.
