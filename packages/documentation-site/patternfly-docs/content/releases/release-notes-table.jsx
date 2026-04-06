@@ -34,7 +34,7 @@ import {
 import FilterIcon from "@patternfly/react-icons/dist/esm/icons/filter-icon";
 import SearchIcon from "@patternfly/react-icons/dist/esm/icons/search-icon";
 
-import { releaseNotes } from "./release-notes-data.js";
+import { releaseNotes } from "./release-notes-data.jsx";
 
 export const ReleaseNotesTable = () => {
   // Row expand/collapse
