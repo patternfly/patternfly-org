@@ -5153,9 +5153,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@patternfly/patternfly-doc-core@npm:^1.20.0":
-  version: 1.20.0
-  resolution: "@patternfly/patternfly-doc-core@npm:1.20.0"
+"@patternfly/patternfly-doc-core@npm:^1.22.0":
+  version: 1.22.0
+  resolution: "@patternfly/patternfly-doc-core@npm:1.22.0"
   dependencies:
     "@astrojs/check": "npm:^0.9.4"
     "@astrojs/cloudflare": "npm:^12.6.5"
@@ -5188,7 +5188,7 @@ __metadata:
     typescript: "npm:^5.9.2"
   bin:
     patternfly-doc-core: dist/cli/cli.js
-  checksum: 10c0/39a9a22c1b2f28fc47c6e71dcd723445f64bfe16cbc7c2403ff181cf36e5f1e0efc27c464e5d9600935596a01b7130b309a9c7c4bbd98bc27c63dd0686faf36d
+  checksum: 10c0/b16cc46cff353988db11fa3afa62c87559498182923abee355132caa9e0216deb5e6679c42b2f42ad4502cc988e12d9f387d08c4655ed887d43700ec0f8cb94b
   languageName: node
   linkType: hard
 
@@ -21321,7 +21321,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "site@workspace:packages/site"
   dependencies:
-    "@patternfly/patternfly-doc-core": "npm:^1.20.0"
+    "@patternfly/patternfly-doc-core": "npm:^1.22.0"
     "@patternfly/react-icons": "npm:^6.5.0-prerelease.14"
     astro: "npm:^5.18.0"
     tsx: "npm:^4.21.0"
