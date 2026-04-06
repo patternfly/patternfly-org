@@ -6,7 +6,7 @@
   "scripts": {
     "ci:build": "yarn generate:content && yarn build",
     "clean": "rm -rf src/generated",
-    "generate:content": "rm -rf src/content && cp -r ../documentation-site/patternfly-docs/content src/content",
+    "generate:content": "rm -rf src/content && mkdir -p src/content && cp -r ../documentation-site/patternfly-docs/content src/content",
     "dev": "patternfly-doc-core start",
     "build": "patternfly-doc-core build --props --api-only",
     "serve": "patternfly-doc-core serve",
