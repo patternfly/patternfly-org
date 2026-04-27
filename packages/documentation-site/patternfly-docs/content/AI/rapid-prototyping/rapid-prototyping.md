@@ -23,12 +23,12 @@ Rapid prototyping with PatternFly code offers several key benefits:
 
 ## Get started
 
-For the best results with AI-assisted prototyping, install the [PatternFly AI helpers](/ai/ai-development-tools) marketplace plugins. These give your AI tools additional knowledge and skills that lead to more accurate code generation.
+For the best results with AI-assisted prototyping, install the [PatternFly AI Helpers](/ai/ai-development-tools) marketplace plugins. These give your AI tools additional knowledge and skills that lead to more accurate code generation.
 
 Choose your path based on your current situation:
 
 - **[Starting a new prototype](/ai/rapid-prototyping/new-prototypes):** Use the [patternfly-react-seed (ai_enabled branch)](https://github.com/patternfly/patternfly-react-seed/tree/ai_enabled) application for optimal setup.
-- **[Enhancing existing projects](/ai/rapid-prototyping/enhancing-existing-projects):** Add AI helpers to your current codebase.
+- **[Enhancing existing projects](/ai/rapid-prototyping/enhancing-existing-projects):** Add AI Helpers to your current codebase.
 
 ## Best practices for AI-assisted prototyping
 
