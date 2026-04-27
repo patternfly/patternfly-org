@@ -17,4 +17,4 @@ If you need to start a new project, follow our guidelines for [starting a new pr
 
 AI development tools work best when they have context about the frameworks and patterns your project uses. The [PatternFly AI Helpers](https://github.com/patternfly/ai-helpers) marketplace plugins provide your AI tools with this context, leading to more accurate component suggestions, better adherence to design patterns, and improved consistency across your codebase.
 
-Because these plugins are installed directly within your AI tools, there are no project dependencies to manage. To set up and use our plugins, refer to our [AI development tools](/ai/ai-development-tools) guidance.
+Because these plugins are installed directly within your AI tools, there are no project dependencies to manage. To set up and use our plugins, refer to our [Marketplace](/ai/marketplace) page.

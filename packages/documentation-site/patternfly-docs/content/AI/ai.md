@@ -16,7 +16,7 @@ The following guides are intended to help you integrate AI into your workflows a
 
 - **[Design language](/ai/design-language):** The foundational design decisions that guide the use of AI features in products.
 - **[Rapid prototyping](/ai/rapid-prototyping):** Guidance for generating and iterating AI features during early stages of design.
-- **[AI development tools](/ai/ai-development-tools):** Knowledge and skills that help AI coding assistants generate more accurate, PatternFly-compliant code.
+- **[Marketplace](/ai/marketplace):** Plugins that give AI coding assistants knowledge and skills to generate more accurate, PatternFly-compliant code.
 - **[AI-assisted code migration](/ai/ai-assisted-code-migration):** Guidance for using AI to speed up and simplify codebase migrations.
 - **[Conversational design principles](/ai/conversation-design):** Guidance for designing effective and human-centered AI conversations.
 - **[Generative UIs](/ai/generative-uis/overview):** Proof-of-concept resources for creating UIs that can utilize AI to dynamically generate elements as needed.
