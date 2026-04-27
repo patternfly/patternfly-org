@@ -17,16 +17,7 @@ With AI Helpers installed, you can expect a few benefits when using generative A
 
 ## What plugins are available?
 
-The AI Helpers marketplace is organized into plugins, each focused on a different area of PatternFly:
-
-| Plugin | Usage |
-| :--- | :--- |
-| **React** | Build and test React components that adhere to PatternFly coding standards and structural best practices. |
-| **Design foundations** | Audit and validate usage of design tokens, icons, colors, and spacing. |
-| **Accessibility** | Audit and document accessibility compliance or concerns across your project. |
-| **Figma** | Review Figma design changes and generate code update checklists. |
-| **Issue management** | (Primarily for PatternFly maintainers) Create, triage, and track issues across PatternFly repositories. |
-| **Repo management** | (Primarily for PatternFly maintainers) Manage releases, analyze dependencies, and maintain repository health. |
+The AI Helpers marketplace is organized into plugins, each focused on a different area of PatternFly — from building and testing React components, to working with design tokens and accessibility, to reviewing Figma changes. New plugins are added regularly as the community contributes.
 
 We are actively maintaining and evolving our plugins based on the needs of our maintainers and users. For the current list of plugins, view our [plugin catalog](https://github.com/patternfly/ai-helpers/blob/main/PLUGINS.md).
 
