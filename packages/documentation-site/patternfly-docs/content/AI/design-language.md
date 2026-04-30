@@ -69,7 +69,7 @@ The following AI-enabled icons are available for use:
 
 Like the rest of PatternFly's icons, these AI icons are available within the [@patternfly/react-icons package](https://www.npmjs.com/package/@patternfly/react-icons/v/6.4.0?activeTab=versions). 
 
-In Figma, these icons are available within the Red Hat brand library, rather than those in the PatternFly components library. You can swap to the Red Hat brand library via the icon instance menu:
+In Figma, these icons are available in the PatternFly components library via the Red Hat brand library. Using the icon wrapper component you can swap the icons in the instance menu:
 
 <div class="ws-docs-content-img">
 ![Menu in Figma showing how to switch between PatternFly and Red Hat icon libraries](./img/rh-icons-figma.png)
