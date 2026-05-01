@@ -24,8 +24,7 @@ import OutlinedPlusSquare from '@patternfly/react-icons/dist/esm/icons/outlined-
 import OutlinedCopy from '@patternfly/react-icons/dist/esm/icons/outlined-copy-icon';
 import OutlinedQuestionCircleIcon from '@patternfly/react-icons/dist/esm/icons/outlined-question-circle-icon';
 
-import wallpaperLight from './assets/wallpaper-light.png'
-import wallpaperDark from './assets/wallpaper-dark.png'
+import pfBackground from '@patternfly/patternfly/assets/images/pf-background.svg';
 import imgAvatar from './assets/avatar.jpg';
 import { RHAutomationsLogo } from './assets/RHAutomationsLogo';
 import { RHAiExperienceIcon } from './assets/RHAiExperienceIcon';
