@@ -45,8 +45,7 @@ import { ClusterDetailsCard } from './cards/ClusterDetailsCard';
 import { RecentActivityCard } from './cards/RecentActivityCard';
 
 import heroBg from './assets/hero-bg.png';
-import wallpaperDark from './assets/wallpaper-dark.png';
-import wallpaperLight from './assets/wallpaper-light.png';
+import pfBackground from '@patternfly/patternfly/assets/images/pf-background.svg';
 import imgAvatar from './assets/avatar.jpg';
 
 export const CompassBasic: React.FunctionComponent = () => {
@@ -279,8 +278,8 @@ export const CompassBasic: React.FunctionComponent = () => {
         main={mainContent}
         sidebarEnd={eastContent}
         footer={southContent}
-        backgroundSrcDark={wallpaperDark}
-        backgroundSrcLight={wallpaperLight}
+        backgroundSrcDark={pfBackground}
+        backgroundSrcLight={pfBackground}
       />
     </>
   );

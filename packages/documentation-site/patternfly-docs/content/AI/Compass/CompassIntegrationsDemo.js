@@ -13,8 +13,7 @@ import OutlinedQuestionCircleIcon from '@patternfly/react-icons/dist/esm/icons/o
 import EllipsisVIcon from '@patternfly/react-icons/dist/esm/icons/ellipsis-v-icon';
 import ThIcon from '@patternfly/react-icons/dist/esm/icons/th-icon';
 import ListIcon from '@patternfly/react-icons/dist/esm/icons/list-icon';
-import wallpaperLight from './assets/wallpaper-light.png';
-import wallpaperDark from './assets/wallpaper-dark.png';
+import pfBackground from '@patternfly/patternfly/assets/images/pf-background.svg';
 import imgAvatar from './assets/avatar.jpg';
 import { RHAutomationsLogo } from './assets/RHAutomationsLogo';
 import { RHAiExperienceIcon } from './assets/RHAiExperienceIcon';
@@ -258,7 +257,7 @@ export const CompassIntegrationsDemo = () => {
         }
     };
     const drawerContent = (_jsxs(DrawerPanelContent, { children: [_jsxs(DrawerHead, { children: [_jsx("span", { children: "Content Details" }), _jsx(DrawerActions, { children: _jsx(DrawerCloseButton, { onClick: onDrawerToggle }) })] }), _jsxs(DrawerPanelBody, { children: [_jsx(Content, { component: "h3", children: "Content Information" }), _jsx(Content, { component: "p", children: "This drawer contains detailed information about the content." })] })] }));
-    return (_jsxs(_Fragment, { children: [_jsx(SkipToContent, { onClick: handleClick, href: "#integrations-main-content", children: "Skip to content" }), _jsx(Compass, { header: headerContent, sidebarStart: startSidebarContent, main: mainContent, sidebarEnd: endSidebarContent, footer: footerContent, backgroundSrcDark: wallpaperDark, backgroundSrcLight: wallpaperLight, drawerContent: drawerContent, drawerProps: { isExpanded: isDrawerOpen, isPill: true } }), _jsx("div", { style: {
+    return (_jsxs(_Fragment, { children: [_jsx(SkipToContent, { onClick: handleClick, href: "#integrations-main-content", children: "Skip to content" }), _jsx(Compass, { header: headerContent, sidebarStart: startSidebarContent, main: mainContent, sidebarEnd: endSidebarContent, footer: footerContent, backgroundSrcDark: pfBackground, backgroundSrcLight: pfBackground, drawerContent: drawerContent, drawerProps: { isExpanded: isDrawerOpen, isPill: true } }), _jsx("div", { style: {
                     position: 'absolute',
                     bottom: '1rem',
                     right: '1rem',
