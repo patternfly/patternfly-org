@@ -1,5 +1,6 @@
 import {
-  CompassPanel,
+  Panel,
+  PanelMain,
   Card,
   CardHeader,
   CardTitle,
@@ -58,8 +59,9 @@ export const RecentActivityCard: React.FunctionComponent = () => {
   };
 
   return (
-    <CompassPanel hasNoPadding isFullHeight>
-      <Card isPlain isFullHeight>
+    <Panel isFullHeight>
+      <PanelMain>
+        <Card isPlain isFullHeight>
         <CardHeader
           actions={{
             actions: (
@@ -160,8 +162,9 @@ export const RecentActivityCard: React.FunctionComponent = () => {
             </Tbody>
           </Table>
         </CardBody>
-      </Card>
-    </CompassPanel>
+        </Card>
+      </PanelMain>
+    </Panel>
   );
 };
 

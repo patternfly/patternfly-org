@@ -9,7 +9,8 @@ import {
   DropdownItem,
   MenuToggle,
   Flex,
-  CompassPanel,
+  Panel,
+  PanelMain,
 } from "@patternfly/react-core";
 
 import EllipsisVIcon from "@patternfly/react-icons/dist/esm/icons/ellipsis-v-icon";
@@ -64,7 +65,8 @@ export const NetworkActivityCard: React.FunctionComponent = () => {
   return (
     // To match the dark theme, we wrap the card in a div with a dark background.
     // The `isPlain` and `isFlat` props on the Card remove its default styling.
-    <CompassPanel hasNoPadding isFullHeight>
+    <Panel isFullHeight>
+      <PanelMain>
         <Card isPlain isFullHeight>
           <CardHeader
             actions={{
@@ -127,7 +129,8 @@ export const NetworkActivityCard: React.FunctionComponent = () => {
             </Chart>
           </CardBody>
         </Card>
-    </CompassPanel>
+      </PanelMain>
+    </Panel>
   );
 };
 NetworkActivityCard.displayName = "NetworkActivityCard";

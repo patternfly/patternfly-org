@@ -12,7 +12,8 @@ import {
   CardHeader,
   DropdownList,
   FlexItem,
-  CompassPanel,
+  Panel,
+  PanelMain,
 } from "@patternfly/react-core";
 import {
   ChartDonutThreshold,
@@ -45,8 +46,9 @@ export const StorageCard: React.FunctionComponent = () => {
   );
 
   return (
-    <CompassPanel hasNoPadding isFullHeight>
-      <Card isFullHeight isPlain>
+    <Panel isFullHeight>
+      <PanelMain>
+        <Card isFullHeight isPlain>
         <CardHeader
           actions={{
             actions: (
@@ -121,8 +123,9 @@ export const StorageCard: React.FunctionComponent = () => {
             Storage page
           </Button>
         </CardFooter>
-      </Card>
-      </CompassPanel>
+        </Card>
+      </PanelMain>
+    </Panel>
   );
 };
 StorageCard.displayName = "StorageCard";

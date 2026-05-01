@@ -12,7 +12,8 @@ import {
   CardHeader,
   DropdownList,
   FlexItem,
-  CompassPanel,
+  Panel,
+  PanelMain,
 } from "@patternfly/react-core";
 import {
   ChartDonutThreshold,
@@ -45,8 +46,9 @@ export const MemoryUtilizationCard: React.FunctionComponent = () => {
   );
 
   return (
-    <CompassPanel hasNoPadding isFullHeight>
-      <Card isPlain isFullHeight>
+    <Panel isFullHeight>
+      <PanelMain>
+        <Card isPlain isFullHeight>
         <CardHeader
           actions={{
             actions: (
@@ -151,8 +153,9 @@ export const MemoryUtilizationCard: React.FunctionComponent = () => {
             Memory usage page
           </Button>
         </CardFooter>
-      </Card>
-      </CompassPanel>
+        </Card>
+      </PanelMain>
+    </Panel>
   );
 };
 MemoryUtilizationCard.displayName = "MemoryUtilizationCard";
