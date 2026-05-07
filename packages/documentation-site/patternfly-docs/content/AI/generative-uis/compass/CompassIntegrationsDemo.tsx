@@ -65,7 +65,6 @@ import EllipsisVIcon from '@patternfly/react-icons/dist/esm/icons/ellipsis-v-ico
 import ThIcon from '@patternfly/react-icons/dist/esm/icons/th-icon';
 import ListIcon from '@patternfly/react-icons/dist/esm/icons/list-icon';
 
-import pfBackground from '@patternfly/patternfly/assets/images/pf-background.svg';
 import imgAvatar from './assets/avatar.jpg';
 import { RHAutomationsLogo } from './assets/RHAutomationsLogo';
 import { RHAiExperienceIcon } from './assets/RHAiExperienceIcon';
@@ -689,8 +688,6 @@ export const CompassIntegrationsDemo: React.FunctionComponent = () => {
         main={mainContent}
         sidebarEnd={endSidebarContent}
         footer={footerContent}
-        backgroundSrcDark={pfBackground}
-        backgroundSrcLight={pfBackground}
         drawerContent={drawerContent}
         drawerProps={{ isExpanded: isDrawerOpen, isPill: true }}
       />
