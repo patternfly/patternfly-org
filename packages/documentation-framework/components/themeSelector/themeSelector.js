@@ -150,9 +150,9 @@ export const ThemeSelector = ({ id }) => {
                 onChange={handleThemeVariantChange}
               />
               <ToggleGroupItem
-                text="Unified"
-                buttonId={themeVariantModes.UNIFIED}
-                isSelected={themeVariant === themeVariantModes.UNIFIED}
+                text="Project Felt"
+                buttonId={themeVariantModes.FELT}
+                isSelected={themeVariant === themeVariantModes.FELT}
                 onChange={handleThemeVariantChange}
               />
             </ToggleGroup>
