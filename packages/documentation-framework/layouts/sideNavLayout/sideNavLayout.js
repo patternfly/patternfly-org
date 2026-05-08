@@ -196,26 +196,28 @@ const hitDataByUrl = {};
 let lastAlgoliaQueryID = null;
 
 // DocSearch v2 discards queryID from Algolia responses, so intercept XHR to capture it
-const origOpen = XMLHttpRequest.prototype.open;
-XMLHttpRequest.prototype.open = function(method, url) {
-  this._algoliaUrl = typeof url === 'string' && url.includes('.algolia.') ? url : null;
-  return origOpen.apply(this, arguments);
-};
-const origSend = XMLHttpRequest.prototype.send;
-XMLHttpRequest.prototype.send = function(body) {
-  if (this._algoliaUrl) {
-    this.addEventListener('load', function() {
-      try {
-        const data = JSON.parse(this.responseText);
-        const result = data.results ? data.results[0] : data;
-        if (result && result.queryID) {
-          lastAlgoliaQueryID = result.queryID;
-        }
-      } catch (e) {}
-    });
-  }
-  return origSend.apply(this, arguments);
-};
+if (typeof XMLHttpRequest !== 'undefined') {
+  const origOpen = XMLHttpRequest.prototype.open;
+  XMLHttpRequest.prototype.open = function(method, url) {
+    this._algoliaUrl = typeof url === 'string' && url.includes('.algolia.') ? url : null;
+    return origOpen.apply(this, arguments);
+  };
+  const origSend = XMLHttpRequest.prototype.send;
+  XMLHttpRequest.prototype.send = function(body) {
+    if (this._algoliaUrl) {
+      this.addEventListener('load', function() {
+        try {
+          const data = JSON.parse(this.responseText);
+          const result = data.results ? data.results[0] : data;
+          if (result && result.queryID) {
+            lastAlgoliaQueryID = result.queryID;
+          }
+        } catch (e) {}
+      });
+    }
+    return origSend.apply(this, arguments);
+  };
+}
 
 export function attachDocSearch(algolia, inputSelector, timeout) {
   if (window.docsearch) {
