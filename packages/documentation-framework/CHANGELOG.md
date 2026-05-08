@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 6.39.1 (2026-05-08)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+# 6.39.0 (2026-05-06)
+
+
+### Features
+
+* **ThemeSwitcher:** replaced unified/redhat with felt ([#5003](https://github.com/patternfly/patternfly-org/issues/5003)) ([6e4c13e](https://github.com/patternfly/patternfly-org/commit/6e4c13e4338d808fa1b2eac86239e753538fe364))
+
+
+
+
+
 ## 6.38.7 (2026-05-01)
 
 **Note:** Version bump only for package @patternfly/documentation-framework

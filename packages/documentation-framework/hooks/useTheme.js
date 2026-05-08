@@ -15,7 +15,7 @@ const CONTRAST_MODES = {
 
 const THEME_VARIANT_MODES = {
   DEFAULT: 'theme-default',
-  UNIFIED: 'theme-redhat'
+  FELT: 'theme-felt'
 };
 
 export const THEME_TYPES = {
@@ -46,7 +46,13 @@ class ThemeManager {
     if (!this.isBrowser) {
       return;
     }
-    const storedValue = localStorage.getItem(this.storageKey);
+
+    let storedValue = localStorage.getItem(this.storageKey);
+    if (storedValue === 'theme-redhat') {
+      storedValue = 'theme-felt';
+      localStorage.setItem(this.storageKey, storedValue);
+    }
+    
     return storedValue || this.defaultMode;
   }
 
@@ -190,8 +196,8 @@ const themeVariantManager = new ThemeManager({
   storageKey: 'theme-variant-preference',
   modes: THEME_VARIANT_MODES,
   defaultMode: THEME_VARIANT_MODES.DEFAULT,
-  cssClass: 'pf-v6-theme-redhat',
-  classEnabledMode: THEME_VARIANT_MODES.UNIFIED,
+  cssClass: 'pf-v6-theme-felt',
+  classEnabledMode: THEME_VARIANT_MODES.FELT,
   mediaQueryString: '(prefers-color-scheme: dark)' // Not used for variant, but required
 });
 
