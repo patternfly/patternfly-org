@@ -5,6 +5,7 @@ import {
   CompassContent,
   Panel,
   PanelMain,
+  PanelMainBody,
   CompassMessageBar,
   Hero,
   Tabs,
@@ -55,7 +56,7 @@ export const CompassBasic: React.FunctionComponent = () => {
 
   const navContent = (
     <>
-      <Panel isPill>
+      <Panel isPill isGlass>
         <PanelMain>
           <Tabs
             activeKey={activeTab}
@@ -78,39 +79,41 @@ export const CompassBasic: React.FunctionComponent = () => {
   );
 
   const westContent = (
-    <Panel isPill>
+    <Panel isPill isGlass>
       <PanelMain>
-        <ActionList isIconList isVertical>
-          <ActionListGroup>
+        <PanelMainBody>
+          <ActionList isIconList isVertical>
+            <ActionListGroup>
+              <ActionListItem>
+                <Tooltip content="Play">
+                  <Button variant="plain" icon={<PlayIcon />} aria-label="Play" isCircle />
+                </Tooltip>
+              </ActionListItem>
+              <ActionListItem>
+                <Tooltip content="Add">
+                  <Button variant="plain" icon={<OutlinedPlusSquare />} aria-label="Add" isCircle />
+                </Tooltip>
+              </ActionListItem>
+            </ActionListGroup>
             <ActionListItem>
-              <Tooltip content="Play">
-                <Button variant="plain" icon={<PlayIcon />} aria-label="Play" isCircle />
+              <Tooltip content="Assistant">
+                <Button variant="plain" icon={<Icon style={{ translate: ".05em .1em; scale: 1.1" }}><RHAiExperienceIcon /></Icon>} aria-label="Assistant" isCircle className="pf-v6-m-ai-indicator" />
               </Tooltip>
             </ActionListItem>
-            <ActionListItem>
-              <Tooltip content="Add">
-                <Button variant="plain" icon={<OutlinedPlusSquare />} aria-label="Add" isCircle />
-              </Tooltip>
-            </ActionListItem>
-          </ActionListGroup>
-          <ActionListItem>
-            <Tooltip content="Assistant">
-              <Button variant="plain" icon={<Icon style={{ translate: ".05em .1em; scale: 1.1" }}><RHAiExperienceIcon /></Icon>} aria-label="Assistant" isCircle className="pf-v6-m-ai-indicator" />
-            </Tooltip>
-          </ActionListItem>
-          <ActionListGroup>
-            <ActionListItem>
-              <Tooltip content="Help">
-                <Button variant="plain" icon={<OutlinedQuestionCircleIcon />} aria-label="Help" isCircle />
-              </Tooltip>
-            </ActionListItem>
-            <ActionListItem>
-              <Tooltip content="Copy">
-                <Button variant="plain" icon={<OutlinedCopy />} aria-label="Copy" isCircle />
-              </Tooltip>
-            </ActionListItem>
-          </ActionListGroup>
-        </ActionList>
+            <ActionListGroup>
+              <ActionListItem>
+                <Tooltip content="Help">
+                  <Button variant="plain" icon={<OutlinedQuestionCircleIcon />} aria-label="Help" isCircle />
+                </Tooltip>
+              </ActionListItem>
+              <ActionListItem>
+                <Tooltip content="Copy">
+                  <Button variant="plain" icon={<OutlinedCopy />} aria-label="Copy" isCircle />
+                </Tooltip>
+              </ActionListItem>
+            </ActionListGroup>
+          </ActionList>
+        </PanelMainBody>
       </PanelMain>
     </Panel>
   );
@@ -210,27 +213,29 @@ export const CompassBasic: React.FunctionComponent = () => {
   );
 
   const eastContent = (
-    <Panel isPill>
+    <Panel isPill isGlass>
       <PanelMain>
-        <ActionList isIconList isVertical>
-          <ActionListGroup>
-            <ActionListItem>
-              <Tooltip content="Help 2">
-                <Button variant="plain" icon={<OutlinedQuestionCircleIcon />} aria-label="Help 2" isCircle />
-              </Tooltip>
-            </ActionListItem>
-            <ActionListItem>
-              <Tooltip content="Add">
-                <Button variant="plain" icon={<OutlinedPlusSquare />} aria-label="Add" isCircle />
-              </Tooltip>
-            </ActionListItem>
-            <ActionListItem>
-              <Tooltip content="Help 3">
-                <Button variant="plain" icon={<OutlinedQuestionCircleIcon />} aria-label="Help 3" isCircle />
-              </Tooltip>
-            </ActionListItem>
-          </ActionListGroup>
-        </ActionList>
+        <PanelMainBody>
+          <ActionList isIconList isVertical>
+            <ActionListGroup>
+              <ActionListItem>
+                <Tooltip content="Help 2">
+                  <Button variant="plain" icon={<OutlinedQuestionCircleIcon />} aria-label="Help 2" isCircle />
+                </Tooltip>
+              </ActionListItem>
+              <ActionListItem>
+                <Tooltip content="Add">
+                  <Button variant="plain" icon={<OutlinedPlusSquare />} aria-label="Add" isCircle />
+                </Tooltip>
+              </ActionListItem>
+              <ActionListItem>
+                <Tooltip content="Help 3">
+                  <Button variant="plain" icon={<OutlinedQuestionCircleIcon />} aria-label="Help 3" isCircle />
+                </Tooltip>
+              </ActionListItem>
+            </ActionListGroup>
+          </ActionList>
+        </PanelMainBody>
       </PanelMain>
     </Panel>
   );
@@ -244,7 +249,7 @@ export const CompassBasic: React.FunctionComponent = () => {
 
   const southContent = (
     <CompassMessageBar>
-      <Panel isPill hasNoBorder>
+      <Panel isPill hasNoBorder isGlass>
         <PanelMain>
           <MessageBar
             isCompact

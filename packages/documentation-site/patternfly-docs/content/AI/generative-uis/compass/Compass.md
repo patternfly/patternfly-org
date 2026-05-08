@@ -39,7 +39,8 @@ import heroBg from './assets/hero-bg.png';
 
 To help you use the Compass layout, there are several variants and props exposed on other PatternFly components that may be useful:
 
-- `isPlain` on [card](/components/card#modifiers), [data list](/components/data-list#plain), and [table](/components/table#plain). This flag will set a transparent background for these components, allowing the glass effect in a wrapping `<Panel>` to appear as the background.
+- `isPlain` on [data list](/components/data-list#plain) and [table](/components/table#plain). This flag will set a transparent background for these components, allowing the glass effect in a wrapping `<Panel isGlass>` to appear as the background.
+- `isGlass` on [card](/components/card#modifiers), without any wrapping `Panel` components. A glass `<Card>` should be passed directly to `<CompassContent>`.
 - `isVertical` on [action list](/components/action-list#vertical-action-list). This flag sets the orientation on `<ActionList>` to support vertical icon lists for the sidebars.
 - `isNav` on [tabs](/components/tabs#tabs-used-for-site-navigation). This flag enables a new styling of `<Tabs>` to be used as a top-page navigation.
 - `isCircle` on [button](/components/button#circle-buttons) and [menu toggle](/components/menus/menu-toggle#plain-circle-toggle). This flag sets a border radius on the `<Button>` and `<MenuToggle>`, allowing buttons and plain icon menu toggles to be circular and typical menu toggles to be a rounded pill shape.

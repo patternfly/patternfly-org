@@ -1,6 +1,6 @@
 import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
 import { useState } from "react";
-import { Card, CardHeader, CardTitle, CardBody, Dropdown, DropdownList, DropdownItem, MenuToggle, Flex, Panel, PanelMain, } from "@patternfly/react-core";
+import { Card, CardHeader, CardTitle, CardBody, Dropdown, DropdownList, DropdownItem, MenuToggle, Flex, } from "@patternfly/react-core";
 import EllipsisVIcon from "@patternfly/react-icons/dist/esm/icons/ellipsis-v-icon";
 import NetworkIcon from "@patternfly/react-icons/dist/esm/icons/network-icon";
 import { Chart, ChartArea, ChartAxis, ChartGroup, ChartThemeColor, ChartVoronoiContainer, } from "@patternfly/react-charts/dist/esm/victory/components";
@@ -27,10 +27,7 @@ export const NetworkActivityCard = () => {
     ];
     // The kebab menu toggle button
     const kebabToggle = (toggleRef) => (_jsx(MenuToggle, { ref: toggleRef, variant: "plain", onClick: () => setIsKebabOpen(!isKebabOpen), isExpanded: isKebabOpen, "aria-label": "Network activity card options", children: _jsx(EllipsisVIcon, {}) }));
-    return (
-    // To match the dark theme, we wrap the card in a div with a dark background.
-    // The `isPlain` and `isFlat` props on the Card remove its default styling.
-    _jsx(Panel, { isFullHeight: true, children: _jsx(PanelMain, { children: _jsxs(Card, { isPlain: true, isFullHeight: true, children: [_jsx(CardHeader, { actions: {
+    return (_jsxs(Card, { isGlass: true, isFullHeight: true, children: [_jsx(CardHeader, { actions: {
                         actions: (_jsx(Dropdown, { isOpen: isKebabOpen, onSelect: () => setIsKebabOpen(false), onOpenChange: (isOpen) => setIsKebabOpen(isOpen), toggle: kebabToggle, popperProps: { position: "right" }, children: _jsx(DropdownList, { children: dropdownItems }) })),
                         hasNoOffset: false,
                         className: "",
@@ -45,7 +42,7 @@ export const NetworkActivityCard = () => {
                                             stroke: "#0066CC", // Line color
                                             fill: "rgba(0, 102, 204, 0.4)", // Area fill color with opacity
                                         },
-                                    } }) })] }) })] }) }) }));
+                                    } }) })] }) })] }));
 };
 NetworkActivityCard.displayName = "NetworkActivityCard";
 export default NetworkActivityCard;

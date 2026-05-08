@@ -6,6 +6,7 @@ import {
   CompassMainHeader,
   Panel,
   PanelMain,
+  PanelMainBody,
   CompassMessageBar,
   Tabs,
   TabsComponent,
@@ -230,7 +231,7 @@ export const CompassIntegrationsDemo: React.FunctionComponent = () => {
 
   const navContent = (
     <>
-      <Panel isPill>
+      <Panel isPill isGlass>
         <PanelMain>
           <Tabs
             activeKey={1}
@@ -251,65 +252,69 @@ export const CompassIntegrationsDemo: React.FunctionComponent = () => {
   );
 
   const startSidebarContent = (
-    <Panel isPill>
+    <Panel isPill isGlass>
       <PanelMain>
-        <ActionList isIconList isVertical>
-          <ActionListGroup>
+        <PanelMainBody>
+          <ActionList isIconList isVertical>
+            <ActionListGroup>
+              <ActionListItem>
+                <Tooltip content="Play">
+                  <Button variant="plain" icon={<PlayIcon />} aria-label="Play" isCircle />
+                </Tooltip>
+              </ActionListItem>
+              <ActionListItem>
+                <Tooltip content="Add">
+                  <Button variant="plain" icon={<OutlinedPlusSquare />} aria-label="Add" isCircle />
+                </Tooltip>
+              </ActionListItem>
+            </ActionListGroup>
             <ActionListItem>
-              <Tooltip content="Play">
-                <Button variant="plain" icon={<PlayIcon />} aria-label="Play" isCircle />
+              <Tooltip content="Chat with AI">
+                <Button variant="plain" icon={<Icon style={{translate: ".05em .1em; scale: 1.1"}}><RHAiExperienceIcon /></Icon>} aria-label="Chat with AI" isCircle className="pf-v6-m-ai-indicator" />
               </Tooltip>
             </ActionListItem>
-            <ActionListItem>
-              <Tooltip content="Add">
-                <Button variant="plain" icon={<OutlinedPlusSquare />} aria-label="Add" isCircle />
-              </Tooltip>
-            </ActionListItem>
-          </ActionListGroup>
-          <ActionListItem>
-            <Tooltip content="Chat with AI">
-              <Button variant="plain" icon={<Icon style={{translate: ".05em .1em; scale: 1.1"}}><RHAiExperienceIcon /></Icon>} aria-label="Chat with AI" isCircle className="pf-v6-m-ai-indicator" />
-            </Tooltip>
-          </ActionListItem>
-          <ActionListGroup>
-            <ActionListItem>
-              <Tooltip content="Help">
-                <Button variant="plain" icon={<OutlinedQuestionCircleIcon />} aria-label="Help" isCircle />
-              </Tooltip>
-            </ActionListItem>
-            <ActionListItem>
-              <Tooltip content="Copy">
-                <Button variant="plain" icon={<OutlinedCopy />} aria-label="Copy" isCircle />
-              </Tooltip>
-            </ActionListItem>
-          </ActionListGroup>
-        </ActionList>
+            <ActionListGroup>
+              <ActionListItem>
+                <Tooltip content="Help">
+                  <Button variant="plain" icon={<OutlinedQuestionCircleIcon />} aria-label="Help" isCircle />
+                </Tooltip>
+              </ActionListItem>
+              <ActionListItem>
+                <Tooltip content="Copy">
+                  <Button variant="plain" icon={<OutlinedCopy />} aria-label="Copy" isCircle />
+                </Tooltip>
+              </ActionListItem>
+            </ActionListGroup>
+          </ActionList>
+        </PanelMainBody>
       </PanelMain>
     </Panel>
   );
 
   const endSidebarContent = (
-    <Panel isPill>
+    <Panel isPill isGlass>
       <PanelMain>
-        <ActionList isIconList isVertical>
-          <ActionListGroup>
-            <ActionListItem>
-              <Tooltip content="Help">
-                <Button variant="plain" icon={<OutlinedQuestionCircleIcon />} aria-label="Help" isCircle />
-              </Tooltip>
-            </ActionListItem>
-            <ActionListItem>
-              <Tooltip content="Add">
-                <Button variant="plain" icon={<OutlinedPlusSquare />} aria-label="Add" isCircle />
-              </Tooltip>
-            </ActionListItem>
-            <ActionListItem>
-              <Tooltip content="Other help icon">
-                <Button variant="plain" icon={<OutlinedQuestionCircleIcon />} aria-label="Other help" isCircle />
-              </Tooltip>
-            </ActionListItem>
-          </ActionListGroup>
-        </ActionList>
+        <PanelMainBody>
+          <ActionList isIconList isVertical>
+            <ActionListGroup>
+              <ActionListItem>
+                <Tooltip content="Help">
+                  <Button variant="plain" icon={<OutlinedQuestionCircleIcon />} aria-label="Help" isCircle />
+                </Tooltip>
+              </ActionListItem>
+              <ActionListItem>
+                <Tooltip content="Add">
+                  <Button variant="plain" icon={<OutlinedPlusSquare />} aria-label="Add" isCircle />
+                </Tooltip>
+              </ActionListItem>
+              <ActionListItem>
+                <Tooltip content="Other help icon">
+                  <Button variant="plain" icon={<OutlinedQuestionCircleIcon />} aria-label="Other help" isCircle />
+                </Tooltip>
+              </ActionListItem>
+            </ActionListGroup>
+          </ActionList>
+        </PanelMainBody>
       </PanelMain>
     </Panel>
   );
@@ -617,15 +622,17 @@ export const CompassIntegrationsDemo: React.FunctionComponent = () => {
         </Toolbar>
       )} />
       <CompassContent>
-        <Panel isScrollable id="integrations-main-content">
+        <Panel isScrollable isGlass id="integrations-main-content">
           <PanelMain tabIndex={-1}>
-            {(() => {
-              if (activeDisplay === "table") {
-                return tableViewContent;
-              } else {
-                return cardViewContent;
-              }
-            })()}
+            <PanelMainBody>
+              {(() => {
+                if (activeDisplay === "table") {
+                  return tableViewContent;
+                } else {
+                  return cardViewContent;
+                }
+              })()}
+            </PanelMainBody>
           </PanelMain>
         </Panel>
       </CompassContent>
@@ -633,7 +640,7 @@ export const CompassIntegrationsDemo: React.FunctionComponent = () => {
   );
   const footerContent = (
     <CompassMessageBar>
-      <Panel isPill hasNoBorder>
+      <Panel isPill hasNoBorder isGlass>
         <PanelMain>
           <MessageBar
             isCompact

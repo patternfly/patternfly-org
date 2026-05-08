@@ -1,6 +1,6 @@
 import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
 import { useState } from "react";
-import { CardTitle, CardBody, CardFooter, Flex, Button, Dropdown, DropdownItem, MenuToggle, Card, CardHeader, DropdownList, FlexItem, Panel, PanelMain, } from "@patternfly/react-core";
+import { CardTitle, CardBody, CardFooter, Flex, Button, Dropdown, DropdownItem, MenuToggle, Card, CardHeader, DropdownList, FlexItem, } from "@patternfly/react-core";
 import { ChartDonutThreshold, ChartDonutUtilization, } from "@patternfly/react-charts/dist/esm/victory/components";
 import StorageDomainIcon from "@patternfly/react-icons/dist/esm/icons/storage-domain-icon";
 import ArrowRightIcon from "@patternfly/react-icons/dist/esm/icons/arrow-right-icon";
@@ -14,7 +14,7 @@ export const StorageCard = () => {
     ];
     // The kebab menu toggle button
     const kebabToggle = (toggleRef) => (_jsx(MenuToggle, { ref: toggleRef, variant: "plain", onClick: () => setIsKebabOpen(!isKebabOpen), isExpanded: isKebabOpen, "aria-label": "Storage card options", children: _jsx(EllipsisVIcon, {}) }));
-    return (_jsx(Panel, { isFullHeight: true, children: _jsx(PanelMain, { children: _jsxs(Card, { isFullHeight: true, isPlain: true, children: [_jsx(CardHeader, { actions: {
+    return (_jsxs(Card, { isFullHeight: true, isGlass: true, children: [_jsx(CardHeader, { actions: {
                         actions: (_jsx(Dropdown, { isOpen: isKebabOpen, onSelect: () => setIsKebabOpen(false), onOpenChange: (isOpen) => setIsKebabOpen(isOpen), toggle: kebabToggle, popperProps: { position: "right" }, children: _jsx(DropdownList, { children: dropdownItems }) })),
                         hasNoOffset: false,
                         className: "",
@@ -26,7 +26,7 @@ export const StorageCard = () => {
                                     left: 10,
                                     right: 10,
                                     top: 0,
-                                }, width: 200, children: _jsx(ChartDonutUtilization, { data: { x: "Storage capacity", y: 80 }, labels: ({ datum }) => datum.x ? `${datum.x}: ${datum.y}%` : null, title: "80%", subTitle: "Available", thresholds: [{ value: 60 }, { value: 90 }] }) }) }) }) }), _jsx(CardFooter, { children: _jsx(Button, { variant: "link", isInline: true, icon: _jsx(ArrowRightIcon, {}), iconPosition: "end", component: "a", href: "#", children: "Storage page" }) })] }) }) }));
+                                }, width: 200, children: _jsx(ChartDonutUtilization, { data: { x: "Storage capacity", y: 80 }, labels: ({ datum }) => datum.x ? `${datum.x}: ${datum.y}%` : null, title: "80%", subTitle: "Available", thresholds: [{ value: 60 }, { value: 90 }] }) }) }) }) }), _jsx(CardFooter, { children: _jsx(Button, { variant: "link", isInline: true, icon: _jsx(ArrowRightIcon, {}), iconPosition: "end", component: "a", href: "#", children: "Storage page" }) })] }));
 };
 StorageCard.displayName = "StorageCard";
 export default StorageCard;
