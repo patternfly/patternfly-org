@@ -3,6 +3,36 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.4.0-alpha.362 (2026-05-11)
+
+
+### Bug Fixes
+
+* **Compass:** replaced CompassPanel and background images ([#5001](https://github.com/patternfly/patternfly-org/issues/5001)) ([b6b9dd6](https://github.com/patternfly/patternfly-org/commit/b6b9dd6f3bb294dd53714a257a0c6a541d665f0e))
+
+
+
+
+
+# 1.4.0-alpha.361 (2026-05-08)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 1.4.0-alpha.360 (2026-05-06)
+
+
+### Features
+
+* **ThemeSwitcher:** replaced unified/redhat with felt ([#5003](https://github.com/patternfly/patternfly-org/issues/5003)) ([6e4c13e](https://github.com/patternfly/patternfly-org/commit/6e4c13e4338d808fa1b2eac86239e753538fe364))
+
+
+
+
+
 # 1.4.0-alpha.359 (2026-05-01)
 
 **Note:** Version bump only for package @patternfly/ast-helpers
