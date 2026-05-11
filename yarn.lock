@@ -5034,16 +5034,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@patternfly/design-tokens@npm:1.16.0":
-  version: 1.16.0
-  resolution: "@patternfly/design-tokens@npm:1.16.0"
+"@patternfly/design-tokens@npm:1.16.2":
+  version: 1.16.2
+  resolution: "@patternfly/design-tokens@npm:1.16.2"
   dependencies:
     "@patternfly/react-core": "npm:^6.1"
     commander: "npm:^12.0.0"
   peerDependencies:
     react: ^17 || ^18
     react-dom: ^18.0.0
-  checksum: 10c0/5156177e1a12eec5d96f58e5e87673e4fdfe2e37709958d0b9d6f789e7e8650b1baa25ccc1d532be5ca83080dca9835f34bdd7ecb1bb3241f4053b5231bde74c
+  checksum: 10c0/6b121f418eca03e688c93bb95fe3350781002033878d6abe12fa1a256ec718c8fbfb8e5d495df84aec9c3b089e52f06bba1faf671708e3be0c5be67e63ce70dd
   languageName: node
   linkType: hard
 
@@ -18616,7 +18616,7 @@ __metadata:
   resolution: "patternfly-org@workspace:packages/documentation-site"
   dependencies:
     "@patternfly/chatbot": "npm:6.6.0-prerelease.6"
-    "@patternfly/design-tokens": "npm:1.16.0"
+    "@patternfly/design-tokens": "npm:1.16.2"
     "@patternfly/documentation-framework": "workspace:*"
     "@patternfly/patternfly-a11y": "npm:5.2.1"
     "@patternfly/quickstarts": "npm:6.5.0-prerelease.4"
