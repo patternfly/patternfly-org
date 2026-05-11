@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.4.0-alpha.362 (2026-05-11)
+
+
+### Bug Fixes
+
+* **Compass:** replaced CompassPanel and background images ([#5001](https://github.com/patternfly/patternfly-org/issues/5001)) ([b6b9dd6](https://github.com/patternfly/patternfly-org/commit/b6b9dd6f3bb294dd53714a257a0c6a541d665f0e))
+
+
+
+
+
+# 1.4.0-alpha.361 (2026-05-08)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
 # 1.4.0-alpha.360 (2026-05-06)
 
 
