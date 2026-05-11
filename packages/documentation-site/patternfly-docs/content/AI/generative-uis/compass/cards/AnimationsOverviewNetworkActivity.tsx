@@ -65,72 +65,68 @@ export const NetworkActivityCard: React.FunctionComponent = () => {
   return (
     // To match the dark theme, we wrap the card in a div with a dark background.
     // The `isPlain` and `isFlat` props on the Card remove its default styling.
-    <Panel isFullHeight>
-      <PanelMain>
-        <Card isPlain isFullHeight>
-          <CardHeader
-            actions={{
-              actions: (
-                <Dropdown
-                  isOpen={isKebabOpen}
-                  onSelect={() => setIsKebabOpen(false)}
-                  onOpenChange={(isOpen: boolean) => setIsKebabOpen(isOpen)}
-                  toggle={kebabToggle}
-                  popperProps={{ position: "right" }}
-                >
-                  <DropdownList>{dropdownItems}</DropdownList>
-                </Dropdown>
-              ),
-              hasNoOffset: false,
-              className: "",
-            }}
-          >
-            <CardTitle>
-              <Flex alignItems={{ default: "alignItemsCenter" }}>
-                <NetworkIcon />
-                <span>Network activity</span>
-              </Flex>
-            </CardTitle>
-          </CardHeader>
-          <CardBody>
-            <Chart
-              ariaDesc="Network activity chart"
-              ariaTitle="Network activity chart"
-              containerComponent={
-                <ChartVoronoiContainer
-                  labels={({ datum }) => `${datum.name}: ${datum.y}`}
-                  constrainToVisibleArea
-                />
-              }
-              height={250}
-              padding={{
-                bottom: 50,
-                left: 50,
-                right: 20,
-                top: 20,
-              }}
-              themeColor={ChartThemeColor.multi}
-              width={400}
+    <Card isGlass isFullHeight>
+      <CardHeader
+        actions={{
+          actions: (
+            <Dropdown
+              isOpen={isKebabOpen}
+              onSelect={() => setIsKebabOpen(false)}
+              onOpenChange={(isOpen: boolean) => setIsKebabOpen(isOpen)}
+              toggle={kebabToggle}
+              popperProps={{ position: "right" }}
             >
-              <ChartAxis />
-              <ChartAxis dependentAxis showGrid />
-              <ChartGroup>
-                <ChartArea
-                  data={chartData}
-                  interpolation="catmullRom" // This creates the smooth curve
-                  style={{
-                    data: {
-                      stroke: "#0066CC", // Line color
-                      fill: "rgba(0, 102, 204, 0.4)", // Area fill color with opacity
-                    },
-                  }}
-                />
-              </ChartGroup>
-            </Chart>
-          </CardBody>
-        </Card>
-      </PanelMain>
-    </Panel>
+              <DropdownList>{dropdownItems}</DropdownList>
+            </Dropdown>
+          ),
+          hasNoOffset: false,
+          className: "",
+        }}
+      >
+        <CardTitle>
+          <Flex alignItems={{ default: "alignItemsCenter" }}>
+            <NetworkIcon />
+            <span>Network activity</span>
+          </Flex>
+        </CardTitle>
+      </CardHeader>
+      <CardBody>
+        <Chart
+          ariaDesc="Network activity chart"
+          ariaTitle="Network activity chart"
+          containerComponent={
+            <ChartVoronoiContainer
+              labels={({ datum }) => `${datum.name}: ${datum.y}`}
+              constrainToVisibleArea
+            />
+          }
+          height={250}
+          padding={{
+            bottom: 50,
+            left: 50,
+            right: 20,
+            top: 20,
+          }}
+          themeColor={ChartThemeColor.multi}
+          width={400}
+        >
+          <ChartAxis />
+          <ChartAxis dependentAxis showGrid />
+          <ChartGroup>
+            <ChartArea
+              data={chartData}
+              interpolation="catmullRom" // This creates the smooth curve
+              style={{
+                data: {
+                  stroke: "#0066CC", // Line color
+                  fill: "rgba(0, 102, 204, 0.4)", // Area fill color with opacity
+                },
+              }}
+            />
+          </ChartGroup>
+        </Chart>
+      </CardBody>
+    </Card>
   );
 };
 NetworkActivityCard.displayName = "NetworkActivityCard";

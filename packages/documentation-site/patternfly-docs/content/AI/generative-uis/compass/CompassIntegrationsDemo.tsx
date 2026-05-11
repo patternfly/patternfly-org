@@ -622,7 +622,7 @@ export const CompassIntegrationsDemo: React.FunctionComponent = () => {
         </Toolbar>
       )} />
       <CompassContent>
-        <Panel isScrollable isGlass id="integrations-main-content">
+        <Panel isScrollable isAutoHeight isGlass id="integrations-main-content">
           <PanelMain tabIndex={-1}>
             <PanelMainBody>
               {(() => {

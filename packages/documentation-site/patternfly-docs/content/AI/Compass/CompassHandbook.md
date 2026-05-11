@@ -49,7 +49,7 @@ In both methods, the footer content will remain the same, typically containing a
 
 ```
  <CompassMessageBar>
-  <Panel isPill hasNoPadding hasNoBorder>
+  <Panel isGlass isPill hasNoBorder>
     <PanelMain>
       <MessageBar />
       <div aria-live="polite" className="pf-v6-screen-reader">

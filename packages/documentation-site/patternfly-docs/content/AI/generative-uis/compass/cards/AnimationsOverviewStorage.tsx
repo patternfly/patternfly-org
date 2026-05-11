@@ -46,86 +46,82 @@ export const StorageCard: React.FunctionComponent = () => {
   );
 
   return (
-    <Panel isFullHeight>
-      <PanelMain>
-        <Card isFullHeight isPlain>
-        <CardHeader
-          actions={{
-            actions: (
-              <Dropdown
-                isOpen={isKebabOpen}
-                onSelect={() => setIsKebabOpen(false)}
-                onOpenChange={(isOpen: boolean) => setIsKebabOpen(isOpen)}
-                toggle={kebabToggle}
-                popperProps={{ position: "right" }}
-              >
-                <DropdownList>{dropdownItems}</DropdownList>
-              </Dropdown>
-            ),
-            hasNoOffset: false,
-            className: "",
-          }}
-        >
-          <CardTitle>
-            <Flex alignItems={{ default: "alignItemsCenter" }}>
-              <StorageDomainIcon />
-              <span>Storage</span>
-            </Flex>
-          </CardTitle>
-        </CardHeader>
-        <CardBody>
-          <Flex
-            direction={{ default: "row" }}
-            justifyContent={{ default: "justifyContentCenter" }}
-            alignItems={{ default: "alignItemsCenter" }}
-          >
-            <FlexItem>
-              <ChartDonutThreshold
-                ariaDesc="Mock storage capacity"
-                ariaTitle="Mock donut utilization chart"
-                constrainToVisibleArea={true}
-                data={[
-                  { x: "Warning at 60%", y: 60 },
-                  { x: "Danger at 90%", y: 90 },
-                ]}
-                height={200}
-                labels={({ datum }) => (datum.x ? datum.x : null)}
-                padding={{
-                  bottom: 0,
-                  left: 10,
-                  right: 10,
-                  top: 0,
-                }}
-                width={200}
-              >
-                <ChartDonutUtilization
-                  data={{ x: "Storage capacity", y: 80 }}
-                  labels={({ datum }) =>
-                    datum.x ? `${datum.x}: ${datum.y}%` : null
-                  }
-                  title="80%"
-                  subTitle="Available"
-                  thresholds={[{ value: 60 }, { value: 90 }]}
-                />
-              </ChartDonutThreshold>
-            </FlexItem>
+    <Card isFullHeight isGlass>
+      <CardHeader
+        actions={{
+          actions: (
+            <Dropdown
+              isOpen={isKebabOpen}
+              onSelect={() => setIsKebabOpen(false)}
+              onOpenChange={(isOpen: boolean) => setIsKebabOpen(isOpen)}
+              toggle={kebabToggle}
+              popperProps={{ position: "right" }}
+            >
+              <DropdownList>{dropdownItems}</DropdownList>
+            </Dropdown>
+          ),
+          hasNoOffset: false,
+          className: "",
+        }}
+      >
+        <CardTitle>
+          <Flex alignItems={{ default: "alignItemsCenter" }}>
+            <StorageDomainIcon />
+            <span>Storage</span>
           </Flex>
-        </CardBody>
-        <CardFooter>
-          <Button
-            variant="link"
-            isInline
-            icon={<ArrowRightIcon />}
-            iconPosition="end"
-            component="a"
-            href="#"
-          >
-            Storage page
-          </Button>
-        </CardFooter>
-        </Card>
-      </PanelMain>
-    </Panel>
+        </CardTitle>
+      </CardHeader>
+      <CardBody>
+        <Flex
+          direction={{ default: "row" }}
+          justifyContent={{ default: "justifyContentCenter" }}
+          alignItems={{ default: "alignItemsCenter" }}
+        >
+          <FlexItem>
+            <ChartDonutThreshold
+              ariaDesc="Mock storage capacity"
+              ariaTitle="Mock donut utilization chart"
+              constrainToVisibleArea={true}
+              data={[
+                { x: "Warning at 60%", y: 60 },
+                { x: "Danger at 90%", y: 90 },
+              ]}
+              height={200}
+              labels={({ datum }) => (datum.x ? datum.x : null)}
+              padding={{
+                bottom: 0,
+                left: 10,
+                right: 10,
+                top: 0,
+              }}
+              width={200}
+            >
+              <ChartDonutUtilization
+                data={{ x: "Storage capacity", y: 80 }}
+                labels={({ datum }) =>
+                  datum.x ? `${datum.x}: ${datum.y}%` : null
+                }
+                title="80%"
+                subTitle="Available"
+                thresholds={[{ value: 60 }, { value: 90 }]}
+              />
+            </ChartDonutThreshold>
+          </FlexItem>
+        </Flex>
+      </CardBody>
+      <CardFooter>
+        <Button
+          variant="link"
+          isInline
+          icon={<ArrowRightIcon />}
+          iconPosition="end"
+          component="a"
+          href="#"
+        >
+          Storage page
+        </Button>
+      </CardFooter>
+    </Card>
   );
 };
 StorageCard.displayName = "StorageCard";
