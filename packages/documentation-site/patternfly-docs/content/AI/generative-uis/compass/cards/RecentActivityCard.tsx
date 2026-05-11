@@ -1,5 +1,6 @@
 import {
-  CompassPanel,
+  Panel,
+  PanelMain,
   Card,
   CardHeader,
   CardTitle,
@@ -58,110 +59,108 @@ export const RecentActivityCard: React.FunctionComponent = () => {
   };
 
   return (
-    <CompassPanel hasNoPadding isFullHeight>
-      <Card isPlain isFullHeight>
-        <CardHeader
-          actions={{
-            actions: (
-              <Dropdown
-                isOpen={false}
-                onSelect={() => {}}
-                onOpenChange={() => {}}
-                toggle={(toggleRef: React.Ref<MenuToggleElement>) => (
-                  <MenuToggle
-                    ref={toggleRef}
-                    variant="plain"
-                    onClick={() => {}}
-                    isExpanded={false}
-                    aria-label="Recent activity card options"
-                  >
-                    <EllipsisVIcon />
-                  </MenuToggle>
-                )}
-                popperProps={{ position: 'right' }}
-              ></Dropdown>
-            ),
-            hasNoOffset: false,
-            className: '',
-          }}
-        >
-          <CardTitle>
-            <Flex alignItems={{ default: 'alignItemsCenter' }}>
-              <PortIcon />
-              <span>Recent activity</span>
-            </Flex>
-          </CardTitle>
-        </CardHeader>
-        <CardBody>
-          <Table aria-label="Recent activity table" variant="compact" className="pf-m-plain">
-            <Thead>
-              <Tr>
-                <Th width={30}>Name</Th>
-                <Th width={30}>Project</Th>
-                <Th width={30}>Progress</Th>
-                <Th width={10} />
+    <Card isGlass isFullHeight>
+      <CardHeader
+        actions={{
+          actions: (
+            <Dropdown
+              isOpen={false}
+              onSelect={() => {}}
+              onOpenChange={() => {}}
+              toggle={(toggleRef: React.Ref<MenuToggleElement>) => (
+                <MenuToggle
+                  ref={toggleRef}
+                  variant="plain"
+                  onClick={() => {}}
+                  isExpanded={false}
+                  aria-label="Recent activity card options"
+                >
+                  <EllipsisVIcon />
+                </MenuToggle>
+              )}
+              popperProps={{ position: 'right' }}
+            ></Dropdown>
+          ),
+          hasNoOffset: false,
+          className: '',
+        }}
+      >
+        <CardTitle>
+          <Flex alignItems={{ default: 'alignItemsCenter' }}>
+            <PortIcon />
+            <span>Recent activity</span>
+          </Flex>
+        </CardTitle>
+      </CardHeader>
+      <CardBody>
+        <Table aria-label="Recent activity table" variant="compact" className="pf-m-plain">
+          <Thead>
+            <Tr>
+              <Th width={30}>Name</Th>
+              <Th width={30}>Project</Th>
+              <Th width={30}>Progress</Th>
+              <Th width={10} />
+            </Tr>
+          </Thead>
+          <Tbody>
+            {activityData.map((activity, rowIndex) => (
+              <Tr key={activity.id}>
+                <Td>
+                  <Button variant="link" isInline component="a" href="#">
+                    {activity.name}
+                  </Button>
+                </Td>
+                <Td>
+                  <Button variant="link" isInline component="a" href="#">
+                    {activity.project}
+                  </Button>
+                </Td>
+                <Td>
+                  <ProgressStepper isCompact aria-label={`Progress for activity ${activity.name} in project ${activity.project}`}>
+                    {activity.progress.map((stepVariant, stepIndex) => (
+                      <ProgressStep
+                        id={`progress-step-${rowIndex}-${stepVariant}-${stepIndex}`}
+                        key={stepIndex}
+                        variant={
+                          stepVariant as
+                            | 'default'
+                            | 'success'
+                            | 'pending'
+                            | 'danger'
+                            | 'warning'
+                            | 'info'
+                        }
+                        icon={iconMap[stepVariant as keyof typeof iconMap]}
+                        aria-label={`Step ${stepIndex + 1} is ${stepVariant}`}
+                      />
+                    ))}
+                  </ProgressStepper>
+                </Td>
+                <Td isActionCell>
+                  <Dropdown
+                    isOpen={false}
+                    onSelect={() => {}}
+                    onOpenChange={() => {}}
+                    toggle={(toggleRef: React.Ref<MenuToggleElement>) => (
+                      <MenuToggle
+                        ref={toggleRef}
+                        variant="plain"
+                        onClick={() => {}}
+                        isExpanded={false}
+                        aria-label={`Options for activity ${activity.name} in project ${activity.project}`}
+                      >
+                        <EllipsisVIcon />
+                      </MenuToggle>
+                    )}
+                    popperProps={{ position: 'right' }}
+                  ></Dropdown>
+                </Td>
               </Tr>
-            </Thead>
-            <Tbody>
-              {activityData.map((activity, rowIndex) => (
-                <Tr key={activity.id}>
-                  <Td>
-                    <Button variant="link" isInline component="a" href="#">
-                      {activity.name}
-                    </Button>
-                  </Td>
-                  <Td>
-                    <Button variant="link" isInline component="a" href="#">
-                      {activity.project}
-                    </Button>
-                  </Td>
-                  <Td>
-                    <ProgressStepper isCompact aria-label={`Progress for activity ${activity.name} in project ${activity.project}`}>
-                      {activity.progress.map((stepVariant, stepIndex) => (
-                        <ProgressStep
-                          id={`progress-step-${rowIndex}-${stepVariant}-${stepIndex}`}
-                          key={stepIndex}
-                          variant={
-                            stepVariant as
-                              | 'default'
-                              | 'success'
-                              | 'pending'
-                              | 'danger'
-                              | 'warning'
-                              | 'info'
-                          }
-                          icon={iconMap[stepVariant as keyof typeof iconMap]}
-                          aria-label={`Step ${stepIndex + 1} is ${stepVariant}`}
-                        />
-                      ))}
-                    </ProgressStepper>
-                  </Td>
-                  <Td isActionCell>
-                    <Dropdown
-                      isOpen={false}
-                      onSelect={() => {}}
-                      onOpenChange={() => {}}
-                      toggle={(toggleRef: React.Ref<MenuToggleElement>) => (
-                        <MenuToggle
-                          ref={toggleRef}
-                          variant="plain"
-                          onClick={() => {}}
-                          isExpanded={false}
-                          aria-label={`Options for activity ${activity.name} in project ${activity.project}`}
-                        >
-                          <EllipsisVIcon />
-                        </MenuToggle>
-                      )}
-                      popperProps={{ position: 'right' }}
-                    ></Dropdown>
-                  </Td>
-                </Tr>
-              ))}
-            </Tbody>
-          </Table>
-        </CardBody>
-      </Card>
-    </CompassPanel>
+            ))}
+          </Tbody>
+        </Table>
+      </CardBody>
+    </Card>
   );
 };
 
