@@ -20,7 +20,7 @@
   "dependencies": {
     "@patternfly/chatbot": "6.6.0-prerelease.6",
     "@patternfly/design-tokens": "1.15.1",
-    "@patternfly/documentation-framework": "workspace:*",
+    "@patternfly/documentation-framework": "1.0.0",
     "@patternfly/quickstarts": "6.5.0-prerelease.4",
     "@patternfly/react-catalog-view-extension": "6.3.0-prerelease.3",
     "@patternfly/react-charts": "8.5.0-prerelease.18",
