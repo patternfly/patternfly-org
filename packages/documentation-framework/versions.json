@@ -2,11 +2,11 @@
   "Releases": [
     {
       "name": "6.5.0-prerelease.74",
-      "date": "2026-05-08",
+      "date": "2026-05-11",
       "latest": true,
       "versions": {
         "@patternfly/chatbot": "6.6.0-prerelease.6",
-        "@patternfly/patternfly": "6.5.0-prerelease.85",
+        "@patternfly/patternfly": "6.5.0-prerelease.86",
         "@patternfly/quickstarts": "6.5.0-prerelease.4",
         "@patternfly/react-catalog-view-extension": "6.3.0-prerelease.3",
         "@patternfly/react-charts": "8.5.0-prerelease.27",

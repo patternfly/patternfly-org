@@ -1,24 +1,25 @@
 ---
 id: Compass
-section: AI
+section: components
 source: org-demos
-subsection: Generative UIs
 ---
+
+import '../components.css';
 
 ## Demos
 
 import { useState, memo, useCallback, useRef, useEffect } from 'react';
 
-import { ActionsColumn } from "@patternfly/react-table";
-import { DataViewTable } from "@patternfly/react-data-view/dist/dynamic/DataViewTable";
-import { DataViewToolbar } from "@patternfly/react-data-view/dist/dynamic/DataViewToolbar";
-import { DataViewTextFilter } from "@patternfly/react-data-view/dist/dynamic/DataViewTextFilter";
+import { ActionsColumn } from '@patternfly/react-table';
+import { DataViewTable } from '@patternfly/react-data-view/dist/dynamic/DataViewTable';
+import { DataViewToolbar } from '@patternfly/react-data-view/dist/dynamic/DataViewToolbar';
+import { DataViewTextFilter } from '@patternfly/react-data-view/dist/dynamic/DataViewTextFilter';
 
 import { MessageBar } from '@patternfly/chatbot';
 
 import ThIcon from '@patternfly/react-icons/dist/esm/icons/th-icon';
 import ListIcon from '@patternfly/react-icons/dist/esm/icons/list-icon';
-import EllipsisVIcon from "@patternfly/react-icons/dist/esm/icons/ellipsis-v-icon";
+import EllipsisVIcon from '@patternfly/react-icons/dist/esm/icons/ellipsis-v-icon';
 import PlayIcon from '@patternfly/react-icons/dist/esm/icons/play-icon';
 import OutlinedPlusSquare from '@patternfly/react-icons/dist/esm/icons/outlined-plus-square-icon';
 import OutlinedCopy from '@patternfly/react-icons/dist/esm/icons/outlined-copy-icon';
@@ -28,10 +29,10 @@ import pfBackground from '@patternfly/patternfly/assets/images/pf-background.svg
 import imgAvatar from './assets/avatar.jpg';
 import { RHAutomationsLogo } from './assets/RHAutomationsLogo';
 import { RHAiExperienceIcon } from './assets/RHAiExperienceIcon';
-import AnimationsOverviewClusterInventory from "./cards/AnimationsOverviewClusterInventory";
-import AnimationsOverviewNetworkActivity from "./cards/AnimationsOverviewNetworkActivity";
-import AnimationsOverviewStorage from "./cards/AnimationsOverviewStorage";
-import AnimationsOverviewMemoryUtilization from "./cards/AnimationsOverviewMemoryUtilization";
+import AnimationsOverviewClusterInventory from './cards/AnimationsOverviewClusterInventory';
+import AnimationsOverviewNetworkActivity from './cards/AnimationsOverviewNetworkActivity';
+import AnimationsOverviewStorage from './cards/AnimationsOverviewStorage';
+import AnimationsOverviewMemoryUtilization from './cards/AnimationsOverviewMemoryUtilization';
 import { ClusterDetailsCard } from './cards/ClusterDetailsCard';
 import { RecentActivityCard } from './cards/RecentActivityCard';
 

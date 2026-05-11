@@ -1,8 +1,8 @@
 ---
 id: Compass
-section: AI
+section: components
 source: Development-guide
-subsection: Generative UIs
+tabName: Development guide
 ---
 
 ## Structural patterns
@@ -11,9 +11,9 @@ When building generative UI layouts using the Compass components, there are seve
 ### Transparent containers
 Transparent containers create a modern glass look and feel. To enable transparency on a container, apply `pf-v6-theme-glass` to the `html` element class list, similar to the approach for enabling the dark mode theme. 
 
-Within Compass layouts, elements with a transparent glass background and rounded borders should be wrapped in a `<Panel>` and `<PanelMain>` (some Compass components do this automatically). You can adjust various options of the `<Panel>` to adapt its padding and behavior to fit the context of your use case. 
+Within Compass layouts, elements with a transparent glass background and rounded borders should be wrapped in a [`Panel`](/components/panel) stack (`Panel`, `PanelMain`, and `PanelMainBody`), using the `isGlass` modifier on `Panel` where appropriate (some Compass components compose this automatically). Use `Panel` props such as `isPill`, `hasNoBorder`, and `isFullHeight`, and set body padding via `PanelMainBody` (for example `style={{ padding: 0 }}` when you need no inner padding).
 
-To prevent styling issues, do not nest `<Panel>` components while using the glass effects.
+To prevent styling issues, do not nest glass-styled `Panel` stacks while using the glass effects.
 
 ### Header
 You can add a header to a Compass layout via the `<CompassHeader>` component. `<CompassHeader>` constructs 3 sections, which can contain any custom content, but will typically include the following: 
@@ -35,7 +35,7 @@ You can add a header to a Compass layout via the `<CompassHeader>` component. `<
 ```
 
 ### Sidebars
-There are 2 vertical sidebars in a Compass layout: 1 at the start of the page and another at the end. There are no specific helper components for these sections, so they're usually created by passing a `<Panel>` and `<PanelMain>` that contains an [`<ActionList>`](/components/action-list) with the `isVertical` flag.
+There are 2 vertical sidebars in a Compass layout: 1 at the start of the page and another at the end. There are no specific helper components for these sections, so they're usually created by passing a pill [`Panel`](/components/panel) (`isPill`) that contains an [`<ActionList>`](/components/action-list) with the `isVertical` flag.
 
 ### Docked navigation
 As an alternative to the above header and sidebars, a docked navigation may be used to organize navigation elements into a single anchored sidebar. You can add a docked nav to the Compass layout via the `dock` property.
@@ -45,16 +45,18 @@ A docked nav will typically contain a [`<Masthead>`](/components/masthead) with 
 ### Footer
 There are 2 methods of adding a footer to a compass layout. 
 
-In both methods, the footer content will remain the same, typically containing a [ChatBot `<MessageBar>`](/extensions/chatbot/messages/), wrapped in a `<Panel>`, `<PanelMain>`, and `<CompassMessageBar>` component:
+In both methods, the footer content will remain the same, typically containing a [ChatBot `<MessageBar>`](/extensions/chatbot/messages/), wrapped in a pill [`Panel`](/components/panel) and `<CompassMessageBar>` component:
 
 ```
- <CompassMessageBar>
-  <Panel isGlass isPill hasNoBorder>
+<CompassMessageBar>
+  <Panel isPill hasNoBorder>
     <PanelMain>
-      <MessageBar />
-      <div aria-live="polite" className="pf-v6-screen-reader">
-        // aria anouncments for message bar's state updates
-      </div>
+      <PanelMainBody style={{ padding: 0 }}>
+        <MessageBar />
+        <div aria-live="polite" className="pf-v6-screen-reader">
+          // aria announcements for message bar's state updates
+        </div>
+      </PanelMainBody>
     </PanelMain>
   </Panel>
 </CompassMessageBar>
@@ -71,9 +73,9 @@ In both methods, the footer content will remain the same, typically containing a
 ### Main content
 The main content in a Compass layout includes the generated information displays. Main content fills the center of the viewport and typically consists of a `<Hero>` or `<CompassMainHeader>`, a `<CompassContent>`, and an optional `<CompassMainFooter>`. 
 
-Often, the main section will contain a `<CompassMainHeader>` and `<CompassContent>` with `<Panel>` and `<PanelMain>` children containing the primary page content.
+Often, the main section will contain a `<CompassMainHeader>` and `<CompassContent>` with a [`Panel`](/components/panel) stack child containing the primary page content.
 
-When making [a dashboard view](/patterns/dashboard), use a `<Hero>` instead of a `<CompassMainHeader>`. Instead of having a single `<Panel>` and `<PanelMain>` structure within a `<CompassContent>`, each individual dashboard item should be wrapped in a `<Panel>` and `<PanelMain>`. For example, in a dashboard with many content cards, each `<Card>` (with `isPlain` flag) should be wrapped by a `<Panel>` and `<PanelMain>` structure inside of a [`<Grid>`](/foundations-and-styles/layouts/grid).
+When making [a dashboard view](/patterns/dashboard), use a `<Hero>` instead of a `<CompassMainHeader>`. Instead of having a single scrollable `Panel` within a `<CompassContent>`, each individual dashboard item should be wrapped in its own `Panel` stack. For example, in a dashboard with many content cards, each `<Card>` (with `isPlain` flag) should be wrapped by a glass `Panel` (`isGlass`, `isFullHeight`) with `PanelMain` / `PanelMainBody` inside of a [`<Grid>`](/foundations-and-styles/layouts/grid).
 
 ## CSS customization
 
