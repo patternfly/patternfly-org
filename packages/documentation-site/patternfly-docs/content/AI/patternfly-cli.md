@@ -12,7 +12,7 @@ The npm package installs two equivalent entry points: `patternfly-cli` and the s
 
 - **Project scaffolding:** Quickly set up new PatternFly based projects for development and prototyping via predefined templates.
 - **Code modifications:** Automate repetitive code changes to help accelerate PatternFly version upgrades.
-- **Task runner:** Execute project-related tasks efficiently, such as source code management and task running.
+- **Task execution:** Run project-related tasks such as committing and pushing changes, pulling updates, and deploying your app to GitHub Pages.
 
 
 ## How do I set up PatternFly CLI?
