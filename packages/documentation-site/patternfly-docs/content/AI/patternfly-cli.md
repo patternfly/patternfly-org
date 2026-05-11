@@ -1,10 +1,12 @@
 ---
 id: PatternFly CLI
 title: PatternFly CLI
-section: developer-guides
+section: AI
 ---
 
-The [PatternFly CLI](https://github.com/patternfly/patternfly-cli) is a command-line tool for scaffolding projects, performing code modifications, and running project-related tasks. It aims to streamline development workflows and improve productivity. The published package is [`@patternfly/patternfly-cli` on npm](https://www.npmjs.com/package/@patternfly/patternfly-cli).
+The [PatternFly CLI](https://github.com/patternfly/patternfly-cli) is a command-line tool for scaffolding projects, performing code modifications, and running project-related tasks. It streamlines everyday development work and PatternFly upgrades. You can run it in the terminal on its own, or use it from an **AI-enabled editor** (for example [Cursor](https://www.cursor.com/)) so coding agents rely on the same predictable commands for scaffolding, updates, and git workflows. The published package is [`@patternfly/patternfly-cli` on npm](https://www.npmjs.com/package/@patternfly/patternfly-cli).
+
+The npm package installs two equivalent entry points: `patternfly-cli` and the shorter alias `pfcli`. The examples below use `patternfly-cli`; substitute `pfcli` if you prefer.
 
 ## What does the PatternFly CLI help with?
 
@@ -47,7 +49,7 @@ npm install -g @patternfly/patternfly-cli
 After installation, you can verify the latest version of the CLI has been installed by running the following terminal command:
 
 ```sh
-pfcli --version
+patternfly-cli --version
 ```
 
 ### Available CLI commands
@@ -72,13 +74,13 @@ In addition to the built-in templates, you can add your own templates by passing
 **Create a project based on custom templates:**
 
 ```sh
-pfcli create my-app --template-file ./my-templates.json
+patternfly-cli create my-app --template-file ./my-templates.json
 ```
 
 **List templates included in custom file:**
 
 ```sh
-pfcli list --template-file ./my-templates.json
+patternfly-cli list --template-file ./my-templates.json
 ```
 
 **JSON format** (Array of template objects, shown in the same shape as the built-in templates):
