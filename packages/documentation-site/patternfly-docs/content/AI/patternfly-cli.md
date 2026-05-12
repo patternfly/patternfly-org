@@ -20,9 +20,9 @@ The npm package installs two equivalent entry points: `patternfly-cli` and the s
 ### Prerequisites
 There are a few key prerequisites to meet before using PatternFly CLI. For macOS, WSL, and Linux, we recommend using [install script](#install-script-macos-and-linux) to address the following prerequisites (you might still need administrator access for system packages). For a Windows-based system, you will need to install the following items manually:
 
-- **[Node.js](https://nodejs.org/)** (Supported versions: 20–24) and **[npm](https://www.npmjs.com/)**
-- **[Corepack](https://nodejs.org/api/corepack.html)** (Included with Node.js and enabled via `corepack enable` after installing npm)
-- **[GitHub CLI](https://cli.github.com/)** (`gh`)
+- [Node.js](https://nodejs.org/) (Versions 20–24) and [npm](https://www.npmjs.com/)
+- [Corepack](https://nodejs.org/api/corepack.html), which is included with Node.js. After installing npm, enable via `corepack enable`
+- [GitHub CLI](https://cli.github.com/)
 
 ## Installation
 
