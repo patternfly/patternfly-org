@@ -110,12 +110,6 @@ export const iconsData = [
     "Contextual_usage": "Indicates a date picker function is available"
   },
   {
-    "Name": "rh-ui-caret-down",
-    "React_name": "RhUiCaretDownIcon",
-    "Type": "Framework",
-    "Contextual_usage": "Indicates the ability to acces option panels for components like drop-downs, filters and page ranges"
-  },
-  {
     "Name": "rh-ui-check",
     "React_name": "RhUiCheckIcon",
     "Type": "Status",
@@ -196,12 +190,6 @@ export const iconsData = [
     "Name": "rh-ui-severity-critical-fill",
     "React_name": "RhUiSeverityCriticalFillIcon",
     "Type": "Status",
-    "Contextual_usage": "Represents potential critical impact on a system or cluster. This is an old icon, going forward, use the pficon-severity-critical icon."
-  },
-  {
-    "Name": "rh-ui-severity-critical-fill",
-    "React_name": "RhUiSeverityCriticalFillIcon",
-    "Type": "Status",
     "Contextual_usage": "Indicates the highest level of severity for an error or issue. This icon should be used instead of pficon-critical-risk for new implementations.",
     "color": "var(--pf-t--global--icon--color--severity--critical--default)"
   },
@@ -245,12 +233,6 @@ export const iconsData = [
     "React_name": "RhUiContainerIcon",
     "Type": "Object",
     "Contextual_usage": "Represents a container"
-  },
-  {
-    "Name": "rh-ui-module",
-    "React_name": "RhUiModuleIcon",
-    "Type": "Object",
-    "Contextual_usage": "Represents a Kubernetes pod(s)"
   },
   {
     "Name": "rh-ui-storage",
@@ -848,12 +830,6 @@ export const iconsData = [
     "Contextual_usage": "Represents network"
   },
   {
-    "Name": "rh-ui-connected",
-    "React_name": "RhUiConnectedIcon",
-    "Type": "Object",
-    "Contextual_usage": "Represents network range"
-  },
-  {
     "Name": "rh-ui-running",
     "React_name": "RhUiRunningIcon",
     "Type": "Status",
@@ -882,12 +858,6 @@ export const iconsData = [
     "React_name": "RhUiPendingIcon",
     "Type": "Status",
     "Contextual_usage": "Represents status: pending; currently waiting on contingencies"
-  },
-  {
-    "Name": "rh-ui-lock",
-    "React_name": "RhUiLockIcon",
-    "Type": "Status",
-    "Contextual_usage": "Represents status: private; cannot access with current credentials"
   },
   {
     "Name": "rh-ui-port",
@@ -968,22 +938,10 @@ export const iconsData = [
     "Contextual_usage": "Represents status: security advisory is present"
   },
   {
-    "Name": "rh-ui-server-stack",
-    "React_name": "RhUiServerStackIcon",
-    "Type": "Object",
-    "Contextual_usage": "Represents a server group"
-  },
-  {
     "Name": "rh-ui-kubernetes-service",
     "React_name": "RhUiKubernetesServiceIcon",
     "Type": "Object",
     "Contextual_usage": "Represents a Kubernetes service"
-  },
-  {
-    "Name": "rh-ui-catalog-alt",
-    "React_name": "RhUiCatalogAltIcon",
-    "Type": "Object",
-    "Contextual_usage": "Indicates availability of a catalog/library to browse"
   },
   {
     "Name": "rh-ui-storage-domain",
@@ -1038,12 +996,6 @@ export const iconsData = [
     "React_name": "RhUiVirtualServerIcon",
     "Type": "Object",
     "Contextual_usage": "Represents a virtual machine"
-  },
-  {
-    "Name": "rh-ui-storage",
-    "React_name": "RhUiStorageIcon",
-    "Type": "Object",
-    "Contextual_usage": "Represents a volume"
   },
   {
     "Name": "rh-ui-zone",
