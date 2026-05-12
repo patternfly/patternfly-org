@@ -54,6 +54,7 @@ patternfly-cli --version
 
 ### Available CLI commands
 Once the PatternFly CLI is installed, you can run the following commands via `patternfly-cli [command]`:
+
 | Command | Usage |
 | --- | --- |
 | `create` | Create a new project from the available templates. |
@@ -66,6 +67,18 @@ Once the PatternFly CLI is installed, you can run the following commands via `pa
 | `deploy` | Build and deploy your app to GitHub Pages. |
 
 For the most up-to-date flags and behavior guidance, refer to [PatternFly CLI README](https://github.com/patternfly/patternfly-cli/blob/main/README.md) on GitHub.
+
+### Predefined templates
+
+Built-in templates ship with the CLI. Each row is the template `name` you pass to `patternfly-cli create` (or choose from the interactive prompt). To print the list from your installed version, run `patternfly-cli list`.
+
+| Template name | Description |
+| --- | --- |
+| `starter` | Starter template for a PatternFly React TypeScript project |
+| `compass-starter` | Starter template for a PatternFly Compass theme TypeScript project | 
+| `nextjs-starter` | Starter template for a PatternFly Next.js project |
+
+Template definitions in source: [patternfly-cli `src/templates.ts`](https://github.com/patternfly/patternfly-cli/blob/main/src/templates.ts).
 
 ### Custom templates
 
@@ -102,3 +115,21 @@ patternfly-cli list --template-file ./my-templates.json
 - **`repo`** (required): Git clone URL
 - **`options`** (optional): Array of extra arguments for `git clone` (such as `["--single-branch", "--branch", "main"]`)
 - **`packageManager`** (optional): `npm`, `yarn`, or `pnpm`; defaults to `npm` if omitted
+
+## Uninstalling PatternFly CLI
+
+### Uninstall script (macOS and Linux)
+
+You can pipe the repository uninstall script into `bash`. It removes the globally installed `@patternfly/patternfly-cli` package with npm. It does **not** remove Node.js, nvm, Corepack, or GitHub CLI:
+
+```sh
+curl -fsSL https://raw.githubusercontent.com/patternfly/patternfly-cli/main/scripts/uninstall.sh | bash
+```
+
+### Windows
+
+If you installed the published package globally with npm, remove it with:
+
+```sh
+npm uninstall -g @patternfly/patternfly-cli
+```
