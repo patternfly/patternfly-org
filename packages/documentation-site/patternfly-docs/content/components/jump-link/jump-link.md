@@ -71,5 +71,5 @@ We recommended placing jump links on the left side of the content and remaining 
 ![Example of jump links placed on the right of the page.](./img/jump-links-placement-right.svg)
 </div>
 
-## Accessibility 
+## Accessibility
 For information regarding accessibility, visit the [jump links accessibility](/components/jump-links/accessibility) tab.

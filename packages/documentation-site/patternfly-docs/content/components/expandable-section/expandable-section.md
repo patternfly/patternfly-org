@@ -58,4 +58,6 @@ We recommend using dynamic toggle text for an expandable section, which will upd
 ![Example of an expandable section in a documentation page.](./img/exp-sect-docs-page.svg)
 </div>
 
-For more information regarding accessibility, visit the [expandable section accessibility tab](/components/expandable-section/accessibility).
+## Accessibility
+
+For more information regarding accessibility, visit the [expandable section accessibility](/components/expandable-section/accessibility) tab.

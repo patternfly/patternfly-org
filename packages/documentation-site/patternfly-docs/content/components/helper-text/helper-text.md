@@ -37,5 +37,5 @@ For information regarding other forms of on-screen help, see [popovers](https://
 * Can be written in complete sentences or as a statement
 * Use helper text for information critical to a user completing a task, such as password requirements, character requirements, invalid text alerts, etc. 
 
-## Accessibility 
-For information regarding accessibility, visit the [helper text accessibility](/components/helper-text/accessibility) tab. 
+## Accessibility
+For information regarding accessibility, visit the [helper text accessibility](/components/helper-text/accessibility) tab.

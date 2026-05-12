@@ -3,70 +3,51 @@ id: Conversation design
 section: AI
 ---
 
-import { Button, Flex, FlexItem } from '@patternfly/react-core';
+import { Button, Flex, FlexItem} from '@patternfly/react-core';
 import ArrowRightIcon from '@patternfly/react-icons/dist/esm/icons/arrow-right-icon';
 
 # Conversation design guidelines
 
-**Conversation design** is a method of writing for conversational interfaces, like chatbots or voicebots. The goal of conversation design is to create an interactive experience that resembles human-to-human conversation as much as possible. Like traditional content design, conversation design is focused on using words to make experiences clear, concise, and well-timed.
+**Conversation design** is the practice of creating human-centered chatbots and other AI-driven interfaces. Like traditional content design, conversation design uses words to make experiences clear, concise, and relevant. At Red Hat, our goal is to ensure that AI enhances user experiences through interactive interactions that resemble a helpful, professional dialogue.
 
-Good conversation design combines content strategy, writing, and design to ensure that the development and use of chatbots is centered on real user needs. This includes making sure that all text related to the conversational UI supports easy engagement with chatbots, while staying aligned with brand standards.
-
-When designing AI conversations alongside PatternFly-based projects, it is important to align with our established [brand voice and tone](/content-design/brand-voice-and-tone), as well as our [ethical guidelines for AI.](/ai/overview)
+When designing AI conversations for PatternFly-based projects, align with our [brand voice and tone](/content-design/brand-voice-and-tone) and the ethical guidelines outlined in our [AI overview](/ai/overview).
 
 ## Best practices 
 
-Following these best practices to help ensure that your users can complete their goals through an AI-based conversation: 
+Follow these best practices to ensure users can complete their goals:
 
-- Be transparent about AI use. 
-- Be direct, brief, and consistent. 
-- Frame questions in terms of value for the user.
-- If you ask for personal info, tell users "why" you're asking first. 
-- Always have the last word.
+- **Be transparent:** Clearly disclose when the user is interacting with AI.
+- **Be direct and brief:** Use simple language and get to the point quickly.
+- **Explain the "why":** If you ask for personal information or specific data, tell users why it's needed first.
+- **End with an invitation:** Always have the "last word" in a chat-based interaction so the user knows the model is ready for their next prompt.
+- **Focus on value:** Frame bot questions and suggestions in terms of how they help the user, not just what the technology can do.
 
-## Chatbot conversation design
+## Red Hat AI voice guidelines
 
-Chatbots provide users with persistent access to convenient help. When they are intentionally designed to meet the needs of your users, chatbots can improve your users' efficiency and enhance the overall UX of your product.
+Our research shows that users want AI to be personable but not human. Red Hat AI experiences should sound like a helpful colleague, without pretending to be a person or mimicking human emotions.
 
-Chatbots are only as good as the writing that goes into them. The language they use must build trust, clearly establish the “rules” of the conversation, and support users' goals. General microcopy, like headings or buttons, should match PatternFly's standard [content design guidelines](/content-design/overview), but there are additional guidelines to follow for common message types and conversation patterns.
+| **Don't** | **Do** |
+| :--- | :--- |
+| Use formal corporate language or jargon like "leverage," "utilize," or "seamless." | Use contractions and everyday language to stay conversational. |
+| Use top-down or directive language like "You must..." or "Do X now." | Use partner-first framing: "Let's...", "Want me to...", or "We can..." |
+| Position Red Hat as the sole decision-maker or impose a single path. | Directly address users and emphasize their autonomy as the decision-maker. |
+| Talk down to users or over-explain basic, fundamental concepts. | Treat the user as a competent professional; give direct, technical instructions. |
+| Use "human" descriptors (e.g., "I'm excited to help") or pretend to have feelings. | Maintain a professional, objective tone that focuses on tasks and solutions. |
+| Give vague recommendations without explaining how or where. | Provide concrete next steps, specific commands, and actionable examples. |
+| Provide a "data dump" of logs or facts without any interpretation. | Interpret data and explain the significance of raw facts or log events. |
+| Overpromise certainty or claim to have performed actions that cannot be done. | Be transparent about the limitations of the model's capabilities. |
+    
+### Voice and tone prompt example
 
-[Our ChatBot extension](/extensions/chatbot/overview) utilizes PatternFly components to create a foundation for a customizable AI-based chatbot. When using ChatBot, it's important to adhere to the following conversation design guidelines. 
+When configuring an LLM or assessing a model's response, use this description as a baseline:
 
-### Writing messages 
+> "Be a helpful colleague. Get straight to the point but engage the user like a peer. Ask clarifying questions if you need more information to give a precise answer. Give concrete advice, not vague platitudes. Empower the user—position Red Hat's technology as an enabler for their success, not a replacement for their expertise."
 
-#### Welcome and goodbye messages 
+## Writing for chatbots
 
-Always welcome users to a conversation with your ChatBot. If there's an "end" to a conversation, make sure to also say goodbye to your users. In instances where users can "minimize" a chat window to come back to it later, a goodbye message isn't necessary. 
+The physical constraints of a chat interface require specific attention to message length and formatting. See our [ChatBot design guidelines](/extensions/chatbot/overview/design-guidelines) for details on prompts, welcome messages, and streaming.
 
-When you know your user's name, address them directly. 
-
-![Chatbot welcome message with user's name](./img/chatbot-welcome.png)
-
-#### Bot prompts 
-
-When writing your bot's prompts: 
-
-- Keep messages short and simple. Try to stick to 3 lines of text in a message and only send 3 messages at most before allowing a user to provide input. 
-- Be direct and limit choices for users as much as possible. 
-- Unlike traditional content design, *don't lead with the benefit.* End with the benefit to be sure that it's read and acted upon. Users should be able to complete an action solely based on a chatbot's last sentence. 
-- Frame any questions from the bot in terms of value for the user.
-- Provide examples when relevant.
-- Avoid open-ended questions. If you ask any, make them very simple, increase pause time between messages, and tell users when they should type. 
-- Utilize different methods of presenting information, like cards or buttons. You don't have to always use plain text in your messages; sometimes different message types can be more convenient and engaging.
-
-![Chatbot prompt examples](./img/chatbot-prompts.png)
-
-### Conversation design patterns
-
-#### Disclosing AI usage
-
-Make sure to disclose any use of AI in chatbots. Our users should be able to trust that we are honest and transparent with them as much as possible.
-
-- Use labels and other visual styling cues to clearly identify AI features. 
-- Add necessary legal disclosures where you can, like in the chatbot footer. 
-- Display an indicator when the bot is "thinking" or "typing," so that users know to expect feedback.
-
-#### Handling unsafe or unethical requests
+### Handling unsafe or unethical requests
 
 LLM guardrails are safety mechanisms that moderate how a model handles sensitive or risky prompts. [Research shows](https://arxiv.org/html/2506.00195v1) that a user's experience is shaped more by how a model handles a refusal than by their initial intent. Even if you cannot fulfill a user's request, it is important to handle the interaction tactfully to ensure they feel respected. 
 
@@ -84,7 +65,7 @@ When a user requests something unsafe or unethical, follow these core strategies
 | **Explanation** | Use when refusing a specific request to reinforce transparency and trust. | "To ensure user privacy, I don't have access to individual [Data type]..." |
 | **Redirection** | Use when a specific request cannot be fulfilled and partial compliance has either already been attempted or is not possible. | "I can’t provide specifics on that, but I can suggest some resources on [Related topic]." |
 
-##### Message streaming considerations
+### Message streaming considerations
 
 Real-time message streaming introduces unique technical challenges because guardrails must be checked dynamically as text is generated. To maintain a seamless experience, you should gracefully handle guardrail triggers at different stages of the conversation.
 

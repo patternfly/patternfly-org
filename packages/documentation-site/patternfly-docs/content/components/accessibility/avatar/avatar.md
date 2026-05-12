@@ -4,7 +4,7 @@ section: components
 ---
 
 import { Checkbox, List, ListItem } from '@patternfly/react-core';
-import { Link } from '@patternfly/documentation-framework/components/link/link';
+import { Link } from '@patternfly/documentation-framework/components/link/link.jsx';
 
 ## Accessibility
 

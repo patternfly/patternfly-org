@@ -80,6 +80,6 @@ All banners should be a solid bar spanning the width of either the full page or 
  
    <img src="./img/placement-2.png" alt="Example of banner placement below above the main content area of the page" width="1500" />
 
-## Accessibility 
+## Accessibility
 
-For information regarding accessibility, visit the [banner accessibility tab](/components/banner/accessibility).
+For information regarding accessibility, visit the [banner accessibility](/components/banner/accessibility) tab.

@@ -3,7 +3,7 @@ id: Develop
 title: Develop for accessibility
 section: accessibility
 ---
-import { AccessibilityDatalist } from './accessibility-datalist.js';
+import { AccessibilityDatalist } from './accessibility-datalist.jsx';
 
 PatternFly provides accessible components, but **we can't guarantee that your products will be accessible**. In order to ensure that your product is accessible, you will need to take additional steps during development, as described in the following guidelines and techniques.
 

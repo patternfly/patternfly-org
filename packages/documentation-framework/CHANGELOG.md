@@ -3,6 +3,187 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 6.40.3 (2026-05-12)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 6.40.2 (2026-05-12)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 6.40.1 (2026-05-12)
+
+
+### Bug Fixes
+
+* move generative AI docs and bump PF versions ([#5007](https://github.com/patternfly/patternfly-org/issues/5007)) ([76098c5](https://github.com/patternfly/patternfly-org/commit/76098c5f3280440901c1ad6e11e1e8a7e38f7a83))
+
+
+
+
+
+# 6.40.0 (2026-05-12)
+
+
+### Features
+
+* bump design-tokens package ([#5002](https://github.com/patternfly/patternfly-org/issues/5002)) ([0e2739b](https://github.com/patternfly/patternfly-org/commit/0e2739b49906f17a0a964d67ba603cbe45a3af77))
+
+
+
+
+
+## 6.39.2 (2026-05-11)
+
+
+### Bug Fixes
+
+* **Compass:** replaced CompassPanel and background images ([#5001](https://github.com/patternfly/patternfly-org/issues/5001)) ([b6b9dd6](https://github.com/patternfly/patternfly-org/commit/b6b9dd6f3bb294dd53714a257a0c6a541d665f0e))
+
+
+
+
+
+## 6.39.1 (2026-05-08)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+# 6.39.0 (2026-05-06)
+
+
+### Features
+
+* **ThemeSwitcher:** replaced unified/redhat with felt ([#5003](https://github.com/patternfly/patternfly-org/issues/5003)) ([6e4c13e](https://github.com/patternfly/patternfly-org/commit/6e4c13e4338d808fa1b2eac86239e753538fe364))
+
+
+
+
+
+## 6.38.7 (2026-05-01)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 6.38.6 (2026-05-01)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 6.38.5 (2026-04-29)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 6.38.4 (2026-04-28)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 6.38.3 (2026-04-15)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 6.38.2 (2026-04-15)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 6.38.1 (2026-04-15)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+# 6.38.0 (2026-04-14)
+
+
+### Features
+
+* **site:** update doc-core to 1.22.0 ([#4946](https://github.com/patternfly/patternfly-org/issues/4946)) ([fc290d0](https://github.com/patternfly/patternfly-org/commit/fc290d030bc34d1728fc9a3948fed4e5b4be5df3))
+
+
+
+
+
+# 6.37.0 (2026-04-06)
+
+
+### Features
+
+* bump preleases and update screenshots ([#4986](https://github.com/patternfly/patternfly-org/issues/4986)) ([96b5a86](https://github.com/patternfly/patternfly-org/commit/96b5a86cf62be502b202e5c736a161439d2c5710))
+
+
+
+
+
+## 6.36.8 (2026-03-25)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 6.36.7 (2026-03-18)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 6.36.6 (2026-03-16)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 6.36.5 (2026-03-11)
+
+
+### Bug Fixes
+
+* Changes for docs-gen v6 ESM compatibility ([#4956](https://github.com/patternfly/patternfly-org/issues/4956)) ([ce09638](https://github.com/patternfly/patternfly-org/commit/ce0963869e626e790ff36f59d745a625c7b36bdf))
+
+
+
+
+
 ## 6.36.4 (2026-03-05)
 
 **Note:** Version bump only for package @patternfly/documentation-framework

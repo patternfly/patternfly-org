@@ -14,6 +14,7 @@
     "build": "yarn workspace patternfly-org build && yarn copy",
     "build:extensions": "EXTENSIONS_ONLY=true PRERELEASE=true yarn build",
     "build:doc-core": "yarn workspace site build",
+    "ci:build:doc-core": "yarn workspace site ci:build",
     "preview:doc-core": "yarn workspace site wrangler:preview",
     "build:ts": "yarn workspace patternfly-org build:ts",
     "build:ts:watch": "yarn build:ts --watch",
@@ -28,7 +29,8 @@
     "start:doc-core": "yarn workspace site dev",
     "uninstall": "find . -name node_modules | xargs rm -rf",
     "workflows": "node .github/generate-workflows",
-    "test:a11y": "yarn workspace patternfly-org test:a11y"
+    "test:a11y": "yarn workspace patternfly-org test:a11y",
+    "generate:content": "yarn workspace site generate:content"
   },
   "workspaces": {
     "packages": [
@@ -37,10 +39,10 @@
   },
   "devDependencies": {
     "@octokit/rest": "^19.0.13",
-    "@patternfly/patternfly": "^6.5.0-prerelease.46",
-    "@patternfly/react-code-editor": "^6.5.0-prerelease.39",
-    "@patternfly/react-core": "^6.5.0-prerelease.36",
-    "@patternfly/react-table": "^6.5.0-prerelease.37",
+    "@patternfly/patternfly": "^6.5.0-prerelease.86",
+    "@patternfly/react-code-editor": "^6.5.0-prerelease.77",
+    "@patternfly/react-core": "^6.5.0-prerelease.74",
+    "@patternfly/react-table": "^6.5.0-prerelease.78",
     "glob": "^8.1.0",
     "lerna": "^9.0.5",
     "monaco-editor": "0.54.0",
@@ -72,9 +74,9 @@
     "ajv": ">=6.14.0",
     "qs": ">=6.15.0",
     "@isaacs/brace-expansion": ">=5.0.1",
-    "@patternfly/react-code-editor": "^6.5.0-prerelease.39",
-    "@patternfly/react-core": "^6.5.0-prerelease.36",
-    "@patternfly/react-table": "^6.5.0-prerelease.37",
+    "@patternfly/react-code-editor": "^6.5.0-prerelease.77",
+    "@patternfly/react-core": "^6.5.0-prerelease.74",
+    "@patternfly/react-table": "^6.5.0-prerelease.78",
     "monaco-editor": "0.54.0"
   }
 }

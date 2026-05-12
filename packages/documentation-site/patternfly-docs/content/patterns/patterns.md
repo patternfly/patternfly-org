@@ -5,7 +5,7 @@ section: patterns
 sortValue: 1
 ---
 
-import { SectionGallery } from '@patternfly/documentation-framework/components/sectionGallery/sectionGallery';
+import { SectionGallery } from '@patternfly/documentation-framework/components/sectionGallery/sectionGallery.jsx';
 import patternsData from './patterns-data.json';
 
 **Patterns** are reusable, best practices solutions that solve common user problems. They offer complex guidance that often involves the relationship between multiple components. To outline a pattern's conventions, we provide design guidelines that describe a pattern's usage, appearance, features, variations, and more. We also often provide demos to help you visualize the implementation of a pattern.

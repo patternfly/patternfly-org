@@ -26,4 +26,4 @@ Breadcrumbs should be placed underneath the masthead, at the top of the page. Th
 </div>
 
 ## Accessibility
-For information regarding accessibility, visit the [breadcrumb accessibility](/components/breadcrumb/accessibility) tab. 
+For information regarding accessibility, visit the [breadcrumb accessibility](/components/breadcrumb/accessibility) tab.

@@ -62,3 +62,6 @@ The main difference between a switch and a checkbox is that a switch changes an 
     <div class="ws-docs-content-img">
     ![Example 3 of do's and don'ts for using a checkbox or a switch.](./img/CB-vs-switch-3.svg)
     </div>
+
+## Accessibility
+For information regarding accessibility, visit the [checkbox accessibility](/components/forms/checkbox/accessibility) tab.

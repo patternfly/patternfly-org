@@ -84,3 +84,6 @@ It is recommended that a page-level context selector be placed at the top of the
 <div class="ws-docs-content-img">
 ![Context selector placed within the page content, above breadcrumbs.](./img/page-context-selector.svg)
 </div>
+
+## Accessibility
+For information regarding accessibility, visit the [context selector accessibility](/components/menus/context-selector/accessibility) tab.

@@ -226,3 +226,6 @@ For **complete** statuses, write your progress bar title in past tense. Use this
 </div>
 
 Progress bars should only use content in their title and progress value. Never write additional content inside the progress track.
+
+## Accessibility
+For information regarding accessibility, visit the [progress accessibility](/components/progress/accessibility) tab.

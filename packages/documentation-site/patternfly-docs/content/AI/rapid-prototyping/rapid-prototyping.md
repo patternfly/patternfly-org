@@ -2,7 +2,6 @@
 id: Rapid prototyping
 section: AI
 source: about-rapid-prototyping
-sortValue: 2
 ---
 
 # Rapid prototyping with AI-assisted PatternFly development
@@ -24,10 +23,12 @@ Rapid prototyping with PatternFly code offers several key benefits:
 
 ## Get started
 
+For the best results with AI-assisted prototyping, install the [PatternFly AI Helpers](/ai/marketplace) marketplace plugins. These give your AI tools additional knowledge and skills that lead to more accurate code generation.
+
 Choose your path based on your current situation:
 
 - **[Starting a new prototype](/ai/rapid-prototyping/new-prototypes):** Use the [patternfly-react-seed (ai_enabled branch)](https://github.com/patternfly/patternfly-react-seed/tree/ai_enabled) application for optimal setup.
-- **[Enhancing existing projects](/ai/rapid-prototyping/enhancing-existing-projects):** Integrate AI tools into your current codebase.
+- **[Enhancing existing projects](/ai/rapid-prototyping/enhancing-existing-projects):** Add AI Helpers to your current codebase.
 
 ## Best practices for AI-assisted prototyping
 
@@ -44,7 +45,7 @@ When working with AI tools using the vibe coding approach:
 ### Vibe coding examples
 
 | **Before** | **After** |
-| --- | --- | 
+| --- | --- |
 | "Create a data table with pagination and sorting" | "Users need to quickly scan through a large dataset to find specific items. They should be able to easily narrow down results and understand the data hierarchy at a glance. The experience should feel efficient and not overwhelming." |
 | "Add a modal with a form" | "When users click this action, they need a focused space to input information without losing context of what they were doing. The interaction should feel lightweight but important." |
 
@@ -55,4 +56,4 @@ This rapid prototyping approach is an evolving experiment. We'd love to learn fr
 - Share your feedback and experiences on our [GitHub discussions board](https://github.com/orgs/patternfly/discussions).
 - Connect with the community on our [PatternFly Slack workspace](https://join.slack.com/t/patternfly/shared_invite/zt-1npmqswgk-bF2R1E2rglV8jz5DNTezMQ).
 
-This guidance represents the first step in maturing AI-assisted PatternFly prototyping. As the process evolves, we'll continue to refine tools and recommendations based on community feedback and real-world usage. 
+This guidance represents the first step in maturing AI-assisted PatternFly prototyping. As the process evolves, we'll continue to refine tools and recommendations based on community feedback and real-world usage.

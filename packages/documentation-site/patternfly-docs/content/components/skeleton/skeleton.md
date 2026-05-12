@@ -24,4 +24,4 @@ Use a skeleton when:
 - It is likely it will fail or show an empty state while waiting for actions to complete.
 
 ## Accessibility
-For information regarding accessibility, visit the [skeleton accessibility](/components/skeleton/accessibility) tab. 
+For information regarding accessibility, visit the [skeleton accessibility](/components/skeleton/accessibility) tab.

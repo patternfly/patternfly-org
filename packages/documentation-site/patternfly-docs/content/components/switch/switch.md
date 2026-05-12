@@ -87,3 +87,6 @@ Do not use end-of-sentence punctuation, like question marks or exclamation point
 
 ### Form field labels 
 For form-based switches, make sure that you follow our [form field guidelines](/components/forms/form/design-guidelines#content-considerations) to effectively pair a form field label with its related switch. 
+
+## Accessibility
+For information regarding accessibility, visit the [switch accessibility](/components/switch/accessibility) tab.

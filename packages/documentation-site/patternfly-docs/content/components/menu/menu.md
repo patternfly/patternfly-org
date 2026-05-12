@@ -174,3 +174,6 @@ When creating menu item labels, keep in mind the following guidelines:
 * Options should reflect the result a user should expect. For example, a list or sorting options might include the items: *Alphabetical*, *Oldest first*, *Newest first*, and *Numeric*.
 
 * Descriptive text added to a menu item should be short. Two lines or less is recommended.
+
+## Accessibility
+For information regarding accessibility, visit the [menu accessibility](/components/menus/menu/accessibility) tab.

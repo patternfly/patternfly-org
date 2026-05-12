@@ -57,4 +57,4 @@ There are 4 size variations available to use for different scenarios:
 
 
 ## Accessibility
-For information regarding accessibility, visit the [avatar accessibility](/components/avatar/accessibility) tab. 
+For information regarding accessibility, visit the [avatar accessibility](/components/avatar/accessibility) tab.

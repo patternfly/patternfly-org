@@ -151,4 +151,4 @@ For **complete** steps, write your progress stepper title in past tense. Use thi
 </div>
 
 ## Accessibility
-For information regarding accessibility, visit the progress stepper [accessibility tab](/components/progress-stepper/accessibility).
+For information regarding accessibility, visit the [progress stepper accessibility](/components/progress-stepper/accessibility) tab.

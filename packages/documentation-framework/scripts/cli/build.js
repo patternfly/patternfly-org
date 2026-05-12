@@ -76,7 +76,7 @@ async function execFile(file, args) {
 }
 
 async function build(cmd, options) {
-  generate(options);
+  await generate(options);
   const toBuild = cmd === 'all'
     ? ['server', 'client']
     : cmd;

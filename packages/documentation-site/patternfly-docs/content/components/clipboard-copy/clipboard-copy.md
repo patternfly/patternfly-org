@@ -82,3 +82,6 @@ An inline compact clipboard copy can include 1 or 2 action buttons next to it. T
 <div class="ws-docs-content-img">
 ![Example of an inline clipboard copy component with two actions.](./img/clipboard-copy-inline-compact-2.svg)
 </div>
+
+## Accessibility
+For information regarding accessibility, visit the [clipboard copy accessibility](/components/clipboard-copy/accessibility) tab.

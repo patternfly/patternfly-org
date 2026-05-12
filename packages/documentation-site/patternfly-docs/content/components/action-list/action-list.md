@@ -36,4 +36,4 @@ In this example, an action list is used for the actions within a toolbar. The ac
 </div>
 
 ## Accessibility
-For information regarding accessibility, visit the [action list accessibility tab](/components/action-list/accessibility). 
+For information regarding accessibility, visit the [action list accessibility](/components/action-list/accessibility) tab.

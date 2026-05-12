@@ -5,7 +5,7 @@ section: foundations-and-styles
 sortValue: 1
 ---
 
-import { SectionGallery } from '@patternfly/documentation-framework/components/sectionGallery/sectionGallery';
+import { SectionGallery } from '@patternfly/documentation-framework/components/sectionGallery/sectionGallery.jsx';
 import designFoundationsData from './design-foundations-data.json';
 
 PatternFly’s **foundations and styles** lay the groundwork for all components and extensions that we offer. These visual and structural frameworks describe how all of our components should be built and designed, with additional standards and guidance to help designers and developers work together more efficiently and create clear and consistent product experiences.

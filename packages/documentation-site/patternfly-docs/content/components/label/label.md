@@ -258,5 +258,6 @@ When a user selects the **Add label** button, it opens up a modal, where they ca
 </div>
 
 Once the new label is created, it cannot be edited. Users will need to add a new label if they want to make changes.
+
 ## Accessibility
-For information regarding accessibility, visit the [labels accessibility](/components/label/accessibility) tab.
+For information regarding accessibility, visit the [label accessibility](/components/label/accessibility) tab.

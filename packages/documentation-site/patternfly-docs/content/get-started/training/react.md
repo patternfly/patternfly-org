@@ -4,7 +4,7 @@ section: get-started
 subsection: training
 ---
 
-import { TrainingCard } from './trainingCard/trainingCard';
+import { TrainingCard } from './trainingCard/trainingCard.jsx';
 
 ## Fundamentals
 <TrainingCard

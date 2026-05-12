@@ -89,4 +89,5 @@ Secondary tabs should also be used when tabs live within a component, or are in 
 ![Example of secondary tabs used in a modal.](./img/tabs-modal.svg)
 </div>
 
-
+## Accessibility
+For information regarding accessibility, visit the [tabs accessibility](/components/tabs/accessibility) tab.

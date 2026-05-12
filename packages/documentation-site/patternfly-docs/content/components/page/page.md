@@ -40,3 +40,5 @@ PatternFly includes a flexible layout system for defining pages. Page layouts ar
 ### Page sections
 Page sections allow you to define areas on a page to group content. The header, body, and footer on a page are examples of page sections. Page sections have 24px padding on left and right edges or no padding to allow the contents to extend to the edge of a page. At screen sizes smaller than 1200px, the left/right padding is reduced to 16px to create a tighter layout. Page sections can also be made sticky such that they will remain visible at the top or bottom of the viewport when the page scrolls. This is useful for creating sticky headers, footers, or other elements.
 
+## Accessibility
+For information regarding accessibility, visit the [page accessibility](/components/page/accessibility) tab.

@@ -34,4 +34,4 @@ For longer lists, you can optionally add the ability to search the list and favo
 </div>
 
 ## Accessibility
-For information regarding accessibility, visit the [application launcher accessibility](/components/menus/application-launcher/accessibility) tab. 
+For information regarding accessibility, visit the [application launcher accessibility](/components/menus/application-launcher/accessibility) tab.

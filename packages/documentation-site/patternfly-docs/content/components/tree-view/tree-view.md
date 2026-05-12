@@ -115,3 +115,6 @@ Compact tree view is useful when the nodes of a tree view contain more than one 
 1. **Guide:** Connected lines between nodes in a tree view. 
 2. **Row:** Content with one or multiple lines that can be formatted.
 3. **Container:** Area that holds the content and visually distinguishes individual rows with a filled or transparent background.
+
+## Accessibility
+For information regarding accessibility, visit the [tree view accessibility](/components/tree-view/accessibility) tab.

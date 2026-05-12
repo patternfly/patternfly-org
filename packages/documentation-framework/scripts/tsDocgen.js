@@ -1,6 +1,14 @@
 const fs = require("fs");
-const reactDocgen = require("react-docgen");
 const ts = require("typescript");
+
+// react-docgen v6+ is ESM-only; lazy-load it asynchronously on first use
+let reactDocgenReady = null;
+function loadReactDocgen() {
+  if (!reactDocgenReady) {
+    reactDocgenReady = import("react-docgen");
+  }
+  return reactDocgenReady;
+}
 
 const annotations = [
   {
@@ -41,7 +49,8 @@ function addAnnotations(prop) {
   return prop;
 }
 
-function getComponentMetadata(filename, sourceText) {
+async function getComponentMetadata(filename, sourceText) {
+  const reactDocgen = await loadReactDocgen();
   let parsedComponents = null;
   try {
     parsedComponents = reactDocgen.parse(sourceText, {
@@ -159,9 +168,9 @@ function normalizeProp([
   return res;
 }
 
-function tsDocgen(file) {
+async function tsDocgen(file) {
   const sourceText = fs.readFileSync(file, "utf8");
-  const componentMeta = getComponentMetadata(file, sourceText); // Array of components with props
+  const componentMeta = await getComponentMetadata(file, sourceText); // Array of components with props
   const interfaceMeta = getInterfaceMetadata(file, sourceText); // Array of interfaces with props
   const typeAliasMeta = getTypeAliasMetadata(file, sourceText); // Array of type aliases with props
   const propsMetaMap = [...interfaceMeta, ...typeAliasMeta].reduce(function (

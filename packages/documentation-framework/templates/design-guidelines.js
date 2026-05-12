@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from '@patternfly/documentation-framework/components/link/link';
+import { Link } from '@patternfly/documentation-framework/components/link/link.jsx';
 
 export const DesignGuidelineTemplate = (
   <React.Fragment>

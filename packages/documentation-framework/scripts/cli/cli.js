@@ -9,17 +9,17 @@ program
 program
   .command('generate')
   .description('generates source files')
-  .action(options => {
+  .action(async options => {
     const { generate } = require('./generate');
-    generate(options);
+    await generate(options);
   });
 
 program
   .command('start')
   .description('generates source files and runs webpack-dev-server')
-  .action(options => {
+  .action(async options => {
     const { start } = require('./start');
-    start(options);
+    await start(options);
   });
 
 program

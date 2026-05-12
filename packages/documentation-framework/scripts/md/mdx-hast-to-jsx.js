@@ -8,6 +8,7 @@ const { parse } = require('@patternfly/ast-helpers');
 const { capitalize } = require('../../helpers/capitalize');
 const { slugger } = require('../../helpers/slugger');
 const { liveCodeTypes } = require('../../helpers/liveCodeTypes');
+const { stripReactTypeOnlyImports } = require('./stripReactTypeOnlyImports');
 
 // Adapted from https://github.com/mdx-js/mdx/blob/next/packages/mdx/mdx-hast-to-jsx.js
 function toJSX(node, parentNode = {}, options = {}) {
@@ -69,7 +70,9 @@ function serializeRoot(node, options) {
 
   const importStatements = groups.import
     .map(node => node.value)
-    .map(imp => imp.replace(/(['"])\./g, (_, match) => `${match}${getRelPath()}${path.posix.sep}\.`));
+    .map(imp => imp.replace(/(['"])\./g, (_, match) => `${match}${getRelPath()}${path.posix.sep}\.`))
+    .map(imp => stripReactTypeOnlyImports(imp))
+    .filter(Boolean);
 
   // Build array of absolute import paths for relative imports
   const relativeImportsRegex = /(import [^'"]*)['"](?:[\.\/]+(?:node_modules\/)?)(@?(?:(?!\.svg|\.jpe?g|\.png).)+)['"][;?]/gm;

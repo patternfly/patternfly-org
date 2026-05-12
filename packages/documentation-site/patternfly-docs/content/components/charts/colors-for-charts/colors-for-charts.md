@@ -7,7 +7,7 @@ sortValue: 2
 ---
 
 import { Alert, Grid, GridItem, Divider } from '@patternfly/react-core';
-import ColorsGrid from './colors-grid.js';
+import ColorsGrid from './colors-grid.jsx';
 import './colors-for-charts.css';
 
 import '../../components.css';

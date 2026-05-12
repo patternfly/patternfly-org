@@ -4,17 +4,21 @@
   "private": true,
   "version": "0.0.2",
   "scripts": {
+    "ci:build": "yarn generate:content && yarn build",
     "clean": "rm -rf src/generated",
-    "generate:content": "patternfly-doc-core convert-to-mdx ../documentation-site/patternfly-docs/content/",
+    "generate:content": "rm -rf src/content && mkdir -p src && cp -r ../documentation-site/patternfly-docs/content src && yarn patch:content",
+    "patch:content": "node patchContent.mjs",
     "dev": "patternfly-doc-core start",
-    "build": "patternfly-doc-core build --props",
+    "build": "patternfly-doc-core build --props --api-only",
     "serve": "patternfly-doc-core serve",
     "sync": "patternfly-doc-core sync",
     "init:docs": "patternfly-doc-core init",
-    "wrangler:preview": "wrangler pages dev"
+    "wrangler:preview": "wrangler pages dev",
+    "wrangler:deploy": "wrangler pages deploy"
   },
   "dependencies": {
-    "@patternfly/patternfly-doc-core": "^1.20.0",
+    "@patternfly/patternfly-doc-core": "^1.22.0",
+    "@patternfly/react-icons": "^6.5.0-prerelease.29",
     "astro": "^5.18.0"
   },
   "devDependencies": {

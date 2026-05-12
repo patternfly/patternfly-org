@@ -19,7 +19,7 @@ function startDevServer(webpackConfig) {
 }
 
 async function start(options) {
-  generate(options, true);
+  await generate(options, true);
   const webpackClientConfig = await clientConfig(null, { mode: 'development', ...getConfig(options) });
   console.log('start rspack-dev-server');
   watchMD();

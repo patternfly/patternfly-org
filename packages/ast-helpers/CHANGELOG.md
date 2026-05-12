@@ -3,6 +3,187 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.4.0-alpha.366 (2026-05-12)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 1.4.0-alpha.365 (2026-05-12)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 1.4.0-alpha.364 (2026-05-12)
+
+
+### Bug Fixes
+
+* move generative AI docs and bump PF versions ([#5007](https://github.com/patternfly/patternfly-org/issues/5007)) ([76098c5](https://github.com/patternfly/patternfly-org/commit/76098c5f3280440901c1ad6e11e1e8a7e38f7a83))
+
+
+
+
+
+# 1.4.0-alpha.363 (2026-05-12)
+
+
+### Features
+
+* bump design-tokens package ([#5002](https://github.com/patternfly/patternfly-org/issues/5002)) ([0e2739b](https://github.com/patternfly/patternfly-org/commit/0e2739b49906f17a0a964d67ba603cbe45a3af77))
+
+
+
+
+
+# 1.4.0-alpha.362 (2026-05-11)
+
+
+### Bug Fixes
+
+* **Compass:** replaced CompassPanel and background images ([#5001](https://github.com/patternfly/patternfly-org/issues/5001)) ([b6b9dd6](https://github.com/patternfly/patternfly-org/commit/b6b9dd6f3bb294dd53714a257a0c6a541d665f0e))
+
+
+
+
+
+# 1.4.0-alpha.361 (2026-05-08)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 1.4.0-alpha.360 (2026-05-06)
+
+
+### Features
+
+* **ThemeSwitcher:** replaced unified/redhat with felt ([#5003](https://github.com/patternfly/patternfly-org/issues/5003)) ([6e4c13e](https://github.com/patternfly/patternfly-org/commit/6e4c13e4338d808fa1b2eac86239e753538fe364))
+
+
+
+
+
+# 1.4.0-alpha.359 (2026-05-01)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 1.4.0-alpha.358 (2026-05-01)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 1.4.0-alpha.357 (2026-04-29)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 1.4.0-alpha.356 (2026-04-28)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 1.4.0-alpha.355 (2026-04-15)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 1.4.0-alpha.354 (2026-04-15)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 1.4.0-alpha.353 (2026-04-15)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 1.4.0-alpha.352 (2026-04-14)
+
+
+### Features
+
+* **site:** update doc-core to 1.22.0 ([#4946](https://github.com/patternfly/patternfly-org/issues/4946)) ([fc290d0](https://github.com/patternfly/patternfly-org/commit/fc290d030bc34d1728fc9a3948fed4e5b4be5df3))
+
+
+
+
+
+# 1.4.0-alpha.351 (2026-04-06)
+
+
+### Features
+
+* bump preleases and update screenshots ([#4986](https://github.com/patternfly/patternfly-org/issues/4986)) ([96b5a86](https://github.com/patternfly/patternfly-org/commit/96b5a86cf62be502b202e5c736a161439d2c5710))
+
+
+
+
+
+# 1.4.0-alpha.350 (2026-03-25)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 1.4.0-alpha.349 (2026-03-18)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 1.4.0-alpha.348 (2026-03-16)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 1.4.0-alpha.347 (2026-03-11)
+
+
+### Bug Fixes
+
+* Changes for docs-gen v6 ESM compatibility ([#4956](https://github.com/patternfly/patternfly-org/issues/4956)) ([ce09638](https://github.com/patternfly/patternfly-org/commit/ce0963869e626e790ff36f59d745a625c7b36bdf))
+
+
+
+
+
 # 1.4.0-alpha.346 (2026-03-05)
 
 **Note:** Version bump only for package @patternfly/ast-helpers

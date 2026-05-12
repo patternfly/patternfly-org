@@ -11,4 +11,4 @@ They are often found in filter toggles to indicate the number of selections that
 [select list documentation](/components/menus/select/design-guidelines#checkbox-select) for more examples.
 
 ## Accessibility
-For information regarding accessibility, visit the [badge accessibility](/components/badge/accessibility) tab. 
+For information regarding accessibility, visit the [badge accessibility](/components/badge/accessibility) tab.

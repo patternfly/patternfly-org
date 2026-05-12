@@ -5,7 +5,7 @@ subsection: training
 hideNavItem: true
 ---
 import { Button, Divider } from '@patternfly/react-core';
-import { CopyCodeBlock } from '../copyCodeBlock/copyCodeBlock';
+import { CopyCodeBlock } from '../copyCodeBlock/copyCodeBlock.jsx';
 
 # Fundamentals
 

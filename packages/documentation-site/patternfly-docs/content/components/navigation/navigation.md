@@ -172,3 +172,6 @@ Secondary horizontal navigation can also be used with primary horizontal navigat
 <div class="ws-docs-content-img">
 ![Example of horizontal primary and secondary navigation.](./img/nav-secondary-horizontal.svg)
 </div>
+
+## Accessibility
+For information regarding accessibility, visit the [navigation accessibility](/components/navigation/accessibility) tab.

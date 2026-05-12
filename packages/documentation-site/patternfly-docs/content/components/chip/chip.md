@@ -26,4 +26,4 @@ Chip groups are useful to express complex filters to a data set, for example.
 
 
 ## Accessibility
-For information regarding accessibility, visit the [chip accessibility](/components/chip/accessibility) tab. 
+For information regarding accessibility, visit the [chip accessibility](/components/chip/accessibility) tab.

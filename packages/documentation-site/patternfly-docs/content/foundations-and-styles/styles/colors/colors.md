@@ -5,15 +5,16 @@ section: foundations-and-styles
 import { Alert, Grid, GridItem, Banner, Button, Stack } from '@patternfly/react-core';
 import { Table, Caption, Thead, Tr, Th, Tbody, Td } from '@patternfly/react-table';
 import ArrowRightIcon from '@patternfly/react-icons/dist/esm/icons/arrow-right-icon';
-import { ColorSwatch } from './ColorSwatch.js';
-import { ColorFamily } from './ColorFamily.js';
+import { ColorSwatch } from './ColorSwatch.jsx';
+import { ColorFamily } from './ColorFamily.jsx';
 
 # PatternFly's palette
 
 Our color palettes align with <a href="https://www.redhat.com/en/about/brand/standards/color" target="_blank" alt="Red Hat brand colors"> Red Hat's brand colors </a> and are designed to reinforce content and support effective communication across different UI needs. Colors are applied to PatternFly elements using [semantic design tokens.](/foundations-and-styles/design-tokens/overview) This guide offers guidance for color use in some of the most common scenarios, but it does not cover all tokens. Additional color usage information is included in our tokens documentation.
 
 <div>
-<Button component="a" href="/foundations-and-styles/design-tokens/all-design-tokens" variant="link" isInline> View all design tokens <ArrowRightIcon />
+<Button component="a" href="/foundations-and-styles/design-tokens/all-design-tokens" variant="link" isInline>
+View all design tokens <ArrowRightIcon />
 </Button>
 </div>
 

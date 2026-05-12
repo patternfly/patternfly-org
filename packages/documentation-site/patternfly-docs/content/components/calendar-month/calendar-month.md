@@ -21,5 +21,5 @@ import '../components.css';
 6. **Disabled state**
 7. **Previous/future date**: Utilizes subtle text colors for days outside of the selected month. 
 
-## Accessibility 
+## Accessibility
 For information regarding accessibility, visit the [calendar month accessibility](/components/date-and-time/calendar-month/accessibility) tab.
