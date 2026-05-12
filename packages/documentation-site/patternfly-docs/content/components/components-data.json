@@ -73,7 +73,7 @@
   },
   "compass": {
     "illustration": "./img/component-illustrations/panel.png",
-    "summary": "<b>Compass</b> is a full-viewport layout for generative and conversational UIs, with header, optional sidebars, main content, and a footer area (often used with ChatBot)."
+    "summary": "<b>Compass</b> is a full-viewport layout for generative and conversational UIs, with a header, optional sidebars, main content, and a footer area that often uses a ChatBot message bar."
   },
   "clipboard-copy": {
     "illustration": "./img/component-illustrations/clipboard-copy.png",
