@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 6.40.1 (2026-05-12)
+
+
+### Bug Fixes
+
+* move generative AI docs and bump PF versions ([#5007](https://github.com/patternfly/patternfly-org/issues/5007)) ([76098c5](https://github.com/patternfly/patternfly-org/commit/76098c5f3280440901c1ad6e11e1e8a7e38f7a83))
+
+
+
+
+
 # 6.40.0 (2026-05-12)
 
 
