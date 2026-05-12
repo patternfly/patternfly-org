@@ -256,7 +256,6 @@ export const CompassBasic: React.FunctionComponent = () => {
             onSendMessage={handleSendMessage}
             alwayShowSendButton
             hasAttachButton={false}
-            hasAiIndicator
             isThinking={isThinking}
           />
         </PanelMain>
