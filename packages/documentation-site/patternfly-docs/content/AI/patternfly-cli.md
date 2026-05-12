@@ -59,7 +59,7 @@ Once the PatternFly CLI is installed, you can run the following commands via `pa
 | --- | --- |
 | `create` | Create a new project from the available templates. |
 | `list` | List all available templates (built-in and optional custom). |
-| `update` | Update your project to a newer version. |
+| `update` | Migrate your project to a newer PatternFly version using codemods, which handle import changes, component renames, and other breaking changes automatically.|
 | `cli-upgrade` | Upgrade the globally installed CLI to the latest npm release. It runs `npm install -g @patternfly/patternfly-cli@latest`&mdash;use your package manager’s equivalent if you did not install with npm. |
 | `init` | Initialize a git repository and optionally create a GitHub repository. |
 | `save` | Commit and push changes to the current branch. |
