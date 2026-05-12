@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 6.40.0 (2026-05-12)
+
+
+### Features
+
+* bump design-tokens package ([#5002](https://github.com/patternfly/patternfly-org/issues/5002)) ([0e2739b](https://github.com/patternfly/patternfly-org/commit/0e2739b49906f17a0a964d67ba603cbe45a3af77))
+
+
+
+
+
 ## 6.39.2 (2026-05-11)
 
 
