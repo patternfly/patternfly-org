@@ -647,7 +647,6 @@ export const CompassIntegrationsDemo: React.FunctionComponent = () => {
             onSendMessage={handleSendMessage}
             alwayShowSendButton
             hasAttachButton={false}
-            hasAiIndicator
             isThinking={isThinking}
           />
           <div aria-live="polite" className="pf-v6-screen-reader">
