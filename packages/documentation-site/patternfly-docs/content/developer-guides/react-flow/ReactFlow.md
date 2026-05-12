@@ -21,7 +21,7 @@ import {
 import "@xyflow/react/dist/style.css";
 import "./reactFlowOverrides.css";
 
-When creating GenUI concepts with PatternFly's compass component, you might want to utilize [React Flow](https://reactflow.dev/). The React Flow package `@xyflow/react` is compatible with PatternFly through customization of its [theme](https://reactflow.dev/learn/customization/theming) and [rendered nodes](https://reactflow.dev/learn/customization/custom-nodes). 
+When creating generative UI concepts with PatternFly's [Compass component](/components/compass), you might want to utilize [React Flow](https://reactflow.dev/). The React Flow package `@xyflow/react` is compatible with PatternFly through customization of its [theme](https://reactflow.dev/learn/customization/theming) and [rendered nodes](https://reactflow.dev/learn/customization/custom-nodes). 
 
 ### Example 
 
