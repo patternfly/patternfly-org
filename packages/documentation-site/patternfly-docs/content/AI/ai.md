@@ -19,7 +19,7 @@ The following guides are intended to help you integrate AI into your workflows a
 - **[Marketplace](/ai/marketplace):** Plugins that give AI coding assistants knowledge and skills to generate more accurate, PatternFly-compliant code.
 - **[AI-assisted code migration](/ai/ai-assisted-code-migration):** Guidance for using AI to speed up and simplify codebase migrations.
 - **[Conversational design principles](/ai/conversation-design):** Guidance for designing effective and human-centered AI conversations.
-- **[Generative UIs](/ai/generative-uis/overview):** Proof-of-concept resources for creating UIs that can utilize AI to dynamically generate elements as needed.
+- **[Compass layout (org demos)](/components/compass/org-demos):** Full-page Compass layout examples for generative UI patterns. For React Flow integration, see the [React Flow guide](/developer-guides/react-flow).
 
 ---
 

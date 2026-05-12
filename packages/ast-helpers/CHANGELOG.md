@@ -3,6 +3,36 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.4.0-alpha.365 (2026-05-12)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 1.4.0-alpha.364 (2026-05-12)
+
+
+### Bug Fixes
+
+* move generative AI docs and bump PF versions ([#5007](https://github.com/patternfly/patternfly-org/issues/5007)) ([76098c5](https://github.com/patternfly/patternfly-org/commit/76098c5f3280440901c1ad6e11e1e8a7e38f7a83))
+
+
+
+
+
+# 1.4.0-alpha.363 (2026-05-12)
+
+
+### Features
+
+* bump design-tokens package ([#5002](https://github.com/patternfly/patternfly-org/issues/5002)) ([0e2739b](https://github.com/patternfly/patternfly-org/commit/0e2739b49906f17a0a964d67ba603cbe45a3af77))
+
+
+
+
+
 # 1.4.0-alpha.362 (2026-05-11)
 
 
