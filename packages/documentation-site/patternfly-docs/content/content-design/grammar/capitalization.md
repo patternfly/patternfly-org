@@ -16,7 +16,7 @@ For example: “When you use PatternFly’s design resources, you get helpful ti
 
 When you write for a product, make sure you adhere to the following capitalization patterns.
 
-- Default to sentence case across all UI elements, including navigation items, page titles, buttons, and so on. 
+- Default to sentence case across all UI elements, including navigation items, page titles, buttons, and so on.
 
 <div class="ws-image"> <img src="../img/navigation-capitalization.png"  alt="A side navigation menu, expanded to show capitalization styles." width="600px"/></div>
 
@@ -31,6 +31,7 @@ When you write for a product, make sure you adhere to the following capitalizati
     | Compliance   | “Check your system **compliance** using Red Hat Insights **Compliance**.”                                                  | The first “compliance” is lowercase since it refers to a concept. The second “compliance” refers to a specific feature offered on cloud.redhat.com, so it is capitalized.                                     |
     | Sources      | “Add a *source* by going to **Settings > *Sources*.**” "Check the *Sources* table for status."<br /><br />Button text: "Add *source*" | “Sources” is only capitalized when it directly refers to a subsection, feature, or location in the UI. "Source" is lowercase in the button text because button labels should always be in sentence case. |
     </div>
+- Match the capitalization of API resources, as outlined in ["Technical API references"](#technical-api-references-exact-case).
 
 ### Capitalization in breadcrumb trails
 
@@ -41,6 +42,52 @@ It is common for page titles to appear as an item in a breadcrumb trail. Match t
 Sometimes, user-named items will appear in a breadcrumb trail. If a custom resource name (for example, "customResource-name") is included in the breadcrumb trail, you should match the capitalization of the users' original entry. 
 
 <p class="ws-image"> <img src="../img/breadcrumb-custom-item.png"  alt="A breadcrumb trail with mixed capitalization styles due to custom resource naming." width="600"/></p>
+
+### API and code reference capitalization
+
+When writing about technical resources and API objects, the appropriate capitalization and formatting depends on whether you are speaking generally about a concept or referencing a specific API resource.
+
+#### General references (sentence case)
+
+When speaking conceptually or generally about features, objects, or workflows in a UI, use sentence case. Do not use special formatting like backticks. This improves readability and treats the object as a common noun.
+
+**When to use:** Descriptive text, help text, or when explaining a workflow.
+
+**Examples:**
+- "You can attach a persistent volume to your pod to ensure data is saved."
+- "After you create your storage class, it can be used by any developer in the namespace."
+- "View resource usage."
+- "Ensure all storage class names are defined in the manifest."
+
+#### Technical API references (exact case)
+
+When referring specifically to an actual API object or underlying resource type (like a custom resource definition), use the exact casing defined in the API specification. How you format this reference depends on where it appears in the UI.
+
+**In body text:** Use backticks, brackets, or other code formatting to visually distinguish the API reference from prose.
+
+- PascalCase example: "The `PersistentVolume` must be in a Bound state."
+- camelCase example: "Ensure the `storageClassName` is defined in the manifest."
+- snake_case example: "The system checks the `volume_id` before mounting."
+
+**In navigation items and page titles:** Match the API casing exactly. Do not use backticks or code formatting in these areas to keep the interface clean. These pages are views of specific data objects, not generic concepts.
+
+- Navigation item example: StorageMap
+- Page title example: StorageMap details
+
+**In action buttons:** If the action creates an object defined by the API, the button label must use the exact casing of that API resource. Use the singular form of the resource name. Do not use backticks or code formatting.
+
+- Example: Create UserDefinedNetwork
+
+**Examples**
+
+<div class="ws-content-table">
+
+| **API resource** | **Sentence case (general)** | **Exact API casing (technical)** |
+|------------------|-----------------------------|----------------------------------|
+| VirtualMachine | "You can migrate your existing virtual machines from VMware directly into OpenShift." | "The `VirtualMachine` must be in a Stopped state before you can change the CPU limits." |
+| instanceType | "You can choose an optimized instance type to improve the performance of your database workloads." | "The controller will return a validation error if the `instanceType` is not supported by the underlying cloud provider's region." |
+
+</div>
 
 ### Tools outside your product portfolio
 
