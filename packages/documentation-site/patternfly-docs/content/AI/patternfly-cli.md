@@ -81,7 +81,7 @@ For the most up-to-date flags and behavior guidance, refer to [PatternFly CLI RE
 
 ### Predefined templates
 
-Built-in templates ship with the CLI. Each row is the template `name` you pass to `patternfly-cli create` (or choose from the interactive prompt). To print the list from your installed version, run `patternfly-cli list`.
+The following predefined templates ship with PatternFly CLI:
 
 | Template name | Description |
 | --- | --- |
