@@ -95,7 +95,7 @@ Template definitions can be found in the [patternfly-cli repo](https://github.co
 
 ### Custom templates
 
-In addition to the built-in templates, you can add your own templates by passing a JSON file with `--template-file` (or `-t`). Custom templates are merged with the built-in list&mdash;if a custom template has the same `name` as a built-in template, the custom definition is used.
+In addition to the predefined templates, you can add your own templates by passing a JSON file with `--template-file` (or `-t`). Custom templates are merged with the predefined list&mdash;if a custom template has the same `name` as a predefined template, the custom definition is used.
 
 **Create a project based on custom templates:**
 
