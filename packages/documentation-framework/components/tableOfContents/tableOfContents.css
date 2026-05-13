@@ -2,7 +2,7 @@
   align-self: flex-start;
   position: sticky;
   width: calc(100% + var(--pf-v6-c-page__main-section--PaddingInlineStart) + var(--pf-v6-c-page__main-section--PaddingInlineEnd));
-  background-color: var(--pf-t--global--background--color--secondary--default);
+  background-color: var(--pf-t--global--background--color--sticky--default);
   z-index: 201;
   margin-block-start: calc(var(--pf-v6-c-page__main-section--PaddingTop) * -1);
   margin-block-end: var(--pf-t--global--spacer--md);
@@ -19,7 +19,7 @@
   box-shadow: var(--pf-t--global--box-shadow--sm--bottom)
 }
 
-.ws-toc .pf-v6-c-jump-links__toggle {
+.ws-toc .pf-v6-c-jump-links__toggle button {
   background-color: var(--pf-t--global--background--color--secondary--default);
 }
 
