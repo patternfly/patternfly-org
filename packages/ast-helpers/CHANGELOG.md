@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.4.0-alpha.368 (2026-05-13)
+
+
+### Features
+
+* added documentation for patternfly cli. ([#5009](https://github.com/patternfly/patternfly-org/issues/5009)) ([011fea9](https://github.com/patternfly/patternfly-org/commit/011fea96f3eac3f733878c0c08a0cbcde11159c4))
+
+
+
+
+
 # 1.4.0-alpha.367 (2026-05-12)
 
 **Note:** Version bump only for package @patternfly/ast-helpers
