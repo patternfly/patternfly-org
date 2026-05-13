@@ -6,7 +6,7 @@ section: AI
 
 The [PatternFly CLI](https://github.com/patternfly/patternfly-cli) is a command-line tool for scaffolding projects, performing code modifications, and running project-related tasks. It streamlines everyday development work and PatternFly upgrades, making it convenient and easy to work straight from the terminal. You can run it in the terminal on its own, or use it from an AI-enabled editor (such as [Cursor](https://www.cursor.com/)) so coding agents can rely on the same predictable commands for scaffolding, updates, and git workflows. The published package is [`@patternfly/patternfly-cli` on npm](https://www.npmjs.com/package/@patternfly/patternfly-cli).
 
-The npm package installs two equivalent entry points: `patternfly-cli` and the shorter alias `pfcli`. The examples below use `patternfly-cli`; substitute `pfcli` if you prefer.
+The npm package installs two equivalent entry points: `patternfly-cli` and the shorter alias `pfcli`. The examples below use `patternfly-cli`, but you can substitute `pfcli` in your own usage if you prefer.
 
 ## What does the PatternFly CLI help with?
 
