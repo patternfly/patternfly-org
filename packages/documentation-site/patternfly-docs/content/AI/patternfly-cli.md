@@ -89,7 +89,9 @@ The following predefined templates ship with PatternFly CLI:
 | `compass-starter` | Starter template for a PatternFly Compass theme TypeScript project | 
 | `nextjs-starter` | Starter template for a PatternFly Next.js project |
 
-Template definitions in source: [patternfly-cli `src/templates.ts`](https://github.com/patternfly/patternfly-cli/blob/main/src/templates.ts).
+To use a template, pass the template name to `patternfly-cli create [template name]` or choose the template from the interactive prompt triggered by the generic `patternfly-cli create` comman. To print a list of all templates from your installed version, run `patternfly-cli list`.
+
+Template definitions can be found in the [patternfly-cli repo](https://github.com/patternfly/patternfly-cli/blob/main/src/templates.ts).
 
 ### Custom templates
 
