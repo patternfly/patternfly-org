@@ -55,12 +55,13 @@ patternfly-cli --version
 
 If you're starting a new project and publishing it, this is the usual sequence:
 
-[CODE FORMAT THIS]
+```sh
 patternfly-cli create my-app   # create a new project from a template
 cd my-app
 patternfly-cli init            # set up Git and connect to GitHub
 patternfly-cli save            # commit and push your changes
 patternfly-cli deploy          # publish to GitHub Pages
+```
 
 For an existing project, use patternfly-cli update to migrate to a newer PatternFly version.
 ### Available CLI commands
