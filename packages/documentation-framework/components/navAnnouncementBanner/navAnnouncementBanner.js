@@ -21,7 +21,7 @@ export const NavAnnouncementBanner = () => {
         title="Website update"
         actionLinks={
           <Fragment>
-            <AlertActionLink component="a" href="https://medium.com/patternfly/a-new-path-for-patternfly-org-91d14de4b93c" target="_blank">
+            <AlertActionLink component="a" href="https://medium.com/patternfly/a-new-path-for-patternfly-org-b3536f514f2f" target="_blank">
               Learn more
             </AlertActionLink>
             <AlertActionLink component="a" href="https://www.feedback.redhat.com/jfe/form/SV_9MKBjq8H7muINMy" target="_blank">
