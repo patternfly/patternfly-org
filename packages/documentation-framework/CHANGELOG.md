@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 6.42.0 (2026-05-14)
+
+
+### Features
+
+* **ver:** bump to 6.5 prerelease version ([#5014](https://github.com/patternfly/patternfly-org/issues/5014)) ([df4d2be](https://github.com/patternfly/patternfly-org/commit/df4d2be996c6e04d55f72efa51248dbc6e08a43d))
+
+
+
+
+
 # 6.41.0 (2026-05-13)
 
 
