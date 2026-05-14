@@ -74,9 +74,17 @@ If you wish to migrate an existing project to PatternFly you must install and co
     yarn add @patternfly/react-core
     ```
 
-## Using icons
+### Using icons
 
-PatternFly utilizes [Red Hat UI icons](https://www.redhat.com/en/about/brand/standards/icons) (`rh-ui-*`), which are available in the [`@patternfly/react-icons` package](https://www.npmjs.com/package/@patternfly/react-icons). Refer to the [icon component](/components/icon) and the [iconography](/foundations-and-styles/iconography) foundations page for implementation and usage guidance.
+PatternFly utilizes [Red Hat UI icons](https://www.redhat.com/en/about/brand/standards/icons) (`rh-ui-*`), which are available in the [`@patternfly/react-icons` package](https://www.npmjs.com/package/@patternfly/react-icons). 
+
+You can import icons as React components directly from the react-icons package to use in your projects:
+
+```
+import { RhUiArrowRightIcon } from '@patternfly/react-icons';
+```
+
+For additional guidance and implementation examples, refer to the [icon component](/components/icon) and the [iconography](/foundations-and-styles/iconography) foundations pages.
 
 ## Develop with HTML/CSS 
 
@@ -121,20 +129,19 @@ Use these files to consume the library. The recommended consumption approach wil
 
 ### Using icons
 
-For the recommended Red Hat icon approach (including React), see ["Using icons"](#using-icons) at the start of this page. The following describes using our previously recommended Font Awesome icons in the HTML/CSS bundle, which you may still rely on for legacy markup.
+Like with React, you can use the [`@patternfly/react-icons` package](https://www.npmjs.com/package/@patternfly/react-icons) in your HTML/CSS implementations. 
 
-[Font Awesome 5](https://fontawesome.com/) can be utilized in 2 different ways:
+You can add and use SVGs as needed from the `@patternfly/react-icons/dist/static` directory, which contains individual `.svg` files for each icon (for example, `rh-ui-arrow-right.svg`) that you can reference directly in code:
 
-  * **Built into PatternFly:** By default, Font Awesome is included as part of the PatternFly CSS file. You do not need to do anything else to use this icon font family.
+```
+npm install @patternfly/react-icons --save
+```
 
-  * **Used as a CDN:** If you wish to use the CDN for Font Awesome 5 rather than the default approach, you need to complete the following steps: 
-    1. Update the ```sass-utilities/scss-variables.scss``` file (from source ```node_modules/@patternfly/patternfly/```) to include:
+```
+<img src="node_modules/@patternfly/react-icons/dist/static/rh-ui-arrow-right.svg" />
+```
 
-      ```scss
-      $pf-v6-global--enable-fontawesome-cdn: true !default;
-      ```
-
-    1. Build PatternFly as part of your build process. 
+For additional guidance and implementation examples, refer to the [icon component](/components/icon) and the [iconography](/foundations-and-styles/iconography) foundations pages.
 
 ## Testing
 
