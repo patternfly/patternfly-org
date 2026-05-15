@@ -7,6 +7,11 @@ export const useIsStuck = (stickyElementId) => {
     const scrollElement = document.getElementById('ws-page-main');
     const stickyElement = document.getElementById(stickyElementId);
 
+    if (!scrollElement || !stickyElement) {
+      setIsStuck(false);
+      return;
+    }
+
     const syncFromScroll = () => {
       setIsStuck(scrollElement.scrollTop > stickyElement.getBoundingClientRect().top);
     };
