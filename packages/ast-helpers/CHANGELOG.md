@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.4.0-alpha.371 (2026-05-15)
+
+
+### Bug Fixes
+
+* **documentation-framework:** handle null errors in useIsStuck ([#5021](https://github.com/patternfly/patternfly-org/issues/5021)) ([5e5e861](https://github.com/patternfly/patternfly-org/commit/5e5e861366bb24bfb973f6c7595da4660fcda708))
+
+
+
+
+
 # 1.4.0-alpha.370 (2026-05-15)
 
 
