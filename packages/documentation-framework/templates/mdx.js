@@ -310,8 +310,8 @@ export const MDXTemplate = ({ title, sources = [], path, id, componentsData }) =
           </Content>
         </PageSection>
         {showTabs && (
-          <PageSection id="ws-sticky-nav-tabs" stickyBase="top" isStickyStuck={isStickyStuck} type="tabs" style={{ borderBottom: 'var(--pf-t--global--border--width--box--default) solid var(--pf-t--global--border--color--default)' }}>
-            <div className="pf-v6-c-tabs pf-m-page-insets pf-m-no-border-bottom">
+          <PageSection id="ws-sticky-nav-tabs" stickyBase="top" isStickyStuck={isStickyStuck} type="tabs">
+            <div className="pf-v6-c-tabs pf-m-page-insets">
               <ul className="pf-v6-c-tabs__list">
                 {sourceKeys.map((source, index) => (
                   <li
