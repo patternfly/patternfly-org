@@ -350,6 +350,8 @@ export const SideNavLayout = ({ children, groupedRoutes, navOpen: navOpenProp })
   return (
     <React.Fragment>
       <RtlContext.Provider value={isRTL}>
+        {/* These alert banners need to be one of the first focusable items so users navigating via
+        keybaord can dismiss them early in their navigation. */}
         <div id="ws-page-banners">
           <NavAnnouncementBanner />
           {hasGdprBanner && <GdprBanner />}
