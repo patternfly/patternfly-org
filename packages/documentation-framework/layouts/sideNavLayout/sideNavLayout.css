@@ -8,6 +8,10 @@
   flex: 1;
 }
 
+#ws-page-banners {
+  z-index: 9999;
+}
+
 /* Search */
 #algolia-autocomplete-listbox-0 {
   /* Fix search results overflowing page */
