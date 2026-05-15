@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.4.0-alpha.370 (2026-05-15)
+
+
+### Bug Fixes
+
+* **Cookies/GDPR:** moved location in DOM for keyboard a11y ([#5016](https://github.com/patternfly/patternfly-org/issues/5016)) ([e2158ab](https://github.com/patternfly/patternfly-org/commit/e2158abdcd09f0dfc5701327a809aca8e6ecec42))
+
+
+
+
+
 # 1.4.0-alpha.369 (2026-05-14)
 
 
