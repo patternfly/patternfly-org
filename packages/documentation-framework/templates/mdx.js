@@ -23,6 +23,7 @@ import { capitalize, getTitle, slugger, trackEvent } from '../helpers';
 import './mdx.css';
 import { convertToReactComponent } from '@patternfly/ast-helpers';
 import { FunctionsTable } from '../components/functionsTable/functionsTable';
+import { useIsStuck } from '../hooks/useIsStuck';
 
 const MDXChildTemplate = ({ Component, source, toc = [], index = 0, id }) => {
   const {
@@ -167,6 +168,8 @@ const MDXChildTemplate = ({ Component, source, toc = [], index = 0, id }) => {
 };
 
 export const MDXTemplate = ({ title, sources = [], path, id, componentsData }) => {
+  const isStickyStuck = useIsStuck('ws-sticky-nav-tabs');
+
   const hasFeedbackButton = process.env.hasFeedbackButton;
   const isDeprecated =
     sources.some((source) => source.source === 'react-deprecated' || source.source === 'html-deprecated') &&
@@ -307,7 +310,7 @@ export const MDXTemplate = ({ title, sources = [], path, id, componentsData }) =
           </Content>
         </PageSection>
         {showTabs && (
-          <PageSection id="ws-sticky-nav-tabs" stickyOnBreakpoint={{ default: 'top' }} type="tabs">
+          <PageSection id="ws-sticky-nav-tabs" stickyBase="top" isStickyStuck={isStickyStuck} type="tabs">
             <div className="pf-v6-c-tabs pf-m-page-insets pf-m-no-border-bottom">
               <ul className="pf-v6-c-tabs__list">
                 {sourceKeys.map((source, index) => (
