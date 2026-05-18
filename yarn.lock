@@ -5862,6 +5862,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@project-felt/ai-guidelines@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "@project-felt/ai-guidelines@npm:1.0.0"
+  checksum: 10c0/b0338f288ae0c6e27c0bebf5bd6bbafab1e7b9550afb48ee284235e6cc7b4648ea87e630ce26017b972f411693c7da9f0ad1fa468ab5c8d5cce780ecf9e727c0
+  languageName: node
+  linkType: hard
+
 "@puppeteer/browsers@npm:2.13.0":
   version: 2.13.0
   resolution: "@puppeteer/browsers@npm:2.13.0"
@@ -21333,6 +21340,7 @@ __metadata:
   dependencies:
     "@patternfly/patternfly-doc-core": "npm:^1.22.0"
     "@patternfly/react-icons": "npm:^6.5.0-prerelease.29"
+    "@project-felt/ai-guidelines": "npm:^1.0.0"
     astro: "npm:^5.18.0"
     tsx: "npm:^4.21.0"
     wrangler: "npm:^4.69.0"

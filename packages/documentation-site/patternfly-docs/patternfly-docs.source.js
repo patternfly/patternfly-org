@@ -22,6 +22,15 @@ module.exports = (sourceMD, sourceProps, sourceFunctionDocs) => {
 
     sourceMD(path.join(contentBase, 'AI/**/*.md'), 'AI');
 
+    // AI guidelines from @project-felt/ai-guidelines
+    const aiGuidelinesPath = require
+      .resolve('@project-felt/ai-guidelines/package.json')
+      .replace('package.json', 'content');
+    sourceMD(path.join(aiGuidelinesPath, '*.md'), 'AI', undefined, {
+      frontmatterMapping: { title: 'id' },
+      frontmatterDefaults: { section: 'AI', subsection: 'Guidelines' }
+    });
+
     sourceMD(path.join(contentBase, 'get-help/**/*.md'), 'get-help');
     sourceMD(path.join(contentBase, 'get-involved/**/*.md'), 'get-involved');
 

@@ -8,7 +8,7 @@ function getSource(options) {
 async function generate(options) {
   const start = new Date();
   console.log('write source files to patternfly-docs/generated');
-  const sourceMDWithOptions = (glob, source, ignore) => sourceMD(glob, source, ignore, options._name);
+  const sourceMDWithOptions = (glob, source, ignore, mdOptions) => sourceMD(glob, source, ignore, options._name, mdOptions);
   getSource(options)(sourceMDWithOptions, sourceProps, sourceFunctionDocs);
   await waitForProps();
   processMD();
