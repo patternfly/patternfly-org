@@ -231,6 +231,7 @@ export function attachDocSearch(algolia, inputSelector, timeout) {
         clickAnalytics: true
       },
       transformData: function(hits) {
+        Object.keys(hitDataByUrl).forEach(k => delete hitDataByUrl[k]);
         hits.forEach((hit, index) => {
           if (hit.url && hit.objectID) {
             hitDataByUrl[hit.url] = {
@@ -252,7 +253,13 @@ export function attachDocSearch(algolia, inputSelector, timeout) {
             positions: [hitData.position]
           });
         }
-        window.location.href = suggestion.url;
+        if (event && (event.metaKey || event.ctrlKey)) {
+          window.open(suggestion.url, '_blank');
+        } else if (event && event.shiftKey) {
+          window.open(suggestion.url);
+        } else {
+          window.location.href = suggestion.url;
+        }
       },
       debug: process.env.NODE_ENV !== 'production',
       ...algolia
