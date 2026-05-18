@@ -23,11 +23,11 @@ We support 2 pre-built themes in PatternFly. While the visual identity of each t
 
 ### Default theme
 
-The Default theme creates the standard, open source PatternFly experience. It is characterized by blue branding, modern, square borders, and simple icons. 
+The Default theme creates the standard, open source PatternFly experience. It is characterized by blue branding and modern, square borders. 
 
 ### Project Felt theme
 
-The Project Felt theme is designed for products within the Red Hat portfolio, providing closer alignment with the [Red Hat Design System](https://ux.redhat.com/). It is characterized by red accent colors, smooth, rounded borders, Red Hat icons, and [glass contrast mode](#glass). Core interactive elements, such as primary buttons, continue to use blue for usability.
+Named after the material of the iconic Red Hat fedora, Project Felt is designed for products within the Red Hat portfolio, providing closer alignment with the [Red Hat Design System](https://ux.redhat.com/). It is characterized by red accent colors and pill-shaped borders. 
 
 ### Custom themes 
 
@@ -71,9 +71,15 @@ Default contrast mode is used in the Default theme and doesn't include special e
 
 ### High contrast
 
-High contrast mode is focused on improving accessibility for users who require more clarity and higher contrast between UI elements. Turned on by user preference, high contrast mode adjusts border strokes and colors to meet an [enhanced contrast ratio of at least 7:1](https://www.w3.org/WAI/WCAG21/Understanding/contrast-enhanced.html). 
+High contrast mode is focused on improving accessibility for users who require more clarity and higher contrast between UI elements. It is available across the Default and Project Felt themes in both light and dark color schemes. When enabled, high contrast mode adjusts the following:
 
-**Note:** Activating high contrast mode will override and disable glass mode to ensure all boundaries and text meet strict accessibility requirements.
+- Raises text contrast to meet a [WCAG AAA ratio of 7:1](https://www.w3.org/WAI/WCAG21/Understanding/contrast-enhanced.html).
+- Raises non-text element contrast (interactive elements and boundaries) to 4.5:1.
+- Applies global border rules that define clear boundaries in place of shadows and subtle background fills, which can disappear in high contrast environments.
+
+High contrast can be enabled manually by users or triggered automatically by OS- and browser-level accessibility settings such as forced colors mode. System-level preferences take precedence over PatternFly theme settings, so users who have already configured high contrast in their OS or browser will get a consistent experience without conflict.
+
+**Note:** Activating high contrast mode will override and disable glass mode&mdash;whether triggered manually or via the OS-level `prefers-reduced-transparency` media query.
 
 For implementation guidance, refer to the [high contrast handbook](/foundations-and-styles/theming/high-contrast-handbook).
 
@@ -83,12 +89,15 @@ For implementation guidance, refer to the [high contrast handbook](/foundations-
 
 ### Glass
 
-Glass mode introduces transparency and depth to the UI, creating a layered visual effect. It is enabled in the Project Felt theme by default, but can also be manually enabled in the Default theme.
+Glass mode introduces transparency, blur, and depth to the UI, creating a layered visual effect. It is available in both light and dark color schemes across the Default and Project Felt themes, and can be manually enabled in either.
 
 When glass is enabled, the following changes will apply:
-- **Transparency:** Container backgrounds will become more transparent, allowing the content below to subtly show through.  
-- **Background image:** A pre-approved background image will fill the page body. Product teams must work with the Brand team ensure these images maintain accessibility compliance behind UI elements.
-- **Layout changes:** Layout variations, including the banded masthead and floating side navigation.
+- **Transparency, blur, and shadows:** Surface-level container backgrounds become semi-transparent and apply blur and shadow adjustments, letting content below subtly show through to create a sense of depth and content hierarchy.
+- **Background image:** A brand-approved background image fills the page body, providing the visual layer that glass containers sit above. Product teams must use approved images and ensure text is never placed outside of a container and directly on top of a background image.
+- **Component-level glass:** Glass automatically applies to the login page, masthead, navigation, and page. It can be manually extended to cards, drawers, and panels.
+- **Layout variations:** A banded masthead (with a solid fill and shadowed border to anchor it above the page) and a floating side navigation (with a solid fill and shadow to visually separate it from glass content) are automatically used in place of their standard counterparts.
+
+Products using glass mode must provide users a clear way to switch to default contrast or high contrast. When high contrast is enabled—manually or via the OS-level `prefers-reduced-transparency` media query&mdash;glass effects are automatically disabled.
 
 For more details, including implementation guidance, refer to the [glass mode handbook](/foundations-and-styles/theming/glass-mode-handbook).
 
@@ -101,11 +110,10 @@ The following table outlines the availability and compatibility of PatternFly fe
 | Accent color | Blue | Red | 
 | Interactive element colors | Blue | Blue | 
 | Border radius shape | Square | Pill | 
-| Default contrast mode | Standard | Glass | 
+| Default contrast mode | Standard | Standard | 
 | Background image | Optional (Manual) | Required (with glass mode) |
 | Branded icons | Optional (Manual) | Default
 | High contrast support | Yes | Yes |
-
 
 ## Best practices
 

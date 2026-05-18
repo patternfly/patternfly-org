@@ -8,7 +8,7 @@ source: glass-mode-handbook
 
 ## What is glass mode?
 
-Glass mode is a contrast mode option that's enabled in our Project Felt theme by default and can be manually enabled in our Default theme. Glass adds transparency, blurring, and depth to the UI to create a more dynamic visual effect where brand-approved background images and layered UI elements subtly show through. 
+Glass mode is a contrast mode option that can be manually enabled in both our Default and Project Felt themes. Glass adds transparency, blurring, and depth to the UI to create a more dynamic visual effect where brand-approved background images and layered UI elements subtly show through. 
 
 When turned on, glass applies to the following components, including their uses within our extensions:
 - Login page
@@ -25,21 +25,19 @@ Additionally, glass can be manually enabled on the following components, via the
 
 The glass effect is most visible when placed over a background image. To retain readability and ensure proper contrast ratios are met, images shouldn't contain high levels of detail or extreme contrast. 
 
-Background images should be selected for each Red Hat product in collaboration with the Brand team.
+Background images, including non-branded and product-specific options are available to download from the [Red Hat brand portal](https://redhat.brand-portal.adobe.com/mediaportal.html/content/dam/mac/redhat/brand/brand-engagement-kit/wallpapers/product-interface-backgrounds?disableExpiredRedirect=true). If a Red Hat product team does not want to use one of the premade background options, then customized background images must be created in collaboration with the brand team.
 
 Text must never be placed directly on a background image&mdash;it should be placed within a container that has a background color or glass effect. Titles or headings with stronger font weights can be placed directly on background images only if they pass specific brand and contrast requirements.
 
 ### Opacity
 
-The default opacity values used in our components have been tested for accessibility, legibility, and visual appeal.
-- Project Felt light typically utilizes a 40% opacity to maintain AAA contrast for standard text.
-- Project Felt dark utilizes a 60% opacity to provide better reliability for the dark color scheme.
+The default opacity values used in our components have been tested for accessibility, legibility, and visual appeal. Glass surfaces (page, masthead, navigation, and similar components) use 50% opacity in both light and dark mode, with a background blur effect applied.
 
 If a product team chooses to override these token values, they are responsible for conducting their own accessibility evaluation to ensure WCAG compliance.
 
 ## Enabling glass mode
 
-Glass mode is designed to work across light and dark color schemes and is enabled by default in our Project Felt theme. To manually enable glass in our Default theme, add the class `.pf-v6-theme-glass` to your application’s `<html>` tag. When implementing glass with our Default theme, it's important to ensure that glass does not harm the overall accessibility or usability of your product.
+Glass mode is designed to work across light and dark color schemes in both our Default and Project Felt themes. To enable glass, add the class `.pf-v6-theme-glass` to your application’s `<html>` tag. When implementing glass, it’s important to ensure that it does not harm the overall accessibility or usability of your product.
 
 ### Technical constraints
 
