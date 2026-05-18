@@ -18,14 +18,13 @@ Alongside these theming milestones, we've added a few new components and variant
 
 ### Promoted package versions
 
-*[Replace with versions from [patternfly-org package.json](https://github.com/patternfly/patternfly-org/blob/main/package.json) before publish.]*
-
 - patternfly/patternfly ([changelog](https://github.com/patternfly/patternfly/releases/tag/v6.5.0))
     - [@patternfly/patternfly@6.5.0](https://www.npmjs.com/package/@patternfly/patternfly/v/6.5.0)
 - patternfly/react ([changelog](https://github.com/patternfly/patternfly-react/releases/tag/v6.5.0))
     - [@patternfly/react-charts@8.5.0](https://www.npmjs.com/package/@patternfly/react-charts/v/8.5.0)
     - [@patternfly/react-code-editor@6.5.0](https://www.npmjs.com/package/@patternfly/react-code-editor/v/6.5.0)
     - [@patternfly/react-core@6.5.0](https://www.npmjs.com/package/@patternfly/react-core/v/6.5.0)
+    - [@patternfly/react-docs@7.5.0](https://www.npmjs.com/package/@patternfly/react-docs/v/7.5.0)
     - [@patternfly/react-drag-drop@6.5.0](https://www.npmjs.com/package/@patternfly/react-drag-drop/v/6.5.0)
     - [@patternfly/react-icons@6.5.0](https://www.npmjs.com/package/@patternfly/react-icons/v/6.5.0)
     - [@patternfly/react-styles@6.5.0](https://www.npmjs.com/package/@patternfly/react-styles/v/6.5.0)
@@ -33,7 +32,16 @@ Alongside these theming milestones, we've added a few new components and variant
     - [@patternfly/react-templates@6.5.0](https://www.npmjs.com/package/@patternfly/react-templates/v/6.5.0)
     - [@patternfly/react-tokens@6.5.0](https://www.npmjs.com/package/@patternfly/react-tokens/v/6.5.0)
 - PatternFly extensions
-    - *[List only extensions bumped for 6.5; npm + changelog per package.]*
+    - [@patternfly/chatbot@6.6.0](https://www.npmjs.com/package/@patternfly/chatbot/v/6.6.0) ([changelog](https://github.com/patternfly/chatbot/releases/tag/v6.6.0))
+    - [@patternfly/quickstarts@6.5.0](https://www.npmjs.com/package/@patternfly/quickstarts/v/6.5.0) ([changelog](https://github.com/patternfly/patternfly-quickstarts/releases/tag/v6.5.0))
+    - [@patternfly/react-catalog-view-extension@6.4.0](https://www.npmjs.com/package/@patternfly/react-catalog-view-extension/v/6.4.0) ([changelog](https://github.com/patternfly/react-catalog-view/releases/tag/v6.4.0))
+    - [@patternfly/react-component-groups@6.5.0](https://www.npmjs.com/package/@patternfly/react-component-groups/v/6.5.0) ([changelog](https://github.com/patternfly/react-component-groups/releases/tag/v6.5.0))
+    - [@patternfly/react-console@6.2.0](https://www.npmjs.com/package/@patternfly/react-console/v/6.2.0) ([changelog](https://github.com/patternfly/react-console/releases/tag/v6.2.0))
+    - [@patternfly/react-data-view@6.5.0](https://www.npmjs.com/package/@patternfly/react-data-view/v/6.5.0) ([changelog](https://github.com/patternfly/react-data-view/releases/tag/v6.5.0))
+    - [@patternfly/react-log-viewer@6.4.0](https://www.npmjs.com/package/@patternfly/react-log-viewer/v/6.4.0) ([changelog](https://github.com/patternfly/react-log-viewer/releases/tag/v6.4.0))
+    - [@patternfly/react-topology@6.5.0](https://www.npmjs.com/package/@patternfly/react-topology/v/6.5.0) ([changelog](https://github.com/patternfly/react-topology/releases/tag/v6.5.0))
+    - [@patternfly/react-user-feedback@6.3.0](https://www.npmjs.com/package/@patternfly/react-user-feedback/v/6.3.0) ([changelog](https://github.com/patternfly/react-user-feedback/releases/tag/v6.3.0))
+    - [@patternfly/react-virtualized-extension@6.2.0](https://www.npmjs.com/package/@patternfly/react-virtualized-extension/v/6.2.0) ([changelog](https://github.com/patternfly/react-virtualized-extension/releases/tag/v6.2.0))
 
 ### Updated theming options 
 
