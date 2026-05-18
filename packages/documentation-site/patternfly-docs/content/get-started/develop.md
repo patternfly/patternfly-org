@@ -143,6 +143,21 @@ npm install @patternfly/react-icons --save
 
 For additional guidance and implementation examples, refer to the [icon component](/components/icon) and the [iconography](/foundations-and-styles/iconography) foundations pages.
 
+### Font Awesome icons (legacy)
+
+PatternFly previously recommended using icons from [Font Awesome 5](https://fontawesome.com/). While we now recommend using Red Hat icons instead, Font Awesome is still included in PatternFly and can be utilized in 2 ways:
+
+  * **Built into PatternFly:** By default, Font Awesome is included as part of the PatternFly CSS file. You do not need to do anything else to use this icon font family.
+
+  * **Used as a CDN:** If you wish to use the CDN for Font Awesome 5 rather than the default approach, you need to complete the following steps:
+    1. Update the ```sass-utilities/scss-variables.scss``` file (from source ```node_modules/@patternfly/patternfly/```) to include:
+
+      ```scss
+      $pf-v6-global--enable-fontawesome-cdn: true !default;
+      ```
+
+    1. Build PatternFly as part of your build process.
+
 ## Testing
 
 Many PatternFly components comply with the Open UI Automation (OUIA) guidelines, which are designed to ease the burden of creating and maintaining automated testing environments.  Additional details about OUIA and the full list of compliant components [can be found in our developer resources.](/developer-guides/open-ui-automation)
