@@ -265,11 +265,9 @@ export const SideNavLayout = ({ children, groupedRoutes, navOpen: navOpenProp })
 
   const SideBar = (
     <PageSidebar>
-      <div className="pf-v6-c-page__sidebar-main">  {/** TODO: fix with updated React components after https://redhat.atlassian.net/browse/PF-3728 merges */}
-        <PageSidebarBody>
-          <SideNav navItems={sideNavItems} groupedRoutes={groupedRoutes} />
-        </PageSidebarBody>
-      </div>
+      <PageSidebarBody>
+        <SideNav navItems={sideNavItems} groupedRoutes={groupedRoutes} />
+      </PageSidebarBody>
     </PageSidebar>
   );
 
@@ -352,6 +350,12 @@ export const SideNavLayout = ({ children, groupedRoutes, navOpen: navOpenProp })
   return (
     <React.Fragment>
       <RtlContext.Provider value={isRTL}>
+        {/* These alert banners need to be one of the first focusable items so users navigating via
+        keybaord can dismiss them early in their navigation. */}
+        <div id="ws-page-banners">
+          <NavAnnouncementBanner />
+          {hasGdprBanner && <GdprBanner />}
+        </div>
         <Page
           id="ws-page"
           mainContainerId="ws-page-main"
@@ -365,10 +369,6 @@ export const SideNavLayout = ({ children, groupedRoutes, navOpen: navOpenProp })
           {children}
           {process.env.hasFooter && <Footer isDarkTheme={isDarkTheme} />}
         </Page>
-        <div id="ws-page-banners">
-          <NavAnnouncementBanner />
-          {hasGdprBanner && <GdprBanner />}
-        </div>
       </RtlContext.Provider>
     </React.Fragment>
   );

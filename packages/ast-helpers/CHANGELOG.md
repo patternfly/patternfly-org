@@ -3,6 +3,96 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.4.0-alpha.371 (2026-05-15)
+
+
+### Bug Fixes
+
+* **documentation-framework:** handle null errors in useIsStuck ([#5021](https://github.com/patternfly/patternfly-org/issues/5021)) ([5e5e861](https://github.com/patternfly/patternfly-org/commit/5e5e861366bb24bfb973f6c7595da4660fcda708))
+
+
+
+
+
+# 1.4.0-alpha.370 (2026-05-15)
+
+
+### Bug Fixes
+
+* **Cookies/GDPR:** moved location in DOM for keyboard a11y ([#5016](https://github.com/patternfly/patternfly-org/issues/5016)) ([e2158ab](https://github.com/patternfly/patternfly-org/commit/e2158abdcd09f0dfc5701327a809aca8e6ecec42))
+
+
+
+
+
+# 1.4.0-alpha.369 (2026-05-14)
+
+
+### Features
+
+* **ver:** bump to 6.5 prerelease version ([#5014](https://github.com/patternfly/patternfly-org/issues/5014)) ([df4d2be](https://github.com/patternfly/patternfly-org/commit/df4d2be996c6e04d55f72efa51248dbc6e08a43d))
+
+
+
+
+
+# 1.4.0-alpha.368 (2026-05-13)
+
+
+### Features
+
+* added documentation for patternfly cli. ([#5009](https://github.com/patternfly/patternfly-org/issues/5009)) ([011fea9](https://github.com/patternfly/patternfly-org/commit/011fea96f3eac3f733878c0c08a0cbcde11159c4))
+
+
+
+
+
+# 1.4.0-alpha.367 (2026-05-12)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 1.4.0-alpha.366 (2026-05-12)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 1.4.0-alpha.365 (2026-05-12)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 1.4.0-alpha.364 (2026-05-12)
+
+
+### Bug Fixes
+
+* move generative AI docs and bump PF versions ([#5007](https://github.com/patternfly/patternfly-org/issues/5007)) ([76098c5](https://github.com/patternfly/patternfly-org/commit/76098c5f3280440901c1ad6e11e1e8a7e38f7a83))
+
+
+
+
+
+# 1.4.0-alpha.363 (2026-05-12)
+
+
+### Features
+
+* bump design-tokens package ([#5002](https://github.com/patternfly/patternfly-org/issues/5002)) ([0e2739b](https://github.com/patternfly/patternfly-org/commit/0e2739b49906f17a0a964d67ba603cbe45a3af77))
+
+
+
+
+
 # 1.4.0-alpha.362 (2026-05-11)
 
 
