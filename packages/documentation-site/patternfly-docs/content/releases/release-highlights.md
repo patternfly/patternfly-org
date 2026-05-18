@@ -10,10 +10,10 @@ import { Divider, Timestamp } from '@patternfly/react-core';
 
 ## PatternFly 6.5
 
-This release brings exciting new options for your PatternFly projects, offering more choice and flexibility in how you use our design system. We’ve subtly refined our core visuals to better align with the Red Hat Design System while still maintaining the classic PatternFly experience you know. 
+This release brings marks a monumental step for PatternFly, delivering more choice, more flexibility, and a stunning new look&mdash;all built with our flexible theming system. We've also subtly refined our core visuals to better align with the Red Hat Design System, while keeping the classic PatternFly experience you know and love.
 
-A major milestone for this release is Project Felt, PatternFly's first distinct theme variant that uses Red Hat–influenced styles. We're also shipping a new glass mode that adds transparency and depth to your UI. More broadly, to ensure all our visual options remain inclusive, we've also launched high-contrast mode for WCAG AAA accessibility across all themes.
- 
+The big headline of this release is Project Felt: PatternFly's first-ever distinct theme variant. Built entirely on our V6 theming system, it brings powerful Red Hat–influenced styles with red accent colors, pill-shaped radii, and a modernized feel. The best part is that products can opt in with zero code changes required. A single class gives your users an elevated experience. We're also shipping a sleek new glass mode that adds transparency and depth to your UI. To ensure all our new visual options remain inclusive, we've launched high-contrast mode for WCAG AAA accessibility across all themes.
+
 Alongside these theming milestones, we've added a few new components and variants, revamped our website navigation for better findability, and expanded our AI resources to keep your workflows moving forward.
 
 ### Promoted package versions
