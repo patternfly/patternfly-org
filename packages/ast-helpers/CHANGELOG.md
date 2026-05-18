@@ -3,6 +3,39 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.4.0-alpha.371 (2026-05-15)
+
+
+### Bug Fixes
+
+* **documentation-framework:** handle null errors in useIsStuck ([#5021](https://github.com/patternfly/patternfly-org/issues/5021)) ([5e5e861](https://github.com/patternfly/patternfly-org/commit/5e5e861366bb24bfb973f6c7595da4660fcda708))
+
+
+
+
+
+# 1.4.0-alpha.370 (2026-05-15)
+
+
+### Bug Fixes
+
+* **Cookies/GDPR:** moved location in DOM for keyboard a11y ([#5016](https://github.com/patternfly/patternfly-org/issues/5016)) ([e2158ab](https://github.com/patternfly/patternfly-org/commit/e2158abdcd09f0dfc5701327a809aca8e6ecec42))
+
+
+
+
+
+# 1.4.0-alpha.369 (2026-05-14)
+
+
+### Features
+
+* **ver:** bump to 6.5 prerelease version ([#5014](https://github.com/patternfly/patternfly-org/issues/5014)) ([df4d2be](https://github.com/patternfly/patternfly-org/commit/df4d2be996c6e04d55f72efa51248dbc6e08a43d))
+
+
+
+
+
 # 1.4.0-alpha.368 (2026-05-13)
 
 
