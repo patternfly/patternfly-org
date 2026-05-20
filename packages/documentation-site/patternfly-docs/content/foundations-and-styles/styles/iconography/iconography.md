@@ -3,30 +3,41 @@ id: Iconography
 section: foundations-and-styles
 ---
 import { Icon, Content, ContentVariants } from '@patternfly/react-core';
-import CheckCircleIcon from '@patternfly/react-icons/dist/esm/icons/check-circle-icon';
-import ExclamationCircleIcon from '@patternfly/react-icons/dist/esm/icons/exclamation-circle-icon';
-import ExclamationTriangleIcon from '@patternfly/react-icons/dist/esm/icons/exclamation-triangle-icon';
-import InfoCircleIcon from '@patternfly/react-icons/dist/esm/icons/info-circle-icon';
-import BellIcon from '@patternfly/react-icons/dist/esm/icons/bell-icon';
-import StarIcon from '@patternfly/react-icons/dist/esm/icons/star-icon';
+import RhUiCheckCircleFillIcon from '@patternfly/react-icons/dist/esm/icons/rh-ui-check-circle-fill-icon';
+import RhUiErrorFillIcon from '@patternfly/react-icons/dist/esm/icons/rh-ui-error-fill-icon';
+import RhUiWarningFillIcon from '@patternfly/react-icons/dist/esm/icons/rh-ui-warning-fill-icon';
+import RhUiInformationFillIcon from '@patternfly/react-icons/dist/esm/icons/rh-ui-information-fill-icon';
+import RhUiNotificationFillIcon from '@patternfly/react-icons/dist/esm/icons/rh-ui-notification-fill-icon';
+import RhUiStarIcon from '@patternfly/react-icons/dist/esm/icons/rh-ui-star-icon';
 import { IconsTable } from './IconsTable.jsx';
 import './icons.css';
+import '../../../components/components.css';
 
-If you're a developer, check out our [development onboarding guide](/get-started/develop#using-icons) to learn how to install and use our icon set.
+We use <a href="https://www.redhat.com/en/about/brand/standards/icons">Red Hat brand UI icons</a> (`rh-ui-*`) in PatternFly, which are delivered via the [`@patternfly/react-icons` package](https://www.npmjs.com/package/@patternfly/react-icons) and the [icon component](/components/icon). The [all icons](#all-icons) table at the end of this page lists the icons commonly used in PatternFly, including their usage details. 
 
-For additional usage instruction, [refer to the icon component pages.](/components/icon)
+The [iconography documentation of the Red Hat Design System (RHDS)](https://ux.redhat.com/foundations/iconography/) outlines the full Red Hat icon catalog, including:
+- UI icons (the same set we use, plus more variants)
+- A large set of standard icons (more general, illustrative, and typically less appropriate for product UIs)
+- Microns (smaller, compact icons)
+- Social icons
 
-## Icon sizes
+In general, rely on the all-icons table on this page and supplement your needs with the RHDS catalog if needed. If there's no icon for your use case, [submit a new icon request](https://docs.google.com/forms/d/e/1FAIpQLSde61rTDD4keaZEA3JFzBPbQVJ5EgEkhNapsYoI6ajKCsX4_Q/viewform) to the Brand team.
 
-Icon size tokens use rems, rather than pixels. Rems are relative units that adjust font size based on a webpage's HTML document root element size. For example, if the root size is 10px, a rem size of 1.5 would be 15px.
+## Migrating to Red Hat icons
 
-PatternFly's default root element size is 16px. If you change this default size, note that the following tables will no longer show accurate pixel measurements (though the rem values will stay the same). 
+To migrate from our previous Font Awesome and PatternFly icon sets without having to manually update every import, apply the `pf-v6-icon-set-rh-ui` class on an outer element (typically the `<html>` element). PatternFly uses the mapping in [`pfToRhIcons.mjs`](https://github.com/patternfly/patternfly-react/blob/main/packages/react-icons/scripts/icons/pfToRhIcons.mjs) to decide which legacy icons render as Red Hat UI icons. Not every legacy icon is mapped, so some might still require direct updates. This class also only points to the UI Red Hat icon set, not [microns](https://ux.redhat.com/foundations/iconography/#micron-icons) or [standard icons](https://ux.redhat.com/foundations/iconography/#standard-icons), which you might prefer for some scenarios.
+
+While you can still use the previous Font Awesome (`fa`, `fas`, `far`, and similar) or PatternFly (`pf`) icons if your product already relies on them, they are not the recommended path for new work.
 
 ## Inline icons
 
+Rather than pixels, icons are sized in rems, which are relative to your page’s root font size. For example, if the root size is 10px, a rem size of 1.5 is 15px. PatternFly’s default root is 16px. If you change the root, the following tables’ size values will only be accurate in rems.
+
 [Inline icons](/components/icon#inline) must be center-aligned horizontally when placed next to text and center-aligned vertically when stacked.
 
+<div class="ws-docs-content-img">
 ![Icons correctly center-aligned beside icons incorrectly front-aligned.](./icon-alignment.svg)
+</div>
 
 Use the following semantic tokens to ensure that icons are properly aligned and match the correct font size:
 
@@ -34,81 +45,64 @@ Use the following semantic tokens to ensure that icons are properly aligned and 
 
 | **Size** | **Token** | **Example** |
 | --- | --- | :---: |
-|  1.375rem (22px)   | `pf-t--global--icon--size--font--heading--h1` | <Content component="h1"> <Icon isInline> <StarIcon /> </Icon> Heading <Icon isInline> <StarIcon /> </Icon></Content>  | 
-| 1.25rem (20px)    | `pf-t--global--icon--size--font--heading--h2` | <Content component="h2"> <Icon isInline> <StarIcon /> </Icon> Heading <Icon isInline> <StarIcon /> </Icon></Content>  |
-| 1.125rem (18px) | `pf-t--global--icon--size--font--heading--h3` | <Content component="h3"> <Icon isInline> <StarIcon /> </Icon> Heading <Icon isInline> <StarIcon /> </Icon></Content>  |
-| 1rem (16px) | `pf-t--global--icon--size--font--heading--h4` | <Content component="h4"> <Icon isInline> <StarIcon /> </Icon> Heading <Icon isInline> <StarIcon /> </Icon></Content>  |
-| 1rem (16px) | `pf-t--global--icon--size--font--heading--h5` | <Content component="h5"> <Icon isInline> <StarIcon /> </Icon> Heading <Icon isInline> <StarIcon /> </Icon></Content>  |
-| 1rem (16px) | `pf-t--global--icon--size--font--heading--h6` | <Content component="h6"> <Icon isInline> <StarIcon /> </Icon> Heading <Icon isInline> <StarIcon /> </Icon></Content>  |
+|  1.375rem (22px)   | `--pf-t--global--icon--size--font--heading--h1` | <Content component="h1"> <Icon isInline> <RhUiStarIcon /> </Icon> Heading <Icon isInline> <RhUiStarIcon /> </Icon></Content>  | 
+| 1.25rem (20px)    | `--pf-t--global--icon--size--font--heading--h2` | <Content component="h2"> <Icon isInline> <RhUiStarIcon /> </Icon> Heading <Icon isInline> <RhUiStarIcon /> </Icon></Content>  |
+| 1.125rem (18px) | `--pf-t--global--icon--size--font--heading--h3` | <Content component="h3"> <Icon isInline> <RhUiStarIcon /> </Icon> Heading <Icon isInline> <RhUiStarIcon /> </Icon></Content>  |
+| 1rem (16px) | `--pf-t--global--icon--size--font--heading--h4` | <Content component="h4"> <Icon isInline> <RhUiStarIcon /> </Icon> Heading <Icon isInline> <RhUiStarIcon /> </Icon></Content>  |
+| 1rem (16px) | `--pf-t--global--icon--size--font--heading--h5` | <Content component="h5"> <Icon isInline> <RhUiStarIcon /> </Icon> Heading <Icon isInline> <RhUiStarIcon /> </Icon></Content>  |
+| 1rem (16px) | `--pf-t--global--icon--size--font--heading--h6` | <Content component="h6"> <Icon isInline> <RhUiStarIcon /> </Icon> Heading <Icon isInline> <RhUiStarIcon /> </Icon></Content>  |
 
 ### Body text
 
 | **Size** | **Token** | **Example** |
 | --- | --- | :---: |
-| 0.75rem (12px)  | `pf-t--global--icon--size--font--body--sm`  | <Content component={ContentVariants.small}> <Icon isInline><StarIcon /></Icon> Small body <Icon isInline><StarIcon /></Icon></Content> |
-| 0.875rem (14px) | `pf-t--global--icon--size--font--body--default`  | <Content component={ContentVariants.p}> <Icon isInline><StarIcon /></Icon> Default body <Icon isInline><StarIcon /></Icon></Content> 
-| 1rem (16px)  | `pf-t--global--icon--size--font--body--lg`  | <Content component={ContentVariants.p} style="font-size: 16px"> <Icon isInline><StarIcon /></Icon> Large body <Icon isInline><StarIcon /></Icon></Content> 
+| 0.75rem (12px)  | `--pf-t--global--icon--size--font--body--sm`  | <Content component={ContentVariants.small}> <Icon isInline><RhUiStarIcon /></Icon> Small body <Icon isInline><RhUiStarIcon /></Icon></Content> |
+| 0.875rem (14px) | `--pf-t--global--icon--size--font--body--default`  | <Content component={ContentVariants.p}> <Icon isInline><RhUiStarIcon /></Icon> Default body <Icon isInline><RhUiStarIcon /></Icon></Content> 
+| 1rem (16px)  | `--pf-t--global--icon--size--font--body--lg`  | <Content component={ContentVariants.p} style="font-size: 16px"> <Icon isInline><RhUiStarIcon /></Icon> Large body <Icon isInline><RhUiStarIcon /></Icon></Content> 
 
 ## Standalone icons 
 
-Occasionally, you may need to use a standalone icon that isn't aligned with any kind of text. PatternFly supports a range of icon sizes that can adapt to these use cases, including small, medium, large, x-large, 2xl, and 3xl icons. These sizes correspond to the following font sizes and tokens:
+Occasionally, you may need to use a standalone icon that isn't aligned with any kind of text. We support a range of icon sizes for these use cases, including small, medium, large, x-large, 2xl, and 3xl icons. These sizes correspond to the following font sizes and tokens:
 
 | **Size** | **Token** | **Example** |
 | --- | --- | :---: |
-| Small (0.75rem, 12px) |  `--pf-t--global--icon--size--sm` |<Icon size ="sm"><StarIcon /></Icon> |
-| Medium (0.875rem, 14px) |  `--pf-t--global--icon--size--md` |<Icon size ="md"><StarIcon /></Icon> |
-| Large (1rem, 16px) |  `--pf-t--global--icon--size--lg` |<Icon size ="lg"><StarIcon /></Icon> |
-| X-large (1.375rem, 22px) | `--pf-t--global--icon--size--xl` | <Icon size ="xl"> <StarIcon /></Icon> |
-| 2xl (3.5rem, 56px) | `--pf-t--global--icon--size--2xl` |  <Icon size ="2xl"><StarIcon /></Icon> |
-| 3xl (6rem, 96px) | `--pf-t--global--icon--size--3xl` | <Icon size ="3xl"><StarIcon /></Icon> |
+| Small (0.75rem, 12px) |  `--pf-t--global--icon--size--sm` |<Icon size ="sm"><RhUiStarIcon /></Icon> |
+| Medium (0.875rem, 14px) |  `--pf-t--global--icon--size--md` |<Icon size ="md"><RhUiStarIcon /></Icon> |
+| Large (1rem, 16px) |  `--pf-t--global--icon--size--lg` |<Icon size ="lg"><RhUiStarIcon /></Icon> |
+| X-large (1.375rem, 22px) | `--pf-t--global--icon--size--xl` | <Icon size ="xl"> <RhUiStarIcon /></Icon> |
+| 2xl (3.5rem, 56px) | `--pf-t--global--icon--size--2xl` |  <Icon size ="2xl"><RhUiStarIcon /></Icon> |
+| 3xl (6rem, 96px) | `--pf-t--global--icon--size--3xl` | <Icon size ="3xl"><RhUiStarIcon /></Icon> |
 
-Medium icons are typically the most versatile size to use in a UI. Most icons in PatternFly components are medium; other sizes are used sparingly.
+Most standalone icons in PatternFly components are medium, since that is typically the most versatile size for a UI&mdash;other sizes are used sparingly.
 
 ## Icon colors
-All icon colors that you use should align with the proper [semantic design token.](/foundations-and-styles/design-tokens/all-design-tokens) For example, a warning icon should use our approved warning color, a danger icon should use our approved danger color, and so on. 
+All icon colors that you use should align with the proper [semantic design token.](/foundations-and-styles/design-tokens/all-design-tokens) For example, a warning icon should use our approved warning color token, a danger icon should use our approved danger color token, and so on. 
 
 | **Icon state** | **Color token** | **Example** |
 | --- | --- | :---: |
-| Danger | `--pf-t--global--icon--color--status--danger--default` | <Icon status="danger" size="xl"> <ExclamationCircleIcon /> </Icon> |
-| Warning  | `--pf-t--global--icon--color--status--warning--default` | <Icon status="warning" size="xl"><ExclamationTriangleIcon /></Icon> |
-| Success | `--pf-t--global--icon--color--status--success--default` | <Icon status="success" size="xl"><CheckCircleIcon /></Icon> |
-| Info | `--pf-t--global--icon--color--status--info--default` | <Icon status="info" size="xl"><InfoCircleIcon /></Icon> |
-| Custom | `--pf-t--global--icon--color--status--custom--default` | <Icon status="custom" size="xl"><BellIcon /></Icon> |
+| Danger | `--pf-t--global--icon--color--status--danger--default` | <Icon status="danger" size="xl"> <RhUiErrorFillIcon /> </Icon> |
+| Warning  | `--pf-t--global--icon--color--status--warning--default` | <Icon status="warning" size="xl"><RhUiWarningFillIcon /></Icon> |
+| Success | `--pf-t--global--icon--color--status--success--default` | <Icon status="success" size="xl"><RhUiCheckCircleFillIcon /></Icon> |
+| Info | `--pf-t--global--icon--color--status--info--default` | <Icon status="info" size="xl"><RhUiInformationFillIcon /></Icon> |
+| Custom | `--pf-t--global--icon--color--status--custom--default` | <Icon status="custom" size="xl"><RhUiNotificationFillIcon /></Icon> |
 
 To learn more about icon colors and color tokens, visit our [colors page.](/foundations-and-styles/colors) 
 
-## PatternFly icons
-PatternFly uses custom icons and selections from <a href="https://fontawesome.com/icons?d=gallery&m=free">Font Awesome Free</a>, as shown in [this table](#all-icons). If PatternFly doesn't offer an icon for your use case, you can download SVGs of additional 'fa' icons from Font Awesome's free set. Be sure to properly attribute these additional icons as outlined on the Font Awesome site.
+## Using icons in development
 
-### HTML icons 
-When using HTML, use the following syntax:
+Developers should first refer to our [development onboarding guide](/get-started/develop#using-icons) to install, import, and use icons within your product. For React and HTML examples, [refer to the icon component.](/components/icon)
 
-- For 'pficon' icons: `<i class="pf-icon [insert-icon-name]"></i>`
-- For 'fa' solid icons: `<i class="fas [insert-icon-name]"></i>`
-- For 'fa' regular icons: `<i class="far [insert-icon-name]"></i>`
+### React imports
+Once installed, you can import individual icons from the [react-icons package](https://www.npmjs.com/package/@patternfly/react-icons). For example
 
-**Note:** Be sure to reference our [development onboarding guide](/get-started/develop#using-icons) when using 'fa' regular icons.
-
-### React icons
-When using React, you can import 'pficon' icons from our [react-icons package](https://www.npmjs.com/package/@patternfly/react-icons) by including the following line: `import { [insert-icon-name] } from '@patternfly/react-icons/dist/esm/icons/[insert-hyphenated-icon-name]';`
-
-For example: 
-`import StarIcon from '@patternfly/react-icons/dist/esm/icons/star-icon';`
-
-### Font Awesome solid (FAS) vs Font Awesome regular (FAR)
-The Font Awesome icons included with PatternFly are Font Awesome solid (FAS) webfont icons. If you're using icons via `<i class="[fa, far, fas] [insert-icon-name]"></i>`, you can use any FAS icon. If you need to use a Font Awesome regular (FAR) icon, you must include the FAR icons yourself by doing one of the following:
-
-1. [Host it yourself](https://fontawesome.com/how-to-use/on-the-web/setup/hosting-font-awesome-yourself)
-2. [Include the icons via a package manager](https://fontawesome.com/how-to-use/on-the-web/setup/using-package-managers)
-3. [Link to a CDN](https://cdnjs.com/libraries/font-awesome)
-4. Use the SVG code directly from [fontawesome.com](https://fontawesome.com) (proper attribution is required)
+`import RhUiStarIcon from '@patternfly/react-icons/dist/esm/icons/rh-ui-star-icon';`
 
 ## All icons 
 
-The following table provides details and usage information for all icons that PatternFly supports.
+The table lists Red Hat UI icons with usage guidance for PatternFly. For the full catalog of Red Hat icons (UI, standard, microns, and social), refer to [the RDHS iconography guidelines](https://ux.redhat.com/foundations/iconography/).
 
-For guidance related to icon tooltips, [refer to our tooltips writing guide.](/content-design/writing-guides/tooltips#icon-tooltips)
+For guidance on icon tooltips, [refer to our tooltips writing guide.](/content-design/writing-guides/tooltips#icon-tooltips)
 
-Select any single icon in the table to download it as an SVG. You can also download all icon SVGs <a href="https://github.com/patternfly/patternfly-design/raw/master/resources/patternfly-icon-svgs" target="_blank">on GitHub (via patternfly-icons.zip.)</a>
+Click an icon to download it as an SVG, or click the React name to copy the icon's name for use in React.
 
 <IconsTable />
