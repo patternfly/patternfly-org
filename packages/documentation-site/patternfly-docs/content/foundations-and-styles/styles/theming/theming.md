@@ -27,7 +27,7 @@ The Default theme creates the standard, open source PatternFly experience. It is
 
 ### Project Felt theme
 
-Named after the material of the iconic Red Hat fedora, Project Felt is designed for products within the Red Hat portfolio, providing closer alignment with the [Red Hat Design System (RHDS)](https://ux.redhat.com/). It replaces PatternFly blue with Red Hat Red as an accent color and introduces pill-shaped borders for buttons, controls, and containers, making product UIs feel recognizably Red Hat.
+Named after the material of the iconic Red Hat fedora, Project Felt is designed for products within the Red Hat portfolio, providing closer alignment with the [Red Hat Design System (RHDS)](https://ux.redhat.com/). It replaces PatternFly blue with Red Hat red as an accent color and introduces pill-shaped borders for buttons, controls, and containers, making product UIs feel recognizably Red Hat.
 
 Project Felt is part of a broader, long-term effort to create a more seamless experience for customers across the full Red Hat journey—from marketing sites and the product marketplace to complex enterprise software—developed in collaboration with RHDS.
 
