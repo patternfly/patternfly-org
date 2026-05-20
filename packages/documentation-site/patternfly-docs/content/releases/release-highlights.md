@@ -6,6 +6,102 @@ section: releases
 import '../get-started/get-started.css';
 import { Divider, Timestamp } from '@patternfly/react-core'; 
 
+<Timestamp date={new Date(2026, 3)}>April 2026</Timestamp>
+
+## PatternFly 6.5
+
+This release marks a monumental step for PatternFly, delivering more choice, more flexibility, and a stunning new look&mdash;all built with our flexible theming system. We've also subtly refined our core visuals to better align with the Red Hat Design System, while keeping the classic PatternFly experience you know and love.
+
+The big headline of this release is Project Felt: PatternFly's first-ever distinct theme variant. Built entirely on our V6 theming system, it brings powerful Red Hat–influenced styles with red accent colors, pill-shaped radii, and a modernized feel. The best part is that products can opt in with zero code changes required. A single class gives your users an elevated experience. We're also shipping a sleek new glass mode that adds transparency and depth to your UI. To ensure all our new visual options remain inclusive, we've launched high-contrast mode for WCAG AAA accessibility across all themes.
+
+Alongside these theming milestones, we've added a few new components and variants, revamped our website navigation for better findability, and expanded our AI resources to keep your workflows moving forward.
+
+### Promoted package versions
+
+- patternfly/patternfly ([changelog](https://github.com/patternfly/patternfly/releases/tag/v6.5.0))
+    - [@patternfly/patternfly@6.5.0](https://www.npmjs.com/package/@patternfly/patternfly/v/6.5.0)
+- patternfly/react ([changelog](https://github.com/patternfly/patternfly-react/releases/tag/v6.5.0))
+    - [@patternfly/react-charts@8.5.0](https://www.npmjs.com/package/@patternfly/react-charts/v/8.5.0)
+    - [@patternfly/react-code-editor@6.5.0](https://www.npmjs.com/package/@patternfly/react-code-editor/v/6.5.0)
+    - [@patternfly/react-core@6.5.0](https://www.npmjs.com/package/@patternfly/react-core/v/6.5.0)
+    - [@patternfly/react-docs@7.5.0](https://www.npmjs.com/package/@patternfly/react-docs/v/7.5.0)
+    - [@patternfly/react-drag-drop@6.5.0](https://www.npmjs.com/package/@patternfly/react-drag-drop/v/6.5.0)
+    - [@patternfly/react-icons@6.5.0](https://www.npmjs.com/package/@patternfly/react-icons/v/6.5.0)
+    - [@patternfly/react-styles@6.5.0](https://www.npmjs.com/package/@patternfly/react-styles/v/6.5.0)
+    - [@patternfly/react-table@6.5.0](https://www.npmjs.com/package/@patternfly/react-table/v/6.5.0)
+    - [@patternfly/react-templates@6.5.0](https://www.npmjs.com/package/@patternfly/react-templates/v/6.5.0)
+    - [@patternfly/react-tokens@6.5.0](https://www.npmjs.com/package/@patternfly/react-tokens/v/6.5.0)
+- PatternFly extensions
+    - [@patternfly/chatbot@6.6.0](https://www.npmjs.com/package/@patternfly/chatbot/v/6.6.0) ([changelog](https://github.com/patternfly/chatbot/releases/tag/v6.6.0))
+    - [@patternfly/quickstarts@6.5.0](https://www.npmjs.com/package/@patternfly/quickstarts/v/6.5.0) ([changelog](https://github.com/patternfly/patternfly-quickstarts/releases/tag/v6.5.0))
+    - [@patternfly/react-catalog-view-extension@6.4.0](https://www.npmjs.com/package/@patternfly/react-catalog-view-extension/v/6.4.0) ([changelog](https://github.com/patternfly/react-catalog-view/releases/tag/v6.4.0))
+    - [@patternfly/react-component-groups@6.5.0](https://www.npmjs.com/package/@patternfly/react-component-groups/v/6.5.0) ([changelog](https://github.com/patternfly/react-component-groups/releases/tag/v6.5.0))
+    - [@patternfly/react-console@6.2.0](https://www.npmjs.com/package/@patternfly/react-console/v/6.2.0) ([changelog](https://github.com/patternfly/react-console/releases/tag/v6.2.0))
+    - [@patternfly/react-data-view@6.5.0](https://www.npmjs.com/package/@patternfly/react-data-view/v/6.5.0) ([changelog](https://github.com/patternfly/react-data-view/releases/tag/v6.5.0))
+    - [@patternfly/react-log-viewer@6.4.0](https://www.npmjs.com/package/@patternfly/react-log-viewer/v/6.4.0) ([changelog](https://github.com/patternfly/react-log-viewer/releases/tag/v6.4.0))
+    - [@patternfly/react-topology@6.5.0](https://www.npmjs.com/package/@patternfly/react-topology/v/6.5.0) ([changelog](https://github.com/patternfly/react-topology/releases/tag/v6.5.0))
+    - [@patternfly/react-user-feedback@6.3.0](https://www.npmjs.com/package/@patternfly/react-user-feedback/v/6.3.0) ([changelog](https://github.com/patternfly/react-user-feedback/releases/tag/v6.3.0))
+    - [@patternfly/react-virtualized-extension@6.2.0](https://www.npmjs.com/package/@patternfly/react-virtualized-extension/v/6.2.0) ([changelog](https://github.com/patternfly/react-virtualized-extension/releases/tag/v6.2.0))
+
+### Updated theming options 
+
+This release significantly expands our theming options with style updates, high contrast mode, the new Project Felt theme, and glass mode as a separate contrast layer that can pair with Project Felt or the Default theme. To see these options in action, swap the theme, color scheme, and contrast mode used on PatternFly.org via the masthead theme switcher. 
+
+#### Project Felt theme
+
+We're excited to offer PatternFly's first major theme variant: the [Project Felt](/foundations-and-styles/theming#project-felt-theme) theme. It targets more familiar Red-Hat experiences through red accent colors and pill-shaped radii. Best of all&mdash;Project Felt is built entirely with our design token system, meaning no breaking change is required to add it to your product.
+
+#### Glass mode
+
+Glass mode is a new contrast mode that can be used in both the Default and Project Felt themes. "Glass", enabled by an intentional set of design tokens, adds transparency and depth to specific components so UIs can feel more layered. 
+
+For implementation guidance, constraints, details about design tokens, and user opt-out, and the specifics of glass effect implementations on components, refer to the [glass mode developer handbook](/foundations-and-styles/theming/glass-mode-handbook/). 
+
+#### Style updates
+
+We've aligned styles in the classic PatternFly experience (now referred to as our [Default theme](/foundations-and-styles/theming)) more closely with the [Red Hat Design System](https://ux.redhat.com/). These changes enhance brand consistency and usability:
+- **Links:** Now feature a subtle gray dotted underline that becomes an active color on hover/focus.
+- **Navigation:** Active items now utilize a vertical "accent" line for better visual emphasis.
+- **Controls:** Borders of controls are now more boldly outlined for better interaction indication.
+
+#### High contrast mode
+
+Now fully released and supported across light and dark color schemes, high contrast mode improves product accessibility and provides users with more control over their experiences. Validated by user research, it utilizes an updated color palette and modified global border rules to meet enhanced WCAG AAA contrast ratios.
+
+High contrast can be enabled via a singular CSS class as described in the [high contrast developer handbook](/foundations-and-styles/theming/high-contrast-handbook).
+
+### New components and layouts
+
+We've added new variants to support our evolving visual language and Red Hat-specific user journeys: 
+
+- [Iconography:](/foundations-and-styles/iconography) We’ve updated our icon set to use Red Hat brand icons. This is an automatic change handled via a single class, ensuring cross-platform consistency without much manual lift.
+- [Hero:](/components/hero) A new card-like component for attention-grabbing callouts at the top of pages.
+- [Docked navigation:](/components/navigation/react-demos#docked-nav) A space-saving solution that minimizes navigation items to icons while remaining expandable.
+- [Compass:](/ai/generative-uis/compass) A conversational-first layout for generative UI, placing a ChatBot bar below content with surrounding toolbars.
+
+### Revamped website navigation
+
+Based on extensive user research, we’ve updated the PatternFly.org navigation. Content is now conceptually grouped and labeled to help you find documentation faster.
+
+### New AI tooling
+
+We’ve expanded our AI ecosystem to help you design and develop more efficiently:
+- [PatternFly MCP server:](https://github.com/patternfly/patternfly-mcp) Connects LLMs directly to PatternFly documentation and schemas to ensure more accurate AI conversations and generation.
+- [PatternFly CLI:](https://github.com/patternfly/patternfly-cli) A new command-line tool designed to accelerate your workflow by automating project scaffolding, streamlining version upgrades, and handling repetitive development tasks.
+- [ai-helpers repo:](https://github.com/patternfly/ai-helpers) A collection of plugins and skills for accelerated workflows.
+
+### New ChatBot features
+
+We've continued to enhance and evolve the [ChatBot extension](/extensions/chatbot/overview) based on user feedback and product needs. Updates include:
+
+- **Improved documentation and design guidelines:** To keep documentation aligned with product patterns, we've updated references to the chat history drawer with consistent naming, and expanded our design guidelines for using [source cards](/extensions/chatbot/overview/design-guidelines/#source-cards) and [starting new chats](/extensions/chatbot/overview/design-guidelines/#starting-a-new-chat).
+- **Message layout and response actions:** To support more flexible messages, you can now [right align user messages](/extensions/chatbot/messages/#user-messages) (and related response actions) and [remove visible metadata from bot or user messages](/extensions/chatbot/messages/#bot-messages). Additionally, you can now [hide response actions](/extensions/chatbot/messages/#message-actions) until a user interacts with a message and use a [filled message action icon variant](/extensions/chatbot/messages/#message-actions) that applies on click.
+- **More options for source cards:** We've added a [non-paginated option for the message sources component](/extensions/chatbot/messages#messages-with-sources) that displays more source cards at once.
+- **More interactive deep thinking:** We added a [loading state option for messages with deep thinking](/extensions/chatbot/messages#messages-with-deep-thinking) that indicates when a model is still reasoning.
+- **More flexible message bar:** The [message bar](/extensions/chatbot/ui) now supports a controlled value when the `value` prop is set. We've also added a [message bar with custom attach menu and additional actions](/extensions/chatbot/ui/#message-bar-with-custom-attach-menu-and-additional-actions) example that shows how to place a customizable action icon at the start of the message bar and add extra actions (for example, a menu or label) via the `additionalActions` prop.
+
+<Divider />
+
 <Timestamp date={new Date(2025, 9)}>October 2025</Timestamp>
 
 ## PatternFly 6.4
