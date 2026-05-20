@@ -6,6 +6,10 @@ source: high-contrast-handbook
 
 # High contrast mode developer handbook
 
+High contrast mode increases the contrast of PatternFly components to support users with low vision or other visual impairments for whom higher contrast is a necessity. Our standard light and dark modes meet WCAG AA contrast ratios (4.5:1 for text), but high contrast mode goes further, targeting WCAG AAA text contrast ratios of 7:1. It also raises non-text element contrast (interactive elements and boundaries) to 4.5:1, and applies global border rules that define clear boundaries in place of shadows and subtle background fills, which can disappear in high contrast environments.
+
+High contrast mode works across both the Default and Project Felt themes, in light and dark color schemes.
+
 ## High contrast mode vs. forced colors mode
 
 Our high contrast mode increases the contrast of PatternFly components, often introducing additional borders to distinguish between elements, states, and interactions that otherwise rely on subtle background colors. High contrast mode is enabled by applying styles that are meant to target the [`prefers-contrast: more`](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-contrast) media query, which is the mode triggered on MacOS via **System Settings** > **Accessibility** > **Display** > **Increase contrast**. 
@@ -50,6 +54,10 @@ We also added the following tokens for plain actions (actions with a transparent
 | `--pf-t--global--border--width--action--plain--default` | 0px| 0px|
 | `--pf-t--global--border--width--action--plain--hover` | 0px | `--pf-t--global--border--width--100`  <br /><br/>Value: 1px |
 | `--pf-t--global--border--width--action--plain--clicked` | 0px | `--pf-t--global--border--width--200`  <br /><br/>Value: 2px |
+
+## High contrast and glass mode
+
+To ensure functional accessibility always takes priority when users need it, high contrast mode and glass mode are mutually exclusive. When high contrast mode is enabled manually or via the OS-level `prefers-reduced-transparency` media query, all glass mode effects are automatically disabled.
 
 ## Best practices
 

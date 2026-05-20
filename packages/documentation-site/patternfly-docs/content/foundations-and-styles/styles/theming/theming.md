@@ -27,7 +27,11 @@ The Default theme creates the standard, open source PatternFly experience. It is
 
 ### Project Felt theme
 
-Named after the material of the iconic Red Hat fedora, Project Felt is designed for products within the Red Hat portfolio, providing closer alignment with the [Red Hat Design System](https://ux.redhat.com/). It is characterized by red accent colors and pill-shaped borders. 
+Named after the material of the iconic Red Hat fedora, Project Felt is designed for products within the Red Hat portfolio, providing closer alignment with the [Red Hat Design System (RHDS)](https://ux.redhat.com/). It replaces PatternFly blue with Red Hat Red as an accent color and introduces pill-shaped borders for buttons, controls, and containers, making product UIs feel recognizably Red Hat.
+
+Project Felt is part of a broader, long-term effort to create a more seamless experience for customers across the full Red Hat journey—from marketing sites and the product marketplace to complex enterprise software—developed in collaboration with RHDS.
+
+Because Project Felt is built on our design token system, you can adopt it without breaking changes. To enable it, add `.pf-v6-theme-felt` to your application's `<html>` tag. You can preview it alongside our other theming options on PatternFly.org via the masthead theme switcher.
 
 ### Custom themes 
 
@@ -132,28 +136,26 @@ To ensure your application is robust, maintainable, and adaptable across differe
 
 ## Theming in Figma
 
-Our Figma libraries fully support theming. Designers can create a single design and then swap between our themes using the "Apply Variable Mode" toggles in the "Appearance" section of the component properties panel. This makes it easy to visually test and validate designs across all supported themes.
+Our Figma libraries fully support theming. The standard light Default theme is applied to components by default. You can swap to any supported combination of theme (Default or Project Felt), color scheme (light or dark), and contrast mode (Default, High Contrast, or Glass) using the Appearance menu in Figma.
 
-The standard light PatternFly theme will be applied to components by default. If you want your mockups to use our dark or high contrast themes, you will need to adjust the following settings in Figma. 
-
-**Note:** Our charts use a unique token collection, so you will need to adjust chart variable modes separately from components in order to swap themes. To change the variable mode for charts, follow the same steps outlined for component theme adjustments. 
+**Note:** Our charts use a unique token collection, so you will need to adjust chart variable modes separately from components. To change the variable mode for charts, follow the same steps outlined for component theme adjustments.
 
 ### Swapping themes
 
-To swap between the Default and Project Felt themes, adjust the theme variable mode. The Project Felt mode will automatically apply the red accents, pill shapes, and glass treatment.
-
-### Swapping color schemes
-
-To swap your components to our standard dark mode, change the Semantic Color Tokens variable mode to be "Dark":
+Project Felt's tokens are defined within our [Styles & Components Library](https://www.figma.com/design/VMEX8Xg2nzhBX8rfBx53jp/PatternFly-6--Styles---Components) as an “extended variable collection.” When choosing appearance modes for your Figma designs, you can select between our Default PatternFly theme and the new Project Felt theme via the extended collections dropdown within the Appearance menu. You will need to set “Felt” or “Default” on both the color and dimensions collections.
 
 <div class="ws-docs-content-img">
-![Figma settings menu to select different token variables.](./img/figma-dark-mode.svg)
+![Figma settings menu to select Project Felt library.](./img/project-felt.png)
 </div>
 
-### Swapping contrast modes
+### Swapping color schemes and contrast modes
 
-To swap your components to our high contrast mode, change the Semantic Dimension Tokens variable mode to be "High Contrast" and choose either "Light - High Contrast" or "Dark - High Contrast" for the Semantic Color Tokens variable mode:
+To swap between our different contrast modes (Default, High Contrast, and Glass), select your desired contrast mode in the second toggle within the Appearance menu. Each contrast mode has a light and dark color scheme defined. You must make sure that the corresponding contrast mode is set across the color token, dimension token, and chart token collections.
 
 <div class="ws-docs-content-img">
-![Figma settings menu to select different token variables.](./img/figma-hc-mode.svg)
+![Figma settings menu to select different token variables.](./img/color-and-contrast.png)
 </div>
+
+### Glass style variants
+
+To support glass mode in Figma, we’ve added new “Style” variants across many components. Components that sit directly on top of a background image in glass mode (panel, hero, cards, page, left navigation, and masthead) have a “glass” style variant. Other components that previously had a background by default also now have a “plain” (transparent) style variant, so they can be nested inside a parent component that has glass styles without obscuring the effect.
