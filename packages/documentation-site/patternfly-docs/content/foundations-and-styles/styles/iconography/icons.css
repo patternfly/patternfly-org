@@ -3,3 +3,8 @@
     width: 400px;
   }
 }
+
+/* Inline text — avoids full-width plain Button stretching the cell on narrow viewports */
+#ws-icons-table .ws-icons-react-name-copy {
+  cursor: pointer;
+}
