@@ -81,9 +81,9 @@ High contrast mode is focused on improving accessibility for users who require m
 - Raises non-text element contrast (interactive elements and boundaries) to 4.5:1.
 - Applies global border rules that define clear boundaries in place of shadows and subtle background fills, which can disappear in high contrast environments.
 
-High contrast can be enabled manually by users or triggered automatically by OS- and browser-level accessibility settings such as forced colors mode. System-level preferences take precedence over PatternFly theme settings, so users who have already configured high contrast in their OS or browser will get a consistent experience without conflict.
+High contrast can be enabled manually by users or triggered automatically by OS- and browser-level accessibility settings such as forced colors mode. System-level preferences (like `prefers-reduced-transparency` and `prefers-contrast`) take precedence over PatternFly theme settings, so users who have already configured high contrast in their OS or browser will get a consistent experience without conflict.
 
-**Note:** Activating high contrast mode will override and disable glass mode&mdash;whether triggered manually or via the OS-level `prefers-reduced-transparency` media query.
+**Note:** PatternFly does not automatically prevent glass mode and high contrast mode from being active simultaneously. If both the glass class and the high contrast class are applied, styles will conflict. Product teams are responsible for ensuring these modes are not applied at the same time.
 
 For implementation guidance, refer to the [high contrast handbook](/foundations-and-styles/theming/high-contrast-handbook).
 
@@ -98,10 +98,10 @@ Glass mode introduces transparency, blur, and depth to the UI, creating a layere
 When glass is enabled, the following changes will apply:
 - **Transparency, blur, and shadows:** Surface-level container backgrounds become semi-transparent and apply blur and shadow adjustments, letting content below subtly show through to create a sense of depth and content hierarchy.
 - **Background image:** A brand-approved background image fills the page body, providing the visual layer that glass containers sit above. Product teams must use approved images and ensure text is never placed outside of a container and directly on top of a background image.
-- **Component-level glass:** Glass automatically applies to the login page, masthead, navigation, and page. It can be manually extended to cards, drawers, and panels.
+- **Component-level glass:** Glass automatically applies to the login page, masthead, navigation, and page. It can be manually extended to cards, drawers, hero, and panels.
 - **Layout variations:** A banded masthead (with a solid fill and shadowed border to anchor it above the page) and a floating side navigation (with a solid fill and shadow to visually separate it from glass content) are automatically used in place of their standard counterparts.
 
-Products using glass mode must provide users a clear way to switch to default contrast or high contrast. When high contrast is enabled—manually or via the OS-level `prefers-reduced-transparency` media query&mdash;glass effects are automatically disabled.
+Products using glass mode must provide users a clear way to switch to default contrast or high contrast. PatternFly does not automatically disable glass effects based on user preferences, so product teams are responsible for ensuring glass is not active when users have enabled high contrast (whether manually or via OS-level media queries such as `prefers-reduced-transparency` or `prefers-contrast`).
 
 For more details, including implementation guidance, refer to the [glass mode handbook](/foundations-and-styles/theming/glass-mode-handbook).
 
@@ -132,7 +132,7 @@ To ensure your application is robust, maintainable, and adaptable across differe
 - **Prioritize semantic tokens:** Always use the most relevant semantic token for your use case to ensure the element's purpose is clear and that it receives the correct styling in any theme. If no semantic token exists, you can fall back to a base token. 
 - **Never use a palette token**: Do not use palette tokens (like `--pf-t--color--blue--20`) directly in your code, as the value is not guaranteed to be consistent across themes.
 - **Use scalable icons:** For icons, use vector images (SVG) or icon fonts instead of raster or bitmap images (PNG, JPEG, GIF, BMP, and so on). This allows you to control their color with CSS `fill` and `color` properties. By assigning a design token to these properties, your icons will automatically change color to match the active theme.
-    - If you must use static images, you might need to hide and show different image files based presence of a theme-specific class (like `pf-v6-theme-dark`).
+    - If you must use static images, you might need to hide and show different image files based presence of a theme-specific class (like `.pf-v6-theme-dark`).
 
 ## Theming in Figma
 
