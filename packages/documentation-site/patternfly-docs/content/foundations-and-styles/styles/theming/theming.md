@@ -57,7 +57,7 @@ Light mode places dark text on light backgrounds, while maintaining a [text cont
 
 ### Dark mode
 
-Dark mode adapts color palettes for light-sensitive users or low-light environments. It presents light text on dark backgrounds backgrounds while maintaining the same accessibility ratios as light mode. Some users might prefer dark mode for aesthetics, while others find it to be easier on the eyes and less straining for those with light sensitivities. 
+Dark mode adapts color palettes for light-sensitive users or low-light environments. It presents light text on dark backgrounds while maintaining the same accessibility ratios as light mode. Some users might prefer dark mode for aesthetics, while others find it to be easier on the eyes and less straining for those with light sensitivities. 
 
 For implementation guidance, refer to the [dark theme handbook](/foundations-and-styles/theming/dark-theme-handbook).
 
