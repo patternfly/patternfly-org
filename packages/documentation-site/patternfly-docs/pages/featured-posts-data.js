@@ -27,7 +27,7 @@ export const featuredPostsData = {
       "https://miro.medium.com/v2/resize:fit:600/format:webp/1*nRzzKkHAXqqHfRQx6jUiXQ.png",
   },
   post4: {
-    title: "Motion with purpose",
+    title: "A dual mandate for design system maturity",
     author: "Jan Wright",
     length: "7 min read",
     URL: "https://medium.com/patternfly/a-dual-mandate-for-design-system-maturity-53f2b744df1d",
