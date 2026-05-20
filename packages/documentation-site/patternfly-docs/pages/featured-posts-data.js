@@ -1,38 +1,38 @@
 export const featuredPostsData = {
   post1: {
-    title: "Welcome to PatternFly 6",
-    author: "Erin Donehoo",
-    length: "5 min read",
-    URL: "https://medium.com/patternfly/welcome-to-patternfly-6-5c372f2fd5de",
+    title: "PatternFly and the Model Context Protocol",
+    author: "CD Cabrera",
+    length: "4 min read",
+    URL: "https://medium.com/patternfly/patternfly-and-the-model-context-protocol-c842b13cfeb6",
     // Use resize:fit:600 in URL
     imageURL:
-      "https://miro.medium.com/v2/resize:fit:600/format:webp/1*FOVVqeJPmsoM6uJqsZHXZA.png",
+      "https://miro.medium.com/v2/resize:fit:600/format:webp/1*FkOQFFvx_ZWjbJAIsxSoAQ.png",
   },
   post2: {
-    title: "Open source is a two-way street",
-    author: "Eric Olkowski and Divyanshu Gupta",
-    length: "5 min read",
-    URL: "https://medium.com/patternfly/open-source-is-a-two-way-street-71c31f6c8384",
+    title: "A new path for PatternFly.org",
+    author: "Erin Donehoo",
+    length: "7 min read",
+    URL: "https://medium.com/patternfly/a-new-path-for-patternfly-org-b3536f514f2f",
     // Use resize:fit:600 in URL
     imageURL:
-      "https://miro.medium.com/v2/resize:fit:600/format:webp/1*iyxUnqaepI63DxmM7U56cg.png",
+      "https://miro.medium.com/v2/resize:fit:600/format:webp/1*L3CtrJqE9TyypMVqYQR_3g.png",
   },
   post3: {
-    title: "Vibe coding and beyond",
-    author: "Nicole Thoen",
+    title: "PatternFly's AI marketplace",
+    author: "Jeff Puzzo",
     length: "7 min read",
-    URL: "https://medium.com/patternfly/vibe-coding-and-beyond-b4bc80b7a74f",
+    URL: "https://medium.com/patternfly/patternflys-ai-marketplace-7b78aa5ead64",
     // Use resize:fit:600 in URL
     imageURL:
-      "https://miro.medium.com/v2/resize:fit:600/format:webp/1*oHJSZu-i_5qI5MX4d11vjw.png",
+      "https://miro.medium.com/v2/resize:fit:600/format:webp/1*nRzzKkHAXqqHfRQx6jUiXQ.png",
   },
   post4: {
-    title: "Motion with purpose",
-    author: "Erin Donehoo",
-    length: "6 min read",
-    URL: "https://medium.com/patternfly/motion-with-purpose-7ac3bd08efba",
+    title: "A dual mandate for design system maturity",
+    author: "Jan Wright",
+    length: "7 min read",
+    URL: "https://medium.com/patternfly/a-dual-mandate-for-design-system-maturity-53f2b744df1d",
     // Use resize:fit:600 in URL
     imageURL:
-      "https://miro.medium.com/v2/resize:fit:600/format:webp/0*f2KRU4Bw2ZmoOSOy",
+      "https://miro.medium.com/v2/resize:fit:600/format:webp/1*9SuH9VuSjyrLwTjl4swxZg.png",
   },
 };
