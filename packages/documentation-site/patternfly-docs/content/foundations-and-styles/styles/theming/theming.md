@@ -153,7 +153,7 @@ Project Felt's tokens are defined within our [Styles & Components Library](https
 To swap between our different contrast modes (Default, High Contrast, and Glass), select your desired contrast mode in the second toggle within the Appearance menu. Each contrast mode has a light and dark color scheme defined. You must make sure that the corresponding contrast mode is set across the color token, dimension token, and chart token collections.
 
 <div class="ws-docs-content-img">
-![Figma settings menu to select different token variables.](./img/color-and-contrast.png)
+![Figma settings menu to select different token variables.](./img/contrast-and-color.png)
 </div>
 
 ### Glass style variants
