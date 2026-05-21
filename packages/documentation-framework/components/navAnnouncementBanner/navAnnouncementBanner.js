@@ -15,7 +15,6 @@ export const NavAnnouncementBanner = () => {
     <div className="ws-nav-announcement-banner-container">
       <Alert
         variant="info"
-        isInline
         actionClose={<AlertActionCloseButton onClose={closeBanner} />}
         className="ws-nav-announcement-banner"
         title="Website update"
