@@ -5000,9 +5000,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@patternfly/chatbot@npm:6.6.0-prerelease.6":
-  version: 6.6.0-prerelease.6
-  resolution: "@patternfly/chatbot@npm:6.6.0-prerelease.6"
+"@patternfly/chatbot@npm:6.6.0-prerelease.8":
+  version: 6.6.0-prerelease.8
+  resolution: "@patternfly/chatbot@npm:6.6.0-prerelease.8"
   dependencies:
     "@patternfly/react-code-editor": "npm:^6.1.0"
     "@patternfly/react-core": "npm:^6.1.0"
@@ -5030,7 +5030,7 @@ __metadata:
       optional: false
     monaco-editor:
       optional: false
-  checksum: 10c0/6a60b7a48134e0dc3188835196b68f983383378c3d6a96f7276a14083633d70307a0dc45c543c1df05d5e20f6d09323b341bda12218bb7fb28b452a883b7d6c7
+  checksum: 10c0/3259a14c76a360021f28d56e326b156bc037eb6e3f45781f9c3f051515162f924863327f5f6095c01c511ec4927379af8306fcce2b72dc769c7f3baca1e5edde
   languageName: node
   linkType: hard
 
@@ -18625,7 +18625,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "patternfly-org@workspace:packages/documentation-site"
   dependencies:
-    "@patternfly/chatbot": "npm:6.6.0-prerelease.6"
+    "@patternfly/chatbot": "npm:6.6.0-prerelease.8"
     "@patternfly/design-tokens": "npm:1.16.2"
     "@patternfly/documentation-framework": "workspace:*"
     "@patternfly/patternfly-a11y": "npm:5.2.1"
