@@ -5,7 +5,7 @@
       "date": "2026-05-19",
       "latest": true,
       "versions": {
-        "@patternfly/chatbot": "6.6.0-prerelease.6",
+        "@patternfly/chatbot": "6.6.0-prerelease.8",
         "@patternfly/patternfly": "6.5.0-prerelease.93",
         "@patternfly/quickstarts": "6.5.0-prerelease.4",
         "@patternfly/react-catalog-view-extension": "6.4.0-prerelease.1",
@@ -32,7 +32,7 @@
       "date": "2026-05-14",
       "hidden": true,
       "versions": {
-        "@patternfly/chatbot": "6.6.0-prerelease.6",
+        "@patternfly/chatbot": "6.6.0-prerelease.8",
         "@patternfly/patternfly": "6.5.0-prerelease.92",
         "@patternfly/quickstarts": "6.5.0-prerelease.4",
         "@patternfly/react-catalog-view-extension": "6.4.0-prerelease.1",
@@ -59,7 +59,7 @@
       "date": "2026-05-14",
       "hidden": true,
       "versions": {
-        "@patternfly/chatbot": "6.6.0-prerelease.6",
+        "@patternfly/chatbot": "6.6.0-prerelease.8",
         "@patternfly/patternfly": "6.5.0-prerelease.91",
         "@patternfly/quickstarts": "6.5.0-prerelease.4",
         "@patternfly/react-catalog-view-extension": "6.4.0-prerelease.1",
@@ -86,7 +86,7 @@
       "date": "2026-05-11",
       "hidden": true,
       "versions": {
-        "@patternfly/chatbot": "6.6.0-prerelease.6",
+        "@patternfly/chatbot": "6.6.0-prerelease.8",
         "@patternfly/patternfly": "6.5.0-prerelease.86",
         "@patternfly/quickstarts": "6.5.0-prerelease.4",
         "@patternfly/react-catalog-view-extension": "6.3.0-prerelease.3",
@@ -113,7 +113,7 @@
       "date": "2026-05-08",
       "hidden": true,
       "versions": {
-        "@patternfly/chatbot": "6.6.0-prerelease.6",
+        "@patternfly/chatbot": "6.6.0-prerelease.8",
         "@patternfly/patternfly": "6.5.0-prerelease.85",
         "@patternfly/quickstarts": "6.5.0-prerelease.4",
         "@patternfly/react-catalog-view-extension": "6.3.0-prerelease.3",
@@ -140,7 +140,7 @@
       "date": "2026-04-06",
       "hidden": true,
       "versions": {
-        "@patternfly/chatbot": "6.6.0-prerelease.6",
+        "@patternfly/chatbot": "6.6.0-prerelease.8",
         "@patternfly/patternfly": "6.5.0-prerelease.64",
         "@patternfly/quickstarts": "6.5.0-prerelease.4",
         "@patternfly/react-catalog-view-extension": "6.3.0-prerelease.3",
