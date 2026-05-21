@@ -191,6 +191,8 @@ Status and state colors are indicators that communicate data and actions to user
 
 To check the contrast between background and text colors, use a <a href="https://color.a11y.com/?wc3" target="_blank" className="pf-m-link">WCAG AA-compliance tool.</a>
 
+Beyond our standard contrast ratio, we support a high contrast and a glass contrast mode, as documented in our [theming guidelines](/foundations-and-styles/theming#contrast-modes).
+
 ## Color families 
 Our color palettes are organized into "families" that contain different shades of the same hue. In the following families, you can expand each color to see related tokens.
 
