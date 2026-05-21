@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 6.43.6 (2026-05-21)
+
+
+### Bug Fixes
+
+* remove isInline from NavAnnouncementBanner ([357c14b](https://github.com/patternfly/patternfly-org/commit/357c14b6a365c49448c8611d3b4a764c9f8f931d))
+
+
+
+
+
 ## 6.43.5 (2026-05-21)
 
 **Note:** Version bump only for package @patternfly/documentation-framework
