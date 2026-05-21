@@ -49,7 +49,7 @@ This release significantly expands our theming options with style updates, high 
 
 #### Project Felt theme
 
-We're excited to offer PatternFly's first major theme variant: the [Project Felt](/foundations-and-styles/theming#project-felt-theme) theme. It targets more familiar Red-Hat experiences through red accent colors and pill-shaped radii. Best of all&mdash;Project Felt is built entirely with our design token system, meaning no breaking change is required to add it to your product.
+We're excited to offer PatternFly's first major theme variant: the [Project Felt](/foundations-and-styles/theming#project-felt-theme) theme. It targets more familiar Red Hat experiences through red accent colors and pill-shaped radii. Best of all&mdash;Project Felt is built entirely with our design token system, meaning no breaking change is required to add it to your product.
 
 #### Glass mode
 
