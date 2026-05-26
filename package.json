@@ -39,10 +39,10 @@
   },
   "devDependencies": {
     "@octokit/rest": "^19.0.13",
-    "@patternfly/patternfly": "^6.5.0-prerelease.93",
-    "@patternfly/react-code-editor": "^6.5.0-prerelease.82",
-    "@patternfly/react-core": "^6.5.0-prerelease.79",
-    "@patternfly/react-table": "^6.5.0-prerelease.83",
+    "@patternfly/patternfly": "^6.5.2",
+    "@patternfly/react-code-editor": "^6.5.1",
+    "@patternfly/react-core": "^6.5.1",
+    "@patternfly/react-table": "^6.5.1",
     "glob": "^8.1.0",
     "lerna": "^9.0.5",
     "monaco-editor": "0.54.0",
@@ -74,9 +74,9 @@
     "ajv": ">=6.14.0",
     "qs": ">=6.15.0",
     "@isaacs/brace-expansion": ">=5.0.1",
-    "@patternfly/react-code-editor": "^6.5.0-prerelease.82",
-    "@patternfly/react-core": "^6.5.0-prerelease.79",
-    "@patternfly/react-table": "^6.5.0-prerelease.83",
+    "@patternfly/react-code-editor": "^6.5.1",
+    "@patternfly/react-core": "^6.5.1",
+    "@patternfly/react-table": "^6.5.1",
     "monaco-editor": "0.54.0"
   }
 }
