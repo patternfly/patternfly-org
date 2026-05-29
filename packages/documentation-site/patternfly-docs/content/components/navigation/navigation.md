@@ -29,6 +29,7 @@ There are 2 main navigation variations, each with sub-variations.
     * [Expandable 3-level navigation](#expandable-3-level-navigation)
     * [Flyout navigation](#flyout-navigation)
     * [Drilldown navigation](#drilldown-navigation)
+    * [Docked navigation](#docked-navigation)
 1. [Horizontal navigation](#horizontal-navigation)
     * [Secondary horizontal navigation](#secondary-horizontal-navigation)
 
@@ -96,6 +97,18 @@ Drilldown menus replace the current navigation menu with the next set of child i
 </div>
 
 Using drilldown navigation, only the navigation items for the current page and its siblings will be visible at any given time. This pattern is very mobile-friendly as it minimizes the need for scrolling to see the entire menu. However, it should be avoided if you expect users to frequently move between levels.
+
+#### Docked navigation
+
+Docked navigation saves space by replacing text-labeled navigation items with icons when collapsed. On mobile or narrow viewports, docked navigation appears as an overlay that users can open and close. On desktop or wider viewports, it displays as a persistent vertical sidebar that can toggle between icon-only and expanded modes showing both icons and text labels.
+
+<div class="ws-docs-content-img">
+![Example of docked navigation, closed and then expanded with full text labels.](./img/docked-nav.svg)
+</div>
+
+Use docked navigation when you need to maximize screen space for page content while keeping global navigation accessible.
+
+Each navigation item must include both an icon and a text label. When only icons are visible, tooltips should provide the full text labels for navigation items and related action controls.
 
 ### Combining vertical navigation patterns
 
