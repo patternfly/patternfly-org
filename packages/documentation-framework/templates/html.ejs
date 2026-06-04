@@ -46,6 +46,24 @@
       media="print"
       onload="this.media='all'; this.onload=null;"
     >
+    <script>
+      var ALGOLIA_INSIGHTS_SRC = "https://cdn.jsdelivr.net/npm/search-insights@2/dist/search-insights.min.js";
+      !function(e,a,t,n,s,i,c){e.AlgoliaAnalyticsObject=s;e[s]=e[s]||function(){
+      (e[s].queue=e[s].queue||[]).push(arguments)};i=a.createElement(t);c=a.getElementsByTagName(t)[0];
+      i.async=1;i.src=n;c.parentNode.insertBefore(i,c)}(window,document,"script",ALGOLIA_INSIGHTS_SRC,"aa");
+    </script>
+    <script>
+      if(!(parseInt(navigator.doNotTrack) === 1 || parseInt(window.doNotTrack) === 1 || parseInt(navigator.msDoNotTrack) === 1 || navigator.doNotTrack === "yes")) {
+        aa('init', {
+          appId: '<%= algolia.appId %>',
+          apiKey: '<%= algolia.apiKey %>',
+          useCookie: true,
+          useSendBeacon: true
+        });
+      } else {
+        window.__algoliaInsightsDisabled = true;
+      }
+    </script>
     <% } %>
     <% if (googleAnalyticsID) { %>
       <!-- Global site tag (gtag.js) - Google Analytics -->
