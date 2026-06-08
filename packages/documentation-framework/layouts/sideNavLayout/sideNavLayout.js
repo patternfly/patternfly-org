@@ -192,6 +192,33 @@ const HeaderTools = ({
 };
 
 // https://github.com/algolia/autocomplete.js#global-options
+const hitDataByUrl = {};
+let lastAlgoliaQueryID = null;
+
+// DocSearch v2 discards queryID from Algolia responses, so intercept XHR to capture it
+if (typeof XMLHttpRequest !== 'undefined') {
+  const origOpen = XMLHttpRequest.prototype.open;
+  XMLHttpRequest.prototype.open = function(method, url) {
+    this._algoliaUrl = typeof url === 'string' && url.includes('.algolia.') ? url : null;
+    return origOpen.apply(this, arguments);
+  };
+  const origSend = XMLHttpRequest.prototype.send;
+  XMLHttpRequest.prototype.send = function(body) {
+    if (this._algoliaUrl) {
+      this.addEventListener('load', function() {
+        try {
+          const data = JSON.parse(this.responseText);
+          const result = data.results ? data.results[0] : data;
+          if (result && result.queryID) {
+            lastAlgoliaQueryID = result.queryID;
+          }
+        } catch (e) {}
+      });
+    }
+    return origSend.apply(this, arguments);
+  };
+}
+
 export function attachDocSearch(algolia, inputSelector, timeout) {
   if (window.docsearch) {
     return window.docsearch({
@@ -199,6 +226,40 @@ export function attachDocSearch(algolia, inputSelector, timeout) {
       autocompleteOptions: {
         hint: false,
         appendTo: `.ws-global-search .pf-v6-c-text-input-group`
+      },
+      algoliaOptions: {
+        clickAnalytics: true
+      },
+      transformData: function(hits) {
+        Object.keys(hitDataByUrl).forEach(k => delete hitDataByUrl[k]);
+        hits.forEach((hit, index) => {
+          if (hit.url && hit.objectID) {
+            hitDataByUrl[hit.url] = {
+              objectID: hit.objectID,
+              position: index + 1
+            };
+          }
+        });
+        return hits;
+      },
+      handleSelected: function(input, event, suggestion, datasetNumber, context) {
+        const hitData = hitDataByUrl[suggestion.url];
+        if (!window.__algoliaInsightsDisabled && window.aa && hitData && lastAlgoliaQueryID) {
+          window.aa('clickedObjectIDsAfterSearch', {
+            eventName: 'Search Result Clicked',
+            index: algolia.indexName,
+            queryID: lastAlgoliaQueryID,
+            objectIDs: [hitData.objectID],
+            positions: [hitData.position]
+          });
+        }
+        if (event && (event.metaKey || event.ctrlKey)) {
+          window.open(suggestion.url, '_blank');
+        } else if (event && event.shiftKey) {
+          window.open(suggestion.url);
+        } else {
+          window.location.href = suggestion.url;
+        }
       },
       debug: process.env.NODE_ENV !== 'production',
       ...algolia
