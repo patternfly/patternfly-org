@@ -108,7 +108,7 @@ Docked navigation saves space by replacing text-labeled navigation items with ic
 
 Use docked navigation when you need to maximize screen space for page content while keeping global navigation accessible.
 
-Each navigation item must include both an icon and a text label. When only icons are visible, tooltips should provide the full text labels for navigation items and related action controls.
+Each navigation item must include both an icon and a text label. To maintain accessibility when only icons are visible, you must also add tooltips that display the full text label for a navigation item or a label for the action an item controls.
 
 ### Combining vertical navigation patterns
 
