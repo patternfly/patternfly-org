@@ -1,6 +1,7 @@
 ---
 id: PatternFly MCP
 section: AI
+subsection: AI-assisted development
 --- 
 import '../components/components.css';
 

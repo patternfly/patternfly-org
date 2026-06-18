@@ -1,0 +1,154 @@
+/* Styles for @project-felt/ai-guidelines content */
+
+/* Figure base styles */
+[data-content-source="ai-guidelines"] figure[data-type] {
+  margin: var(--pf-t--global--spacer--lg) 0;
+  padding: var(--pf-t--global--spacer--md);
+  border: 1px solid var(--pf-t--global--border--color--default);
+  border-radius: var(--pf-t--global--border--radius--small);
+  text-align: center;
+  max-width: 700px;
+  margin-inline: auto;
+  width: 100%;
+}
+
+[data-content-source="ai-guidelines"] figure[data-type="example landscape"] {
+  max-width: 100%;
+}
+
+[data-content-source="ai-guidelines"] figure[data-type] img {
+  max-width: 100%;
+  height: auto;
+}
+
+[data-content-source="ai-guidelines"] figure[data-type] figcaption {
+  margin-top: var(--pf-t--global--spacer--sm);
+  font-size: var(--pf-t--global--font--size--sm);
+  color: var(--pf-t--global--text--color--subtle);
+  text-align: left;
+}
+
+/* Inline icons in lists and paragraphs */
+[data-content-source="ai-guidelines"] li img,
+[data-content-source="ai-guidelines"] p img {
+  height: 1em;
+  width: auto;
+  max-width: none;
+  vertical-align: middle;
+}
+
+/* Do examples — green accent */
+[data-content-source="ai-guidelines"] figure[data-type="do"] {
+  border-color: var(--pf-t--global--color--status--success--default);
+  border-left-width: 4px;
+}
+
+[data-content-source="ai-guidelines"] figure[data-type="do"]::before {
+  content: "Do";
+  display: block;
+  text-align: left;
+  font-weight: var(--pf-t--global--font--weight--body--bold);
+  color: var(--pf-t--global--color--status--success--default);
+  margin-bottom: var(--pf-t--global--spacer--sm);
+}
+
+/* Don't examples — red accent */
+[data-content-source="ai-guidelines"] figure[data-type="dont"] {
+  border-color: var(--pf-t--global--color--status--danger--default);
+  border-left-width: 4px;
+}
+
+[data-content-source="ai-guidelines"] figure[data-type="dont"]::before {
+  content: "Don't";
+  display: block;
+  text-align: left;
+  font-weight: var(--pf-t--global--font--weight--body--bold);
+  color: var(--pf-t--global--color--status--danger--default);
+  margin-bottom: var(--pf-t--global--spacer--sm);
+}
+
+/* Figure groups */
+[data-content-source="ai-guidelines"] ul[data-type] {
+  list-style: none;
+  padding: 0;
+  margin: var(--pf-t--global--spacer--lg) 0;
+  display: grid;
+  gap: var(--pf-t--global--spacer--md);
+}
+
+[data-content-source="ai-guidelines"] ul[data-type="dos-donts"] {
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+[data-content-source="ai-guidelines"] ul[data-type="examples"] {
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+[data-content-source="ai-guidelines"] ul[data-type] > li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+[data-content-source="ai-guidelines"] ul[data-type] > li > figure[data-type] {
+  margin: 0;
+  height: 100%;
+}
+
+/* GitHub-style admonitions */
+[data-content-source="ai-guidelines"] .ws-admonition {
+  border-left-width: 4px;
+  padding: var(--pf-t--global--spacer--md);
+  margin: var(--pf-t--global--spacer--md) 0;
+}
+
+[data-content-source="ai-guidelines"] .ws-admonition::before {
+  display: block;
+  font-weight: var(--pf-t--global--font--weight--body--bold);
+  margin-bottom: var(--pf-t--global--spacer--xs);
+}
+
+[data-content-source="ai-guidelines"] .ws-admonition-note {
+  border-left-color: var(--pf-t--global--color--status--info--default);
+}
+
+[data-content-source="ai-guidelines"] .ws-admonition-note::before {
+  content: "Note";
+  color: var(--pf-t--global--color--status--info--default);
+}
+
+[data-content-source="ai-guidelines"] .ws-admonition-tip {
+  border-left-color: var(--pf-t--global--color--status--success--default);
+}
+
+[data-content-source="ai-guidelines"] .ws-admonition-tip::before {
+  content: "Tip";
+  color: var(--pf-t--global--color--status--success--default);
+}
+
+[data-content-source="ai-guidelines"] .ws-admonition-warning {
+  border-left-color: var(--pf-t--global--color--status--warning--default);
+}
+
+[data-content-source="ai-guidelines"] .ws-admonition-warning::before {
+  content: "Warning";
+  color: var(--pf-t--global--color--status--warning--default);
+}
+
+[data-content-source="ai-guidelines"] .ws-admonition-important {
+  border-left-color: var(--pf-t--global--color--status--danger--default);
+}
+
+[data-content-source="ai-guidelines"] .ws-admonition-important::before {
+  content: "Important";
+  color: var(--pf-t--global--color--status--danger--default);
+}
+
+[data-content-source="ai-guidelines"] .ws-admonition-caution {
+  border-left-color: var(--pf-t--global--color--status--warning--default);
+}
+
+[data-content-source="ai-guidelines"] .ws-admonition-caution::before {
+  content: "Caution";
+  color: var(--pf-t--global--color--status--warning--default);
+}

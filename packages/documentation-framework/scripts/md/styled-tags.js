@@ -22,11 +22,33 @@ const styledMdTags = [
 
 function styledTags() {
   return tree => {
-    visit(tree, 'element', node => {
+    visit(tree, 'element', (node, index, parent) => {
       node.properties.className = node.properties.className || '';
-      
-      if (contentStyledMdTags.includes(node.tagName)) {
+
+      const hasDataType = node.properties && (node.properties.dataType || node.properties['data-type']);
+      const parentHasDataType = parent && parent.properties && (parent.properties.dataType || parent.properties['data-type']);
+      if (contentStyledMdTags.includes(node.tagName) && !hasDataType && !parentHasDataType) {
         node.properties.className += `pf-v6-c-content--${node.tagName} pf-m-editorial`;
+      }
+
+      // GitHub-style admonitions: > [!NOTE], > [!TIP], > [!WARNING], etc.
+      if (node.tagName === 'blockquote') {
+        const firstP = node.children && node.children.find(c => c.tagName === 'p');
+        if (firstP && firstP.children) {
+          const firstText = firstP.children.find(c => c.type === 'text');
+          if (firstText) {
+            const match = firstText.value.match(/^\[!(NOTE|TIP|WARNING|IMPORTANT|CAUTION)\]\s*/i);
+            if (match) {
+              const type = match[1].toLowerCase();
+              node.properties['data-admonition'] = type;
+              node.properties.className += ` ws-admonition ws-admonition-${type}`;
+              firstText.value = firstText.value.slice(match[0].length);
+              if (!firstText.value.trim() && firstP.children.length === 1) {
+                node.children = node.children.filter(c => c !== firstP);
+              }
+            }
+          }
+        }
       }
 
       if (styledMdTags.includes(node.tagName)) {

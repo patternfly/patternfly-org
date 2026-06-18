@@ -26,9 +26,12 @@ module.exports = (sourceMD, sourceProps, sourceFunctionDocs) => {
     const aiGuidelinesPath = require
       .resolve('@project-felt/ai-guidelines/package.json')
       .replace('package.json', 'content');
-    sourceMD(path.join(aiGuidelinesPath, '*.md'), 'AI', undefined, {
-      frontmatterMapping: { title: 'id' },
+    const guidelinesPageOptions = {
+      frontmatterMapping: { title: 'id', order: 'sortValue' },
       frontmatterDefaults: { section: 'AI', subsection: 'Guidelines' }
+    };
+    ['transparency-notices', 'iconography', 'color', 'chatbot-avatars', 'animation'].forEach(name => {
+      sourceMD(path.join(aiGuidelinesPath, `${name}.md`), 'ai-guidelines', undefined, guidelinesPageOptions);
     });
 
     sourceMD(path.join(contentBase, 'get-help/**/*.md'), 'get-help');

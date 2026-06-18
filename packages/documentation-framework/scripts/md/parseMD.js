@@ -29,6 +29,11 @@ function toReactComponent(mdFilePath, source, buildMode, { frontmatterDefaults, 
   // vfiles allow for nicer error messages and have native `unified` support
   const vfile = toVfile.readSync(mdFilePath);
 
+  // Normalize void HTML elements to self-closing for MDX compatibility
+  const voidElements = 'area|base|br|col|embed|hr|img|input|link|meta|param|source|track|wbr';
+  const voidTagRegex = new RegExp(`<(${voidElements})(\\s[^>]*?)\\s*(?<!/)>`, 'g');
+  vfile.contents = String(vfile.contents).replace(voidTagRegex, '<$1$2 />');
+
   const relPath = path.relative(path.join(process.cwd(), '../..'), vfile.path).split(path.sep).join(path.posix.sep);
 
   let jsx;
