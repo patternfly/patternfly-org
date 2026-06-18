@@ -4,19 +4,17 @@ section: patterns
 ---
 import { Button, Icon, Content, ContentVariants } from '@patternfly/react-core';
 import './status-and-severity.css';
-import SeverityCriticalIcon from '@patternfly/react-icons/dist/esm/icons/severity-critical-icon';
-import SeverityImportantIcon from '@patternfly/react-icons/dist/esm/icons/severity-important-icon';
-import SeverityMinorIcon from '@patternfly/react-icons/dist/esm/icons/severity-minor-icon';
-import SeverityModerateIcon from '@patternfly/react-icons/dist/esm/icons/severity-moderate-icon';
-import SeverityNoneIcon from '@patternfly/react-icons/dist/esm/icons/severity-none-icon';
-import SeverityUndefinedIcon from '@patternfly/react-icons/dist/esm/icons/severity-undefined-icon';
-import CheckCircleIcon from '@patternfly/react-icons/dist/esm/icons/check-circle-icon';
-import ExclamationCircleIcon from '@patternfly/react-icons/dist/esm/icons/exclamation-circle-icon';
-import ExclamationTriangleIcon from '@patternfly/react-icons/dist/esm/icons/exclamation-triangle-icon';
-import InfoCircleIcon from '@patternfly/react-icons/dist/esm/icons/info-circle-icon';
-import BellIcon from '@patternfly/react-icons/dist/esm/icons/bell-icon';
-import StarIcon from '@patternfly/react-icons/dist/esm/icons/star-icon';
-import ArrowRightIcon from '@patternfly/react-icons/dist/esm/icons/arrow-right-icon';
+import RhUiSeverityCriticalFillIcon from '@patternfly/react-icons/dist/esm/icons/rh-ui-severity-critical-fill-icon';
+import RhUiSeverityImportantFillIcon from '@patternfly/react-icons/dist/esm/icons/rh-ui-severity-important-fill-icon';
+import RhUiSeverityMinorFillIcon from '@patternfly/react-icons/dist/esm/icons/rh-ui-severity-minor-fill-icon';
+import RhUiSeverityModerateFillIcon from '@patternfly/react-icons/dist/esm/icons/rh-ui-severity-moderate-fill-icon';
+import RhUiSeverityNoneFillIcon from '@patternfly/react-icons/dist/esm/icons/rh-ui-severity-none-fill-icon';
+import RhUiSeverityUndefinedFillIcon from '@patternfly/react-icons/dist/esm/icons/rh-ui-severity-undefined-fill-icon';
+import RhUiCheckCircleFillIcon from '@patternfly/react-icons/dist/esm/icons/rh-ui-check-circle-fill-icon';
+import RhUiErrorFillIcon from '@patternfly/react-icons/dist/esm/icons/rh-ui-error-fill-icon';
+import RhUiWarningFillIcon from '@patternfly/react-icons/dist/esm/icons/rh-ui-warning-fill-icon';
+import RhUiInformationFillIcon from '@patternfly/react-icons/dist/esm/icons/rh-ui-information-fill-icon';
+import RhUiNotificationFillIcon from '@patternfly/react-icons/dist/esm/icons/rh-ui-notification-fill-icon';
 
 # Communicating status versus severity 
 
@@ -44,11 +42,11 @@ The following table outlines the proper combination of status type, icon, and co
 
 | **Status** | **Icon** | **Color token** | **Usage** |
 | --- | --- | :---: | --- |
-| Danger | <Icon status="danger" size="xl"> <ExclamationCircleIcon /> </Icon> |`--pf-t--global--icon--color--status--danger--default` | Use when a major error or blocking error has occurred. |
-| Warning | <Icon status="warning" size="xl"><ExclamationTriangleIcon /></Icon> | `--pf-t--global--icon--color--status--warning--default` | Use when a non-critical error has occurred.  |
-| Success | <Icon status="success" size="xl"><CheckCircleIcon /></Icon> | `--pf-t--global--icon--color--status--success--default` | Use when a task or process has completed without error.|
-| Info | <Icon status="info" size="xl"><InfoCircleIcon /></Icon> | `--pf-t--global--icon--color--status--info--default` | Use for  general, informational messages. |
-| Custom |  <Icon status="custom" size="xl"><BellIcon /></Icon> |`--pf-t--global--icon--color--status--custom--default` | Use for generic messages, with no associated severity. Allows you to use custom colors.|
+| Danger | <Icon status="danger" size="xl"> <RhUiErrorFillIcon /> </Icon> |`--pf-t--global--icon--color--status--danger--default` | Use when a major error or blocking error has occurred. |
+| Warning | <Icon status="warning" size="xl"><RhUiWarningFillIcon /></Icon> | `--pf-t--global--icon--color--status--warning--default` | Use when a non-critical error has occurred.  |
+| Success | <Icon status="success" size="xl"><RhUiCheckCircleFillIcon /></Icon> | `--pf-t--global--icon--color--status--success--default` | Use when a task or process has completed without error.|
+| Info | <Icon status="info" size="xl"><RhUiInformationFillIcon /></Icon> | `--pf-t--global--icon--color--status--info--default` | Use for  general, informational messages. |
+| Custom |  <Icon status="custom" size="xl"><RhUiNotificationFillIcon /></Icon> |`--pf-t--global--icon--color--status--custom--default` | Use for generic messages, with no associated severity. Allows you to use custom colors.|
 
 ### Usage 
 
@@ -65,14 +63,14 @@ When there is an issue or incident related to a source of data, it is important 
 
 These icons utilize color and visual weight to reflect the sense of severity that the icon is communicating. As the icons progress from less severe to more severe, the visual weight shifts and the color becomes more attention-grabbing.
 
-| **Severity level** |  <p align="center">**Icon**</p> | **Color token** | **Usage** |
-| --- | :---: | --- | --- |
-| Critical | <p align="center"><Icon iconSize="lg" className="critical"><SeverityCriticalIcon /></Icon></p> | `--pf-t--global--icon--color--severity--critical--default`| Reserve for the highest severity issues. |
-| Important | <p align="center"><Icon iconSize="lg" className="important"><SeverityImportantIcon /></Icon></p>  | `--pf-t--global--icon--color--severity--important--default` | Use for high-threat issues. |
-| Moderate | <p align="center"><Icon iconSize="lg" className="moderate"><SeverityModerateIcon /></Icon></p> | `--pf-t--global--icon--color--severity--moderate--default`| Use for moderate-threat issues. |
-| Minor | <p align="center"><Icon iconSize="lg" className="minor"><SeverityMinorIcon /></Icon></p> | `--pf-t--global--icon--color--severity--minor--default`| Use for low-threat issues.  |
-| None | <p align="center"><Icon iconSize="lg" className="none"><SeverityNoneIcon /></Icon></p> | `--pf-t--global--icon--color--severity--none--default` | Use when there is no security threat.  |
-| Undefined | <p align="center"><Icon iconSize="lg"  className="undefined"><SeverityUndefinedIcon /></Icon></p> | `--pf-t--global--icon--color--severity--undefined--default` | Use if a severity level has not been determined yet, but is expected to change and be defined later. |
+| **Severity level** |  <p align="center">**Icon**</p> | **Name** | **React name** | **Color token** | **Usage** |
+| --- | :---: | --- | --- | --- | --- |
+| Critical | <p align="center"><Icon iconSize="lg" className="critical"><RhUiSeverityCriticalFillIcon /></Icon></p> | rh-ui-severity-critical-fill | RhUiSeverityCriticalFillIcon | `--pf-t--global--icon--color--severity--critical--default`| Reserve for the highest severity issues. |
+| Important | <p align="center"><Icon iconSize="lg" className="important"><RhUiSeverityImportantFillIcon /></Icon></p>  | rh-ui-severity-important-fill | RhUiSeverityImportantFillIcon | `--pf-t--global--icon--color--severity--important--default` | Use for high-threat issues. |
+| Moderate | <p align="center"><Icon iconSize="lg" className="moderate"><RhUiSeverityModerateFillIcon /></Icon></p> | rh-ui-severity-moderate-fill | RhUiSeverityModerateFillIcon | `--pf-t--global--icon--color--severity--moderate--default`| Use for moderate-threat issues. |
+| Minor | <p align="center"><Icon iconSize="lg" className="minor"><RhUiSeverityMinorFillIcon /></Icon></p> | rh-ui-severity-minor-fill | RhUiSeverityMinorFillIcon | `--pf-t--global--icon--color--severity--minor--default`| Use for low-threat issues.  |
+| None | <p align="center"><Icon iconSize="lg" className="none"><RhUiSeverityNoneFillIcon /></Icon></p> | rh-ui-severity-none-fill | RhUiSeverityNoneFillIcon | `--pf-t--global--icon--color--severity--none--default` | Use when there is no security threat.  |
+| Undefined | <p align="center"><Icon iconSize="lg"  className="undefined"><RhUiSeverityUndefinedFillIcon /></Icon></p> | rh-ui-severity-undefined-fill | RhUiSeverityUndefinedFillIcon | `--pf-t--global--icon--color--severity--undefined--default` | Use if a severity level has not been determined yet, but is expected to change and be defined later. |
 
 ### Usage
 
@@ -95,10 +93,10 @@ Due to varying use cases, you can use anywhere between 3 to 6 icons to communica
 
 | **Scale** | **Levels** | **Icons** |
 | --- | --- | --- |
-| 6-point scale | Critical, important, moderate, minor, none, undefined | <Icon iconSize="lg" className="critical"><SeverityCriticalIcon /></Icon> &nbsp;&nbsp; <Icon iconSize="lg" className="important"><SeverityImportantIcon /></Icon> &nbsp;&nbsp; <Icon iconSize="lg" className="moderate"><SeverityModerateIcon /></Icon>   &nbsp;&nbsp; <Icon iconSize="lg" className="minor"><SeverityMinorIcon /></Icon> &nbsp;&nbsp; <Icon iconSize="lg" className="none"><SeverityNoneIcon /></Icon> &nbsp;&nbsp; <Icon iconSize="lg" className="undefined"><SeverityUndefinedIcon /></Icon>  | 
-| 5-point scale | Critical, important, moderate, minor, none or undefined (choose 1) | <Icon iconSize="lg" className="critical"><SeverityCriticalIcon /> </Icon> &nbsp;&nbsp; <Icon iconSize="lg" className="important"><SeverityImportantIcon /></Icon> &nbsp;&nbsp; <Icon iconSize="lg" className="moderate"><SeverityModerateIcon /></Icon>   &nbsp;&nbsp; <Icon iconSize="lg" className="minor"><SeverityMinorIcon /></Icon> &nbsp;&nbsp; <Icon iconSize="lg" className="none"><SeverityNoneIcon /></Icon> <br /> or <br /> <Icon iconSize="lg" className="critical"><SeverityCriticalIcon /> </Icon> &nbsp;&nbsp; <Icon iconSize="lg" className="important"><SeverityImportantIcon /></Icon> &nbsp;&nbsp; <Icon iconSize="lg" className="moderate"><SeverityModerateIcon /></Icon>   &nbsp;&nbsp; <Icon iconSize="lg" className="minor"><SeverityMinorIcon /></Icon> &nbsp;&nbsp; <Icon iconSize="lg" className="undefined"><SeverityUndefinedIcon /></Icon>   | 
-| 4-point scale | Critical, important, moderate, minor |<Icon iconSize="lg" className="critical"><SeverityCriticalIcon /> </Icon> &nbsp;&nbsp; <Icon iconSize="lg" className="important"><SeverityImportantIcon /></Icon> &nbsp;&nbsp; <Icon iconSize="lg" className="moderate"><SeverityModerateIcon /></Icon>   &nbsp;&nbsp; <Icon iconSize="lg" className="minor"><SeverityMinorIcon /></Icon>  | 
-| 3-point scale | Critical, moderate, minor | <Icon iconSize="lg" className="critical"><SeverityCriticalIcon /> </Icon> &nbsp;&nbsp; <Icon iconSize="lg" className="moderate"><SeverityModerateIcon /></Icon>   &nbsp;&nbsp; <Icon iconSize="lg" className="minor"><SeverityMinorIcon /></Icon>   | 
+| 6-point scale | Critical, important, moderate, minor, none, undefined | <Icon iconSize="lg" className="critical"><RhUiSeverityCriticalFillIcon /></Icon> &nbsp;&nbsp; <Icon iconSize="lg" className="important"><RhUiSeverityImportantFillIcon /></Icon> &nbsp;&nbsp; <Icon iconSize="lg" className="moderate"><RhUiSeverityModerateFillIcon /></Icon>   &nbsp;&nbsp; <Icon iconSize="lg" className="minor"><RhUiSeverityMinorFillIcon /></Icon> &nbsp;&nbsp; <Icon iconSize="lg" className="none"><RhUiSeverityNoneFillIcon /></Icon> &nbsp;&nbsp; <Icon iconSize="lg" className="undefined"><RhUiSeverityUndefinedFillIcon /></Icon>  | 
+| 5-point scale | Critical, important, moderate, minor, none or undefined (choose 1) | <Icon iconSize="lg" className="critical"><RhUiSeverityCriticalFillIcon /> </Icon> &nbsp;&nbsp; <Icon iconSize="lg" className="important"><RhUiSeverityImportantFillIcon /></Icon> &nbsp;&nbsp; <Icon iconSize="lg" className="moderate"><RhUiSeverityModerateFillIcon /></Icon>   &nbsp;&nbsp; <Icon iconSize="lg" className="minor"><RhUiSeverityMinorFillIcon /></Icon> &nbsp;&nbsp; <Icon iconSize="lg" className="none"><RhUiSeverityNoneFillIcon /></Icon> <br /> or <br /> <Icon iconSize="lg" className="critical"><RhUiSeverityCriticalFillIcon /> </Icon> &nbsp;&nbsp; <Icon iconSize="lg" className="important"><RhUiSeverityImportantFillIcon /></Icon> &nbsp;&nbsp; <Icon iconSize="lg" className="moderate"><RhUiSeverityModerateFillIcon /></Icon>   &nbsp;&nbsp; <Icon iconSize="lg" className="minor"><RhUiSeverityMinorFillIcon /></Icon> &nbsp;&nbsp; <Icon iconSize="lg" className="undefined"><RhUiSeverityUndefinedFillIcon /></Icon>   | 
+| 4-point scale | Critical, important, moderate, minor |<Icon iconSize="lg" className="critical"><RhUiSeverityCriticalFillIcon /> </Icon> &nbsp;&nbsp; <Icon iconSize="lg" className="important"><RhUiSeverityImportantFillIcon /></Icon> &nbsp;&nbsp; <Icon iconSize="lg" className="moderate"><RhUiSeverityModerateFillIcon /></Icon>   &nbsp;&nbsp; <Icon iconSize="lg" className="minor"><RhUiSeverityMinorFillIcon /></Icon>  | 
+| 3-point scale | Critical, moderate, minor | <Icon iconSize="lg" className="critical"><RhUiSeverityCriticalFillIcon /> </Icon> &nbsp;&nbsp; <Icon iconSize="lg" className="moderate"><RhUiSeverityModerateFillIcon /></Icon>   &nbsp;&nbsp; <Icon iconSize="lg" className="minor"><RhUiSeverityMinorFillIcon /></Icon>   | 
 
 These groups of severity icons are especially useful in data displays, like tables and cards.
 

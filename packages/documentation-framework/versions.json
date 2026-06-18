@@ -1,11 +1,65 @@
 {
   "Releases": [
     {
-      "name": "6.5.0-prerelease.78",
-      "date": "2026-05-14",
+      "name": "6.5.1",
+      "date": "2026-05-26",
       "latest": true,
       "versions": {
-        "@patternfly/chatbot": "6.6.0-prerelease.6",
+        "@patternfly/chatbot": "6.6.0",
+        "@patternfly/patternfly": "6.5.2",
+        "@patternfly/quickstarts": "6.5.0",
+        "@patternfly/react-catalog-view-extension": "6.4.0",
+        "@patternfly/react-charts": "8.5.1",
+        "@patternfly/react-code-editor": "6.5.1",
+        "@patternfly/react-component-groups": "6.5.0",
+        "@patternfly/react-console": "6.2.0",
+        "@patternfly/react-core": "6.5.1",
+        "@patternfly/react-data-view": "6.5.0",
+        "@patternfly/react-drag-drop": "6.5.1",
+        "@patternfly/react-icons": "6.5.1",
+        "@patternfly/react-log-viewer": "6.4.0",
+        "@patternfly/react-styles": "6.5.1",
+        "@patternfly/react-table": "6.5.1",
+        "@patternfly/react-templates": "6.5.1",
+        "@patternfly/react-tokens": "6.5.1",
+        "@patternfly/react-topology": "6.5.0",
+        "@patternfly/react-user-feedback": "6.3.0",
+        "@patternfly/react-virtualized-extension": "6.2.0"
+      }
+    },
+    {
+      "name": "6.5.0-prerelease.79",
+      "date": "2026-05-19",
+      "versions": {
+        "@patternfly/chatbot": "6.6.0-prerelease.8",
+        "@patternfly/patternfly": "6.5.0-prerelease.93",
+        "@patternfly/quickstarts": "6.5.0-prerelease.4",
+        "@patternfly/react-catalog-view-extension": "6.4.0-prerelease.1",
+        "@patternfly/react-charts": "8.5.0-prerelease.32",
+        "@patternfly/react-code-editor": "6.5.0-prerelease.82",
+        "@patternfly/react-component-groups": "6.5.0-prerelease.1",
+        "@patternfly/react-console": "6.2.0-prerelease.1",
+        "@patternfly/react-core": "6.5.0-prerelease.79",
+        "@patternfly/react-data-view": "6.5.0-prerelease.2",
+        "@patternfly/react-drag-drop": "6.5.0-prerelease.81",
+        "@patternfly/react-icons": "6.5.0-prerelease.39",
+        "@patternfly/react-log-viewer": "6.4.0-prerelease.2",
+        "@patternfly/react-styles": "6.5.0-prerelease.29",
+        "@patternfly/react-table": "6.5.0-prerelease.83",
+        "@patternfly/react-templates": "6.5.0-prerelease.79",
+        "@patternfly/react-tokens": "6.5.0-prerelease.28",
+        "@patternfly/react-topology": "6.5.0-prerelease.6",
+        "@patternfly/react-user-feedback": "6.3.0-prerelease.1",
+        "@patternfly/react-virtualized-extension": "6.2.0"
+      },
+      "hidden": true
+    },
+    {
+      "name": "6.5.0-prerelease.78",
+      "date": "2026-05-14",
+      "hidden": true,
+      "versions": {
+        "@patternfly/chatbot": "6.6.0-prerelease.8",
         "@patternfly/patternfly": "6.5.0-prerelease.92",
         "@patternfly/quickstarts": "6.5.0-prerelease.4",
         "@patternfly/react-catalog-view-extension": "6.4.0-prerelease.1",
@@ -32,7 +86,7 @@
       "date": "2026-05-14",
       "hidden": true,
       "versions": {
-        "@patternfly/chatbot": "6.6.0-prerelease.6",
+        "@patternfly/chatbot": "6.6.0-prerelease.8",
         "@patternfly/patternfly": "6.5.0-prerelease.91",
         "@patternfly/quickstarts": "6.5.0-prerelease.4",
         "@patternfly/react-catalog-view-extension": "6.4.0-prerelease.1",
@@ -59,7 +113,7 @@
       "date": "2026-05-11",
       "hidden": true,
       "versions": {
-        "@patternfly/chatbot": "6.6.0-prerelease.6",
+        "@patternfly/chatbot": "6.6.0-prerelease.8",
         "@patternfly/patternfly": "6.5.0-prerelease.86",
         "@patternfly/quickstarts": "6.5.0-prerelease.4",
         "@patternfly/react-catalog-view-extension": "6.3.0-prerelease.3",
@@ -86,7 +140,7 @@
       "date": "2026-05-08",
       "hidden": true,
       "versions": {
-        "@patternfly/chatbot": "6.6.0-prerelease.6",
+        "@patternfly/chatbot": "6.6.0-prerelease.8",
         "@patternfly/patternfly": "6.5.0-prerelease.85",
         "@patternfly/quickstarts": "6.5.0-prerelease.4",
         "@patternfly/react-catalog-view-extension": "6.3.0-prerelease.3",
@@ -113,7 +167,7 @@
       "date": "2026-04-06",
       "hidden": true,
       "versions": {
-        "@patternfly/chatbot": "6.6.0-prerelease.6",
+        "@patternfly/chatbot": "6.6.0-prerelease.8",
         "@patternfly/patternfly": "6.5.0-prerelease.64",
         "@patternfly/quickstarts": "6.5.0-prerelease.4",
         "@patternfly/react-catalog-view-extension": "6.3.0-prerelease.3",
@@ -296,7 +350,8 @@
         "@patternfly/chatbot": "2.2.1",
         "@patternfly/data-view": "6.2.0"
       }
-    },{
+    },
+    {
       "name": "6.1.0",
       "date": "2024-12-17",
       "hidden": true,
@@ -322,7 +377,8 @@
         "@patternfly/chatbot": "2.1.0",
         "@patternfly/data-view": "6.1.0"
       }
-    },{
+    },
+    {
       "name": "6.0.0",
       "date": "2024-10-30",
       "hidden": true,
@@ -347,7 +403,8 @@
         "@patternfly/react-templates": "6.0.0",
         "@patternfly/virtual-assistant": "2.0.2"
       }
-    },{
+    },
+    {
       "name": "prerelease",
       "date": "2024-10-08",
       "hidden": true,
@@ -371,7 +428,8 @@
         "@patternfly/react-virtualized-extension": "6.0.0-prerelease.4",
         "@patternfly/react-templates": "6.0.0-prerelease.21"
       }
-    },{
+    },
+    {
       "name": "5.4.1",
       "date": "2024-09-30",
       "hidden": true,
@@ -395,7 +453,8 @@
         "@patternfly/quickstarts": "5.4.0",
         "@patternfly/react-templates": "1.1.1"
       }
-    },{
+    },
+    {
       "name": "5.4.0",
       "date": "2024-08-28",
       "hidden": true,
@@ -419,7 +478,8 @@
         "@patternfly/quickstarts": "5.4.0",
         "@patternfly/react-templates": "1.1.0"
       }
-    },{
+    },
+    {
       "name": "5.3.0",
       "date": "2024-04-02",
       "hidden": true,
@@ -443,7 +503,8 @@
         "@patternfly/quickstarts": "5.3.0",
         "@patternfly/react-templates": "1.0.3"
       }
-    },{
+    },
+    {
       "name": "5.2.2",
       "date": "2024-03-12",
       "hidden": true,
@@ -467,7 +528,8 @@
         "@patternfly/quickstarts": "5.0.0",
         "@patternfly/react-templates": "^1.0.0-alpha.0"
       }
-    },{
+    },
+    {
       "name": "5.2.1",
       "date": "2024-03-01",
       "hidden": true,
@@ -491,7 +553,8 @@
         "@patternfly/quickstarts": "5.0.0",
         "@patternfly/react-templates": "^1.0.0-alpha.0"
       }
-    },{
+    },
+    {
       "name": "5.2.0",
       "date": "2024-01-17",
       "hidden": true,
@@ -514,7 +577,8 @@
         "@patternfly/react-virtualized-extension": "5.0.0",
         "@patternfly/quickstarts": "5.0.0"
       }
-    },{
+    },
+    {
       "name": "5.1.0",
       "date": "2023-10-06",
       "hidden": true,
@@ -537,7 +601,8 @@
         "@patternfly/react-virtualized-extension": "5.0.0",
         "@patternfly/quickstarts": "5.0.0"
       }
-    },{
+    },
+    {
       "name": "5.0.0",
       "date": "2023-07-27",
       "hidden": true,
@@ -600,7 +665,8 @@
         "@patternfly/react-topology": "4.91.27",
         "@patternfly/react-virtualized-extension": "4.88.113"
       }
-    },{
+    },
+    {
       "name": "2022.16",
       "date": "2022-12-15",
       "hidden": true,
@@ -619,7 +685,8 @@
         "@patternfly/react-topology": "4.90.38",
         "@patternfly/react-virtualized-extension": "4.88.82"
       }
-    },{
+    },
+    {
       "name": "2022.15",
       "date": "2022-11-21",
       "hidden": true,
@@ -638,7 +705,8 @@
         "@patternfly/react-topology": "4.90.23",
         "@patternfly/react-virtualized-extension": "4.88.67"
       }
-    },{
+    },
+    {
       "name": "2022.14",
       "date": "2022-11-01",
       "hidden": true,
@@ -657,7 +725,8 @@
         "@patternfly/react-topology": "4.90.11",
         "@patternfly/react-virtualized-extension": "4.88.55"
       }
-    },{
+    },
+    {
       "name": "2022.13",
       "date": "2022-10-11",
       "hidden": true,
@@ -676,7 +745,8 @@
         "@patternfly/react-topology": "4.88.26",
         "@patternfly/react-virtualized-extension": "4.88.26"
       }
-    },{
+    },
+    {
       "name": "2022.12",
       "date": "2022-9-16",
       "hidden": true,
@@ -815,7 +885,8 @@
         "@patternfly/react-topology": "4.53.1",
         "@patternfly/react-virtualized-extension": "4.53.1"
       }
-    }, {
+    },
+    {
       "name": "2022.04",
       "date": "2022-4-7",
       "hidden": true,
@@ -874,7 +945,8 @@
         "@patternfly/react-topology": "4.45.5",
         "@patternfly/react-virtualized-extension": "4.45.5"
       }
-    }, {
+    },
+    {
       "name": "2022.01",
       "date": "2022-1-28",
       "hidden": true,
@@ -893,7 +965,8 @@
         "@patternfly/react-topology": "4.39.14",
         "@patternfly/react-virtualized-extension": "4.39.14"
       }
-    }, {
+    },
+    {
       "name": "2021.16",
       "date": "2021-12-13",
       "hidden": true,
@@ -912,7 +985,8 @@
         "@patternfly/react-topology": "4.28.1",
         "@patternfly/react-virtualized-extension": "4.28.1"
       }
-    }, {
+    },
+    {
       "name": "2021.15",
       "date": "2021-11-16",
       "hidden": true,
@@ -931,7 +1005,8 @@
         "@patternfly/react-topology": "4.22.4",
         "@patternfly/react-virtualized-extension": "4.22.4"
       }
-    }, {
+    },
+    {
       "name": "2021.14",
       "date": "2021-10-28",
       "hidden": true,

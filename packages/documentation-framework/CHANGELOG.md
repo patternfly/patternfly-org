@@ -3,6 +3,114 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 6.44.3 (2026-06-17)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 6.44.2 (2026-06-15)
+
+
+### Bug Fixes
+
+* **CopyIcon:** Replace with brand icon ([#5036](https://github.com/patternfly/patternfly-org/issues/5036)) ([e628208](https://github.com/patternfly/patternfly-org/commit/e6282081668ed61fd3f22960e9dc96a036c4548e))
+
+
+
+
+
+## 6.44.1 (2026-06-04)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+# 6.44.0 (2026-05-26)
+
+
+### Features
+
+* **ver:** update to 6.5 release ([#5029](https://github.com/patternfly/patternfly-org/issues/5029)) ([70da474](https://github.com/patternfly/patternfly-org/commit/70da474c28d3ea06f2c920503cebcb2364e5ad5f))
+
+
+
+
+
+## 6.43.7 (2026-05-21)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 6.43.6 (2026-05-21)
+
+
+### Bug Fixes
+
+* remove isInline from NavAnnouncementBanner ([357c14b](https://github.com/patternfly/patternfly-org/commit/357c14b6a365c49448c8611d3b4a764c9f8f931d))
+
+
+
+
+
+## 6.43.5 (2026-05-21)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 6.43.4 (2026-05-20)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 6.43.3 (2026-05-20)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 6.43.2 (2026-05-20)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 6.43.1 (2026-05-20)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+# 6.43.0 (2026-05-19)
+
+
+### Features
+
+* **ver:** bump versions for prerelease ([#5023](https://github.com/patternfly/patternfly-org/issues/5023)) ([eae8174](https://github.com/patternfly/patternfly-org/commit/eae817447e67f065aa2e36202934eb100b3e1f9e))
+
+
+
+
+
 ## 6.42.2 (2026-05-15)
 
 

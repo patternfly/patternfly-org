@@ -23,15 +23,21 @@ import {
 } from '@patternfly/react-table';
 import { iconsData } from './icons';
 import { saveAs } from 'file-saver';
-import SearchIcon from '@patternfly/react-icons/dist/esm/icons/search-icon';
-import * as iconUnicodes from '@patternfly/patternfly/assets/icons/iconUnicodes.json';
+import RhUiSearchIcon from '@patternfly/react-icons/dist/esm/icons/rh-ui-search-icon';
+
+const REACT_COLUMN_LABEL = 'React name';
 
 export const IconsTable = () => {
-  const columns = ['Icon', 'Name', 'Style', 'React', 'Usage', 'Unicode'];
+  const columns = ['Icon', 'Name', 'React', 'Usage'];
   const [searchValue, setSearchValue] = React.useState('');
-  const [isCopied, setCopied] = React.useState(false);
   const [sortByIndex, setSortByIndex] = React.useState(1);
   const [sortDirection, setSortDirection] = React.useState('asc');
+  /** Which row’s React name was last copied (for tooltip feedback). */
+  const [copiedReactName, setCopiedReactName] = React.useState(null);
+
+  React.useEffect(() => {
+    setCopiedReactName(null);
+  }, [searchValue]);
 
   const getSortParams = columnIndex => ({
     sortBy: {
@@ -60,11 +66,6 @@ export const IconsTable = () => {
     });
 
     saveAs(blob, filename);
-  };
-
-  const clipboardCopyFunc = (event, text) => {
-    navigator.clipboard.writeText(text.toString());
-    setCopied(true);
   };
 
   const filteredRows = React.useMemo(() => {
@@ -115,7 +116,7 @@ export const IconsTable = () => {
       </Toolbar>
       <Divider />
       <Table
-        aria-label="Filterable PatternFly icons"
+        aria-label="Filterable Red Hat UI icons"
         variant={'compact'}
         id="ws-icons-table"
       >
@@ -123,16 +124,13 @@ export const IconsTable = () => {
           <Tr>
             <Th>{columns[0]}</Th>
             <Th sort={getSortParams(1)}>{columns[1]}</Th>
-            <Th>{columns[2]}</Th>
-            <Th>{columns[3]}</Th>
-            <Th sort={getSortParams(4)}>{columns[4]}</Th>
-            <Th modifier="fitContent">{columns[5]}</Th>
+            <Th>{REACT_COLUMN_LABEL}</Th>
+            <Th sort={getSortParams(3)}>{columns[3]}</Th>
           </Tr>
         </Thead>
         <Tbody>
           {sortedRows.map((icon, index) => {
             const Icon = icons[icon.React_name];
-            const iconUnicode = icon.Unicode || iconUnicodes.default[icon.Name] || '';
 
             return (
               <Tr key={index}>
@@ -148,32 +146,46 @@ export const IconsTable = () => {
                   </Tooltip>
                 </Td>
                 <Td dataLabel={columns[1]} modifier="fitContent">{icon.Name}</Td>
-                <Td dataLabel={columns[2]}>{icon.Style}</Td>
-                <Td dataLabel={columns[4]}>{icon.React_name}</Td>
-                <Td dataLabel={columns[5]}>
+                <Td dataLabel={REACT_COLUMN_LABEL} modifier="fitContent">
+                  <Tooltip
+                    trigger="mouseenter focus click"
+                    content={<div>{copiedReactName === icon.React_name ? 'Copied' : 'Copy React name'}</div>}
+                    position={TooltipPosition.left}
+                    exitDelay={copiedReactName === icon.React_name ? 1000 : 100}
+                    onTooltipHidden={() => {
+                      if (copiedReactName === icon.React_name) {
+                        setCopiedReactName(null);
+                      }
+                    }}
+                  >
+                    <span
+                      role="button"
+                      tabIndex={0}
+                      className="ws-icons-react-name-copy"
+                      aria-label={`Copy ${icon.React_name} to clipboard`}
+                      onClick={() => {
+                        navigator.clipboard.writeText(icon.React_name);
+                        setCopiedReactName(icon.React_name);
+                      }}
+                      onKeyDown={(e) => {
+                        if (e.key === 'Enter' || e.key === ' ') {
+                          e.preventDefault();
+                          navigator.clipboard.writeText(icon.React_name);
+                          setCopiedReactName(icon.React_name);
+                        }
+                      }}
+                    >
+                      {icon.React_name}
+                    </span>
+                  </Tooltip>
+                </Td>
+                <Td dataLabel={columns[3]}>
                   {icon.Contextual_usage}
                   {icon.Extra_context && (
                     <React.Fragment>
                       <br/><br/>{icon.Extra_context}
                     </React.Fragment>
                   )}
-                </Td>
-                <Td dataLabel={columns[6]}>
-                  <Tooltip
-                    trigger="mouseenter focus click"
-                    content={<div>{isCopied ? 'Copied' : 'Copy'}</div>}
-                    position={TooltipPosition.left}
-                    exitDelay={isCopied ? 1000 : 100}
-                    onTooltipHidden={() => setCopied(false)}
-                  >
-                    <Button
-                      aria-label={`Copy ${icon.Name} icon unicode to clipboard`}
-                      variant="plain"
-                      onClick={(event) => clipboardCopyFunc(event, iconUnicode)}
-                    >
-                      {iconUnicode}
-                    </Button>
-                  </Tooltip>
                 </Td>
               </Tr>
             )
@@ -182,9 +194,18 @@ export const IconsTable = () => {
       </Table>
 
       {filteredRows.length === 0 && (
-        <EmptyState titleText={`No results found for "${ searchValue }"`} headingLevel="h4" icon={SearchIcon}>
-          <EmptyStateBody>We couldn't find any icons that matched your search. If none of the icons listed fit
-            your use case, you may use any additional 'fa' icons within <a href="https://fontawesome.com/icons?d=gallery&amp;m=free">Font Awesome's free set</a>.
+        <EmptyState titleText={`No results found for "${ searchValue }"`} headingLevel="h4" icon={RhUiSearchIcon}>
+          <EmptyStateBody>
+            We couldn't find any icons that matched your search. Try different keywords or browse the full list above.
+            If you need an icon that isn't listed, you can{' '}
+            <a
+              href="https://docs.google.com/forms/d/e/1FAIpQLSde61rTDD4keaZEA3JFzBPbQVJ5EgEkhNapsYoI6ajKCsX4_Q/viewform"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              request a new icon from the Red Hat brand team
+            </a>
+            .
           </EmptyStateBody>
         </EmptyState>
       )}
