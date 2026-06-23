@@ -25,6 +25,8 @@ When used thoughtfully, **AI** can enhance user experiences through personalized
 
 ### Guidelines
 
+- **[AI design principles](/ai/guidelines/ai-design-principles):** Core principles for designing AI-enabled experiences at Red Hat.
+- **[Legal requirements](/ai/guidelines/legal-requirements):** Legal review requirements for AI-enabled features.
 - **[Transparency notices](/ai/guidelines/transparency-notices):** Guidelines for communicating AI usage to users through visual and verbal indicators.
 - **[Iconography](/ai/guidelines/iconography):** Guidelines for using AI-related icons, sparkles, and visual representations.
 - **[Color](/ai/guidelines/color):** Color usage guidelines for AI-enabled features.

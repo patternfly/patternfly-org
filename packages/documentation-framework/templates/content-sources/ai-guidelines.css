@@ -4,8 +4,8 @@
 [data-content-source="ai-guidelines"] figure[data-type] {
   margin: var(--pf-t--global--spacer--lg) 0;
   padding: var(--pf-t--global--spacer--md);
-  border: 1px solid var(--pf-t--global--border--color--default);
-  border-radius: var(--pf-t--global--border--radius--small);
+  border: 3px solid var(--pf-t--global--border--color--default);
+  border-radius: var(--pf-t--global--border--radius--medium);
   text-align: center;
   max-width: 700px;
   margin-inline: auto;
@@ -40,7 +40,6 @@
 /* Do examples — green accent */
 [data-content-source="ai-guidelines"] figure[data-type="do"] {
   border-color: var(--pf-t--global--color--status--success--default);
-  border-left-width: 4px;
 }
 
 [data-content-source="ai-guidelines"] figure[data-type="do"]::before {
@@ -55,7 +54,6 @@
 /* Don't examples — red accent */
 [data-content-source="ai-guidelines"] figure[data-type="dont"] {
   border-color: var(--pf-t--global--color--status--danger--default);
-  border-left-width: 4px;
 }
 
 [data-content-source="ai-guidelines"] figure[data-type="dont"]::before {
@@ -151,4 +149,9 @@
 [data-content-source="ai-guidelines"] .ws-admonition-caution::before {
   content: "Caution";
   color: var(--pf-t--global--color--status--warning--default);
+}
+
+/* Internal Red Hat links */
+[data-content-source="ai-guidelines"] a[href*="url.corp.redhat.com"]::after {
+  content: " (requires Red Hat login)";
 }

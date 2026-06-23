@@ -30,9 +30,7 @@ module.exports = (sourceMD, sourceProps, sourceFunctionDocs) => {
       frontmatterMapping: { title: 'id', order: 'sortValue' },
       frontmatterDefaults: { section: 'AI', subsection: 'Guidelines' }
     };
-    ['transparency-notices', 'iconography', 'color', 'chatbot-avatars', 'animation'].forEach(name => {
-      sourceMD(path.join(aiGuidelinesPath, `${name}.md`), 'ai-guidelines', undefined, guidelinesPageOptions);
-    });
+    sourceMD(path.join(aiGuidelinesPath, '*.md'), 'ai-guidelines', undefined, guidelinesPageOptions);
 
     sourceMD(path.join(contentBase, 'get-help/**/*.md'), 'get-help');
     sourceMD(path.join(contentBase, 'get-involved/**/*.md'), 'get-involved');

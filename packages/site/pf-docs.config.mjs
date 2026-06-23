@@ -92,7 +92,7 @@ export const config = {
     },
     {
       base: "../../node_modules/@project-felt/ai-guidelines",
-      pattern: "content/{transparency-notices,iconography,color,chatbot-avatars,animation}.md",
+      pattern: "content/*.md",
       name: "ai-guidelines",
       frontmatterDefaults: { section: "AI", subsection: "Guidelines" },
       frontmatterMapping: { title: "id", order: "sortValue" },
