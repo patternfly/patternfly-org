@@ -4,8 +4,9 @@
 [data-content-source="ai-guidelines"] figure[data-type] {
   margin: var(--pf-t--global--spacer--lg) 0;
   padding: var(--pf-t--global--spacer--md);
-  border: 3px solid var(--pf-t--global--border--color--default);
+  border: var(--pf-t--global--border--width--regular) solid var(--pf-t--global--border--color--default);
   border-radius: var(--pf-t--global--border--radius--medium);
+  background-color: var(--pf-t--global--background--color--primary--default);
   text-align: center;
   max-width: 700px;
   margin-inline: auto;
@@ -28,6 +29,10 @@
   text-align: left;
 }
 
+[data-content-source="ai-guidelines"] figure[data-type] figcaption:first-child {
+  margin-top: 0;
+}
+
 /* Inline icons in lists and paragraphs */
 [data-content-source="ai-guidelines"] li img,
 [data-content-source="ai-guidelines"] p img {
@@ -42,13 +47,12 @@
   border-color: var(--pf-t--global--color--status--success--default);
 }
 
-[data-content-source="ai-guidelines"] figure[data-type="do"]::before {
+[data-content-source="ai-guidelines"] figure[data-type="do"] figcaption::before {
   content: "Do";
   display: block;
-  text-align: left;
   font-weight: var(--pf-t--global--font--weight--body--bold);
   color: var(--pf-t--global--color--status--success--default);
-  margin-bottom: var(--pf-t--global--spacer--sm);
+  margin-bottom: var(--pf-t--global--spacer--xs);
 }
 
 /* Don't examples — red accent */
@@ -56,13 +60,12 @@
   border-color: var(--pf-t--global--color--status--danger--default);
 }
 
-[data-content-source="ai-guidelines"] figure[data-type="dont"]::before {
+[data-content-source="ai-guidelines"] figure[data-type="dont"] figcaption::before {
   content: "Don't";
   display: block;
-  text-align: left;
   font-weight: var(--pf-t--global--font--weight--body--bold);
   color: var(--pf-t--global--color--status--danger--default);
-  margin-bottom: var(--pf-t--global--spacer--sm);
+  margin-bottom: var(--pf-t--global--spacer--xs);
 }
 
 /* Figure groups */
