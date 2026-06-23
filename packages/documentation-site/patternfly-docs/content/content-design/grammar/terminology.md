@@ -11,7 +11,7 @@ import TimesCircleIcon from '@patternfly/react-icons/dist/esm/icons/times-circle
 import AngleDownIcon from '@patternfly/react-icons/dist/esm/icons/angle-down-icon';
 import AngleUpIcon from '@patternfly/react-icons/dist/esm/icons/angle-up-icon';
 import AngleRightIcon from '@patternfly/react-icons/dist/esm/icons/angle-right-icon';
-import CopyIcon from '@patternfly/react-icons/dist/esm/icons/copy-icon';
+import RhUiCopyIcon from '@patternfly/react-icons/dist/esm/icons/rh-ui-copy-icon';
 import TrashIcon from '@patternfly/react-icons/dist/esm/icons/trash-icon';
 import DownloadIcon from '@patternfly/react-icons/dist/esm/icons/download-icon';
 import PencilAltIcon from '@patternfly/react-icons/dist/esm/icons/pencil-alt-icon';
@@ -61,7 +61,7 @@ When using trademarks:
 | **Close** <br /> (verb) | Use to describe shutting an open window (like a message dialog). | <TimesIcon /> <br /> (fa-times) <br/><br/> <TimesCircleIcon /> <br /> (fa-times-circle) | *Open* | **Do not use** interchangeably with *Cancel* or *Quit*. |
 | **Collapse** <br /> (verb) | Use to describe minimizing a container element (like a list or message) so that it's partially visible. | <AngleDownIcon /> <br /> (fa-angle-down) <br/><br/> <AngleUpIcon /> <br /> (fa-angle-up) | *Expand* |
 | **Continue** <br /> (verb) | Use to describe proceeding with an action or process that is in progress. | | |
-| **Copy** <br /> (verb) | Use to describe the action of creating a reproduction of an object (like a file or text). This may be used in reference to the keyboard action (Ctrl/cmd + c). | <CopyIcon /> <br /> (fa-copy) | | **Do not use** interchangeably with *Duplicate*.
+| **Copy** <br /> (verb) | Use to describe the action of creating a reproduction of an object (like a file or text). This may be used in reference to the keyboard action (Ctrl/cmd + c). | <RhUiCopyIcon /> <br /> (fa-copy) | | **Do not use** interchangeably with *Duplicate*.
 | **Create** <br /> (verb) | Use to describe creating something new. | <AddCircleOIcon /> <br /> (pficon-add-circle-o) | *Delete* | If the object being created is not readily apparent from the context, consider adding a noun (like "Create user"). *New* or *Add* are not recommended for this use case. See *Add* for usage guidelines.
 | **Delete** <br /> (verb) | Use to describe completely removing an object. Delete is a destructive action. | <TrashIcon /> <br /> (fa-trash) | *Create* | *Erase* and *Remove* are not recommended for this use case. See *Remove* for usage guidelines.
 | **Deselect** <br /> (verb) | Use to prompt the user to deselect an item from a list, group, view, or other container element. | | *Select* |

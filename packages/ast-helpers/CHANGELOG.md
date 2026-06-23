@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.4.0-alpha.383 (2026-06-17)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 1.4.0-alpha.382 (2026-06-15)
+
+
+### Bug Fixes
+
+* **CopyIcon:** Replace with brand icon ([#5036](https://github.com/patternfly/patternfly-org/issues/5036)) ([e628208](https://github.com/patternfly/patternfly-org/commit/e6282081668ed61fd3f22960e9dc96a036c4548e))
+
+
+
+
+
 # 1.4.0-alpha.381 (2026-06-04)
 
 **Note:** Version bump only for package @patternfly/ast-helpers

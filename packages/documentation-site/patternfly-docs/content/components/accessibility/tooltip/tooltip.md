@@ -17,7 +17,7 @@ For the PatternFly React library:
   ```noLive
   <Tooltip content="Copy to clipboard" aria="labelledby">
     <button>
-      <CopyIcon />
+      <RhUiCopyIcon />
     </button>
   </Tooltip>
   ```
@@ -34,7 +34,7 @@ For the HTML/CSS library:
     </div>
   </div>
   <button aria-labelledby="tooltip-label-content">
-    <CopyIcon />
+    <RhUiCopyIcon />
   </button>
   ```
 - Pass in the `aria-describedby` attribute to the trigger when the tooltip should act as supplementary information:
@@ -111,7 +111,7 @@ const onClick = () => {
 
 <Tooltip aria-live="polite" content={tooltipContent}>
   <button onClick={onClick}>
-    <CopyIcon />
+    <RhUiCopyIcon />
   </button>
 </Tooltip>
 ```
@@ -123,7 +123,7 @@ When passing in `aria="none"` in the following code block, the `id` is passed in
 ```noLive
 <Tooltip id="tooltip-without-aria" aria="none" content="Copy to clipboard">
   <button aria-labelledby="tooltip-without-aria">
-    <CopyIcon />
+    <RhUiCopyIcon />
   </button>
 </Tooltip>
 ```
@@ -137,7 +137,7 @@ const tooltipRef = React.useRef();
 
 <Tooltip id="tooltip-with-reference" content="Copy to clipboard" reference={tooltipRef} />
 <button ref={tooltipRef} aria-labelledby="tooltip-with-reference">
-  <CopyIcon />
+  <RhUiCopyIcon />
 </button>
 ```
 

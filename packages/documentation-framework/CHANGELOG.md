@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 6.44.3 (2026-06-17)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 6.44.2 (2026-06-15)
+
+
+### Bug Fixes
+
+* **CopyIcon:** Replace with brand icon ([#5036](https://github.com/patternfly/patternfly-org/issues/5036)) ([e628208](https://github.com/patternfly/patternfly-org/commit/e6282081668ed61fd3f22960e9dc96a036c4548e))
+
+
+
+
+
 ## 6.44.1 (2026-06-04)
 
 **Note:** Version bump only for package @patternfly/documentation-framework
