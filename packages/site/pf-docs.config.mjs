@@ -89,6 +89,13 @@ export const config = {
       base: "../../node_modules/@patternfly/chatbot",
       pattern: "patternfly-docs/**/*.{md,mdx}",
       name: "chatbot-docs",
+    },
+    {
+      base: "../../node_modules/@project-felt/ai-guidelines",
+      pattern: "content/*.md",
+      name: "ai-guidelines",
+      frontmatterDefaults: { section: "AI", subsection: "Guidelines" },
+      frontmatterMapping: { title: "id", order: "sortValue" },
     }
   ],
   navSectionOrder: [],

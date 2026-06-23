@@ -1,6 +1,7 @@
 ---
 id: Rapid prototyping
 section: AI
+subsection: AI-assisted development
 source: about-rapid-prototyping
 ---
 

@@ -7,19 +7,66 @@ sortValue: 1
 import { Alert, AlertActionLink, Accordion, AccordionItem, AccordionContent, AccordionToggle, Button, Card, CardHeader, CardTitle, CardBody, CardFooter, Checkbox, Divider,  DescriptionList, DescriptionListTerm, DescriptionListGroup,  DescriptionListDescription, Grid, GridItem} from '@patternfly/react-core';
 import ExternalLinkSquareAltIcon from '@patternfly/react-icons/dist/esm/icons/external-link-square-alt-icon';
 import DownloadIcon from '@patternfly/react-icons/dist/esm/icons/download-icon';
+import { Icon } from '@patternfly/react-core';
+import RhUiAiCreateIcon from '@patternfly/react-icons/dist/esm/icons/rh-ui-ai-create-icon';
+import RhUiAiEditIcon from '@patternfly/react-icons/dist/esm/icons/rh-ui-ai-edit-icon';
+import RhUiAiEnhanceIcon from '@patternfly/react-icons/dist/esm/icons/rh-ui-ai-enhance-icon';
+import RhUiAiErrorIcon from '@patternfly/react-icons/dist/esm/icons/rh-ui-ai-error-icon';
+import RhUiAiExperienceFillIcon from '@patternfly/react-icons/dist/esm/icons/rh-ui-ai-experience-fill-icon';
+import RhUiAiExperienceIcon from '@patternfly/react-icons/dist/esm/icons/rh-ui-ai-experience-icon';
+import RhUiAiFilterIcon from '@patternfly/react-icons/dist/esm/icons/rh-ui-ai-filter-icon';
+import RhUiAiInfoIcon from '@patternfly/react-icons/dist/esm/icons/rh-ui-ai-info-icon';
+import RhUiAiSearchIcon from '@patternfly/react-icons/dist/esm/icons/rh-ui-ai-search-icon';
+import RhUiAiTroubleshootIcon from '@patternfly/react-icons/dist/esm/icons/rh-ui-ai-troubleshoot-icon';
 
 When used thoughtfully, **AI** can enhance user experiences through personalized interactions, increased efficiency, and innovative designs. Regardless of the AI resources or workflows you use, it's important to ensure that you're aligned with the compliance rules, ethical considerations, and best practices on this page.
 
 ## PatternFly AI resources
 
-The following guides are intended to help you integrate AI into your workflows as you design and develop products with:
+### Guidelines
 
-- **[Design language](/ai/design-language):** The foundational design decisions that guide the use of AI features in products.
-- **[Rapid prototyping](/ai/rapid-prototyping):** Guidance for generating and iterating AI features during early stages of design.
-- **[Marketplace](/ai/marketplace):** Plugins that give AI coding assistants knowledge and skills to generate more accurate, PatternFly-compliant code.
-- **[AI-assisted code migration](/ai/ai-assisted-code-migration):** Guidance for using AI to speed up and simplify codebase migrations.
-- **[Conversational design principles](/ai/conversation-design):** Guidance for designing effective and human-centered AI conversations.
+- **[AI design principles](/ai/guidelines/ai-design-principles):** Core principles for designing AI-enabled experiences at Red Hat.
+- **[Legal requirements](/ai/guidelines/legal-requirements):** Legal review requirements for AI-enabled features.
+- **[Transparency notices](/ai/guidelines/transparency-notices):** Guidelines for communicating AI usage to users through visual and verbal indicators.
+- **[Iconography](/ai/guidelines/iconography):** Guidelines for using AI-related icons, sparkles, and visual representations.
+- **[Color](/ai/guidelines/color):** Color usage guidelines for AI-enabled features.
+- **[Chatbot avatars](/ai/guidelines/chatbot-avatars):** Guidelines for chatbot avatar design, robot icons, and launch buttons.
+- **[Animation](/ai/guidelines/animation):** Guidelines for AI-related animations and sparkle effects.
+- **[Conversation design](/ai/guidelines/conversation-design):** Guidance for designing effective and human-centered AI conversations.
+
+### AI-assisted development
+
+- **[Marketplace](/ai/ai-assisted-development/marketplace):** Plugins that give AI coding assistants knowledge and skills to generate more accurate, PatternFly-compliant code.
+- **[PatternFly CLI](/ai/ai-assisted-development/patternfly-cli):** A command-line tool for scaffolding projects, performing code modifications, and running project-related tasks.
+- **[PatternFly MCP](/ai/ai-assisted-development/patternfly-mcp):** An MCP server that gives AI coding tools PatternFly knowledge and capabilities.
+- **[Rapid prototyping](/ai/ai-assisted-development/rapid-prototyping):** Guidance for generating and iterating AI features during early stages of design.
+- **[AI-assisted code migration](/ai/ai-assisted-development/ai-assisted-code-migration):** Guidance for using AI to speed up and simplify codebase migrations.
 - **[Compass layout (org demos)](/components/compass/org-demos):** Full-page Compass layout examples for generative UI patterns. For React Flow integration, see the [React Flow guide](/developer-guides/react-flow).
+
+---
+
+## Using AI icons in React
+
+The following AI icons are available in the [@patternfly/react-icons](https://www.npmjs.com/package/@patternfly/react-icons) package. For detailed usage guidelines, see [Iconography](/ai/guidelines/iconography).
+
+| **Icon** | **React** | **Text label** | **Usage** |
+| :---: | --- | --- | --- |
+| <Icon size="lg"><RhUiAiExperienceIcon /></Icon> | RhUiAiExperienceIcon | | General AI identification, or when no other AI icon is appropriate. |
+| <Icon size="lg"><RhUiAiExperienceFillIcon /></Icon> | RhUiAiExperienceFillIcon | | General AI identification, or when no other AI icon is appropriate. |
+| <Icon size="lg"><RhUiAiCreateIcon /></Icon> | RhUiAiCreateIcon | "Create with AI" | Create something new with the help of AI. |
+| <Icon size="lg"><RhUiAiEditIcon /></Icon> | RhUiAiEditIcon | "Edit with AI" | Edit something with the help of AI. Typically used for editing text. |
+| <Icon size="lg"><RhUiAiEnhanceIcon /></Icon> | RhUiAiEnhanceIcon | "Enhance with AI" | Enhance something with AI. |
+| <Icon size="lg"><RhUiAiErrorIcon /></Icon> | RhUiAiErrorIcon | "Error found by AI" | A problem has been identified by AI. |
+| <Icon size="lg"><RhUiAiFilterIcon /></Icon> | RhUiAiFilterIcon | "Filter with AI" | Filter data with the help of AI. |
+| <Icon size="lg"><RhUiAiInfoIcon /></Icon> | RhUiAiInfoIcon | "Information by AI" | Information partially or completely generated by AI. |
+| <Icon size="lg"><RhUiAiSearchIcon /></Icon> | RhUiAiSearchIcon | "Search with AI" | Search with the help of AI. |
+| <Icon size="lg"><RhUiAiTroubleshootIcon /></Icon> | RhUiAiTroubleshootIcon | "Troubleshoot with AI" | Receive help from AI when troubleshooting issues. |
+
+In Figma, these icons are available in the PatternFly components library via the Red Hat brand library. Using the icon wrapper component, you can swap the icons in the instance menu:
+
+<div class="ws-docs-content-img">
+![Menu in Figma showing how to switch between PatternFly and Red Hat icon libraries](./img/rh-icons-figma.png)
+</div>
 
 ---
 

@@ -1,0 +1,171 @@
+/* Styles for @project-felt/ai-guidelines content */
+
+/* Figure base styles */
+[data-content-source="ai-guidelines"] figure[data-type] {
+  margin: var(--pf-t--global--spacer--lg) 0;
+  padding: var(--pf-t--global--spacer--md);
+  border: var(--pf-t--global--border--width--regular) solid var(--pf-t--global--border--color--default);
+  border-radius: var(--pf-t--global--border--radius--medium);
+  background-color: var(--pf-t--global--background--color--primary--default);
+  text-align: center;
+  max-width: 700px;
+  margin-inline: auto;
+  width: 100%;
+}
+
+[data-content-source="ai-guidelines"] figure[data-type="example landscape"] {
+  max-width: 100%;
+}
+
+[data-content-source="ai-guidelines"] figure[data-type] img {
+  max-width: 100%;
+  height: auto;
+}
+
+[data-content-source="ai-guidelines"] figure[data-type] figcaption {
+  margin-top: var(--pf-t--global--spacer--sm);
+  font-size: var(--pf-t--global--font--size--sm);
+  color: var(--pf-t--global--text--color--subtle);
+  text-align: left;
+}
+
+[data-content-source="ai-guidelines"] figure[data-type] figcaption:first-child {
+  margin-top: 0;
+}
+
+/* Inline icons in lists and paragraphs */
+[data-content-source="ai-guidelines"] li img,
+[data-content-source="ai-guidelines"] p img {
+  height: 1em;
+  width: auto;
+  max-width: none;
+  vertical-align: middle;
+}
+
+/* Do examples — green accent */
+[data-content-source="ai-guidelines"] figure[data-type="do"] {
+  border-color: var(--pf-t--global--color--status--success--default);
+}
+
+[data-content-source="ai-guidelines"] figure[data-type="do"] figcaption::before {
+  content: "Do";
+  display: block;
+  font-weight: var(--pf-t--global--font--weight--body--bold);
+  color: var(--pf-t--global--color--status--success--default);
+  margin-bottom: var(--pf-t--global--spacer--xs);
+}
+
+/* Don't examples — red accent */
+[data-content-source="ai-guidelines"] figure[data-type="dont"] {
+  border-color: var(--pf-t--global--color--status--danger--default);
+}
+
+[data-content-source="ai-guidelines"] figure[data-type="dont"] figcaption::before {
+  content: "Don't";
+  display: block;
+  font-weight: var(--pf-t--global--font--weight--body--bold);
+  color: var(--pf-t--global--color--status--danger--default);
+  margin-bottom: var(--pf-t--global--spacer--xs);
+}
+
+/* Figure groups */
+[data-content-source="ai-guidelines"] ul[data-type] {
+  list-style: none;
+  padding: 0;
+  margin: var(--pf-t--global--spacer--lg) 0;
+  display: grid;
+  gap: var(--pf-t--global--spacer--md);
+}
+
+[data-content-source="ai-guidelines"] ul[data-type="dos-donts"] {
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+[data-content-source="ai-guidelines"] ul[data-type="examples"] {
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+[data-content-source="ai-guidelines"] ul[data-type] > li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+[data-content-source="ai-guidelines"] ul[data-type] > li > figure[data-type] {
+  margin: 0;
+  height: 100%;
+}
+
+/* GitHub-style admonitions */
+[data-content-source="ai-guidelines"] .ws-admonition {
+  border-left-width: 4px;
+  padding: var(--pf-t--global--spacer--md);
+  margin: var(--pf-t--global--spacer--md) 0;
+}
+
+[data-content-source="ai-guidelines"] .ws-admonition::before {
+  display: block;
+  font-weight: var(--pf-t--global--font--weight--body--bold);
+  margin-bottom: var(--pf-t--global--spacer--xs);
+}
+
+[data-content-source="ai-guidelines"] .ws-admonition-note {
+  border-left-color: var(--pf-t--global--color--status--info--default);
+}
+
+[data-content-source="ai-guidelines"] .ws-admonition-note::before {
+  content: "Note";
+  color: var(--pf-t--global--color--status--info--default);
+}
+
+[data-content-source="ai-guidelines"] .ws-admonition-tip {
+  border-left-color: var(--pf-t--global--color--status--success--default);
+}
+
+[data-content-source="ai-guidelines"] .ws-admonition-tip::before {
+  content: "Tip";
+  color: var(--pf-t--global--color--status--success--default);
+}
+
+[data-content-source="ai-guidelines"] .ws-admonition-warning {
+  border-left-color: var(--pf-t--global--color--status--warning--default);
+}
+
+[data-content-source="ai-guidelines"] .ws-admonition-warning::before {
+  content: "Warning";
+  color: var(--pf-t--global--color--status--warning--default);
+}
+
+[data-content-source="ai-guidelines"] .ws-admonition-important {
+  border-left-color: var(--pf-t--global--color--status--danger--default);
+}
+
+[data-content-source="ai-guidelines"] .ws-admonition-important::before {
+  content: "Important";
+  color: var(--pf-t--global--color--status--danger--default);
+}
+
+[data-content-source="ai-guidelines"] .ws-admonition-caution {
+  border-left-color: var(--pf-t--global--color--status--warning--default);
+}
+
+[data-content-source="ai-guidelines"] .ws-admonition-caution::before {
+  content: "Caution";
+  color: var(--pf-t--global--color--status--warning--default);
+}
+
+/* Internal Red Hat links — lock icon + sr-only text */
+[data-content-source="ai-guidelines"] a[href*="url.corp.redhat.com"]::after {
+  content: " (requires Red Hat login)";
+  overflow: hidden;
+  display: inline-block;
+  width: 0.85em;
+  height: 0.85em;
+  margin-left: 0.25em;
+  vertical-align: middle;
+  text-indent: -9999px;
+  background-color: currentColor;
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'%3E%3Cpath d='M400 224h-24v-72C376 68.2 307.8 0 224 0S72 68.2 72 152v72H48c-26.5 0-48 21.5-48 48v192c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V272c0-26.5-21.5-48-48-48zm-104 0H152v-72c0-39.7 32.3-72 72-72s72 32.3 72 72v72z'/%3E%3C/svg%3E");
+  mask-size: contain;
+  mask-repeat: no-repeat;
+}

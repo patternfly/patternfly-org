@@ -19,6 +19,7 @@
   "dependencies": {
     "@patternfly/patternfly-doc-core": "^1.22.0",
     "@patternfly/react-icons": "^6.5.0-prerelease.29",
+    "@project-felt/ai-guidelines": "github:project-felt/ai-guidelines",
     "astro": "^5.18.0"
   },
   "devDependencies": {

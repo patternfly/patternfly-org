@@ -1,6 +1,7 @@
 ---
 id: Marketplace
 section: AI
+subsection: AI-assisted development
 sortValue: 3
 ---
 

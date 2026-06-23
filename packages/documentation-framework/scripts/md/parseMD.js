@@ -25,9 +25,14 @@ const globs = {
   md: [],
 };
 
-function toReactComponent(mdFilePath, source, buildMode) {
+function toReactComponent(mdFilePath, source, buildMode, { frontmatterDefaults, frontmatterMapping } = {}) {
   // vfiles allow for nicer error messages and have native `unified` support
   const vfile = toVfile.readSync(mdFilePath);
+
+  // Normalize void HTML elements to self-closing for MDX compatibility
+  const voidElements = 'area|base|br|col|embed|hr|img|input|link|meta|param|source|track|wbr';
+  const voidTagRegex = new RegExp(`<(${voidElements})(\\s[^>]*?)\\s*(?<!/)>`, 'g');
+  vfile.contents = String(vfile.contents).replace(voidTagRegex, '<$1$2 />');
 
   const relPath = path.relative(path.join(process.cwd(), '../..'), vfile.path).split(path.sep).join(path.posix.sep);
 
@@ -46,6 +51,23 @@ function toReactComponent(mdFilePath, source, buildMode) {
         return file.info('no frontmatter, skipping');
       }
       frontmatter = yaml.load(yamlNode.value);
+
+      // Apply frontmatter mapping (e.g., { title: "id" } maps title -> id)
+      if (frontmatterMapping) {
+        Object.entries(frontmatterMapping).forEach(([fromKey, toKey]) => {
+          if (frontmatter[fromKey] !== undefined && frontmatter[toKey] === undefined) {
+            frontmatter[toKey] = frontmatter[fromKey];
+          }
+        });
+      }
+      // Apply frontmatter defaults (e.g., { section: "AI" })
+      if (frontmatterDefaults) {
+        Object.entries(frontmatterDefaults).forEach(([key, value]) => {
+          if (frontmatter[key] === undefined) {
+            frontmatter[key] = value;
+          }
+        });
+      }
 
       // Fail early
       if (!frontmatter.id) {
@@ -276,7 +298,7 @@ async function sourcePropsFile(file) {
     });
 }
 
-function sourceMDFile(file, source, buildMode) {
+function sourceMDFile(file, source, buildMode, options) {
   if (path.basename(file).startsWith('_')) {
     return;
   }
@@ -285,7 +307,7 @@ function sourceMDFile(file, source, buildMode) {
   if (source === 'design-guidelines' && file.includes('/accessibility/')) {
     return;
   }
-  const { jsx, pageData, outPath } = toReactComponent(file, source, buildMode);
+  const { jsx, pageData, outPath } = toReactComponent(file, source, buildMode, options);
 
   if (jsx) {
     fs.outputFileSync(outPath, jsx);
@@ -352,12 +374,12 @@ module.exports = {
   async waitForProps() {
     await Promise.all(pendingProps);
   },
-  sourceMD(glob, source, ignore, buildMode) {
-    globs.md.push({ glob, source, ignore, buildMode });
+  sourceMD(glob, source, ignore, buildMode, options) {
+    globs.md.push({ glob, source, ignore, buildMode, options });
   },
   processMD() {
-    globs.md.forEach(({ glob, source, ignore, buildMode }) => {
-      globSync(glob, { ignore }).forEach(file => sourceMDFile(file, source, buildMode));
+    globs.md.forEach(({ glob, source, ignore, buildMode, options }) => {
+      globSync(glob, { ignore }).forEach(file => sourceMDFile(file, source, buildMode, options));
     });
   },
   sourceFunctionDocs,
@@ -373,10 +395,10 @@ module.exports = {
       propWatcher.on('add', onPropFile);
       propWatcher.on('change', onPropFile);
     });
-    globs.md.forEach(({ glob, source, ignore }) => {
+    globs.md.forEach(({ glob, source, ignore, options }) => {
       const mdWatcher = chokidar.watch(globSync(glob, { ignored: ignore, ignoreInitial: true }));
       function onMDFileChange(file) {
-        sourceMDFile(file, source, 'start');
+        sourceMDFile(file, source, 'start', options);
         writeIndex();
       }
       mdWatcher.on('add', onMDFileChange);

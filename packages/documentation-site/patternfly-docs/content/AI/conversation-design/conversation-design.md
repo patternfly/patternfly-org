@@ -1,6 +1,7 @@
 ---
 id: Conversation design
 section: AI
+subsection: Guidelines
 ---
 
 import { Button, Flex, FlexItem} from '@patternfly/react-core';
