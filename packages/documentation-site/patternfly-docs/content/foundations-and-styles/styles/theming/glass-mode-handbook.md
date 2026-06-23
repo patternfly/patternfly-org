@@ -20,14 +20,14 @@ Additionally, glass can be manually enabled on the following components, via the
 - Hero
 - Panel
 
-Many components also support the `isPlain` prop, which removes their default solid background color so they can sit directly on a glass-enabled surface without obscuring the intended depth effect.
+Many components also support the `isPlain` prop, which removes their default borders and solid background colors so they can sit directly on a glass-enabled surface without obscuring the intended depth effect.
 
 ## Glass-specific component variants
 
 When glass is enabled, two component variants are automatically applied in place of their standard counterparts to help anchor the experience:
 
-- **Banded masthead:** Adds a solid fill color and shadowed border to the masthead, setting it apart as a persistent dock above the rest of the page.
-- **Floating side navigation:** Adds a solid fill color and shadowed border to the side navigation, insetting it to make it visually elevated and clearly readable as a navigation resource within the glass context.
+- **Banded masthead:** Adds transparency, blur, and a shadowed border to the masthead, setting it apart as a persistent dock above the rest of the page.
+- **Floating side navigation:** Adds transparency, blur, and a shadowed border to the side navigation, insetting it to make it visually elevated and clearly readable as a navigation resource within the glass context.
 
 ## Background images
 
@@ -94,7 +94,7 @@ There are a few technical constraints to abide by when using glass in your produ
 
 - **No glass-on-glass layering:** Never layer glass-enabled containers. Doing so can cause significant performance and accessibility problems. For example, child objects inside a blurred parent container can become illegibly blurred themselves. To mitigate this, we have intentionally adjusted the opacity of our background color design tokens to simulate depth without introducing extra blur.
 - **High contrast precedence:** If high-contrast mode is enabled, all glass effects must be automatically disabled to prioritize functional accessibility.
-- **User controls and preferences:** Because some users might experience legibility issues in glass mode, any product utilizing glass must also let users swap to default contrast or high contrast via a theme switcher or preferences menu. Products should also respect the OS-level `prefers-reduced-transparency` media query, disabling glass or replacing it with a solid high-opacity background to accommodate users appropriately. 
+- **User controls and preferences:** Because some users might experience legibility issues in glass mode, any product utilizing glass must also let users swap to default contrast or high contrast via a theme switcher or preferences menu. Products should also respect the OS-level `prefers-reduced-transparency` and `prefers-contrast` media queries, disabling glass or replacing it with a solid high-opacity background to accommodate users appropriately. 
 
 ## Glass design tokens 
 
