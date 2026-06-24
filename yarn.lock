@@ -5327,7 +5327,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@patternfly/react-code-editor@npm:^6.6.0-prerelease.8":
+"@patternfly/react-code-editor@npm:^6.6.0-prerelease.9":
   version: 6.6.0-prerelease.9
   resolution: "@patternfly/react-code-editor@npm:6.6.0-prerelease.9"
   dependencies:
@@ -5395,7 +5395,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@patternfly/react-core@npm:^6.6.0-prerelease.7":
+"@patternfly/react-core@npm:^6.6.0-prerelease.8":
   version: 6.6.0-prerelease.8
   resolution: "@patternfly/react-core@npm:6.6.0-prerelease.8"
   dependencies:
@@ -5594,7 +5594,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@patternfly/react-table@npm:^6.6.0-prerelease.7":
+"@patternfly/react-table@npm:^6.6.0-prerelease.8":
   version: 6.6.0-prerelease.8
   resolution: "@patternfly/react-table@npm:6.6.0-prerelease.8"
   dependencies:
