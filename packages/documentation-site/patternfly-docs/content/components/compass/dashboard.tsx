@@ -51,8 +51,6 @@ import imgAvatar from './assets/avatar.jpg';
 export const CompassBasic: React.FunctionComponent = () => {
   const [activeTab, setActiveTab] = useState<number>(0);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  const [isThinking, setIsThinking] = useState(false);
-
 
   const navContent = (
     <>
@@ -240,27 +238,18 @@ export const CompassBasic: React.FunctionComponent = () => {
     </Panel>
   );
 
-  const handleSendMessage = () => {
-    setIsThinking(true);
-    setTimeout(() => {
-      setIsThinking(false);
-    }, 10000); // 10 seconds
-  };
-
   const southContent = (
     <CompassMessageBar>
       <Panel isPill hasNoBorder isGlass>
         <PanelMain>
           <MessageBar
             isCompact
-            onSendMessage={handleSendMessage}
+            onSendMessage={() => {}}
             alwayShowSendButton
             hasAttachButton={false}
-            isThinking={isThinking}
           />
         </PanelMain>
       </Panel>
-      <div className="pf-v6-screen-reader" aria-live="polite">{isThinking && "AI is thinking..."}</div>
     </CompassMessageBar>
   );
 
