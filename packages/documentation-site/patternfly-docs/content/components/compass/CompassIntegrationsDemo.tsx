@@ -71,7 +71,6 @@ import { RHAutomationsLogo } from './assets/RHAutomationsLogo';
 import { RHAiExperienceIcon } from './assets/RHAiExperienceIcon';
 
 export const CompassIntegrationsDemo: React.FunctionComponent = () => {
-  const [isThinking, setIsThinking] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [activeDisplay, setActiveDisplay] = useState<"table" | "card">("table");
   const [isGlassTheme, setIsGlassTheme] = useState(true);
@@ -221,13 +220,6 @@ export const CompassIntegrationsDemo: React.FunctionComponent = () => {
       url: "splunk.example.com",
     },
   ];
-
-  const handleSendMessage = () => {
-    setIsThinking(true);
-    setTimeout(() => {
-      setIsThinking(false);
-    }, 10000); // 10 seconds
-  };
 
   const navContent = (
     <>
@@ -644,14 +636,10 @@ export const CompassIntegrationsDemo: React.FunctionComponent = () => {
         <PanelMain>
           <MessageBar
             isCompact
-            onSendMessage={handleSendMessage}
+            onSendMessage={() => {}}
             alwayShowSendButton
             hasAttachButton={false}
-            isThinking={isThinking}
           />
-          <div aria-live="polite" className="pf-v6-screen-reader">
-            {isThinking ? "Ai is thinking..." : "Ai is ready to chat"}
-          </div>
         </PanelMain>
       </Panel>
     </CompassMessageBar>
