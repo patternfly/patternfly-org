@@ -5862,10 +5862,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@project-felt/ai-guidelines@github:project-felt/ai-guidelines":
+"@project-felt/ai-guidelines@github:project-felt/ai-guidelines#main":
   version: 1.0.0
-  resolution: "@project-felt/ai-guidelines@https://github.com/project-felt/ai-guidelines.git#commit=3e53486f83eba02fdecdb67390d1c4704bda5817"
-  checksum: 10c0/38f97401fce6918df3583d47671c299b0abecee9e98a231160e5dea26e0065a96ba4fe5116bfb2cafd5f285fdcd2949fe4a4feef3834c0196f424c9799784afd
+  resolution: "@project-felt/ai-guidelines@https://github.com/project-felt/ai-guidelines.git#commit=7c80cccf75871dd18ab1a2a30a5ec52374b3d0bf"
+  checksum: 10c0/f14e27228e2e1faa3aa416d2798a45d4e73b2ab9e38e93588f0941e30c356ba0b2732b7594e5c501cc602c9e78c4ffcb73b212a70ea7932cf9ba5983160a8cc9
   languageName: node
   linkType: hard
 
@@ -21352,7 +21352,7 @@ __metadata:
   dependencies:
     "@patternfly/patternfly-doc-core": "npm:^1.22.0"
     "@patternfly/react-icons": "npm:^6.5.0-prerelease.29"
-    "@project-felt/ai-guidelines": "github:project-felt/ai-guidelines"
+    "@project-felt/ai-guidelines": "github:project-felt/ai-guidelines#main"
     astro: "npm:^5.18.0"
     tsx: "npm:^4.21.0"
     wrangler: "npm:^4.69.0"
