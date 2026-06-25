@@ -1,7 +1,7 @@
 {
   "name": "@patternfly/documentation-framework",
   "description": "A framework to build documentation for PatternFly.",
-  "version": "6.44.5",
+  "version": "6.45.0",
   "author": "Red Hat",
   "license": "MIT",
   "bin": {

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.4.0-alpha.386 (2026-06-25)
+
+
+### Features
+
+* **ver:** bump to prerelease ([#5039](https://github.com/patternfly/patternfly-org/issues/5039)) ([a1f3e37](https://github.com/patternfly/patternfly-org/commit/a1f3e37f2e80d014fb75599067ad03e876a506dd))
+
+
+
+
+
 # 1.4.0-alpha.385 (2026-06-25)
 
 **Note:** Version bump only for package @patternfly/ast-helpers
