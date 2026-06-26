@@ -1,4 +1,4 @@
-import React, { useMemo } from 'react';
+import React from 'react';
 import {
   PageSection,
   Title,
@@ -343,7 +343,6 @@ export const MDXTemplate = ({ title, sources = [], path, id, componentsData }) =
               {sources
                 .map((source, index) => {
                   source.index = index;
-                  source.id = id;
                   return source;
                 })
                 .map(MDXChildTemplate)}
