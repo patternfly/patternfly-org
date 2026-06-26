@@ -16,11 +16,8 @@ export const useIsStuck = (stickyElementId) => {
       return;
     }
 
-    // Get the initial offset of the sticky element relative to the scroll container
-    const initialTop = stickyElement.offsetTop;
-
     const syncFromScroll = () => {
-      const newIsStuck = scrollElement.scrollTop >= initialTop;
+      const newIsStuck = scrollElement.scrollTop >= stickyElement.offsetTop;
       // Only update state if the value actually changed
       if (prevIsStuck.current !== newIsStuck) {
         setIsStuck(newIsStuck);
