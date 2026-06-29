@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.4.0-alpha.388 (2026-06-29)
+
+
+### Bug Fixes
+
+* **docs-framework:** fixes isStickyStuck rendering bugs ([#5044](https://github.com/patternfly/patternfly-org/issues/5044)) ([7d1d14d](https://github.com/patternfly/patternfly-org/commit/7d1d14d5dc205a1719d804f9480a84b58b8fba26))
+
+
+
+
+
 # 1.4.0-alpha.387 (2026-06-26)
 
 
