@@ -25,6 +25,31 @@ import { convertToReactComponent } from '@patternfly/ast-helpers';
 import { FunctionsTable } from '../components/functionsTable/functionsTable';
 import { useIsStuck } from '../hooks/useIsStuck';
 
+const StickyTabs = React.memo(({ sourceKeys, tabNames, activeSource, path }) => {
+  const isStickyStuck = useIsStuck('ws-sticky-nav-tabs');
+
+  return (
+    <PageSection id="ws-sticky-nav-tabs" stickyBase="top" isStickyStuck={isStickyStuck} type="tabs">
+      <div className="pf-v6-c-tabs pf-m-page-insets">
+        <ul className="pf-v6-c-tabs__list">
+          {sourceKeys.map((source, index) => (
+            <li
+              key={source}
+              className={css('pf-v6-c-tabs__item', activeSource === source && 'pf-m-current')}
+              onClick={() => trackEvent('tab_click', 'click_event', source.toUpperCase())}
+            >
+              <Link className="pf-v6-c-tabs__link" to={`${path}${index === 0 ? '' : '/' + source}`}>
+                {tabNames[source]}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </PageSection>
+  );
+});
+StickyTabs.displayName = 'StickyTabs';
+
 const MDXChildTemplate = ({ Component, source, toc = [], index = 0, id }) => {
   const {
     propComponents = [],
@@ -168,7 +193,6 @@ const MDXChildTemplate = ({ Component, source, toc = [], index = 0, id }) => {
 };
 
 export const MDXTemplate = ({ title, sources = [], path, id, componentsData }) => {
-  const isStickyStuck = useIsStuck('ws-sticky-nav-tabs');
 
   const hasFeedbackButton = process.env.hasFeedbackButton;
   const isDeprecated =
@@ -310,24 +334,7 @@ export const MDXTemplate = ({ title, sources = [], path, id, componentsData }) =
           </Content>
         </PageSection>
         {showTabs && (
-          <PageSection id="ws-sticky-nav-tabs" stickyBase="top" isStickyStuck={isStickyStuck} type="tabs">
-            <div className="pf-v6-c-tabs pf-m-page-insets">
-              <ul className="pf-v6-c-tabs__list">
-                {sourceKeys.map((source, index) => (
-                  <li
-                    key={source}
-                    className={css('pf-v6-c-tabs__item', activeSource === source && 'pf-m-current')}
-                    // Send clicked tab name for analytics
-                    onClick={() => trackEvent('tab_click', 'click_event', source.toUpperCase())}
-                  >
-                    <Link className="pf-v6-c-tabs__link" to={`${path}${index === 0 ? '' : '/' + source}`}>
-                      {tabNames[source]}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </PageSection>
+          <StickyTabs sourceKeys={sourceKeys} tabNames={tabNames} activeSource={activeSource} path={path} />
         )}
         <PageSection id="main-content" isFilled className="pf-m-light-100">
           {isSinglePage && <MDXChildTemplate {...sources[0]} id={id} />}
