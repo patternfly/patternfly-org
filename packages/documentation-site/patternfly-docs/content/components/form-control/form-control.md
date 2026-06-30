@@ -11,6 +11,8 @@ Form control can be applied to various input components, including text boxes, d
 ## Usage
 While form controls are useful in providing feedback on user input, they don't need to be implemented for every input instance. Only use form controls when it is essential to convey information to the user. For example, if any string is valid for a text input, or any selection in a list is acceptable, form controls are not necessary.
 
+Apply the `pf-m-form` modifier to all dropdowns and menu toggles used in a form. The `.pf-m-form` class modifies the menu toggle's border radius to match other form elements. Read more on form controls in the [Form guidelines](/components/forms/form/design-guidelines).
+
 ## Variations
 While form control styles differ slightly depending on the component, they all use some combination of underlines, color, and icons to give users **feedback** on their inputs and selections. For example, if a user types an invalid string into a text box, the box changes state to indicate the error.
 
