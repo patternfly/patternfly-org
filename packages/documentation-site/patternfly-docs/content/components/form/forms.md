@@ -468,6 +468,20 @@ Use button text to clearly and specifically communicate the action it triggers. 
 
 For more button text guidance, see our [button content guidelines](/components/button/design-guidelines#content).
 
+## Best practices
+
+To ensure your forms are consistent, maintainable, and adaptable across different themes, we recommend following these best practices.
+
+### Menu toggles and dropdowns in a form
+
+Apply the `pf-m-form` modifier to all dropdowns and [menu toggles](/components/menus/menu-toggle/html/#usage) used in a form. The `.pf-m-form` class modifies the menu toggle's border radius to match other form elements.
+
+<div class="ws-docs-content-img">
+![Do and don't example showing a menu toggle with the pf-m-form modifier applied (square corners) versus without it (pill shape) in a form context.](./img/form-toggle-modifier.png)
+</div>
+
+In the default PatternFly theme, form elements use a square border radius. In the [Felt theme](/foundations-and-styles/theming#project-felt-theme), form elements—including input fields, menu toggles, and dropdowns—use a 6px border radius, while other non-control components use a pill radius. Using `pf-m-form` ensures that your menu toggle always matches the border radius of the surrounding form fields, regardless of theme.
+
 ## Accessibility
 
 This section highlights accessibility considerations to keep in mind when creating forms. For more accessibility guidance, see our [PatternFly accessibility guide](/accessibility/overview).
