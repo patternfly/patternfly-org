@@ -12,7 +12,7 @@ import { Divider, Timestamp } from '@patternfly/react-core';
 
 This release refines core components and improves visual consistency to help you build better experiences. You'll find focused updates to typography, icons, and foundational components, plus important cross-browser compatibility fixes.
 
-Key highlights include updated Red Hat font integration with refined font-weight tokens, new avatar component capabilities with icon and color variant support, table footer element support, and Safari compatibility improvements. This release focuses on polish — refining interaction states, fixing visual inconsistencies, and enhancing component flexibility across the design system.
+Key highlights include updated Red Hat font integration with refined font-weight tokens, new avatar component capabilities with icon and color variant support, table footer element support, and Safari compatibility improvements. This release focuses on polish&mdash;refining interaction states, fixing visual inconsistencies, and enhancing component flexibility across the design system.
 
 ### Promoted package versions
 
@@ -49,13 +49,13 @@ Key highlights include updated Red Hat font integration with refined font-weight
 This release brings targeted improvements to core components:
 
 - **Avatar:** You can now add icons and use color variants to create more expressive user representations.
-- **Table:** Added support for table footer elements using `<tfoot>`, giving you more flexibility for data table layouts. We also fixed Safari-specific rendering issues with table header backgrounds.
+- **Table:** Added support for table footer elements using the tfoot element, giving you more flexibility for data table layouts. We also fixed Safari-specific rendering issues with table header backgrounds.
 - **Buttons:** Refined clicked states for inline link buttons to improve visual feedback.
 - **Icons:** Updated caret icons across dual list selectors, pagination controls, and toolbar components for improved visual consistency.
 
 ### Typography and design tokens
 
-We've updated Red Hat font integration with refined font-weight token values. These updates ensure better alignment with Red Hat Design System standards while maintaining consistency across all PatternFly themes introduced in 6.5 — including Project Felt, glass mode, and high-contrast mode.
+We've updated Red Hat font integration with refined font-weight token values. These updates ensure better alignment with Red Hat Design System standards while maintaining consistency across all PatternFly themes introduced in 6.5&mdash;including Project Felt, glass mode, and high-contrast mode.
 
 ### Visual polish
 
