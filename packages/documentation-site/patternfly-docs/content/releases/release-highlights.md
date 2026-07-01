@@ -74,7 +74,7 @@ Our Chatbot extension has made updates to help provide consistent alignment rega
 
 - **MessageBar:** Removed gradient borders and animations for when an AI is "thinking".
 - **ChatbotToggle:** Updated the icons for the chatbot toggle, using the new recommended robot icon when the toggle is collapsed, and the Red Hat brand icon when the toggle is expanded.
-- **Message avatars:** Updated the avatar for bot messages to use the new recommended robot icon by default. Customization of user avatars has also been expanded, allowing more custom svgs or initials, following the updates made to the [avatar component](/components/avatar).
+- **Message avatars:** Updated the avatar for bot messages to use the new recommended robot icon, which will no longer be able to be overridden in favor of consistency across products. Customization of user avatars has also been expanded, allowing more custom svgs/icons or initials, following the updates made to the [avatar component](/components/avatar).
 - **ChatbotFootnote:** The recommended verbiage has been updated for more consistency.
 
 In order to take advantage of this 6.7 Chatbot release, you will need to update any other PatternFly packages to their latest 6.6 release versions.
