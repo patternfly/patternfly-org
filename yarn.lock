@@ -5000,15 +5000,15 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@patternfly/chatbot@npm:6.7.0-prerelease.4":
-  version: 6.7.0-prerelease.4
-  resolution: "@patternfly/chatbot@npm:6.7.0-prerelease.4"
+"@patternfly/chatbot@npm:6.7.0":
+  version: 6.7.0
+  resolution: "@patternfly/chatbot@npm:6.7.0"
   dependencies:
-    "@patternfly/react-code-editor": "npm:^6.5.1"
-    "@patternfly/react-core": "npm:^6.5.1"
-    "@patternfly/react-icons": "npm:^6.5.1"
-    "@patternfly/react-styles": "npm:^6.5.1"
-    "@patternfly/react-table": "npm:^6.5.1"
+    "@patternfly/react-code-editor": "npm:^6.6.0"
+    "@patternfly/react-core": "npm:^6.6.0"
+    "@patternfly/react-icons": "npm:^6.6.0"
+    "@patternfly/react-styles": "npm:^6.6.0"
+    "@patternfly/react-table": "npm:^6.6.0"
     "@segment/analytics-next": "npm:^1.76.0"
     clsx: "npm:^2.1.0"
     path-browserify: "npm:^1.0.1"
@@ -5030,7 +5030,7 @@ __metadata:
       optional: false
     monaco-editor:
       optional: false
-  checksum: 10c0/49bbe2b8770a326052814d135ee7677412253d13448c12c07ac0ecafa5a9f16082fe10fb0fe7fbfc8ceb18ed15e3a1aef0112844268365fdeb9797f3b4ccb463
+  checksum: 10c0/283b8d8f3c78a3b7b2ed0e514e0b8871a6d6dc00fdaacd759a4bab7cac3986d204df5d1e9028e02632c85d152c4e84bee0730f56c6f93758a387f7f5dfadcf4b
   languageName: node
   linkType: hard
 
@@ -18656,7 +18656,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "patternfly-org@workspace:packages/documentation-site"
   dependencies:
-    "@patternfly/chatbot": "npm:6.7.0-prerelease.4"
+    "@patternfly/chatbot": "npm:6.7.0"
     "@patternfly/design-tokens": "npm:1.16.2"
     "@patternfly/documentation-framework": "workspace:*"
     "@patternfly/patternfly-a11y": "npm:5.2.1"
