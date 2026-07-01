@@ -10,9 +10,9 @@ import { Divider, Timestamp } from '@patternfly/react-core';
 
 ## PatternFly 6.6
 
-This release refines core components and improves visual consistency to help you build better experiences. You'll find focused updates to typography, icons, and foundational components, plus important cross-browser compatibility fixes.
+This release refines components and improves visual consistency to help you build better experiences. You'll find focused updates to typography, icons, and foundational components, plus important cross-browser compatibility fixes.
 
-Key highlights include updated Red Hat font integration with refined font-weight tokens, new avatar component capabilities with icon and color variant support, table footer element support, and Safari compatibility improvements. This release focuses on polish&mdash;refining interaction states, fixing visual inconsistencies, and enhancing component flexibility across the design system.
+Key highlights include updated Red Hat font integration with refined font-weight tokens, new avatar component capabilities with icon and color variant support, icon updates for Red Hat brand alignment, and a critical Safari table bug fix. This release focuses on polish, refining interaction states, fixing visual inconsistencies, and enhancing component flexibility across the design system.
 
 ### Promoted package versions
 
@@ -44,23 +44,47 @@ Key highlights include updated Red Hat font integration with refined font-weight
 
 ### Component enhancements
 
-This release brings targeted improvements to core components:
+This release brings targeted improvements to the following components:
 
 - **Avatar:** You can now add icons and use color variants to create more expressive user representations.
-- **Table:** Added support for table footer elements using the tfoot element, giving you more flexibility for data table layouts. We also fixed Safari-specific rendering issues with table header backgrounds.
-- **Buttons:** Refined clicked states for inline link buttons to improve visual feedback.
-- **Icons:** Updated caret icons across dual list selectors, pagination controls, and toolbar components for improved visual consistency.
+- **Banner:** Added pill variant for a more compact appearance.
+- **Navigation:** NavExpandable now supports icon integration.
+- **Table:** We fixed a critical Safari-specific layout bug in tables with sticky headers.
+- **Drawer:** Fixed resizable drawer width jump on drag operations.
+- **Icons:** Updated icons across the design system for better alignment with Red Hat brand standards, including caret icons in dual list selectors, pagination controls, and toolbar components.
 
 ### Typography and design tokens
 
-We've updated Red Hat font integration with refined font-weight token values. These updates ensure better alignment with Red Hat Design System standards while maintaining consistency across all PatternFly themes introduced in 6.5&mdash;including Project Felt, glass mode, and high-contrast mode.
+We've updated Red Hat font integration and font-weight token values:
+
+- Updated Red Hat fonts (Red Hat Text, Red Hat Display, and Red Hat Mono) to the latest versions from the [upstream Red Hat Font repository](https://github.com/RedHatOfficial/RedHatFont/pull/75).
+- Updated the numerical font-weights used for bold body text, and regular and bold heading text.
+
+**Important:** If your app displays incorrect font-weights after this update, ensure you're using our CSS variables to control font-weight. This ensures your app always uses the correct numerical font-weight PatternFly intends. The variables to use are:
+- `--pf-t--global--font--weight--body--default`
+- `--pf-t--global--font--weight--body--bold`
+- `--pf-t--global--font--weight--heading--default`
+- `--pf-t--global--font--weight--heading--bold`
+
+More information can be found by searching for those tokens in our [all design tokens table](https://www.patternfly.org/foundations-and-styles/design-tokens/all-design-tokens/).
+
+### Alignment on Chatbot AI standards
+
+Our Chatbot extension has made updates to help provide consistent alignment regarding AI standards:
+
+- **MessageBar:** Removed gradient borders and animations for when an AI is "thinking".
+- **ChatbotToggle:** Updated the icons for the chatbot toggle, using the new recommended robot icon when the toggle is collapsed, and the Red Hat brand icon when the toggle is expanded.
+- **Message avatars:** Updated the avatar for bot messages to use the new recommended robot icon by default. Customization of user avatars has also been expanded, allowing more custom svgs or initials, following the updates made to the [avatar component](/components/avatar).
+- **ChatbotFootnote:** The recommended verbiage has been updated for more consistency.
+
+In order to take advantage of this 6.7 Chatbot release, you will need to update any other PatternFly packages to their latest 6.6 release versions.
 
 ### Visual polish
 
 This release includes visual refinements across multiple components:
 - Improved alert icon alignment for multiline titles
 - Fixed banner link colors
-- Corrected borders in panel and docked navigation components
+- Added panel borders in high-contrast theme for better visibility
 - Refined drag-and-drop ghost row border-radius values
 
 <Divider />
