@@ -82,6 +82,7 @@ const sourceOrder = {
   'react-deprecated': 2.1,
   html: 3,
   'html-demos': 4,
+  'css-variables': 5,
   'design-guidelines': 99,
   'accessibility': 100,
   'upgrade-guide': 101,
@@ -117,6 +118,29 @@ const getDefaultDesignGuidelines = ({ id, section, slug, title }) => {
   return pageData;
 }
 
+const getCssVariablesTab = ({ id, section, subsection, title, cssPrefix }) => {
+  const source = 'css-variables';
+  const slug = makeSlug(source, section, id, false, subsection);
+  const pageData = {
+    id,
+    section,
+    subsection,
+    slug,
+    source,
+    tabName: 'CSS variables',
+    title,
+    cssPrefix,
+    toc: [{ text: 'CSS variables', id: 'css-variables' }]
+  };
+
+  const Component = () => null;
+  Component.displayName = 'CssVariablesTab';
+  Component.getPageData = () => pageData;
+  pageData.Component = Component;
+
+  return pageData;
+};
+
 Object.entries(groupedRoutes)
   .forEach(([_section, ids]) => {
     Object.values(ids).forEach(pageData => {
@@ -138,6 +162,13 @@ Object.entries(groupedRoutes)
         pageDataObj.sources.forEach(({ slug }) => {
           delete routes[slug];
         });
+
+        const cssPrefix = [...new Set(pageDataObj.sources.flatMap((source) => source.cssPrefix || []))];
+        if (cssPrefix.length > 0 && !pageDataObj.sources.some((source) => source.source === 'css-variables')) {
+          const { id, section, subsection, title } = pageDataObj;
+          pageDataObj.sources.push(getCssVariablesTab({ id, section, subsection, title, cssPrefix }));
+        }
+
         // Sort sources for tabs
         pageDataObj.sources = pageDataObj.sources.sort(sortSources);
         // Add grouped route
