@@ -58,7 +58,7 @@ This release brings targeted improvements to the following components:
 We've updated Red Hat font integration and font-weight token values:
 
 - Updated Red Hat fonts (Red Hat Text, Red Hat Display, and Red Hat Mono) to the latest versions from the [upstream Red Hat Font repository](https://github.com/RedHatOfficial/RedHatFont/pull/75).
-- Updated the numerical font-weights used for bold body text, and regular and bold heading text.
+- Updated the numerical font-weights used for bold body text, as well as regular and bold heading text.
 
 **Important:** If your app displays incorrect font-weights after this update, ensure you're using our CSS variables to control font-weight. This ensures your app always uses the correct numerical font-weight PatternFly intends. The variables to use are:
 - `--pf-t--global--font--weight--body--default`
