@@ -47,8 +47,8 @@ Key highlights include updated Red Hat font integration with refined font-weight
 This release brings targeted improvements to the following components:
 
 - **Avatar:** You can now add icons and use color variants to create more expressive user representations.
-- **Banner:** Added pill variant for a more compact appearance.
-- **Navigation:** NavExpandable now supports icon integration.
+- **Banner:** Added pill variant.
+- **Navigation:** Expandable navigation items now support an optional icon prop that displays before the title.
 - **Table:** We fixed a critical Safari-specific layout bug in tables with sticky headers.
 - **Drawer:** Fixed resizable drawer width jump on drag operations.
 - **Icons:** Updated icons across the design system for better alignment with Red Hat brand standards, including caret icons in dual list selectors, pagination controls, and toolbar components.
@@ -86,6 +86,20 @@ This release includes visual refinements across multiple components:
 - Fixed banner link colors
 - Added panel borders in high-contrast theme for better visibility
 - Refined drag-and-drop ghost row border-radius values
+
+### Unified AI design guidelines
+
+We've established comprehensive design guidelines for AI-enabled experiences that ensure consistent, transparent, and trustworthy AI interactions across all Red Hat products. The documentation source for these guidelines is maintained in a single common location that both the Red Hat Design System and PatternFly consume, making it easy for teams across Red Hat to access the same AI design standards regardless of which design system they use. This shared source is also AI-ready, structured for use in Model Context Protocols (MCPs) and for producing AI skills.
+
+The new guidelines cover:
+
+- **AI design principles:** Three foundational principles guide all AI experiences: be transparent, make it personable but not human, and stay within the Red Hat brand and design language.
+- **Transparency notices:** Comprehensive guidance on when and how to clearly communicate AI usage to users through visual and verbal indicators.
+- **AI iconography:** Standardized sparkle icons for consistent AI indication across both information and action contexts.
+- **Color approach:** Guidance on using standard interface colors for AI features rather than special colors or gradients.
+- **Chatbot avatars:** Standards for representing AI assistants consistently across products.
+
+This work was developed collaboratively through the [Project Felt AI guidelines initiative](https://github.com/project-felt/ai-guidelines). All components in the Chatbot extension have been updated to follow these new standards.
 
 <Divider />
 
