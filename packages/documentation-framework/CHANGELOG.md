@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 6.48.0 (2026-07-02)
+
+
+### Features
+
+* **ver:** bump chatbot to 6.7 ([#5049](https://github.com/patternfly/patternfly-org/issues/5049)) ([98961d8](https://github.com/patternfly/patternfly-org/commit/98961d88ad75fb49de96d86810e5b71c17b77e96))
+
+
+
+
+
 # 6.47.0 (2026-07-01)
 
 
