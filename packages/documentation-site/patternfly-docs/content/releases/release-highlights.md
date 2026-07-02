@@ -31,7 +31,7 @@ Key highlights include updated Red Hat font integration with refined font-weight
     - [@patternfly/react-topology@6.6.0](https://www.npmjs.com/package/@patternfly/react-topology/v/6.6.0)
     - [@patternfly/react-virtualized-extension@6.2.0](https://www.npmjs.com/package/@patternfly/react-virtualized-extension/v/6.2.0)
 - PatternFly extensions
-    - [@patternfly/chatbot@6.7.0](https://www.npmjs.com/package/@patternfly/chatbot/v/6.7.0) ([changelog](https://github.com/patternfly/chatbot/releases))
+    - [@patternfly/chatbot@6.7.1](https://www.npmjs.com/package/@patternfly/chatbot/v/6.7.1) ([changelog](https://github.com/patternfly/chatbot/releases))
     - [@patternfly/quickstarts@6.6.0](https://www.npmjs.com/package/@patternfly/quickstarts/v/6.6.0) ([changelog](https://github.com/patternfly/quickstarts/releases))
     - [@patternfly/react-catalog-view-extension@6.5.0](https://www.npmjs.com/package/@patternfly/react-catalog-view-extension/v/6.5.0) ([changelog](https://github.com/patternfly/react-catalog-view/releases))
     - [@patternfly/react-component-groups@6.5.0](https://www.npmjs.com/package/@patternfly/react-component-groups/v/6.5.0) ([changelog](https://github.com/patternfly/react-component-groups/releases))
