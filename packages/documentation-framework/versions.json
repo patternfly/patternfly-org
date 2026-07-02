@@ -5,7 +5,7 @@
       "date": "2026-07-01",
       "latest": true,
       "versions": {
-        "@patternfly/chatbot": "6.7.0-prerelease.4",
+        "@patternfly/chatbot": "6.7.0",
         "@patternfly/patternfly": "6.6.0",
         "@patternfly/quickstarts": "6.6.0",
         "@patternfly/react-catalog-view-extension": "6.4.0",
