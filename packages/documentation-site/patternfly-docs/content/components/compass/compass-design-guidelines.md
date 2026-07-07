@@ -29,10 +29,6 @@ The header spans the full width of the viewport at the top of the page. It typic
 - **Navigation:** Primary navigation tabs or links, using the `Tabs` component with the `isNav` flag.
 - **Profile:** A user account control, such as a dropdown with an avatar.
 
-#### Docked navigation
-
-As an alternative to a top header with sidebars, a `[docked navigation]`(/components/navigation/react-demos#docked-nav) anchors all navigation into a single vertical sidebar. This is a good fit for applications that emphasize content density or that follow a more traditional side-nav convention.
-
 ### Sidebars
 
 Compass gives you 2 vertical sidebars — one at the start (left) and one at the end (right) of the page. Use them for contextual actions, secondary navigation, or persistent tooling that doesn't belong in the main content flow. Actions in the sidebars can trigger menus and drawers.
@@ -77,7 +73,7 @@ For dashboard views, replace the main header with a `Hero` component and arrange
 
 ### Docked navigation layout
 
-Use the `dock` prop to consolidate all navigation into a single anchored vertical sidebar. This layout works well when horizontal screen space is at a premium or when following a vertical-nav design convention.
+Use the `dock` prop to consolidate all navigation into a single anchored vertical `[docked navigation]`(/components/navigation/react-demos#docked-nav). This layout works well when horizontal screen space is at a premium or when following a vertical-nav design convention.
 
 ## Visual style
 
