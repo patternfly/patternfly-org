@@ -3,6 +3,47 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.4.0-alpha.392 (2026-07-02)
+
+
+### Features
+
+* **ver:** bump to chatbot 6.7.1 ([#5057](https://github.com/patternfly/patternfly-org/issues/5057)) ([c20b899](https://github.com/patternfly/patternfly-org/commit/c20b899f046a73bf317234304c5c743873bfcd65))
+
+
+
+
+
+# 1.4.0-alpha.391 (2026-07-02)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 1.4.0-alpha.390 (2026-07-02)
+
+
+### Features
+
+* **ver:** bump chatbot to 6.7 ([#5049](https://github.com/patternfly/patternfly-org/issues/5049)) ([98961d8](https://github.com/patternfly/patternfly-org/commit/98961d88ad75fb49de96d86810e5b71c17b77e96))
+
+
+
+
+
+# 1.4.0-alpha.389 (2026-07-01)
+
+
+### Features
+
+* **ver:** update to new versions ([#5048](https://github.com/patternfly/patternfly-org/issues/5048)) ([19a1327](https://github.com/patternfly/patternfly-org/commit/19a1327f3cc77c59760cf7788bd459cf6ee5b540))
+
+
+
+
+
 # 1.4.0-alpha.388 (2026-06-29)
 
 
