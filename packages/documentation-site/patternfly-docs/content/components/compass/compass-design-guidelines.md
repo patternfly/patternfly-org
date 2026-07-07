@@ -12,6 +12,15 @@ Use Compass to build AI-driven and generative UI experiences. It gives you a str
 
 A Compass layout is made up of several distinct regions. You can use them independently or together.
 
+<div class="ws-docs-content-img">
+![Elements of the Compass copy component.](./img/compass-elements.svg)
+</div>
+
+1. Header
+2. Sidebars
+3. Main content
+4. Footer
+
 ### Header
 
 The header spans the full width of the viewport at the top of the page. It typically contains 3 areas:
@@ -20,13 +29,13 @@ The header spans the full width of the viewport at the top of the page. It typic
 - **Navigation:** Primary navigation tabs or links, using the `Tabs` component with the `isNav` flag.
 - **Profile:** A user account control, such as a dropdown with an avatar.
 
-### Sidebars
-
-Compass gives you 2 vertical sidebars — one at the start (left) and one at the end (right) of the page. Use them for contextual actions, secondary navigation, or persistent tooling that doesn't belong in the main content flow.
-
-### Docked navigation
+#### Docked navigation
 
 As an alternative to a top header with sidebars, a `[docked navigation]`(/components/navigation/react-demos#docked-nav) anchors all navigation into a single vertical sidebar. This is a good fit for applications that emphasize content density or that follow a more traditional side-nav convention.
+
+### Sidebars
+
+Compass gives you 2 vertical sidebars — one at the start (left) and one at the end (right) of the page. Use them for contextual actions, secondary navigation, or persistent tooling that doesn't belong in the main content flow. Actions in the sidebars can trigger menus and drawers.
 
 ### Main content
 
