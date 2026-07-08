@@ -42,7 +42,6 @@ module.exports = (_env, argv) => {
             path.resolve(process.cwd(), 'patternfly-docs'),
             path.resolve(process.cwd(), 'examples'),
             path.resolve(__dirname, '../..'), // Temporarily compile theme using webpack for development
-            path.resolve(process.cwd(), 'node_modules/@patternfly/documentation-framework'), // symlink path for workspace builds
             /react-[\w-]+\/src\/.*\/examples/,
             /react-[\w-]+\\src\\.*\\examples/, // fix for Windows
             /react-[\w-]+\/patternfly-docs\/.*\/examples/, //fixes for extensions
@@ -107,7 +106,6 @@ module.exports = (_env, argv) => {
       ]
     },
     resolve: {
-      symlinks: false,
       // Allow importing client routes
       alias: {
         'client-styles': path.resolve(process.cwd(), 'patternfly-docs/patternfly-docs.css.js'),
