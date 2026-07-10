@@ -10,7 +10,7 @@ import '../components.css';
 Radio buttons allow users to select **1 item** from a list of options.
 
 <div class="ws-docs-content-img">
-![Example of multiple radio buttons.](./img/radio-usage.png)
+![Example of multiple radio buttons.](./img/radio-usage.svg)
 </div>
 
 **General guidelines**
@@ -22,7 +22,7 @@ Radio buttons allow users to select **1 item** from a list of options.
 * If space is limited, you can also use progressive disclosure by nesting other controls underneath a radio button.
 
     <div class="ws-docs-content-img">
-    ![Example of nested control radio buttons.](./img/radio-nested.png)
+    ![Example of nested control radio buttons.](./img/radio-nested.svg)
     </div>
 
 
