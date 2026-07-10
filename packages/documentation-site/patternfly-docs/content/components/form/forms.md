@@ -480,7 +480,7 @@ Apply the `pf-m-form` modifier to all dropdowns and [menu toggles](/components/m
 ![Do and don't example showing a menu toggle with the pf-m-form modifier applied (square corners) versus without it (pill shape) in a form context.](./img/form-toggle-modifier.png)
 </div>
 
-In the default PatternFly theme, form elements use a 6px square border radius token, `--pf-t--global--border--radius--control--form-element`. In the [Felt theme](/foundations-and-styles/theming#project-felt-theme), form elements—including input fields, menu toggles, and dropdowns—continue to use the same 6px border radius token, while other non-control components use a pill radius token. Using `pf-m-form` ensures that your form elements and menu toggle always match the border radius of the surrounding form fields, regardless of theme.
+In the default PatternFly theme, form elements use `--pf-t--global--border--radius--control--form-element` (6px) border radius token. In the [Felt theme](/foundations-and-styles/theming#project-felt-theme), form elements, including input fields, menu toggles, and dropdowns, continue to use the same `--pf-t--global--border--radius--control--form-element` (6px) token, while other non-control components use `--pf-t--global--border--radius--control--default`. Using the `pf-m-form` class ensures that your form elements and menu toggle always match the border radius of the surrounding form fields, regardless of theme.
 
 ## Accessibility
 
