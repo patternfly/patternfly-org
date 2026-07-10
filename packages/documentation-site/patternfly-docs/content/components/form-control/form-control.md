@@ -17,7 +17,7 @@ Apply the `pf-m-form` modifier to all dropdowns and menu toggles used in a form.
 While form control styles differ slightly depending on the component, they all use some combination of underlines, color, and icons to give users **feedback** on their inputs and selections. For example, if a user types an invalid string into a text box, the box changes state to indicate the error.
 
 <div class="ws-docs-content-img">
-![Types of form controls.](./img/FC-variations.svg)
+![Types of form controls.](./img/FC-variations.png)
 </div>
 
 1. **Default component:** State of the input component before any form control is applied.
@@ -39,7 +39,7 @@ Use error controls when a user inputs incorrect information or selects an invali
 Use success controls to indicate valid user input for fields that require a specific form of input. In the example below, the name entered must be unique, so the success state indicates availability. Alternatively, an error control would be used to indicate a name that is already in use. **Only use success controls if the input must be validated.**
 
 <div class="ws-docs-content-img">
-![Example of a successful input.](./img/FC-success.svg)
+![Example of a successful input.](./img/FC-success.png)
 </div>
 
 ### Grey-out controls
@@ -49,7 +49,7 @@ Input fields should be grayed out when the user cannot perform actions. Gray-out
 Disable controls indicate dependency and can be used to guide the user in a sequential workflow. In the example below, the field Target namespace is disabled, because the user must select a Target provider first. The component is disabled until the user makes the first selection, because namespace options are dependent on the selected provider. Disabled controls should be used over read only controls in scenarios where there is a way for a field to become enabled, for example, in the case of user access/permission restrictions.
 
 <div class="ws-docs-content-img">
-![Example of a disabled input.](./img/FC-disabled.svg)
+![Example of a disabled input.](./img/FC-disabled.png)
 </div>
 
 #### Read only controls
@@ -60,21 +60,21 @@ Use the read only state when an input will *never* be editable. This state diffe
 Use when you don't have the need to copy to clipboard.
 
 <div class="ws-docs-content-img">
-![Example of a plain read-only input with no icon.](./img/FC-read-only-plain.svg)
+![Example of a plain read-only input with no icon.](./img/FC-read-only-plain.png)
 </div>
 
 #### Boxed variation
 Use when you have a need to copy to clipboard.
 
 <div class="ws-docs-content-img">
-![Example of a read-only icon with an icon.](./img/FC-read-only-boxed.svg)
+![Example of a read-only icon with an icon.](./img/FC-read-only-boxed.png)
 </div>
 
 ### Custom icons
 Icons can be included within form fields to indicate the type of input required. The most common example is the Search field, shown below. All icons should be right-aligned within the input component.
 
 <div class="ws-docs-content-img">
-![Example of a custom search input field.](./img/FC-custom-icons.svg)
+![Example of a custom search input field.](./img/FC-custom-icons.png)
 </div>
 
 As a designer, you can choose to design input components with custom icons. Make sure that whatever icon you choose informs the user about the type of input that field requires.

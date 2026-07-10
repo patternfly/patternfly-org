@@ -9,7 +9,7 @@ import '../components.css';
 ## Elements
 
 <div class="ws-docs-content-img">
-![Elements of a text input.](./img/text-input-elements.svg)
+![Elements of a text input.](./img/text-input-elements.png)
 </div>
 
 1. **Label:** Indicates what you want the user to input in the text field.
@@ -43,7 +43,7 @@ For more information about how to provide help content, see  the [forms design g
 Wherever possible, use inline errors to notify users where there is an issue with their input. Inline errors help should be short and help users quickly identify and understand what they need to fix and why.
 
 <div class="ws-docs-content-img">
-![Example of text input errors and validation.](./img/text-input-errors.svg)
+![Example of text input errors and validation.](./img/text-input-errors.png)
 </div>
 
 For more information about how to provide errors and validation, see  the [forms design guidelines](/components/forms/form/design-guidelines#errors-and-validation).
