@@ -35,7 +35,7 @@ You can use headings to label a group of checkboxes. The placement of headings w
 ![Example of a group of checkboxes.](./img/checkbox-alignment.svg)
 </div>
 
-You also have the option to use progressive disclosure by nesting other controls underneath a checkbox. The nested options would be enabled or disabled when the user selects or deselects a checkbox.
+You also have the option to use progressive disclosure by nesting other controls underneath a checkbox. The nested options would be shown or hidden when the user selects or deselects a checkbox.
 
 <div class="ws-docs-content-img">
 ![Example of nested control checkboxes.](./img/checkbox-nested.svg)
