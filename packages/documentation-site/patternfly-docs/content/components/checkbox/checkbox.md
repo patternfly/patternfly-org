@@ -16,7 +16,7 @@ Checkboxes allow users to choose **1 or more items** from a list of options.
 You can also use a single checkbox to allow a user to enable or disable a feature or setting, along with a save button. 
 
 <div class="ws-docs-content-img">
-![Example of a single checkbox.](./img/checkbox-usage-single.svg)
+![Example of a single checkbox for a common "Remember me" option.](./img/checkbox-usage-single.svg)
 </div>
 
 ### When to use
