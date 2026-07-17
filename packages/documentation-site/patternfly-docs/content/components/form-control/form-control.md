@@ -17,7 +17,7 @@ Apply the `pf-m-form` modifier to all dropdowns and menu toggles used in a form.
 While form control styles differ slightly depending on the component, they all use some combination of underlines, color, and icons to give users **feedback** on their inputs and selections. For example, if a user types an invalid string into a text box, the box changes state to indicate the error.
 
 <div class="ws-docs-content-img">
-![Types of form controls.](./img/form-control-variations.svg)
+![Types of form controls grouped by input, selection, and text area. Each form control is numbered in the image to correspond to a text list of descriptions.](./img/form-control-variations.svg)
 </div>
 
 1. **Default component:** State of the input component before any form control is applied.
