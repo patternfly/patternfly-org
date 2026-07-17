@@ -32,7 +32,7 @@ Checkbox labels fall to the right of the checkbox control. If placed vertically,
 You should provide a visible label to a group of checkboxes. The placement of the label will depend on the layout of other content in the form or on the page you’re designing. For more information on how to arrange checkboxes, see our [forms documentation](/components/forms/form/design-guidelines).
 
 <div class="ws-docs-content-img">
-![Example of a group of checkboxes.](./img/checkbox-alignment.svg)
+![Example of a group of checkboxes with a label for the group.](./img/checkbox-alignment.svg)
 </div>
 
 You also have the option to use progressive disclosure by nesting other controls underneath a checkbox. The nested options would be shown or hidden when the user selects or deselects a checkbox.
