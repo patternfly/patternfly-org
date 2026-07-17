@@ -39,7 +39,7 @@ Use error controls when a user inputs incorrect information or selects an invali
 Use success controls to indicate valid user input for fields that require a specific form of input. In the example below, the name entered must be unique, so the success state indicates availability. Alternatively, an error control would be used to indicate a name that is already in use. **Only use success controls if the input must be validated.**
 
 <div class="ws-docs-content-img">
-![Example of a successful input.](./img/form-control-success.svg)
+![Example of a successful input, with a success variant helper text stating that the entered username is available.](./img/form-control-success.svg)
 </div>
 
 ### Grey-out controls
