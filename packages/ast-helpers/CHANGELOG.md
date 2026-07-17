@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.4.0-alpha.393 (2026-07-15)
+
+
+### Bug Fixes
+
+* **docs-framework:** let examples shrink to fit window width ([#5075](https://github.com/patternfly/patternfly-org/issues/5075)) ([5bbd5ef](https://github.com/patternfly/patternfly-org/commit/5bbd5ef45ef49ed1d823bbc4637775945bdab3f4))
+
+
+
+
+
 # 1.4.0-alpha.392 (2026-07-02)
 
 
