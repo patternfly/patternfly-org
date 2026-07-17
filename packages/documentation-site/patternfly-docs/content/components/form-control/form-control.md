@@ -32,7 +32,7 @@ Status controls are the most prominent form control. Error, warning, and success
 Use error controls when a user inputs incorrect information or selects an invalid option from a dropdown menu. Error indicators are often accompanied by helper text to further specify the user error. Read more on error messaging in the [forms guidelines](https://v4-archive.patternfly.org/v4/components/form/design-guidelines#errors-and-validation).
 
 <div class="ws-docs-content-img">
-![A gif showing an example of an input error.](./img/errorcontrols.gif)
+![An example if an input error. When a single letter "A" is entered into the "Name" field, an error helper text is rendered stating that the value must be at least 2 characters.](./img/errorcontrols.gif)
 </div>
 
 #### Success controls
