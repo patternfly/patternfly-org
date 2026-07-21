@@ -313,7 +313,7 @@ To view an interactive example of field groups, see our [field groups demo](/com
 Forms may be placed in several contexts including on a page, in a wizard, or in a modal. Your chosen form placement may impact specific spacing considerations, but general form spacing requirements apply across these contexts.
 
 ### General spacing
-Add `--pf-t--global--spacer--lg` (24px) of spacing below each form input. If a form input includes helper text, this spacing should start below the helper text. Spacing between data inputs like checkboxes and radio buttons should also be `--pf-t--global--spacer--lg` (24px) when on the same line or stacked on one another. For more spacing information, see the [PatternFly spacer guidelines](/foundations-and-styles/spacers#considering-line-height-and-padding).
+Add `--pf-t--global--spacer--gap--group-to-group--vertical--default` (24px) of spacing between each form input group. If a form input includes helper text, this spacing should start below the helper text. Spacing between data inputs like checkboxes and radio buttons should also be `--pf-t--global--spacer--gap--group-to-group--vertical--default` (24px) when on the same line or stacked on one another. Spacing between the end of a form and the start of the button action group should be `--pf-t--global--spacer--xl` (32px). For more spacing information, see the [PatternFly spacer guidelines](/foundations-and-styles/spacers#considering-line-height-and-padding).
 
 <div class="ws-docs-content-img">
 ![Example of a basic form with spacers to show how elements should be spaced within it.](./img/form-spacing.svg)
@@ -322,7 +322,7 @@ Add `--pf-t--global--spacer--lg` (24px) of spacing below each form input. If a f
 
 ### Button spacing
 
-Place submit or cancel buttons on the bottom left of a form, left-aligned with all form fields. Buttons should be spaced using `--pf-t--global--spacer--md` (16px) in all contexts. Buttons for actions other than submitting or canceling the form may be placed elsewhere within a form depending on your use case. 
+Place submit or cancel buttons on the bottom left of a form, left-aligned with all form fields. Buttons should be spaced using `--pf-t--global--spacer--gap--action-to-action--default` (16px) in all contexts. Buttons for actions other than submitting or canceling the form may be placed elsewhere within a form depending on your use case. 
 
 For more guidance on button placement, see our [button guidelines](/components/button/design-guidelines#button-placement). 
 
@@ -332,7 +332,7 @@ For more guidance on button placement, see our [button guidelines](/components/b
 
 ### Forms on a page
 
-Left and top align a form within a page’s content area. A minimum of `--pf-t--global--spacer--lg` (24px) padding should separate the form from neighboring elements.
+Left and top align a form within a page’s content area. A minimum of `--pf-t--global--spacer--gap--group-to-group--vertical--default` (24px) padding should separate the form from neighboring elements.
 
 <div class="ws-docs-content-img">
 ![Example of a form on a page.](./img/form-page-spacing.svg)
@@ -348,7 +348,7 @@ To accommodate lengthy input fields, the maximum suggested width is 880px. Use y
 All input fields in your form will be the same length, except for in a [multi-column form](#multi-column-forms) where you may place two or more adjacent fields in a single line. In a multi-column form, form inputs will share available width on that line.
 
 ### Forms in a wizard
-Similar to an in-page form, forms in wizards should be left-aligned in the content area and have a minimum of `--pf-t--global--spacer--lg` (24px) padding separating its content from neighboring elements. 
+Similar to an in-page form, forms in wizards should be left-aligned in the content area and have a minimum of `--pf-t--global--spacer--gap--group-to-group--vertical--default` (24px) padding separating its content from neighboring elements. 
 
 In a wizard, form error validation should occur when or by the time the user clicks the “Next” button. Don’t wait until the user has completed the whole wizard to notify them of possible errors and their location.
 
@@ -472,9 +472,9 @@ For more button text guidance, see our [button content guidelines](/components/b
 
 To ensure your forms are consistent, maintainable, and adaptable across different themes, we recommend following these best practices.
 
-### Menu toggles and dropdowns in a form
+### Menu toggles in a form
 
-Apply the `pf-m-form` modifier to all dropdowns and [menu toggles](/components/menus/menu-toggle/html/#usage) used in a form. The `.pf-m-form` class modifies the menu toggle's border radius to match other form elements.
+Apply the `pf-m-form` modifier, either by applying the class or using the `isForm` prop for React, to all [menu toggles](/components/menus/menu-toggle/html/#usage) used in a form. The `.pf-m-form` class modifies the menu toggle's border radius to match other form elements.
 
 <div class="ws-docs-content-img">
 ![Do and don't example showing a menu toggle with the pf-m-form modifier applied (square corners) versus without it (pill shape) in a form context.](./img/form-toggle-modifier.svg)
