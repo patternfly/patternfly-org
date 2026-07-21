@@ -16,10 +16,10 @@ A hero is a compositional container. Structure content with PatternFly typograph
 ![Annotated default hero showing headline, description, call-to-action buttons, and optional right-aligned brand asset.](./img/hero-elements.svg)
 </div>
 
-1. **Headline:** A concise statement about the offering or page purpose. Use heading XL typography. On a landing page, this should typically be the page `h1`.
-2. **Description:** Supporting context for the headline. Use body large typography.
-3. **Optional visual content:** A right-aligned brand asset applied as a background image. Decorative assets should support the message without competing with text.
-4. **Calls to action:** Include at least one primary action; one secondary or tertiary action is optional. Use [CTA buttons](/components/button#call-to-action-cta-buttons) at size `lg`.
+1. **Headline:** A concise statement about the offering or page purpose. Use heading XL typography (28px, Red Hat Display Medium). On a landing page, this should typically be the page `h1`.
+2. **Description:** Supporting context for the headline. Use body large typography (16px).
+3. **Visual content (optional):** A right-aligned brand asset applied as a background image. Decorative assets should support the message without competing with text.
+4. **Call to action(s):** Include at least one primary action; one secondary or tertiary action is optional. Use [CTA buttons](/components/button#call-to-action-cta-buttons) at size `lg`.
 
 ## Usage
 
@@ -31,13 +31,13 @@ Use a hero when the primary purpose of the page is to:
 - Introduce a new product, feature, or campaign.
 - Drive users toward a specific high-value action or conversion.
 
-Common placements include homepages, product landing pages, and main dashboard landing views such as Compass.
+Common placements include homepages, product landing pages, and main dashboard landing views (such as Compass).
 
 ### When not to use
 
 Do not use a hero as a generic page header on:
 
-- Pages focused on content discovery, data management, or dense workflows. Use a standard page header instead.
+- Pages focused on content discovery, data management, or dense workflows (use a standard page header instead).
 - Detail views, settings pages, or views where the user's primary task is utility- or task-driven rather than conversion-oriented.
 
 For in-page promotional content that is not at the top of the view, use a [hint](/components/hint/design-guidelines) or horizontal split card instead.
@@ -46,8 +46,8 @@ For in-page promotional content that is not at the top of the view, use a [hint]
 
 - Place the hero at the top of the page content area, spanning the full content width.
 - Do not place a hero in the middle or bottom of a page.
-- In Compass or layered layouts, place a Glass hero directly over the page background&mdash;not inside a [Panel](/components/panel), or within `.pf-v6-c-compass__main-header` or `.pf-v6-c-compass__content`.
-- Constrain text content with the hero body defaults so copy stays on the left and does not collide with a right-aligned background asset. Use `bodyWidth` 800px and `bodyMaxWidth` 80%.
+- In Compass or layered layouts, place a Glass hero directly over the page background&mdash;not inside a [Panel](/components/panel) (`.pf-v6-c-panel`), or within `.pf-v6-c-compass__main-header` or `.pf-v6-c-compass__content`.
+- Constrain text content with the hero body defaults (`bodyWidth` 800px, `bodyMaxWidth` 80%) so copy stays on the left and does not collide with a right-aligned background asset.
 
 <div class="ws-docs-content-img">
 ![Hero placed at the top of a Compass-style layout over the page background, outside the main header and content regions.](./img/hero-placement.svg)
@@ -57,7 +57,7 @@ For in-page promotional content that is not at the top of the view, use a [hint]
 
 ### Default
 
-Use by default on standard landing pages. Default heroes use asymmetric corner radii to reflect Red Hat brand styling and uniform 64px padding to draw attention.
+Use by default on standard landing pages. Default heroes use asymmetric corner radii to reflect Red Hat brand styling (16px on the start-start and end-end corners; 48px on the start-end and end-start corners) and uniform 64px padding to draw attention.
 
 ### Glass
 
@@ -65,8 +65,8 @@ Use in glass theme contexts&mdash;especially Compass and generative UI layouts&m
 
 Glass styling requires **both**:
 
-- The glass theme, `.pf-v6-theme-glass`, and
-- The glass variant, `isGlass` in React or `.pf-m-glass` in HTML/CSS
+- The glass theme (`.pf-v6-theme-glass`), and
+- The glass variant (`isGlass` in React, or `.pf-m-glass` in HTML/CSS)
 
 Glass heroes use a translucent background, backdrop blur, and the glass box shadow token.
 
@@ -84,8 +84,8 @@ Write hero content that is clear, concise, and action-oriented:
 | --- | --- |
 | **Headline** | 1 short sentence. Lead with the core user benefit. Use sentence case. |
 | **Description** | 1–2 sentences maximum. Add essential context without repeating the headline. |
-| **Primary CTA** | Start with an action verb. Be specific&mdash;for example, "Start free trial," not "Click here". |
-| **Secondary CTA** | Use for a lower-commitment or supporting action such as "Learn more" or "View documentation". |
+| **Primary CTA** | Start with an action verb. Be specific ("Start free trial," not "Click here"). |
+| **Secondary CTA** | Use for a lower-commitment or supporting action ("Learn more," "View documentation"). |
 
 - **CTA limit:** Use a maximum of 2 buttons. If more links are needed, put them in the description or in the page body below the hero.
 - For voice and tone, follow [brand voice and tone](/ux-writing/brand-voice-and-tone). Hero copy should feel informative and supportive.
@@ -94,9 +94,9 @@ Write hero content that is clear, concise, and action-oriented:
 
 ### Brand assets
 
-- Apply visual assets as a **background image**, not a separate image slot. Position on the right, aligned to right-center. Use `background-position: right center` and `background-size: contain`.
+- Apply visual assets as a **background image** (not a separate image slot). Position on the right, aligned to right-center (`background-position: right center`; `background-size: contain`).
 - Ensure sufficient contrast between text and any part of the background the text might sit over.
-- Provide distinct light- and dark-theme asset variants when using background imagery. In React, use `backgroundSrcLight` and `backgroundSrcDark`.
+- Provide distinct light- and dark-theme asset variants when using background imagery (`backgroundSrcLight` / `backgroundSrcDark` in React).
 
 ### Responsive behavior
 
@@ -114,7 +114,7 @@ When using gradient overlays or background images, verify color contrast in both
 
 ## Spacing and typography reference
 
-### Hero container (implemented)
+### Hero container
 
 | Spec / Element | Value | Token |
 | --- | --- | --- |
@@ -127,7 +127,7 @@ When using gradient overlays or background images, verify color contrast in both
 | **Glass background** | Glass primary | `--pf-t--global--background--color--glass--primary--default` |
 | **Glass shadow** | Glass default | `--pf-t--global--box-shadow--glass--default` |
 
-### Recommended composition (not Hero CSS)
+### Recommended composition
 
 These gaps come from nested content components (`Content`, `Flex`, `ActionList`), not from `.pf-v6-c-hero` itself:
 
