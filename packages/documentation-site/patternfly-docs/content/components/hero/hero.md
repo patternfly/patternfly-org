@@ -46,7 +46,7 @@ For in-page promotional content that is not at the top of the view, use a [hint]
 
 - Place the hero at the top of the page content area, spanning the full content width.
 - Do not place a hero in the middle or bottom of a page.
-- In Compass or layered layouts, place a Glass hero directly over the page background&mdash;not inside a [Panel](/components/panel) (`.pf-v6-c-panel`), or within `.pf-v6-c-compass__main-header` or `.pf-v6-c-compass__content`. Those regions typically make up the Compass page layout, with panels nested inside them.
+- In Compass or layered layouts, place a Glass hero directly over the page background&mdash;not inside a [Panel](/components/panel) (`.pf-v6-c-panel`), or within `.pf-v6-c-compass__main-header` or `.pf-v6-c-compass__content`.
 - Constrain text content with the hero body defaults (`bodyWidth` 800px, `bodyMaxWidth` 80%) so copy stays on the left and does not collide with a right-aligned background asset.
 
 <div class="ws-docs-content-img">
