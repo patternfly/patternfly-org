@@ -19,6 +19,11 @@ import { css } from '@patternfly/react-styles';
 import ExternalLinkAltIcon from '@patternfly/react-icons/dist/esm/icons/external-link-alt-icon';
 import { Router, useLocation } from '@reach/router';
 import { CSSVariables, PropsTable, TableOfContents, Link, AutoLinkHeader, InlineAlert, FeedbackButton } from '../components';
+import {
+  TocPrototypeProvider,
+  TocDrawerShell,
+  TocSurfaceSwitcher
+} from '../components/tableOfContents/tocPrototype';
 import { capitalize, getTitle, slugger, trackEvent } from '../helpers';
 import './mdx.css';
 import { convertToReactComponent } from '@patternfly/ast-helpers';
@@ -30,7 +35,8 @@ const StickyTabs = React.memo(({ sourceKeys, tabNames, activeSource, path }) => 
 
   return (
     <PageSection id="ws-sticky-nav-tabs" stickyBase="top" isStickyStuck={isStickyStuck} type="tabs">
-      <div className="pf-v6-c-tabs pf-m-page-insets">
+      {/* PROTOTYPE: flex row hosts source tabs + Lg TOC menu slot (#ws-toc-menu-slot) */}
+      <div className="pf-v6-c-tabs pf-m-page-insets ws-sticky-nav-tabs">
         <ul className="pf-v6-c-tabs__list">
           {sourceKeys.map((source, index) => (
             <li
@@ -44,6 +50,7 @@ const StickyTabs = React.memo(({ sourceKeys, tabNames, activeSource, path }) => 
             </li>
           ))}
         </ul>
+        <div id="ws-toc-menu-slot" className="ws-toc-menu-slot" />
       </div>
     </PageSection>
   );
@@ -288,70 +295,77 @@ export const MDXTemplate = ({ title, sources = [], path, id, componentsData }) =
   const showTabs = (!isSinglePage && !hideTabName) || isComponent || isUtility || isPattern;
 
   return (
-    <React.Fragment>
-      <PageGroup>
-        <PageSection className={getClassName()} variant={!isSinglePage ? PageSectionVariants.light : ''} isWidthLimited>
-          <Content isEditorial>
-            <Flex alignItems={{ default: 'alignItemsCenter' }}>
-              <FlexItem>
-                <Title headingLevel="h1" size="4xl" id="ws-page-title">
-                  {title}
-                </Title>
-              </FlexItem>
-              <FlexItem>
-                <Flex display={{ default: 'inlineFlex' }}>
-                  {isDeprecated && (
-                    <FlexItem spacer={{ default: 'spacerSm' }}>
-                      <Tooltip content="Deprecated components are available for use but are no longer being maintained or enhanced.">
-                        <Button variant="plain" hasNoPadding>
-                          <Label color="grey">Deprecated</Label>
-                        </Button>
-                      </Tooltip>
-                    </FlexItem>
-                  )}
-                  {isDemo && (
-                    <FlexItem spacer={{ default: 'spacerSm' }}>
-                      <Tooltip content="Demos show how multiple components can be used in a single design.">
-                        <Button variant="plain" hasNoPadding>
-                          <Label color="purple">Demo</Label>
-                        </Button>
-                      </Tooltip>
-                    </FlexItem>
-                  )}
-                  {isBeta && (
-                    <FlexItem spacer={{ default: 'spacerSm' }}>
-                      <Tooltip content="This beta component is currently under review and is still open for further evolution.">
-                        <Button variant="plain" hasNoPadding>
-                          <Label color="blue">Beta</Label>
-                        </Button>
-                      </Tooltip>
-                    </FlexItem>
-                  )}
-                </Flex>
-              </FlexItem>
-            </Flex>
-            {isComponent && summary && <SummaryComponent />}
-          </Content>
-        </PageSection>
-        {showTabs && (
-          <StickyTabs sourceKeys={sourceKeys} tabNames={tabNames} activeSource={activeSource} path={path} />
-        )}
-        <PageSection id="main-content" isFilled className="pf-m-light-100">
-          {isSinglePage && <MDXChildTemplate {...sources[0]} id={id} />}
-          {!isSinglePage && (
-            <Router className="pf-v6-u-h-100" primary={false}>
-              {sources
-                .map((source, index) => {
-                  source.index = index;
-                  return source;
-                })
-                .map(MDXChildTemplate)}
-            </Router>
+    <TocPrototypeProvider>
+      <TocDrawerShell>
+        <PageGroup>
+          <PageSection className={getClassName()} variant={!isSinglePage ? PageSectionVariants.light : ''} isWidthLimited>
+            <Content isEditorial>
+              <Flex alignItems={{ default: 'alignItemsCenter' }} className="ws-page-title-row">
+                <FlexItem>
+                  <Title headingLevel="h1" size="4xl" id="ws-page-title">
+                    {title}
+                  </Title>
+                </FlexItem>
+                <FlexItem>
+                  <Flex display={{ default: 'inlineFlex' }}>
+                    {isDeprecated && (
+                      <FlexItem spacer={{ default: 'spacerSm' }}>
+                        <Tooltip content="Deprecated components are available for use but are no longer being maintained or enhanced.">
+                          <Button variant="plain" hasNoPadding>
+                            <Label color="grey">Deprecated</Label>
+                          </Button>
+                        </Tooltip>
+                      </FlexItem>
+                    )}
+                    {isDemo && (
+                      <FlexItem spacer={{ default: 'spacerSm' }}>
+                        <Tooltip content="Demos show how multiple components can be used in a single design.">
+                          <Button variant="plain" hasNoPadding>
+                            <Label color="purple">Demo</Label>
+                          </Button>
+                        </Tooltip>
+                      </FlexItem>
+                    )}
+                    {isBeta && (
+                      <FlexItem spacer={{ default: 'spacerSm' }}>
+                        <Tooltip content="This beta component is currently under review and is still open for further evolution.">
+                          <Button variant="plain" hasNoPadding>
+                            <Label color="blue">Beta</Label>
+                          </Button>
+                        </Tooltip>
+                      </FlexItem>
+                    )}
+                  </Flex>
+                </FlexItem>
+                {/* PROTOTYPE: title-row slot (unused while no-tabs uses fixed placement) */}
+                <FlexItem className="ws-toc-title-slot-item" align={{ default: 'alignRight' }}>
+                  <div id="ws-toc-title-slot" className="ws-toc-title-slot" />
+                </FlexItem>
+              </Flex>
+              {isComponent && summary && <SummaryComponent />}
+            </Content>
+          </PageSection>
+          {showTabs && (
+            <StickyTabs sourceKeys={sourceKeys} tabNames={tabNames} activeSource={activeSource} path={path} />
           )}
-        </PageSection>
-        <BackToTop className="ws-back-to-top" scrollableSelector="#ws-page-main" />
-        {hasFeedbackButton && <FeedbackButton />}
-      </PageGroup>
-    </React.Fragment>
+          <PageSection id="main-content" isFilled className="pf-m-light-100">
+            {isSinglePage && <MDXChildTemplate {...sources[0]} id={id} />}
+            {!isSinglePage && (
+              <Router className="pf-v6-u-h-100" primary={false}>
+                {sources
+                  .map((source, index) => {
+                    source.index = index;
+                    return source;
+                  })
+                  .map(MDXChildTemplate)}
+              </Router>
+            )}
+          </PageSection>
+          <BackToTop className="ws-back-to-top" scrollableSelector="#ws-page-main" />
+          {hasFeedbackButton && <FeedbackButton />}
+        </PageGroup>
+        <TocSurfaceSwitcher />
+      </TocDrawerShell>
+    </TocPrototypeProvider>
   );
 };

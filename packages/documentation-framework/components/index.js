@@ -10,6 +10,7 @@ export * from './sideNav/sideNav';
 export * from './topNav/topNav';
 export * from './link/link.jsx';
 export * from './tableOfContents/tableOfContents';
+export * from './tableOfContents/tocPrototype';
 export * from './inlineAlert/inlineAlert';
 export * from './themeSelector/themeSelector';
 export * from './feedbackButton/feedbackButton';

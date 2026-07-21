@@ -26,8 +26,16 @@ p.pf-v6-c-content--p.ws-p {
   z-index: var(--pf-t--global--z-index--2xl);
 }
 
+/* PROTOTYPE: allow content to shrink so Md TOC floating behavior can be reviewed */
 .ws-example-page-wrapper {
-  min-width: 825px;
+  min-width: 0;
   max-width: 1200px;
   flex-grow: 1;
+  width: 100%;
+}
+
+@media (min-width: 1450px) {
+  .ws-example-page-wrapper {
+    min-width: 825px;
+  }
 }

@@ -1,3 +1,15 @@
+/**
+ * PROTOTYPE: Responsive TOC redesign styles
+ * See tableOfContents.js for breakpoint behavior notes.
+ */
+
+/* —— Shared —— */
+.ws-toc-item .pf-m-link {
+  text-wrap: wrap;
+  text-align: left;
+}
+
+/* —— XL+ / 2xl (≥1450px): sidebar JumpLinks (existing) —— */
 .ws-toc {
   align-self: flex-start;
   position: sticky;
@@ -16,32 +28,17 @@
 }
 
 .ws-toc.pf-m-expanded {
-  box-shadow: var(--pf-t--global--box-shadow--sm--bottom)
+  box-shadow: var(--pf-t--global--box-shadow--sm--bottom);
 }
 
 .ws-toc .pf-v6-c-jump-links__toggle button {
   background-color: var(--pf-t--global--background--color--secondary--default);
 }
 
-/* Mobile jumplinks */
-@media (max-width: 1449px) {
-  .ws-toc.pf-m-expanded .pf-v6-c-jump-links__main {
-    max-height: 65vh;
-    overflow-y:auto;
-  }
-
-  .ws-toc .pf-v6-c-jump-links__header {
-    position: sticky;
-    top: 0;
-    z-index: 2;
-  }
-}
-
 .ws-toc .pf-v6-c-jump-links__main {
   scrollbar-width: none;
 }
 
-/* Hide TOC scrollbar Chrome, Safari & Opera */
 .ws-toc .pf-v6-c-jump-links__main::-webkit-scrollbar {
   display: none;
 }
@@ -52,7 +49,6 @@
     max-width: 320px;
     max-height: calc(100vh - 76px);
     overflow-y: auto;
-    /* Hide TOC scrollbar IE, Edge & Firefox */
     -ms-overflow-style: none;
     scrollbar-width: none;
     padding: 0 0 0 var(--pf-t--global--spacer--2xl);
@@ -66,15 +62,300 @@
   .ws-toc.pf-m-expanded {
     box-shadow: none;
   }
-}
 
-.ws-toc-item .pf-m-link {
-  text-wrap: wrap;
-  text-align: left;
-}
-
-@media (min-width: 1450px) {
   .ws-toc .pf-v6-c-jump-links__main {
     margin-bottom: var(--jump-links-main-margin-bottom);
   }
+}
+
+/* —— Sticky tabs: slot for Lg TOC menu toggle —— */
+.ws-sticky-nav-tabs {
+  display: flex;
+  align-items: center;
+  gap: var(--pf-t--global--spacer--sm);
+}
+
+.ws-sticky-nav-tabs .pf-v6-c-tabs__list {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.ws-toc-menu-slot {
+  display: none;
+  flex: 0 0 auto;
+  align-items: center;
+  margin-inline-start: auto;
+  /* No extra slot padding — tabs pf-m-page-insets (~24px) remains */
+  padding-inline-end: 0;
+}
+
+/* Show slot only at Lg (below 2xl sidebar breakpoint) */
+@media (min-width: 992px) and (max-width: 1449px) {
+  .ws-toc-menu-slot {
+    display: flex;
+  }
+}
+
+/* —— Title row slot kept for layout hooks; unused while no-tabs uses fixed placement —— */
+.ws-toc-title-slot-item {
+  margin-inline-start: auto;
+  display: none;
+}
+
+.ws-toc-title-slot {
+  display: none;
+}
+
+/* —— Menu toggle (Lg plain / Md floating) —— */
+.ws-toc-menu-toggle {
+  flex-shrink: 0;
+  pointer-events: auto;
+}
+
+.ws-toc-menu-toggle.pf-m-expanded,
+.ws-toc-menu-toggle[aria-expanded='true'] {
+  background-color: var(--pf-t--global--background--color--action--plain--clicked);
+}
+
+/* Floating toggle row (md with tabs — sticky below tabs, no content push) */
+.ws-toc-floating {
+  position: sticky;
+  top: calc(var(--ws-toc-sticky-offset, 0px) + var(--pf-t--global--spacer--sm));
+  z-index: 200;
+  display: flex;
+  justify-content: flex-end;
+  align-self: stretch;
+  width: 100%;
+  /* Zero flow height so the toggle overlays content instead of pushing it down */
+  height: 0;
+  margin-block-end: 0;
+  overflow: visible;
+  /* Avoid blocking clicks on page content behind the sticky row */
+  pointer-events: none;
+}
+
+/*
+ * No-tabs / overview: fixed on document.body with a constant right edge.
+ * top is set in JS to the page title (then below stuck toolbars on scroll).
+ */
+.ws-toc-floating-no-tabs {
+  --ws-toc-feedback-clearance: 2.75rem;
+  position: fixed;
+  right: var(--ws-toc-feedback-clearance);
+  left: auto;
+  width: auto;
+  margin: 0;
+  z-index: 300;
+}
+
+.ws-toc-floating-no-tabs:not([style*='top']) {
+  visibility: hidden;
+}
+
+.ws-toc-menu-toggle-floating {
+  background-color: var(--pf-t--global--background--color--floating--default, var(--pf-t--global--background--color--primary--default));
+  box-shadow: var(--pf-t--global--box-shadow--md);
+  border-radius: var(--pf-t--global--border--radius--small);
+  /* Keep toggle at its natural MenuToggle size even when the sticky row has height: 0 */
+  flex-shrink: 0;
+  transform: none;
+  min-width: var(--pf-t--global--spacer--2xl);
+  min-height: var(--pf-t--global--spacer--2xl);
+}
+
+.ws-toc-menu-toggle-floating:hover {
+  background-color: var(--pf-t--global--background--color--floating--hover, var(--pf-t--global--background--color--primary--hover));
+}
+
+@media (max-width: 991px) {
+  .ws-toc-floating:not(.ws-toc-floating-no-tabs) {
+    --ws-toc-feedback-clearance: 2.75rem;
+    margin-inline-end: calc(
+      -1 * var(--pf-v6-c-page__main-section--PaddingInlineEnd, var(--pf-t--global--spacer--md)) +
+        var(--ws-toc-feedback-clearance)
+    );
+  }
+
+  .ws-toc-panel {
+    max-width: min(287px, calc(100vw - var(--ws-toc-feedback-clearance, 2.75rem) - var(--pf-t--global--spacer--lg)));
+  }
+}
+
+/* —— Floating panel with jumplinks —— */
+.ws-toc-panel {
+  width: 287px;
+  max-width: min(287px, calc(100vw - var(--pf-t--global--spacer--2xl)));
+  max-height: min(347px, 65vh);
+  border-radius: var(--pf-t--global--border--radius--medium);
+  overflow: hidden;
+  pointer-events: auto;
+}
+
+.ws-toc-panel .pf-v6-c-panel__main {
+  overflow-y: auto;
+  max-height: inherit;
+}
+
+.ws-toc-panel-jumplinks {
+  width: 100%;
+  background: none;
+  box-shadow: none;
+  margin: 0;
+  padding: var(--pf-t--global--spacer--md);
+}
+
+.ws-toc-panel-jumplinks .pf-v6-c-jump-links__main {
+  scrollbar-width: thin;
+}
+
+.ws-toc-panel-jumplinks .pf-v6-c-jump-links__list {
+  padding-inline-start: 0;
+}
+
+/* —— Pill overlay Drawer surface —— */
+.ws-toc-drawer.pf-v6-c-drawer,
+.ws-toc-drawer {
+  /* Stay in normal page flow; do not create a nested scrollport */
+  display: block;
+  height: auto;
+  min-height: 0;
+  /* PF drawer sets overflow-x:hidden which breaks position:sticky tabs */
+  overflow: visible !important;
+}
+
+/*
+ * Closed panel is collapsed out of flow (below), so we do not need
+ * overflow:hidden on __main (that broke sticky tabs / toolbars).
+ */
+.ws-toc-drawer > .pf-v6-c-drawer__main {
+  overflow: visible;
+  min-height: 0;
+}
+
+.ws-toc-drawer .pf-v6-c-drawer__content {
+  overflow: visible;
+  flex-basis: 100%;
+  flex-shrink: 0;
+  min-width: 0;
+  min-height: 0;
+}
+
+.ws-toc-drawer-content-body {
+  display: block;
+  min-height: 0;
+  height: auto;
+  padding: 0;
+}
+
+/* Closed: keep panel out of layout so it never leaves a blank gutter */
+.ws-toc-drawer:not(.pf-m-expanded):not(.ws-toc-drawer-expanded) .ws-toc-drawer-panel.pf-v6-c-drawer__panel {
+  position: absolute;
+  inset-inline-end: 0;
+  width: 0;
+  min-width: 0;
+  max-width: 0;
+  flex-basis: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  overflow: hidden;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+/*
+ * Expanded: fixed within #ws-page-main (backdrop-filter containing block),
+ * inset by medium spacer on top, bottom, and inline-end.
+ */
+.ws-toc-drawer.pf-m-expanded .ws-toc-drawer-panel.pf-v6-c-drawer__panel,
+.ws-toc-drawer-expanded .ws-toc-drawer-panel.pf-v6-c-drawer__panel {
+  --pf-v6-c-drawer--m-expanded__panel--inset: var(--pf-t--global--spacer--md);
+  --pf-v6-c-drawer__panel--MarginBlock: 0;
+  margin: 0 !important;
+
+  position: fixed;
+  top: var(--pf-t--global--spacer--md);
+  inset-block-start: var(--pf-t--global--spacer--md);
+  bottom: var(--pf-t--global--spacer--md);
+  inset-block-end: var(--pf-t--global--spacer--md);
+  inset-inline-end: var(--pf-t--global--spacer--md);
+  height: auto;
+  max-height: none;
+  /* Let PF defaults drive size (50% / 450px at xl); width needed because we're fixed */
+  width: var(--pf-v6-c-drawer__panel--FlexBasis);
+  min-width: var(--pf-v6-c-drawer__panel--MinWidth);
+  max-width: none;
+  /* Override PF slide transform so inset metrics control placement */
+  transform: none !important;
+  z-index: 1000;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  visibility: visible;
+}
+
+/* <768px: overlay the full page-main area (md inset on all sides) */
+@media (max-width: 767px) {
+  .ws-toc-drawer.pf-m-expanded .ws-toc-drawer-panel.pf-v6-c-drawer__panel,
+  .ws-toc-drawer-expanded .ws-toc-drawer-panel.pf-v6-c-drawer__panel {
+    inset-inline-start: var(--pf-t--global--spacer--md);
+    width: auto;
+    min-width: 0;
+    max-width: none;
+    flex-basis: auto !important;
+  }
+}
+
+.ws-toc-drawer-panel-body {
+  padding-block-start: 0;
+  flex: 1 1 auto;
+  overflow-y: auto;
+  min-height: 0;
+}
+
+.ws-toc-drawer-jumplinks {
+  width: 100%;
+  background: none;
+  box-shadow: none;
+  margin: 0;
+  padding: var(--pf-t--global--spacer--md);
+}
+
+.ws-toc-drawer-jumplinks .pf-v6-c-jump-links__main {
+  scrollbar-width: thin;
+}
+
+.ws-toc-drawer-jumplinks .pf-v6-c-jump-links__list {
+  padding-inline-start: 0;
+}
+
+/* Keep floating TOC toggle under the open drawer */
+.ws-toc-menu-toggle-under-drawer {
+  z-index: 1 !important;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.ws-toc-floating-no-tabs.ws-toc-menu-toggle-under-drawer {
+  z-index: 1 !important;
+}
+
+/* —— Prototype surface switcher (Panel | Drawer) —— */
+.ws-toc-surface-switcher {
+  position: fixed;
+  inset-block-end: var(--pf-t--global--spacer--md);
+  inset-inline-start: var(--pf-t--global--spacer--md);
+  z-index: 400;
+  display: flex;
+  flex-direction: column;
+  gap: var(--pf-t--global--spacer--xs);
+  padding: var(--pf-t--global--spacer--sm);
+  background-color: var(--pf-t--global--background--color--floating--default, var(--pf-t--global--background--color--primary--default));
+  box-shadow: var(--pf-t--global--box-shadow--md);
+  border-radius: var(--pf-t--global--border--radius--small);
+}
+
+.ws-toc-surface-switcher-label {
+  font-size: var(--pf-t--global--font--size--body--sm);
+  color: var(--pf-t--global--text--color--subtle);
 }
