@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="380" viewBox="0 0 1200 380" role="img" aria-labelledby="title desc">
+  <title id="title">Hero variants</title>
+  <desc id="desc">Side-by-side comparison of the default hero and glass hero variants. Replace with final design export.</desc>
+  <rect width="1200" height="380" fill="#f5f5f5"/>
+  <text x="40" y="36" font-family="Red Hat Display, Helvetica, Arial, sans-serif" font-size="18" font-weight="600" fill="#151515">Default</text>
+  <rect x="40" y="56" width="540" height="240" rx="16" fill="#ececec" stroke="#b8b8b8" stroke-width="2"/>
+  <text x="72" y="120" font-family="Red Hat Display, Helvetica, Arial, sans-serif" font-size="24" font-weight="600" fill="#151515">Hero title</text>
+  <text x="72" y="156" font-family="Red Hat Text, Helvetica, Arial, sans-serif" font-size="15" fill="#4f4f4f">Main body content</text>
+  <rect x="72" y="190" width="110" height="36" rx="18" fill="#0066cc"/>
+  <rect x="196" y="190" width="110" height="36" rx="18" fill="#ffffff" stroke="#c7c7c7"/>
+  <rect x="360" y="90" width="180" height="160" rx="8" fill="#d2d2d2" opacity="0.75"/>
+  <text x="620" y="36" font-family="Red Hat Display, Helvetica, Arial, sans-serif" font-size="18" font-weight="600" fill="#151515">Glass</text>
+  <rect x="620" y="56" width="540" height="240" rx="16" fill="#ffffff" stroke="#c7c7c7" stroke-width="2" opacity="0.95"/>
+  <text x="652" y="120" font-family="Red Hat Display, Helvetica, Arial, sans-serif" font-size="24" font-weight="600" fill="#151515">Hero title</text>
+  <text x="652" y="156" font-family="Red Hat Text, Helvetica, Arial, sans-serif" font-size="15" fill="#4f4f4f">Main body content</text>
+  <rect x="652" y="190" width="110" height="36" rx="18" fill="#0066cc"/>
+  <rect x="776" y="190" width="110" height="36" rx="18" fill="#ffffff" stroke="#c7c7c7"/>
+  <rect x="940" y="90" width="180" height="160" rx="8" fill="#d2d2d2" opacity="0.55"/>
+  <text x="40" y="350" font-family="Red Hat Text, Helvetica, Arial, sans-serif" font-size="13" fill="#6a6e73">Placeholder  replace with Figma export (Default vs Glass)</text>
+</svg>

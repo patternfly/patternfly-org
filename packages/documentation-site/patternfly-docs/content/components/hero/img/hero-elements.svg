@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="420" viewBox="0 0 1200 420" role="img" aria-labelledby="title desc">
+  <title id="title">Hero elements</title>
+  <desc id="desc">Annotated default hero showing headline, description, call-to-action buttons, and optional right-aligned brand asset. Replace with final design export.</desc>
+  <rect width="1200" height="420" fill="#f5f5f5"/>
+  <rect x="40" y="40" width="1120" height="300" rx="16" fill="#ececec" stroke="#b8b8b8" stroke-width="2"/>
+  <path d="M1120 40h24a16 16 0 0 1 16 16v24" fill="none" stroke="#b8b8b8" stroke-width="2"/>
+  <path d="M40 316v24a16 16 0 0 0 16 16h24" fill="none" stroke="#b8b8b8" stroke-width="2"/>
+  <path d="M1160 100c0 80-48 148-48 220" fill="none" stroke="#b8b8b8" stroke-width="2"/>
+  <text x="80" y="110" font-family="Red Hat Display, Helvetica, Arial, sans-serif" font-size="28" font-weight="600" fill="#151515">1. Headline</text>
+  <text x="80" y="150" font-family="Red Hat Text, Helvetica, Arial, sans-serif" font-size="16" fill="#4f4f4f">2. Description  supporting context for the headline</text>
+  <rect x="80" y="190" width="140" height="40" rx="20" fill="#0066cc"/>
+  <text x="100" y="215" font-family="Red Hat Text, Helvetica, Arial, sans-serif" font-size="14" font-weight="600" fill="#ffffff">3. Primary CTA</text>
+  <rect x="236" y="190" width="150" height="40" rx="20" fill="#ffffff" stroke="#c7c7c7" stroke-width="1"/>
+  <text x="252" y="215" font-family="Red Hat Text, Helvetica, Arial, sans-serif" font-size="14" font-weight="600" fill="#0066cc">Secondary CTA</text>
+  <rect x="780" y="80" width="320" height="220" rx="8" fill="#d2d2d2" opacity="0.7"/>
+  <text x="840" y="195" font-family="Red Hat Text, Helvetica, Arial, sans-serif" font-size="16" fill="#6a6e73">4. Visual content</text>
+  <text x="40" y="390" font-family="Red Hat Text, Helvetica, Arial, sans-serif" font-size="13" fill="#6a6e73">Placeholder  replace with Figma export (Default hero, annotated)</text>
+</svg>

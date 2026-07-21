@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="520" viewBox="0 0 1200 520" role="img" aria-labelledby="title desc">
+  <title id="title">Hero placement in Compass layouts</title>
+  <desc id="desc">Hero placed at the top of a Compass-style layout over the page background, outside the main content panel. Replace with final design export.</desc>
+  <rect width="1200" height="520" fill="#d8d8d8"/>
+  <rect x="24" y="24" width="1152" height="48" rx="8" fill="#ffffff" opacity="0.9"/>
+  <text x="48" y="54" font-family="Red Hat Text, Helvetica, Arial, sans-serif" font-size="14" fill="#6a6e73">Masthead / navigation</text>
+  <rect x="80" y="100" width="1040" height="160" rx="16" fill="#ffffff" stroke="#c7c7c7" stroke-width="2" opacity="0.95"/>
+  <text x="112" y="150" font-family="Red Hat Display, Helvetica, Arial, sans-serif" font-size="22" font-weight="600" fill="#151515">Glass hero</text>
+  <text x="112" y="180" font-family="Red Hat Text, Helvetica, Arial, sans-serif" font-size="14" fill="#4f4f4f">Sits over page background  not inside a compass panel</text>
+  <rect x="112" y="200" width="100" height="32" rx="16" fill="#0066cc"/>
+  <rect x="80" y="290" width="1040" height="180" rx="24" fill="#f0f0f0" stroke="#b8b8b8" stroke-width="2"/>
+  <text x="112" y="340" font-family="Red Hat Display, Helvetica, Arial, sans-serif" font-size="18" font-weight="600" fill="#151515">.pf-v6-c-compass__panel</text>
+  <text x="112" y="370" font-family="Red Hat Text, Helvetica, Arial, sans-serif" font-size="14" fill="#4f4f4f">Main page content lives here</text>
+  <text x="40" y="500" font-family="Red Hat Text, Helvetica, Arial, sans-serif" font-size="13" fill="#6a6e73">Placeholder  replace with Figma/Compass placement screenshot</text>
+</svg>

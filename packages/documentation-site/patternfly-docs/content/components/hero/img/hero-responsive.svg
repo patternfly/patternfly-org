@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="420" viewBox="0 0 1200 420" role="img" aria-labelledby="title desc">
+  <title id="title">Hero responsive behavior</title>
+  <desc id="desc">Desktop hero with a right-aligned brand asset next to a narrow viewport hero with the brand asset omitted and content stacked vertically. Replace with final design export.</desc>
+  <rect width="1200" height="420" fill="#f5f5f5"/>
+  <text x="40" y="36" font-family="Red Hat Display, Helvetica, Arial, sans-serif" font-size="18" font-weight="600" fill="#151515">Desktop</text>
+  <rect x="40" y="56" width="680" height="280" rx="16" fill="#ececec" stroke="#b8b8b8" stroke-width="2"/>
+  <text x="72" y="120" font-family="Red Hat Display, Helvetica, Arial, sans-serif" font-size="24" font-weight="600" fill="#151515">Hero title</text>
+  <text x="72" y="156" font-family="Red Hat Text, Helvetica, Arial, sans-serif" font-size="15" fill="#4f4f4f">Main body content</text>
+  <rect x="72" y="190" width="110" height="36" rx="18" fill="#0066cc"/>
+  <rect x="196" y="190" width="110" height="36" rx="18" fill="#ffffff" stroke="#c7c7c7"/>
+  <rect x="480" y="90" width="200" height="180" rx="8" fill="#d2d2d2" opacity="0.75"/>
+  <text x="520" y="185" font-family="Red Hat Text, Helvetica, Arial, sans-serif" font-size="14" fill="#6a6e73">Brand asset</text>
+  <text x="760" y="36" font-family="Red Hat Display, Helvetica, Arial, sans-serif" font-size="18" font-weight="600" fill="#151515">Narrow / mobile</text>
+  <rect x="760" y="56" width="400" height="280" rx="16" fill="#ececec" stroke="#b8b8b8" stroke-width="2"/>
+  <text x="792" y="120" font-family="Red Hat Display, Helvetica, Arial, sans-serif" font-size="22" font-weight="600" fill="#151515">Hero title</text>
+  <text x="792" y="156" font-family="Red Hat Text, Helvetica, Arial, sans-serif" font-size="15" fill="#4f4f4f">Main body content</text>
+  <rect x="792" y="190" width="110" height="36" rx="18" fill="#0066cc"/>
+  <rect x="792" y="240" width="110" height="36" rx="18" fill="#ffffff" stroke="#c7c7c7"/>
+  <text x="792" y="310" font-family="Red Hat Text, Helvetica, Arial, sans-serif" font-size="13" fill="#6a6e73">Brand asset omitted</text>
+  <text x="40" y="390" font-family="Red Hat Text, Helvetica, Arial, sans-serif" font-size="13" fill="#6a6e73">Placeholder  replace with Figma export (desktop vs mobile)</text>
+</svg>
