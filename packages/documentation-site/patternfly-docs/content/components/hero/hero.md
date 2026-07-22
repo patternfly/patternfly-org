@@ -94,7 +94,7 @@ Write hero content that is clear, concise, and action-oriented:
 
 ### Brand assets
 
-- Apply visual assets as a **background image** (not a separate image slot). Position on the right, aligned to right-center (`background-position: right center`; `background-size: contain`).
+- Apply visual assets as a **background image** (not a separate image slot). Position on the right, aligned to right-center (`background-position: right center`, `background-size: contain`).
 - Ensure sufficient contrast between text and any part of the background the text might sit over.
 - Provide distinct light- and dark-theme asset variants when using background imagery (`backgroundSrcLight` / `backgroundSrcDark` in React).
 
