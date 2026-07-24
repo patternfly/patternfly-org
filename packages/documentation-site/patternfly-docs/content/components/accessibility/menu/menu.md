@@ -12,7 +12,9 @@ import { Checkbox, List, ListItem } from '@patternfly/react-core';
 To implement an accessible PatternFly **menu** component:
 - Due to the composable nature of the menu component, keyboard interaction will need to be added manually between the menu toggle and the menu. See the [custom menu demos](https://www.patternfly.org/components/menus/custom-menus) to see how this is done.
 - Any actions placed within a menu item will need an `aria-label` on the `MenuItemAction` to communicate to users what the action is.
-- When using the menu as a select (single or multi-select), use `role="listbox"` on the menu list, `role="option"` on menu items, `aria-selected` on every option, and `aria-multiselectable="true"` on the list for multi-select.
+- When using the menu as a select (single or multi-select), you must ensure any applicable attributes are applied to the menu components:
+  - `role="listbox"` on the menu list, as well as `aria-multiselectable="true"` if multiple options can be selected
+  - `role="option"` and a boolean `aria-selected` on menu items
 
 
 ## Testing
@@ -43,8 +45,8 @@ The following React props have been provided for more fine-tuned control over ac
 |`icon={<Icon aria-hidden />}` | `MenuItemAction` | Renders an icon to a menu item action. When icon is decorative, pass an `aria-hidden` to the icon to hide it from screen reader users. |
 | `labelHeadingLevel=[a heading tag]` | `MenuGroup` | Adds a group label's heading level. Default is `h1`. Be sure to not skip heading levels when passing this prop in. For example, if a menu group is within a page section that has an `h2` heading, you should not pass `headingLevel="h4"`. |
 | `role="listbox"` | `Menu` | When the menu is used as a select (single or multi-select), replaces the default menu role to declare the menu as a listbox. |
-| `isAriaMultiselectable` | `MenuList` | Indicates that more than one option in the listbox can be selected at a time. Sets `aria-multiselectable="true"` on the menu list. Only applies to multi-select when `role="listbox"` is also passed to `Menu`. |
-| `isSelected` | `MenuItem` | Indicates whether the option is currently selected. When `role="listbox"` is passed to `Menu`, sets `aria-selected="true"` or `"false"` on the menu item. **Required** on every option in a select listbox. Can also use the `selected` prop on `Menu` to manage selection state. |
+| `isAriaMultiselectable` | `MenuList` | Indicates that more than one option in the listbox can be selected at a time. Only applies when `role="listbox"` is also passed to `Menu`. |
+| `isSelected` | `MenuItem` | Indicates whether the option is currently selected. Only applies when `role="listbox"` is passed to `Menu`. **Required** on every option in a select listbox with either a value of `true` or `false`. Can also use the `selected` prop on `Menu` to manage selection state. |
 | `role="option"` | `MenuItem` | When the menu is used as a select, replaces `role="menuitem"` to assign the menu item as a selectable option in the listbox. Automatically applied when `role="listbox"` is passed to `Menu`. |
 
 
@@ -57,12 +59,12 @@ The following HTML attributes and PatternFly classes can be used for more fine-t
 | Attribute or class | Applied | Reason |
 | -- | -- | -- |
 | `role="menu"` | `.pf-v6-c-menu__list` | Declares `.pf-v6-c-menu__list` as a menu. |
-| `role="listbox"` | `.pf-v6-c-menu__list` | When the menu is used as a select (single or multi-select), replaces `role="menu"` to declare `.pf-v6-c-menu__list` as a listbox. |
+| `role="listbox"` | `.pf-v6-c-menu__list` | When the menu is used as a select (single or multi-select), replace `role="menu"` to declare `.pf-v6-c-menu__list` as a listbox. |
 | `disabled` | `button.pf-v6-c-menu__item` | When the menu item uses a button element, indicates that it is unavailable and removes it from keyboard focus. |
 | `role="menuitem"` | `.pf-v6-c-menu__item`, `.pf-v6-c-menu__list-item` (checkbox) | Assigns `.pf-v6-c-menu__item` as an option in a set of choices contained by a menu. |
-| `role="option"` | `.pf-v6-c-menu__item` | When the menu is used as a select, replaces `role="menuitem"` to assign `.pf-v6-c-menu__item` as a selectable option in the listbox. |
-| `aria-selected="true"` or `"false"` | `.pf-v6-c-menu__item` (`role="option"`) | **Required** on every option in a select listbox. Indicates whether that option is currently selected; must never be omitted, even for unselected options. |
-| `aria-multiselectable="true"` | `.pf-v6-c-menu__list` (`role="listbox"`) | Indicates that more than one option in the listbox can be selected at a time. Only applies to multi-select. |
+| `role="option"` | `.pf-v6-c-menu__item` | When the menu is used as a select, replace `role="menuitem"` to assign `.pf-v6-c-menu__item` as a selectable option in the listbox. |
+| `aria-selected="[true or false]"` | `.pf-v6-c-menu__item[role="option"]` | Indicates whether that option is currently selected. **Required** on every option in a select listbox; must never be omitted, even for unselected options. |
+| `aria-multiselectable="true"` | `.pf-v6-c-menu__list` (`role="listbox"`) | Indicates that more than one option in the listbox can be selected at a time. |
 | `role="none"` | `.pf-v6-c-menu__list-item` | Removes semantic meaning from `.pf-v6-c-menu__list-item`. |
 | `aria-disabled="true"` | `a.pf-v6-c-menu__item` | When the menu item uses a link element, removes it from keyboard focus. |
 | `tabindex="-1"` | `a.pf-v6-c-menu__item` | When the menu item uses a link element, removes it from keyboard focus. |
