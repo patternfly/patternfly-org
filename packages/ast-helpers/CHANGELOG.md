@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.4.0-alpha.396 (2026-07-27)
+
+
+### Bug Fixes
+
+* **nav:** close sidebar on mobile breakpoint ([#5087](https://github.com/patternfly/patternfly-org/issues/5087)) ([75b6042](https://github.com/patternfly/patternfly-org/commit/75b6042db3183f752f64b83a52ab1818d70c261d))
+
+
+
+
+
 # 1.4.0-alpha.395 (2026-07-27)
 
 
