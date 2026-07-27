@@ -1,12 +1,11 @@
 ---
 id: Hero
 section: components
+beta: true
 ---
 import '../components.css';
 
-Use a hero at the top of a homepage or landing page to introduce a clear value proposition and primary call to action.
-
-Hero is currently a [beta component](/get-started/about-PatternFly#beta-components). These guidelines reflect what is implemented today and may evolve as the component matures.
+Use a hero at the top of a home page or landing page to introduce a clear value proposition and primary call to action.
 
 ## Elements
 
