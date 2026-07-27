@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.4.0-alpha.395 (2026-07-27)
+
+
+### Bug Fixes
+
+* keep examples from pushing jump links off screen ([#5085](https://github.com/patternfly/patternfly-org/issues/5085)) ([0043ada](https://github.com/patternfly/patternfly-org/commit/0043adad446e627141d0938bb33253d5e66e0470))
+
+
+
+
+
 # 1.4.0-alpha.394 (2026-07-22)
 
 **Note:** Version bump only for package @patternfly/ast-helpers
