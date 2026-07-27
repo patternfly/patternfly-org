@@ -30,7 +30,7 @@ Use a hero when the primary purpose of the page is to:
 - Introduce a new product, feature, or campaign.
 - Drive users toward a specific high-value action or conversion.
 
-Common placements include homepages, product landing pages, and main dashboard landing views (such as Compass).
+Common placements include home pages, product landing pages, and main dashboard landing views (such as Compass).
 
 ### When not to use
 
