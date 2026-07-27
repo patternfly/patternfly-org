@@ -37,9 +37,8 @@ Compass gives you 2 vertical sidebars — one at the start (left) and one at the
 
 The main content region fills the center of the viewport. It typically contains:
 
-- **Main header:** A title area or hero section that contextualizes the current view.
+- **Main header:** A title area or [hero](/components/hero) section that contextualizes the current view.
 - **Content area:** The primary body of generated content or interactive data.
-- **Footer:** A persistent input area, typically housing a `MessageBar` for conversational AI interactions.
 
 ### Footer
 
@@ -77,14 +76,14 @@ Use the `dock` prop to consolidate all navigation into a single anchored vertica
 
 ## Visual style
 
-### Glass theme
+### Glass mode
 
-Compass is designed to work with the glass theme (`pf-v6-theme-glass`). When using the glass mode:
+Compass is designed to work with the **Glass mode** (`pf-v6-theme-glass`). When using the Glass mode:
 
-- The glass theme is typically applied globally to the `html` element, similar to enabling dark mode.
+- The glass mode is applied globally to the `html` element, similar to enabling dark mode.
 - Glass mode works best with a full-page background image. 
 - Wrap glass-styled containers in a `Panel` with the `isGlass` modifier.
-- Do not nest glass-styled `Panel` stacks, as this can cause unintended visual artifacts.
+- Do not nest glass-styled components like `Cards` inside `Panels`. This can cause legibility, accessibility, and performance issues.
 
 ## Content considerations
 
