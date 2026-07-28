@@ -58,6 +58,8 @@ For an overlay pill drawer sitting above the main content area, the margin aroun
 
 #### Compass layout - Pill overlay
 
+To see the drawer in a compass layout, view the [compass layout demo](/components/compass/org-demos/card-and-data-view-layout/).
+
 <div class="ws-docs-content-img">
 ![Example of an overlay pill drawer in a Compass layout.](./img/compass-overlay-drawer.svg)
 </div>
@@ -86,12 +88,6 @@ The rounded inline drawer shares the same base styling as the rounded overlay dr
 
 <div class="ws-docs-content-img">
 ![Example of an inline pill drawer without a masthead.](./img/Pill-Inline-without-masthead.svg)
-</div>
-
-#### Compass layout - Inline pill
-
-<div class="ws-docs-content-img">
-![Example of an inline pill drawer in a Compass layout.](./img/compass-inline-drawer.svg)
 </div>
 
 ## Placement
