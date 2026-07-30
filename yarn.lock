@@ -5876,8 +5876,8 @@ __metadata:
 
 "@project-felt/ai-guidelines@github:project-felt/ai-guidelines#main":
   version: 1.0.0
-  resolution: "@project-felt/ai-guidelines@https://github.com/project-felt/ai-guidelines.git#commit=7c80cccf75871dd18ab1a2a30a5ec52374b3d0bf"
-  checksum: 10c0/f14e27228e2e1faa3aa416d2798a45d4e73b2ab9e38e93588f0941e30c356ba0b2732b7594e5c501cc602c9e78c4ffcb73b212a70ea7932cf9ba5983160a8cc9
+  resolution: "@project-felt/ai-guidelines@https://github.com/project-felt/ai-guidelines.git#commit=f771aac2237b7f2e7bb860bb54361a414447ec42"
+  checksum: 10c0/873fbe73477f5273fe3e079dd3be4f4ab0c4736d0463c30428a231449444f8426ad5b2e1758b05df840e3b512e34efd13a3fc2bfbad7b3dd65a1441143010670
   languageName: node
   linkType: hard
 
