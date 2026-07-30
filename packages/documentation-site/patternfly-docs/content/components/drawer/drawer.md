@@ -38,7 +38,7 @@ An overlay drawer appears "on top" of page content, and must be minimized or clo
 
 ### Inline drawer
 
-An inline drawer is placed beside page content, making the rest of the page content more compact (but still visible). All inline drawer variants have a `--pf-t--global--background--color--primary--default` token applied.
+An inline drawer is placed beside page content, making the rest of the page content more compact (but still visible). All inline drawer variants have a `--pf-t--global--background--color--primary--default` token applied. In glass mode, inline drawers inherit the glass styling and have no background color.
 
 <div class="ws-docs-content-img">
 ![A drawer is beside page content, similar to a split screen view.](./img/drawer-inline.svg)
