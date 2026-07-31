@@ -39,7 +39,7 @@ Do not use a hero as a generic page header on:
 - Pages focused on content discovery, data management, or dense workflows (use a standard page header instead).
 - Detail views, settings pages, or views where the user's primary task is utility- or task-driven rather than conversion-oriented.
 
-For in-page promotional content that is not at the top of the view, use a [hint](/components/hint/design-guidelines) or horizontal split card instead.
+For in-page promotional content that is not at the top of the view, use a [hint](/components/hint/design-guidelines) or [horizontal split card](/components/card/react-demos#horizontal-split) instead.
 
 ### Placement
 
@@ -64,8 +64,8 @@ Use in glass theme contexts&mdash;especially Compass and generative UI layouts&m
 
 Glass styling requires **both**:
 
-- The glass theme (`.pf-v6-theme-glass`), and
-- The glass variant (`isGlass` in React, or `.pf-m-glass` in HTML/CSS)
+- The glass theme (`.pf-v6-theme-glass`) on the `<html>` element
+- The glass variant (`isGlass` in React, or `.pf-m-glass` in HTML/CSS) on the hero component
 
 Glass heroes use a translucent background, backdrop blur, and the glass box shadow token.
 
