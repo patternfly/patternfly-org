@@ -3,8 +3,6 @@ id: Actions
 section: patterns
 ---
 
-import '../components.css';
-
 An **action** is any process that a user can trigger by clicking or selecting a linked component. Common actions include adding, deleting, editing, filtering, and submitting, for example. In PatternFly, most actions are shown in the UI as action buttons, action items (in menus), and action cards. These components are incorporated into the design of other components, such as a toolbar with action buttons, a dropdown menu with action items, and so on.
 
 ## Elements 
