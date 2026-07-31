@@ -20,7 +20,6 @@ const DIVIDER_STYLES = {
   marginBottom: 'var(--pf-t--global--spacer--xs)'
 };
 import { makeSlug } from '../../helpers';
-import globalBreakpointXl from '@patternfly/react-tokens/dist/esm/t_global_breakpoint_xl';
 import { trackEvent } from '../../helpers';
 
 const getIsActive = (location, section, subsection = null) => {
@@ -31,14 +30,13 @@ const getIsActive = (location, section, subsection = null) => {
 const defaultValue = 50;
 
 const NavItem = ({ text, href, isDeprecated, isBeta, isDemo }) => {
-  const isMobileView = window.innerWidth < Number.parseInt(globalBreakpointXl.value, 10);
   return (
     <PageContextConsumer key={href + text}>
-      {({ onSidebarToggle, isSidebarOpen }) => (
+      {({ onSidebarToggle, isSidebarOpen, isMobile }) => (
         <li
           key={href + text}
           className="pf-v6-c-nav__item"
-          onClick={() => isMobileView && onSidebarToggle && onSidebarToggle()}
+          onClick={() => isMobile && onSidebarToggle && onSidebarToggle()}
         >
           <Link
             to={href}
@@ -170,24 +168,27 @@ export const SideNav = ({ groupedRoutes = {}, navItems = [] }) => {
     }
   }, []);
 
-  const groupedItems = React.useMemo(() => 
-    (navItems || []).filter(entry => entry && entry.title), [navItems]);
-  const ungroupedItems = React.useMemo(() => 
-    (navItems || []).filter(entry => entry && !entry.title), [navItems]);
+  const groupedItems = React.useMemo(() => (navItems || []).filter((entry) => entry && entry.title), [navItems]);
+  const ungroupedItems = React.useMemo(() => (navItems || []).filter((entry) => entry && !entry.title), [navItems]);
 
-  const renderNavItem = React.useCallback((item) => {
-    if (!item) return null;
-    
-    return item.section ? (
-      <Location key={item.section}>
-        {({ location }) => ExpandableNav({ groupedRoutes, location, section: item.section })}
-      </Location>
-    ) : NavItem({
-      key: item.href || `nav-item-${Math.random()}`,
-      text: item.text || (item.href ? capitalize(item.href.replace(/\//g, '').replace(/-/g, ' ')) : 'Untitled'),
-      href: item.href
-    });
-  }, [groupedRoutes]);
+  const renderNavItem = React.useCallback(
+    (item) => {
+      if (!item) return null;
+
+      return item.section ? (
+        <Location key={item.section}>
+          {({ location }) => ExpandableNav({ groupedRoutes, location, section: item.section })}
+        </Location>
+      ) : (
+        NavItem({
+          key: item.href || `nav-item-${Math.random()}`,
+          text: item.text || (item.href ? capitalize(item.href.replace(/\//g, '').replace(/-/g, ' ')) : 'Untitled'),
+          href: item.href
+        })
+      );
+    },
+    [groupedRoutes]
+  );
 
   return (
     <Nav aria-label="Side Nav" theme="light">
@@ -202,13 +203,9 @@ export const SideNav = ({ groupedRoutes = {}, navItems = [] }) => {
           {group.hasDivider && <Divider style={DIVIDER_STYLES} />}
         </React.Fragment>
       ))}
-      
+
       {/* Render ungrouped items - this handles the current flat structure */}
-      {ungroupedItems.length > 0 && (
-        <NavList className="ws-side-nav-list">
-          {ungroupedItems.map(renderNavItem)}
-        </NavList>
-      )}
+      {ungroupedItems.length > 0 && <NavList className="ws-side-nav-list">{ungroupedItems.map(renderNavItem)}</NavList>}
     </Nav>
   );
 };

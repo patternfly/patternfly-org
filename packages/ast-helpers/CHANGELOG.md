@@ -3,6 +3,44 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.4.0-alpha.397 (2026-07-28)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 1.4.0-alpha.396 (2026-07-27)
+
+
+### Bug Fixes
+
+* **nav:** close sidebar on mobile breakpoint ([#5087](https://github.com/patternfly/patternfly-org/issues/5087)) ([75b6042](https://github.com/patternfly/patternfly-org/commit/75b6042db3183f752f64b83a52ab1818d70c261d))
+
+
+
+
+
+# 1.4.0-alpha.395 (2026-07-27)
+
+
+### Bug Fixes
+
+* keep examples from pushing jump links off screen ([#5085](https://github.com/patternfly/patternfly-org/issues/5085)) ([0043ada](https://github.com/patternfly/patternfly-org/commit/0043adad446e627141d0938bb33253d5e66e0470))
+
+
+
+
+
+# 1.4.0-alpha.394 (2026-07-22)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
 # 1.4.0-alpha.393 (2026-07-15)
 
 
