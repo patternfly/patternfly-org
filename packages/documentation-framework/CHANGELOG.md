@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 6.51.0 (2026-08-03)
+
+
+### Features
+
+* **misc:** separate CSSVariables into its own tab ([#5046](https://github.com/patternfly/patternfly-org/issues/5046)) ([0ecb4d3](https://github.com/patternfly/patternfly-org/commit/0ecb4d34d9f8100c1088936b765f98ecca9b94b6))
+
+
+
+
+
 # 6.50.0 (2026-08-03)
 
 
