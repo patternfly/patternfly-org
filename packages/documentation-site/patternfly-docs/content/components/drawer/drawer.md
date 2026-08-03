@@ -78,7 +78,7 @@ To see the drawer in a compass layout, view the [compass layout demo](/component
 
 ### Inline pill
 
-The rounded inline drawer shares the same base styling as the rounded overlay drawer. In the glass theme, a `.pf-v6-u-box-shadow-md` (medium box shadow) is applied to the entire drawer.
+The inline pill drawer shares the same base styling as the overlay pill drawer. In the glass theme, a `.pf-v6-u-box-shadow-md` (medium box shadow) is applied to the entire drawer.
 
 <div class="ws-docs-content-img">
 ![Example of an inline pill drawer.](./img/Pill-Inline.svg)
