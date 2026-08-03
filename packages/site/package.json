@@ -4,7 +4,7 @@
   "private": true,
   "version": "0.0.2",
   "scripts": {
-    "ci:build": "export NODE_OPTIONS='--max-old-space-size=8192' && yarn generate:content && yarn build",
+    "ci:build": "yarn generate:content && NODE_OPTIONS='--max-old-space-size=8192' yarn build",
     "clean": "rm -rf src/generated",
     "generate:content": "rm -rf src/content && mkdir -p src && cp -r ../documentation-site/patternfly-docs/content src && yarn patch:content",
     "patch:content": "node patchContent.mjs",
@@ -18,7 +18,7 @@
   },
   "dependencies": {
     "@patternfly/patternfly-doc-core": "^1.22.0",
-    "@patternfly/react-icons": "^6.5.0-prerelease.29",
+    "@patternfly/react-icons": "^6.6.1",
     "@project-felt/ai-guidelines": "github:project-felt/ai-guidelines#main",
     "astro": "^5.18.0"
   },
