@@ -5192,7 +5192,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@patternfly/patternfly@npm:^6.6.1":
+"@patternfly/patternfly@npm:6.6.1, @patternfly/patternfly@npm:^6.0.0, @patternfly/patternfly@npm:^6.6.1":
   version: 6.6.1
   resolution: "@patternfly/patternfly@npm:6.6.1"
   checksum: 10c0/ff05fe2a75dde489e2b8643d4bcd59f9a23d20710c16178721718c77551b75a43aad43da43481f52ef9452c7b46fa6b9dbf15e620d476e70955727982412b053
@@ -5242,7 +5242,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@patternfly/react-charts@npm:^8.6.1":
+"@patternfly/react-charts@npm:8.6.1, @patternfly/react-charts@npm:^8.6.1":
   version: 8.6.1
   resolution: "@patternfly/react-charts@npm:8.6.1"
   dependencies:
@@ -5435,7 +5435,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@patternfly/react-drag-drop@npm:^6.6.1":
+"@patternfly/react-drag-drop@npm:^6.0.0, @patternfly/react-drag-drop@npm:^6.6.1":
   version: 6.6.1
   resolution: "@patternfly/react-drag-drop@npm:6.6.1"
   dependencies:
@@ -5453,7 +5453,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@patternfly/react-icons@npm:^6.6.1":
+"@patternfly/react-icons@npm:6.6.1, @patternfly/react-icons@npm:^6.0.0, @patternfly/react-icons@npm:^6.0.0-prerelease.7, @patternfly/react-icons@npm:^6.4.0, @patternfly/react-icons@npm:^6.5.1, @patternfly/react-icons@npm:^6.6.0, @patternfly/react-icons@npm:^6.6.1":
   version: 6.6.1
   resolution: "@patternfly/react-icons@npm:6.6.1"
   dependencies:
@@ -5480,7 +5480,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@patternfly/react-styles@npm:^6.6.1":
+"@patternfly/react-styles@npm:^6.0.0, @patternfly/react-styles@npm:^6.0.0-prerelease.6, @patternfly/react-styles@npm:^6.1.0, @patternfly/react-styles@npm:^6.5.1, @patternfly/react-styles@npm:^6.6.0, @patternfly/react-styles@npm:^6.6.1":
   version: 6.6.1
   resolution: "@patternfly/react-styles@npm:6.6.1"
   checksum: 10c0/0c50bf72fade26d30e6ff9abe0d2d8dbb5b546fe434067f70665ce704e63767a9f8ea7627871e2c6ce17ea4f475daa931fd420e1f1aee891c1f48b5905e57433
@@ -5520,7 +5520,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@patternfly/react-tokens@npm:^6.6.1":
+"@patternfly/react-tokens@npm:^6.0.0, @patternfly/react-tokens@npm:^6.6.1":
   version: 6.6.1
   resolution: "@patternfly/react-tokens@npm:6.6.1"
   checksum: 10c0/818f0539722c147a83c35bd53860b80566117c823706e51228f652754c2053410da987712b21def02d55c39845c9d129819e96a78870cc390db80df59c127a8b

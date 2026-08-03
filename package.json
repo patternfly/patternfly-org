@@ -77,14 +77,6 @@
     "@patternfly/react-code-editor": "^6.6.1",
     "@patternfly/react-core": "^6.6.1",
     "@patternfly/react-table": "^6.6.1",
-    "@patternfly/react-icons": "^6.6.1",
-    "@patternfly/react-styles": "^6.6.1",
-    "@patternfly/react-tokens": "^6.6.1",
-    "@patternfly/react-templates": "^6.6.1",
-    "@patternfly/react-drag-drop": "^6.6.1",
-    "@patternfly/patternfly": "^6.6.1",
-    "@patternfly/react-charts": "^8.6.1",
-    "@patternfly/react-docs": "7.6.1",
     "@project-felt/ai-guidelines": "github:project-felt/ai-guidelines#main",
     "monaco-editor": "0.54.0"
   }
