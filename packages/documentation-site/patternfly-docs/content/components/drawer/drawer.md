@@ -46,7 +46,7 @@ An inline drawer is placed beside page content, making the rest of the page cont
 
 ### Overlay pill
 
-A rounded overlay drawer is available across all themes. Apply the `pf-m-pill` modifier—either by applying the class or using the `isPill` prop for React—to enable the rounded style. The `--pf-t--global--border--radius--medium` (16px) border radius token and `--pf-t--global--border--color--subtle` border color token are applied to all rounded drawers. When placing a rounded drawer in a page, use the `global/spacer/inset/page-chrome` gutter token to ensure consistent spacing.
+A rounded overlay drawer is available across all themes. Apply the `pf-m-pill` class modifier or the `isPill` React property to enable the rounded style. The `--pf-t--global--border--radius--medium` (16px) border radius token and `--pf-t--global--border--color--subtle` border color token are applied to all rounded drawers. When placing a rounded drawer in a page, use the `global/spacer/inset/page-chrome` gutter token to ensure consistent spacing.
 
 The rounded overlay drawer has a `.pf-v6-u-box-shadow-md` (medium box shadow) applied to the entire drawer.
 
