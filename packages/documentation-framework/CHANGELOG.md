@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 6.50.0 (2026-08-03)
+
+
+### Features
+
+* **ver:** bump PatternFly packages to 6.6.1 and fix export issue with Astro build. ([#5093](https://github.com/patternfly/patternfly-org/issues/5093)) ([89523fb](https://github.com/patternfly/patternfly-org/commit/89523fb9d16968340f89be200985c74b2d1a1214))
+
+
+
+
+
 ## 6.49.7 (2026-08-03)
 
 **Note:** Version bump only for package @patternfly/documentation-framework
