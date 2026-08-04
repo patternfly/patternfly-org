@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import {
   Compass,
   CompassHeader,
@@ -45,7 +45,6 @@ import {
   Avatar,
   Icon,
   SkipToContent,
-  Switch,
   DrawerPanelContent,
   DrawerHead,
   DrawerActions,
@@ -53,7 +52,6 @@ import {
   DrawerPanelBody
 } from '@patternfly/react-core';
 import { ActionsColumn } from '@patternfly/react-table';
-import { DataViewToolbar } from '@patternfly/react-data-view/dist/dynamic/DataViewToolbar';
 import { DataViewTextFilter } from '@patternfly/react-data-view/dist/dynamic/DataViewTextFilter';
 import { DataViewTable } from '@patternfly/react-data-view/dist/dynamic/DataViewTable';
 import { MessageBar } from '@patternfly/chatbot';
@@ -73,20 +71,11 @@ import { RHAiExperienceIcon } from './assets/RHAiExperienceIcon';
 export const CompassIntegrationsDemo: React.FunctionComponent = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [activeDisplay, setActiveDisplay] = useState<"table" | "card">("table");
-  const [isGlassTheme, setIsGlassTheme] = useState(true);
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
 
   const onDrawerToggle = () => {
     setIsDrawerOpen(!isDrawerOpen);
   };
-
-  useEffect(() => {
-    if (isGlassTheme) {
-      document.documentElement.classList.add('pf-v6-theme-glass');
-    } else {
-      document.documentElement.classList.remove('pf-v6-theme-glass');
-    }
-  }, [isGlassTheme]);
 
   const integrations = [
     {
@@ -554,33 +543,36 @@ export const CompassIntegrationsDemo: React.FunctionComponent = () => {
 
   const tableViewContent = (
     <>
-      <DataViewToolbar
-        clearAllFilters={() => { }}
-        filters={
-          <DataViewTextFilter
-            filterId="name"
-            title="Name"
-            placeholder="Filter by name"
-          />
-        }
-        actions={
-          <ToggleGroup>
-            <ToggleGroupItem
-              icon={<ThIcon />}
-              aria-label="grid icon button"
-              isSelected={activeDisplay === "card"}
-              onChange={() => setActiveDisplay("card")}
-            ></ToggleGroupItem>
-            <ToggleGroupItem
-              icon={<ListIcon />}
-              aria-label="list icon button"
-              isSelected={activeDisplay === "table"}
-              onChange={() => setActiveDisplay("table")}
-            ></ToggleGroupItem>
-          </ToggleGroup>
-        }
-        pagination={<Pagination page={1} perPage={10} isCompact />}
-      />
+      <Toolbar>
+        <ToolbarContent>
+          <ToolbarItem>
+            <DataViewTextFilter
+              filterId="name"
+              title="Name"
+              placeholder="Filter by name"
+            />
+          </ToolbarItem>
+          <ToolbarItem>
+            <ToggleGroup>
+              <ToggleGroupItem
+                icon={<ThIcon />}
+                aria-label="grid icon button"
+                isSelected={activeDisplay === "card"}
+                onChange={() => setActiveDisplay("card")}
+              ></ToggleGroupItem>
+              <ToggleGroupItem
+                icon={<ListIcon />}
+                aria-label="list icon button"
+                isSelected={activeDisplay === "table"}
+                onChange={() => setActiveDisplay("table")}
+              ></ToggleGroupItem>
+            </ToggleGroup>
+          </ToolbarItem>
+          <ToolbarItem variant="pagination" align={{ default: "alignEnd" }}>
+            <Pagination page={1} perPage={10} isCompact />
+          </ToolbarItem>
+        </ToolbarContent>
+      </Toolbar>
       <DataViewTable
         aria-label="Integrations"
         columns={columns}
@@ -685,21 +677,6 @@ export const CompassIntegrationsDemo: React.FunctionComponent = () => {
         drawerContent={drawerContent}
         drawerProps={{ isExpanded: isDrawerOpen, isPill: true }}
       />
-        <div
-          style={{
-            position: 'absolute',
-            bottom: '1rem',
-            right: '1rem',
-            zIndex: 1000
-          }}
-        >
-          <Switch
-            id="glass-theme-toggle"
-            label="Glass theme"
-            isChecked={isGlassTheme}
-            onChange={(_, checked) => setIsGlassTheme(checked)}
-          />
-        </div>
       </>
   );
 };
