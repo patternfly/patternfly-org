@@ -24,7 +24,7 @@ Rapid prototyping with PatternFly code offers several key benefits:
 
 ## Get started
 
-For the best results with AI-assisted prototyping, install the [PatternFly AI Helpers](/ai/marketplace) marketplace plugins. These give your AI tools additional knowledge and skills that lead to more accurate code generation.
+For the best results with AI-assisted prototyping, install the [AI Helpers](/ai/marketplace) marketplace plugins. These give your AI tools additional knowledge and skills that lead to more accurate code generation.
 
 Choose your path based on your current situation:
 
