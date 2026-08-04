@@ -17,6 +17,8 @@ In addition to primary-details, the drawer component is frequently used in [noti
 
 A splitter allows you to create a layout with resizable panes. The orientation of a splitter can be set to vertical or horizontal. Depending on the direction the drawer opens within the page, you can place a splitter at the start or end of a drawer.
 
+Place the splitter on the opposite side from which the drawer opens: on the left for a right-opening drawer, on the right for a left-opening drawer, and at the top for a bottom-opening drawer.
+
 ### When to use a splitter
 Add a splitter to a drawer if you need to resize the width or height of a panel to give content more space. If data shown in a drawer has enough space, then you don’t need to use a splitter.
 
@@ -58,7 +60,7 @@ For an overlay pill drawer sitting above the main content area, the margin aroun
 
 #### Compass layout - Pill overlay
 
-To see the drawer in a compass layout, view the [compass layout demo](/components/compass/org-demos/card-and-data-view-layout/).
+For compass layouts, use a pill drawer. To see the pill overlay drawer in action, view the [compass layout demo](/components/compass/org-demos/card-and-data-view-layout/).
 
 <div class="ws-docs-content-img">
 ![Example of an overlay pill drawer in a Compass layout.](./img/compass-overlay-drawer.svg)
