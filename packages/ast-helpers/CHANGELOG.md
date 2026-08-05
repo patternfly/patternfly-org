@@ -3,6 +3,117 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.4.0-alpha.404 (2026-08-04)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 1.4.0-alpha.403 (2026-08-04)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 1.4.0-alpha.402 (2026-08-04)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 1.4.0-alpha.401 (2026-08-03)
+
+
+### Features
+
+* **misc:** separate CSSVariables into its own tab ([#5046](https://github.com/patternfly/patternfly-org/issues/5046)) ([0ecb4d3](https://github.com/patternfly/patternfly-org/commit/0ecb4d34d9f8100c1088936b765f98ecca9b94b6))
+
+
+
+
+
+# 1.4.0-alpha.400 (2026-08-03)
+
+
+### Features
+
+* **ver:** bump PatternFly packages to 6.6.1 and fix export issue with Astro build. ([#5093](https://github.com/patternfly/patternfly-org/issues/5093)) ([89523fb](https://github.com/patternfly/patternfly-org/commit/89523fb9d16968340f89be200985c74b2d1a1214))
+
+
+
+
+
+# 1.4.0-alpha.399 (2026-08-03)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 1.4.0-alpha.398 (2026-07-31)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 1.4.0-alpha.397 (2026-07-28)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 1.4.0-alpha.396 (2026-07-27)
+
+
+### Bug Fixes
+
+* **nav:** close sidebar on mobile breakpoint ([#5087](https://github.com/patternfly/patternfly-org/issues/5087)) ([75b6042](https://github.com/patternfly/patternfly-org/commit/75b6042db3183f752f64b83a52ab1818d70c261d))
+
+
+
+
+
+# 1.4.0-alpha.395 (2026-07-27)
+
+
+### Bug Fixes
+
+* keep examples from pushing jump links off screen ([#5085](https://github.com/patternfly/patternfly-org/issues/5085)) ([0043ada](https://github.com/patternfly/patternfly-org/commit/0043adad446e627141d0938bb33253d5e66e0470))
+
+
+
+
+
+# 1.4.0-alpha.394 (2026-07-22)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 1.4.0-alpha.393 (2026-07-15)
+
+
+### Bug Fixes
+
+* **docs-framework:** let examples shrink to fit window width ([#5075](https://github.com/patternfly/patternfly-org/issues/5075)) ([5bbd5ef](https://github.com/patternfly/patternfly-org/commit/5bbd5ef45ef49ed1d823bbc4637775945bdab3f4))
+
+
+
+
+
 # 1.4.0-alpha.392 (2026-07-02)
 
 

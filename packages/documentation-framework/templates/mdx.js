@@ -68,10 +68,10 @@ const MDXChildTemplate = ({ Component, source, toc = [], index = 0, id }) => {
     toc.push({ text: propsTitle });
     toc.push(propComponents.map((propComponent) => ({ text: propComponent.name })));
   }
-  if (cssVarsTitle && !toc.find((item) => item.text === cssVarsTitle)) {
+  if (source === 'css-variables' && cssVarsTitle && !toc.find((item) => item.text === cssVarsTitle)) {
     toc.push({ text: cssVarsTitle });
     if (cssPrefix.length > 1) {
-      toc.push(cssPrefix.map((cssPrefix) => ({ text: `Prefixed with '${cssPrefix}'` })));
+      toc.push(cssPrefix.map((prefix) => ({ text: `Prefixed with '${prefix}'` })));
     }
   }
   // We don't add `id`s in anchor-header.js for items where id === slugger(text)
@@ -138,8 +138,8 @@ const MDXChildTemplate = ({ Component, source, toc = [], index = 0, id }) => {
       {toc.length > 1 && <TableOfContents items={toc} />}
       <Stack hasGutter className={(source !== 'landing-pages' && 'ws-example-page-wrapper')}>
         {InlineAlerts}
-        <Component />
-        {functionDocumentation.length > 0 && (
+        {source !== 'css-variables' && <Component />}
+        {source !== 'css-variables' && functionDocumentation.length > 0 && (
           <StackItem>
             <AutoLinkHeader headingLevel="h2" className="pf-v6-c-content--h2" id="functions">
               Functions
@@ -147,7 +147,7 @@ const MDXChildTemplate = ({ Component, source, toc = [], index = 0, id }) => {
             <FunctionsTable functionDescriptions={functionDocumentation} />
           </StackItem>
         )}
-        {propsTitle && (
+        {source !== 'css-variables' && propsTitle && (
           <StackItem>
             <AutoLinkHeader headingLevel="h2" className="pf-v6-c-content--h2" id="props">
               {propsTitle}
@@ -163,7 +163,7 @@ const MDXChildTemplate = ({ Component, source, toc = [], index = 0, id }) => {
             ))}
           </StackItem>
         )}
-        {cssPrefix.length > 0 && (
+        {source === 'css-variables' && cssPrefix.length > 0 && (
           <StackItem>
             <AutoLinkHeader headingLevel="h2" className="pf-v6-c-content--h2" id="css-variables">
               {cssVarsTitle}
