@@ -9,7 +9,9 @@ An **action** is any process that a user can trigger by clicking or selecting a 
 
 The following image of a card view demonstrates some of the more common uses of actions that you will find in a UI, but does not cover all scenarios. 
 
-![A card view, where the toolbar action buttons, actionable card, ellipsis icon, and action menu item are marked with annotations.](./img/actions-pattern.png)
+<div class="ws-docs-content-img">
+![A card view where the toolbar actions, actionable card, ellipsis icon, and action menu items are marked with annotations.](./img/actions-elements.svg)
+</div>
 
 1. [**Action button:**](/components/button) Most buttons in a UI trigger an action. 
 1. [**Action card:**](/components/card#actionable) A card itself can be actionable, meaning an action will be triggered when a user selects the card.
@@ -40,7 +42,9 @@ Users can typically trigger deletion using buttons or menu items. Consider the f
 
 After a user triggers deletion, communicate that it will be permanent via a confirmation modal:
 
-![Confirmation modal with danger styling.](./img/critical-deletion-modal.png)
+<div class="ws-docs-content-img">
+![A confirmation modal with danger styling.](./img/actions-deletion.svg)
+</div>
 
 1. A **warning icon** beside the title.
 1. A **labeled text input** to ask users to confirm the resource name. 
@@ -49,7 +53,9 @@ After a user triggers deletion, communicate that it will be permanent via a conf
 
 Once a resource has been successfully deleted, show an [inline success alert:](/components/alert#inline-alerts-variants)
 
-![Inline success alert for deletion.](./img/critical-deletion-success.png)
+<div class="ws-docs-content-img">
+![An inline success alert for deletion.](./img/actions-inline-success.svg)
+</div>
 
 #### Removal
 When the action of removing a resource can be reversed, it has a lower impact on the user experience. A confirmation dialog isn't necessary because users can easily retrieve the removed resource. 
@@ -70,7 +76,9 @@ Many PatternFly components have design options that allow you to include actions
 
 For example, if a button affects data in a table or card view, place the button in the toolbar. 
 
-![A toolbar with a primary action button and a secondary dropdown menu toggle.](./img/component-actions-dropdown.png)
+<div class="ws-docs-content-img">
+![A toolbar with a primary action button and a secondary dropdown menu toggle.](./img/actions-component-level.svg)
+</div>
 
 ### Page-wide actions
 
@@ -78,14 +86,20 @@ Sometimes, an action isn't intended to affect a specific component and is intend
 
 Actions that affect a page as a whole should be placed on the top right of a page, at the header level. Do not place any page-wide actions in a toolbar.
 
-![A UI screen with a page-wide action button.](../../components/table/img/page-action.png)
+<div class="ws-docs-content-img">
+![An UI with a secondary page-wide action button.](./img/actions-page-level.svg)
+</div>
 
 #### Single actions 
 When there is only a single page-wide action, use a primary or secondary button. Use a primary if it is the primary action you would like the user to take on the page, and a secondary button if it is not the primary call to action.
 
-![A primary page-wide action button.](./img/page-actions-primary.png)
+<div class="ws-docs-content-img">
+![A primary page-wide action button.](./img/actions-single-action.svg)
+</div>
 
 #### Multiple actions
 If there are multiple possible page-wide actions a user can take on the page, house them in a dropdown menu. For guidance on menu toggle styling, refer to the [dropdown menu design guidelines](/components/menus/dropdown/design-guidelines).
 
-![A secondary page-wide menu toggle.](./img/page-actions-secondary.png)
+<div class="ws-docs-content-img">
+![A secondary page-wide menu toggle.](./img/actions-multi-actions.svg)
+</div>
