@@ -20,7 +20,9 @@ import '../components.css';
 
 4. **Attention status (optional):** Setting the background color to red will indicate that one or more notifications are present in the drawer that require immediate attention. In the attention state the icon also changes from 'fa-bell' to 'pf-icon-attention-bell'.
 
-5. **Count (optional):** When used, the count field will indicate the number of notifications in the notification drawer.
+5. **Plain:** In the plain variant, the background is modified to be transparent.
+
+6. **Count (optional):** When used, the count field will indicate the number of notifications in the notification drawer.
 
 ## Usage
 Always use a notification badge when a notification drawer is present. Dependent on the capabilities and needs of your application, best practices for using the badge are as follows:
