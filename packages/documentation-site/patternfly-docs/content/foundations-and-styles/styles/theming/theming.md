@@ -123,9 +123,9 @@ The following table outlines the availability and compatibility of PatternFly fe
 
 Because theme, color scheme, and contrast mode affect both personalization and accessibility, products should give users an easy, discoverable way to adjust them. We recommend exposing these controls from the masthead, using one of the following patterns.
 
-### Preferences page or modal
+### User preferences page or modal
 
-The masthead's [settings icon or user menu](/components/masthead#elements) opens a dedicated preferences page or modal, where theme, color scheme, and contrast mode controls appear alongside other application-level preferences, such as language or notification settings.
+The masthead's [Settings button or User menu toggle](/components/masthead#elements) opens a menu with a dedicated **User preferences** item. This will trigger either a page or modal, where theme, color scheme, and contrast mode controls appear along with other application-level preferences, such as language or notification settings.
 
 <!-- TODO: replace placeholder screenshot with final PatternFly-style illustration -->
 <div class="ws-docs-content-img">
@@ -133,7 +133,7 @@ The masthead's [settings icon or user menu](/components/masthead#elements) opens
 </div>
 
 Use this pattern when:
-- Theming is one of several account- or application-level preferences you want to expose in a single, dedicated location.
+- Theming controls are one of several User preferences that could be exposed in a single, dedicated location.
 - Your product already has an established settings or preferences experience that you want to extend, rather than introduce a new masthead item.
 - You want to pair each control with additional context, like descriptive helper text, without crowding the masthead.
 
@@ -151,7 +151,7 @@ Use this pattern when:
 - Color scheme is the control most users will reach for, with theme and contrast mode as secondary, expanded options.
 - Your product doesn't already have a dedicated settings page or modal, and you don't want to introduce one solely for theming.
 
-### Best practices for theme controls
+### Best practices for Theme controls
 
 Regardless of which pattern you use, keep the following guidelines in mind:
 
