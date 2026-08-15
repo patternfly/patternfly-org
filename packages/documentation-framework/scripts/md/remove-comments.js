@@ -1,21 +1,24 @@
-// https://github.com/remarkjs/remark/tree/main/packages/remark-parse#processoruseparse-options
+// Strips HTML comments from markdown source before the parser sees them.
+// This replaces the old tokenizer-based approach that used deprecated
+// this.Parser.prototype.blockTokenizers APIs (removed in remark-parse v11).
+//
+// Wraps the processor's parse method to strip comments from the raw
+// vfile contents before remark-parse and remark-mdx process the text.
+function plugin() {
+  const self = this;
+  const originalParse = self.parse;
 
-function plugin({ beginMarker = '<!--', endMarker = '-->' } = {}) {
-  const Parser = this.Parser
-  const tokenizers = Parser.prototype.blockTokenizers
-  const methods = Parser.prototype.blockMethods
-
-  tokenizers.comments = function tokenizeComment(eat, value) {
-    const trimmed = value.trimRight();
-    const endIndex = trimmed.indexOf(endMarker);
-    if (trimmed.startsWith(beginMarker) && endIndex >= 1) {
-      eat(value.substr(0, endIndex + endMarker.length));
+  self.parse = function (file) {
+    const str = String(file.contents || file.value || '');
+    const stripped = str.replace(/<!--[\s\S]*?-->/g, '');
+    if (file.contents !== undefined) {
+      file.contents = stripped;
     }
-    return true;
-  }
-
-  // Run it just before `html`.
-  methods.splice(methods.indexOf('html'), 0, 'comments')
+    if (file.value !== undefined) {
+      file.value = stripped;
+    }
+    return originalParse.call(this, file);
+  };
 }
 
 module.exports = plugin;

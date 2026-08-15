@@ -1,33 +1,26 @@
-// https://github.com/remarkjs/remark/tree/main/packages/remark-parse#processoruseparse-options
-// https://github.com/remarkjs/remark/blob/main/packages/remark-parse/lib/tokenize/auto-link.js
-const decode = require('parse-entities');
+// Re-adds support for <https://...> autolinks in MDX.
+// remark-mdx treats angle brackets as JSX, so <https://google.com>
+// fails to parse. This plugin converts autolinks to standard markdown
+// link syntax [url](url) before the parser sees them.
+//
+// Replaces the old this.Parser.prototype.inlineTokenizers approach
+// (removed in remark-parse v11). Compatible with unified v9 and v11.
+function plugin() {
+  const self = this;
+  const originalParse = self.parse;
 
-// Support `<https://google.com>`
-// This is removed in MDX 2: https://github.com/mdx-js/mdx/issues/1049
-function plugin({ beginMarker = '<http', endMarker = '>' } = {}) {
-  const Parser = this.Parser;
-  const tokenizers = Parser.prototype.inlineTokenizers;
-  const methods = Parser.prototype.inlineMethods;
-
-  tokenizers.autoLinkUrl = function autoLinkUrl(eat, value) {
-    if (!value.startsWith(beginMarker)) {
-      return;
+  self.parse = function (file) {
+    const str = String(file.contents || file.value || '');
+    // Match <http://...> or <https://...> autolinks and convert to [url](url)
+    const converted = str.replace(/<(https?:\/\/[^>]+)>/g, '[$1]($1)');
+    if (file.contents !== undefined) {
+      file.contents = converted;
     }
-    const endIndex = value.indexOf(endMarker);
-    if (endIndex >= 1) {
-      const link = value.substr(1, endIndex);
-      return eat(value.substr(0, endIndex))({
-        type: 'link',
-        title: null,
-        url: decode(link, { nonTerminated: false })
-      });
+    if (file.value !== undefined) {
+      file.value = converted;
     }
-    return true;
-  }
-  tokenizers.autoLinkUrl.locator = (value, fromIndex) => value.indexOf(beginMarker, fromIndex);
-
-  // Put before existing `autoLink` which will be deleted in remark-mdx
-  methods.splice(methods.indexOf('autoLink'), 0, 'autoLinkUrl')
+    return originalParse.call(this, file);
+  };
 }
 
 module.exports = plugin;
