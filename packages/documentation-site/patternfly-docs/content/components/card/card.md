@@ -101,8 +101,30 @@ The header element can be made expandable in situations where you want to hide t
  <div class="ws-docs-content-img">
 ![Example of an expandable card.](./img/card-expandable.svg)
 </div>
- 
- 
+
+### Accented cards
+
+Use an accented card to give one or more cards more visual prominence in a set. An accented card includes a short brand accent mark centered along the top edge. The mark uses the brand accent color and is meant for hierarchy and emphasis, not to communicate status.
+
+<div class="ws-docs-content-img">
+![Example of an accented card with a brand accent mark on the top edge, shown next to a standard card without the accent.](./img/card-accented.svg)
+</div>
+
+Add the accent to a single card or a small number of cards in a row to help users identify a featured, recommended, or primary option among similar cards. For example, you might accent one plan in a pricing comparison or one entry point in a catalog view.
+
+Do not use the accent mark to indicate status. On cards that include status information, such as success, warning, or danger, use status indicators like icons, labels, or semantic colors instead. Avoid combining an accented card with status-specific color treatments that could be confused with the accent mark.
+
+#### When to use
+
+- You want to highlight one or a few cards as featured, recommended, or primary among similar options.
+- The accent supports a clear visual hierarchy without relying on status color.
+
+#### When not to use
+
+- The card needs to communicate status. Use status indicators instead.
+- You plan to accent most or all cards in a set. The accent loses meaning when overused.
+- The card has no hierarchy purpose. Do not add the accent for decoration alone.
+
 ### Selectable cards
 Selectable cards have a checkbox or radio button to indicate that a card is selectable. To select a card, users can click anywhere on the card. PatternFly supports two types of selectable cards:
  
