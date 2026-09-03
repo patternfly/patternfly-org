@@ -86,6 +86,16 @@ import { RhUiArrowRightIcon } from '@patternfly/react-icons';
 
 For additional guidance and implementation examples, refer to the [icon component](/components/icon) and the [iconography](/foundations-and-styles/iconography) foundations pages.
 
+### Importing Patternfly styles
+
+PatternFly uses the [`@patternfly/react-styles` package](https://www.npmjs.com/package/@patternfly/react-styles) as a translation layer to reference the styles contained in the PatternFly HTML/CSS library. When developing with Patternfly React, include the following import at the base level of your application to pull in PatternFly's styling: 
+
+```
+import '@patternfly/react-core/dist/styles/base.css';
+```
+
+Importing CSS directly from the PatternFly HTML/CSS library while using PatternFly React may result in duplicated stylesheets in the browser as PatternFly React already pulls in styles internally via `@patternfly/react-styles`.
+
 ## Develop with HTML/CSS 
 
 The PatternFly HTML/CSS library contains a collection of code samples that you can use to build interfaces with consistent PatternFly markup and styling.

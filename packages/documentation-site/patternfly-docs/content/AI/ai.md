@@ -36,7 +36,7 @@ When used thoughtfully, **AI** can enhance user experiences through personalized
 
 ### AI-assisted development
 
-- **[Marketplace](/ai/ai-assisted-development/marketplace):** Plugins that give AI coding assistants knowledge and skills to generate more accurate, PatternFly-compliant code.
+- **[Marketplace](/ai/ai-assisted-development/marketplace):** Plugins for PatternFly and UXD workflows that give AI coding assistants knowledge and skills to generate more accurate, design-system-compliant code.
 - **[PatternFly CLI](/ai/ai-assisted-development/patternfly-cli):** A command-line tool for scaffolding projects, performing code modifications, and running project-related tasks.
 - **[PatternFly MCP](/ai/ai-assisted-development/patternfly-mcp):** An MCP server that gives AI coding tools PatternFly knowledge and capabilities.
 - **[Rapid prototyping](/ai/ai-assisted-development/rapid-prototyping):** Guidance for generating and iterating AI features during early stages of design.

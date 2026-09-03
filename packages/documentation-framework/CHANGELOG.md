@@ -3,6 +3,89 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 6.51.9 (2026-09-02)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 6.51.8 (2026-09-01)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 6.51.7 (2026-08-13)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 6.51.6 (2026-08-10)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 6.51.5 (2026-08-10)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 6.51.4 (2026-08-05)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 6.51.3 (2026-08-04)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 6.51.2 (2026-08-04)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 6.51.1 (2026-08-04)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+# 6.51.0 (2026-08-03)
+
+
+### Features
+
+* **misc:** separate CSSVariables into its own tab ([#5046](https://github.com/patternfly/patternfly-org/issues/5046)) ([0ecb4d3](https://github.com/patternfly/patternfly-org/commit/0ecb4d34d9f8100c1088936b765f98ecca9b94b6))
+
+
+
+
+
 # 6.50.0 (2026-08-03)
 
 
