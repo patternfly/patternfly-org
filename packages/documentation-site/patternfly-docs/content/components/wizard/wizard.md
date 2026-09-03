@@ -5,143 +5,142 @@ section: components
 
 import '../components.css';
 
+A **wizard** breaks a long or complex task into a sequence of steps.
+
 ## Elements
-Except where noted, modal and in-page wizards have the same elements and behaviors. For the sake of simplicity, all screens here show the modal wizard.
+Except where noted, modal and in-page wizards share the same elements and behaviors. For simplicity, the screens here show the modal wizard.
 
 <div class="ws-docs-content-img">
 ![Example of a simple wizard.](./img/simple-wizard.svg)
 </div>
 
-1. **Header (modal wizard only):** Modal wizards always have a header area that minimally contains the wizard title and a close button. The title should be action oriented and reflect the intended outcome of the wizard, such as "Create resource." You may optionally also include a description below the wizard title.
-2. **Steps sidebar:** Enumerated steps are displayed in the sidebar. Steps can be fixed or updated as the user proceeds through the process (see progressive wizard).
-3. **Visited step:** A step that has been already visited. In most cases users can click this step to return to a prior point in the flow.
+1. **Header (modal wizard only):** Modal wizards always have a header that includes at least the wizard title and a close button. Write an action-oriented title that reflects the outcome of the wizard, for example "Create resource." You can also add a description below the title.
+2. **Steps sidebar:** Show numbered steps in the sidebar. Steps can stay fixed, or they can update as someone moves through the process (see [progressive wizard](#progressive-wizard)).
+3. **Visited step:** A step that has already been visited. In most cases, people can select this step to return to an earlier point in the flow.
 4. **Current step:** The current step is always highlighted.
-5. **Disabled step:** Steps that follow the current step are usually disabled to enforce the sequential flow.
-6. **Step title:** The step title is unique to each step, and should reinforce the outcome of the individual step. This can match the current step, or it can be more verbose.
-7. **Body:** The contents of a step itself. Any valid form elements can be incorporated within the body. The size of the modal that contains the wizard can be adjusted based on the contents of the body section. If the height of the body section causes the bottom of the modal to push beyond the height of the viewport, a vertical scrollbar will appear. However it is recommended to break your workflow into small enough steps so that scrolling is not necessary on typical monitor sizes.
-8. **Button footer:** Buttons control the wizard flow. Default buttons are **Back**, **Next**, and **Cancel**. You may optionally add other actions, such as **Skip to finish** or **Start over**. There should only be 1 primary action in the footer and it should typically be the **Next** button.
+5. **Disabled step:** Later steps are usually disabled so the flow stays sequential.
+6. **Step title:** Give each step a unique title that reinforces that step's outcome. It can match the sidebar label, or it can be more verbose.
+7. **Body:** The contents of the current step. You can use any valid form elements in the body. Adjust the modal size to fit the body content. If the body is taller than the viewport, a vertical scrollbar appears. Break the workflow into small enough steps that scrolling isn't needed on typical monitor sizes.
+8. **Button footer:** Buttons control the wizard flow. Default buttons are **Back**, **Next**, and **Cancel**. You can add other actions, such as **Skip to finish** or **Start over**. Use only 1 primary action in the footer, typically **Next**.
 
 ## Usage
 ### When to use
-* The task is long/complex and benefits from being broken into smaller more manageable steps. This allows the user to focus on smaller tasks and not feel overwhelmed.
-* There is a known step by step order of tasks, and these steps can be broken up into clearly defined categories/sections which can be indicated via labels on the steps.
-* This process is prescriptive. The actions a user takes in one step influence downstream steps.
-* A simple form is not sufficient to aid a user in completing a task.
+- Break a long or complex task into smaller steps so people can focus on one part at a time.
+- Follow a known, step-by-step order of tasks that you can group into labeled categories.
+- Guide a prescriptive process, where choices in one step affect later steps.
+- Support a task that a basic form can't handle on its own.
 
 ### When not to use
-* Avoid using a wizard for simple data entry tasks in which a basic form would suffice.
+- Don't use a wizard for simple data entry that a basic form can handle.
 
-## Behavior 
-In a standard wizard the user moves through the wizard sequentially, a step at a time. The **Next** button is always used to advance the wizard. In addition:
+## Behavior
+In a standard wizard, people move through steps one at a time. Use **Next** to move forward.
 
-* The **Back** button is disabled on the first page of the wizard.
-* To abandon the wizard, the user selects **Cancel** in the button footer or the **Close** button in the header. Closing the wizard will discard current changes, so it may be appropriate to insert a confirmation message before executing this operation.
-* Wizard steps are skippable if the user configures them to be.
-* The user can jump to steps directly if the user clicks on a step in the sidebar (if the step is not disabled).
+- **Back** is disabled on the first step.
+- To leave the wizard, select **Cancel** in the footer or **Close** in the header. Closing discards unsaved edits, so show a confirmation before you close.
+- You can make steps skippable.
+- People can jump to an enabled step by selecting it in the sidebar.
 
 ### Mobile considerations
-When viewing a wizard on a mobile device, the steps sidebar will be hidden and collapse into a drop down menu panel as shown below.
+On mobile, the steps sidebar is hidden and collapses into a dropdown menu.
 
 <div class="ws-docs-content-img">
 ![Example of a wizard on mobile.](./img/mobile-wizard.svg)
 </div>
 
 ## Variations
-Wizards can be placed in a modal or within the content area of a page. Behavior may change depending on variation. 
-* [Modal wizard](#modal-wizards)
-* [In-page wizard](#in-page-wizard)
-* [Progressive wizard](#progressive-wizard)
-* [With sub-steps](#wizard-with-sub-steps)
-* [With optional steps](#wizard-with-optional-steps)
-* [With a drawer](#wizard-with-a-drawer)
+You can place a wizard in a modal or in the content area of a page. Behavior can differ by variation.
 
-### Modal wizards
+- [Modal wizard](#modal-wizard)
+- [In-page wizard](#in-page-wizard)
+- [Progressive wizard](#progressive-wizard)
+- [With sub-steps](#wizard-with-sub-steps)
+- [With optional steps](#wizard-with-optional-steps)
+- [With a drawer](#wizard-with-a-drawer)
+
+### Modal wizard
 <div class="ws-docs-content-img">
 ![Example of a wizard in a modal.](./img/modal-wizard.svg)
 </div>
 
-The modal wizard lives in a modal dialog. If necessary, the default width and height of the modal can be overridden to increase that available content area. In most cases, the modal wizard is recommended as it will keep users focused on the task at hand. Users must either complete all of the steps of the wizard or cancel before navigating elsewhere within an application.
+A modal wizard opens in a dialog. Override the default width and height if you need more space for content. Prefer a modal wizard when you want to keep people focused on the task. They must finish all steps or cancel before they can go elsewhere in the application.
 
 ### In-page wizard
-A wizard may be embedded in a page as shown below.
+You can embed a wizard in the content area of a page.
 
 <div class="ws-docs-content-img">
 ![Example of an in-page wizard.](./img/in-page-wizard.svg)
 </div>
 
-Wizards can also be added to the content area of a page. This will allow greater flexibility in navigating to other locations in your application while within a wizard flow, but it also places greater responsibility on the system to manage state.
+An in-page wizard makes it easier to navigate elsewhere in the application during the flow, but your application must manage state.
 
-Note that when a wizard is embedded into a page, the wizard title and description are placed within the page header. The same standards that were defined for usage of the title and description for modal wizards should be applied here.
+When you embed a wizard in a page, place the title and description in the page header. Use the same title and description guidance as the modal wizard.
 
-When a wizard is placed in the context of a page, it allows some freedom that is not available using the standard modal approach.
+An in-page wizard also allows interactions that a modal wizard doesn't:
 
-* Modals may be opened from the wizard to examine required information or perform subtask that are related to, but not part of, the wizard workflow.
-* User can navigate away from the wizard to look up information or perform some prerequisite task.
+- Open a modal from the wizard to view required information or complete a related subtask that isn't part of the wizard flow.
+- Navigate away to look up information or complete a prerequisite task.
 
-Be aware that anytime the user navigates away from the wizard, there is a risk that any information entered up until that point will be lost. At a minimum, we recommend opening a modal alert when the user tries to do this warning of potential data loss and confirming that they want to leave the wizard. Optionally you should consider including a "Save as draft" feature that will allow work in progress to be saved and recalled upon returning to the wizard.
+If someone leaves the wizard, they might lose what they entered. At a minimum, show a modal alert that warns about data loss and confirms that they want to leave. You can also include **Save as draft** so work in progress can be restored later.
 
 ### Progressive wizard
-A progressive wizard takes the same form as the standard wizard or wizard with sub-steps above but accommodates a situation where the exact number of steps is not known when the wizard is first loaded. Steps in the sidebar can be changed or added as the user progresses through the wizard.
+Use a progressive wizard when you don't know the exact number of steps at the start. It uses the same layout as a standard wizard or a wizard with sub-steps. Add or update steps in the sidebar as someone moves through the flow.
 
-A walk-through of a progressive wizard might look like this:
+For example:
 
 <div class="ws-docs-content-img">
 ![Example of the first step in a progressive wizard.](./img/wizard-progressive-step1.svg)
 </div>
 
-**Step 1**: The user is presented with a Get started screen where they can specify what they want to do.
+**Step 1:** Present a **Get started** screen so people can choose what they want to do.
 
 <div class="ws-docs-content-img">
 ![Example of the second step in a progressive wizard.](./img/wizard-progressive-step2.svg)
 </div>
 
-**Step 2**: Based on their choice to create a new object, a user is presented with a second set of options. But the remaining steps are still unknown.
+**Step 2:** After they choose to create a new object, present a second set of options. The remaining steps are still unknown.
 
 <div class="ws-docs-content-img">
 ![Example of the third step in a progressive wizard.](./img/wizard-progressive-step3.svg)
 </div>
 
-**Step 3**: After the user chooses “Quick create” and clicks **Next**, they can now be presented with a full set of steps. It should be possible to revisit either of the first two steps making different choices and steps shown should update accordingly.
+**Step 3:** After they choose **Quick create** and select **Next**, present the full set of steps. People should be able to go back to either of the first 2 steps, make a different choice, and see the later steps update.
 
 ### Wizard with sub-steps
-Sub-steps can be added to the sidebar. Use sub-steps when there is a hierarchical relationship between a group of steps, if a primary step contains too much content to be displayed on 1 page, or when there is a set of optional settings that make sense to group together where the user need not visit each page.
+Add sub-steps to the sidebar when parent steps have a hierarchy, when a parent step has too much content for 1 page, or when you want to group optional settings that people don't have to visit on every page.
 
 <div class="ws-docs-content-img">
 ![Example of a wizard with sub-steps.](./img/wizard-substeps.svg)
 </div>
 
-1. **Sub-steps:** Sub-steps are always nested inside of a major step.
-2. **Expansion (optional):** Sub-steps may be shown or hidden using the caret next to the parent step.
+1. **Sub-steps:** Always nest sub-steps inside a parent step.
+2. **Expansion (optional):** Use the caret next to the parent step to show or hide sub-steps.
 
 #### Behavior
 
-* You may force the user to execute sub-steps in order by disabling future steps. Or enable all steps if the user should be able to click freely between sub-steps.
-
-* Clicking **Next** or **Back** should navigate through the sub-steps as it would for the major steps.
-
-* If an expansion is used, sub-steps are hidden unless the user expands the parent step or has naturally arrived at the first of the sub-steps.
-
-* Parent steps are automatically closed once they are complete. However, the user can manually expand the parent back open at any time to see the sub-steps again while staying in context of their current step.
+- To keep a sequential flow, disable later sub-steps. Or enable all sub-steps so people can move between them freely.
+- **Next** and **Back** move through sub-steps the same way they move through parent steps.
+- If you use an expansion, hide sub-steps until someone expands the parent step or arrives at the first sub-step.
+- Collapse a parent step automatically when it's complete. People can expand it again at any time to see the sub-steps, without leaving their current step.
 
 ### Wizard with optional steps
-Optional steps can be added to the wizard. Make steps optional when they do not need to be filled out to complete the wizard.
+Make a step optional when it isn't required to finish the wizard.
 
 <div class="ws-docs-content-img">
 ![Example of a wizard with optional steps.](./img/wizard-optional.svg)
 </div>
 
-1. **Optional steps:** It's recommended to group all optional steps under a single parent step.
-2. **Tooltip (optional):** This tooltip is optional, but recommended. It would help explain that the following steps in the wizard are not required and would give more context to the new **Review and finish** button. 
+1. **Optional steps:** Group optional steps under a single parent step.
+2. **Tooltip (optional):** A tooltip is optional, but recommended. Use it to explain that later steps aren't required and to give context for the **Review and finish** button.
 
 #### Behavior
 
-* The review step is enabled once all required steps have been filled out.
+- Enable the review step once all required steps are complete.
+- After required steps are complete, show a tertiary button beside **Back** and **Next**. Selecting it jumps to the review step.
 
-* Once required steps have been filled, a tertiary button would appear to the right of the **Back** and **Next** buttons. Once clicked, this button would jump users ahead to the final review step. 
- 
 ### Wizard with a drawer
 
-The drawer inside a wizard is useful in situations where you need to show more information while keeping the user in the context of the wizard. When opened, the drawer overlays the data, rather than pushing it to the side. There are 2 types of drawers: dismissable and non-dismissible. For opening and closing a drawer, use a link button or a link button with an icon.
+Use a [drawer](/components/drawer/design-guidelines) in a wizard when you need to show more information without taking people out of the flow. When opened, the drawer overlays the content instead of pushing it aside. There are 2 types of drawers: dismissible and non-dismissible. To open and close a drawer, use a link button or a link button with an icon.
 
 <div class="ws-docs-content-img">
 ![Example of a wizard with a closed drawer.](./img/wizard-drawer-closed.svg)
@@ -151,51 +150,53 @@ The drawer inside a wizard is useful in situations where you need to show more i
 ![Example of a wizard with an open drawer.](./img/wizard-drawer-open.svg)
 </div>
 
-#### Use drawer when:
+#### When to use a drawer
 
-* You want to let consumers review additional information without switching contexts
-* You need to add context or more description around the information you are showing
-* You want to display additional learning resources
+- Let people review more information without switching context.
+- Add context or description around the information you're showing.
+- Display additional learning resources.
 
-### Review and completion
-The last step in a wizard should always be a review step. This step should include a summary of what the user has input so the user may confirm them before committing their changes.
+## Review and completion
+Always end with a review step. Summarize what was entered so it can be confirmed before submit.
 
 <div class="ws-docs-content-img">
 ![Example of a review screen.](./img/wizard-review.svg)
 </div>
 
-1. **Review step**
-2. **Finish button:** On the last step of the wizard, the **Next** button is labeled "Finish" by default. This is a configurable choice and should be replaced by a more specific verb or verb-object word pair like “Create” or “Configure networks,” when possible.
+1. **Review step:** The last step in the sidebar. Use it to confirm the information entered in earlier steps.
+2. **Finish button:** On the last step, **Next** is labeled **Finish** by default. Replace it with a more specific verb or verb-object pair when you can, such as **Create** or **Configure networks**.
 
-If it will take a long time (more than a few seconds) for changes to be applied, a progress screen is recommended. This can be constructed from a variation of the [empty state](/components/empty-state/design-guidelines) pattern by embedding a progress bar and appropriate messaging within the body of the wizard.
+If applying the result takes more than a few seconds, show a progress screen. Build it from the [empty state](/components/empty-state/design-guidelines) pattern: place a progress bar and a short message in the wizard body.
 
 <div class="ws-docs-content-img">
 ![Example of a progress screen.](./img/wizard-config.svg)
 </div>
 
-1. **Progress message:** Include a progress bar with appropriate messaging using an empty state pattern.
-2. **Cancel button (optional):** Include a cancel button only if the operation can be terminated once it is started. Cancel should revert all changes and leave the system in the state that existed before the user launched the wizard.
+1. **Progress message:** Include a progress bar and a short message, using an empty state pattern.
+2. **Cancel button (optional):** Include **Cancel** only if the operation can be stopped after it starts. Cancel should undo the work and return the system to the state it was in before the wizard opened.
 
-Note that once changes have been committed, the steps sidebar is hidden and the user can no longer make changes.
+After submit, hide the steps sidebar. People can no longer edit earlier steps.
 
-Once the changes initiated by the wizard are completed, a final confirmation screen should be displayed. Again, this can leverage an empty state pattern to present a success (or failure) message to users.
+When the work is done, show a confirmation screen. Use an empty state to present a success or failure message.
 
 <div class="ws-docs-content-img">
 ![Example of a completion screen.](./img/completion-screen.svg)
 </div>
 
-1. **Completion message:** Provide appropriate messaging to inform the user about the outcome of the wizard.
+1. **Completion message:** Tell people what happened as a result of the wizard.
 
-2. **Primary action:** In most cases this will be a navigational button to close the wizard and take the user to a page where they can see the results of their changes, like a new project that was created. If there is no appropriate destination or if results will be seen on the current page, make the primary action close.
+2. **Primary action:** In most cases, this is a button that closes the wizard and takes people to where they can see the result, such as a new project. If there's no destination, or the result is already on the current page, make the primary action **Close**.
 
-3. **Secondary action(s) (optional):** If the primary action is something other than closing the wizard, add a **Close** button here to exit the wizard and return to the prior page. Other secondary actions can also be included. See [empty state guidelines](/components/empty-state) for button placement.
+3. **Secondary action (optional):** If the primary action does something other than close the wizard, add a **Close** button so people can exit and return to the previous page. You can include other secondary actions. See [empty state](/components/empty-state/design-guidelines) for button placement.
 
-In some cases the result of a wizard is to dispatch a task to the background to execute changes in the back end. In these circumstances, we recommend that you provide a navigation link to monitor task progress and/or simply a close button.
-
+Sometimes a wizard starts a background task. Provide a link to monitor progress, a **Close** button, or both.
 
 ## Content considerations
-You should keep the following in mind while designing your wizard screens:
+When you write wizard content:
 
-* Keep step labels short. The title at the top of each screen may be used to elaborate on the step label, but in all cases there should be a direct relationship between the step label and the screen title.
-* The final step to submit the wizard should always be labeled "Review"".
-* Default button labels for wizard navigation are: **Back**, **Next**, and **Cancel**. If you are replacing the default button labels, keep them short and action oriented, such as “Create network.”
+- Keep step labels short. The title at the top of each screen can expand on the label, but the label and title should stay clearly related.
+- Always label the final submit step **Review**.
+- Default navigation buttons are **Back**, **Next**, and **Cancel**. If you replace the defaults, keep labels short and action-oriented, such as **Create network**.
+
+## Accessibility
+For information regarding accessibility, visit the [wizard accessibility](/components/wizard/accessibility) tab.
