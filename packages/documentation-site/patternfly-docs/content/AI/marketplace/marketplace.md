@@ -5,9 +5,9 @@ subsection: AI-assisted development
 sortValue: 3
 ---
 
-The [PatternFly AI Helpers](https://github.com/patternfly/ai-helpers) marketplace is an open source collection of **plugins** for AI coding tools like [Claude Code](https://docs.anthropic.com/en/docs/claude-code) and [Cursor](https://www.cursor.com/). These plugins provide models with knowledge and skills that are tailored to PatternFly workflows, so your AI tools can generate more accurate solutions that follow our best practices.
+The [AI Helpers](https://github.com/rh-uxd/ai-helpers) marketplace is an open source collection of **plugins** for AI coding tools like [Claude Code](https://docs.anthropic.com/en/docs/claude-code) and [Cursor](https://www.cursor.com/). Hosted in the `rh-uxd/ai-helpers` repository, it includes plugins for both PatternFly and UXD workflows. These plugins provide models with knowledge and skills tailored to our design system and team practices, so your AI tools can generate more accurate solutions that follow our best practices.
 
-Whether you're building PatternFly UIs, prototyping in code, or evaluating AI tooling for your team, our AI Helpers can simplify and enhance your experience.
+Whether you're building PatternFly UIs, prototyping in code, or evaluating AI tooling for your team, AI Helpers can simplify and enhance your experience.
 
 With AI Helpers installed, you can expect a few benefits when using generative AI:
 
@@ -15,41 +15,49 @@ With AI Helpers installed, you can expect a few benefits when using generative A
 - Faster prototyping and development cycles.
 - Fewer common implementation mistakes.
 - Built-in awareness of PatternFly coding standards, accessibility, and design tokens.
+- Support for UXD workflows such as prototyping, research, and design review.
 
 ## What plugins are available?
 
-The AI Helpers marketplace is organized into plugins, each focused on a different area of PatternFly — from building and testing React components, to working with design tokens and accessibility, to reviewing Figma changes. New plugins are added regularly as the community contributes.
+The AI Helpers marketplace is organized into plugins across PatternFly and UXD:
 
-We are actively maintaining and evolving our plugins based on the needs of our maintainers and users. For the current list of plugins, view our [plugin catalog](https://github.com/patternfly/ai-helpers/blob/main/PLUGINS.md).
+- **PatternFly plugins** cover React component development, design guidance, design audits, migration, code review, team workflows, and MCP documentation access. On Claude Code, you can install the `patternfly` meta-plugin to get the PatternFly sub-plugins in one step.
+- **UXD plugins** (such as `uxd-workshop`) support prototyping, research, design review, and related team workflows.
+
+New plugins are added regularly as the community contributes. For the current list of plugins and skills, view our [plugin catalog](https://github.com/rh-uxd/ai-helpers/blob/main/PLUGINS.md).
 
 ## Get started
 
 You can use our plugins with the AI coding tool of your choice, such as Claude Code or Cursor, by following these onboarding steps.
 
-For the best experience, set up the [PatternFly MCP server](https://github.com/patternfly/patternfly-mcp) to give AI tools direct access to PatternFly component documentation, prop schemas, and design guidelines. While our plugins work without the PatternFly MCP, connecting your tools to it will provide stronger results.
+For the best experience, set up the [PatternFly MCP server](https://github.com/patternfly/patternfly-mcp) to give AI tools direct access to PatternFly component documentation, prop schemas, and design guidelines. On Claude Code, MCP is included when you install the `patternfly` meta-plugin. On Cursor, the MCP server requires [separate setup](https://github.com/rh-uxd/ai-helpers/blob/main/FAQ.md#how-do-i-test-a-skill-without-the-patternfly-mcp-server).
 
 ### Claude Code
 
-To use our AI Helpers in Claude Code:
+To use AI Helpers in Claude Code:
 
 1. Add the AI Helpers marketplace:
 ```bash
-/plugin marketplace add patternfly/ai-helpers
+claude plugins marketplace add rh-uxd/ai-helpers
 ```
 
-2. Install the specific plugins you need:
+2. Install the PatternFly meta-plugin (recommended), which auto-installs the PatternFly sub-plugins:
 ```bash
-/plugin install react@ai-helpers
+claude plugins install patternfly@uxd-ai-helpers
 ```
 
-3. Utilize the plugin's skills and knowledge in your project.
+Or install individual plugins as needed (for example, `claude plugins install pf-react@uxd-ai-helpers`). Don't install both `patternfly` and individual PatternFly sub-plugins — `patternfly` already includes them.
+
+3. Use the plugin's skills and knowledge in your project. Skills are available as slash commands, such as `/pf-react:pf-test-gen`.
 
 ### Cursor
 
-Cursor can discover plugins from `.cursor-plugin/` directories. If you also have Claude Code installed, Cursor may pick up installed plugins automatically via its third-party plugin settings. See the [AI Helpers README](https://github.com/patternfly/ai-helpers#cursor) for details.
+In Cursor, add the marketplace in **Settings → Marketplace**, then install the plugins you need. See the [Plugins table in the AI Helpers README](https://github.com/rh-uxd/ai-helpers#plugins) for the full list.
+
+After installing, skills work the same way — as slash commands in any project. For MCP server access, also install `pf-mcp` and complete the [Cursor MCP setup](https://github.com/rh-uxd/ai-helpers/blob/main/FAQ.md#how-do-i-test-a-skill-without-the-patternfly-mcp-server).
 
 ## How can I contribute a plugin?
 
-The PatternFly AI Helpers marketplace is open source and welcomes contributions from our community. Whether you want to add a new skill to an existing plugin, create an entirely new plugin, or improve the documentation that AI tools rely on, there's a place for your contribution.
+The AI Helpers marketplace is open source and welcomes contributions from our community. Whether you want to add a new skill to an existing plugin, create an entirely new plugin, or improve the documentation that AI tools rely on, there's a place for your contribution.
 
-To get started, check out the [contributing guide](https://github.com/patternfly/ai-helpers/blob/main/CONTRIBUTING.md) and the [step-by-step skill creation guide](https://github.com/patternfly/ai-helpers/blob/main/CONTRIBUTING-SKILLS.md).
+To get started, check out the [contributing guide](https://github.com/rh-uxd/ai-helpers/blob/main/CONTRIBUTING.md) and the [step-by-step skill creation guide](https://github.com/rh-uxd/ai-helpers/blob/main/CONTRIBUTING-SKILLS.md).

@@ -3,6 +3,105 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.4.0-alpha.412 (2026-09-03)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 1.4.0-alpha.411 (2026-09-03)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 1.4.0-alpha.410 (2026-09-02)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 1.4.0-alpha.409 (2026-09-01)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 1.4.0-alpha.408 (2026-08-13)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 1.4.0-alpha.407 (2026-08-10)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 1.4.0-alpha.406 (2026-08-10)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 1.4.0-alpha.405 (2026-08-05)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 1.4.0-alpha.404 (2026-08-04)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 1.4.0-alpha.403 (2026-08-04)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 1.4.0-alpha.402 (2026-08-04)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 1.4.0-alpha.401 (2026-08-03)
+
+
+### Features
+
+* **misc:** separate CSSVariables into its own tab ([#5046](https://github.com/patternfly/patternfly-org/issues/5046)) ([0ecb4d3](https://github.com/patternfly/patternfly-org/commit/0ecb4d34d9f8100c1088936b765f98ecca9b94b6))
+
+
+
+
+
 # 1.4.0-alpha.400 (2026-08-03)
 
 

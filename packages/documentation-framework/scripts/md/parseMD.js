@@ -327,7 +327,8 @@ function sourceMDFile(file, source, buildMode, options) {
       ...(pageData.template && { template: pageData.template }),
       ...(pageData.demo && { demo: pageData.demo }),
       ...(pageData.sortValue && { sortValue: pageData.sortValue }),
-      ...(pageData.subsectionSortValue && { subsectionSortValue: pageData.subsectionSortValue })
+      ...(pageData.subsectionSortValue && { subsectionSortValue: pageData.subsectionSortValue }),
+      ...(pageData.cssPrefix && { cssPrefix: pageData.cssPrefix })
     };
   }
 }

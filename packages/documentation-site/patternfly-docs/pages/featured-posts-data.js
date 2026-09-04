@@ -18,13 +18,13 @@ export const featuredPostsData = {
       "https://miro.medium.com/v2/resize:fit:600/format:webp/1*L3CtrJqE9TyypMVqYQR_3g.png",
   },
   post3: {
-    title: "PatternFly's AI marketplace",
-    author: "Jeff Puzzo",
-    length: "7 min read",
-    URL: "https://medium.com/patternfly/patternflys-ai-marketplace-7b78aa5ead64",
+    title: "Harmonizing the Red Hat experience",
+    author: "Erin Donehoo",
+    length: "5 min read",
+    URL: "https://medium.com/patternfly/harmonizing-the-red-hat-experience-f5dc5c52e1be",
     // Use resize:fit:600 in URL
     imageURL:
-      "https://miro.medium.com/v2/resize:fit:600/format:webp/1*nRzzKkHAXqqHfRQx6jUiXQ.png",
+      "https://miro.medium.com/v2/resize:fit:600/format:webp/1*KYvrm8V0w7ThnpNc8iO_Gw.png",
   },
   post4: {
     title: "A dual mandate for design system maturity",

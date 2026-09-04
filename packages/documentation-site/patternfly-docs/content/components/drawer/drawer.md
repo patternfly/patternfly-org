@@ -15,7 +15,9 @@ In addition to primary-details, the drawer component is frequently used in [noti
 
 ### Splitter in a drawer
 
-A splitter allows you to create a layout with resizable panes. The orientation of a splitter can be set to vertical or horizontal.
+A splitter allows you to create a layout with resizable panes. The orientation of a splitter can be set to vertical or horizontal. Depending on the direction the drawer opens within the page, you can place a splitter at the start or end of a drawer.
+
+Place the splitter on the opposite side from which the drawer opens: on the left for a right-opening drawer, on the right for a left-opening drawer, and at the top for a bottom-opening drawer.
 
 ### When to use a splitter
 Add a splitter to a drawer if you need to resize the width or height of a panel to give content more space. If data shown in a drawer has enough space, then you don’t need to use a splitter.
@@ -30,7 +32,7 @@ There are 2 types of drawer displays: overlay and inline.
 
 ### Overlay drawer
 
-An overlay drawer appears "on top" of page content, and must be minimized or closed in order for users to view the content that is covered by the expanded drawer.
+An overlay drawer appears "on top" of page content, and must be minimized or closed in order for users to view the content that is covered by the expanded drawer. Overlay drawers in default and glass mode will have the `--pf-t--global--background--color--floating--default` token applied.
 
 <div class="ws-docs-content-img">
 ![A drawer overlays page content, displaying a shadow where the primary page content is overlaid.](./img/drawer-overlay.svg)
@@ -38,10 +40,56 @@ An overlay drawer appears "on top" of page content, and must be minimized or clo
 
 ### Inline drawer
 
-An inline drawer is placed beside page content, making the rest of the page content more compact (but still visible).
+An inline drawer is placed beside page content, making the rest of the page content more compact (but still visible). All inline drawer variants have a `--pf-t--global--background--color--primary--default` token applied. In glass mode, inline drawers inherit the glass styling and have no background color.
 
 <div class="ws-docs-content-img">
 ![A drawer is beside page content, similar to a split screen view.](./img/drawer-inline.svg)
+</div>
+
+### Overlay pill
+
+A rounded overlay drawer is available across all themes. Apply the `pf-m-pill` class modifier or the `isPill` React property to enable the rounded style. The `--pf-t--global--border--radius--medium` (16px) border radius token and `--pf-t--global--border--color--subtle` border color token are applied to all rounded drawers. When placing a rounded drawer in a page, use the `global/spacer/inset/page-chrome` gutter token to ensure consistent spacing.
+
+The rounded overlay drawer has a `.pf-v6-u-box-shadow-md` (medium box shadow) applied to the entire drawer.
+
+For an overlay pill drawer sitting above the main content area, the margin around the overlay drawer should use gutter spacer `--pf-t--global--spacer--gutter--default` on the top, bottom, and right if possible (or look visually equivalent if another code implementation is needed).
+
+<div class="ws-docs-content-img">
+![Example of an overlay pill drawer.](./img/Pill-Overlay.svg)
+</div>
+
+#### Compass layout - Pill overlay
+
+For compass layouts, use a pill drawer. To see the pill overlay drawer in action, view the [compass layout demo](/components/compass/org-demos/card-and-data-view-layout/).
+
+<div class="ws-docs-content-img">
+![Example of an overlay pill drawer in a Compass layout.](./img/compass-overlay-drawer.svg)
+</div>
+
+#### Over main page content - Pill overlay
+
+<div class="ws-docs-content-img">
+![Example of an overlay pill drawer over main page content.](./img/Pill-Overlay-over-main-page.svg)
+</div>
+
+#### In main page area - Pill overlay
+
+<div class="ws-docs-content-img">
+![Example of an overlay pill drawer in the main page area.](./img/Pill-Overlay-In-main-page.svg)
+</div>
+
+### Inline pill
+
+The inline pill drawer shares the same base styling as the overlay pill drawer. In the glass theme, a `.pf-v6-u-box-shadow-md` (medium box shadow) is applied to the entire drawer.
+
+<div class="ws-docs-content-img">
+![Example of an inline pill drawer.](./img/Pill-Inline.svg)
+</div>
+
+#### Without masthead - Inline pill
+
+<div class="ws-docs-content-img">
+![Example of an inline pill drawer without a masthead.](./img/Pill-Inline-without-masthead.svg)
 </div>
 
 ## Placement

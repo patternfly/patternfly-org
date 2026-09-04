@@ -1,5 +1,6 @@
 import React from 'react';
-import { Link, FeedbackButton } from '@patternfly/documentation-framework/components';
+import { Link } from '@patternfly/documentation-framework/components';
+import { FeedbackButton } from '@patternfly/documentation-framework/components/feedbackButton/feedbackButton';
 import {
   Banner,
   Button,
