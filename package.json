@@ -78,6 +78,7 @@
     "@patternfly/react-core": "^6.6.1",
     "@patternfly/react-table": "^6.6.1",
     "@project-felt/ai-guidelines": "github:project-felt/ai-guidelines#main",
-    "monaco-editor": "0.54.0"
+    "monaco-editor": "0.54.0",
+    "handlebars": "4.7.9"
   }
 }
