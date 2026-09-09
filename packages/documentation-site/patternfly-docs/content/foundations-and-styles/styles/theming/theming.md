@@ -134,12 +134,12 @@ The masthead's [Settings button or User menu toggle](/components/masthead#elemen
 
 Use this pattern when:
 - Theming controls are one of several User preferences that could be exposed in a single, dedicated location.
-- Your product already has an established settings or preferences experience that you want to extend, rather than introduce a new masthead item.
+- Your product already has an established settings or preferences experience that you want to extend, rather than introducing a new masthead item.
 - You want to pair each control with additional context, like descriptive helper text, without crowding the masthead.
 
 ### Masthead theme switcher
 
-A persistent icon toggle, commonly represented by a sun or moon icon, sits directly in the masthead. Selecting it opens a menu with expanded controls for theme, color scheme, and contrast mode, letting users adjust their preferences without leaving their current page.
+A persistent icon button, commonly represented by a sun or moon icon, sits directly in the masthead. Selecting it opens a menu with expanded controls for theme, color scheme, and contrast mode, letting users adjust their preferences without leaving their current page.
 
 <!-- TODO: replace placeholder screenshot with final PatternFly-style illustration -->
 <div class="ws-docs-content-img">
@@ -149,16 +149,16 @@ A persistent icon toggle, commonly represented by a sun or moon icon, sits direc
 Use this pattern when:
 - You want theme controls to be reachable from anywhere in the product, in a single click.
 - Color scheme is the control most users will reach for, with theme and contrast mode as secondary, expanded options.
-- Your product doesn't already have a dedicated settings page or modal, and you don't want to introduce one solely for theming.
+- Your product doesn't already have a dedicated Settings or User preference page, and you don't want to introduce one solely for theming.
 
-### Best practices for Theme controls
+### Theme control guidelines
 
 Regardless of which pattern you use, keep the following guidelines in mind:
 
 - **Default to the system setting:** Provide a "System" option for color scheme and contrast mode, and select it by default, so your product respects the user's OS- or browser-level preferences until they choose to override them.
 - **Persist user selections:** Store each user's choice, for example in `localStorage` or their account settings, so their preferences are remembered across sessions.
 - **Apply changes immediately:** Update the UI as soon as a user makes a selection, without requiring a separate save or submit action.
-- **Group controls by tier:** Present Theme, Color scheme, and Contrast mode as distinct, clearly labeled groups so users understand how each layer affects their experience.
+- **Group controls by tier:** Present theme, Color scheme, and Contrast mode as distinct, clearly labeled groups so users understand how each layer affects their experience.
 - **Match the control to the option count:** Use a toggle group for a small, fixed set of options (like Light, Dark, and System) and a dropdown or select list if you expect to support more options in the future.
 - **Keep accessibility controls easy to find:** Don't bury Contrast mode behind extra steps or unrelated settings. Users who need High contrast, or who need to turn off Glass, should be able to do so quickly.
 
