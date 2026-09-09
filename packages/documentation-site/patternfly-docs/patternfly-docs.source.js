@@ -202,11 +202,10 @@ module.exports = (sourceMD, sourceProps, sourceFunctionDocs) => {
   );
 
   // Chatbot
-  const virtualAssistantPath = require.resolve('@patternfly/chatbot/package.json').replace('package.json', 'src');
+  const chatbotRoot = require.resolve('@patternfly/chatbot').replace(/\/dist\/.*$/, '');
+  const virtualAssistantPath = path.join(chatbotRoot, 'src');
 
-  const virtualAssistantBase = require
-    .resolve('@patternfly/chatbot/package.json')
-    .replace('package.json', 'patternfly-docs/content/extensions/chatbot');
+  const virtualAssistantBase = path.join(chatbotRoot, 'patternfly-docs/content/extensions/chatbot');
 
   sourceProps(
     path.join(virtualAssistantPath, "/**/*.tsx"),
