@@ -129,7 +129,7 @@ The masthead's [Settings button or User menu toggle](/components/masthead#elemen
 
 <!-- TODO: replace placeholder screenshot with final PatternFly-style illustration -->
 <div class="ws-docs-content-img">
-![Placeholder screenshot of a preferences page with a Theme dropdown and a Contrast mode dropdown, shown alongside other unrelated application settings like search and project defaults.](./img/theme-switcher-preferences.png)
+![Placeholder screenshot of a preferences page with a Theme dropdown and a Contrast mode dropdown, shown alongside other unrelated application settings like search and project defaults.](./img/theme-switcher-preferences.svg)
 </div>
 
 Use this pattern when:
@@ -143,7 +143,7 @@ A persistent icon button, commonly represented by a sun or moon icon, sits direc
 
 <!-- TODO: replace placeholder screenshot with final PatternFly-style illustration -->
 <div class="ws-docs-content-img">
-![Placeholder screenshot of a masthead icon toggle opening a menu with toggle groups for Theme, Color scheme, and Contrast mode.](./img/theme-switcher-masthead-menu.png)
+![Placeholder screenshot of a masthead icon toggle opening a menu with toggle groups for Theme, Color scheme, and Contrast mode.](./img/theme-switcher-masthead-menu.svg)
 </div>
 
 Use this pattern when:
