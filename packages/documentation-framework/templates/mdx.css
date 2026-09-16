@@ -1,7 +1,13 @@
 @import './content-sources/ai-guidelines.css';
 
-p.pf-v6-c-content--p.ws-p {
+/* Stack gutter already spaces direct children; don't also use paragraph margins. */
+.pf-v6-l-stack.pf-m-gutter > p.pf-v6-c-content--p.ws-p {
   margin: 0;
+}
+
+/* Stack gutter provides spacing before template section headings. */
+.ws-example-page-wrapper.pf-m-gutter .ws-stack-section-heading {
+  margin-block-start: 0;
 }
 
 .ws-code {
@@ -30,4 +36,5 @@ p.pf-v6-c-content--p.ws-p {
   max-width: min(100%, 1200px);
   flex-grow: 1;
   min-width: 0;
+  gap: 2.5rem;
 }
