@@ -2,6 +2,10 @@
   --ws-code-editor--tooltip--MaxWidth: 16ch;
 }
 
+.ws-heading.ws-example-heading {
+  margin-block-end: -0.5rem;
+}
+
 .ws-code-editor:not(.ws-example-code-expanded) > .pf-v6-c-code-editor__header::before {
   --pf-v6-c-code-editor__header--before--BorderBottomWidth: 0;
 }

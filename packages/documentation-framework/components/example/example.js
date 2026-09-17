@@ -9,8 +9,7 @@ import {
   Label,
   Switch,
   Tooltip,
-  Stack,
-  StackItem,
+  Stack
 } from '@patternfly/react-core';
 import * as reactCoreModule from '@patternfly/react-core';
 import * as reactCoreNextModule from '@patternfly/react-core/next';
@@ -117,8 +116,6 @@ export const Example = ({
   // absolute url to hosted file
   sourceLink = ''
 }) => {
-
-
   if (isFullscreenPreview) {
     isFullscreen = false;
   }
@@ -284,7 +281,9 @@ export const Example = ({
                   className={css('ws-full-page-utils-position-btn', utilsProps.className)}
                   isClicked={fullPageUtilsPosition === utilsProps.className}
                   onClick={() => setFullPageUtilsPosition(utilsProps.className)}
-                  aria-label={`${utilsProps.label}${fullPageUtilsPosition === utilsProps.className ? ', selected' : ''}`}
+                  aria-label={`${utilsProps.label}${
+                    fullPageUtilsPosition === utilsProps.className ? ', selected' : ''
+                  }`}
                   icon={fullPageUtilsPosition === utilsProps.className ? utilsProps.iconClicked : utilsProps.icon}
                 />
               </Tooltip>
@@ -303,7 +302,7 @@ export const Example = ({
   const fullscreenLink = (() => {
     const cleanPathname = loc.pathname.replace(/\/$/, '');
     const sourcePath = `/${source}`;
-    
+
     // Check if the source is already at the end of the pathname to avoid duplication
     // Using endsWith instead of includes to prevent false positives (e.g., /react-console matching /react)
     if (cleanPathname.endsWith(sourcePath)) {
@@ -348,19 +347,19 @@ export const Example = ({
   const metaText = hasMetaText && tooltips;
 
   const thumbnailDimensions = {
-    width: "800",
-    height: "450"
-  }
+    width: '800',
+    height: '450'
+  };
 
   return (
     <Stack hasGutter>
-      <StackItem>
-        <AutoLinkHeader metaText={metaText} headingLevel="h3">
+      <Stack hasGutter>
+        <AutoLinkHeader metaText={metaText} headingLevel="h3" className="ws-example-heading">
           {title}
         </AutoLinkHeader>
         {children}
-      </StackItem>
-      <StackItem>
+      </Stack>
+      <Stack hasGutter>
         {isFullscreen ? (
           <div>
             <a
@@ -369,7 +368,12 @@ export const Example = ({
               target="_blank"
               aria-label={`Open fullscreen ${title} example`}
             >
-              <img src={thumbnail} width={thumbnailDimensions.width} height={thumbnailDimensions.height} alt={`${title} screenshot`} />
+              <img
+                src={thumbnail}
+                width={thumbnailDimensions.width}
+                height={thumbnailDimensions.height}
+                alt={`${title} screenshot`}
+              />
             </a>
           </div>
         ) : (
@@ -377,8 +381,8 @@ export const Example = ({
             {livePreview}
           </div>
         )}
-      </StackItem>
-      <StackItem>
+      </Stack>
+      <Stack hasGutter>
         <ExampleToolbar
           lang={lang}
           isFullscreen={isFullscreen}
@@ -389,7 +393,7 @@ export const Example = ({
           codeBoxParams={codeBoxParams}
           exampleTitle={title}
         />
-      </StackItem>
+      </Stack>
     </Stack>
   );
 };
