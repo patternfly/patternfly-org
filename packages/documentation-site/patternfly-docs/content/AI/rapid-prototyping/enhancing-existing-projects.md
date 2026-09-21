@@ -10,9 +10,9 @@ sortValue: 2
 
 This guide describes how to integrate AI-assisted PatternFly development tools into an existing codebase.
 
-Before you get started, review [best practices for AI-assisted prototyping](/ai/rapid-prototyping/#best-practices-for-ai-assisted-prototyping) and learn about [vibe coding principles](/ai/rapid-prototyping/#what-is-vibe-coding) for effective AI-assisted development.
+Before you get started, review [best practices for AI-assisted prototyping](/ai/ai-assisted-development/rapid-prototyping#best-practices-for-ai-assisted-prototyping) and learn about [vibe coding principles](/ai/ai-assisted-development/rapid-prototyping/#what-is-vibe-coding) for effective AI-assisted development.
 
-If you need to start a new project, follow our guidelines for [starting a new prototype](/ai/rapid-prototyping/new-prototypes).
+If you need to start a new project, follow our guidelines for [starting a new prototype](/ai/ai-assisted-development/rapid-prototyping/new-prototypes).
 
 ## Get started
 
