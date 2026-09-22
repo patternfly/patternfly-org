@@ -17,6 +17,12 @@ async function writeScreenshot({ page, data: { url, urlPrefix } }) {
   // hide theme switcher
   await page.addStyleTag({content: '.ws-full-page-utils { display: none !important; }'});
   await page.waitForSelector('.pf-v6-u-h-100');
+  // Reset any auto-scrolled chatbot message boxes to the top so screenshots are consistent
+  await page.evaluate(() => {
+    document.querySelectorAll('.pf-chatbot__messagebox').forEach(el => {
+      el.scrollTop = 0;
+    });
+  });
   const outfile = path.join(
     screenshotBase,
     url.replace(`${urlPrefix}/`, '') + '.png'
