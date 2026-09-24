@@ -3,7 +3,50 @@ const path = require('path');
 const toHAST = require('mdast-util-to-hast');
 const detab = require('detab');
 const normalize = require('mdurl/encode');
-const all = require('mdast-util-to-hast/lib/all');
+// Inlined from mdast-util-to-hast/lib/all and lib/one (private APIs).
+// `all` recursively transforms a node's children through the handler
+// dispatch system. `one` dispatches a single node to the appropriate
+// handler registered on `h`.
+function one(h, node, parent) {
+  const type = node && node.type;
+  if (!type) {
+    throw new Error('Expected node, got `' + node + '`');
+  }
+  const fn = h.handlers[type] || h.unknownHandler;
+  if (typeof fn === 'function') {
+    return fn(h, node, parent);
+  }
+  // Fallback for unknown node types: wrap children in a div, or
+  // return a text value if the node carries one.
+  if (node.children) {
+    return h(node, 'div', all(h, node));
+  }
+  if (node.value) {
+    return { type: 'text', value: node.value };
+  }
+}
+
+function all(h, parent) {
+  const nodes = parent.children || [];
+  const values = [];
+  for (let i = 0; i < nodes.length; i++) {
+    const result = one(h, nodes[i], parent);
+    if (result) {
+      // After a break node, trim leading whitespace from the next sibling
+      if (i && nodes[i - 1].type === 'break') {
+        if (result.value) {
+          result.value = result.value.replace(/^\s+/, '');
+        }
+        const head = result.children && result.children[0];
+        if (head && head.value) {
+          head.value = head.value.replace(/^\s+/, '');
+        }
+      }
+      values.push(...(Array.isArray(result) ? result : [result]));
+    }
+  }
+  return values;
+}
 const styleToObject = require('style-to-object');
 const camelCaseCSS = require('camelcase-css');
 const { parseJSXAttributes } = require('./jsxAttributes');

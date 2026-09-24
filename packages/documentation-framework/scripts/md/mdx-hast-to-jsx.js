@@ -1,14 +1,72 @@
 const path = require('path');
 const fs = require('fs');
-const { serializeTags } = require('remark-mdx/lib/serialize/mdx-element');
-const serializeMdxExpression = require('remark-mdx/lib/serialize/mdx-expression');
-const toH = require('hast-to-hyperscript');
-const { toTemplateLiteral } = require('@mdx-js/util');
 const { parse } = require('@patternfly/ast-helpers');
 const { capitalize } = require('../../helpers/capitalize');
 const { slugger } = require('../../helpers/slugger');
 const { liveCodeTypes } = require('../../helpers/liveCodeTypes');
 const { stripReactTypeOnlyImports } = require('./stripReactTypeOnlyImports');
+
+// Inlined from remark-mdx/lib/serialize/mdx-expression (private API)
+function serializeMdxExpression(node) {
+  const value = node.value || '';
+  const block = node.type === 'mdxBlockExpression';
+  const around = block ? '\n' : '';
+  const content = block ? indentStr(value) : value;
+  return '{' + around + content + around + '}';
+}
+
+// Inlined from remark-mdx/lib/util/indent (private API)
+function indentStr(value) {
+  return value.split('\n').map(line => /\S/.test(line) ? '  ' + line : line).join('\n');
+}
+
+// Inlined from remark-mdx/lib/serialize/mdx-element serializeTags (private API)
+function serializeTags(node) {
+  const name = String(node.name || '');
+  const selfClosing = name && node.children.length === 0;
+  const attrs = (node.attributes || []).map(attr => {
+    if (attr.type === 'mdxAttributeExpression') {
+      return serializeMdxExpression(attr);
+    }
+    const attrName = String(attr.name || '');
+    if (attr.value === null || attr.value === undefined) {
+      return attrName;
+    }
+    if (typeof attr.value === 'object') {
+      return attrName + '=' + serializeMdxExpression(attr.value);
+    }
+    return attrName + '="' + attr.value.replace(/"/g, '&quot;') + '"';
+  });
+  const attrStr = attrs.length > 0 ? ' ' + attrs.join(' ') : '';
+
+  return {
+    open: '<' + name + attrStr + (selfClosing ? '/' : '') + '>',
+    close: selfClosing ? null : '</' + name + '>'
+  };
+}
+
+// Inlined from @mdx-js/util toTemplateLiteral (private API)
+function toTemplateLiteral(text) {
+  const escaped = text
+    .replace(/\\(?!\$)/g, '\\\\')
+    .replace(/`/g, '\\`')
+    .replace(/(\\\$)/g, '\\$1')
+    .replace(/(\\\$)(\{)/g, '\\$1\\$2')
+    .replace(/\$\{/g, '\\${');
+  return '{`' + escaped + '`}';
+}
+
+// Replacement for hast-to-hyperscript + fakeReactCreateElement.
+// Extracts type and props from a HAST element node, normalizing
+// className arrays to space-separated strings.
+function hastToProps(node) {
+  const props = {};
+  for (const [key, val] of Object.entries(node.properties || {})) {
+    if (val === null || val === undefined) continue;
+    props[key] = Array.isArray(val) ? val.join(' ') : val;
+  }
+  return { type: node.tagName, props };
+}
 
 // Adapted from https://github.com/mdx-js/mdx/blob/next/packages/mdx/mdx-hast-to-jsx.js
 function toJSX(node, parentNode = {}, options = {}) {
@@ -136,14 +194,8 @@ export default Component;\n`;
 
 function serializeElement(node, options) {
   const { indent, examples } = options;
-  const { type, props } = toH(
-    fakeReactCreateElement,
-    Object.assign({}, node, {children: []}),
-    {prefix: false}
-  );
+  const { type, props } = hastToProps(node);
   const content = serializeChildren(node, {...options});
-
-  delete props.key;
 
   const srcImport = node.properties.src;
   if (type === 'img') {
@@ -237,17 +289,6 @@ function serializeChildren(node, options) {
   return children
     .map(childNode => toJSX(childNode, node, childOptions))
     .join(`\n${indentText}`);
-}
-
-// We only do this for the props, so we’re ignoring children.
-function fakeReactCreateElement(name, props) {
-  return {
-    type: name,
-    props: props,
-    // Needed for `toH` to think this is React.
-    key: null,
-    _owner: null
-  }
 }
 
 module.exports = compile;
