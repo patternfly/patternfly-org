@@ -11,8 +11,8 @@ sortValue: 1
 Essential rules for PatternFly data display components including lists, data presentation, and data view patterns.
 
 ## Related Files
-- [**Component Architecture**](/ai/development-guidelines/component-architecture/) - Component structure patterns
-- [**Table Rules**](/ai/development-guidelines/data-display/table/) - For table-based data display
+- [**Component Architecture**](/ai/development-guidelines/component-architecture) - Component structure patterns
+- [**Table Rules**](/ai/development-guidelines/table) - For table-based data display
 
 ## Data View Component
 
@@ -30,11 +30,11 @@ The PatternFly Data View component is a flexible component for displaying large 
 
 ## List Components
 
-### Content List
-For displaying lists of text content with optional icons and actions.
+### List
+For displaying lists of text content with optional icons.
 
-- [**Content List Documentation**](https://www.patternfly.org/components/content-list)
-- [**Content List Examples**](https://github.com/patternfly/patternfly-react/tree/main/packages/react-core/src/components/ContentList/examples)
+- [**List Documentation**](https://www.patternfly.org/components/list)
+- [**List Examples**](https://github.com/patternfly/patternfly-react/tree/main/packages/react-core/src/components/List/examples)
 
 ### Simple List
 For basic unordered or ordered lists.

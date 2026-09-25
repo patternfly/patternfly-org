@@ -16,10 +16,10 @@ The Quick Start process uses the official PatternFly React Seed repository to sc
 
 ## Related Files
 
-- [**Setup Rules**](/ai/development-guidelines/setup/overview/) - Prerequisites and setup overview
-- [**Development Environment**](/ai/development-guidelines/setup/development-environment/) - Environment configuration
-- [**Component Architecture**](/ai/development-guidelines/component-architecture/) - Development best practices
-- [**Common Issues**](/ai/development-guidelines/troubleshooting/common-issues/) - Troubleshooting setup problems
+- [**Setup Rules**](/ai/development-guidelines/setup) - Prerequisites and setup overview
+- [**Development Environment**](/ai/development-guidelines/development-environment) - Environment configuration
+- [**Component Architecture**](/ai/development-guidelines/component-architecture) - Development best practices
+- [**Common Issues**](/ai/development-guidelines/common-issues) - Troubleshooting setup problems
 
 ## Step-by-Step Instructions
 
@@ -97,4 +97,4 @@ Once your development environment is running:
 
 ## Common Issues
 
-If you encounter problems during setup, refer to the [Common Issues](/ai/development-guidelines/troubleshooting/common-issues/) documentation for troubleshooting steps.
+If you encounter problems during setup, refer to the [Common Issues](/ai/development-guidelines/common-issues) documentation for troubleshooting steps.

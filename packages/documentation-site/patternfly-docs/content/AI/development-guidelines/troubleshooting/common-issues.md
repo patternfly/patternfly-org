@@ -16,8 +16,8 @@ PatternFly development can present various challenges ranging from setup issues 
 
 ## Related Files
 
-- [**Setup Rules**](/ai/development-guidelines/setup/overview/) - Initial setup troubleshooting
-- [**External References**](/ai/development-guidelines/resources/external-links/) - Additional troubleshooting resources
+- [**Setup Rules**](/ai/development-guidelines/setup) - Initial setup troubleshooting
+- [**External References**](/ai/development-guidelines/external-links) - Additional troubleshooting resources
 
 ## AI Coding Specific Issues
 
@@ -35,7 +35,7 @@ PatternFly development can present various challenges ranging from setup issues 
 1. **Use correct v6 components**:
    ```jsx
    // ✅ Correct v6 components
-   import { Content, EmptyState } from '@patternfly/react-core';
+   import { Content, EmptyState, EmptyStateBody } from '@patternfly/react-core';
 
    <Content component="h1">Title</Content>
 
@@ -53,10 +53,12 @@ PatternFly development can present various challenges ranging from setup issues 
 ```
 
 **Solutions**:
-1. **Use PatternFly utility classes**:
+1. **Use PatternFly utility classes** (install `@patternfly/patternfly` and import its utility stylesheet once in the application entry point; `base.css` alone does not include utilities):
    ```jsx
+   import '@patternfly/patternfly/patternfly-addons.css';
+
    // ✅ Correct - Use PatternFly utilities
-   <div className="pf-v6-u-margin-md pf-v6-u-text-align-center">
+   <div className="pf-v6-u-m-md pf-v6-u-text-align-center">Content</div>
    ```
 
 2. **Use CSS-in-JS for custom styles**:
@@ -101,7 +103,7 @@ PatternFly development can present various challenges ranging from setup issues 
 **Solutions**:
 1. Verify CSS import in main file:
    ```jsx
-   import '@patternfly/patternfly/patternfly.css';
+   import '@patternfly/react-core/dist/styles/base.css';
    ```
 2. Check webpack configuration for CSS loaders
 3. Clear build cache and rebuild
@@ -109,7 +111,7 @@ PatternFly development can present various challenges ranging from setup issues 
 ### Issue: Build fails with TypeScript errors
 **Solutions**:
 1. Check for missing type definitions
-2. Run `npm run typecheck` to identify errors
+2. Run `npm run type-check` to identify errors
 3. Update @types packages if needed
 
 ## Component-Specific Issues
@@ -118,7 +120,7 @@ PatternFly development can present various challenges ranging from setup issues 
 **Solutions**:
 1. Verify table structure (Table > Thead/Tbody > Tr > Th/Td)
 2. Check that all required props are provided
-3. Verify CSS import: `import '@patternfly/react-table/dist/css/main.css';`
+3. Do not import CSS from `@patternfly/react-table`; ensure PatternFly base CSS is loaded by the application
 
 ### Issue: Dropdown not positioning correctly
 **Solutions**:

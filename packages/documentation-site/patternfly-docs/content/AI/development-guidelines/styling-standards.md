@@ -11,9 +11,9 @@ sortValue: 3
 Essential CSS and styling rules for PatternFly React applications.
 
 ## Related Files
-- [**PatternFly Guidelines**](/ai/development-guidelines/overview/) - Core development principles
-- [**Component Rules**](/ai/development-guidelines/component-architecture/) - Component structure patterns
-- [**Layout Rules**](/ai/development-guidelines/layout/overview/) - Page layout styling
+- [**PatternFly Guidelines**](/ai/development-guidelines/overview) - Core development principles
+- [**Component Rules**](/ai/development-guidelines/component-architecture) - Component structure patterns
+- [**Layout Rules**](/ai/development-guidelines/layout) - Page layout styling
 
 ## Class Naming Rules
 
@@ -120,8 +120,8 @@ Always use PatternFly design tokens for custom CSS instead of hardcoded values.
 /* ✅ Correct - Use design tokens */
 .custom-component {
   margin: var(--pf-t--global--spacer--md);
-  color: var(--pf-t--global--color--default--100);
-  font-size: var(--pf-t--font--size--body--md);
+  color: var(--pf-t--global--text--color--regular);
+  font-size: var(--pf-t--global--font--size--body--default);
 }
 
 /* ❌ Wrong - Hardcoded values */

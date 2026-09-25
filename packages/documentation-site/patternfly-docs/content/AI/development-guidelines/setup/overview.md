@@ -11,8 +11,8 @@ sortValue: 1
 Project initialization requirements for PatternFly React applications.
 
 ## Related Files
-- [**Quick Start**](/ai/development-guidelines/setup/quick-start/) - Essential setup steps
-- [**Development Environment**](/ai/development-guidelines/setup/development-environment/) - Development configuration
+- [**Quick Start**](/ai/development-guidelines/quick-start) - Essential setup steps
+- [**Development Environment**](/ai/development-guidelines/development-environment) - Development configuration
 
 ## Project Initialization
 
@@ -35,7 +35,7 @@ npm install @patternfly/react-core @patternfly/react-icons
 ## Environment Setup
 
 ### Node.js Version
-- Use Node.js 18 or later
+- Use Node.js 20 or later
 - Verify with: `node --version`
 
 ### Package Manager
@@ -51,5 +51,5 @@ npm install @patternfly/react-core @patternfly/react-icons
 
 ### ❌ Don'ts
 - Start PatternFly projects from scratch without the seed
-- Use outdated Node.js versions (below 18)
+- Use outdated Node.js versions (below 20)
 - Skip dependency installation

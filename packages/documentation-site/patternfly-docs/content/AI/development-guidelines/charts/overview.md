@@ -32,7 +32,7 @@ npm install @patternfly/patternfly
 ```jsx
 // ✅ Correct imports - MUST include /victory
 import { ChartDonut, ChartLine, ChartBar } from '@patternfly/react-charts/victory';
-import { EChart } from '@patternfly/react-charts/echarts';
+import { Charts } from '@patternfly/react-charts/echarts';
 
 // ❌ Wrong imports - Missing /victory will cause "Module not found" errors
 import { ChartDonut } from '@patternfly/react-charts';
@@ -133,34 +133,41 @@ const chartColors = [
 
 ```jsx
 // ✅ Required responsive pattern
+const containerRef = useRef(null);
 const [dimensions, setDimensions] = useState({ width: 0, height: 0 });
 
 useEffect(() => {
-  const updateDimensions = () => {
-    if (containerRef.current) {
-      const { width, height } = containerRef.current.getBoundingClientRect();
-      setDimensions({ width, height });
-    }
-  };
-  updateDimensions();
-  window.addEventListener('resize', updateDimensions);
-  return () => window.removeEventListener('resize', updateDimensions);
+  if (!containerRef.current) return;
+
+  const observer = new ResizeObserver(([entry]) => {
+    const { width, height } = entry.contentRect;
+    setDimensions({ width, height });
+  });
+  observer.observe(containerRef.current);
+  return () => observer.disconnect();
 }, []);
+
+<div ref={containerRef} style={{ width: '100%', aspectRatio: '16 / 9' }}>
+  {dimensions.width > 0 && dimensions.height > 0 && (
+    <ChartDonut data={data} width={dimensions.width} height={dimensions.height} />
+  )}
+</div>
 ```
 
 ### Accessibility Rules
 - ✅ **Provide ARIA labels** - For screen reader support
 - ✅ **Use high contrast colors** - Meet WCAG standards
-- ✅ **Support keyboard navigation** - Add tabIndex and role
+- ✅ **Support keyboard navigation** - Make the chart container focusable when the chart needs keyboard interaction
 
 ```jsx
 // ✅ Required accessibility pattern
+import { ChartContainer, ChartDonut } from '@patternfly/react-charts/victory';
+
 <ChartDonut
   data={data}
   ariaDesc="Chart showing user distribution"
   ariaTitle="User Status Chart"
-  tabIndex={0}
-  role="img"
+  containerComponent={<ChartContainer tabIndex={0} />}
 />
 ```
 
@@ -172,13 +179,22 @@ useEffect(() => {
 
 ```jsx
 // ✅ Required state handling
-if (isLoading) return <Spinner />;
-if (error) return <EmptyState titleText="Chart error" />;
-if (!data?.length) return <EmptyState titleText="No data" />;
+import { useMemo } from 'react';
+import { EmptyState, Spinner } from '@patternfly/react-core';
+import { ChartDonut } from '@patternfly/react-charts/victory';
 
-const processedData = useMemo(() => {
-  return rawData.map(item => ({ x: item.date, y: item.value }));
-}, [rawData]);
+const DataChart = ({ rawData, isLoading, error }) => {
+  const processedData = useMemo(
+    () => (rawData ?? []).map(item => ({ x: item.date, y: item.value })),
+    [rawData]
+  );
+
+  if (isLoading) return <Spinner />;
+  if (error) return <EmptyState titleText="Chart error" />;
+  if (!processedData.length) return <EmptyState titleText="No data" />;
+
+  return <ChartDonut data={processedData} />;
+};
 ```
 
 ### Integration Rules

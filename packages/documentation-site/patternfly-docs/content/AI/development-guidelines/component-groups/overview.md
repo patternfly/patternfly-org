@@ -24,22 +24,22 @@ PatternFly Component Groups are opinionated React components that combine and ex
 npm install @patternfly/react-component-groups
 ```
 
-### Required CSS Import
+### Base CSS Import
 ```jsx
-import '@patternfly/react-component-groups/dist/css/main.css';
+// Import PatternFly base styles once in your application entry point.
+import '@patternfly/react-core/dist/styles/base.css';
 ```
+
+Component groups do not provide a separate CSS bundle.
 
 ## Import Rules
 
-### Required Import Pattern
-- ✅ **Use dynamic imports** from `/dist/dynamic/` paths
-- ❌ **Don't use standard imports**
+### Import Pattern
+- ✅ **Use standard imports** from the package entry point
+- ✅ **Use `/dist/dynamic/` imports when needed** to load individual components
 
 ```jsx
 // ✅ Correct
-import { BulkSelect } from '@patternfly/react-component-groups/dist/dynamic/BulkSelect';
-
-// ❌ Wrong
 import { BulkSelect } from '@patternfly/react-component-groups';
 ```
 
@@ -51,14 +51,29 @@ import { BulkSelect } from '@patternfly/react-component-groups';
 - ❌ **Don't reimplement existing group functionality with custom code**
 
 ### Example Usage
-```jsx
-import { BulkSelect } from '@patternfly/react-component-groups/dist/dynamic/BulkSelect';
+```tsx
+import { useState } from 'react';
+import { BulkSelect, BulkSelectValue } from '@patternfly/react-component-groups';
 
-<BulkSelect
-  items={items}
-  selectedItems={selectedItems}
-  onSelect={handleSelect}
-/>
+const BulkSelection = () => {
+  const allItems = ['Item 1', 'Item 2', 'Item 3'];
+  const [selectedItems, setSelectedItems] = useState<string[]>([]);
+
+  const handleSelect = (value: BulkSelectValue) => {
+    if (value === BulkSelectValue.all) setSelectedItems(allItems);
+    if (value === BulkSelectValue.none) setSelectedItems([]);
+  };
+
+  return (
+    <BulkSelect
+      isDataPaginated={false}
+      canSelectAll
+      selectedCount={selectedItems.length}
+      totalCount={allItems.length}
+      onSelect={handleSelect}
+    />
+  );
+};
 ```
 
 ### Component API Rules
@@ -81,21 +96,21 @@ import { BulkSelect } from '@patternfly/react-component-groups/dist/dynamic/Bulk
 ## Essential Do's and Don'ts
 
 ### ✅ Do's
-- Use dynamic imports and import required CSS
+- Use the package entry point and import PatternFly base CSS
 - Reference official demos and documentation
 - Write accessible, well-documented components
 - Use JSS for styling and follow naming conventions
 - Add tests for all new functionality
 
 ### ❌ Don'ts
-- Skip CSS imports or use standard imports
+- Import a nonexistent component-groups CSS bundle
 - Reimplement existing group components from scratch
 - Ignore accessibility or documentation requirements
 - Use `pf-v6-u-XXX` utility classes (use CSS variables instead)
 
 ## Common Issues
-- **Missing styles:** Ensure CSS is imported
-- **Import errors:** Use `/dist/dynamic/` paths
+- **Missing styles:** Ensure PatternFly base CSS is imported
+- **Import errors:** Use the package entry point or a supported `/dist/dynamic/` path
 - **Component not found:** Check package installation and import paths
 - **Accessibility:** Run a11y tests and review ARIA usage
 

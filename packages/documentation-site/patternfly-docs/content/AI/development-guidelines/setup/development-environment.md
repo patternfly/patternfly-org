@@ -11,14 +11,14 @@ sortValue: 3
 Configuration rules for development tools and environment settings for PatternFly React development.
 
 ## Related Files
-- [**Setup Rules**](/ai/development-guidelines/setup/overview/) - Project initialization requirements
-- [**Quick Start**](/ai/development-guidelines/setup/quick-start/) - Essential setup steps
-- [**Component Architecture**](/ai/development-guidelines/component-architecture/) - Component structure patterns
+- [**Setup Rules**](/ai/development-guidelines/setup) - Project initialization requirements
+- [**Quick Start**](/ai/development-guidelines/quick-start) - Essential setup steps
+- [**Component Architecture**](/ai/development-guidelines/component-architecture) - Component structure patterns
 
 ## Node.js Configuration
 
 ### Version Requirements
-- Use Node.js 18 or later
+- Use Node.js 20 or later
 - Verify with: `node --version`
 
 ### Environment Variables
@@ -77,7 +77,7 @@ Production builds are output to the `dist` directory.
 ## Essential Do's and Don'ts
 
 ### ✅ Do's
-- Use Node.js 18 or later
+- Use Node.js 20 or later
 - Configure IDE with recommended extensions
 - Use the project's environment configuration
 - Test with both development and production builds

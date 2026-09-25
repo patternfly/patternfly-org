@@ -16,9 +16,9 @@ External resources are essential for staying current with PatternFly updates, fi
 
 ## Related Files
 
-- [**Component Architecture**](/ai/development-guidelines/component-architecture/) - Core development principles.
-- [**Setup Rules**](/ai/development-guidelines/setup/overview/) - Initial project setup resources
-- [**Common Issues**](/ai/development-guidelines/troubleshooting/common-issues/) - Problem-solving resources
+- [**Component Architecture**](/ai/development-guidelines/component-architecture) - Core development principles.
+- [**Setup Rules**](/ai/development-guidelines/setup) - Initial project setup resources
+- [**Common Issues**](/ai/development-guidelines/common-issues) - Problem-solving resources
 
 ## Official PatternFly Documentation
 

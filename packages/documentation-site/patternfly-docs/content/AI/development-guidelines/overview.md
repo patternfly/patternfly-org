@@ -16,31 +16,31 @@ Essential rules and guidelines for AI coders working with PatternFly React appli
 ## Quick Navigation
 
 ### Setup & Environment
-- [**Setup Rules**](/ai/development-guidelines/setup/overview/) - Project initialization requirements
-- [**Quick Start**](/ai/development-guidelines/setup/quick-start/) - Essential setup steps
-- [**Environment Rules**](/ai/development-guidelines/setup/development-environment/) - Development configuration
+- [**Setup Rules**](/ai/development-guidelines/setup) - Project initialization requirements
+- [**Quick Start**](/ai/development-guidelines/quick-start) - Essential setup steps
+- [**Environment Rules**](/ai/development-guidelines/development-environment) - Development configuration
 
 ### Core Rules
-- [**PatternFly Guidelines**](/ai/development-guidelines/component-architecture/) - Component structure requirements
-- [**Styling Rules**](/ai/development-guidelines/styling-standards/) - CSS and styling requirements
-- [**AI Prompt Guidance**](/ai/development-guidelines/ai-prompt-guidance/) - How to write effective AI prompts
-- [**Deployment Guide**](/ai/development-guidelines/deployment-guide/) - How to deploy prototypes
+- [**PatternFly Guidelines**](/ai/development-guidelines/component-architecture) - Component structure requirements
+- [**Styling Rules**](/ai/development-guidelines/styling-standards) - CSS and styling requirements
+- [**AI Prompt Guidance**](/ai/development-guidelines/ai-prompt-guidance) - How to write effective AI prompts
+- [**Deployment Guide**](/ai/development-guidelines/deployment-guide) - How to deploy prototypes
 
 ### Component Rules
-- [**Layout Rules**](/ai/development-guidelines/layout/overview/) - Page structure requirements
-- [**Table Component Rules**](/ai/development-guidelines/data-display/table/) - Table usage and best practices
-- [**Data View Component Rules**](/ai/development-guidelines/data-display/overview/) - Data view usage and best practices
+- [**Layout Rules**](/ai/development-guidelines/layout) - Page structure requirements
+- [**Table Component Rules**](/ai/development-guidelines/table) - Table usage and best practices
+- [**Data View Component Rules**](/ai/development-guidelines/data-display) - Data view usage and best practices
 
 ### Specialized Rules
-- [**Charts Rules**](/ai/development-guidelines/charts/overview/) - PatternFly Charts requirements
-- [**Chatbot Rules**](/ai/development-guidelines/chatbot/overview/) - PatternFly Chatbot requirements
-- [**Component Groups Rules**](/ai/development-guidelines/component-groups/overview/) - PatternFly Component Groups requirements
+- [**Charts Rules**](/ai/development-guidelines/charts) - PatternFly Charts requirements
+- [**Chatbot Rules**](/ai/development-guidelines/chatbot) - PatternFly Chatbot requirements
+- [**Component Groups Rules**](/ai/development-guidelines/component-groups) - PatternFly Component Groups requirements
 
 ### Troubleshooting
-- [**Common Issues**](/ai/development-guidelines/troubleshooting/common-issues/) - Problem resolution rules
+- [**Common Issues**](/ai/development-guidelines/common-issues) - Problem resolution rules
 
 ### Resources
-- [**External Links**](/ai/development-guidelines/resources/external-links/) - Official documentation links
+- [**External Links**](/ai/development-guidelines/external-links) - Official documentation links
 
 ## Usage Rules for AI Coders
 
@@ -60,7 +60,7 @@ Based on feedback, these rules prevent frequent AI-generated errors:
 - **No inline styles for layout** - Use PatternFly utilities instead
 - **Chart imports must include `/victory`** - Critical for chart components
 - **Always include accessibility attributes** - Keyboard navigation and ARIA labels
-- **Use specific, detailed prompts** - See [AI Prompt Guidance](/ai/development-guidelines/ai-prompt-guidance/)
+- **Use specific, detailed prompts** - See [AI Prompt Guidance](/ai/development-guidelines/ai-prompt-guidance)
 
 ## Documentation Structure
 

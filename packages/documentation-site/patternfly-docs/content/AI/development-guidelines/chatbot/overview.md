@@ -12,8 +12,8 @@ Essential rules for PatternFly Chatbot implementation and integration patterns.
 
 ## Related Files
 
-- [**Component Architecture**](/ai/development-guidelines/component-architecture/) - Chatbot component structure rules
-- [**Styling Standards**](/ai/development-guidelines/styling-standards/) - CSS and styling best practices
+- [**Component Architecture**](/ai/development-guidelines/component-architecture) - Chatbot component structure rules
+- [**Styling Standards**](/ai/development-guidelines/styling-standards) - CSS and styling best practices
 
 ## Installation Rules
 
@@ -33,29 +33,38 @@ import '@patternfly/chatbot/dist/css/main.css';
 
 ### Webpack Configuration (if needed)
 
-```javascript
-// stylePaths.js - Add to webpack if CSS not loading
-module.exports = [
-  require.resolve('@patternfly/chatbot/dist/css/main.css')
-];
+The PatternFly React seed exports an object with a `stylePaths` array from `stylePaths.js`. If webpack is not loading the chatbot stylesheet, add this entry to that existing array; keep the other entries and the `module.exports = { stylePaths: [...] }` shape:
+
+```diff
+// stylePaths.js - retain the existing stylePaths entries and export
+ module.exports = {
+   stylePaths: [
+     // ...other existing paths
+-    path.resolve(__dirname, 'node_modules/@patternfly/react-inline-edit-extension/node_modules/@patternfly/react-styles/css')
++    path.resolve(__dirname, 'node_modules/@patternfly/react-inline-edit-extension/node_modules/@patternfly/react-styles/css'),
++    require.resolve('@patternfly/chatbot/dist/css/main.css')
+   ]
+ };
 ```
 
 ## Import Rules
 
-### Required Import Pattern
+### Public Import Pattern
 
-- ✅ **Use dynamic imports** - Import from `/dist/dynamic/` paths
-- ❌ **Don't use standard imports** - May not work with current package structure
+- ✅ **Use standard imports** from the package's public entry point
+- ✅ **Use dynamic imports when needed** - Import individual components from `/dist/dynamic/` only when optimizing bundle loading
 
 ```jsx
-// ✅ Correct - Use dynamic imports
-import { Chatbot } from '@patternfly/chatbot/dist/dynamic/Chatbot';
-import { ChatbotContent } from '@patternfly/chatbot/dist/dynamic/ChatbotContent';
-import { MessageBox } from '@patternfly/chatbot/dist/dynamic/MessageBox';
-import { Message } from '@patternfly/chatbot/dist/dynamic/Message';
-
-// ❌ Wrong - Standard imports may not work
-import { Chatbot, ChatbotContent } from '@patternfly/chatbot';
+// ✅ Correct - Import from the public package entry point
+import {
+  Chatbot,
+  ChatbotContent,
+  ChatbotFooter,
+  ChatbotWelcomePrompt,
+  Message,
+  MessageBar,
+  MessageBox
+} from '@patternfly/chatbot';
 ```
 
 ## Implementation Rules
@@ -70,8 +79,8 @@ import { Chatbot, ChatbotContent } from '@patternfly/chatbot';
 // ✅ Required chatbot structure
 <Chatbot>
   <ChatbotContent>
-    <ChatbotWelcomePrompt title="Assistant" description="How can I help?" />
-    <MessageBox>
+    <MessageBox ariaLabel="Scrollable message log">
+      <ChatbotWelcomePrompt title="Assistant" description="How can I help?" />
       {messages.map(message => (
         <Message key={message.id} role={message.role} content={message.content} />
       ))}
@@ -85,7 +94,7 @@ import { Chatbot, ChatbotContent } from '@patternfly/chatbot';
 
 ### Message State Rules
 
-- ✅ **Use proper message roles** - 'user', 'assistant', 'system'
+- ✅ **Use supported message roles** - 'user' and 'bot'
 - ✅ **Include timestamps** - For message ordering and display
 - ✅ **Handle loading states** - Show indicators during API calls
 - ✅ **Handle error states** - Show error messages with retry options
@@ -95,9 +104,8 @@ import { Chatbot, ChatbotContent } from '@patternfly/chatbot';
 const createMessage = (content, role) => ({
   id: generateId(),
   content,
-  role, // 'user' | 'assistant' | 'system'
-  timestamp: new Date(),
-  status: 'sent'
+  role, // 'user' | 'bot'
+  timestamp: new Date().toLocaleString()
 });
 ```
 
@@ -128,15 +136,15 @@ const createMessage = (content, role) => ({
 
 - ✅ **Use proper ARIA labels** - For screen reader support
 - ✅ **Implement keyboard navigation** - Full keyboard accessibility
-- ✅ **Use semantic roles** - role="application", role="log"
+- ✅ **Use component accessibility props** - `ariaLabel`, `announcement`, and `isLiveRegion`
 - ✅ **Auto-scroll to new messages** - For better UX
 
 ```jsx
 // ✅ Required accessibility pattern
-<Chatbot role="application" aria-label="AI Assistant">
-  <MessageBox role="log" aria-live="polite" aria-label="Chat messages">
+<Chatbot ariaLabel="AI Assistant">
+  <MessageBox ariaLabel="Scrollable message log">
     {messages.map(message => (
-      <Message aria-label={`${message.role} message: ${message.content}`} />
+      <Message key={message.id} {...message} isLiveRegion />
     ))}
   </MessageBox>
 </Chatbot>
@@ -147,12 +155,12 @@ const createMessage = (content, role) => ({
 ### ✅ Do's
 
 - Import CSS from `@patternfly/chatbot/dist/css/main.css`
-- Use dynamic imports for chatbot components
+- Use standard imports from `@patternfly/chatbot`
 - Reference official PatternFly demo pages for implementation
 - Provide proper ARIA labels and roles for accessibility
 - Handle loading states during message processing
 - Implement proper error handling for API failures
-- Use semantic message roles (user, assistant, system)
+- Use supported message roles (user and bot)
 
 ### ❌ Don'ts
 
@@ -172,7 +180,7 @@ const createMessage = (content, role) => ({
 
 ### Component Issues
 
-- **Import errors**: Use dynamic import paths `/dist/dynamic/`
+- **Import errors**: Verify imports use the public `@patternfly/chatbot` entry point
 - **Component not found**: Verify package is installed and paths are correct
 
 ### Performance Issues

@@ -114,22 +114,35 @@ Netlify offers a similar, straightforward deployment experience to Vercel.
 
 If your project is already in a GitHub repository, GitHub Pages is a free and reliable hosting option.
 
+GitHub project sites are served from `/<repo-name>/`. Configure both the seed's asset path and client-side routing for that subpath before deploying.
+
 1.  **Install the gh-pages package**:
     ```bash
     npm install gh-pages --save-dev
     ```
 
-2.  **Add deployment scripts to your `package.json`**:
+2.  **Use hash-based routing**:
+    GitHub Pages does not provide a fallback for client-side routes. In `src/app/index.tsx`, replace `BrowserRouter` with `HashRouter`:
+    ```jsx
+    import { HashRouter as Router } from 'react-router-dom';
+    ```
+
+3.  **Add deployment scripts to your `package.json`**:
+    Replace `<repo-name>` with the repository name. `ASSET_PATH` configures webpack to emit asset URLs for the GitHub Pages project subpath.
     ```json
     "scripts": {
-      "predeploy": "npm run build",
+      "predeploy": "ASSET_PATH=/<repo-name>/ npm run build",
       "deploy": "gh-pages -d dist"
     }
     ```
+    On Windows, use `cross-env ASSET_PATH=/<repo-name>/ npm run build` for the `predeploy` command.
 
-3.  **Deploy your app**:
+4.  **Deploy your app**:
     Run the deployment script.
     ```bash
     npm run deploy
     ```
-    This command will build your project and push the static files to a new `gh-pages` branch on your GitHub repository. Your site will be available at `https://<your-username>.github.io/<your-repo-name>`.
+    This command builds the project and pushes the static files to the `gh-pages` branch.
+
+5.  **Configure the publishing source**:
+    In the repository's GitHub settings, open **Pages**, select **Deploy from a branch**, and choose the `gh-pages` branch and `/ (root)` folder. The site will be available at `https://<your-username>.github.io/<repo-name>/`.
