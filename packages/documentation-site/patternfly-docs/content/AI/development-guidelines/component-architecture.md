@@ -11,10 +11,10 @@ sortValue: 2
 This document outlines the essential rules for structuring PatternFly components, managing state, and ensuring performance. It is a high-level guide that links to more detailed documentation for specific patterns.
 
 ## Related Files
-- [**Layout Rules**](/ai/development-guidelines/layout) - For page structure and layout patterns.
-- [**Table Component Rules**](/ai/development-guidelines/table) - For table usage, selection, and actions.
-- [**Data View Component Rules**](/ai/development-guidelines/data-display) - For data view usage.
-- [**Styling Rules**](/ai/development-guidelines/styling-standards) - For CSS and styling approaches.
+- [**Layout Rules**](/api/v6/AI/development-guidelines_layout/text/text) - For page structure and layout patterns.
+- [**Table Component Rules**](/api/v6/AI/development-guidelines_table/text/text) - For table usage, selection, and actions.
+- [**Data View Component Rules**](/api/v6/AI/development-guidelines_data-display/text/text) - For data view usage.
+- [**Styling Rules**](/api/v6/AI/development-guidelines_styling-standards/text/text) - For CSS and styling approaches.
 
 ## 1. Component Composition
 

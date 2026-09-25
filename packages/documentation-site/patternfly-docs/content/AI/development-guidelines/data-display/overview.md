@@ -11,8 +11,8 @@ sortValue: 1
 Essential rules for PatternFly data display components including lists, data presentation, and data view patterns.
 
 ## Related Files
-- [**Component Architecture**](/ai/development-guidelines/component-architecture) - Component structure patterns
-- [**Table Rules**](/ai/development-guidelines/table) - For table-based data display
+- [**Component Architecture**](/api/v6/AI/development-guidelines_component-architecture/text/text) - Component structure patterns
+- [**Table Rules**](/api/v6/AI/development-guidelines_table/text/text) - For table-based data display
 
 ## Data View Component
 

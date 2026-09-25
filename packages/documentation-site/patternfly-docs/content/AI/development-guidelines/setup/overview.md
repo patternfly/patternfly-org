@@ -11,8 +11,8 @@ sortValue: 1
 Project initialization requirements for PatternFly React applications.
 
 ## Related Files
-- [**Quick Start**](/ai/development-guidelines/quick-start) - Essential setup steps
-- [**Development Environment**](/ai/development-guidelines/development-environment) - Development configuration
+- [**Quick Start**](/api/v6/AI/development-guidelines_quick-start/text/text) - Essential setup steps
+- [**Development Environment**](/api/v6/AI/development-guidelines_development-environment/text/text) - Development configuration
 
 ## Project Initialization
 

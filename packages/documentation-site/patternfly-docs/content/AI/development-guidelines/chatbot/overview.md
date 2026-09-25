@@ -12,8 +12,8 @@ Essential rules for PatternFly Chatbot implementation and integration patterns.
 
 ## Related Files
 
-- [**Component Architecture**](/ai/development-guidelines/component-architecture) - Chatbot component structure rules
-- [**Styling Standards**](/ai/development-guidelines/styling-standards) - CSS and styling best practices
+- [**Component Architecture**](/api/v6/AI/development-guidelines_component-architecture/text/text) - Chatbot component structure rules
+- [**Styling Standards**](/api/v6/AI/development-guidelines_styling-standards/text/text) - CSS and styling best practices
 
 ## Installation Rules
 

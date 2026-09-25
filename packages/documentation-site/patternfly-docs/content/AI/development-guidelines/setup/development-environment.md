@@ -11,9 +11,9 @@ sortValue: 3
 Configuration rules for development tools and environment settings for PatternFly React development.
 
 ## Related Files
-- [**Setup Rules**](/ai/development-guidelines/setup) - Project initialization requirements
-- [**Quick Start**](/ai/development-guidelines/quick-start) - Essential setup steps
-- [**Component Architecture**](/ai/development-guidelines/component-architecture) - Component structure patterns
+- [**Setup Rules**](/api/v6/AI/development-guidelines_setup/text/text) - Project initialization requirements
+- [**Quick Start**](/api/v6/AI/development-guidelines_quick-start/text/text) - Essential setup steps
+- [**Component Architecture**](/api/v6/AI/development-guidelines_component-architecture/text/text) - Component structure patterns
 
 ## Node.js Configuration
 

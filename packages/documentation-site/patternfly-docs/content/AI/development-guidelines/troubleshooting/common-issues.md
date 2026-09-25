@@ -16,8 +16,8 @@ PatternFly development can present various challenges ranging from setup issues 
 
 ## Related Files
 
-- [**Setup Rules**](/ai/development-guidelines/setup) - Initial setup troubleshooting
-- [**External References**](/ai/development-guidelines/external-links) - Additional troubleshooting resources
+- [**Setup Rules**](/api/v6/AI/development-guidelines_setup/text/text) - Initial setup troubleshooting
+- [**External References**](/api/v6/AI/development-guidelines_external-links/text/text) - Additional troubleshooting resources
 
 ## AI Coding Specific Issues
 

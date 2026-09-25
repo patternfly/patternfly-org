@@ -25,8 +25,8 @@ PatternFly layout components provide the foundation for structuring application 
 
 ## Related Files
 
-- [**Component Architecture**](/ai/development-guidelines/component-architecture) - Component structure patterns
-- [**Styling Standards**](/ai/development-guidelines/styling-standards) - Layout styling guidelines
+- [**Component Architecture**](/api/v6/AI/development-guidelines_component-architecture/text/text) - Component structure patterns
+- [**Styling Standards**](/api/v6/AI/development-guidelines_styling-standards/text/text) - Layout styling guidelines
 
 ## Core Layout Components
 

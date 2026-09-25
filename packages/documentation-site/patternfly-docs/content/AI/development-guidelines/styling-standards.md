@@ -11,9 +11,9 @@ sortValue: 3
 Essential CSS and styling rules for PatternFly React applications.
 
 ## Related Files
-- [**PatternFly Guidelines**](/ai/development-guidelines/overview) - Core development principles
-- [**Component Rules**](/ai/development-guidelines/component-architecture) - Component structure patterns
-- [**Layout Rules**](/ai/development-guidelines/layout) - Page layout styling
+- [**PatternFly Guidelines**](/api/v6/AI/development-guidelines_overview/text/text) - Core development principles
+- [**Component Rules**](/api/v6/AI/development-guidelines_component-architecture/text/text) - Component structure patterns
+- [**Layout Rules**](/api/v6/AI/development-guidelines_layout/text/text) - Page layout styling
 
 ## Class Naming Rules
 

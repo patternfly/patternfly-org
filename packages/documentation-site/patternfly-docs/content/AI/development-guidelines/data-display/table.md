@@ -11,8 +11,8 @@ sortValue: 1
 Essential rules for using the PatternFly React Table component.
 
 ## Related Files
-- [**Component Architecture**](/ai/development-guidelines/component-architecture) - Component structure patterns
-- [**Data View Rules**](/ai/development-guidelines/data-display) - For data view alternatives
+- [**Component Architecture**](/api/v6/AI/development-guidelines_component-architecture/text/text) - Component structure patterns
+- [**Data View Rules**](/api/v6/AI/development-guidelines_data-display/text/text) - For data view alternatives
 
 ## Installation Rules
 
