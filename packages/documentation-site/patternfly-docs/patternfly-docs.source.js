@@ -20,7 +20,8 @@ module.exports = (sourceMD, sourceProps, sourceFunctionDocs) => {
     sourceMD(path.join(contentBase, 'get-started/training/**/*.md'), 'get-started');
     sourceMD(path.join(contentBase, 'releases/**/*.md'), 'releases');
 
-    sourceMD(path.join(contentBase, 'AI/**/*.md'), 'AI');
+    // The development guidelines are served by the doc-core API, not the legacy documentation UI.
+    sourceMD(path.join(contentBase, 'AI/**/*.md'), 'AI', path.join(contentBase, 'AI/development-guidelines/**/*.md'));
 
     // AI guidelines from @project-felt/ai-guidelines
     const aiGuidelinesPath = require
