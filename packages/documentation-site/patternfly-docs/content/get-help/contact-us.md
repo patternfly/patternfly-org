@@ -21,7 +21,7 @@ If there's something you'd like to discuss in this meeting, [sign up for a topic
 
 ## Reach out to the team
 
-The best way to reach the team is to [join the PatternFly Slack workspace](https://join.slack.com/t/patternfly/shared_invite/zt-3dcejyvj6-MU93z8IVihJXxbs2ggrMEw). If you're a Red Hatter, you can also reach out on the [#list-patternfly](https://redhat.enterprise.slack.com/archives/C04JMHKSD9C) channel within the Red Hat Internal workspace. 
+The best way to reach the team is to [join the PatternFly Slack workspace](https://join.slack.com/t/patternfly/shared_invite/zt-3dcejyvj6-MU93z8IVihJXxbs2ggrMEw). If you're a Red Hatter, you can also reach out on the [#list-felt-design-system](https://redhat.enterprise.slack.com/archives/C0BSR5K0HTN) channel within the Red Hat Internal workspace. 
 
 There are a few PatternFly Slack channels to reach out to us on:
 - For general questions and help: [#general](https://patternfly.slack.com/archives/C293LQ36J)
