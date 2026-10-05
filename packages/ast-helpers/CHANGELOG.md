@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.4.0-alpha.419 (2026-10-05)
+
+
+### Bug Fixes
+
+* update expired Slack invite links ([#5109](https://github.com/patternfly/patternfly-org/issues/5109)) ([0bcc346](https://github.com/patternfly/patternfly-org/commit/0bcc34620c9a735457a67e2396e609944cf30320))
+
+
+
+
+
 # 1.4.0-alpha.418 (2026-10-01)
 
 **Note:** Version bump only for package @patternfly/ast-helpers
