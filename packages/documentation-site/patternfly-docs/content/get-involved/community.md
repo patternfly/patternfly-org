@@ -18,7 +18,7 @@ There are many ways to be a Flyer:
     <Card isCompact isClickable> 
       <CardHeader
               selectableActions={{
-                onClickAction: () => window.open("https://join.slack.com/t/patternfly/shared_invite/zt-3dcejyvj6-MU93z8IVihJXxbs2ggrMEw"),
+                onClickAction: () => window.open("https://join.slack.com/t/patternfly/shared_invite/zt-1npmqswgk-bF2R1E2rglV8jz5DNTezMQ"),
                 selectableActionAriaLabelledby:'slack-card'
               }}
             >
@@ -29,7 +29,7 @@ There are many ways to be a Flyer:
       </CardBody>
       <Divider />
       <CardFooter>
-        <Button component="a" href="https://join.slack.com/t/patternfly/shared_invite/zt-3dcejyvj6-MU93z8IVihJXxbs2ggrMEw" variant="link" target="_blank" isInline icon={<ExternalLinkAltIcon />} iconPosition="end"> Join our Slack workspace </Button>
+        <Button component="a" href="https://join.slack.com/t/patternfly/shared_invite/zt-1npmqswgk-bF2R1E2rglV8jz5DNTezMQ" variant="link" target="_blank" isInline icon={<ExternalLinkAltIcon />} iconPosition="end"> Join our Slack workspace </Button>
       </CardFooter>
     </Card>
     <Card isCompact isClickable>
