@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 6.52.3 (2026-10-06)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
 ## 6.52.2 (2026-10-05)
 
 
