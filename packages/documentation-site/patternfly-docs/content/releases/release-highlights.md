@@ -66,7 +66,7 @@ You can also simplify diagrams by combining connections between groups into shar
 The Chatbot extension adds more control over conversation history and embedded layouts:
 
 - Conversation history: Organize previous conversations into expandable groups so users can focus on the history they need.
-- Embedded layouts: Choose to place the scrollbar at the far edge of an embedded Chatbot. New demos show how to combine Chatbot with docked navigation.
+- Embedded layouts: Choose to place the scrollbar at the far edge of an embedded Chatbot. New demos show how to combine Chatbot with Canvas mode and docked navigation.
 - Message content: Display inline code correctly in tables and add extra content to source-card headers. Markdown processing now loads on demand.
 
 If you use `CodeModal`, `PreviewAttachment`, `AttachmentEdit`, or tracking utilities, update their imports to the individual `dist/dynamic` entry points. The first three also require the Monaco environment helper at application startup. See the [Chatbot import guidance](https://github.com/patternfly/chatbot/blob/5948d8fe5aa2aac86c5d38b1d68df124816e67c3/README.md#tree-shaking) for examples.
