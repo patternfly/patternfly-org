@@ -77,7 +77,7 @@ Additional Red Hat icons bring more consistency to controls, tables, and Chatbot
 
 ### Behind Project Felt
 
-Learn how Project Felt is bringing PatternFly and Red Hat Design System closer together in [Behind Project Felt: Unifying Red Hat’s Design Systems](https://medium.com/patternfly/behind-project-felt-unifying-red-hats-design-systems-1f2a51051f5b). The article looks back at the unified theme and outlines plans for shared design tokens to support consistent experiences and AI-assisted development.
+Learn how Project Felt is bringing PatternFly and Red Hat Design System closer together in [Behind Project Felt: Unifying Red Hat’s Design Systems](https://medium.com/patternfly/behind-project-felt-unifying-red-hats-design-systems-1f2a51051f5b). The article explores how the unified theme creates a shared look and feel across Red Hat websites and product interfaces without requiring breaking code changes. It also outlines the next phase: aligning design tokens to give designers, developers, and AI tools a common foundation for building consistent, accessible experiences.
 
 <Divider />
 
