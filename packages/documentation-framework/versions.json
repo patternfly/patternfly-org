@@ -30,7 +30,7 @@
     {
       "name": "6.7.0-prerelease.6",
       "date": "2026-10-09",
-      "latest": true,
+      "hidden": true,
       "versions": {
         "@patternfly/chatbot": "6.9.0-prerelease.7",
         "@patternfly/patternfly": "6.7.0-prerelease.3",
