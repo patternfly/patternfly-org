@@ -6,6 +6,81 @@ section: releases
 import '../get-started/get-started.css';
 import { Divider, Timestamp } from '@patternfly/react-core'; 
 
+## PatternFly 6.7
+
+This release gives you more ways to organize pages, navigate complex workflows, and work with data. Highlights include expandable docked navigation, responsive toolbars, sticky table footers, and a new tearsheet component for detailed workflows. You'll also find improvements to touch interactions, pipeline accessibility, and Chatbot conversation history.
+
+### Promoted package versions
+
+- patternfly/patternfly ([changelog](https://github.com/patternfly/patternfly/releases))
+    - [@patternfly/patternfly@6.7.0-prerelease.3](https://www.npmjs.com/package/@patternfly/patternfly/v/6.7.0-prerelease.3)
+- patternfly/react ([changelog](https://github.com/patternfly/patternfly-react/releases))
+    - [@patternfly/react-charts@8.7.0-prerelease.4](https://www.npmjs.com/package/@patternfly/react-charts/v/8.7.0-prerelease.4)
+    - [@patternfly/react-code-editor@6.7.0-prerelease.5](https://www.npmjs.com/package/@patternfly/react-code-editor/v/6.7.0-prerelease.5)
+    - [@patternfly/react-core@6.7.0-prerelease.5](https://www.npmjs.com/package/@patternfly/react-core/v/6.7.0-prerelease.5)
+    - [@patternfly/react-drag-drop@6.7.0-prerelease.5](https://www.npmjs.com/package/@patternfly/react-drag-drop/v/6.7.0-prerelease.5)
+    - [@patternfly/react-icons@6.7.0-prerelease.3](https://www.npmjs.com/package/@patternfly/react-icons/v/6.7.0-prerelease.3)
+    - [@patternfly/react-styles@6.7.0-prerelease.3](https://www.npmjs.com/package/@patternfly/react-styles/v/6.7.0-prerelease.3)
+    - [@patternfly/react-table@6.7.0-prerelease.6](https://www.npmjs.com/package/@patternfly/react-table/v/6.7.0-prerelease.6)
+    - [@patternfly/react-templates@6.7.0-prerelease.5](https://www.npmjs.com/package/@patternfly/react-templates/v/6.7.0-prerelease.5)
+    - [@patternfly/react-tokens@6.7.0-prerelease.4](https://www.npmjs.com/package/@patternfly/react-tokens/v/6.7.0-prerelease.4)
+- PatternFly extensions
+    - [@patternfly/chatbot@6.9.0-prerelease.7](https://www.npmjs.com/package/@patternfly/chatbot/v/6.9.0-prerelease.7) ([changelog](https://github.com/patternfly/chatbot/releases))
+    - [@patternfly/react-component-groups@6.8.0-prerelease.1](https://www.npmjs.com/package/@patternfly/react-component-groups/v/6.8.0-prerelease.1) ([changelog](https://github.com/patternfly/react-component-groups/releases))
+    - [@patternfly/react-data-view@6.7.0-prerelease.1](https://www.npmjs.com/package/@patternfly/react-data-view/v/6.7.0-prerelease.1) ([changelog](https://github.com/patternfly/react-data-view/releases))
+    - [@patternfly/react-topology@6.7.0-prerelease.1](https://www.npmjs.com/package/@patternfly/react-topology/v/6.7.0-prerelease.1) ([changelog](https://github.com/patternfly/react-topology/releases))
+
+### More flexible layouts and navigation
+
+Build layouts that give users room to work while keeping navigation and supporting content within reach:
+
+- Custom page layouts (Beta): Use `PageHeader` and `PageFooter` to add custom header and footer content. The new plain page option removes the default content background and overflow scrolling so you can control the surrounding layout.
+- Expandable docked navigation: Organize nested destinations within docked navigation. Expanded docks can stay alongside page content or appear as an overlay.
+- Viewport drawers (Beta): Open a drawer that fills the browser viewport height while allowing page content to scroll behind it.
+- Tearsheets: Use the new component in `@patternfly/react-component-groups` for workflows that need more space than a standard modal. Compose headers, scrollable bodies, and footers, with support for stacked sheets.
+
+### Responsive toolbars and data tables
+
+- Toolbars: Opt in to responsive behavior based on the toolbar's own width with `isContainer`. Controls can adapt to the space available in a panel or embedded view, even when the browser window stays the same size.
+- Table footers: Keep totals and other summary information visible as users scroll with the new `Tfoot` component and sticky footer support. Additional options let you control the footer's appearance when it becomes stuck.
+- Data view: Add a dedicated toggle column for expandable rows alongside the existing compound expansion option. Use `indexBy` to track expanded rows by a stable identifier so expansion follows the correct item through sorting, filtering, and pagination.
+
+### Component interactions and accessibility
+
+This release improves how users interact with controls across input methods:
+
+- Modals: Opening and closing animations now extend to modals and their backdrops. Animations are enabled by default and can be disabled with `hasAnimations={false}`.
+- Drag and drop: Touch support lets users reorder items on mobile devices. A small movement threshold helps prevent accidental drags, and dragged items stay within the browser window by default.
+- Sliders: Provide custom tooltip content and accessible value text. You can also enable live updates as users type into a slider's value input.
+- Checkboxes and radio buttons: Larger clickable areas make standalone controls easier to select.
+- Keyboard interactions: Fixes improve focus behavior for hoverable popovers and prevent discarded label edits from returning after users cancel with Escape.
+
+### Clearer topology diagrams
+
+Pipeline task nodes and groups now support keyboard activation, visible focus indicators, and accessible labels that include run status. The tab order follows the visual layout, helping users navigate pipelines without a mouse.
+
+You can also simplify diagrams by combining connections between groups into shared paths. This reduces overlapping lines while preserving the relationships between individual nodes.
+
+### Chatbot improvements
+
+The Chatbot extension adds more control over conversation history and embedded layouts:
+
+- Conversation history: Organize previous conversations into expandable groups so users can focus on the history they need.
+- Embedded layouts: Choose to place the scrollbar at the far edge of an embedded Chatbot. New demos show how to combine Chatbot with Canvas mode and docked navigation.
+- Message content: Display inline code correctly in tables and add extra content to source-card headers.
+
+If you use `CodeModal`, `PreviewAttachment`, `AttachmentEdit`, or tracking utilities, update their imports to the individual `dist/dynamic` entry points. The first three also require the Monaco environment helper at application startup. See the [Chatbot import guidance](https://github.com/patternfly/chatbot/blob/5948d8fe5aa2aac86c5d38b1d68df124816e67c3/README.md#tree-shaking) for examples.
+
+### Visual polish
+
+Additional Red Hat icons bring more consistency to controls, tables, and Chatbot actions. This release also refines table spacing on small screens, restores progress-button animations, and fixes the code editor's content-fitting height. Component groups adds the option to hide skeleton table headers and corrects tag-count icon colors in the dark theme.
+
+### Behind Project Felt
+
+Learn how Project Felt is bringing PatternFly and Red Hat Design System closer together in [Behind Project Felt: Unifying Red Hat’s Design Systems](https://medium.com/patternfly/behind-project-felt-unifying-red-hats-design-systems-1f2a51051f5b). The article explores how the unified theme creates a shared look and feel across Red Hat websites and product interfaces without requiring breaking code changes. It also outlines the next phase: aligning design tokens to give designers, developers, and AI tools a common foundation for building consistent, accessible experiences.
+
+<Divider />
+
 <Timestamp date={new Date(2026, 5)}>June 2026</Timestamp>
 
 ## PatternFly 6.6
