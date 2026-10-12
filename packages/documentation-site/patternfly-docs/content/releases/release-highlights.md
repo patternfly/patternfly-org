@@ -77,7 +77,9 @@ We have made several improvements to tree-shaking in the ChatBot extension. Test
 
 `CodeModal`, `PreviewAttachment`, `AttachmentEdit`, and `tracking` are no longer exported from the root barrel - import them from `dist/dynamic/<Component>` instead. When using `CodeModal`, `PreviewAttachment`, or `AttachmentEdit`, also import the Monaco worker helper once at application startup:
 
-`import '@patternfly/chatbot/monaco-environment';`
+```tsx
+import '@patternfly/chatbot/monaco-environment';
+```
 
 monaco-editor was also bumped to ^0.56.0 to resolve a vulnerability in both `react-code-editor` and the ChatBot repo.
 
