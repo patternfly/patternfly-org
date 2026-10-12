@@ -35,7 +35,7 @@ This release gives you more ways to organize pages, navigate complex workflows, 
 Build layouts that give users room to work while keeping navigation and supporting content within reach:
 
 - Custom page layouts (Beta): Use `PageHeader` and `PageFooter` to add custom header and footer content. The new plain page option removes the default content background and overflow scrolling so you can control the surrounding layout.
-- Expandable docked navigation: Organize nested destinations within docked navigation. Expanded docks can stay alongside page content or appear as an overlay.
+- Expandable docked navigation (Beta): Organize nested destinations within docked navigation, indicated by an ellipsis in the docked state. The expanded navigation can be set inline alongside page content or open as an overlay.
 - Viewport drawers (Beta): Open a drawer that fills the browser viewport height while allowing page content to scroll behind it.
 - Tearsheets: Use the new component in `@patternfly/react-component-groups` for workflows that need more space than a standard modal. Compose headers, scrollable bodies, and footers, with support for stacked sheets.
 
