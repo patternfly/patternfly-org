@@ -26,7 +26,7 @@ This release gives you more ways to organize pages, navigate complex workflows, 
     - [@patternfly/react-tokens@6.7.0-prerelease.4](https://www.npmjs.com/package/@patternfly/react-tokens/v/6.7.0-prerelease.4)
 - PatternFly extensions
     - [@patternfly/chatbot@6.9.0-prerelease.7](https://www.npmjs.com/package/@patternfly/chatbot/v/6.9.0-prerelease.7) ([changelog](https://github.com/patternfly/chatbot/releases))
-    - [@patternfly/react-component-groups@6.8.0-prerelease.1](https://www.npmjs.com/package/@patternfly/react-component-groups/v/6.8.0-prerelease.1) ([changelog](https://github.com/patternfly/react-component-groups/releases))
+    - [@patternfly/react-component-groups@6.7.0-prerelease.1](https://www.npmjs.com/package/@patternfly/react-component-groups/v/6.7.0-prerelease.1) ([changelog](https://github.com/patternfly/react-component-groups/releases))
     - [@patternfly/react-data-view@6.7.0-prerelease.1](https://www.npmjs.com/package/@patternfly/react-data-view/v/6.7.0-prerelease.1) ([changelog](https://github.com/patternfly/react-data-view/releases))
     - [@patternfly/react-topology@6.7.0-prerelease.1](https://www.npmjs.com/package/@patternfly/react-topology/v/6.7.0-prerelease.1) ([changelog](https://github.com/patternfly/react-topology/releases))
 
