@@ -69,7 +69,19 @@ The Chatbot extension adds more control over conversation history and embedded l
 - Embedded layouts: Choose to place the scrollbar at the far edge of an embedded Chatbot. New demos show how to combine Chatbot with Canvas mode and docked navigation.
 - Message content: Display inline code correctly in tables and add extra content to source-card headers.
 
-If you use `CodeModal`, `PreviewAttachment`, `AttachmentEdit`, or tracking utilities, update their imports to the individual `dist/dynamic` entry points. The first three also require the Monaco environment helper at application startup. See the [Chatbot import guidance](https://github.com/patternfly/chatbot/blob/5948d8fe5aa2aac86c5d38b1d68df124816e67c3/README.md#tree-shaking) for examples.
+We have made several improvements to tree-shaking in the ChatBot extension. Testing by the Ask Red Hat team found an 84% size decrease in our overall package size following these improvements:
+
+- sideEffects optimization: Updated package.json to allow tree-shaking on dynamic imports
+- Barrel export refactoring: We removed heavy dependencies like the Monaco Editor from the root barrel export. You now load CodeModal, PreviewAttachment, AttachmentEdit, and tracking on demand with dynamic imports.
+- Lazy-loaded markdown: MarkdownContent now dynamically imports react-markdown and syntax highlighters only when rendered.
+
+`CodeModal`, `PreviewAttachment`, `AttachmentEdit`, and `tracking` are no longer exported from the root barrel - import them from `dist/dynamic/<Component>` instead. When using `CodeModal`, `PreviewAttachment`, or `AttachmentEdit`, also import the Monaco worker helper once at application startup:
+
+`import '@patternfly/chatbot/monaco-environment';`
+
+monaco-editor was also bumped to ^0.56.0 to resolve a vulnerability in both `react-code-editor` and the ChatBot repo.
+
+
 
 ### Visual polish
 
