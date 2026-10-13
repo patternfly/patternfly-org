@@ -13,22 +13,22 @@ This release gives you more ways to organize pages, navigate complex workflows, 
 ### Promoted package versions
 
 - patternfly/patternfly ([changelog](https://github.com/patternfly/patternfly/releases))
-    - [@patternfly/patternfly@6.7.0-prerelease.3](https://www.npmjs.com/package/@patternfly/patternfly/v/6.7.0-prerelease.3)
+    - [@patternfly/patternfly@6.7.0](https://www.npmjs.com/package/@patternfly/patternfly/v/6.7.0)
 - patternfly/react ([changelog](https://github.com/patternfly/patternfly-react/releases))
-    - [@patternfly/react-charts@8.7.0-prerelease.4](https://www.npmjs.com/package/@patternfly/react-charts/v/8.7.0-prerelease.4)
-    - [@patternfly/react-code-editor@6.7.0-prerelease.5](https://www.npmjs.com/package/@patternfly/react-code-editor/v/6.7.0-prerelease.5)
-    - [@patternfly/react-core@6.7.0-prerelease.5](https://www.npmjs.com/package/@patternfly/react-core/v/6.7.0-prerelease.5)
-    - [@patternfly/react-drag-drop@6.7.0-prerelease.5](https://www.npmjs.com/package/@patternfly/react-drag-drop/v/6.7.0-prerelease.5)
-    - [@patternfly/react-icons@6.7.0-prerelease.3](https://www.npmjs.com/package/@patternfly/react-icons/v/6.7.0-prerelease.3)
-    - [@patternfly/react-styles@6.7.0-prerelease.3](https://www.npmjs.com/package/@patternfly/react-styles/v/6.7.0-prerelease.3)
-    - [@patternfly/react-table@6.7.0-prerelease.6](https://www.npmjs.com/package/@patternfly/react-table/v/6.7.0-prerelease.6)
-    - [@patternfly/react-templates@6.7.0-prerelease.5](https://www.npmjs.com/package/@patternfly/react-templates/v/6.7.0-prerelease.5)
-    - [@patternfly/react-tokens@6.7.0-prerelease.4](https://www.npmjs.com/package/@patternfly/react-tokens/v/6.7.0-prerelease.4)
+    - [@patternfly/react-charts@8.7.0](https://www.npmjs.com/package/@patternfly/react-charts/v/8.7.0)
+    - [@patternfly/react-code-editor@6.7.0](https://www.npmjs.com/package/@patternfly/react-code-editor/v/6.7.0)
+    - [@patternfly/react-core@6.7.0](https://www.npmjs.com/package/@patternfly/react-core/v/6.7.0)
+    - [@patternfly/react-drag-drop@6.7.0](https://www.npmjs.com/package/@patternfly/react-drag-drop/v/6.7.0)
+    - [@patternfly/react-icons@6.7.0](https://www.npmjs.com/package/@patternfly/react-icons/v/6.7.0)
+    - [@patternfly/react-styles@6.7.0](https://www.npmjs.com/package/@patternfly/react-styles/v/6.7.0)
+    - [@patternfly/react-table@6.7.0](https://www.npmjs.com/package/@patternfly/react-table/v/6.7.0)
+    - [@patternfly/react-templates@6.7.0](https://www.npmjs.com/package/@patternfly/react-templates/v/6.7.0)
+    - [@patternfly/react-tokens@6.7.0](https://www.npmjs.com/package/@patternfly/react-tokens/v/6.7.0)
 - PatternFly extensions
-    - [@patternfly/chatbot@6.9.0-prerelease.7](https://www.npmjs.com/package/@patternfly/chatbot/v/6.9.0-prerelease.7) ([changelog](https://github.com/patternfly/chatbot/releases))
-    - [@patternfly/react-component-groups@6.7.0-prerelease.1](https://www.npmjs.com/package/@patternfly/react-component-groups/v/6.7.0-prerelease.1) ([changelog](https://github.com/patternfly/react-component-groups/releases))
-    - [@patternfly/react-data-view@6.7.0-prerelease.1](https://www.npmjs.com/package/@patternfly/react-data-view/v/6.7.0-prerelease.1) ([changelog](https://github.com/patternfly/react-data-view/releases))
-    - [@patternfly/react-topology@6.7.0-prerelease.1](https://www.npmjs.com/package/@patternfly/react-topology/v/6.7.0-prerelease.1) ([changelog](https://github.com/patternfly/react-topology/releases))
+    - [@patternfly/chatbot@6.9.0](https://www.npmjs.com/package/@patternfly/chatbot/v/6.9.0) ([changelog](https://github.com/patternfly/chatbot/releases))
+    - [@patternfly/react-component-groups@6.7.0](https://www.npmjs.com/package/@patternfly/react-component-groups/v/6.7.0) ([changelog](https://github.com/patternfly/react-component-groups/releases))
+    - [@patternfly/react-data-view@6.7.0](https://www.npmjs.com/package/@patternfly/react-data-view/v/6.7.0) ([changelog](https://github.com/patternfly/react-data-view/releases))
+    - [@patternfly/react-topology@6.7.0](https://www.npmjs.com/package/@patternfly/react-topology/v/6.7.0) ([changelog](https://github.com/patternfly/react-topology/releases))
 
 ### More flexible layouts and navigation
 
