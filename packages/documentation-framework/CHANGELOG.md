@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 6.53.3 (2026-10-13)
+
+
+### Bug Fixes
+
+* **deps:** Update ChatBot version ([#5116](https://github.com/patternfly/patternfly-org/issues/5116)) ([2a37396](https://github.com/patternfly/patternfly-org/commit/2a37396418d4739b43f623512023d4e4723198e8))
+
+
+
+
+
 ## 6.53.2 (2026-10-13)
 
 
