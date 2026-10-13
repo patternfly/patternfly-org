@@ -6,6 +6,8 @@ section: releases
 import '../get-started/get-started.css';
 import { Divider, Timestamp } from '@patternfly/react-core'; 
 
+<Timestamp date={new Date(2026, 9)}>October 2026</Timestamp>
+
 ## PatternFly 6.7
 
 This release gives you more ways to organize pages, navigate complex workflows, and work with data. Highlights include expandable docked navigation, responsive toolbars, sticky table footers, and a new tearsheet component for detailed workflows. You'll also find improvements to touch interactions, pipeline accessibility, and Chatbot conversation history.
