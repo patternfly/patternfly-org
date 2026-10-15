@@ -1,10 +1,16 @@
-import { useState, useLayoutEffect, useRef } from 'react';
+import { useState, useEffect, useLayoutEffect, useRef } from 'react';
+
+// The prerenderer provides a partial document shim but no createElement.
+const useIsomorphicLayoutEffect =
+  typeof document !== 'undefined' && typeof document.createElement === 'function'
+    ? useLayoutEffect
+    : useEffect;
 
 export const useIsStuck = (stickyElementId) => {
   const [isStuck, setIsStuck] = useState(false);
   const prevIsStuck = useRef(false);
 
-  useLayoutEffect(() => {
+  useIsomorphicLayoutEffect(() => {
     const scrollElement = document.getElementById('ws-page-main');
     const stickyElement = document.getElementById(stickyElementId);
 
