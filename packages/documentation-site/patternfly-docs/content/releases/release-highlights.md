@@ -51,7 +51,8 @@ Build layouts that give users room to work while keeping navigation and supporti
 
 This release improves how users interact with controls across input methods:
 
-- Modals: Opening and closing animations now extend to modals and their backdrops. Animations are enabled by default and can be disabled with `hasAnimations={false}`.
+- Modals: Opening and closing animations now extend to modals and their backdrops. Animations are enabled by default and can be disabled with `hasAnimations={false}`. 
+  - **Note for testing:** Due to animations being enabled by default, modal closing is no longer instantaneous, which may cause test failures. Either disable animations with `hasAnimations={false}` or wrap assertions that the modal has closed in `waitFor` (or equivalent).
 - Drag and drop: Touch support lets users reorder items on mobile devices. A small movement threshold helps prevent accidental drags, and dragged items stay within the browser window by default.
 - Sliders: Provide custom tooltip content and accessible value text. You can also enable live updates as users type into a slider's value input.
 - Checkboxes and radio buttons: Larger clickable areas make standalone controls easier to select.
