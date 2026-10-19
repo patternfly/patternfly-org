@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 6.54.1 (2026-10-19)
+
+
+### Bug Fixes
+
+* **docs:** Update featured posts ([#5121](https://github.com/patternfly/patternfly-org/issues/5121)) ([a527ade](https://github.com/patternfly/patternfly-org/commit/a527adee8e72fc514bebb600e5b22da2c7bac17c))
+
+
+
+
+
 # 6.54.0 (2026-10-19)
 
 
