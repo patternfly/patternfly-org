@@ -11,7 +11,7 @@ export const featuredPostsData = {
     title: "Bridging design systems",
     author: "Rebecca Alpert",
     length: "7 min read",
-    URL: "https://medium.com/@rebecca.p.alpert/5e8188b45cbd",
+    URL: "https://medium.com/patternfly/bridging-design-systems-5e8188b45cbd",
     // Use resize:fit:600 in URL
     imageURL:
       "https://miro.medium.com/v2/resize:fit:600/format:webp/1*AD1bot-cnuiDK_aZ8wrb-g.png",
