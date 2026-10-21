@@ -5112,7 +5112,7 @@ __metadata:
   peerDependencies:
     "@patternfly/patternfly": ^6.7.0
     "@patternfly/react-code-editor": ^6.7.0
-    "@patternfly/react-core": ^6.7.0
+    "@patternfly/react-core": ^6.7.1-prerelease.0
     "@patternfly/react-icons": ^6.7.0
     "@patternfly/react-table": ^6.7.0
     react: ^17.0.0 || ^18.0.0
@@ -5395,9 +5395,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@patternfly/react-core@npm:^6.7.0":
-  version: 6.7.0
-  resolution: "@patternfly/react-core@npm:6.7.0"
+"@patternfly/react-core@npm:^6.7.1-prerelease.0":
+  version: 6.7.1-prerelease.0
+  resolution: "@patternfly/react-core@npm:6.7.1-prerelease.0"
   dependencies:
     "@patternfly/react-icons": "npm:^6.7.0"
     "@patternfly/react-styles": "npm:^6.7.0"
@@ -5408,7 +5408,7 @@ __metadata:
   peerDependencies:
     react: ^17 || ^18 || ^19
     react-dom: ^17 || ^18 || ^19
-  checksum: 10c0/4a69b399ab0fc751db471be4a374f28d0fc5be3c72b03768d7ea3e88de18f8fe6e5ec484ae43b904513f8d771f7e4addf713ac71875ab5d058bd3a290978f178
+  checksum: 10c0/379f3b2a09a0bab1f6228c2483a8af0bee52978ac70a86df4a40e22e0428a16ea210141a24d520b0c1f66df20995982e25c5ab133d9c43a8adda5a7b7d8d41c7
   languageName: node
   linkType: hard
 
@@ -18654,7 +18654,7 @@ __metadata:
     "@octokit/rest": "npm:^19.0.13"
     "@patternfly/patternfly": "npm:^6.7.0"
     "@patternfly/react-code-editor": "npm:^6.7.0"
-    "@patternfly/react-core": "npm:^6.7.0"
+    "@patternfly/react-core": "npm:^6.7.1-prerelease.0"
     "@patternfly/react-table": "npm:^6.7.0"
     glob: "npm:^8.1.0"
     lerna: "npm:^9.0.5"
