@@ -1,5 +1,7 @@
 import os
 import json
+import subprocess
+import tempfile
 import requests
 from datetime import datetime
 
@@ -54,7 +56,23 @@ def save_rotation_state(state):
     os.system('git config --global user.email "actions@github.com"')
     os.system('git add rotation_state.json')
     os.system('git commit -m "Update rotation state [skip ci]"')
-    os.system(f'git push https://{os.environ.get("GITHUB_TOKEN")}@github.com/{os.environ.get("GITHUB_REPOSITORY")}.git HEAD:main')
+    # Avoid exposing GITHUB_TOKEN via process listing (ps aux) by keeping it
+    # out of the command line; git's credential helper reads it from a
+    # temporary, owner-only-readable file instead.
+    token = os.environ.get("GITHUB_TOKEN")
+    repo = os.environ.get("GITHUB_REPOSITORY")
+    with tempfile.NamedTemporaryFile(mode="w", delete=False) as cred_file:
+        cred_file.write(f"https://x-access-token:{token}@github.com\n")
+        cred_path = cred_file.name
+    os.chmod(cred_path, 0o600)
+    try:
+        subprocess.run(
+            ["git", "-c", f"credential.helper=store --file={cred_path}",
+             "push", f"https://github.com/{repo}.git", "HEAD:main"],
+            check=True,
+        )
+    finally:
+        os.remove(cred_path)
 
 def get_user_info(user_id):
     """Get user information from Slack."""
