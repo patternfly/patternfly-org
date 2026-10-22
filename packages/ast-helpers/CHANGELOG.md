@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.4.0-alpha.430 (2026-10-22)
+
+
+### Bug Fixes
+
+* update useIsStuck to useEffect for prerendering, improve sticky tabs ([#5119](https://github.com/patternfly/patternfly-org/issues/5119)) ([bcfef08](https://github.com/patternfly/patternfly-org/commit/bcfef08817e6fad574a1498ce9ad4e9e5e51baa4))
+
+
+
+
+
 # 1.4.0-alpha.429 (2026-10-22)
 
 **Note:** Version bump only for package @patternfly/ast-helpers

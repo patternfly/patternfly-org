@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 6.54.3 (2026-10-22)
+
+
+### Bug Fixes
+
+* update useIsStuck to useEffect for prerendering, improve sticky tabs ([#5119](https://github.com/patternfly/patternfly-org/issues/5119)) ([bcfef08](https://github.com/patternfly/patternfly-org/commit/bcfef08817e6fad574a1498ce9ad4e9e5e51baa4))
+
+
+
+
+
 ## 6.54.2 (2026-10-22)
 
 **Note:** Version bump only for package @patternfly/documentation-framework
