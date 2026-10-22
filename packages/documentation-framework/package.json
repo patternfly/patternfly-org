@@ -70,7 +70,7 @@
   "peerDependencies": {
     "@patternfly/patternfly": "^6.7.0",
     "@patternfly/react-code-editor": "^6.7.0",
-    "@patternfly/react-core": "^6.7.0",
+    "@patternfly/react-core": "^6.7.1-prerelease.0",
     "@patternfly/react-icons": "^6.7.0",
     "@patternfly/react-table": "^6.7.0",
     "react": "^17.0.0 || ^18.0.0",
