@@ -17,7 +17,7 @@
     "wrangler:deploy": "wrangler pages deploy"
   },
   "dependencies": {
-    "@patternfly/patternfly-doc-core": "^1.22.0",
+    "@patternfly/patternfly-doc-core": "^1.24.1",
     "@patternfly/react-icons": "^6.6.1",
     "@project-felt/ai-guidelines": "github:project-felt/ai-guidelines#main",
     "astro": "^5.18.0"
