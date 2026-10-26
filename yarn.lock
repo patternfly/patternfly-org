@@ -5153,9 +5153,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@patternfly/patternfly-doc-core@npm:^1.24.1":
-  version: 1.24.1
-  resolution: "@patternfly/patternfly-doc-core@npm:1.24.1"
+"@patternfly/patternfly-doc-core@npm:^1.24.2":
+  version: 1.24.2
+  resolution: "@patternfly/patternfly-doc-core@npm:1.24.2"
   dependencies:
     "@astrojs/check": "npm:^0.9.4"
     "@astrojs/cloudflare": "npm:^12.6.5"
@@ -5188,7 +5188,7 @@ __metadata:
     typescript: "npm:^5.9.2"
   bin:
     patternfly-doc-core: dist/cli/cli.js
-  checksum: 10c0/91ecdd267bde8e50e7d83bc2a0704cf57faf9e8c2d8471cab2c891ff82f3dbc90841496d05823328dc0c6e4d2a0fb0ce9c08e6776b74cd61213b35caa112115b
+  checksum: 10c0/bce9b2245529d434f2c27370c2c6da9b151ec183fdcd869d93aa1bab6b2d797e81fb44056dc309fea3520b2aa6a7dc6a5f91b0afa5c1b4aad9ccb379274dc9ae
   languageName: node
   linkType: hard
 
@@ -21334,7 +21334,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "site@workspace:packages/site"
   dependencies:
-    "@patternfly/patternfly-doc-core": "npm:^1.24.1"
+    "@patternfly/patternfly-doc-core": "npm:^1.24.2"
     "@patternfly/react-icons": "npm:^6.6.1"
     "@project-felt/ai-guidelines": "github:project-felt/ai-guidelines#main"
     astro: "npm:^5.18.0"
